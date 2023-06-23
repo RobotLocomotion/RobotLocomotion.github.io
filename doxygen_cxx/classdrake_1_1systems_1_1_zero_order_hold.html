@@ -170,7 +170,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1_zero_order_h
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
 class drake::systems::ZeroOrderHold&lt; T &gt;</h3>
 
-<p>A zero order hold block with input u, which may be vector-valued (discrete or continuous) or abstract, and discrete output y, where the y is sampled from u with a fixed period. </p>
+<p>A zero order hold block with input u, which may be vector-valued (discrete or continuous) or abstract, and discrete output y, where the y is sampled from u with a fixed period (and optional offset). </p>
 <table align="center" cellpadding="0" cellspacing="0">
 <tr align="center">
 <td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
@@ -185,7 +185,7 @@ class drake::systems::ZeroOrderHold&lt; T &gt;</h3>
 </table>
 <p>The discrete state space dynamics of ZeroOrderHold is: </p><div class="fragment"><div class="line">xₙ₊₁ = uₙ     <span class="comment">// update</span></div><div class="line">yₙ   = xₙ     <span class="comment">// output</span></div><div class="line">x₀   = xᵢₙᵢₜ  <span class="comment">// initialize</span></div></div><!-- fragment --><p> where xᵢₙᵢₜ = 0 for vector-valued ZeroOrderHold, and xᵢₙᵢₜ is a given value for abstract-valued ZeroOrderHold.</p>
 <p>See <a class="el" href="group__discrete__systems.html">Discrete Systems</a> for general information about discrete systems in Drake, including how they interact with continuous systems.</p>
-<dl class="section note"><dt>Note</dt><dd>This system uses a periodic update with zero offset, so the first update occurs at t=0. When used with a <a class="el" href="classdrake_1_1systems_1_1_simulator.html" title="A class for advancing the state of hybrid dynamic systems, represented by System&lt;T&gt; objects,...">Simulator</a>, the output port is equal to xᵢₙᵢₜ after simulator.Initialize(), but is immediately updated to u₀ at the start of the first step. If you want to force that initial update, use simulator.AdvanceTo(0.).</dd>
+<dl class="section note"><dt>Note</dt><dd>This system defaults to a periodic update with zero offset, in which case the first update occurs at t=0. When used with a <a class="el" href="classdrake_1_1systems_1_1_simulator.html" title="A class for advancing the state of hybrid dynamic systems, represented by System&lt;T&gt; objects,...">Simulator</a>, the output port is equal to xᵢₙᵢₜ after simulator.Initialize(), but is immediately updated to u₀ at the start of the first step. If you want to force that initial update, use simulator.AdvanceTo(0.0).</dd>
 <dd>
 For an abstract-valued <a class="el" href="classdrake_1_1systems_1_1_zero_order_hold.html" title="A zero order hold block with input u, which may be vector-valued (discrete or continuous) or abstract...">ZeroOrderHold</a>, scalar-type conversion is not supported since <a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">AbstractValue</a> does not support it.</dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
@@ -199,12 +199,12 @@ For an abstract-valued <a class="el" href="classdrake_1_1systems_1_1_zero_order_
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5856e7f2702e44bdaa4a07b19a115787"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_zero_order_hold.html#a5856e7f2702e44bdaa4a07b19a115787">ZeroOrderHold</a> (<a class="el" href="classdouble.html">double</a> period_sec, <a class="el" href="classint.html">int</a> vector_size)</td></tr>
-<tr class="memdesc:a5856e7f2702e44bdaa4a07b19a115787"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1systems_1_1_zero_order_hold.html" title="A zero order hold block with input u, which may be vector-valued (discrete or continuous) or abstract...">ZeroOrderHold</a> system with the given <code>period_sec</code>, over a vector-valued input of size <code>vector_size</code>.  <a href="#a5856e7f2702e44bdaa4a07b19a115787">More...</a><br /></td></tr>
-<tr class="separator:a5856e7f2702e44bdaa4a07b19a115787"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a238fbc486a1a503628ae85cb32d95bf8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_zero_order_hold.html#a238fbc486a1a503628ae85cb32d95bf8">ZeroOrderHold</a> (<a class="el" href="classdouble.html">double</a> period_sec, const <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &amp;abstract_model_value)</td></tr>
-<tr class="memdesc:a238fbc486a1a503628ae85cb32d95bf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1systems_1_1_zero_order_hold.html" title="A zero order hold block with input u, which may be vector-valued (discrete or continuous) or abstract...">ZeroOrderHold</a> system with the given <code>period_sec</code>, over a abstract-valued input <code>abstract_model_value</code>.  <a href="#a238fbc486a1a503628ae85cb32d95bf8">More...</a><br /></td></tr>
-<tr class="separator:a238fbc486a1a503628ae85cb32d95bf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac11436f0b43f652005c211738be87c5e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_zero_order_hold.html#ac11436f0b43f652005c211738be87c5e">ZeroOrderHold</a> (<a class="el" href="classdouble.html">double</a> period_sec, <a class="el" href="classint.html">int</a> vector_size, <a class="el" href="classdouble.html">double</a> offset_sec=0.0)</td></tr>
+<tr class="memdesc:ac11436f0b43f652005c211738be87c5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1systems_1_1_zero_order_hold.html" title="A zero order hold block with input u, which may be vector-valued (discrete or continuous) or abstract...">ZeroOrderHold</a> system with the given <code>period_sec</code>, over a vector-valued input of size <code>vector_size</code>.  <a href="#ac11436f0b43f652005c211738be87c5e">More...</a><br /></td></tr>
+<tr class="separator:ac11436f0b43f652005c211738be87c5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76e36269d760776c11822e19076aace4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_zero_order_hold.html#a76e36269d760776c11822e19076aace4">ZeroOrderHold</a> (<a class="el" href="classdouble.html">double</a> period_sec, const <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &amp;abstract_model_value, <a class="el" href="classdouble.html">double</a> offset_sec=0.0)</td></tr>
+<tr class="memdesc:a76e36269d760776c11822e19076aace4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1systems_1_1_zero_order_hold.html" title="A zero order hold block with input u, which may be vector-valued (discrete or continuous) or abstract...">ZeroOrderHold</a> system with the given <code>period_sec</code>, over a abstract-valued input <code>abstract_model_value</code>.  <a href="#a76e36269d760776c11822e19076aace4">More...</a><br /></td></tr>
+<tr class="separator:a76e36269d760776c11822e19076aace4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60f9f8ef37a7bab7cce2d0600de116f8"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
 <tr class="memitem:a60f9f8ef37a7bab7cce2d0600de116f8"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_zero_order_hold.html#a60f9f8ef37a7bab7cce2d0600de116f8">ZeroOrderHold</a> (const <a class="el" href="classdrake_1_1systems_1_1_zero_order_hold.html">ZeroOrderHold</a>&lt; U &gt; &amp;other)</td></tr>
 <tr class="memdesc:a60f9f8ef37a7bab7cce2d0600de116f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scalar-type converting copy constructor.  <a href="#a60f9f8ef37a7bab7cce2d0600de116f8">More...</a><br /></td></tr>
@@ -214,6 +214,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5ae4ab5e2ebbb46c574d1f0531d86d66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_zero_order_hold.html#a5ae4ab5e2ebbb46c574d1f0531d86d66">period</a> () const</td></tr>
 <tr class="memdesc:a5ae4ab5e2ebbb46c574d1f0531d86d66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the period of this hold (in seconds).  <a href="#a5ae4ab5e2ebbb46c574d1f0531d86d66">More...</a><br /></td></tr>
 <tr class="separator:a5ae4ab5e2ebbb46c574d1f0531d86d66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96ffc785b7b2135c7980c985883ffdd3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_zero_order_hold.html#a96ffc785b7b2135c7980c985883ffdd3">offset</a> () const</td></tr>
+<tr class="memdesc:a96ffc785b7b2135c7980c985883ffdd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the first update time of this hold (in seconds).  <a href="#a96ffc785b7b2135c7980c985883ffdd3">More...</a><br /></td></tr>
+<tr class="separator:a96ffc785b7b2135c7980c985883ffdd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fd85a9651ee5246cc2e24cebe853e7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_zero_order_hold.html#a5fd85a9651ee5246cc2e24cebe853e7e">LatchInputPortToState</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; *context) const</td></tr>
 <tr class="memdesc:a5fd85a9651ee5246cc2e24cebe853e7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Manually sample the input port and copy ("latch") the value into the state.  <a href="#a5fd85a9651ee5246cc2e24cebe853e7e">More...</a><br /></td></tr>
 <tr class="separator:a5fd85a9651ee5246cc2e24cebe853e7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1341,8 +1344,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a5856e7f2702e44bdaa4a07b19a115787"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5856e7f2702e44bdaa4a07b19a115787">&#9670;&nbsp;</a></span>ZeroOrderHold() <span class="overload">[3/5]</span></h2>
+<a id="ac11436f0b43f652005c211738be87c5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac11436f0b43f652005c211738be87c5e">&#9670;&nbsp;</a></span>ZeroOrderHold() <span class="overload">[3/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1357,7 +1360,13 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
-          <td class="paramname"><em>vector_size</em>&#160;</td>
+          <td class="paramname"><em>vector_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>offset_sec</em> = <code>0.0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1368,12 +1377,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructs a <a class="el" href="classdrake_1_1systems_1_1_zero_order_hold.html" title="A zero order hold block with input u, which may be vector-valued (discrete or continuous) or abstract...">ZeroOrderHold</a> system with the given <code>period_sec</code>, over a vector-valued input of size <code>vector_size</code>. </p>
-<p>The default initial value for this system will be zero. The offset is always zero, meaning that the first update occurs at t=0. </p>
+<p>The default initial value for this system will be zero. The first update occurs at t=offset_sec, which must be &gt;= 0. </p>
 
 </div>
 </div>
-<a id="a238fbc486a1a503628ae85cb32d95bf8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a238fbc486a1a503628ae85cb32d95bf8">&#9670;&nbsp;</a></span>ZeroOrderHold() <span class="overload">[4/5]</span></h2>
+<a id="a76e36269d760776c11822e19076aace4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76e36269d760776c11822e19076aace4">&#9670;&nbsp;</a></span>ZeroOrderHold() <span class="overload">[4/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1388,7 +1397,13 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &amp;&#160;</td>
-          <td class="paramname"><em>abstract_model_value</em>&#160;</td>
+          <td class="paramname"><em>abstract_model_value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>offset_sec</em> = <code>0.0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1399,7 +1414,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructs a <a class="el" href="classdrake_1_1systems_1_1_zero_order_hold.html" title="A zero order hold block with input u, which may be vector-valued (discrete or continuous) or abstract...">ZeroOrderHold</a> system with the given <code>period_sec</code>, over a abstract-valued input <code>abstract_model_value</code>. </p>
-<p>The default initial value for this system will be <code>abstract_model_value</code>. The offset is always zero, meaning that the first update occurs at t=0. </p>
+<p>The default initial value for this system will be <code>abstract_model_value</code>. The first update occurs at t=offset_sec, which must be &gt;= 0. </p>
 
 </div>
 </div>
@@ -1476,6 +1491,25 @@ Additional Inherited Members</h2></td></tr>
 
 <p>(Advanced) Manually sample the input port and copy ("latch") the value into the state. </p>
 <p>This emulates an update event and is mostly useful for testing. </p>
+
+</div>
+</div>
+<a id="a96ffc785b7b2135c7980c985883ffdd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96ffc785b7b2135c7980c985883ffdd3">&#9670;&nbsp;</a></span>offset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> offset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reports the first update time of this hold (in seconds). </p>
 
 </div>
 </div>

@@ -1,5 +1,6 @@
 var NAVTREEINDEX45 =
 {
+"eigen__types_8h.html#af359dfdb84d6c13b606bb3ed7b821e23":[4,0,0,1,29,30],
 "eigen__types_8h.html#af7e96394aef85f13f3fc84d3c3c238b3":[4,0,0,1,29,34],
 "eigen__types_8h.html#afc54e1f7aa3341a5f6b305705452d9bd":[4,0,0,1,29,22],
 "environment_8h.html":[4,0,0,1,3,0,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX45 =
 "fibonacci__difference__equation_8h.html":[4,0,0,3,5,0],
 "field__intersection_8h.html":[4,0,0,4,2,15],
 "files.html":[4,0],
-"find__cache_8h.html":[4,0,0,1,31],
-"find__collision__candidates__callback_8h.html":[4,0,0,4,2,16]
+"find__cache_8h.html":[4,0,0,1,31]
 };

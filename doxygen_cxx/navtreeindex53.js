@@ -1,5 +1,6 @@
 var NAVTREEINDEX53 =
 {
+"sdpa__free__format_8h.html#a121673ddbdadd10b2e3ceab52a93f5d3a268e3bfe4e48f70785a46a8d3552e552":[4,0,0,11,43,0,0],
 "sdpa__free__format_8h.html#a121673ddbdadd10b2e3ceab52a93f5d3a2992c87df2428b480924bf6c6509edec":[4,0,0,11,43,0,2],
 "sdpa__free__format_8h.html#a121673ddbdadd10b2e3ceab52a93f5d3a54b9d7601ece96fc42e2ffd67aae2690":[4,0,0,11,43,0,1],
 "sdpa__free__format_8h.html#aeb2470f8cacd8e5f5a473b10d0acf6cc":[4,0,0,11,43,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX53 =
 "structdrake_1_1_delegating_hasher.html":[3,0,0,23],
 "structdrake_1_1_delegating_hasher.html#a2f06de017c348e04061971db98125a4e":[3,0,0,23,1],
 "structdrake_1_1_delegating_hasher.html#aa82405da558e1deea00586c32b6c5651":[3,0,0,23,0],
-"structdrake_1_1_delegating_hasher.html#ab03f097f6c3d31eb2fcdcf71a49d072a":[3,0,0,23,2],
-"structdrake_1_1_polynomial_1_1_product.html":[3,0,0,41,1]
+"structdrake_1_1_delegating_hasher.html#ab03f097f6c3d31eb2fcdcf71a49d072a":[3,0,0,23,2]
 };

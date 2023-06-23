@@ -131,9 +131,17 @@
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.autodiffutils.AutoDiffXd.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>__init__(self: pydrake.autodiffutils.AutoDiffXd, arg0: float) -&gt; None</p></li>
-<li><p>__init__(self: pydrake.autodiffutils.AutoDiffXd, arg0: float, arg1: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.autodiffutils.AutoDiffXd, value: float) -&gt; None</p></li>
 </ol>
+<p>Constructs a value with empty derivatives.</p>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.autodiffutils.AutoDiffXd, value: float, derivatives: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</p></li>
+</ol>
+<p>Constructs a value with the given derivatives.</p>
+<ol class="arabic simple" start="3">
+<li><p>__init__(self: pydrake.autodiffutils.AutoDiffXd, value: float, size: int, offset: int) -&gt; None</p></li>
+</ol>
+<p>Constructs a value with a single partial derivative of 1.0 at the given <cite>offset</cite> in a vector of <cite>size</cite> otherwise-zero derivatives.</p>
 </dd></dl>
 
 <dl class="py method">

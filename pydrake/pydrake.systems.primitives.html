@@ -6383,7 +6383,7 @@ and <code class="docutils literal notranslate"><span class="pre">high</span></co
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
 <p>A zero order hold block with input u, which may be vector-valued
 (discrete or continuous) or abstract, and discrete output y, where the
-y is sampled from u with a fixed period.</p>
+y is sampled from u with a fixed period (and optional offset).</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>ZeroOrderHold</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y</td></tr></table></td></tr></table><p>The discrete state space dynamics of ZeroOrderHold is:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>xₙ₊₁ = uₙ     // update
   yₙ   = xₙ     // output
@@ -6397,11 +6397,12 @@ discrete systems in Drake, including how they interact with continuous
 systems.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This system uses a periodic update with zero offset, so the first
-update occurs at t=0. When used with a Simulator, the output port
-is equal to xᵢₙᵢₜ after simulator.Initialize(), but is immediately
-updated to u₀ at the start of the first step. If you want to force
-that initial update, use simulator.AdvanceTo(0.).</p>
+<p>This system defaults to a periodic update with zero offset, in
+which case the first update occurs at t=0. When used with a
+Simulator, the output port is equal to xᵢₙᵢₜ after
+simulator.Initialize(), but is immediately updated to u₀ at the
+start of the first step. If you want to force that initial update,
+use simulator.AdvanceTo(0.0).</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -6418,19 +6419,31 @@ for the list of instantiations.</p>
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.ZeroOrderHold.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>__init__(self: pydrake.systems.primitives.ZeroOrderHold, period_sec: float, vector_size: int) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.systems.primitives.ZeroOrderHold, period_sec: float, vector_size: int, offset_sec: float = 0.0) -&gt; None</p></li>
 </ol>
 <p>Constructs a ZeroOrderHold system with the given <code class="docutils literal notranslate"><span class="pre">period_sec</span></code>, over
 a vector-valued input of size <code class="docutils literal notranslate"><span class="pre">vector_size</span></code>. The default initial
-value for this system will be zero. The offset is always zero, meaning
-that the first update occurs at t=0.</p>
+value for this system will be zero. The first update occurs at
+t=offset_sec, which must be &gt;= 0.</p>
 <ol class="arabic simple" start="2">
-<li><p>__init__(self: pydrake.systems.primitives.ZeroOrderHold, period_sec: float, abstract_model_value: pydrake.common.value.AbstractValue) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.systems.primitives.ZeroOrderHold, period_sec: float, abstract_model_value: pydrake.common.value.AbstractValue, offset_sec: float = 0.0) -&gt; None</p></li>
 </ol>
 <p>Constructs a ZeroOrderHold system with the given <code class="docutils literal notranslate"><span class="pre">period_sec</span></code>, over
 a abstract-valued input <code class="docutils literal notranslate"><span class="pre">abstract_model_value</span></code>. The default initial
-value for this system will be <code class="docutils literal notranslate"><span class="pre">abstract_model_value</span></code>. The offset is
-always zero, meaning that the first update occurs at t=0.</p>
+value for this system will be <code class="docutils literal notranslate"><span class="pre">abstract_model_value</span></code>. The first
+update occurs at t=offset_sec, which must be &gt;= 0.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.ZeroOrderHold.offset">
+<span class="sig-name descname"><span class="pre">offset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.ZeroOrderHold" title="pydrake.systems.primitives.ZeroOrderHold"><span class="pre">pydrake.systems.primitives.ZeroOrderHold</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.ZeroOrderHold.offset" title="Permalink to this definition"></a></dt>
+<dd><p>Reports the first update time of this hold (in seconds).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.ZeroOrderHold.period">
+<span class="sig-name descname"><span class="pre">period</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.ZeroOrderHold" title="pydrake.systems.primitives.ZeroOrderHold"><span class="pre">pydrake.systems.primitives.ZeroOrderHold</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.ZeroOrderHold.period" title="Permalink to this definition"></a></dt>
+<dd><p>Reports the period of this hold (in seconds).</p>
 </dd></dl>
 
 </dd></dl>
@@ -6447,7 +6460,7 @@ always zero, meaning that the first update occurs at t=0.</p>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-AutoDiffXd" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[AutoDiffXd]</span></code></a></p>
 <p>A zero order hold block with input u, which may be vector-valued
 (discrete or continuous) or abstract, and discrete output y, where the
-y is sampled from u with a fixed period.</p>
+y is sampled from u with a fixed period (and optional offset).</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>ZeroOrderHold</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y</td></tr></table></td></tr></table><p>The discrete state space dynamics of ZeroOrderHold is:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>xₙ₊₁ = uₙ     // update
   yₙ   = xₙ     // output
@@ -6461,11 +6474,12 @@ discrete systems in Drake, including how they interact with continuous
 systems.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This system uses a periodic update with zero offset, so the first
-update occurs at t=0. When used with a Simulator, the output port
-is equal to xᵢₙᵢₜ after simulator.Initialize(), but is immediately
-updated to u₀ at the start of the first step. If you want to force
-that initial update, use simulator.AdvanceTo(0.).</p>
+<p>This system defaults to a periodic update with zero offset, in
+which case the first update occurs at t=0. When used with a
+Simulator, the output port is equal to xᵢₙᵢₜ after
+simulator.Initialize(), but is immediately updated to u₀ at the
+start of the first step. If you want to force that initial update,
+use simulator.AdvanceTo(0.0).</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -6477,19 +6491,31 @@ not supported since AbstractValue does not support it.</p>
 <span id="pydrake.systems.primitives.ZeroOrderHold_[AutoDiffXd].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.ZeroOrderHold_-AutoDiffXd-.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>__init__(self: pydrake.systems.primitives.ZeroOrderHold_[AutoDiffXd], period_sec: float, vector_size: int) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.systems.primitives.ZeroOrderHold_[AutoDiffXd], period_sec: float, vector_size: int, offset_sec: float = 0.0) -&gt; None</p></li>
 </ol>
 <p>Constructs a ZeroOrderHold system with the given <code class="docutils literal notranslate"><span class="pre">period_sec</span></code>, over
 a vector-valued input of size <code class="docutils literal notranslate"><span class="pre">vector_size</span></code>. The default initial
-value for this system will be zero. The offset is always zero, meaning
-that the first update occurs at t=0.</p>
+value for this system will be zero. The first update occurs at
+t=offset_sec, which must be &gt;= 0.</p>
 <ol class="arabic simple" start="2">
-<li><p>__init__(self: pydrake.systems.primitives.ZeroOrderHold_[AutoDiffXd], period_sec: float, abstract_model_value: pydrake.common.value.AbstractValue) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.systems.primitives.ZeroOrderHold_[AutoDiffXd], period_sec: float, abstract_model_value: pydrake.common.value.AbstractValue, offset_sec: float = 0.0) -&gt; None</p></li>
 </ol>
 <p>Constructs a ZeroOrderHold system with the given <code class="docutils literal notranslate"><span class="pre">period_sec</span></code>, over
 a abstract-valued input <code class="docutils literal notranslate"><span class="pre">abstract_model_value</span></code>. The default initial
-value for this system will be <code class="docutils literal notranslate"><span class="pre">abstract_model_value</span></code>. The offset is
-always zero, meaning that the first update occurs at t=0.</p>
+value for this system will be <code class="docutils literal notranslate"><span class="pre">abstract_model_value</span></code>. The first
+update occurs at t=offset_sec, which must be &gt;= 0.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.ZeroOrderHold_-AutoDiffXd-.offset">
+<span id="pydrake.systems.primitives.ZeroOrderHold_[AutoDiffXd].offset"></span><span class="sig-name descname"><span class="pre">offset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.ZeroOrderHold_" title="pydrake.systems.primitives.ZeroOrderHold_"><span class="pre">pydrake.systems.primitives.ZeroOrderHold_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.ZeroOrderHold_-AutoDiffXd-.offset" title="Permalink to this definition"></a></dt>
+<dd><p>Reports the first update time of this hold (in seconds).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.ZeroOrderHold_-AutoDiffXd-.period">
+<span id="pydrake.systems.primitives.ZeroOrderHold_[AutoDiffXd].period"></span><span class="sig-name descname"><span class="pre">period</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.ZeroOrderHold_" title="pydrake.systems.primitives.ZeroOrderHold_"><span class="pre">pydrake.systems.primitives.ZeroOrderHold_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.ZeroOrderHold_-AutoDiffXd-.period" title="Permalink to this definition"></a></dt>
+<dd><p>Reports the period of this hold (in seconds).</p>
 </dd></dl>
 
 </dd></dl>
@@ -6500,7 +6526,7 @@ always zero, meaning that the first update occurs at t=0.</p>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-Expression" title="pydrake.systems.framework.LeafSystem_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[Expression]</span></code></a></p>
 <p>A zero order hold block with input u, which may be vector-valued
 (discrete or continuous) or abstract, and discrete output y, where the
-y is sampled from u with a fixed period.</p>
+y is sampled from u with a fixed period (and optional offset).</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>ZeroOrderHold</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y</td></tr></table></td></tr></table><p>The discrete state space dynamics of ZeroOrderHold is:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>xₙ₊₁ = uₙ     // update
   yₙ   = xₙ     // output
@@ -6514,11 +6540,12 @@ discrete systems in Drake, including how they interact with continuous
 systems.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This system uses a periodic update with zero offset, so the first
-update occurs at t=0. When used with a Simulator, the output port
-is equal to xᵢₙᵢₜ after simulator.Initialize(), but is immediately
-updated to u₀ at the start of the first step. If you want to force
-that initial update, use simulator.AdvanceTo(0.).</p>
+<p>This system defaults to a periodic update with zero offset, in
+which case the first update occurs at t=0. When used with a
+Simulator, the output port is equal to xᵢₙᵢₜ after
+simulator.Initialize(), but is immediately updated to u₀ at the
+start of the first step. If you want to force that initial update,
+use simulator.AdvanceTo(0.0).</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -6530,19 +6557,31 @@ not supported since AbstractValue does not support it.</p>
 <span id="pydrake.systems.primitives.ZeroOrderHold_[Expression].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.ZeroOrderHold_-Expression-.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>__init__(self: pydrake.systems.primitives.ZeroOrderHold_[Expression], period_sec: float, vector_size: int) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.systems.primitives.ZeroOrderHold_[Expression], period_sec: float, vector_size: int, offset_sec: float = 0.0) -&gt; None</p></li>
 </ol>
 <p>Constructs a ZeroOrderHold system with the given <code class="docutils literal notranslate"><span class="pre">period_sec</span></code>, over
 a vector-valued input of size <code class="docutils literal notranslate"><span class="pre">vector_size</span></code>. The default initial
-value for this system will be zero. The offset is always zero, meaning
-that the first update occurs at t=0.</p>
+value for this system will be zero. The first update occurs at
+t=offset_sec, which must be &gt;= 0.</p>
 <ol class="arabic simple" start="2">
-<li><p>__init__(self: pydrake.systems.primitives.ZeroOrderHold_[Expression], period_sec: float, abstract_model_value: pydrake.common.value.AbstractValue) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.systems.primitives.ZeroOrderHold_[Expression], period_sec: float, abstract_model_value: pydrake.common.value.AbstractValue, offset_sec: float = 0.0) -&gt; None</p></li>
 </ol>
 <p>Constructs a ZeroOrderHold system with the given <code class="docutils literal notranslate"><span class="pre">period_sec</span></code>, over
 a abstract-valued input <code class="docutils literal notranslate"><span class="pre">abstract_model_value</span></code>. The default initial
-value for this system will be <code class="docutils literal notranslate"><span class="pre">abstract_model_value</span></code>. The offset is
-always zero, meaning that the first update occurs at t=0.</p>
+value for this system will be <code class="docutils literal notranslate"><span class="pre">abstract_model_value</span></code>. The first
+update occurs at t=offset_sec, which must be &gt;= 0.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.ZeroOrderHold_-Expression-.offset">
+<span id="pydrake.systems.primitives.ZeroOrderHold_[Expression].offset"></span><span class="sig-name descname"><span class="pre">offset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.ZeroOrderHold_" title="pydrake.systems.primitives.ZeroOrderHold_"><span class="pre">pydrake.systems.primitives.ZeroOrderHold_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.ZeroOrderHold_-Expression-.offset" title="Permalink to this definition"></a></dt>
+<dd><p>Reports the first update time of this hold (in seconds).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.ZeroOrderHold_-Expression-.period">
+<span id="pydrake.systems.primitives.ZeroOrderHold_[Expression].period"></span><span class="sig-name descname"><span class="pre">period</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.ZeroOrderHold_" title="pydrake.systems.primitives.ZeroOrderHold_"><span class="pre">pydrake.systems.primitives.ZeroOrderHold_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.ZeroOrderHold_-Expression-.period" title="Permalink to this definition"></a></dt>
+<dd><p>Reports the period of this hold (in seconds).</p>
 </dd></dl>
 
 </dd></dl>

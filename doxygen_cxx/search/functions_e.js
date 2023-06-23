@@ -4,6 +4,7 @@ var searchData=
   ['observabilitymatrix',['ObservabilityMatrix',['../group__estimator__systems.html#gaa15831763ec42b356a75c6bb616a6531',1,'drake::systems']]],
   ['observer_5fgain',['observer_gain',['../classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#a2d369537575baf5f2628190a821155ce',1,'drake::systems::estimators::LuenbergerObserver']]],
   ['odddegreemonomialbasis',['OddDegreeMonomialBasis',['../namespacedrake_1_1symbolic.html#ade6ac4e26dcd9023a9f8146aa75454c7',1,'drake::symbolic']]],
+  ['offset',['offset',['../classdrake_1_1systems_1_1_zero_order_hold.html#a96ffc785b7b2135c7980c985883ffdd3',1,'drake::systems::ZeroOrderHold']]],
   ['offset_5fsec',['offset_sec',['../classdrake_1_1systems_1_1_periodic_event_data.html#a55aa9905f485cb2da33a6aaa66d0ba2a',1,'drake::systems::PeriodicEventData']]],
   ['one',['One',['../classdrake_1_1symbolic_1_1_expression.html#a485617aa0d5ec42920858c1585c5b708',1,'drake::symbolic::Expression']]],
   ['onplaneside',['OnPlaneSide',['../classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html#aa4e072198684b3b69292aaa154063106',1,'drake::geometry::optimization::CIrisCollisionGeometry']]],
