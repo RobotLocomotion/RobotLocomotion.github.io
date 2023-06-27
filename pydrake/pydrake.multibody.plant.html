@@ -563,6 +563,23 @@ must be in the range [0, <code class="docutils literal notranslate"><span class=
 method aborts.</p>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.ContactResults.SelectHydroelastic">
+<span class="sig-name descname"><span class="pre">SelectHydroelastic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.ContactResults" title="pydrake.multibody.plant.ContactResults"><span class="pre">pydrake.multibody.plant.ContactResults</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">selector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.multibody.plant.HydroelasticContactInfo" title="pydrake.multibody.plant.HydroelasticContactInfo"><span class="pre">pydrake.multibody.plant.HydroelasticContactInfo</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.plant.ContactResults" title="pydrake.multibody.plant.ContactResults"><span class="pre">pydrake.multibody.plant.ContactResults</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.ContactResults.SelectHydroelastic" title="Permalink to this definition"></a></dt>
+<dd><p>Returns ContactResults with only HydroelasticContactInfo instances
+satisfying the selection criterion and with all PointPairContactInfo
+instances.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">selector</span></code>:</dt><dd><p>Boolean predicate that returns true to select which
+HydroelasticContactInfo.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It uses deep copy.</p>
+</div>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py template">
@@ -619,6 +636,23 @@ must be in the range [0, <code class="docutils literal notranslate"><span class=
 method aborts.</p>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.ContactResults_-AutoDiffXd-.SelectHydroelastic">
+<span id="pydrake.multibody.plant.ContactResults_[AutoDiffXd].SelectHydroelastic"></span><span class="sig-name descname"><span class="pre">SelectHydroelastic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.ContactResults_" title="pydrake.multibody.plant.ContactResults_"><span class="pre">pydrake.multibody.plant.ContactResults_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.multibody.plant.HydroelasticContactInfo_" title="pydrake.multibody.plant.HydroelasticContactInfo_"><span class="pre">pydrake.multibody.plant.HydroelasticContactInfo_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.plant.ContactResults_" title="pydrake.multibody.plant.ContactResults_"><span class="pre">pydrake.multibody.plant.ContactResults_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.ContactResults_-AutoDiffXd-.SelectHydroelastic" title="Permalink to this definition"></a></dt>
+<dd><p>Returns ContactResults with only HydroelasticContactInfo instances
+satisfying the selection criterion and with all PointPairContactInfo
+instances.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">selector</span></code>:</dt><dd><p>Boolean predicate that returns true to select which
+HydroelasticContactInfo.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It uses deep copy.</p>
+</div>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
@@ -667,6 +701,23 @@ have nulls.</p>
 <dd><p>Retrieves the ith PointPairContactInfo instance. The input index i
 must be in the range [0, <code class="docutils literal notranslate"><span class="pre">num_point_pair_contacts()</span></code> - 1] or this
 method aborts.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.ContactResults_-Expression-.SelectHydroelastic">
+<span id="pydrake.multibody.plant.ContactResults_[Expression].SelectHydroelastic"></span><span class="sig-name descname"><span class="pre">SelectHydroelastic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.ContactResults_" title="pydrake.multibody.plant.ContactResults_"><span class="pre">pydrake.multibody.plant.ContactResults_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.multibody.plant.HydroelasticContactInfo_" title="pydrake.multibody.plant.HydroelasticContactInfo_"><span class="pre">pydrake.multibody.plant.HydroelasticContactInfo_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.plant.ContactResults_" title="pydrake.multibody.plant.ContactResults_"><span class="pre">pydrake.multibody.plant.ContactResults_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.ContactResults_-Expression-.SelectHydroelastic" title="Permalink to this definition"></a></dt>
+<dd><p>Returns ContactResults with only HydroelasticContactInfo instances
+satisfying the selection criterion and with all PointPairContactInfo
+instances.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">selector</span></code>:</dt><dd><p>Boolean predicate that returns true to select which
+HydroelasticContactInfo.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It uses deep copy.</p>
+</div>
 </dd></dl>
 
 </dd></dl>
@@ -5235,6 +5286,24 @@ details.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.MakeQDotToVelocityMap">
+<span class="sig-name descname"><span class="pre">MakeQDotToVelocityMap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">scipy.sparse.csc_matrix</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.MakeQDotToVelocityMap" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the matrix <code class="docutils literal notranslate"><span class="pre">N⁺(q)</span></code>, which maps <code class="docutils literal notranslate"><span class="pre">v</span> <span class="pre">=</span> <span class="pre">N⁺(q)⋅q̇</span></code>, as
+described in MapQDotToVelocity(). Prefer calling MapQDotToVelocity()
+directly; this entry point is provided to support callers that require
+the explicit linear form (once q is given) of the relationship. This
+method is, in the worst case, O(n), where n is the number of joints.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context containing the state of the model.</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>MapVelocityToQDot()</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.MakeStateSelectorMatrix">
 <span class="sig-name descname"><span class="pre">MakeStateSelectorMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_to_joint_index_map</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JointIndex" title="pydrake.multibody.tree.JointIndex"><span class="pre">pydrake.multibody.tree.JointIndex</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.MakeStateSelectorMatrix" title="Permalink to this definition"></a></dt>
 <dd><p>This method allows users to map the state of <code class="docutils literal notranslate"><span class="pre">this</span></code> model, x, into a
@@ -5262,6 +5331,26 @@ velocities vₛ.</p>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.MakeVelocityToQDotMap">
+<span class="sig-name descname"><span class="pre">MakeVelocityToQDotMap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">scipy.sparse.csc_matrix</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.MakeVelocityToQDotMap" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the matrix <code class="docutils literal notranslate"><span class="pre">N(q)</span></code>, which maps <code class="docutils literal notranslate"><span class="pre">q̇</span> <span class="pre">=</span> <span class="pre">N(q)⋅v</span></code>, as described
+in MapVelocityToQDot(). Prefer calling MapVelocityToQDot() directly;
+this entry point is provided to support callers that require the
+explicit linear form (once q is given) of the relationship. Do not
+take the (pseudo-)inverse of <code class="docutils literal notranslate"><span class="pre">N(q)</span></code>; call MakeQDotToVelocityMap
+instead. This method is, in the worst case, O(n), where n is the
+number of joints.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context containing the state of the model.</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>MapVelocityToQDot()</p>
+</div>
 </dd></dl>
 
 <dl class="py method">

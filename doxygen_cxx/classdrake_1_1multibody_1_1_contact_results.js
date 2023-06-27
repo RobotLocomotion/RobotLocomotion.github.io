@@ -9,5 +9,6 @@ var classdrake_1_1multibody_1_1_contact_results =
     [ "operator=", "classdrake_1_1multibody_1_1_contact_results.html#a7f74cd31bd1bc9b0366f9f8cea2b9dd9", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_contact_results.html#a6876ed6779266e390e4e81587f7e4f56", null ],
     [ "plant", "classdrake_1_1multibody_1_1_contact_results.html#a208fb8b999d2a234339e911892f24369", null ],
-    [ "point_pair_contact_info", "classdrake_1_1multibody_1_1_contact_results.html#ae95eb61a1c41436ae224ea8bf8719259", null ]
+    [ "point_pair_contact_info", "classdrake_1_1multibody_1_1_contact_results.html#ae95eb61a1c41436ae224ea8bf8719259", null ],
+    [ "SelectHydroelastic", "classdrake_1_1multibody_1_1_contact_results.html#abb3d397ff78c83707d3fab3eba7186cf", null ]
 ];

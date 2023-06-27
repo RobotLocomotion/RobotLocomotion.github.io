@@ -53,6 +53,7 @@ var namespacedrake_1_1systems =
     [ "HermitianDenseOutput", "classdrake_1_1systems_1_1_hermitian_dense_output.html", "classdrake_1_1systems_1_1_hermitian_dense_output" ],
     [ "ImplicitEulerIntegrator", "classdrake_1_1systems_1_1_implicit_euler_integrator.html", "classdrake_1_1systems_1_1_implicit_euler_integrator" ],
     [ "ImplicitIntegrator", "classdrake_1_1systems_1_1_implicit_integrator.html", "classdrake_1_1systems_1_1_implicit_integrator" ],
+    [ "InitializationTestSystem", "classdrake_1_1systems_1_1_initialization_test_system.html", "classdrake_1_1systems_1_1_initialization_test_system" ],
     [ "InitializeParams", "structdrake_1_1systems_1_1_initialize_params.html", "structdrake_1_1systems_1_1_initialize_params" ],
     [ "InitialValueProblem", "classdrake_1_1systems_1_1_initial_value_problem.html", "classdrake_1_1systems_1_1_initial_value_problem" ],
     [ "InputPort", "classdrake_1_1systems_1_1_input_port.html", "classdrake_1_1systems_1_1_input_port" ],

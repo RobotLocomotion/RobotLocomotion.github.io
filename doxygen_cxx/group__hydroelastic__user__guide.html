@@ -167,7 +167,7 @@ Hydroelastic Contact User Guide</h1>
 <h2><a class="anchor" id="hug_introduction"></a>
 Introduction</h2>
 <p>There are many ways to model contact between rigid bodies. Drake uses an approach we call “compliant” contact. In compliant contact, nominally rigid bodies are allowed to penetrate slightly, as if the rigid body had a slightly deformable layer, but whose compression has no appreciable effect on the body’s mass properties. The contact force between two deformed bodies is distributed over a contact patch with an uneven pressure distribution over that patch. It is common in robotics to model that as a single point contact or a set of point contacts. Hydroelastic contact instead attempts to approximate the patch and pressure distribution to provide much richer and more realistic contact behavior. For a high-level overview, see <a href="https://medium.com/toyotaresearch/rethinking-contact-simulation-for-robot-manipulation-434a56b5ec88">this blog post</a>.</p>
-<p>Drake implements two models for resolving contact to forces: point contact and hydroelastic contact. See <a class="el" href="group__hydroelastic__user__guide.html#hydro_appendix_a">Appendix A: Compliant Contact Models</a> for a fuller discussion of the theory and practice of contact models. For notes on implementation status, see <a class="el" href="group__hydroelastic__user__guide.html#hydro_appendix_b">Appendix B: Current state of implementation</a>.</p>
+<p>Drake implements two models for resolving contact to forces: point contact and hydroelastic contact. See <a class="el" href="group__hydroelastic__user__guide.html#hydro_appendix_a">Appendix A: Compliant Contact Models</a> for a fuller discussion of the theory and practice of contact models. For notes on implementation status, see <a class="el" href="group__hydroelastic__user__guide.html#hydro_appendix_b">Appendix B: Current state of implementation</a>. Also see <a class="el" href="group__hydroelastic__user__guide.html#hydro_appendix_examples_and_tutorials">Appendix C: Examples and Tutorials</a>.</p>
 <h2><a class="anchor" id="hug_working_with_hydro"></a>
 Working with Hydroelastic Contact</h2>
 <p>It is relatively simple to enable a simulation to use hydroelastic contact. However, using it effectively requires some experience and consideration. This section details the mechanisms and choices involved in enabling hydroelastic contact and the next section helps guide you through some common tips, tricks, and traps.</p>
@@ -175,6 +175,18 @@ Working with Hydroelastic Contact</h2>
 <li>Configuring the system (<a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">drake::multibody::MultibodyPlant</a>) to use hydroelastic contact.</li>
 <li>Applying appropriate properties to the collision geometries to enable hydroelastic contact calculations.</li>
 </ul>
+<p>Collision geometries for hydroelastic contact can be either "compliant-hydroelastic" with tetrahedral meshes describing an internal pressure field or "rigid-hydroelastic" with triangle surface meshes that are regarded as infinitely stiff. The figure below shows examples of a compliant hydroelastic box and a rigid hydroelastic box.</p>
+<div class="image">
+<img src="HydroelasticTutorialCompliantRigidOutsideInside800x669.jpg" alt="HydroelasticTutorialCompliantRigidOutsideInside800x669.jpg"/>
+</div>
+<p>The figure below shows a contact surface between a compliant-hydroelastic cylinder and a compliant-hydroelastic sphere. The contact surface is internal to both solids and is defined as the surface where the two pressure fields are equal.</p>
+<div class="image">
+<img src="HydroelasticTutorialContactSurfaceCompliantCompliant.png" alt="HydroelasticTutorialContactSurfaceCompliantCompliant.png"/>
+</div>
+<p>Pictured below, a rigid-hydroelastic cylindrical spatula handle is grasped by two hydroelastic-compliant ellipsoidal bubble grippers. The contact surface between the spatula handle's rigid-hydroelastic geometry and either gripper is on the <b>surface</b> of the rigid-hydroelastic geometry.</p>
+<div class="image">
+<img src="HydroelasticTutorialContactSurfaceRigidCompliantBubble.png" alt="HydroelasticTutorialContactSurfaceRigidCompliantBubble.png"/>
+</div>
 <h3><a class="anchor" id="hug_enabling"></a>
 Enabling Hydroelastic contact in your simulation</h3>
 <p>Because <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a> is responsible for computing the dynamics of the system (and the contact forces are part of that), the ability to enable/disable the hydroelastic contact model is part of <code>MultibodyPlant</code>’s API: <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ad253ab790ff8e142080cedd210e982da" title="Sets the contact model to be used by this MultibodyPlant, see ContactModel for available options.">drake::multibody::MultibodyPlant::set_contact_model()</a>.</p>
@@ -482,7 +494,20 @@ What can’t you do with hydroelastic contact?</h2>
 <h2><a class="anchor" id="hug_dissipation_and_solver"></a>
 Current dissipation models</h2>
 <ul>
-<li>SAP does not support Hunt-Crossley dissipation at this time for both point and hydroelastic contact. See the documentation for that in the <a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1multibody_1_1_multibody_plant.html#:~:text=%E2%81%B4%20We%20allow%20to,will%20be%20ignored.">MultibodyPlant documentation.</a> We allow the user to specify both hunt_crossley_dissipation (TAMSI and continuous mode parameter) and relaxation_time (SAP specific parameter) on the model, but the parameter may be ignored depending on your plant configuration.</li>
+<li>SAP does not support Hunt-Crossley dissipation at this time for both point and hydroelastic contact (issue <a href="https://github.com/RobotLocomotion/drake/issues/19320">19320</a>). See the documentation for that in the <a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1multibody_1_1_multibody_plant.html#:~:text=%E2%81%B4%20We%20allow%20to,will%20be%20ignored.">MultibodyPlant documentation.</a> We allow the user to specify both hunt_crossley_dissipation (TAMSI and continuous mode parameter) and relaxation_time (SAP specific parameter) on the model, but the parameter may be ignored depending on your plant configuration.</li>
+</ul>
+<h1><a class="anchor" id="hydro_appendix_examples_and_tutorials"></a>
+Appendix C: Examples and Tutorials</h1>
+<ul>
+<li>Example <a href="https://github.com/RobotLocomotion/drake/tree/master/examples/hydroelastic/ball_plate">Contact between a ball, dinner plate, and floor in C++</a> uses the hydroelastic contact model for a convex ball and non-convex dinner plate.</li>
+<li>Example <a href="https://github.com/RobotLocomotion/drake/tree/master/examples/hydroelastic/python_ball_paddle">Contact between a ball and paddle (box) in Python</a> uses the hydroelastic contact model for a ball on stationary paddle (box).</li>
+<li>Example <a href="https://github.com/RobotLocomotion/drake/tree/master/examples/hydroelastic/python_nonconvex_mesh">Contact between a bell pepper, dinner bowl, and floor in Python</a> uses the hydroelastic contact model for a non-convex bell pepper in a non-convex dinner bowl.</li>
+<li>Example <a href="https://github.com/RobotLocomotion/drake/tree/master/examples/hydroelastic/spatula_slip_control">Slip control for a spatula handle between finger grippers in C++</a> uses the hydroelastic contact model for a spatula handle between finger grippers.</li>
+<li><p class="startli">Tutorial <a href="https://github.com/RobotLocomotion/drake/blob/master/tutorials/hydroelastic_contact_basics.ipynb">Hydroelastic Contact Basics with Jupyter Python notebook</a> shows how to simulate hydroelastic contact for a compliant block dropped on a rigid rectangular plate. The below-left picture shows one frame of the block's contact with the contact force as a red arrow and the contact torque as a blue arrow. The below-right picture zooms into the hydroelastic contact surface showing pressure distribution.</p>
+<div class="image">
+<img src="HydroelasticTutorialImage600x388.jpg" alt="HydroelasticTutorialImage600x388.jpg"/>
+</div>
+</li>
 </ul>
 <h1><a class="anchor" id="hydro_references"></a>
 Sources referenced within this documentation</h1>

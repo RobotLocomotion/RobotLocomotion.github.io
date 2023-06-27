@@ -537,10 +537,14 @@ published value of the plant Context.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">diagram</span></code> must be a top-level (i.e., “root”) diagram.</p>
 </dd>
-<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">diagram</span></code> must contain this JointSliders system.</p>
-</dd>
 <dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">diagram</span></code> must contain the <code class="docutils literal notranslate"><span class="pre">plant</span></code> that was passed into this
 JointSliders system’s constructor.</p>
+</dd>
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">diagram</span></code> must contain this JointSliders system, however the
+output of these sliders need not be connected (even indirectly) to
+any <code class="docutils literal notranslate"><span class="pre">plant</span></code> input port. The positions of the <code class="docutils literal notranslate"><span class="pre">plant</span></code> will be
+updated directly using a call to <code class="docutils literal notranslate"><span class="pre">plant.SetPositions(...)</span></code> when
+the slider values change.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -668,10 +672,14 @@ published value of the plant Context.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">diagram</span></code> must be a top-level (i.e., “root”) diagram.</p>
 </dd>
-<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">diagram</span></code> must contain this JointSliders system.</p>
-</dd>
 <dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">diagram</span></code> must contain the <code class="docutils literal notranslate"><span class="pre">plant</span></code> that was passed into this
 JointSliders system’s constructor.</p>
+</dd>
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">diagram</span></code> must contain this JointSliders system, however the
+output of these sliders need not be connected (even indirectly) to
+any <code class="docutils literal notranslate"><span class="pre">plant</span></code> input port. The positions of the <code class="docutils literal notranslate"><span class="pre">plant</span></code> will be
+updated directly using a call to <code class="docutils literal notranslate"><span class="pre">plant.SetPositions(...)</span></code> when
+the slider values change.</p>
 </dd>
 </dl>
 </dd></dl>

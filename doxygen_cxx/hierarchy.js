@@ -1013,6 +1013,7 @@ var hierarchy =
             [ "QuadraticScalarSystem", "classdrake_1_1systems_1_1analysis__test_1_1_quadratic_scalar_system.html", null ],
             [ "QuarticScalarSystem", "classdrake_1_1systems_1_1analysis__test_1_1_quartic_scalar_system.html", null ],
             [ "QuinticScalarSystem", "classdrake_1_1systems_1_1analysis__test_1_1_quintic_scalar_system.html", null ],
+            [ "InitializationTestSystem", "classdrake_1_1systems_1_1_initialization_test_system.html", null ],
             [ "LcmInterfaceSystem", "classdrake_1_1systems_1_1lcm_1_1_lcm_interface_system.html", null ],
             [ "LcmLogPlaybackSystem", "classdrake_1_1systems_1_1lcm_1_1_lcm_log_playback_system.html", null ],
             [ "LcmPublisherSystem", "classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html", null ],

@@ -207,6 +207,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a208fb8b999d2a234339e911892f24369"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_contact_results.html#a208fb8b999d2a234339e911892f24369">plant</a> () const</td></tr>
 <tr class="memdesc:a208fb8b999d2a234339e911892f24369"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the plant that produced these contact results.  <a href="#a208fb8b999d2a234339e911892f24369">More...</a><br /></td></tr>
 <tr class="separator:a208fb8b999d2a234339e911892f24369"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb3d397ff78c83707d3fab3eba7186cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_contact_results.html">ContactResults</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_contact_results.html#abb3d397ff78c83707d3fab3eba7186cf">SelectHydroelastic</a> (std::function&lt; bool(const <a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html">HydroelasticContactInfo</a>&lt; T &gt; &amp;)&gt; selector) const</td></tr>
+<tr class="memdesc:abb3d397ff78c83707d3fab3eba7186cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <a class="el" href="classdrake_1_1multibody_1_1_contact_results.html" title="A container class storing the contact results information for each contact pair for a given state of ...">ContactResults</a> with only <a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html" title="A class containing information regarding contact and contact response between two geometries attached...">HydroelasticContactInfo</a> instances satisfying the selection criterion and with all <a class="el" href="classdrake_1_1multibody_1_1_point_pair_contact_info.html" title="A class containing information regarding contact response between two bodies including:">PointPairContactInfo</a> instances.  <a href="#abb3d397ff78c83707d3fab3eba7186cf">More...</a><br /></td></tr>
+<tr class="separator:abb3d397ff78c83707d3fab3eba7186cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a1a0028ecb11611ebcbe54f4df2c0fcc5"></a>
@@ -412,6 +415,33 @@ Public Member Functions</h2></td></tr>
 
 <p>Retrieves the ith <a class="el" href="classdrake_1_1multibody_1_1_point_pair_contact_info.html" title="A class containing information regarding contact response between two bodies including:">PointPairContactInfo</a> instance. </p>
 <p>The input index i must be in the range [0, <code><a class="el" href="classdrake_1_1multibody_1_1_contact_results.html#ade01b0d7de50d59e8c0739eed77d1979" title="Returns the number of point pair contacts.">num_point_pair_contacts()</a></code> - 1] or this method aborts. </p>
+
+</div>
+</div>
+<a id="abb3d397ff78c83707d3fab3eba7186cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb3d397ff78c83707d3fab3eba7186cf">&#9670;&nbsp;</a></span>SelectHydroelastic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_contact_results.html">ContactResults</a>&lt;T&gt; SelectHydroelastic </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; bool(const <a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html">HydroelasticContactInfo</a>&lt; T &gt; &amp;)&gt;&#160;</td>
+          <td class="paramname"><em>selector</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns <a class="el" href="classdrake_1_1multibody_1_1_contact_results.html" title="A container class storing the contact results information for each contact pair for a given state of ...">ContactResults</a> with only <a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html" title="A class containing information regarding contact and contact response between two geometries attached...">HydroelasticContactInfo</a> instances satisfying the selection criterion and with all <a class="el" href="classdrake_1_1multibody_1_1_point_pair_contact_info.html" title="A class containing information regarding contact response between two bodies including:">PointPairContactInfo</a> instances. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">selector</td><td>Boolean predicate that returns true to select which <a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html" title="A class containing information regarding contact and contact response between two geometries attached...">HydroelasticContactInfo</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>It uses deep copy. </dd></dl>
 
 </div>
 </div>
