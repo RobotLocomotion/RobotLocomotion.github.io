@@ -1,5 +1,7 @@
 var NAVTREEINDEX48 =
 {
+"group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6":[1,1,1,11],
+"group__geometry__roles.html":[1,5,1],
 "group__hash__append.html":[1,6,2,0],
 "group__hydroelastic__user__guide.html":[1,3,1],
 "group__identification.html":[1,4,5],
@@ -213,13 +215,14 @@ var NAVTREEINDEX48 =
 "internal__geometry__names_8h.html":[4,0,0,8,10,20],
 "internal__http__service_8h.html":[4,0,0,4,6,1],
 "internal__http__service__curl_8h.html":[4,0,0,4,6,2],
+"internal__merge__gltf_8h.html":[4,0,0,4,6,3],
 "internal__opengl__context_8h.html":[4,0,0,4,5,2],
 "internal__opengl__geometry_8h.html":[4,0,0,4,5,3],
 "internal__opengl__includes_8h.html":[4,0,0,4,5,4],
 "internal__opengl__includes_8h.html#a120fb070bddb21f0bd899f50252c4cb5":[4,0,0,4,5,4,0],
-"internal__render__client_8h.html":[4,0,0,4,6,3],
+"internal__render__client_8h.html":[4,0,0,4,6,4],
 "internal__render__engine__gl_8h.html":[4,0,0,4,5,5],
-"internal__render__engine__gltf__client_8h.html":[4,0,0,4,6,4],
+"internal__render__engine__gltf__client_8h.html":[4,0,0,4,6,5],
 "internal__render__engine__vtk_8h.html":[4,0,0,4,7,1],
 "internal__render__engine__vtk__base_8h.html":[4,0,0,4,7,2],
 "internal__shader__program_8h.html":[4,0,0,4,5,6],
@@ -246,8 +249,5 @@ var NAVTREEINDEX48 =
 "is__cloneable_8h.html#a158f68939b94f6c2c5ea353d652919da":[4,0,0,1,41,0],
 "is__dynamic__castable_8h.html":[4,0,0,1,4,6],
 "is__dynamic__castable_8h.html#a120160cb3dd89c5c7ae2543a3de457e8":[4,0,0,1,4,6,1],
-"is__dynamic__castable_8h.html#ab9decd0aba05654d37c4d7f3d82655c6":[4,0,0,1,4,6,0],
-"is__dynamic__castable_8h.html#ada20909a7ef482cf1fecbe11bbcf67d4":[4,0,0,1,4,6,2],
-"is__less__than__comparable_8h.html":[4,0,0,1,42],
-"is__memcpy__movable_8h.html":[4,0,0,1,4,7]
+"is__dynamic__castable_8h.html#ab9decd0aba05654d37c4d7f3d82655c6":[4,0,0,1,4,6,0]
 };

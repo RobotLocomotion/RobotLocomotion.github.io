@@ -1,5 +1,7 @@
 var NAVTREEINDEX44 =
 {
+"diagram__discrete__values_8h.html":[4,0,0,12,3,15],
+"diagram__output__port_8h.html":[4,0,0,12,3,16],
 "diagram__state_8h.html":[4,0,0,12,3,17],
 "differentiable__norm_8h.html":[4,0,0,7,10],
 "differentiable__norm_8h.html#ae918eb0a5749b337a92058e92bd039c9":[4,0,0,7,10,0],
@@ -212,8 +214,8 @@ var NAVTREEINDEX44 =
 "eigen__printer_8h.html":[4,0,0,1,4,2],
 "eigen__pybind_8h.html":[4,0,0,0,0,0,5],
 "eigen__pybind_8h.html#a0d7582877591057ceea633df19d910fa":[4,0,0,0,0,0,5,2],
-"eigen__pybind_8h.html#ae8c72466dd0066fa6ff539d65eaf1a01":[4,0,0,0,0,0,5,0],
-"eigen__pybind_8h.html#af50a9a915770def7cbf4f78aa68235dc":[4,0,0,0,0,0,5,1],
+"eigen__pybind_8h.html#a875e25ecdc84790945435e9538a6ef60":[4,0,0,0,0,0,5,0],
+"eigen__pybind_8h.html#ab9047f00f873c1cd6f00d0665365ecf5":[4,0,0,0,0,0,5,1],
 "eigen__pybind_8h.html#af5f81d7315477aaa1694d9aa02a1346b":[4,0,0,0,0,0,5,3],
 "eigen__sparse__triplet_8h.html":[4,0,0,7,13],
 "eigen__sparse__triplet_8h.html#a731362436a359883cbac2c59abf95168":[4,0,0,7,13,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX44 =
 "eigen__types_8h.html#ad5de4c858064cf0a457d6a18381e837b":[4,0,0,1,29,27],
 "eigen__types_8h.html#adfbacdba0566fe8958cfafd659b4373f":[4,0,0,1,29,37],
 "eigen__types_8h.html#ae2b0be18a912f9cacfec6d0a0a6d873c":[4,0,0,1,29,16],
-"eigen__types_8h.html#ae74155a11dfcdaad0adc0349f0956148":[4,0,0,1,29,12],
-"eigen__types_8h.html#aee4ae0d841ea1629551bf77fd5d9ec9e":[4,0,0,1,29,23],
-"eigen__types_8h.html#af13883859324817e6310d04a6d2fe206":[4,0,0,1,29,9]
+"eigen__types_8h.html#ae74155a11dfcdaad0adc0349f0956148":[4,0,0,1,29,12]
 };

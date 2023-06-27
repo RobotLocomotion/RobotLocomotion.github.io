@@ -1,5 +1,7 @@
 var NAVTREEINDEX22 =
 {
+"classdrake_1_1solvers_1_1_constraint.html#a8103e61bbe01093fd3f57411e09135f8":[1,1,0,23,4],
+"classdrake_1_1solvers_1_1_constraint.html#a990aa60edc55bb53a68f7153da755d30":[1,1,0,23,2],
 "classdrake_1_1solvers_1_1_constraint.html#ab1fd11751b157b98e9f0f0527cf95511":[1,1,0,23,6],
 "classdrake_1_1solvers_1_1_constraint.html#ac7c521a6b409f26ad65848a980286992":[1,1,0,23,9],
 "classdrake_1_1solvers_1_1_constraint.html#ad451ccfb5afdefb0827a7588c9f88c3d":[1,1,0,23,7],
@@ -247,7 +249,5 @@ var NAVTREEINDEX22 =
 "classdrake_1_1solvers_1_1_linear_cost.html#a4e3c56bcd664d21346c090bdcd126c67":[1,1,0,38,1],
 "classdrake_1_1solvers_1_1_linear_cost.html#a5eea9354674efc1c07bf537319628ead":[1,1,0,38,9],
 "classdrake_1_1solvers_1_1_linear_cost.html#a863f7df9d3ee10378794b4c6842a4377":[1,1,0,38,7],
-"classdrake_1_1solvers_1_1_linear_cost.html#a93525196254bc68d569c78064eadb500":[1,1,0,38,0],
-"classdrake_1_1solvers_1_1_linear_cost.html#a96660bcd5033480cd109da1361670f26":[1,1,0,38,11],
-"classdrake_1_1solvers_1_1_linear_cost.html#aa1b2d558d5487acf11ff7efb46fd76e8":[1,1,0,38,10]
+"classdrake_1_1solvers_1_1_linear_cost.html#a93525196254bc68d569c78064eadb500":[1,1,0,38,0]
 };

@@ -495,6 +495,45 @@ containing System.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.CacheEntry.description">
+<span class="sig-name descname"><span class="pre">description</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.CacheEntry" title="pydrake.systems.framework.CacheEntry"><span class="pre">pydrake.systems.framework.CacheEntry</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.systems.framework.CacheEntry.description" title="Permalink to this definition"></a></dt>
+<dd><p>Return the human-readable description for this CacheEntry.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.CacheEntry.disable_caching">
+<span class="sig-name descname"><span class="pre">disable_caching</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.CacheEntry" title="pydrake.systems.framework.CacheEntry"><span class="pre">pydrake.systems.framework.CacheEntry</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.ContextBase" title="pydrake.systems.framework.ContextBase"><span class="pre">pydrake.systems.framework.ContextBase</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.CacheEntry.disable_caching" title="Permalink to this definition"></a></dt>
+<dd><p>(Debugging) Disables caching for this cache entry in the given
+<code class="docutils literal notranslate"><span class="pre">context</span></code>. Eval() will recompute the cached value every time it is
+invoked, regardless of the state of the out_of_date flag. That should
+have no effect on any computed results, other than speed. See class
+documentation for ideas as to what might be wrong if you see a change.
+Note that the <code class="docutils literal notranslate"><span class="pre">context</span></code> is <code class="docutils literal notranslate"><span class="pre">const</span></code> here; cache entry values are
+mutable.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.CacheEntry.disable_caching_by_default">
+<span class="sig-name descname"><span class="pre">disable_caching_by_default</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.CacheEntry" title="pydrake.systems.framework.CacheEntry"><span class="pre">pydrake.systems.framework.CacheEntry</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.CacheEntry.disable_caching_by_default" title="Permalink to this definition"></a></dt>
+<dd><p>(Debugging) Marks this cache entry so that the corresponding
+CacheEntryValue object in any allocated Context is created with its
+<code class="docutils literal notranslate"><span class="pre">disabled</span></code> flag initially set. This can be useful for debugging when
+you have observed a difference between cached and non-cached behavior
+that can’t be diagnosed with the runtime disable_caching() method.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>disable_caching()</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.CacheEntry.enable_caching">
+<span class="sig-name descname"><span class="pre">enable_caching</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.CacheEntry" title="pydrake.systems.framework.CacheEntry"><span class="pre">pydrake.systems.framework.CacheEntry</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.ContextBase" title="pydrake.systems.framework.ContextBase"><span class="pre">pydrake.systems.framework.ContextBase</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.CacheEntry.enable_caching" title="Permalink to this definition"></a></dt>
+<dd><p>(Debugging) Enables caching for this cache entry in the given
+<code class="docutils literal notranslate"><span class="pre">context</span></code> if it was previously disabled.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.CacheEntry.Eval">
 <span class="sig-name descname"><span class="pre">Eval</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.CacheEntry" title="pydrake.systems.framework.CacheEntry"><span class="pre">pydrake.systems.framework.CacheEntry</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.ContextBase" title="pydrake.systems.framework.ContextBase"><span class="pre">pydrake.systems.framework.ContextBase</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#pydrake.systems.framework.CacheEntry.Eval" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a reference to the up-to-date value of this cache entry
@@ -542,6 +581,51 @@ that corresponds to this CacheEntry, from the supplied Context. Note
 that <code class="docutils literal notranslate"><span class="pre">context</span></code> is const; cache values are mutable. Don’t call this
 method unless you know what you’re doing. This method is constant time
 and <em>very</em> fast in all circumstances.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.CacheEntry.has_default_prerequisites">
+<span class="sig-name descname"><span class="pre">has_default_prerequisites</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.CacheEntry" title="pydrake.systems.framework.CacheEntry"><span class="pre">pydrake.systems.framework.CacheEntry</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.systems.framework.CacheEntry.has_default_prerequisites" title="Permalink to this definition"></a></dt>
+<dd><p>(Advanced) Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if this cache entry was created without
+specifying any prerequisites. This can be useful in determining
+whether the apparent dependencies should be believed, or whether they
+may just be due to some user’s ignorance.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Currently we can’t distinguish between “no prerequisites given”
+(in which case we default to <code class="docutils literal notranslate"><span class="pre">all_sources_ticket()</span></code>) and
+“prerequisite specified as <code class="docutils literal notranslate"><span class="pre">all_sources_ticket()`&quot;.</span> <span class="pre">Either</span> <span class="pre">of</span>
+<span class="pre">those</span> <span class="pre">cases</span> <span class="pre">makes</span> <span class="pre">this</span> <span class="pre">method</span> <span class="pre">return</span> <span class="pre">`true</span></code> now, but we intend to
+change so that <em>explicit</em> specification of
+<code class="docutils literal notranslate"><span class="pre">all_sources_ticket()</span></code> will be considered non-default. So don’t
+depend on the current behavior.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.CacheEntry.is_cache_entry_disabled">
+<span class="sig-name descname"><span class="pre">is_cache_entry_disabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.CacheEntry" title="pydrake.systems.framework.CacheEntry"><span class="pre">pydrake.systems.framework.CacheEntry</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.ContextBase" title="pydrake.systems.framework.ContextBase"><span class="pre">pydrake.systems.framework.ContextBase</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.systems.framework.CacheEntry.is_cache_entry_disabled" title="Permalink to this definition"></a></dt>
+<dd><p>(Debugging) Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if caching has been disabled for this
+cache entry in the given <code class="docutils literal notranslate"><span class="pre">context</span></code>. That means Eval() will
+recalculate even if the entry is marked up to date.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.CacheEntry.is_disabled_by_default">
+<span class="sig-name descname"><span class="pre">is_disabled_by_default</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.CacheEntry" title="pydrake.systems.framework.CacheEntry"><span class="pre">pydrake.systems.framework.CacheEntry</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.systems.framework.CacheEntry.is_disabled_by_default" title="Permalink to this definition"></a></dt>
+<dd><p>(Debugging) Returns the current value of this flag. It is <code class="docutils literal notranslate"><span class="pre">False</span></code>
+unless a call to <code class="docutils literal notranslate"><span class="pre">disable_caching_by_default()</span></code> has previously been
+made.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.CacheEntry.is_out_of_date">
+<span class="sig-name descname"><span class="pre">is_out_of_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.CacheEntry" title="pydrake.systems.framework.CacheEntry"><span class="pre">pydrake.systems.framework.CacheEntry</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.ContextBase" title="pydrake.systems.framework.ContextBase"><span class="pre">pydrake.systems.framework.ContextBase</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.systems.framework.CacheEntry.is_out_of_date" title="Permalink to this definition"></a></dt>
+<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if the current value of this cache entry is out of
+date with respect to its prerequisites. If this returns <code class="docutils literal notranslate"><span class="pre">False</span></code> then
+the Eval() method will not perform any computation when invoked,
+unless caching has been disabled for this entry. If this returns
+<code class="docutils literal notranslate"><span class="pre">True</span></code> the GetKnownUpToDate() methods will fail if invoked.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -3453,7 +3537,7 @@ returned by get_name().</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.Diagram.GetSystems">
-<span class="sig-name descname"><span class="pre">GetSystems</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Diagram" title="pydrake.systems.framework.Diagram"><span class="pre">pydrake.systems.framework.Diagram</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#pydrake.systems.framework.Diagram.GetSystems" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">GetSystems</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Diagram" title="pydrake.systems.framework.Diagram"><span class="pre">pydrake.systems.framework.Diagram</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.systems.framework.System" title="pydrake.systems.framework.System"><span class="pre">pydrake.systems.framework.System</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.framework.Diagram.GetSystems" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the list of contained Systems.</p>
 </dd></dl>
 
@@ -3546,7 +3630,7 @@ returned by get_name().</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.Diagram_-AutoDiffXd-.GetSystems">
-<span id="pydrake.systems.framework.Diagram_[AutoDiffXd].GetSystems"></span><span class="sig-name descname"><span class="pre">GetSystems</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Diagram_" title="pydrake.systems.framework.Diagram_"><span class="pre">pydrake.systems.framework.Diagram_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#pydrake.systems.framework.Diagram_-AutoDiffXd-.GetSystems" title="Permalink to this definition"></a></dt>
+<span id="pydrake.systems.framework.Diagram_[AutoDiffXd].GetSystems"></span><span class="sig-name descname"><span class="pre">GetSystems</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Diagram_" title="pydrake.systems.framework.Diagram_"><span class="pre">pydrake.systems.framework.Diagram_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.framework.Diagram_-AutoDiffXd-.GetSystems" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the list of contained Systems.</p>
 </dd></dl>
 
@@ -3633,7 +3717,7 @@ returned by get_name().</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.Diagram_-Expression-.GetSystems">
-<span id="pydrake.systems.framework.Diagram_[Expression].GetSystems"></span><span class="sig-name descname"><span class="pre">GetSystems</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Diagram_" title="pydrake.systems.framework.Diagram_"><span class="pre">pydrake.systems.framework.Diagram_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#pydrake.systems.framework.Diagram_-Expression-.GetSystems" title="Permalink to this definition"></a></dt>
+<span id="pydrake.systems.framework.Diagram_[Expression].GetSystems"></span><span class="sig-name descname"><span class="pre">GetSystems</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Diagram_" title="pydrake.systems.framework.Diagram_"><span class="pre">pydrake.systems.framework.Diagram_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.framework.Diagram_-Expression-.GetSystems" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the list of contained Systems.</p>
 </dd></dl>
 
@@ -3911,7 +3995,7 @@ returned by get_name().</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.DiagramBuilder.GetMutableSystems">
-<span class="sig-name descname"><span class="pre">GetMutableSystems</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.DiagramBuilder" title="pydrake.systems.framework.DiagramBuilder"><span class="pre">pydrake.systems.framework.DiagramBuilder</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder.GetMutableSystems" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">GetMutableSystems</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.DiagramBuilder" title="pydrake.systems.framework.DiagramBuilder"><span class="pre">pydrake.systems.framework.DiagramBuilder</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List[drake::systems::System&lt;double&gt;]</span></span></span><a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder.GetMutableSystems" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the list of contained Systems.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -3949,7 +4033,7 @@ returned by get_name().</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.DiagramBuilder.GetSystems">
-<span class="sig-name descname"><span class="pre">GetSystems</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.DiagramBuilder" title="pydrake.systems.framework.DiagramBuilder"><span class="pre">pydrake.systems.framework.DiagramBuilder</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder.GetSystems" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">GetSystems</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.DiagramBuilder" title="pydrake.systems.framework.DiagramBuilder"><span class="pre">pydrake.systems.framework.DiagramBuilder</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List[drake::systems::System&lt;double&gt;]</span></span></span><a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder.GetSystems" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the list of contained Systems.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -4261,7 +4345,7 @@ returned by get_name().</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.DiagramBuilder_-AutoDiffXd-.GetMutableSystems">
-<span id="pydrake.systems.framework.DiagramBuilder_[AutoDiffXd].GetMutableSystems"></span><span class="sig-name descname"><span class="pre">GetMutableSystems</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.DiagramBuilder_" title="pydrake.systems.framework.DiagramBuilder_"><span class="pre">pydrake.systems.framework.DiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_-AutoDiffXd-.GetMutableSystems" title="Permalink to this definition"></a></dt>
+<span id="pydrake.systems.framework.DiagramBuilder_[AutoDiffXd].GetMutableSystems"></span><span class="sig-name descname"><span class="pre">GetMutableSystems</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.DiagramBuilder_" title="pydrake.systems.framework.DiagramBuilder_"><span class="pre">pydrake.systems.framework.DiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List[drake::systems::System&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double,</span> <span class="pre">-1,</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">-1,</span> <span class="pre">1&gt;</span> <span class="pre">&gt;</span> <span class="pre">&gt;]</span></span></span><a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_-AutoDiffXd-.GetMutableSystems" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the list of contained Systems.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -4299,7 +4383,7 @@ returned by get_name().</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.DiagramBuilder_-AutoDiffXd-.GetSystems">
-<span id="pydrake.systems.framework.DiagramBuilder_[AutoDiffXd].GetSystems"></span><span class="sig-name descname"><span class="pre">GetSystems</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.DiagramBuilder_" title="pydrake.systems.framework.DiagramBuilder_"><span class="pre">pydrake.systems.framework.DiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_-AutoDiffXd-.GetSystems" title="Permalink to this definition"></a></dt>
+<span id="pydrake.systems.framework.DiagramBuilder_[AutoDiffXd].GetSystems"></span><span class="sig-name descname"><span class="pre">GetSystems</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.DiagramBuilder_" title="pydrake.systems.framework.DiagramBuilder_"><span class="pre">pydrake.systems.framework.DiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List[drake::systems::System&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double,</span> <span class="pre">-1,</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">-1,</span> <span class="pre">1&gt;</span> <span class="pre">&gt;</span> <span class="pre">&gt;]</span></span></span><a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_-AutoDiffXd-.GetSystems" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the list of contained Systems.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -4605,7 +4689,7 @@ returned by get_name().</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.DiagramBuilder_-Expression-.GetMutableSystems">
-<span id="pydrake.systems.framework.DiagramBuilder_[Expression].GetMutableSystems"></span><span class="sig-name descname"><span class="pre">GetMutableSystems</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.DiagramBuilder_" title="pydrake.systems.framework.DiagramBuilder_"><span class="pre">pydrake.systems.framework.DiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_-Expression-.GetMutableSystems" title="Permalink to this definition"></a></dt>
+<span id="pydrake.systems.framework.DiagramBuilder_[Expression].GetMutableSystems"></span><span class="sig-name descname"><span class="pre">GetMutableSystems</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.DiagramBuilder_" title="pydrake.systems.framework.DiagramBuilder_"><span class="pre">pydrake.systems.framework.DiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List[drake::systems::System&lt;drake::symbolic::Expression&gt;]</span></span></span><a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_-Expression-.GetMutableSystems" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the list of contained Systems.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -4643,7 +4727,7 @@ returned by get_name().</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.DiagramBuilder_-Expression-.GetSystems">
-<span id="pydrake.systems.framework.DiagramBuilder_[Expression].GetSystems"></span><span class="sig-name descname"><span class="pre">GetSystems</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.DiagramBuilder_" title="pydrake.systems.framework.DiagramBuilder_"><span class="pre">pydrake.systems.framework.DiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_-Expression-.GetSystems" title="Permalink to this definition"></a></dt>
+<span id="pydrake.systems.framework.DiagramBuilder_[Expression].GetSystems"></span><span class="sig-name descname"><span class="pre">GetSystems</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.DiagramBuilder_" title="pydrake.systems.framework.DiagramBuilder_"><span class="pre">pydrake.systems.framework.DiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List[drake::systems::System&lt;drake::symbolic::Expression&gt;]</span></span></span><a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_-Expression-.GetSystems" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the list of contained Systems.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -6212,6 +6296,12 @@ for the list of instantiations.</p>
 <dd></dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.LeafOutputPort.cache_entry">
+<span class="sig-name descname"><span class="pre">cache_entry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.LeafOutputPort" title="pydrake.systems.framework.LeafOutputPort"><span class="pre">pydrake.systems.framework.LeafOutputPort</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.framework.CacheEntry" title="pydrake.systems.framework.CacheEntry"><span class="pre">pydrake.systems.framework.CacheEntry</span></a></span></span><a class="headerlink" href="#pydrake.systems.framework.LeafOutputPort.cache_entry" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the cache entry associated with this output port.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.LeafOutputPort.disable_caching_by_default">
 <span class="sig-name descname"><span class="pre">disable_caching_by_default</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.LeafOutputPort" title="pydrake.systems.framework.LeafOutputPort"><span class="pre">pydrake.systems.framework.LeafOutputPort</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.LeafOutputPort.disable_caching_by_default" title="Permalink to this definition"></a></dt>
 <dd><p>(Debugging) Specifies that caching should be disabled for this output
@@ -6246,6 +6336,12 @@ LeafSystem.</p>
 <dd></dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.LeafOutputPort_-AutoDiffXd-.cache_entry">
+<span id="pydrake.systems.framework.LeafOutputPort_[AutoDiffXd].cache_entry"></span><span class="sig-name descname"><span class="pre">cache_entry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.LeafOutputPort_" title="pydrake.systems.framework.LeafOutputPort_"><span class="pre">pydrake.systems.framework.LeafOutputPort_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.framework.CacheEntry" title="pydrake.systems.framework.CacheEntry"><span class="pre">pydrake.systems.framework.CacheEntry</span></a></span></span><a class="headerlink" href="#pydrake.systems.framework.LeafOutputPort_-AutoDiffXd-.cache_entry" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the cache entry associated with this output port.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.LeafOutputPort_-AutoDiffXd-.disable_caching_by_default">
 <span id="pydrake.systems.framework.LeafOutputPort_[AutoDiffXd].disable_caching_by_default"></span><span class="sig-name descname"><span class="pre">disable_caching_by_default</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.LeafOutputPort_" title="pydrake.systems.framework.LeafOutputPort_"><span class="pre">pydrake.systems.framework.LeafOutputPort_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.LeafOutputPort_-AutoDiffXd-.disable_caching_by_default" title="Permalink to this definition"></a></dt>
 <dd><p>(Debugging) Specifies that caching should be disabled for this output
@@ -6272,6 +6368,12 @@ LeafSystem.</p>
 <dt class="sig sig-object py" id="pydrake.systems.framework.LeafOutputPort_-Expression-.__init__">
 <span id="pydrake.systems.framework.LeafOutputPort_[Expression].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.LeafOutputPort_-Expression-.__init__" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.LeafOutputPort_-Expression-.cache_entry">
+<span id="pydrake.systems.framework.LeafOutputPort_[Expression].cache_entry"></span><span class="sig-name descname"><span class="pre">cache_entry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.LeafOutputPort_" title="pydrake.systems.framework.LeafOutputPort_"><span class="pre">pydrake.systems.framework.LeafOutputPort_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.framework.CacheEntry" title="pydrake.systems.framework.CacheEntry"><span class="pre">pydrake.systems.framework.CacheEntry</span></a></span></span><a class="headerlink" href="#pydrake.systems.framework.LeafOutputPort_-Expression-.cache_entry" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the cache entry associated with this output port.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.LeafOutputPort_-Expression-.disable_caching_by_default">

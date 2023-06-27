@@ -160,6 +160,7 @@ var group__geometry__optimization =
       [ "MinimumUniformScalingToTouch", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#a152cd9dac97b61e35faa07fd4f1d2472", null ],
       [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#a6728f7f0e845d80b3b9b27b074d89e64", null ],
       [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#a31236f7fa2323eab3ac92db5e4d89829", null ],
+      [ "Serialize", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#a8e8824802dedfbc36776227f7482b6bc", null ],
       [ "ToShapeWithPose", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#af7add202067720eb1a04fac8f1781c87", null ],
       [ "Volume", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#a678f606b1ff10c8959240d2985e022ad", null ]
     ] ],
