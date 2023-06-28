@@ -1,5 +1,6 @@
 var NAVTREEINDEX52 =
 {
+"proximity__utilities_8h.html":[4,0,0,4,2,50],
 "proximity__utilities_8h.html#a4f24aa7e86f9331b9bd72b84a7672963":[4,0,0,4,2,50,2],
 "proximity__utilities_8h.html#a54e88575f94080e2f54bd4b79ac25f5d":[4,0,0,4,2,50,5],
 "proximity__utilities_8h.html#a80a8ed53b2aebbfe932e097efa7d4da3":[4,0,0,4,2,50,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX52 =
 "scope__exit_8h.html":[4,0,0,1,53],
 "scoped__name_8h.html":[4,0,0,8,14,43],
 "scoped__names_8h.html":[4,0,0,8,9,24],
-"scoped__names_8h.html#a621e8533a6e2dae1933984297afb01ff":[4,0,0,8,9,24,6],
-"scoped__names_8h.html#a94b7f029e6229b3479146dd8550aacfd":[4,0,0,8,9,24,1]
+"scoped__names_8h.html#a621e8533a6e2dae1933984297afb01ff":[4,0,0,8,9,24,6]
 };

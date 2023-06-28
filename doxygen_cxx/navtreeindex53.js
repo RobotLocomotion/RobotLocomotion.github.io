@@ -1,5 +1,6 @@
 var NAVTREEINDEX53 =
 {
+"scoped__names_8h.html#a94b7f029e6229b3479146dd8550aacfd":[4,0,0,8,9,24,1],
 "scoped__names_8h.html#abcb2da7ff1e0248aaa1eab6e19e41af9":[4,0,0,8,9,24,7],
 "scoped__names_8h.html#ad0442d59f36dad1157430528e91d147f":[4,0,0,8,9,24,4],
 "scoped__names_8h.html#ad59da48dd3e20a1ee37bddcd64a23b16":[4,0,0,8,9,24,5],
@@ -126,7 +127,7 @@ var NAVTREEINDEX53 =
 "space__xyz__floating__mobilizer_8h.html":[4,0,0,8,14,46],
 "space__xyz__mobilizer_8h.html":[4,0,0,8,14,47],
 "sparse__and__dense__matrix_8h.html":[4,0,0,11,54],
-"sparse__linear__operator_8h.html":[4,0,0,8,2,13],
+"sparse__linear__operator_8h.html":[4,0,0,8,2,14],
 "spatial__acceleration_8h.html":[4,0,0,8,6,0],
 "spatial__algebra_8h.html":[4,0,0,8,6,1],
 "spatial__algebra_8h.html#a20c5b057eb2bb3c32004a09588193538":[4,0,0,8,6,1,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX53 =
 "stochastic_8h.html#a57679ebbc3affa5691736cd9fae0173c":[4,0,0,1,2,1,17],
 "stochastic_8h.html#a57f6c7970d805c54498388c6e47113fa":[4,0,0,1,2,1,12],
 "stochastic_8h.html#a7d8363da077652b8868dcd5f6200358c":[4,0,0,1,2,1,22],
-"stochastic_8h.html#a884497545d6076a3763d5e62549b117d":[4,0,0,1,2,1,18],
-"stochastic_8h.html#a9db0a3ddbcab1e2ecbb6e6257c03ea3d":[4,0,0,1,2,1,15]
+"stochastic_8h.html#a884497545d6076a3763d5e62549b117d":[4,0,0,1,2,1,18]
 };

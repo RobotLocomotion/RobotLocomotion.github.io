@@ -1,5 +1,6 @@
 var NAVTREEINDEX51 =
 {
+"namespacemembers_func.html":[2,1,1,0],
 "namespacemembers_func_b.html":[2,1,1,1],
 "namespacemembers_func_c.html":[2,1,1,2],
 "namespacemembers_func_d.html":[2,1,1,3],
@@ -47,7 +48,7 @@ var NAVTREEINDEX51 =
 "network__policy_8h.html":[4,0,0,1,44],
 "never__destroyed_8h.html":[4,0,0,1,45],
 "newmark__scheme_8h.html":[4,0,0,8,3,24],
-"newton__with__bisection_8h.html":[4,0,0,8,2,10],
+"newton__with__bisection_8h.html":[4,0,0,8,2,11],
 "nice__type__name_8h.html":[4,0,0,1,46],
 "nice__type__name__override_8h.html":[4,0,0,1,47],
 "nlopt__solver_8h.html":[4,0,0,11,37],
@@ -90,8 +91,8 @@ var NAVTREEINDEX51 =
 "penetration__as__point__pair__callback_8h.html":[4,0,0,4,2,43],
 "penetration__doxygen_8h.html":[4,0,0,4,2,44],
 "petsc__symmetric__block__sparse__matrix_8h.html":[4,0,0,8,3,25],
-"pgs__solver_8h.html":[4,0,0,8,2,11],
-"pgs__solver_8h.html#a75ec46747224131fd800947a133929c7":[4,0,0,8,2,11,0],
+"pgs__solver_8h.html":[4,0,0,8,2,12],
+"pgs__solver_8h.html#a75ec46747224131fd800947a133929c7":[4,0,0,8,2,12,0],
 "physical__model_8h.html":[4,0,0,8,10,27],
 "physical__model_8h.html#a5e7ddad0af94f5e5c14b6c648491a2ba":[4,0,0,8,10,27,3],
 "physical__model_8h.html#adb169d7f3b447c98cbd02015fba0d6f9":[4,0,0,8,10,27,2],
@@ -157,7 +158,7 @@ var NAVTREEINDEX51 =
 "point__cloud__flags_8h.html#ac6b11bb7c847d6211b1f4d4720a683afaf7838358503ffc19f4ed15a03804b7f1":[4,0,0,9,2,4,2],
 "point__cloud__flags_8h.html#acff44cbce439811c7213d1bb4e295e4c":[4,0,0,9,2,7],
 "point__cloud__to__lcm_8h.html":[4,0,0,9,3],
-"point__contact__data_8h.html":[4,0,0,8,2,12],
+"point__contact__data_8h.html":[4,0,0,8,2,13],
 "point__contact__visualizer_8h.html":[4,0,0,8,7,4],
 "point__pair__contact__info_8h.html":[4,0,0,8,10,28],
 "point__to__line__distance__constraint_8h.html":[4,0,0,8,5,16],
@@ -248,6 +249,5 @@ var NAVTREEINDEX51 =
 "proximity__properties_8h.html#a331f457a6ce0d146213faa844725dcda":[4,0,0,4,34,1],
 "proximity__properties_8h.html#a5a4cec840d5cb801271dbe609deaf0fe":[4,0,0,4,34,0],
 "proximity__properties_8h.html#a7d24de26748b70a3c802fd171b150fc2":[4,0,0,4,34,4],
-"proximity__properties_8h.html#af76ed94bef3f81765a1b3ce069562e00":[4,0,0,4,34,3],
-"proximity__utilities_8h.html":[4,0,0,4,2,50]
+"proximity__properties_8h.html#af76ed94bef3f81765a1b3ce069562e00":[4,0,0,4,34,3]
 };

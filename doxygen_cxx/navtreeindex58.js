@@ -1,5 +1,6 @@
 var NAVTREEINDEX58 =
 {
+"structdrake_1_1type__check__different__from.html#a0860509034ec6a8bc624149afad18d42":[3,0,0,53,0],
 "structdrake_1_1type__pack.html":[3,0,0,54],
 "structdrake_1_1type__pack.html#a0d7ec463ea247ebd6d235632c14544ba":[3,0,0,54,1],
 "structdrake_1_1type__pack.html#a3d3a828636762306b3bf4b16e74236cb":[3,0,0,54,0],
@@ -108,7 +109,7 @@ var NAVTREEINDEX58 =
 "structstd_1_1tuple__element_3_01_index_00_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html#a9b731d88a685b1ec76623274cccf7d33":[3,0,2,29,0],
 "structstd_1_1tuple__size_3_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html":[3,0,2,30],
 "subvector_8h.html":[4,0,0,12,3,37],
-"supernodal__solver_8h.html":[4,0,0,8,2,14],
+"supernodal__solver_8h.html":[4,0,0,8,2,15],
 "supervector_8h.html":[4,0,0,12,3,38],
 "symbolic_2polynomial_8h.html":[4,0,0,1,3,11],
 "symbolic_2polynomial_8h.html#a03731fe9a001a20e071a7a9e106061bd":[4,0,0,1,3,11,41],
@@ -201,7 +202,7 @@ var NAVTREEINDEX58 =
 "system__constraint__adapter_8h.html":[4,0,0,12,5,0],
 "system__constraint__wrapper_8h.html":[4,0,0,12,5,1],
 "system__constraint__wrapper_8h.html#aa012f2e77f3c419bf4b10632f6eb6507":[4,0,0,12,5,1,1],
-"system__dynamics__data_8h.html":[4,0,0,8,2,15],
+"system__dynamics__data_8h.html":[4,0,0,8,2,16],
 "system__html_8h.html":[4,0,0,12,3,43],
 "system__html_8h.html#ga3e4e6a211dd145828511de57c117c5aa":[4,0,0,12,3,43,0],
 "system__output_8h.html":[4,0,0,12,3,44],
@@ -248,6 +249,5 @@ var NAVTREEINDEX58 =
 "triangle__quadrature__rule_8h.html":[4,0,0,8,15,2],
 "triangle__surface__mesh_8h.html":[4,0,0,4,2,53],
 "triangle__surface__mesh__field_8h.html":[4,0,0,4,2,54],
-"triangle__surface__mesh__field_8h.html#a982d81c894c425051f4cbb03cd3ca4dd":[4,0,0,4,2,54,0],
-"trigonometric__polynomial_8h.html":[4,0,0,1,3,17]
+"triangle__surface__mesh__field_8h.html#a982d81c894c425051f4cbb03cd3ca4dd":[4,0,0,4,2,54,0]
 };
