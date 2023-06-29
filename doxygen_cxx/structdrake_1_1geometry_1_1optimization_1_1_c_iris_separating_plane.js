@@ -4,6 +4,5 @@ var structdrake_1_1geometry_1_1optimization_1_1_c_iris_separating_plane =
     [ "CIrisSeparatingPlane", "structdrake_1_1geometry_1_1optimization_1_1_c_iris_separating_plane.html#a88ff96bc0a49d38c883dcdf852e970c3", null ],
     [ "CIrisSeparatingPlane", "structdrake_1_1geometry_1_1optimization_1_1_c_iris_separating_plane.html#ab85079a547fe808cdfd02dbe6093543d", null ],
     [ "operator=", "structdrake_1_1geometry_1_1optimization_1_1_c_iris_separating_plane.html#ad7fd7cf438cf0446e4c6ebdb36907e69", null ],
-    [ "operator=", "structdrake_1_1geometry_1_1optimization_1_1_c_iris_separating_plane.html#a360860154e606cd585943b31bcf46619", null ],
-    [ "plane_order", "structdrake_1_1geometry_1_1optimization_1_1_c_iris_separating_plane.html#ad1b8efe99814df8b48bea97022f190cf", null ]
+    [ "operator=", "structdrake_1_1geometry_1_1optimization_1_1_c_iris_separating_plane.html#a360860154e606cd585943b31bcf46619", null ]
 ];

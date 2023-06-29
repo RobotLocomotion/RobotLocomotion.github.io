@@ -1,5 +1,7 @@
 var NAVTREEINDEX7 =
 {
+"classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#aa265781415ff88df19224c143628305d":[1,1,1,0,2],
+"classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#aa265781415ff88df19224c143628305d":[1,5,4,0,2],
 "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#aa7a4d7c125954dfde3c15238c852eeed":[1,1,1,0,12],
 "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#aa7a4d7c125954dfde3c15238c852eeed":[1,5,4,0,12],
 "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#ab446eba95a4fc1c18f1bb5b6b3ebc887":[1,1,1,0,8],
@@ -247,7 +249,5 @@ var NAVTREEINDEX7 =
 "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#a53748c9b2b03e591925478e582e14bd7":[1,1,1,2,1,16],
 "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#a53748c9b2b03e591925478e582e14bd7":[1,5,4,2,1,16],
 "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#a7627d7b3e6f0f75b63061b47eec664f9":[1,1,1,2,1,0],
-"classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#a7627d7b3e6f0f75b63061b47eec664f9":[1,5,4,2,1,0],
-"classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#a79ab6fe34900a8391301b23abd29e10e":[1,1,1,2,1,7],
-"classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#a79ab6fe34900a8391301b23abd29e10e":[1,5,4,2,1,7]
+"classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#a7627d7b3e6f0f75b63061b47eec664f9":[1,5,4,2,1,0]
 };

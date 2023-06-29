@@ -507,11 +507,6 @@ initialized to zero. All constraints are initialized to nullopt.</p>
 num_positions).</p>
 </dd>
 </dl>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Currently DoDifferentialInverseKinematics requires that
-num_positions == num_velocities.</p>
-</div>
 </dd></dl>
 
 <dl class="py method">
@@ -622,9 +617,9 @@ bound.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.set_joint_centering_gain">
 <span class="sig-name descname"><span class="pre">set_joint_centering_gain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">K</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.set_joint_centering_gain" title="Permalink to this definition"></a></dt>
 <dd><p>Sets the joint centering gain, K, so that the joint centering command
-is v_next = K * (q_nominal - q_current).</p>
+is attempting to achieve v_next = N⁺(q) * K * (q_nominal - q_current).</p>
 <dl class="simple">
-<dt>Precondition:</dt><dd><p>K must be num_velocities x num_positions.</p>
+<dt>Precondition:</dt><dd><p>K must be num_positions x num_positions.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -810,35 +805,35 @@ MultibodyPlant&lt;AutoDiffXd&gt;.</p>
 <span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">DoDifferentialInverseKinematics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DoDifferentialInverseKinematics" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>DoDifferentialInverseKinematics(q_current: numpy.ndarray[numpy.float64[m, 1]], v_current: numpy.ndarray[numpy.float64[m, 1]], V: numpy.ndarray[numpy.float64[m, 1]], J: numpy.ndarray[numpy.float64[m, n]], parameters: pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters) -&gt; pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsResult</p></li>
+<li><p>DoDifferentialInverseKinematics(q_current: numpy.ndarray[numpy.float64[m, 1]], v_current: numpy.ndarray[numpy.float64[m, 1]], V: numpy.ndarray[numpy.float64[m, 1]], J: numpy.ndarray[numpy.float64[m, n]], parameters: pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters, N: Optional[numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]] = None, Nplus: Optional[numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]] = None) -&gt; pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsResult</p></li>
 </ol>
 <p>Computes a generalized velocity v_next, via the following
 MathematicalProgram:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">min_</span><span class="p">{</span><span class="n">v_next</span><span class="p">,</span><span class="n">alpha</span><span class="p">}</span>  <span class="o">-</span><span class="mi">100</span> <span class="o">*</span> <span class="n">alpha</span>
-                        <span class="o">+</span> <span class="o">|</span> <span class="n">P</span> <span class="o">*</span> <span class="p">(</span><span class="n">v_next</span> <span class="o">-</span> <span class="n">K</span> <span class="o">*</span> <span class="p">(</span><span class="n">q_nominal</span> <span class="o">-</span> <span class="n">q_current</span><span class="p">))</span> <span class="o">|^</span><span class="mi">2</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>min_{v_next,alpha}
+    -100 * alpha + |P⋅(v_next - N⁺(q)⋅K⋅(q_nominal - q_current))|²
 
-  <span class="n">s</span><span class="o">.</span><span class="n">t</span><span class="o">.</span>
-    <span class="n">J</span> <span class="o">*</span> <span class="n">v_next</span> <span class="o">=</span> <span class="n">alpha</span> <span class="o">*</span> <span class="n">V</span><span class="p">,</span> <span class="o">//</span> <span class="n">J</span> <span class="o">*</span> <span class="n">v_next</span> <span class="n">has</span> <span class="n">the</span> <span class="n">same</span> <span class="n">direction</span> <span class="k">as</span> <span class="n">V</span>
-    <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">alpha</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">,</span>        <span class="o">//</span> <span class="n">Never</span> <span class="n">go</span> <span class="n">faster</span> <span class="n">than</span> <span class="n">V</span>
-    <span class="n">joint_lim_min</span> <span class="o">&lt;=</span> <span class="n">q_current</span> <span class="o">+</span> <span class="n">v_next</span><span class="o">*</span><span class="n">dt</span> <span class="o">&lt;=</span> <span class="n">joint_lim_max</span><span class="p">,</span>
-    <span class="n">joint_vel_lim_min</span> <span class="o">&lt;=</span> <span class="n">v_next</span> <span class="o">&lt;=</span> <span class="n">joint_vel_lim_max</span><span class="p">,</span>
-    <span class="n">joint_accel_lim_min</span> <span class="o">&lt;=</span> <span class="p">(</span><span class="n">v_next</span> <span class="o">-</span> <span class="n">v_current</span><span class="p">)</span><span class="o">/</span><span class="n">dt</span> <span class="o">&lt;=</span> <span class="n">joint_accel_lim_max</span><span class="p">,</span>
-    <span class="ow">and</span> <span class="n">additional</span> <span class="n">linear</span> <span class="n">velocity</span> <span class="n">constraints</span><span class="p">,</span>
+  s.t.
+    J⋅v_next = alpha⋅V, // J⋅v_next has the same direction as V
+    0 &lt;= alpha &lt;= 1,        // Never go faster than V
+    joint_lim_min &lt;= q_current + N⋅v_next⋅dt &lt;= joint_lim_max,
+    joint_vel_lim_min &lt;= v_next &lt;= joint_vel_lim_max,
+    joint_accel_lim_min &lt;= (v_next - v_current)/dt &lt;= joint_accel_lim_max,
+    and additional linear velocity constraints,
 </pre></div>
 </div>
 <p>where: - The rows of P form an orthonormal basis for the nullspace of
 J, - J.rows() == V.size(), - J.cols() == v_current.size() ==
-q_current.size() == v_next.size(), - V can have any size, with each
-element representing a constraint on the solution (6 constraints
-specifying an end-effector spatial velocity is typical, but not
-required), - K is the joint_centering_gain, - the “additional linear
-velocity constraints” are added via
+v_next.size(), - V can have any size, with each element representing a
+constraint on the solution (6 constraints specifying an end-effector
+spatial velocity is typical, but not required), - K is the
+joint_centering_gain, - the “additional linear velocity constraints”
+are added via
 DifferentialInverseKinematicsParameters::AddLinearVelocityConstraint().</p>
 <p>Intuitively, this finds a v_next such that J*v_next is in the same
-direction as V, and the difference between <a href="#id3"><span class="problematic" id="id4">|V|</span></a> and <a href="#id5"><span class="problematic" id="id6">|J * v_next|</span></a> is
+direction as V, and the difference between <a href="#id5"><span class="problematic" id="id6">|V|</span></a> and <a href="#id7"><span class="problematic" id="id8">|J * v_next|</span></a> is
 minimized while all constraints in <code class="docutils literal notranslate"><span class="pre">parameters</span></code> are satisfied as
 well. In the nullspace of this objective, we have a secondary
-objective to minimize <a href="#id7"><span class="problematic" id="id8">|v_next - K * (q_nominal - q_current)|</span></a>.</p>
+objective to minimize <a href="#id1"><span class="problematic" id="id2">|</span></a>v_next - N⁺(q)⋅K⋅(q_nominal - q_current)|².</p>
 <p>For more details, see
 <a class="reference external" href="https://manipulation.csail.mit.edu/pick.html#diff_ik_w_constraints">https://manipulation.csail.mit.edu/pick.html#diff_ik_w_constraints</a> .</p>
 <p>If q_current is a feasible point, then v_next = 0 should always be a
@@ -857,10 +852,21 @@ is very small, then the status will be set to kStuck.</p>
 <code class="docutils literal notranslate"><span class="pre">J</span></code>.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">J</span></code>:</dt><dd><p>Jacobian with respect to generalized velocities v. It must have
-the same number of rows as <code class="docutils literal notranslate"><span class="pre">V</span></code>. J * v need to represent the same
-spatial velocity as <code class="docutils literal notranslate"><span class="pre">V</span></code>.</p>
+the same number of rows as <code class="docutils literal notranslate"><span class="pre">V</span></code>. J * v needs to represent the
+same spatial velocity as <code class="docutils literal notranslate"><span class="pre">V</span></code>.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">parameters</span></code>:</dt><dd><p>Collection of various problem specific constraints and constants.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">N</span></code>:</dt><dd><p>(optional) matrix which maps q̇ = N(q)⋅v. See
+MultibodyPlant::MakeVelocityToQDotMap(). By default, it is taken
+to be the identity matrix. If dim(q) != dim(v) and any joint
+position limits are set in <code class="docutils literal notranslate"><span class="pre">parameters</span></code>, then you <em>must</em> provide
+N.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">Nplus</span></code>:</dt><dd><p>(optional) matrix which maps q̇ = N⁺(q)⋅v. See
+MultibodyPlant::MakeQDotToVelocityMap(). By default, it is taken
+to be the identity matrix. If dim(q) != dim(v) and J is not full
+column rank, then you <em>must</em> provide Nplus.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -1420,7 +1426,7 @@ the steps are:</p>
 </div>
 <p>This context will be modified during calling ik.prog.Solve(…). When
 Solve() returns <code class="docutils literal notranslate"><span class="pre">result</span></code>, context will store the optimized posture,
-namely plant.GetPositions(<a href="#id1"><span class="problematic" id="id2">*</span></a>context) will be the same as in
+namely plant.GetPositions(<a href="#id3"><span class="problematic" id="id4">*</span></a>context) will be the same as in
 result.GetSolution(ik.q()). The user could then use this context to
 perform kinematic computation (like computing the position of the
 end-effector etc.).</p>

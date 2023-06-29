@@ -760,12 +760,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab128a8bba10523922358bc35df103753"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ab128a8bba10523922358bc35df103753">MapQDotToVelocity</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;qdot, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; v) const</td></tr>
 <tr class="memdesc:ab128a8bba10523922358bc35df103753"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms the time derivative <code>qdot</code> of the generalized positions vector <code>q</code> (stored in <code>context</code>) to generalized velocities <code>v</code>.  <a href="#ab128a8bba10523922358bc35df103753">More...</a><br /></td></tr>
 <tr class="separator:ab128a8bba10523922358bc35df103753"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc454344dcb22a72386690a6147cdbe7"><td class="memItemLeft" align="right" valign="top">Eigen::SparseMatrix&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#acc454344dcb22a72386690a6147cdbe7">MakeVelocityToQDotMap</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context)</td></tr>
-<tr class="memdesc:acc454344dcb22a72386690a6147cdbe7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the matrix <code>N(q)</code>, which maps <code>q̇ = N(q)⋅v</code>, as described in <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a7bb24fed19f16a76450eece1857b92dc" title="Transforms generalized velocities v to time derivatives qdot of the generalized positions vector q (s...">MapVelocityToQDot()</a>.  <a href="#acc454344dcb22a72386690a6147cdbe7">More...</a><br /></td></tr>
-<tr class="separator:acc454344dcb22a72386690a6147cdbe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5561c9ba0ed8ffc3b381da021055eea8"><td class="memItemLeft" align="right" valign="top">Eigen::SparseMatrix&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a5561c9ba0ed8ffc3b381da021055eea8">MakeQDotToVelocityMap</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context)</td></tr>
-<tr class="memdesc:a5561c9ba0ed8ffc3b381da021055eea8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the matrix <code>N⁺(q)</code>, which maps <code>v = N⁺(q)⋅q̇</code>, as described in <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ab128a8bba10523922358bc35df103753" title="Transforms the time derivative qdot of the generalized positions vector q (stored in context) to gene...">MapQDotToVelocity()</a>.  <a href="#a5561c9ba0ed8ffc3b381da021055eea8">More...</a><br /></td></tr>
-<tr class="separator:a5561c9ba0ed8ffc3b381da021055eea8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a545362f43197e188f938f372ef63baab"><td class="memItemLeft" align="right" valign="top">Eigen::SparseMatrix&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a545362f43197e188f938f372ef63baab">MakeVelocityToQDotMap</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
+<tr class="memdesc:a545362f43197e188f938f372ef63baab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the matrix <code>N(q)</code>, which maps <code>q̇ = N(q)⋅v</code>, as described in <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a7bb24fed19f16a76450eece1857b92dc" title="Transforms generalized velocities v to time derivatives qdot of the generalized positions vector q (s...">MapVelocityToQDot()</a>.  <a href="#a545362f43197e188f938f372ef63baab">More...</a><br /></td></tr>
+<tr class="separator:a545362f43197e188f938f372ef63baab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06e24ade5414a752bd116ab1f30795fc"><td class="memItemLeft" align="right" valign="top">Eigen::SparseMatrix&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a06e24ade5414a752bd116ab1f30795fc">MakeQDotToVelocityMap</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
+<tr class="memdesc:a06e24ade5414a752bd116ab1f30795fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the matrix <code>N⁺(q)</code>, which maps <code>v = N⁺(q)⋅q̇</code>, as described in <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ab128a8bba10523922358bc35df103753" title="Transforms the time derivative qdot of the generalized positions vector q (stored in context) to gene...">MapQDotToVelocity()</a>.  <a href="#a06e24ade5414a752bd116ab1f30795fc">More...</a><br /></td></tr>
+<tr class="separator:a06e24ade5414a752bd116ab1f30795fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">System matrix computations</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="mbp_system_matrix_computations"></a> Methods in this section compute and return various matrices that appear in the system equations of motion. For better performance, prefer to use direct computations where available rather than work with explicit matrices. See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#mbp_kinematic_and_dynamic_computations">Kinematic and dynamics computations</a> for available computations. For example, you can obtain the mass matrix, Coriolis, centripetal, and gyroscopic "bias" terms, and a variety of Jacobian and actuation matrices. </p>
 </div></td></tr>
@@ -7071,8 +7071,8 @@ This function is guaranteed to allocate no heap. </dd></dl>
 
 </div>
 </div>
-<a id="a5561c9ba0ed8ffc3b381da021055eea8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5561c9ba0ed8ffc3b381da021055eea8">&#9670;&nbsp;</a></span>MakeQDotToVelocityMap()</h2>
+<a id="a06e24ade5414a752bd116ab1f30795fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06e24ade5414a752bd116ab1f30795fc">&#9670;&nbsp;</a></span>MakeQDotToVelocityMap()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7082,7 +7082,7 @@ This function is guaranteed to allocate no heap. </dd></dl>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>context</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -7128,8 +7128,8 @@ This function is guaranteed to allocate no heap. </dd></dl>
 
 </div>
 </div>
-<a id="acc454344dcb22a72386690a6147cdbe7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acc454344dcb22a72386690a6147cdbe7">&#9670;&nbsp;</a></span>MakeVelocityToQDotMap()</h2>
+<a id="a545362f43197e188f938f372ef63baab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a545362f43197e188f938f372ef63baab">&#9670;&nbsp;</a></span>MakeVelocityToQDotMap()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7139,7 +7139,7 @@ This function is guaranteed to allocate no heap. </dd></dl>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>context</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">

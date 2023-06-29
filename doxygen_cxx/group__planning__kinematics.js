@@ -75,7 +75,7 @@ var group__planning__kinematics =
       [ "prog", "classdrake_1_1multibody_1_1_inverse_kinematics.html#afcc8c6b2091ff4447ee2951bb7907de8", null ],
       [ "q", "classdrake_1_1multibody_1_1_inverse_kinematics.html#af0d4dcb28c6cfb63f69b03e0d3e98571", null ]
     ] ],
-    [ "DoDifferentialInverseKinematics", "group__planning__kinematics.html#gac36361db531cfc7f707ef52db81375e9", null ],
+    [ "DoDifferentialInverseKinematics", "group__planning__kinematics.html#ga2f16257d707e2329789beaf507b75b2d", null ],
     [ "DoDifferentialInverseKinematics", "group__planning__kinematics.html#ga6e3a66e37411b9d8358efc00ec510a33", null ],
     [ "DoDifferentialInverseKinematics", "group__planning__kinematics.html#gafd57fd1045276e8221f6f0a4fac36c82", null ]
 ];

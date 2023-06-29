@@ -228,7 +228,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a0fa5c89596926e41d3e5a1fbe98e0df9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the end effector flags in the body frame.  <a href="#a0fa5c89596926e41d3e5a1fbe98e0df9">More...</a><br /></td></tr>
 <tr class="separator:a0fa5c89596926e41d3e5a1fbe98e0df9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad29b1f2e4ce3fb1512dd3ca3b860b270"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#ad29b1f2e4ce3fb1512dd3ca3b860b270">set_joint_centering_gain</a> (const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;K)</td></tr>
-<tr class="memdesc:ad29b1f2e4ce3fb1512dd3ca3b860b270"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the joint centering gain, K, so that the joint centering command is v_next = K * (q_nominal - q_current).  <a href="#ad29b1f2e4ce3fb1512dd3ca3b860b270">More...</a><br /></td></tr>
+<tr class="memdesc:ad29b1f2e4ce3fb1512dd3ca3b860b270"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the joint centering gain, K, so that the joint centering command is attempting to achieve v_next = N⁺(q) * K * (q_nominal - q_current).  <a href="#ad29b1f2e4ce3fb1512dd3ca3b860b270">More...</a><br /></td></tr>
 <tr class="separator:ad29b1f2e4ce3fb1512dd3ca3b860b270"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af05c6384d322cfd365f7b4d932a3636d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#af05c6384d322cfd365f7b4d932a3636d">set_joint_position_limits</a> (const std::pair&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&gt; &amp;q_bounds)</td></tr>
 <tr class="memdesc:af05c6384d322cfd365f7b4d932a3636d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the joint position limits.  <a href="#af05c6384d322cfd365f7b4d932a3636d">More...</a><br /></td></tr>
@@ -332,11 +332,10 @@ Public Member Functions</h2></td></tr>
 <p>Initializes the nominal joint position to zeros of size <code>num_positions</code>. The time step is initialized to 1. The end effector flags are initialized to True. The joint centering gains are initialized to zero. All constraints are initialized to nullopt. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">num_positions</td><td>Number of generalized positions. </td></tr>
-    <tr><td class="paramname">num_velocities</td><td>Number of generalized velocities (by default it will be set to num_positions).</td></tr>
+    <tr><td class="paramname">num_velocities</td><td>Number of generalized velocities (by default it will be set to num_positions). </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>Currently DoDifferentialInverseKinematics requires that num_positions == num_velocities. </dd></dl>
 
 </div>
 </div>
@@ -784,8 +783,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Sets the joint centering gain, K, so that the joint centering command is v_next = K * (q_nominal - q_current). </p>
-<dl class="section pre"><dt>Precondition</dt><dd>K must be num_velocities x num_positions. </dd></dl>
+<p>Sets the joint centering gain, K, so that the joint centering command is attempting to achieve v_next = N⁺(q) * K * (q_nominal - q_current). </p>
+<dl class="section pre"><dt>Precondition</dt><dd>K must be num_positions x num_positions. </dd></dl>
 
 </div>
 </div>

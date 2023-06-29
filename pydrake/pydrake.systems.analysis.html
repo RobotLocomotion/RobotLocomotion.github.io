@@ -2307,6 +2307,11 @@ conditions it might produce.</p>
 Context or Simulator options between successive AdvanceTo() calls.
 See Initialize() for more information.</p>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can track simulation progress to terminate on arbitrary
+conditions using a <em>monitor</em> function; see set_monitor().</p>
+</div>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">boundary_time</span></code>:</dt><dd><p>The maximum time to which the trajectory will be advanced by this
 call to AdvanceTo(). The method may return earlier if an event or
@@ -2325,7 +2330,8 @@ after pending Context updates are performed.</p>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>Initialize(), AdvancePendingEvents(), SimulatorStatus</p>
+<p>Initialize(), AdvancePendingEvents(), SimulatorStatus,
+set_monitor()</p>
 </div>
 </dd></dl>
 
@@ -2931,6 +2937,11 @@ conditions it might produce.</p>
 Context or Simulator options between successive AdvanceTo() calls.
 See Initialize() for more information.</p>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can track simulation progress to terminate on arbitrary
+conditions using a <em>monitor</em> function; see set_monitor().</p>
+</div>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">boundary_time</span></code>:</dt><dd><p>The maximum time to which the trajectory will be advanced by this
 call to AdvanceTo(). The method may return earlier if an event or
@@ -2949,7 +2960,8 @@ after pending Context updates are performed.</p>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>Initialize(), AdvancePendingEvents(), SimulatorStatus</p>
+<p>Initialize(), AdvancePendingEvents(), SimulatorStatus,
+set_monitor()</p>
 </div>
 </dd></dl>
 

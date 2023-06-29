@@ -1,5 +1,7 @@
 var NAVTREEINDEX8 =
 {
+"classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#a79ab6fe34900a8391301b23abd29e10e":[1,1,1,2,1,7],
+"classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#a79ab6fe34900a8391301b23abd29e10e":[1,5,4,2,1,7],
 "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#a8711d41b9a7b76436bbb07bf5f19913e":[1,1,1,2,1,10],
 "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#a8711d41b9a7b76436bbb07bf5f19913e":[1,5,4,2,1,10],
 "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#a94669eb1f0e3c1db0bdc6f2db0f48e55":[1,1,1,2,1,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX8 =
 "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#ad5d589780714066f1e6a1118a8e5a83e":[1,1,1,10,8],
 "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#ad5d589780714066f1e6a1118a8e5a83e":[1,5,4,10,8],
 "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#af39035d161c3b21e796ed5ed8ee960da":[1,1,1,10,6],
-"classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#af39035d161c3b21e796ed5ed8ee960da":[1,5,4,10,6],
-"classdrake_1_1geometry_1_1render_1_1_clipping_range.html":[3,0,0,4,2,0],
-"classdrake_1_1geometry_1_1render_1_1_clipping_range.html#a5e283c97ae8a21c32e01441a9831be55":[3,0,0,4,2,0,1]
+"classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#af39035d161c3b21e796ed5ed8ee960da":[1,5,4,10,6]
 };

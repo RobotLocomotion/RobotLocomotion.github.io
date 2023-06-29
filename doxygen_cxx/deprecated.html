@@ -164,46 +164,52 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 <div class="contents">
 <div class="textblock"><dl class="reflist">
 <dt>Member <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a2321a66698e800884f3ff0496160860c">CollisionChecker::GetScopedName</a>  (const multibody::Frame&lt; double &gt; &amp;frame) const</dt>
-<dd><a class="anchor" id="_deprecated000008"></a>Use frame.scoped_name() instead. <br />
+<dd><a class="anchor" id="_deprecated000009"></a>Use frame.scoped_name() instead. <br />
  This will be removed from Drake on or after 2023-07-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#aebcb3747eeb77c4aa20776b0cc145c56">CollisionChecker::GetScopedName</a>  (const multibody::Body&lt; double &gt; &amp;body) const</dt>
-<dd><a class="anchor" id="_deprecated000009"></a>Use body.scoped_name() instead. <br />
+<dd><a class="anchor" id="_deprecated000010"></a>Use body.scoped_name() instead. <br />
  This will be removed from Drake on or after 2023-07-01. </dd>
+<dt>Member <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a8a925f64a8bd3f54619d98d84036ca0a">CSpaceSeparatingPlane&lt; T &gt;::CSpaceSeparatingPlane</a>  (<a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2" title="A column vector of size 3, templated on scalar type.">Vector3&lt; symbolic::Polynomial &gt;</a> m_a, <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html" title="Represents symbolic polynomials.">symbolic::Polynomial</a> m_b, const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html" title="This class contains the necessary information about the collision geometry used in C-IRIS.">CIrisCollisionGeometry</a> *m_positive_side_geometry, const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html" title="This class contains the necessary information about the collision geometry used in C-IRIS.">CIrisCollisionGeometry</a> *m_negative_side_geometry, <a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0" title="Type used to identify bodies by index in a multibody tree system.">multibody::BodyIndex</a> m_expressed_body, const Eigen::Ref&lt; const VectorX&lt; T &gt;&gt; &amp;m_decision_variables)</dt>
+<dd><a class="anchor" id="_deprecated000002"></a>The overload without plane_degree will be removed. <br />
+ This will be removed from Drake on or after 2023-10-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#ac52a87949354e558c4a05a11acb655ec">drake::geometry::optimization::GetCollisionGeometries</a>  (const multibody::MultibodyPlant&lt; double &gt; &amp;plant, const geometry::SceneGraph&lt; double &gt; &amp;scene_graph)</dt>
 <dd><a class="anchor" id="_deprecated000001"></a>This function was not intended for public use. <br />
  This will be removed from Drake on or after 2023-09-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1geometry_1_1render.html#a6a949953d76af52d6dd1b13417cb556a">drake::geometry::render::kHasRenderEngineGl</a>  </dt>
-<dd><a class="anchor" id="_deprecated000002"></a>Use the geometry namespace instead. <br />
- This will be removed from Drake on or after 2023-07-01. </dd>
-<dt>Member <a class="el" href="namespacedrake_1_1geometry_1_1render.html#aaa4adf317ad66ba21d0ec9b99cd177ad">drake::geometry::render::MakeRenderEngineGl</a>  </dt>
 <dd><a class="anchor" id="_deprecated000003"></a>Use the geometry namespace instead. <br />
  This will be removed from Drake on or after 2023-07-01. </dd>
+<dt>Member <a class="el" href="namespacedrake_1_1geometry_1_1render.html#aaa4adf317ad66ba21d0ec9b99cd177ad">drake::geometry::render::MakeRenderEngineGl</a>  </dt>
+<dd><a class="anchor" id="_deprecated000004"></a>Use the geometry namespace instead. <br />
+ This will be removed from Drake on or after 2023-07-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1multibody_1_1parsing.html#aea5d08d1947ebcdbde413331fd55d323">drake::multibody::parsing::GetInstanceScopeName</a>  (const drake::multibody::MultibodyPlant&lt; double &gt; &amp;, <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0" title="Type used to identify model instances by index within a multibody tree system.">drake::multibody::ModelInstanceIndex</a>)</dt>
-<dd><a class="anchor" id="_deprecated000007"></a>Use multibody::ScopedName instead <br />
+<dd><a class="anchor" id="_deprecated000008"></a>Use multibody::ScopedName instead <br />
  This will be removed from Drake on or after 2023-07-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1multibody_1_1parsing.html#ad59da48dd3e20a1ee37bddcd64a23b16">drake::multibody::parsing::GetScopedFrameName</a>  (const drake::multibody::MultibodyPlant&lt; double &gt; &amp;plant, const drake::multibody::Frame&lt; double &gt; &amp;frame)</dt>
-<dd><a class="anchor" id="_deprecated000004"></a>Use multibody::ScopedName instead <br />
- This will be removed from Drake on or after 2023-07-01. </dd>
-<dt>Member <a class="el" href="namespacedrake_1_1multibody_1_1parsing.html#a621e8533a6e2dae1933984297afb01ff">drake::multibody::parsing::ParseScopedName</a>  (const std::string &amp;full_name)</dt>
 <dd><a class="anchor" id="_deprecated000005"></a>Use multibody::ScopedName instead <br />
  This will be removed from Drake on or after 2023-07-01. </dd>
-<dt>Member <a class="el" href="namespacedrake_1_1multibody_1_1parsing.html#abcb2da7ff1e0248aaa1eab6e19e41af9">drake::multibody::parsing::PrefixName</a>  (const std::string &amp;namespace_, const std::string &amp;name)</dt>
+<dt>Member <a class="el" href="namespacedrake_1_1multibody_1_1parsing.html#a621e8533a6e2dae1933984297afb01ff">drake::multibody::parsing::ParseScopedName</a>  (const std::string &amp;full_name)</dt>
 <dd><a class="anchor" id="_deprecated000006"></a>Use multibody::ScopedName instead <br />
  This will be removed from Drake on or after 2023-07-01. </dd>
+<dt>Member <a class="el" href="namespacedrake_1_1multibody_1_1parsing.html#abcb2da7ff1e0248aaa1eab6e19e41af9">drake::multibody::parsing::PrefixName</a>  (const std::string &amp;namespace_, const std::string &amp;name)</dt>
+<dd><a class="anchor" id="_deprecated000007"></a>Use multibody::ScopedName instead <br />
+ This will be removed from Drake on or after 2023-07-01. </dd>
+<dt>Member <a class="el" href="namespacedrake_1_1solvers.html#a2393a50b2a4547a3a88aa89c9f77e4bb">drake::solvers::FindNonconvexQuadraticCost</a>  (const std::vector&lt; Binding&lt; QuadraticCost &gt;&gt; &amp;quadratic_costs)</dt>
+<dd><a class="anchor" id="_deprecated000014"></a>This function is no longer public. <br />
+ This will be removed from Drake on or after 2023-11-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1visualization.html#a91350b14472fa922d11a6ced06e72bc8">drake::visualization::ApplyVisualizationConfig</a>  (const <a class="el" href="structdrake_1_1visualization_1_1_visualization_config.html" title="Settings for what MultibodyPlant and SceneGraph should send to meldis, Meshcat, and/or drake_visualiz...">VisualizationConfig</a> &amp;config, systems::DiagramBuilder&lt; double &gt; *builder, const <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html" title="A mapping from {bus_name: interface} with sugar for error checking with nice error messages during ac...">systems::lcm::LcmBuses</a> *lcm_buses, const multibody::MultibodyPlant&lt; double &gt; *plant, const geometry::SceneGraph&lt; double &gt; *scene_graph, std::shared_ptr&lt; geometry::Meshcat &gt; meshcat=nullptr, <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html" title="A pure virtual interface that enables LCM to be mocked.">lcm::DrakeLcmInterface</a> *lcm=nullptr)</dt>
-<dd><a class="anchor" id="_deprecated000014"></a>Pass a non-const SceneGraph pointer <br />
+<dd><a class="anchor" id="_deprecated000016"></a>Pass a non-const SceneGraph pointer <br />
  This will be removed from Drake on or after 2023-09-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#adb23e0ee6a1a0fa9904a0b3247baacb6">MultipleShooting::fixed_timestep</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000011"></a>Use fixed_time_step() instead. <br />
+<dd><a class="anchor" id="_deprecated000012"></a>Use fixed_time_step() instead. <br />
  This will be removed from Drake on or after 2023-09-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ab0a28fec382d5b41c8193e698d9d3d99">MultipleShooting::timestep</a>  (int index) const</dt>
-<dd><a class="anchor" id="_deprecated000010"></a>Use time_step() instead. <br />
+<dd><a class="anchor" id="_deprecated000011"></a>Use time_step() instead. <br />
  This will be removed from Drake on or after 2023-09-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ae6f30b165f1275d62dea7f27b441a41b">MultipleShooting::timesteps_are_decision_variables</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000012"></a>Use time_steps_are_decision_variables() instead. <br />
+<dd><a class="anchor" id="_deprecated000013"></a>Use time_steps_are_decision_variables() instead. <br />
  This will be removed from Drake on or after 2023-09-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html#acbee7f3497ff5244da916e6997c54872">SerializerInterface::Clone</a>  () const =0</dt>
-<dd><a class="anchor" id="_deprecated000013"></a>Use a shared_ptr&lt;const SerializerInterface&gt; instead of cloning. <br />
+<dd><a class="anchor" id="_deprecated000015"></a>Use a shared_ptr&lt;const SerializerInterface&gt; instead of cloning. <br />
  This will be removed from Drake on or after 2023-09-01.</dd>
 </dl>
 </div></div><!-- PageDoc -->
