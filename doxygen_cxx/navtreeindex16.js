@@ -1,5 +1,11 @@
 var NAVTREEINDEX16 =
 {
+"classdrake_1_1multibody_1_1_revolute_joint.html#a5a700b3f8484f49b554484c00411b8c2":[3,0,0,9,75,15],
+"classdrake_1_1multibody_1_1_revolute_joint.html#a681fbb83431b9b1d7a9651dc9e93b29b":[3,0,0,9,75,25],
+"classdrake_1_1multibody_1_1_revolute_joint.html#a6c8eb6f9f1b78c1e9a5bebb1f1b25db2":[3,0,0,9,75,22],
+"classdrake_1_1multibody_1_1_revolute_joint.html#a79b24d1bde5380500b8bdf2bd9a28228":[3,0,0,9,75,7],
+"classdrake_1_1multibody_1_1_revolute_joint.html#a7bfac2e954b2a595a7eb903eee290b22":[3,0,0,9,75,4],
+"classdrake_1_1multibody_1_1_revolute_joint.html#a7f081af6a0a8a4122394e0c63b5ff7e9":[3,0,0,9,75,26],
 "classdrake_1_1multibody_1_1_revolute_joint.html#a87889df2dbbcb278013f813d9a0cf452":[3,0,0,9,75,1],
 "classdrake_1_1multibody_1_1_revolute_joint.html#a952a908b4c1b68ac11b2e31ef31e9524":[3,0,0,9,75,24],
 "classdrake_1_1multibody_1_1_revolute_joint.html#a97faa4914fcecce95d6a17238bcd047e":[3,0,0,9,75,13],
@@ -243,11 +249,5 @@ var NAVTREEINDEX16 =
 "classdrake_1_1multibody_1_1_spatial_momentum.html#a65232f2bac94fd25f787168e85246a76":[3,0,0,9,85,3],
 "classdrake_1_1multibody_1_1_spatial_momentum.html#a795da21c81556a246f849e181ec6a622":[3,0,0,9,85,6],
 "classdrake_1_1multibody_1_1_spatial_momentum.html#a80adf254abcd794a723b6c43c5e32832":[3,0,0,9,85,8],
-"classdrake_1_1multibody_1_1_spatial_momentum.html#a89f8701bcb6ec96960eaf08164c0b05d":[3,0,0,9,85,1],
-"classdrake_1_1multibody_1_1_spatial_momentum.html#a953c5a97a970a6e96fa6f609e147dcda":[3,0,0,9,85,5],
-"classdrake_1_1multibody_1_1_spatial_momentum.html#a9e31b095e0f5acd3faeaa62381b03d83":[3,0,0,9,85,7],
-"classdrake_1_1multibody_1_1_spatial_momentum.html#aa2c0781d3d6e650d99072938e2469c99":[3,0,0,9,85,11],
-"classdrake_1_1multibody_1_1_spatial_momentum.html#aa91737d065e467e0606561e201cc9394":[3,0,0,9,85,9],
-"classdrake_1_1multibody_1_1_spatial_momentum.html#ab5bf8cdf4436a0ede1be7b367896d046":[3,0,0,9,85,2],
-"classdrake_1_1multibody_1_1_spatial_momentum.html#ad3ff325ca21d5d06e048aa09efac5ad6":[3,0,0,9,85,10]
+"classdrake_1_1multibody_1_1_spatial_momentum.html#a89f8701bcb6ec96960eaf08164c0b05d":[3,0,0,9,85,1]
 };

@@ -16,6 +16,5 @@ var classdrake_1_1geometry_1_1_meshcat_visualizer =
     [ "ResetRealtimeRateCalculator", "classdrake_1_1geometry_1_1_meshcat_visualizer.html#ab648811a71fc30082c0e3283f495d9df", null ],
     [ "StartRecording", "classdrake_1_1geometry_1_1_meshcat_visualizer.html#a65d3dfd0973e9d83d859aebbec3d3b83", null ],
     [ "StopRecording", "classdrake_1_1geometry_1_1_meshcat_visualizer.html#ab4e410341b1ca35649cafd7b099a1819", null ],
-    [ "MeshcatVisualizer", "classdrake_1_1geometry_1_1_meshcat_visualizer.html#a163096a84f8361de8dde0c953d449e9a", null ],
-    [ "MeshcatVisualizerTester", "classdrake_1_1geometry_1_1_meshcat_visualizer.html#ad099fc17d6a0928a5dc778aacab011ed", null ]
+    [ "MeshcatVisualizer", "classdrake_1_1geometry_1_1_meshcat_visualizer.html#a163096a84f8361de8dde0c953d449e9a", null ]
 ];

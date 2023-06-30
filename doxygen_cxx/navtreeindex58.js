@@ -1,5 +1,15 @@
 var NAVTREEINDEX58 =
 {
+"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_label_01_4.html#ab9d071a35c456d7863cadc4f413e8fcf":[3,0,0,16,8,35,0],
+"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_rgb_01_4.html":[3,0,0,16,8,36],
+"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_rgb_01_4.html#ab9d071a35c456d7863cadc4f413e8fcf":[3,0,0,16,8,36,0],
+"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_rgba_01_4.html":[3,0,0,16,8,37],
+"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_rgba_01_4.html#ab9d071a35c456d7863cadc4f413e8fcf":[3,0,0,16,8,37,0],
+"structdrake_1_1template__single__tag.html":[3,0,0,50],
+"structdrake_1_1template__single__tag.html#a0b59870d7a48aad480f84b0f2423dfb2":[3,0,0,50,0],
+"structdrake_1_1test_1_1_limit_malloc_params.html":[3,0,0,17,2],
+"structdrake_1_1test_1_1_limit_malloc_params.html#a34a5b591b64e647d30fcae67a24564df":[3,0,0,17,2,1],
+"structdrake_1_1test_1_1_limit_malloc_params.html#a55bdaee9c2cac50e78a415ab477cf4e2":[3,0,0,17,2,0],
 "structdrake_1_1test_1_1_limit_malloc_params.html#a7febc78e5aba3a9f8f0b9a89f4537b25":[3,0,0,17,2,2],
 "structdrake_1_1type__at.html":[3,0,0,52],
 "structdrake_1_1type__at.html#ae186135b13d8acdaf385d1ff052f0d82":[3,0,0,52,0],
@@ -239,15 +249,5 @@ var NAVTREEINDEX58 =
 "text__logging_8h.html#ae6e439f4584cc1f0a6dd0990378604a5":[4,0,0,1,58,8],
 "text__logging_8h.html#aed13fee35863fff48d177f80c979bca0":[4,0,0,1,58,2],
 "text__logging__pybind_8h.html":[4,0,0,0,0,0,10],
-"timer_8h.html":[4,0,0,1,59],
-"toppra_8h.html":[4,0,0,8,8,11],
-"toppra_8h.html#ad8fa828762d54ed2db5efec5df1b5082":[4,0,0,8,8,11,1],
-"toppra_8h.html#ad8fa828762d54ed2db5efec5df1b5082a8adcba0ce62338780719c9d3d29a0c6a":[4,0,0,8,8,11,1,0],
-"toppra_8h.html#ad8fa828762d54ed2db5efec5df1b5082a9ef15c126044c94d6440bfbf02f6c55d":[4,0,0,8,8,11,1,1],
-"trajectory_8h.html":[4,0,0,1,5,11],
-"trajectory__affine__system_8h.html":[4,0,0,12,6,24],
-"trajectory__linear__system_8h.html":[4,0,0,12,6,25],
-"trajectory__source_8h.html":[4,0,0,12,6,26],
-"transform_8h.html":[4,0,0,1,2,2],
-"triangle__quadrature_8h.html":[4,0,0,8,15,1]
+"timer_8h.html":[4,0,0,1,59]
 };

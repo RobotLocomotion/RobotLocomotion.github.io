@@ -185,6 +185,8 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1sensors_1_1_r
 <td align="left" style="padding:5px 0px 5px 0px">&rarr; label_image</td></tr>
 <tr>
 <td align="left" style="padding:5px 0px 5px 0px">&rarr; body_pose_in_world</td></tr>
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; image_time</td></tr>
 </table>
 </td></tr>
 </table>
@@ -199,10 +201,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a8c8d309d9c89915e9954359bd2780a90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a diagram containing a (non-registered) <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html" title="A meta-sensor that houses RGB, depth, and label cameras, producing their corresponding images based o...">RgbdSensor</a> that will update at a given rate.  <a href="#a8c8d309d9c89915e9954359bd2780a90">More...</a><br /></td></tr>
 <tr class="separator:a8c8d309d9c89915e9954359bd2780a90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afaf00d756e556d58e224c3cb82bd9987"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html">RgbdSensor</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#afaf00d756e556d58e224c3cb82bd9987">sensor</a> () const</td></tr>
-<tr class="memdesc:afaf00d756e556d58e224c3cb82bd9987"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns reference to <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html" title="A meta-sensor that houses RGB, depth, and label cameras, producing their corresponding images based o...">RgbdSensor</a> instance.  <a href="#afaf00d756e556d58e224c3cb82bd9987">More...</a><br /></td></tr>
+<tr class="memdesc:afaf00d756e556d58e224c3cb82bd9987"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the underlying <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html" title="A meta-sensor that houses RGB, depth, and label cameras, producing their corresponding images based o...">RgbdSensor</a> object.  <a href="#afaf00d756e556d58e224c3cb82bd9987">More...</a><br /></td></tr>
 <tr class="separator:afaf00d756e556d58e224c3cb82bd9987"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ae4ab5e2ebbb46c574d1f0531d86d66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#a5ae4ab5e2ebbb46c574d1f0531d86d66">period</a> () const</td></tr>
-<tr class="memdesc:a5ae4ab5e2ebbb46c574d1f0531d86d66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns update period for discrete camera.  <a href="#a5ae4ab5e2ebbb46c574d1f0531d86d66">More...</a><br /></td></tr>
+<tr class="memdesc:a5ae4ab5e2ebbb46c574d1f0531d86d66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the update period for the discrete camera.  <a href="#a5ae4ab5e2ebbb46c574d1f0531d86d66">More...</a><br /></td></tr>
 <tr class="separator:a5ae4ab5e2ebbb46c574d1f0531d86d66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf4572bb00056a157be83e44f7f41523"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">InputPort</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#adf4572bb00056a157be83e44f7f41523">query_object_input_port</a> () const</td></tr>
 <tr class="separator:adf4572bb00056a157be83e44f7f41523"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -216,6 +218,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aea1c4f5f5823d9fd788df60be071025a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff74e4980084b28c29f132bd18606031"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#aff74e4980084b28c29f132bd18606031">body_pose_in_world_output_port</a> () const</td></tr>
 <tr class="separator:aff74e4980084b28c29f132bd18606031"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96a36d6a07e828f5d59df2fd3f254495"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#a96a36d6a07e828f5d59df2fd3f254495">image_time_output_port</a> () const</td></tr>
+<tr class="memdesc:a96a36d6a07e828f5d59df2fd3f254495"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the vector-valued output port (with size == 1) which reports the simulation time when the image outputs were captured, in seconds (i.e., the time of the most recent zero-order hold discrete update).  <a href="#a96a36d6a07e828f5d59df2fd3f254495">More...</a><br /></td></tr>
+<tr class="separator:a96a36d6a07e828f5d59df2fd3f254495"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:ad21badaf40ab842db851a4a380c0e22f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#ad21badaf40ab842db851a4a380c0e22f">RgbdSensorDiscrete</a> (const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html">RgbdSensorDiscrete</a> &amp;)=delete</td></tr>
 <tr class="separator:ad21badaf40ab842db851a4a380c0e22f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -716,7 +721,7 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a79737f07b9834cf08fd55925be76944d"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#a79737f07b9834cf08fd55925be76944d">kDefaultPeriod</a> = 1. / 30</td></tr>
+<tr class="memitem:a79737f07b9834cf08fd55925be76944d"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#a79737f07b9834cf08fd55925be76944d">kDefaultPeriod</a> = 1.0 / 30</td></tr>
 <tr class="separator:a79737f07b9834cf08fd55925be76944d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -1271,6 +1276,25 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a96a36d6a07e828f5d59df2fd3f254495"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96a36d6a07e828f5d59df2fd3f254495">&#9670;&nbsp;</a></span>image_time_output_port()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;&amp; image_time_output_port </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the vector-valued output port (with size == 1) which reports the simulation time when the image outputs were captured, in seconds (i.e., the time of the most recent zero-order hold discrete update). </p>
+
+</div>
+</div>
 <a id="aea1c4f5f5823d9fd788df60be071025a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aea1c4f5f5823d9fd788df60be071025a">&#9670;&nbsp;</a></span>label_image_output_port()</h2>
 
@@ -1289,8 +1313,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a7a7563e77e29dbe2723b67edd4ffe6bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7a7563e77e29dbe2723b67edd4ffe6bb">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="afd0368849f35be23e914079d5373ee2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd0368849f35be23e914079d5373ee2c">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1301,7 +1325,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html">RgbdSensorDiscrete</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html">RgbdSensorDiscrete</a> &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html">RgbdSensorDiscrete</a> &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1315,8 +1339,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="afd0368849f35be23e914079d5373ee2c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd0368849f35be23e914079d5373ee2c">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a7a7563e77e29dbe2723b67edd4ffe6bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a7563e77e29dbe2723b67edd4ffe6bb">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1327,7 +1351,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html">RgbdSensorDiscrete</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html">RgbdSensorDiscrete</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html">RgbdSensorDiscrete</a> &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1356,7 +1380,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns update period for discrete camera. </p>
+<p>Returns the update period for the discrete camera. </p>
 
 </div>
 </div>
@@ -1393,7 +1417,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns reference to <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html" title="A meta-sensor that houses RGB, depth, and label cameras, producing their corresponding images based o...">RgbdSensor</a> instance. </p>
+<p>Returns a reference to the underlying <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html" title="A meta-sensor that houses RGB, depth, and label cameras, producing their corresponding images based o...">RgbdSensor</a> object. </p>
 
 </div>
 </div>
@@ -1408,7 +1432,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr <a class="el" href="classdouble.html">double</a> kDefaultPeriod = 1. / 30</td>
+          <td class="memname">constexpr <a class="el" href="classdouble.html">double</a> kDefaultPeriod = 1.0 / 30</td>
         </tr>
       </table>
   </td>

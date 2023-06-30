@@ -440,15 +440,33 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a23f1475b0c301d9d78814fce265fd6ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a23f1475b0c301d9d78814fce265fd6ea">num_constraints</a> () const</td></tr>
 <tr class="memdesc:a23f1475b0c301d9d78814fce265fd6ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the total number of constraints specified by the user.  <a href="#a23f1475b0c301d9d78814fce265fd6ea">More...</a><br /></td></tr>
 <tr class="separator:a23f1475b0c301d9d78814fce265fd6ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71b7c4d7b4af1c97bb6f7dae906d1088"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#acf80186832c1a4abbfe4473c9783495f">ConstraintIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a71b7c4d7b4af1c97bb6f7dae906d1088">AddCouplerConstraint</a> (const <a class="el" href="classdrake_1_1multibody_1_1_joint.html">Joint</a>&lt; T &gt; &amp;joint0, const <a class="el" href="classdrake_1_1multibody_1_1_joint.html">Joint</a>&lt; T &gt; &amp;joint1, <a class="el" href="classdouble.html">double</a> gear_ratio, <a class="el" href="classdouble.html">double</a> offset=0.0)</td></tr>
-<tr class="memdesc:a71b7c4d7b4af1c97bb6f7dae906d1088"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a holonomic constraint between two single-dof joints <code>joint0</code> and <code>joint1</code> with positions q₀ and q₁, respectively, such that q₀ = ρ⋅q₁ + Δq, where ρ is the gear ratio and Δq is a fixed offset.  <a href="#a71b7c4d7b4af1c97bb6f7dae906d1088">More...</a><br /></td></tr>
-<tr class="separator:a71b7c4d7b4af1c97bb6f7dae906d1088"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f29f6aa01dd68ee2babe09ace936ebf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#acf80186832c1a4abbfe4473c9783495f">ConstraintIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8f29f6aa01dd68ee2babe09ace936ebf">AddDistanceConstraint</a> (const <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; &amp;body_A, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;p_AP, const <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; &amp;body_B, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;p_BQ, <a class="el" href="classdouble.html">double</a> distance, <a class="el" href="classdouble.html">double</a> stiffness=std::numeric_limits&lt; <a class="el" href="classdouble.html">double</a> &gt;::infinity(), <a class="el" href="classdouble.html">double</a> damping=0.0)</td></tr>
-<tr class="memdesc:a8f29f6aa01dd68ee2babe09ace936ebf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a distance constraint between a point P on a body A and a point Q on a body B.  <a href="#a8f29f6aa01dd68ee2babe09ace936ebf">More...</a><br /></td></tr>
-<tr class="separator:a8f29f6aa01dd68ee2babe09ace936ebf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0572ce9897e3727ccdfd5fbb34e6512a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#acf80186832c1a4abbfe4473c9783495f">ConstraintIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a0572ce9897e3727ccdfd5fbb34e6512a">AddBallConstraint</a> (const <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; &amp;body_A, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;p_AP, const <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; &amp;body_B, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;p_BQ)</td></tr>
-<tr class="memdesc:a0572ce9897e3727ccdfd5fbb34e6512a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a constraint such that point P affixed to body A is coincident at all times with point Q affixed to body B, effectively modeling a ball-and-socket joint.  <a href="#a0572ce9897e3727ccdfd5fbb34e6512a">More...</a><br /></td></tr>
-<tr class="separator:a0572ce9897e3727ccdfd5fbb34e6512a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabbb62902b23cee44ddb8a5ad0b04e07"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aabbb62902b23cee44ddb8a5ad0b04e07">num_coupler_constraints</a> () const</td></tr>
+<tr class="memdesc:aabbb62902b23cee44ddb8a5ad0b04e07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the total number of coupler constraints specified by the user.  <a href="#aabbb62902b23cee44ddb8a5ad0b04e07">More...</a><br /></td></tr>
+<tr class="separator:aabbb62902b23cee44ddb8a5ad0b04e07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcd3b83abdfc7ffd22359f73c540f166"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#adcd3b83abdfc7ffd22359f73c540f166">num_distance_constraints</a> () const</td></tr>
+<tr class="memdesc:adcd3b83abdfc7ffd22359f73c540f166"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the total number of distance constraints specified by the user.  <a href="#adcd3b83abdfc7ffd22359f73c540f166">More...</a><br /></td></tr>
+<tr class="separator:adcd3b83abdfc7ffd22359f73c540f166"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff063ba2ef6ea43b0abf574e27846c29"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aff063ba2ef6ea43b0abf574e27846c29">num_ball_constraints</a> () const</td></tr>
+<tr class="memdesc:aff063ba2ef6ea43b0abf574e27846c29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the total number of ball constraints specified by the user.  <a href="#aff063ba2ef6ea43b0abf574e27846c29">More...</a><br /></td></tr>
+<tr class="separator:aff063ba2ef6ea43b0abf574e27846c29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a891b617d944b90c276e67bcdc48e86b1"><td class="memItemLeft" align="right" valign="top">const internal::CouplerConstraintSpec &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a891b617d944b90c276e67bcdc48e86b1">get_coupler_constraint_specs</a> (<a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a> id) const</td></tr>
+<tr class="memdesc:a891b617d944b90c276e67bcdc48e86b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the coupler constraint specification corresponding to <code>id</code>  <a href="#a891b617d944b90c276e67bcdc48e86b1">More...</a><br /></td></tr>
+<tr class="separator:a891b617d944b90c276e67bcdc48e86b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72e189f7283ce15c0ea440bacd5925bf"><td class="memItemLeft" align="right" valign="top">const internal::DistanceConstraintSpec &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a72e189f7283ce15c0ea440bacd5925bf">get_distance_constraint_specs</a> (<a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a> id) const</td></tr>
+<tr class="memdesc:a72e189f7283ce15c0ea440bacd5925bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the distance constraint specification corresponding to <code>id</code>  <a href="#a72e189f7283ce15c0ea440bacd5925bf">More...</a><br /></td></tr>
+<tr class="separator:a72e189f7283ce15c0ea440bacd5925bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace9b88bf8d937ef60eb4a96c28db13c0"><td class="memItemLeft" align="right" valign="top">const internal::BallConstraintSpec &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ace9b88bf8d937ef60eb4a96c28db13c0">get_ball_constraint_specs</a> (<a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a> id) const</td></tr>
+<tr class="memdesc:ace9b88bf8d937ef60eb4a96c28db13c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the ball constraint specification corresponding to <code>id</code>  <a href="#ace9b88bf8d937ef60eb4a96c28db13c0">More...</a><br /></td></tr>
+<tr class="separator:ace9b88bf8d937ef60eb4a96c28db13c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad867f47ed9c5fa6a48d4eba8b9d871e9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ad867f47ed9c5fa6a48d4eba8b9d871e9">AddCouplerConstraint</a> (const <a class="el" href="classdrake_1_1multibody_1_1_joint.html">Joint</a>&lt; T &gt; &amp;joint0, const <a class="el" href="classdrake_1_1multibody_1_1_joint.html">Joint</a>&lt; T &gt; &amp;joint1, <a class="el" href="classdouble.html">double</a> gear_ratio, <a class="el" href="classdouble.html">double</a> offset=0.0)</td></tr>
+<tr class="memdesc:ad867f47ed9c5fa6a48d4eba8b9d871e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a holonomic constraint between two single-dof joints <code>joint0</code> and <code>joint1</code> with positions q₀ and q₁, respectively, such that q₀ = ρ⋅q₁ + Δq, where ρ is the gear ratio and Δq is a fixed offset.  <a href="#ad867f47ed9c5fa6a48d4eba8b9d871e9">More...</a><br /></td></tr>
+<tr class="separator:ad867f47ed9c5fa6a48d4eba8b9d871e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7524a3e022e5da25a388ca8cba5367ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a7524a3e022e5da25a388ca8cba5367ab">AddDistanceConstraint</a> (const <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; &amp;body_A, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;p_AP, const <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; &amp;body_B, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;p_BQ, <a class="el" href="classdouble.html">double</a> distance, <a class="el" href="classdouble.html">double</a> stiffness=std::numeric_limits&lt; <a class="el" href="classdouble.html">double</a> &gt;::infinity(), <a class="el" href="classdouble.html">double</a> damping=0.0)</td></tr>
+<tr class="memdesc:a7524a3e022e5da25a388ca8cba5367ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a distance constraint between a point P on a body A and a point Q on a body B.  <a href="#a7524a3e022e5da25a388ca8cba5367ab">More...</a><br /></td></tr>
+<tr class="separator:a7524a3e022e5da25a388ca8cba5367ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4db62379a7fa75d245736108c0d12491"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a4db62379a7fa75d245736108c0d12491">AddBallConstraint</a> (const <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; &amp;body_A, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;p_AP, const <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; &amp;body_B, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;p_BQ)</td></tr>
+<tr class="memdesc:a4db62379a7fa75d245736108c0d12491"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a constraint such that point P affixed to body A is coincident at all times with point Q affixed to body B, effectively modeling a ball-and-socket joint.  <a href="#a4db62379a7fa75d245736108c0d12491">More...</a><br /></td></tr>
+<tr class="separator:a4db62379a7fa75d245736108c0d12491"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Geometry</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="mbp_geometry"></a></p>
 <p>The following geometry methods provide a convenient means for associating geometries with bodies. Ultimately, the geometries are owned by <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>. These methods do the work of registering the requested geometries with SceneGraph and maintaining a mapping between the body and the registered data. Particularly, SceneGraph knows nothing about the concepts inherent in the MultibodyPlant. These methods account for those differences as documented below.</p>
@@ -1295,14 +1313,14 @@ Contact modeling</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a0572ce9897e3727ccdfd5fbb34e6512a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0572ce9897e3727ccdfd5fbb34e6512a">&#9670;&nbsp;</a></span>AddBallConstraint()</h2>
+<a id="a4db62379a7fa75d245736108c0d12491"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4db62379a7fa75d245736108c0d12491">&#9670;&nbsp;</a></span>AddBallConstraint()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacedrake_1_1multibody.html#acf80186832c1a4abbfe4473c9783495f">ConstraintIndex</a> AddBallConstraint </td>
+          <td class="memname"><a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a> AddBallConstraint </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>body_A</em>, </td>
@@ -1343,7 +1361,7 @@ Contact modeling</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the index to the newly added constraint.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the id of the newly added constraint.</dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if bodies A and B are the same body. </td></tr>
@@ -1354,14 +1372,14 @@ Contact modeling</h2></td></tr>
 
 </div>
 </div>
-<a id="a71b7c4d7b4af1c97bb6f7dae906d1088"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a71b7c4d7b4af1c97bb6f7dae906d1088">&#9670;&nbsp;</a></span>AddCouplerConstraint()</h2>
+<a id="ad867f47ed9c5fa6a48d4eba8b9d871e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad867f47ed9c5fa6a48d4eba8b9d871e9">&#9670;&nbsp;</a></span>AddCouplerConstraint()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacedrake_1_1multibody.html#acf80186832c1a4abbfe4473c9783495f">ConstraintIndex</a> AddCouplerConstraint </td>
+          <td class="memname"><a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a> AddCouplerConstraint </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_joint.html">Joint</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>joint0</em>, </td>
@@ -1407,14 +1425,14 @@ Generally, to couple (q0, q1, q2), the user would define a coupler between (q0, 
 
 </div>
 </div>
-<a id="a8f29f6aa01dd68ee2babe09ace936ebf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8f29f6aa01dd68ee2babe09ace936ebf">&#9670;&nbsp;</a></span>AddDistanceConstraint()</h2>
+<a id="a7524a3e022e5da25a388ca8cba5367ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7524a3e022e5da25a388ca8cba5367ab">&#9670;&nbsp;</a></span>AddDistanceConstraint()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacedrake_1_1multibody.html#acf80186832c1a4abbfe4473c9783495f">ConstraintIndex</a> AddDistanceConstraint </td>
+          <td class="memname"><a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a> AddDistanceConstraint </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>body_A</em>, </td>
@@ -1478,7 +1496,7 @@ Generally, to couple (q0, q1, q2), the user would define a coupler between (q0, 
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the index to the newly added constraint.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the id of the newly added constraint.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Currently, it is the user's responsibility to initialize the model's context in a configuration compatible with the newly added constraint.</dd>
 <dd>
 A distance constraint is the wrong modeling choice if the distance needs to go through zero. To constrain two points to be coincident we need a 3-dof ball constraint, the 1-dof distance constraint is singular in this case. Therefore we require the distance parameter to be strictly positive.</dd></dl>
@@ -3969,6 +3987,32 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 
 </div>
 </div>
+<a id="ace9b88bf8d937ef60eb4a96c28db13c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace9b88bf8d937ef60eb4a96c28db13c0">&#9670;&nbsp;</a></span>get_ball_constraint_specs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const internal::BallConstraintSpec&amp; get_ball_constraint_specs </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a>&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the ball constraint specification corresponding to <code>id</code> </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td><code>id</code> is not a valid identifier for a ball constraint. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ada9547075b5a67b2354f3dabf0f2f787"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ada9547075b5a67b2354f3dabf0f2f787">&#9670;&nbsp;</a></span>get_body()</h2>
 
@@ -4153,6 +4197,32 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 
 </div>
 </div>
+<a id="a891b617d944b90c276e67bcdc48e86b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a891b617d944b90c276e67bcdc48e86b1">&#9670;&nbsp;</a></span>get_coupler_constraint_specs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const internal::CouplerConstraintSpec&amp; get_coupler_constraint_specs </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a>&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the coupler constraint specification corresponding to <code>id</code> </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td><code>id</code> is not a valid identifier for a coupler constraint. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ad7698366750a09e383106a17bf9009a2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad7698366750a09e383106a17bf9009a2">&#9670;&nbsp;</a></span>get_discrete_contact_solver()</h2>
 
@@ -4169,6 +4239,32 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 </div><div class="memdoc">
 
 <p>Returns the contact solver type used for discrete MultibodyPlant models. </p>
+
+</div>
+</div>
+<a id="a72e189f7283ce15c0ea440bacd5925bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72e189f7283ce15c0ea440bacd5925bf">&#9670;&nbsp;</a></span>get_distance_constraint_specs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const internal::DistanceConstraintSpec&amp; get_distance_constraint_specs </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a>&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the distance constraint specification corresponding to <code>id</code> </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td><code>id</code> is not a valid identifier for a distance constraint. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -7363,6 +7459,25 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 
 </div>
 </div>
+<a id="aff063ba2ef6ea43b0abf574e27846c29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff063ba2ef6ea43b0abf574e27846c29">&#9670;&nbsp;</a></span>num_ball_constraints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> num_ball_constraints </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the total number of ball constraints specified by the user. </p>
+
+</div>
+</div>
 <a id="af92b53211e54243aff4490a700168eb4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af92b53211e54243aff4490a700168eb4">&#9670;&nbsp;</a></span>num_bodies()</h2>
 
@@ -7419,6 +7534,44 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 </div><div class="memdoc">
 
 <p>Returns the total number of constraints specified by the user. </p>
+
+</div>
+</div>
+<a id="aabbb62902b23cee44ddb8a5ad0b04e07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabbb62902b23cee44ddb8a5ad0b04e07">&#9670;&nbsp;</a></span>num_coupler_constraints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> num_coupler_constraints </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the total number of coupler constraints specified by the user. </p>
+
+</div>
+</div>
+<a id="adcd3b83abdfc7ffd22359f73c540f166"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcd3b83abdfc7ffd22359f73c540f166">&#9670;&nbsp;</a></span>num_distance_constraints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> num_distance_constraints </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the total number of distance constraints specified by the user. </p>
 
 </div>
 </div>

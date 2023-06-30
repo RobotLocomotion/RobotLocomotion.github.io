@@ -1709,7 +1709,7 @@ in different messages will not produce useful results).</p>
 <p>A meta-sensor that houses RGB, depth, and label cameras, producing
 their corresponding images based on the contents of the
 geometry::SceneGraph.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">geometry_query&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>RgbdSensor</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; color_image</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; depth_image_32f</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; depth_image_16u</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; label_image</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_pose_in_world</td></tr></table></td></tr></table><p>This system models a continuous sensor, where the output ports reflect
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">geometry_query&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>RgbdSensor</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; color_image</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; depth_image_32f</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; depth_image_16u</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; label_image</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_pose_in_world</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; image_time</td></tr></table></td></tr></table><p>This system models a continuous sensor, where the output ports reflect
 the instantaneous images observed by the sensor. In contrast, a
 discrete (sample and hold) sensor model might be a more suitable match
 for a real-world camera; for that case, see RgbdSensorDiscrete or
@@ -1831,6 +1831,15 @@ ImageDepth32F.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensor.image_time_output_port">
+<span class="sig-name descname"><span class="pre">image_time_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensor" title="pydrake.systems.sensors.RgbdSensor"><span class="pre">pydrake.systems.sensors.RgbdSensor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensor.image_time_output_port" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the vector-valued output port (with size == 1) that reports
+the current simulation time, in seconds. This is provided for
+consistency with RgbdSensorDiscrete and RgbdSensorAsync (where the
+image time is not always the current time).</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensor.label_image_output_port">
 <span class="sig-name descname"><span class="pre">label_image_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensor" title="pydrake.systems.sensors.RgbdSensor"><span class="pre">pydrake.systems.sensors.RgbdSensor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensor.label_image_output_port" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the abstract-valued output port that contains an
@@ -1884,7 +1893,7 @@ either not thread-safe or perform poorly when used here. We hope
 to add async support for those engines down the road (see #19437
 for details).</p>
 </div>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">geometry_query&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>RgbdSensorAsync</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; color_image (optional)</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; depth_image_32f (optional)</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; depth_image_16u (optional)</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; label_image (optional)</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_pose_in_world</td></tr></table></td></tr></table><p>This sensor works by capturing the i’th state of the world at time
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">geometry_query&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>RgbdSensorAsync</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; color_image (optional)</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; depth_image_32f (optional)</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; depth_image_16u (optional)</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; label_image (optional)</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_pose_in_world</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; image_time</td></tr></table></td></tr></table><p>This sensor works by capturing the i’th state of the world at time
 <code class="docutils literal notranslate"><span class="pre">t_capture</span> <span class="pre">=</span> <span class="pre">capture_offset</span> <span class="pre">+</span> <span class="pre">i</span> <span class="pre">/</span> <span class="pre">fps</span></code> and outputting the
 corresponding rendered image at time <code class="docutils literal notranslate"><span class="pre">t_output</span> <span class="pre">=</span> <span class="pre">t_capture</span> <span class="pre">+</span>
 <span class="pre">output_delay</span></code>, i.e., <code class="docutils literal notranslate"><span class="pre">t_output</span> <span class="pre">=</span> <span class="pre">capture_offset</span> <span class="pre">+</span> <span class="pre">i</span> <span class="pre">/</span> <span class="pre">fps</span> <span class="pre">+</span>
@@ -1954,7 +1963,7 @@ input and render the associated images. Must be strictly positive
 and finite.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">capture_offset</span></code>:</dt><dd><p>The time of the first sample of <code class="docutils literal notranslate"><span class="pre">geometry_query</span></code> input.
-Typically zero. Must be finite.</p>
+Typically zero. Must be non-negative and finite.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">output_delay</span></code>:</dt><dd><p>How long after the <code class="docutils literal notranslate"><span class="pre">geometry_query</span></code> input sample the output
 ports should change to reflect the new rendered image(s). Must be
@@ -1997,8 +2006,12 @@ which reports the pose of the body in the world frame (X_WB).</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensorAsync.color_image_output_port">
 <span class="sig-name descname"><span class="pre">color_image_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensorAsync" title="pydrake.systems.sensors.RgbdSensorAsync"><span class="pre">pydrake.systems.sensors.RgbdSensorAsync</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensorAsync.color_image_output_port" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the abstract-valued output port that contains an ImageRgba8U
-if such a port was requested in the constructor, otherwise null.</p>
+<dd><p>Returns the abstract-valued output port that contains an ImageRgba8U.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError when color output is not enabled.</strong> – </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -2010,15 +2023,25 @@ if such a port was requested in the constructor, otherwise null.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensorAsync.depth_image_16U_output_port">
 <span class="sig-name descname"><span class="pre">depth_image_16U_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensorAsync" title="pydrake.systems.sensors.RgbdSensorAsync"><span class="pre">pydrake.systems.sensors.RgbdSensorAsync</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensorAsync.depth_image_16U_output_port" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the abstract-valued output port that contains an ImageDepth16U
-if such a port was requested in the constructor, otherwise null.</p>
+<dd><p>Returns the abstract-valued output port that contains an
+ImageDepth16U.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError when depth output is not enabled.</strong> – </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensorAsync.depth_image_32F_output_port">
 <span class="sig-name descname"><span class="pre">depth_image_32F_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensorAsync" title="pydrake.systems.sensors.RgbdSensorAsync"><span class="pre">pydrake.systems.sensors.RgbdSensorAsync</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensorAsync.depth_image_32F_output_port" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the abstract-valued output port that contains an ImageDepth32F
-if such a port was requested in the constructor, otherwise null.</p>
+<dd><p>Returns the abstract-valued output port that contains an
+ImageDepth32F.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError when depth output is not enabled.</strong> – </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -2028,10 +2051,24 @@ if such a port was requested in the constructor, otherwise null.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensorAsync.image_time_output_port">
+<span class="sig-name descname"><span class="pre">image_time_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensorAsync" title="pydrake.systems.sensors.RgbdSensorAsync"><span class="pre">pydrake.systems.sensors.RgbdSensorAsync</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensorAsync.image_time_output_port" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the vector-valued output port (with size == 1) which reports
+the simulation time when the image outputs were captured, in seconds.
+When there are no images available on the output ports (e.g., at the
+beginning of a simulation), the value will be NaN.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensorAsync.label_image_output_port">
 <span class="sig-name descname"><span class="pre">label_image_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensorAsync" title="pydrake.systems.sensors.RgbdSensorAsync"><span class="pre">pydrake.systems.sensors.RgbdSensorAsync</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensorAsync.label_image_output_port" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the abstract-valued output port that contains an ImageLabel16I
-if such a port was requested in the constructor, otherwise null.</p>
+<dd><p>Returns the abstract-valued output port that contains an
+ImageLabel16I.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError when label output is not enabled.</strong> – </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -2060,7 +2097,7 @@ if such a port was requested in the constructor, otherwise null.</p>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram" title="pydrake.systems.framework.Diagram"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Diagram</span></code></a></p>
 <p>Wraps a continuous RgbdSensor with a zero-order hold to create a
 discrete sensor.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">geometry_query&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>RgbdSensorDiscrete</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; color_image</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; depth_image_32f</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; depth_image_16u</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; label_image</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_pose_in_world</td></tr></table></td></tr></table><p>See also RgbdSensorAsync for a slightly different discrete sensor
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">geometry_query&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>RgbdSensorDiscrete</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; color_image</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; depth_image_32f</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; depth_image_16u</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; label_image</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_pose_in_world</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; image_time</td></tr></table></td></tr></table><p>See also RgbdSensorAsync for a slightly different discrete sensor
 model.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -2126,6 +2163,14 @@ called.</p>
 </div>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensorDiscrete.image_time_output_port">
+<span class="sig-name descname"><span class="pre">image_time_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensorDiscrete" title="pydrake.systems.sensors.RgbdSensorDiscrete"><span class="pre">pydrake.systems.sensors.RgbdSensorDiscrete</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensorDiscrete.image_time_output_port" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the vector-valued output port (with size == 1) which reports
+the simulation time when the image outputs were captured, in seconds
+(i.e., the time of the most recent zero-order hold discrete update).</p>
+</dd></dl>
+
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensorDiscrete.kDefaultPeriod">
 <span class="sig-name descname"><span class="pre">kDefaultPeriod</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.03333333333333333</span></em><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensorDiscrete.kDefaultPeriod" title="Permalink to this definition"></a></dt>
@@ -2143,7 +2188,7 @@ called.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensorDiscrete.period">
 <span class="sig-name descname"><span class="pre">period</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensorDiscrete" title="pydrake.systems.sensors.RgbdSensorDiscrete"><span class="pre">pydrake.systems.sensors.RgbdSensorDiscrete</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensorDiscrete.period" title="Permalink to this definition"></a></dt>
-<dd><p>Returns update period for discrete camera.</p>
+<dd><p>Returns the update period for the discrete camera.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2158,7 +2203,7 @@ called.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensorDiscrete.sensor">
 <span class="sig-name descname"><span class="pre">sensor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensorDiscrete" title="pydrake.systems.sensors.RgbdSensorDiscrete"><span class="pre">pydrake.systems.sensors.RgbdSensorDiscrete</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensor" title="pydrake.systems.sensors.RgbdSensor"><span class="pre">pydrake.systems.sensors.RgbdSensor</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensorDiscrete.sensor" title="Permalink to this definition"></a></dt>
-<dd><p>Returns reference to RgbdSensor instance.</p>
+<dd><p>Returns a reference to the underlying RgbdSensor object.</p>
 </dd></dl>
 
 </dd></dl>

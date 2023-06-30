@@ -1,5 +1,14 @@
 var NAVTREEINDEX42 =
 {
+"classdrake_1_1trajectories_1_1_bspline_trajectory.html":[3,0,0,18,1],
+"classdrake_1_1trajectories_1_1_bspline_trajectory.html#a0acbf3fa1589153652739854f168b63e":[3,0,0,18,1,11],
+"classdrake_1_1trajectories_1_1_bspline_trajectory.html#a0d37069b2edc37d7662aa809b6070e4e":[3,0,0,18,1,7],
+"classdrake_1_1trajectories_1_1_bspline_trajectory.html#a16a1ff64460e6742849e539887626cea":[3,0,0,18,1,9],
+"classdrake_1_1trajectories_1_1_bspline_trajectory.html#a1ffd5b82508f158e6e2d5b85be11bacc":[3,0,0,18,1,24],
+"classdrake_1_1trajectories_1_1_bspline_trajectory.html#a2a8a7c06f6f68cd4e58721aab4eb5885":[3,0,0,18,1,18],
+"classdrake_1_1trajectories_1_1_bspline_trajectory.html#a34cedb829a75120bfb60c98f376c4c19":[3,0,0,18,1,10],
+"classdrake_1_1trajectories_1_1_bspline_trajectory.html#a3d0f848e23c2d6e2ff99c8838ad439f8":[3,0,0,18,1,4],
+"classdrake_1_1trajectories_1_1_bspline_trajectory.html#a576612a037dee8597b5975d3525b3a48":[3,0,0,18,1,6],
 "classdrake_1_1trajectories_1_1_bspline_trajectory.html#a641bfb18296d6976a000cf31c213dfdf":[3,0,0,18,1,13],
 "classdrake_1_1trajectories_1_1_bspline_trajectory.html#a76b00967f0f33d809b58469e8301e4cb":[3,0,0,18,1,15],
 "classdrake_1_1trajectories_1_1_bspline_trajectory.html#a7bf41e0881035d3f5e879b99ff8fc4c5":[3,0,0,18,1,17],
@@ -240,14 +249,5 @@ var NAVTREEINDEX42 =
 "classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#a87b644f91479935ab6f674550c53f1dc":[1,2,11,5,3],
 "classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#ab9a884ab71a576b2fdb10c31f1501ece":[1,2,11,5,6],
 "classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#ac2e5aab0612d67400354a4fe71278a21":[1,2,11,5,4],
-"classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#ad869cd6ef2e796607d92e63fdc374112":[1,2,11,5,7],
-"classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#ae66e8448b66859a6593a973875a61c9c":[1,2,11,5,5],
-"classes.html":[3,1],
-"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html":[3,0,2,3],
-"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a03f87782de17fa3cc06eae968fe10b34":[3,0,2,3,12],
-"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a04a274a495def8512740b2abae7247dd":[3,0,2,3,2],
-"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a1c819a8d5b38cc935879f361b40c4b75":[3,0,2,3,0],
-"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a26709732b110585adcbcc580e1e1d0e9":[3,0,2,3,10],
-"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a2f4a903b4dccbfa52fa4a2db82073b45":[3,0,2,3,8],
-"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a3af4f2d4069e14a1b6ff6d509f180e71":[3,0,2,3,6]
+"classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#ad869cd6ef2e796607d92e63fdc374112":[1,2,11,5,7]
 };

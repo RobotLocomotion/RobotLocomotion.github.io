@@ -187,6 +187,8 @@ This system is intended for use only with the out-of-process glTF rendering engi
 <td align="left" style="padding:5px 0px 5px 0px">&rarr; label_image (optional)</td></tr>
 <tr>
 <td align="left" style="padding:5px 0px 5px 0px">&rarr; body_pose_in_world</td></tr>
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; image_time</td></tr>
 </table>
 </td></tr>
 </table>
@@ -247,21 +249,24 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aed8d1a98da2015ca3e2366207174f1c6"><td class="memItemLeft" align="right" valign="top">const std::optional&lt; <a class="el" href="classdrake_1_1geometry_1_1render_1_1_depth_render_camera.html">geometry::render::DepthRenderCamera</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_async.html#aed8d1a98da2015ca3e2366207174f1c6">depth_camera</a> () const</td></tr>
 <tr class="memdesc:aed8d1a98da2015ca3e2366207174f1c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <code>depth_camera</code> passed to the constructor.  <a href="#aed8d1a98da2015ca3e2366207174f1c6">More...</a><br /></td></tr>
 <tr class="separator:aed8d1a98da2015ca3e2366207174f1c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ee8400faa6385e896ae4feae20a28d4"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_async.html#a9ee8400faa6385e896ae4feae20a28d4">color_image_output_port</a> () const</td></tr>
-<tr class="memdesc:a9ee8400faa6385e896ae4feae20a28d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the abstract-valued output port that contains an ImageRgba8U if such a port was requested in the constructor, otherwise null.  <a href="#a9ee8400faa6385e896ae4feae20a28d4">More...</a><br /></td></tr>
-<tr class="separator:a9ee8400faa6385e896ae4feae20a28d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a53ce288298cc58e24f23648d46983c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_async.html#a6a53ce288298cc58e24f23648d46983c">depth_image_32F_output_port</a> () const</td></tr>
-<tr class="memdesc:a6a53ce288298cc58e24f23648d46983c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the abstract-valued output port that contains an ImageDepth32F if such a port was requested in the constructor, otherwise null.  <a href="#a6a53ce288298cc58e24f23648d46983c">More...</a><br /></td></tr>
-<tr class="separator:a6a53ce288298cc58e24f23648d46983c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaef7424aa204c80013d2216ba574b4ff"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_async.html#aaef7424aa204c80013d2216ba574b4ff">depth_image_16U_output_port</a> () const</td></tr>
-<tr class="memdesc:aaef7424aa204c80013d2216ba574b4ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the abstract-valued output port that contains an ImageDepth16U if such a port was requested in the constructor, otherwise null.  <a href="#aaef7424aa204c80013d2216ba574b4ff">More...</a><br /></td></tr>
-<tr class="separator:aaef7424aa204c80013d2216ba574b4ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44a2b4062239396919bfe065e6463cb5"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_async.html#a44a2b4062239396919bfe065e6463cb5">label_image_output_port</a> () const</td></tr>
-<tr class="memdesc:a44a2b4062239396919bfe065e6463cb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the abstract-valued output port that contains an ImageLabel16I if such a port was requested in the constructor, otherwise null.  <a href="#a44a2b4062239396919bfe065e6463cb5">More...</a><br /></td></tr>
-<tr class="separator:a44a2b4062239396919bfe065e6463cb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33d5986623f99c4adcfabe1291da311c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_async.html#a33d5986623f99c4adcfabe1291da311c">color_image_output_port</a> () const</td></tr>
+<tr class="memdesc:a33d5986623f99c4adcfabe1291da311c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the abstract-valued output port that contains an ImageRgba8U.  <a href="#a33d5986623f99c4adcfabe1291da311c">More...</a><br /></td></tr>
+<tr class="separator:a33d5986623f99c4adcfabe1291da311c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bdec7b6592d2ef93c40e246d1cd8b93"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_async.html#a4bdec7b6592d2ef93c40e246d1cd8b93">depth_image_32F_output_port</a> () const</td></tr>
+<tr class="memdesc:a4bdec7b6592d2ef93c40e246d1cd8b93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the abstract-valued output port that contains an ImageDepth32F.  <a href="#a4bdec7b6592d2ef93c40e246d1cd8b93">More...</a><br /></td></tr>
+<tr class="separator:a4bdec7b6592d2ef93c40e246d1cd8b93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ad3e6f86050d237d6a7ce35383510ce"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_async.html#a5ad3e6f86050d237d6a7ce35383510ce">depth_image_16U_output_port</a> () const</td></tr>
+<tr class="memdesc:a5ad3e6f86050d237d6a7ce35383510ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the abstract-valued output port that contains an ImageDepth16U.  <a href="#a5ad3e6f86050d237d6a7ce35383510ce">More...</a><br /></td></tr>
+<tr class="separator:a5ad3e6f86050d237d6a7ce35383510ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc15d39d0d9cb5544712ad6c0bed1aed"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_async.html#abc15d39d0d9cb5544712ad6c0bed1aed">label_image_output_port</a> () const</td></tr>
+<tr class="memdesc:abc15d39d0d9cb5544712ad6c0bed1aed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the abstract-valued output port that contains an ImageLabel16I.  <a href="#abc15d39d0d9cb5544712ad6c0bed1aed">More...</a><br /></td></tr>
+<tr class="separator:abc15d39d0d9cb5544712ad6c0bed1aed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff74e4980084b28c29f132bd18606031"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_async.html#aff74e4980084b28c29f132bd18606031">body_pose_in_world_output_port</a> () const</td></tr>
 <tr class="memdesc:aff74e4980084b28c29f132bd18606031"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the abstract-valued output port (containing a RigidTransform) which reports the pose of the body in the world frame (X_WB).  <a href="#aff74e4980084b28c29f132bd18606031">More...</a><br /></td></tr>
 <tr class="separator:aff74e4980084b28c29f132bd18606031"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96a36d6a07e828f5d59df2fd3f254495"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_async.html#a96a36d6a07e828f5d59df2fd3f254495">image_time_output_port</a> () const</td></tr>
+<tr class="memdesc:a96a36d6a07e828f5d59df2fd3f254495"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the vector-valued output port (with size == 1) which reports the simulation time when the image outputs were captured, in seconds.  <a href="#a96a36d6a07e828f5d59df2fd3f254495">More...</a><br /></td></tr>
+<tr class="separator:a96a36d6a07e828f5d59df2fd3f254495"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a1e302e5ca758a4d8e1fb225d4f6cea49"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_async.html#a1e302e5ca758a4d8e1fb225d4f6cea49">RgbdSensorAsync</a> (const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_async.html">RgbdSensorAsync</a> &amp;)=delete</td></tr>
 <tr class="separator:a1e302e5ca758a4d8e1fb225d4f6cea49"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1417,7 +1422,7 @@ Additional Inherited Members</h2></td></tr>
     <tr><td class="paramname">parent_id</td><td>The frame "P" to which the sensor body is affixed. See <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html" title="A meta-sensor that houses RGB, depth, and label cameras, producing their corresponding images based o...">RgbdSensor</a> for details. </td></tr>
     <tr><td class="paramname">X_PB</td><td>The transform relating parent and sensor body. See <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html" title="A meta-sensor that houses RGB, depth, and label cameras, producing their corresponding images based o...">RgbdSensor</a> for details. </td></tr>
     <tr><td class="paramname">fps</td><td>How often (frames per second) to sample the <code>geometry_query</code> input and render the associated images. Must be strictly positive and finite. </td></tr>
-    <tr><td class="paramname">capture_offset</td><td>The time of the first sample of <code>geometry_query</code> input. Typically zero. Must be finite. </td></tr>
+    <tr><td class="paramname">capture_offset</td><td>The time of the first sample of <code>geometry_query</code> input. Typically zero. Must be non-negative and finite. </td></tr>
     <tr><td class="paramname">output_delay</td><td>How long after the <code>geometry_query</code> input sample the output ports should change to reflect the new rendered image(s). Must be strictly positive and strictly less than 1/fps. </td></tr>
     <tr><td class="paramname">color_camera</td><td>The properties for the <code>color_image</code> output port. When nullopt, there will be no <code>color_image</code> output port. At least one of <code>color_camera</code> or <code>depth_camera</code> must be provided. </td></tr>
     <tr><td class="paramname">depth_camera</td><td>The properties for the <code>depth_image_32f</code> and <code>depth_image_16u</code> output ports. When nullopt, there will be no such output ports. At least one of <code>color_camera</code> or <code>depth_camera</code> must be provided. </td></tr>
@@ -1486,14 +1491,14 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a9ee8400faa6385e896ae4feae20a28d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ee8400faa6385e896ae4feae20a28d4">&#9670;&nbsp;</a></span>color_image_output_port()</h2>
+<a id="a33d5986623f99c4adcfabe1291da311c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33d5986623f99c4adcfabe1291da311c">&#9670;&nbsp;</a></span>color_image_output_port()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;* color_image_output_port </td>
+          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;&amp; color_image_output_port </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1501,7 +1506,13 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the abstract-valued output port that contains an ImageRgba8U if such a port was requested in the constructor, otherwise null. </p>
+<p>Returns the abstract-valued output port that contains an ImageRgba8U. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>when color output is not enabled. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1524,14 +1535,14 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="aaef7424aa204c80013d2216ba574b4ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaef7424aa204c80013d2216ba574b4ff">&#9670;&nbsp;</a></span>depth_image_16U_output_port()</h2>
+<a id="a5ad3e6f86050d237d6a7ce35383510ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ad3e6f86050d237d6a7ce35383510ce">&#9670;&nbsp;</a></span>depth_image_16U_output_port()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;* depth_image_16U_output_port </td>
+          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;&amp; depth_image_16U_output_port </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1539,18 +1550,24 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the abstract-valued output port that contains an ImageDepth16U if such a port was requested in the constructor, otherwise null. </p>
+<p>Returns the abstract-valued output port that contains an ImageDepth16U. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>when depth output is not enabled. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a id="a6a53ce288298cc58e24f23648d46983c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a53ce288298cc58e24f23648d46983c">&#9670;&nbsp;</a></span>depth_image_32F_output_port()</h2>
+<a id="a4bdec7b6592d2ef93c40e246d1cd8b93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bdec7b6592d2ef93c40e246d1cd8b93">&#9670;&nbsp;</a></span>depth_image_32F_output_port()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;* depth_image_32F_output_port </td>
+          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;&amp; depth_image_32F_output_port </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1558,7 +1575,13 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the abstract-valued output port that contains an ImageDepth32F if such a port was requested in the constructor, otherwise null. </p>
+<p>Returns the abstract-valued output port that contains an ImageDepth32F. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>when depth output is not enabled. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1581,14 +1604,14 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a44a2b4062239396919bfe065e6463cb5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a44a2b4062239396919bfe065e6463cb5">&#9670;&nbsp;</a></span>label_image_output_port()</h2>
+<a id="a96a36d6a07e828f5d59df2fd3f254495"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96a36d6a07e828f5d59df2fd3f254495">&#9670;&nbsp;</a></span>image_time_output_port()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;* label_image_output_port </td>
+          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;&amp; image_time_output_port </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1596,7 +1619,33 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the abstract-valued output port that contains an ImageLabel16I if such a port was requested in the constructor, otherwise null. </p>
+<p>Returns the vector-valued output port (with size == 1) which reports the simulation time when the image outputs were captured, in seconds. </p>
+<p>When there are no images available on the output ports (e.g., at the beginning of a simulation), the value will be NaN. </p>
+
+</div>
+</div>
+<a id="abc15d39d0d9cb5544712ad6c0bed1aed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc15d39d0d9cb5544712ad6c0bed1aed">&#9670;&nbsp;</a></span>label_image_output_port()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;&amp; label_image_output_port </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the abstract-valued output port that contains an ImageLabel16I. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>when label output is not enabled. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

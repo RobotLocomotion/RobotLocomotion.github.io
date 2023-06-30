@@ -3944,6 +3944,16 @@ your gamepad is working), see
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.Meshcat.GetRealtimeRate">
+<span class="sig-name descname"><span class="pre">GetRealtimeRate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Meshcat" title="pydrake.geometry.Meshcat"><span class="pre">pydrake.geometry.Meshcat</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.geometry.Meshcat.GetRealtimeRate" title="Permalink to this definition"></a></dt>
+<dd><p>Gets the realtime rate that is displayed in the meshcat visualizer
+stats strip chart. See SetRealtimeRate(). Note that this value might
+be a smoothing function across multiple calls to SetRealtimeRate()
+rather than the most recent argument value, in case this class ever
+adds smoothing capability.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.Meshcat.GetSliderNames">
 <span class="sig-name descname"><span class="pre">GetSliderNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Meshcat" title="pydrake.geometry.Meshcat"><span class="pre">pydrake.geometry.Meshcat</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.Meshcat.GetSliderNames" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the names of all sliders.</p>
@@ -5239,6 +5249,14 @@ cause a runtime error when attempting to broadcast messages.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.MeshcatVisualizer.ResetRealtimeRateCalculator">
+<span class="sig-name descname"><span class="pre">ResetRealtimeRateCalculator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.MeshcatVisualizer" title="pydrake.geometry.MeshcatVisualizer"><span class="pre">pydrake.geometry.MeshcatVisualizer</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizer.ResetRealtimeRateCalculator" title="Permalink to this definition"></a></dt>
+<dd><p>Resets the realtime rate calculator. Calculation will resume on the
+next periodic publish event. This is useful for correcting the
+realtime rate after simulation is resumed from a paused state, etc.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.MeshcatVisualizer.StartRecording">
 <span class="sig-name descname"><span class="pre">StartRecording</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.MeshcatVisualizer" title="pydrake.geometry.MeshcatVisualizer"><span class="pre">pydrake.geometry.MeshcatVisualizer</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">set_transforms_while_recording</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.MeshcatAnimation" title="pydrake.geometry.MeshcatAnimation"><span class="pre">pydrake.geometry.MeshcatAnimation</span></a></span></span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizer.StartRecording" title="Permalink to this definition"></a></dt>
 <dd><p>Sets a flag indicating that subsequent publish events should also be
@@ -5404,6 +5422,14 @@ Publish()).</p>
 <dd><p>Returns the QueryObject-valued input port. It should be connected to
 SceneGraph’s QueryObject-valued output port. Failure to do so will
 cause a runtime error when attempting to broadcast messages.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.MeshcatVisualizer_-AutoDiffXd-.ResetRealtimeRateCalculator">
+<span id="pydrake.geometry.MeshcatVisualizer_[AutoDiffXd].ResetRealtimeRateCalculator"></span><span class="sig-name descname"><span class="pre">ResetRealtimeRateCalculator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.MeshcatVisualizer_" title="pydrake.geometry.MeshcatVisualizer_"><span class="pre">pydrake.geometry.MeshcatVisualizer_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizer_-AutoDiffXd-.ResetRealtimeRateCalculator" title="Permalink to this definition"></a></dt>
+<dd><p>Resets the realtime rate calculator. Calculation will resume on the
+next periodic publish event. This is useful for correcting the
+realtime rate after simulation is resumed from a paused state, etc.</p>
 </dd></dl>
 
 <dl class="py method">

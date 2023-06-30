@@ -184,6 +184,8 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1sensors_1_1_r
 <td align="left" style="padding:5px 0px 5px 0px">&rarr; label_image</td></tr>
 <tr>
 <td align="left" style="padding:5px 0px 5px 0px">&rarr; body_pose_in_world</td></tr>
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; image_time</td></tr>
 </table>
 </td></tr>
 </table>
@@ -257,6 +259,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aff74e4980084b28c29f132bd18606031"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#aff74e4980084b28c29f132bd18606031">body_pose_in_world_output_port</a> () const</td></tr>
 <tr class="memdesc:aff74e4980084b28c29f132bd18606031"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the abstract-valued output port (containing a RigidTransform) which reports the pose of the body in the world frame (X_WB).  <a href="#aff74e4980084b28c29f132bd18606031">More...</a><br /></td></tr>
 <tr class="separator:aff74e4980084b28c29f132bd18606031"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96a36d6a07e828f5d59df2fd3f254495"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a96a36d6a07e828f5d59df2fd3f254495">image_time_output_port</a> () const</td></tr>
+<tr class="memdesc:a96a36d6a07e828f5d59df2fd3f254495"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the vector-valued output port (with size == 1) that reports the current simulation time, in seconds.  <a href="#a96a36d6a07e828f5d59df2fd3f254495">More...</a><br /></td></tr>
+<tr class="separator:a96a36d6a07e828f5d59df2fd3f254495"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a85d28c4753a0ad6977a19678dc614ba4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a85d28c4753a0ad6977a19678dc614ba4">RgbdSensor</a> (const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html">RgbdSensor</a> &amp;)=delete</td></tr>
 <tr class="separator:a85d28c4753a0ad6977a19678dc614ba4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1597,6 +1602,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the render camera for depth renderings. </p>
+
+</div>
+</div>
+<a id="a96a36d6a07e828f5d59df2fd3f254495"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96a36d6a07e828f5d59df2fd3f254495">&#9670;&nbsp;</a></span>image_time_output_port()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;&amp; image_time_output_port </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the vector-valued output port (with size == 1) that reports the current simulation time, in seconds. </p>
+<p>This is provided for consistency with <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html" title="Wraps a continuous RgbdSensor with a zero-order hold to create a discrete sensor.">RgbdSensorDiscrete</a> and <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_async.html" title="A sensor similar to RgbdSensorDiscrete but the rendering occurs on a background thread to offer impro...">RgbdSensorAsync</a> (where the image time is not always the current time). </p>
 
 </div>
 </div>

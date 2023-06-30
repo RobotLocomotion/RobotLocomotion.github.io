@@ -294,6 +294,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a85a13960e9b5cbf4becb62e66e6f3a8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a85a13960e9b5cbf4becb62e66e6f3a8b">SetRealtimeRate</a> (<a class="el" href="classdouble.html">double</a> rate)</td></tr>
 <tr class="memdesc:a85a13960e9b5cbf4becb62e66e6f3a8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the realtime rate that is displayed in the meshcat visualizer stats strip chart.  <a href="#a85a13960e9b5cbf4becb62e66e6f3a8b">More...</a><br /></td></tr>
 <tr class="separator:a85a13960e9b5cbf4becb62e66e6f3a8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5c20c156d9affc723055d0384137c44"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#ae5c20c156d9affc723055d0384137c44">GetRealtimeRate</a> () const</td></tr>
+<tr class="memdesc:ae5c20c156d9affc723055d0384137c44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the realtime rate that is displayed in the meshcat visualizer stats strip chart.  <a href="#ae5c20c156d9affc723055d0384137c44">More...</a><br /></td></tr>
+<tr class="separator:ae5c20c156d9affc723055d0384137c44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a277b54e83957ffa93ecc55625fa3aeb3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a277b54e83957ffa93ecc55625fa3aeb3">SetProperty</a> (std::string_view path, std::string property, bool value, const std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;time_in_recording=std::nullopt)</td></tr>
 <tr class="memdesc:a277b54e83957ffa93ecc55625fa3aeb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a single named property of the object at the given path.  <a href="#a277b54e83957ffa93ecc55625fa3aeb3">More...</a><br /></td></tr>
 <tr class="separator:a277b54e83957ffa93ecc55625fa3aeb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -930,6 +933,26 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae5c20c156d9affc723055d0384137c44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5c20c156d9affc723055d0384137c44">&#9670;&nbsp;</a></span>GetRealtimeRate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> GetRealtimeRate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the realtime rate that is displayed in the meshcat visualizer stats strip chart. </p>
+<p>See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a85a13960e9b5cbf4becb62e66e6f3a8b" title="Sets the realtime rate that is displayed in the meshcat visualizer stats strip chart.">SetRealtimeRate()</a>. Note that this value might be a smoothing function across multiple calls to <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a85a13960e9b5cbf4becb62e66e6f3a8b" title="Sets the realtime rate that is displayed in the meshcat visualizer stats strip chart.">SetRealtimeRate()</a> rather than the most recent argument value, in case this class ever adds smoothing capability. </p>
 
 </div>
 </div>
