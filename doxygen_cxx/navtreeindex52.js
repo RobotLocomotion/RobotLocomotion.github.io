@@ -1,7 +1,5 @@
 var NAVTREEINDEX52 =
 {
-"program__attribute_8h.html#ab09ca5e1afe9e5a4e8744ecb27839b15aeb3825da90413e715ee32c3463428d84":[4,0,0,11,40,5,3],
-"program__attribute_8h.html#ab09ca5e1afe9e5a4e8744ecb27839b15af91d74856b95694eb9624142e4317bb4":[4,0,0,11,40,5,8],
 "program__attribute_8h.html#adbd6047c1efdb345f4761a04b3764c90":[4,0,0,11,40,9],
 "program__attribute_8h.html#adfb26b995d486732f1b2867751dbbee7":[4,0,0,11,40,10],
 "propeller_8h.html":[4,0,0,8,10,29],
@@ -120,14 +118,11 @@ var NAVTREEINDEX52 =
 "render__doxygen_8h.html":[4,0,0,4,4,2],
 "render__engine_8h.html":[4,0,0,4,4,3],
 "render__engine__gl__params_8h.html":[4,0,0,4,5,10],
-"render__engine__gl__params_8h.html#ab09d4fd17cb25efe903b9cc7440bfd29":[4,0,0,4,5,10,1],
 "render__engine__gltf__client__params_8h.html":[4,0,0,4,6,6],
 "render__engine__vtk__params_8h.html":[4,0,0,4,7,4],
 "render__gl_2factory_8h.html":[4,0,0,4,5,0],
-"render__gl_2factory_8h.html#a6a949953d76af52d6dd1b13417cb556a":[4,0,0,4,5,0,2],
 "render__gl_2factory_8h.html#a6a949953d76af52d6dd1b13417cb556a":[4,0,0,4,5,0,1],
 "render__gl_2factory_8h.html#a822ce4b4810855c6f6fe7a025d8372f7":[4,0,0,4,5,0,0],
-"render__gl_2factory_8h.html#aaa4adf317ad66ba21d0ec9b99cd177ad":[4,0,0,4,5,0,3],
 "render__gltf__client_2factory_8h.html":[4,0,0,4,6,0],
 "render__gltf__client_2factory_8h.html#a99ba06b63779a45d0b347f3b6321ac43":[4,0,0,4,6,0,0],
 "render__gltf__client__doxygen_8h.html":[4,0,0,4,6,7],
@@ -249,5 +244,10 @@ var NAVTREEINDEX52 =
 "schunk__wsg__constants_8h.html#ga9d4acc482bc52a69383e884679887402":[4,0,0,6,2,1,1],
 "schunk__wsg__controller_8h.html":[4,0,0,6,2,2],
 "schunk__wsg__driver_8h.html":[4,0,0,6,2,3],
-"schunk__wsg__driver__functions_8h.html":[4,0,0,6,2,4]
+"schunk__wsg__driver__functions_8h.html":[4,0,0,6,2,4],
+"schunk__wsg__driver__functions_8h.html#a4439da2b643292abc0bbb07129cbd324":[4,0,0,6,2,4,0],
+"schunk__wsg__lcm_8h.html":[4,0,0,6,2,5],
+"schunk__wsg__plain__controller_8h.html":[4,0,0,6,2,6],
+"schunk__wsg__plain__controller_8h.html#aee3ea37f4f505980157cf93a84687bcb":[4,0,0,6,2,6,0],
+"schunk__wsg__plain__controller_8h.html#aee3ea37f4f505980157cf93a84687bcba5f1cd95b5107d0b426a753a484765cc9":[4,0,0,6,2,6,0,1]
 };

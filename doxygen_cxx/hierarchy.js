@@ -725,7 +725,6 @@ var hierarchy =
     [ "SceneGraphInspector< double >", "classdrake_1_1geometry_1_1_scene_graph_inspector.html", null ],
     [ "SchunkWsgDriver", "structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_driver.html", null ],
     [ "ScopedName", "classdrake_1_1multibody_1_1_scoped_name.html", null ],
-    [ "ScopedNameIsDeprecated", "structdrake_1_1multibody_1_1parsing_1_1_scoped_name_is_deprecated.html", null ],
     [ "ScopeExit", "classdrake_1_1_scope_exit.html", null ],
     [ "ScsSolverDetails", "structdrake_1_1solvers_1_1_scs_solver_details.html", null ],
     [ "CspaceFreePolytope::SearchResult", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html", null ],

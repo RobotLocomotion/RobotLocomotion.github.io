@@ -111,7 +111,7 @@ var searchData=
   ['khalfangleprefercos',['kHalfAnglePreferCos',['../namespacedrake_1_1symbolic.html#a0f7729e9ae50c2b5ca1d86021ad1ae44acdf5f9e766a4e04d5ac3bf38e82da0f0',1,'drake::symbolic']]],
   ['khalfangleprefersin',['kHalfAnglePreferSin',['../namespacedrake_1_1symbolic.html#a0f7729e9ae50c2b5ca1d86021ad1ae44aea1eea0840dd2bfd79a5cbfdf49ea143',1,'drake::symbolic']]],
   ['khardwarestatusperiod',['kHardwareStatusPeriod',['../namespacedrake_1_1examples_1_1allegro__hand.html#a4cfe0e130688b9fbe28a6a401caff04c',1,'drake::examples::allegro_hand']]],
-  ['khasrenderenginegl',['kHasRenderEngineGl',['../namespacedrake_1_1geometry.html#a6a949953d76af52d6dd1b13417cb556a',1,'drake::geometry::kHasRenderEngineGl()'],['../namespacedrake_1_1geometry_1_1render.html#a6a949953d76af52d6dd1b13417cb556a',1,'drake::geometry::render::kHasRenderEngineGl()']]],
+  ['khasrenderenginegl',['kHasRenderEngineGl',['../namespacedrake_1_1geometry.html#a6a949953d76af52d6dd1b13417cb556a',1,'drake::geometry']]],
   ['khavespdlog',['kHaveSpdlog',['../namespacedrake_1_1logging.html#a43a4a42dcea3143d400de1575cb5758c',1,'drake::logging']]],
   ['khydroelastic',['kHydroelastic',['../namespacedrake_1_1multibody.html#a6f6e054758d34b83e86bea87d65dfe4ea873aefb0d70a0478c541b2d98484595d',1,'drake::multibody']]],
   ['khydroelasticsonly',['kHydroelasticsOnly',['../namespacedrake_1_1multibody.html#a6f6e054758d34b83e86bea87d65dfe4ea0f9136530df40294d8404d10cc150423',1,'drake::multibody']]],

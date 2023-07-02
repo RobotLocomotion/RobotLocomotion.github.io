@@ -1,7 +1,5 @@
 var NAVTREEINDEX42 =
 {
-"classdrake_1_1trajectories_1_1_bspline_trajectory.html":[3,0,0,18,1],
-"classdrake_1_1trajectories_1_1_bspline_trajectory.html#a0acbf3fa1589153652739854f168b63e":[3,0,0,18,1,11],
 "classdrake_1_1trajectories_1_1_bspline_trajectory.html#a0d37069b2edc37d7662aa809b6070e4e":[3,0,0,18,1,7],
 "classdrake_1_1trajectories_1_1_bspline_trajectory.html#a16a1ff64460e6742849e539887626cea":[3,0,0,18,1,9],
 "classdrake_1_1trajectories_1_1_bspline_trajectory.html#a1ffd5b82508f158e6e2d5b85be11bacc":[3,0,0,18,1,24],
@@ -249,5 +247,7 @@ var NAVTREEINDEX42 =
 "classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#a87b644f91479935ab6f674550c53f1dc":[1,2,11,5,3],
 "classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#ab9a884ab71a576b2fdb10c31f1501ece":[1,2,11,5,6],
 "classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#ac2e5aab0612d67400354a4fe71278a21":[1,2,11,5,4],
-"classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#ad869cd6ef2e796607d92e63fdc374112":[1,2,11,5,7]
+"classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#ad869cd6ef2e796607d92e63fdc374112":[1,2,11,5,7],
+"classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#ae66e8448b66859a6593a973875a61c9c":[1,2,11,5,5],
+"classes.html":[3,1]
 };

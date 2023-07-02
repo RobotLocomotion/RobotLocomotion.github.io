@@ -1,7 +1,5 @@
 var NAVTREEINDEX46 =
 {
-"expression__kind_8h.html#a70b5e99a86a85837124c6a006f7ec60a":[4,0,0,1,3,0,5,1],
-"expression__visitor_8h.html":[4,0,0,1,3,0,6],
 "expression__visitor_8h.html#a0a61c45c20176e91159639186b26e35e":[4,0,0,1,3,0,6,1],
 "expression__visitor_8h.html#ab58092344918003fc7e186b1c57bbc7f":[4,0,0,1,3,0,6,0],
 "externally__applied__spatial__force_8h.html":[4,0,0,8,10,15],
@@ -216,8 +214,8 @@ var NAVTREEINDEX46 =
 "framework__py__values_8h.html#ae073851bc679a64d47dc27c133b8d89d":[4,0,0,0,0,7,2,0],
 "free__body_8h.html":[4,0,0,8,0,1,0],
 "function_8h.html":[4,0,0,11,19],
-"functions.html":[3,3,0,0],
 "functions.html":[3,3,0],
+"functions.html":[3,3,0,0],
 "functions_b.html":[3,3,0,1],
 "functions_c.html":[3,3,0,2],
 "functions_d.html":[3,3,0,3],
@@ -249,5 +247,7 @@ var NAVTREEINDEX46 =
 "functions_func_u.html":[3,3,1,20],
 "functions_func_v.html":[3,3,1,21],
 "functions_func_w.html":[3,3,1,22],
-"functions_func_x.html":[3,3,1,23]
+"functions_func_x.html":[3,3,1,23],
+"functions_func_y.html":[3,3,1,24],
+"functions_func_z.html":[3,3,1,25]
 };

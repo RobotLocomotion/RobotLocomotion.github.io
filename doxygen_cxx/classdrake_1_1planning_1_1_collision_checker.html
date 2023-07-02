@@ -226,12 +226,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7426149695dc6d09303cb351b3d84201"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ebf64a0503672b17907178242458218"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a0ebf64a0503672b17907178242458218">get_body</a> (<a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">multibody::BodyIndex</a> body_index) const</td></tr>
 <tr class="separator:a0ebf64a0503672b17907178242458218"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2321a66698e800884f3ff0496160860c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a2321a66698e800884f3ff0496160860c">GetScopedName</a> (const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">multibody::Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;frame) const</td></tr>
-<tr class="memdesc:a2321a66698e800884f3ff0496160860c"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a2321a66698e800884f3ff0496160860c">More...</a><br /></td></tr>
-<tr class="separator:a2321a66698e800884f3ff0496160860c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aebcb3747eeb77c4aa20776b0cc145c56"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#aebcb3747eeb77c4aa20776b0cc145c56">GetScopedName</a> (const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;body) const</td></tr>
-<tr class="memdesc:aebcb3747eeb77c4aa20776b0cc145c56"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#aebcb3747eeb77c4aa20776b0cc145c56">More...</a><br /></td></tr>
-<tr class="separator:aebcb3747eeb77c4aa20776b0cc145c56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9938c30a0a5d9a51996a163b111c883a"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">multibody::ModelInstanceIndex</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a9938c30a0a5d9a51996a163b111c883a">robot_model_instances</a> () const</td></tr>
 <tr class="memdesc:a9938c30a0a5d9a51996a163b111c883a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the set of model instances belonging to the robot.  <a href="#a9938c30a0a5d9a51996a163b111c883a">More...</a><br /></td></tr>
 <tr class="separator:a9938c30a0a5d9a51996a163b111c883a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1926,50 +1920,6 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Gets the collision padding matrix. </p>
-
-</div>
-</div>
-<a id="a2321a66698e800884f3ff0496160860c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2321a66698e800884f3ff0496160860c">&#9670;&nbsp;</a></span>GetScopedName() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string GetScopedName </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">multibody::Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>frame</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000009">Deprecated:</a></b></dt><dd>Use frame.scoped_name() instead. <br />
- This will be removed from Drake on or after 2023-07-01.</dd></dl>
-
-</div>
-</div>
-<a id="aebcb3747eeb77c4aa20776b0cc145c56"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aebcb3747eeb77c4aa20776b0cc145c56">&#9670;&nbsp;</a></span>GetScopedName() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string GetScopedName </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>body</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000010">Deprecated:</a></b></dt><dd>Use body.scoped_name() instead. <br />
- This will be removed from Drake on or after 2023-07-01.</dd></dl>
 
 </div>
 </div>

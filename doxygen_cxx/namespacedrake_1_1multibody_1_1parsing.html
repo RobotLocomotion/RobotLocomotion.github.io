@@ -160,7 +160,6 @@ $(document).ready(function(){initNavTree('namespacedrake_1_1multibody_1_1parsing
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">drake::multibody::parsing Namespace Reference</div>  </div>
@@ -196,13 +195,6 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html">ModelInstanceInfo</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience structure to hold all of the information to add a model instance from a file.  <a href="structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_scoped_name_is_deprecated.html">ScopedNameIsDeprecated</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a94b7f029e6229b3479146dd8550aacfd"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1parsing.html#a94b7f029e6229b3479146dd8550aacfd">ScopedName</a> = <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_scoped_name_is_deprecated.html">ScopedNameIsDeprecated</a></td></tr>
-<tr class="separator:a94b7f029e6229b3479146dd8550aacfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -228,34 +220,7 @@ Functions</h2></td></tr>
 <tr class="memitem:aea5ef9ce73e6aad999339261567758eb"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">drake::multibody::Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1parsing.html#aea5ef9ce73e6aad999339261567758eb">GetScopedFrameByName</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">drake::multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant, const std::string &amp;full_name)</td></tr>
 <tr class="memdesc:aea5ef9ce73e6aad999339261567758eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Equivalent to <code>GetScopedFrameByNameMaybe</code>, but throws if the frame is not found.  <a href="#aea5ef9ce73e6aad999339261567758eb">More...</a><br /></td></tr>
 <tr class="separator:aea5ef9ce73e6aad999339261567758eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad59da48dd3e20a1ee37bddcd64a23b16"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1parsing.html#ad59da48dd3e20a1ee37bddcd64a23b16">GetScopedFrameName</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">drake::multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">drake::multibody::Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;frame)</td></tr>
-<tr class="memdesc:ad59da48dd3e20a1ee37bddcd64a23b16"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#ad59da48dd3e20a1ee37bddcd64a23b16">More...</a><br /></td></tr>
-<tr class="separator:ad59da48dd3e20a1ee37bddcd64a23b16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a621e8533a6e2dae1933984297afb01ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_scoped_name_is_deprecated.html">ScopedNameIsDeprecated</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1parsing.html#a621e8533a6e2dae1933984297afb01ff">ParseScopedName</a> (const std::string &amp;full_name)</td></tr>
-<tr class="memdesc:a621e8533a6e2dae1933984297afb01ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a621e8533a6e2dae1933984297afb01ff">More...</a><br /></td></tr>
-<tr class="separator:a621e8533a6e2dae1933984297afb01ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abcb2da7ff1e0248aaa1eab6e19e41af9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1parsing.html#abcb2da7ff1e0248aaa1eab6e19e41af9">PrefixName</a> (const std::string &amp;namespace_, const std::string &amp;name)</td></tr>
-<tr class="memdesc:abcb2da7ff1e0248aaa1eab6e19e41af9"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#abcb2da7ff1e0248aaa1eab6e19e41af9">More...</a><br /></td></tr>
-<tr class="separator:abcb2da7ff1e0248aaa1eab6e19e41af9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea5d08d1947ebcdbde413331fd55d323"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1parsing.html#aea5d08d1947ebcdbde413331fd55d323">GetInstanceScopeName</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">drake::multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;, <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">drake::multibody::ModelInstanceIndex</a>)</td></tr>
-<tr class="memdesc:aea5d08d1947ebcdbde413331fd55d323"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#aea5d08d1947ebcdbde413331fd55d323">More...</a><br /></td></tr>
-<tr class="separator:aea5d08d1947ebcdbde413331fd55d323"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a id="a94b7f029e6229b3479146dd8550aacfd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a94b7f029e6229b3479146dd8550aacfd">&#9670;&nbsp;</a></span>ScopedName</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="namespacedrake_1_1multibody_1_1parsing.html#a94b7f029e6229b3479146dd8550aacfd">ScopedName</a> =  <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_scoped_name_is_deprecated.html">ScopedNameIsDeprecated</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="abc86ac1c2971d0d3ca1e2e98d0aa986c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abc86ac1c2971d0d3ca1e2e98d0aa986c">&#9670;&nbsp;</a></span>FlattenModelDirectives()</h2>
@@ -290,38 +255,6 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Flatten model directives. </p>
-
-</div>
-</div>
-<a id="aea5d08d1947ebcdbde413331fd55d323"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea5d08d1947ebcdbde413331fd55d323">&#9670;&nbsp;</a></span>GetInstanceScopeName()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string drake::multibody::parsing::GetInstanceScopeName </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">drake::multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">drake::multibody::ModelInstanceIndex</a>&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000008">Deprecated:</a></b></dt><dd>Use multibody::ScopedName instead <br />
- This will be removed from Drake on or after 2023-07-01.</dd></dl>
 
 </div>
 </div>
@@ -386,38 +319,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ad59da48dd3e20a1ee37bddcd64a23b16"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad59da48dd3e20a1ee37bddcd64a23b16">&#9670;&nbsp;</a></span>GetScopedFrameName()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string drake::multibody::parsing::GetScopedFrameName </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">drake::multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>plant</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">drake::multibody::Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>frame</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000005">Deprecated:</a></b></dt><dd>Use multibody::ScopedName instead <br />
- This will be removed from Drake on or after 2023-07-01.</dd></dl>
-
-</div>
-</div>
 <a id="a57aafdf49e089598a1e344d8e7a74249"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a57aafdf49e089598a1e344d8e7a74249">&#9670;&nbsp;</a></span>LoadModelDirectives()</h2>
 
@@ -451,60 +352,6 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a id="a621e8533a6e2dae1933984297afb01ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a621e8533a6e2dae1933984297afb01ff">&#9670;&nbsp;</a></span>ParseScopedName()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_scoped_name_is_deprecated.html">ScopedNameIsDeprecated</a> drake::multibody::parsing::ParseScopedName </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>full_name</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000006">Deprecated:</a></b></dt><dd>Use multibody::ScopedName instead <br />
- This will be removed from Drake on or after 2023-07-01.</dd></dl>
-
-</div>
-</div>
-<a id="abcb2da7ff1e0248aaa1eab6e19e41af9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abcb2da7ff1e0248aaa1eab6e19e41af9">&#9670;&nbsp;</a></span>PrefixName()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string drake::multibody::parsing::PrefixName </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>namespace_</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>name</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000007">Deprecated:</a></b></dt><dd>Use multibody::ScopedName instead <br />
- This will be removed from Drake on or after 2023-07-01.</dd></dl>
 
 </div>
 </div>

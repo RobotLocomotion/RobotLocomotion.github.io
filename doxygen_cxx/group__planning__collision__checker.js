@@ -60,8 +60,6 @@ var group__planning__collision__checker =
       [ "GetPaddingBetween", "classdrake_1_1planning_1_1_collision_checker.html#a642639c3ef89987db37c8ba232f0f494", null ],
       [ "GetPaddingBetween", "classdrake_1_1planning_1_1_collision_checker.html#a7c03d02cc94803a222f42da8032fb8e8", null ],
       [ "GetPaddingMatrix", "classdrake_1_1planning_1_1_collision_checker.html#aaf8617f3f3e43613b77a61b303035b7a", null ],
-      [ "GetScopedName", "classdrake_1_1planning_1_1_collision_checker.html#a2321a66698e800884f3ff0496160860c", null ],
-      [ "GetScopedName", "classdrake_1_1planning_1_1_collision_checker.html#aebcb3747eeb77c4aa20776b0cc145c56", null ],
       [ "GetZeroConfiguration", "classdrake_1_1planning_1_1_collision_checker.html#a32f67c9b2ea339cc9f20902bed41428f", null ],
       [ "InterpolateBetweenConfigurations", "classdrake_1_1planning_1_1_collision_checker.html#a15d96471a621cda128cdbc959b4f96c9", null ],
       [ "IsCollisionFilteredBetween", "classdrake_1_1planning_1_1_collision_checker.html#a4c482d9dc344b97944de8b61dc41911f", null ],

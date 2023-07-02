@@ -23,7 +23,6 @@ var searchData=
   ['schunkwsgstatussender',['SchunkWsgStatusSender',['../classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_status_sender.html',1,'drake::manipulation::schunk_wsg']]],
   ['schunkwsgtrajectorygenerator',['SchunkWsgTrajectoryGenerator',['../classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator.html',1,'drake::manipulation::schunk_wsg']]],
   ['scopedname',['ScopedName',['../classdrake_1_1multibody_1_1_scoped_name.html',1,'drake::multibody']]],
-  ['scopednameisdeprecated',['ScopedNameIsDeprecated',['../structdrake_1_1multibody_1_1parsing_1_1_scoped_name_is_deprecated.html',1,'drake::multibody::parsing']]],
   ['scopeexit',['ScopeExit',['../classdrake_1_1_scope_exit.html',1,'drake']]],
   ['screwjoint',['ScrewJoint',['../classdrake_1_1multibody_1_1_screw_joint.html',1,'drake::multibody']]],
   ['scssolver',['ScsSolver',['../classdrake_1_1solvers_1_1_scs_solver.html',1,'drake::solvers']]],
