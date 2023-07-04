@@ -1,5 +1,8 @@
 var NAVTREEINDEX43 =
 {
+"classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#ad869cd6ef2e796607d92e63fdc374112":[1,2,11,5,7],
+"classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#ae66e8448b66859a6593a973875a61c9c":[1,2,11,5,5],
+"classes.html":[3,1],
 "classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html":[3,0,2,3],
 "classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a03f87782de17fa3cc06eae968fe10b34":[3,0,2,3,12],
 "classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a04a274a495def8512740b2abae7247dd":[3,0,2,3,2],
@@ -246,8 +249,5 @@ var NAVTREEINDEX43 =
 "depth__shaders_8h.html":[4,0,0,4,4,0,0],
 "depth__shaders_8h.html#a5a1001f7895bceeeb06a6944b0789691":[4,0,0,4,4,0,0,1],
 "depth__shaders_8h.html#a7e1ae93b96cfb8ae4df5ee57a3371be2":[4,0,0,4,4,0,0,0],
-"detail__collision__filter__group__resolver_8h.html":[4,0,0,8,9,0],
-"detail__common_8h.html":[4,0,0,8,9,1],
-"detail__composite__parse_8h.html":[4,0,0,8,9,2],
-"detail__dmd__parser_8h.html":[4,0,0,8,9,3]
+"detail__collision__filter__group__resolver_8h.html":[4,0,0,8,9,0]
 };

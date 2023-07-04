@@ -173,8 +173,11 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 <dd><a class="anchor" id="_deprecated000006"></a>This function is no longer public. <br />
  This will be removed from Drake on or after 2023-11-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1visualization.html#a91350b14472fa922d11a6ced06e72bc8">drake::visualization::ApplyVisualizationConfig</a>  (const <a class="el" href="structdrake_1_1visualization_1_1_visualization_config.html" title="Settings for what MultibodyPlant and SceneGraph should send to meldis, Meshcat, and/or drake_visualiz...">VisualizationConfig</a> &amp;config, systems::DiagramBuilder&lt; double &gt; *builder, const <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html" title="A mapping from {bus_name: interface} with sugar for error checking with nice error messages during ac...">systems::lcm::LcmBuses</a> *lcm_buses, const multibody::MultibodyPlant&lt; double &gt; *plant, const geometry::SceneGraph&lt; double &gt; *scene_graph, std::shared_ptr&lt; geometry::Meshcat &gt; meshcat=nullptr, <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html" title="A pure virtual interface that enables LCM to be mocked.">lcm::DrakeLcmInterface</a> *lcm=nullptr)</dt>
-<dd><a class="anchor" id="_deprecated000008"></a>Pass a non-const SceneGraph pointer <br />
+<dd><a class="anchor" id="_deprecated000009"></a>Pass a non-const SceneGraph pointer <br />
  This will be removed from Drake on or after 2023-09-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1solvers_1_1_minimum_value_constraint.html#ab401d591e846938bc37b33dfa80119f8">MinimumValueConstraint::minimum_value</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000007"></a>Use minimum_value_lower() instead. <br />
+ This will be removed from Drake on or after 2023-11-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#adb23e0ee6a1a0fa9904a0b3247baacb6">MultipleShooting::fixed_timestep</a>  () const</dt>
 <dd><a class="anchor" id="_deprecated000004"></a>Use fixed_time_step() instead. <br />
  This will be removed from Drake on or after 2023-09-01. </dd>
@@ -185,7 +188,7 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 <dd><a class="anchor" id="_deprecated000005"></a>Use time_steps_are_decision_variables() instead. <br />
  This will be removed from Drake on or after 2023-09-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html#acbee7f3497ff5244da916e6997c54872">SerializerInterface::Clone</a>  () const =0</dt>
-<dd><a class="anchor" id="_deprecated000007"></a>Use a shared_ptr&lt;const SerializerInterface&gt; instead of cloning. <br />
+<dd><a class="anchor" id="_deprecated000008"></a>Use a shared_ptr&lt;const SerializerInterface&gt; instead of cloning. <br />
  This will be removed from Drake on or after 2023-09-01.</dd>
 </dl>
 </div></div><!-- PageDoc -->
