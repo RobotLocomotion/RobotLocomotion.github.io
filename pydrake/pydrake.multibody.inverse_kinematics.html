@@ -1881,24 +1881,26 @@ of the robot.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.MinimumDistanceConstraint">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">MinimumDistanceConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.MinimumDistanceConstraint" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
-<p>Constrain the signed distance between all candidate pairs of
-geometries (according to the logic of
+<p>Constrain lb &lt;= min(d) &lt;= ub, namely the signed distance between all
+candidate pairs of geometries (according to the logic of
 SceneGraphInspector::GetCollisionCandidates()) to be no smaller than a
-specified minimum distance. This constraint should be bound to
-decision variables corresponding to the configuration vector, q, of
-the associate MultibodyPlant.</p>
+specified minimum distance lb, and the minimal distance is no larger
+than a specified ub. This constraint should be bound to decision
+variables corresponding to the configuration vector, q, of the
+associated MultibodyPlant.</p>
 <p>The formulation of the constraint is</p>
-<p>0 ≤ SmoothMax( φ((dᵢ(q) - d_influence)/(d_influence - dₘᵢₙ)) / φ(-1) )
-≤ 1</p>
-<p>where dᵢ(q) is the signed distance of the i-th pair, dₘᵢₙ is the
-minimum allowable distance, d_influence is the “influence distance”
-(the distance below which a pair of geometries influences the
-constraint), φ is a multibody::MinimumDistancePenaltyFunction, and
-SmoothMax(d) is smooth approximation of max(d). We require that dₘᵢₙ &lt;
-d_influence. The input scaling (dᵢ(q) - d_influence)/(d_influence -
-dₘᵢₙ) ensures that at the boundary of the feasible set (when dᵢ(q) ==
-dₘᵢₙ), we evaluate the penalty function at -1, where it is required to
-have a non-zero gradient.</p>
+<p>SmoothOverMax( φ((dᵢ(q) - d_influence)/(d_influence - lb)) / φ(-1) ) ≤
+1 SmoothUnderMax( φ((dᵢ(q) - d_influence)/(d_influence - ub)) / φ(-1)
+) ≥ 1</p>
+<p>where dᵢ(q) is the signed distance of the i-th pair, lb is the minimum
+allowable distance, d_influence is the “influence distance” (the
+distance below which a pair of geometries influences the constraint),
+φ is a multibody::MinimumDistancePenaltyFunction. SmoothOverMax(d) and
+SmoothUnderMax(d) is smooth over and under approximation of max(d). We
+require that lb &lt; d_influence. The input scaling (dᵢ(q) -
+d_influence)/(d_influence - lb) ensures that at the boundary of the
+feasible set (when dᵢ(q) == lb), we evaluate the penalty function at
+-1, where it is required to have a non-zero gradient.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.MinimumDistanceConstraint.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.MinimumDistanceConstraint.__init__" title="Permalink to this definition"></a></dt>
@@ -1910,8 +1912,8 @@ have a non-zero gradient.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt><dd><p>The multibody system on which the constraint will be evaluated.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">minimum_distance</span></code>:</dt><dd><p>The minimum allowed value, dₘᵢₙ, of the signed distance between
-any candidate pair of geometries.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">minimum_distance</span></code>:</dt><dd><p>The minimum allowed value, lb, of the signed distance between any
+candidate pair of geometries.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">penalty_function</span></code>:</dt><dd><p>The penalty function formulation.</p>
 </dd>
@@ -1919,11 +1921,13 @@ any candidate pair of geometries.</p>
 </dd>
 </dl>
 <p>The difference (in meters) between the influence distance,
-d_influence, and the minimum distance, dₘᵢₙ (see class documentation).
-This value must be finite and strictly positive, as it is used to
-scale the signed distances between pairs of geometries. Smaller values
-may improve performance, as fewer pairs of geometries need to be
-considered in each constraint evaluation. $*Default:* 1 meter</p>
+d_influence, and the minimum distance, lb (see class documentation),
+namely influence_distance = minimum_distance_lower +
+influence_distance_offset. This value must be finite and strictly
+positive, as it is used to scale the signed distances between pairs of
+geometries. Smaller values may improve performance, as fewer pairs of
+geometries need to be considered in each constraint evaluation.
+$*Default:* 1 meter</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">

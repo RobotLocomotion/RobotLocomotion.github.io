@@ -1,5 +1,9 @@
 var NAVTREEINDEX56 =
 {
+"structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#a16c5614af40edee599284c373fba9c09":[3,0,0,9,1,2,21],
+"structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#a1b267a517e862262fc1f50dd62c48f41":[3,0,0,9,1,2,2],
+"structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#a235e103284e33844b7704d12373bcbd5":[3,0,0,9,1,2,9],
+"structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#a25efbc7b4af31078308a2eb610edb0c9":[3,0,0,9,1,2,1],
 "structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#a274d84c1487d6903a06861fea93b6165":[3,0,0,9,1,2,17],
 "structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#a29af929fcff5a59a15ac072ebe89d26e":[3,0,0,9,1,2,18],
 "structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#a34f9c5615cadcbffa3bfbfd8fe849952":[3,0,0,9,1,2,8],
@@ -245,9 +249,5 @@ var NAVTREEINDEX56 =
 "structdrake_1_1symbolic_1_1_basis_element_graded_reverse_lex_order.html#a27f28cb60a97c16b3dd9b30cb72b2a8f":[3,0,0,15,0,0],
 "structdrake_1_1symbolic_1_1_graded_reverse_lex_order.html":[3,0,0,15,54],
 "structdrake_1_1symbolic_1_1_graded_reverse_lex_order.html#af1b666b4bbbf1ba4ad66a257f92e73a4":[3,0,0,15,54,0],
-"structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data.html":[3,0,0,15,58,0],
-"structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data.html#af29303862b440941e562a6b6a11de551":[3,0,0,15,58,0,0],
-"structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data.html#af3841474533d8bd1db7c131548d0bc27":[3,0,0,15,58,0,1],
-"structdrake_1_1symbolic_1_1_sin_cos.html":[3,0,0,15,63],
-"structdrake_1_1symbolic_1_1_sin_cos.html#a06a14e4a94aab4befcf2506ef07dc38f":[3,0,0,15,63,7]
+"structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data.html":[3,0,0,15,58,0]
 };

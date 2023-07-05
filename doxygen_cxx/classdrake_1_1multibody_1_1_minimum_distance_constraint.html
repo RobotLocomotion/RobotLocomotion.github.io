@@ -166,27 +166,39 @@ $(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_minimum_di
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Constrain the signed distance between all candidate pairs of geometries (according to the logic of SceneGraphInspector::GetCollisionCandidates()) to be no smaller than a specified minimum distance. </p>
-<p>This constraint should be bound to decision variables corresponding to the configuration vector, q, of the associate <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>.</p>
+<div class="textblock"><p>Constrain lb &lt;= min(d) &lt;= ub, namely the signed distance between all candidate pairs of geometries (according to the logic of SceneGraphInspector::GetCollisionCandidates()) to be no smaller than a specified minimum distance lb, and the minimal distance is no larger than a specified ub. </p>
+<p>This constraint should be bound to decision variables corresponding to the configuration vector, q, of the associated <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>.</p>
 <p>The formulation of the constraint is</p>
-<p>0 ≤ SmoothMax( φ((dᵢ(q) - d_influence)/(d_influence - dₘᵢₙ)) / φ(-1) ) ≤ 1</p>
-<p>where dᵢ(q) is the signed distance of the i-th pair, dₘᵢₙ is the minimum allowable distance, d_influence is the "influence distance" (the distance below which a pair of geometries influences the constraint), φ is a <a class="el" href="namespacedrake_1_1multibody.html#a9b7dce3eb33772802af322ca25ef4864" title="Computes the penalty function φ(x) and its derivatives dφ(x)/dx.">multibody::MinimumDistancePenaltyFunction</a>, and SmoothMax(d) is smooth approximation of max(d). We require that dₘᵢₙ &lt; d_influence. The input scaling (dᵢ(q) - d_influence)/(d_influence - dₘᵢₙ) ensures that at the boundary of the feasible set (when dᵢ(q) == dₘᵢₙ), we evaluate the penalty function at -1, where it is required to have a non-zero gradient. </p>
+<p>SmoothOverMax( φ((dᵢ(q) - d_influence)/(d_influence - lb)) / φ(-1) ) ≤ 1 SmoothUnderMax( φ((dᵢ(q) - d_influence)/(d_influence - ub)) / φ(-1) ) ≥ 1</p>
+<p>where dᵢ(q) is the signed distance of the i-th pair, lb is the minimum allowable distance, d_influence is the "influence distance" (the distance below which a pair of geometries influences the constraint), φ is a <a class="el" href="namespacedrake_1_1multibody.html#a9b7dce3eb33772802af322ca25ef4864" title="Computes the penalty function φ(x) and its derivatives dφ(x)/dx.">multibody::MinimumDistancePenaltyFunction</a>. SmoothOverMax(d) and SmoothUnderMax(d) is smooth over and under approximation of max(d). We require that lb &lt; d_influence. The input scaling (dᵢ(q) - d_influence)/(d_influence - lb) ensures that at the boundary of the feasible set (when dᵢ(q) == lb), we evaluate the penalty function at -1, where it is required to have a non-zero gradient. </p>
 </div>
 <p><code>#include &lt;drake/multibody/inverse_kinematics/minimum_distance_constraint.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a56cddcd9e15326b09a5bb54af6c18049"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_minimum_distance_constraint.html#a56cddcd9e15326b09a5bb54af6c18049">MinimumDistanceConstraint</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *const plant, <a class="el" href="classdouble.html">double</a> <a class="el" href="classdrake_1_1multibody_1_1_minimum_distance_constraint.html#a5f54fe1174b9d9de89ffefb622bb5161">minimum_distance</a>, <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *plant_context, <a class="el" href="namespacedrake_1_1multibody.html#a9b7dce3eb33772802af322ca25ef4864">MinimumDistancePenaltyFunction</a> penalty_function={}, <a class="el" href="classdouble.html">double</a> influence_distance_offset=1)</td></tr>
-<tr class="memdesc:a56cddcd9e15326b09a5bb54af6c18049"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1multibody_1_1_minimum_distance_constraint.html" title="Constrain the signed distance between all candidate pairs of geometries (according to the logic of Sc...">MinimumDistanceConstraint</a>.  <a href="#a56cddcd9e15326b09a5bb54af6c18049">More...</a><br /></td></tr>
+<tr class="memdesc:a56cddcd9e15326b09a5bb54af6c18049"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1multibody_1_1_minimum_distance_constraint.html" title="Constrain lb &lt;= min(d) &lt;= ub, namely the signed distance between all candidate pairs of geometries (a...">MinimumDistanceConstraint</a>.  <a href="#a56cddcd9e15326b09a5bb54af6c18049">More...</a><br /></td></tr>
 <tr class="separator:a56cddcd9e15326b09a5bb54af6c18049"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29f6659fc5c1891a8ee79837e8b035f6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_minimum_distance_constraint.html#a29f6659fc5c1891a8ee79837e8b035f6">MinimumDistanceConstraint</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *const plant, <a class="el" href="classdouble.html">double</a> <a class="el" href="classdrake_1_1multibody_1_1_minimum_distance_constraint.html#aa67369bd4332e56a746933c14eba7d4b">minimum_distance_lower</a>, <a class="el" href="classdouble.html">double</a> <a class="el" href="classdrake_1_1multibody_1_1_minimum_distance_constraint.html#ace27b68ab7bfea24246954fd68dcdc34">minimum_distance_upper</a>, <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *plant_context, <a class="el" href="namespacedrake_1_1multibody.html#a9b7dce3eb33772802af322ca25ef4864">MinimumDistancePenaltyFunction</a> penalty_function, <a class="el" href="classdouble.html">double</a> <a class="el" href="classdrake_1_1multibody_1_1_minimum_distance_constraint.html#a8f7e944ec487debca7e690ac2496f3f9">influence_distance</a>)</td></tr>
+<tr class="memdesc:a29f6659fc5c1891a8ee79837e8b035f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloaded constructor.  <a href="#a29f6659fc5c1891a8ee79837e8b035f6">More...</a><br /></td></tr>
+<tr class="separator:a29f6659fc5c1891a8ee79837e8b035f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8909ff9341c3efb7782c94099f54c4fe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_minimum_distance_constraint.html#a8909ff9341c3efb7782c94099f54c4fe">MinimumDistanceConstraint</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; *const plant, <a class="el" href="classdouble.html">double</a> <a class="el" href="classdrake_1_1multibody_1_1_minimum_distance_constraint.html#a5f54fe1174b9d9de89ffefb622bb5161">minimum_distance</a>, <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; *plant_context, <a class="el" href="namespacedrake_1_1multibody.html#a9b7dce3eb33772802af322ca25ef4864">MinimumDistancePenaltyFunction</a> penalty_function={}, <a class="el" href="classdouble.html">double</a> influence_distance_offset=1)</td></tr>
 <tr class="memdesc:a8909ff9341c3efb7782c94099f54c4fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloaded constructor.  <a href="#a8909ff9341c3efb7782c94099f54c4fe">More...</a><br /></td></tr>
 <tr class="separator:a8909ff9341c3efb7782c94099f54c4fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96462d8a10ca239c6db0fbeeb6bdac50"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_minimum_distance_constraint.html#a96462d8a10ca239c6db0fbeeb6bdac50">MinimumDistanceConstraint</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; *const plant, <a class="el" href="classdouble.html">double</a> <a class="el" href="classdrake_1_1multibody_1_1_minimum_distance_constraint.html#aa67369bd4332e56a746933c14eba7d4b">minimum_distance_lower</a>, <a class="el" href="classdouble.html">double</a> <a class="el" href="classdrake_1_1multibody_1_1_minimum_distance_constraint.html#ace27b68ab7bfea24246954fd68dcdc34">minimum_distance_upper</a>, <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; *plant_context, <a class="el" href="namespacedrake_1_1multibody.html#a9b7dce3eb33772802af322ca25ef4864">MinimumDistancePenaltyFunction</a> penalty_function, <a class="el" href="classdouble.html">double</a> <a class="el" href="classdrake_1_1multibody_1_1_minimum_distance_constraint.html#a8f7e944ec487debca7e690ac2496f3f9">influence_distance</a>)</td></tr>
+<tr class="memdesc:a96462d8a10ca239c6db0fbeeb6bdac50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloaded constructor.  <a href="#a96462d8a10ca239c6db0fbeeb6bdac50">More...</a><br /></td></tr>
+<tr class="separator:a96462d8a10ca239c6db0fbeeb6bdac50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9623b17216753d2cc42cf54fc6e2dd79"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_minimum_distance_constraint.html#a9623b17216753d2cc42cf54fc6e2dd79">~MinimumDistanceConstraint</a> () override</td></tr>
 <tr class="separator:a9623b17216753d2cc42cf54fc6e2dd79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f54fe1174b9d9de89ffefb622bb5161"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_minimum_distance_constraint.html#a5f54fe1174b9d9de89ffefb622bb5161">minimum_distance</a> () const</td></tr>
 <tr class="memdesc:a5f54fe1174b9d9de89ffefb622bb5161"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for the minimum distance.  <a href="#a5f54fe1174b9d9de89ffefb622bb5161">More...</a><br /></td></tr>
 <tr class="separator:a5f54fe1174b9d9de89ffefb622bb5161"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa67369bd4332e56a746933c14eba7d4b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_minimum_distance_constraint.html#aa67369bd4332e56a746933c14eba7d4b">minimum_distance_lower</a> () const</td></tr>
+<tr class="memdesc:aa67369bd4332e56a746933c14eba7d4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for the lower bound of the minimum distance.  <a href="#aa67369bd4332e56a746933c14eba7d4b">More...</a><br /></td></tr>
+<tr class="separator:aa67369bd4332e56a746933c14eba7d4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace27b68ab7bfea24246954fd68dcdc34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_minimum_distance_constraint.html#ace27b68ab7bfea24246954fd68dcdc34">minimum_distance_upper</a> () const</td></tr>
+<tr class="memdesc:ace27b68ab7bfea24246954fd68dcdc34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for the upper bound of the minimum distance.  <a href="#ace27b68ab7bfea24246954fd68dcdc34">More...</a><br /></td></tr>
+<tr class="separator:ace27b68ab7bfea24246954fd68dcdc34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f7e944ec487debca7e690ac2496f3f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_minimum_distance_constraint.html#a8f7e944ec487debca7e690ac2496f3f9">influence_distance</a> () const</td></tr>
 <tr class="memdesc:a8f7e944ec487debca7e690ac2496f3f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for the influence distance.  <a href="#a8f7e944ec487debca7e690ac2496f3f9">More...</a><br /></td></tr>
 <tr class="separator:a8f7e944ec487debca7e690ac2496f3f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -304,7 +316,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a084659d68be4a5bebf2be75907f7e76a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a084659d68be4a5bebf2be75907f7e76a">&#9670;&nbsp;</a></span>MinimumDistanceConstraint() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a084659d68be4a5bebf2be75907f7e76a">&#9670;&nbsp;</a></span>MinimumDistanceConstraint() <span class="overload">[1/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -330,7 +342,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="a9d27838b949a6fb9b754c9a70e38d76c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9d27838b949a6fb9b754c9a70e38d76c">&#9670;&nbsp;</a></span>MinimumDistanceConstraint() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d27838b949a6fb9b754c9a70e38d76c">&#9670;&nbsp;</a></span>MinimumDistanceConstraint() <span class="overload">[2/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -356,7 +368,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="a56cddcd9e15326b09a5bb54af6c18049"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a56cddcd9e15326b09a5bb54af6c18049">&#9670;&nbsp;</a></span>MinimumDistanceConstraint() <span class="overload">[3/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a56cddcd9e15326b09a5bb54af6c18049">&#9670;&nbsp;</a></span>MinimumDistanceConstraint() <span class="overload">[3/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -399,14 +411,14 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructs a <a class="el" href="classdrake_1_1multibody_1_1_minimum_distance_constraint.html" title="Constrain the signed distance between all candidate pairs of geometries (according to the logic of Sc...">MinimumDistanceConstraint</a>. </p>
+<p>Constructs a <a class="el" href="classdrake_1_1multibody_1_1_minimum_distance_constraint.html" title="Constrain lb &lt;= min(d) &lt;= ub, namely the signed distance between all candidate pairs of geometries (a...">MinimumDistanceConstraint</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">plant</td><td>The multibody system on which the constraint will be evaluated. </td></tr>
-    <tr><td class="paramname">minimum_distance</td><td>The minimum allowed value, dₘᵢₙ, of the signed distance between any candidate pair of geometries. </td></tr>
+    <tr><td class="paramname">minimum_distance</td><td>The minimum allowed value, lb, of the signed distance between any candidate pair of geometries. </td></tr>
     <tr><td class="paramname">penalty_function</td><td>The penalty function formulation. <br />
  <em>Default:</em> QuadraticallySmoothedHinge </td></tr>
-    <tr><td class="paramname">influence_distance_offset</td><td>The difference (in meters) between the influence distance, d_influence, and the minimum distance, dₘᵢₙ (see class documentation). This value must be finite and strictly positive, as it is used to scale the signed distances between pairs of geometries. Smaller values may improve performance, as fewer pairs of geometries need to be considered in each constraint evaluation. <br />
+    <tr><td class="paramname">influence_distance_offset</td><td>The difference (in meters) between the influence distance, d_influence, and the minimum distance, lb (see class documentation), namely influence_distance = minimum_distance_lower + influence_distance_offset. This value must be finite and strictly positive, as it is used to scale the signed distances between pairs of geometries. Smaller values may improve performance, as fewer pairs of geometries need to be considered in each constraint evaluation. <br />
  <em>Default:</em> 1 meter </td></tr>
   </table>
   </dd>
@@ -422,8 +434,69 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a29f6659fc5c1891a8ee79837e8b035f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29f6659fc5c1891a8ee79837e8b035f6">&#9670;&nbsp;</a></span>MinimumDistanceConstraint() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_minimum_distance_constraint.html">MinimumDistanceConstraint</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *const&#160;</td>
+          <td class="paramname"><em>plant</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>minimum_distance_lower</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>minimum_distance_upper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td>
+          <td class="paramname"><em>plant_context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#a9b7dce3eb33772802af322ca25ef4864">MinimumDistancePenaltyFunction</a>&#160;</td>
+          <td class="paramname"><em>penalty_function</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>influence_distance</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Overloaded constructor. </p>
+<p>lower &lt;= min(distance) &lt;= upper. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">minimum_distance_lower</td><td>The lower bound of the minimum distance. lower &lt;= min(distance). </td></tr>
+    <tr><td class="paramname">minimum_distance_upper</td><td>The upper bound of the minimum distance. min(distance) &lt;= upper. If minimum_distance_upper is finite, then it must be smaller than influence_distance_offset. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a8909ff9341c3efb7782c94099f54c4fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8909ff9341c3efb7782c94099f54c4fe">&#9670;&nbsp;</a></span>MinimumDistanceConstraint() <span class="overload">[4/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8909ff9341c3efb7782c94099f54c4fe">&#9670;&nbsp;</a></span>MinimumDistanceConstraint() <span class="overload">[5/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -468,6 +541,67 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Overloaded constructor. </p>
 <p>Constructs the constraint using <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant&lt;AutoDiffXd&gt;</a>. </p>
+
+</div>
+</div>
+<a id="a96462d8a10ca239c6db0fbeeb6bdac50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96462d8a10ca239c6db0fbeeb6bdac50">&#9670;&nbsp;</a></span>MinimumDistanceConstraint() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_minimum_distance_constraint.html">MinimumDistanceConstraint</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; *const&#160;</td>
+          <td class="paramname"><em>plant</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>minimum_distance_lower</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>minimum_distance_upper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; *&#160;</td>
+          <td class="paramname"><em>plant_context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#a9b7dce3eb33772802af322ca25ef4864">MinimumDistancePenaltyFunction</a>&#160;</td>
+          <td class="paramname"><em>penalty_function</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>influence_distance</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Overloaded constructor. </p>
+<p>Constructs the constraint using <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant&lt;AutoDiffXd&gt;</a>. lower &lt;= min(distance) &lt;= upper. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">minimum_distance_lower</td><td>The lower bound of the minimum distance. lower &lt;= min(distance). We must have minimum_distance_lower &lt;= influence_distance. </td></tr>
+    <tr><td class="paramname">minimum_distance_upper</td><td>The upper bound of the minimum distance. min(distance) &lt;= upper. If minimum_distance_upper is finite, then it must be smaller than influence_distance. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -532,6 +666,46 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Getter for the minimum distance. </p>
+<p>(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000003">Deprecated:</a></b></dt><dd>Use minimum_distance_lower() instead. <br />
+ This will be removed from Drake on or after 2023-11-01.</dd></dl>
+
+</div>
+</div>
+<a id="aa67369bd4332e56a746933c14eba7d4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa67369bd4332e56a746933c14eba7d4b">&#9670;&nbsp;</a></span>minimum_distance_lower()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> minimum_distance_lower </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Getter for the lower bound of the minimum distance. </p>
+
+</div>
+</div>
+<a id="ace27b68ab7bfea24246954fd68dcdc34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace27b68ab7bfea24246954fd68dcdc34">&#9670;&nbsp;</a></span>minimum_distance_upper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> minimum_distance_upper </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Getter for the upper bound of the minimum distance. </p>
 
 </div>
 </div>

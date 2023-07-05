@@ -4,7 +4,7 @@ var classdrake_1_1solvers_1_1_minimum_value_constraint =
     [ "MinimumValueConstraint", "classdrake_1_1solvers_1_1_minimum_value_constraint.html#aced60c0081fc2eba4cbddd0260f02b26", null ],
     [ "~MinimumValueConstraint", "classdrake_1_1solvers_1_1_minimum_value_constraint.html#a382ce7201d11202f72729b4960871a43", null ],
     [ "influence_value", "classdrake_1_1solvers_1_1_minimum_value_constraint.html#af608569c22efc4a0c30ab19f3e58e2dc", null ],
-    [ "max_num_values", "classdrake_1_1solvers_1_1_minimum_value_constraint.html#a015db1edbf4e20a83e3b36e16d6183cc", null ],
+    [ "max_num_values", "classdrake_1_1solvers_1_1_minimum_value_constraint.html#a93d4b5a510863f73768935ea3a3681ee", null ],
     [ "minimum_value", "classdrake_1_1solvers_1_1_minimum_value_constraint.html#ab401d591e846938bc37b33dfa80119f8", null ],
     [ "minimum_value_lower", "classdrake_1_1solvers_1_1_minimum_value_constraint.html#a9a9b45204eae7c96d746ea7c94812e1f", null ],
     [ "minimum_value_upper", "classdrake_1_1solvers_1_1_minimum_value_constraint.html#a6d8a14c0ab11d6994465704b9450568a", null ],
