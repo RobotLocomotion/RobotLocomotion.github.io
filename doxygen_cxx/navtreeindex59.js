@@ -1,5 +1,7 @@
 var NAVTREEINDEX59 =
 {
+"trajectory_8h.html":[4,0,0,1,5,11],
+"trajectory__affine__system_8h.html":[4,0,0,12,6,24],
 "trajectory__linear__system_8h.html":[4,0,0,12,6,25],
 "trajectory__source_8h.html":[4,0,0,12,6,26],
 "transform_8h.html":[4,0,0,1,2,2],
@@ -39,7 +41,7 @@ var NAVTREEINDEX59 =
 "unit__quaternion__constraint_8h.html#a4a29f222bbff1590d2fa6ecb35f87492":[4,0,0,8,5,21,0],
 "universal__joint_8h.html":[4,0,0,8,14,52],
 "universal__mobilizer_8h.html":[4,0,0,8,14,53],
-"unrevised__lemke__solver_8h.html":[4,0,0,11,55],
+"unrevised__lemke__solver_8h.html":[4,0,0,11,56],
 "unused_8h.html":[4,0,0,1,61],
 "unused_8h.html#ade20b7bf635eecb13adbaac4df980af0":[4,0,0,1,61,0],
 "utilities_8h.html":[4,0,0,4,42],

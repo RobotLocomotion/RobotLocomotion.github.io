@@ -99,6 +99,7 @@ var searchData=
   ['makerenderenginegltfclient',['MakeRenderEngineGltfClient',['../namespacedrake_1_1geometry.html#a99ba06b63779a45d0b347f3b6321ac43',1,'drake::geometry']]],
   ['makerenderenginevtk',['MakeRenderEngineVtk',['../namespacedrake_1_1geometry.html#a18b9a919046a97500f422a85a4a8ce30',1,'drake::geometry']]],
   ['makerulerewriter',['MakeRuleRewriter',['../namespacedrake_1_1symbolic.html#a697784ea0eafd05039e3a0c97b7c1415',1,'drake::symbolic']]],
+  ['makesemidefiniterelaxation',['MakeSemidefiniteRelaxation',['../namespacedrake_1_1solvers.html#af6da6d265dcd5e959082b17d3a94258b',1,'drake::solvers']]],
   ['makesolver',['MakeSolver',['../namespacedrake_1_1solvers.html#ac0a32aadfdc1241e4e39f206479b6000',1,'drake::solvers']]],
   ['makesortedpair',['MakeSortedPair',['../namespacedrake.html#a87d5210878ec865ee82bb87786eb996d',1,'drake']]],
   ['makestandaloneconfigurationdistancefunction',['MakeStandaloneConfigurationDistanceFunction',['../classdrake_1_1planning_1_1_collision_checker.html#a57903558264bcd6cb91e68f8e49d20a1',1,'drake::planning::CollisionChecker']]],

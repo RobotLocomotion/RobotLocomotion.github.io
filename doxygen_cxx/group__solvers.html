@@ -206,7 +206,7 @@ s.t Ax = b,
 <tr>
 <td><a href="http://ab-initio.mit.edu/wiki/index.php/NLopt">NLopt</a> </td><td align="center">▢ </td><td align="center">▢ </td><td align="center">⬘ </td><td align="center">⬘ </td><td align="center">⬘  </td></tr>
 </table>
-<p>† This is a commercial solver which requires a license (note that some have free licenses for academics).</p>
+<p>† This is a commercial solver which requires a license (note that some have free licenses for academics). See <a href="https://drake.mit.edu/bazel.html#proprietary-solvers">the build system documentation</a> for details.</p>
 <p>‡ <a href="https://drake.mit.edu/installation.html">Drake's pre-compiled binary releases</a> incorporate a private build of SNOPT that does not require a license when invoked via Drake's SnoptSolver wrapper class.</p>
 <p>♦ A preferred solver for the given category.</p>
 <p>⟡ The native CSDP solver cannot handle free variables (namely all variables have to be constrained within a cone). In Drake we apply special techniques to handle free variables (refer to RemoveFreeVariableMethod for more details). These heuristics can make the problem expensive to solve or poorly conditioned.</p>
@@ -224,7 +224,7 @@ s.t Ax = b,
 <tr>
 <td><a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html">naive branch-and-bound</a>  </td><td align="center">◊ </td><td align="center">◊ </td><td align="center">◊ </td><td align="center">◊ </td></tr>
 </table>
-<p>† This is a commercial solver which requires a license (note that some have free licenses for academics).</p>
+<p>† This is a commercial solver which requires a license (note that some have free licenses for academics). See <a href="https://drake.mit.edu/bazel.html#proprietary-solvers">the build system documentation</a> for details.</p>
 <p>♦ A preferred solver for the given category.</p>
 <p>◊ The naive solver's usefulness is likely restricted to small-sized problems with dozens of binary variables. We implement only the basic branch-and-bound algorithm, without cutting planes nor advanced branching heuristics.</p>
 <h2>Nonconvex Programming</h2>
@@ -240,7 +240,7 @@ s.t Ax = b,
 <tr>
 <td><a href="https://github.com/PositronicsLab/Moby">Moby LCP</a> </td><td></td><td align="center">♦ </td><td></td></tr>
 </table>
-<p>† This is a commercial solver which requires a license (note that some have free licenses for academics).</p>
+<p>† This is a commercial solver which requires a license (note that some have free licenses for academics). See <a href="https://drake.mit.edu/bazel.html#proprietary-solvers">the build system documentation</a> for details.</p>
 <p>‡ <a href="https://drake.mit.edu/installation.html">Drake's pre-compiled binary releases</a> incorporate a private build of SNOPT that does not require a license when invoked via Drake's SnoptSolver wrapper class.</p>
 <p>♦ A preferred solver for the given category. ⟐ SNOPT/IPOPT/NLOPT might be able to solve LCP, but they are not the preferred solver. </p>
 <table class="memberdecls">

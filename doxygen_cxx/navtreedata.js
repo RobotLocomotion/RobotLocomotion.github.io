@@ -118,12 +118,12 @@ var NAVTREEINDEX =
 "namespacedrake_1_1trajectories.html",
 "program__attribute_8h.html#ab09ca5e1afe9e5a4e8744ecb27839b15a9ac21b2be50204074e59ceb63526fae6",
 "schunk__wsg__driver_8h.html",
-"stochastic_8h.html#a025af5d6df759f4a5bdb396846dcca74",
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a67295e7681f83a17890571e4b6b0a7dd",
-"structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#a16c5614af40edee599284c373fba9c09",
-"structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data.html#af29303862b440941e562a6b6a11de551",
-"structdrake_1_1template__single__tag.html#a0b59870d7a48aad480f84b0f2423dfb2",
-"trajectory__linear__system_8h.html"
+"stiff__double__mass__spring__system_8h.html",
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a49f1367efbb0c0efddaec6ed273e8bb7",
+"structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#a0f29fed6311156aa9a7efefa57dfae06",
+"structdrake_1_1symbolic_1_1_graded_reverse_lex_order.html#af1b666b4bbbf1ba4ad66a257f92e73a4",
+"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_rgba_01_4.html#ab9d071a35c456d7863cadc4f413e8fcf",
+"trajectory_8h.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -1813,16 +1813,23 @@ set) as a default value for “Threads”.</p>
 <dt class="sig sig-object py" id="pydrake.solvers.GurobiSolver.AcquireLicense">
 <em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AcquireLicense</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.solvers.GurobiSolver.License" title="pydrake.solvers.GurobiSolver.License"><span class="pre">pydrake.solvers.GurobiSolver.License</span></a></span></span><a class="headerlink" href="#pydrake.solvers.GurobiSolver.AcquireLicense" title="Permalink to this definition"></a></dt>
 <dd><p>This acquires a Gurobi license environment shared among all
-GurobiSolver instances; the environment will stay valid as long as at
-least one shared_ptr returned by this function is alive. Call this
-ONLY if you must use different MathematicalProgram instances at
-different instances in time, and repeatedly acquiring the license is
-costly (e.g., requires contacting a license server).</p>
+GurobiSolver instances. The environment will stay valid as long as at
+least one shared_ptr returned by this function is alive. GurobiSolver
+calls this method on each Solve().</p>
+<p>If the license file contains the string <code class="docutils literal notranslate"><span class="pre">HOSTID</span></code>, then we treat this
+as confirmation that the license is attached to the local host, and
+maintain an internal copy of the shared_ptr for the lifetime of the
+process. Otherwise the default behavior is to only hold the license
+while at least one GurobiSolver instance is alive.</p>
+<p>Call this method directly and maintain the shared_ptr ONLY if you must
+use different MathematicalProgram instances at different instances in
+time, and repeatedly acquiring the license is costly (e.g., requires
+contacting a license server).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>A shared pointer to a license environment that will stay valid as
 long as any shared_ptr returned by this function is alive. If
-Gurobi not available in your build, this will return a null
+Gurobi is not available in your build, this will return a null
 (empty) shared_ptr.</p>
 </dd>
 <dt class="field-even">Raises</dt>
@@ -2614,6 +2621,26 @@ new_b.rows().</p>
 <span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">MakeFirstAvailableSolver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">solver_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.SolverId" title="pydrake.solvers.SolverId"><span class="pre">pydrake.solvers.SolverId</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.solvers.SolverInterface" title="pydrake.solvers.SolverInterface"><span class="pre">pydrake.solvers.SolverInterface</span></a></span></span><a class="headerlink" href="#pydrake.solvers.MakeFirstAvailableSolver" title="Permalink to this definition"></a></dt>
 <dd><p>Makes the first available and enabled solver. If no solvers are
 available, throws a RuntimeError.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydrake.solvers.MakeSemidefiniteRelaxation">
+<span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">MakeSemidefiniteRelaxation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prog</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></span><a class="headerlink" href="#pydrake.solvers.MakeSemidefiniteRelaxation" title="Permalink to this definition"></a></dt>
+<dd><p>Constructs a new MathematicalProgram which represents the semidefinite
+programming convex relaxation of the (likely nonconvex) program
+<code class="docutils literal notranslate"><span class="pre">prog</span></code>. This method currently supports only linear and quadratic
+costs and constraints, but may be extended in the future with broader
+support.</p>
+<p>See <a class="reference external" href="https://underactuated.mit.edu/optimization.html#sdp_relaxation">https://underactuated.mit.edu/optimization.html#sdp_relaxation</a> for
+references and examples.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if prog has costs and constraints which are not</strong> – </p></li>
+<li><p><strong>linear nor quadratic.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
@@ -4035,6 +4062,17 @@ decision variables.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if the size of prog_var_vals is invalid.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.MathematicalProgram.EvalBindingAtInitialGuess">
+<span class="sig-name descname"><span class="pre">EvalBindingAtInitialGuess</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">binding</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.EvaluatorBase" title="pydrake.solvers.EvaluatorBase"><span class="pre">EvaluatorBase</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.solvers.MathematicalProgram.EvalBindingAtInitialGuess" title="Permalink to this definition"></a></dt>
+<dd><p>Evaluates the evaluator in <code class="docutils literal notranslate"><span class="pre">binding</span></code> at the initial guess.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The value of <code class="docutils literal notranslate"><span class="pre">binding</span></code> at the initial guess.</p>
 </dd>
 </dl>
 </dd></dl>

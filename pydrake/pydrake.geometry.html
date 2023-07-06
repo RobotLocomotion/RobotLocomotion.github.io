@@ -4257,6 +4257,12 @@ meshcat_path “Meshcat paths” for the semantics.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">rgba</span></code>:</dt><dd><p>an Rgba that specifies the (solid) color of the object.</p>
 </dd>
 </dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">shape</span></code> is a mesh, the file referred to can be either an .obj
+file or an <em>embedded</em> .gltf file (it has all geometry data and
+texture data contained within the single .gltf file).</p>
+</div>
 <ol class="arabic simple" start="2">
 <li><p>SetObject(self: pydrake.geometry.Meshcat, path: str, cloud: drake::perception::PointCloud, point_size: float = 0.001, rgba: pydrake.geometry.Rgba = Rgba(r=0.9, g=0.9, b=0.9, a=1.0)) -&gt; None</p></li>
 </ol>

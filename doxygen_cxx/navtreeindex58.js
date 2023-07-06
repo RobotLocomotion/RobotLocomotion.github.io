@@ -1,5 +1,7 @@
 var NAVTREEINDEX58 =
 {
+"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_rgba_01_4.html#ab9d071a35c456d7863cadc4f413e8fcf":[3,0,0,16,8,37,0],
+"structdrake_1_1template__single__tag.html":[3,0,0,50],
 "structdrake_1_1template__single__tag.html#a0b59870d7a48aad480f84b0f2423dfb2":[3,0,0,50,0],
 "structdrake_1_1test_1_1_limit_malloc_params.html":[3,0,0,17,2],
 "structdrake_1_1test_1_1_limit_malloc_params.html#a34a5b591b64e647d30fcae67a24564df":[3,0,0,17,2,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX58 =
 "toppra_8h.html":[4,0,0,8,8,11],
 "toppra_8h.html#ad8fa828762d54ed2db5efec5df1b5082":[4,0,0,8,8,11,1],
 "toppra_8h.html#ad8fa828762d54ed2db5efec5df1b5082a8adcba0ce62338780719c9d3d29a0c6a":[4,0,0,8,8,11,1,0],
-"toppra_8h.html#ad8fa828762d54ed2db5efec5df1b5082a9ef15c126044c94d6440bfbf02f6c55d":[4,0,0,8,8,11,1,1],
-"trajectory_8h.html":[4,0,0,1,5,11],
-"trajectory__affine__system_8h.html":[4,0,0,12,6,24]
+"toppra_8h.html#ad8fa828762d54ed2db5efec5df1b5082a9ef15c126044c94d6440bfbf02f6c55d":[4,0,0,8,8,11,1,1]
 };
