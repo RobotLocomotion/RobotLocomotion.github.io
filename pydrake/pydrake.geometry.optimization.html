@@ -330,6 +330,20 @@ always returns true.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.ConvexSet.IsEmpty">
+<span class="sig-name descname"><span class="pre">IsEmpty</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.ConvexSet.IsEmpty" title="Permalink to this definition"></a></dt>
+<dd><p>Returns true iff the set is empty. Note: for some derived classes,
+this check is trivial, but for others, it can require solving a
+(typically small) optimization problem. Check the derived class
+documentation for any notes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if ambient_dimension</strong><strong>(</strong><strong>) </strong><strong>== 0</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.ConvexSet.MaybeGetPoint">
 <span class="sig-name descname"><span class="pre">MaybeGetPoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.ConvexSet.MaybeGetPoint" title="Permalink to this definition"></a></dt>
 <dd><p>If this set trivially contains exactly one point, returns the value of
@@ -762,7 +776,7 @@ graph.</p>
 <span class="sig-name descname"><span class="pre">SolveShortestPath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.SolveShortestPath" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>SolveShortestPath(self: pydrake.geometry.optimization.GraphOfConvexSets, source_id: pydrake.geometry.optimization.GraphOfConvexSets.VertexId, target_id: pydrake.geometry.optimization.GraphOfConvexSets.VertexId, options: pydrake.geometry.optimization.GraphOfConvexSetsOptions = GraphOfConvexSetsOptions(convex_relaxation=True, preprocessing=False, max_rounded_paths=0, max_rounding_trials=100, flow_tolerance=1e-05, rounding_seed=0, solver=None, solver_options=&lt;SolverOptions&gt;, rounding_solver_options=None, )) -&gt; pydrake.solvers.MathematicalProgramResult</p></li>
+<li><p>SolveShortestPath(self: pydrake.geometry.optimization.GraphOfConvexSets, source_id: pydrake.geometry.optimization.GraphOfConvexSets.VertexId, target_id: pydrake.geometry.optimization.GraphOfConvexSets.VertexId, options: pydrake.geometry.optimization.GraphOfConvexSetsOptions = GraphOfConvexSetsOptions(convex_relaxation=None, preprocessing=None, max_rounded_paths=None, max_rounding_trials=100, flow_tolerance=1e-05, rounding_seed=0, solver=None, solver_options=&lt;SolverOptions&gt;, rounding_solver_options=None, )) -&gt; pydrake.solvers.MathematicalProgramResult</p></li>
 </ol>
 <p>Formulates and solves the mixed-integer convex formulation of the
 shortest path problem on the graph, as discussed in detail in</p>
@@ -778,7 +792,11 @@ Point set to the graph and using that as the source.</p>
 set.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">options</span></code>:</dt><dd><p>include all settings for solving the shortest path problem. See
-<code class="docutils literal notranslate"><span class="pre">GraphOfConvexSetsOptions</span></code> for further details.</p>
+<code class="docutils literal notranslate"><span class="pre">GraphOfConvexSetsOptions</span></code> for further details. The following
+default options will be used if they are not provided in
+<code class="docutils literal notranslate"><span class="pre">options</span></code>: - <cite>options.convex_relaxation = false</cite>, -
+<code class="docutils literal notranslate"><span class="pre">options.max_rounded_paths</span> <span class="pre">=</span> <span class="pre">0</span></code>, - <cite>options.preprocessing =
+false</cite>.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -792,7 +810,7 @@ set.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>SolveShortestPath(self: pydrake.geometry.optimization.GraphOfConvexSets, source: pydrake.geometry.optimization.GraphOfConvexSets.Vertex, target: pydrake.geometry.optimization.GraphOfConvexSets.Vertex, options: pydrake.geometry.optimization.GraphOfConvexSetsOptions = GraphOfConvexSetsOptions(convex_relaxation=True, preprocessing=False, max_rounded_paths=0, max_rounding_trials=100, flow_tolerance=1e-05, rounding_seed=0, solver=None, solver_options=&lt;SolverOptions&gt;, rounding_solver_options=None, )) -&gt; pydrake.solvers.MathematicalProgramResult</p></li>
+<li><p>SolveShortestPath(self: pydrake.geometry.optimization.GraphOfConvexSets, source: pydrake.geometry.optimization.GraphOfConvexSets.Vertex, target: pydrake.geometry.optimization.GraphOfConvexSets.Vertex, options: pydrake.geometry.optimization.GraphOfConvexSetsOptions = GraphOfConvexSetsOptions(convex_relaxation=None, preprocessing=None, max_rounded_paths=None, max_rounding_trials=100, flow_tolerance=1e-05, rounding_seed=0, solver=None, solver_options=&lt;SolverOptions&gt;, rounding_solver_options=None, )) -&gt; pydrake.solvers.MathematicalProgramResult</p></li>
 </ol>
 <p>Convenience overload that takes const reference arguments for source
 and target.</p>
@@ -1232,12 +1250,6 @@ other.A().row(i).dot(x)&lt;=other.b()(i)+tol is not implied by the
 inequalities from this HPolyhedron. A positive tol means it is more
 likely to deem a constraint being redundant and remove it. A negative
 tol means it is less likely to remove a constraint.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.geometry.optimization.HPolyhedron.IsEmpty">
-<span class="sig-name descname"><span class="pre">IsEmpty</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.HPolyhedron" title="pydrake.geometry.optimization.HPolyhedron"><span class="pre">pydrake.geometry.optimization.HPolyhedron</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.IsEmpty" title="Permalink to this definition"></a></dt>
-<dd><p>Checks if this HPolyhedron defines an empty set.</p>
 </dd></dl>
 
 <dl class="py method">

@@ -1,5 +1,8 @@
 var NAVTREEINDEX17 =
 {
+"classdrake_1_1multibody_1_1_spatial_momentum.html":[3,0,0,9,85],
+"classdrake_1_1multibody_1_1_spatial_momentum.html#a443c65e3aa700e20cffca0d6530abd2f":[3,0,0,9,85,4],
+"classdrake_1_1multibody_1_1_spatial_momentum.html#a6042fc1fe4f8b4f29d50a5f73c506ee0":[3,0,0,9,85,0],
 "classdrake_1_1multibody_1_1_spatial_momentum.html#a65232f2bac94fd25f787168e85246a76":[3,0,0,9,85,3],
 "classdrake_1_1multibody_1_1_spatial_momentum.html#a795da21c81556a246f849e181ec6a622":[3,0,0,9,85,6],
 "classdrake_1_1multibody_1_1_spatial_momentum.html#a80adf254abcd794a723b6c43c5e32832":[3,0,0,9,85,8],
@@ -246,8 +249,5 @@ var NAVTREEINDEX17 =
 "classdrake_1_1multibody_1_1_weld_joint.html#a952a908b4c1b68ac11b2e31ef31e9524":[3,0,0,9,102,7],
 "classdrake_1_1multibody_1_1_weld_joint.html#a955f9ba613b3309f1c819c7d379f6afd":[3,0,0,9,102,3],
 "classdrake_1_1multibody_1_1_weld_joint.html#a9b78e1282dbe407d7e389ea125515f69":[3,0,0,9,102,0],
-"classdrake_1_1multibody_1_1_weld_joint.html#ab0954f79e22c39d0bd221aea65b0d625":[3,0,0,9,102,1],
-"classdrake_1_1multibody_1_1_weld_joint.html#aec0ff8efa446e5e97baa611baca985e7":[3,0,0,9,102,6],
-"classdrake_1_1multibody_1_1_weld_joint.html#afeb8c8bfec14a1952a54971827058949":[3,0,0,9,102,8],
-"classdrake_1_1multibody_1_1_wing.html":[1,2,7,1]
+"classdrake_1_1multibody_1_1_weld_joint.html#ab0954f79e22c39d0bd221aea65b0d625":[3,0,0,9,102,1]
 };

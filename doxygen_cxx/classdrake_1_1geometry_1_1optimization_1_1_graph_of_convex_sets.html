@@ -781,7 +781,12 @@ Friends</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">source</td><td>specifies the source set. The solver will choose any point in that set; to start at a particular continuous state consider adding a <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_point.html" title="A convex set that contains exactly one element.">Point</a> set to the graph and using that as the source. </td></tr>
     <tr><td class="paramname">target</td><td>specifies the target set. The solver will choose any point in that set. </td></tr>
-    <tr><td class="paramname">options</td><td>include all settings for solving the shortest path problem. See <code><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html">GraphOfConvexSetsOptions</a></code> for further details.</td></tr>
+    <tr><td class="paramname">options</td><td>include all settings for solving the shortest path problem. See <code><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html">GraphOfConvexSetsOptions</a></code> for further details. The following default options will be used if they are not provided in <code>options</code>:<ul>
+<li><code>options.convex_relaxation = false</code>,</li>
+<li><code>options.max_rounded_paths = 0</code>,</li>
+<li><code>options.preprocessing = false</code>.</li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>

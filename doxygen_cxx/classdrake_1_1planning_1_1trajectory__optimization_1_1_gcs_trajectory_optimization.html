@@ -815,7 +815,12 @@ Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">source</td><td>specifies the source subgraph. Must have been created from a call to <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#acc7d38daf4914a37193b3b1203080b14" title="Creates a Subgraph with the given regions and indices.">AddRegions()</a> on this object, not some other optimization program. If the source is a subgraph with more than one region, an empty set will be added and optimizer will choose the best region to start in. To start in a particular point, consider adding a subgraph of order zero with a single region of type Point. </td></tr>
     <tr><td class="paramname">target</td><td>specifies the target subgraph. Must have been created from a call to <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#acc7d38daf4914a37193b3b1203080b14" title="Creates a Subgraph with the given regions and indices.">AddRegions()</a> on this object, not some other optimization program. If the target is a subgraph with more than one region, an empty set will be added and optimizer will choose the best region to end in. To end in a particular point, consider adding a subgraph of order zero with a single region of type Point. </td></tr>
-    <tr><td class="paramname">options</td><td>include all settings for solving the shortest path problem. </td></tr>
+    <tr><td class="paramname">options</td><td>include all settings for solving the shortest path problem. The following default options will be used if they are not provided in <code>options</code>:<ul>
+<li><code>options.convex_relaxation = true</code>,</li>
+<li><code>options.max_rounded_paths = 5</code>,</li>
+<li><code>options.preprocessing = true</code>.</li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>

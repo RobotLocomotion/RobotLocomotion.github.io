@@ -3602,7 +3602,12 @@ throw an exception. $*Default:* = 0.</p>
 <ol class="arabic simple">
 <li><p>AddQuadraticConstraint(self: pydrake.solvers.MathematicalProgram, Q: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], b: numpy.ndarray[numpy.float64[m, 1]], lb: float, ub: float, vars: numpy.ndarray[object[m, 1]], hessian_type: Optional[pydrake.solvers.QuadraticConstraint.HessianType] = None) -&gt; pydrake.solvers.Binding[QuadraticConstraint]</p></li>
 </ol>
-<p>Adds quadratic constraint lb ≤ .5 xᵀQx + bᵀx ≤ ub</p>
+<p>Adds quadratic constraint lb ≤ .5 xᵀQx + bᵀx ≤ ub Notice that if your
+quadratic constraint is convex, and you intend to solve the problem
+with a convex solver (like Mosek), then it is better to reformulate it
+with a second order cone constraint. See
+<a class="reference external" href="https://docs.mosek.com/10.0/capi/prob-def-quadratic.html#a-recommendation">https://docs.mosek.com/10.0/capi/prob-def-quadratic.html#a-recommendation</a>
+for an explanation.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">vars</span></code>:</dt><dd><p>x in the documentation above.</p>
 </dd>
@@ -3619,7 +3624,12 @@ will blindly trust it in the downstream code.</p>
 <li><p>AddQuadraticConstraint(self: pydrake.solvers.MathematicalProgram, e: pydrake.symbolic.Expression, lb: float, ub: float, hessian_type: Optional[pydrake.solvers.QuadraticConstraint.HessianType] = None) -&gt; pydrake.solvers.Binding[QuadraticConstraint]</p></li>
 </ol>
 <p>Overloads AddQuadraticConstraint, impose lb &lt;= e &lt;= ub where <code class="docutils literal notranslate"><span class="pre">e</span></code> is
-a quadratic expression.</p>
+a quadratic expression. Notice that if your quadratic constraint is
+convex, and you intend to solve the problem with a convex solver (like
+Mosek), then it is better to reformulate it with a second order cone
+constraint. See
+<a class="reference external" href="https://docs.mosek.com/10.0/capi/prob-def-quadratic.html#a-recommendation">https://docs.mosek.com/10.0/capi/prob-def-quadratic.html#a-recommendation</a>
+for an explanation.</p>
 </dd></dl>
 
 <dl class="py method">

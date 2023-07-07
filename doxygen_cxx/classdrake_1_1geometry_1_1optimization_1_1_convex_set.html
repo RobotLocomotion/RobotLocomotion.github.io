@@ -187,6 +187,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2f010e733bd63adb8352995624362b65"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a2f010e733bd63adb8352995624362b65">IsBounded</a> () const</td></tr>
 <tr class="memdesc:a2f010e733bd63adb8352995624362b65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff the set is bounded, e.g., there exists an element-wise finite lower and upper bound for the set.  <a href="#a2f010e733bd63adb8352995624362b65">More...</a><br /></td></tr>
 <tr class="separator:a2f010e733bd63adb8352995624362b65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e12342fc420701fbffd97025421575a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a8e12342fc420701fbffd97025421575a">IsEmpty</a> () const</td></tr>
+<tr class="memdesc:a8e12342fc420701fbffd97025421575a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff the set is empty.  <a href="#a8e12342fc420701fbffd97025421575a">More...</a><br /></td></tr>
+<tr class="separator:a8e12342fc420701fbffd97025421575a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c8afc65a3f5ac1df8167abbbd13d218"><td class="memItemLeft" align="right" valign="top">std::optional&lt; Eigen::VectorXd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a0c8afc65a3f5ac1df8167abbbd13d218">MaybeGetPoint</a> () const</td></tr>
 <tr class="memdesc:a0c8afc65a3f5ac1df8167abbbd13d218"><td class="mdescLeft">&#160;</td><td class="mdescRight">If this set trivially contains exactly one point, returns the value of that point.  <a href="#a0c8afc65a3f5ac1df8167abbbd13d218">More...</a><br /></td></tr>
 <tr class="separator:a0c8afc65a3f5ac1df8167abbbd13d218"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -242,6 +245,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a8dab5a4504816ff943e184bdc8f2cb5f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a8dab5a4504816ff943e184bdc8f2cb5f">DoIsBounded</a> () const =0</td></tr>
 <tr class="memdesc:a8dab5a4504816ff943e184bdc8f2cb5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a2f010e733bd63adb8352995624362b65" title="Returns true iff the set is bounded, e.g., there exists an element-wise finite lower and upper bound ...">IsBounded()</a>.  <a href="#a8dab5a4504816ff943e184bdc8f2cb5f">More...</a><br /></td></tr>
 <tr class="separator:a8dab5a4504816ff943e184bdc8f2cb5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cc320d6088c2debb29de0d55001596f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a1cc320d6088c2debb29de0d55001596f">DoIsEmpty</a> () const</td></tr>
+<tr class="memdesc:a1cc320d6088c2debb29de0d55001596f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a8e12342fc420701fbffd97025421575a" title="Returns true iff the set is empty.">IsEmpty()</a>.  <a href="#a1cc320d6088c2debb29de0d55001596f">More...</a><br /></td></tr>
+<tr class="separator:a1cc320d6088c2debb29de0d55001596f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54d6f25d563615123ccee12d0a41e81d"><td class="memItemLeft" align="right" valign="top">virtual std::optional&lt; Eigen::VectorXd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a54d6f25d563615123ccee12d0a41e81d">DoMaybeGetPoint</a> () const</td></tr>
 <tr class="memdesc:a54d6f25d563615123ccee12d0a41e81d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a0c8afc65a3f5ac1df8167abbbd13d218" title="If this set trivially contains exactly one point, returns the value of that point.">MaybeGetPoint()</a>.  <a href="#a54d6f25d563615123ccee12d0a41e81d">More...</a><br /></td></tr>
 <tr class="separator:a54d6f25d563615123ccee12d0a41e81d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -806,6 +812,34 @@ c.rows() == t.size() </dd></dl>
 
 </div>
 </div>
+<a id="a1cc320d6088c2debb29de0d55001596f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cc320d6088c2debb29de0d55001596f">&#9670;&nbsp;</a></span>DoIsEmpty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool DoIsEmpty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a8e12342fc420701fbffd97025421575a" title="Returns true iff the set is empty.">IsEmpty()</a>. </p>
+<p>The default implementation solves a feasibility optimization problem, but derived classes can override with a custom (more efficient) implementation. </p>
+
+</div>
+</div>
 <a id="a54d6f25d563615123ccee12d0a41e81d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a54d6f25d563615123ccee12d0a41e81d">&#9670;&nbsp;</a></span>DoMaybeGetPoint()</h2>
 
@@ -946,6 +980,31 @@ c.rows() == t.size() </dd></dl>
 
 <p>Returns true iff the set is bounded, e.g., there exists an element-wise finite lower and upper bound for the set. </p>
 <p>Note: for some derived classes, this check is trivial, but for others it can require solving an (typically small) optimization problem. Check the derived class documentation for any notes. When ambient_dimension is zero, always returns true. </p>
+
+</div>
+</div>
+<a id="a8e12342fc420701fbffd97025421575a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e12342fc420701fbffd97025421575a">&#9670;&nbsp;</a></span>IsEmpty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsEmpty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true iff the set is empty. </p>
+<p>Note: for some derived classes, this check is trivial, but for others, it can require solving a (typically small) optimization problem. Check the derived class documentation for any notes. </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> == 0 </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

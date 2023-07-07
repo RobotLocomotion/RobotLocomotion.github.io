@@ -51,6 +51,7 @@ var searchData=
   ['meshcat_5fvisualizer_2eh',['meshcat_visualizer.h',['../meshcat__visualizer_8h.html',1,'']]],
   ['meshcat_5fvisualizer_5fparams_2eh',['meshcat_visualizer_params.h',['../meshcat__visualizer__params_8h.html',1,'']]],
   ['meshing_5futilities_2eh',['meshing_utilities.h',['../meshing__utilities_8h.html',1,'']]],
+  ['minimum_5fdegree_5fordering_2eh',['minimum_degree_ordering.h',['../minimum__degree__ordering_8h.html',1,'']]],
   ['minimum_5fdistance_5fconstraint_2eh',['minimum_distance_constraint.h',['../minimum__distance__constraint_8h.html',1,'']]],
   ['minimum_5fvalue_5fconstraint_2eh',['minimum_value_constraint.h',['../minimum__value__constraint_8h.html',1,'']]],
   ['minkowski_5fsum_2eh',['minkowski_sum.h',['../minkowski__sum_8h.html',1,'']]],

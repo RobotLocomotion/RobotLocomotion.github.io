@@ -1,5 +1,8 @@
 var NAVTREEINDEX25 =
 {
+"classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#ace583a472a3bdc1b67f05d6a6571a903":[1,1,0,43,4],
+"classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#af32fe83b5bd0308ba9deac5a0331b76b":[1,1,0,43,10],
+"classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#afd5ade712b02fa2e71e8c26811c9494a":[1,1,0,43,6],
 "classdrake_1_1solvers_1_1_polynomial_constraint.html":[1,1,0,28],
 "classdrake_1_1solvers_1_1_polynomial_constraint.html#a25f396d1eaf4be52eb3db66072895105":[1,1,0,28,7],
 "classdrake_1_1solvers_1_1_polynomial_constraint.html#a4983fdabdbaa1977122fd25c7081127d":[1,1,0,28,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX25 =
 "classdrake_1_1symbolic_1_1_chebyshev_basis_element.html#ab742e6229cad2845385553c42f101511":[3,0,0,15,2,6],
 "classdrake_1_1symbolic_1_1_chebyshev_basis_element.html#aba26a87c6147b18e8abf8c2bbccd2e06":[3,0,0,15,2,11],
 "classdrake_1_1symbolic_1_1_chebyshev_basis_element.html#ad07bb4182d6a3dc3b0ddcf165a492825":[3,0,0,15,2,10],
-"classdrake_1_1symbolic_1_1_chebyshev_basis_element.html#aeb966b9b8938caf3b73c32f4043d0c8f":[3,0,0,15,2,0],
-"classdrake_1_1symbolic_1_1_chebyshev_basis_element.html#af43531f645bc3f0d26090c621394a217":[3,0,0,15,2,13],
-"classdrake_1_1symbolic_1_1_chebyshev_basis_element.html#af7175873a78ceeb2f9618df075522bd3":[3,0,0,15,2,7],
-"classdrake_1_1symbolic_1_1_chebyshev_basis_element.html#af7f99b595b4e8a78116a3f6dcc6f2a5a":[3,0,0,15,2,5]
+"classdrake_1_1symbolic_1_1_chebyshev_basis_element.html#aeb966b9b8938caf3b73c32f4043d0c8f":[3,0,0,15,2,0]
 };
