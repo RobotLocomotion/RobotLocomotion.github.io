@@ -212,6 +212,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8f101502c5626e477259a06f4acd97e1"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a8f101502c5626e477259a06f4acd97e1">ChebyshevCenter</a> () const</td></tr>
 <tr class="memdesc:a8f101502c5626e477259a06f4acd97e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves a linear program to compute the center of the largest inscribed ball in the polyhedron.  <a href="#a8f101502c5626e477259a06f4acd97e1">More...</a><br /></td></tr>
 <tr class="separator:a8f101502c5626e477259a06f4acd97e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95efbfc978d1926652dff936c8931e03"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a95efbfc978d1926652dff936c8931e03">Scale</a> (<a class="el" href="classdouble.html">double</a> scale, std::optional&lt; Eigen::VectorXd &gt; center=std::nullopt) const</td></tr>
+<tr class="memdesc:a95efbfc978d1926652dff936c8931e03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Results a new <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html" title="Implements a polyhedral convex set using the half-space representation: {x| A x ≤ b}.">HPolyhedron</a> that is a scaled version of <code>this</code>, by scaling the distance from each face to the <code>center</code> by a factor of <code>pow(scale, 1/ambient_dimension())</code>, to have units of volume:  <a href="#a95efbfc978d1926652dff936c8931e03">More...</a><br /></td></tr>
+<tr class="separator:a95efbfc978d1926652dff936c8931e03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41dbe3e953c0721ed00d5e74e0280b31"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a41dbe3e953c0721ed00d5e74e0280b31">CartesianProduct</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> &amp;other) const</td></tr>
 <tr class="memdesc:a41dbe3e953c0721ed00d5e74e0280b31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Cartesian product of <code>this</code> and <code>other</code>.  <a href="#a41dbe3e953c0721ed00d5e74e0280b31">More...</a><br /></td></tr>
 <tr class="separator:a41dbe3e953c0721ed00d5e74e0280b31"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -991,6 +994,46 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a95efbfc978d1926652dff936c8931e03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95efbfc978d1926652dff936c8931e03">&#9670;&nbsp;</a></span>Scale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> Scale </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>scale</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; Eigen::VectorXd &gt;&#160;</td>
+          <td class="paramname"><em>center</em> = <code>std::nullopt</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Results a new <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html" title="Implements a polyhedral convex set using the half-space representation: {x| A x ≤ b}.">HPolyhedron</a> that is a scaled version of <code>this</code>, by scaling the distance from each face to the <code>center</code> by a factor of <code>pow(scale, 1/ambient_dimension())</code>, to have units of volume: </p>
+<ul>
+<li><code>scale = 0</code> will result in a point,</li>
+<li><code>0 &lt; scale &lt; 1</code> shrinks the region,</li>
+<li><code>scale = 1</code> returns a copy of the <code>this</code>, and</li>
+<li><code>1 &lt; scale</code> grows the region.</li>
+</ul>
+<p>If <code>center</code> is not provided, then the value returned by <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a8f101502c5626e477259a06f4acd97e1" title="Solves a linear program to compute the center of the largest inscribed ball in the polyhedron.">ChebyshevCenter()</a> will be used.</p>
+<p><code>this</code> does not need to be bounded, nor have volume. <code>center</code> does not need to be in the set. </p><dl class="section pre"><dt>Precondition</dt><dd><code>scale</code> &gt;= 0. </dd>
+<dd>
+<code>center</code> has size equal to the ambient dimension. </dd></dl>
 
 </div>
 </div>

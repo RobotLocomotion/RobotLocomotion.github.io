@@ -1,5 +1,7 @@
 var NAVTREEINDEX53 =
 {
+"schunk__wsg__constants_8h.html#a711e5cc36bb4a36b15f109e28b623d28":[4,0,0,6,2,1,4],
+"schunk__wsg__constants_8h.html#a80a43febe2b6239f4d48a63094288d1b":[4,0,0,6,2,1,5],
 "schunk__wsg__constants_8h.html#ad3478526c69fa04f5dff9ad3c2ebf055":[4,0,0,6,2,1,8],
 "schunk__wsg__constants_8h.html#ga4466f959f6516ddf231455e01f6ce3df":[4,0,0,6,2,1,2],
 "schunk__wsg__constants_8h.html#ga9d4acc482bc52a69383e884679887402":[4,0,0,6,2,1,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX53 =
 "state_8h.html":[4,0,0,12,3,36],
 "state__feedback__controller__interface_8h.html":[4,0,0,12,1,10],
 "stateless__system_8h.html":[4,0,0,12,0,0,16],
-"static__equilibrium__constraint_8h.html":[4,0,0,8,8,7],
-"static__equilibrium__problem_8h.html":[4,0,0,8,8,8],
-"static__friction__cone__complementarity__constraint_8h.html":[4,0,0,8,8,9]
+"static__equilibrium__constraint_8h.html":[4,0,0,8,8,7]
 };
