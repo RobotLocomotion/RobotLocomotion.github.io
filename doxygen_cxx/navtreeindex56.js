@@ -1,5 +1,6 @@
 var NAVTREEINDEX56 =
 {
+"structdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_kuka_robot_joint_reaction_forces.html#a64cab667fd65c47cbe1e9235c557dc3a":[3,0,0,9,0,2,1,2],
 "structdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_kuka_robot_joint_reaction_forces.html#aaaeae014c3934ee5060476d52c6e9181":[3,0,0,9,0,2,1,5],
 "structdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_kuka_robot_joint_reaction_forces.html#ad0c3c5a0cf4055c763011fc59fbb4cb3":[3,0,0,9,0,2,1,0],
 "structdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_kuka_robot_joint_reaction_forces.html#ad4d2d87cee466cb27680067e1b4ee5c5":[3,0,0,9,0,2,1,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX56 =
 "structdrake_1_1solvers_1_1_new_variable_names.html":[3,0,0,14,46],
 "structdrake_1_1solvers_1_1_new_variable_names_3_01_rows_00_01_cols_01_4.html":[3,0,0,14,47],
 "structdrake_1_1solvers_1_1_new_variable_names_3_01_size_01_4.html":[3,0,0,14,48],
-"structdrake_1_1solvers_1_1_new_variable_names_3_01_size_01_4.html#ac921af9184702dd3a3baba941c7361aa":[3,0,0,14,48,0],
-"structdrake_1_1solvers_1_1_nlopt_solver_details.html":[3,0,0,14,50]
+"structdrake_1_1solvers_1_1_new_variable_names_3_01_size_01_4.html#ac921af9184702dd3a3baba941c7361aa":[3,0,0,14,48,0]
 };

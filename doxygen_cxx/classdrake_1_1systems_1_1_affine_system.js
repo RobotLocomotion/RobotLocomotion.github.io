@@ -18,6 +18,7 @@ var classdrake_1_1systems_1_1_affine_system =
     [ "MakeAffineSystem", "classdrake_1_1systems_1_1_affine_system.html#a4e8842b4740001e271439803a421ab1c", null ],
     [ "operator=", "classdrake_1_1systems_1_1_affine_system.html#ae455fc4e086d800ed2d1f5a3f9f747b2", null ],
     [ "operator=", "classdrake_1_1systems_1_1_affine_system.html#aa44d49269315d1e2ded0344b9a21c3bf", null ],
+    [ "UpdateCoefficients", "classdrake_1_1systems_1_1_affine_system.html#a9b9239e87b6c059d9f4e630113d0294c", null ],
     [ "y0", "classdrake_1_1systems_1_1_affine_system.html#af1094f55f3c81cc7f8c3a953a2394337", null ],
     [ "y0", "classdrake_1_1systems_1_1_affine_system.html#a75939c59506633bf76199742eda9736f", null ]
 ];

@@ -1,5 +1,6 @@
 var NAVTREEINDEX44 =
 {
+"deprecation__pybind_8h.html#a36e0f3795b29cfb57c0940ffc8780120":[4,0,0,0,0,0,3,2],
 "deprecation__pybind_8h.html#a40a674f4af53caa963b98daa8d85af39":[4,0,0,0,0,0,3,3],
 "deprecation__pybind_8h.html#a88a20567ddf6e5978a874a3cb46353f4":[4,0,0,0,0,0,3,4],
 "deprecation__pybind_8h.html#aa542768548608eefe8534a3bdc5c1cd4":[4,0,0,0,0,0,3,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX44 =
 "eigen__pybind_8h.html#a0d7582877591057ceea633df19d910fa":[4,0,0,0,0,0,5,2],
 "eigen__pybind_8h.html#a875e25ecdc84790945435e9538a6ef60":[4,0,0,0,0,0,5,0],
 "eigen__pybind_8h.html#ab9047f00f873c1cd6f00d0665365ecf5":[4,0,0,0,0,0,5,1],
-"eigen__pybind_8h.html#af5f81d7315477aaa1694d9aa02a1346b":[4,0,0,0,0,0,5,3],
-"eigen__sparse__triplet_8h.html":[4,0,0,7,13]
+"eigen__pybind_8h.html#af5f81d7315477aaa1694d9aa02a1346b":[4,0,0,0,0,0,5,3]
 };

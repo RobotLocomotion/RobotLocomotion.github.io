@@ -1,5 +1,6 @@
 var NAVTREEINDEX35 =
 {
+"classdrake_1_1systems_1_1_multilayer_perceptron.html#aa1830877a7cd94e0fa0240a4dfbc18f3":[1,2,1,16,2],
 "classdrake_1_1systems_1_1_multilayer_perceptron.html#ab095e65668baa20e93607dae3799c1a0":[1,2,1,16,20],
 "classdrake_1_1systems_1_1_multilayer_perceptron.html#ab6d92a60f96df3756ac29808fd8bd1c1":[1,2,1,16,3],
 "classdrake_1_1systems_1_1_multilayer_perceptron.html#ac5fc0acd1a5e69bb7cceb5ca4fd06eb7":[1,2,1,16,12],
@@ -248,6 +249,5 @@ var NAVTREEINDEX35 =
 "classdrake_1_1systems_1_1_scalar_dense_output.html#a2fdb1e2e6e96c28657e7c3ecca22c149":[3,0,0,16,87,8],
 "classdrake_1_1systems_1_1_scalar_dense_output.html#a391a65a7d2b4f5059ef524ac3a9b97e9":[3,0,0,16,87,4],
 "classdrake_1_1systems_1_1_scalar_dense_output.html#a3ee4672a4597cc60597444085106fff9":[3,0,0,16,87,5],
-"classdrake_1_1systems_1_1_scalar_dense_output.html#a59ec7eee615677d38592f3c8f73e5abe":[3,0,0,16,87,7],
-"classdrake_1_1systems_1_1_scalar_dense_output.html#a687a48016f7da72e6a4bc234718fe144":[3,0,0,16,87,2]
+"classdrake_1_1systems_1_1_scalar_dense_output.html#a59ec7eee615677d38592f3c8f73e5abe":[3,0,0,16,87,7]
 };
