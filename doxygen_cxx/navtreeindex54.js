@@ -1,5 +1,6 @@
 var NAVTREEINDEX54 =
 {
+"stateless__system_8h.html":[4,0,0,12,0,0,16],
 "static__equilibrium__constraint_8h.html":[4,0,0,8,8,7],
 "static__equilibrium__problem_8h.html":[4,0,0,8,8,8],
 "static__friction__cone__complementarity__constraint_8h.html":[4,0,0,8,8,9],
@@ -248,6 +249,5 @@ var NAVTREEINDEX54 =
 "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html#af4785f1c637fd480c9b1c3c2f7805675":[3,0,0,4,1,5,8,1],
 "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html":[3,0,0,4,1,6,0],
 "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html#a28d39a844c3a37ab61d32ab7c6352f09":[3,0,0,4,1,6,0,0],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html#afb686f56113478fa59b75fe3fe36e326":[3,0,0,4,1,6,0,1],
-"structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html":[3,0,0,4,1,8]
+"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html#afb686f56113478fa59b75fe3fe36e326":[3,0,0,4,1,6,0,1]
 };
