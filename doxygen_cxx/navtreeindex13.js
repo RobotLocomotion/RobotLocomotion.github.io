@@ -1,5 +1,8 @@
 var NAVTREEINDEX13 =
 {
+"classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#ac6e57627705f9b3e5f66c6a8f5f12a84":[3,0,0,9,42,1],
+"classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#ad8ebf5d56f723686c5dc57d1c41f551e":[3,0,0,9,42,7],
+"classdrake_1_1multibody_1_1_inverse_kinematics.html":[1,4,2,0,2],
 "classdrake_1_1multibody_1_1_inverse_kinematics.html#a069b08fb67eeeb99c807dfc823ea3154":[1,4,2,0,2,21],
 "classdrake_1_1multibody_1_1_inverse_kinematics.html#a0bb60b773199c651ab8c8802501d4391":[1,4,2,0,2,8],
 "classdrake_1_1multibody_1_1_inverse_kinematics.html#a17e545f30ae2d1bf7fd15e14f6198fa9":[1,4,2,0,2,2],
@@ -246,8 +249,5 @@ var NAVTREEINDEX13 =
 "classdrake_1_1multibody_1_1_multibody_plant.html#a16fc1c385cc07dda2780f12ce664fcbb":[1,2,14,23],
 "classdrake_1_1multibody_1_1_multibody_plant.html#a1bff7f57e96b0587a6ae89e4d191bcf2":[1,2,14,81],
 "classdrake_1_1multibody_1_1_multibody_plant.html#a1cc1d71e6c2e91fcd215105ae4ed01e4":[1,2,14,55],
-"classdrake_1_1multibody_1_1_multibody_plant.html#a1e5e058b968b927f6342a8127aea663a":[1,2,14,212],
-"classdrake_1_1multibody_1_1_multibody_plant.html#a1ed349a2f7ff96074f02339fb34ef81f":[1,2,14,110],
-"classdrake_1_1multibody_1_1_multibody_plant.html#a1f20f6e2e2de42a5225e86baff2ca0e5":[1,2,14,76],
-"classdrake_1_1multibody_1_1_multibody_plant.html#a1fc148ddec26f8c109c233b8b2ec1e2d":[1,2,14,90]
+"classdrake_1_1multibody_1_1_multibody_plant.html#a1e5e058b968b927f6342a8127aea663a":[1,2,14,212]
 };

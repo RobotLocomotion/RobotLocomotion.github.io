@@ -1,5 +1,11 @@
 var NAVTREEINDEX57 =
 {
+"structdrake_1_1solvers_1_1_mosek_solver_details.html#a3bd18d95fc284969ff5703de05b5a9f5":[3,0,0,14,44,0],
+"structdrake_1_1solvers_1_1_mosek_solver_details.html#a4036e6e47f77a14497bc9f6c007193a0":[3,0,0,14,44,2],
+"structdrake_1_1solvers_1_1_new_symmetric_variable_names.html":[3,0,0,14,45],
+"structdrake_1_1solvers_1_1_new_variable_names.html":[3,0,0,14,46],
+"structdrake_1_1solvers_1_1_new_variable_names_3_01_rows_00_01_cols_01_4.html":[3,0,0,14,47],
+"structdrake_1_1solvers_1_1_new_variable_names_3_01_size_01_4.html":[3,0,0,14,48],
 "structdrake_1_1solvers_1_1_new_variable_names_3_01_size_01_4.html#ac921af9184702dd3a3baba941c7361aa":[3,0,0,14,48,0],
 "structdrake_1_1solvers_1_1_nlopt_solver_details.html":[3,0,0,14,50],
 "structdrake_1_1solvers_1_1_nlopt_solver_details.html#a6e27f49150e9a14580fb313cc2777e00":[3,0,0,14,50,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX57 =
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_grey8_u_01_4.html#adc250b4c9ae780fa619885b581260e43":[3,0,0,16,8,15,0],
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_grey8_u_01_4.html#afe6901f952a36afe20ac9b9e21e1a22a":[3,0,0,16,8,15,2],
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_label16_i_01_4.html":[3,0,0,16,8,16],
-"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_label16_i_01_4.html#a770fd0c30a2b985c180ebffb9747a07a":[3,0,0,16,8,16,1],
-"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_label16_i_01_4.html#ab8e216583fec393487ca0b011a6fecea":[3,0,0,16,8,16,0],
-"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_label16_i_01_4.html#afe6901f952a36afe20ac9b9e21e1a22a":[3,0,0,16,8,16,2],
-"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgb8_u_01_4.html":[3,0,0,16,8,17],
-"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgb8_u_01_4.html#a770fd0c30a2b985c180ebffb9747a07a":[3,0,0,16,8,17,1],
-"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgb8_u_01_4.html#adc250b4c9ae780fa619885b581260e43":[3,0,0,16,8,17,0],
-"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgb8_u_01_4.html#afe6901f952a36afe20ac9b9e21e1a22a":[3,0,0,16,8,17,2]
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_label16_i_01_4.html#a770fd0c30a2b985c180ebffb9747a07a":[3,0,0,16,8,16,1]
 };

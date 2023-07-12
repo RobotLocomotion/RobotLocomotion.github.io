@@ -16432,9 +16432,9 @@ Bcm).</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">density</span></code>:</dt><dd><p>mass per volume (kg/m³).</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">radius</span></code>:</dt><dd><p>radius of the cylinder/half-sphere part of the capsule.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">radius</span></code>:</dt><dd><p>radius of the cylinder/half-sphere parts of the capsule.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">length</span></code>:</dt><dd><p>length of the cylindrical part of the capsule (meters).</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">length</span></code>:</dt><dd><p>length of the cylindrical part of the capsule.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code>:</dt><dd><p>unit vector defining the axial direction of the cylindrical part
 of the capsule, expressed in B.</p>
@@ -16452,12 +16452,43 @@ through Bo and is perpendicular to unit_vector.</p>
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if density</strong><strong>, </strong><strong>radius</strong><strong>, or </strong><strong>length is not positive and</strong> – </p></li>
-<li><p><strong>finite.</strong> – </p></li>
+<li><p><strong>finite</strong><strong> or </strong><strong>if ‖unit_vector‖ is not within 1.0E-14 of 1.0.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia.SolidCapsuleWithMass">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCapsuleWithMass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia" title="pydrake.multibody.tree.SpatialInertia"><span class="pre">pydrake.multibody.tree.SpatialInertia</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia.SolidCapsuleWithMass" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform density solid capsule B about
+its geometric center Bo (which is coincident with B’s center of mass
+Bcm).</p>
 <dl class="simple">
-<dt>Precondition:</dt><dd><p>‖unit_vector‖ = 1; see UnitVector::SolidCapsule() for details.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mass</span></code>:</dt><dd><p>mass of the solid capsule (kg).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">radius</span></code>:</dt><dd><p>radius of the cylinder/half-sphere parts of the capsule.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">length</span></code>:</dt><dd><p>length of the cylindrical part of the capsule.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code>:</dt><dd><p>unit vector defining the axial direction of the cylindrical part
+of the capsule, expressed in B.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>B’s spatial inertia about Bo, expressed in B.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>B’s rotational inertia about Bo is axially symmetric, meaning B
+has an equal moment of inertia about any line that both passes
+through Bo and is perpendicular to unit_vector.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if mass</strong><strong>, </strong><strong>radius</strong><strong>, or </strong><strong>length is not positive and finite</strong> – </p></li>
+<li><p><strong>or if ‖unit_vector‖ is not within 1.0E-14 of 1.0.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -16519,12 +16550,8 @@ through Bo and is perpendicular to unit_vector.</p>
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if density</strong><strong>, </strong><strong>radius</strong><strong>, or </strong><strong>length is not positive and</strong> – </p></li>
-<li><p><strong>finite.</strong> – </p></li>
+<li><p><strong>finite</strong><strong> or </strong><strong>if ‖unit_vector‖ is not within 1.0E-14 of 1.0.</strong> – </p></li>
 </ul>
-</dd>
-</dl>
-<dl class="simple">
-<dt>Precondition:</dt><dd><p>‖unit_vector‖ = 1.</p>
 </dd>
 </dl>
 <div class="admonition seealso">
@@ -16568,12 +16595,8 @@ through Bp and is perpendicular to unit_vector.</p>
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if density</strong><strong>, </strong><strong>radius</strong><strong>, or </strong><strong>length is not positive and</strong> – </p></li>
-<li><p><strong>finite.</strong> – </p></li>
+<li><p><strong>finite</strong><strong> or </strong><strong>if ‖unit_vector‖ is not within 1.0E-14 of 1.0.</strong> – </p></li>
 </ul>
-</dd>
-</dl>
-<dl class="simple">
-<dt>Precondition:</dt><dd><p>‖unit_vector‖ = 1.</p>
 </dd>
 </dl>
 <div class="admonition seealso">
@@ -16581,6 +16604,41 @@ through Bp and is perpendicular to unit_vector.</p>
 <p>SolidCylinderWithDensity() to calculate M_BBcm_B, B’s spatial
 inertia about Bcm (B’s center of mass).</p>
 </div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia.SolidCylinderWithMass">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCylinderWithMass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia" title="pydrake.multibody.tree.SpatialInertia"><span class="pre">pydrake.multibody.tree.SpatialInertia</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia.SolidCylinderWithMass" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform density solid cylinder B about
+its geometric center Bo (which is coincident with B’s center of mass
+Bcm).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mass</span></code>:</dt><dd><p>mass of the solid cylinder (kg).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">radius</span></code>:</dt><dd><p>radius of the cylinder (meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">length</span></code>:</dt><dd><p>length of cylinder in unit_vector direction (meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code>:</dt><dd><p>unit vector defining the axial direction of the cylinder,
+expressed in B.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>B’s spatial inertia about Bo, expressed in B.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>B’s rotational inertia about Bo is axially symmetric, meaning B
+has an equal moment of inertia about any line that both passes
+through Bo and is perpendicular to unit_vector.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if mass</strong><strong>, </strong><strong>radius</strong><strong>, or </strong><strong>length is not positive and finite</strong> – </p></li>
+<li><p><strong>or if ‖unit_vector‖ is not within 1.0E-14 of 1.0.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -16604,6 +16662,31 @@ mass Bcm).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if density</strong><strong>, </strong><strong>a</strong><strong>, </strong><strong>b</strong><strong>, or </strong><strong>c is not positive and finite.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia.SolidEllipsoidWithMass">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidEllipsoidWithMass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia" title="pydrake.multibody.tree.SpatialInertia"><span class="pre">pydrake.multibody.tree.SpatialInertia</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia.SolidEllipsoidWithMass" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform density solid ellipsoid B
+about its geometric center Bo (which is coincident with B’s center of
+mass Bcm).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mass</span></code>:</dt><dd><p>mass of the solid ellipsoid (kg).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">a</span></code>:</dt><dd><p>length of ellipsoid semi-axis in the ellipsoid Bx direction.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">b</span></code>:</dt><dd><p>length of ellipsoid semi-axis in the ellipsoid By direction.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">c</span></code>:</dt><dd><p>length of ellipsoid semi-axis in the ellipsoid Bz direction.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>B’s spatial inertia about Bo, expressed in B.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if mass</strong><strong>, </strong><strong>a</strong><strong>, </strong><strong>b</strong><strong>, or </strong><strong>c is not positive and finite.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -16689,11 +16772,10 @@ parallel to unit_vector.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if mass</strong><strong> or </strong><strong>length is not positive and finite.</strong> – </p>
-</dd>
-</dl>
-<dl class="simple">
-<dt>Precondition:</dt><dd><p>‖unit_vector‖ = 1.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if mass</strong><strong> or </strong><strong>length is not positive and finite</strong><strong> or </strong><strong>if</strong> – </p></li>
+<li><p><strong>‖unit_vector‖ is not within 1.0E-14 of 1.0.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 <div class="admonition seealso">
@@ -16732,11 +16814,10 @@ parallel to unit_vector.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if mass</strong><strong> or </strong><strong>length is not positive and finite.</strong> – </p>
-</dd>
-</dl>
-<dl class="simple">
-<dt>Precondition:</dt><dd><p>‖unit_vector‖ = 1.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if mass</strong><strong> or </strong><strong>length is not positive and finite</strong><strong> or </strong><strong>if</strong> – </p></li>
+<li><p><strong>‖unit_vector‖ is not within 1.0E-14 of 1.0.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 <div class="admonition seealso">
@@ -17183,9 +17264,9 @@ Bcm).</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">density</span></code>:</dt><dd><p>mass per volume (kg/m³).</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">radius</span></code>:</dt><dd><p>radius of the cylinder/half-sphere part of the capsule.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">radius</span></code>:</dt><dd><p>radius of the cylinder/half-sphere parts of the capsule.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">length</span></code>:</dt><dd><p>length of the cylindrical part of the capsule (meters).</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">length</span></code>:</dt><dd><p>length of the cylindrical part of the capsule.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code>:</dt><dd><p>unit vector defining the axial direction of the cylindrical part
 of the capsule, expressed in B.</p>
@@ -17203,12 +17284,43 @@ through Bo and is perpendicular to unit_vector.</p>
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if density</strong><strong>, </strong><strong>radius</strong><strong>, or </strong><strong>length is not positive and</strong> – </p></li>
-<li><p><strong>finite.</strong> – </p></li>
+<li><p><strong>finite</strong><strong> or </strong><strong>if ‖unit_vector‖ is not within 1.0E-14 of 1.0.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.SolidCapsuleWithMass">
+<span id="pydrake.multibody.tree.SpatialInertia_[AutoDiffXd].SolidCapsuleWithMass"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCapsuleWithMass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.SolidCapsuleWithMass" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform density solid capsule B about
+its geometric center Bo (which is coincident with B’s center of mass
+Bcm).</p>
 <dl class="simple">
-<dt>Precondition:</dt><dd><p>‖unit_vector‖ = 1; see UnitVector::SolidCapsule() for details.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mass</span></code>:</dt><dd><p>mass of the solid capsule (kg).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">radius</span></code>:</dt><dd><p>radius of the cylinder/half-sphere parts of the capsule.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">length</span></code>:</dt><dd><p>length of the cylindrical part of the capsule.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code>:</dt><dd><p>unit vector defining the axial direction of the cylindrical part
+of the capsule, expressed in B.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>B’s spatial inertia about Bo, expressed in B.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>B’s rotational inertia about Bo is axially symmetric, meaning B
+has an equal moment of inertia about any line that both passes
+through Bo and is perpendicular to unit_vector.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if mass</strong><strong>, </strong><strong>radius</strong><strong>, or </strong><strong>length is not positive and finite</strong> – </p></li>
+<li><p><strong>or if ‖unit_vector‖ is not within 1.0E-14 of 1.0.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -17270,12 +17382,8 @@ through Bo and is perpendicular to unit_vector.</p>
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if density</strong><strong>, </strong><strong>radius</strong><strong>, or </strong><strong>length is not positive and</strong> – </p></li>
-<li><p><strong>finite.</strong> – </p></li>
+<li><p><strong>finite</strong><strong> or </strong><strong>if ‖unit_vector‖ is not within 1.0E-14 of 1.0.</strong> – </p></li>
 </ul>
-</dd>
-</dl>
-<dl class="simple">
-<dt>Precondition:</dt><dd><p>‖unit_vector‖ = 1.</p>
 </dd>
 </dl>
 <div class="admonition seealso">
@@ -17319,12 +17427,8 @@ through Bp and is perpendicular to unit_vector.</p>
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if density</strong><strong>, </strong><strong>radius</strong><strong>, or </strong><strong>length is not positive and</strong> – </p></li>
-<li><p><strong>finite.</strong> – </p></li>
+<li><p><strong>finite</strong><strong> or </strong><strong>if ‖unit_vector‖ is not within 1.0E-14 of 1.0.</strong> – </p></li>
 </ul>
-</dd>
-</dl>
-<dl class="simple">
-<dt>Precondition:</dt><dd><p>‖unit_vector‖ = 1.</p>
 </dd>
 </dl>
 <div class="admonition seealso">
@@ -17332,6 +17436,41 @@ through Bp and is perpendicular to unit_vector.</p>
 <p>SolidCylinderWithDensity() to calculate M_BBcm_B, B’s spatial
 inertia about Bcm (B’s center of mass).</p>
 </div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.SolidCylinderWithMass">
+<span id="pydrake.multibody.tree.SpatialInertia_[AutoDiffXd].SolidCylinderWithMass"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCylinderWithMass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.SolidCylinderWithMass" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform density solid cylinder B about
+its geometric center Bo (which is coincident with B’s center of mass
+Bcm).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mass</span></code>:</dt><dd><p>mass of the solid cylinder (kg).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">radius</span></code>:</dt><dd><p>radius of the cylinder (meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">length</span></code>:</dt><dd><p>length of cylinder in unit_vector direction (meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code>:</dt><dd><p>unit vector defining the axial direction of the cylinder,
+expressed in B.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>B’s spatial inertia about Bo, expressed in B.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>B’s rotational inertia about Bo is axially symmetric, meaning B
+has an equal moment of inertia about any line that both passes
+through Bo and is perpendicular to unit_vector.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if mass</strong><strong>, </strong><strong>radius</strong><strong>, or </strong><strong>length is not positive and finite</strong> – </p></li>
+<li><p><strong>or if ‖unit_vector‖ is not within 1.0E-14 of 1.0.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -17355,6 +17494,31 @@ mass Bcm).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if density</strong><strong>, </strong><strong>a</strong><strong>, </strong><strong>b</strong><strong>, or </strong><strong>c is not positive and finite.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.SolidEllipsoidWithMass">
+<span id="pydrake.multibody.tree.SpatialInertia_[AutoDiffXd].SolidEllipsoidWithMass"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidEllipsoidWithMass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.SolidEllipsoidWithMass" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform density solid ellipsoid B
+about its geometric center Bo (which is coincident with B’s center of
+mass Bcm).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mass</span></code>:</dt><dd><p>mass of the solid ellipsoid (kg).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">a</span></code>:</dt><dd><p>length of ellipsoid semi-axis in the ellipsoid Bx direction.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">b</span></code>:</dt><dd><p>length of ellipsoid semi-axis in the ellipsoid By direction.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">c</span></code>:</dt><dd><p>length of ellipsoid semi-axis in the ellipsoid Bz direction.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>B’s spatial inertia about Bo, expressed in B.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if mass</strong><strong>, </strong><strong>a</strong><strong>, </strong><strong>b</strong><strong>, or </strong><strong>c is not positive and finite.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -17440,11 +17604,10 @@ parallel to unit_vector.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if mass</strong><strong> or </strong><strong>length is not positive and finite.</strong> – </p>
-</dd>
-</dl>
-<dl class="simple">
-<dt>Precondition:</dt><dd><p>‖unit_vector‖ = 1.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if mass</strong><strong> or </strong><strong>length is not positive and finite</strong><strong> or </strong><strong>if</strong> – </p></li>
+<li><p><strong>‖unit_vector‖ is not within 1.0E-14 of 1.0.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 <div class="admonition seealso">
@@ -17483,11 +17646,10 @@ parallel to unit_vector.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if mass</strong><strong> or </strong><strong>length is not positive and finite.</strong> – </p>
-</dd>
-</dl>
-<dl class="simple">
-<dt>Precondition:</dt><dd><p>‖unit_vector‖ = 1.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if mass</strong><strong> or </strong><strong>length is not positive and finite</strong><strong> or </strong><strong>if</strong> – </p></li>
+<li><p><strong>‖unit_vector‖ is not within 1.0E-14 of 1.0.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 <div class="admonition seealso">
@@ -17928,9 +18090,9 @@ Bcm).</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">density</span></code>:</dt><dd><p>mass per volume (kg/m³).</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">radius</span></code>:</dt><dd><p>radius of the cylinder/half-sphere part of the capsule.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">radius</span></code>:</dt><dd><p>radius of the cylinder/half-sphere parts of the capsule.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">length</span></code>:</dt><dd><p>length of the cylindrical part of the capsule (meters).</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">length</span></code>:</dt><dd><p>length of the cylindrical part of the capsule.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code>:</dt><dd><p>unit vector defining the axial direction of the cylindrical part
 of the capsule, expressed in B.</p>
@@ -17948,12 +18110,43 @@ through Bo and is perpendicular to unit_vector.</p>
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if density</strong><strong>, </strong><strong>radius</strong><strong>, or </strong><strong>length is not positive and</strong> – </p></li>
-<li><p><strong>finite.</strong> – </p></li>
+<li><p><strong>finite</strong><strong> or </strong><strong>if ‖unit_vector‖ is not within 1.0E-14 of 1.0.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-Expression-.SolidCapsuleWithMass">
+<span id="pydrake.multibody.tree.SpatialInertia_[Expression].SolidCapsuleWithMass"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCapsuleWithMass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-Expression-.SolidCapsuleWithMass" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform density solid capsule B about
+its geometric center Bo (which is coincident with B’s center of mass
+Bcm).</p>
 <dl class="simple">
-<dt>Precondition:</dt><dd><p>‖unit_vector‖ = 1; see UnitVector::SolidCapsule() for details.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mass</span></code>:</dt><dd><p>mass of the solid capsule (kg).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">radius</span></code>:</dt><dd><p>radius of the cylinder/half-sphere parts of the capsule.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">length</span></code>:</dt><dd><p>length of the cylindrical part of the capsule.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code>:</dt><dd><p>unit vector defining the axial direction of the cylindrical part
+of the capsule, expressed in B.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>B’s spatial inertia about Bo, expressed in B.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>B’s rotational inertia about Bo is axially symmetric, meaning B
+has an equal moment of inertia about any line that both passes
+through Bo and is perpendicular to unit_vector.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if mass</strong><strong>, </strong><strong>radius</strong><strong>, or </strong><strong>length is not positive and finite</strong> – </p></li>
+<li><p><strong>or if ‖unit_vector‖ is not within 1.0E-14 of 1.0.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -18015,12 +18208,8 @@ through Bo and is perpendicular to unit_vector.</p>
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if density</strong><strong>, </strong><strong>radius</strong><strong>, or </strong><strong>length is not positive and</strong> – </p></li>
-<li><p><strong>finite.</strong> – </p></li>
+<li><p><strong>finite</strong><strong> or </strong><strong>if ‖unit_vector‖ is not within 1.0E-14 of 1.0.</strong> – </p></li>
 </ul>
-</dd>
-</dl>
-<dl class="simple">
-<dt>Precondition:</dt><dd><p>‖unit_vector‖ = 1.</p>
 </dd>
 </dl>
 <div class="admonition seealso">
@@ -18064,12 +18253,8 @@ through Bp and is perpendicular to unit_vector.</p>
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if density</strong><strong>, </strong><strong>radius</strong><strong>, or </strong><strong>length is not positive and</strong> – </p></li>
-<li><p><strong>finite.</strong> – </p></li>
+<li><p><strong>finite</strong><strong> or </strong><strong>if ‖unit_vector‖ is not within 1.0E-14 of 1.0.</strong> – </p></li>
 </ul>
-</dd>
-</dl>
-<dl class="simple">
-<dt>Precondition:</dt><dd><p>‖unit_vector‖ = 1.</p>
 </dd>
 </dl>
 <div class="admonition seealso">
@@ -18077,6 +18262,41 @@ through Bp and is perpendicular to unit_vector.</p>
 <p>SolidCylinderWithDensity() to calculate M_BBcm_B, B’s spatial
 inertia about Bcm (B’s center of mass).</p>
 </div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-Expression-.SolidCylinderWithMass">
+<span id="pydrake.multibody.tree.SpatialInertia_[Expression].SolidCylinderWithMass"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCylinderWithMass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-Expression-.SolidCylinderWithMass" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform density solid cylinder B about
+its geometric center Bo (which is coincident with B’s center of mass
+Bcm).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mass</span></code>:</dt><dd><p>mass of the solid cylinder (kg).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">radius</span></code>:</dt><dd><p>radius of the cylinder (meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">length</span></code>:</dt><dd><p>length of cylinder in unit_vector direction (meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code>:</dt><dd><p>unit vector defining the axial direction of the cylinder,
+expressed in B.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>B’s spatial inertia about Bo, expressed in B.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>B’s rotational inertia about Bo is axially symmetric, meaning B
+has an equal moment of inertia about any line that both passes
+through Bo and is perpendicular to unit_vector.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if mass</strong><strong>, </strong><strong>radius</strong><strong>, or </strong><strong>length is not positive and finite</strong> – </p></li>
+<li><p><strong>or if ‖unit_vector‖ is not within 1.0E-14 of 1.0.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -18100,6 +18320,31 @@ mass Bcm).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if density</strong><strong>, </strong><strong>a</strong><strong>, </strong><strong>b</strong><strong>, or </strong><strong>c is not positive and finite.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-Expression-.SolidEllipsoidWithMass">
+<span id="pydrake.multibody.tree.SpatialInertia_[Expression].SolidEllipsoidWithMass"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidEllipsoidWithMass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-Expression-.SolidEllipsoidWithMass" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform density solid ellipsoid B
+about its geometric center Bo (which is coincident with B’s center of
+mass Bcm).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mass</span></code>:</dt><dd><p>mass of the solid ellipsoid (kg).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">a</span></code>:</dt><dd><p>length of ellipsoid semi-axis in the ellipsoid Bx direction.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">b</span></code>:</dt><dd><p>length of ellipsoid semi-axis in the ellipsoid By direction.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">c</span></code>:</dt><dd><p>length of ellipsoid semi-axis in the ellipsoid Bz direction.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>B’s spatial inertia about Bo, expressed in B.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if mass</strong><strong>, </strong><strong>a</strong><strong>, </strong><strong>b</strong><strong>, or </strong><strong>c is not positive and finite.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -18185,11 +18430,10 @@ parallel to unit_vector.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if mass</strong><strong> or </strong><strong>length is not positive and finite.</strong> – </p>
-</dd>
-</dl>
-<dl class="simple">
-<dt>Precondition:</dt><dd><p>‖unit_vector‖ = 1.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if mass</strong><strong> or </strong><strong>length is not positive and finite</strong><strong> or </strong><strong>if</strong> – </p></li>
+<li><p><strong>‖unit_vector‖ is not within 1.0E-14 of 1.0.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 <div class="admonition seealso">
@@ -18228,11 +18472,10 @@ parallel to unit_vector.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if mass</strong><strong> or </strong><strong>length is not positive and finite.</strong> – </p>
-</dd>
-</dl>
-<dl class="simple">
-<dt>Precondition:</dt><dd><p>‖unit_vector‖ = 1.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if mass</strong><strong> or </strong><strong>length is not positive and finite</strong><strong> or </strong><strong>if</strong> – </p></li>
+<li><p><strong>‖unit_vector‖ is not within 1.0E-14 of 1.0.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 <div class="admonition seealso">
@@ -18758,7 +19001,7 @@ direction.</p>
 <dd><p>Computes the unit inertia for a uniform density unit-mass capsule C
 whose axis of revolution is along the z-axis.</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">r</span></code>:</dt><dd><p>radius of the cylinder/half-sphere part of the capsule.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">r</span></code>:</dt><dd><p>radius of the cylinder/half-sphere parts of the capsule.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">L</span></code>:</dt><dd><p>length of the cylindrical part of the capsule.</p>
 </dd>
@@ -19183,7 +19426,7 @@ direction.</p>
 <p>Computes the unit inertia for a uniform density unit-mass capsule C
 whose axis of revolution is along the z-axis.</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">r</span></code>:</dt><dd><p>radius of the cylinder/half-sphere part of the capsule.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">r</span></code>:</dt><dd><p>radius of the cylinder/half-sphere parts of the capsule.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">L</span></code>:</dt><dd><p>length of the cylindrical part of the capsule.</p>
 </dd>
@@ -19602,7 +19845,7 @@ direction.</p>
 <dd><p>Computes the unit inertia for a uniform density unit-mass capsule C
 whose axis of revolution is along the z-axis.</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">r</span></code>:</dt><dd><p>radius of the cylinder/half-sphere part of the capsule.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">r</span></code>:</dt><dd><p>radius of the cylinder/half-sphere parts of the capsule.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">L</span></code>:</dt><dd><p>length of the cylindrical part of the capsule.</p>
 </dd>

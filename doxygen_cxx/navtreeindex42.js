@@ -1,5 +1,11 @@
 var NAVTREEINDEX42 =
 {
+"classdrake_1_1trajectories_1_1_bezier_curve.html#a0d37069b2edc37d7662aa809b6070e4e":[3,0,0,18,0,6],
+"classdrake_1_1trajectories_1_1_bezier_curve.html#a1140b71651392be777ab280996db81de":[3,0,0,18,0,9],
+"classdrake_1_1trajectories_1_1_bezier_curve.html#a16ae097f54f82e813d19f77126ba21e7":[3,0,0,18,0,11],
+"classdrake_1_1trajectories_1_1_bezier_curve.html#a1ffd5b82508f158e6e2d5b85be11bacc":[3,0,0,18,0,17],
+"classdrake_1_1trajectories_1_1_bezier_curve.html#a3f901a992920634ebe38141643a638e3":[3,0,0,18,0,2],
+"classdrake_1_1trajectories_1_1_bezier_curve.html#a641bfb18296d6976a000cf31c213dfdf":[3,0,0,18,0,10],
 "classdrake_1_1trajectories_1_1_bezier_curve.html#a7e99df7a6f35c49ccba8d64fe7027714":[3,0,0,18,0,0],
 "classdrake_1_1trajectories_1_1_bezier_curve.html#a9aa1f1cfff6dcb352d5fbb15a80ee1a9":[3,0,0,18,0,15],
 "classdrake_1_1trajectories_1_1_bezier_curve.html#aabb3eea611e5a4d88dd140ed23b2e3ef":[3,0,0,18,0,13],
@@ -243,11 +249,5 @@ var NAVTREEINDEX42 =
 "classdrake_1_1trajectories_1_1_trajectory.html#afbddf9c56911aa6014253b5800fbff83":[3,0,0,18,10,7],
 "classdrake_1_1visualization_1_1_inertia_visualizer.html":[1,2,11,4],
 "classdrake_1_1visualization_1_1_inertia_visualizer.html#a35e4757607fba787b9450627f6112166":[1,2,11,4,3],
-"classdrake_1_1visualization_1_1_inertia_visualizer.html#a6b25925ec5f7044f7ed092ee3180f38d":[1,2,11,4,7],
-"classdrake_1_1visualization_1_1_inertia_visualizer.html#a73f8cf9a55941586846beae0ef7f94a8":[1,2,11,4,1],
-"classdrake_1_1visualization_1_1_inertia_visualizer.html#a8b091eb5e79051e855367de4106c9739":[1,2,11,4,8],
-"classdrake_1_1visualization_1_1_inertia_visualizer.html#a920edba4b207049d7ce573d4ff8b96bf":[1,2,11,4,0],
-"classdrake_1_1visualization_1_1_inertia_visualizer.html#a9a2e0e4083590b0ce302bc8dd23d985b":[1,2,11,4,4],
-"classdrake_1_1visualization_1_1_inertia_visualizer.html#aae4a07b05d13e93beed877b8119042f5":[1,2,11,4,5],
-"classdrake_1_1visualization_1_1_inertia_visualizer.html#ac589bc8397bf7d9c4d695830cb1b9c2f":[1,2,11,4,6]
+"classdrake_1_1visualization_1_1_inertia_visualizer.html#a6b25925ec5f7044f7ed092ee3180f38d":[1,2,11,4,7]
 };

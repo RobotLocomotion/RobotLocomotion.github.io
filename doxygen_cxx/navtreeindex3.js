@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"classdrake_1_1examples_1_1planar__gripper_1_1_planar_manipuland_status_encoder.html#a4b66e0d45620d50449fd43991e731bc8":[3,0,0,3,11,7,1],
 "classdrake_1_1examples_1_1planar__gripper_1_1_planar_manipuland_status_encoder.html#a79e9a441a7e61b004ba1cca5ac7db434":[3,0,0,3,11,7,3],
 "classdrake_1_1examples_1_1planar__gripper_1_1_planar_manipuland_status_encoder.html#aa67b4c0cd1beed3e9e171c313ca19935":[3,0,0,3,11,7,4],
 "classdrake_1_1examples_1_1quadrotor_1_1_quadrotor_geometry.html":[3,0,0,3,12,0],
@@ -221,11 +222,12 @@ var NAVTREEINDEX3 =
 "classdrake_1_1geometry_1_1_contact_surface.html#af931921055f30df1a5f7185dcefa83a2":[3,0,0,4,7,3],
 "classdrake_1_1geometry_1_1_convex.html":[3,0,0,4,8],
 "classdrake_1_1geometry_1_1_convex.html#a0835d42bc864d8d9d8323e4f157803f3":[3,0,0,4,8,2],
-"classdrake_1_1geometry_1_1_convex.html#a461227a8207000598c5578ed3428fbcd":[3,0,0,4,8,4],
-"classdrake_1_1geometry_1_1_convex.html#a5109cb042f782c4a77fcb072e4d4bf10":[3,0,0,4,8,6],
-"classdrake_1_1geometry_1_1_convex.html#a64b4c300fe95c104df48d1328b1d381e":[3,0,0,4,8,3],
+"classdrake_1_1geometry_1_1_convex.html#a461227a8207000598c5578ed3428fbcd":[3,0,0,4,8,5],
+"classdrake_1_1geometry_1_1_convex.html#a5109cb042f782c4a77fcb072e4d4bf10":[3,0,0,4,8,7],
+"classdrake_1_1geometry_1_1_convex.html#a5a2ba33fb44bb4a5f4e273a5d9d440ea":[3,0,0,4,8,3],
+"classdrake_1_1geometry_1_1_convex.html#a64b4c300fe95c104df48d1328b1d381e":[3,0,0,4,8,4],
 "classdrake_1_1geometry_1_1_convex.html#aae78da78d792b38ecf8a3b05f8f31058":[3,0,0,4,8,1],
-"classdrake_1_1geometry_1_1_convex.html#ab9b8bdc626d95cc812727195393f2899":[3,0,0,4,8,5],
+"classdrake_1_1geometry_1_1_convex.html#ab9b8bdc626d95cc812727195393f2899":[3,0,0,4,8,6],
 "classdrake_1_1geometry_1_1_convex.html#ac71926f74e5eb4d52ebc237f44cf1b18":[3,0,0,4,8,0],
 "classdrake_1_1geometry_1_1_cylinder.html":[3,0,0,4,9],
 "classdrake_1_1geometry_1_1_cylinder.html#a2ec95712d33d7e2859be8264c18de553":[3,0,0,4,9,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX3 =
 "classdrake_1_1geometry_1_1_d_r_a_k_e___n_o___e_x_p_o_r_t_1_1_encoded_data.html#a8ae797cdf3a76d4e5d09a4067bf3665a":[3,0,0,4,0,0,8],
 "classdrake_1_1geometry_1_1_d_r_a_k_e___n_o___e_x_p_o_r_t_1_1_encoded_data.html#a9a2b3db1f44f152cd957bc9b1df1e0cf":[3,0,0,4,0,0,1],
 "classdrake_1_1geometry_1_1_d_r_a_k_e___n_o___e_x_p_o_r_t_1_1_encoded_data.html#ab9d8053e1b839f6a2a4df611a9789a04":[3,0,0,4,0,0,2],
-"classdrake_1_1geometry_1_1_d_r_a_k_e___n_o___e_x_p_o_r_t_1_1_encoded_data.html#aee6f666577d2d4330049382fd0e4fd01":[3,0,0,4,0,0,0],
-"classdrake_1_1geometry_1_1_drake_visualizer.html":[3,0,0,4,10],
-"classdrake_1_1geometry_1_1_drake_visualizer.html#a063bba7329e7434bd8e6d2a6324dd63f":[3,0,0,4,10,1]
+"classdrake_1_1geometry_1_1_d_r_a_k_e___n_o___e_x_p_o_r_t_1_1_encoded_data.html#aee6f666577d2d4330049382fd0e4fd01":[3,0,0,4,0,0,0]
 };

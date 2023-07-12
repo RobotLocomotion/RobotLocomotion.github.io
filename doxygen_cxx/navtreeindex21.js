@@ -1,5 +1,11 @@
 var NAVTREEINDEX21 =
 {
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#adfdd25520386a4df952c26050e544f0f":[1,4,2,1,4,27],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ae0ee3cf6bf50e6695a4c35c725eaa823":[1,4,2,1,4,11],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ae53f152a770c0e399fd18519a82111ca":[1,4,2,1,4,17],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ae67390ae3d55a7e0e060b4def47e53ee":[1,4,2,1,4,30],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ae6f30b165f1275d62dea7f27b441a41b":[1,4,2,1,4,55],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ae8a8a3244e3e70007474108a9b024d50":[1,4,2,1,4,49],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ae8e11a2faf65c8a8e01c6558fde16a7c":[1,4,2,1,4,12],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#aed75c6e52b003291a450cf15e43bd1f9":[1,4,2,1,4,41],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#aee5343205c8aa1f984787466a5d8a3fd":[1,4,2,1,4,6],
@@ -243,11 +249,5 @@ var NAVTREEINDEX21 =
 "classdrake_1_1solvers_1_1_bounding_box_constraint.html#afb4013b924f2a7a2155bc7cddd5ecbf3":[1,1,0,31,2],
 "classdrake_1_1solvers_1_1_clp_solver.html":[3,0,0,14,6],
 "classdrake_1_1solvers_1_1_clp_solver.html#a00b55f8b4c1c4f19b45621a84deed66c":[3,0,0,14,6,11],
-"classdrake_1_1solvers_1_1_clp_solver.html#a1c59c2b75f70b644a2ae231fc87773a3":[3,0,0,14,6,8],
-"classdrake_1_1solvers_1_1_clp_solver.html#a277134785588d69bb461a4a402877e7a":[3,0,0,14,6,6],
-"classdrake_1_1solvers_1_1_clp_solver.html#a2acbb1fddaffbf52c3eaf70f6dfa41bd":[3,0,0,14,6,7],
-"classdrake_1_1solvers_1_1_clp_solver.html#a3faa8470e2f36f85518fa1eb6500fb9b":[3,0,0,14,6,3],
-"classdrake_1_1solvers_1_1_clp_solver.html#a4dc451b7db72a168d9f0da1746011b45":[3,0,0,14,6,5],
-"classdrake_1_1solvers_1_1_clp_solver.html#a5a8d092d93a349d34f2a16631ef6de55":[3,0,0,14,6,0],
-"classdrake_1_1solvers_1_1_clp_solver.html#a5e8be6cbcc05ae5b195b15b0ea040039":[3,0,0,14,6,4]
+"classdrake_1_1solvers_1_1_clp_solver.html#a1c59c2b75f70b644a2ae231fc87773a3":[3,0,0,14,6,8]
 };

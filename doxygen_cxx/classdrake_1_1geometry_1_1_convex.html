@@ -178,6 +178,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0835d42bc864d8d9d8323e4f157803f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64b4c300fe95c104df48d1328b1d381e"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_convex.html#a64b4c300fe95c104df48d1328b1d381e">filename</a> () const</td></tr>
 <tr class="separator:a64b4c300fe95c104df48d1328b1d381e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a2ba33fb44bb4a5f4e273a5d9d440ea"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_convex.html#a5a2ba33fb44bb4a5f4e273a5d9d440ea">extension</a> () const</td></tr>
+<tr class="memdesc:a5a2ba33fb44bb4a5f4e273a5d9d440ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the extension of the mesh filename &ndash; all lower case and including the dot.  <a href="#a5a2ba33fb44bb4a5f4e273a5d9d440ea">More...</a><br /></td></tr>
+<tr class="separator:a5a2ba33fb44bb4a5f4e273a5d9d440ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5109cb042f782c4a77fcb072e4d4bf10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_convex.html#a5109cb042f782c4a77fcb072e4d4bf10">scale</a> () const</td></tr>
 <tr class="separator:a5109cb042f782c4a77fcb072e4d4bf10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
@@ -323,6 +326,26 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a5a2ba33fb44bb4a5f4e273a5d9d440ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a2ba33fb44bb4a5f4e273a5d9d440ea">&#9670;&nbsp;</a></span>extension()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string&amp; extension </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the extension of the mesh filename &ndash; all lower case and including the dot. </p>
+<p>In other words /foo/bar/mesh.obj and /foo/bar/mesh.OBJ would both report the ".obj" extension. The "extension" portion of the filename is defined as in std::filesystem::path::extension(). </p>
+
+</div>
+</div>
 <a id="a64b4c300fe95c104df48d1328b1d381e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a64b4c300fe95c104df48d1328b1d381e">&#9670;&nbsp;</a></span>filename()</h2>
 

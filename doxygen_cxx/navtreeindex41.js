@@ -1,5 +1,11 @@
 var NAVTREEINDEX41 =
 {
+"classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html#a301c222474fa97426845334d05ed727a":[3,0,0,16,5,7,7],
+"classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html#a43a2fc02cb2f5eb2db97ea5f3fe9a3bf":[3,0,0,16,5,7,8],
+"classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html#a5bfe2467e0ea22bbb13e0c4b9afa98a4":[3,0,0,16,5,7,5],
+"classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html#ab9c5d077a75cc19cd399abe892316543":[3,0,0,16,5,7,1],
+"classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html#acbee7f3497ff5244da916e6997c54872":[3,0,0,16,5,7,4],
+"classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html#acf0fec4b7afc9415a7441b0bb4e9cf33":[3,0,0,16,5,7,0],
 "classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html#aeae40f26cfe7f3992ac3b6a75e32133f":[3,0,0,16,5,7,6],
 "classdrake_1_1systems_1_1rendering_1_1_multibody_position_to_geometry_pose.html":[1,2,11,3],
 "classdrake_1_1systems_1_1rendering_1_1_multibody_position_to_geometry_pose.html#a2227250843f4dc54ecb253185461b199":[1,2,11,3,5],
@@ -243,11 +249,5 @@ var NAVTREEINDEX41 =
 "classdrake_1_1test_1_1_limit_malloc.html#afcdbfd967bf9091f3554dc4b5609c288":[3,0,0,17,1,5],
 "classdrake_1_1test_1_1_limit_malloc.html#afef229bd4c5ea3baf6feca1c8720d9da":[3,0,0,17,1,1],
 "classdrake_1_1trajectories_1_1_bezier_curve.html":[3,0,0,18,0],
-"classdrake_1_1trajectories_1_1_bezier_curve.html#a07c5c6d262d1976bc5f747cbb00e26fb":[3,0,0,18,0,8],
-"classdrake_1_1trajectories_1_1_bezier_curve.html#a0d37069b2edc37d7662aa809b6070e4e":[3,0,0,18,0,6],
-"classdrake_1_1trajectories_1_1_bezier_curve.html#a1140b71651392be777ab280996db81de":[3,0,0,18,0,9],
-"classdrake_1_1trajectories_1_1_bezier_curve.html#a16ae097f54f82e813d19f77126ba21e7":[3,0,0,18,0,11],
-"classdrake_1_1trajectories_1_1_bezier_curve.html#a1ffd5b82508f158e6e2d5b85be11bacc":[3,0,0,18,0,17],
-"classdrake_1_1trajectories_1_1_bezier_curve.html#a3f901a992920634ebe38141643a638e3":[3,0,0,18,0,2],
-"classdrake_1_1trajectories_1_1_bezier_curve.html#a641bfb18296d6976a000cf31c213dfdf":[3,0,0,18,0,10]
+"classdrake_1_1trajectories_1_1_bezier_curve.html#a07c5c6d262d1976bc5f747cbb00e26fb":[3,0,0,18,0,8]
 };

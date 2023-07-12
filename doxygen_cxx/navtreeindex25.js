@@ -1,5 +1,11 @@
 var NAVTREEINDEX25 =
 {
+"classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#a5c62a9fdaa320f7568a7ab93a80180dc":[1,1,0,43,12],
+"classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#a5eea9354674efc1c07bf537319628ead":[1,1,0,43,9],
+"classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#a7753f51736cfaf47d79cccf47af3e6b7":[1,1,0,43,0],
+"classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#a863f7df9d3ee10378794b4c6842a4377":[1,1,0,43,7],
+"classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#a9f514d254d676ff4db7124730f8b0e37":[1,1,0,43,1],
+"classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#aa2431c2dbd82437d8f621033d8af8231":[1,1,0,43,8],
 "classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#aae45694d3595659922653fd027d15cb6":[1,1,0,43,5],
 "classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#acd63f52880d3aad51f3d675636b4832c":[1,1,0,43,11],
 "classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#ace583a472a3bdc1b67f05d6a6571a903":[1,1,0,43,4],
@@ -243,11 +249,5 @@ var NAVTREEINDEX25 =
 "classdrake_1_1symbolic_1_1_chebyshev_basis_element.html#a54c331d37dc1fa2681579b916a93333d":[3,0,0,15,2,8],
 "classdrake_1_1symbolic_1_1_chebyshev_basis_element.html#a63929de29f3d2b155105f56be0f05c36":[3,0,0,15,2,1],
 "classdrake_1_1symbolic_1_1_chebyshev_basis_element.html#a67a4f0a8fd4c135cd142f0fb677b8535":[3,0,0,15,2,14],
-"classdrake_1_1symbolic_1_1_chebyshev_basis_element.html#a6ce529dd88bd7a979a7d3ec5938ffebe":[3,0,0,15,2,12],
-"classdrake_1_1symbolic_1_1_chebyshev_basis_element.html#a7850844db03d9588e56b130526206978":[3,0,0,15,2,2],
-"classdrake_1_1symbolic_1_1_chebyshev_basis_element.html#aa236b14b253b91763a5ffa1154a80b76":[3,0,0,15,2,4],
-"classdrake_1_1symbolic_1_1_chebyshev_basis_element.html#aaf22e557ede1a46c5e97c194b30ecb15":[3,0,0,15,2,15],
-"classdrake_1_1symbolic_1_1_chebyshev_basis_element.html#ab1a0beb3ea74b58b133dd8e7b1c31878":[3,0,0,15,2,3],
-"classdrake_1_1symbolic_1_1_chebyshev_basis_element.html#ab742e6229cad2845385553c42f101511":[3,0,0,15,2,6],
-"classdrake_1_1symbolic_1_1_chebyshev_basis_element.html#aba26a87c6147b18e8abf8c2bbccd2e06":[3,0,0,15,2,11]
+"classdrake_1_1symbolic_1_1_chebyshev_basis_element.html#a6ce529dd88bd7a979a7d3ec5938ffebe":[3,0,0,15,2,12]
 };

@@ -82,6 +82,7 @@ var searchData=
   ['bit_5fcast_2eh',['bit_cast.h',['../bit__cast_8h.html',1,'']]],
   ['block',['Block',['../classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a45001b70f1a92e1d01778b69bb61adf3',1,'drake::trajectories::PiecewisePolynomial']]],
   ['block_5f3x3_5fsparse_5fmatrix_2eh',['block_3x3_sparse_matrix.h',['../block__3x3__sparse__matrix_8h.html',1,'']]],
+  ['block_5fsparse_5fcholesky_5fsolver_2eh',['block_sparse_cholesky_solver.h',['../block__sparse__cholesky__solver_8h.html',1,'']]],
   ['block_5fsparse_5flower_5ftriangular_5for_5fsymmetric_5fmatrix_2eh',['block_sparse_lower_triangular_or_symmetric_matrix.h',['../block__sparse__lower__triangular__or__symmetric__matrix_8h.html',1,'']]],
   ['block_5fsparse_5fmatrix_2eh',['block_sparse_matrix.h',['../block__sparse__matrix_8h.html',1,'']]],
   ['blueprint',['BluePrint',['../structdrake_1_1multibody_1_1_joint_1_1_blue_print.html',1,'drake::multibody::Joint']]],

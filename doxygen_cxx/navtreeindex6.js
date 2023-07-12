@@ -1,5 +1,8 @@
 var NAVTREEINDEX6 =
 {
+"classdrake_1_1geometry_1_1_scene_graph.html#a503a5f4ba34cf182f67427e63ff48754":[1,2,13,21],
+"classdrake_1_1geometry_1_1_scene_graph.html#a55cfeaa6fd5edcdd91db50054941c1be":[1,2,13,27],
+"classdrake_1_1geometry_1_1_scene_graph.html#a69b7c400cb9ee0b5ebe0dcb2b86a7f12":[1,2,13,2],
 "classdrake_1_1geometry_1_1_scene_graph.html#a72f7d830f6776bb7403c6bbc66d1d676":[1,2,13,5],
 "classdrake_1_1geometry_1_1_scene_graph.html#a76a5871dd4432de7e8225f334765729f":[1,2,13,14],
 "classdrake_1_1geometry_1_1_scene_graph.html#a7df6907a9e82dda25b30e182d68b5d1c":[1,2,13,0],
@@ -236,8 +239,8 @@ var NAVTREEINDEX6 =
 "classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html#af400a7e2f52b0ca6a37d1d008f6485e7":[3,0,0,4,1,1,3],
 "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html":[1,5,4,0],
 "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html":[1,1,1,0],
-"classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a251de6c17a4bc0152b26a4ad55ddf98b":[1,5,4,0,5],
 "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a251de6c17a4bc0152b26a4ad55ddf98b":[1,1,1,0,5],
+"classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a251de6c17a4bc0152b26a4ad55ddf98b":[1,5,4,0,5],
 "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a27ef18eef844167c096ed08fbceeeb1a":[1,1,1,0,9],
 "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a27ef18eef844167c096ed08fbceeeb1a":[1,5,4,0,9],
 "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a2c90e1984608b11e2445e216c3617723":[1,1,1,0,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX6 =
 "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a2fed6723fd1b1a945e7dd0a07cca22ae":[1,5,4,0,11],
 "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a3e4b08dc563560e2186dc7c35b92fff3":[1,1,1,0,0],
 "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a3e4b08dc563560e2186dc7c35b92fff3":[1,5,4,0,0],
-"classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a61422fd8297062124a1aabb31f3decdb":[1,1,1,0,10],
-"classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a61422fd8297062124a1aabb31f3decdb":[1,5,4,0,10],
-"classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a8ab1489323311a9aaecb36b81d6af500":[1,1,1,0,6],
-"classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a8ab1489323311a9aaecb36b81d6af500":[1,5,4,0,6]
+"classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a61422fd8297062124a1aabb31f3decdb":[1,1,1,0,10]
 };

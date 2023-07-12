@@ -1,5 +1,11 @@
 var NAVTREEINDEX20 =
 {
+"classdrake_1_1planning_1_1_collision_checker_context.html":[1,4,2,2,2],
+"classdrake_1_1planning_1_1_collision_checker_context.html#a130213e985622308e422772f75461973":[1,4,2,2,2,7],
+"classdrake_1_1planning_1_1_collision_checker_context.html#a1e7d2a81568c26350b120a592e55e174":[1,4,2,2,2,13],
+"classdrake_1_1planning_1_1_collision_checker_context.html#a46e2ea7dcce7c4029de4eb1dda4d547d":[1,4,2,2,2,14],
+"classdrake_1_1planning_1_1_collision_checker_context.html#a6a64fc87cab6f3a1e3e9a1a0bfceb6c4":[1,4,2,2,2,3],
+"classdrake_1_1planning_1_1_collision_checker_context.html#a7bc6fa500c4de5a249e9c4a99257f0ba":[1,4,2,2,2,9],
 "classdrake_1_1planning_1_1_collision_checker_context.html#a800ea0d285a5c165e06b3bbb590716e1":[1,4,2,2,2,5],
 "classdrake_1_1planning_1_1_collision_checker_context.html#a80968832e288788ab0e522a18d845bf6":[1,4,2,2,2,8],
 "classdrake_1_1planning_1_1_collision_checker_context.html#a9562c5f2670a4fbf10b0c1b5e50ac2ce":[1,4,2,2,2,6],
@@ -243,11 +249,5 @@ var NAVTREEINDEX20 =
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ac5ec168ba2fdfe3900aca37b8580c8ad":[1,4,2,1,4,4],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ad0da7cef1acfba329513b0c072bbe784":[1,4,2,1,4,56],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ad5d70f396be36bd160c2eb380c39bd9a":[1,4,2,1,4,50],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#adb23e0ee6a1a0fa9904a0b3247baacb6":[1,4,2,1,4,24],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#adfdd25520386a4df952c26050e544f0f":[1,4,2,1,4,27],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ae0ee3cf6bf50e6695a4c35c725eaa823":[1,4,2,1,4,11],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ae53f152a770c0e399fd18519a82111ca":[1,4,2,1,4,17],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ae67390ae3d55a7e0e060b4def47e53ee":[1,4,2,1,4,30],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ae6f30b165f1275d62dea7f27b441a41b":[1,4,2,1,4,55],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ae8a8a3244e3e70007474108a9b024d50":[1,4,2,1,4,49]
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#adb23e0ee6a1a0fa9904a0b3247baacb6":[1,4,2,1,4,24]
 };

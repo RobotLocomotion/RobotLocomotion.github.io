@@ -1499,6 +1499,16 @@ relative to the current working directory.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.Convex.extension">
+<span class="sig-name descname"><span class="pre">extension</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Convex" title="pydrake.geometry.Convex"><span class="pre">pydrake.geometry.Convex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.geometry.Convex.extension" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the extension of the mesh filename – all lower case and
+including the dot. In other words /foo/bar/mesh.obj and
+/foo/bar/mesh.OBJ would both report the “.obj” extension. The
+“extension” portion of the filename is defined as in
+std::filesystem::path::extension().</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.Convex.filename">
 <span class="sig-name descname"><span class="pre">filename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Convex" title="pydrake.geometry.Convex"><span class="pre">pydrake.geometry.Convex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.geometry.Convex.filename" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
@@ -1714,6 +1724,11 @@ E.g.,</p>
 <p>such that the data in the per-thread systems::Context varies.
 - Evaluating multiple instances of DrakeVisualizer in a single thread that
 share the same lcm::DrakeLcmInterface.</p>
+<p><strong>Mesh support</strong></p>
+<p>DrakeVisualizer is mesh file format agnostic. A Mesh or Convex shape
+that references arbitrary mesh files will simply be packaged in the
+broadcast LCM message. It defers to the message <em>receiver</em> on whether
+that particular file format is supported.</p>
 <p><strong>Scalar support and conversion</strong></p>
 <p>DrakeVisualizer is templated on <code class="docutils literal notranslate"><span class="pre">T</span></code> and can be used in a <code class="docutils literal notranslate"><span class="pre">double</span></code>-
 or AutoDiffXd-valued Diagram. However, the diagram can only be
@@ -1879,6 +1894,11 @@ E.g.,</p>
 <p>such that the data in the per-thread systems::Context varies.
 - Evaluating multiple instances of DrakeVisualizer in a single thread that
 share the same lcm::DrakeLcmInterface.</p>
+<p><strong>Mesh support</strong></p>
+<p>DrakeVisualizer is mesh file format agnostic. A Mesh or Convex shape
+that references arbitrary mesh files will simply be packaged in the
+broadcast LCM message. It defers to the message <em>receiver</em> on whether
+that particular file format is supported.</p>
 <p><strong>Scalar support and conversion</strong></p>
 <p>DrakeVisualizer is templated on <code class="docutils literal notranslate"><span class="pre">T</span></code> and can be used in a <code class="docutils literal notranslate"><span class="pre">double</span></code>-
 or AutoDiffXd-valued Diagram. However, the diagram can only be
@@ -3630,6 +3650,16 @@ by the given scale factor.</p>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.Mesh.extension">
+<span class="sig-name descname"><span class="pre">extension</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Mesh" title="pydrake.geometry.Mesh"><span class="pre">pydrake.geometry.Mesh</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.geometry.Mesh.extension" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the extension of the mesh filename – all lower case and
+including the dot. In other words /foo/bar/mesh.obj and
+/foo/bar/mesh.OBJ would both report the “.obj” extension. The
+“extension” portion of the filename is defined as in
+std::filesystem::path::extension().</p>
 </dd></dl>
 
 <dl class="py method">

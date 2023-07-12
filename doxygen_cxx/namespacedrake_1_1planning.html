@@ -255,8 +255,9 @@ Functions</h2></td></tr>
 <p>The returned distance will be strictly non-negative.</p>
 <p>To be valid, the function must satisfy the following condition:</p>
 <ul>
-<li>dist(q, q) ≡ 0 </li>
+<li>dist(q, q) ≡ 0</li>
 </ul>
+<p>for values of q that are valid for the <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html" title="Interface for collision checkers to use.">CollisionChecker</a>'s plant. </p>
 
 </div>
 </div>
@@ -278,8 +279,9 @@ Functions</h2></td></tr>
 <ul>
 <li>interpolate(q1, q2, 0) ≡ q1</li>
 <li>interpolate(q1, q2, 1) ≡ q2</li>
-<li>interpolate(q, q, r) ≡ q, for all r in [0, 1] </li>
+<li>interpolate(q, q, r) ≡ q, for all r in [0, 1]</li>
 </ul>
+<p>for values of q, q1, and q2 that are valid for the <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html" title="Interface for collision checkers to use.">CollisionChecker</a>'s plant. </p>
 
 </div>
 </div>
