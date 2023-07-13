@@ -1,5 +1,6 @@
 var classdrake_1_1systems_1_1_system =
 [
+    [ "Scalar", "classdrake_1_1systems_1_1_system.html#a78eaec0a6a2d1c99d2a7eb5eeb1f8bdc", null ],
     [ "System", "classdrake_1_1systems_1_1_system.html#a718e74eb516f658aa9f80ab77706e4e5", null ],
     [ "System", "classdrake_1_1systems_1_1_system.html#a51e42f15501f79c6a60375041a7e3729", null ],
     [ "~System", "classdrake_1_1systems_1_1_system.html#abfc527f890d8846b751645ab81a67bb1", null ],

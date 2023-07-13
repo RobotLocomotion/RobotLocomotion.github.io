@@ -193,6 +193,10 @@ Public Types</h2></td></tr>
 <tr class="memitem:abb81c12f1c6e0a1457361f35d5ad3426"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#abb81c12f1c6e0a1457361f35d5ad3426">OutputPortLocator</a> = std::pair&lt; const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; *, <a class="el" href="namespacedrake_1_1systems.html#afb427ae7d4f36f7a3cfe34eb5a3d51aa">OutputPortIndex</a> &gt;</td></tr>
 <tr class="memdesc:abb81c12f1c6e0a1457361f35d5ad3426"><td class="mdescLeft">&#160;</td><td class="mdescRight">A designator for a "system + output port" pair, to uniquely refer to some output port on one of this diagram's subsystems.  <a href="#abb81c12f1c6e0a1457361f35d5ad3426">More...</a><br /></td></tr>
 <tr class="separator:abb81c12f1c6e0a1457361f35d5ad3426"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_classdrake_1_1systems_1_1_system"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classdrake_1_1systems_1_1_system')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classdrake_1_1systems_1_1_system.html">System&lt; T &gt;</a></td></tr>
+<tr class="memitem:a78eaec0a6a2d1c99d2a7eb5eeb1f8bdc inherit pub_types_classdrake_1_1systems_1_1_system"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a78eaec0a6a2d1c99d2a7eb5eeb1f8bdc">Scalar</a> = T</td></tr>
+<tr class="memdesc:a78eaec0a6a2d1c99d2a7eb5eeb1f8bdc inherit pub_types_classdrake_1_1systems_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">The scalar type with which this System was instantiated.  <a href="classdrake_1_1systems_1_1_system.html#a78eaec0a6a2d1c99d2a7eb5eeb1f8bdc">More...</a><br /></td></tr>
+<tr class="separator:a78eaec0a6a2d1c99d2a7eb5eeb1f8bdc inherit pub_types_classdrake_1_1systems_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -248,6 +252,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8733b5799e3a872764125e9c031dae57"><td class="memTemplItemLeft" align="right" valign="top">const MySystem&lt; T &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8733b5799e3a872764125e9c031dae57">GetDowncastSubsystemByName</a> (std::string_view name) const</td></tr>
 <tr class="memdesc:a8733b5799e3a872764125e9c031dae57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a const reference to the subsystem with name <code>name</code> returned by <a class="el" href="classdrake_1_1systems_1_1_system_base.html#aea1591b1773209f55ccc85356efb639a" title="Returns the name last supplied to set_name(), if any.">get_name()</a>, downcast to the type provided as a template argument.  <a href="#a8733b5799e3a872764125e9c031dae57">More...</a><br /></td></tr>
 <tr class="separator:a8733b5799e3a872764125e9c031dae57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8eee7cb4feec033770aad1c57f75098"><td class="memTemplParams" colspan="2">template&lt;class MyUntemplatizedSystem &gt; </td></tr>
+<tr class="memitem:aa8eee7cb4feec033770aad1c57f75098"><td class="memTemplItemLeft" align="right" valign="top">const MyUntemplatizedSystem &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#aa8eee7cb4feec033770aad1c57f75098">GetDowncastSubsystemByName</a> (std::string_view name) const</td></tr>
+<tr class="memdesc:aa8eee7cb4feec033770aad1c57f75098"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alternate signature for a subsystem that has the <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a>'s scalar type T but is not explicitly templatized on T.  <a href="#aa8eee7cb4feec033770aad1c57f75098">More...</a><br /></td></tr>
+<tr class="separator:aa8eee7cb4feec033770aad1c57f75098"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4741e381404171da4ebbfdaf499a655"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_continuous_state.html">ContinuousState</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#af4741e381404171da4ebbfdaf499a655">GetSubsystemDerivatives</a> (const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &amp;subsystem, const <a class="el" href="classdrake_1_1systems_1_1_continuous_state.html">ContinuousState</a>&lt; T &gt; &amp;derivatives) const</td></tr>
 <tr class="memdesc:af4741e381404171da4ebbfdaf499a655"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the state derivatives for a particular subsystem from the derivatives for the entire diagram.  <a href="#af4741e381404171da4ebbfdaf499a655">More...</a><br /></td></tr>
 <tr class="separator:af4741e381404171da4ebbfdaf499a655"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2008,7 +2016,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="a8733b5799e3a872764125e9c031dae57"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8733b5799e3a872764125e9c031dae57">&#9670;&nbsp;</a></span>GetDowncastSubsystemByName()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8733b5799e3a872764125e9c031dae57">&#9670;&nbsp;</a></span>GetDowncastSubsystemByName() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2039,6 +2047,27 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a2a87442c45f9ee72c4a2c234587f9776" title="Retrieves a const reference to the subsystem with name name returned by get_name().">GetSubsystemByName()</a> </dd>
 <dd>
 <a class="el" href="classdrake_1_1systems_1_1_system_base.html#aea1591b1773209f55ccc85356efb639a" title="Returns the name last supplied to set_name(), if any.">System&lt;T&gt;::get_name()</a> </dd></dl>
+
+</div>
+</div>
+<a id="aa8eee7cb4feec033770aad1c57f75098"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8eee7cb4feec033770aad1c57f75098">&#9670;&nbsp;</a></span>GetDowncastSubsystemByName() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const MyUntemplatizedSystem&amp; GetDowncastSubsystemByName </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Alternate signature for a subsystem that has the <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a>'s scalar type T but is not explicitly templatized on T. </p>
+<p>This can happen if the subsystem class declaration inherits, for example, from a <code><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html" title="A superclass template that extends System with some convenience utilities that are not applicable to ...">LeafSystem</a>&lt;T&gt;</code>. </p><dl class="section pre"><dt>Precondition</dt><dd>The Scalar type of MyUntemplatizedSystem matches the Diagram Scalar type T (will fail to compile if not). </dd></dl>
 
 </div>
 </div>
@@ -2543,8 +2572,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a4b83dd5f96c886cc1b1a63583b943c39"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4b83dd5f96c886cc1b1a63583b943c39">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a268013bacd119a14d00b1b14028cbd5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a268013bacd119a14d00b1b14028cbd5c">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2555,7 +2584,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_diagram.html">Diagram</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram.html">Diagram</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_diagram.html">Diagram</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -2569,8 +2598,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a268013bacd119a14d00b1b14028cbd5c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a268013bacd119a14d00b1b14028cbd5c">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a4b83dd5f96c886cc1b1a63583b943c39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b83dd5f96c886cc1b1a63583b943c39">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2581,7 +2610,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_diagram.html">Diagram</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_diagram.html">Diagram</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram.html">Diagram</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
