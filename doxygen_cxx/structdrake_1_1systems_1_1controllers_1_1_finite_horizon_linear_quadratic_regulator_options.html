@@ -202,6 +202,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a92fc34e0decbd0e19c08c8aa004c98a4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a92fc34e0decbd0e19c08c8aa004c98a4">use_square_root_method</a> {false}</td></tr>
 <tr class="memdesc:a92fc34e0decbd0e19c08c8aa004c98a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables the "square-root" method solution to the Riccati equation.  <a href="#a92fc34e0decbd0e19c08c8aa004c98a4">More...</a><br /></td></tr>
 <tr class="separator:a92fc34e0decbd0e19c08c8aa004c98a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4242c7dc34593f02bccbbd0dd44585f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1systems_1_1_simulator_config.html">SimulatorConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a4242c7dc34593f02bccbbd0dd44585f2">simulator_config</a> {}</td></tr>
+<tr class="memdesc:a4242c7dc34593f02bccbbd0dd44585f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">For continuous-time dynamical systems, the Riccati equation is solved by the <a class="el" href="classdrake_1_1systems_1_1_simulator.html" title="A class for advancing the state of hybrid dynamic systems, represented by System&lt;T&gt; objects,...">Simulator</a> (running backwards in time).  <a href="#a4242c7dc34593f02bccbbd0dd44585f2">More...</a><br /></td></tr>
+<tr class="separator:a4242c7dc34593f02bccbbd0dd44585f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a29017aee3204b230b5884faaf2fac289"></a>
@@ -278,6 +281,23 @@ Public Attributes</h2></td></tr>
 
 <p>A num_states x num_states positive semi-definite matrix which specified the cost at the final time. </p>
 <p>If unset, then Qf will be set to the zero matrix. </p>
+
+</div>
+</div>
+<a id="a4242c7dc34593f02bccbbd0dd44585f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4242c7dc34593f02bccbbd0dd44585f2">&#9670;&nbsp;</a></span>simulator_config</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdrake_1_1systems_1_1_simulator_config.html">SimulatorConfig</a> simulator_config {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>For continuous-time dynamical systems, the Riccati equation is solved by the <a class="el" href="classdrake_1_1systems_1_1_simulator.html" title="A class for advancing the state of hybrid dynamic systems, represented by System&lt;T&gt; objects,...">Simulator</a> (running backwards in time). </p>
+<p>Use this parameter to configure the simulator (e.g. choose non-default integrator or integrator parameters). </p>
 
 </div>
 </div>
