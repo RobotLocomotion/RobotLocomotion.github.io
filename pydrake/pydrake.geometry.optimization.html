@@ -381,7 +381,7 @@ the SceneGraph geometry ecosystem.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.GraphOfConvexSets">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.optimization.</span></span><span class="sig-name descname"><span class="pre">GraphOfConvexSets</span></span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets" title="Permalink to this definition"></a></dt>
-<dd><p>GraphOfConvexSets implements the design pattern and optimization
+<dd><p>GraphOfConvexSets (GCS) implements the design pattern and optimization
 problems first introduced in the paper “Shortest Paths in Graphs of
 Convex Sets”.</p>
 <p>“Shortest Paths in Graphs of Convex Sets” by Tobia Marcucci, Jack
@@ -769,6 +769,22 @@ graph.</p>
 <dt>Precondition:</dt><dd><p>The vertex must be part of the graph.</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.GraphOfConvexSets.SolveConvexRestriction">
+<span class="sig-name descname"><span class="pre">SolveConvexRestriction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.geometry.optimization.GraphOfConvexSets,</span> <span class="pre">active_edges:</span> <span class="pre">Set[pydrake.geometry.optimization.GraphOfConvexSets.EdgeId],</span> <span class="pre">options:</span> <span class="pre">pydrake.geometry.optimization.GraphOfConvexSetsOptions</span> <span class="pre">=</span> <span class="pre">GraphOfConvexSetsOptions(convex_relaxation=None,</span> <span class="pre">preprocessing=None,</span> <span class="pre">max_rounded_paths=None,</span> <span class="pre">max_rounding_trials=100,</span> <span class="pre">flow_tolerance=1e-05,</span> <span class="pre">rounding_seed=0,</span> <span class="pre">solver=None,</span> <span class="pre">solver_options=&lt;SolverOptions&gt;,</span> <span class="pre">rounding_solver_options=None,</span> <span class="pre">)</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.MathematicalProgramResult" title="pydrake.solvers.MathematicalProgramResult"><span class="pre">pydrake.solvers.MathematicalProgramResult</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.SolveConvexRestriction" title="Permalink to this definition"></a></dt>
+<dd><p>The non-convexity in a GCS problem comes from the binary variables
+(phi) associated with the edges being active or inactive in the
+solution. If those binary variables are fixed, then the problem is
+convex – this is a so-called “convex restriction” of the original
+problem.</p>
+<p>The convex restriction can often be solved much more efficiently than
+solving the full GCS problem with additional constraints to fix the
+binaries; it can be written using less decision variables, and needs
+only to include the vertices associated with at least one of the
+active edges. Decision variables for all other convex sets will be set
+to NaN.</p>
 </dd></dl>
 
 <dl class="py method">

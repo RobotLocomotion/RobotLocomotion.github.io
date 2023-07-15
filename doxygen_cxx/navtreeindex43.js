@@ -1,5 +1,7 @@
 var NAVTREEINDEX43 =
 {
+"classdrake_1_1trajectories_1_1_trajectory.html#af752fbd39919690fbbe2110639682be7":[3,0,0,18,10,2],
+"classdrake_1_1trajectories_1_1_trajectory.html#afbddf9c56911aa6014253b5800fbff83":[3,0,0,18,10,7],
 "classdrake_1_1visualization_1_1_inertia_visualizer.html":[1,2,11,4],
 "classdrake_1_1visualization_1_1_inertia_visualizer.html#a35e4757607fba787b9450627f6112166":[1,2,11,4,3],
 "classdrake_1_1visualization_1_1_inertia_visualizer.html#a6b25925ec5f7044f7ed092ee3180f38d":[1,2,11,4,7],
@@ -247,7 +249,5 @@ var NAVTREEINDEX43 =
 "deformable__contact_8h.html":[4,0,0,4,3,1],
 "deformable__contact__geometries_8h.html":[4,0,0,4,2,9],
 "deformable__contact__internal_8h.html":[4,0,0,4,2,10],
-"deformable__driver_8h.html":[4,0,0,8,10,11],
-"deformable__mesh__intersection_8h.html":[4,0,0,4,2,11],
-"deformable__model_8h.html":[4,0,0,8,10,12]
+"deformable__driver_8h.html":[4,0,0,8,10,11]
 };

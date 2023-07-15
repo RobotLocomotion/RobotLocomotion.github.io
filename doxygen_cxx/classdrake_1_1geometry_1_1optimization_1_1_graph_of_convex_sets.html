@@ -169,7 +169,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1geometry_1_1optimization
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html" title="GraphOfConvexSets implements the design pattern and optimization problems first introduced in the pap...">GraphOfConvexSets</a> implements the design pattern and optimization problems first introduced in the paper "Shortest Paths in Graphs of Convex Sets". </p>
+<div class="textblock"><p><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html" title="GraphOfConvexSets (GCS) implements the design pattern and optimization problems first introduced in t...">GraphOfConvexSets</a> (GCS) implements the design pattern and optimization problems first introduced in the paper "Shortest Paths in Graphs of Convex Sets". </p>
 <p>"Shortest Paths in Graphs of Convex Sets" by Tobia Marcucci, Jack Umenberger, Pablo A. Parrilo, Russ Tedrake. <a href="https://arxiv.org/abs/2101.11565">https://arxiv.org/abs/2101.11565</a></p>
 <dl class="section warning"><dt>Warning</dt><dd>This feature is considered to be <b>experimental</b> and may change or be removed at any time, without any deprecation notice ahead of time.</dd></dl>
 <p>Each vertex in the graph is associated with a convex set over continuous variables, edges in the graph contain convex costs and constraints on these continuous variables. We can then formulate optimization problems over this graph, such as the shortest path problem where each visit to a vertex also corresponds to selecting an element from the convex set subject to the costs and constraints. Behind the scenes, we construct efficient mixed-integer convex transcriptions of the graph problem using MathematicalProgram.</p>
@@ -245,6 +245,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a51f263df76c721f1bbdeb5708bf7df86"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a51f263df76c721f1bbdeb5708bf7df86">SolveShortestPath</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a> &amp;source, const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a> &amp;target, const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html">GraphOfConvexSetsOptions</a> &amp;options=<a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html">GraphOfConvexSetsOptions</a>()) const</td></tr>
 <tr class="memdesc:a51f263df76c721f1bbdeb5708bf7df86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience overload that takes const reference arguments for source and target.  <a href="#a51f263df76c721f1bbdeb5708bf7df86">More...</a><br /></td></tr>
 <tr class="separator:a51f263df76c721f1bbdeb5708bf7df86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89aca5288d105169f42343e4b4a46cac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a89aca5288d105169f42343e4b4a46cac">SolveConvexRestriction</a> (const std::set&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a4df1a3580f1ae7e96903c7b3f7b00974">EdgeId</a> &gt; &amp;active_edge_ids, const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html">GraphOfConvexSetsOptions</a> &amp;options=<a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html">GraphOfConvexSetsOptions</a>()) const</td></tr>
+<tr class="memdesc:a89aca5288d105169f42343e4b4a46cac"><td class="mdescLeft">&#160;</td><td class="mdescRight">The non-convexity in a GCS problem comes from the binary variables (phi) associated with the edges being active or inactive in the solution.  <a href="#a89aca5288d105169f42343e4b4a46cac">More...</a><br /></td></tr>
+<tr class="separator:a89aca5288d105169f42343e4b4a46cac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:aee71a4d66e8a29651242b12019c0a30e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#aee71a4d66e8a29651242b12019c0a30e">GraphOfConvexSets</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html">GraphOfConvexSets</a> &amp;)=delete</td></tr>
 <tr class="separator:aee71a4d66e8a29651242b12019c0a30e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -740,6 +743,38 @@ Friends</h2></td></tr>
 
 <p>Removes vertex <code>vertex</code> from the graph as well as any edges from or to the vertex. </p>
 <p>Runtime is O(nₑ) where nₑ is the number of edges in the graph. </p><dl class="section pre"><dt>Precondition</dt><dd>The vertex must be part of the graph. </dd></dl>
+
+</div>
+</div>
+<a id="a89aca5288d105169f42343e4b4a46cac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89aca5288d105169f42343e4b4a46cac">&#9670;&nbsp;</a></span>SolveConvexRestriction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> SolveConvexRestriction </td>
+          <td>(</td>
+          <td class="paramtype">const std::set&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a4df1a3580f1ae7e96903c7b3f7b00974">EdgeId</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>active_edge_ids</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html">GraphOfConvexSetsOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html">GraphOfConvexSetsOptions</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The non-convexity in a GCS problem comes from the binary variables (phi) associated with the edges being active or inactive in the solution. </p>
+<p>If those binary variables are fixed, then the problem is convex &ndash; this is a so-called "convex restriction" of the original problem.</p>
+<p>The convex restriction can often be solved much more efficiently than solving the full GCS problem with additional constraints to fix the binaries; it can be written using less decision variables, and needs only to include the vertices associated with at least one of the active edges. Decision variables for all other convex sets will be set to NaN. </p>
 
 </div>
 </div>
