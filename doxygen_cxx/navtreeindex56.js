@@ -1,5 +1,6 @@
 var NAVTREEINDEX56 =
 {
+"structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html":[3,0,0,9,93],
 "structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html#a372de693ad40b3f42839c8ec6ac845f4":[3,0,0,9,93,0],
 "structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html#ab702e2f7530d6172eea3780d8923bd71":[3,0,0,9,93,3],
 "structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html#ab789f8c5c51c6c3bbd3d2d7737c95b29":[3,0,0,9,93,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX56 =
 "structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html#ad7023f370a56939d6a62930614f16911":[3,0,0,14,33,1],
 "structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html":[3,0,0,14,38,0],
 "structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html#a28d39a844c3a37ab61d32ab7c6352f09":[3,0,0,14,38,0,0],
-"structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html#a7d164a4c018dfca9cd2bc71c083c8054":[3,0,0,14,38,0,2],
-"structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,14,38,0,1]
+"structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html#a7d164a4c018dfca9cd2bc71c083c8054":[3,0,0,14,38,0,2]
 };

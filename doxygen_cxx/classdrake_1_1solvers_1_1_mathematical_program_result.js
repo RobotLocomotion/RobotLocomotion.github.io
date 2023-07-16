@@ -25,13 +25,14 @@ var classdrake_1_1solvers_1_1_mathematical_program_result =
     [ "GetSuboptimalSolution", "classdrake_1_1solvers_1_1_mathematical_program_result.html#a0f1b5841ee288eef56aab11d80344e64", null ],
     [ "is_success", "classdrake_1_1solvers_1_1_mathematical_program_result.html#ab69f22a0b39aa76226e1a7a1c357cced", null ],
     [ "num_suboptimal_solution", "classdrake_1_1solvers_1_1_mathematical_program_result.html#abc1b132c76d03e6a14ff22e0c7974a02", null ],
-    [ "operator=", "classdrake_1_1solvers_1_1_mathematical_program_result.html#aab14a1a3b5014abef5065b6c4b4a7549", null ],
     [ "operator=", "classdrake_1_1solvers_1_1_mathematical_program_result.html#a6c118742704a07098ca9c32a33d1774f", null ],
+    [ "operator=", "classdrake_1_1solvers_1_1_mathematical_program_result.html#aab14a1a3b5014abef5065b6c4b4a7549", null ],
     [ "set_decision_variable_index", "classdrake_1_1solvers_1_1_mathematical_program_result.html#a8454ba31b3b8d0dcf68140e63b8333fe", null ],
     [ "set_dual_solution", "classdrake_1_1solvers_1_1_mathematical_program_result.html#acb24e4b6d61d3d8b70d7d8d8c3b05490", null ],
     [ "set_optimal_cost", "classdrake_1_1solvers_1_1_mathematical_program_result.html#a7ab1855f8b76b618b25d64262cfc2320", null ],
     [ "set_solution_result", "classdrake_1_1solvers_1_1_mathematical_program_result.html#ad1f3ddfd8fc09cc65cc8612e7d8f58f9", null ],
     [ "set_solver_id", "classdrake_1_1solvers_1_1_mathematical_program_result.html#aafc118526b8c4e23fe369ce8b28ea597", null ],
     [ "set_x_val", "classdrake_1_1solvers_1_1_mathematical_program_result.html#a8efad865c03b165eece1fd889cd6631c", null ],
+    [ "SetSolution", "classdrake_1_1solvers_1_1_mathematical_program_result.html#a5d0d1bedd09e7efb632e277a09b3fba2", null ],
     [ "SetSolverDetailsType", "classdrake_1_1solvers_1_1_mathematical_program_result.html#a9f995771dccccc792ef06b9255f31f6c", null ]
 ];
