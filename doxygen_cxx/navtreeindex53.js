@@ -1,5 +1,8 @@
 var NAVTREEINDEX53 =
 {
+"scalar__conversion_8h.html#a6db02f9af804fcddb0d613e703e8c4fb":[4,0,0,12,3,0,3,0],
+"scalar__conversion_8h.html#ab7eb9f17930349a33024bcbce629e491":[4,0,0,12,3,0,3,4],
+"scalar__conversion_8h.html#ac7ed4cbbc75e344a25b9a6638ee008ff":[4,0,0,12,3,0,3,2],
 "scalar__conversion__traits_8h.html":[4,0,0,12,3,34],
 "scalar__convertible__component_8h.html":[4,0,0,8,10,31],
 "scalar__dense__output_8h.html":[4,0,0,12,0,18],
@@ -173,7 +176,7 @@ var NAVTREEINDEX53 =
 "spatial__vector_8h.html":[4,0,0,8,6,4],
 "spatial__velocity_8h.html":[4,0,0,8,6,5],
 "spatial__velocity__constraint_8h.html":[4,0,0,8,8,6],
-"spectrahedron_8h.html":[4,0,0,4,1,18],
+"spectrahedron_8h.html":[4,0,0,4,1,17],
 "spong__controller_8h.html":[4,0,0,3,0,3],
 "spring__mass__damper__system_8h.html":[4,0,0,12,0,0,14],
 "spring__mass__system_8h.html":[4,0,0,12,0,0,15],
@@ -246,8 +249,5 @@ var NAVTREEINDEX53 =
 "standard__operations_8h.html#adba66fa3f24b1711525f817537581476":[4,0,0,1,0,0,2,54],
 "standard__operations_8h.html#ae015da9f4e757c85f102509932ce501a":[4,0,0,1,0,0,2,43],
 "standard__operations_8h.html#ae062b9210a5e3013e5582db753e9566b":[4,0,0,1,0,0,2,2],
-"standard__operations_8h.html#ae1e2fa6fbabe331a19c0e8614705ab92":[4,0,0,1,0,0,2,5],
-"standard__operations_8h.html#ae266fc063e51b2c1bffaf26c82c19f6c":[4,0,0,1,0,0,2,59],
-"standard__operations_8h.html#ae44e54592a38f223146ee6362a44320e":[4,0,0,1,0,0,2,46],
-"standard__operations_8h.html#ae521245b6aec25f233036d952061fb5b":[4,0,0,1,0,0,2,24]
+"standard__operations_8h.html#ae1e2fa6fbabe331a19c0e8614705ab92":[4,0,0,1,0,0,2,5]
 };

@@ -1,8 +1,5 @@
 var NAVTREEINDEX57 =
 {
-"structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,14,38,0,1],
-"structdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator_1_1_return_type.html":[3,0,0,14,40,0],
-"structdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator_1_1_return_type.html#a558e28b2fea6ebcac661358ea97c7f58":[3,0,0,14,40,0,1],
 "structdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator_1_1_return_type.html#a67361c684f5a0c392169e80bb76e9228":[3,0,0,14,40,0,0],
 "structdrake_1_1solvers_1_1_mosek_solver_details.html":[3,0,0,14,44],
 "structdrake_1_1solvers_1_1_mosek_solver_details.html#a049167e80a2c377c18ea0185894e0003":[3,0,0,14,44,1],
@@ -249,5 +246,8 @@ var NAVTREEINDEX57 =
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_depth32_f_01_4.html#afe6901f952a36afe20ac9b9e21e1a22a":[3,0,0,16,8,13,2],
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_expr_01_4.html":[3,0,0,16,8,14],
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_expr_01_4.html#a3fc5a3db41247932de0536acb4a82a6d":[3,0,0,16,8,14,0],
-"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_expr_01_4.html#a770fd0c30a2b985c180ebffb9747a07a":[3,0,0,16,8,14,1]
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_expr_01_4.html#a770fd0c30a2b985c180ebffb9747a07a":[3,0,0,16,8,14,1],
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_expr_01_4.html#afe6901f952a36afe20ac9b9e21e1a22a":[3,0,0,16,8,14,2],
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_grey8_u_01_4.html":[3,0,0,16,8,15],
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_grey8_u_01_4.html#a770fd0c30a2b985c180ebffb9747a07a":[3,0,0,16,8,15,1]
 };

@@ -1,6 +1,5 @@
 var NAVTREEINDEX18 =
 {
-"classdrake_1_1multibody_1_1_universal_joint.html#af97d689d941b9eade67b31632c84d6bd":[3,0,0,9,101,10],
 "classdrake_1_1multibody_1_1_weld_joint.html":[3,0,0,9,102],
 "classdrake_1_1multibody_1_1_weld_joint.html#a4d111c4fc2a82d94fe15a244da576424":[3,0,0,9,102,9],
 "classdrake_1_1multibody_1_1_weld_joint.html#a503af5e7b7477b89d8920f5ec29582e1":[3,0,0,9,102,10],
@@ -249,5 +248,6 @@ var NAVTREEINDEX18 =
 "classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#aae75b8668056f3231cb82ac04ed73ce9":[1,2,11,0,1],
 "classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#ab5736fb85c92c045f489a412701a164a":[1,2,11,0,13],
 "classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#ac9b5cfee1d50590650a48d6b68ceb219":[1,2,11,0,2],
-"classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#afc1d4a4b88a63d5d17cb306a04c8cb2b":[1,2,11,0,10]
+"classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#afc1d4a4b88a63d5d17cb306a04c8cb2b":[1,2,11,0,10],
+"classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html":[1,2,11,1]
 };

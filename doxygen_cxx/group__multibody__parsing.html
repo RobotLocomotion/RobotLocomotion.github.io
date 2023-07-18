@@ -255,6 +255,11 @@ Drake Extensions</h1>
 </pre><p>Here is the full list of custom elements:</p><ul>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_acceleration">drake:acceleration</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_accepting_renderer">drake:accepting_renderer</a></li>
+<li><a class="el" href="group__multibody__parsing.html#tag_drake_ball_constraint">drake:ball_constraint</a></li>
+<li><a class="el" href="group__multibody__parsing.html#tag_drake_ball_constraint_body_A">drake:ball_constraint_body_A</a></li>
+<li><a class="el" href="group__multibody__parsing.html#tag_drake_ball_constraint_body_B">drake:ball_constraint_body_B</a></li>
+<li><a class="el" href="group__multibody__parsing.html#tag_drake_ball_constraint_p_AP">drake:ball_constraint_p_AP</a></li>
+<li><a class="el" href="group__multibody__parsing.html#tag_drake_ball_constraint_p_BQ">drake:ball_constraint_p_BQ</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_bushing_force_damping">drake:bushing_force_damping</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_bushing_force_stiffness">drake:bushing_force_stiffness</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_bushing_frameA">drake:bushing_frameA</a></li>
@@ -314,6 +319,60 @@ Semantics</h3>
 <li>Multiple instances of this tag are allowed. Each instance adds a renderer to the list of targeted renderers.</li>
 </ul>
 <p>This feature is one way to provide multiple visual representations of a body.</p>
+<h2><a class="anchor" id="tag_drake_ball_constraint"></a>
+drake:ball_constraint</h2>
+<ul>
+<li>SDFormat path: <code>//model/drake:ball_constraint</code></li>
+<li>URDF path: <code>/robot/drake:ball_constraint</code></li>
+<li>Syntax: Nested elements <a class="el" href="group__multibody__parsing.html#tag_drake_ball_constraint_body_A">drake:ball_constraint_body_A</a>, <a class="el" href="group__multibody__parsing.html#tag_drake_ball_constraint_body_B">drake:ball_constraint_body_B</a>, <a class="el" href="group__multibody__parsing.html#tag_drake_ball_constraint_p_AP">drake:ball_constraint_p_AP</a>, and <a class="el" href="group__multibody__parsing.html#tag_drake_ball_constraint_p_BQ">drake:ball_constraint_p_BQ</a></li>
+</ul>
+<h2><a class="anchor" id="tag_drake_ball_constraint_semantics"></a>
+Semantics</h2>
+<p>The element adds a ball constraint to the model via <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a4db62379a7fa75d245736108c0d12491" title="Defines a constraint such that point P affixed to body A is coincident at all times with point Q affi...">drake::multibody::MultibodyPlant::AddBallConstraint()</a>.</p>
+<h2><a class="anchor" id="tag_drake_ball_constraint_body_A"></a>
+drake:ball_constraint_body_A</h2>
+<ul>
+<li>SDFormat path: <code>//model/drake:ball_constraint/drake:ball_constraint_body_A</code></li>
+<li>URDF path: <code>/robot/drake:ball_constraint/drake:ball_constraint_body_A/@value</code></li>
+<li>Syntax: String.</li>
+</ul>
+<h2><a class="anchor" id="tag_drake_ball_constraint_body_A_semantics"></a>
+Semantics</h2>
+<p>The string names a body (expected to already be defined by this model) that will be passed to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a4db62379a7fa75d245736108c0d12491" title="Defines a constraint such that point P affixed to body A is coincident at all times with point Q affi...">drake::multibody::MultibodyPlant::AddBallConstraint()</a> as the <code>body_A</code> parameter.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__multibody__parsing.html#tag_drake_ball_constraint">drake:ball_constraint</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a4db62379a7fa75d245736108c0d12491" title="Defines a constraint such that point P affixed to body A is coincident at all times with point Q affi...">drake::multibody::MultibodyPlant::AddBallConstraint()</a></dd></dl>
+<h2><a class="anchor" id="tag_drake_ball_constraint_body_B"></a>
+drake:ball_constraint_body_B</h2>
+<ul>
+<li>SDFormat path: <code>//model/drake:ball_constraint/drake:ball_constraint_body_B</code></li>
+<li>URDF path: <code>/robot/drake:ball_constraint/drake:ball_constraint_body_B/@value</code></li>
+<li>Syntax: String.</li>
+</ul>
+<h2><a class="anchor" id="tag_drake_ball_constraint_body_B_semantics"></a>
+Semantics</h2>
+<p>The string names a body (expected to already be defined by this model) that will be passed to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a4db62379a7fa75d245736108c0d12491" title="Defines a constraint such that point P affixed to body A is coincident at all times with point Q affi...">drake::multibody::MultibodyPlant::AddBallConstraint()</a> as the <code>body_B</code> parameter.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__multibody__parsing.html#tag_drake_ball_constraint">drake:ball_constraint</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a4db62379a7fa75d245736108c0d12491" title="Defines a constraint such that point P affixed to body A is coincident at all times with point Q affi...">drake::multibody::MultibodyPlant::AddBallConstraint()</a></dd></dl>
+<h2><a class="anchor" id="tag_drake_ball_constraint_p_AP"></a>
+drake:ball_constraint_p_AP</h2>
+<ul>
+<li>SDFormat path: <code>//model/drake:ball_constraint/drake:ball_constraint_p_AP</code></li>
+<li>URDF path: <code>/robot/drake:ball_constraint/drake:ball_constraint_p_AP/@value</code></li>
+<li>Syntax: Three floating point values.</li>
+</ul>
+<h2><a class="anchor" id="tag_drake_ball_constraint_p_AP_semantics"></a>
+Semantics</h2>
+<p>The three floating point values (units of meters) are formed into a vector and passed into <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a4db62379a7fa75d245736108c0d12491" title="Defines a constraint such that point P affixed to body A is coincident at all times with point Q affi...">drake::multibody::MultibodyPlant::AddBallConstraint()</a> as the <code>p_AP</code> parameter.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__multibody__parsing.html#tag_drake_ball_constraint">drake:ball_constraint</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a4db62379a7fa75d245736108c0d12491" title="Defines a constraint such that point P affixed to body A is coincident at all times with point Q affi...">drake::multibody::MultibodyPlant::AddBallConstraint()</a></dd></dl>
+<h2><a class="anchor" id="tag_drake_ball_constraint_p_BQ"></a>
+drake:ball_constraint_p_BQ</h2>
+<ul>
+<li>SDFormat path: <code>//model/drake:ball_constraint/drake:ball_constraint_p_BQ</code></li>
+<li>URDF path: <code>/robot/drake:ball_constraint/drake:ball_constraint_p_BQ/@value</code></li>
+<li>Syntax: Three floating point values.</li>
+</ul>
+<h2><a class="anchor" id="tag_drake_ball_constraint_p_BQ_semantics"></a>
+Semantics</h2>
+<p>The three floating point values (units of meters) are formed into a vector and passed into <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a4db62379a7fa75d245736108c0d12491" title="Defines a constraint such that point P affixed to body A is coincident at all times with point Q affi...">drake::multibody::MultibodyPlant::AddBallConstraint()</a> as the <code>p_BQ</code> parameter.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__multibody__parsing.html#tag_drake_ball_constraint">drake:ball_constraint</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a4db62379a7fa75d245736108c0d12491" title="Defines a constraint such that point P affixed to body A is coincident at all times with point Q affi...">drake::multibody::MultibodyPlant::AddBallConstraint()</a></dd></dl>
 <h2><a class="anchor" id="tag_drake_bushing_force_damping"></a>
 drake:bushing_force_damping</h2>
 <ul>

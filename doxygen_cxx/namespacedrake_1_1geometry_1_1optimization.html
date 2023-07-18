@@ -176,8 +176,6 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html">CIrisCollisionGeometry</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class contains the necessary information about the collision geometry used in C-IRIS.  <a href="classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_c_iris_separating_plane.html">CIrisSeparatingPlane</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract base class for defining a convex set.  <a href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -257,7 +255,7 @@ Enumerations</h2></td></tr>
 <tr class="separator:a4013454f1b2c236ff18e572d12436fef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6febb8c28b6d49e494dbe16b5ed5b089"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a6febb8c28b6d49e494dbe16b5ed5b089">SeparatingPlaneOrder</a> { <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a6febb8c28b6d49e494dbe16b5ed5b089ac3af1341756d0c5a66c8ea473dc38927">kAffine</a> = 1
  }</td></tr>
-<tr class="memdesc:a6febb8c28b6d49e494dbe16b5ed5b089"><td class="mdescLeft">&#160;</td><td class="mdescRight">The separating plane aᵀx + b ≥ δ, aᵀx+b ≤ −δ has parameters a and b.  <a href="namespacedrake_1_1geometry_1_1optimization.html#a6febb8c28b6d49e494dbe16b5ed5b089">More...</a><br /></td></tr>
+<tr class="memdesc:a6febb8c28b6d49e494dbe16b5ed5b089"><td class="mdescLeft">&#160;</td><td class="mdescRight">The separating plane aᵀx + b ≥ δ, aᵀx + b ≤ −δ has parameters a and b.  <a href="namespacedrake_1_1geometry_1_1optimization.html#a6febb8c28b6d49e494dbe16b5ed5b089">More...</a><br /></td></tr>
 <tr class="separator:a6febb8c28b6d49e494dbe16b5ed5b089"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -265,10 +263,6 @@ Functions</h2></td></tr>
 <tr class="memitem:acb19d1d31dfa7158b5270096dac977a7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#acb19d1d31dfa7158b5270096dac977a7">DistanceToHalfspace</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html">CIrisCollisionGeometry</a> &amp;collision_geometry, const Eigen::Vector3d &amp;a, <a class="el" href="classdouble.html">double</a> b, <a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">multibody::BodyIndex</a> expressed_body, <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a4013454f1b2c236ff18e572d12436fef">PlaneSide</a> plane_side, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant, const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant_context)</td></tr>
 <tr class="memdesc:acb19d1d31dfa7158b5270096dac977a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the signed distance from <code>collision_geometry</code> to the half space ℋ, where ℋ = {x | aᵀx+b &gt;= 0} if plane_side=<a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a4013454f1b2c236ff18e572d12436fefafe449700ac27fbd09863263d74e7735f">PlaneSide::kPositive</a>, and ℋ = {x | aᵀx+b &lt;= 0} if plane_side=<a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a4013454f1b2c236ff18e572d12436fefa25b105cbe0fd4622cdb36360c85e89c3">PlaneSide::kNegative</a>.  <a href="#acb19d1d31dfa7158b5270096dac977a7">More...</a><br /></td></tr>
 <tr class="separator:acb19d1d31dfa7158b5270096dac977a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe172ebdad3a3b9dd87435343d6b190c"><td class="memTemplParams" colspan="2">template&lt;typename D , typename S , typename V &gt; </td></tr>
-<tr class="memitem:abe172ebdad3a3b9dd87435343d6b190c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#abe172ebdad3a3b9dd87435343d6b190c">CalcPlane</a> (const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; D &gt; &amp;decision_variables, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; S &gt; &amp;s_for_plane, <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a6febb8c28b6d49e494dbe16b5ed5b089">SeparatingPlaneOrder</a> order, <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; V &gt; *a_val, V *b_val)</td></tr>
-<tr class="memdesc:abe172ebdad3a3b9dd87435343d6b190c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the parameters a, b in the plane { x | aᵀx+b=0 }.  <a href="#abe172ebdad3a3b9dd87435343d6b190c">More...</a><br /></td></tr>
-<tr class="separator:abe172ebdad3a3b9dd87435343d6b190c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9a3a5006f20615946f5b466fe9446b6"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
 <tr class="memitem:ac9a3a5006f20615946f5b466fe9446b6"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">ConvexSets</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#ac9a3a5006f20615946f5b466fe9446b6">MakeConvexSets</a> (Args &amp;&amp;... args)</td></tr>
 <tr class="memdesc:ac9a3a5006f20615946f5b466fe9446b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function that allows the ConvexSets to be initialized from arguments containing <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html" title="Abstract base class for defining a convex set.">ConvexSet</a> references, or unique_ptr&lt;ConvexSet&gt; instances, or any object that can be assigned to ConvexSets::value_type.  <a href="#ac9a3a5006f20615946f5b466fe9446b6">More...</a><br /></td></tr>
@@ -276,6 +270,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ac52a87949354e558c4a05a11acb655ec"><td class="memItemLeft" align="right" valign="top">std::map&lt; <a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">multibody::BodyIndex</a>, std::vector&lt; std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html">CIrisCollisionGeometry</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#ac52a87949354e558c4a05a11acb655ec">GetCollisionGeometries</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant, const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;scene_graph)</td></tr>
 <tr class="memdesc:ac52a87949354e558c4a05a11acb655ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#ac52a87949354e558c4a05a11acb655ec">More...</a><br /></td></tr>
 <tr class="separator:ac52a87949354e558c4a05a11acb655ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d1ae826ab17a7ccd2b08fab3222813d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a6febb8c28b6d49e494dbe16b5ed5b089">SeparatingPlaneOrder</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a6d1ae826ab17a7ccd2b08fab3222813d">ToPlaneOrder</a> (<a class="el" href="classint.html">int</a> plane_degree)</td></tr>
+<tr class="memdesc:a6d1ae826ab17a7ccd2b08fab3222813d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert an integer degree to the SeparatingPlaneOrder.  <a href="#a6d1ae826ab17a7ccd2b08fab3222813d">More...</a><br /></td></tr>
+<tr class="separator:a6d1ae826ab17a7ccd2b08fab3222813d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac176296e2c3b79a9f480c7a38b0842b0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#ac176296e2c3b79a9f480c7a38b0842b0">ToPlaneDegree</a> (<a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a6febb8c28b6d49e494dbe16b5ed5b089">SeparatingPlaneOrder</a> plane_order)</td></tr>
+<tr class="memdesc:ac176296e2c3b79a9f480c7a38b0842b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert SeparatingPlaneOrder to an integer degree.  <a href="#ac176296e2c3b79a9f480c7a38b0842b0">More...</a><br /></td></tr>
+<tr class="separator:ac176296e2c3b79a9f480c7a38b0842b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a6bfeb13bf4fc1924f61f81051d7561"><td class="memTemplParams" colspan="2">template&lt;typename D , typename S , typename V &gt; </td></tr>
 <tr class="memitem:a0a6bfeb13bf4fc1924f61f81051d7561"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a0a6bfeb13bf4fc1924f61f81051d7561">CalcPlane</a> (const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; D &gt; &amp;decision_variables, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; S &gt; &amp;s_for_plane, <a class="el" href="classint.html">int</a> plane_degree, <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; V &gt; *a_val, V *b_val)</td></tr>
 <tr class="memdesc:a0a6bfeb13bf4fc1924f61f81051d7561"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the parameters a, b in the plane { x | aᵀx+b=0 }.  <a href="#a0a6bfeb13bf4fc1924f61f81051d7561">More...</a><br /></td></tr>
@@ -403,71 +403,18 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>The separating plane aᵀx + b ≥ δ, aᵀx+b ≤ −δ has parameters a and b. </p>
-<p>These parameters a polynomial function of <code>s_for_plane</code> with the specified degree. <code>s_for_plane</code> is a sub set of the configuration-space variable <code>s</code>, please refer to RationalForwardKinematics class or the paper above on the meaning of s. </p>
+<p>The separating plane aᵀx + b ≥ δ, aᵀx + b ≤ −δ has parameters a and b. </p>
+<p>These parameterize a polynomial function of <code>s_for_plane</code> with the specified order. <code>s_for_plane</code> is a sub set of the configuration-space variable <code>s</code>, please refer to the RationalForwardKinematics class or the paper above on the meaning of s. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a6febb8c28b6d49e494dbe16b5ed5b089ac3af1341756d0c5a66c8ea473dc38927"></a>kAffine&#160;</td><td class="fielddoc"><p>a and b are affine function of s. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a6febb8c28b6d49e494dbe16b5ed5b089ac3af1341756d0c5a66c8ea473dc38927"></a>kAffine&#160;</td><td class="fielddoc"><p>a and b are affine functions of s. </p>
 </td></tr>
 </table>
 
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="abe172ebdad3a3b9dd87435343d6b190c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe172ebdad3a3b9dd87435343d6b190c">&#9670;&nbsp;</a></span>CalcPlane() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void drake::geometry::optimization::CalcPlane </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; D &gt; &amp;&#160;</td>
-          <td class="paramname"><em>decision_variables</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; S &gt; &amp;&#160;</td>
-          <td class="paramname"><em>s_for_plane</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a6febb8c28b6d49e494dbe16b5ed5b089">SeparatingPlaneOrder</a>&#160;</td>
-          <td class="paramname"><em>order</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; V &gt; *&#160;</td>
-          <td class="paramname"><em>a_val</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">V *&#160;</td>
-          <td class="paramname"><em>b_val</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Computes the parameters a, b in the plane { x | aᵀx+b=0 }. </p>
-<p>a and b are both polynomials of <code>s_for_plane</code>. The coefficients of these polynomials are in <code>decision_variables</code>. The possible combination of D, S, V are</p><ol type="1">
-<li>D=<a class="el" href="classdrake_1_1symbolic_1_1_variable.html" title="Represents a symbolic variable.">symbolic::Variable</a>, S=<a class="el" href="classdrake_1_1symbolic_1_1_variable.html" title="Represents a symbolic variable.">symbolic::Variable</a>, V=<a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html" title="Represents symbolic polynomials.">symbolic::Polynomial</a>.</li>
-<li>D=double, S=<a class="el" href="classdrake_1_1symbolic_1_1_variable.html" title="Represents a symbolic variable.">symbolic::Variable</a>, V=<a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html" title="Represents symbolic polynomials.">symbolic::Polynomial</a></li>
-<li>D=double, S=double, V=double </li>
-</ol>
-
-</div>
-</div>
 <a id="a0a6bfeb13bf4fc1924f61f81051d7561"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a6bfeb13bf4fc1924f61f81051d7561">&#9670;&nbsp;</a></span>CalcPlane() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a6bfeb13bf4fc1924f61f81051d7561">&#9670;&nbsp;</a></span>CalcPlane()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -662,6 +609,46 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Helper function that allows the ConvexSets to be initialized from arguments containing <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html" title="Abstract base class for defining a convex set.">ConvexSet</a> references, or unique_ptr&lt;ConvexSet&gt; instances, or any object that can be assigned to ConvexSets::value_type. </p>
+
+</div>
+</div>
+<a id="ac176296e2c3b79a9f480c7a38b0842b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac176296e2c3b79a9f480c7a38b0842b0">&#9670;&nbsp;</a></span>ToPlaneDegree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> drake::geometry::optimization::ToPlaneDegree </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a6febb8c28b6d49e494dbe16b5ed5b089">SeparatingPlaneOrder</a>&#160;</td>
+          <td class="paramname"><em>plane_order</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convert SeparatingPlaneOrder to an integer degree. </p>
+
+</div>
+</div>
+<a id="a6d1ae826ab17a7ccd2b08fab3222813d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d1ae826ab17a7ccd2b08fab3222813d">&#9670;&nbsp;</a></span>ToPlaneOrder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a6febb8c28b6d49e494dbe16b5ed5b089">SeparatingPlaneOrder</a> drake::geometry::optimization::ToPlaneOrder </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>plane_degree</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convert an integer degree to the SeparatingPlaneOrder. </p>
 
 </div>
 </div>

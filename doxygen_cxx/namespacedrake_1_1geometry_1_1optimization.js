@@ -2,7 +2,6 @@ var namespacedrake_1_1geometry_1_1optimization =
 [
     [ "CartesianProduct", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product" ],
     [ "CIrisCollisionGeometry", "classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html", "classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry" ],
-    [ "CIrisSeparatingPlane", "structdrake_1_1geometry_1_1optimization_1_1_c_iris_separating_plane.html", "structdrake_1_1geometry_1_1optimization_1_1_c_iris_separating_plane" ],
     [ "ConvexSet", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html", "classdrake_1_1geometry_1_1optimization_1_1_convex_set" ],
     [ "CspaceFreeBox", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box.html", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box" ],
     [ "CspaceFreePolytope", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope" ],

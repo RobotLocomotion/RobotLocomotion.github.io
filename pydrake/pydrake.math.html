@@ -7569,6 +7569,206 @@ encountered by some algorithms when pitch is within 1E-6 of π/2 or
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="pydrake.math.SoftOverMax">
+<span class="sig-prename descclassname"><span class="pre">pydrake.math.</span></span><span class="sig-name descname"><span class="pre">SoftOverMax</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.SoftOverMax" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>SoftOverMax(x: List[float], alpha: float = 1.0) -&gt; float</p></li>
+</ol>
+<p>Computes a smooth over approximation of max function, namely
+SoftOverMax(x) &gt;= max(x). Mathematically we compute this as (log (∑ᵢ
+exp(αxᵢ))) / α.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">x</span></code>:</dt><dd><p>The vector for which we want to compute its soft max.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">alpha</span></code>:</dt><dd><p>α in the documentation above. Larger α makes the soft max more
+similar to max, with a sharper corner. Must be strictly positive
+and finite.</p>
+</dd>
+<dt><em>Default:</em> is 1.</dt><dd><p>$Raises:</p>
+</dd>
+</dl>
+<p>RuntimeError if α &lt;= 0.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if α is non-finite.</strong> – </p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>SoftOverMax(x: List[pydrake.autodiffutils.AutoDiffXd], alpha: float = 1.0) -&gt; pydrake.autodiffutils.AutoDiffXd</p></li>
+</ol>
+<p>Computes a smooth over approximation of max function, namely
+SoftOverMax(x) &gt;= max(x). Mathematically we compute this as (log (∑ᵢ
+exp(αxᵢ))) / α.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">x</span></code>:</dt><dd><p>The vector for which we want to compute its soft max.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">alpha</span></code>:</dt><dd><p>α in the documentation above. Larger α makes the soft max more
+similar to max, with a sharper corner. Must be strictly positive
+and finite.</p>
+</dd>
+<dt><em>Default:</em> is 1.</dt><dd><p>$Raises:</p>
+</dd>
+</dl>
+<p>RuntimeError if α &lt;= 0.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if α is non-finite.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydrake.math.SoftOverMin">
+<span class="sig-prename descclassname"><span class="pre">pydrake.math.</span></span><span class="sig-name descname"><span class="pre">SoftOverMin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.SoftOverMin" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>SoftOverMin(x: List[float], alpha: float = 1.0) -&gt; float</p></li>
+</ol>
+<p>Computes a smooth over approximation of min function, namely
+SoftOverMin(x) &gt;= min(x). Mathematically we compute this as ∑ᵢ
+exp(-αxᵢ)*xᵢ / d, where d = ∑ⱼ exp(-αxⱼ)</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">x</span></code>:</dt><dd><p>The vector for which we want to compute its soft min.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">alpha</span></code>:</dt><dd><p>α in the documentation above. Larger α makes the soft min more
+similar to min, with a sharper corner. Must be strictly positive
+and finite.</p>
+</dd>
+<dt><em>Default:</em> is 1.</dt><dd><p>$Raises:</p>
+</dd>
+</dl>
+<p>RuntimeError if α &lt;= 0.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if α is non-finite.</strong> – </p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>SoftOverMin(x: List[pydrake.autodiffutils.AutoDiffXd], alpha: float = 1.0) -&gt; pydrake.autodiffutils.AutoDiffXd</p></li>
+</ol>
+<p>Computes a smooth over approximation of min function, namely
+SoftOverMin(x) &gt;= min(x). Mathematically we compute this as ∑ᵢ
+exp(-αxᵢ)*xᵢ / d, where d = ∑ⱼ exp(-αxⱼ)</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">x</span></code>:</dt><dd><p>The vector for which we want to compute its soft min.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">alpha</span></code>:</dt><dd><p>α in the documentation above. Larger α makes the soft min more
+similar to min, with a sharper corner. Must be strictly positive
+and finite.</p>
+</dd>
+<dt><em>Default:</em> is 1.</dt><dd><p>$Raises:</p>
+</dd>
+</dl>
+<p>RuntimeError if α &lt;= 0.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if α is non-finite.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydrake.math.SoftUnderMax">
+<span class="sig-prename descclassname"><span class="pre">pydrake.math.</span></span><span class="sig-name descname"><span class="pre">SoftUnderMax</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.SoftUnderMax" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>SoftUnderMax(x: List[float], alpha: float = 1.0) -&gt; float</p></li>
+</ol>
+<p>Computes a smooth under approximation of max function, namely
+SoftUnderMax(x) &lt;= max(x). Mathematically we compute this as ∑ᵢ
+exp(αxᵢ)*xᵢ / d, where d = ∑ⱼ exp(αxⱼ)</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">x</span></code>:</dt><dd><p>The vector for which we want to compute its soft max.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">alpha</span></code>:</dt><dd><p>α in the documentation above. Larger α makes the soft max more
+similar to max, with a sharper corner. Must be strictly positive
+and finite.</p>
+</dd>
+<dt><em>Default:</em> is 1.</dt><dd><p>$Raises:</p>
+</dd>
+</dl>
+<p>RuntimeError if α &lt;= 0.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if α is non-finite.</strong> – </p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>SoftUnderMax(x: List[pydrake.autodiffutils.AutoDiffXd], alpha: float = 1.0) -&gt; pydrake.autodiffutils.AutoDiffXd</p></li>
+</ol>
+<p>Computes a smooth under approximation of max function, namely
+SoftUnderMax(x) &lt;= max(x). Mathematically we compute this as ∑ᵢ
+exp(αxᵢ)*xᵢ / d, where d = ∑ⱼ exp(αxⱼ)</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">x</span></code>:</dt><dd><p>The vector for which we want to compute its soft max.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">alpha</span></code>:</dt><dd><p>α in the documentation above. Larger α makes the soft max more
+similar to max, with a sharper corner. Must be strictly positive
+and finite.</p>
+</dd>
+<dt><em>Default:</em> is 1.</dt><dd><p>$Raises:</p>
+</dd>
+</dl>
+<p>RuntimeError if α &lt;= 0.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if α is non-finite.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydrake.math.SoftUnderMin">
+<span class="sig-prename descclassname"><span class="pre">pydrake.math.</span></span><span class="sig-name descname"><span class="pre">SoftUnderMin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.SoftUnderMin" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>SoftUnderMin(x: List[float], alpha: float = 1.0) -&gt; float</p></li>
+</ol>
+<p>Computes a smooth under approximation of min function, namely
+SoftUnderMin(x) &lt;= min(x). Mathematically we compute this as -(log (∑ᵢ
+exp(-αxᵢ))) / α</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">x</span></code>:</dt><dd><p>The vector for which we want to compute its soft min.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">alpha</span></code>:</dt><dd><p>α in the documentation above. Larger α makes the soft min more
+similar to min, with a sharper corner. Must be strictly positive
+and finite.</p>
+</dd>
+<dt><em>Default:</em> is 1.</dt><dd><p>$Raises:</p>
+</dd>
+</dl>
+<p>RuntimeError if α &lt;= 0.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if α is non-finite.</strong> – </p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>SoftUnderMin(x: List[pydrake.autodiffutils.AutoDiffXd], alpha: float = 1.0) -&gt; pydrake.autodiffutils.AutoDiffXd</p></li>
+</ol>
+<p>Computes a smooth under approximation of min function, namely
+SoftUnderMin(x) &lt;= min(x). Mathematically we compute this as -(log (∑ᵢ
+exp(-αxᵢ))) / α</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">x</span></code>:</dt><dd><p>The vector for which we want to compute its soft min.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">alpha</span></code>:</dt><dd><p>α in the documentation above. Larger α makes the soft min more
+similar to min, with a sharper corner. Must be strictly positive
+and finite.</p>
+</dd>
+<dt><em>Default:</em> is 1.</dt><dd><p>$Raises:</p>
+</dd>
+</dl>
+<p>RuntimeError if α &lt;= 0.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if α is non-finite.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="pydrake.math.sqrt">
 <span class="sig-prename descclassname"><span class="pre">pydrake.math.</span></span><span class="sig-name descname"><span class="pre">sqrt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.sqrt" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
