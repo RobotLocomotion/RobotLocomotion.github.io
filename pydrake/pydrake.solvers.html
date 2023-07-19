@@ -2633,6 +2633,10 @@ costs and constraints, but may be extended in the future with broader
 support.</p>
 <p>See <a class="reference external" href="https://underactuated.mit.edu/optimization.html#sdp_relaxation">https://underactuated.mit.edu/optimization.html#sdp_relaxation</a> for
 references and examples.</p>
+<p>Note: Currently, programs using LinearEqualityConstraint will give
+tighter relaxations than programs using LinearConstraint or
+BoundingBoxConstraint, even if lower_bound == upper_bound. Prefer
+LinearEqualityConstraint.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
