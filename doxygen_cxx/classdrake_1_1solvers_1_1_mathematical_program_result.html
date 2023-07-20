@@ -182,6 +182,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8454ba31b3b8d0dcf68140e63b8333fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html#a8454ba31b3b8d0dcf68140e63b8333fe">set_decision_variable_index</a> (std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html#ad045777573c866588ca72937e92c1a2c">symbolic::Variable::Id</a>, <a class="el" href="classint.html">int</a> &gt; decision_variable_index)</td></tr>
 <tr class="memdesc:a8454ba31b3b8d0dcf68140e63b8333fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets decision_variable_index mapping, that maps each decision variable to its index in the aggregated vector containing all decision variables in <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html" title="MathematicalProgram stores the decision variables, the constraints and costs of an optimization probl...">MathematicalProgram</a>.  <a href="#a8454ba31b3b8d0dcf68140e63b8333fe">More...</a><br /></td></tr>
 <tr class="separator:a8454ba31b3b8d0dcf68140e63b8333fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7268732fe17f9db4dd565beed77b64a1"><td class="memItemLeft" align="right" valign="top">const std::optional&lt; std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html#ad045777573c866588ca72937e92c1a2c">symbolic::Variable::Id</a>, <a class="el" href="classint.html">int</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html#a7268732fe17f9db4dd565beed77b64a1">get_decision_variable_index</a> () const</td></tr>
+<tr class="memdesc:a7268732fe17f9db4dd565beed77b64a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets decision_variable_index.  <a href="#a7268732fe17f9db4dd565beed77b64a1">More...</a><br /></td></tr>
+<tr class="separator:a7268732fe17f9db4dd565beed77b64a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1f3ddfd8fc09cc65cc8612e7d8f58f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html#ad1f3ddfd8fc09cc65cc8612e7d8f58f9">set_solution_result</a> (<a class="el" href="namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136f">SolutionResult</a> solution_result)</td></tr>
 <tr class="memdesc:ad1f3ddfd8fc09cc65cc8612e7d8f58f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets SolutionResult.  <a href="#ad1f3ddfd8fc09cc65cc8612e7d8f58f9">More...</a><br /></td></tr>
 <tr class="separator:ad1f3ddfd8fc09cc65cc8612e7d8f58f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -447,6 +450,25 @@ The user must have called <a class="el" href="classdrake_1_1solvers_1_1_mathemat
 
 <p>(Advanced.) Gets the type-erased solver details. </p>
 <p>Most users should use <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html#a5b8dd00dcf89c4a841c058b6b4427c12" title="Gets the solver details for the Solver that solved the program.">get_solver_details()</a> instead. Throws an error if the solver_details has not been set. </p>
+
+</div>
+</div>
+<a id="a7268732fe17f9db4dd565beed77b64a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7268732fe17f9db4dd565beed77b64a1">&#9670;&nbsp;</a></span>get_decision_variable_index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::optional&lt;std::unordered_map&lt;<a class="el" href="classdrake_1_1symbolic_1_1_variable.html#ad045777573c866588ca72937e92c1a2c">symbolic::Variable::Id</a>, <a class="el" href="classint.html">int</a>&gt; &gt;&amp; get_decision_variable_index </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets decision_variable_index. </p>
 
 </div>
 </div>

@@ -13,9 +13,11 @@ var classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex =
     [ "GetSolution", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#a8711d41b9a7b76436bbb07bf5f19913e", null ],
     [ "GetSolutionCost", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#abc8440cef215ba725a47df2067e5f054", null ],
     [ "id", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#ae8f534ba19a206a4b70b81bbbaa981c4", null ],
+    [ "incoming_edges", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#abb9f5d6d225259efadbda849e14a9045", null ],
     [ "name", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#ad8227ba86a01f26e4f173cd5e219d5d1", null ],
     [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#a4f8b9c4405bc28c61b8a3b909ebac122", null ],
     [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#ab7cfc90f4347f8ddf6e8cb5b3b18260d", null ],
+    [ "outgoing_edges", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#a59054452837001dfe040e7820f435f23", null ],
     [ "set", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#a53748c9b2b03e591925478e582e14bd7", null ],
     [ "x", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#ad7acb25ff1d4759a67548a22e11c1a5f", null ],
     [ "GraphOfConvexSets", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#adda5f965126b626170b367b0d51cd453", null ]

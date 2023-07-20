@@ -6,6 +6,7 @@ var classdrake_1_1solvers_1_1_mathematical_program_result =
     [ "AddSuboptimalSolution", "classdrake_1_1solvers_1_1_mathematical_program_result.html#a36e18a00ea3f96de94071921fd7bcfd3", null ],
     [ "EvalBinding", "classdrake_1_1solvers_1_1_mathematical_program_result.html#a5477c6d7b8af6a3be55e58d0d5e2d768", null ],
     [ "get_abstract_solver_details", "classdrake_1_1solvers_1_1_mathematical_program_result.html#ad4a9441ae39194025b2ea2c1d97190a2", null ],
+    [ "get_decision_variable_index", "classdrake_1_1solvers_1_1_mathematical_program_result.html#a7268732fe17f9db4dd565beed77b64a1", null ],
     [ "get_optimal_cost", "classdrake_1_1solvers_1_1_mathematical_program_result.html#a9d5ddbee930ff1a078b859f00b8a698a", null ],
     [ "get_solution_result", "classdrake_1_1solvers_1_1_mathematical_program_result.html#a4b0532bc94d42bfb6a357b3187c5bc63", null ],
     [ "get_solver_details", "classdrake_1_1solvers_1_1_mathematical_program_result.html#a5b8dd00dcf89c4a841c058b6b4427c12", null ],

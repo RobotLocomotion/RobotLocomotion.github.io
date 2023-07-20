@@ -245,9 +245,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a51f263df76c721f1bbdeb5708bf7df86"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a51f263df76c721f1bbdeb5708bf7df86">SolveShortestPath</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a> &amp;source, const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a> &amp;target, const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html">GraphOfConvexSetsOptions</a> &amp;options=<a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html">GraphOfConvexSetsOptions</a>()) const</td></tr>
 <tr class="memdesc:a51f263df76c721f1bbdeb5708bf7df86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience overload that takes const reference arguments for source and target.  <a href="#a51f263df76c721f1bbdeb5708bf7df86">More...</a><br /></td></tr>
 <tr class="separator:a51f263df76c721f1bbdeb5708bf7df86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a89aca5288d105169f42343e4b4a46cac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a89aca5288d105169f42343e4b4a46cac">SolveConvexRestriction</a> (const std::set&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a4df1a3580f1ae7e96903c7b3f7b00974">EdgeId</a> &gt; &amp;active_edge_ids, const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html">GraphOfConvexSetsOptions</a> &amp;options=<a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html">GraphOfConvexSetsOptions</a>()) const</td></tr>
-<tr class="memdesc:a89aca5288d105169f42343e4b4a46cac"><td class="mdescLeft">&#160;</td><td class="mdescRight">The non-convexity in a GCS problem comes from the binary variables (phi) associated with the edges being active or inactive in the solution.  <a href="#a89aca5288d105169f42343e4b4a46cac">More...</a><br /></td></tr>
-<tr class="separator:a89aca5288d105169f42343e4b4a46cac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab615e29dafcd98a50d5b22314cfd9f3d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html">Edge</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#ab615e29dafcd98a50d5b22314cfd9f3d">GetSolutionPath</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a> &amp;source, const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a> &amp;target, const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &amp;result, <a class="el" href="classdouble.html">double</a> tolerance=1e-3) const</td></tr>
+<tr class="memdesc:ab615e29dafcd98a50d5b22314cfd9f3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extracts a path from <code>source</code> to <code>target</code> described by the <code>result</code> returned by <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a943e17664f99f42099ecacca17676aee" title="Formulates and solves the mixed-integer convex formulation of the shortest path problem on the graph,...">SolveShortestPath()</a>, via depth-first search following the largest values of the edge binary variables.  <a href="#ab615e29dafcd98a50d5b22314cfd9f3d">More...</a><br /></td></tr>
+<tr class="separator:ab615e29dafcd98a50d5b22314cfd9f3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab25b5b85ea26d22e0702ca76e695c659"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#ab25b5b85ea26d22e0702ca76e695c659">SolveConvexRestriction</a> (const std::vector&lt; const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html">Edge</a> * &gt; &amp;active_edges, const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html">GraphOfConvexSetsOptions</a> &amp;options=<a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html">GraphOfConvexSetsOptions</a>()) const</td></tr>
+<tr class="memdesc:ab25b5b85ea26d22e0702ca76e695c659"><td class="mdescLeft">&#160;</td><td class="mdescRight">The non-convexity in a GCS problem comes from the binary variables (phi) associated with the edges being active or inactive in the solution.  <a href="#ab25b5b85ea26d22e0702ca76e695c659">More...</a><br /></td></tr>
+<tr class="separator:ab25b5b85ea26d22e0702ca76e695c659"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:aee71a4d66e8a29651242b12019c0a30e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#aee71a4d66e8a29651242b12019c0a30e">GraphOfConvexSets</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html">GraphOfConvexSets</a> &amp;)=delete</td></tr>
 <tr class="separator:aee71a4d66e8a29651242b12019c0a30e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -610,6 +613,60 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="ab615e29dafcd98a50d5b22314cfd9f3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab615e29dafcd98a50d5b22314cfd9f3d">&#9670;&nbsp;</a></span>GetSolutionPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html">Edge</a>*&gt; GetSolutionPath </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a> &amp;&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a> &amp;&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &amp;&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>tolerance</em> = <code>1e-3</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Extracts a path from <code>source</code> to <code>target</code> described by the <code>result</code> returned by <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a943e17664f99f42099ecacca17676aee" title="Formulates and solves the mixed-integer convex formulation of the shortest path problem on the graph,...">SolveShortestPath()</a>, via depth-first search following the largest values of the edge binary variables. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tolerance</td><td>defines the threshold for checking the integrality conditions of the binary variables for each edge. <code>tolerance</code> = 0 would demand that the binary variables are exactly 1 for the edges on the path. <code>tolerance</code> = 1 would allow the binary variables to be any value in [0, 1]. The default value is 1e-3. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if !result.is_success() or no path from <code>source</code> to <code>target</code> can be found in the solution. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a5a86ee0b1b2dea70ae192ecb3acb9ca7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5a86ee0b1b2dea70ae192ecb3acb9ca7">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
@@ -746,8 +803,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a89aca5288d105169f42343e4b4a46cac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a89aca5288d105169f42343e4b4a46cac">&#9670;&nbsp;</a></span>SolveConvexRestriction()</h2>
+<a id="ab25b5b85ea26d22e0702ca76e695c659"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab25b5b85ea26d22e0702ca76e695c659">&#9670;&nbsp;</a></span>SolveConvexRestriction()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -755,8 +812,8 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> SolveConvexRestriction </td>
           <td>(</td>
-          <td class="paramtype">const std::set&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a4df1a3580f1ae7e96903c7b3f7b00974">EdgeId</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>active_edge_ids</em>, </td>
+          <td class="paramtype">const std::vector&lt; const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html">Edge</a> * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>active_edges</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

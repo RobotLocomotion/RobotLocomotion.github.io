@@ -20,7 +20,9 @@ var classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge =
     [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a65e78fcef5eb74c3f87cdebce36f5de2", null ],
     [ "phi", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#ae27544a079b05b64881722b0002f7b96", null ],
     [ "u", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a70f4c533eb1879f1674ab4b2b8083d4c", null ],
+    [ "u", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#ad2f7bac85a5ba53836843b62bea2ff2a", null ],
     [ "v", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a7d79fc3d9d1ff6828f96d4f00cfd8295", null ],
+    [ "v", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#acc9aa285e1f7779c552846a8c8a2cb80", null ],
     [ "xu", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#aeacbc2abb655b394b863536ddcd78036", null ],
     [ "xv", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a09f1477bfa664da452fb472f7c1959cc", null ],
     [ "GraphOfConvexSets", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#adda5f965126b626170b367b0d51cd453", null ]

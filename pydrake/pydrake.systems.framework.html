@@ -11349,6 +11349,20 @@ to the given <code class="docutils literal notranslate"><span class="pre">output
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.System.HasInputPort">
+<span class="sig-name descname"><span class="pre">HasInputPort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System" title="pydrake.systems.framework.System"><span class="pre">pydrake.systems.framework.System</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">port_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.systems.framework.System.HasInputPort" title="Permalink to this definition"></a></dt>
+<dd><p>Returns true iff the system has an InputPort of the given
+<code class="docutils literal notranslate"><span class="pre">port_name</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.System.HasOutputPort">
+<span class="sig-name descname"><span class="pre">HasOutputPort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System" title="pydrake.systems.framework.System"><span class="pre">pydrake.systems.framework.System</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">port_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.systems.framework.System.HasOutputPort" title="Permalink to this definition"></a></dt>
+<dd><p>Returns true iff the system has an OutputPort of the given
+<code class="docutils literal notranslate"><span class="pre">port_name</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.System.IsDifferenceEquationSystem">
 <span class="sig-name descname"><span class="pre">IsDifferenceEquationSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System" title="pydrake.systems.framework.System"><span class="pre">pydrake.systems.framework.System</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.framework.System.IsDifferenceEquationSystem" title="Permalink to this definition"></a></dt>
 <dd><p>Returns true iff the state dynamics of this system are governed
@@ -12432,6 +12446,20 @@ to the given <code class="docutils literal notranslate"><span class="pre">output
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.System_-AutoDiffXd-.HasInputPort">
+<span id="pydrake.systems.framework.System_[AutoDiffXd].HasInputPort"></span><span class="sig-name descname"><span class="pre">HasInputPort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.systems.framework.System_-AutoDiffXd-.HasInputPort" title="Permalink to this definition"></a></dt>
+<dd><p>Returns true iff the system has an InputPort of the given
+<code class="docutils literal notranslate"><span class="pre">port_name</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.System_-AutoDiffXd-.HasOutputPort">
+<span id="pydrake.systems.framework.System_[AutoDiffXd].HasOutputPort"></span><span class="sig-name descname"><span class="pre">HasOutputPort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.systems.framework.System_-AutoDiffXd-.HasOutputPort" title="Permalink to this definition"></a></dt>
+<dd><p>Returns true iff the system has an OutputPort of the given
+<code class="docutils literal notranslate"><span class="pre">port_name</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.System_-AutoDiffXd-.IsDifferenceEquationSystem">
 <span id="pydrake.systems.framework.System_[AutoDiffXd].IsDifferenceEquationSystem"></span><span class="sig-name descname"><span class="pre">IsDifferenceEquationSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.framework.System_-AutoDiffXd-.IsDifferenceEquationSystem" title="Permalink to this definition"></a></dt>
 <dd><p>Returns true iff the state dynamics of this system are governed
@@ -13506,6 +13534,20 @@ to the given <code class="docutils literal notranslate"><span class="pre">output
 </ol>
 <p>Returns true if there might be direct-feedthrough from the given
 <code class="docutils literal notranslate"><span class="pre">input_port</span></code> to the given <code class="docutils literal notranslate"><span class="pre">output_port</span></code>, and false otherwise.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.System_-Expression-.HasInputPort">
+<span id="pydrake.systems.framework.System_[Expression].HasInputPort"></span><span class="sig-name descname"><span class="pre">HasInputPort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.systems.framework.System_-Expression-.HasInputPort" title="Permalink to this definition"></a></dt>
+<dd><p>Returns true iff the system has an InputPort of the given
+<code class="docutils literal notranslate"><span class="pre">port_name</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.System_-Expression-.HasOutputPort">
+<span id="pydrake.systems.framework.System_[Expression].HasOutputPort"></span><span class="sig-name descname"><span class="pre">HasOutputPort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.systems.framework.System_-Expression-.HasOutputPort" title="Permalink to this definition"></a></dt>
+<dd><p>Returns true iff the system has an OutputPort of the given
+<code class="docutils literal notranslate"><span class="pre">port_name</span></code>.</p>
 </dd></dl>
 
 <dl class="py method">

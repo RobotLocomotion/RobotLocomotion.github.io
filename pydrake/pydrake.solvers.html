@@ -5826,12 +5826,10 @@ latter) describe relevant matrix classes in more detail.</p>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">MosekSolver</span></span><a class="headerlink" href="#pydrake.solvers.MosekSolver" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.SolverInterface" title="pydrake.solvers.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.SolverInterface</span></code></a></p>
 <p>An implementation of SolverInterface for the commercially-licensed
-MOSEK<a href="/tm.html">™</a> solver (<a class="reference external" href="https://www.mosek.com/">https://www.mosek.com/</a>).</p>
-<p>The default build of Drake is not configured to use MOSEK<a href="/tm.html">™</a>, so
-therefore SolverInterface::available() will return false. You must
-compile Drake from source in order to link against MOSEK<a href="/tm.html">™</a>. For
-details, refer to the documentation at
-<a class="reference external" href="https://drake.mit.edu/bazel.html#mosek">https://drake.mit.edu/bazel.html#mosek</a>.</p>
+MOSEK (TM) solver (<a class="reference external" href="https://www.mosek.com/">https://www.mosek.com/</a>).</p>
+<p>Drake downloads and builds MOSEK<a href="/tm.html">™</a> automatically, but to enable it you
+must set the location of your license file as described in the
+documentation at <a class="reference external" href="https://drake.mit.edu/bazel.html#mosek">https://drake.mit.edu/bazel.html#mosek</a>.</p>
 <p>The MOSEKLM_LICENSE_FILE environment variable controls whether or not
 SolverInterface::enabled() returns true. Iff it is set to any
 non-empty value, then the solver is enabled; otherwise, the solver is

@@ -344,6 +344,13 @@ documentation for any notes.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.ConvexSet.MaybeGetFeasiblePoint">
+<span class="sig-name descname"><span class="pre">MaybeGetFeasiblePoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.ConvexSet.MaybeGetFeasiblePoint" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a feasible point within this convex set if it is nonempty, and
+nullopt otherwise. When ambient_dimension is zero, returns nullopt.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.ConvexSet.MaybeGetPoint">
 <span class="sig-name descname"><span class="pre">MaybeGetPoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.ConvexSet.MaybeGetPoint" title="Permalink to this definition"></a></dt>
 <dd><p>If this set trivially contains exactly one point, returns the value of
@@ -636,14 +643,14 @@ MathematicalProgramResult.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.GraphOfConvexSets.Edge.u">
 <span class="sig-name descname"><span class="pre">u</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge" title="pydrake.geometry.optimization.GraphOfConvexSets.Edge"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Edge</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex" title="pydrake.geometry.optimization.GraphOfConvexSets.Vertex"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Vertex</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.u" title="Permalink to this definition"></a></dt>
-<dd><p>Returns a const reference to the “left” Vertex that this edge connects
-to.</p>
+<dd><p>Returns a mutable reference to the “left” Vertex that this edge
+connects to.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.GraphOfConvexSets.Edge.v">
 <span class="sig-name descname"><span class="pre">v</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge" title="pydrake.geometry.optimization.GraphOfConvexSets.Edge"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Edge</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex" title="pydrake.geometry.optimization.GraphOfConvexSets.Vertex"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Vertex</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.v" title="Permalink to this definition"></a></dt>
-<dd><p>Returns a const reference to the “right” Vertex that this edge
+<dd><p>Returns a mutable reference to the “right” Vertex that this edge
 connects to.</p>
 </dd></dl>
 
@@ -724,6 +731,30 @@ fixed (if false).</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.GraphOfConvexSets.GetSolutionPath">
+<span class="sig-name descname"><span class="pre">GetSolutionPath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets" title="pydrake.geometry.optimization.GraphOfConvexSets"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex" title="pydrake.geometry.optimization.GraphOfConvexSets.Vertex"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Vertex</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex" title="pydrake.geometry.optimization.GraphOfConvexSets.Vertex"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Vertex</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.MathematicalProgramResult" title="pydrake.solvers.MathematicalProgramResult"><span class="pre">pydrake.solvers.MathematicalProgramResult</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.001</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge" title="pydrake.geometry.optimization.GraphOfConvexSets.Edge"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Edge</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.GetSolutionPath" title="Permalink to this definition"></a></dt>
+<dd><p>Extracts a path from <code class="docutils literal notranslate"><span class="pre">source</span></code> to <code class="docutils literal notranslate"><span class="pre">target</span></code> described by the
+<code class="docutils literal notranslate"><span class="pre">result</span></code> returned by SolveShortestPath(), via depth-first search
+following the largest values of the edge binary variables.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">tolerance</span></code>:</dt><dd><p>defines the threshold for checking the integrality conditions of
+the binary variables for each edge. <code class="docutils literal notranslate"><span class="pre">tolerance</span></code> = 0 would demand
+that the binary variables are exactly 1 for the edges on the path.
+<code class="docutils literal notranslate"><span class="pre">tolerance</span></code> = 1 would allow the binary variables to be any value
+in [0, 1]. The default value is 1e-3.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if !result.is_success</strong><strong>(</strong><strong>) or </strong><strong>no path from source to</strong> – </p></li>
+<li><p><strong>target` can be found in the solution</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.GraphOfConvexSets.RemoveEdge">
 <span class="sig-name descname"><span class="pre">RemoveEdge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.RemoveEdge" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
@@ -773,7 +804,7 @@ graph.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.GraphOfConvexSets.SolveConvexRestriction">
-<span class="sig-name descname"><span class="pre">SolveConvexRestriction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.geometry.optimization.GraphOfConvexSets,</span> <span class="pre">active_edges:</span> <span class="pre">Set[pydrake.geometry.optimization.GraphOfConvexSets.EdgeId],</span> <span class="pre">options:</span> <span class="pre">pydrake.geometry.optimization.GraphOfConvexSetsOptions</span> <span class="pre">=</span> <span class="pre">GraphOfConvexSetsOptions(convex_relaxation=None,</span> <span class="pre">preprocessing=None,</span> <span class="pre">max_rounded_paths=None,</span> <span class="pre">max_rounding_trials=100,</span> <span class="pre">flow_tolerance=1e-05,</span> <span class="pre">rounding_seed=0,</span> <span class="pre">solver=None,</span> <span class="pre">solver_options=&lt;SolverOptions&gt;,</span> <span class="pre">rounding_solver_options=None,</span> <span class="pre">)</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.MathematicalProgramResult" title="pydrake.solvers.MathematicalProgramResult"><span class="pre">pydrake.solvers.MathematicalProgramResult</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.SolveConvexRestriction" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">SolveConvexRestriction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.geometry.optimization.GraphOfConvexSets,</span> <span class="pre">active_edges:</span> <span class="pre">List[pydrake.geometry.optimization.GraphOfConvexSets.Edge],</span> <span class="pre">options:</span> <span class="pre">pydrake.geometry.optimization.GraphOfConvexSetsOptions</span> <span class="pre">=</span> <span class="pre">GraphOfConvexSetsOptions(convex_relaxation=None,</span> <span class="pre">preprocessing=None,</span> <span class="pre">max_rounded_paths=None,</span> <span class="pre">max_rounding_trials=100,</span> <span class="pre">flow_tolerance=1e-05,</span> <span class="pre">rounding_seed=0,</span> <span class="pre">solver=None,</span> <span class="pre">solver_options=&lt;SolverOptions&gt;,</span> <span class="pre">rounding_solver_options=None,</span> <span class="pre">)</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.MathematicalProgramResult" title="pydrake.solvers.MathematicalProgramResult"><span class="pre">pydrake.solvers.MathematicalProgramResult</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.SolveConvexRestriction" title="Permalink to this definition"></a></dt>
 <dd><p>The non-convexity in a GCS problem comes from the binary variables
 (phi) associated with the edges being active or inactive in the
 solution. If those binary variables are fixed, then the problem is
@@ -982,10 +1013,20 @@ solvers::MathematicalProgramResult.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.GraphOfConvexSets.Vertex.incoming_edges">
+<span class="sig-name descname"><span class="pre">incoming_edges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex" title="pydrake.geometry.optimization.GraphOfConvexSets.Vertex"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Vertex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List[drake::geometry::optimization::GraphOfConvexSets::Edge]</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex.incoming_edges" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.GraphOfConvexSets.Vertex.name">
 <span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex" title="pydrake.geometry.optimization.GraphOfConvexSets.Vertex"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Vertex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex.name" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the name of the vertex.</p>
 </dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.GraphOfConvexSets.Vertex.outgoing_edges">
+<span class="sig-name descname"><span class="pre">outgoing_edges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex" title="pydrake.geometry.optimization.GraphOfConvexSets.Vertex"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Vertex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List[drake::geometry::optimization::GraphOfConvexSets::Edge]</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex.outgoing_edges" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.GraphOfConvexSets.Vertex.set">
