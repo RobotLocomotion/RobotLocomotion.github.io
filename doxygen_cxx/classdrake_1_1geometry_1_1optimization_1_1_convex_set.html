@@ -272,6 +272,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a2da746fed405258f0af4dc5c385f6e2a"><td class="memItemLeft" align="right" valign="top">virtual std::pair&lt; std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &gt;, math::RigidTransformd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a2da746fed405258f0af4dc5c385f6e2a">DoToShapeWithPose</a> () const =0</td></tr>
 <tr class="memdesc:a2da746fed405258f0af4dc5c385f6e2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#af7add202067720eb1a04fac8f1781c87" title="Constructs a Shape and a pose of the set in the world frame for use in the SceneGraph geometry ecosys...">ToShapeWithPose()</a>.  <a href="#a2da746fed405258f0af4dc5c385f6e2a">More...</a><br /></td></tr>
 <tr class="separator:a2da746fed405258f0af4dc5c385f6e2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7da589d9fc72f5064b7bbc48a97d0845"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a7da589d9fc72f5064b7bbc48a97d0845">HandleZeroAmbientDimensionConstraints</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *prog, const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;set, std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt;&gt; *constraints) const</td></tr>
+<tr class="memdesc:a7da589d9fc72f5064b7bbc48a97d0845"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instances of subclasses such as <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html" title="The Cartesian product of convex sets is a convex set: S = X₁ × X₂ × ⋯ × Xₙ = {(x₁,...">CartesianProduct</a> and <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html" title="A convex set that represents the Minkowski sum of multiple sets: S = X₁ ⨁ X₂ ⨁ ...">MinkowskiSum</a> can have constituent sets with zero ambient dimension, which much be handled in a special manner when calling methods such as DoAddPointInSetConstraints.  <a href="#a7da589d9fc72f5064b7bbc48a97d0845">More...</a><br /></td></tr>
+<tr class="separator:a7da589d9fc72f5064b7bbc48a97d0845"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
 <tr class="memitem:aee74f49fab7ccaabd8661e516c7a8d9f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aee74f49fab7ccaabd8661e516c7a8d9f">ConvexSet</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;)=default</td></tr>
 <tr class="separator:aee74f49fab7ccaabd8661e516c7a8d9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -814,7 +817,7 @@ c.rows() == t.size() </dd></dl>
 </div><div class="memdoc">
 
 <p>Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a2f010e733bd63adb8352995624362b65" title="Returns true iff the set is bounded, e.g., there exists an element-wise finite lower and upper bound ...">IsBounded()</a>. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> &gt; 0 </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> &gt;= 0 </dd></dl>
 
 </div>
 </div>
@@ -842,7 +845,7 @@ c.rows() == t.size() </dd></dl>
 </div><div class="memdoc">
 
 <p>Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a8e12342fc420701fbffd97025421575a" title="Returns true iff the set is empty.">IsEmpty()</a>. </p>
-<p>The default implementation solves a feasibility optimization problem, but derived classes can override with a custom (more efficient) implementation. </p>
+<p>The default implementation solves a feasibility optimization problem, but derived classes can override with a custom (more efficient) implementation. Zero-dimensional sets are considered to be nonempty by default. Sets which can be zero-dimensional and empty must handle this behavior in their derived implementation of DoIsEmpty. </p>
 
 </div>
 </div>
@@ -898,7 +901,7 @@ c.rows() == t.size() </dd></dl>
 </div><div class="memdoc">
 
 <p>Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a0c8afc65a3f5ac1df8167abbbd13d218" title="If this set trivially contains exactly one point, returns the value of that point.">MaybeGetPoint()</a>. </p>
-<p>The default implementation returns nullopt. Sets that can model a single point should override with a custom implementation. </p><dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> &gt; 0 </dd></dl>
+<p>The default implementation returns nullopt. Sets that can model a single point should override with a custom implementation. </p><dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> &gt;= 0 </dd></dl>
 
 </div>
 </div>
@@ -939,7 +942,7 @@ c.rows() == t.size() </dd></dl>
 <p>Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aa7a4d7c125954dfde3c15238c852eeed" title="Returns true iff the point x is contained in the set.">PointInSet()</a>. </p>
 <dl class="section pre"><dt>Precondition</dt><dd>x.size() == <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> </dd>
 <dd>
-<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> &gt; 0 </dd></dl>
+<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> &gt;= 0 </dd></dl>
 
 </div>
 </div>
@@ -968,6 +971,51 @@ c.rows() == t.size() </dd></dl>
 
 <p>Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#af7add202067720eb1a04fac8f1781c87" title="Constructs a Shape and a pose of the set in the world frame for use in the SceneGraph geometry ecosys...">ToShapeWithPose()</a>. </p>
 <dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> == 3 </dd></dl>
+
+</div>
+</div>
+<a id="a7da589d9fc72f5064b7bbc48a97d0845"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7da589d9fc72f5064b7bbc48a97d0845">&#9670;&nbsp;</a></span>HandleZeroAmbientDimensionConstraints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;<a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>&gt; HandleZeroAmbientDimensionConstraints </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *&#160;</td>
+          <td class="paramname"><em>prog</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;&#160;</td>
+          <td class="paramname"><em>set</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt;&gt; *&#160;</td>
+          <td class="paramname"><em>constraints</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Instances of subclasses such as <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html" title="The Cartesian product of convex sets is a convex set: S = X₁ × X₂ × ⋯ × Xₙ = {(x₁,...">CartesianProduct</a> and <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html" title="A convex set that represents the Minkowski sum of multiple sets: S = X₁ ⨁ X₂ ⨁ ...">MinkowskiSum</a> can have constituent sets with zero ambient dimension, which much be handled in a special manner when calling methods such as DoAddPointInSetConstraints. </p>
+<p>If the set is empty, a trivially infeasible constraint must be added. We also warn the user when this happens, since they probably didn't intend it to occur. If the set is nonempty, then it's the unique zero-dimensional vector space {0}, and no additional variables or constraints are needed. If a new variable is created, return it, to optionally be stored (as in AddPointInSetConstraints), or not be stored (as in DoAddPointInNonnegativeScalingConstraints). </p>
 
 </div>
 </div>
@@ -1033,12 +1081,7 @@ c.rows() == t.size() </dd></dl>
 </div><div class="memdoc">
 
 <p>Returns true iff the set is empty. </p>
-<p>Note: for some derived classes, this check is trivial, but for others, it can require solving a (typically small) optimization problem. Check the derived class documentation for any notes. </p><dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> == 0 </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Note: for some derived classes, this check is trivial, but for others, it can require solving a (typically small) optimization problem. Check the derived class documentation for any notes. Zero-dimensional sets must be handled specially. There are two possible sets in a zero-dimensional space &ndash; the empty set, and the whole set (which is simply the "zero vector space", {0}.) For more details, see: <a href="https://en.wikipedia.org/wiki/Examples_of_vector_spaces#Trivial_or_zero_vector_space">https://en.wikipedia.org/wiki/Examples_of_vector_spaces#Trivial_or_zero_vector_space</a> Zero-dimensional sets are considered to be nonempty by default. Sets which can be zero-dimensional and empty must handle this behavior in their derived implementation of DoIsEmpty. An example of such a subclass is <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html" title="A polytope described using the vertex representation.">VPolytope</a>. </p>
 
 </div>
 </div>
@@ -1058,7 +1101,6 @@ c.rows() == t.size() </dd></dl>
 </div><div class="memdoc">
 
 <p>Returns a feasible point within this convex set if it is nonempty, and nullopt otherwise. </p>
-<p>When ambient_dimension is zero, returns nullopt. </p>
 
 </div>
 </div>
@@ -1078,12 +1120,12 @@ c.rows() == t.size() </dd></dl>
 </div><div class="memdoc">
 
 <p>If this set trivially contains exactly one point, returns the value of that point. </p>
-<p>Otherwise, returns nullopt. When ambient_dimension is zero, returns nullopt. By "trivially", we mean that representation of the set structurally maps to a single point; if checking for point-ness would require solving an optimization program, returns nullopt. In other words, this is a relatively cheap function to call. </p>
+<p>Otherwise, returns nullopt. By "trivially", we mean that representation of the set structurally maps to a single point; if checking for point-ness would require solving an optimization program, returns nullopt. In other words, this is a relatively cheap function to call. </p>
 
 </div>
 </div>
-<a id="aaf56e31cd3546020503a8d7b3b359703"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaf56e31cd3546020503a8d7b3b359703">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a35e9f9166891aeacbca14f74e73018f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35e9f9166891aeacbca14f74e73018f3">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1094,7 +1136,7 @@ c.rows() == t.size() </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1108,8 +1150,8 @@ c.rows() == t.size() </dd></dl>
 
 </div>
 </div>
-<a id="a35e9f9166891aeacbca14f74e73018f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a35e9f9166891aeacbca14f74e73018f3">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="aaf56e31cd3546020503a8d7b3b359703"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf56e31cd3546020503a8d7b3b359703">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1120,7 +1162,7 @@ c.rows() == t.size() </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1161,7 +1203,7 @@ c.rows() == t.size() </dd></dl>
 </div><div class="memdoc">
 
 <p>Returns true iff the point x is contained in the set. </p>
-<p>When ambient_dimension is zero, returns false. </p>
+<p>If the ambient dimension is zero, then if the set is nonempty, the point is trivially in the set, and if the set is empty, the point is trivially not in the set. </p>
 
 </div>
 </div>

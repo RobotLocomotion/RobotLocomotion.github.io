@@ -405,7 +405,10 @@ This inheritance list is sorted roughly, but not completely, alphabetically:</di
 </p>
  </td></tr>
 <tr id="row_139_2_8_" class="even" style="display:none;"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classdrake_1_1solvers_1_1_l_inf_norm_cost.html" target="_self">LInfNormCost</a></td><td class="desc">Implements a cost of the form ‖Ax + b‖∞ </td></tr>
-<tr id="row_139_2_9_" class="even" style="display:none;"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classdrake_1_1solvers_1_1_perspective_quadratic_cost.html" target="_self">PerspectiveQuadraticCost</a></td><td class="desc">If z = Ax + b, implements a cost of the form: (z_1^2 + z_2^2 + .. </td></tr>
+<tr id="row_139_2_9_" class="even" style="display:none;"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classdrake_1_1solvers_1_1_perspective_quadratic_cost.html" target="_self">PerspectiveQuadraticCost</a></td><td class="desc">If \( z = Ax + b,\) implements a cost of the form: </p><p class="formulaDsp">
+\[ (z_1^2 + z_2^2 + ... + z_{n-1}^2) / z_0. \]
+</p>
+<p> Note that this cost is convex when we additionally constrain z_0 &gt; 0 </td></tr>
 <tr id="row_139_2_10_" class="even" style="display:none;"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html" target="_self">QuadraticCost</a></td><td class="desc">Implements a cost of the form </p><p class="formulaDsp">
 \[ .5 x&#39;Qx + b&#39;x + c \]
 </p>

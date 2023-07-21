@@ -140,6 +140,11 @@ coordinates are transformed by the linear map, {x | y = Ax + b, y ∈ Y₁
 concept is required for reasoning about cylinders in arbitrary poses
 as cartesian products, and more generally for describing any affine
 transform of a CartesianProduct.</p>
+<p>Special behavior for IsEmpty: If there are no sets in the product,
+returns nonempty by convention. See:
+<a class="reference external" href="https://en.wikipedia.org/wiki/Empty_product#Nullary_Cartesian_product">https://en.wikipedia.org/wiki/Empty_product#Nullary_Cartesian_product</a>
+Otherwise, if any set in the cartesian product is empty, the whole
+product is empty.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.CartesianProduct.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.CartesianProduct.__init__" title="Permalink to this definition"></a></dt>
@@ -147,7 +152,7 @@ transform of a CartesianProduct.</p>
 <ol class="arabic simple">
 <li><p>__init__(self: pydrake.geometry.optimization.CartesianProduct) -&gt; None</p></li>
 </ol>
-<p>Constructs a default (zero-dimensional) set.</p>
+<p>Constructs a default (zero-dimensional, nonempty) set.</p>
 <ol class="arabic simple" start="2">
 <li><p>__init__(self: pydrake.geometry.optimization.CartesianProduct, sets: List[pydrake.geometry.optimization.ConvexSet]) -&gt; None</p></li>
 </ol>
@@ -335,37 +340,42 @@ always returns true.</p>
 <dd><p>Returns true iff the set is empty. Note: for some derived classes,
 this check is trivial, but for others, it can require solving a
 (typically small) optimization problem. Check the derived class
-documentation for any notes.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if ambient_dimension</strong><strong>(</strong><strong>) </strong><strong>== 0</strong> – </p>
-</dd>
-</dl>
+documentation for any notes. Zero-dimensional sets must be handled
+specially. There are two possible sets in a zero-dimensional space –
+the empty set, and the whole set (which is simply the “zero vector
+space”, {0}.) For more details, see:
+<a class="reference external" href="https://en.wikipedia.org/wiki/Examples_of_vector_spaces#Trivial_or_zero_vector_space">https://en.wikipedia.org/wiki/Examples_of_vector_spaces#Trivial_or_zero_vector_space</a>
+Zero-dimensional sets are considered to be nonempty by default. Sets
+which can be zero-dimensional and empty must handle this behavior in
+their derived implementation of DoIsEmpty. An example of such a
+subclass is VPolytope.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.ConvexSet.MaybeGetFeasiblePoint">
 <span class="sig-name descname"><span class="pre">MaybeGetFeasiblePoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.ConvexSet.MaybeGetFeasiblePoint" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a feasible point within this convex set if it is nonempty, and
-nullopt otherwise. When ambient_dimension is zero, returns nullopt.</p>
+nullopt otherwise.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.ConvexSet.MaybeGetPoint">
 <span class="sig-name descname"><span class="pre">MaybeGetPoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.ConvexSet.MaybeGetPoint" title="Permalink to this definition"></a></dt>
 <dd><p>If this set trivially contains exactly one point, returns the value of
-that point. Otherwise, returns nullopt. When ambient_dimension is
-zero, returns nullopt. By “trivially”, we mean that representation of
-the set structurally maps to a single point; if checking for
-point-ness would require solving an optimization program, returns
-nullopt. In other words, this is a relatively cheap function to call.</p>
+that point. Otherwise, returns nullopt. By “trivially”, we mean that
+representation of the set structurally maps to a single point; if
+checking for point-ness would require solving an optimization program,
+returns nullopt. In other words, this is a relatively cheap function
+to call.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.ConvexSet.PointInSet">
 <span class="sig-name descname"><span class="pre">PointInSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1e-08</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.ConvexSet.PointInSet" title="Permalink to this definition"></a></dt>
-<dd><p>Returns true iff the point x is contained in the set. When
-ambient_dimension is zero, returns false.</p>
+<dd><p>Returns true iff the point x is contained in the set. If the ambient
+dimension is zero, then if the set is nonempty, the point is trivially
+in the set, and if the set is empty, the point is trivially not in the
+set.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -816,6 +826,14 @@ binaries; it can be written using less decision variables, and needs
 only to include the vertices associated with at least one of the
 active edges. Decision variables for all other convex sets will be set
 to NaN.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the program cannot be written as a convex</strong> – </p></li>
+<li><p><strong>optimization consumable by one of the standard solvers.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -1177,6 +1195,7 @@ generated, the calling solve method will throw.</p>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></code></a></p>
 <p>Implements a polyhedral convex set using the half-space
 representation: <code class="docutils literal notranslate"><span class="pre">{x|</span> <span class="pre">A</span> <span class="pre">x</span> <span class="pre">≤</span> <span class="pre">b}</span></code>. Note: This set may be unbounded.</p>
+<p>By convention, we treat a zero-dimensional HPolyhedron as nonempty.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.HPolyhedron.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.__init__" title="Permalink to this definition"></a></dt>
@@ -1184,7 +1203,7 @@ representation: <code class="docutils literal notranslate"><span class="pre">{x|
 <ol class="arabic simple">
 <li><p>__init__(self: pydrake.geometry.optimization.HPolyhedron) -&gt; None</p></li>
 </ol>
-<p>Constructs a default (zero-dimensional) polyhedron.</p>
+<p>Constructs a default (zero-dimensional, nonempty) polyhedron.</p>
 <ol class="arabic simple" start="2">
 <li><p>__init__(self: pydrake.geometry.optimization.HPolyhedron, A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], b: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</p></li>
 </ol>
@@ -1449,6 +1468,8 @@ unbounded sets.</p>
 <p>Note: the name Hyperellipsoid was taken here to avoid conflicting with
 geometry::Ellipsoid and to distinguish that this class supports N
 dimensions.</p>
+<p>A hyperellipsoid can never be empty – it always contains its center.
+This includes the zero-dimensional case.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.Hyperellipsoid.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.Hyperellipsoid.__init__" title="Permalink to this definition"></a></dt>
@@ -1456,7 +1477,7 @@ dimensions.</p>
 <ol class="arabic simple">
 <li><p>__init__(self: pydrake.geometry.optimization.Hyperellipsoid) -&gt; None</p></li>
 </ol>
-<p>Constructs a default (zero-dimensional) set.</p>
+<p>Constructs a default (zero-dimensional, nonempty) set.</p>
 <ol class="arabic simple" start="2">
 <li><p>__init__(self: pydrake.geometry.optimization.Hyperellipsoid, A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], center: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</p></li>
 </ol>
@@ -1553,6 +1574,10 @@ center (up to precision).</p>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></code></a></p>
 <p>A convex set that represents the intersection of multiple sets: S = X₁
 ∩ X₂ ∩ … ∩ Xₙ = {x | x ∈ X₁, x ∈ X₂, …, x ∈ Xₙ}</p>
+<p>Special behavior for IsEmpty: The intersection of zero sets (i.e. when
+we have <a href="#id11"><span class="problematic" id="id12">sets_</span></a>.size() == 0) is always nonempty. This includes the
+zero-dimensional case, which we treat as being {0}, the unique
+zero-dimensional vector space.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.Intersection.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.Intersection.__init__" title="Permalink to this definition"></a></dt>
@@ -1560,7 +1585,7 @@ center (up to precision).</p>
 <ol class="arabic simple">
 <li><p>__init__(self: pydrake.geometry.optimization.Intersection) -&gt; None</p></li>
 </ol>
-<p>Constructs a default (zero-dimensional) set.</p>
+<p>Constructs a default (zero-dimensional, nonempty) set.</p>
 <ol class="arabic simple" start="2">
 <li><p>__init__(self: pydrake.geometry.optimization.Intersection, sets: List[pydrake.geometry.optimization.ConvexSet]) -&gt; None</p></li>
 </ol>
@@ -1811,6 +1836,9 @@ IRIS algorithm.</p>
 <p>A convex set that represents the Minkowski sum of multiple sets: S =
 X₁ ⨁ X₂ ⨁ … ⨁ Xₙ = {x₁ + x₂ + … + xₙ | x₁ ∈ X₁, x₂ ∈ X₂, …, xₙ ∈
 Xₙ}</p>
+<p>Special behavior for IsEmpty: The Minkowski sum of zero sets (i.e.
+when we have <a href="#id13"><span class="problematic" id="id14">sets_</span></a>.size() == 0) is treated as the singleton {0}, which
+is nonempty. This includes the zero-dimensional case.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.MinkowskiSum.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.MinkowskiSum.__init__" title="Permalink to this definition"></a></dt>
@@ -1818,7 +1846,7 @@ Xₙ}</p>
 <ol class="arabic simple">
 <li><p>__init__(self: pydrake.geometry.optimization.MinkowskiSum) -&gt; None</p></li>
 </ol>
-<p>Constructs a default (zero-dimensional) set.</p>
+<p>Constructs a default (zero-dimensional, nonempty) set.</p>
 <ol class="arabic simple" start="2">
 <li><p>__init__(self: pydrake.geometry.optimization.MinkowskiSum, sets: List[pydrake.geometry.optimization.ConvexSet]) -&gt; None</p></li>
 </ol>
@@ -1867,6 +1895,7 @@ the sum.</p>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></code></a></p>
 <p>A convex set that contains exactly one element. Also known as a
 singleton or unit set.</p>
+<p>This set is always nonempty, even in the zero-dimensional case.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.Point.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.Point.__init__" title="Permalink to this definition"></a></dt>
@@ -1874,7 +1903,7 @@ singleton or unit set.</p>
 <ol class="arabic simple">
 <li><p>__init__(self: pydrake.geometry.optimization.Point) -&gt; None</p></li>
 </ol>
-<p>Constructs a default (zero-dimensional) set.</p>
+<p>Constructs a default (zero-dimensional, nonempty) set.</p>
 <ol class="arabic simple" start="2">
 <li><p>__init__(self: pydrake.geometry.optimization.Point, x: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</p></li>
 </ol>
@@ -1927,6 +1956,8 @@ in the world frame.</p>
 <p>Implements a spectrahedron (the feasible set of a semidefinite
 program). The ambient dimension of the set is N(N+1)/2; the number of
 variables required to describe the N-by-N semidefinite matrix.</p>
+<p>By convention, a zero-dimensional spectrahedron is considered
+nonempty.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.Spectrahedron.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.Spectrahedron.__init__" title="Permalink to this definition"></a></dt>
@@ -1934,7 +1965,7 @@ variables required to describe the N-by-N semidefinite matrix.</p>
 <ol class="arabic simple">
 <li><p>__init__(self: pydrake.geometry.optimization.Spectrahedron) -&gt; None</p></li>
 </ol>
-<p>Default constructor (which constructs the empty set).</p>
+<p>Default constructor (yields the zero-dimensional nonempty set).</p>
 <ol class="arabic simple" start="2">
 <li><p>__init__(self: pydrake.geometry.optimization.Spectrahedron, prog: pydrake.solvers.MathematicalProgram) -&gt; None</p></li>
 </ol>
@@ -1962,6 +1993,12 @@ vertices could be strictly in the interior of the set).</p>
 <p>Note: Unlike the half-space representation, this definition means the
 set is always bounded (hence the name polytope, instead of
 polyhedron).</p>
+<p>A VPolytope is empty if and only if it is composed of zero vertices,
+i.e., if <a href="#id15"><span class="problematic" id="id16">vertices_</span></a>.cols() == 0. This includes the zero-dimensional
+case. If <a href="#id17"><span class="problematic" id="id18">vertices_</span></a>.rows() == 0 but <a href="#id19"><span class="problematic" id="id20">vertices_</span></a>.cols() &gt; 0, we treat this
+as having one or more copies of 0 in the zero-dimensional vector space
+{0}. If <a href="#id21"><span class="problematic" id="id22">vertices_</span></a>.rows() and <a href="#id23"><span class="problematic" id="id24">vertices_</span></a>.cols() are zero, we treat this
+as no points in {0}, which is empty.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.VPolytope.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.VPolytope.__init__" title="Permalink to this definition"></a></dt>
@@ -1969,7 +2006,8 @@ polyhedron).</p>
 <ol class="arabic simple">
 <li><p>__init__(self: pydrake.geometry.optimization.VPolytope) -&gt; None</p></li>
 </ol>
-<p>Constructs a default (zero-dimensional) set.</p>
+<p>Constructs a set with no vertices in the zero-dimensional space, which
+is empty (by convention).</p>
 <ol class="arabic simple" start="2">
 <li><p>__init__(self: pydrake.geometry.optimization.VPolytope, vertices: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]) -&gt; None</p></li>
 </ol>

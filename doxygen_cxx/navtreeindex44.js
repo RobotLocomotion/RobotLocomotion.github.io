@@ -1,5 +1,7 @@
 var NAVTREEINDEX44 =
 {
+"decompose_8h.html#aa6c01361f464b3eae396f7d1a0e92c85":[4,0,0,1,3,4,3],
+"decompose_8h.html#acd9ab6787ea570003b69621c52bfa5cc":[4,0,0,1,3,4,8],
 "decompose_8h.html#ad528f8f92173863f5029b979b9c5f36b":[4,0,0,1,3,4,6],
 "decompose_8h.html#ae3c6a31812dc3e509644dbbc95c9778e":[4,0,0,1,3,4,2],
 "decompose_8h.html#ae8c85e424b3109ed84a5bb309238bc3c":[4,0,0,1,3,4,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX44 =
 "drake__lcm__interface_8h.html":[4,0,0,5,2],
 "drake__lcm__interface_8h.html#a6db1a743c5ddeef2341da48dbf5ab027":[4,0,0,5,2,3],
 "drake__lcm__interface_8h.html#a7f10e39fd5048940095d76f21bdf760d":[4,0,0,5,2,4],
-"drake__lcm__interface_8h.html#ac0dd1948e81c44942a67677e6cc43d07":[4,0,0,5,2,5],
-"drake__lcm__log_8h.html":[4,0,0,5,3],
-"drake__lcm__params_8h.html":[4,0,0,5,4]
+"drake__lcm__interface_8h.html#ac0dd1948e81c44942a67677e6cc43d07":[4,0,0,5,2,5]
 };

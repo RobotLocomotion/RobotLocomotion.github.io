@@ -6107,10 +6107,13 @@ linear inequality first, and then linear equality constraints.</p>
 <dt class="sig sig-object py" id="pydrake.solvers.PerspectiveQuadraticCost">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">PerspectiveQuadraticCost</span></span><a class="headerlink" href="#pydrake.solvers.PerspectiveQuadraticCost" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Cost" title="pydrake.solvers.Cost"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Cost</span></code></a></p>
-<p>If z = Ax + b, implements a cost of the form: (z_1^2 + z_2^2 + … +
-z_{n-1}^2) / z_0. Note that this cost is convex when we additionally
-constrain z_0 &gt; 0. It is treated as a generic nonlinear objective by
-most solvers.</p>
+<p>If <span class="math notranslate nohighlight">\(z = Ax + b,\)</span> implements a cost of the form:</p>
+<div class="math notranslate nohighlight">
+\[(z_1^2 + z_2^2 + ... + z_{n-1}^2) / z_0.\]</div>
+<p>Note that this cost is convex when we additionally constrain z_0 &gt; 0.
+It is treated as a generic nonlinear objective by most solvers.</p>
+<p>Costs of this form are sometimes referred to as “quadratic over
+linear”.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.PerspectiveQuadraticCost.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.PerspectiveQuadraticCost" title="pydrake.solvers.PerspectiveQuadraticCost"><span class="pre">pydrake.solvers.PerspectiveQuadraticCost</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.PerspectiveQuadraticCost.__init__" title="Permalink to this definition"></a></dt>

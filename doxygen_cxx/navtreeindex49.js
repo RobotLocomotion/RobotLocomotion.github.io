@@ -1,5 +1,7 @@
 var NAVTREEINDEX49 =
 {
+"inclined__plane__plant_8h.html#a5d67f1e55203961cdc5524c6ed15b9a6":[4,0,0,8,0,2,0,2],
+"inclined__plane__plant_8h.html#aadab8c9684c51ceaa06119b74cc6072b":[4,0,0,8,0,2,0,1],
 "inclined__plane__plant_8h.html#ad0d0dbc6b59d65c6244b73b39c81d2d5":[4,0,0,8,0,2,0,0],
 "indeterminate_8h.html":[4,0,0,11,22],
 "indeterminate_8h.html#a0f19da4730aeebddf6a1d14f51f0b7ec":[4,0,0,11,22,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX49 =
 "mesh__half__space__intersection_8h.html":[4,0,0,4,2,35],
 "mesh__intersection_8h.html":[4,0,0,4,2,36],
 "mesh__plane__intersection_8h.html":[4,0,0,4,2,37],
-"mesh__to__vtk_8h.html":[4,0,0,4,2,38],
-"mesh__traits_8h.html":[4,0,0,4,2,39],
-"mesh__traits_8h.html#a74b8d905842571b365085fdd17378772":[4,0,0,4,2,39,1]
+"mesh__to__vtk_8h.html":[4,0,0,4,2,38]
 };
