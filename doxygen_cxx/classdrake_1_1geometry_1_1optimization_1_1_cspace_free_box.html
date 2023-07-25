@@ -202,6 +202,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:adfbe9a0f2e79d07d3424cdab71184985"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8869dc04a027222c1080fbf9b38cdb93"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box.html#a8869dc04a027222c1080fbf9b38cdb93">CspaceFreeBox</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *plant, const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#a73ee6610b18791fddf6176c0fb38f2d7">scene_graph</a>, <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a6febb8c28b6d49e494dbe16b5ed5b089">SeparatingPlaneOrder</a> <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#a0f8dcce2c5fdfcc41effdec6a3280aa0">plane_order</a>, const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html">Options</a> &amp;options=<a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html">Options</a>{})</td></tr>
 <tr class="separator:a8869dc04a027222c1080fbf9b38cdb93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82053964fb9e23b4c3e73214bf701d2a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box.html#a82053964fb9e23b4c3e73214bf701d2a">FindSeparationCertificateGivenBox</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;q_box_lower, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;q_box_upper, const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#a409fd33166e0e4d6bf8967bac91676df">IgnoredCollisionPairs</a> &amp;ignored_collision_pairs, const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html">FindSeparationCertificateOptions</a> &amp;options, std::unordered_map&lt; <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">geometry::GeometryId</a> &gt;, <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result.html">SeparationCertificateResult</a> &gt; *certificates) const</td></tr>
+<tr class="memdesc:a82053964fb9e23b4c3e73214bf701d2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the certificates that the C-space box {q | q_box_lower &lt;= q &lt;= q_box_upper} is collision free.  <a href="#a82053964fb9e23b4c3e73214bf701d2a">More...</a><br /></td></tr>
+<tr class="separator:a82053964fb9e23b4c3e73214bf701d2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a1c23b4c5693c34544927876b910c7e42"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box.html#a1c23b4c5693c34544927876b910c7e42">CspaceFreeBox</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box.html">CspaceFreeBox</a> &amp;)=delete</td></tr>
 <tr class="separator:a1c23b4c5693c34544927876b910c7e42"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -278,6 +281,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a5c5286e186ccdca6b57fd0e14c16c0e1 inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#a5c5286e186ccdca6b57fd0e14c16c0e1">GetSForPlane</a> (const <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt; <a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">multibody::BodyIndex</a> &gt; &amp;body_pair, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#af37d7074a4efcc3e865a92b801c01249">SForPlane</a> s_for_plane_enum) const</td></tr>
 <tr class="memdesc:a5c5286e186ccdca6b57fd0e14c16c0e1 inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a vector of s variable used in a(s), b(s), which parameterize the separating plane {x | a(s)ᵀx+b(s) = 0}.  <a href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#a5c5286e186ccdca6b57fd0e14c16c0e1">More...</a><br /></td></tr>
 <tr class="separator:a5c5286e186ccdca6b57fd0e14c16c0e1 inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fb87f172d89d8d5ad9cfa4977859401 inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#a4fb87f172d89d8d5ad9cfa4977859401">SolveCertificationForEachPlaneInParallel</a> (const std::vector&lt; <a class="el" href="classint.html">int</a> &gt; &amp;active_plane_indices, const std::function&lt; bool(<a class="el" href="classint.html">int</a>)&gt; &amp;solve_plane_sos, <a class="el" href="classint.html">int</a> num_threads, bool verbose, bool terminate_at_failure) const</td></tr>
+<tr class="memdesc:a4fb87f172d89d8d5ad9cfa4977859401 inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">For each pair of geometries, solve the certification problem to find their separation plane in parallel.  <a href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#a4fb87f172d89d8d5ad9cfa4977859401">More...</a><br /></td></tr>
+<tr class="separator:a4fb87f172d89d8d5ad9cfa4977859401 inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a409fd33166e0e4d6bf8967bac91676df"></a>
@@ -422,6 +428,69 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a82053964fb9e23b4c3e73214bf701d2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82053964fb9e23b4c3e73214bf701d2a">&#9670;&nbsp;</a></span>FindSeparationCertificateGivenBox()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FindSeparationCertificateGivenBox </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>q_box_lower</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>q_box_upper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#a409fd33166e0e4d6bf8967bac91676df">IgnoredCollisionPairs</a> &amp;&#160;</td>
+          <td class="paramname"><em>ignored_collision_pairs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html">FindSeparationCertificateOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::unordered_map&lt; <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">geometry::GeometryId</a> &gt;, <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result.html">SeparationCertificateResult</a> &gt; *&#160;</td>
+          <td class="paramname"><em>certificates</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Finds the certificates that the C-space box {q | q_box_lower &lt;= q &lt;= q_box_upper} is collision free. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">q_box_lower</td><td>The lower bound of the C-space box. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">q_box_upper</td><td>The upper bound of the C-space box. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">ignored_collision_pairs</td><td>We ignore the pair of geometries in <code>ignored_collision_pairs</code>. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">certificates</td><td>Contains the certificate we successfully found for each pair of geometries. Notice that depending on <code>options</code>, the program could search for the certificate for each geometry pair in parallel, and will terminate the search once it fails to find the certificate for any pair. At termination, the pair of geometries whose optimization hasn't been finished will not show up in <code>certificates</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">success</td><td>If true, then we have certified that the C-space box {q | q_box_lower&lt;=q&lt;=q_box_upper} is collision free. Otherwise success=false. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a4c50d334525f00cbf04493c120f987c4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4c50d334525f00cbf04493c120f987c4">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
