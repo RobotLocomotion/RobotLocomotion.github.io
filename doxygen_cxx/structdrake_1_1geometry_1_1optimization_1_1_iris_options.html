@@ -215,6 +215,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ad9059bc845096b2f05414a66c836b4ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ad9059bc845096b2f05414a66c836b4ee">random_seed</a> {1234}</td></tr>
 <tr class="memdesc:ad9059bc845096b2f05414a66c836b4ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">The only randomization in IRIS is the random sampling done to find counter-examples for the additional constraints using in IrisInConfigurationSpace.  <a href="#ad9059bc845096b2f05414a66c836b4ee">More...</a><br /></td></tr>
 <tr class="separator:ad9059bc845096b2f05414a66c836b4ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5394db50dd4c2741c4d3f7dacf50f51d"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">Meshcat</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a5394db50dd4c2741c4d3f7dacf50f51d">meshcat</a> {}</td></tr>
+<tr class="memdesc:a5394db50dd4c2741c4d3f7dacf50f51d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passing a meshcat instance may enable debugging visualizations; this currently only happens in IrisInConfigurationSpace and when the configuration space is &lt;= 3 dimensional.  <a href="#a5394db50dd4c2741c4d3f7dacf50f51d">More...</a><br /></td></tr>
+<tr class="separator:a5394db50dd4c2741c4d3f7dacf50f51d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="acb0bda48ae293b2b8a06f159001280ac"></a>
@@ -311,6 +314,22 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Maximum number of iterations. </p>
+
+</div>
+</div>
+<a id="a5394db50dd4c2741c4d3f7dacf50f51d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5394db50dd4c2741c4d3f7dacf50f51d">&#9670;&nbsp;</a></span>meshcat</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">Meshcat</a>&gt; meshcat {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Passing a meshcat instance may enable debugging visualizations; this currently only happens in IrisInConfigurationSpace and when the configuration space is &lt;= 3 dimensional. </p>
 
 </div>
 </div>

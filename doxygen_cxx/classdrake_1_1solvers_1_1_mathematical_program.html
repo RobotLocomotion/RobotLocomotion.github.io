@@ -3890,9 +3890,13 @@ log(Z(i, i)) &gt;= t(i)
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>(cost, t, Z) cost is -∑ᵢt(i), we also return the newly created slack variables t and the lower triangular matrix Z. Note that Z is not a matrix of <a class="el" href="classdrake_1_1symbolic_1_1_variable.html" title="Represents a symbolic variable.">symbolic::Variable</a> but <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a>, because the upper-diagonal entries of Z are not variable, but expression 0. </dd></dl>
 <dl class="section pre"><dt>Precondition</dt><dd>X is a symmetric matrix. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>We implicitly require that <code>X</code> being positive semidefinite (psd) (as X is the diagonal entry of the big psd matrix above). If your <code>X</code> is not necessarily psd, then don't call this function. </dd>
+<dl class="section note"><dt>Note</dt><dd>The constraint log(Z(i, i)) &gt;= t(i) is imposed as an exponential cone constraint. Please make sure your have a solver that supports exponential cone constraint (currently SCS does). </dd>
 <dd>
-The constraint log(Z(i, i)) &gt;= t(i) is imposed as an exponential cone constraint. Please make sure your have a solver that supports exponential cone constraint (currently SCS does). Refer to <a href="https://docs.mosek.com/modeling-cookbook/sdo.html#log-determinant">https://docs.mosek.com/modeling-cookbook/sdo.html#log-determinant</a> for more details. </dd></dl>
+The constraint that <pre class="fragment">⌈X         Z⌉ is positive semidifinite.
+⌊Zᵀ  diag(Z)⌋
+</pre></dd></dl>
+<p>already implies that X is positive semidefinite. The user DO NOT need to separately impose the constraint that X being psd.</p>
+<p>Refer to <a href="https://docs.mosek.com/modeling-cookbook/sdo.html#log-determinant">https://docs.mosek.com/modeling-cookbook/sdo.html#log-determinant</a> for more details. </p>
 
 </div>
 </div>

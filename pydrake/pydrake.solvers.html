@@ -3469,18 +3469,20 @@ expression 0.</p>
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>We implicitly require that <code class="docutils literal notranslate"><span class="pre">X</span></code> being positive semidefinite (psd)
-(as X is the diagonal entry of the big psd matrix above). If your
-<code class="docutils literal notranslate"><span class="pre">X</span></code> is not necessarily psd, then don’t call this function.</p>
+<p>The constraint log(Z(i, i)) &gt;= t(i) is imposed as an exponential
+cone constraint. Please make sure your have a solver that supports
+exponential cone constraint (currently SCS does).</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The constraint log(Z(i, i)) &gt;= t(i) is imposed as an exponential
-cone constraint. Please make sure your have a solver that supports
-exponential cone constraint (currently SCS does). Refer to
-<a class="reference external" href="https://docs.mosek.com/modeling-cookbook/sdo.html#log-determinant">https://docs.mosek.com/modeling-cookbook/sdo.html#log-determinant</a>
-for more details.</p>
+<p>The constraint that</p>
 </div>
+<p>⌈X Z⌉ is positive semidifinite. ⌊Zᵀ diag(Z)⌋</p>
+<p>already implies that X is positive semidefinite. The user DO NOT need
+to separately impose the constraint that X being psd.</p>
+<p>Refer to
+<a class="reference external" href="https://docs.mosek.com/modeling-cookbook/sdo.html#log-determinant">https://docs.mosek.com/modeling-cookbook/sdo.html#log-determinant</a> for
+more details.</p>
 </dd></dl>
 
 <dl class="py method">
