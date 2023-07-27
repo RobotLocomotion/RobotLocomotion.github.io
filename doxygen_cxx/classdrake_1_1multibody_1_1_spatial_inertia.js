@@ -40,6 +40,7 @@ var classdrake_1_1multibody_1_1_spatial_inertia =
     [ "SolidCylinderWithDensity", "classdrake_1_1multibody_1_1_spatial_inertia.html#a0bb726864b19730f6f1c822670e144b1", null ],
     [ "SolidCylinderWithDensityAboutEnd", "classdrake_1_1multibody_1_1_spatial_inertia.html#af67b3136ef4e48d788b0419b3e69c56d", null ],
     [ "SolidCylinderWithMass", "classdrake_1_1multibody_1_1_spatial_inertia.html#a215d901a05f95038a906a1383cedeae2", null ],
+    [ "SolidCylinderWithMassAboutEnd", "classdrake_1_1multibody_1_1_spatial_inertia.html#acb702323ac7052994423f00550f2aff3", null ],
     [ "SolidEllipsoidWithDensity", "classdrake_1_1multibody_1_1_spatial_inertia.html#aeb07d17fd701017f4d67815c17fc80a2", null ],
     [ "SolidEllipsoidWithMass", "classdrake_1_1multibody_1_1_spatial_inertia.html#a9ba5d8b235266f2b5dd38650df184917", null ],
     [ "SolidSphereWithDensity", "classdrake_1_1multibody_1_1_spatial_inertia.html#a1354f4723023135536629d866ef5de09", null ],

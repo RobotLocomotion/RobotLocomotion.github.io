@@ -1,5 +1,7 @@
 var NAVTREEINDEX21 =
 {
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a60218cf6a183ddb4eb8b6e1f966113a3":[1,4,2,1,4,28],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a63b08c13c0f9c0398a7a37d6770110bb":[1,4,2,1,4,32],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a68d2e991f48fbbc0b1d64613033930fc":[1,4,2,1,4,18],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a737a04575b64f5fbe9e92c2af450a563":[1,4,2,1,4,5],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a7a85c23236d85e9f314e3c5287e54271":[1,4,2,1,4,47],
@@ -247,7 +249,5 @@ var NAVTREEINDEX21 =
 "classdrake_1_1solvers_1_1_binding.html":[3,0,0,14,3],
 "classdrake_1_1solvers_1_1_binding.html#a029d0047d449cc59d92f3951167aba3a":[3,0,0,14,3,3],
 "classdrake_1_1solvers_1_1_binding.html#a16a29060a22052fd99eeea242a14627a":[3,0,0,14,3,8],
-"classdrake_1_1solvers_1_1_binding.html#a236729b642e241e5c611e09dba8951d2":[3,0,0,14,3,11],
-"classdrake_1_1solvers_1_1_binding.html#a38b81cff4aa19f7c4f19a55d095d2213":[3,0,0,14,3,10],
-"classdrake_1_1solvers_1_1_binding.html#a437e49f5ef82c70c9085c8f0c741005a":[3,0,0,14,3,0]
+"classdrake_1_1solvers_1_1_binding.html#a236729b642e241e5c611e09dba8951d2":[3,0,0,14,3,11]
 };

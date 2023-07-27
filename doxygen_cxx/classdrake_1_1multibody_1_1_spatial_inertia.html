@@ -336,8 +336,11 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memdesc:a215d901a05f95038a906a1383cedeae2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a spatial inertia for a uniform density solid cylinder B about its geometric center Bo (which is coincident with B's center of mass Bcm).  <a href="#a215d901a05f95038a906a1383cedeae2">More...</a><br /></td></tr>
 <tr class="separator:a215d901a05f95038a906a1383cedeae2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af67b3136ef4e48d788b0419b3e69c56d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#af67b3136ef4e48d788b0419b3e69c56d">SolidCylinderWithDensityAboutEnd</a> (const T &amp;density, const T &amp;radius, const T &amp;length, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;unit_vector)</td></tr>
-<tr class="memdesc:af67b3136ef4e48d788b0419b3e69c56d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a spatial inertia for a uniform-density solid cylinder B about an end-point Bp (Bp is at the center of one of the cylinder's circular ends).  <a href="#af67b3136ef4e48d788b0419b3e69c56d">More...</a><br /></td></tr>
+<tr class="memdesc:af67b3136ef4e48d788b0419b3e69c56d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a spatial inertia for a uniform-density solid cylinder B about an end-point Bp of the cylinder's axis (see below for more about Bp).  <a href="#af67b3136ef4e48d788b0419b3e69c56d">More...</a><br /></td></tr>
 <tr class="separator:af67b3136ef4e48d788b0419b3e69c56d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb702323ac7052994423f00550f2aff3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#acb702323ac7052994423f00550f2aff3">SolidCylinderWithMassAboutEnd</a> (const T &amp;mass, const T &amp;radius, const T &amp;length, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;unit_vector)</td></tr>
+<tr class="memdesc:acb702323ac7052994423f00550f2aff3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a spatial inertia for a uniform-density solid cylinder B about an end-point Bp of the cylinder's axis (see below for more about Bp).  <a href="#acb702323ac7052994423f00550f2aff3">More...</a><br /></td></tr>
+<tr class="separator:acb702323ac7052994423f00550f2aff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5233380acba42c39c9b741b85660beca"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a5233380acba42c39c9b741b85660beca">ThinRodWithMass</a> (const T &amp;mass, const T &amp;length, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;unit_vector)</td></tr>
 <tr class="memdesc:a5233380acba42c39c9b741b85660beca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a spatial inertia for a uniform-density thin rod B about its center of mass Bcm.  <a href="#a5233380acba42c39c9b741b85660beca">More...</a><br /></td></tr>
 <tr class="separator:a5233380acba42c39c9b741b85660beca"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1772,7 +1775,7 @@ Related Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#af67b3136ef4e48d788b0419b3e69c56d" title="Creates a spatial inertia for a uniform-density solid cylinder B about an end-point Bp (Bp is at the ...">SolidCylinderWithDensityAboutEnd()</a> to calculate M_BBp_B, B's spatial inertia about Bp (at the center of one of the cylinder's circular ends). </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#af67b3136ef4e48d788b0419b3e69c56d" title="Creates a spatial inertia for a uniform-density solid cylinder B about an end-point Bp of the cylinde...">SolidCylinderWithDensityAboutEnd()</a> to calculate M_BBp_B, B's spatial inertia about Bp (at the center of one of the cylinder's circular ends). </dd></dl>
 
 </div>
 </div>
@@ -1822,13 +1825,13 @@ Related Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Creates a spatial inertia for a uniform-density solid cylinder B about an end-point Bp (Bp is at the center of one of the cylinder's circular ends). </p>
+<p>Creates a spatial inertia for a uniform-density solid cylinder B about an end-point Bp of the cylinder's axis (see below for more about Bp). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">density</td><td>mass per volume (kg/m³). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">radius</td><td>radius of cylinder (meters). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>length of cylinder in unit_vector direction (meters). </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">unit_vector</td><td>unit vector defining the axial direction of the cylinder, expressed in B. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">unit_vector</td><td>unit vector parallel to the axis of the cylinder and directed from Bp to Bcm (B's center of mass), expressed in B. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1838,7 +1841,7 @@ Related Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>The position from Bp to Bcm is length / 2 * unit_vector. </dd>
+<dl class="section note"><dt>Note</dt><dd>The position from Bp to Bcm is p_BpBcm = length / 2 * unit_vector. </dd>
 <dd>
 B's rotational inertia about Bp is axially symmetric, meaning B has an equal moment of inertia about any line that both passes through Bp and is perpendicular to unit_vector. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
@@ -1920,6 +1923,82 @@ B's rotational inertia about Bp is axially symmetric, meaning B has an equal mom
   </table>
   </dd>
 </dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#acb702323ac7052994423f00550f2aff3" title="Creates a spatial inertia for a uniform-density solid cylinder B about an end-point Bp of the cylinde...">SolidCylinderWithMassAboutEnd()</a> to calculate M_BBp_B, B's spatial inertia about Bp (at the center of one of the cylinder's circular ends). </dd></dl>
+
+</div>
+</div>
+<a id="acb702323ac7052994423f00550f2aff3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb702323ac7052994423f00550f2aff3">&#9670;&nbsp;</a></span>SolidCylinderWithMassAboutEnd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt;T&gt; SolidCylinderWithMassAboutEnd </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>mass</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>length</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>unit_vector</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a spatial inertia for a uniform-density solid cylinder B about an end-point Bp of the cylinder's axis (see below for more about Bp). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mass</td><td>mass of the solid cylinder (kg). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">radius</td><td>radius of cylinder (meters). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>length of cylinder in unit_vector direction (meters). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">unit_vector</td><td>unit vector parallel to the axis of the cylinder and directed from Bp to Bcm (B's center of mass), expressed in B. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">M_BBp_B</td><td>B's spatial inertia about Bp, expressed in B. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>The position from Bp to Bcm is p_BpBcm = length / 2 * unit_vector. </dd>
+<dd>
+B's rotational inertia about Bp is axially symmetric, meaning B has an equal moment of inertia about any line that both passes through Bp and is perpendicular to unit_vector. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if density, radius, or length is not positive and finite or if ‖unit_vector‖ is not within 1.0E-14 of 1.0. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a215d901a05f95038a906a1383cedeae2" title="Creates a spatial inertia for a uniform density solid cylinder B about its geometric center Bo (which...">SolidCylinderWithMass()</a> to calculate M_BBcm_B, B's spatial inertia about Bcm (B's center of mass). </dd></dl>
 
 </div>
 </div>

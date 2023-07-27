@@ -1,5 +1,7 @@
 var NAVTREEINDEX43 =
 {
+"classdrake_1_1trajectories_1_1_stacked_trajectory.html#ae2167a7e4dbf33198c4a3cfb4d8ff370":[3,0,0,18,9,1],
+"classdrake_1_1trajectories_1_1_stacked_trajectory.html#aef16c3e234e70a22d89678041a6bda57":[3,0,0,18,9,5],
 "classdrake_1_1trajectories_1_1_trajectory.html":[3,0,0,18,10],
 "classdrake_1_1trajectories_1_1_trajectory.html#a0a8606a2bfd8a6ecade8bf4f95fb40c5":[3,0,0,18,10,16],
 "classdrake_1_1trajectories_1_1_trajectory.html#a0a945567d9505ef681194f053ef5a1c2":[3,0,0,18,10,12],
@@ -247,7 +249,5 @@ var NAVTREEINDEX43 =
 "decision__variable_8h.html#acf84184cb10b49233b007295d1880e17":[4,0,0,11,16,1],
 "decompose_8h.html":[4,0,0,1,3,4],
 "decompose_8h.html#a0c152941a4e06624bac5926fac2d4e32":[4,0,0,1,3,4,1],
-"decompose_8h.html#a13c0db41d89c9257d2fbfc4928fa5bd7":[4,0,0,1,3,4,9],
-"decompose_8h.html#a168045cc4df5fee36f317095c2a9f891":[4,0,0,1,3,4,5],
-"decompose_8h.html#a47d95a6b1bc2f740b30a4735cc6dcd3c":[4,0,0,1,3,4,0]
+"decompose_8h.html#a13c0db41d89c9257d2fbfc4928fa5bd7":[4,0,0,1,3,4,9]
 };

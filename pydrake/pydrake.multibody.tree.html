@@ -16566,8 +16566,7 @@ circular ends).</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia.SolidCylinderWithDensityAboutEnd">
 <em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCylinderWithDensityAboutEnd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">density</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia" title="pydrake.multibody.tree.SpatialInertia"><span class="pre">pydrake.multibody.tree.SpatialInertia</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia.SolidCylinderWithDensityAboutEnd" title="Permalink to this definition"></a></dt>
 <dd><p>Creates a spatial inertia for a uniform-density solid cylinder B about
-an end-point Bp (Bp is at the center of one of the cylinder’s circular
-ends).</p>
+an end-point Bp of the cylinder’s axis (see below for more about Bp).</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">density</span></code>:</dt><dd><p>mass per volume (kg/m³).</p>
 </dd>
@@ -16575,15 +16574,15 @@ ends).</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">length</span></code>:</dt><dd><p>length of cylinder in unit_vector direction (meters).</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code>:</dt><dd><p>unit vector defining the axial direction of the cylinder,
-expressed in B.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code>:</dt><dd><p>unit vector parallel to the axis of the cylinder and directed from
+Bp to Bcm (B’s center of mass), expressed in B.</p>
 </dd>
 <dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBp_B</span></code>:</dt><dd><p>B’s spatial inertia about Bp, expressed in B.</p>
 </dd>
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The position from Bp to Bcm is length / 2 * unit_vector.</p>
+<p>The position from Bp to Bcm is p_BpBcm = length / 2 * unit_vector.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -16639,6 +16638,55 @@ through Bo and is perpendicular to unit_vector.</p>
 </ul>
 </dd>
 </dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>SolidCylinderWithMassAboutEnd() to calculate M_BBp_B, B’s spatial
+inertia about Bp (at the center of one of the cylinder’s circular
+ends).</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia.SolidCylinderWithMassAboutEnd">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCylinderWithMassAboutEnd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia" title="pydrake.multibody.tree.SpatialInertia"><span class="pre">pydrake.multibody.tree.SpatialInertia</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia.SolidCylinderWithMassAboutEnd" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform-density solid cylinder B about
+an end-point Bp of the cylinder’s axis (see below for more about Bp).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mass</span></code>:</dt><dd><p>mass of the solid cylinder (kg).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">radius</span></code>:</dt><dd><p>radius of cylinder (meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">length</span></code>:</dt><dd><p>length of cylinder in unit_vector direction (meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code>:</dt><dd><p>unit vector parallel to the axis of the cylinder and directed from
+Bp to Bcm (B’s center of mass), expressed in B.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBp_B</span></code>:</dt><dd><p>B’s spatial inertia about Bp, expressed in B.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The position from Bp to Bcm is p_BpBcm = length / 2 * unit_vector.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>B’s rotational inertia about Bp is axially symmetric, meaning B
+has an equal moment of inertia about any line that both passes
+through Bp and is perpendicular to unit_vector.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if density</strong><strong>, </strong><strong>radius</strong><strong>, or </strong><strong>length is not positive and</strong> – </p></li>
+<li><p><strong>finite</strong><strong> or </strong><strong>if ‖unit_vector‖ is not within 1.0E-14 of 1.0.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>SolidCylinderWithMass() to calculate M_BBcm_B, B’s spatial inertia
+about Bcm (B’s center of mass).</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -17398,8 +17446,7 @@ circular ends).</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.SolidCylinderWithDensityAboutEnd">
 <span id="pydrake.multibody.tree.SpatialInertia_[AutoDiffXd].SolidCylinderWithDensityAboutEnd"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCylinderWithDensityAboutEnd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">density</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.SolidCylinderWithDensityAboutEnd" title="Permalink to this definition"></a></dt>
 <dd><p>Creates a spatial inertia for a uniform-density solid cylinder B about
-an end-point Bp (Bp is at the center of one of the cylinder’s circular
-ends).</p>
+an end-point Bp of the cylinder’s axis (see below for more about Bp).</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">density</span></code>:</dt><dd><p>mass per volume (kg/m³).</p>
 </dd>
@@ -17407,15 +17454,15 @@ ends).</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">length</span></code>:</dt><dd><p>length of cylinder in unit_vector direction (meters).</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code>:</dt><dd><p>unit vector defining the axial direction of the cylinder,
-expressed in B.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code>:</dt><dd><p>unit vector parallel to the axis of the cylinder and directed from
+Bp to Bcm (B’s center of mass), expressed in B.</p>
 </dd>
 <dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBp_B</span></code>:</dt><dd><p>B’s spatial inertia about Bp, expressed in B.</p>
 </dd>
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The position from Bp to Bcm is length / 2 * unit_vector.</p>
+<p>The position from Bp to Bcm is p_BpBcm = length / 2 * unit_vector.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -17471,6 +17518,55 @@ through Bo and is perpendicular to unit_vector.</p>
 </ul>
 </dd>
 </dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>SolidCylinderWithMassAboutEnd() to calculate M_BBp_B, B’s spatial
+inertia about Bp (at the center of one of the cylinder’s circular
+ends).</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.SolidCylinderWithMassAboutEnd">
+<span id="pydrake.multibody.tree.SpatialInertia_[AutoDiffXd].SolidCylinderWithMassAboutEnd"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCylinderWithMassAboutEnd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.SolidCylinderWithMassAboutEnd" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform-density solid cylinder B about
+an end-point Bp of the cylinder’s axis (see below for more about Bp).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mass</span></code>:</dt><dd><p>mass of the solid cylinder (kg).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">radius</span></code>:</dt><dd><p>radius of cylinder (meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">length</span></code>:</dt><dd><p>length of cylinder in unit_vector direction (meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code>:</dt><dd><p>unit vector parallel to the axis of the cylinder and directed from
+Bp to Bcm (B’s center of mass), expressed in B.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBp_B</span></code>:</dt><dd><p>B’s spatial inertia about Bp, expressed in B.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The position from Bp to Bcm is p_BpBcm = length / 2 * unit_vector.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>B’s rotational inertia about Bp is axially symmetric, meaning B
+has an equal moment of inertia about any line that both passes
+through Bp and is perpendicular to unit_vector.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if density</strong><strong>, </strong><strong>radius</strong><strong>, or </strong><strong>length is not positive and</strong> – </p></li>
+<li><p><strong>finite</strong><strong> or </strong><strong>if ‖unit_vector‖ is not within 1.0E-14 of 1.0.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>SolidCylinderWithMass() to calculate M_BBcm_B, B’s spatial inertia
+about Bcm (B’s center of mass).</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -18224,8 +18320,7 @@ circular ends).</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-Expression-.SolidCylinderWithDensityAboutEnd">
 <span id="pydrake.multibody.tree.SpatialInertia_[Expression].SolidCylinderWithDensityAboutEnd"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCylinderWithDensityAboutEnd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">density</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-Expression-.SolidCylinderWithDensityAboutEnd" title="Permalink to this definition"></a></dt>
 <dd><p>Creates a spatial inertia for a uniform-density solid cylinder B about
-an end-point Bp (Bp is at the center of one of the cylinder’s circular
-ends).</p>
+an end-point Bp of the cylinder’s axis (see below for more about Bp).</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">density</span></code>:</dt><dd><p>mass per volume (kg/m³).</p>
 </dd>
@@ -18233,15 +18328,15 @@ ends).</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">length</span></code>:</dt><dd><p>length of cylinder in unit_vector direction (meters).</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code>:</dt><dd><p>unit vector defining the axial direction of the cylinder,
-expressed in B.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code>:</dt><dd><p>unit vector parallel to the axis of the cylinder and directed from
+Bp to Bcm (B’s center of mass), expressed in B.</p>
 </dd>
 <dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBp_B</span></code>:</dt><dd><p>B’s spatial inertia about Bp, expressed in B.</p>
 </dd>
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The position from Bp to Bcm is length / 2 * unit_vector.</p>
+<p>The position from Bp to Bcm is p_BpBcm = length / 2 * unit_vector.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -18297,6 +18392,55 @@ through Bo and is perpendicular to unit_vector.</p>
 </ul>
 </dd>
 </dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>SolidCylinderWithMassAboutEnd() to calculate M_BBp_B, B’s spatial
+inertia about Bp (at the center of one of the cylinder’s circular
+ends).</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-Expression-.SolidCylinderWithMassAboutEnd">
+<span id="pydrake.multibody.tree.SpatialInertia_[Expression].SolidCylinderWithMassAboutEnd"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCylinderWithMassAboutEnd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-Expression-.SolidCylinderWithMassAboutEnd" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a spatial inertia for a uniform-density solid cylinder B about
+an end-point Bp of the cylinder’s axis (see below for more about Bp).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mass</span></code>:</dt><dd><p>mass of the solid cylinder (kg).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">radius</span></code>:</dt><dd><p>radius of cylinder (meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">length</span></code>:</dt><dd><p>length of cylinder in unit_vector direction (meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code>:</dt><dd><p>unit vector parallel to the axis of the cylinder and directed from
+Bp to Bcm (B’s center of mass), expressed in B.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBp_B</span></code>:</dt><dd><p>B’s spatial inertia about Bp, expressed in B.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The position from Bp to Bcm is p_BpBcm = length / 2 * unit_vector.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>B’s rotational inertia about Bp is axially symmetric, meaning B
+has an equal moment of inertia about any line that both passes
+through Bp and is perpendicular to unit_vector.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if density</strong><strong>, </strong><strong>radius</strong><strong>, or </strong><strong>length is not positive and</strong> – </p></li>
+<li><p><strong>finite</strong><strong> or </strong><strong>if ‖unit_vector‖ is not within 1.0E-14 of 1.0.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>SolidCylinderWithMass() to calculate M_BBcm_B, B’s spatial inertia
+about Bcm (B’s center of mass).</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -19012,8 +19156,8 @@ whose axis of revolution is along the z-axis.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if r</strong><strong> or </strong><strong>L is negative</strong><strong> or </strong><strong>if ‖unit_vector‖ ≉ 1</strong><strong>, </strong><strong>(</strong><strong>the</strong> – </p></li>
-<li><p><strong>magnitude of unit_vector is not within 1E-14 of 1.0</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>RuntimeError if r</strong><strong> or </strong><strong>L is negative</strong><strong> or </strong><strong>if ‖unit_vector‖ is not</strong> – </p></li>
+<li><p><strong>within 1.0E-14 of 1.0.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -19069,8 +19213,38 @@ input axis of rotation <code class="docutils literal notranslate"><span class="p
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.UnitInertia.SolidCylinderAboutEnd">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCylinderAboutEnd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">L</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.UnitInertia" title="pydrake.multibody.tree.UnitInertia"><span class="pre">pydrake.multibody.tree.UnitInertia</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.UnitInertia.SolidCylinderAboutEnd" title="Permalink to this definition"></a></dt>
-<dd><p>Computes the unit inertia for a unit-mass cylinder of uniform density
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCylinderAboutEnd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.UnitInertia.SolidCylinderAboutEnd" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>SolidCylinderAboutEnd(radius: float, length: float, unit_vector: numpy.ndarray[numpy.float64[3, 1]]) -&gt; pydrake.multibody.tree.UnitInertia</p></li>
+</ol>
+<p>Creates a unit inertia for a uniform-density solid cylinder B about an
+end-point Bp of the cylinder’s axis (see below for more about Bp).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">radius</span></code>:</dt><dd><p>radius of cylinder (meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">length</span></code>:</dt><dd><p>length of cylinder in unit_vector direction (meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code>:</dt><dd><p>unit vector parallel to the axis of the cylinder and directed from
+Bp to Bcm (B’s center of mass), expressed in B.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The position from Bp to Bcm is p_BpBcm = length / 2 * unit_vector.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if radius</strong><strong> or </strong><strong>length is negative</strong><strong> or </strong><strong>if ‖unit_vector‖</strong> – </p></li>
+<li><p><strong>is not within 1.0E-14 of 1.0.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>SolidCylinderAboutEnd(r: float, L: float) -&gt; pydrake.multibody.tree.UnitInertia</p></li>
+</ol>
+<p>Computes the unit inertia for a unit-mass cylinder of uniform density
 oriented along the z-axis computed about a point at the center of its
 base.</p>
 <dl class="simple">
@@ -19081,7 +19255,13 @@ base.</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if r</strong><strong> or </strong><strong>L is negative.</strong> – </p>
+<dd class="field-odd"><p><strong>RuntimeError if r</strong><strong> or </strong><strong>L is negative.</strong><strong> (</strong><strong>Deprecated.</strong><strong>)</strong> – </p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>SolidCylinderAboutEnd now requires the cylinder’s axis direction
+to be explicitly given. This will be removed from Drake on or
+after 2023-11-01.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -19442,8 +19622,8 @@ whose axis of revolution is along the z-axis.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if r</strong><strong> or </strong><strong>L is negative</strong><strong> or </strong><strong>if ‖unit_vector‖ ≉ 1</strong><strong>, </strong><strong>(</strong><strong>the</strong> – </p></li>
-<li><p><strong>magnitude of unit_vector is not within 1E-14 of 1.0</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>RuntimeError if r</strong><strong> or </strong><strong>L is negative</strong><strong> or </strong><strong>if ‖unit_vector‖ is not</strong> – </p></li>
+<li><p><strong>within 1.0E-14 of 1.0.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -19503,8 +19683,38 @@ input axis of rotation <code class="docutils literal notranslate"><span class="p
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.UnitInertia_-AutoDiffXd-.SolidCylinderAboutEnd">
-<span id="pydrake.multibody.tree.UnitInertia_[AutoDiffXd].SolidCylinderAboutEnd"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCylinderAboutEnd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">L</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.UnitInertia_" title="pydrake.multibody.tree.UnitInertia_"><span class="pre">pydrake.multibody.tree.UnitInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.UnitInertia_-AutoDiffXd-.SolidCylinderAboutEnd" title="Permalink to this definition"></a></dt>
-<dd><p>Computes the unit inertia for a unit-mass cylinder of uniform density
+<span id="pydrake.multibody.tree.UnitInertia_[AutoDiffXd].SolidCylinderAboutEnd"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCylinderAboutEnd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.UnitInertia_-AutoDiffXd-.SolidCylinderAboutEnd" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>SolidCylinderAboutEnd(radius: pydrake.autodiffutils.AutoDiffXd, length: pydrake.autodiffutils.AutoDiffXd, unit_vector: numpy.ndarray[object[3, 1]]) -&gt; pydrake.multibody.tree.UnitInertia_[AutoDiffXd]</p></li>
+</ol>
+<p>Creates a unit inertia for a uniform-density solid cylinder B about an
+end-point Bp of the cylinder’s axis (see below for more about Bp).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">radius</span></code>:</dt><dd><p>radius of cylinder (meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">length</span></code>:</dt><dd><p>length of cylinder in unit_vector direction (meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code>:</dt><dd><p>unit vector parallel to the axis of the cylinder and directed from
+Bp to Bcm (B’s center of mass), expressed in B.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The position from Bp to Bcm is p_BpBcm = length / 2 * unit_vector.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if radius</strong><strong> or </strong><strong>length is negative</strong><strong> or </strong><strong>if ‖unit_vector‖</strong> – </p></li>
+<li><p><strong>is not within 1.0E-14 of 1.0.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>SolidCylinderAboutEnd(r: pydrake.autodiffutils.AutoDiffXd, L: pydrake.autodiffutils.AutoDiffXd) -&gt; pydrake.multibody.tree.UnitInertia_[AutoDiffXd]</p></li>
+</ol>
+<p>Computes the unit inertia for a unit-mass cylinder of uniform density
 oriented along the z-axis computed about a point at the center of its
 base.</p>
 <dl class="simple">
@@ -19515,7 +19725,13 @@ base.</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if r</strong><strong> or </strong><strong>L is negative.</strong> – </p>
+<dd class="field-odd"><p><strong>RuntimeError if r</strong><strong> or </strong><strong>L is negative.</strong><strong> (</strong><strong>Deprecated.</strong><strong>)</strong> – </p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>SolidCylinderAboutEnd now requires the cylinder’s axis direction
+to be explicitly given. This will be removed from Drake on or
+after 2023-11-01.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -19866,8 +20082,8 @@ whose axis of revolution is along the z-axis.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if r</strong><strong> or </strong><strong>L is negative</strong><strong> or </strong><strong>if ‖unit_vector‖ ≉ 1</strong><strong>, </strong><strong>(</strong><strong>the</strong> – </p></li>
-<li><p><strong>magnitude of unit_vector is not within 1E-14 of 1.0</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>RuntimeError if r</strong><strong> or </strong><strong>L is negative</strong><strong> or </strong><strong>if ‖unit_vector‖ is not</strong> – </p></li>
+<li><p><strong>within 1.0E-14 of 1.0.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -19923,8 +20139,38 @@ input axis of rotation <code class="docutils literal notranslate"><span class="p
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.UnitInertia_-Expression-.SolidCylinderAboutEnd">
-<span id="pydrake.multibody.tree.UnitInertia_[Expression].SolidCylinderAboutEnd"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCylinderAboutEnd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">L</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.UnitInertia_" title="pydrake.multibody.tree.UnitInertia_"><span class="pre">pydrake.multibody.tree.UnitInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.UnitInertia_-Expression-.SolidCylinderAboutEnd" title="Permalink to this definition"></a></dt>
-<dd><p>Computes the unit inertia for a unit-mass cylinder of uniform density
+<span id="pydrake.multibody.tree.UnitInertia_[Expression].SolidCylinderAboutEnd"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCylinderAboutEnd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.UnitInertia_-Expression-.SolidCylinderAboutEnd" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>SolidCylinderAboutEnd(radius: pydrake.symbolic.Expression, length: pydrake.symbolic.Expression, unit_vector: numpy.ndarray[object[3, 1]]) -&gt; pydrake.multibody.tree.UnitInertia_[Expression]</p></li>
+</ol>
+<p>Creates a unit inertia for a uniform-density solid cylinder B about an
+end-point Bp of the cylinder’s axis (see below for more about Bp).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">radius</span></code>:</dt><dd><p>radius of cylinder (meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">length</span></code>:</dt><dd><p>length of cylinder in unit_vector direction (meters).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code>:</dt><dd><p>unit vector parallel to the axis of the cylinder and directed from
+Bp to Bcm (B’s center of mass), expressed in B.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The position from Bp to Bcm is p_BpBcm = length / 2 * unit_vector.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if radius</strong><strong> or </strong><strong>length is negative</strong><strong> or </strong><strong>if ‖unit_vector‖</strong> – </p></li>
+<li><p><strong>is not within 1.0E-14 of 1.0.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>SolidCylinderAboutEnd(r: pydrake.symbolic.Expression, L: pydrake.symbolic.Expression) -&gt; pydrake.multibody.tree.UnitInertia_[Expression]</p></li>
+</ol>
+<p>Computes the unit inertia for a unit-mass cylinder of uniform density
 oriented along the z-axis computed about a point at the center of its
 base.</p>
 <dl class="simple">
@@ -19935,7 +20181,13 @@ base.</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if r</strong><strong> or </strong><strong>L is negative.</strong> – </p>
+<dd class="field-odd"><p><strong>RuntimeError if r</strong><strong> or </strong><strong>L is negative.</strong><strong> (</strong><strong>Deprecated.</strong><strong>)</strong> – </p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>SolidCylinderAboutEnd now requires the cylinder’s axis direction
+to be explicitly given. This will be removed from Drake on or
+after 2023-11-01.</p>
 </dd>
 </dl>
 </dd></dl>
