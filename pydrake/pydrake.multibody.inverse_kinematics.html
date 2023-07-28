@@ -1943,6 +1943,32 @@ $*Default:* 1 meter</p>
 </ol>
 <p>Overloaded constructor. Constructs the constraint using
 MultibodyPlant&lt;AutoDiffXd&gt;.</p>
+<ol class="arabic simple" start="3">
+<li><p>__init__(self: pydrake.multibody.inverse_kinematics.MinimumDistanceConstraint, plant: pydrake.multibody.plant.MultibodyPlant, minimum_distance_lower: float, minimum_distance_upper: float, plant_context: pydrake.systems.framework.Context, penalty_function: Callable[[float, bool], tuple], influence_distance: float) -&gt; None</p></li>
+</ol>
+<p>Overloaded constructor. lower &lt;= min(distance) &lt;= upper.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">minimum_distance_lower</span></code>:</dt><dd><p>The lower bound of the minimum distance. lower &lt;= min(distance).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">minimum_distance_upper</span></code>:</dt><dd><p>The upper bound of the minimum distance. min(distance) &lt;= upper.
+If minimum_distance_upper is finite, then it must be smaller than
+influence_distance_offset.The penalty function penalty_function(x: float, compute_grad: bool) -&gt; tuple[float, Optional[float]] returns [penalty_val,  penalty_gradient] when compute_grad=True, or [penalty_value, None] when compute_grad=False. See minimum_value_constraint.h on the requirement on MinimumValuePenaltyFunction. Set penalty_function=None and then the constraint will use the default penalty function.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="4">
+<li><p>__init__(self: pydrake.multibody.inverse_kinematics.MinimumDistanceConstraint, plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], minimum_distance_lower: float, minimum_distance_upper: float, plant_context: pydrake.systems.framework.Context_[AutoDiffXd], penalty_function: Callable[[float, bool], tuple], influence_distance: float) -&gt; None</p></li>
+</ol>
+<p>Overloaded constructor. Constructs the constraint using
+MultibodyPlant&lt;AutoDiffXd&gt;. lower &lt;= min(distance) &lt;= upper.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">minimum_distance_lower</span></code>:</dt><dd><p>The lower bound of the minimum distance. lower &lt;= min(distance).
+We must have minimum_distance_lower &lt;= influence_distance.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">minimum_distance_upper</span></code>:</dt><dd><p>The upper bound of the minimum distance. min(distance) &lt;= upper.
+If minimum_distance_upper is finite, then it must be smaller than
+influence_distance.The penalty function penalty_function(x: float, compute_grad: bool) -&gt; tuple[float, Optional[float]] returns [penalty_val,  penalty_gradient] when compute_grad=True, or [penalty_value, None] when compute_grad=False. See minimum_value_constraint.h on the requirement on MinimumValuePenaltyFunction. Set penalty_function=None and then the constraint will use the default penalty function.</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>

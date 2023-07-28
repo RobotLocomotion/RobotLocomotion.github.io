@@ -3,6 +3,7 @@ var searchData=
   ['_7eabstractvalue',['~AbstractValue',['../classdrake_1_1_abstract_value.html#a410fe58e5fa2679a77872ccd53089344',1,'drake::AbstractValue']]],
   ['_7eabstractvalues',['~AbstractValues',['../classdrake_1_1systems_1_1_abstract_values.html#a8d304b437e28d63ffbe7ffae38de0eed',1,'drake::systems::AbstractValues']]],
   ['_7eacrobotgeometry',['~AcrobotGeometry',['../classdrake_1_1examples_1_1acrobot_1_1_acrobot_geometry.html#af52fa9ef3f3263d46ea4f329b83d5ab2',1,'drake::examples::acrobot::AcrobotGeometry']]],
+  ['_7eaffinesubspace',['~AffineSubspace',['../classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a9fe2f6653e76b4db7c02a2ba9c8e35cd',1,'drake::geometry::optimization::AffineSubspace']]],
   ['_7eanglebetweenvectorsconstraint',['~AngleBetweenVectorsConstraint',['../classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html#a2cf9c73e6f4c40795e1a8bd64ea29e62',1,'drake::multibody::AngleBetweenVectorsConstraint']]],
   ['_7eanglebetweenvectorscost',['~AngleBetweenVectorsCost',['../classdrake_1_1multibody_1_1_angle_between_vectors_cost.html#a2ff1efb8836b6b3be852de75a5e5a920',1,'drake::multibody::AngleBetweenVectorsCost']]],
   ['_7eautodiff',['~AutoDiff',['../classdrake_1_1ad_1_1_auto_diff.html#a701541ece873a57b52e3d7f520094311',1,'drake::ad::AutoDiff']]],

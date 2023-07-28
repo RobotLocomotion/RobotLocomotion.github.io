@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"classdrake_1_1examples_1_1planar__gripper_1_1_planar_manipuland_status_encoder.html#aa67b4c0cd1beed3e9e171c313ca19935":[3,0,0,3,11,7,4],
 "classdrake_1_1examples_1_1quadrotor_1_1_quadrotor_geometry.html":[3,0,0,3,12,0],
 "classdrake_1_1examples_1_1quadrotor_1_1_quadrotor_geometry.html#a3223a0862c11f9920fa637b27a3d2270":[3,0,0,3,12,0,4],
 "classdrake_1_1examples_1_1quadrotor_1_1_quadrotor_geometry.html#a406de3a9d9b7f2dd8e68d40622e22f05":[3,0,0,3,12,0,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX3 =
 "classdrake_1_1geometry_1_1_d_r_a_k_e___n_o___e_x_p_o_r_t_1_1_encoded_data.html#ab9d8053e1b839f6a2a4df611a9789a04":[3,0,0,4,0,0,2],
 "classdrake_1_1geometry_1_1_d_r_a_k_e___n_o___e_x_p_o_r_t_1_1_encoded_data.html#aee6f666577d2d4330049382fd0e4fd01":[3,0,0,4,0,0,0],
 "classdrake_1_1geometry_1_1_drake_visualizer.html":[3,0,0,4,10],
-"classdrake_1_1geometry_1_1_drake_visualizer.html#a063bba7329e7434bd8e6d2a6324dd63f":[3,0,0,4,10,1],
-"classdrake_1_1geometry_1_1_drake_visualizer.html#a0ad035eb34b678412b826d72efe5d1ad":[3,0,0,4,10,7]
+"classdrake_1_1geometry_1_1_drake_visualizer.html#a063bba7329e7434bd8e6d2a6324dd63f":[3,0,0,4,10,1]
 };

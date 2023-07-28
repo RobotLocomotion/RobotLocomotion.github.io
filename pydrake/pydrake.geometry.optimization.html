@@ -129,6 +129,65 @@
 <span id="pydrake-geometry-optimization"></span><h1>pydrake.geometry.optimization<a class="headerlink" href="#module-pydrake.geometry.optimization" title="Permalink to this headline"></a></h1>
 <p>Local bindings for <cite>drake::geometry::optimization</cite></p>
 <dl class="py class">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.AffineSubspace">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.optimization.</span></span><span class="sig-name descname"><span class="pre">AffineSubspace</span></span><a class="headerlink" href="#pydrake.geometry.optimization.AffineSubspace" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></code></a></p>
+<p>An affine subspace (also known as a “flat”, a “linear variety”, or a
+“linear manifold”) is a vector subspace of some Euclidean space,
+potentially translated so as to not pass through the origin. Examples
+include points, lines, and planes (not necessarily through the
+origin).</p>
+<p>An affine subspace is described by a basis of its corresponding vector
+subspace, plus a translation. This description is not unique as any
+point in the affine subspace can be used as a translation, and any
+basis of the corresponding vector subspace is valid.</p>
+<p>An affine subspace can never be empty, because a vector subspace can
+never be empty. Thus, the translation will always be contained in the
+flat. An affine subspace is bounded if it is a point, which is when
+the basis has zero columns.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.AffineSubspace.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.AffineSubspace.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.geometry.optimization.AffineSubspace) -&gt; None</p></li>
+</ol>
+<p>Constructs a default (zero-dimensional, nonempty) affine subspace.</p>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.geometry.optimization.AffineSubspace, basis: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], translation: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</p></li>
+</ol>
+<p>Constructs the affine subspace from an n-by-m matrix describing the
+basis, where n is the ambient dimension, and m is the dimension of the
+subspace, and from an n-dimensional vector describing the translation.
+The set is {x | x = translation + basis*y, y ∈ Rᵐ} The columns must be
+linearly independent.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>basis.rows() == translation.size().</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.AffineSubspace.basis">
+<span class="sig-name descname"><span class="pre">basis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.AffineSubspace" title="pydrake.geometry.optimization.AffineSubspace"><span class="pre">pydrake.geometry.optimization.AffineSubspace</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.AffineSubspace.basis" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the basis in an n-by-m matrix, where n is the ambient
+dimension, and m is the number of vectors in the basis.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.AffineSubspace.Clone">
+<span class="sig-name descname"><span class="pre">Clone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.AffineSubspace" title="pydrake.geometry.optimization.AffineSubspace"><span class="pre">pydrake.geometry.optimization.AffineSubspace</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.AffineSubspace.Clone" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.AffineSubspace.translation">
+<span class="sig-name descname"><span class="pre">translation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.AffineSubspace" title="pydrake.geometry.optimization.AffineSubspace"><span class="pre">pydrake.geometry.optimization.AffineSubspace</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.AffineSubspace.translation" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the translation as a length n vector.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.CartesianProduct">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.optimization.</span></span><span class="sig-name descname"><span class="pre">CartesianProduct</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CartesianProduct" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></code></a></p>
