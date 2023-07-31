@@ -1429,7 +1429,8 @@ length 2.</p>
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.HPolyhedron.MaximumVolumeInscribedEllipsoid">
 <span class="sig-name descname"><span class="pre">MaximumVolumeInscribedEllipsoid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.HPolyhedron" title="pydrake.geometry.optimization.HPolyhedron"><span class="pre">pydrake.geometry.optimization.HPolyhedron</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::geometry::optimization::Hyperellipsoid</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.MaximumVolumeInscribedEllipsoid" title="Permalink to this definition"></a></dt>
 <dd><p>Solves a semi-definite program to compute the inscribed ellipsoid.
-From Section 8.4.2 in Boyd and Vandenberghe, 2004, we solve</p>
+This is also known as the inner Löwner-John ellipsoid. From Section
+8.4.2 in Boyd and Vandenberghe, 2004, we solve</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>max_{C,d} log det (C)
 s.t. |aᵢC|₂ ≤ bᵢ - aᵢd, ∀i
 C ≽ 0
@@ -1630,6 +1631,42 @@ center (up to precision).</p>
 <li><p><strong>RuntimeError if other is empty.</strong> – </p></li>
 <li><p><strong>RuntimeError if ambient_dimension</strong><strong>(</strong><strong>) </strong><strong>== 0</strong> – </p></li>
 </ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.Hyperellipsoid.MinimumVolumeCircumscribedEllipsoid">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MinimumVolumeCircumscribedEllipsoid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">points</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rank_tol</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1e-06</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.optimization.Hyperellipsoid" title="pydrake.geometry.optimization.Hyperellipsoid"><span class="pre">pydrake.geometry.optimization.Hyperellipsoid</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.Hyperellipsoid.MinimumVolumeCircumscribedEllipsoid" title="Permalink to this definition"></a></dt>
+<dd><p>Constructs the minimum-volume ellipsoid which contains all of the
+<code class="docutils literal notranslate"><span class="pre">points</span></code>. This is commonly referred to as the outer Löwner-John
+ellipsoid.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">points</span></code>:</dt><dd><p>is a d-by-n matrix, where d is the ambient dimension and each
+column represents one point.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">rank_tol</span></code>:</dt><dd><p>the singular values of the data matrix will be considered non-zero
+if they are strictly greater than <code class="docutils literal notranslate"><span class="pre">rank_tol</span></code> *
+<code class="docutils literal notranslate"><span class="pre">max_singular_value</span></code>. The default is 1e-6 to be compatible with
+common solver tolerances. This is used to detect if the data lies
+on a lower-dimensional affine space than the ambient dimension of
+the ellipsoid.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the MathematicalProgram fails to solve. If this</strong> – </p></li>
+<li><p><strong>were to happen</strong><strong> (</strong><strong>due to numerical issues</strong><strong>)</strong><strong>, </strong><strong>then increasing</strong> – </p></li>
+<li><p><strong>rank_tol` should provide a mitigation</strong> – </p></li>
+<li><p><strong>RuntimeError if points includes NaNs</strong><strong> or </strong><strong>infinite values.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>The numerical data rank of points is greater than 0 (the largest
+singular value is greater than rank_tol). This requires, for
+instance, that points.cols() &gt; 1.</p>
 </dd>
 </dl>
 </dd></dl>

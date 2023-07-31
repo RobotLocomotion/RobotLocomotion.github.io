@@ -284,6 +284,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a84c2ba9e34cf02155736ab87a70342cd"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html">Hyperellipsoid</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#a84c2ba9e34cf02155736ab87a70342cd">MakeUnitBall</a> (<a class="el" href="classint.html">int</a> dim)</td></tr>
 <tr class="memdesc:a84c2ba9e34cf02155736ab87a70342cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the L₂-norm unit ball in <code>dim</code> dimensions, {x | |x|₂ &lt;= 1 }.  <a href="#a84c2ba9e34cf02155736ab87a70342cd">More...</a><br /></td></tr>
 <tr class="separator:a84c2ba9e34cf02155736ab87a70342cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0783f7f2e02468471d114e49cbbfa4fd"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html">Hyperellipsoid</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#a0783f7f2e02468471d114e49cbbfa4fd">MinimumVolumeCircumscribedEllipsoid</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;points, <a class="el" href="classdouble.html">double</a> rank_tol=1e-6)</td></tr>
+<tr class="memdesc:a0783f7f2e02468471d114e49cbbfa4fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the minimum-volume ellipsoid which contains all of the <code>points</code>.  <a href="#a0783f7f2e02468471d114e49cbbfa4fd">More...</a><br /></td></tr>
+<tr class="separator:a0783f7f2e02468471d114e49cbbfa4fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -669,6 +672,60 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a0783f7f2e02468471d114e49cbbfa4fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0783f7f2e02468471d114e49cbbfa4fd">&#9670;&nbsp;</a></span>MinimumVolumeCircumscribedEllipsoid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html">Hyperellipsoid</a> MinimumVolumeCircumscribedEllipsoid </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>points</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>rank_tol</em> = <code>1e-6</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs the minimum-volume ellipsoid which contains all of the <code>points</code>. </p>
+<p>This is commonly referred to as the outer Löwner-John ellipsoid.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">points</td><td>is a d-by-n matrix, where d is the ambient dimension and each column represents one point. </td></tr>
+    <tr><td class="paramname">rank_tol</td><td>the singular values of the data matrix will be considered non-zero if they are strictly greater than <code>rank_tol</code> * <code>max_singular_value</code>. The default is 1e-6 to be compatible with common solver tolerances. This is used to detect if the data lies on a lower-dimensional affine space than the ambient dimension of the ellipsoid. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the MathematicalProgram fails to solve. If this were to happen (due to numerical issues), then increasing <code>rank_tol</code> should provide a mitigation. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if points includes NaNs or infinite values. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>The numerical data rank of points is greater than 0 (the largest singular value is greater than rank_tol). This requires, for instance, that points.cols() &gt; 1. </dd></dl>
 
 </div>
 </div>

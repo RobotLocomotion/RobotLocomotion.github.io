@@ -3815,7 +3815,7 @@ Each entry in new_indeterminates should be of CONTINUOUS type. </dd></dl>
 </div><div class="memdoc">
 
 <p>An overloaded version of <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#maximize_geometric_mean">maximize_geometric_mean</a>. </p>
-<dl class="section return"><dt>Returns</dt><dd>cost The added cost (note that since <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html" title="MathematicalProgram stores the decision variables, the constraints and costs of an optimization probl...">MathematicalProgram</a> only minimizes the cost, the returned cost evaluates to -c * power(∏ᵢx(i), 1/n). </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>cost The added cost (note that since <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html" title="MathematicalProgram stores the decision variables, the constraints and costs of an optimization probl...">MathematicalProgram</a> only minimizes the cost, the returned cost evaluates to -power(∏ᵢz(i), 1/n) where z = A*x+b. </dd></dl>
 <dl class="section pre"><dt>Precondition</dt><dd>A.rows() == b.rows(), A.rows() &gt;= 2. </dd></dl>
 
 </div>

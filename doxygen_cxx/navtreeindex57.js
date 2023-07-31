@@ -1,5 +1,7 @@
 var NAVTREEINDEX57 =
 {
+"structdrake_1_1schema_1_1_rotation_1_1_uniform.html#aa3b4b0360b49f499d1d0996b08940f1c":[3,0,0,13,6,3,5],
+"structdrake_1_1schema_1_1_rotation_1_1_uniform.html#ac23c4ac1cbe9a2a85b751fc5957e40a3":[3,0,0,13,6,3,3],
 "structdrake_1_1schema_1_1_rotation_1_1_uniform.html#af196ffa310575bf8069e73c164a60871":[3,0,0,13,6,3,1],
 "structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html":[3,0,0,14,0],
 "structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#a5fb1522ebe7e354d0ee6abc526454673":[3,0,0,14,0,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX57 =
 "structdrake_1_1systems_1_1sensors_1_1_camera_config.html#ad12fc34ce789bce6c8a05d8a17138534":[3,0,0,16,8,2,17],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config.html#ad4489c31400be9adcd1f625f99c48134":[3,0,0,16,8,2,14],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config.html#ad4c6ff118d1301201b7fe48a73a9f0bf":[3,0,0,16,8,2,18],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#ae3b978041e97c1025818e7f4e79345fa":[3,0,0,16,8,2,25],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#afae8fde9f81370fb4851c9e1de452a7f":[3,0,0,16,8,2,28],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html":[3,0,0,16,8,2,0]
+"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#ae3b978041e97c1025818e7f4e79345fa":[3,0,0,16,8,2,25]
 };

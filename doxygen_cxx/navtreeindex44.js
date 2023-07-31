@@ -1,5 +1,7 @@
 var NAVTREEINDEX44 =
 {
+"cspace__free__internal_8h.html":[4,0,0,4,1,5],
+"cspace__free__polytope_8h.html":[4,0,0,4,1,6],
 "cspace__free__polytope_8h.html#ac52a87949354e558c4a05a11acb655ec":[4,0,0,4,1,6,10],
 "cspace__free__polytope__base_8h.html":[4,0,0,4,1,7],
 "cspace__free__structs_8h.html":[4,0,0,4,1,8],
@@ -247,7 +249,5 @@ var NAVTREEINDEX44 =
 "double__overloads_8h.html":[4,0,0,1,16],
 "double__overloads_8h.html#ad14dd00683f82b89dc0f08f9adec904e":[4,0,0,1,16,0],
 "doxygen_8h.html":[4,0,0,2,0,0],
-"doxygen__cxx_8h.html":[4,0,0,1,17],
-"drake__assert_8h.html":[4,0,0,1,18],
-"drake__assert_8h.html#a0d126d5c79d6e74d5f03f8c81e4b3a63":[4,0,0,1,18,0]
+"doxygen__cxx_8h.html":[4,0,0,1,17]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX47 =
 {
+"formula__cell_8h.html#ad0f9249b5c150485c3c7cff61d5c0416":[4,0,0,1,3,0,8,44],
+"formula__cell_8h.html#ad4f46f5ae1e9130eb9214a2ae0611f52":[4,0,0,1,3,0,8,41],
 "formula__cell_8h.html#ad60a650ffd29c64c25be2dc84bfefccc":[4,0,0,1,3,0,8,18],
 "formula__cell_8h.html#adfca6086d970d576d51fa5364416a297":[4,0,0,1,3,0,8,27],
 "formula__visitor_8h.html":[4,0,0,1,3,0,9],
@@ -46,8 +48,8 @@ var NAVTREEINDEX47 =
 "functions_enum.html":[3,3,4],
 "functions_eval.html":[3,3,5],
 "functions_f.html":[3,3,0,5],
-"functions_func.html":[3,3,1,0],
 "functions_func.html":[3,3,1],
+"functions_func.html":[3,3,1,0],
 "functions_func_b.html":[3,3,1,1],
 "functions_func_c.html":[3,3,1,2],
 "functions_func_d.html":[3,3,1,3],
@@ -114,8 +116,8 @@ var NAVTREEINDEX47 =
 "functions_type.html":[3,3,3],
 "functions_u.html":[3,3,0,20],
 "functions_v.html":[3,3,0,21],
-"functions_vars.html":[3,3,2],
 "functions_vars.html":[3,3,2,0],
+"functions_vars.html":[3,3,2],
 "functions_vars_b.html":[3,3,2,1],
 "functions_vars_c.html":[3,3,2,2],
 "functions_vars_d.html":[3,3,2,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX47 =
 "gradient__util_8h.html#ae748bcfe9270b9ed5dd2fb71df3941b6":[4,0,0,7,18,11],
 "graph__of__convex__sets_8h.html":[4,0,0,4,1,10],
 "gray__code_8h.html":[4,0,0,7,19],
-"gray__code_8h.html#ab5390cdccf326541855e43a3dd5c2a9d":[4,0,0,7,19,2],
-"gray__code_8h.html#ad276064dcd8cb5e77d3dc41140840e8c":[4,0,0,7,19,1],
-"gripper__brick_8h.html":[4,0,0,3,13,1]
+"gray__code_8h.html#ab5390cdccf326541855e43a3dd5c2a9d":[4,0,0,7,19,2]
 };

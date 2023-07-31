@@ -1,5 +1,7 @@
 var NAVTREEINDEX9 =
 {
+"classdrake_1_1geometry_1_1optimization_1_1_spectrahedron.html#a263b68c98844884d62cd81c7e34b9032":[1,1,1,10,2],
+"classdrake_1_1geometry_1_1optimization_1_1_spectrahedron.html#a263b68c98844884d62cd81c7e34b9032":[1,5,4,10,2],
 "classdrake_1_1geometry_1_1optimization_1_1_spectrahedron.html#a3f0a6e4a83be3ce571a5e9fba73f4e26":[1,1,1,10,5],
 "classdrake_1_1geometry_1_1optimization_1_1_spectrahedron.html#a3f0a6e4a83be3ce571a5e9fba73f4e26":[1,5,4,10,5],
 "classdrake_1_1geometry_1_1optimization_1_1_spectrahedron.html#a4068638c2dfbb9799325449bbcc1f0af":[1,1,1,10,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX9 =
 "classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_sender.html#a8f65b194a09c993efa502fc06fb9915d":[3,0,0,7,0,1,2],
 "classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_sender.html#a9e93f33f1399a91a3fd96447ec5a7e38":[3,0,0,7,0,1,5],
 "classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_sender.html#ac729fa3f0a996804cc0ebf8c5f328c4a":[3,0,0,7,0,1,0],
-"classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_sender.html#afa6c1eea2e5f447b9a0d6cc1e44c337d":[3,0,0,7,0,1,7],
-"classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_receiver.html":[3,0,0,7,0,2],
-"classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_receiver.html#a1793cb8aaa804ffbfa4578afe74db3d0":[3,0,0,7,0,2,3]
+"classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_sender.html#afa6c1eea2e5f447b9a0d6cc1e44c337d":[3,0,0,7,0,1,7]
 };

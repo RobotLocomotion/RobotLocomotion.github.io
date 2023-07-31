@@ -894,7 +894,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Solves a semi-definite program to compute the inscribed ellipsoid. </p>
-<p>From Section 8.4.2 in Boyd and Vandenberghe, 2004, we solve </p><pre class="fragment">max_{C,d} log det (C)
+<p>This is also known as the inner Löwner-John ellipsoid. From Section 8.4.2 in Boyd and Vandenberghe, 2004, we solve </p><pre class="fragment">max_{C,d} log det (C)
       s.t. |aᵢC|₂ ≤ bᵢ - aᵢd, ∀i
           C ≽ 0
 </pre><p> where aᵢ and bᵢ denote the ith row. This defines the ellipsoid E = { Cx + d | |x|₂ ≤ 1}.</p>

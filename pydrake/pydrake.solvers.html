@@ -3429,8 +3429,8 @@ call</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>cost The added cost (note that since MathematicalProgram only
-minimizes the cost, the returned cost evaluates to -c *
-power(∏ᵢx(i), 1/n).</p>
+minimizes the cost, the returned cost evaluates to -power(∏ᵢz(i),
+1/n) where z = A*x+b.</p>
 </dd>
 </dl>
 <dl class="simple">

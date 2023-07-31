@@ -181,6 +181,7 @@ var group__geometry__optimization =
       [ "MakeHypersphere", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#aaeda19ebf3b289e78f7bc3740dbd4275", null ],
       [ "MakeUnitBall", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#a84c2ba9e34cf02155736ab87a70342cd", null ],
       [ "MinimumUniformScalingToTouch", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#a152cd9dac97b61e35faa07fd4f1d2472", null ],
+      [ "MinimumVolumeCircumscribedEllipsoid", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#a0783f7f2e02468471d114e49cbbfa4fd", null ],
       [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#a6728f7f0e845d80b3b9b27b074d89e64", null ],
       [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#a31236f7fa2323eab3ac92db5e4d89829", null ],
       [ "Serialize", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#a8e8824802dedfbc36776227f7482b6bc", null ],

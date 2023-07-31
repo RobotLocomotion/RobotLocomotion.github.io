@@ -1,5 +1,7 @@
 var NAVTREEINDEX52 =
 {
+"pointer__cast_8h.html":[4,0,0,1,48],
+"pointer__cast_8h.html#a36437147c667653017cba46d057455d9":[4,0,0,1,48,2],
 "pointer__cast_8h.html#a983e5f23fd0a884e01038572bd3e24a2":[4,0,0,1,48,3],
 "pointer__cast_8h.html#ab53bd4a15e73e524b3f73c625ea88176":[4,0,0,1,48,0],
 "pointer__cast_8h.html#acd10687a188332bb1f67fb3acf28f208":[4,0,0,1,48,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX52 =
 "rod2d__geometry_8h.html":[4,0,0,3,16,1],
 "roll__pitch__yaw_8h.html":[4,0,0,7,30],
 "rotary__encoders_8h.html":[4,0,0,12,8,18],
-"rotation_8h.html":[4,0,0,1,2,0],
-"rotation__constraint_8h.html":[4,0,0,11,41],
-"rotation__constraint_8h.html#a0c7466e7ce1b8db6de94ad0524f8106d":[4,0,0,11,41,2]
+"rotation_8h.html":[4,0,0,1,2,0]
 };
