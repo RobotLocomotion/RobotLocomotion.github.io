@@ -377,9 +377,6 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a1b3f9382208d13e11984a54afa711577"><td class="memItemLeft" align="right" valign="top">internal::SystemId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a1b3f9382208d13e11984a54afa711577">get_system_id</a> () const</td></tr>
 <tr class="memdesc:a1b3f9382208d13e11984a54afa711577"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal) Gets the id used to tag context data as being created by this system.  <a href="#a1b3f9382208d13e11984a54afa711577">More...</a><br /></td></tr>
 <tr class="separator:a1b3f9382208d13e11984a54afa711577"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0eb4af07bc8d4b9cb860f869e3e742db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a0eb4af07bc8d4b9cb860f869e3e742db">ResetSystemId</a> ()</td></tr>
-<tr class="memdesc:a0eb4af07bc8d4b9cb860f869e3e742db"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal) Assigns a new id used to tag context data as being created by this system.  <a href="#a0eb4af07bc8d4b9cb860f869e3e742db">More...</a><br /></td></tr>
-<tr class="separator:a0eb4af07bc8d4b9cb860f869e3e742db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Declare cache entries</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="DeclareCacheEntry_documentation"></a> Methods in this section are used by derived classes to declare cache entries for their own internal computations. (Other cache entries are provided automatically for well-known computations such as output ports and time derivatives.) <a class="el" href="classdrake_1_1systems_1_1_cache.html" title="(Advanced) Stores all the CacheEntryValue objects owned by a particular Context, organized to allow f...">Cache</a> entries may contain values of any type, however the type for any particular cache entry is fixed after first allocation. Every cache entry must have an <em>allocator</em> function <code>Allocate()</code> and a <em>calculator</em> function <code>Calc()</code>. <code>Allocate()</code> returns an object suitable for holding a value of the cache entry. <code>Calc()</code> uses the contents of a given <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> to produce the cache entry's value, which is placed in an object of the type returned by <code>Allocate()</code>.</p>
 <h4>Prerequisites</h4>
@@ -2688,34 +2685,6 @@ the port's value must be retrievable from the stored abstract value using <code>
 
 <p>Returns a ticket indicating that a computation depends on configuration state variables q. </p>
 <p>There is no ticket representing just one of the state variables qᵢ. </p>
-
-</div>
-</div>
-<a id="a0eb4af07bc8d4b9cb860f869e3e742db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0eb4af07bc8d4b9cb860f869e3e742db">&#9670;&nbsp;</a></span>ResetSystemId()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ResetSystemId </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>(Internal) Assigns a new id used to tag context data as being created by this system. </p>
-<p>See <a class="el" href="group__system__compatibility.html">System Compatibility</a>. </p>
 
 </div>
 </div>

@@ -1,5 +1,12 @@
 var NAVTREEINDEX47 =
 {
+"formula__cell_8h.html#a9fb95d50cf0c445f6be7d3d1e5a356a9":[4,0,0,1,3,0,8,19],
+"formula__cell_8h.html#a9fe1f207a7dfa971bf80a1d44041368b":[4,0,0,1,3,0,8,21],
+"formula__cell_8h.html#aaed4c523512b2ee45d906c0f9d0b1d13":[4,0,0,1,3,0,8,26],
+"formula__cell_8h.html#ac014e89da18637b81f9c1fbe6306e689":[4,0,0,1,3,0,8,33],
+"formula__cell_8h.html#ac5cfac124e8ae1c7450c4e0c91c2bc07":[4,0,0,1,3,0,8,29],
+"formula__cell_8h.html#aceef2c41a1ce6c5f7eed83c1d2df9381":[4,0,0,1,3,0,8,45],
+"formula__cell_8h.html#acfb39c33945b763922fe0fcacc6c369b":[4,0,0,1,3,0,8,43],
 "formula__cell_8h.html#ad0f9249b5c150485c3c7cff61d5c0416":[4,0,0,1,3,0,8,44],
 "formula__cell_8h.html#ad4f46f5ae1e9130eb9214a2ae0611f52":[4,0,0,1,3,0,8,41],
 "formula__cell_8h.html#ad60a650ffd29c64c25be2dc84bfefccc":[4,0,0,1,3,0,8,18],
@@ -48,8 +55,8 @@ var NAVTREEINDEX47 =
 "functions_enum.html":[3,3,4],
 "functions_eval.html":[3,3,5],
 "functions_f.html":[3,3,0,5],
-"functions_func.html":[3,3,1],
 "functions_func.html":[3,3,1,0],
+"functions_func.html":[3,3,1],
 "functions_func_b.html":[3,3,1,1],
 "functions_func_c.html":[3,3,1,2],
 "functions_func_d.html":[3,3,1,3],
@@ -242,12 +249,5 @@ var NAVTREEINDEX47 =
 "gradient__util_8h.html#a30d857f8398886aff22da2ea64bc1113":[4,0,0,7,18,10],
 "gradient__util_8h.html#a41fb0200e4ab7c796576b2fe17408ec8":[4,0,0,7,18,9],
 "gradient__util_8h.html#a4805a6b4a327bedeb7793cd1ce11523c":[4,0,0,7,18,8],
-"gradient__util_8h.html#a5c5269630d172b12a31b34d6c98b4e64":[4,0,0,7,18,4],
-"gradient__util_8h.html#a6eb0d39dab703d87f0f582cf310c6134":[4,0,0,7,18,7],
-"gradient__util_8h.html#ab54df9b3b01c7c5509373712fda88ad4":[4,0,0,7,18,12],
-"gradient__util_8h.html#ad4b8fed3ad399a2bd53630c3b5b6d335":[4,0,0,7,18,5],
-"gradient__util_8h.html#ae748bcfe9270b9ed5dd2fb71df3941b6":[4,0,0,7,18,11],
-"graph__of__convex__sets_8h.html":[4,0,0,4,1,10],
-"gray__code_8h.html":[4,0,0,7,19],
-"gray__code_8h.html#ab5390cdccf326541855e43a3dd5c2a9d":[4,0,0,7,19,2]
+"gradient__util_8h.html#a5c5269630d172b12a31b34d6c98b4e64":[4,0,0,7,18,4]
 };

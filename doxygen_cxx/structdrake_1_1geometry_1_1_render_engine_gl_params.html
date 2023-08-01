@@ -189,6 +189,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a24b99c9946848c937df22ef2b8745d65"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_gl_params.html#a24b99c9946848c937df22ef2b8745d65">default_clear_color</a> {204 / 255., 229 / 255., 255 / 255., 1.0}</td></tr>
 <tr class="memdesc:a24b99c9946848c937df22ef2b8745d65"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default background color for color images.  <a href="#a24b99c9946848c937df22ef2b8745d65">More...</a><br /></td></tr>
 <tr class="separator:a24b99c9946848c937df22ef2b8745d65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c649edac2bf38690cac11ff4730c9d5"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structdrake_1_1geometry_1_1render_1_1_light_parameter.html">render::LightParameter</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_gl_params.html#a7c649edac2bf38690cac11ff4730c9d5">lights</a></td></tr>
+<tr class="memdesc:a7c649edac2bf38690cac11ff4730c9d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lights in the scene.  <a href="#a7c649edac2bf38690cac11ff4730c9d5">More...</a><br /></td></tr>
+<tr class="separator:a7c649edac2bf38690cac11ff4730c9d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a8e8824802dedfbc36776227f7482b6bc"></a>
@@ -258,6 +261,23 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Default render label to apply to a geometry when none is otherwise specified. </p>
+
+</div>
+</div>
+<a id="a7c649edac2bf38690cac11ff4730c9d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c649edac2bf38690cac11ff4730c9d5">&#9670;&nbsp;</a></span>lights</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structdrake_1_1geometry_1_1render_1_1_light_parameter.html">render::LightParameter</a>&gt; lights</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lights in the scene. </p>
+<p>More than five lights is an error. If no lights are defined, a single directional light, fixed to the camera frame, is used. </p>
 
 </div>
 </div>

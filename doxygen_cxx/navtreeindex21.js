@@ -1,5 +1,12 @@
 var NAVTREEINDEX21 =
 {
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#adca55d80c38bff3a312419c47ff112d9":[1,4,2,1,3,13],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#ae36974e43ab46ab33b24010ec4099c05":[1,4,2,1,3,12],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#aeb432a55ef7765459155c69a539d8658":[1,4,2,1,3,25],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#af27492cb5b0dbf8cd8ce10e792486052":[1,4,2,1,3,14],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#af3392559929281e1d5db4f104ed4b8f1":[1,4,2,1,3,19],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#afcc8c6b2091ff4447ee2951bb7907de8":[1,4,2,1,3,24],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html":[1,1,0,22],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html#a040b81f85b87c2da89ca72d802975d7b":[1,1,0,22,2],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html#a63969a3ff95f039bca49c87905e30bd1":[1,1,0,22,1],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html#ad3906276b020fabf6c83b599655bb09c":[1,1,0,22,0],
@@ -242,12 +249,5 @@ var NAVTREEINDEX21 =
 "classdrake_1_1schema_1_1_uniform_vector.html#aad4b968e35b277b170084310566c8b8b":[3,0,0,13,10,8],
 "classdrake_1_1schema_1_1_uniform_vector.html#abc76c95f878dba8af54e786430d7f9f9":[3,0,0,13,10,12],
 "classdrake_1_1schema_1_1_uniform_vector.html#ad196407ab2a1c2bdef6c230515b104a8":[3,0,0,13,10,6],
-"classdrake_1_1schema_1_1_uniform_vector.html#ad80934fe58016c8c45ace203e14bdc43":[3,0,0,13,10,10],
-"classdrake_1_1schema_1_1_uniform_vector.html#ae555cbd7ab2e1077d50cc922f572e4ca":[3,0,0,13,10,0],
-"classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html":[3,0,0,14,1],
-"classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html#a0eb00b367e40489c4c79184e172d9a61":[3,0,0,14,1,9],
-"classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html#a1c89886a59dfaa4862b55712c37b876b":[3,0,0,14,1,11],
-"classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html#a2a22a90654161042250f15296cf33643":[3,0,0,14,1,6],
-"classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html#a56e6fe46c8fdccc5a5945f778e80f018":[3,0,0,14,1,5],
-"classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html#a5ce6eb5b762cd581bb03d3a31775d1e1":[3,0,0,14,1,4]
+"classdrake_1_1schema_1_1_uniform_vector.html#ad80934fe58016c8c45ace203e14bdc43":[3,0,0,13,10,10]
 };

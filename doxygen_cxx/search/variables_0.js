@@ -19,6 +19,7 @@ var searchData=
   ['archive_5ftype',['archive_type',['../structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html#a81066da499282f418a381f8a164a10af',1,'drake::multibody::PackageMap::RemoteParams']]],
   ['aspect',['aspect',['../structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#a11926af9280d70fd96e47b07c90cf0ed',1,'drake::geometry::Meshcat::PerspectiveCamera']]],
   ['assume_5fnon_5fcontinuous_5fstates_5fare_5ffixed',['assume_non_continuous_states_are_fixed',['../structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a2f676e6424410f6f9742e3f7177cb90c',1,'drake::systems::controllers::DynamicProgrammingOptions']]],
+  ['attenuation_5fvalues',['attenuation_values',['../structdrake_1_1geometry_1_1render_1_1_light_parameter.html#a50be65dc8aca77a64ba06b615506e2be',1,'drake::geometry::render::LightParameter']]],
   ['axes',['axes',['../structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html#aa0de0a897162ef2c7d4a43529b8f25f7',1,'drake::geometry::Meshcat::Gamepad']]],
   ['axis',['axis',['../structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a370df3b5b1ee0045d5f876aa4757fc44',1,'drake::schema::Rotation::AngleAxis']]]
 ];

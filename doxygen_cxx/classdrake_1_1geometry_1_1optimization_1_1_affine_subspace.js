@@ -6,6 +6,8 @@ var classdrake_1_1geometry_1_1optimization_1_1_affine_subspace =
     [ "AffineSubspace", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#af6154bf89e3d063bb7b29741d1914fd8", null ],
     [ "~AffineSubspace", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a9fe2f6653e76b4db7c02a2ba9c8e35cd", null ],
     [ "basis", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a2e517d5b78e2fa08bdc06aea97a0d3b6", null ],
+    [ "ContainedIn", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#acc52b1cf2090f143dfeda40221474fb3", null ],
+    [ "IsNearlyEqualTo", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a5d6c9e843c1772c0cade2a7ae80f3773", null ],
     [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#aec46116411b87b5a8824ff5aa0d7e194", null ],
     [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a9ef622cde6496d9c85941241b4f061a6", null ],
     [ "Serialize", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a8e8824802dedfbc36776227f7482b6bc", null ],

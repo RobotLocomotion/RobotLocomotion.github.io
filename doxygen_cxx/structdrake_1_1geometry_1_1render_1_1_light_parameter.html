@@ -1,0 +1,407 @@
+<!-- HTML header for doxygen 1.8.15-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: LightParameter Struct Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/%2Findex.ipynb">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+ </div>
+</div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('structdrake_1_1geometry_1_1render_1_1_light_parameter.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="structdrake_1_1geometry_1_1render_1_1_light_parameter-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">LightParameter Struct Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Light parameter for supporting <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html" title="The engine for performing rasterization operations on geometry.">RenderEngine</a> implementations. </p>
+<p>Look at the various RenderEngine___Params types to see if they support declaring lights. </p>
+</div>
+<p><code>#include &lt;drake/geometry/render/light_parameter.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a8e8824802dedfbc36776227f7482b6bc"><td class="memTemplParams" colspan="2">template&lt;typename Archive &gt; </td></tr>
+<tr class="memitem:a8e8824802dedfbc36776227f7482b6bc"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1render_1_1_light_parameter.html#a8e8824802dedfbc36776227f7482b6bc">Serialize</a> (Archive *a)</td></tr>
+<tr class="memdesc:a8e8824802dedfbc36776227f7482b6bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passes this object to an Archive.  <a href="#a8e8824802dedfbc36776227f7482b6bc">More...</a><br /></td></tr>
+<tr class="separator:a8e8824802dedfbc36776227f7482b6bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a75b160f574a0be26114bae2c7686a5e1"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1render_1_1_light_parameter.html#a75b160f574a0be26114bae2c7686a5e1">type</a> {&quot;directional&quot;}</td></tr>
+<tr class="memdesc:a75b160f574a0be26114bae2c7686a5e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The light type is either <code>"point"</code>, <code>"spot"</code>, or <code>"directional"</code>.  <a href="#a75b160f574a0be26114bae2c7686a5e1">More...</a><br /></td></tr>
+<tr class="separator:a75b160f574a0be26114bae2c7686a5e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae79058e72ae4c657ddc14a966ef045dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1render_1_1_light_parameter.html#ae79058e72ae4c657ddc14a966ef045dd">color</a> = <a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>(1, 1, 1)</td></tr>
+<tr class="memdesc:ae79058e72ae4c657ddc14a966ef045dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">The illuminating color of the light (with channels in the range [0, 1]).  <a href="#ae79058e72ae4c657ddc14a966ef045dd">More...</a><br /></td></tr>
+<tr class="separator:ae79058e72ae4c657ddc14a966ef045dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50be65dc8aca77a64ba06b615506e2be"><td class="memItemLeft" align="right" valign="top">Eigen::Vector3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1render_1_1_light_parameter.html#a50be65dc8aca77a64ba06b615506e2be">attenuation_values</a> = {1, 0, 0}</td></tr>
+<tr class="memdesc:a50be65dc8aca77a64ba06b615506e2be"><td class="mdescLeft">&#160;</td><td class="mdescRight">The quadratic attenuation constants (k₀, k₁, and k₂).  <a href="#a50be65dc8aca77a64ba06b615506e2be">More...</a><br /></td></tr>
+<tr class="separator:a50be65dc8aca77a64ba06b615506e2be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aced78e83d6ebcea2c5e1419c05c4719d"><td class="memItemLeft" align="right" valign="top">Eigen::Vector3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1render_1_1_light_parameter.html#aced78e83d6ebcea2c5e1419c05c4719d">position</a> {0, 0, 0}</td></tr>
+<tr class="memdesc:aced78e83d6ebcea2c5e1419c05c4719d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The position of the light in the frame indicated by <code>frame</code> F: p_FL.  <a href="#aced78e83d6ebcea2c5e1419c05c4719d">More...</a><br /></td></tr>
+<tr class="separator:aced78e83d6ebcea2c5e1419c05c4719d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe60a2ebe324a7ec86e5bd0024febf2e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1render_1_1_light_parameter.html#abe60a2ebe324a7ec86e5bd0024febf2e">frame</a> {&quot;camera&quot;}</td></tr>
+<tr class="memdesc:abe60a2ebe324a7ec86e5bd0024febf2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specifies the frame to which the camera is fixed, <code>"world"</code> or <code>"camera"</code>.  <a href="#abe60a2ebe324a7ec86e5bd0024febf2e">More...</a><br /></td></tr>
+<tr class="separator:abe60a2ebe324a7ec86e5bd0024febf2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2118076db8e8f8a25c2376e1d4acfb67"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1render_1_1_light_parameter.html#a2118076db8e8f8a25c2376e1d4acfb67">intensity</a> {1}</td></tr>
+<tr class="memdesc:a2118076db8e8f8a25c2376e1d4acfb67"><td class="mdescLeft">&#160;</td><td class="mdescRight">A multiplier for the brightness of the light.  <a href="#a2118076db8e8f8a25c2376e1d4acfb67">More...</a><br /></td></tr>
+<tr class="separator:a2118076db8e8f8a25c2376e1d4acfb67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a239e12f97e33fa0b06091b668289681c"><td class="memItemLeft" align="right" valign="top">Eigen::Vector3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1render_1_1_light_parameter.html#a239e12f97e33fa0b06091b668289681c">direction</a> {0, 0, 1}</td></tr>
+<tr class="memdesc:a239e12f97e33fa0b06091b668289681c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The direction the light points in the frame indicated by <code>frame</code>.  <a href="#a239e12f97e33fa0b06091b668289681c">More...</a><br /></td></tr>
+<tr class="separator:a239e12f97e33fa0b06091b668289681c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dc037cf2bcfb547da23636bd58f37dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1render_1_1_light_parameter.html#a0dc037cf2bcfb547da23636bd58f37dd">cone_angle</a> {0}</td></tr>
+<tr class="memdesc:a0dc037cf2bcfb547da23636bd58f37dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">For a spotlight, it is the measure of the angle (in degrees) between the light's central direction vector and the border of the light's conical extent.  <a href="#a0dc037cf2bcfb547da23636bd58f37dd">More...</a><br /></td></tr>
+<tr class="separator:a0dc037cf2bcfb547da23636bd58f37dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8e8824802dedfbc36776227f7482b6bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e8824802dedfbc36776227f7482b6bc">&#9670;&nbsp;</a></span>Serialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Serialize </td>
+          <td>(</td>
+          <td class="paramtype">Archive *&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Passes this object to an Archive. </p>
+<p>Refer to <a class="el" href="group__yaml__serialization.html">YAML Serialization</a> for background. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a50be65dc8aca77a64ba06b615506e2be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50be65dc8aca77a64ba06b615506e2be">&#9670;&nbsp;</a></span>attenuation_values</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Vector3d attenuation_values = {1, 0, 0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The quadratic attenuation constants (k₀, k₁, and k₂). </p>
+<p>The intensity of light can decrease with distance according to the following equation:</p>
+<p>I = 1/(k₀ + k₁·d + k₂·d²)</p>
+<p>In the physical world, light from a point source decreases with the squared distance (with some linear attenuation due to atmospheric effects). However, this often leads to undesirable illumination effects in low-dynamic range rendering. Suitable values typically will temper the quadratic effects with non-zero constant and linear terms.</p>
+<p>If the values sum to 1, then, a surface one meter away from the light will get full illumination (surfaces closer will get <em>magnified</em> illumination. When tuning attenuation to achieve a particular falloff <em>pattern</em>, it is common to <em>increase</em> the light <code>intensity</code> to offset what would otherwise appear to be a rapid decay. By default, the light is unattenuated, with constant illumination across all distances.</p>
+<p>When using directional lights, attenuation is best kept with the default, non attenuated values (&lt;1, 0, 0&gt;). Other attenuation values may be applied, but the effect may be surprising and difficult to control.</p>
+<dl class="section warning"><dt>Warning</dt><dd>If all three values are zero, no light is emitted. </dd></dl>
+
+</div>
+</div>
+<a id="ae79058e72ae4c657ddc14a966ef045dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae79058e72ae4c657ddc14a966ef045dd">&#9670;&nbsp;</a></span>color</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> color = <a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>(1, 1, 1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The illuminating color of the light (with channels in the range [0, 1]). </p>
+<p>The alpha value is currently ignored. </p>
+
+</div>
+</div>
+<a id="a0dc037cf2bcfb547da23636bd58f37dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dc037cf2bcfb547da23636bd58f37dd">&#9670;&nbsp;</a></span>cone_angle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> cone_angle {0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>For a spotlight, it is the measure of the angle (in degrees) between the light's central direction vector and the border of the light's conical extent. </p>
+<p>It is half of the spotlight's full angular span. So, a light with a 45° <code>cone_angle</code> would cast light over a 90° span. </p>
+
+</div>
+</div>
+<a id="a239e12f97e33fa0b06091b668289681c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a239e12f97e33fa0b06091b668289681c">&#9670;&nbsp;</a></span>direction</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Vector3d direction {0, 0, 1}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The direction the light points in the frame indicated by <code>frame</code>. </p>
+<p>For example, in the world frame, a spotlight with direction [0, 0, -1]ᵀ points straight down. In the camera frame, the direction [0, 0, 1]ᵀ points forward in the camera's view direction. This field only applies to spotlight and directional lights.</p>
+<dl class="section pre"><dt>Precondition</dt><dd>the vector has length 1. </dd></dl>
+
+</div>
+</div>
+<a id="abe60a2ebe324a7ec86e5bd0024febf2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe60a2ebe324a7ec86e5bd0024febf2e">&#9670;&nbsp;</a></span>frame</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string frame {&quot;camera&quot;}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Specifies the frame to which the camera is fixed, <code>"world"</code> or <code>"camera"</code>. </p>
+
+</div>
+</div>
+<a id="a2118076db8e8f8a25c2376e1d4acfb67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2118076db8e8f8a25c2376e1d4acfb67">&#9670;&nbsp;</a></span>intensity</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> intensity {1}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A multiplier for the brightness of the light. </p>
+<p>A zero intensity will effectively disable the light. A value of one will have an intensity equal to the light's color. Higher values will magnify the light's illumination (and may be necessary to offset the attenuation effects). </p>
+
+</div>
+</div>
+<a id="aced78e83d6ebcea2c5e1419c05c4719d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aced78e83d6ebcea2c5e1419c05c4719d">&#9670;&nbsp;</a></span>position</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Vector3d position {0, 0, 0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The position of the light in the frame indicated by <code>frame</code> F: p_FL. </p>
+
+</div>
+</div>
+<a id="a75b160f574a0be26114bae2c7686a5e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75b160f574a0be26114bae2c7686a5e1">&#9670;&nbsp;</a></span>type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string type {&quot;directional&quot;}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The light type is either <code>"point"</code>, <code>"spot"</code>, or <code>"directional"</code>. </p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>drake/geometry/render/<a class="el" href="light__parameter_8h.html">light_parameter.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a class="el" href="namespacedrake.html">drake</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1geometry.html">geometry</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1geometry_1_1render.html">render</a></li><li class="navelem"><a class="el" href="structdrake_1_1geometry_1_1render_1_1_light_parameter.html">LightParameter</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>    
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>    
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().value = searchBox.searchLabel;
+</script>
+</body>
+</html>

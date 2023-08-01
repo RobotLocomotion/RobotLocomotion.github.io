@@ -398,6 +398,29 @@ trailing <code class="docutils literal notranslate"><span class="pre">/</span></
 <dd><p>Trigger a Drake C++ assertion failure</p>
 </dd></dl>
 
+<dl class="py function">
+<dt class="sig sig-object py" id="pydrake.common.use_native_cpp_logging">
+<span class="sig-prename descclassname"><span class="pre">pydrake.common.</span></span><span class="sig-name descname"><span class="pre">use_native_cpp_logging</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.use_native_cpp_logging" title="Permalink to this definition"></a></dt>
+<dd><p>By default, pydrake’s C++ code routes all of its log messages to
+Python’s <code class="docutils literal notranslate"><span class="pre">logging</span></code> module; this function opts-out of that feature.</p>
+<p>After this function has been called, pydrake’s C++ code will log directly
+to stderr, with no interaction with Python. (The Python settings for log
+level threshold and message formatting will no longer affect the C++ log
+messages.)</p>
+<p>This can be useful to avoid C++ logging touching the GIL, e.g., when using
+Python’s <code class="docutils literal notranslate"><span class="pre">threading</span></code> module.</p>
+<p>This function is not thread-safe. No other threads should be running when
+it is called.</p>
+<p>See also the <a class="reference external" href="https://drake.mit.edu/doxygen_cxx/group__environment__variables.html">environment variable</a>
+<code class="docutils literal notranslate"><span class="pre">DRAKE_PYTHON_LOGGING</span></code>, which can also be used to opt-out.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError</strong> – If the reconfiguration is not possible, e.g., if you have
+    already manually adjusted the C++ logging configuration.</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 
 

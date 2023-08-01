@@ -163,6 +163,26 @@ interval t ∈ [0, 1].</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.trajectories.BezierCurve.AsLinearInControlPoints">
+<span class="sig-name descname"><span class="pre">AsLinearInControlPoints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.BezierCurve" title="pydrake.trajectories.BezierCurve"><span class="pre">pydrake.trajectories.BezierCurve</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">derivative_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">scipy.sparse.csc_matrix</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.BezierCurve.AsLinearInControlPoints" title="Permalink to this definition"></a></dt>
+<dd><p>We often write optimizations using the control points as decision
+variables. This method returns the matrix, <code class="docutils literal notranslate"><span class="pre">M</span></code>, defining the control
+points of the <code class="docutils literal notranslate"><span class="pre">order</span></code> derivative in the form:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">derivative</span><span class="o">.</span><span class="n">control_points</span><span class="p">()</span><span class="o">.</span><span class="n">row</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">T</span> <span class="o">=</span> <span class="n">M</span> <span class="o">*</span> <span class="n">this</span><span class="o">.</span><span class="n">control_points</span><span class="p">()</span><span class="o">.</span><span class="n">row</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
+</pre></div>
+</div>
+<p>Note the transpose operators, <code class="docutils literal notranslate"><span class="pre">.T</span></code>; this format was chosen for
+compatibility use with e.g.
+solvers::MathematicalProgram::AddLinearConstraint(). Note also that
+the matrix, <code class="docutils literal notranslate"><span class="pre">M</span></code>, is the same for all rows, <code class="docutils literal notranslate"><span class="pre">i</span></code>, of
+control_points().</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>derivative_order &gt;= 0.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.trajectories.BezierCurve.BernsteinBasis">
 <span class="sig-name descname"><span class="pre">BernsteinBasis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.BezierCurve" title="pydrake.trajectories.BezierCurve"><span class="pre">pydrake.trajectories.BezierCurve</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.trajectories.BezierCurve.BernsteinBasis" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the value of the ith basis function of <code class="docutils literal notranslate"><span class="pre">order</span></code> (1 for
@@ -173,7 +193,8 @@ for the optional argument <code class="docutils literal notranslate"><span class
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.trajectories.BezierCurve.control_points">
 <span class="sig-name descname"><span class="pre">control_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.BezierCurve" title="pydrake.trajectories.BezierCurve"><span class="pre">pydrake.trajectories.BezierCurve</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.BezierCurve.control_points" title="Permalink to this definition"></a></dt>
-<dd><p>Returns a reference to the control points which define the curve.</p>
+<dd><p>Returns a const reference to the control points which define the
+curve.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -242,6 +263,26 @@ interval t ∈ [0, 1].</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.trajectories.BezierCurve_-AutoDiffXd-.AsLinearInControlPoints">
+<span id="pydrake.trajectories.BezierCurve_[AutoDiffXd].AsLinearInControlPoints"></span><span class="sig-name descname"><span class="pre">AsLinearInControlPoints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.BezierCurve_" title="pydrake.trajectories.BezierCurve_"><span class="pre">pydrake.trajectories.BezierCurve_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">derivative_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">scipy.sparse.csc_matrix</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.BezierCurve_-AutoDiffXd-.AsLinearInControlPoints" title="Permalink to this definition"></a></dt>
+<dd><p>We often write optimizations using the control points as decision
+variables. This method returns the matrix, <code class="docutils literal notranslate"><span class="pre">M</span></code>, defining the control
+points of the <code class="docutils literal notranslate"><span class="pre">order</span></code> derivative in the form:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">derivative</span><span class="o">.</span><span class="n">control_points</span><span class="p">()</span><span class="o">.</span><span class="n">row</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">T</span> <span class="o">=</span> <span class="n">M</span> <span class="o">*</span> <span class="n">this</span><span class="o">.</span><span class="n">control_points</span><span class="p">()</span><span class="o">.</span><span class="n">row</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
+</pre></div>
+</div>
+<p>Note the transpose operators, <code class="docutils literal notranslate"><span class="pre">.T</span></code>; this format was chosen for
+compatibility use with e.g.
+solvers::MathematicalProgram::AddLinearConstraint(). Note also that
+the matrix, <code class="docutils literal notranslate"><span class="pre">M</span></code>, is the same for all rows, <code class="docutils literal notranslate"><span class="pre">i</span></code>, of
+control_points().</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>derivative_order &gt;= 0.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.trajectories.BezierCurve_-AutoDiffXd-.BernsteinBasis">
 <span id="pydrake.trajectories.BezierCurve_[AutoDiffXd].BernsteinBasis"></span><span class="sig-name descname"><span class="pre">BernsteinBasis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.BezierCurve_" title="pydrake.trajectories.BezierCurve_"><span class="pre">pydrake.trajectories.BezierCurve_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></span><a class="headerlink" href="#pydrake.trajectories.BezierCurve_-AutoDiffXd-.BernsteinBasis" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the value of the ith basis function of <code class="docutils literal notranslate"><span class="pre">order</span></code> (1 for
@@ -252,7 +293,8 @@ for the optional argument <code class="docutils literal notranslate"><span class
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.trajectories.BezierCurve_-AutoDiffXd-.control_points">
 <span id="pydrake.trajectories.BezierCurve_[AutoDiffXd].control_points"></span><span class="sig-name descname"><span class="pre">control_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.BezierCurve_" title="pydrake.trajectories.BezierCurve_"><span class="pre">pydrake.trajectories.BezierCurve_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.BezierCurve_-AutoDiffXd-.control_points" title="Permalink to this definition"></a></dt>
-<dd><p>Returns a reference to the control points which define the curve.</p>
+<dd><p>Returns a const reference to the control points which define the
+curve.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -315,6 +357,26 @@ interval t ∈ [0, 1].</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.trajectories.BezierCurve_-Expression-.AsLinearInControlPoints">
+<span id="pydrake.trajectories.BezierCurve_[Expression].AsLinearInControlPoints"></span><span class="sig-name descname"><span class="pre">AsLinearInControlPoints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.BezierCurve_" title="pydrake.trajectories.BezierCurve_"><span class="pre">pydrake.trajectories.BezierCurve_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">derivative_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">scipy.sparse.csc_matrix</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.BezierCurve_-Expression-.AsLinearInControlPoints" title="Permalink to this definition"></a></dt>
+<dd><p>We often write optimizations using the control points as decision
+variables. This method returns the matrix, <code class="docutils literal notranslate"><span class="pre">M</span></code>, defining the control
+points of the <code class="docutils literal notranslate"><span class="pre">order</span></code> derivative in the form:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">derivative</span><span class="o">.</span><span class="n">control_points</span><span class="p">()</span><span class="o">.</span><span class="n">row</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">T</span> <span class="o">=</span> <span class="n">M</span> <span class="o">*</span> <span class="n">this</span><span class="o">.</span><span class="n">control_points</span><span class="p">()</span><span class="o">.</span><span class="n">row</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
+</pre></div>
+</div>
+<p>Note the transpose operators, <code class="docutils literal notranslate"><span class="pre">.T</span></code>; this format was chosen for
+compatibility use with e.g.
+solvers::MathematicalProgram::AddLinearConstraint(). Note also that
+the matrix, <code class="docutils literal notranslate"><span class="pre">M</span></code>, is the same for all rows, <code class="docutils literal notranslate"><span class="pre">i</span></code>, of
+control_points().</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>derivative_order &gt;= 0.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.trajectories.BezierCurve_-Expression-.BernsteinBasis">
 <span id="pydrake.trajectories.BezierCurve_[Expression].BernsteinBasis"></span><span class="sig-name descname"><span class="pre">BernsteinBasis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.BezierCurve_" title="pydrake.trajectories.BezierCurve_"><span class="pre">pydrake.trajectories.BezierCurve_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></span><a class="headerlink" href="#pydrake.trajectories.BezierCurve_-Expression-.BernsteinBasis" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the value of the ith basis function of <code class="docutils literal notranslate"><span class="pre">order</span></code> (1 for
@@ -325,7 +387,8 @@ for the optional argument <code class="docutils literal notranslate"><span class
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.trajectories.BezierCurve_-Expression-.control_points">
 <span id="pydrake.trajectories.BezierCurve_[Expression].control_points"></span><span class="sig-name descname"><span class="pre">control_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.BezierCurve_" title="pydrake.trajectories.BezierCurve_"><span class="pre">pydrake.trajectories.BezierCurve_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.BezierCurve_-Expression-.control_points" title="Permalink to this definition"></a></dt>
-<dd><p>Returns a reference to the control points which define the curve.</p>
+<dd><p>Returns a const reference to the control points which define the
+curve.</p>
 </dd></dl>
 
 <dl class="py method">

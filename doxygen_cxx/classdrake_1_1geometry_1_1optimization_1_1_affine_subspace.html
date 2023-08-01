@@ -194,6 +194,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8e8824802dedfbc36776227f7482b6bc"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a8e8824802dedfbc36776227f7482b6bc">Serialize</a> (Archive *a)</td></tr>
 <tr class="memdesc:a8e8824802dedfbc36776227f7482b6bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passes this object to an Archive.  <a href="#a8e8824802dedfbc36776227f7482b6bc">More...</a><br /></td></tr>
 <tr class="separator:a8e8824802dedfbc36776227f7482b6bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc52b1cf2090f143dfeda40221474fb3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#acc52b1cf2090f143dfeda40221474fb3">ContainedIn</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html">AffineSubspace</a> &amp;other, <a class="el" href="classdouble.html">double</a> tol=1e-15) const</td></tr>
+<tr class="memdesc:acc52b1cf2090f143dfeda40221474fb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if <code>this</code> <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html" title="An affine subspace (also known as a &quot;flat&quot;, a &quot;linear variety&quot;, or a &quot;linear manifold&quot;) is a vector s...">AffineSubspace</a> is contained in <code>other</code>.  <a href="#acc52b1cf2090f143dfeda40221474fb3">More...</a><br /></td></tr>
+<tr class="separator:acc52b1cf2090f143dfeda40221474fb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d6c9e843c1772c0cade2a7ae80f3773"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a5d6c9e843c1772c0cade2a7ae80f3773">IsNearlyEqualTo</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html">AffineSubspace</a> &amp;other, <a class="el" href="classdouble.html">double</a> tol=1e-15) const</td></tr>
+<tr class="memdesc:a5d6c9e843c1772c0cade2a7ae80f3773"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the two AffineSubspaces describe the same set, by checking that each set is contained in the other.  <a href="#a5d6c9e843c1772c0cade2a7ae80f3773">More...</a><br /></td></tr>
+<tr class="separator:a5d6c9e843c1772c0cade2a7ae80f3773"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
 <tr class="memitem:a69ca9f24815ca559fa2afadb9cef61fc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a69ca9f24815ca559fa2afadb9cef61fc">AffineSubspace</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html">AffineSubspace</a> &amp;)=default</td></tr>
 <tr class="separator:a69ca9f24815ca559fa2afadb9cef61fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -456,6 +462,67 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the basis in an n-by-m matrix, where n is the ambient dimension, and m is the number of vectors in the basis. </p>
+
+</div>
+</div>
+<a id="acc52b1cf2090f143dfeda40221474fb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc52b1cf2090f143dfeda40221474fb3">&#9670;&nbsp;</a></span>ContainedIn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ContainedIn </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html">AffineSubspace</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>tol</em> = <code>1e-15</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns <code>true</code> if <code>this</code> <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html" title="An affine subspace (also known as a &quot;flat&quot;, a &quot;linear variety&quot;, or a &quot;linear manifold&quot;) is a vector s...">AffineSubspace</a> is contained in <code>other</code>. </p>
+<p>This is computed by checking if <code><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a4bf2b12f9c8ea0ce42173abdf5816d1b" title="Returns the translation as a length n vector.">translation()</a></code> is in <code>other</code> and then checking if each basis vector is in the span of the basis of <code>other</code>. The latter step requires finding a least-squares solution, so a nonzero tolerance (<code>tol</code>) is almost always necessary. (You may have to adjust the default tolerance depending on the dimension of your space and the scale of your basis vectors.) </p>
+
+</div>
+</div>
+<a id="a5d6c9e843c1772c0cade2a7ae80f3773"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d6c9e843c1772c0cade2a7ae80f3773">&#9670;&nbsp;</a></span>IsNearlyEqualTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsNearlyEqualTo </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html">AffineSubspace</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>tol</em> = <code>1e-15</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if the two AffineSubspaces describe the same set, by checking that each set is contained in the other. </p>
 
 </div>
 </div>

@@ -160,7 +160,9 @@ $(document).ready(function(){initNavTree('namespacedrake_1_1geometry_1_1render.h
 <div class="header">
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">drake::geometry::render Namespace Reference</div>  </div>
 </div><!--header-->
@@ -185,6 +187,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_depth_render_camera.html">DepthRenderCamera</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collection of camera properties for cameras to be used with depth images.  <a href="classdrake_1_1geometry_1_1render_1_1_depth_render_camera.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1render_1_1_light_parameter.html">LightParameter</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Light parameter for supporting <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html" title="The engine for performing rasterization operations on geometry.">RenderEngine</a> implementations.  <a href="structdrake_1_1geometry_1_1render_1_1_light_parameter.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_camera_core.html">RenderCameraCore</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collection of core parameters for modeling a pinhole-model camera in a <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html" title="The engine for performing rasterization operations on geometry.">RenderEngine</a>.  <a href="classdrake_1_1geometry_1_1render_1_1_render_camera_core.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -194,7 +199,225 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html">RenderLabel</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class representing object "labels" for rendering.  <a href="classdrake_1_1geometry_1_1render_1_1_render_label.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:adc3ec8293e6a97ebe43f0196b9a7f638"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render.html#adc3ec8293e6a97ebe43f0196b9a7f638">LightType</a> { <a class="el" href="namespacedrake_1_1geometry_1_1render.html#adc3ec8293e6a97ebe43f0196b9a7f638a20e722b15a1b587c30633f0a136b7009">kPoint</a> = 1, 
+<a class="el" href="namespacedrake_1_1geometry_1_1render.html#adc3ec8293e6a97ebe43f0196b9a7f638a4a679103e90e5b1d77370e744134971a">kSpot</a> = 2, 
+<a class="el" href="namespacedrake_1_1geometry_1_1render.html#adc3ec8293e6a97ebe43f0196b9a7f638ab34dea3b99121eeade6dc92ac1fff18f">kDirectional</a> = 3
+ }</td></tr>
+<tr class="memdesc:adc3ec8293e6a97ebe43f0196b9a7f638"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specification of the type of light.  <a href="namespacedrake_1_1geometry_1_1render.html#adc3ec8293e6a97ebe43f0196b9a7f638">More...</a><br /></td></tr>
+<tr class="separator:adc3ec8293e6a97ebe43f0196b9a7f638"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a102150e6763c0db325ca79bbf1148ffd"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render.html#a102150e6763c0db325ca79bbf1148ffd">LightFrame</a> { <a class="el" href="namespacedrake_1_1geometry_1_1render.html#a102150e6763c0db325ca79bbf1148ffda5346a7e9e23cbcc5a9ddf739ee74bc4d">kWorld</a> = 0, 
+<a class="el" href="namespacedrake_1_1geometry_1_1render.html#a102150e6763c0db325ca79bbf1148ffdab91a982133fa67e579d45373b64bbe7b">kCamera</a> = 1
+ }</td></tr>
+<tr class="memdesc:a102150e6763c0db325ca79bbf1148ffd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specifies the frame in which a light is fixed.  <a href="namespacedrake_1_1geometry_1_1render.html#a102150e6763c0db325ca79bbf1148ffd">More...</a><br /></td></tr>
+<tr class="separator:a102150e6763c0db325ca79bbf1148ffd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:aab07aecacd083ebe574a44a2754b430a"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render.html#aab07aecacd083ebe574a44a2754b430a">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="namespacedrake_1_1geometry_1_1render.html#adc3ec8293e6a97ebe43f0196b9a7f638">LightType</a> &amp;t)</td></tr>
+<tr class="memdesc:aab07aecacd083ebe574a44a2754b430a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the LightType as a string.  <a href="#aab07aecacd083ebe574a44a2754b430a">More...</a><br /></td></tr>
+<tr class="separator:aab07aecacd083ebe574a44a2754b430a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f84eb20195999e4bb6c95cd47b69a76"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1geometry_1_1render.html#adc3ec8293e6a97ebe43f0196b9a7f638">LightType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render.html#a8f84eb20195999e4bb6c95cd47b69a76">light_type_from_string</a> (const std::string &amp;spec)</td></tr>
+<tr class="memdesc:a8f84eb20195999e4bb6c95cd47b69a76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiates a LightType from its string representation.  <a href="#a8f84eb20195999e4bb6c95cd47b69a76">More...</a><br /></td></tr>
+<tr class="separator:a8f84eb20195999e4bb6c95cd47b69a76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a4729ba2516af248942df77db747f51"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render.html#a5a4729ba2516af248942df77db747f51">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="namespacedrake_1_1geometry_1_1render.html#a102150e6763c0db325ca79bbf1148ffd">LightFrame</a> &amp;t)</td></tr>
+<tr class="memdesc:a5a4729ba2516af248942df77db747f51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the LightFrame as a string.  <a href="#a5a4729ba2516af248942df77db747f51">More...</a><br /></td></tr>
+<tr class="separator:a5a4729ba2516af248942df77db747f51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5284a5342f4a9295304af282c5e2653"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1geometry_1_1render.html#a102150e6763c0db325ca79bbf1148ffd">LightFrame</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render.html#ab5284a5342f4a9295304af282c5e2653">light_frame_from_string</a> (const std::string &amp;spec)</td></tr>
+<tr class="memdesc:ab5284a5342f4a9295304af282c5e2653"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiates a LightFrame from its string representation.  <a href="#ab5284a5342f4a9295304af282c5e2653">More...</a><br /></td></tr>
+<tr class="separator:ab5284a5342f4a9295304af282c5e2653"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a102150e6763c0db325ca79bbf1148ffd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a102150e6763c0db325ca79bbf1148ffd">&#9670;&nbsp;</a></span>LightFrame</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="namespacedrake_1_1geometry_1_1render.html#a102150e6763c0db325ca79bbf1148ffd">LightFrame</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Specifies the frame in which a light is fixed. </p>
+<p>Fixing the camera to the world keeps it stationary. Fixing it to the camera moves it with the camera. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a102150e6763c0db325ca79bbf1148ffda5346a7e9e23cbcc5a9ddf739ee74bc4d"></a>kWorld&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a102150e6763c0db325ca79bbf1148ffdab91a982133fa67e579d45373b64bbe7b"></a>kCamera&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="adc3ec8293e6a97ebe43f0196b9a7f638"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc3ec8293e6a97ebe43f0196b9a7f638">&#9670;&nbsp;</a></span>LightType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="namespacedrake_1_1geometry_1_1render.html#adc3ec8293e6a97ebe43f0196b9a7f638">LightType</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Specification of the type of light. </p>
+<ul>
+<li>kPoint: a punctual light source emitting light in all directions.</li>
+<li>kSpot: A conical light source emitting light from a point into a limited set of directions.</li>
+<li>kDirectional: a light source, infinitely far away, casting parallel rays of light (like a sun). </li>
+</ul>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="adc3ec8293e6a97ebe43f0196b9a7f638a20e722b15a1b587c30633f0a136b7009"></a>kPoint&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="adc3ec8293e6a97ebe43f0196b9a7f638a4a679103e90e5b1d77370e744134971a"></a>kSpot&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="adc3ec8293e6a97ebe43f0196b9a7f638ab34dea3b99121eeade6dc92ac1fff18f"></a>kDirectional&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ab5284a5342f4a9295304af282c5e2653"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5284a5342f4a9295304af282c5e2653">&#9670;&nbsp;</a></span>light_frame_from_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1geometry_1_1render.html#a102150e6763c0db325ca79bbf1148ffd">LightFrame</a> drake::geometry::render::light_frame_from_string </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>spec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Instantiates a LightFrame from its string representation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spec</td><td>Must be one of 'world' or 'camera'. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td><code>spec</code> is an unrecognized string. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8f84eb20195999e4bb6c95cd47b69a76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f84eb20195999e4bb6c95cd47b69a76">&#9670;&nbsp;</a></span>light_type_from_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1geometry_1_1render.html#adc3ec8293e6a97ebe43f0196b9a7f638">LightType</a> drake::geometry::render::light_type_from_string </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>spec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Instantiates a LightType from its string representation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spec</td><td>Must be one of 'point', 'spot', or 'directional'. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td><code>spec</code> is an unrecognized string. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aab07aecacd083ebe574a44a2754b430a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab07aecacd083ebe574a44a2754b430a">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; drake::geometry::render::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake_1_1geometry_1_1render.html#adc3ec8293e6a97ebe43f0196b9a7f638">LightType</a> &amp;&#160;</td>
+          <td class="paramname"><em>t</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Writes the LightType as a string. </p>
+
+</div>
+</div>
+<a id="a5a4729ba2516af248942df77db747f51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a4729ba2516af248942df77db747f51">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; drake::geometry::render::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake_1_1geometry_1_1render.html#a102150e6763c0db325ca79bbf1148ffd">LightFrame</a> &amp;&#160;</td>
+          <td class="paramname"><em>t</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Writes the LightFrame as a string. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- footer -->

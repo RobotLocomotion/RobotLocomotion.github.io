@@ -516,6 +516,7 @@ var hierarchy =
     [ "less< drake::symbolic::Expression >", "structstd_1_1less_3_01drake_1_1symbolic_1_1_expression_01_4.html", null ],
     [ "less< drake::symbolic::Formula >", "structstd_1_1less_3_01drake_1_1symbolic_1_1_formula_01_4.html", null ],
     [ "less< drake::symbolic::Variable >", "structstd_1_1less_3_01drake_1_1symbolic_1_1_variable_01_4.html", null ],
+    [ "LightParameter", "structdrake_1_1geometry_1_1render_1_1_light_parameter.html", null ],
     [ "LimitMalloc", "classdrake_1_1test_1_1_limit_malloc.html", null ],
     [ "LimitMallocParams", "structdrake_1_1test_1_1_limit_malloc_params.html", null ],
     [ "LinearQuadraticRegulatorResult", "structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html", null ],
@@ -724,10 +725,10 @@ var hierarchy =
     [ "ScopeExit", "classdrake_1_1_scope_exit.html", null ],
     [ "ScsSolverDetails", "structdrake_1_1solvers_1_1_scs_solver_details.html", null ],
     [ "CspaceFreePolytope::SearchResult", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html", null ],
-    [ "CspaceFreePolytope::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html", null ],
     [ "CspaceFreeBox::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html", null ],
-    [ "CspaceFreeBox::SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate.html", null ],
+    [ "CspaceFreePolytope::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html", null ],
     [ "CspaceFreePolytope::SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate.html", null ],
+    [ "CspaceFreeBox::SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate.html", null ],
     [ "SeparationCertificateProgramBase", "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_program_base.html", [
       [ "CspaceFreeBox::SeparationCertificateProgram", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_program.html", null ],
       [ "CspaceFreePolytope::SeparationCertificateProgram", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_program.html", null ]

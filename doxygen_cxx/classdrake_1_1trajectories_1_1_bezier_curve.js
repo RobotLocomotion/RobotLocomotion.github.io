@@ -5,6 +5,7 @@ var classdrake_1_1trajectories_1_1_bezier_curve =
     [ "BezierCurve", "classdrake_1_1trajectories_1_1_bezier_curve.html#a3f901a992920634ebe38141643a638e3", null ],
     [ "BezierCurve", "classdrake_1_1trajectories_1_1_bezier_curve.html#ab46b3b961a9a0e0baff74272179e7744", null ],
     [ "~BezierCurve", "classdrake_1_1trajectories_1_1_bezier_curve.html#ab36054abe833a388fc4386dd782b8b5b", null ],
+    [ "AsLinearInControlPoints", "classdrake_1_1trajectories_1_1_bezier_curve.html#a4218e147feb3c1d1e3a0b864d223e670", null ],
     [ "BernsteinBasis", "classdrake_1_1trajectories_1_1_bezier_curve.html#af265c9fcdcdb0c8441a21ee6e85c4517", null ],
     [ "Clone", "classdrake_1_1trajectories_1_1_bezier_curve.html#a0d37069b2edc37d7662aa809b6070e4e", null ],
     [ "cols", "classdrake_1_1trajectories_1_1_bezier_curve.html#adca8eca2ee324f57170dedfb4b06160b", null ],

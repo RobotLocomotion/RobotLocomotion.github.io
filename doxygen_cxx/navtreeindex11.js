@@ -1,5 +1,12 @@
 var NAVTREEINDEX11 =
 {
+"classdrake_1_1math_1_1_numerical_gradient_option.html#a4a865e4411f8c79f280a51d9141d1dd4":[3,0,0,8,10,1],
+"classdrake_1_1math_1_1_rigid_transform.html":[3,0,0,8,11],
+"classdrake_1_1math_1_1_rigid_transform.html#a0780a9ce724867fa65c009f0fbf82dc5":[3,0,0,8,11,6],
+"classdrake_1_1math_1_1_rigid_transform.html#a079ca01bad5c04328237cfc47c73f7c6":[3,0,0,8,11,3],
+"classdrake_1_1math_1_1_rigid_transform.html#a08c8cdccdeb018584d05a3d7557bf42c":[3,0,0,8,11,40],
+"classdrake_1_1math_1_1_rigid_transform.html#a10a6bee63e97e5697d2f4dac49cde380":[3,0,0,8,11,45],
+"classdrake_1_1math_1_1_rigid_transform.html#a1bc2d96e26802c52ea92f21a40540681":[3,0,0,8,11,14],
 "classdrake_1_1math_1_1_rigid_transform.html#a1fe4dc36c56c493ac1e956ec185bdfea":[3,0,0,8,11,41],
 "classdrake_1_1math_1_1_rigid_transform.html#a257f755b0f58f8958f8827b0651e205c":[3,0,0,8,11,34],
 "classdrake_1_1math_1_1_rigid_transform.html#a25d3e276d5e4e1fad974214851ce0b46":[3,0,0,8,11,46],
@@ -242,12 +249,5 @@ var NAVTREEINDEX11 =
 "classdrake_1_1multibody_1_1_body_frame.html#a5f1f8d35fd236710bc6fde286f4c7946":[3,0,0,9,13,5],
 "classdrake_1_1multibody_1_1_body_frame.html#a85ed93e3f60b6b39558dfcc087442495":[3,0,0,9,13,10],
 "classdrake_1_1multibody_1_1_body_frame.html#a8b36ad94c219bfd6dda8aca9d484b408":[3,0,0,9,13,1],
-"classdrake_1_1multibody_1_1_body_frame.html#a9c005ea7741995b13b8171bdae043956":[3,0,0,9,13,16],
-"classdrake_1_1multibody_1_1_body_frame.html#aab37c950311b422d44019ea551ae5b1e":[3,0,0,9,13,12],
-"classdrake_1_1multibody_1_1_body_frame.html#abb66ebf40df1ef9fb2d4347e84a9ab2f":[3,0,0,9,13,11],
-"classdrake_1_1multibody_1_1_body_frame.html#acd3092c461ef2339ba51209fcf41bdbe":[3,0,0,9,13,7],
-"classdrake_1_1multibody_1_1_body_frame.html#ad0fe08fa46f1c029e9b860946bc13340":[3,0,0,9,13,0],
-"classdrake_1_1multibody_1_1_body_frame.html#aed0eeb663f377076dab1ae0ab44be5aa":[3,0,0,9,13,8],
-"classdrake_1_1multibody_1_1_body_frame.html#af545520bafbd67a7e6c8b3c0bf4aae6f":[3,0,0,9,13,4],
-"classdrake_1_1multibody_1_1_centroidal_momentum_constraint.html":[1,1,0,14]
+"classdrake_1_1multibody_1_1_body_frame.html#a9c005ea7741995b13b8171bdae043956":[3,0,0,9,13,16]
 };

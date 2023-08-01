@@ -3440,6 +3440,59 @@ drake_visualizer_role_consumer “drake::geometry::DrakeVisualizer”</p>
 
 </dd></dl>
 
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.geometry.LightParameter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">LightParameter</span></span><a class="headerlink" href="#pydrake.geometry.LightParameter" title="Permalink to this definition"></a></dt>
+<dd><p>Light parameter for supporting RenderEngine implementations. Look at
+the various RenderEngine___Params types to see if they support
+declaring lights.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.LightParameter.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.LightParameter" title="pydrake.geometry.LightParameter"><span class="pre">pydrake.geometry.LightParameter</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.LightParameter.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.LightParameter.attenuation_values">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">attenuation_values</span></span><a class="headerlink" href="#pydrake.geometry.LightParameter.attenuation_values" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.LightParameter.color">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">color</span></span><a class="headerlink" href="#pydrake.geometry.LightParameter.color" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.LightParameter.cone_angle">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cone_angle</span></span><a class="headerlink" href="#pydrake.geometry.LightParameter.cone_angle" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.LightParameter.direction">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">direction</span></span><a class="headerlink" href="#pydrake.geometry.LightParameter.direction" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.LightParameter.frame">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">frame</span></span><a class="headerlink" href="#pydrake.geometry.LightParameter.frame" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.LightParameter.intensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">intensity</span></span><a class="headerlink" href="#pydrake.geometry.LightParameter.intensity" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.LightParameter.position">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">position</span></span><a class="headerlink" href="#pydrake.geometry.LightParameter.position" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.LightParameter.type">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">type</span></span><a class="headerlink" href="#pydrake.geometry.LightParameter.type" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="pydrake.geometry.MakePhongIllustrationProperties">
 <span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">MakePhongIllustrationProperties</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">diffuse</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.IllustrationProperties" title="pydrake.geometry.IllustrationProperties"><span class="pre">pydrake.geometry.IllustrationProperties</span></a></span></span><a class="headerlink" href="#pydrake.geometry.MakePhongIllustrationProperties" title="Permalink to this definition"></a></dt>
@@ -3449,7 +3502,7 @@ drake_visualizer_role_consumer “drake::geometry::DrakeVisualizer”</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pydrake.geometry.MakeRenderEngineGl">
-<span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">MakeRenderEngineGl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.RenderEngineGlParams" title="pydrake.geometry.RenderEngineGlParams"><span class="pre">pydrake.geometry.RenderEngineGlParams</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">RenderEngineGlParams(default_label=RenderLabel.kUnspecified,</span> <span class="pre">default_diffuse=Rgba(r=0.9,</span> <span class="pre">g=0.7,</span> <span class="pre">b=0.2,</span> <span class="pre">a=1.0),</span> <span class="pre">default_clear_color=Rgba(r=0.8,</span> <span class="pre">g=0.8980392156862745,</span> <span class="pre">b=1.0,</span> <span class="pre">a=1.0))</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.RenderEngine" title="pydrake.geometry.RenderEngine"><span class="pre">pydrake.geometry.RenderEngine</span></a></span></span><a class="headerlink" href="#pydrake.geometry.MakeRenderEngineGl" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">MakeRenderEngineGl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.RenderEngineGlParams" title="pydrake.geometry.RenderEngineGlParams"><span class="pre">pydrake.geometry.RenderEngineGlParams</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">RenderEngineGlParams(default_label=RenderLabel.kUnspecified,</span> <span class="pre">default_diffuse=Rgba(r=0.9,</span> <span class="pre">g=0.7,</span> <span class="pre">b=0.2,</span> <span class="pre">a=1.0),</span> <span class="pre">default_clear_color=Rgba(r=0.8,</span> <span class="pre">g=0.8980392156862745,</span> <span class="pre">b=1.0,</span> <span class="pre">a=1.0),</span> <span class="pre">lights=[])</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.RenderEngine" title="pydrake.geometry.RenderEngine"><span class="pre">pydrake.geometry.RenderEngine</span></a></span></span><a class="headerlink" href="#pydrake.geometry.MakeRenderEngineGl" title="Permalink to this definition"></a></dt>
 <dd><p>Constructs a RenderEngine implementation which uses a purely OpenGL
 renderer. The engine only works under Ubuntu. If called on a Mac, it
 will throw.</p>
@@ -8954,6 +9007,14 @@ specified in the (phong, diffuse) property.</p>
 specified.</p>
 </dd></dl>
 
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.RenderEngineGlParams.lights">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lights</span></span><a class="headerlink" href="#pydrake.geometry.RenderEngineGlParams.lights" title="Permalink to this definition"></a></dt>
+<dd><p>Lights in the scene. More than five lights is an error. If no lights
+are defined, a single directional light, fixed to the camera frame, is
+used.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
@@ -9196,6 +9257,18 @@ label image more compact but means there are only, approximately,
 <dt class="sig sig-object py" id="pydrake.geometry.Rgba.rgba">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rgba</span></span><a class="headerlink" href="#pydrake.geometry.Rgba.rgba" title="Permalink to this definition"></a></dt>
 <dd><p>The RGBA value as a property (as np.ndarray).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.Rgba.scale_rgb">
+<span class="sig-name descname"><span class="pre">scale_rgb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Rgba" title="pydrake.geometry.Rgba"><span class="pre">pydrake.geometry.Rgba</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.Rgba" title="pydrake.geometry.Rgba"><span class="pre">pydrake.geometry.Rgba</span></a></span></span><a class="headerlink" href="#pydrake.geometry.Rgba.scale_rgb" title="Permalink to this definition"></a></dt>
+<dd><p>Computes a new Rgba color by multiplying the color channels (rgb) by
+the given scalar <code class="docutils literal notranslate"><span class="pre">scalar</span></code>. All resultant channel values saturate at
+one. The result has <code class="docutils literal notranslate"><span class="pre">this</span></code> Rgba’s alpha values.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>scale &gt;= 0.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">

@@ -42,6 +42,7 @@ var searchData=
   ['less_3c_20drake_3a_3asymbolic_3a_3aexpression_20_3e',['less&lt; drake::symbolic::Expression &gt;',['../structstd_1_1less_3_01drake_1_1symbolic_1_1_expression_01_4.html',1,'std']]],
   ['less_3c_20drake_3a_3asymbolic_3a_3aformula_20_3e',['less&lt; drake::symbolic::Formula &gt;',['../structstd_1_1less_3_01drake_1_1symbolic_1_1_formula_01_4.html',1,'std']]],
   ['less_3c_20drake_3a_3asymbolic_3a_3avariable_20_3e',['less&lt; drake::symbolic::Variable &gt;',['../structstd_1_1less_3_01drake_1_1symbolic_1_1_variable_01_4.html',1,'std']]],
+  ['lightparameter',['LightParameter',['../structdrake_1_1geometry_1_1render_1_1_light_parameter.html',1,'drake::geometry::render']]],
   ['limitmalloc',['LimitMalloc',['../classdrake_1_1test_1_1_limit_malloc.html',1,'drake::test']]],
   ['limitmallocparams',['LimitMallocParams',['../structdrake_1_1test_1_1_limit_malloc_params.html',1,'drake::test']]],
   ['linearbushingrollpitchyaw',['LinearBushingRollPitchYaw',['../classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html',1,'drake::multibody']]],
