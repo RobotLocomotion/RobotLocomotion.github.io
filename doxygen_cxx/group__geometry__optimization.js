@@ -5,13 +5,18 @@ var group__geometry__optimization =
       [ "AffineSubspace", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#aec86862d72382b4af5589ef378b32652", null ],
       [ "AffineSubspace", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a21a288a410eefce77117064d05ca92ad", null ],
       [ "AffineSubspace", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#af6154bf89e3d063bb7b29741d1914fd8", null ],
+      [ "AffineSubspace", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#ab02962a500960e624b84787ddbf3aa94", null ],
       [ "~AffineSubspace", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a9fe2f6653e76b4db7c02a2ba9c8e35cd", null ],
+      [ "AffineDimension", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a941a95906ac84cc920167e46af9fc2dd", null ],
       [ "basis", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a2e517d5b78e2fa08bdc06aea97a0d3b6", null ],
       [ "ContainedIn", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#acc52b1cf2090f143dfeda40221474fb3", null ],
       [ "IsNearlyEqualTo", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a5d6c9e843c1772c0cade2a7ae80f3773", null ],
       [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#aec46116411b87b5a8824ff5aa0d7e194", null ],
       [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a9ef622cde6496d9c85941241b4f061a6", null ],
+      [ "Project", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#ad5896cc1956d6475fbf60b5da9e0f094", null ],
       [ "Serialize", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a8e8824802dedfbc36776227f7482b6bc", null ],
+      [ "ToGlobalCoordinates", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a8959fcff6a1314155423f57f82302119", null ],
+      [ "ToLocalCoordinates", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a3d1925b7f2c88852aafd90b2bfb6e51c", null ],
       [ "translation", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a4bf2b12f9c8ea0ce42173abdf5816d1b", null ]
     ] ],
     [ "CartesianProduct", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html", [

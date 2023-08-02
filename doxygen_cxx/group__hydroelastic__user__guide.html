@@ -349,7 +349,7 @@ Assigning hydroelastic properties in code</h4>
 <p><a class="el" href="namespacedrake_1_1geometry.html#af76ed94bef3f81765a1b3ce069562e00" title="Adds properties to the given set of proximity properties sufficient to cause the associated geometry ...">AddRigidHydroelasticProperties()</a> is overloaded. One version accepts a value for resolution hint, one does not. When in doubt which to use, it is harmless to provide a resolution hint value that would be ignored for some geometries, but failing to provide one where necessary will cause the simulation to throw an exception. Note the special case for declaring a compliant half space &ndash; it takes the required slab thickness parameter in addition to the hydroelastic modulus value.</p>
 <h2><a class="anchor" id="hug_visualizing"></a>
 Visualizing hydroelastic contact</h2>
-<p>Currently we can visualize the contact surface using Drake Visualizer; however, it will be replaced by <a href="https://github.com/rdeits/meshcat">MeshCat</a> in the future.</p>
+<p>Currently we can only visualize the contact surface using the legacy <code>drake_visualizer</code> application of days past; however, it will be replaced by <a href="https://github.com/rdeits/meshcat">MeshCat</a> in the future.</p>
 <p>Start Drake Visualizer by: </p><pre class="fragment">$ bazel run //tools:drake_visualizer &amp;
 </pre><p>Run a simulation with hydroelastic contact model; for example, </p><pre class="fragment">$ bazel run //examples/hydroelastic/ball_plate:ball_plate_run_dynamics -- \
    --mbp_dt=0.001 --simulator_publish_every_time_step --x0=0.10 --z0=0.15 \

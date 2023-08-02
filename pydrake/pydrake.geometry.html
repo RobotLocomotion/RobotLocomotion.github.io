@@ -1646,10 +1646,11 @@ getter methods for documentation of parameters.</p>
 <dt class="sig sig-object py" id="pydrake.geometry.DrakeVisualizer">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">DrakeVisualizer</span></span><a class="headerlink" href="#pydrake.geometry.DrakeVisualizer" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
-<p>A system that publishes LCM messages compatible with the
-<code class="docutils literal notranslate"><span class="pre">drake_visualizer</span></code> application representing the current state of a
-SceneGraph instance (whose QueryObject-valued output port is connected
-to this system’s input port).</p>
+<p>A system that publishes LCM messages representing the current state of
+a SceneGraph instance (whose QueryObject-valued output port is
+connected to this system’s input port).</p>
+<p>The messages are compatible with the legacy <code class="docutils literal notranslate"><span class="pre">drake_visualizer</span></code>
+application of days past, or its modern re-implementation <a class="reference external" href="/pydrake/pydrake.visualization.meldis.html">Meldis</a>.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">query_object&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>DrakeVisualizer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><p>The DrakeVisualizer system broadcasts three kinds of LCM messages:</p>
 <ul class="simple">
 <li><p>a message that defines the non-deformable geometries in the world on the</p></li>
@@ -1670,7 +1671,7 @@ DrakeVisualizer instances.</p>
 </ul>
 <p>The system uses the versioning mechanism provided by SceneGraph to
 detect changes to the geometry so that a change in SceneGraph’s data
-will propagate to <code class="docutils literal notranslate"><span class="pre">drake_visualizer</span></code>.</p>
+will propagate to the message receiver.</p>
 <p><strong>Visualization by Role</strong></p>
 <p>By default, DrakeVisualizer visualizes geometries with the
 illustration role (see geometry_roles for more details). It can be
@@ -1696,9 +1697,9 @@ DrakeVisualizerParams).</p>
 | The rgba value of the object surface. |</p>
 <p><em>Appearance of OBJ files</em></p>
 <p>Meshes represented by OBJ are special. The OBJ file can reference a
-material file (.mtl). If found by <code class="docutils literal notranslate"><span class="pre">drake_visualizer</span></code>, the values in
-the .mtl will take precedence over the (“phong”, “diffuse”) geometry
-property.</p>
+material file (.mtl). If the mtl file is found by the receiving
+application, values in the .mtl will take precedence over the
+(“phong”, “diffuse”) geometry property.</p>
 <p>It’s worth emphasizing that these rules permits control over the
 appearance of collision geometry on a per-geometry basis by assigning
 an explicit Rgba value to the (“phong”, “diffuse”) property in the
@@ -1816,10 +1817,11 @@ cause a runtime error when attempting to broadcast messages.</p>
 <dt class="sig sig-object py" id="pydrake.geometry.DrakeVisualizer_-AutoDiffXd">
 <span id="pydrake.geometry.DrakeVisualizer_[AutoDiffXd]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">DrakeVisualizer_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.geometry.DrakeVisualizer_-AutoDiffXd" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-AutoDiffXd" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[AutoDiffXd]</span></code></a></p>
-<p>A system that publishes LCM messages compatible with the
-<code class="docutils literal notranslate"><span class="pre">drake_visualizer</span></code> application representing the current state of a
-SceneGraph instance (whose QueryObject-valued output port is connected
-to this system’s input port).</p>
+<p>A system that publishes LCM messages representing the current state of
+a SceneGraph instance (whose QueryObject-valued output port is
+connected to this system’s input port).</p>
+<p>The messages are compatible with the legacy <code class="docutils literal notranslate"><span class="pre">drake_visualizer</span></code>
+application of days past, or its modern re-implementation <a class="reference external" href="/pydrake/pydrake.visualization.meldis.html">Meldis</a>.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">query_object&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>DrakeVisualizer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><p>The DrakeVisualizer system broadcasts three kinds of LCM messages:</p>
 <ul class="simple">
 <li><p>a message that defines the non-deformable geometries in the world on the</p></li>
@@ -1840,7 +1842,7 @@ DrakeVisualizer instances.</p>
 </ul>
 <p>The system uses the versioning mechanism provided by SceneGraph to
 detect changes to the geometry so that a change in SceneGraph’s data
-will propagate to <code class="docutils literal notranslate"><span class="pre">drake_visualizer</span></code>.</p>
+will propagate to the message receiver.</p>
 <p><strong>Visualization by Role</strong></p>
 <p>By default, DrakeVisualizer visualizes geometries with the
 illustration role (see geometry_roles for more details). It can be
@@ -1866,9 +1868,9 @@ DrakeVisualizerParams).</p>
 | The rgba value of the object surface. |</p>
 <p><em>Appearance of OBJ files</em></p>
 <p>Meshes represented by OBJ are special. The OBJ file can reference a
-material file (.mtl). If found by <code class="docutils literal notranslate"><span class="pre">drake_visualizer</span></code>, the values in
-the .mtl will take precedence over the (“phong”, “diffuse”) geometry
-property.</p>
+material file (.mtl). If the mtl file is found by the receiving
+application, values in the .mtl will take precedence over the
+(“phong”, “diffuse”) geometry property.</p>
 <p>It’s worth emphasizing that these rules permits control over the
 appearance of collision geometry on a per-geometry basis by assigning
 an explicit Rgba value to the (“phong”, “diffuse”) property in the
@@ -2222,7 +2224,7 @@ containing library. No other values for KinematicsValue are supported.</p>
 <p>Currently, the following data types with the following scalar types
 are supported:</p>
 <p>Alias | Instantiation | Scalar types
-————————————-<a href="#id16"><span class="problematic" id="id17">|--------------------------------------------------|</span></a>————-
+————————————-<a href="#id17"><span class="problematic" id="id18">|--------------------------------------------------|</span></a>————-
 FramePoseVector&lt;Scalar&gt; |
 KinematicsVector&lt;FrameId,RigidTransform&lt;Scalar&gt;&gt; |
 double/AutoDiffXd/Expression GeometryConfigurationVector&lt;Scalar&gt; |
@@ -2364,7 +2366,7 @@ containing library. No other values for KinematicsValue are supported.</p>
 <p>Currently, the following data types with the following scalar types
 are supported:</p>
 <p>Alias | Instantiation | Scalar types
-————————————-<a href="#id18"><span class="problematic" id="id19">|--------------------------------------------------|</span></a>————-
+————————————-<a href="#id19"><span class="problematic" id="id20">|--------------------------------------------------|</span></a>————-
 FramePoseVector&lt;Scalar&gt; |
 KinematicsVector&lt;FrameId,RigidTransform&lt;Scalar&gt;&gt; |
 double/AutoDiffXd/Expression GeometryConfigurationVector&lt;Scalar&gt; |
@@ -2495,7 +2497,7 @@ containing library. No other values for KinematicsValue are supported.</p>
 <p>Currently, the following data types with the following scalar types
 are supported:</p>
 <p>Alias | Instantiation | Scalar types
-————————————-<a href="#id20"><span class="problematic" id="id21">|--------------------------------------------------|</span></a>————-
+————————————-<a href="#id21"><span class="problematic" id="id22">|--------------------------------------------------|</span></a>————-
 FramePoseVector&lt;Scalar&gt; |
 KinematicsVector&lt;FrameId,RigidTransform&lt;Scalar&gt;&gt; |
 double/AutoDiffXd/Expression GeometryConfigurationVector&lt;Scalar&gt; |
@@ -2784,12 +2786,6 @@ they are defined). Nullptr otherwise.</p>
 <span class="sig-name descname"><span class="pre">proximity_properties</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.GeometryInstance" title="pydrake.geometry.GeometryInstance"><span class="pre">pydrake.geometry.GeometryInstance</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::geometry::ProximityProperties</span></span></span><a class="headerlink" href="#pydrake.geometry.GeometryInstance.proximity_properties" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a pointer to the geometry’s const proximity properties (if
 they are defined). Nullptr otherwise.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.geometry.GeometryInstance.release_shape">
-<span class="sig-name descname"><span class="pre">release_shape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.GeometryInstance" title="pydrake.geometry.GeometryInstance"><span class="pre">pydrake.geometry.GeometryInstance</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::geometry::Shape</span></span></span><a class="headerlink" href="#pydrake.geometry.GeometryInstance.release_shape" title="Permalink to this definition"></a></dt>
-<dd><p>Ownership transfer doesn’t make sense for Python. Just use shape() instead. This function will be removed on or after 2023-08-01.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -5899,7 +5895,7 @@ being measured and expressed in the mesh’s frame M).</p>
 integers which <em>encodes</em> P polygons. Each polygon can have an
 arbitrary number of vertices. The encoding of the P polygons is as
 follows:</p>
-<p><a href="#id22"><span class="problematic" id="id23">|c₁|v₁₀|v₁₁|</span></a>…|cᵢ|cᵢ₀|cᵢ₁|…|cₚ|cₚ₀|cₚ₁|…|</p>
+<p><a href="#id23"><span class="problematic" id="id24">|c₁|v₁₀|v₁₁|</span></a>…|cᵢ|cᵢ₀|cᵢ₁|…|cₚ|cₚ₀|cₚ₁|…|</p>
 <p>Each polygon is defined in sequence. The definition consists of an
 integer indicating the <em>number</em> of vertices in that polygon (c₁, cᵢ,
 and cₘ in the illustration above). The next cᵢ integers in the
@@ -6089,7 +6085,7 @@ being measured and expressed in the mesh’s frame M).</p>
 integers which <em>encodes</em> P polygons. Each polygon can have an
 arbitrary number of vertices. The encoding of the P polygons is as
 follows:</p>
-<p><a href="#id24"><span class="problematic" id="id25">|c₁|v₁₀|v₁₁|</span></a>…|cᵢ|cᵢ₀|cᵢ₁|…|cₚ|cₚ₀|cₚ₁|…|</p>
+<p><a href="#id25"><span class="problematic" id="id26">|c₁|v₁₀|v₁₁|</span></a>…|cᵢ|cᵢ₀|cᵢ₁|…|cₚ|cₚ₀|cₚ₁|…|</p>
 <p>Each polygon is defined in sequence. The definition consists of an
 integer indicating the <em>number</em> of vertices in that polygon (c₁, cᵢ,
 and cₘ in the illustration above). The next cᵢ integers in the
@@ -6907,7 +6903,7 @@ geometries and penetrating geometries.</p>
 and B.</p>
 <p>If the objects do not overlap (i.e., A ⋂ B = ∅), φ &gt; 0 and represents
 the minimal distance between the two objects. More formally: φ =
-min(<a href="#id26"><span class="problematic" id="id27">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
+min(<a href="#id27"><span class="problematic" id="id28">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The pair (Aₚ, Bₚ) is a “witness” of the distance. The pair need
@@ -6917,7 +6913,7 @@ not be unique (think of two parallel planes).</p>
 interpreted as the negative penetration depth. It is the smallest
 length of the vector v, such that by shifting one object along that
 vector relative to the other, the two objects will no longer be
-overlapping. More formally, φ(A, B) = -min <a href="#id28"><span class="problematic" id="id29">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
+overlapping. More formally, φ(A, B) = -min <a href="#id29"><span class="problematic" id="id30">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
 where Tᵥ is a rigid transformation that displaces A by the vector v,
 namely Tᵥ · A = {u + v | ∀ u ∈ A}. By implication, there exist points
 Aₚ and Bₚ on the surfaces of objects A and B, respectively, such that
@@ -7055,8 +7051,8 @@ outside Gᵢ, then ∇φᵢ(p) equals the unit vector in the direction from
 the nearest point Nᵢ on Gᵢ’s surface to p. If p is inside Gᵢ, then
 ∇φᵢ(p) is in the direction from p to Nᵢ. This observation is written
 formally as:</p>
-<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id30"><span class="problematic" id="id31">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
-<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id32"><span class="problematic" id="id33">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
+<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id31"><span class="problematic" id="id32">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
+<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id33"><span class="problematic" id="id34">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
 <p>Note that ∇φᵢ(p) is also defined on Gᵢ’s surface, but we cannot use
 the above formula.</p>
 <p><strong>Characterizing the returned values</strong></p>
@@ -7652,7 +7648,7 @@ geometries and penetrating geometries.</p>
 and B.</p>
 <p>If the objects do not overlap (i.e., A ⋂ B = ∅), φ &gt; 0 and represents
 the minimal distance between the two objects. More formally: φ =
-min(<a href="#id34"><span class="problematic" id="id35">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
+min(<a href="#id35"><span class="problematic" id="id36">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The pair (Aₚ, Bₚ) is a “witness” of the distance. The pair need
@@ -7662,7 +7658,7 @@ not be unique (think of two parallel planes).</p>
 interpreted as the negative penetration depth. It is the smallest
 length of the vector v, such that by shifting one object along that
 vector relative to the other, the two objects will no longer be
-overlapping. More formally, φ(A, B) = -min <a href="#id36"><span class="problematic" id="id37">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
+overlapping. More formally, φ(A, B) = -min <a href="#id37"><span class="problematic" id="id38">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
 where Tᵥ is a rigid transformation that displaces A by the vector v,
 namely Tᵥ · A = {u + v | ∀ u ∈ A}. By implication, there exist points
 Aₚ and Bₚ on the surfaces of objects A and B, respectively, such that
@@ -7800,8 +7796,8 @@ outside Gᵢ, then ∇φᵢ(p) equals the unit vector in the direction from
 the nearest point Nᵢ on Gᵢ’s surface to p. If p is inside Gᵢ, then
 ∇φᵢ(p) is in the direction from p to Nᵢ. This observation is written
 formally as:</p>
-<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id38"><span class="problematic" id="id39">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
-<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id40"><span class="problematic" id="id41">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
+<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id39"><span class="problematic" id="id40">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
+<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id41"><span class="problematic" id="id42">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
 <p>Note that ∇φᵢ(p) is also defined on Gᵢ’s surface, but we cannot use
 the above formula.</p>
 <p><strong>Characterizing the returned values</strong></p>
@@ -8272,7 +8268,7 @@ geometries and penetrating geometries.</p>
 and B.</p>
 <p>If the objects do not overlap (i.e., A ⋂ B = ∅), φ &gt; 0 and represents
 the minimal distance between the two objects. More formally: φ =
-min(<a href="#id42"><span class="problematic" id="id43">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
+min(<a href="#id43"><span class="problematic" id="id44">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The pair (Aₚ, Bₚ) is a “witness” of the distance. The pair need
@@ -8282,7 +8278,7 @@ not be unique (think of two parallel planes).</p>
 interpreted as the negative penetration depth. It is the smallest
 length of the vector v, such that by shifting one object along that
 vector relative to the other, the two objects will no longer be
-overlapping. More formally, φ(A, B) = -min <a href="#id44"><span class="problematic" id="id45">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
+overlapping. More formally, φ(A, B) = -min <a href="#id45"><span class="problematic" id="id46">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
 where Tᵥ is a rigid transformation that displaces A by the vector v,
 namely Tᵥ · A = {u + v | ∀ u ∈ A}. By implication, there exist points
 Aₚ and Bₚ on the surfaces of objects A and B, respectively, such that
@@ -8420,8 +8416,8 @@ outside Gᵢ, then ∇φᵢ(p) equals the unit vector in the direction from
 the nearest point Nᵢ on Gᵢ’s surface to p. If p is inside Gᵢ, then
 ∇φᵢ(p) is in the direction from p to Nᵢ. This observation is written
 formally as:</p>
-<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id46"><span class="problematic" id="id47">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
-<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id48"><span class="problematic" id="id49">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
+<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id47"><span class="problematic" id="id48">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
+<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id49"><span class="problematic" id="id50">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
 <p>Note that ∇φᵢ(p) is also defined on Gᵢ’s surface, but we cannot use
 the above formula.</p>
 <p><strong>Characterizing the returned values</strong></p>
@@ -8662,7 +8658,7 @@ the indicated parent frame P.</p>
 scales coordinates by the given scale factor. Polygons will be
 triangulated if they are not triangles already. All objects in the
 .obj file will be merged into the surface mesh. See
-<a class="reference external" href="https://en.wikipedia.org/wiki/">https://en.wikipedia.org/wiki/</a><a href="#id56"><span class="problematic" id="id57">Wavefront_</span></a>.obj_file for the file format.</p>
+<a class="reference external" href="https://en.wikipedia.org/wiki/">https://en.wikipedia.org/wiki/</a><a href="#id57"><span class="problematic" id="id58">Wavefront_</span></a>.obj_file for the file format.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">filename</span></code>:</dt><dd><p>A valid file name with absolute path or relative path.</p>
 </dd>
@@ -9730,8 +9726,9 @@ retrigger its initialization action.</p>
 <p>Due to a bug (see issue <a class="reference external" href="https://github.com/RobotLocomotion/drake/issues/13597">#13597</a>),
 changing the illustration roles or properties in a
 systems::Context will not have any apparent effect in, at least,
-drake_visualizer. Please change the illustration role in the model
-prior to allocating the context.</p>
+the legacy <code class="docutils literal notranslate"><span class="pre">drake_visualizer</span></code> application of days past. Please
+change the illustration role in the model prior to allocating the
+context.</p>
 </div>
 </dd></dl>
 
@@ -10461,8 +10458,9 @@ retrigger its initialization action.</p>
 <p>Due to a bug (see issue <a class="reference external" href="https://github.com/RobotLocomotion/drake/issues/13597">#13597</a>),
 changing the illustration roles or properties in a
 systems::Context will not have any apparent effect in, at least,
-drake_visualizer. Please change the illustration role in the model
-prior to allocating the context.</p>
+the legacy <code class="docutils literal notranslate"><span class="pre">drake_visualizer</span></code> application of days past. Please
+change the illustration role in the model prior to allocating the
+context.</p>
 </div>
 </dd></dl>
 
@@ -11186,8 +11184,9 @@ retrigger its initialization action.</p>
 <p>Due to a bug (see issue <a class="reference external" href="https://github.com/RobotLocomotion/drake/issues/13597">#13597</a>),
 changing the illustration roles or properties in a
 systems::Context will not have any apparent effect in, at least,
-drake_visualizer. Please change the illustration role in the model
-prior to allocating the context.</p>
+the legacy <code class="docutils literal notranslate"><span class="pre">drake_visualizer</span></code> application of days past. Please
+change the illustration role in the model prior to allocating the
+context.</p>
 </div>
 </dd></dl>
 
@@ -13811,7 +13810,7 @@ query point Q, expressed in world frame W.</p>
 <p><code class="docutils literal notranslate"><span class="pre">grad_W</span></code> is not well defined everywhere. For example, when
 computing the distance from a point to a sphere, and the point
 coincides with the center of the sphere, grad_W is not well
-defined (as it can be computed as p_GQ / <a href="#id50"><span class="problematic" id="id51">|p_GQ|</span></a>, but the
+defined (as it can be computed as p_GQ / <a href="#id51"><span class="problematic" id="id52">|p_GQ|</span></a>, but the
 denominator is 0). When grad_W is not well defined, and we
 instantiate SignedDistanceToPoint&lt;T&gt; with T being an
 AutoDiffScalar (like AutoDiffXd), the gradient of the query result
@@ -13902,7 +13901,7 @@ query point Q, expressed in world frame W.</p>
 <p><code class="docutils literal notranslate"><span class="pre">grad_W</span></code> is not well defined everywhere. For example, when
 computing the distance from a point to a sphere, and the point
 coincides with the center of the sphere, grad_W is not well
-defined (as it can be computed as p_GQ / <a href="#id52"><span class="problematic" id="id53">|p_GQ|</span></a>, but the
+defined (as it can be computed as p_GQ / <a href="#id53"><span class="problematic" id="id54">|p_GQ|</span></a>, but the
 denominator is 0). When grad_W is not well defined, and we
 instantiate SignedDistanceToPoint&lt;T&gt; with T being an
 AutoDiffScalar (like AutoDiffXd), the gradient of the query result
@@ -13987,7 +13986,7 @@ query point Q, expressed in world frame W.</p>
 <p><code class="docutils literal notranslate"><span class="pre">grad_W</span></code> is not well defined everywhere. For example, when
 computing the distance from a point to a sphere, and the point
 coincides with the center of the sphere, grad_W is not well
-defined (as it can be computed as p_GQ / <a href="#id54"><span class="problematic" id="id55">|p_GQ|</span></a>, but the
+defined (as it can be computed as p_GQ / <a href="#id55"><span class="problematic" id="id56">|p_GQ|</span></a>, but the
 denominator is 0). When grad_W is not well defined, and we
 instantiate SignedDistanceToPoint&lt;T&gt; with T being an
 AutoDiffScalar (like AutoDiffXd), the gradient of the query result

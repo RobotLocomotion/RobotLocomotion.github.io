@@ -165,6 +165,34 @@ linearly independent.</p>
 <dt>Precondition:</dt><dd><p>basis.rows() == translation.size().</p>
 </dd>
 </dl>
+<ol class="arabic simple" start="3">
+<li><p>__init__(self: pydrake.geometry.optimization.AffineSubspace, set: pydrake.geometry.optimization.ConvexSet, tol: float = 0) -&gt; None</p></li>
+</ol>
+<p>Constructs an affine subspace as the affine hull of another convex
+set. This is done by finding a feasible point in the set, and then
+iteratively computing feasible vectors until we have a basis that
+spans the set. If you pass in a convex set whose points are
+matrix-valued (e.g. a Spectrahedron), then the affine subspace will
+work over a flattened representation of those coordinates. (So a
+Spectrahedron with n-by-n matrices will output an AffineSubspace with
+ambient dimension (n * (n+1)) / 2.)</p>
+<p><code class="docutils literal notranslate"><span class="pre">tol</span></code> sets the numerical precision of the computation. For each
+dimension, a pair of feasible points are constructed, so as to
+maximize the displacement in that dimension. If their displacement
+along that dimension is larger than tol, then the vector connecting
+the points is added as a basis vector.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>!set.IsEmpty()</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.AffineSubspace.AffineDimension">
+<span class="sig-name descname"><span class="pre">AffineDimension</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.AffineSubspace" title="pydrake.geometry.optimization.AffineSubspace"><span class="pre">pydrake.geometry.optimization.AffineSubspace</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.AffineSubspace.AffineDimension" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the affine dimension of this set. For an affine subspace, this
+is simply the number of columns in the <a href="#id11"><span class="problematic" id="id12">basis_</span></a> matrix. A point will
+have affine dimension zero.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -201,6 +229,57 @@ then checking if each basis vector is in the span of the basis of
 so a nonzero tolerance (<code class="docutils literal notranslate"><span class="pre">tol</span></code>) is almost always necessary. (You may
 have to adjust the default tolerance depending on the dimension of
 your space and the scale of your basis vectors.)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.AffineSubspace.Project">
+<span class="sig-name descname"><span class="pre">Project</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.AffineSubspace" title="pydrake.geometry.optimization.AffineSubspace"><span class="pre">pydrake.geometry.optimization.AffineSubspace</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.AffineSubspace.Project" title="Permalink to this definition"></a></dt>
+<dd><p>Computes the orthogonal projection of x onto the AffineSubspace. This
+is achieved by finding the least squares solution y for y to x =
+<a href="#id13"><span class="problematic" id="id14">translation_</span></a> + basis_*y, and returning <a href="#id15"><span class="problematic" id="id16">translation_</span></a> + basis_*y. Each
+column of the input should be a vector in the ambient space, and the
+corresponding column of the output will be its projection onto the
+affine subspace.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>x.rows() == ambient_dimension()</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.AffineSubspace.ToGlobalCoordinates">
+<span class="sig-name descname"><span class="pre">ToGlobalCoordinates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.AffineSubspace" title="pydrake.geometry.optimization.AffineSubspace"><span class="pre">pydrake.geometry.optimization.AffineSubspace</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.AffineSubspace.ToGlobalCoordinates" title="Permalink to this definition"></a></dt>
+<dd><p>Given a point y in the basis of the AffineSubspace, with the zero
+point at <a href="#id17"><span class="problematic" id="id18">translation_</span></a>, returns the coordinates of y in the standard
+basis of the ambient space. If the AffineSubspace is a point, it has
+an empty basis, so the only possible local coordinates are also empty
+(and should be passed in as a length-zero vector). Each column of the
+input should be a vector in the affine subspace, represented in its
+local coordinates, and the corresponding column of the output will be
+its representation in the coordinate system of the ambient space.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>y.rows() == AffineDimension()</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.AffineSubspace.ToLocalCoordinates">
+<span class="sig-name descname"><span class="pre">ToLocalCoordinates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.AffineSubspace" title="pydrake.geometry.optimization.AffineSubspace"><span class="pre">pydrake.geometry.optimization.AffineSubspace</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.AffineSubspace.ToLocalCoordinates" title="Permalink to this definition"></a></dt>
+<dd><p>Given a point x in the standard basis of the ambient space, returns
+the coordinates of x in the basis of the AffineSubspace, with the zero
+point at <a href="#id19"><span class="problematic" id="id20">translation_</span></a>. The component of x that is orthogonal to the
+AffineSubspace (if it exists) is discarded, so
+ToGlobalCoordinates(ToLocalCoordinates(x)) is equivalent to
+Project(x). Note that if the AffineSubspace is a point, the basis is
+empty, so the local coordinates will also be empty (and returned as a
+length-zero vector). Each column of the input should be a vector in
+the ambient space, and the corresponding column of the output will be
+its representation in the local coordinates of the affine subspace.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>x.rows() == ambient_dimension()</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -1710,7 +1789,7 @@ instance, that points.cols() &gt; 1.</p>
 <p>A convex set that represents the intersection of multiple sets: S = X₁
 ∩ X₂ ∩ … ∩ Xₙ = {x | x ∈ X₁, x ∈ X₂, …, x ∈ Xₙ}</p>
 <p>Special behavior for IsEmpty: The intersection of zero sets (i.e. when
-we have <a href="#id11"><span class="problematic" id="id12">sets_</span></a>.size() == 0) is always nonempty. This includes the
+we have <a href="#id21"><span class="problematic" id="id22">sets_</span></a>.size() == 0) is always nonempty. This includes the
 zero-dimensional case, which we treat as being {0}, the unique
 zero-dimensional vector space.</p>
 <dl class="py method">
@@ -1972,7 +2051,7 @@ IRIS algorithm.</p>
 X₁ ⨁ X₂ ⨁ … ⨁ Xₙ = {x₁ + x₂ + … + xₙ | x₁ ∈ X₁, x₂ ∈ X₂, …, xₙ ∈
 Xₙ}</p>
 <p>Special behavior for IsEmpty: The Minkowski sum of zero sets (i.e.
-when we have <a href="#id13"><span class="problematic" id="id14">sets_</span></a>.size() == 0) is treated as the singleton {0}, which
+when we have <a href="#id23"><span class="problematic" id="id24">sets_</span></a>.size() == 0) is treated as the singleton {0}, which
 is nonempty. This includes the zero-dimensional case.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.MinkowskiSum.__init__">
@@ -2129,10 +2208,10 @@ vertices could be strictly in the interior of the set).</p>
 set is always bounded (hence the name polytope, instead of
 polyhedron).</p>
 <p>A VPolytope is empty if and only if it is composed of zero vertices,
-i.e., if <a href="#id15"><span class="problematic" id="id16">vertices_</span></a>.cols() == 0. This includes the zero-dimensional
-case. If <a href="#id17"><span class="problematic" id="id18">vertices_</span></a>.rows() == 0 but <a href="#id19"><span class="problematic" id="id20">vertices_</span></a>.cols() &gt; 0, we treat this
+i.e., if <a href="#id25"><span class="problematic" id="id26">vertices_</span></a>.cols() == 0. This includes the zero-dimensional
+case. If <a href="#id27"><span class="problematic" id="id28">vertices_</span></a>.rows() == 0 but <a href="#id29"><span class="problematic" id="id30">vertices_</span></a>.cols() &gt; 0, we treat this
 as having one or more copies of 0 in the zero-dimensional vector space
-{0}. If <a href="#id21"><span class="problematic" id="id22">vertices_</span></a>.rows() and <a href="#id23"><span class="problematic" id="id24">vertices_</span></a>.cols() are zero, we treat this
+{0}. If <a href="#id31"><span class="problematic" id="id32">vertices_</span></a>.rows() and <a href="#id33"><span class="problematic" id="id34">vertices_</span></a>.cols() are zero, we treat this
 as no points in {0}, which is empty.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.VPolytope.__init__">

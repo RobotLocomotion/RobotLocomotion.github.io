@@ -251,7 +251,7 @@ MUST NOT start the receive thread on this object.</p>
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.lcm.LcmPublisherSystem.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>__init__(self: pydrake.systems.lcm.LcmPublisherSystem, channel: str, serializer: pydrake.systems.lcm.SerializerInterface, lcm: pydrake.systems.lcm.LcmInterfaceSystem, publish_period: float = 0.0) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.systems.lcm.LcmPublisherSystem, channel: str, serializer: pydrake.systems.lcm.SerializerInterface, lcm: pydrake.systems.lcm.LcmInterfaceSystem, publish_period: float = 0.0, publish_offset: float = 0.0) -&gt; None</p></li>
 </ol>
 <p>A constructor for an LcmPublisherSystem that takes LCM message objects
 on its sole abstract-valued input port. The LCM message type is
@@ -273,11 +273,18 @@ the class comments.</p>
 period is zero, LcmPublisherSystem will use per-step publishing
 instead; see LeafSystem::DeclarePerStepPublishEvent().</p>
 </dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">publish_offset</span></code>:</dt><dd><p>Offset that messages will be published (optional), in seconds.
+This adds a phase-shift delay to periodic publish events.</p>
+</dd>
 <dt>Precondition:</dt><dd><p>publish_period is non-negative.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>publish_offset is finite and non-negative.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>publish_offset is set to zero when the publish_period is zero.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>__init__(self: pydrake.systems.lcm.LcmPublisherSystem, channel: str, serializer: pydrake.systems.lcm.SerializerInterface, lcm: pydrake.lcm.DrakeLcmInterface, publish_period: float = 0.0) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.systems.lcm.LcmPublisherSystem, channel: str, serializer: pydrake.systems.lcm.SerializerInterface, lcm: pydrake.lcm.DrakeLcmInterface, publish_period: float = 0.0, publish_offset: float = 0.0) -&gt; None</p></li>
 </ol>
 <p>A constructor for an LcmPublisherSystem that takes LCM message objects
 on its sole abstract-valued input port. The LCM message type is
@@ -299,17 +306,22 @@ the class comments.</p>
 period is zero, LcmPublisherSystem will use per-step publishing
 instead; see LeafSystem::DeclarePerStepPublishEvent().</p>
 </dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">publish_offset</span></code>:</dt><dd><p>Offset that messages will be published (optional), in seconds.
+This adds a phase-shift delay to periodic publish events.</p>
+</dd>
 <dt>Precondition:</dt><dd><p>publish_period is non-negative.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>publish_offset is finite and non-negative.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>publish_offset is set to zero when the publish_period is zero.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="3">
-<li><p>__init__(self: pydrake.systems.lcm.LcmPublisherSystem, channel: str, serializer: pydrake.systems.lcm.SerializerInterface, lcm: pydrake.systems.lcm.LcmInterfaceSystem, publish_triggers: Set[pydrake.systems.framework.TriggerType], publish_period: float = 0.0) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.systems.lcm.LcmPublisherSystem, channel: str, serializer: pydrake.systems.lcm.SerializerInterface, lcm: pydrake.systems.lcm.LcmInterfaceSystem, publish_triggers: Set[pydrake.systems.framework.TriggerType], publish_period: float = 0.0, publish_offset: float = 0.0) -&gt; None</p></li>
 </ol>
 <p>A constructor for an LcmPublisherSystem that takes LCM message objects
 on its sole abstract-valued input port. The LCM message type is
-determined by the provided <code class="docutils literal notranslate"><span class="pre">serializer</span></code>. Will publish on forced
-events and either periodic or per-step events, as determined by
-publish_period.</p>
+determined by the provided <code class="docutils literal notranslate"><span class="pre">serializer</span></code>.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">channel</span></code>:</dt><dd><p>The LCM channel on which to publish.</p>
 </dd>
@@ -321,21 +333,37 @@ the lifetime of this object. If null, a drake::lcm::DrakeLcm
 object is allocated and maintained internally, but see the note in
 the class comments.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">publish_period</span></code>:</dt><dd><p>Period that messages will be published (optional). If the publish
-period is zero, LcmPublisherSystem will use per-step publishing
-instead; see LeafSystem::DeclarePerStepPublishEvent().</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">publish_triggers</span></code>:</dt><dd><p>Set of triggers that determine when messages will be published.
+Supported TriggerTypes are {kForced, kPeriodic, kPerStep}. Will
+throw an exception if empty or if unsupported types are provided.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">publish_period</span></code>:</dt><dd><p>Period that messages will be published (optional). publish_period
+should only be non-zero if one of the publish_triggers is
+kPerStep.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">publish_offset</span></code>:</dt><dd><p>Offset that messages will be published (optional), in seconds.
+This adds a phase-shift delay to periodic publish events.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>publish_triggers contains a subset of {kForced, kPeriodic,
+kPerStep}.</p>
 </dd>
 <dt>Precondition:</dt><dd><p>publish_period is non-negative.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>publish_period &gt; 0 if and only if publish_triggers contains
+kPeriodic.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>publish_offset is finite and non-negative.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>publish_offset &gt; 0 if and only if publish_triggers contains
+kPeriodic.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="4">
-<li><p>__init__(self: pydrake.systems.lcm.LcmPublisherSystem, channel: str, serializer: pydrake.systems.lcm.SerializerInterface, lcm: pydrake.lcm.DrakeLcmInterface, publish_triggers: Set[pydrake.systems.framework.TriggerType], publish_period: float = 0.0) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.systems.lcm.LcmPublisherSystem, channel: str, serializer: pydrake.systems.lcm.SerializerInterface, lcm: pydrake.lcm.DrakeLcmInterface, publish_triggers: Set[pydrake.systems.framework.TriggerType], publish_period: float = 0.0, publish_offset: float = 0.0) -&gt; None</p></li>
 </ol>
 <p>A constructor for an LcmPublisherSystem that takes LCM message objects
 on its sole abstract-valued input port. The LCM message type is
-determined by the provided <code class="docutils literal notranslate"><span class="pre">serializer</span></code>. Will publish on forced
-events and either periodic or per-step events, as determined by
-publish_period.</p>
+determined by the provided <code class="docutils literal notranslate"><span class="pre">serializer</span></code>.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">channel</span></code>:</dt><dd><p>The LCM channel on which to publish.</p>
 </dd>
@@ -347,18 +375,36 @@ the lifetime of this object. If null, a drake::lcm::DrakeLcm
 object is allocated and maintained internally, but see the note in
 the class comments.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">publish_period</span></code>:</dt><dd><p>Period that messages will be published (optional). If the publish
-period is zero, LcmPublisherSystem will use per-step publishing
-instead; see LeafSystem::DeclarePerStepPublishEvent().</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">publish_triggers</span></code>:</dt><dd><p>Set of triggers that determine when messages will be published.
+Supported TriggerTypes are {kForced, kPeriodic, kPerStep}. Will
+throw an exception if empty or if unsupported types are provided.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">publish_period</span></code>:</dt><dd><p>Period that messages will be published (optional). publish_period
+should only be non-zero if one of the publish_triggers is
+kPerStep.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">publish_offset</span></code>:</dt><dd><p>Offset that messages will be published (optional), in seconds.
+This adds a phase-shift delay to periodic publish events.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>publish_triggers contains a subset of {kForced, kPeriodic,
+kPerStep}.</p>
 </dd>
 <dt>Precondition:</dt><dd><p>publish_period is non-negative.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>publish_period &gt; 0 if and only if publish_triggers contains
+kPeriodic.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>publish_offset is finite and non-negative.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>publish_offset &gt; 0 if and only if publish_triggers contains
+kPeriodic.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.lcm.LcmPublisherSystem.Make">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Make</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lcm_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lcm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">publish_period</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_cpp_serializer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">publish_triggers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.lcm.LcmPublisherSystem.Make" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Make</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lcm_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lcm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">publish_period</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_cpp_serializer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">publish_triggers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">publish_offset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.lcm.LcmPublisherSystem.Make" title="Permalink to this definition"></a></dt>
 <dd><p>Convenience to create an LCM publisher system with a concrete type.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -367,6 +413,7 @@ instead; see LeafSystem::DeclarePerStepPublishEvent().</p>
 <li><p><strong>lcm_type</strong> – Python class generated by lcmgen.</p></li>
 <li><p><strong>lcm</strong> – LCM service instance.</p></li>
 <li><p><strong>publish_period</strong> – System’s publish period (in seconds). Default is 0.</p></li>
+<li><p><strong>publish_offset</strong> – System’s publish offset (in seconds). Default is 0.</p></li>
 <li><p><strong>use_cpp_serializer</strong> – Use C++ serializer to interface with LCM converter
 systems that are implemented in C++. LCM types must be registered
 in C++ via <cite>BindCppSerializer</cite>.</p></li>

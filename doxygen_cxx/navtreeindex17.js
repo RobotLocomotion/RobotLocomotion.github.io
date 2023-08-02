@@ -1,5 +1,17 @@
 var NAVTREEINDEX17 =
 {
+"classdrake_1_1multibody_1_1_spatial_acceleration.html#aa6bf6b4ed657ad8f3bacd8d7cf2e8338":[3,0,0,9,82,3],
+"classdrake_1_1multibody_1_1_spatial_acceleration.html#ab91461e103923f530ba5f1f9147ee29d":[3,0,0,9,82,12],
+"classdrake_1_1multibody_1_1_spatial_acceleration.html#ac8cf5e8a26c45a4a376af6484782c67e":[3,0,0,9,82,8],
+"classdrake_1_1multibody_1_1_spatial_acceleration.html#ad148d7373c82a29ebf98499b07fbe3c1":[3,0,0,9,82,5],
+"classdrake_1_1multibody_1_1_spatial_acceleration.html#ad7f507917333adceb2c6542f4d2df38c":[3,0,0,9,82,2],
+"classdrake_1_1multibody_1_1_spatial_acceleration.html#adcb3b75410a7352ca292fc5ca2ab5b01":[3,0,0,9,82,10],
+"classdrake_1_1multibody_1_1_spatial_acceleration.html#af1304fa4eec81102161931379fe4b55c":[3,0,0,9,82,6],
+"classdrake_1_1multibody_1_1_spatial_force.html":[3,0,0,9,83],
+"classdrake_1_1multibody_1_1_spatial_force.html#a23d1353c23201a3614ae5f555fef38e4":[3,0,0,9,83,3],
+"classdrake_1_1multibody_1_1_spatial_force.html#a4a986da49bae72b84a406084126741e6":[3,0,0,9,83,7],
+"classdrake_1_1multibody_1_1_spatial_force.html#a64b5dc902072c535393a8f018caffb12":[3,0,0,9,83,4],
+"classdrake_1_1multibody_1_1_spatial_force.html#a70018645246d1214c2f73c8d80b6e766":[3,0,0,9,83,8],
 "classdrake_1_1multibody_1_1_spatial_force.html#a8602c8746b6a12c4c66c628df61b2619":[3,0,0,9,83,2],
 "classdrake_1_1multibody_1_1_spatial_force.html#a8981af1db01730cff9d845e41b3bfc87":[3,0,0,9,83,10],
 "classdrake_1_1multibody_1_1_spatial_force.html#a8cb331ee8374547a5016a580556119f0":[3,0,0,9,83,6],
@@ -237,17 +249,5 @@ var NAVTREEINDEX17 =
 "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#abee9ac3222a915113bf9f4b339e8ba0e":[3,0,0,9,98,14],
 "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#ad877d988ac4cd1942aa84e91e3c5d49a":[3,0,0,9,98,5],
 "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#adeb7d1c6793c4c1aa997582eb3b65197":[3,0,0,9,98,13],
-"classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#af9b1da34b5924f4441438ce5d7885673":[3,0,0,9,98,15],
-"classdrake_1_1multibody_1_1_unit_inertia.html":[3,0,0,9,99],
-"classdrake_1_1multibody_1_1_unit_inertia.html#a069e5dcab9f2119cc2c4eadb6e91abab":[3,0,0,9,99,24],
-"classdrake_1_1multibody_1_1_unit_inertia.html#a0e321b3b8489b5519c9bc079ad3b521a":[3,0,0,9,99,14],
-"classdrake_1_1multibody_1_1_unit_inertia.html#a18e7babe23518ac81fc0a3c1c7157496":[3,0,0,9,99,8],
-"classdrake_1_1multibody_1_1_unit_inertia.html#a224f50a8d9351914db96e47ddb5767fb":[3,0,0,9,99,25],
-"classdrake_1_1multibody_1_1_unit_inertia.html#a2feaaa8887c6fbcf994cf374fa57eb48":[3,0,0,9,99,28],
-"classdrake_1_1multibody_1_1_unit_inertia.html#a329d230352494812d0e1662fb73f4ff8":[3,0,0,9,99,13],
-"classdrake_1_1multibody_1_1_unit_inertia.html#a43654f1a4db4b783a4fbed3e8bc17532":[3,0,0,9,99,17],
-"classdrake_1_1multibody_1_1_unit_inertia.html#a508911b2ad53d5a156259e5b4690278a":[3,0,0,9,99,23],
-"classdrake_1_1multibody_1_1_unit_inertia.html#a5144657705a1226f7c42ce80a1ed5951":[3,0,0,9,99,9],
-"classdrake_1_1multibody_1_1_unit_inertia.html#a63b39c6656200a848579b87b986f6965":[3,0,0,9,99,22],
-"classdrake_1_1multibody_1_1_unit_inertia.html#a6dcd4923027cb6fa0b9ad164c211ceae":[3,0,0,9,99,0]
+"classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#af9b1da34b5924f4441438ce5d7885673":[3,0,0,9,98,15]
 };

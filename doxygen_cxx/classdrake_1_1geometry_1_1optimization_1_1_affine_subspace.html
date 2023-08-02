@@ -182,6 +182,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af6154bf89e3d063bb7b29741d1914fd8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#af6154bf89e3d063bb7b29741d1914fd8">AffineSubspace</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a2e517d5b78e2fa08bdc06aea97a0d3b6">basis</a>, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a4bf2b12f9c8ea0ce42173abdf5816d1b">translation</a>)</td></tr>
 <tr class="memdesc:af6154bf89e3d063bb7b29741d1914fd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the affine subspace from an n-by-m matrix describing the basis, where n is the ambient dimension, and m is the dimension of the subspace, and from an n-dimensional vector describing the translation.  <a href="#af6154bf89e3d063bb7b29741d1914fd8">More...</a><br /></td></tr>
 <tr class="separator:af6154bf89e3d063bb7b29741d1914fd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab02962a500960e624b84787ddbf3aa94"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#ab02962a500960e624b84787ddbf3aa94">AffineSubspace</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;set, <a class="el" href="classdouble.html">double</a> tol=0)</td></tr>
+<tr class="memdesc:ab02962a500960e624b84787ddbf3aa94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an affine subspace as the affine hull of another convex set.  <a href="#ab02962a500960e624b84787ddbf3aa94">More...</a><br /></td></tr>
+<tr class="separator:ab02962a500960e624b84787ddbf3aa94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9fe2f6653e76b4db7c02a2ba9c8e35cd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a9fe2f6653e76b4db7c02a2ba9c8e35cd">~AffineSubspace</a> () final</td></tr>
 <tr class="separator:a9fe2f6653e76b4db7c02a2ba9c8e35cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e517d5b78e2fa08bdc06aea97a0d3b6"><td class="memItemLeft" align="right" valign="top">const Eigen::MatrixXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a2e517d5b78e2fa08bdc06aea97a0d3b6">basis</a> () const</td></tr>
@@ -194,6 +197,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8e8824802dedfbc36776227f7482b6bc"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a8e8824802dedfbc36776227f7482b6bc">Serialize</a> (Archive *a)</td></tr>
 <tr class="memdesc:a8e8824802dedfbc36776227f7482b6bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passes this object to an Archive.  <a href="#a8e8824802dedfbc36776227f7482b6bc">More...</a><br /></td></tr>
 <tr class="separator:a8e8824802dedfbc36776227f7482b6bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a941a95906ac84cc920167e46af9fc2dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a941a95906ac84cc920167e46af9fc2dd">AffineDimension</a> () const</td></tr>
+<tr class="memdesc:a941a95906ac84cc920167e46af9fc2dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the affine dimension of this set.  <a href="#a941a95906ac84cc920167e46af9fc2dd">More...</a><br /></td></tr>
+<tr class="separator:a941a95906ac84cc920167e46af9fc2dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5896cc1956d6475fbf60b5da9e0f094"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#ad5896cc1956d6475fbf60b5da9e0f094">Project</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;x) const</td></tr>
+<tr class="memdesc:ad5896cc1956d6475fbf60b5da9e0f094"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the orthogonal projection of x onto the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html" title="An affine subspace (also known as a &quot;flat&quot;, a &quot;linear variety&quot;, or a &quot;linear manifold&quot;) is a vector s...">AffineSubspace</a>.  <a href="#ad5896cc1956d6475fbf60b5da9e0f094">More...</a><br /></td></tr>
+<tr class="separator:ad5896cc1956d6475fbf60b5da9e0f094"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d1925b7f2c88852aafd90b2bfb6e51c"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a3d1925b7f2c88852aafd90b2bfb6e51c">ToLocalCoordinates</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;x) const</td></tr>
+<tr class="memdesc:a3d1925b7f2c88852aafd90b2bfb6e51c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a point x in the standard basis of the ambient space, returns the coordinates of x in the basis of the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html" title="An affine subspace (also known as a &quot;flat&quot;, a &quot;linear variety&quot;, or a &quot;linear manifold&quot;) is a vector s...">AffineSubspace</a>, with the zero point at translation_.  <a href="#a3d1925b7f2c88852aafd90b2bfb6e51c">More...</a><br /></td></tr>
+<tr class="separator:a3d1925b7f2c88852aafd90b2bfb6e51c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8959fcff6a1314155423f57f82302119"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a8959fcff6a1314155423f57f82302119">ToGlobalCoordinates</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;y) const</td></tr>
+<tr class="memdesc:a8959fcff6a1314155423f57f82302119"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a point y in the basis of the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html" title="An affine subspace (also known as a &quot;flat&quot;, a &quot;linear variety&quot;, or a &quot;linear manifold&quot;) is a vector s...">AffineSubspace</a>, with the zero point at translation_, returns the coordinates of y in the standard basis of the ambient space.  <a href="#a8959fcff6a1314155423f57f82302119">More...</a><br /></td></tr>
+<tr class="separator:a8959fcff6a1314155423f57f82302119"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc52b1cf2090f143dfeda40221474fb3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#acc52b1cf2090f143dfeda40221474fb3">ContainedIn</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html">AffineSubspace</a> &amp;other, <a class="el" href="classdouble.html">double</a> tol=1e-15) const</td></tr>
 <tr class="memdesc:acc52b1cf2090f143dfeda40221474fb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if <code>this</code> <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html" title="An affine subspace (also known as a &quot;flat&quot;, a &quot;linear variety&quot;, or a &quot;linear manifold&quot;) is a vector s...">AffineSubspace</a> is contained in <code>other</code>.  <a href="#acc52b1cf2090f143dfeda40221474fb3">More...</a><br /></td></tr>
 <tr class="separator:acc52b1cf2090f143dfeda40221474fb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -311,7 +326,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a69ca9f24815ca559fa2afadb9cef61fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a69ca9f24815ca559fa2afadb9cef61fc">&#9670;&nbsp;</a></span>AffineSubspace() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a69ca9f24815ca559fa2afadb9cef61fc">&#9670;&nbsp;</a></span>AffineSubspace() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -337,7 +352,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="aec86862d72382b4af5589ef378b32652"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec86862d72382b4af5589ef378b32652">&#9670;&nbsp;</a></span>AffineSubspace() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aec86862d72382b4af5589ef378b32652">&#9670;&nbsp;</a></span>AffineSubspace() <span class="overload">[2/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -363,7 +378,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="a21a288a410eefce77117064d05ca92ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a21a288a410eefce77117064d05ca92ad">&#9670;&nbsp;</a></span>AffineSubspace() <span class="overload">[3/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a21a288a410eefce77117064d05ca92ad">&#9670;&nbsp;</a></span>AffineSubspace() <span class="overload">[3/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -382,7 +397,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="af6154bf89e3d063bb7b29741d1914fd8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6154bf89e3d063bb7b29741d1914fd8">&#9670;&nbsp;</a></span>AffineSubspace() <span class="overload">[4/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af6154bf89e3d063bb7b29741d1914fd8">&#9670;&nbsp;</a></span>AffineSubspace() <span class="overload">[4/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -420,6 +435,46 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="ab02962a500960e624b84787ddbf3aa94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab02962a500960e624b84787ddbf3aa94">&#9670;&nbsp;</a></span>AffineSubspace() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html">AffineSubspace</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;&#160;</td>
+          <td class="paramname"><em>set</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>tol</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs an affine subspace as the affine hull of another convex set. </p>
+<p>This is done by finding a feasible point in the set, and then iteratively computing feasible vectors until we have a basis that spans the set. If you pass in a convex set whose points are matrix-valued (e.g. a <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_spectrahedron.html" title="Implements a spectrahedron (the feasible set of a semidefinite program).">Spectrahedron</a>), then the affine subspace will work over a flattened representation of those coordinates. (So a <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_spectrahedron.html" title="Implements a spectrahedron (the feasible set of a semidefinite program).">Spectrahedron</a> with n-by-n matrices will output an <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html" title="An affine subspace (also known as a &quot;flat&quot;, a &quot;linear variety&quot;, or a &quot;linear manifold&quot;) is a vector s...">AffineSubspace</a> with ambient dimension (n * (n+1)) / 2.)</p>
+<p><code>tol</code> sets the numerical precision of the computation. For each dimension, a pair of feasible points are constructed, so as to maximize the displacement in that dimension. If their displacement along that dimension is larger than tol, then the vector connecting the points is added as a basis vector. </p><dl class="section pre"><dt>Precondition</dt><dd>!set.<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a8e12342fc420701fbffd97025421575a" title="Returns true iff the set is empty.">IsEmpty()</a> </dd></dl>
+
+</div>
+</div>
 <a id="a9fe2f6653e76b4db7c02a2ba9c8e35cd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9fe2f6653e76b4db7c02a2ba9c8e35cd">&#9670;&nbsp;</a></span>~AffineSubspace()</h2>
 
@@ -446,6 +501,26 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a941a95906ac84cc920167e46af9fc2dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a941a95906ac84cc920167e46af9fc2dd">&#9670;&nbsp;</a></span>AffineDimension()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> AffineDimension </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the affine dimension of this set. </p>
+<p>For an affine subspace, this is simply the number of columns in the basis_ matrix. A point will have affine dimension zero. </p>
+
+</div>
+</div>
 <a id="a2e517d5b78e2fa08bdc06aea97a0d3b6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2e517d5b78e2fa08bdc06aea97a0d3b6">&#9670;&nbsp;</a></span>basis()</h2>
 
@@ -578,6 +653,30 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="ad5896cc1956d6475fbf60b5da9e0f094"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5896cc1956d6475fbf60b5da9e0f094">&#9670;&nbsp;</a></span>Project()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::MatrixXd Project </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes the orthogonal projection of x onto the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html" title="An affine subspace (also known as a &quot;flat&quot;, a &quot;linear variety&quot;, or a &quot;linear manifold&quot;) is a vector s...">AffineSubspace</a>. </p>
+<p>This is achieved by finding the least squares solution y for y to x = translation_</p><ul>
+<li>basis_*y, and returning translation_ + basis_*y. Each column of the input should be a vector in the ambient space, and the corresponding column of the output will be its projection onto the affine subspace. <dl class="section pre"><dt>Precondition</dt><dd>x.rows() == <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> </dd></dl>
+</li>
+</ul>
+
+</div>
+</div>
 <a id="a8e8824802dedfbc36776227f7482b6bc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8e8824802dedfbc36776227f7482b6bc">&#9670;&nbsp;</a></span>Serialize()</h2>
 
@@ -596,6 +695,48 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Passes this object to an Archive. </p>
 <p>Refer to <a class="el" href="group__yaml__serialization.html">YAML Serialization</a> for background. </p>
+
+</div>
+</div>
+<a id="a8959fcff6a1314155423f57f82302119"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8959fcff6a1314155423f57f82302119">&#9670;&nbsp;</a></span>ToGlobalCoordinates()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::MatrixXd ToGlobalCoordinates </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>y</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Given a point y in the basis of the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html" title="An affine subspace (also known as a &quot;flat&quot;, a &quot;linear variety&quot;, or a &quot;linear manifold&quot;) is a vector s...">AffineSubspace</a>, with the zero point at translation_, returns the coordinates of y in the standard basis of the ambient space. </p>
+<p>If the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html" title="An affine subspace (also known as a &quot;flat&quot;, a &quot;linear variety&quot;, or a &quot;linear manifold&quot;) is a vector s...">AffineSubspace</a> is a point, it has an empty basis, so the only possible local coordinates are also empty (and should be passed in as a length-zero vector). Each column of the input should be a vector in the affine subspace, represented in its local coordinates, and the corresponding column of the output will be its representation in the coordinate system of the ambient space. </p><dl class="section pre"><dt>Precondition</dt><dd>y.rows() == <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a941a95906ac84cc920167e46af9fc2dd" title="Returns the affine dimension of this set.">AffineDimension()</a> </dd></dl>
+
+</div>
+</div>
+<a id="a3d1925b7f2c88852aafd90b2bfb6e51c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d1925b7f2c88852aafd90b2bfb6e51c">&#9670;&nbsp;</a></span>ToLocalCoordinates()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::MatrixXd ToLocalCoordinates </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Given a point x in the standard basis of the ambient space, returns the coordinates of x in the basis of the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html" title="An affine subspace (also known as a &quot;flat&quot;, a &quot;linear variety&quot;, or a &quot;linear manifold&quot;) is a vector s...">AffineSubspace</a>, with the zero point at translation_. </p>
+<p>The component of x that is orthogonal to the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html" title="An affine subspace (also known as a &quot;flat&quot;, a &quot;linear variety&quot;, or a &quot;linear manifold&quot;) is a vector s...">AffineSubspace</a> (if it exists) is discarded, so ToGlobalCoordinates(ToLocalCoordinates(x)) is equivalent to Project(x). Note that if the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html" title="An affine subspace (also known as a &quot;flat&quot;, a &quot;linear variety&quot;, or a &quot;linear manifold&quot;) is a vector s...">AffineSubspace</a> is a point, the basis is empty, so the local coordinates will also be empty (and returned as a length-zero vector). Each column of the input should be a vector in the ambient space, and the corresponding column of the output will be its representation in the local coordinates of the affine subspace. </p><dl class="section pre"><dt>Precondition</dt><dd>x.rows() == <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> </dd></dl>
 
 </div>
 </div>

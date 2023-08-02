@@ -12,6 +12,7 @@ var searchData=
   ['beadonawire',['BeadOnAWire',['../classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html',1,'drake::examples::bead_on_a_wire']]],
   ['beammodel',['BeamModel',['../classdrake_1_1systems_1_1sensors_1_1_beam_model.html',1,'drake::systems::sensors']]],
   ['beziercurve',['BezierCurve',['../classdrake_1_1trajectories_1_1_bezier_curve.html',1,'drake::trajectories']]],
+  ['beziercurve_3c_20double_20_3e',['BezierCurve&lt; double &gt;',['../classdrake_1_1trajectories_1_1_bezier_curve.html',1,'drake::trajectories']]],
   ['beziercurve_3c_20drake_3a_3asymbolic_3a_3aexpression_20_3e',['BezierCurve&lt; drake::symbolic::Expression &gt;',['../classdrake_1_1trajectories_1_1_bezier_curve.html',1,'drake::trajectories']]],
   ['bilinearalternationoptions',['BilinearAlternationOptions',['../structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_bilinear_alternation_options.html',1,'drake::geometry::optimization::CspaceFreePolytope']]],
   ['binaryexpressioncell',['BinaryExpressionCell',['../classdrake_1_1symbolic_1_1_binary_expression_cell.html',1,'drake::symbolic']]],

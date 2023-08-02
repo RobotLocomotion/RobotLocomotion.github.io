@@ -225,6 +225,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3026f3dacc50a81434a05e8c9348eebf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a3026f3dacc50a81434a05e8c9348eebf">EstimateComplexity</a> () const</td></tr>
 <tr class="memdesc:a3026f3dacc50a81434a05e8c9348eebf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide a heuristic estimate of the complexity of the underlying GCS mathematical program, for regression testing purposes.  <a href="#a3026f3dacc50a81434a05e8c9348eebf">More...</a><br /></td></tr>
 <tr class="separator:a3026f3dacc50a81434a05e8c9348eebf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69241ad5a6d2fafc3af8987e63bf49be"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html">geometry::optimization::GraphOfConvexSets</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a69241ad5a6d2fafc3af8987e63bf49be">graph_of_convex_sets</a> () const</td></tr>
+<tr class="memdesc:a69241ad5a6d2fafc3af8987e63bf49be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for the underlying GraphOfConvexSets.  <a href="#a69241ad5a6d2fafc3af8987e63bf49be">More...</a><br /></td></tr>
+<tr class="separator:a69241ad5a6d2fafc3af8987e63bf49be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a168105bb5c3b8e774024bc13eeef01de"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a168105bb5c3b8e774024bc13eeef01de">GcsTrajectoryOptimization</a> (const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html">GcsTrajectoryOptimization</a> &amp;)=delete</td></tr>
 <tr class="separator:a168105bb5c3b8e774024bc13eeef01de"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -401,7 +404,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Adds multiple L2Norm Costs on the upper bound of the path length. </p>
-<p>Since we cannot directly compute the path length of a Bézier curve, we minimize the upper bound of the path integral by minimizing the sum of distances between control points. For Bézier curves, this is equivalent to the sum of the L2Norm of the derivative control points of the curve divided by the order.</p>
+<p>Since we cannot directly compute the path length of a Bézier curve, we minimize the upper bound of the path integral by minimizing the sum of (weighted) distances between control points: ∑ |weight_matrix * (rᵢ₊₁ − rᵢ)|₂.</p>
 <p>This cost will be added to the entire graph. Since the path length is only defined for Bézier curves that have two or more control points, this cost will only added to all subgraphs with order greater than zero. Note that this cost will be applied even to subgraphs added in the future.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -555,8 +558,8 @@ Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">regions</td><td>represent the valid set a control point can be in. We retain a copy of the regions since other functions may access them. </td></tr>
     <tr><td class="paramname">order</td><td>is the order of the Bézier curve. </td></tr>
-    <tr><td class="paramname">h_max</td><td>is the maximum duration to spend in a region (seconds). Some solvers struggle numerically with large values. </td></tr>
     <tr><td class="paramname">h_min</td><td>is the minimum duration to spend in a region (seconds) if that region is visited on the optimal path. Some cost and constraints are only convex for h &gt; 0. For example the perspective quadratic cost of the path energy ||ṙ(s)||² / h becomes non-convex for h = 0. Otherwise h_min can be set to 0. </td></tr>
+    <tr><td class="paramname">h_max</td><td>is the maximum duration to spend in a region (seconds). Some solvers struggle numerically with large values. </td></tr>
     <tr><td class="paramname">name</td><td>is the name of the subgraph. A default name will be provided. </td></tr>
   </table>
   </dd>
@@ -706,6 +709,26 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a69241ad5a6d2fafc3af8987e63bf49be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69241ad5a6d2fafc3af8987e63bf49be">&#9670;&nbsp;</a></span>graph_of_convex_sets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html">geometry::optimization::GraphOfConvexSets</a>&amp; graph_of_convex_sets </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Getter for the underlying GraphOfConvexSets. </p>
+<p>This is intended primarily for inspecting the resulting programs. </p>
+
+</div>
+</div>
 <a id="aba2887f0ca1fbbdfb49cf6b0ee21e553"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aba2887f0ca1fbbdfb49cf6b0ee21e553">&#9670;&nbsp;</a></span>num_positions()</h2>
 
@@ -725,8 +748,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a0e0056534457223e2eb27065147b9232"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e0056534457223e2eb27065147b9232">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="af6cfa802822c84540b5145bec87c49e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6cfa802822c84540b5145bec87c49e5">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -737,7 +760,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html">GcsTrajectoryOptimization</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html">GcsTrajectoryOptimization</a> &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html">GcsTrajectoryOptimization</a> &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -751,8 +774,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="af6cfa802822c84540b5145bec87c49e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6cfa802822c84540b5145bec87c49e5">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a0e0056534457223e2eb27065147b9232"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e0056534457223e2eb27065147b9232">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -763,7 +786,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html">GcsTrajectoryOptimization</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html">GcsTrajectoryOptimization</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html">GcsTrajectoryOptimization</a> &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

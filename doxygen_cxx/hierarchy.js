@@ -1097,6 +1097,7 @@ var hierarchy =
       ] ]
     ] ],
     [ "Trajectory< double >", "classdrake_1_1trajectories_1_1_trajectory.html", [
+      [ "BezierCurve< double >", "classdrake_1_1trajectories_1_1_bezier_curve.html", null ],
       [ "PiecewiseTrajectory< double >", "classdrake_1_1trajectories_1_1_piecewise_trajectory.html", [
         [ "ExponentialPlusPiecewisePolynomial< double >", "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html", null ],
         [ "PiecewisePolynomial< double >", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html", null ]

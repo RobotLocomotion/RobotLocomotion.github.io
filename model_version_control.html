@@ -146,9 +146,7 @@ committing large files directly to Git.</p>
 may add them directly to Git in a PR to master.</p>
 
 <p>Otherwise, you should add the large files to
-<a href="https://github.com/RobotLocomotion/models">RobotLocomotion/models</a>. Please do
-not commit files that are generally small, like <code class="language-plaintext highlighter-rouge">*.sdf</code> or <code class="language-plaintext highlighter-rouge">*.urdf</code> files,
-in <code class="language-plaintext highlighter-rouge">RobotLocomotion/models</code>; instead, please commit those directly.</p>
+<a href="https://github.com/RobotLocomotion/models">RobotLocomotion/models</a>.</p>
 
 <p>Before you decide to submit models, please ensure that you have tests that
 will need them. Do not submit a PR that adds models but has zero intent to use
@@ -159,16 +157,23 @@ them, as Drake is not a model repository.</p>
 <h2 id="develop-changes-locally">Develop Changes Locally</h2>
 
 <ol>
-  <li>Clone <code class="language-plaintext highlighter-rouge">RobotLocomotion/models</code> locally</li>
+  <li>Clone <code class="language-plaintext highlighter-rouge">RobotLocomotion/models</code> locally.</li>
   <li>Create a Git branch in your local checkouts of <em>both</em> <code class="language-plaintext highlighter-rouge">models</code> and
 <code class="language-plaintext highlighter-rouge">drake</code>.</li>
   <li>Update <code class="language-plaintext highlighter-rouge">drake/tools/workspace/drake_models/repository.bzl</code> to point to your
 <code class="language-plaintext highlighter-rouge">models</code> checkout using
 <code class="language-plaintext highlighter-rouge">github_archive(..., local_repository_override = &lt;path&gt;)</code>.</li>
-  <li>Update <code class="language-plaintext highlighter-rouge">drake/tools/workspace/drake_models/files.bzl</code> to incorporate the models
-you want.</li>
-  <li>Update <code class="language-plaintext highlighter-rouge">drake/tools/workspace/drake_models/package.BUILD.bazel</code> to export the
-models.</li>
+  <li>Incorporate the new <code class="language-plaintext highlighter-rouge">models</code> files into a Drake <code class="language-plaintext highlighter-rouge">BUILD.bazel</code> file where
+they are needed, typically via <code class="language-plaintext highlighter-rouge">filegroup(name = "models", ...)</code>.
+    <ol>
+      <li>You can grep for <code class="language-plaintext highlighter-rouge">@drake_models</code> to find examples of using existing
+model files.</li>
+      <li>Do not ask the build system to “install” any files from <code class="language-plaintext highlighter-rouge">drake_models</code>;
+they are already available via remote fetching. In particular, don’t add
+any <code class="language-plaintext highlighter-rouge">install()</code> rule for them, nor add them to any <code class="language-plaintext highlighter-rouge">filegroup()</code> that
+is already being installed.</li>
+    </ol>
+  </li>
   <li>Ensure your tests pass under <code class="language-plaintext highlighter-rouge">bazel test</code>.</li>
 </ol>
 

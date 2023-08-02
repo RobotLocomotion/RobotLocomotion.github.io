@@ -15,8 +15,9 @@ var classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimi
     [ "AddVelocityBounds", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#af27492cb5b0dbf8cd8ce10e792486052", null ],
     [ "EstimateComplexity", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a3026f3dacc50a81434a05e8c9348eebf", null ],
     [ "GetGraphvizString", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#ae696ea90dcbf1b197d5a4a30f895421d", null ],
+    [ "graph_of_convex_sets", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a69241ad5a6d2fafc3af8987e63bf49be", null ],
     [ "num_positions", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#aba2887f0ca1fbbdfb49cf6b0ee21e553", null ],
-    [ "operator=", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a0e0056534457223e2eb27065147b9232", null ],
     [ "operator=", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#af6cfa802822c84540b5145bec87c49e5", null ],
+    [ "operator=", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a0e0056534457223e2eb27065147b9232", null ],
     [ "SolvePath", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a8ddb1df26a2324afc83f84c90281c249", null ]
 ];

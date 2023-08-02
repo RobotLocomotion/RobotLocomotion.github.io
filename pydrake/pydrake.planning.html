@@ -1896,9 +1896,8 @@ instances of ConvexSets.</p>
 <p>Adds multiple L2Norm Costs on the upper bound of the path length.
 Since we cannot directly compute the path length of a Bézier curve, we
 minimize the upper bound of the path integral by minimizing the sum of
-distances between control points. For Bézier curves, this is
-equivalent to the sum of the L2Norm of the derivative control points
-of the curve divided by the order.</p>
+(weighted) distances between control points: ∑ <a href="#id7"><span class="problematic" id="id8">|</span></a>weight_matrix * (rᵢ₊₁
+− rᵢ)|₂.</p>
 <p>This cost will be added to the entire graph. Since the path length is
 only defined for Bézier curves that have two or more control points,
 this cost will only added to all subgraphs with order greater than
@@ -1975,14 +1974,14 @@ copy of the regions since other functions may access them.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">order</span></code>:</dt><dd><p>is the order of the Bézier curve.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">h_max</span></code>:</dt><dd><p>is the maximum duration to spend in a region (seconds). Some
-solvers struggle numerically with large values.</p>
-</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">h_min</span></code>:</dt><dd><p>is the minimum duration to spend in a region (seconds) if that
 region is visited on the optimal path. Some cost and constraints
 are only convex for h &gt; 0. For example the perspective quadratic
 cost of the path energy ||ṙ(s)||² / h becomes non-convex for h =
 0. Otherwise h_min can be set to 0.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">h_max</span></code>:</dt><dd><p>is the maximum duration to spend in a region (seconds). Some
+solvers struggle numerically with large values.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt><dd><p>is the name of the subgraph. A default name will be provided.</p>
 </dd>
@@ -2084,6 +2083,13 @@ of the annotations.</p>
 fixed (if false).</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.graph_of_convex_sets">
+<span class="sig-name descname"><span class="pre">graph_of_convex_sets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.GcsTrajectoryOptimization" title="pydrake.planning.GcsTrajectoryOptimization"><span class="pre">pydrake.planning.GcsTrajectoryOptimization</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.GraphOfConvexSets" title="pydrake.geometry.optimization.GraphOfConvexSets"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets</span></a></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.graph_of_convex_sets" title="Permalink to this definition"></a></dt>
+<dd><p>Getter for the underlying GraphOfConvexSets. This is intended
+primarily for inspecting the resulting programs.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2339,7 +2345,7 @@ d³rds³(s).</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.KinematicTrajectoryOptimization.AddPathLengthCost">
 <span class="sig-name descname"><span class="pre">AddPathLengthCost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.KinematicTrajectoryOptimization" title="pydrake.planning.KinematicTrajectoryOptimization"><span class="pre">pydrake.planning.KinematicTrajectoryOptimization</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_conic_constraint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.KinematicTrajectoryOptimization.AddPathLengthCost" title="Permalink to this definition"></a></dt>
-<dd><p>Adds a cost on an upper bound on length of the path, ∫₀ᵀ <a href="#id7"><span class="problematic" id="id8">|</span></a>q̇(t)|₂ dt,
+<dd><p>Adds a cost on an upper bound on length of the path, ∫₀ᵀ <a href="#id9"><span class="problematic" id="id10">|</span></a>q̇(t)|₂ dt,
 by summing the distance between the path control points. If
 <code class="docutils literal notranslate"><span class="pre">use_conic_constraint</span> <span class="pre">=</span> <span class="pre">false</span></code>, then costs are added via
 MathematicalProgram::AddL2NormCost; otherwise they are added via
