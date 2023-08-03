@@ -1,5 +1,6 @@
 var NAVTREEINDEX9 =
 {
+"classdrake_1_1geometry_1_1optimization_1_1_point.html#a99517cf9329eaf4327b3c7b090a058d3":[1,1,1,9,3],
 "classdrake_1_1geometry_1_1optimization_1_1_point.html#a99517cf9329eaf4327b3c7b090a058d3":[1,5,4,9,3],
 "classdrake_1_1geometry_1_1optimization_1_1_point.html#aa32345884ecc59f85087059f9bcee5e7":[1,1,1,9,4],
 "classdrake_1_1geometry_1_1optimization_1_1_point.html#aa32345884ecc59f85087059f9bcee5e7":[1,5,4,9,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX9 =
 "classdrake_1_1lcm_1_1_subscriber.html#aff871e6fe97086a46415d06515414580":[3,0,0,5,6,9],
 "classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_receiver.html":[3,0,0,7,0,0],
 "classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_receiver.html#a4e9a6806e8eaa0ce617c01cc26a150e2":[3,0,0,7,0,0,4],
-"classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_receiver.html#a4fc7560f1dff45aab3cc2be3169fb419":[3,0,0,7,0,0,2],
-"classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_receiver.html#a57bcaeadc839bfcc8a5dc093b6ad1956":[3,0,0,7,0,0,7]
+"classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_receiver.html#a4fc7560f1dff45aab3cc2be3169fb419":[3,0,0,7,0,0,2]
 };

@@ -1,5 +1,8 @@
 var NAVTREEINDEX16 =
 {
+"classdrake_1_1multibody_1_1_prismatic_spring.html#afa4381977890fe7162c38c41337a7901":[3,0,0,9,69,0],
+"classdrake_1_1multibody_1_1_prismatic_spring.html#afd645833d7942a6d6927337a3be8d4eb":[3,0,0,9,69,9],
+"classdrake_1_1multibody_1_1_propeller.html":[1,2,7,0],
 "classdrake_1_1multibody_1_1_propeller.html#a00bb1bf6b619e332e440549f5ae2bcb3":[1,2,7,0,5],
 "classdrake_1_1multibody_1_1_propeller.html#a1282a8877c657a710e2f8c154db8575a":[1,2,7,0,1],
 "classdrake_1_1multibody_1_1_propeller.html#a280fde2ed6d0906edaa37c422fd7f410":[1,2,7,0,7],
@@ -246,8 +249,5 @@ var NAVTREEINDEX16 =
 "classdrake_1_1multibody_1_1_spatial_acceleration.html":[3,0,0,9,82],
 "classdrake_1_1multibody_1_1_spatial_acceleration.html#a0e2c52c1ca5f71c7d19ae3e462f28ea4":[3,0,0,9,82,7],
 "classdrake_1_1multibody_1_1_spatial_acceleration.html#a623a6ff496aa671b9c4784525ce6808c":[3,0,0,9,82,9],
-"classdrake_1_1multibody_1_1_spatial_acceleration.html#a779e53116ddd6e0dbded2c52f141c580":[3,0,0,9,82,1],
-"classdrake_1_1multibody_1_1_spatial_acceleration.html#a7b917a147d41074fa7d6b8108d3d19c1":[3,0,0,9,82,4],
-"classdrake_1_1multibody_1_1_spatial_acceleration.html#a8bf37dab7236092d343a3550f3c0a97d":[3,0,0,9,82,0],
-"classdrake_1_1multibody_1_1_spatial_acceleration.html#a9dd5aa678bd7f87a9f58c661a81388fc":[3,0,0,9,82,11]
+"classdrake_1_1multibody_1_1_spatial_acceleration.html#a779e53116ddd6e0dbded2c52f141c580":[3,0,0,9,82,1]
 };

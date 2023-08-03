@@ -1266,9 +1266,9 @@ Variables</h2></td></tr>
 <tr class="markdownTableHead">
 <th class="markdownTableHeadCenter">Group name  </th><th class="markdownTableHeadCenter">Property Name  </th><th class="markdownTableHeadCenter">Required  </th><th class="markdownTableHeadCenter">Property Type  </th><th class="markdownTableHeadLeft">Property Description   </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyCenter">label  </td><td class="markdownTableBodyCenter">id  </td><td class="markdownTableBodyCenter">configurable⁵  </td><td class="markdownTableBodyCenter">RenderLabel  </td><td class="markdownTableBodyLeft">The label to render into the image.   </td></tr>
+<td class="markdownTableBodyCenter">label  </td><td class="markdownTableBodyCenter">id  </td><td class="markdownTableBodyCenter">no⁵  </td><td class="markdownTableBodyCenter">RenderLabel  </td><td class="markdownTableBodyLeft">The label to render into the image.   </td></tr>
 </table>
-<p>⁵ RenderEngineVtk has a default render label value that is applied to any geometry that doesn't have a (label, id) property at registration. If a value is not explicitly specified, RenderEngineVtk uses RenderLabel::kUnspecified as this default value. It can be explicitly set upon construction. The possible values for this default label and the ramifications of that choice are documented <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html#render_engine_default_label">here</a>.</p>
+<p>⁵ When the label property is not set, RenderEngineVtk uses a default render label of RenderLabel::kDontCare.</p>
 <h3>Geometries accepted by RenderEngineVtk</h3>
 <p>As documented in RenderEngine::RegisterVisual(), a RenderEngine implementation can use the properties found in the <a class="el" href="classdrake_1_1geometry_1_1_perception_properties.html" title="The set of properties for geometry used in a &quot;perception&quot; role.">PerceptionProperties</a> to determine whether it <em>accepts</em> a shape provided for registration. RenderEngineVtk makes use of defaults to accept <em>all</em> geometries (assuming the properties pass validation, e.g., render label validation). </p>
 

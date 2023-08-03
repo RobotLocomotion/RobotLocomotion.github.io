@@ -435,7 +435,8 @@ Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Constraints</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="mbp_constraints"></a></p>
 <p>Set of APIs to define constraints. To mention a few important examples, constraints can be used to couple the motion of joints, to create kinematic loops, or to weld bodies together.</p>
-<p>Currently constraints are only supported for discrete MultibodyPlant models and not for all discrete solvers, see <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a217d8aa9218c9d981b7bc2e8a983c4be" title="Sets the contact solver type used for discrete MultibodyPlant models.">set_discrete_contact_solver()</a>. If the model contains constraints not supported by the discrete solver, the plant will throw an exception at <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a> time. At this point the user has the option to either change the contact solver with <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a217d8aa9218c9d981b7bc2e8a983c4be" title="Sets the contact solver type used for discrete MultibodyPlant models.">set_discrete_contact_solver()</a> or in the <a class="el" href="structdrake_1_1multibody_1_1_multibody_plant_config.html" title="The set of configurable properties on a MultibodyPlant.">MultibodyPlantConfig</a>, or to re-define the model so that such a constraint is not needed. </p>
+<p>Currently constraints are only supported for discrete MultibodyPlant models and not for all discrete solvers, see <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a217d8aa9218c9d981b7bc2e8a983c4be" title="Sets the contact solver type used for discrete MultibodyPlant models.">set_discrete_contact_solver()</a>. If the model contains constraints not supported by the discrete solver, the plant will throw an exception at <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a> time. At this point the user has the option to either change the contact solver with <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a217d8aa9218c9d981b7bc2e8a983c4be" title="Sets the contact solver type used for discrete MultibodyPlant models.">set_discrete_contact_solver()</a> or in the <a class="el" href="structdrake_1_1multibody_1_1_multibody_plant_config.html" title="The set of configurable properties on a MultibodyPlant.">MultibodyPlantConfig</a>, or to re-define the model so that such a constraint is not needed.</p>
+<p>Each constraint is identified with a MultibodyConstraintId returned by the function used to add it (e.g. <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ad867f47ed9c5fa6a48d4eba8b9d871e9" title="Defines a holonomic constraint between two single-dof joints joint0 and joint1 with positions q₀ and ...">AddCouplerConstraint()</a>). It is possible to recover constraint specification parameters for each constraint with various introspection functions (e.g. <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a891b617d944b90c276e67bcdc48e86b1" title="(Internal use only) Returns the coupler constraint specification corresponding to id">get_coupler_constraint_specs()</a>). Each constraint has an "active" status that is set to true by default. Query a constraint's active status with <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8f75638f952ae11ee62d8c8458a47415" title="Returns the active status of the constraint given by id in context.">GetConstraintActiveStatus()</a> and set its active status with <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a0308169d8d70b7f20285b0d5df3f046f" title="Sets the active status of the constraint given by id in context.">SetConstraintActiveStatus()</a>. </p>
 </div></td></tr>
 <tr class="memitem:a23f1475b0c301d9d78814fce265fd6ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a23f1475b0c301d9d78814fce265fd6ea">num_constraints</a> () const</td></tr>
 <tr class="memdesc:a23f1475b0c301d9d78814fce265fd6ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the total number of constraints specified by the user.  <a href="#a23f1475b0c301d9d78814fce265fd6ea">More...</a><br /></td></tr>
@@ -467,6 +468,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a10c6bff76358c7f126d12de878f6cdbc"><td class="memItemLeft" align="right" valign="top">const std::map&lt; <a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a>, internal::BallConstraintSpec &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a10c6bff76358c7f126d12de878f6cdbc">get_ball_constraint_specs</a> () const</td></tr>
 <tr class="memdesc:a10c6bff76358c7f126d12de878f6cdbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns a reference to the all of the ball constraints in this plant as a map from MultibodyConstraintId to BallConstraintSpec.  <a href="#a10c6bff76358c7f126d12de878f6cdbc">More...</a><br /></td></tr>
 <tr class="separator:a10c6bff76358c7f126d12de878f6cdbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f75638f952ae11ee62d8c8458a47415"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8f75638f952ae11ee62d8c8458a47415">GetConstraintActiveStatus</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a> id) const</td></tr>
+<tr class="memdesc:a8f75638f952ae11ee62d8c8458a47415"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the active status of the constraint given by <code>id</code> in <code>context</code>.  <a href="#a8f75638f952ae11ee62d8c8458a47415">More...</a><br /></td></tr>
+<tr class="separator:a8f75638f952ae11ee62d8c8458a47415"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0308169d8d70b7f20285b0d5df3f046f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a0308169d8d70b7f20285b0d5df3f046f">SetConstraintActiveStatus</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, <a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a> id, bool status) const</td></tr>
+<tr class="memdesc:a0308169d8d70b7f20285b0d5df3f046f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the active status of the constraint given by <code>id</code> in <code>context</code>.  <a href="#a0308169d8d70b7f20285b0d5df3f046f">More...</a><br /></td></tr>
+<tr class="separator:a0308169d8d70b7f20285b0d5df3f046f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad867f47ed9c5fa6a48d4eba8b9d871e9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ad867f47ed9c5fa6a48d4eba8b9d871e9">AddCouplerConstraint</a> (const <a class="el" href="classdrake_1_1multibody_1_1_joint.html">Joint</a>&lt; T &gt; &amp;joint0, const <a class="el" href="classdrake_1_1multibody_1_1_joint.html">Joint</a>&lt; T &gt; &amp;joint1, <a class="el" href="classdouble.html">double</a> gear_ratio, <a class="el" href="classdouble.html">double</a> offset=0.0)</td></tr>
 <tr class="memdesc:ad867f47ed9c5fa6a48d4eba8b9d871e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a holonomic constraint between two single-dof joints <code>joint0</code> and <code>joint1</code> with positions q₀ and q₁, respectively, such that q₀ = ρ⋅q₁ + Δq, where ρ is the gear ratio and Δq is a fixed offset.  <a href="#ad867f47ed9c5fa6a48d4eba8b9d871e9">More...</a><br /></td></tr>
 <tr class="separator:ad867f47ed9c5fa6a48d4eba8b9d871e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -5133,6 +5140,43 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 
 </div>
 </div>
+<a id="a8f75638f952ae11ee62d8c8458a47415"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f75638f952ae11ee62d8c8458a47415">&#9670;&nbsp;</a></span>GetConstraintActiveStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GetConstraintActiveStatus </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a>&#160;</td>
+          <td class="paramname"><em>id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the active status of the constraint given by <code>id</code> in <code>context</code>. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the MultibodyPlant has not been finalized. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>id</code> does not belong to any multibody constraint in <code>context</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a93cf63581a2d40a28d9cf65a3017839b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a93cf63581a2d40a28d9cf65a3017839b">&#9670;&nbsp;</a></span>GetDefaultContactSurfaceRepresentation()</h2>
 
@@ -7913,8 +7957,8 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 
 </div>
 </div>
-<a id="aecc2576d314d5baf56ad6ad593b26f9f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aecc2576d314d5baf56ad6ad593b26f9f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="af4f43a6f72128af8e926d32c37ed7580"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4f43a6f72128af8e926d32c37ed7580">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7925,7 +7969,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -7939,8 +7983,8 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 
 </div>
 </div>
-<a id="af4f43a6f72128af8e926d32c37ed7580"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4f43a6f72128af8e926d32c37ed7580">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="aecc2576d314d5baf56ad6ad593b26f9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecc2576d314d5baf56ad6ad593b26f9f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7951,7 +7995,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -8507,6 +8551,50 @@ to allow?" There are two opposing design issues in picking a value for vₛ. On 
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">u_instance</td><td>Actuation values for the actuators. It must be of size equal to the number of degrees of freedom of all of the actuated joints in <code>model_instance</code>. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">u</td><td>The vector containing the actuation values for the entire model. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0308169d8d70b7f20285b0d5df3f046f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0308169d8d70b7f20285b0d5df3f046f">&#9670;&nbsp;</a></span>SetConstraintActiveStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetConstraintActiveStatus </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a>&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the active status of the constraint given by <code>id</code> in <code>context</code>. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the MultibodyPlant has not been finalized. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>context</code> == nullptr </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>id</code> does not belong to any multibody constraint in <code>context</code>. </td></tr>
   </table>
   </dd>
 </dl>

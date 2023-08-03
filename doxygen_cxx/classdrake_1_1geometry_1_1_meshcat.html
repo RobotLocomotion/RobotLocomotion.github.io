@@ -306,6 +306,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af11648befdbdbdee941386269cc979fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#af11648befdbdbdee941386269cc979fc">SetProperty</a> (std::string_view path, std::string property, const std::vector&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;value, const std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;time_in_recording=std::nullopt)</td></tr>
 <tr class="memdesc:af11648befdbdbdee941386269cc979fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a single named property of the object at the given path.  <a href="#af11648befdbdbdee941386269cc979fc">More...</a><br /></td></tr>
 <tr class="separator:af11648befdbdbdee941386269cc979fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e604b24e8ece3d7d7ac74a8b4fe2783"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a4e604b24e8ece3d7d7ac74a8b4fe2783">SetEnvironmentMap</a> (const std::filesystem::path &amp;image_path)</td></tr>
+<tr class="memdesc:a4e604b24e8ece3d7d7ac74a8b4fe2783"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <em>environment</em> texture.  <a href="#a4e604b24e8ece3d7d7ac74a8b4fe2783">More...</a><br /></td></tr>
+<tr class="separator:a4e604b24e8ece3d7d7ac74a8b4fe2783"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a385b6142ccc841b5b51a14825b7cebdf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a385b6142ccc841b5b51a14825b7cebdf">SetAnimation</a> (const <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html">MeshcatAnimation</a> &amp;animation)</td></tr>
 <tr class="memdesc:a385b6142ccc841b5b51a14825b7cebdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html" title="An interface for recording/playback animations in Meshcat.">MeshcatAnimation</a>, which creates a slider interface element to play/pause/rewind through a series of animation frames in the visualizer.  <a href="#a385b6142ccc841b5b51a14825b7cebdf">More...</a><br /></td></tr>
 <tr class="separator:a385b6142ccc841b5b51a14825b7cebdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1332,6 +1335,36 @@ Public Member Functions</h2></td></tr>
 
 <p>Sets the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> object on <code>path</code> to an orthographic camera. </p>
 <p>We provide a default value of <code>path</code> corresponding to the default camera object in <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a>. </p>
+
+</div>
+</div>
+<a id="a4e604b24e8ece3d7d7ac74a8b4fe2783"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e604b24e8ece3d7d7ac74a8b4fe2783">&#9670;&nbsp;</a></span>SetEnvironmentMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetEnvironmentMap </td>
+          <td>(</td>
+          <td class="paramtype">const std::filesystem::path &amp;&#160;</td>
+          <td class="paramname"><em>image_path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the <em>environment</em> texture. </p>
+<p>For objects with physically-based rendering (PBR) material properties (e.g., metallic surfaces), this defines the luminance environment, contributing to total illumination and appearing in reflections.</p>
+<p>The image should be of a format typically supported by web browsers: e.g., jpg, png, etc. Furthermore, the image must be an <a href="https://en.wikipedia.org/wiki/Equirectangular_projection">equirectangular image</a> (as opposed to a <a href="https://en.wikipedia.org/wiki/Cube_mapping">cube-map</a>).</p>
+<p>If the path is empty, the environment map will be cleared.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td><code>image_path</code> is <em>not</em> empty and the file isn't accessible. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>If <code>image_path</code> names an accessible file, it is an appropriate image type. </dd></dl>
 
 </div>
 </div>

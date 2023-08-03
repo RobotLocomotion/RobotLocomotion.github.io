@@ -162,16 +162,16 @@ case where a MultibodyPlant has already been added to <code class="docutils lite
 using either AddMultibodyPlant() or AddMultibodyPlantSceneGraph(),
 the default value (nullptr) here is suitable and generally should
 be preferred. When provided, it must be a System that’s been added
-to the the given <code class="docutils literal notranslate"><span class="pre">builder</span></code>. When not provided, uses the system
-named “plant” in the given <code class="docutils literal notranslate"><span class="pre">builder</span></code>.</p>
+to the given <code class="docutils literal notranslate"><span class="pre">builder</span></code>. When not provided, uses the system named
+“plant” in the given <code class="docutils literal notranslate"><span class="pre">builder</span></code>.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">scene_graph</span></code>:</dt><dd><p>(Optional) The SceneGraph to use for rendering. In the common case
 where a SceneGraph has already been added to <code class="docutils literal notranslate"><span class="pre">builder</span></code> using
 either AddMultibodyPlant() or AddMultibodyPlantSceneGraph(), the
 default value (nullptr) here is suitable and generally should be
 preferred. When provided, it must be a System that’s been added to
-the the given <code class="docutils literal notranslate"><span class="pre">builder</span></code>. When not provided, uses the system
-named “scene_graph” in the given <code class="docutils literal notranslate"><span class="pre">builder</span></code>.</p>
+the given <code class="docutils literal notranslate"><span class="pre">builder</span></code>. When not provided, uses the system named
+“scene_graph” in the given <code class="docutils literal notranslate"><span class="pre">builder</span></code>.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">lcm</span></code>:</dt><dd><p>(Optional) The LCM interface used for visualization message
 publication. When not provided, uses the <code class="docutils literal notranslate"><span class="pre">config.lcm_bus</span></code> value
@@ -242,6 +242,18 @@ value in YAML.</p>
 (having identical values for <code class="docutils literal notranslate"><span class="pre">renderer_name</span></code>) but <em>different</em> values
 for <code class="docutils literal notranslate"><span class="pre">background</span></code>, the render engine instance will be configured with
 one of the set of values. Which one is undefined.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.CameraConfig.capture_offset">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">capture_offset</span></span><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.capture_offset" title="Permalink to this definition"></a></dt>
+<dd><p>Phase offset (in seconds) for image capture, relative to the
+simulator’s time zero. This can be useful to stagger multiple cameras.
+Refer to the RgbdSensorAsync class for a comprehensive description.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>capture_offset is non-negative and finite.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py property">
@@ -436,6 +448,18 @@ RgbdSensor system’s name and serves as a suffix of the LCM channel
 name.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">name</span></code> is not empty.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.CameraConfig.output_delay">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">output_delay</span></span><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.output_delay" title="Permalink to this definition"></a></dt>
+<dd><p>Delay (in seconds) between when the scene graph geometry is “captured”
+and when the output image is published. Refer to the RgbdSensorAsync
+class for a comprehensive description.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>output_delay is non-negative and strictly less than 1/fps.</p>
 </dd>
 </dl>
 </dd></dl>

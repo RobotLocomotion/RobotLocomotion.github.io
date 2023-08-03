@@ -256,6 +256,12 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a63da2a617b72a1630998a4d8b4d26cd3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a63da2a617b72a1630998a4d8b4d26cd3">fps</a> {10.0}</td></tr>
 <tr class="memdesc:a63da2a617b72a1630998a4d8b4d26cd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Publishing rate (in Hz) for both RGB and depth cameras (as requested).  <a href="#a63da2a617b72a1630998a4d8b4d26cd3">More...</a><br /></td></tr>
 <tr class="separator:a63da2a617b72a1630998a4d8b4d26cd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0f326f2618a06b1f9e2817015ff1cd7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#ac0f326f2618a06b1f9e2817015ff1cd7">capture_offset</a> {0.0}</td></tr>
+<tr class="memdesc:ac0f326f2618a06b1f9e2817015ff1cd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Phase offset (in seconds) for image capture, relative to the simulator's time zero.  <a href="#ac0f326f2618a06b1f9e2817015ff1cd7">More...</a><br /></td></tr>
+<tr class="separator:ac0f326f2618a06b1f9e2817015ff1cd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a516e6b1994145bd1efc9ccb21bc15fdc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a516e6b1994145bd1efc9ccb21bc15fdc">output_delay</a> {0.0}</td></tr>
+<tr class="memdesc:a516e6b1994145bd1efc9ccb21bc15fdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delay (in seconds) between when the scene graph geometry is "captured" and when the output image is published.  <a href="#a516e6b1994145bd1efc9ccb21bc15fdc">More...</a><br /></td></tr>
+<tr class="separator:a516e6b1994145bd1efc9ccb21bc15fdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51a5f94eea0e5ea757caaddb41c3eb79"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a51a5f94eea0e5ea757caaddb41c3eb79">rgb</a> {true}</td></tr>
 <tr class="memdesc:a51a5f94eea0e5ea757caaddb41c3eb79"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, RGB images will be produced and published via LCM.  <a href="#a51a5f94eea0e5ea757caaddb41c3eb79">More...</a><br /></td></tr>
 <tr class="separator:a51a5f94eea0e5ea757caaddb41c3eb79"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -441,6 +447,23 @@ Camera intrinsics</h2></td></tr>
 <p>The "background" color. </p>
 <p>This is the color drawn where there are no objects visible. Its default value matches the default value for render::RenderEngineVtkParams::default_clear_color. See the documentation for <a class="el" href="classdrake_1_1geometry_1_1_rgba.html#a8e8824802dedfbc36776227f7482b6bc" title="Passes this object to an Archive.">geometry::Rgba::Serialize</a> for how to define this value in YAML.</p>
 <p>N.B. If two different cameras are configured to use the same renderer (having identical values for <code>renderer_name</code>) but <em>different</em> values for <code>background</code>, the render engine instance will be configured with one of the set of values. Which one is undefined. </p>
+
+</div>
+</div>
+<a id="ac0f326f2618a06b1f9e2817015ff1cd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0f326f2618a06b1f9e2817015ff1cd7">&#9670;&nbsp;</a></span>capture_offset</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> capture_offset {0.0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Phase offset (in seconds) for image capture, relative to the simulator's time zero. </p>
+<p>This can be useful to stagger multiple cameras. Refer to the <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_async.html" title="A sensor similar to RgbdSensorDiscrete but the rendering occurs on a background thread to offer impro...">RgbdSensorAsync</a> class for a comprehensive description. </p><dl class="section pre"><dt>Precondition</dt><dd>capture_offset is non-negative and finite. </dd></dl>
 
 </div>
 </div>
@@ -631,6 +654,23 @@ Camera intrinsics</h2></td></tr>
 
 <p>The camera name. </p>
 <p>This <code>name</code> is used as part of the corresponding <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html" title="A meta-sensor that houses RGB, depth, and label cameras, producing their corresponding images based o...">RgbdSensor</a> system's name and serves as a suffix of the LCM channel name. </p><dl class="section pre"><dt>Precondition</dt><dd><code>name</code> is not empty. </dd></dl>
+
+</div>
+</div>
+<a id="a516e6b1994145bd1efc9ccb21bc15fdc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a516e6b1994145bd1efc9ccb21bc15fdc">&#9670;&nbsp;</a></span>output_delay</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> output_delay {0.0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Delay (in seconds) between when the scene graph geometry is "captured" and when the output image is published. </p>
+<p>Refer to the <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_async.html" title="A sensor similar to RgbdSensorDiscrete but the rendering occurs on a background thread to offer impro...">RgbdSensorAsync</a> class for a comprehensive description. </p><dl class="section pre"><dt>Precondition</dt><dd>output_delay is non-negative and strictly less than 1/fps. </dd></dl>
 
 </div>
 </div>

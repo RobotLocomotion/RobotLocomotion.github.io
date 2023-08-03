@@ -656,6 +656,7 @@ var searchData=
   ['getcolordfromlabel',['GetColorDFromLabel',['../classdrake_1_1geometry_1_1render_1_1_render_engine.html#aa06319c11fbba76d4ebaa142bd37df99',1,'drake::geometry::render::RenderEngine']]],
   ['getcolorifromlabel',['GetColorIFromLabel',['../classdrake_1_1geometry_1_1render_1_1_render_engine.html#a6b0cc456e7beb967979d325283656039',1,'drake::geometry::render::RenderEngine']]],
   ['getconfigurationsinworld',['GetConfigurationsInWorld',['../classdrake_1_1geometry_1_1_query_object.html#a7ef16ceab68157261224e26f51a96e76',1,'drake::geometry::QueryObject']]],
+  ['getconstraintactivestatus',['GetConstraintActiveStatus',['../classdrake_1_1multibody_1_1_multibody_plant.html#a8f75638f952ae11ee62d8c8458a47415',1,'drake::multibody::MultibodyPlant']]],
   ['getconstraints',['GetConstraints',['../classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#ab70a73def5d48495fc70c4cb4f8ba218',1,'drake::geometry::optimization::GraphOfConvexSets::Vertex::GetConstraints()'],['../classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#ab70a73def5d48495fc70c4cb4f8ba218',1,'drake::geometry::optimization::GraphOfConvexSets::Edge::GetConstraints()']]],
   ['getcontactpoints',['GetContactPoints',['../classdrake_1_1examples_1_1rod2d_1_1_rod2_d.html#a72c5ce8ab71d6e6eb3101ac6dceb53ef',1,'drake::examples::rod2d::Rod2D']]],
   ['getcontactpointstangentvelocities',['GetContactPointsTangentVelocities',['../classdrake_1_1examples_1_1rod2d_1_1_rod2_d.html#a49560db81c9a8ceccfe2153869ee251d',1,'drake::examples::rod2d::Rod2D']]],
