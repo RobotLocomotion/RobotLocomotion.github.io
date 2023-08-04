@@ -243,9 +243,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a447b42f56ec0921186385e6863a6548d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a447b42f56ec0921186385e6863a6548d">renderer_name</a> {&quot;default&quot;}</td></tr>
 <tr class="memdesc:a447b42f56ec0921186385e6863a6548d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name of the <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html" title="The engine for performing rasterization operations on geometry.">geometry::render::RenderEngine</a> that this camera uses.  <a href="#a447b42f56ec0921186385e6863a6548d">More...</a><br /></td></tr>
 <tr class="separator:a447b42f56ec0921186385e6863a6548d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3cf1bcc14fdfe348e72ab596466f675"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#ab3cf1bcc14fdfe348e72ab596466f675">renderer_class</a></td></tr>
-<tr class="memdesc:ab3cf1bcc14fdfe348e72ab596466f675"><td class="mdescLeft">&#160;</td><td class="mdescRight">The choice of render engine implementation to use.  <a href="#ab3cf1bcc14fdfe348e72ab596466f675">More...</a><br /></td></tr>
-<tr class="separator:ab3cf1bcc14fdfe348e72ab596466f675"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a079f690a782b18a752952851aafd792a"><td class="memItemLeft" align="right" valign="top">std::variant&lt; std::string, <a class="el" href="structdrake_1_1geometry_1_1_render_engine_vtk_params.html">geometry::RenderEngineVtkParams</a>, <a class="el" href="structdrake_1_1geometry_1_1_render_engine_gl_params.html">geometry::RenderEngineGlParams</a>, <a class="el" href="structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html">geometry::RenderEngineGltfClientParams</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a079f690a782b18a752952851aafd792a">renderer_class</a> {&quot;&quot;}</td></tr>
+<tr class="memdesc:a079f690a782b18a752952851aafd792a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The choice of render engine implementation to use.  <a href="#a079f690a782b18a752952851aafd792a">More...</a><br /></td></tr>
+<tr class="separator:a079f690a782b18a752952851aafd792a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01a2a4e8cf420c179bc1253ca3d3a1c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_rgba.html">geometry::Rgba</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a01a2a4e8cf420c179bc1253ca3d3a1c3">background</a> {204 / 255.0, 229 / 255.0, 255 / 255.0, 1.0}</td></tr>
 <tr class="memdesc:a01a2a4e8cf420c179bc1253ca3d3a1c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The "background" color.  <a href="#a01a2a4e8cf420c179bc1253ca3d3a1c3">More...</a><br /></td></tr>
 <tr class="separator:a01a2a4e8cf420c179bc1253ca3d3a1c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -446,7 +446,7 @@ Camera intrinsics</h2></td></tr>
 
 <p>The "background" color. </p>
 <p>This is the color drawn where there are no objects visible. Its default value matches the default value for render::RenderEngineVtkParams::default_clear_color. See the documentation for <a class="el" href="classdrake_1_1geometry_1_1_rgba.html#a8e8824802dedfbc36776227f7482b6bc" title="Passes this object to an Archive.">geometry::Rgba::Serialize</a> for how to define this value in YAML.</p>
-<p>N.B. If two different cameras are configured to use the same renderer (having identical values for <code>renderer_name</code>) but <em>different</em> values for <code>background</code>, the render engine instance will be configured with one of the set of values. Which one is undefined. </p>
+<p>This value is used only if the <code>render_class</code> specifies either <code>"RenderEngineVtk"</code> or <code>"RenderEngineGl"</code> by <em>name</em> (RenderEngineGltfClient doesn't have a configurable background color.) </p>
 
 </div>
 </div>
@@ -674,23 +674,49 @@ Camera intrinsics</h2></td></tr>
 
 </div>
 </div>
-<a id="ab3cf1bcc14fdfe348e72ab596466f675"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab3cf1bcc14fdfe348e72ab596466f675">&#9670;&nbsp;</a></span>renderer_class</h2>
+<a id="a079f690a782b18a752952851aafd792a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a079f690a782b18a752952851aafd792a">&#9670;&nbsp;</a></span>renderer_class</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::string renderer_class</td>
+          <td class="memname">std::variant&lt;std::string, <a class="el" href="structdrake_1_1geometry_1_1_render_engine_vtk_params.html">geometry::RenderEngineVtkParams</a>, <a class="el" href="structdrake_1_1geometry_1_1_render_engine_gl_params.html">geometry::RenderEngineGlParams</a>, <a class="el" href="structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html">geometry::RenderEngineGltfClientParams</a>&gt; renderer_class {&quot;&quot;}</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>The choice of render engine implementation to use. </p>
-<p>The value should be one of empty, '"RenderEngineVtk"', or '"RenderEngineGl"'. An <code>empty</code> string signals, in essence, "don't care". If a render engine with that name has already been configured, the camera will use it (regardless of type). If the name doesn't already exist, the default, slower, more portable, and more robust RenderEngineVtk will be instantiated. RenderEngineGl can be selected if you are on Ubuntu and need the improved performance (at the <em>possible</em> cost of lesser image fidelity).</p>
-<dl class="section pre"><dt>Precondition</dt><dd><code>renderer_class</code> is empty or one of '"RenderEngineVtk"' or '"RenderEngineGl"'. </dd>
-<dd>
-For two cameras with the same <code>renderer_name</code> value, they must also specify the same <code>renderer_class</code> (either implicitly or explicitly). </dd></dl>
+<p>It can be specified simply by providing a <code>string</code> containing the class <em>name</em> of the RenderEngine to use (i.e., <code>"RenderEngineVtk"</code>, <code>"RenderEngineGl"</code>, or <code>"RenderEngineGltfClient"</code>). Or, it can be specified by providing parameters for one of those engines: RenderEngineVtkParams, RenderEngineGlParams, or RenderEngineGltfClientParams.</p>
+<p>If a <code>string</code> containing the render engine class <em>name</em> is provided, the engine instantiated will use the default parameters &ndash; equivalent to passing the set of default parameters.</p>
+<p>It is possible for multiple cameras to reference the same <code>renderer_name</code> but configure the renderer differently. This would be a configuration error. The following rules will help prevent problematic configurations:</p>
+<ul>
+<li>Multiple cameras can reference the same value for <code>renderer_name</code>.</li>
+<li>If multiple cameras reference the same value for <code>renderer_name</code>, only the <em>first</em> can use the engine parameters to specify it. Attempting to do so with a later camera will produce an error.<ul>
+<li>The later cameras can use engine class <em>name</em>.</li>
+<li>If a later camera names a <em>different</em> engine class, that will result in an error.</li>
+</ul>
+</li>
+</ul>
+<p>In YAML, it can be a bit trickier. Depending on how a collection of cameras is articulated, the concept of "first" may be unclear. In <code><a class="el" href="scenario_8h.html">examples/hardware_sim/scenario.h</a></code> the collection is a map. So, the camera configurations are not necessarily processed in the order they appear in the YAML file. Instead, the processing order depends on the mnemonic camera key. So, be aware, if you use a similar mapping, you may have to massage the key names to achieve the requisite processing order. Alternatively, a vector of CameraConfig in your own scenario file, would guarantee that processing order is the same as file order.</p>
+<p>We intend to relax these restrictions in time, allowing equivalent, redundant specifications of a render engine (and throwing only on inconsistent specifications).</p>
+<p>Passing the empty string is equivalent to saying, "I don't care". If a render engine with that name has already been configured, the camera will use it (regardless of type). If the name doesn't already exist, the default, slower, more portable, and more robust RenderEngineVtk will be instantiated. RenderEngineGl can be selected if you are on Ubuntu and need the improved performance (at the <em>possible</em> cost of lesser image fidelity). In YAML, omitting <code>renderer_class</code> from the camera specification is equivalent to "passing the empty string".</p>
+<h4>Configuring in YAML</h4>
+<p>It isn't always obvious what the proper spelling in YAML is. The following examples illustrate how the <code>renderer_class</code> field can be defined in YAML files.</p>
+<ol type="1">
+<li>Use the RenderEngineVtk with all default parameters - providing the class name as a string. <div class="fragment"><div class="line">renderer_class: RenderEngineVtk</div></div><!-- fragment --></li>
+<li>Use the RenderEngineVtk with all default parameters - providing the engine parameters with default values. <div class="fragment"><div class="line">renderer_class: !RenderEngineVtkParams {}</div></div><!-- fragment --></li>
+<li>Use the RenderEngineVtk with a customized clear color (black). <div class="fragment"><div class="line">renderer_class: !RenderEngineVtkParams</div><div class="line">  default_clear_color: [0, 0, 0]</div></div><!-- fragment --></li>
+<li>Use the RenderEngineGl with a customized clear color (black). <div class="fragment"><div class="line">renderer_class: !RenderEngineGlParams</div><div class="line">  default_clear_color:</div><div class="line">    rgba: [0, 0, 0, 1]</div></div><!-- fragment --></li>
+<li>Use the RenderEngineGltfClient with fully specified properties. <div class="fragment"><div class="line">renderer_class: !RenderEngineGltfClientParams</div><div class="line">  base_url: http://10.10.10.1</div><div class="line">  render_endpoint: server</div><div class="line">  verbose: true</div><div class="line">  cleanup: false</div></div><!-- fragment --></li>
+</ol>
+<p>Things to note:</p>
+<ul>
+<li>When providing the <em>parameters</em> for the engine, the declaration must begin with <code>!</code> to announce it as a type (examples 2, 3, and 4).</li>
+<li>A defaulted set of parameters must have a trailing <code>{}</code> (example 2).</li>
+<li>Two engine parameter sets may have the same semantic parameter but spell it differently (<code>default_clear_color</code> in examples 3 and 4).</li>
+</ul>
+<dl class="section pre"><dt>Precondition</dt><dd><code>renderer_class</code> is a string and either empty or one of <code>"RenderEngineVtk"</code>, <code>"RenderEngineGl"</code>, or <code>"RenderEngineGltfClient"</code>, or, it is a parameter type of one of Drake's RenderEngine implementations. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a9cdf0a6693c255362906281ff2f7d880" title="Reports the type name for the RenderEngine registered with the given name.">drake::geometry::SceneGraph::GetRendererTypeName()</a>. </dd></dl>
 
 </div>

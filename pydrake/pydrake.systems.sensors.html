@@ -238,10 +238,9 @@ objects visible. Its default value matches the default value for
 render::RenderEngineVtkParams::default_clear_color. See the
 documentation for geometry::Rgba::Serialize for how to define this
 value in YAML.</p>
-<p>N.B. If two different cameras are configured to use the same renderer
-(having identical values for <code class="docutils literal notranslate"><span class="pre">renderer_name</span></code>) but <em>different</em> values
-for <code class="docutils literal notranslate"><span class="pre">background</span></code>, the render engine instance will be configured with
-one of the set of values. Which one is undefined.</p>
+<p>This value is used only if the <code class="docutils literal notranslate"><span class="pre">render_class</span></code> specifies either
+<code class="docutils literal notranslate"><span class="pre">&quot;RenderEngineVtk&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;RenderEngineGl&quot;</span></code> by <em>name</em>
+(RenderEngineGltfClient doesn’t have a configurable background color.)</p>
 </dd></dl>
 
 <dl class="py property">
@@ -475,22 +474,105 @@ point in the center of the image.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.CameraConfig.renderer_class">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">renderer_class</span></span><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.renderer_class" title="Permalink to this definition"></a></dt>
-<dd><p>The choice of render engine implementation to use. The value should be
-one of empty, ‘“RenderEngineVtk”’, or ‘“RenderEngineGl”’. An <code class="docutils literal notranslate"><span class="pre">empty</span></code>
-string signals, in essence, “don’t care”. If a render engine with that
-name has already been configured, the camera will use it (regardless
-of type). If the name doesn’t already exist, the default, slower, more
-portable, and more robust RenderEngineVtk will be instantiated.
-RenderEngineGl can be selected if you are on Ubuntu and need the
-improved performance (at the <em>possible</em> cost of lesser image
-fidelity).</p>
+<dd><p>The choice of render engine implementation to use. It can be specified
+simply by providing a <code class="docutils literal notranslate"><span class="pre">string</span></code> containing the class <em>name</em> of the
+RenderEngine to use (i.e., <code class="docutils literal notranslate"><span class="pre">&quot;RenderEngineVtk&quot;</span></code>, <cite>“RenderEngineGl”</cite>,
+or <code class="docutils literal notranslate"><span class="pre">&quot;RenderEngineGltfClient&quot;</span></code>). Or, it can be specified by providing
+parameters for one of those engines: RenderEngineVtkParams,
+RenderEngineGlParams, or RenderEngineGltfClientParams.</p>
+<p>If a <code class="docutils literal notranslate"><span class="pre">string</span></code> containing the render engine class <em>name</em> is provided,
+the engine instantiated will use the default parameters – equivalent
+to passing the set of default parameters.</p>
+<p>It is possible for multiple cameras to reference the same
+<code class="docutils literal notranslate"><span class="pre">renderer_name</span></code> but configure the renderer differently. This would
+be a configuration error. The following rules will help prevent
+problematic configurations:</p>
+<ul class="simple">
+<li><p>Multiple cameras can reference the same value for <code class="docutils literal notranslate"><span class="pre">renderer_name</span></code>.</p></li>
+<li><p>If multiple cameras reference the same value for <code class="docutils literal notranslate"><span class="pre">renderer_name</span></code>, only</p></li>
+</ul>
+<p>the <em>first</em> can use the engine parameters to specify it. Attempting to
+do so with a later camera will produce an error.
+- The later cameras can use engine class <em>name</em>.
+- If a later camera names a <em>different</em> engine class, that will result
+in an error.</p>
+<p>In YAML, it can be a bit trickier. Depending on how a collection of
+cameras is articulated, the concept of “first” may be unclear. In
+<code class="docutils literal notranslate"><span class="pre">examples/hardware_sim/scenario.h</span></code> the collection is a map. So, the
+camera configurations are not necessarily processed in the order they
+appear in the YAML file. Instead, the processing order depends on the
+mnemonic camera key. So, be aware, if you use a similar mapping, you
+may have to massage the key names to achieve the requisite processing
+order. Alternatively, a vector of CameraConfig in your own scenario
+file, would guarantee that processing order is the same as file order.</p>
+<p>We intend to relax these restrictions in time, allowing equivalent,
+redundant specifications of a render engine (and throwing only on
+inconsistent specifications).</p>
+<p>Passing the empty string is equivalent to saying, “I don’t care”. If a
+render engine with that name has already been configured, the camera
+will use it (regardless of type). If the name doesn’t already exist,
+the default, slower, more portable, and more robust RenderEngineVtk
+will be instantiated. RenderEngineGl can be selected if you are on
+Ubuntu and need the improved performance (at the <em>possible</em> cost of
+lesser image fidelity). In YAML, omitting <code class="docutils literal notranslate"><span class="pre">renderer_class</span></code> from the
+camera specification is equivalent to “passing the empty string”.</p>
+<p><em>Configuring in YAML</em></p>
+<p>It isn’t always obvious what the proper spelling in YAML is. The
+following examples illustrate how the <code class="docutils literal notranslate"><span class="pre">renderer_class</span></code> field can be
+defined in YAML files.</p>
+<p>1. Use the RenderEngineVtk with all default parameters - providing the class
+name as a string.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">yaml</span><span class="p">}</span>
+<span class="n">renderer_class</span><span class="p">:</span> <span class="n">RenderEngineVtk</span>
+</pre></div>
+</div>
+<p>2. Use the RenderEngineVtk with all default parameters - providing the
+engine parameters with default values.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{yaml}
+renderer_class: !RenderEngineVtkParams {}
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Use the RenderEngineVtk with a customized clear color (black).</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{yaml}
+renderer_class: !RenderEngineVtkParams
+default_clear_color: [0, 0, 0]
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Use the RenderEngineGl with a customized clear color (black).</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{yaml}
+renderer_class: !RenderEngineGlParams
+default_clear_color:
+rgba: [0, 0, 0, 1]
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Use the RenderEngineGltfClient with fully specified properties.</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{yaml}
+renderer_class: !RenderEngineGltfClientParams
+base_url: http://10.10.10.1
+render_endpoint: server
+verbose: true
+cleanup: false
+</pre></div>
+</div>
+<p>Things to note:</p>
+<ul class="simple">
+<li><p>When providing the <em>parameters</em> for the engine, the declaration must</p></li>
+</ul>
+<p>begin with <code class="docutils literal notranslate"><span class="pre">!</span></code> to announce it as a type (examples 2, 3, and 4).
+- A defaulted set of parameters must have a trailing <code class="docutils literal notranslate"><span class="pre">{}</span></code> (example 2).
+- Two engine parameter sets may have the same semantic parameter but spell
+it differently (<code class="docutils literal notranslate"><span class="pre">default_clear_color</span></code> in examples 3 and 4).</p>
 <dl class="simple">
-<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">renderer_class</span></code> is empty or one of ‘“RenderEngineVtk”’ or
-‘“RenderEngineGl”’.</p>
-</dd>
-<dt>Precondition:</dt><dd><p>For two cameras with the same <code class="docutils literal notranslate"><span class="pre">renderer_name</span></code> value, they must
-also specify the same <code class="docutils literal notranslate"><span class="pre">renderer_class</span></code> (either implicitly or
-explicitly).</p>
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">renderer_class</span></code> is a string and either empty or one of
+<code class="docutils literal notranslate"><span class="pre">&quot;RenderEngineVtk&quot;</span></code>, <cite>“RenderEngineGl”</cite>, or
+<code class="docutils literal notranslate"><span class="pre">&quot;RenderEngineGltfClient&quot;</span></code>, or, it is a parameter type of one of
+Drake’s RenderEngine implementations.</p>
 </dd>
 </dl>
 <div class="admonition seealso">

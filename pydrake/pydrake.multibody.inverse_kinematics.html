@@ -1951,6 +1951,30 @@ influence_distance_offset with good results.</p>
 <p>Overloaded constructor. Constructs the constraint using
 MultibodyPlant&lt;AutoDiffXd&gt;.</p>
 <ol class="arabic simple" start="3">
+<li><p>__init__(self: pydrake.multibody.inverse_kinematics.MinimumDistanceConstraint, collision_checker: pydrake.planning.CollisionChecker, minimum_distance: float, collision_checker_context: pydrake.planning.CollisionCheckerContext, penalty_function: Callable[[float, bool], tuple] = None, influence_distance_offset: float = 1) -&gt; None</p></li>
+</ol>
+<p>Overloaded constructor. Constructs the constraint with
+CollisionChecker instead of MultibodyPlant.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">collision_checker</span></code>:</dt><dd><p>collision_checker must outlive this constraint.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">collision_checker_context</span></code>:</dt><dd><p>The context for the collision checker. See CollisionChecker class
+for more details.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="4">
+<li><p>__init__(self: pydrake.multibody.inverse_kinematics.MinimumDistanceConstraint, collision_checker: pydrake.planning.CollisionChecker, minimum_distance_lower: float, minimum_distance_upper: float, collision_checker_context: pydrake.planning.CollisionCheckerContext, penalty_function: Callable[[float, bool], tuple], influence_distance: float) -&gt; None</p></li>
+</ol>
+<p>Overloaded constructor. Constructs the constraint with
+CollisionChecker instead of MultibodyPlant.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">collision_checker</span></code>:</dt><dd><p>collision_checker must outlive this constraint.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">collision_checker_context</span></code>:</dt><dd><p>The context for the collision checker. See CollisionChecker class
+for more details.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="5">
 <li><p>__init__(self: pydrake.multibody.inverse_kinematics.MinimumDistanceConstraint, plant: pydrake.multibody.plant.MultibodyPlant, minimum_distance_lower: float, minimum_distance_upper: float, plant_context: pydrake.systems.framework.Context, penalty_function: Callable[[float, bool], tuple], influence_distance: float) -&gt; None</p></li>
 </ol>
 <p>Overloaded constructor. lower &lt;= min(distance) &lt;= upper.</p>
@@ -1962,7 +1986,7 @@ If minimum_distance_upper is finite, then it must be smaller than
 influence_distance_offset.The penalty function penalty_function(x: float, compute_grad: bool) -&gt; tuple[float, Optional[float]] returns [penalty_val,  penalty_gradient] when compute_grad=True, or [penalty_value, None] when compute_grad=False. See minimum_value_constraint.h on the requirement on MinimumValuePenaltyFunction. Set penalty_function=None and then the constraint will use the default penalty function.</p>
 </dd>
 </dl>
-<ol class="arabic simple" start="4">
+<ol class="arabic simple" start="6">
 <li><p>__init__(self: pydrake.multibody.inverse_kinematics.MinimumDistanceConstraint, plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], minimum_distance_lower: float, minimum_distance_upper: float, plant_context: pydrake.systems.framework.Context_[AutoDiffXd], penalty_function: Callable[[float, bool], tuple], influence_distance: float) -&gt; None</p></li>
 </ol>
 <p>Overloaded constructor. Constructs the constraint using

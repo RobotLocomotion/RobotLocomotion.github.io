@@ -201,7 +201,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a07c5c6d262d1976bc5f747cbb00e26fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the control points which define the curve.  <a href="#a07c5c6d262d1976bc5f747cbb00e26fb">More...</a><br /></td></tr>
 <tr class="separator:a07c5c6d262d1976bc5f747cbb00e26fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4218e147feb3c1d1e3a0b864d223e670"><td class="memItemLeft" align="right" valign="top">Eigen::SparseMatrix&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_bezier_curve.html#a4218e147feb3c1d1e3a0b864d223e670">AsLinearInControlPoints</a> (<a class="el" href="classint.html">int</a> derivative_order=1) const</td></tr>
-<tr class="memdesc:a4218e147feb3c1d1e3a0b864d223e670"><td class="mdescLeft">&#160;</td><td class="mdescRight">We often write optimizations using the control points as decision variables.  <a href="#a4218e147feb3c1d1e3a0b864d223e670">More...</a><br /></td></tr>
+<tr class="memdesc:a4218e147feb3c1d1e3a0b864d223e670"><td class="mdescLeft">&#160;</td><td class="mdescRight">Supports writing optimizations using the control points as decision variables.  <a href="#a4218e147feb3c1d1e3a0b864d223e670">More...</a><br /></td></tr>
 <tr class="separator:a4218e147feb3c1d1e3a0b864d223e670"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d37069b2edc37d7662aa809b6070e4e"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html">trajectories::Trajectory</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_bezier_curve.html#a0d37069b2edc37d7662aa809b6070e4e">Clone</a> () const override</td></tr>
 <tr class="separator:a0d37069b2edc37d7662aa809b6070e4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -416,10 +416,20 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>We often write optimizations using the control points as decision variables. </p>
+<p>Supports writing optimizations using the control points as decision variables. </p>
 <p>This method returns the matrix, <code>M</code>, defining the control points of the <code>order</code> derivative in the form: </p><pre>
-  derivative.control_points().row(i).T = M * this.control_points().row(i).T
-</pre><p> Note the transpose operators, <code>.T</code>; this format was chosen for compatibility use with e.g. <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a7d60c0944a1bf43c50dd26b6dbbc3c1b" title="Adds linear constraints referencing potentially a subset of the decision variables (defined in the va...">solvers::MathematicalProgram::AddLinearConstraint()</a>. Note also that the matrix, <code>M</code>, is the same for all rows, <code>i</code>, of <a class="el" href="classdrake_1_1trajectories_1_1_bezier_curve.html#a07c5c6d262d1976bc5f747cbb00e26fb" title="Returns a const reference to the control points which define the curve.">control_points()</a>. </p><dl class="section pre"><dt>Precondition</dt><dd>derivative_order &gt;= 0. </dd></dl>
+derivative.control_points() = this.control_points() * M
+</pre><p> For instance, since we have </p><pre>
+derivative.control_points().col(k) = this.control_points() * M.col(k),
+</pre><p> constraining the kth control point of the <code>n</code>th derivative to be in [ub, lb], could be done with: </p><div class="fragment"><div class="line"><span class="keyword">auto</span> M = curve.AsLinearInControlPoints(n);</div><div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;curve.rows(); ++i) {</div><div class="line">  <span class="keyword">auto</span> c = std::make_shared&lt;solvers::LinearConstraint&gt;(</div><div class="line">    M.col(k).transpose(), <a class="code" href="namespacedrake.html#a6d923e79e6e92c2556edd86520145077">Vector1d</a>(lb(i)), <a class="code" href="namespacedrake.html#a6d923e79e6e92c2556edd86520145077">Vector1d</a>(ub(i)));</div><div class="line">  prog.AddConstraint(c, curve.row(i).transpose());</div><div class="line">}</div></div><!-- fragment --><p> Iterating over the rows of the control points is the natural sparsity pattern here (since <code>M</code> is the same for all rows). For instance, we also have </p><pre>
+derivative.control_points().row(k).T = M.T * this.control_points().row(k).T,
+</pre><p> or </p><pre>
+vec(derivative.control_points().T) = blockMT * vec(this.control_points().T),
+blockMT = [ M.T,   0, .... 0 ]
+          [   0, M.T, 0, ... ]
+          [      ...         ]
+          [  ...    , 0, M.T ].
+</pre> <dl class="section pre"><dt>Precondition</dt><dd>derivative_order &gt;= 0. </dd></dl>
 
 </div>
 </div>
