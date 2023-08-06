@@ -1,5 +1,6 @@
 var NAVTREEINDEX56 =
 {
+"structdrake_1_1multibody_1_1_constraint_relaxing_ik_1_1_ik_cartesian_waypoint.html#a1c465fdede6b5ea8a96275e2b9f1ecb3":[1,4,2,0,0,0,3],
 "structdrake_1_1multibody_1_1_constraint_relaxing_ik_1_1_ik_cartesian_waypoint.html#ae01adb7e45a3f63fccccf9f06a9eea2f":[1,4,2,0,0,0,2],
 "structdrake_1_1multibody_1_1_constraint_relaxing_ik_1_1_ik_cartesian_waypoint.html#afeff966124fec7399f4a3e1eef5c9a26":[1,4,2,0,0,0,1],
 "structdrake_1_1multibody_1_1_contact_wrench.html":[3,0,0,9,21],
@@ -248,6 +249,5 @@ var NAVTREEINDEX56 =
 "structdrake_1_1planning_1_1test_1_1_collision_checker_test_configuration_data.html#a34d9f563a87f3b1bed1fabd4cae935ed":[3,0,0,11,0,2,6],
 "structdrake_1_1planning_1_1test_1_1_collision_checker_test_configuration_data.html#a492e1743184f229bbdc6ed9f93ba9d1a":[3,0,0,11,0,2,0],
 "structdrake_1_1planning_1_1test_1_1_collision_checker_test_configuration_data.html#a611913f2ba0249b13096053ee1099cc8":[3,0,0,11,0,2,4],
-"structdrake_1_1planning_1_1test_1_1_collision_checker_test_configuration_data.html#ab9afcfbb3e3010496f0088caed6ad532":[3,0,0,11,0,2,3],
-"structdrake_1_1planning_1_1test_1_1_collision_checker_test_configuration_data.html#abca9b631eac11dd0dd1ad1c69e05bf31":[3,0,0,11,0,2,2]
+"structdrake_1_1planning_1_1test_1_1_collision_checker_test_configuration_data.html#ab9afcfbb3e3010496f0088caed6ad532":[3,0,0,11,0,2,3]
 };

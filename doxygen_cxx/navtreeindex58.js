@@ -1,5 +1,6 @@
 var NAVTREEINDEX58 =
 {
+"structdrake_1_1systems_1_1scalar__conversion_1_1_from_double_traits.html":[3,0,0,16,7,0],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_from_double_traits.html#ada71661baddc01a12a0ca7a6a70d9c4f":[3,0,0,16,7,0,0],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_non_symbolic_traits.html":[3,0,0,16,7,1],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_non_symbolic_traits.html#a585e598ef14189082cf26030c07b2db4":[3,0,0,16,7,1,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX58 =
 "structstd_1_1hash_3_01drake_1_1symbolic_1_1_variable_01_4.html":[3,0,2,18],
 "structstd_1_1hash_3_01drake_1_1symbolic_1_1_variables_01_4.html":[3,0,2,19],
 "structstd_1_1hash_3_01drake_1_1systems_1_1sensors_1_1_color_3_01_t_01_4_01_4.html":[3,0,2,20],
-"structstd_1_1hash_3_01drake_1_1systems_1_1sensors_1_1_pixel_type_01_4.html":[3,0,2,21],
-"structstd_1_1less_3_01drake_1_1solvers_1_1_solver_id_01_4.html":[3,0,2,23]
+"structstd_1_1hash_3_01drake_1_1systems_1_1sensors_1_1_pixel_type_01_4.html":[3,0,2,21]
 };
