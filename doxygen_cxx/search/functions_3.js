@@ -281,7 +281,7 @@ var searchData=
   ['doimplicitintegratorreset',['DoImplicitIntegratorReset',['../classdrake_1_1systems_1_1_implicit_integrator.html#a6071e575b3a65d7c71d873e00df80afa',1,'drake::systems::ImplicitIntegrator']]],
   ['doimplicitintegratorstep',['DoImplicitIntegratorStep',['../classdrake_1_1systems_1_1_implicit_integrator.html#a627b9d2a2be784e0a7bd8f79baeea4c6',1,'drake::systems::ImplicitIntegrator']]],
   ['doinitialize',['DoInitialize',['../classdrake_1_1systems_1_1_integrator_base.html#ae1949ad54a9dc1dc95f632a066aa12e6',1,'drake::systems::IntegratorBase']]],
-  ['doisbounded',['DoIsBounded',['../classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a8dab5a4504816ff943e184bdc8f2cb5f',1,'drake::geometry::optimization::ConvexSet']]],
+  ['doisboundedshortcut',['DoIsBoundedShortcut',['../classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a2cac663c667a539d3fa44c3f5c933d6b',1,'drake::geometry::optimization::ConvexSet']]],
   ['doisempty',['DoIsEmpty',['../classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a1cc320d6088c2debb29de0d55001596f',1,'drake::geometry::optimization::ConvexSet']]],
   ['domain',['domain',['../classdrake_1_1symbolic_1_1_environment.html#aaa0a3a993236363f9cc3f1d7b040a52d',1,'drake::symbolic::Environment']]],
   ['domakederivative',['DoMakeDerivative',['../classdrake_1_1trajectories_1_1_trajectory.html#ac51b842ba9d2ee39e9398c86fdc38a75',1,'drake::trajectories::Trajectory']]],

@@ -245,9 +245,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:adfb929a6f184f623628eb1729f9be4e1"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#adfb929a6f184f623628eb1729f9be4e1">DoClone</a> () const =0</td></tr>
 <tr class="memdesc:adfb929a6f184f623628eb1729f9be4e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a6982e731d7838abcf4dfd0f4821210f9" title="Creates a unique deep copy of this set.">Clone()</a>.  <a href="#adfb929a6f184f623628eb1729f9be4e1">More...</a><br /></td></tr>
 <tr class="separator:adfb929a6f184f623628eb1729f9be4e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8dab5a4504816ff943e184bdc8f2cb5f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a8dab5a4504816ff943e184bdc8f2cb5f">DoIsBounded</a> () const =0</td></tr>
-<tr class="memdesc:a8dab5a4504816ff943e184bdc8f2cb5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a2f010e733bd63adb8352995624362b65" title="Returns true iff the set is bounded, e.g., there exists an element-wise finite lower and upper bound ...">IsBounded()</a>.  <a href="#a8dab5a4504816ff943e184bdc8f2cb5f">More...</a><br /></td></tr>
-<tr class="separator:a8dab5a4504816ff943e184bdc8f2cb5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cac663c667a539d3fa44c3f5c933d6b"><td class="memItemLeft" align="right" valign="top">virtual std::optional&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a2cac663c667a539d3fa44c3f5c933d6b">DoIsBoundedShortcut</a> () const</td></tr>
+<tr class="memdesc:a2cac663c667a539d3fa44c3f5c933d6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a2cac663c667a539d3fa44c3f5c933d6b" title="Non-virtual interface implementation for DoIsBoundedShortcut().">DoIsBoundedShortcut()</a>.  <a href="#a2cac663c667a539d3fa44c3f5c933d6b">More...</a><br /></td></tr>
+<tr class="separator:a2cac663c667a539d3fa44c3f5c933d6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1cc320d6088c2debb29de0d55001596f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a1cc320d6088c2debb29de0d55001596f">DoIsEmpty</a> () const</td></tr>
 <tr class="memdesc:a1cc320d6088c2debb29de0d55001596f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a8e12342fc420701fbffd97025421575a" title="Returns true iff the set is empty.">IsEmpty()</a>.  <a href="#a1cc320d6088c2debb29de0d55001596f">More...</a><br /></td></tr>
 <tr class="separator:a1cc320d6088c2debb29de0d55001596f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -793,8 +793,8 @@ c.rows() == t.size() </dd></dl>
 
 </div>
 </div>
-<a id="a8dab5a4504816ff943e184bdc8f2cb5f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8dab5a4504816ff943e184bdc8f2cb5f">&#9670;&nbsp;</a></span>DoIsBounded()</h2>
+<a id="a2cac663c667a539d3fa44c3f5c933d6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cac663c667a539d3fa44c3f5c933d6b">&#9670;&nbsp;</a></span>DoIsBoundedShortcut()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -803,7 +803,7 @@ c.rows() == t.size() </dd></dl>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool DoIsBounded </td>
+          <td class="memname">virtual std::optional&lt;bool&gt; DoIsBoundedShortcut </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -811,13 +811,13 @@ c.rows() == t.size() </dd></dl>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a2f010e733bd63adb8352995624362b65" title="Returns true iff the set is bounded, e.g., there exists an element-wise finite lower and upper bound ...">IsBounded()</a>. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> &gt;= 0 </dd></dl>
+<p>Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a2cac663c667a539d3fa44c3f5c933d6b" title="Non-virtual interface implementation for DoIsBoundedShortcut().">DoIsBoundedShortcut()</a>. </p>
+<p>Trivially returns std::nullopt. This allows a derived class to implement its own boundedness checks, to potentially avoid the more expensive base class checks. </p><dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> &gt;= 0 </dd></dl>
 
 </div>
 </div>
@@ -1061,7 +1061,7 @@ c.rows() == t.size() </dd></dl>
 </div><div class="memdoc">
 
 <p>Returns true iff the set is bounded, e.g., there exists an element-wise finite lower and upper bound for the set. </p>
-<p>Note: for some derived classes, this check is trivial, but for others it can require solving an (typically small) optimization problem. Check the derived class documentation for any notes. When ambient_dimension is zero, always returns true. </p>
+<p>Note: for some derived classes, this check is trivial, but for others it can require solving an (typically small) optimization problem. Check the derived class documentation for any notes. </p>
 
 </div>
 </div>

@@ -1,5 +1,6 @@
 var NAVTREEINDEX44 =
 {
+"corotated__model__data_8h.html":[4,0,0,8,3,4],
 "cost_8h.html":[4,0,0,11,9],
 "cost_8h.html#ga5f972e77c40a9afab91907620c621e11":[4,0,0,11,9,2],
 "cost_8h.html#ga62744a5e355fa26fa97169acfc946128":[4,0,0,11,9,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX44 =
 "direct__collocation_8h.html":[4,0,0,10,1,0],
 "direct__collocation_8h.html#adbb6bc996413925c93dca6d2f5e2bb3d":[4,0,0,10,1,0,0],
 "direct__transcription_8h.html":[4,0,0,10,1,1],
-"dirichlet__boundary__condition_8h.html":[4,0,0,8,3,8],
-"dirichlet__boundary__condition_8h.html#ae2a9fef64ae955d7fad6cbef266f2d68":[4,0,0,8,3,8,0]
+"dirichlet__boundary__condition_8h.html":[4,0,0,8,3,8]
 };

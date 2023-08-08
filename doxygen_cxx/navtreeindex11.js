@@ -1,5 +1,6 @@
 var NAVTREEINDEX11 =
 {
+"classdrake_1_1math_1_1_bspline_basis.html#acdb5921081f904477377b76b90953b12":[3,0,0,8,1,4],
 "classdrake_1_1math_1_1_bspline_basis.html#af4e5bebbe5c3fca068049c1ffe48c0fe":[3,0,0,8,1,3],
 "classdrake_1_1math_1_1_linear_solver.html":[3,0,0,8,7],
 "classdrake_1_1math_1_1_linear_solver.html#a029d532ff52b767fd930b12a8d8021ca":[3,0,0,8,7,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX11 =
 "classdrake_1_1multibody_1_1_body.html#ae062c2e92129f7be1f2b7a9f20398714":[3,0,0,9,12,14],
 "classdrake_1_1multibody_1_1_body.html#ae2cf2457b20082313585ad750dc24672":[3,0,0,9,12,8],
 "classdrake_1_1multibody_1_1_body.html#ae594f732e1f00317aeb8c6cd83591db5":[3,0,0,9,12,5],
-"classdrake_1_1multibody_1_1_body.html#afa64a237a5acb010f896154c45bc5407":[3,0,0,9,12,27],
-"classdrake_1_1multibody_1_1_body_frame.html":[3,0,0,9,13]
+"classdrake_1_1multibody_1_1_body.html#afa64a237a5acb010f896154c45bc5407":[3,0,0,9,12,27]
 };

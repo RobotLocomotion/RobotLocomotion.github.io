@@ -226,9 +226,10 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:aad583220075aa91abce716ffb986a3ae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#aad583220075aa91abce716ffb986a3ae">CspaceFreePolytopeBase</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *plant, const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#a73ee6610b18791fddf6176c0fb38f2d7">scene_graph</a>, <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a6febb8c28b6d49e494dbe16b5ed5b089">SeparatingPlaneOrder</a> <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#a0f8dcce2c5fdfcc41effdec6a3280aa0">plane_order</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#af37d7074a4efcc3e865a92b801c01249">SForPlane</a> s_for_plane_enum, const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html">Options</a> &amp;options=<a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html">Options</a>{})</td></tr>
 <tr class="memdesc:aad583220075aa91abce716ffb986a3ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#aad583220075aa91abce716ffb986a3ae">More...</a><br /></td></tr>
 <tr class="separator:aad583220075aa91abce716ffb986a3ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28900ab8316eb6b15f1f3ddb29c6ec6e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#a28900ab8316eb6b15f1f3ddb29c6ec6e">CalcSBoundsPolynomial</a> (const Eigen::VectorXd &amp;s_lower, const Eigen::VectorXd &amp;s_upper, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a> &gt; *s_minus_s_lower, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a> &gt; *s_upper_minus_s) const</td></tr>
-<tr class="memdesc:a28900ab8316eb6b15f1f3ddb29c6ec6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes s-s_lower and s_upper - s as polynomials of s.  <a href="#a28900ab8316eb6b15f1f3ddb29c6ec6e">More...</a><br /></td></tr>
-<tr class="separator:a28900ab8316eb6b15f1f3ddb29c6ec6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6929ab255a64acebe1836acc9452f21f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a6929ab255a64acebe1836acc9452f21f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#a6929ab255a64acebe1836acc9452f21f">CalcSBoundsPolynomial</a> (const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;s_lower, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;s_upper, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a> &gt; *s_minus_s_lower, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a> &gt; *s_upper_minus_s) const</td></tr>
+<tr class="memdesc:a6929ab255a64acebe1836acc9452f21f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes s-s_lower and s_upper - s as polynomials of s.  <a href="#a6929ab255a64acebe1836acc9452f21f">More...</a><br /></td></tr>
+<tr class="separator:a6929ab255a64acebe1836acc9452f21f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0aaeb86b57fbc836feecd3f177490b8d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#a0aaeb86b57fbc836feecd3f177490b8d">GetSeparatingPlaneIndex</a> (const <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">geometry::GeometryId</a> &gt; &amp;pair) const</td></tr>
 <tr class="memdesc:a0aaeb86b57fbc836feecd3f177490b8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the index of the plane which will separate the geometry pair.  <a href="#a0aaeb86b57fbc836feecd3f177490b8d">More...</a><br /></td></tr>
 <tr class="separator:a0aaeb86b57fbc836feecd3f177490b8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -255,6 +256,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:ac20a3d6936aad7280ed04bb3d734f723"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#ac20a3d6936aad7280ed04bb3d734f723">SolveCertificationForEachPlaneInParallel</a> (const std::vector&lt; <a class="el" href="classint.html">int</a> &gt; &amp;active_plane_indices, const std::function&lt; std::pair&lt; bool, <a class="el" href="classint.html">int</a> &gt;(<a class="el" href="classint.html">int</a>)&gt; &amp;solve_plane_sos, <a class="el" href="classint.html">int</a> num_threads, bool verbose, bool terminate_at_failure) const</td></tr>
 <tr class="memdesc:ac20a3d6936aad7280ed04bb3d734f723"><td class="mdescLeft">&#160;</td><td class="mdescRight">For each pair of geometries, solve the certification problem to find their separation plane in parallel.  <a href="#ac20a3d6936aad7280ed04bb3d734f723">More...</a><br /></td></tr>
 <tr class="separator:ac20a3d6936aad7280ed04bb3d734f723"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a636a8d50bbcec61739fe0e7380f1a511"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#a636a8d50bbcec61739fe0e7380f1a511">GetGramVarSizeForPolytopeSearchProgram</a> (const std::vector&lt; <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_plane_separates_geometries.html">PlaneSeparatesGeometries</a> &gt; &amp;plane_geometries_vec, const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#a409fd33166e0e4d6bf8967bac91676df">IgnoredCollisionPairs</a> &amp;ignored_collision_pairs, const std::function&lt; <a class="el" href="classint.html">int</a>(const <a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">symbolic::RationalFunction</a> &amp;rational, const std::array&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">symbolic::Monomial</a> &gt;, 4 &gt; &amp;monomial_basis_array)&gt; &amp;count_gram_per_rational) const</td></tr>
+<tr class="memdesc:a636a8d50bbcec61739fe0e7380f1a511"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the total size of all the decision variables for the Gram matrices, so as to search for the polytope with given Lagrangian multipliers.  <a href="#a636a8d50bbcec61739fe0e7380f1a511">More...</a><br /></td></tr>
+<tr class="separator:a636a8d50bbcec61739fe0e7380f1a511"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -443,8 +447,8 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a28900ab8316eb6b15f1f3ddb29c6ec6e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a28900ab8316eb6b15f1f3ddb29c6ec6e">&#9670;&nbsp;</a></span>CalcSBoundsPolynomial()</h2>
+<a id="a6929ab255a64acebe1836acc9452f21f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6929ab255a64acebe1836acc9452f21f">&#9670;&nbsp;</a></span>CalcSBoundsPolynomial()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -455,13 +459,13 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">void CalcSBoundsPolynomial </td>
           <td>(</td>
-          <td class="paramtype">const Eigen::VectorXd &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>s_lower</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Eigen::VectorXd &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>s_upper</em>, </td>
         </tr>
         <tr>
@@ -515,6 +519,58 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a636a8d50bbcec61739fe0e7380f1a511"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a636a8d50bbcec61739fe0e7380f1a511">&#9670;&nbsp;</a></span>GetGramVarSizeForPolytopeSearchProgram()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> GetGramVarSizeForPolytopeSearchProgram </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_plane_separates_geometries.html">PlaneSeparatesGeometries</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>plane_geometries_vec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#a409fd33166e0e4d6bf8967bac91676df">IgnoredCollisionPairs</a> &amp;&#160;</td>
+          <td class="paramname"><em>ignored_collision_pairs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::function&lt; <a class="el" href="classint.html">int</a>(const <a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">symbolic::RationalFunction</a> &amp;rational, const std::array&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">symbolic::Monomial</a> &gt;, 4 &gt; &amp;monomial_basis_array)&gt; &amp;&#160;</td>
+          <td class="paramname"><em>count_gram_per_rational</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the total size of all the decision variables for the Gram matrices, so as to search for the polytope with given Lagrangian multipliers. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">plane_geometries_vec</td><td>This struct contains the information on the rationals that we need to certify, so as to prove the existence of separating planes. </td></tr>
+    <tr><td class="paramname">ignored_collision_pairs</td><td>The collision pairs that we ignore. </td></tr>
+    <tr><td class="paramname">count_gram_per_rational</td><td>We will impose the sos condition that certain rational is always non-negative within a semialgebraic set. This function returns the number of variables in the Gram matrices for this rational. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

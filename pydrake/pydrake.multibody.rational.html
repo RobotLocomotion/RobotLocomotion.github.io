@@ -201,23 +201,41 @@ computed from q(i)).</p>
 <span class="sig-name descname"><span class="pre">ComputeSValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.rational.RationalForwardKinematics.ComputeSValue" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>ComputeSValue(self: pydrake.multibody.rational.RationalForwardKinematics, q_val: numpy.ndarray[numpy.float64[m, 1]], q_star_val: numpy.ndarray[numpy.float64[m, 1]]) -&gt; numpy.ndarray[numpy.float64[m, 1]]</p></li>
+<li><p>ComputeSValue(self: pydrake.multibody.rational.RationalForwardKinematics, q_val: numpy.ndarray[numpy.float64[m, 1]], q_star_val: numpy.ndarray[numpy.float64[m, 1]], angles_wrap_to_inf: bool = False) -&gt; numpy.ndarray[numpy.float64[m, 1]]</p></li>
 </ol>
 <p>Computes values of s from q_val and q_star_val, while handling the
 index matching between q and s (we don’t guarantee that s(i) is
 computed from q(i)).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">angles_wrap_to_inf</span></code>:</dt><dd><p>If set to True, then for a revolute joint whose (θ −θ*) &gt;=π/2 (or
+&lt;= −π/2), we set the corresponding s to ∞ (or −∞), $*Default:* is
+false.</p>
+</dd>
+</dl>
 <ol class="arabic simple" start="2">
 <li><p>ComputeSValue(self: pydrake.multibody.rational.RationalForwardKinematics, q_val: numpy.ndarray[object[m, 1]], q_star_val: numpy.ndarray[numpy.float64[m, 1]]) -&gt; numpy.ndarray[object[m, 1]]</p></li>
 </ol>
 <p>Computes values of s from q_val and q_star_val, while handling the
 index matching between q and s (we don’t guarantee that s(i) is
 computed from q(i)).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">angles_wrap_to_inf</span></code>:</dt><dd><p>If set to True, then for a revolute joint whose (θ −θ*) &gt;=π/2 (or
+&lt;= −π/2), we set the corresponding s to ∞ (or −∞), $*Default:* is
+false.</p>
+</dd>
+</dl>
 <ol class="arabic simple" start="3">
 <li><p>ComputeSValue(self: pydrake.multibody.rational.RationalForwardKinematics, q_val: numpy.ndarray[object[m, 1]], q_star_val: numpy.ndarray[numpy.float64[m, 1]]) -&gt; numpy.ndarray[object[m, 1]]</p></li>
 </ol>
 <p>Computes values of s from q_val and q_star_val, while handling the
 index matching between q and s (we don’t guarantee that s(i) is
 computed from q(i)).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">angles_wrap_to_inf</span></code>:</dt><dd><p>If set to True, then for a revolute joint whose (θ −θ*) &gt;=π/2 (or
+&lt;= −π/2), we set the corresponding s to ∞ (or −∞), $*Default:* is
+false.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">

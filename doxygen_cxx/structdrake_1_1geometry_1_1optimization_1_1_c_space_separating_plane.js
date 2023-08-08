@@ -5,6 +5,7 @@ var structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane =
     [ "CSpaceSeparatingPlane", "structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a9871c5b4de89d2980eecc87ceb65e858", null ],
     [ "CSpaceSeparatingPlane", "structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a8a925f64a8bd3f54619d98d84036ca0a", null ],
     [ "geometry", "structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a9bae89849c60ffcef775b55b000bd872", null ],
+    [ "geometry_pair", "structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a829d61f108407c1c5546e170f2c9d48b", null ],
     [ "operator=", "structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a6963913f739b2038ab3906727e36da71", null ],
     [ "operator=", "structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a03924fec23a67a542cf129700a52949a", null ],
     [ "a", "structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a9bcd2beab49aa2bbcc29485e8c15774b", null ],

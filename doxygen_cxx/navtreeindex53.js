@@ -1,5 +1,6 @@
 var NAVTREEINDEX53 =
 {
+"revolute__spring_8h.html":[4,0,0,8,14,40],
 "rgba_8h.html":[4,0,0,4,37],
 "rgbd__sensor_8h.html":[4,0,0,12,8,15],
 "rgbd__sensor__async_8h.html":[4,0,0,12,8,16],
@@ -248,6 +249,5 @@ var NAVTREEINDEX53 =
 "sparse__and__dense__matrix_8h.html":[4,0,0,11,55],
 "sparse__linear__operator_8h.html":[4,0,0,8,2,17],
 "spatial__acceleration_8h.html":[4,0,0,8,6,0],
-"spatial__algebra_8h.html":[4,0,0,8,6,1],
-"spatial__algebra_8h.html#a20c5b057eb2bb3c32004a09588193538":[4,0,0,8,6,1,0]
+"spatial__algebra_8h.html":[4,0,0,8,6,1]
 };

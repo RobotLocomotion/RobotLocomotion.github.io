@@ -48,7 +48,7 @@ var group__geometry__optimization =
       [ "DoAddPointInNonnegativeScalingConstraints", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#affad14a5bd9a8a9827a0e9d15d08dd4e", null ],
       [ "DoAddPointInSetConstraints", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a4e36bd79c9772253165b5d5a308c8f09", null ],
       [ "DoClone", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#adfb929a6f184f623628eb1729f9be4e1", null ],
-      [ "DoIsBounded", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a8dab5a4504816ff943e184bdc8f2cb5f", null ],
+      [ "DoIsBoundedShortcut", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a2cac663c667a539d3fa44c3f5c933d6b", null ],
       [ "DoIsEmpty", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a1cc320d6088c2debb29de0d55001596f", null ],
       [ "DoMaybeGetFeasiblePoint", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a32670386b6ba4debeba0e63df599fd83", null ],
       [ "DoMaybeGetPoint", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a54d6f25d563615123ccee12d0a41e81d", null ],

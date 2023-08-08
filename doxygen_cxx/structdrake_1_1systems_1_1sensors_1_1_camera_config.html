@@ -709,6 +709,7 @@ Camera intrinsics</h2></td></tr>
 <li>Use the RenderEngineVtk with a customized clear color (black). <div class="fragment"><div class="line">renderer_class: !RenderEngineVtkParams</div><div class="line">  default_clear_color: [0, 0, 0]</div></div><!-- fragment --></li>
 <li>Use the RenderEngineGl with a customized clear color (black). <div class="fragment"><div class="line">renderer_class: !RenderEngineGlParams</div><div class="line">  default_clear_color:</div><div class="line">    rgba: [0, 0, 0, 1]</div></div><!-- fragment --></li>
 <li>Use the RenderEngineGltfClient with fully specified properties. <div class="fragment"><div class="line">renderer_class: !RenderEngineGltfClientParams</div><div class="line">  base_url: http://10.10.10.1</div><div class="line">  render_endpoint: server</div><div class="line">  verbose: true</div><div class="line">  cleanup: false</div></div><!-- fragment --></li>
+<li>Explicitly request Drake's default render engine. <div class="fragment"><div class="line">renderer_class: &quot;&quot;</div></div><!-- fragment --></li>
 </ol>
 <p>Things to note:</p>
 <ul>

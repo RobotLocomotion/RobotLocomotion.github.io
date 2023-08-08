@@ -1,5 +1,6 @@
 var NAVTREEINDEX16 =
 {
+"classdrake_1_1multibody_1_1_prismatic_spring.html#ac8467a9ff79bbea98fa2605ca44b047e":[3,0,0,9,69,10],
 "classdrake_1_1multibody_1_1_prismatic_spring.html#afa4381977890fe7162c38c41337a7901":[3,0,0,9,69,0],
 "classdrake_1_1multibody_1_1_prismatic_spring.html#afd645833d7942a6d6927337a3be8d4eb":[3,0,0,9,69,9],
 "classdrake_1_1multibody_1_1_propeller.html":[1,2,7,0],
@@ -60,12 +61,12 @@ var NAVTREEINDEX16 =
 "classdrake_1_1multibody_1_1_rational_forward_kinematics.html":[3,0,0,9,74],
 "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a0b8069d8a262731933b1bd421ed0adbf":[3,0,0,9,74,8],
 "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a1d7bf899c5b65ecbc2169089be5086f3":[3,0,0,9,74,7],
-"classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a2d7612c3b51d4712c669eb4a2e95a43d":[3,0,0,9,74,6],
 "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a377a632079f13b90b216530b0f5767b4":[3,0,0,9,74,2],
 "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a3b2e4244a8a8f1a59a720eb1994d7d7b":[3,0,0,9,74,4],
 "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a5001e433b72f3005d744a7b9b71cc529":[3,0,0,9,74,11],
 "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a6d2714a9f2454037cce36e1bb67f763c":[3,0,0,9,74,5],
 "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a851ee363d02555f11f4d45d8056b072a":[3,0,0,9,74,12],
+"classdrake_1_1multibody_1_1_rational_forward_kinematics.html#aadeb582d17d1b40237b7f889b2d5047d":[3,0,0,9,74,6],
 "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#ac73a5a06e9d73c1e5c761e7accee6265":[3,0,0,9,74,10],
 "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#adda199f0e8784ca13c32d2525af89019":[3,0,0,9,74,3],
 "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#ae2f64cf4a62743cda2f74fff57f1c224":[3,0,0,9,74,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX16 =
 "classdrake_1_1multibody_1_1_screw_joint.html#af39612657328ea5e88a3ba3563e0614e":[3,0,0,9,80,13],
 "classdrake_1_1multibody_1_1_spatial_acceleration.html":[3,0,0,9,82],
 "classdrake_1_1multibody_1_1_spatial_acceleration.html#a0e2c52c1ca5f71c7d19ae3e462f28ea4":[3,0,0,9,82,7],
-"classdrake_1_1multibody_1_1_spatial_acceleration.html#a623a6ff496aa671b9c4784525ce6808c":[3,0,0,9,82,9],
-"classdrake_1_1multibody_1_1_spatial_acceleration.html#a779e53116ddd6e0dbded2c52f141c580":[3,0,0,9,82,1]
+"classdrake_1_1multibody_1_1_spatial_acceleration.html#a623a6ff496aa671b9c4784525ce6808c":[3,0,0,9,82,9]
 };

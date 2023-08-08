@@ -1,5 +1,6 @@
 var NAVTREEINDEX17 =
 {
+"classdrake_1_1multibody_1_1_spatial_acceleration.html#a779e53116ddd6e0dbded2c52f141c580":[3,0,0,9,82,1],
 "classdrake_1_1multibody_1_1_spatial_acceleration.html#a7b917a147d41074fa7d6b8108d3d19c1":[3,0,0,9,82,4],
 "classdrake_1_1multibody_1_1_spatial_acceleration.html#a8bf37dab7236092d343a3550f3c0a97d":[3,0,0,9,82,0],
 "classdrake_1_1multibody_1_1_spatial_acceleration.html#a9dd5aa678bd7f87a9f58c661a81388fc":[3,0,0,9,82,11],
@@ -248,6 +249,5 @@ var NAVTREEINDEX17 =
 "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a7550e320ab6c15635e57f8a8c75ab6c8":[3,0,0,9,98,2],
 "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a8555862636cf3c684394b26aac1cb69b":[3,0,0,9,98,16],
 "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a886c494032cdc0bb5c1a4e5123415cab":[3,0,0,9,98,8],
-"classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a89c49c8f7ca8e6215810784c48acae23":[3,0,0,9,98,10],
-"classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#abee9ac3222a915113bf9f4b339e8ba0e":[3,0,0,9,98,14]
+"classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a89c49c8f7ca8e6215810784c48acae23":[3,0,0,9,98,10]
 };
