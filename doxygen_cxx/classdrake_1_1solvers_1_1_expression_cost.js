@@ -7,8 +7,9 @@ var classdrake_1_1solvers_1_1_expression_cost =
     [ "DoEval", "classdrake_1_1solvers_1_1_expression_cost.html#a863f7df9d3ee10378794b4c6842a4377", null ],
     [ "DoEval", "classdrake_1_1solvers_1_1_expression_cost.html#aa2431c2dbd82437d8f621033d8af8231", null ],
     [ "DoEval", "classdrake_1_1solvers_1_1_expression_cost.html#a5eea9354674efc1c07bf537319628ead", null ],
+    [ "DoToLatex", "classdrake_1_1solvers_1_1_expression_cost.html#aa8e1e9254703f4bfe3d3e4d01807f441", null ],
     [ "expression", "classdrake_1_1solvers_1_1_expression_cost.html#a125cb9305ffd8f4897e456f2ef263e98", null ],
-    [ "operator=", "classdrake_1_1solvers_1_1_expression_cost.html#abfe5dffe599fde6b490894d439da6e78", null ],
     [ "operator=", "classdrake_1_1solvers_1_1_expression_cost.html#ab4527d9954ab8947669d361995656a96", null ],
+    [ "operator=", "classdrake_1_1solvers_1_1_expression_cost.html#abfe5dffe599fde6b490894d439da6e78", null ],
     [ "vars", "classdrake_1_1solvers_1_1_expression_cost.html#a0bdb5058e54f26856026de3d1acf9cf4", null ]
 ];

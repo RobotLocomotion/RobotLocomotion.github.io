@@ -79,6 +79,7 @@
 <li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.gym.html">pydrake.gym</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
@@ -729,6 +730,8 @@
         <li><a href="pydrake.geometry.html#pydrake.geometry.VolumeMesh.__init__">(pydrake.geometry.VolumeMesh method)</a>
 </li>
         <li><a href="pydrake.geometry.html#pydrake.geometry.VolumeMesh_-AutoDiffXd-.__init__">(pydrake.geometry.VolumeMesh_[AutoDiffXd] method)</a>
+</li>
+        <li><a href="pydrake.gym.html#pydrake.gym.DrakeGymEnv.__init__">(pydrake.gym.DrakeGymEnv method)</a>
 </li>
         <li><a href="pydrake.lcm.html#pydrake.lcm.DrakeLcm.__init__">(pydrake.lcm.DrakeLcm method)</a>
 </li>
@@ -5557,10 +5560,10 @@
       </ul></li>
       <li><a href="pydrake.multibody.fem.html#pydrake.multibody.fem.DeformableBodyConfig">DeformableBodyConfig (class in pydrake.multibody.fem)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.multibody.fem.html#pydrake.multibody.fem.DeformableBodyConfig_-AutoDiffXd">DeformableBodyConfig_[AutoDiffXd] (class in pydrake.multibody.fem)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DeformableBodyId">DeformableBodyId (class in pydrake.multibody.plant)</a>
 </li>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DeformableModel">DeformableModel (class in pydrake.multibody.plant)</a>
@@ -5920,6 +5923,8 @@
 </li>
       </ul></li>
       <li><a href="pydrake.common.deprecation.html#pydrake.common.deprecation.DrakeDeprecationWarning">DrakeDeprecationWarning</a>
+</li>
+      <li><a href="pydrake.gym.html#pydrake.gym.DrakeGymEnv">DrakeGymEnv (class in pydrake.gym)</a>
 </li>
       <li><a href="pydrake.lcm.html#pydrake.lcm.DrakeLcm">DrakeLcm (class in pydrake.lcm)</a>
 </li>
@@ -8745,10 +8750,10 @@
         <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_-Expression-.get_sap_near_rigid_threshold">(pydrake.multibody.plant.MultibodyPlant_[Expression] method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.examples.html#pydrake.examples.ManipulationStation.get_scene_graph">get_scene_graph() (pydrake.examples.ManipulationStation method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.trajectories.html#pydrake.trajectories.PiecewiseTrajectory.get_segment_index">get_segment_index() (pydrake.trajectories.PiecewiseTrajectory method)</a>
 
       <ul>
@@ -9679,6 +9684,14 @@
         <li><a href="pydrake.geometry.html#pydrake.geometry.SceneGraphInspector_-AutoDiffXd-.GetFrameId">(pydrake.geometry.SceneGraphInspector_[AutoDiffXd] method)</a>
 </li>
         <li><a href="pydrake.geometry.html#pydrake.geometry.SceneGraphInspector_-Expression-.GetFrameId">(pydrake.geometry.SceneGraphInspector_[Expression] method)</a>
+</li>
+      </ul></li>
+      <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant.GetFrameIndices">GetFrameIndices() (pydrake.multibody.plant.MultibodyPlant method)</a>
+
+      <ul>
+        <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetFrameIndices">(pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd] method)</a>
+</li>
+        <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetFrameIndices">(pydrake.multibody.plant.MultibodyPlant_[Expression] method)</a>
 </li>
       </ul></li>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant.GetFreeBodyPose">GetFreeBodyPose() (pydrake.multibody.plant.MultibodyPlant method)</a>
@@ -13003,6 +13016,12 @@
 </li>
         <li><a href="pydrake.examples.html#module-pydrake.examples">pydrake.examples</a>
 </li>
+        <li><a href="pydrake.examples.gym.html#module-pydrake.examples.gym">pydrake.examples.gym</a>
+</li>
+        <li><a href="pydrake.examples.gym.play_cart_pole.html#module-pydrake.examples.gym.play_cart_pole">pydrake.examples.gym.play_cart_pole</a>
+</li>
+        <li><a href="pydrake.examples.gym.train_cart_pole.html#module-pydrake.examples.gym.train_cart_pole">pydrake.examples.gym.train_cart_pole</a>
+</li>
         <li><a href="pydrake.forwarddiff.html#module-pydrake.forwarddiff">pydrake.forwarddiff</a>
 </li>
         <li><a href="pydrake.geometry.html#module-pydrake.geometry">pydrake.geometry</a>
@@ -13010,6 +13029,8 @@
         <li><a href="pydrake.geometry.all.html#module-pydrake.geometry.all">pydrake.geometry.all</a>
 </li>
         <li><a href="pydrake.geometry.optimization.html#module-pydrake.geometry.optimization">pydrake.geometry.optimization</a>
+</li>
+        <li><a href="pydrake.gym.html#module-pydrake.gym">pydrake.gym</a>
 </li>
         <li><a href="pydrake.lcm.html#module-pydrake.lcm">pydrake.lcm</a>
 </li>
@@ -14570,8 +14591,6 @@
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.Joint_-Expression-.position_start">(pydrake.multibody.tree.Joint_[Expression] method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.Joint.position_suffix">position_suffix() (pydrake.multibody.tree.Joint method)</a>
 
       <ul>
@@ -14594,6 +14613,8 @@
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.RevoluteJoint_-Expression-.position_upper_limit">(pydrake.multibody.tree.RevoluteJoint_[Expression] method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.Joint.position_upper_limits">position_upper_limits() (pydrake.multibody.tree.Joint method)</a>
 
       <ul>
@@ -14861,6 +14882,27 @@
 </li>
       </ul></li>
       <li>
+    pydrake.examples.gym
+
+      <ul>
+        <li><a href="pydrake.examples.gym.html#module-pydrake.examples.gym">module</a>
+</li>
+      </ul></li>
+      <li>
+    pydrake.examples.gym.play_cart_pole
+
+      <ul>
+        <li><a href="pydrake.examples.gym.play_cart_pole.html#module-pydrake.examples.gym.play_cart_pole">module</a>
+</li>
+      </ul></li>
+      <li>
+    pydrake.examples.gym.train_cart_pole
+
+      <ul>
+        <li><a href="pydrake.examples.gym.train_cart_pole.html#module-pydrake.examples.gym.train_cart_pole">module</a>
+</li>
+      </ul></li>
+      <li>
     pydrake.forwarddiff
 
       <ul>
@@ -14886,6 +14928,13 @@
 
       <ul>
         <li><a href="pydrake.geometry.optimization.html#module-pydrake.geometry.optimization">module</a>
+</li>
+      </ul></li>
+      <li>
+    pydrake.gym
+
+      <ul>
+        <li><a href="pydrake.gym.html#module-pydrake.gym">module</a>
 </li>
       </ul></li>
       <li>
@@ -15498,6 +15547,8 @@
 </li>
       <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.GraphOfConvexSets.RemoveVertex">RemoveVertex() (pydrake.geometry.optimization.GraphOfConvexSets method)</a>
 </li>
+      <li><a href="pydrake.gym.html#pydrake.gym.DrakeGymEnv.render">render() (pydrake.gym.DrakeGymEnv method)</a>
+</li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.RenderEngineGltfClientParams.render_endpoint">render_endpoint (pydrake.geometry.RenderEngineGltfClientParams property)</a>
 </li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.RenderCameraCore">RenderCameraCore (class in pydrake.geometry)</a>
@@ -15592,6 +15643,8 @@
         <li><a href="pydrake.systems.primitives.html#pydrake.systems.primitives.VectorLog_-Expression-.Reserve">(pydrake.systems.primitives.VectorLog_[Expression] method)</a>
 </li>
       </ul></li>
+      <li><a href="pydrake.gym.html#pydrake.gym.DrakeGymEnv.reset">reset() (pydrake.gym.DrakeGymEnv method)</a>
+</li>
       <li><a href="pydrake.systems.analysis.html#pydrake.systems.analysis.IntegratorBase.Reset">Reset() (pydrake.systems.analysis.IntegratorBase method)</a>
 
       <ul>
@@ -15624,6 +15677,8 @@
       </ul></li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.Meshcat.ResetRenderMode">ResetRenderMode() (pydrake.geometry.Meshcat method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.systems.analysis.html#pydrake.systems.analysis.IntegratorBase.ResetStatistics">ResetStatistics() (pydrake.systems.analysis.IntegratorBase method)</a>
 
       <ul>
@@ -15636,8 +15691,6 @@
         <li><a href="pydrake.systems.analysis.html#pydrake.systems.analysis.Simulator_-AutoDiffXd-.ResetStatistics">(pydrake.systems.analysis.Simulator_[AutoDiffXd] method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.trajectories.html#pydrake.trajectories.PiecewisePolynomial.Reshape">Reshape() (pydrake.trajectories.PiecewisePolynomial method)</a>
 
       <ul>
@@ -17298,10 +17351,10 @@
 </li>
       <li><a href="pydrake.planning.html#pydrake.planning.CollisionChecker.SetConfigurationDistanceFunction">SetConfigurationDistanceFunction() (pydrake.planning.CollisionChecker method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.planning.html#pydrake.planning.CollisionChecker.SetConfigurationInterpolationFunction">SetConfigurationInterpolationFunction() (pydrake.planning.CollisionChecker method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant.SetConstraintActiveStatus">SetConstraintActiveStatus() (pydrake.multibody.plant.MultibodyPlant method)</a>
 
       <ul>
@@ -18488,6 +18541,8 @@
         <li><a href="pydrake.common.schema.html#pydrake.common.schema.GaussianVector-None-.stddev">(pydrake.common.schema.GaussianVector[None] property)</a>
 </li>
       </ul></li>
+      <li><a href="pydrake.gym.html#pydrake.gym.DrakeGymEnv.step">step() (pydrake.gym.DrakeGymEnv method)</a>
+</li>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlantConfig.stiction_tolerance">stiction_tolerance (pydrake.multibody.plant.MultibodyPlantConfig property)</a>
 </li>
       <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.LinearSpringDamper.stiffness">stiffness() (pydrake.multibody.tree.LinearSpringDamper method)</a>
@@ -18877,7 +18932,59 @@
       <li><a href="pydrake.multibody.parsing.html#pydrake.multibody.parsing.PackageMap.RemoteParams.ToJson">ToJson() (pydrake.multibody.parsing.PackageMap.RemoteParams method)</a>
 </li>
       <li><a href="pydrake.symbolic.html#pydrake.symbolic.ToLatex">ToLatex() (in module pydrake.symbolic)</a>
+
+      <ul>
+        <li><a href="pydrake.solvers.html#pydrake.solvers.Binding-BoundingBoxConstraint-.ToLatex">(pydrake.solvers.Binding[BoundingBoxConstraint] method)</a>
 </li>
+        <li><a href="pydrake.solvers.html#pydrake.solvers.Binding-Constraint-.ToLatex">(pydrake.solvers.Binding[Constraint] method)</a>
+</li>
+        <li><a href="pydrake.solvers.html#pydrake.solvers.Binding-Cost-.ToLatex">(pydrake.solvers.Binding[Cost] method)</a>
+</li>
+        <li><a href="pydrake.solvers.html#pydrake.solvers.Binding-EvaluatorBase-.ToLatex">(pydrake.solvers.Binding[EvaluatorBase] method)</a>
+</li>
+        <li><a href="pydrake.solvers.html#pydrake.solvers.Binding-ExponentialConeConstraint-.ToLatex">(pydrake.solvers.Binding[ExponentialConeConstraint] method)</a>
+</li>
+        <li><a href="pydrake.solvers.html#pydrake.solvers.Binding-ExpressionConstraint-.ToLatex">(pydrake.solvers.Binding[ExpressionConstraint] method)</a>
+</li>
+        <li><a href="pydrake.solvers.html#pydrake.solvers.Binding-ExpressionCost-.ToLatex">(pydrake.solvers.Binding[ExpressionCost] method)</a>
+</li>
+        <li><a href="pydrake.solvers.html#pydrake.solvers.Binding-L1NormCost-.ToLatex">(pydrake.solvers.Binding[L1NormCost] method)</a>
+</li>
+        <li><a href="pydrake.solvers.html#pydrake.solvers.Binding-L2NormCost-.ToLatex">(pydrake.solvers.Binding[L2NormCost] method)</a>
+</li>
+        <li><a href="pydrake.solvers.html#pydrake.solvers.Binding-LinearComplementarityConstraint-.ToLatex">(pydrake.solvers.Binding[LinearComplementarityConstraint] method)</a>
+</li>
+        <li><a href="pydrake.solvers.html#pydrake.solvers.Binding-LinearConstraint-.ToLatex">(pydrake.solvers.Binding[LinearConstraint] method)</a>
+</li>
+        <li><a href="pydrake.solvers.html#pydrake.solvers.Binding-LinearCost-.ToLatex">(pydrake.solvers.Binding[LinearCost] method)</a>
+</li>
+        <li><a href="pydrake.solvers.html#pydrake.solvers.Binding-LinearEqualityConstraint-.ToLatex">(pydrake.solvers.Binding[LinearEqualityConstraint] method)</a>
+</li>
+        <li><a href="pydrake.solvers.html#pydrake.solvers.Binding-LinearMatrixInequalityConstraint-.ToLatex">(pydrake.solvers.Binding[LinearMatrixInequalityConstraint] method)</a>
+</li>
+        <li><a href="pydrake.solvers.html#pydrake.solvers.Binding-LInfNormCost-.ToLatex">(pydrake.solvers.Binding[LInfNormCost] method)</a>
+</li>
+        <li><a href="pydrake.solvers.html#pydrake.solvers.Binding-LorentzConeConstraint-.ToLatex">(pydrake.solvers.Binding[LorentzConeConstraint] method)</a>
+</li>
+        <li><a href="pydrake.solvers.html#pydrake.solvers.Binding-MinimumValueConstraint-.ToLatex">(pydrake.solvers.Binding[MinimumValueConstraint] method)</a>
+</li>
+        <li><a href="pydrake.solvers.html#pydrake.solvers.Binding-PerspectiveQuadraticCost-.ToLatex">(pydrake.solvers.Binding[PerspectiveQuadraticCost] method)</a>
+</li>
+        <li><a href="pydrake.solvers.html#pydrake.solvers.Binding-PositiveSemidefiniteConstraint-.ToLatex">(pydrake.solvers.Binding[PositiveSemidefiniteConstraint] method)</a>
+</li>
+        <li><a href="pydrake.solvers.html#pydrake.solvers.Binding-QuadraticConstraint-.ToLatex">(pydrake.solvers.Binding[QuadraticConstraint] method)</a>
+</li>
+        <li><a href="pydrake.solvers.html#pydrake.solvers.Binding-QuadraticCost-.ToLatex">(pydrake.solvers.Binding[QuadraticCost] method)</a>
+</li>
+        <li><a href="pydrake.solvers.html#pydrake.solvers.Binding-RotatedLorentzConeConstraint-.ToLatex">(pydrake.solvers.Binding[RotatedLorentzConeConstraint] method)</a>
+</li>
+        <li><a href="pydrake.solvers.html#pydrake.solvers.Binding-VisualizationCallback-.ToLatex">(pydrake.solvers.Binding[VisualizationCallback] method)</a>
+</li>
+        <li><a href="pydrake.solvers.html#pydrake.solvers.EvaluatorBase.ToLatex">(pydrake.solvers.EvaluatorBase method)</a>
+</li>
+        <li><a href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram.ToLatex">(pydrake.solvers.MathematicalProgram method)</a>
+</li>
+      </ul></li>
       <li><a href="pydrake.common.html#pydrake.common.ToleranceType">ToleranceType (class in pydrake.common)</a>
 </li>
       <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.AffineSubspace.ToLocalCoordinates">ToLocalCoordinates() (pydrake.geometry.optimization.AffineSubspace method)</a>
@@ -18902,6 +19009,8 @@
         <li><a href="pydrake.math.html#pydrake.math.RotationMatrix_-Expression-.ToQuaternion">(pydrake.math.RotationMatrix_[Expression] method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.math.html#pydrake.math.RotationMatrix.ToRollPitchYaw">ToRollPitchYaw() (pydrake.math.RotationMatrix method)</a>
 
       <ul>
@@ -18928,8 +19037,6 @@
       </ul></li>
       <li><a href="pydrake.manipulation.html#pydrake.manipulation.torque_enabled">torque_enabled() (in module pydrake.manipulation)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.LinearBushingRollPitchYaw.torque_stiffness_constants">torque_stiffness_constants() (pydrake.multibody.tree.LinearBushingRollPitchYaw method)</a>
 
       <ul>

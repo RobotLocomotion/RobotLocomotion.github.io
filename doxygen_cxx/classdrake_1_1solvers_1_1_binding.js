@@ -13,6 +13,7 @@ var classdrake_1_1solvers_1_1_binding =
     [ "operator=", "classdrake_1_1solvers_1_1_binding.html#a38b81cff4aa19f7c4f19a55d095d2213", null ],
     [ "operator==", "classdrake_1_1solvers_1_1_binding.html#a236729b642e241e5c611e09dba8951d2", null ],
     [ "to_string", "classdrake_1_1solvers_1_1_binding.html#aac993ecccd3d88aafefb6b8e3caa1dee", null ],
+    [ "ToLatex", "classdrake_1_1solvers_1_1_binding.html#a2d56859532ea054bc76a10ea691746bc", null ],
     [ "variables", "classdrake_1_1solvers_1_1_binding.html#a6f319f0d50c3403278af24eb88d8fb61", null ],
     [ "hash_append", "classdrake_1_1solvers_1_1_binding.html#af010068c7bb5f5bb77fe6d432cd1cf01", null ]
 ];

@@ -83,6 +83,7 @@
 <li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.gym.html">pydrake.gym</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
@@ -675,6 +676,14 @@ constraint <code class="docutils literal notranslate"><span class="pre">c</span>
 <dd></dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.Binding-BoundingBoxConstraint-.ToLatex">
+<span id="pydrake.solvers.Binding[BoundingBoxConstraint].ToLatex"></span><span class="sig-name descname"><span class="pre">ToLatex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.BoundingBoxConstraint" title="pydrake.solvers.BoundingBoxConstraint"><span class="pre">BoundingBoxConstraint</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.Binding-BoundingBoxConstraint-.ToLatex" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a LaTeX description of this Binding. Does not include any
+characters to enter/exit math mode; you might want, e.g. “$$” +
+evaluator.ToLatex() + “$$”.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.Binding-BoundingBoxConstraint-.variables">
 <span id="pydrake.solvers.Binding[BoundingBoxConstraint].variables"></span><span class="sig-name descname"><span class="pre">variables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.BoundingBoxConstraint" title="pydrake.solvers.BoundingBoxConstraint"><span class="pre">BoundingBoxConstraint</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.solvers.Binding-BoundingBoxConstraint-.variables" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
@@ -703,6 +712,14 @@ constraint <code class="docutils literal notranslate"><span class="pre">c</span>
 <dt class="sig sig-object py" id="pydrake.solvers.Binding-Constraint-.evaluator">
 <span id="pydrake.solvers.Binding[Constraint].evaluator"></span><span class="sig-name descname"><span class="pre">evaluator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><span class="pre">Constraint</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><span class="pre">pydrake.solvers.Constraint</span></a></span></span><a class="headerlink" href="#pydrake.solvers.Binding-Constraint-.evaluator" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.Binding-Constraint-.ToLatex">
+<span id="pydrake.solvers.Binding[Constraint].ToLatex"></span><span class="sig-name descname"><span class="pre">ToLatex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><span class="pre">Constraint</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.Binding-Constraint-.ToLatex" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a LaTeX description of this Binding. Does not include any
+characters to enter/exit math mode; you might want, e.g. “$$” +
+evaluator.ToLatex() + “$$”.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.Binding-Constraint-.variables">
@@ -735,6 +752,14 @@ constraint <code class="docutils literal notranslate"><span class="pre">c</span>
 <dd></dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.Binding-Cost-.ToLatex">
+<span id="pydrake.solvers.Binding[Cost].ToLatex"></span><span class="sig-name descname"><span class="pre">ToLatex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.Cost" title="pydrake.solvers.Cost"><span class="pre">Cost</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.Binding-Cost-.ToLatex" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a LaTeX description of this Binding. Does not include any
+characters to enter/exit math mode; you might want, e.g. “$$” +
+evaluator.ToLatex() + “$$”.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.Binding-Cost-.variables">
 <span id="pydrake.solvers.Binding[Cost].variables"></span><span class="sig-name descname"><span class="pre">variables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.Cost" title="pydrake.solvers.Cost"><span class="pre">Cost</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.solvers.Binding-Cost-.variables" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
@@ -765,6 +790,14 @@ constraint <code class="docutils literal notranslate"><span class="pre">c</span>
 <dd></dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.Binding-EvaluatorBase-.ToLatex">
+<span id="pydrake.solvers.Binding[EvaluatorBase].ToLatex"></span><span class="sig-name descname"><span class="pre">ToLatex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.EvaluatorBase" title="pydrake.solvers.EvaluatorBase"><span class="pre">EvaluatorBase</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.Binding-EvaluatorBase-.ToLatex" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a LaTeX description of this Binding. Does not include any
+characters to enter/exit math mode; you might want, e.g. “$$” +
+evaluator.ToLatex() + “$$”.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.Binding-EvaluatorBase-.variables">
 <span id="pydrake.solvers.Binding[EvaluatorBase].variables"></span><span class="sig-name descname"><span class="pre">variables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.EvaluatorBase" title="pydrake.solvers.EvaluatorBase"><span class="pre">EvaluatorBase</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.solvers.Binding-EvaluatorBase-.variables" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
@@ -786,6 +819,14 @@ constraint <code class="docutils literal notranslate"><span class="pre">c</span>
 <dt class="sig sig-object py" id="pydrake.solvers.Binding-ExponentialConeConstraint-.evaluator">
 <span id="pydrake.solvers.Binding[ExponentialConeConstraint].evaluator"></span><span class="sig-name descname"><span class="pre">evaluator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.ExponentialConeConstraint" title="pydrake.solvers.ExponentialConeConstraint"><span class="pre">ExponentialConeConstraint</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.solvers.ExponentialConeConstraint" title="pydrake.solvers.ExponentialConeConstraint"><span class="pre">pydrake.solvers.ExponentialConeConstraint</span></a></span></span><a class="headerlink" href="#pydrake.solvers.Binding-ExponentialConeConstraint-.evaluator" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.Binding-ExponentialConeConstraint-.ToLatex">
+<span id="pydrake.solvers.Binding[ExponentialConeConstraint].ToLatex"></span><span class="sig-name descname"><span class="pre">ToLatex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.ExponentialConeConstraint" title="pydrake.solvers.ExponentialConeConstraint"><span class="pre">ExponentialConeConstraint</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.Binding-ExponentialConeConstraint-.ToLatex" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a LaTeX description of this Binding. Does not include any
+characters to enter/exit math mode; you might want, e.g. “$$” +
+evaluator.ToLatex() + “$$”.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.Binding-ExponentialConeConstraint-.variables">
@@ -811,6 +852,14 @@ constraint <code class="docutils literal notranslate"><span class="pre">c</span>
 <dd></dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.Binding-ExpressionConstraint-.ToLatex">
+<span id="pydrake.solvers.Binding[ExpressionConstraint].ToLatex"></span><span class="sig-name descname"><span class="pre">ToLatex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.ExpressionConstraint" title="pydrake.solvers.ExpressionConstraint"><span class="pre">ExpressionConstraint</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.Binding-ExpressionConstraint-.ToLatex" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a LaTeX description of this Binding. Does not include any
+characters to enter/exit math mode; you might want, e.g. “$$” +
+evaluator.ToLatex() + “$$”.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.Binding-ExpressionConstraint-.variables">
 <span id="pydrake.solvers.Binding[ExpressionConstraint].variables"></span><span class="sig-name descname"><span class="pre">variables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.ExpressionConstraint" title="pydrake.solvers.ExpressionConstraint"><span class="pre">ExpressionConstraint</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.solvers.Binding-ExpressionConstraint-.variables" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
@@ -832,6 +881,14 @@ constraint <code class="docutils literal notranslate"><span class="pre">c</span>
 <dt class="sig sig-object py" id="pydrake.solvers.Binding-ExpressionCost-.evaluator">
 <span id="pydrake.solvers.Binding[ExpressionCost].evaluator"></span><span class="sig-name descname"><span class="pre">evaluator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.ExpressionCost" title="pydrake.solvers.ExpressionCost"><span class="pre">ExpressionCost</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.solvers.ExpressionCost" title="pydrake.solvers.ExpressionCost"><span class="pre">pydrake.solvers.ExpressionCost</span></a></span></span><a class="headerlink" href="#pydrake.solvers.Binding-ExpressionCost-.evaluator" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.Binding-ExpressionCost-.ToLatex">
+<span id="pydrake.solvers.Binding[ExpressionCost].ToLatex"></span><span class="sig-name descname"><span class="pre">ToLatex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.ExpressionCost" title="pydrake.solvers.ExpressionCost"><span class="pre">ExpressionCost</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.Binding-ExpressionCost-.ToLatex" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a LaTeX description of this Binding. Does not include any
+characters to enter/exit math mode; you might want, e.g. “$$” +
+evaluator.ToLatex() + “$$”.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.Binding-ExpressionCost-.variables">
@@ -857,6 +914,14 @@ constraint <code class="docutils literal notranslate"><span class="pre">c</span>
 <dd></dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.Binding-L1NormCost-.ToLatex">
+<span id="pydrake.solvers.Binding[L1NormCost].ToLatex"></span><span class="sig-name descname"><span class="pre">ToLatex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.L1NormCost" title="pydrake.solvers.L1NormCost"><span class="pre">L1NormCost</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.Binding-L1NormCost-.ToLatex" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a LaTeX description of this Binding. Does not include any
+characters to enter/exit math mode; you might want, e.g. “$$” +
+evaluator.ToLatex() + “$$”.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.Binding-L1NormCost-.variables">
 <span id="pydrake.solvers.Binding[L1NormCost].variables"></span><span class="sig-name descname"><span class="pre">variables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.L1NormCost" title="pydrake.solvers.L1NormCost"><span class="pre">L1NormCost</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.solvers.Binding-L1NormCost-.variables" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
@@ -878,6 +943,14 @@ constraint <code class="docutils literal notranslate"><span class="pre">c</span>
 <dt class="sig sig-object py" id="pydrake.solvers.Binding-L2NormCost-.evaluator">
 <span id="pydrake.solvers.Binding[L2NormCost].evaluator"></span><span class="sig-name descname"><span class="pre">evaluator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.L2NormCost" title="pydrake.solvers.L2NormCost"><span class="pre">L2NormCost</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.solvers.L2NormCost" title="pydrake.solvers.L2NormCost"><span class="pre">pydrake.solvers.L2NormCost</span></a></span></span><a class="headerlink" href="#pydrake.solvers.Binding-L2NormCost-.evaluator" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.Binding-L2NormCost-.ToLatex">
+<span id="pydrake.solvers.Binding[L2NormCost].ToLatex"></span><span class="sig-name descname"><span class="pre">ToLatex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.L2NormCost" title="pydrake.solvers.L2NormCost"><span class="pre">L2NormCost</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.Binding-L2NormCost-.ToLatex" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a LaTeX description of this Binding. Does not include any
+characters to enter/exit math mode; you might want, e.g. “$$” +
+evaluator.ToLatex() + “$$”.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.Binding-L2NormCost-.variables">
@@ -903,6 +976,14 @@ constraint <code class="docutils literal notranslate"><span class="pre">c</span>
 <dd></dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.Binding-LinearComplementarityConstraint-.ToLatex">
+<span id="pydrake.solvers.Binding[LinearComplementarityConstraint].ToLatex"></span><span class="sig-name descname"><span class="pre">ToLatex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.LinearComplementarityConstraint" title="pydrake.solvers.LinearComplementarityConstraint"><span class="pre">LinearComplementarityConstraint</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.Binding-LinearComplementarityConstraint-.ToLatex" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a LaTeX description of this Binding. Does not include any
+characters to enter/exit math mode; you might want, e.g. “$$” +
+evaluator.ToLatex() + “$$”.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.Binding-LinearComplementarityConstraint-.variables">
 <span id="pydrake.solvers.Binding[LinearComplementarityConstraint].variables"></span><span class="sig-name descname"><span class="pre">variables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.LinearComplementarityConstraint" title="pydrake.solvers.LinearComplementarityConstraint"><span class="pre">LinearComplementarityConstraint</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.solvers.Binding-LinearComplementarityConstraint-.variables" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
@@ -924,6 +1005,14 @@ constraint <code class="docutils literal notranslate"><span class="pre">c</span>
 <dt class="sig sig-object py" id="pydrake.solvers.Binding-LinearConstraint-.evaluator">
 <span id="pydrake.solvers.Binding[LinearConstraint].evaluator"></span><span class="sig-name descname"><span class="pre">evaluator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.LinearConstraint" title="pydrake.solvers.LinearConstraint"><span class="pre">LinearConstraint</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.solvers.LinearConstraint" title="pydrake.solvers.LinearConstraint"><span class="pre">pydrake.solvers.LinearConstraint</span></a></span></span><a class="headerlink" href="#pydrake.solvers.Binding-LinearConstraint-.evaluator" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.Binding-LinearConstraint-.ToLatex">
+<span id="pydrake.solvers.Binding[LinearConstraint].ToLatex"></span><span class="sig-name descname"><span class="pre">ToLatex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.LinearConstraint" title="pydrake.solvers.LinearConstraint"><span class="pre">LinearConstraint</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.Binding-LinearConstraint-.ToLatex" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a LaTeX description of this Binding. Does not include any
+characters to enter/exit math mode; you might want, e.g. “$$” +
+evaluator.ToLatex() + “$$”.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.Binding-LinearConstraint-.variables">
@@ -949,6 +1038,14 @@ constraint <code class="docutils literal notranslate"><span class="pre">c</span>
 <dd></dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.Binding-LinearCost-.ToLatex">
+<span id="pydrake.solvers.Binding[LinearCost].ToLatex"></span><span class="sig-name descname"><span class="pre">ToLatex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.LinearCost" title="pydrake.solvers.LinearCost"><span class="pre">LinearCost</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.Binding-LinearCost-.ToLatex" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a LaTeX description of this Binding. Does not include any
+characters to enter/exit math mode; you might want, e.g. “$$” +
+evaluator.ToLatex() + “$$”.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.Binding-LinearCost-.variables">
 <span id="pydrake.solvers.Binding[LinearCost].variables"></span><span class="sig-name descname"><span class="pre">variables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.LinearCost" title="pydrake.solvers.LinearCost"><span class="pre">LinearCost</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.solvers.Binding-LinearCost-.variables" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
@@ -970,6 +1067,14 @@ constraint <code class="docutils literal notranslate"><span class="pre">c</span>
 <dt class="sig sig-object py" id="pydrake.solvers.Binding-LinearEqualityConstraint-.evaluator">
 <span id="pydrake.solvers.Binding[LinearEqualityConstraint].evaluator"></span><span class="sig-name descname"><span class="pre">evaluator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.LinearEqualityConstraint" title="pydrake.solvers.LinearEqualityConstraint"><span class="pre">LinearEqualityConstraint</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.solvers.LinearEqualityConstraint" title="pydrake.solvers.LinearEqualityConstraint"><span class="pre">pydrake.solvers.LinearEqualityConstraint</span></a></span></span><a class="headerlink" href="#pydrake.solvers.Binding-LinearEqualityConstraint-.evaluator" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.Binding-LinearEqualityConstraint-.ToLatex">
+<span id="pydrake.solvers.Binding[LinearEqualityConstraint].ToLatex"></span><span class="sig-name descname"><span class="pre">ToLatex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.LinearEqualityConstraint" title="pydrake.solvers.LinearEqualityConstraint"><span class="pre">LinearEqualityConstraint</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.Binding-LinearEqualityConstraint-.ToLatex" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a LaTeX description of this Binding. Does not include any
+characters to enter/exit math mode; you might want, e.g. “$$” +
+evaluator.ToLatex() + “$$”.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.Binding-LinearEqualityConstraint-.variables">
@@ -995,6 +1100,14 @@ constraint <code class="docutils literal notranslate"><span class="pre">c</span>
 <dd></dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.Binding-LinearMatrixInequalityConstraint-.ToLatex">
+<span id="pydrake.solvers.Binding[LinearMatrixInequalityConstraint].ToLatex"></span><span class="sig-name descname"><span class="pre">ToLatex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.LinearMatrixInequalityConstraint" title="pydrake.solvers.LinearMatrixInequalityConstraint"><span class="pre">LinearMatrixInequalityConstraint</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.Binding-LinearMatrixInequalityConstraint-.ToLatex" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a LaTeX description of this Binding. Does not include any
+characters to enter/exit math mode; you might want, e.g. “$$” +
+evaluator.ToLatex() + “$$”.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.Binding-LinearMatrixInequalityConstraint-.variables">
 <span id="pydrake.solvers.Binding[LinearMatrixInequalityConstraint].variables"></span><span class="sig-name descname"><span class="pre">variables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.LinearMatrixInequalityConstraint" title="pydrake.solvers.LinearMatrixInequalityConstraint"><span class="pre">LinearMatrixInequalityConstraint</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.solvers.Binding-LinearMatrixInequalityConstraint-.variables" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
@@ -1016,6 +1129,14 @@ constraint <code class="docutils literal notranslate"><span class="pre">c</span>
 <dt class="sig sig-object py" id="pydrake.solvers.Binding-LInfNormCost-.evaluator">
 <span id="pydrake.solvers.Binding[LInfNormCost].evaluator"></span><span class="sig-name descname"><span class="pre">evaluator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.LInfNormCost" title="pydrake.solvers.LInfNormCost"><span class="pre">LInfNormCost</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.solvers.LInfNormCost" title="pydrake.solvers.LInfNormCost"><span class="pre">pydrake.solvers.LInfNormCost</span></a></span></span><a class="headerlink" href="#pydrake.solvers.Binding-LInfNormCost-.evaluator" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.Binding-LInfNormCost-.ToLatex">
+<span id="pydrake.solvers.Binding[LInfNormCost].ToLatex"></span><span class="sig-name descname"><span class="pre">ToLatex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.LInfNormCost" title="pydrake.solvers.LInfNormCost"><span class="pre">LInfNormCost</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.Binding-LInfNormCost-.ToLatex" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a LaTeX description of this Binding. Does not include any
+characters to enter/exit math mode; you might want, e.g. “$$” +
+evaluator.ToLatex() + “$$”.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.Binding-LInfNormCost-.variables">
@@ -1041,6 +1162,14 @@ constraint <code class="docutils literal notranslate"><span class="pre">c</span>
 <dd></dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.Binding-LorentzConeConstraint-.ToLatex">
+<span id="pydrake.solvers.Binding[LorentzConeConstraint].ToLatex"></span><span class="sig-name descname"><span class="pre">ToLatex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.LorentzConeConstraint" title="pydrake.solvers.LorentzConeConstraint"><span class="pre">LorentzConeConstraint</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.Binding-LorentzConeConstraint-.ToLatex" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a LaTeX description of this Binding. Does not include any
+characters to enter/exit math mode; you might want, e.g. “$$” +
+evaluator.ToLatex() + “$$”.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.Binding-LorentzConeConstraint-.variables">
 <span id="pydrake.solvers.Binding[LorentzConeConstraint].variables"></span><span class="sig-name descname"><span class="pre">variables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.LorentzConeConstraint" title="pydrake.solvers.LorentzConeConstraint"><span class="pre">LorentzConeConstraint</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.solvers.Binding-LorentzConeConstraint-.variables" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
@@ -1062,6 +1191,14 @@ constraint <code class="docutils literal notranslate"><span class="pre">c</span>
 <dt class="sig sig-object py" id="pydrake.solvers.Binding-MinimumValueConstraint-.evaluator">
 <span id="pydrake.solvers.Binding[MinimumValueConstraint].evaluator"></span><span class="sig-name descname"><span class="pre">evaluator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.MinimumValueConstraint" title="pydrake.solvers.MinimumValueConstraint"><span class="pre">MinimumValueConstraint</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.solvers.MinimumValueConstraint" title="pydrake.solvers.MinimumValueConstraint"><span class="pre">pydrake.solvers.MinimumValueConstraint</span></a></span></span><a class="headerlink" href="#pydrake.solvers.Binding-MinimumValueConstraint-.evaluator" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.Binding-MinimumValueConstraint-.ToLatex">
+<span id="pydrake.solvers.Binding[MinimumValueConstraint].ToLatex"></span><span class="sig-name descname"><span class="pre">ToLatex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.MinimumValueConstraint" title="pydrake.solvers.MinimumValueConstraint"><span class="pre">MinimumValueConstraint</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.Binding-MinimumValueConstraint-.ToLatex" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a LaTeX description of this Binding. Does not include any
+characters to enter/exit math mode; you might want, e.g. “$$” +
+evaluator.ToLatex() + “$$”.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.Binding-MinimumValueConstraint-.variables">
@@ -1087,6 +1224,14 @@ constraint <code class="docutils literal notranslate"><span class="pre">c</span>
 <dd></dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.Binding-PerspectiveQuadraticCost-.ToLatex">
+<span id="pydrake.solvers.Binding[PerspectiveQuadraticCost].ToLatex"></span><span class="sig-name descname"><span class="pre">ToLatex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.PerspectiveQuadraticCost" title="pydrake.solvers.PerspectiveQuadraticCost"><span class="pre">PerspectiveQuadraticCost</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.Binding-PerspectiveQuadraticCost-.ToLatex" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a LaTeX description of this Binding. Does not include any
+characters to enter/exit math mode; you might want, e.g. “$$” +
+evaluator.ToLatex() + “$$”.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.Binding-PerspectiveQuadraticCost-.variables">
 <span id="pydrake.solvers.Binding[PerspectiveQuadraticCost].variables"></span><span class="sig-name descname"><span class="pre">variables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.PerspectiveQuadraticCost" title="pydrake.solvers.PerspectiveQuadraticCost"><span class="pre">PerspectiveQuadraticCost</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.solvers.Binding-PerspectiveQuadraticCost-.variables" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
@@ -1108,6 +1253,14 @@ constraint <code class="docutils literal notranslate"><span class="pre">c</span>
 <dt class="sig sig-object py" id="pydrake.solvers.Binding-PositiveSemidefiniteConstraint-.evaluator">
 <span id="pydrake.solvers.Binding[PositiveSemidefiniteConstraint].evaluator"></span><span class="sig-name descname"><span class="pre">evaluator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.PositiveSemidefiniteConstraint" title="pydrake.solvers.PositiveSemidefiniteConstraint"><span class="pre">PositiveSemidefiniteConstraint</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.solvers.PositiveSemidefiniteConstraint" title="pydrake.solvers.PositiveSemidefiniteConstraint"><span class="pre">pydrake.solvers.PositiveSemidefiniteConstraint</span></a></span></span><a class="headerlink" href="#pydrake.solvers.Binding-PositiveSemidefiniteConstraint-.evaluator" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.Binding-PositiveSemidefiniteConstraint-.ToLatex">
+<span id="pydrake.solvers.Binding[PositiveSemidefiniteConstraint].ToLatex"></span><span class="sig-name descname"><span class="pre">ToLatex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.PositiveSemidefiniteConstraint" title="pydrake.solvers.PositiveSemidefiniteConstraint"><span class="pre">PositiveSemidefiniteConstraint</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.Binding-PositiveSemidefiniteConstraint-.ToLatex" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a LaTeX description of this Binding. Does not include any
+characters to enter/exit math mode; you might want, e.g. “$$” +
+evaluator.ToLatex() + “$$”.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.Binding-PositiveSemidefiniteConstraint-.variables">
@@ -1133,6 +1286,14 @@ constraint <code class="docutils literal notranslate"><span class="pre">c</span>
 <dd></dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.Binding-QuadraticConstraint-.ToLatex">
+<span id="pydrake.solvers.Binding[QuadraticConstraint].ToLatex"></span><span class="sig-name descname"><span class="pre">ToLatex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.QuadraticConstraint" title="pydrake.solvers.QuadraticConstraint"><span class="pre">QuadraticConstraint</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.Binding-QuadraticConstraint-.ToLatex" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a LaTeX description of this Binding. Does not include any
+characters to enter/exit math mode; you might want, e.g. “$$” +
+evaluator.ToLatex() + “$$”.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.Binding-QuadraticConstraint-.variables">
 <span id="pydrake.solvers.Binding[QuadraticConstraint].variables"></span><span class="sig-name descname"><span class="pre">variables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.QuadraticConstraint" title="pydrake.solvers.QuadraticConstraint"><span class="pre">QuadraticConstraint</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.solvers.Binding-QuadraticConstraint-.variables" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
@@ -1154,6 +1315,14 @@ constraint <code class="docutils literal notranslate"><span class="pre">c</span>
 <dt class="sig sig-object py" id="pydrake.solvers.Binding-QuadraticCost-.evaluator">
 <span id="pydrake.solvers.Binding[QuadraticCost].evaluator"></span><span class="sig-name descname"><span class="pre">evaluator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.QuadraticCost" title="pydrake.solvers.QuadraticCost"><span class="pre">QuadraticCost</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.solvers.QuadraticCost" title="pydrake.solvers.QuadraticCost"><span class="pre">pydrake.solvers.QuadraticCost</span></a></span></span><a class="headerlink" href="#pydrake.solvers.Binding-QuadraticCost-.evaluator" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.Binding-QuadraticCost-.ToLatex">
+<span id="pydrake.solvers.Binding[QuadraticCost].ToLatex"></span><span class="sig-name descname"><span class="pre">ToLatex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.QuadraticCost" title="pydrake.solvers.QuadraticCost"><span class="pre">QuadraticCost</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.Binding-QuadraticCost-.ToLatex" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a LaTeX description of this Binding. Does not include any
+characters to enter/exit math mode; you might want, e.g. “$$” +
+evaluator.ToLatex() + “$$”.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.Binding-QuadraticCost-.variables">
@@ -1179,6 +1348,14 @@ constraint <code class="docutils literal notranslate"><span class="pre">c</span>
 <dd></dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.Binding-RotatedLorentzConeConstraint-.ToLatex">
+<span id="pydrake.solvers.Binding[RotatedLorentzConeConstraint].ToLatex"></span><span class="sig-name descname"><span class="pre">ToLatex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.RotatedLorentzConeConstraint" title="pydrake.solvers.RotatedLorentzConeConstraint"><span class="pre">RotatedLorentzConeConstraint</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.Binding-RotatedLorentzConeConstraint-.ToLatex" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a LaTeX description of this Binding. Does not include any
+characters to enter/exit math mode; you might want, e.g. “$$” +
+evaluator.ToLatex() + “$$”.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.Binding-RotatedLorentzConeConstraint-.variables">
 <span id="pydrake.solvers.Binding[RotatedLorentzConeConstraint].variables"></span><span class="sig-name descname"><span class="pre">variables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.RotatedLorentzConeConstraint" title="pydrake.solvers.RotatedLorentzConeConstraint"><span class="pre">RotatedLorentzConeConstraint</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.solvers.Binding-RotatedLorentzConeConstraint-.variables" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
@@ -1200,6 +1377,14 @@ constraint <code class="docutils literal notranslate"><span class="pre">c</span>
 <dt class="sig sig-object py" id="pydrake.solvers.Binding-VisualizationCallback-.evaluator">
 <span id="pydrake.solvers.Binding[VisualizationCallback].evaluator"></span><span class="sig-name descname"><span class="pre">evaluator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.VisualizationCallback" title="pydrake.solvers.VisualizationCallback"><span class="pre">VisualizationCallback</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.solvers.VisualizationCallback" title="pydrake.solvers.VisualizationCallback"><span class="pre">pydrake.solvers.VisualizationCallback</span></a></span></span><a class="headerlink" href="#pydrake.solvers.Binding-VisualizationCallback-.evaluator" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.Binding-VisualizationCallback-.ToLatex">
+<span id="pydrake.solvers.Binding[VisualizationCallback].ToLatex"></span><span class="sig-name descname"><span class="pre">ToLatex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.VisualizationCallback" title="pydrake.solvers.VisualizationCallback"><span class="pre">VisualizationCallback</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.Binding-VisualizationCallback-.ToLatex" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a LaTeX description of this Binding. Does not include any
+characters to enter/exit math mode; you might want, e.g. “$$” +
+evaluator.ToLatex() + “$$”.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.Binding-VisualizationCallback-.variables">
@@ -1605,6 +1790,14 @@ used in Eval(x, y).</p>
 y value in Eval, w.r.t x in Eval) . gradient_sparsity_pattern contains
 <em>all</em> the pairs of (row_index, col_index) for which the corresponding
 entries could have non-zero value in the gradient matrix ∂y/∂x.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.EvaluatorBase.ToLatex">
+<span class="sig-name descname"><span class="pre">ToLatex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.EvaluatorBase" title="pydrake.solvers.EvaluatorBase"><span class="pre">pydrake.solvers.EvaluatorBase</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">vars</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.EvaluatorBase.ToLatex" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a LaTeX string describing this evaluator. Does not include any
+characters to enter/exit math mode; you might want, e.g. “$$” +
+evaluator.ToLatex() + “$$”.</p>
 </dd></dl>
 
 </dd></dl>
@@ -2215,9 +2408,13 @@ variables (columns of A) cannot change.</p>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">LinearComplementarityConstraint</span></span><a class="headerlink" href="#pydrake.solvers.LinearComplementarityConstraint" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
 <p>Implements a constraint of the form:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Mx</span> <span class="o">+</span> <span class="n">q</span> <span class="o">&gt;=</span> <span class="mi">0</span>
-  <span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">0</span>
-  <span class="n">x</span><span class="s1">&#39;(Mx + q) == 0</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Mx + q ≥ 0
+  x ≥ 0
+  x&#39;(Mx + q) == 0
+</pre></div>
+</div>
+<p>Often this is summarized with the short-hand:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>0 ≤ z ⊥ Mz+q ≥ 0
 </pre></div>
 </div>
 <p>An implied slack variable complements any 0 component of x. To get the
@@ -3075,6 +3272,22 @@ decision variables.</p>
 <p>Adds linear constraints referencing potentially a subset of the
 decision variables (defined in the vars parameter).</p>
 <ol class="arabic simple" start="2">
+<li><p>AddLinearConstraint(self: pydrake.solvers.MathematicalProgram, a: numpy.ndarray[numpy.float64[1, n]], lb: float, ub: float, vars: numpy.ndarray[object[m, 1]]) -&gt; pydrake.solvers.Binding[LinearConstraint]</p></li>
+</ol>
+<p>Adds one row of linear constraint referencing potentially a subset of
+the decision variables (defined in the vars parameter). lb &lt;= a*vars
+&lt;= ub</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">a</span></code>:</dt><dd><p>A row vector.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lb</span></code>:</dt><dd><p>A scalar, the lower bound.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">ub</span></code>:</dt><dd><p>A scalar, the upper bound.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">vars</span></code>:</dt><dd><p>The decision variables on which to impose the linear constraint.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="3">
 <li><p>AddLinearConstraint(self: pydrake.solvers.MathematicalProgram, e: pydrake.symbolic.Expression, lb: float, ub: float) -&gt; pydrake.solvers.Binding[LinearConstraint]</p></li>
 </ol>
 <p>Adds one row of linear constraint lb &lt;= e &lt;= ub where <code class="docutils literal notranslate"><span class="pre">e</span></code> is a
@@ -3097,13 +3310,13 @@ symbolic expression.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">ub</span></code>:</dt><dd><p>A scalar, the upper bound.</p>
 </dd>
 </dl>
-<ol class="arabic simple" start="3">
+<ol class="arabic simple" start="4">
 <li><p>AddLinearConstraint(self: pydrake.solvers.MathematicalProgram, v: numpy.ndarray[object[m, n], flags.f_contiguous], lb: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], ub: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]) -&gt; pydrake.solvers.Binding[LinearConstraint]</p></li>
 </ol>
 <p>Adds linear constraints represented by symbolic expressions to the
 program. It throws if &#64;v includes a non-linear expression or <code class="docutils literal notranslate"><span class="pre">lb</span> <span class="pre">&lt;=</span> <span class="pre">v</span>
 <span class="pre">&lt;=</span> <span class="pre">ub</span></code> includes trivial/unsatisfiable constraints.</p>
-<ol class="arabic simple" start="4">
+<ol class="arabic simple" start="5">
 <li><p>AddLinearConstraint(self: pydrake.solvers.MathematicalProgram, f: pydrake.symbolic.Formula) -&gt; pydrake.solvers.Binding[LinearConstraint]</p></li>
 </ol>
 <p>Add a linear constraint represented by a symbolic formula to the
@@ -3127,7 +3340,7 @@ such as “2 &lt;= 1”. 4. It is not possible to find numerical bounds of
 be infinite but only if there are no other terms. For example, <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&lt;=</span>
 <span class="pre">∞</span></code> is allowed. However, <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">-</span> <span class="pre">∞</span> <span class="pre">&lt;=</span> <span class="pre">0</span></code> is not allowed because <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">↦</span>
 <span class="pre">∞</span></code> introduces <code class="docutils literal notranslate"><span class="pre">nan</span></code> in the evaluation.</p>
-<ol class="arabic simple" start="5">
+<ol class="arabic simple" start="6">
 <li><p>AddLinearConstraint(self: pydrake.solvers.MathematicalProgram, formulas: numpy.ndarray[object[m, n], flags.f_contiguous]) -&gt; pydrake.solvers.Binding[LinearConstraint]</p></li>
 </ol>
 <p>Add a linear constraint represented by an
@@ -5030,6 +5243,22 @@ the provided solver options.</p>
 </dd>
 </dl>
 <p>See variable_scaling “Variable scaling” for more information.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.MathematicalProgram.ToLatex">
+<span class="sig-name descname"><span class="pre">ToLatex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.MathematicalProgram.ToLatex" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a string representation of this program in LaTeX.</p>
+<p>This can be particularly useful e.g. in a Jupyter (python) notebook:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Markdown</span><span class="p">,</span> <span class="n">display</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="n">prog</span><span class="o">.</span><span class="n">ToLatex</span><span class="p">()))</span>
+</pre></div>
+</div>
+<p>Note that by default, we do not require variables to have unique
+names. Providing useful variable names and calling
+Evaluator::set_description() to describe the costs and constraints can
+dramatically improve the readability of the output. See the tutorial
+<code class="docutils literal notranslate"><span class="pre">debug_mathematical_program.ipynb</span></code> for more information.</p>
 </dd></dl>
 
 </dd></dl>

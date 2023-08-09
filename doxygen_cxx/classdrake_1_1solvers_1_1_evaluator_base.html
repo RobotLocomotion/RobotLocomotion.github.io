@@ -197,6 +197,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6075120b53bfe7e4341d7e4a0c526cca"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a6075120b53bfe7e4341d7e4a0c526cca">Display</a> (std::ostream &amp;os) const</td></tr>
 <tr class="memdesc:a6075120b53bfe7e4341d7e4a0c526cca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats this evaluator into the given stream, without displaying the decision variables it is bound to.  <a href="#a6075120b53bfe7e4341d7e4a0c526cca">More...</a><br /></td></tr>
 <tr class="separator:a6075120b53bfe7e4341d7e4a0c526cca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae50e80a411eaea6701020ad031a4ab0c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#ae50e80a411eaea6701020ad031a4ab0c">ToLatex</a> (const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &amp;vars, <a class="el" href="classint.html">int</a> precision=3) const</td></tr>
+<tr class="memdesc:ae50e80a411eaea6701020ad031a4ab0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a LaTeX string describing this evaluator.  <a href="#ae50e80a411eaea6701020ad031a4ab0c">More...</a><br /></td></tr>
+<tr class="separator:ae50e80a411eaea6701020ad031a4ab0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a224e4c35014e87139f73f9a517866796"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a224e4c35014e87139f73f9a517866796">num_vars</a> () const</td></tr>
 <tr class="memdesc:a224e4c35014e87139f73f9a517866796"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for the number of variables, namely the number of rows in x, as used in Eval(x, y).  <a href="#a224e4c35014e87139f73f9a517866796">More...</a><br /></td></tr>
 <tr class="separator:a224e4c35014e87139f73f9a517866796"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -236,6 +239,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a3999c2d5247045f02ba7e732ca5b6a81"><td class="memItemLeft" align="right" valign="top">virtual std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a3999c2d5247045f02ba7e732ca5b6a81">DoDisplay</a> (std::ostream &amp;os, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &amp;vars) const</td></tr>
 <tr class="memdesc:a3999c2d5247045f02ba7e732ca5b6a81"><td class="mdescLeft">&#160;</td><td class="mdescRight">NVI implementation of Display.  <a href="#a3999c2d5247045f02ba7e732ca5b6a81">More...</a><br /></td></tr>
 <tr class="separator:a3999c2d5247045f02ba7e732ca5b6a81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38a654a15b5202c41b1374af2deff2f4"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a38a654a15b5202c41b1374af2deff2f4">DoToLatex</a> (const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &amp;vars, <a class="el" href="classint.html">int</a> precision) const</td></tr>
+<tr class="separator:a38a654a15b5202c41b1374af2deff2f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a5844a758fb9db2cbf63e64cafe833a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a6a5844a758fb9db2cbf63e64cafe833a">set_num_outputs</a> (<a class="el" href="classint.html">int</a> <a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a25e4d5af707e93ac3ee4f0b749da86a5">num_outputs</a>)</td></tr>
 <tr class="separator:a6a5844a758fb9db2cbf63e64cafe833a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -610,6 +615,44 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a38a654a15b5202c41b1374af2deff2f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38a654a15b5202c41b1374af2deff2f4">&#9670;&nbsp;</a></span>DoToLatex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string DoToLatex </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vars</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>precision</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="classdrake_1_1solvers_1_1_exponential_cone_constraint.html#aa8e1e9254703f4bfe3d3e4d01807f441">ExponentialConeConstraint</a>, <a class="el" href="classdrake_1_1solvers_1_1_expression_constraint.html#aa8e1e9254703f4bfe3d3e4d01807f441">ExpressionConstraint</a>, <a class="el" href="classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#aa8e1e9254703f4bfe3d3e4d01807f441">LinearMatrixInequalityConstraint</a>, <a class="el" href="classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#aa8e1e9254703f4bfe3d3e4d01807f441">PositiveSemidefiniteConstraint</a>, <a class="el" href="classdrake_1_1solvers_1_1_linear_complementarity_constraint.html#aa8e1e9254703f4bfe3d3e4d01807f441">LinearComplementarityConstraint</a>, <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html#aa8e1e9254703f4bfe3d3e4d01807f441">LinearConstraint</a>, <a class="el" href="classdrake_1_1solvers_1_1_expression_cost.html#aa8e1e9254703f4bfe3d3e4d01807f441">ExpressionCost</a>, <a class="el" href="classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#aa8e1e9254703f4bfe3d3e4d01807f441">PerspectiveQuadraticCost</a>, <a class="el" href="classdrake_1_1solvers_1_1_l_inf_norm_cost.html#aa8e1e9254703f4bfe3d3e4d01807f441">LInfNormCost</a>, <a class="el" href="classdrake_1_1solvers_1_1_l2_norm_cost.html#aa8e1e9254703f4bfe3d3e4d01807f441">L2NormCost</a>, <a class="el" href="classdrake_1_1solvers_1_1_l1_norm_cost.html#aa8e1e9254703f4bfe3d3e4d01807f441">L1NormCost</a>, and <a class="el" href="classdrake_1_1solvers_1_1_linear_cost.html#aa8e1e9254703f4bfe3d3e4d01807f441">LinearCost</a>.</p>
+
+</div>
+</div>
 <a id="a50219f96db07dfe231abad115aba84c2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a50219f96db07dfe231abad115aba84c2">&#9670;&nbsp;</a></span>Eval() <span class="overload">[1/3]</span></h2>
 
@@ -919,6 +962,37 @@ Protected Member Functions</h2></td></tr>
 
 <p>Set the sparsity pattern of the gradient matrix ∂y/∂x (the gradient of y value in Eval, w.r.t x in Eval) . </p>
 <p>gradient_sparsity_pattern contains <em>all</em> the pairs of (row_index, col_index) for which the corresponding entries could have non-zero value in the gradient matrix ∂y/∂x. </p>
+
+</div>
+</div>
+<a id="ae50e80a411eaea6701020ad031a4ab0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae50e80a411eaea6701020ad031a4ab0c">&#9670;&nbsp;</a></span>ToLatex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ToLatex </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vars</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>precision</em> = <code>3</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a LaTeX string describing this evaluator. </p>
+<p>Does not include any characters to enter/exit math mode; you might want, e.g. "$$" + <a class="el" href="namespacedrake_1_1symbolic.html#a50f946a2d656be1b946c8f2f6bf00810" title="Generates a LaTeX string representation of e with floating point coefficients displayed using precisi...">evaluator.ToLatex()</a> + "$$". </p>
 
 </div>
 </div>

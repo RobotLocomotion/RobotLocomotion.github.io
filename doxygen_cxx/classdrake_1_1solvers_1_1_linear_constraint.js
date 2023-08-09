@@ -9,6 +9,7 @@ var classdrake_1_1solvers_1_1_linear_constraint =
     [ "DoEval", "classdrake_1_1solvers_1_1_linear_constraint.html#a863f7df9d3ee10378794b4c6842a4377", null ],
     [ "DoEval", "classdrake_1_1solvers_1_1_linear_constraint.html#aa2431c2dbd82437d8f621033d8af8231", null ],
     [ "DoEval", "classdrake_1_1solvers_1_1_linear_constraint.html#a5eea9354674efc1c07bf537319628ead", null ],
+    [ "DoToLatex", "classdrake_1_1solvers_1_1_linear_constraint.html#aa8e1e9254703f4bfe3d3e4d01807f441", null ],
     [ "get_sparse_A", "classdrake_1_1solvers_1_1_linear_constraint.html#a1c266571ce951e63d66d582a62854908", null ],
     [ "GetDenseA", "classdrake_1_1solvers_1_1_linear_constraint.html#a38e25e75fd44159789b93a0c7f180c39", null ],
     [ "operator=", "classdrake_1_1solvers_1_1_linear_constraint.html#aa21495d4d797f18f8acd9dad11fdfdfc", null ],

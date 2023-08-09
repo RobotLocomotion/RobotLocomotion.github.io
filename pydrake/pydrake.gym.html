@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pydrake.gym &mdash; pydrake  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pydrake.lcm" href="pydrake.lcm.html" />
+    <link rel="prev" title="pydrake.geometry.optimization" href="pydrake.geometry.optimization.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+<header class="site-header">
+  <div class="site-header-inner contain">
+    <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+    <div class="menu-mobile-toggle">
+      <span></span>
+    </div>
+    <nav class="site-menu">
+      <ul>
+        <li class="site-menu-item site-menu-item-main">
+          <a class="site-menu-item" href="/">Home</a>
+        </li>
+        <li class="site-menu-item site-menu-item-main">
+          <a class="site-menu-item" href="/installation.html">Installation</a>
+        </li>
+        <li class="site-menu-item site-menu-item-main">
+          <a class="site-menu-item" href="/gallery.html">Gallery</a>
+        </li>
+        <li class="site-menu-item site-menu-item-main">API Documentation
+          <div class="sub">
+            <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a> <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+          </div>
+        </li>
+        <li class="site-menu-item site-menu-item-main">Resources
+          <div class="sub">
+            <a class="site-menu-item" href="/getting_help.html">Getting Help</a> <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/%2Findex.ipynb">Tutorials</a> <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a> <a class="site-menu-item" href="/developers.html">For Developers</a> <a class="site-menu-item" href="/credits.html">Credits</a>
+          </div>
+        </li>
+        <li class="github-link">
+          <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> pydrake
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search pydrake only…" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+    <input type="text" name="q" placeholder="Search all of Drake…" />
+    <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu" />
+  </form>
+</div>
+
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">pydrake.gym</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#drake-gym">Drake Gym</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#a-note-on-dependencies">A note on dependencies</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.planning.html">pydrake.planning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.polynomial.html">pydrake.polynomial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.tutorials.html">pydrake.tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.visualization.html">pydrake.visualization</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>pydrake.gym</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-pydrake.gym">
+<span id="pydrake-gym"></span><h1>pydrake.gym<a class="headerlink" href="#module-pydrake.gym" title="Permalink to this headline"></a></h1>
+<section id="drake-gym">
+<h2>Drake Gym<a class="headerlink" href="#drake-gym" title="Permalink to this headline"></a></h2>
+<p>THIS FEATURE IS EXPERIMENTAL.
+As per our [guidelines](<a class="reference external" href="https://drake.mit.edu/stable.html">https://drake.mit.edu/stable.html</a>)
+for experimental code, development is ongoing and no guarantees against
+deprecation are provided for any file under this directory.</p>
+<p>Drake Gym is an implementation of Farama’s “Gymnasium” interface for
+reinforcement learning which uses a Drake <cite>Simulator</cite> as a
+backend.  The Gym interface provided
+by [the python <cite>gym</cite> module](<a class="reference external" href="https://pypi.org/project/gymnasium/">https://pypi.org/project/gymnasium/</a>)
+simply models a time-stepped process with an action space,
+a reward function, and some form of state observation.</p>
+<p>Note that pydrake.gym is an optional component of pydrake, and will only work
+when the gymnasium package is also installed. As such, the DrakeGymEnv and
+related code is not available for import as part of <cite>pydrake.all</cite>.</p>
+<section id="a-note-on-dependencies">
+<h3>A note on dependencies<a class="headerlink" href="#a-note-on-dependencies" title="Permalink to this headline"></a></h3>
+<p>In order to use a Gym, code must implement a <cite>gymnasium.Env</cite> (in this case the
+actual <cite>Simulator</cite> wrapped via <cite>DrakeGymEnv</cite>) and must run the Gym within an
+RL engine of some sort (that’s usually an algorithm chosen from
+[Stable Baselines 3]
+(<a class="reference external" href="https://stable-baselines3.readthedocs.io/en/master/index.html">https://stable-baselines3.readthedocs.io/en/master/index.html</a>)
+but could also be from <cite>nevergrad</cite> or some other source of gradient-free
+optimizers).</p>
+<p>Stable Baselines3 iteself is too large and too heavy of a dependency tree for
+Drake to require itself; as such you will need to provide it yourself to use
+these examples.  If you are going to train drake gym examples on your machine,
+you should install Stable Baselines 3 (for instance,
+<cite>pip install stable_baselines3</cite> inside of a virtual environment).  The
+training examples will not run without it, and drake does not come with it
+(Drake does include a subset of <cite>stable_baselines3</cite> for testing purposes, but
+not enough to perform training).</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.gym.DrakeGymEnv">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.gym.</span></span><span class="sig-name descname"><span class="pre">DrakeGymEnv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">simulator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.systems.analysis.html#pydrake.systems.analysis.Simulator" title="pydrake.systems.analysis.Simulator"><span class="pre">pydrake.systems.analysis.Simulator</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">pydrake.common._module_py.RandomGenerator</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="pydrake.systems.analysis.html#pydrake.systems.analysis.Simulator" title="pydrake.systems.analysis.Simulator"><span class="pre">pydrake.systems.analysis.Simulator</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_step</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">action_space</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">gymnasium.spaces.space.Space</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">observation_space</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">gymnasium.spaces.space.Space</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reward</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.System" title="pydrake.systems.framework.System"><span class="pre">pydrake.systems.framework.System</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPortIndex" title="pydrake.systems.framework.OutputPortIndex"><span class="pre">pydrake.systems.framework.OutputPortIndex</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">action_port_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPortIndex" title="pydrake.systems.framework.InputPortIndex"><span class="pre">pydrake.systems.framework.InputPortIndex</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">observation_port_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPortIndex" title="pydrake.systems.framework.OutputPortIndex"><span class="pre">pydrake.systems.framework.OutputPortIndex</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">render_rgb_port_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPortIndex" title="pydrake.systems.framework.OutputPortIndex"><span class="pre">pydrake.systems.framework.OutputPortIndex</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">render_mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'human'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reset_handler</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.systems.analysis.html#pydrake.systems.analysis.Simulator" title="pydrake.systems.analysis.Simulator"><span class="pre">pydrake.systems.analysis.Simulator</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hardware</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.gym.DrakeGymEnv" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">gymnasium.core.Env</span></code></p>
+<p>DrakeGymEnv provides a gym.Env interface for a Drake System (often a
+Diagram) using a Simulator.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.gym.DrakeGymEnv.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">simulator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.systems.analysis.html#pydrake.systems.analysis.Simulator" title="pydrake.systems.analysis.Simulator"><span class="pre">pydrake.systems.analysis.Simulator</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">pydrake.common._module_py.RandomGenerator</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="pydrake.systems.analysis.html#pydrake.systems.analysis.Simulator" title="pydrake.systems.analysis.Simulator"><span class="pre">pydrake.systems.analysis.Simulator</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_step</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">action_space</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">gymnasium.spaces.space.Space</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">observation_space</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">gymnasium.spaces.space.Space</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reward</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.System" title="pydrake.systems.framework.System"><span class="pre">pydrake.systems.framework.System</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPortIndex" title="pydrake.systems.framework.OutputPortIndex"><span class="pre">pydrake.systems.framework.OutputPortIndex</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">action_port_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPortIndex" title="pydrake.systems.framework.InputPortIndex"><span class="pre">pydrake.systems.framework.InputPortIndex</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">observation_port_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPortIndex" title="pydrake.systems.framework.OutputPortIndex"><span class="pre">pydrake.systems.framework.OutputPortIndex</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">render_rgb_port_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPortIndex" title="pydrake.systems.framework.OutputPortIndex"><span class="pre">pydrake.systems.framework.OutputPortIndex</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">render_mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'human'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reset_handler</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.systems.analysis.html#pydrake.systems.analysis.Simulator" title="pydrake.systems.analysis.Simulator"><span class="pre">pydrake.systems.analysis.Simulator</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hardware</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.gym.DrakeGymEnv.__init__" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>simulator</strong> – Either a <code class="docutils literal notranslate"><span class="pre">drake.systems.analysis.Simulator</span></code>, or
+a function that produces a (randomized) Simulator.</p></li>
+<li><p><strong>time_step</strong> – Each call to <code class="docutils literal notranslate"><span class="pre">step()</span></code> will advance the simulator by
+<code class="docutils literal notranslate"><span class="pre">time_step</span></code> seconds.</p></li>
+<li><p><strong>action_space</strong> – Defines the <code class="docutils literal notranslate"><span class="pre">gym.spaces.Space</span></code> for the actions.  If
+the action port is vector-valued, then passing <code class="docutils literal notranslate"><span class="pre">None</span></code>
+defaults to a <code class="docutils literal notranslate"><span class="pre">gym.spaces.Box</span></code> of the correct dimension with
+bounds at negative and positive infinity.  Note: Stable
+Baselines 3 strongly encourages normalizing the
+<code class="docutils literal notranslate"><span class="pre">action_space</span></code> to [-1, 1].</p></li>
+<li><p><strong>observation_space</strong> – Defines the <code class="docutils literal notranslate"><span class="pre">gym.spaces.Space</span></code> for the
+observations.  If the observation port is vector-valued, then
+passing <code class="docutils literal notranslate"><span class="pre">None</span></code> defaults to a <code class="docutils literal notranslate"><span class="pre">gym.spaces.Box</span></code> of the
+correct dimension with bounds at negative and positive
+infinity.</p></li>
+<li><p><strong>reward</strong> – The reward can be specified in one of two
+ways: (1) by passing a callable with the signature
+<code class="docutils literal notranslate"><span class="pre">value</span> <span class="pre">=</span> <span class="pre">reward(context)</span></code> or (2) by passing a scalar
+vector-valued output port of <code class="docutils literal notranslate"><span class="pre">simulator</span></code>’s system.</p></li>
+<li><p><strong>action_port_id</strong> – The ID of an input port of <code class="docutils literal notranslate"><span class="pre">simulator</span></code>’s system
+compatible with the <code class="docutils literal notranslate"><span class="pre">action_space</span></code>.  Each Env <em>must</em> have an
+action port; passing <code class="docutils literal notranslate"><span class="pre">None</span></code> defaults to using the <em>first</em>
+input port (inspired by
+<code class="docutils literal notranslate"><span class="pre">InputPortSelection.kUseFirstInputIfItExists</span></code>).</p></li>
+<li><p><strong>observation_port_id</strong> – An output port of <code class="docutils literal notranslate"><span class="pre">simulator</span></code>’s system
+compatible with the <code class="docutils literal notranslate"><span class="pre">observation_space</span></code>. Each Env <em>must</em> have
+an observation port (it seems that gym doesn’t support empty
+observation spaces / open-loop policies); passing <code class="docutils literal notranslate"><span class="pre">None</span></code>
+defaults to using the <em>first</em> input port (inspired by
+<code class="docutils literal notranslate"><span class="pre">OutputPortSelection.kUseFirstOutputIfItExists</span></code>).</p></li>
+<li><p><strong>render_rgb_port_id</strong> – An optional output port of <code class="docutils literal notranslate"><span class="pre">simulator</span></code>’s
+system that returns  an <code class="docutils literal notranslate"><span class="pre">ImageRgba8U</span></code>; often the
+<code class="docutils literal notranslate"><span class="pre">color_image</span></code> port of a Drake <code class="docutils literal notranslate"><span class="pre">RgbdSensor</span></code>.</p></li>
+<li><p><strong>render_mode</strong> – The render mode of the environment determined at
+initialization. Defaults to <code class="docutils literal notranslate"><span class="pre">human</span></code> which uses visualizers
+inside the System (e.g. MeshcatVisualizer,
+PlanarSceneGraphVisualizer, etc.). <code class="docutils literal notranslate"><span class="pre">render_mode</span></code> equal to
+<code class="docutils literal notranslate"><span class="pre">rgb_array</span></code> evaluates the <code class="docutils literal notranslate"><span class="pre">render_rgb_port</span></code> and <code class="docutils literal notranslate"><span class="pre">ansi</span></code>
+calls <code class="docutils literal notranslate"><span class="pre">__repr__</span></code> on the system Context.</p></li>
+<li><p><strong>reset_handler</strong> – A function that sets the home state
+(plant, and/or env.) at <code class="docutils literal notranslate"><span class="pre">reset()</span></code>.
+The reset state can be specified in one of
+the two ways:
+(if <code class="docutils literal notranslate"><span class="pre">reset_handler</span></code> is None) setting random context using
+a Drake random_generator
+(e.g. <code class="docutils literal notranslate"><span class="pre">joint.set_random_pose_distribution()</span></code>
+using the <code class="docutils literal notranslate"><span class="pre">reset()</span></code> seed), (otherwise) using
+<code class="docutils literal notranslate"><span class="pre">reset_handler()</span></code>.</p></li>
+<li><p><strong>hardware</strong> – If True, it prevents from setting random context at
+<code class="docutils literal notranslate"><span class="pre">reset()</span></code> when using <code class="docutils literal notranslate"><span class="pre">random_generator</span></code>, but it does
+execute <code class="docutils literal notranslate"><span class="pre">reset_handler()</span></code> if given.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Notes (using <code class="docutils literal notranslate"><span class="pre">env</span></code> as an instance of this class):</p>
+<ul class="simple">
+<li><p>You may set simulator/integrator preferences by using
+<code class="docutils literal notranslate"><span class="pre">env.simulator</span></code> directly.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">done</span></code> condition returned by <code class="docutils literal notranslate"><span class="pre">step()</span></code> is always False by
+default.  Use <code class="docutils literal notranslate"><span class="pre">env.simulator.set_monitor()</span></code> to use Drake’s monitor
+functionality for specifying termination conditions.</p></li>
+<li><p>You may additionally wish to directly set <code class="docutils literal notranslate"><span class="pre">env.reward_range</span></code> and/or
+<code class="docutils literal notranslate"><span class="pre">env.spec</span></code>.  See the docs for <code class="docutils literal notranslate"><span class="pre">gym.Env</span></code> for more details.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.gym.DrakeGymEnv.render">
+<span class="sig-name descname"><span class="pre">render</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.gym.DrakeGymEnv.render" title="Permalink to this definition"></a></dt>
+<dd><p>Rendering in <code class="docutils literal notranslate"><span class="pre">human</span></code> mode is accomplished by calling ForcedPublish on
+<code class="docutils literal notranslate"><span class="pre">system</span></code>.  This should cause visualizers inside the System (e.g.
+MeshcatVisualizer, PlanarSceneGraphVisualizer, etc.) to draw their
+outputs.  To be fully compliant, those visualizers should set their
+default publishing period to <code class="docutils literal notranslate"><span class="pre">np.inf</span></code> (do not publish periodically).</p>
+<p>Rendering in <code class="docutils literal notranslate"><span class="pre">ascii</span></code> mode calls <code class="docutils literal notranslate"><span class="pre">__repr__</span></code> on the system Context.</p>
+<p>Rendering in <code class="docutils literal notranslate"><span class="pre">rgb_array</span></code> mode is enabled by passing a compatible
+<code class="docutils literal notranslate"><span class="pre">render_rgb_port</span></code> to the class constructor.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.gym.DrakeGymEnv.reset">
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.gym.DrakeGymEnv.reset" title="Permalink to this definition"></a></dt>
+<dd><p>If a callable “simulator factory” was passed to the constructor, then a
+new simulator is created.  Otherwise this method simply resets the
+<code class="docutils literal notranslate"><span class="pre">simulator</span></code> and its Context.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.gym.DrakeGymEnv.step">
+<span class="sig-name descname"><span class="pre">step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">action</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.gym.DrakeGymEnv.step" title="Permalink to this definition"></a></dt>
+<dd><p>Implements <code class="docutils literal notranslate"><span class="pre">gym.Env.step</span></code> to advance the simulation forward by one
+<code class="docutils literal notranslate"><span class="pre">self.time_step</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>action</strong> – an element from <code class="docutils literal notranslate"><span class="pre">self.action_space</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pydrake.geometry.optimization.html" class="btn btn-neutral float-left" title="pydrake.geometry.optimization" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pydrake.lcm.html" class="btn btn-neutral float-right" title="pydrake.lcm" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+</footer>
+<script>
+  /* Enables clicking for the mobile "hamburger" (three-line) menu item. */
+  const siteHeader = document.querySelector('.site-header')
+  const mobileButton = document.querySelector('.menu-mobile-toggle')
+  const body = document.querySelector('body')
+
+  mobileButton.addEventListener('click', function(event) {
+    siteHeader.classList.toggle('open');
+    body.classList.toggle('overflow-hidden');
+  })
+</script>
+<footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg">
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

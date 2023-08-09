@@ -10,6 +10,7 @@ var classdrake_1_1solvers_1_1_linear_complementarity_constraint =
     [ "DoEval", "classdrake_1_1solvers_1_1_linear_complementarity_constraint.html#a863f7df9d3ee10378794b4c6842a4377", null ],
     [ "DoEval", "classdrake_1_1solvers_1_1_linear_complementarity_constraint.html#aa2431c2dbd82437d8f621033d8af8231", null ],
     [ "DoEval", "classdrake_1_1solvers_1_1_linear_complementarity_constraint.html#a5eea9354674efc1c07bf537319628ead", null ],
+    [ "DoToLatex", "classdrake_1_1solvers_1_1_linear_complementarity_constraint.html#aa8e1e9254703f4bfe3d3e4d01807f441", null ],
     [ "M", "classdrake_1_1solvers_1_1_linear_complementarity_constraint.html#a41cd52f9178fb411a0320d607c0ed0de", null ],
     [ "operator=", "classdrake_1_1solvers_1_1_linear_complementarity_constraint.html#a79a14d56125fe0e068352df8b2925dc3", null ],
     [ "operator=", "classdrake_1_1solvers_1_1_linear_complementarity_constraint.html#a0cc62a52f31fd4559c54056c5555df86", null ],

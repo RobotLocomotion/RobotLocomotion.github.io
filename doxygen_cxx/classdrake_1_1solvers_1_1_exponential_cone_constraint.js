@@ -10,6 +10,7 @@ var classdrake_1_1solvers_1_1_exponential_cone_constraint =
     [ "DoEval", "classdrake_1_1solvers_1_1_exponential_cone_constraint.html#aa2431c2dbd82437d8f621033d8af8231", null ],
     [ "DoEval", "classdrake_1_1solvers_1_1_exponential_cone_constraint.html#a5eea9354674efc1c07bf537319628ead", null ],
     [ "DoEvalGeneric", "classdrake_1_1solvers_1_1_exponential_cone_constraint.html#ad895dd4ffcf4c774b7586beb1cbdda69", null ],
-    [ "operator=", "classdrake_1_1solvers_1_1_exponential_cone_constraint.html#ab693a7669cf23e60b7ee4ae9678c6510", null ],
-    [ "operator=", "classdrake_1_1solvers_1_1_exponential_cone_constraint.html#af595bfd9e53d96bd88850eba12fa82a7", null ]
+    [ "DoToLatex", "classdrake_1_1solvers_1_1_exponential_cone_constraint.html#aa8e1e9254703f4bfe3d3e4d01807f441", null ],
+    [ "operator=", "classdrake_1_1solvers_1_1_exponential_cone_constraint.html#af595bfd9e53d96bd88850eba12fa82a7", null ],
+    [ "operator=", "classdrake_1_1solvers_1_1_exponential_cone_constraint.html#ab693a7669cf23e60b7ee4ae9678c6510", null ]
 ];

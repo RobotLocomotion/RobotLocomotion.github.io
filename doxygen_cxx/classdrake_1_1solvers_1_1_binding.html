@@ -198,6 +198,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aac993ecccd3d88aafefb6b8e3caa1dee"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_binding.html#aac993ecccd3d88aafefb6b8e3caa1dee">to_string</a> () const</td></tr>
 <tr class="memdesc:aac993ecccd3d88aafefb6b8e3caa1dee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns string representation of <a class="el" href="classdrake_1_1solvers_1_1_binding.html" title="A binding on constraint type C is a mapping of the decision variables onto the inputs of C.">Binding</a>.  <a href="#aac993ecccd3d88aafefb6b8e3caa1dee">More...</a><br /></td></tr>
 <tr class="separator:aac993ecccd3d88aafefb6b8e3caa1dee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d56859532ea054bc76a10ea691746bc"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_binding.html#a2d56859532ea054bc76a10ea691746bc">ToLatex</a> (<a class="el" href="classint.html">int</a> precision=3) const</td></tr>
+<tr class="memdesc:a2d56859532ea054bc76a10ea691746bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a LaTeX description of this <a class="el" href="classdrake_1_1solvers_1_1_binding.html" title="A binding on constraint type C is a mapping of the decision variables onto the inputs of C.">Binding</a>.  <a href="#a2d56859532ea054bc76a10ea691746bc">More...</a><br /></td></tr>
+<tr class="separator:a2d56859532ea054bc76a10ea691746bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a236729b642e241e5c611e09dba8951d2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_binding.html#a236729b642e241e5c611e09dba8951d2">operator==</a> (const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; C &gt; &amp;other) const</td></tr>
 <tr class="memdesc:a236729b642e241e5c611e09dba8951d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare two bindings based on their evaluator pointers and the bound variables.  <a href="#a236729b642e241e5c611e09dba8951d2">More...</a><br /></td></tr>
 <tr class="separator:a236729b642e241e5c611e09dba8951d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -522,6 +525,27 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns string representation of <a class="el" href="classdrake_1_1solvers_1_1_binding.html" title="A binding on constraint type C is a mapping of the decision variables onto the inputs of C.">Binding</a>. </p>
+
+</div>
+</div>
+<a id="a2d56859532ea054bc76a10ea691746bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d56859532ea054bc76a10ea691746bc">&#9670;&nbsp;</a></span>ToLatex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ToLatex </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>precision</em> = <code>3</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a LaTeX description of this <a class="el" href="classdrake_1_1solvers_1_1_binding.html" title="A binding on constraint type C is a mapping of the decision variables onto the inputs of C.">Binding</a>. </p>
+<p>Does not include any characters to enter/exit math mode; you might want, e.g. "$$" + <a class="el" href="namespacedrake_1_1symbolic.html#a50f946a2d656be1b946c8f2f6bf00810" title="Generates a LaTeX string representation of e with floating point coefficients displayed using precisi...">evaluator.ToLatex()</a> + "$$". </p>
 
 </div>
 </div>

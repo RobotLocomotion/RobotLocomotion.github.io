@@ -322,6 +322,7 @@ var group__solver__evaluators =
       [ "DoEval", "classdrake_1_1solvers_1_1_linear_constraint.html#a863f7df9d3ee10378794b4c6842a4377", null ],
       [ "DoEval", "classdrake_1_1solvers_1_1_linear_constraint.html#aa2431c2dbd82437d8f621033d8af8231", null ],
       [ "DoEval", "classdrake_1_1solvers_1_1_linear_constraint.html#a5eea9354674efc1c07bf537319628ead", null ],
+      [ "DoToLatex", "classdrake_1_1solvers_1_1_linear_constraint.html#aa8e1e9254703f4bfe3d3e4d01807f441", null ],
       [ "get_sparse_A", "classdrake_1_1solvers_1_1_linear_constraint.html#a1c266571ce951e63d66d582a62854908", null ],
       [ "GetDenseA", "classdrake_1_1solvers_1_1_linear_constraint.html#a38e25e75fd44159789b93a0c7f180c39", null ],
       [ "operator=", "classdrake_1_1solvers_1_1_linear_constraint.html#aa21495d4d797f18f8acd9dad11fdfdfc", null ],
@@ -364,6 +365,7 @@ var group__solver__evaluators =
       [ "DoEval", "classdrake_1_1solvers_1_1_linear_complementarity_constraint.html#a863f7df9d3ee10378794b4c6842a4377", null ],
       [ "DoEval", "classdrake_1_1solvers_1_1_linear_complementarity_constraint.html#aa2431c2dbd82437d8f621033d8af8231", null ],
       [ "DoEval", "classdrake_1_1solvers_1_1_linear_complementarity_constraint.html#a5eea9354674efc1c07bf537319628ead", null ],
+      [ "DoToLatex", "classdrake_1_1solvers_1_1_linear_complementarity_constraint.html#aa8e1e9254703f4bfe3d3e4d01807f441", null ],
       [ "M", "classdrake_1_1solvers_1_1_linear_complementarity_constraint.html#a41cd52f9178fb411a0320d607c0ed0de", null ],
       [ "operator=", "classdrake_1_1solvers_1_1_linear_complementarity_constraint.html#a79a14d56125fe0e068352df8b2925dc3", null ],
       [ "operator=", "classdrake_1_1solvers_1_1_linear_complementarity_constraint.html#a0cc62a52f31fd4559c54056c5555df86", null ],
@@ -377,6 +379,7 @@ var group__solver__evaluators =
       [ "DoEval", "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#a863f7df9d3ee10378794b4c6842a4377", null ],
       [ "DoEval", "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#aa2431c2dbd82437d8f621033d8af8231", null ],
       [ "DoEval", "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#a5eea9354674efc1c07bf537319628ead", null ],
+      [ "DoToLatex", "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#aa8e1e9254703f4bfe3d3e4d01807f441", null ],
       [ "matrix_rows", "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#ac070804dddf0300f7245aa6692940d95", null ],
       [ "operator=", "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#a2ef19e543f4121af42e8d3f5e66ce4fa", null ],
       [ "operator=", "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#af6182a9803c81d9ef793685fd891082f", null ]
@@ -389,10 +392,11 @@ var group__solver__evaluators =
       [ "DoEval", "classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#a863f7df9d3ee10378794b4c6842a4377", null ],
       [ "DoEval", "classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#aa2431c2dbd82437d8f621033d8af8231", null ],
       [ "DoEval", "classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#a5eea9354674efc1c07bf537319628ead", null ],
+      [ "DoToLatex", "classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#aa8e1e9254703f4bfe3d3e4d01807f441", null ],
       [ "F", "classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#aa36ab394854328438f9f23a05efcd0c4", null ],
       [ "matrix_rows", "classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#ac070804dddf0300f7245aa6692940d95", null ],
-      [ "operator=", "classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#a81d38df57d93852344ee376f7d29f275", null ],
-      [ "operator=", "classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#a110e13a03117327c96ccb37092fbde8a", null ]
+      [ "operator=", "classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#a110e13a03117327c96ccb37092fbde8a", null ],
+      [ "operator=", "classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#a81d38df57d93852344ee376f7d29f275", null ]
     ] ],
     [ "ExpressionConstraint", "classdrake_1_1solvers_1_1_expression_constraint.html", [
       [ "ExpressionConstraint", "classdrake_1_1solvers_1_1_expression_constraint.html#a46caf4fead07a0f09be7a6658294bb39", null ],
@@ -402,9 +406,10 @@ var group__solver__evaluators =
       [ "DoEval", "classdrake_1_1solvers_1_1_expression_constraint.html#a863f7df9d3ee10378794b4c6842a4377", null ],
       [ "DoEval", "classdrake_1_1solvers_1_1_expression_constraint.html#aa2431c2dbd82437d8f621033d8af8231", null ],
       [ "DoEval", "classdrake_1_1solvers_1_1_expression_constraint.html#a5eea9354674efc1c07bf537319628ead", null ],
+      [ "DoToLatex", "classdrake_1_1solvers_1_1_expression_constraint.html#aa8e1e9254703f4bfe3d3e4d01807f441", null ],
       [ "expressions", "classdrake_1_1solvers_1_1_expression_constraint.html#ac1cbc561801ad09635b6af9bddf602eb", null ],
-      [ "operator=", "classdrake_1_1solvers_1_1_expression_constraint.html#a89445cb6a4881d829648c96420b2a909", null ],
       [ "operator=", "classdrake_1_1solvers_1_1_expression_constraint.html#aeb2e4fedf967d3c57baaa00e7931141c", null ],
+      [ "operator=", "classdrake_1_1solvers_1_1_expression_constraint.html#a89445cb6a4881d829648c96420b2a909", null ],
       [ "vars", "classdrake_1_1solvers_1_1_expression_constraint.html#a0bdb5058e54f26856026de3d1acf9cf4", null ]
     ] ],
     [ "ExponentialConeConstraint", "classdrake_1_1solvers_1_1_exponential_cone_constraint.html", [
@@ -418,8 +423,9 @@ var group__solver__evaluators =
       [ "DoEval", "classdrake_1_1solvers_1_1_exponential_cone_constraint.html#aa2431c2dbd82437d8f621033d8af8231", null ],
       [ "DoEval", "classdrake_1_1solvers_1_1_exponential_cone_constraint.html#a5eea9354674efc1c07bf537319628ead", null ],
       [ "DoEvalGeneric", "classdrake_1_1solvers_1_1_exponential_cone_constraint.html#ad895dd4ffcf4c774b7586beb1cbdda69", null ],
-      [ "operator=", "classdrake_1_1solvers_1_1_exponential_cone_constraint.html#ab693a7669cf23e60b7ee4ae9678c6510", null ],
-      [ "operator=", "classdrake_1_1solvers_1_1_exponential_cone_constraint.html#af595bfd9e53d96bd88850eba12fa82a7", null ]
+      [ "DoToLatex", "classdrake_1_1solvers_1_1_exponential_cone_constraint.html#aa8e1e9254703f4bfe3d3e4d01807f441", null ],
+      [ "operator=", "classdrake_1_1solvers_1_1_exponential_cone_constraint.html#af595bfd9e53d96bd88850eba12fa82a7", null ],
+      [ "operator=", "classdrake_1_1solvers_1_1_exponential_cone_constraint.html#ab693a7669cf23e60b7ee4ae9678c6510", null ]
     ] ],
     [ "Cost", "classdrake_1_1solvers_1_1_cost.html", [
       [ "Cost", "classdrake_1_1solvers_1_1_cost.html#a7b9f49304c49f28ade4c1cc4b24b592a", null ],
@@ -439,9 +445,10 @@ var group__solver__evaluators =
       [ "DoEval", "classdrake_1_1solvers_1_1_linear_cost.html#a863f7df9d3ee10378794b4c6842a4377", null ],
       [ "DoEval", "classdrake_1_1solvers_1_1_linear_cost.html#aa2431c2dbd82437d8f621033d8af8231", null ],
       [ "DoEval", "classdrake_1_1solvers_1_1_linear_cost.html#a5eea9354674efc1c07bf537319628ead", null ],
+      [ "DoToLatex", "classdrake_1_1solvers_1_1_linear_cost.html#aa8e1e9254703f4bfe3d3e4d01807f441", null ],
       [ "GetSparseMatrix", "classdrake_1_1solvers_1_1_linear_cost.html#aa1b2d558d5487acf11ff7efb46fd76e8", null ],
-      [ "operator=", "classdrake_1_1solvers_1_1_linear_cost.html#a96660bcd5033480cd109da1361670f26", null ],
       [ "operator=", "classdrake_1_1solvers_1_1_linear_cost.html#a46863ada967e178fad6be79d2e8dd3d7", null ],
+      [ "operator=", "classdrake_1_1solvers_1_1_linear_cost.html#a96660bcd5033480cd109da1361670f26", null ],
       [ "UpdateCoefficients", "classdrake_1_1solvers_1_1_linear_cost.html#a083d486bad895d52d44b5ae214379ec0", null ]
     ] ],
     [ "QuadraticCost", "classdrake_1_1solvers_1_1_quadratic_cost.html", [
@@ -468,6 +475,7 @@ var group__solver__evaluators =
       [ "DoEval", "classdrake_1_1solvers_1_1_l1_norm_cost.html#a863f7df9d3ee10378794b4c6842a4377", null ],
       [ "DoEval", "classdrake_1_1solvers_1_1_l1_norm_cost.html#aa2431c2dbd82437d8f621033d8af8231", null ],
       [ "DoEval", "classdrake_1_1solvers_1_1_l1_norm_cost.html#a5eea9354674efc1c07bf537319628ead", null ],
+      [ "DoToLatex", "classdrake_1_1solvers_1_1_l1_norm_cost.html#aa8e1e9254703f4bfe3d3e4d01807f441", null ],
       [ "operator=", "classdrake_1_1solvers_1_1_l1_norm_cost.html#a17be3710c66eca9567f09c640fd2ba41", null ],
       [ "operator=", "classdrake_1_1solvers_1_1_l1_norm_cost.html#a9a99f0ecef212a5e3d88790649f6a032", null ],
       [ "UpdateCoefficients", "classdrake_1_1solvers_1_1_l1_norm_cost.html#a5c62a9fdaa320f7568a7ab93a80180dc", null ]
@@ -483,6 +491,7 @@ var group__solver__evaluators =
       [ "DoEval", "classdrake_1_1solvers_1_1_l2_norm_cost.html#a863f7df9d3ee10378794b4c6842a4377", null ],
       [ "DoEval", "classdrake_1_1solvers_1_1_l2_norm_cost.html#aa2431c2dbd82437d8f621033d8af8231", null ],
       [ "DoEval", "classdrake_1_1solvers_1_1_l2_norm_cost.html#a5eea9354674efc1c07bf537319628ead", null ],
+      [ "DoToLatex", "classdrake_1_1solvers_1_1_l2_norm_cost.html#aa8e1e9254703f4bfe3d3e4d01807f441", null ],
       [ "operator=", "classdrake_1_1solvers_1_1_l2_norm_cost.html#a4cf3e98daed7e5998c947592c2d7c3e0", null ],
       [ "operator=", "classdrake_1_1solvers_1_1_l2_norm_cost.html#addd377d5a0ba976169de8d2a389ff352", null ],
       [ "UpdateCoefficients", "classdrake_1_1solvers_1_1_l2_norm_cost.html#a5c62a9fdaa320f7568a7ab93a80180dc", null ]
@@ -498,6 +507,7 @@ var group__solver__evaluators =
       [ "DoEval", "classdrake_1_1solvers_1_1_l_inf_norm_cost.html#a863f7df9d3ee10378794b4c6842a4377", null ],
       [ "DoEval", "classdrake_1_1solvers_1_1_l_inf_norm_cost.html#aa2431c2dbd82437d8f621033d8af8231", null ],
       [ "DoEval", "classdrake_1_1solvers_1_1_l_inf_norm_cost.html#a5eea9354674efc1c07bf537319628ead", null ],
+      [ "DoToLatex", "classdrake_1_1solvers_1_1_l_inf_norm_cost.html#aa8e1e9254703f4bfe3d3e4d01807f441", null ],
       [ "operator=", "classdrake_1_1solvers_1_1_l_inf_norm_cost.html#ab6304fd980ebd27b25e88b5d2cfec5e8", null ],
       [ "operator=", "classdrake_1_1solvers_1_1_l_inf_norm_cost.html#ab765f2102252bded1d21b19ac5184576", null ],
       [ "UpdateCoefficients", "classdrake_1_1solvers_1_1_l_inf_norm_cost.html#a5c62a9fdaa320f7568a7ab93a80180dc", null ]
@@ -513,6 +523,7 @@ var group__solver__evaluators =
       [ "DoEval", "classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#a863f7df9d3ee10378794b4c6842a4377", null ],
       [ "DoEval", "classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#aa2431c2dbd82437d8f621033d8af8231", null ],
       [ "DoEval", "classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#a5eea9354674efc1c07bf537319628ead", null ],
+      [ "DoToLatex", "classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#aa8e1e9254703f4bfe3d3e4d01807f441", null ],
       [ "operator=", "classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#af32fe83b5bd0308ba9deac5a0331b76b", null ],
       [ "operator=", "classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#acd63f52880d3aad51f3d675636b4832c", null ],
       [ "UpdateCoefficients", "classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#a5c62a9fdaa320f7568a7ab93a80180dc", null ]
@@ -546,9 +557,10 @@ var group__solver__evaluators =
       [ "DoEval", "classdrake_1_1solvers_1_1_expression_cost.html#a863f7df9d3ee10378794b4c6842a4377", null ],
       [ "DoEval", "classdrake_1_1solvers_1_1_expression_cost.html#aa2431c2dbd82437d8f621033d8af8231", null ],
       [ "DoEval", "classdrake_1_1solvers_1_1_expression_cost.html#a5eea9354674efc1c07bf537319628ead", null ],
+      [ "DoToLatex", "classdrake_1_1solvers_1_1_expression_cost.html#aa8e1e9254703f4bfe3d3e4d01807f441", null ],
       [ "expression", "classdrake_1_1solvers_1_1_expression_cost.html#a125cb9305ffd8f4897e456f2ef263e98", null ],
-      [ "operator=", "classdrake_1_1solvers_1_1_expression_cost.html#abfe5dffe599fde6b490894d439da6e78", null ],
       [ "operator=", "classdrake_1_1solvers_1_1_expression_cost.html#ab4527d9954ab8947669d361995656a96", null ],
+      [ "operator=", "classdrake_1_1solvers_1_1_expression_cost.html#abfe5dffe599fde6b490894d439da6e78", null ],
       [ "vars", "classdrake_1_1solvers_1_1_expression_cost.html#a0bdb5058e54f26856026de3d1acf9cf4", null ]
     ] ],
     [ "SystemConstraintAdapter", "classdrake_1_1systems_1_1_system_constraint_adapter.html", [

@@ -10,8 +10,9 @@ var classdrake_1_1solvers_1_1_linear_cost =
     [ "DoEval", "classdrake_1_1solvers_1_1_linear_cost.html#a863f7df9d3ee10378794b4c6842a4377", null ],
     [ "DoEval", "classdrake_1_1solvers_1_1_linear_cost.html#aa2431c2dbd82437d8f621033d8af8231", null ],
     [ "DoEval", "classdrake_1_1solvers_1_1_linear_cost.html#a5eea9354674efc1c07bf537319628ead", null ],
+    [ "DoToLatex", "classdrake_1_1solvers_1_1_linear_cost.html#aa8e1e9254703f4bfe3d3e4d01807f441", null ],
     [ "GetSparseMatrix", "classdrake_1_1solvers_1_1_linear_cost.html#aa1b2d558d5487acf11ff7efb46fd76e8", null ],
-    [ "operator=", "classdrake_1_1solvers_1_1_linear_cost.html#a96660bcd5033480cd109da1361670f26", null ],
     [ "operator=", "classdrake_1_1solvers_1_1_linear_cost.html#a46863ada967e178fad6be79d2e8dd3d7", null ],
+    [ "operator=", "classdrake_1_1solvers_1_1_linear_cost.html#a96660bcd5033480cd109da1361670f26", null ],
     [ "UpdateCoefficients", "classdrake_1_1solvers_1_1_linear_cost.html#a083d486bad895d52d44b5ae214379ec0", null ]
 ];

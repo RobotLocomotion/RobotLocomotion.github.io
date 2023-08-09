@@ -10,6 +10,7 @@ var classdrake_1_1solvers_1_1_evaluator_base =
     [ "DoEval", "classdrake_1_1solvers_1_1_evaluator_base.html#a515e0d153b83bd7133f6a4bbf5e4534e", null ],
     [ "DoEval", "classdrake_1_1solvers_1_1_evaluator_base.html#a0184613cc2538fda69fa81bacfab9cb6", null ],
     [ "DoEval", "classdrake_1_1solvers_1_1_evaluator_base.html#a61a8d0234025beb9ce68ab8344ee81f3", null ],
+    [ "DoToLatex", "classdrake_1_1solvers_1_1_evaluator_base.html#a38a654a15b5202c41b1374af2deff2f4", null ],
     [ "Eval", "classdrake_1_1solvers_1_1_evaluator_base.html#a50219f96db07dfe231abad115aba84c2", null ],
     [ "Eval", "classdrake_1_1solvers_1_1_evaluator_base.html#adf337592a3f79f4797aa0856cf72865f", null ],
     [ "Eval", "classdrake_1_1solvers_1_1_evaluator_base.html#ae573cc421e67ff0cfa10b9885ace7b93", null ],
@@ -21,5 +22,6 @@ var classdrake_1_1solvers_1_1_evaluator_base =
     [ "operator=", "classdrake_1_1solvers_1_1_evaluator_base.html#ab72a0677c344c7bedf3691aabe24a8e9", null ],
     [ "set_description", "classdrake_1_1solvers_1_1_evaluator_base.html#a9b582ca26190005482986c1ac7f8609f", null ],
     [ "set_num_outputs", "classdrake_1_1solvers_1_1_evaluator_base.html#a6a5844a758fb9db2cbf63e64cafe833a", null ],
-    [ "SetGradientSparsityPattern", "classdrake_1_1solvers_1_1_evaluator_base.html#a604f98ac54b2b64e7dbe46efb31e9af1", null ]
+    [ "SetGradientSparsityPattern", "classdrake_1_1solvers_1_1_evaluator_base.html#a604f98ac54b2b64e7dbe46efb31e9af1", null ],
+    [ "ToLatex", "classdrake_1_1solvers_1_1_evaluator_base.html#ae50e80a411eaea6701020ad031a4ab0c", null ]
 ];

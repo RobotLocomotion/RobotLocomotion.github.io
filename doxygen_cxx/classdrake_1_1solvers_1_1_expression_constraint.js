@@ -7,8 +7,9 @@ var classdrake_1_1solvers_1_1_expression_constraint =
     [ "DoEval", "classdrake_1_1solvers_1_1_expression_constraint.html#a863f7df9d3ee10378794b4c6842a4377", null ],
     [ "DoEval", "classdrake_1_1solvers_1_1_expression_constraint.html#aa2431c2dbd82437d8f621033d8af8231", null ],
     [ "DoEval", "classdrake_1_1solvers_1_1_expression_constraint.html#a5eea9354674efc1c07bf537319628ead", null ],
+    [ "DoToLatex", "classdrake_1_1solvers_1_1_expression_constraint.html#aa8e1e9254703f4bfe3d3e4d01807f441", null ],
     [ "expressions", "classdrake_1_1solvers_1_1_expression_constraint.html#ac1cbc561801ad09635b6af9bddf602eb", null ],
-    [ "operator=", "classdrake_1_1solvers_1_1_expression_constraint.html#a89445cb6a4881d829648c96420b2a909", null ],
     [ "operator=", "classdrake_1_1solvers_1_1_expression_constraint.html#aeb2e4fedf967d3c57baaa00e7931141c", null ],
+    [ "operator=", "classdrake_1_1solvers_1_1_expression_constraint.html#a89445cb6a4881d829648c96420b2a909", null ],
     [ "vars", "classdrake_1_1solvers_1_1_expression_constraint.html#a0bdb5058e54f26856026de3d1acf9cf4", null ]
 ];

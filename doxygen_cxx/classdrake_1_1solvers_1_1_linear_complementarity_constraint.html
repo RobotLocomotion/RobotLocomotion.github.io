@@ -169,9 +169,11 @@ $(document).ready(function(){initNavTree('classdrake_1_1solvers_1_1_linear_compl
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implements a constraint of the form: </p>
 <pre>
-  Mx + q &gt;= 0
-  x &gt;= 0
+  Mx + q ≥ 0
+  x ≥ 0
   x'(Mx + q) == 0
+</pre><p> Often this is summarized with the short-hand: </p><pre>
+  0 ≤ z ⊥ Mz+q ≥ 0
 </pre><p>An implied slack variable complements any 0 component of x. To get the slack values at a given solution x, use Eval(x). </p>
 </div>
 <p><code>#include &lt;drake/solvers/constraint.h&gt;</code></p>
@@ -250,6 +252,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6075120b53bfe7e4341d7e4a0c526cca inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a6075120b53bfe7e4341d7e4a0c526cca">Display</a> (std::ostream &amp;os) const</td></tr>
 <tr class="memdesc:a6075120b53bfe7e4341d7e4a0c526cca inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats this evaluator into the given stream, without displaying the decision variables it is bound to.  <a href="classdrake_1_1solvers_1_1_evaluator_base.html#a6075120b53bfe7e4341d7e4a0c526cca">More...</a><br /></td></tr>
 <tr class="separator:a6075120b53bfe7e4341d7e4a0c526cca inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae50e80a411eaea6701020ad031a4ab0c inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#ae50e80a411eaea6701020ad031a4ab0c">ToLatex</a> (const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &amp;vars, <a class="el" href="classint.html">int</a> precision=3) const</td></tr>
+<tr class="memdesc:ae50e80a411eaea6701020ad031a4ab0c inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a LaTeX string describing this evaluator.  <a href="classdrake_1_1solvers_1_1_evaluator_base.html#ae50e80a411eaea6701020ad031a4ab0c">More...</a><br /></td></tr>
+<tr class="separator:ae50e80a411eaea6701020ad031a4ab0c inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a224e4c35014e87139f73f9a517866796 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a224e4c35014e87139f73f9a517866796">num_vars</a> () const</td></tr>
 <tr class="memdesc:a224e4c35014e87139f73f9a517866796 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for the number of variables, namely the number of rows in x, as used in Eval(x, y).  <a href="classdrake_1_1solvers_1_1_evaluator_base.html#a224e4c35014e87139f73f9a517866796">More...</a><br /></td></tr>
 <tr class="separator:a224e4c35014e87139f73f9a517866796 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -288,6 +293,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a905e90e7807b0e2b618658970ff6f2e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa76446865e36c6261be8798dbd5b9203"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_formula.html">symbolic::Formula</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_linear_complementarity_constraint.html#aa76446865e36c6261be8798dbd5b9203">DoCheckSatisfied</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;&gt; &amp;x) const override</td></tr>
 <tr class="separator:aa76446865e36c6261be8798dbd5b9203"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8e1e9254703f4bfe3d3e4d01807f441"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_linear_complementarity_constraint.html#aa8e1e9254703f4bfe3d3e4d01807f441">DoToLatex</a> (const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &amp;, <a class="el" href="classint.html">int</a>) const override</td></tr>
+<tr class="separator:aa8e1e9254703f4bfe3d3e4d01807f441"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classdrake_1_1solvers_1_1_constraint"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classdrake_1_1solvers_1_1_constraint')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">Constraint</a></td></tr>
 <tr class="memitem:a4f01849f46f82b2f890dd1264125d52f inherit pro_methods_classdrake_1_1solvers_1_1_constraint"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_constraint.html#a4f01849f46f82b2f890dd1264125d52f">UpdateLowerBound</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;new_lb)</td></tr>
 <tr class="memdesc:a4f01849f46f82b2f890dd1264125d52f inherit pro_methods_classdrake_1_1solvers_1_1_constraint"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the lower bound.  <a href="classdrake_1_1solvers_1_1_constraint.html#a4f01849f46f82b2f890dd1264125d52f">More...</a><br /></td></tr>
@@ -663,6 +670,44 @@ Protected Member Functions</h2></td></tr>
 <dl class="section post"><dt>Postcondition</dt><dd>y will be of size <code>num_outputs</code> x 1. </dd></dl>
 
 <p>Implements <a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a61a8d0234025beb9ce68ab8344ee81f3">EvaluatorBase</a>.</p>
+
+</div>
+</div>
+<a id="aa8e1e9254703f4bfe3d3e4d01807f441"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8e1e9254703f4bfe3d3e4d01807f441">&#9670;&nbsp;</a></span>DoToLatex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string DoToLatex </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a38a654a15b5202c41b1374af2deff2f4">EvaluatorBase</a>.</p>
 
 </div>
 </div>
