@@ -238,6 +238,7 @@ var NAVTREEINDEX43 =
 "contact__solver_8h.html":[4,0,0,8,2,8],
 "contact__solver__results_8h.html":[4,0,0,8,2,9],
 "contact__solver__utils_8h.html":[4,0,0,8,2,10],
+"contact__solvers_2schur__complement_8h.html":[4,0,0,8,2,17],
 "contact__surface_8h.html":[4,0,0,4,3,0],
 "contact__surface_8h.html#a227f80cb57c9c87f6ecc4e839e364979":[4,0,0,4,3,0,1],
 "contact__surface_8h.html#a227f80cb57c9c87f6ecc4e839e364979a3a53496ffe96227ef579995d332425c1":[4,0,0,4,3,0,1,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX43 =
 "contact__visualizer_8h.html#aaef19a49dabf0bd3fe0fd47e32a84706":[4,0,0,8,7,0,1],
 "contact__visualizer__params_8h.html":[4,0,0,8,7,1],
 "contact__wrench_8h.html":[4,0,0,8,8,1],
-"contact__wrench__evaluator_8h.html":[4,0,0,8,8,2],
-"context_8h.html":[4,0,0,12,3,7]
+"contact__wrench__evaluator_8h.html":[4,0,0,8,8,2]
 };

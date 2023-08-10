@@ -1,5 +1,8 @@
 var NAVTREEINDEX54 =
 {
+"sorted__pair_8h.html":[4,0,0,1,55],
+"sorted__pair_8h.html#a140ed52150ccb7d8a9194eec633ba50d":[4,0,0,1,55,9],
+"sorted__pair_8h.html#a642a411b9ac97aefd67450fd5717a890":[4,0,0,1,55,5],
 "sorted__pair_8h.html#a6d76c69274d87b34a742dae799e2177f":[4,0,0,1,55,7],
 "sorted__pair_8h.html#a87d5210878ec865ee82bb87786eb996d":[4,0,0,1,55,4],
 "sorted__pair_8h.html#a98c59bc997ae44eeb4d45bc371b26f0a":[4,0,0,1,55,11],
@@ -13,7 +16,7 @@ var NAVTREEINDEX54 =
 "space__xyz__floating__mobilizer_8h.html":[4,0,0,8,14,46],
 "space__xyz__mobilizer_8h.html":[4,0,0,8,14,47],
 "sparse__and__dense__matrix_8h.html":[4,0,0,11,55],
-"sparse__linear__operator_8h.html":[4,0,0,8,2,17],
+"sparse__linear__operator_8h.html":[4,0,0,8,2,18],
 "spatial__acceleration_8h.html":[4,0,0,8,6,0],
 "spatial__algebra_8h.html":[4,0,0,8,6,1],
 "spatial__algebra_8h.html#a20c5b057eb2bb3c32004a09588193538":[4,0,0,8,6,1,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX54 =
 "structdrake_1_1geometry_1_1_render_engine_vtk_params.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,42,0],
 "structdrake_1_1geometry_1_1_render_engine_vtk_params.html#ab0128f21da79318f9d8a2da1d4d3a684":[3,0,0,4,42,2],
 "structdrake_1_1geometry_1_1_render_engine_vtk_params.html#ace5c9e02c229a4fcf4b3ca57a6dfe7d6":[3,0,0,4,42,3],
-"structdrake_1_1geometry_1_1_shape_tag.html":[3,0,0,4,49],
-"structdrake_1_1geometry_1_1_signed_distance_pair.html":[3,0,0,4,50],
-"structdrake_1_1geometry_1_1_signed_distance_pair.html#a01b0d3895f2cd2cbeed07c2b2af575e6":[3,0,0,4,50,4],
-"structdrake_1_1geometry_1_1_signed_distance_pair.html#a09d9dc26f5ad9558065022d1cdab2b27":[3,0,0,4,50,6]
+"structdrake_1_1geometry_1_1_shape_tag.html":[3,0,0,4,49]
 };
