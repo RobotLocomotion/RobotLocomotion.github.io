@@ -1977,8 +1977,10 @@ not included.</p>
 geometry, a call to Finalize() must be performed. This call will: -
 Build the underlying tree structure of the multibody model, - declare
 the plant’s state, - declare the plant’s input and output ports, -
-declare collision filters to ignore collisions: - between bodies
-connected by a joint, - within subgraphs of welded bodies.</p>
+declare collision filters to ignore collisions among rigid bodies: -
+between rigid bodies connected by a joint, - within subgraphs of
+welded rigid bodies. Note that MultibodyPlant will <em>not</em> introduce
+<em>any</em> collision filters on deformable bodies.</p>
 <p><a href="#id19"><span class="problematic" id="id20">**</span></a>** References</p>
 <ul class="simple">
 <li><p>[Featherstone 2008] Featherstone, R., 2008.</p></li>
@@ -5729,6 +5731,28 @@ geometry::IllustrationProperties.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.RenameModelInstance">
+<span class="sig-name descname"><span class="pre">RenameModelInstance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.RenameModelInstance" title="Permalink to this definition"></a></dt>
+<dd><p>Renames an existing model instance.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>:</dt><dd><p>The instance to rename.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt><dd><p>A string that uniquely identifies the instance within <code class="docutils literal notranslate"><span class="pre">this</span></code>
+model.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if called after Finalize</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>RuntimeError if model_instance is not a valid index.</strong> – </p></li>
+<li><p><strong>RuntimeError if HasModelInstanceNamed</strong><strong>(</strong><strong>name</strong><strong>) </strong><strong>is true.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.set_adjacent_bodies_collision_filters">
 <span class="sig-name descname"><span class="pre">set_adjacent_bodies_collision_filters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.set_adjacent_bodies_collision_filters" title="Permalink to this definition"></a></dt>
 <dd><p>Sets whether to apply collision filters to topologically adjacent
@@ -6529,8 +6553,10 @@ not included.</p>
 geometry, a call to Finalize() must be performed. This call will: -
 Build the underlying tree structure of the multibody model, - declare
 the plant’s state, - declare the plant’s input and output ports, -
-declare collision filters to ignore collisions: - between bodies
-connected by a joint, - within subgraphs of welded bodies.</p>
+declare collision filters to ignore collisions among rigid bodies: -
+between rigid bodies connected by a joint, - within subgraphs of
+welded rigid bodies. Note that MultibodyPlant will <em>not</em> introduce
+<em>any</em> collision filters on deformable bodies.</p>
 <p><a href="#id47"><span class="problematic" id="id48">**</span></a>** References</p>
 <ul class="simple">
 <li><p>[Featherstone 2008] Featherstone, R., 2008.</p></li>
@@ -10238,6 +10264,28 @@ geometry::IllustrationProperties.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.RenameModelInstance">
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].RenameModelInstance"></span><span class="sig-name descname"><span class="pre">RenameModelInstance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.RenameModelInstance" title="Permalink to this definition"></a></dt>
+<dd><p>Renames an existing model instance.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>:</dt><dd><p>The instance to rename.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt><dd><p>A string that uniquely identifies the instance within <code class="docutils literal notranslate"><span class="pre">this</span></code>
+model.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if called after Finalize</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>RuntimeError if model_instance is not a valid index.</strong> – </p></li>
+<li><p><strong>RuntimeError if HasModelInstanceNamed</strong><strong>(</strong><strong>name</strong><strong>) </strong><strong>is true.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.set_adjacent_bodies_collision_filters">
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].set_adjacent_bodies_collision_filters"></span><span class="sig-name descname"><span class="pre">set_adjacent_bodies_collision_filters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.set_adjacent_bodies_collision_filters" title="Permalink to this definition"></a></dt>
 <dd><p>Sets whether to apply collision filters to topologically adjacent
@@ -11032,8 +11080,10 @@ not included.</p>
 geometry, a call to Finalize() must be performed. This call will: -
 Build the underlying tree structure of the multibody model, - declare
 the plant’s state, - declare the plant’s input and output ports, -
-declare collision filters to ignore collisions: - between bodies
-connected by a joint, - within subgraphs of welded bodies.</p>
+declare collision filters to ignore collisions among rigid bodies: -
+between rigid bodies connected by a joint, - within subgraphs of
+welded rigid bodies. Note that MultibodyPlant will <em>not</em> introduce
+<em>any</em> collision filters on deformable bodies.</p>
 <p><a href="#id75"><span class="problematic" id="id76">**</span></a>** References</p>
 <ul class="simple">
 <li><p>[Featherstone 2008] Featherstone, R., 2008.</p></li>
@@ -14738,6 +14788,28 @@ property of type CoulombFriction&lt;double&gt;.</p>
 <code class="docutils literal notranslate"><span class="pre">diffuse_color</span></code> (RGBA with values in the range [0, 1]) into a
 geometry::DrakeVisualizer-compatible set of
 geometry::IllustrationProperties.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.RenameModelInstance">
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].RenameModelInstance"></span><span class="sig-name descname"><span class="pre">RenameModelInstance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.RenameModelInstance" title="Permalink to this definition"></a></dt>
+<dd><p>Renames an existing model instance.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>:</dt><dd><p>The instance to rename.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt><dd><p>A string that uniquely identifies the instance within <code class="docutils literal notranslate"><span class="pre">this</span></code>
+model.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if called after Finalize</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>RuntimeError if model_instance is not a valid index.</strong> – </p></li>
+<li><p><strong>RuntimeError if HasModelInstanceNamed</strong><strong>(</strong><strong>name</strong><strong>) </strong><strong>is true.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">

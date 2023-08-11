@@ -1,5 +1,16 @@
 var NAVTREEINDEX54 =
 {
+"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ecaa1f0780f88b19c3a73710b47fc57d795":[4,0,0,11,52,0,4],
+"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ecaa71a8c0a25fe7a3d777fc06d50bada13":[4,0,0,11,52,0,0],
+"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ecabc8ddfb8a00bb405e68545ce187ac238":[4,0,0,11,52,0,3],
+"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ecabd0a61a2cf9acec23fccd41c7402ef56":[4,0,0,11,52,0,6],
+"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ecad1ddb13aaaf649f197e0f6549596571c":[4,0,0,11,52,0,11],
+"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ecae654b0ad8f79045aff33844a0c3cdf81":[4,0,0,11,52,0,1],
+"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ecaebb0e280cb0e7da8a3868247749a4d9d":[4,0,0,11,52,0,5],
+"solver__type__converter_8h.html":[4,0,0,11,53],
+"solvers__py_8h.html":[4,0,0,0,0,6,0],
+"solvers__pybind_8h.html":[4,0,0,0,0,6,1],
+"solvers__pybind_8h.html#ab20a1ef3e56f4759c3fae832d66332f0":[4,0,0,0,0,6,1,0],
 "sorted__pair_8h.html":[4,0,0,1,55],
 "sorted__pair_8h.html#a140ed52150ccb7d8a9194eec633ba50d":[4,0,0,1,55,9],
 "sorted__pair_8h.html#a642a411b9ac97aefd67450fd5717a890":[4,0,0,1,55,5],
@@ -238,16 +249,5 @@ var NAVTREEINDEX54 =
 "structdrake_1_1geometry_1_1_render_engine_gl_params.html#abbdc8937e3fab606a545e2a6749ee459":[3,0,0,4,40,2],
 "structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html":[3,0,0,4,41],
 "structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a05029dd35522254658dee01b5025968d":[3,0,0,4,41,0],
-"structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a58c8c4d09a9e537115c0b941b297e311":[3,0,0,4,41,5],
-"structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a6120129a500ee5f5fb32836c1ad5bbc0":[3,0,0,4,41,2],
-"structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a6d9b7b7aeb7996e8469a93c3dd4ee5ef":[3,0,0,4,41,3],
-"structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,41,1],
-"structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#ab3f078684998b83967d507d0f453f454":[3,0,0,4,41,6],
-"structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#ace5c9e02c229a4fcf4b3ca57a6dfe7d6":[3,0,0,4,41,4],
-"structdrake_1_1geometry_1_1_render_engine_vtk_params.html":[3,0,0,4,42],
-"structdrake_1_1geometry_1_1_render_engine_vtk_params.html#a21e03ddd563337ed39c36bc8f4463d8a":[3,0,0,4,42,1],
-"structdrake_1_1geometry_1_1_render_engine_vtk_params.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,42,0],
-"structdrake_1_1geometry_1_1_render_engine_vtk_params.html#ab0128f21da79318f9d8a2da1d4d3a684":[3,0,0,4,42,2],
-"structdrake_1_1geometry_1_1_render_engine_vtk_params.html#ace5c9e02c229a4fcf4b3ca57a6dfe7d6":[3,0,0,4,42,3],
-"structdrake_1_1geometry_1_1_shape_tag.html":[3,0,0,4,49]
+"structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a58c8c4d09a9e537115c0b941b297e311":[3,0,0,4,41,5]
 };

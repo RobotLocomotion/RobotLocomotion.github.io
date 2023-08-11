@@ -485,7 +485,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructs the Meshcat instance on <code>port</code>. </p>
-<p>If no port is specified, it will listen on the first available port starting at 7000 (up to 7099). </p><dl class="section pre"><dt>Precondition</dt><dd>We require <code>port</code> &gt;= 1024. </dd></dl>
+<p>If no port is specified, it will listen on the first available port starting at 7000 (up to 7999). If port 0 is specified, it will listen on an arbitrary "ephemeral" port. </p><dl class="section pre"><dt>Precondition</dt><dd>We require <code>port</code> == 0 || <code>port</code> &gt;= 1024. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if no requested <code>port</code> is available. </td></tr>

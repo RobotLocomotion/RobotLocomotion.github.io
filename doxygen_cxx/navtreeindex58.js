@@ -1,5 +1,16 @@
 var NAVTREEINDEX58 =
 {
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#ab63f7cdb7cd14bc9cc48c4b9d4a629a5":[3,0,0,16,2,0,6],
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#ad7e0abe77b84e16a4224c12492730d30":[3,0,0,16,2,0,4],
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html":[3,0,0,16,2,0,0],
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html#a1fbdf8974a433578feee716bd2074060":[3,0,0,16,2,0,0,1],
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html#a2fdb1c59d7e0362407f9784fff99c6ef":[3,0,0,16,2,0,0,0],
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html#a868930cd95abeb4a0a903df323444fd9":[3,0,0,16,2,0,0,2],
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html#ae2bfa68803b302dc2c985a150d7f9205":[3,0,0,16,2,0,0,3],
+"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html":[3,0,0,16,2,1],
+"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a0e3cbe33d19f96def02ebd180f9267a0":[3,0,0,16,2,1,1],
+"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a10106668012c2b809949d73d6e72f88f":[3,0,0,16,2,1,3],
+"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a1ba9dae3af1b60cc4f276e689b8f3134":[3,0,0,16,2,1,6],
 "structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a267538df8d3c6c1cf0dcd83eafa308ca":[3,0,0,16,2,1,8],
 "structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a29017aee3204b230b5884faaf2fac289":[3,0,0,16,2,1,0],
 "structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a4242c7dc34593f02bccbbd0dd44585f2":[3,0,0,16,2,1,4],
@@ -238,16 +249,5 @@ var NAVTREEINDEX58 =
 "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_chebyshev_polynomial_01_4.html":[3,0,1,26],
 "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_generic_polynomial_3_01_basis_element_01_4_01_4.html":[3,0,1,27],
 "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_monomial_basis_element_01_4.html":[3,0,1,28],
-"structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_polynomial_01_4.html":[3,0,1,29],
-"structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_rational_function_01_4.html":[3,0,1,30],
-"structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_variable_01_4.html":[3,0,1,31],
-"structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_variable_1_1_type_01_4.html":[3,0,1,32],
-"structfmt_1_1formatter_3_01drake_1_1systems_1_1_vector_base_3_01_t_01_4_01_4.html":[3,0,1,34],
-"structfmt_1_1formatter_3_01drake_1_1systems_1_1sensors_1_1_color_3_01_t_01_4_01_4.html":[3,0,1,33],
-"structfmt_1_1formatter_3_01drake_1_1yaml_1_1_load_yaml_options_01_4.html":[3,0,1,36],
-"structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_expression_01_4.html":[3,0,2,0],
-"structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_expression_01_4.html#a538d122bb822306915eed589daae8627":[3,0,2,0,0],
-"structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_formula_01_4.html":[3,0,2,1],
-"structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_formula_01_4.html#ad8fefac14435343adfcc69f7348f0961":[3,0,2,1,0],
-"structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_variable_01_4.html":[3,0,2,2]
+"structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_polynomial_01_4.html":[3,0,1,29]
 };

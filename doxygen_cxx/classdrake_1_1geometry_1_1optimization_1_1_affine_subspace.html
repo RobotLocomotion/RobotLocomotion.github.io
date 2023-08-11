@@ -215,6 +215,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5d6c9e843c1772c0cade2a7ae80f3773"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a5d6c9e843c1772c0cade2a7ae80f3773">IsNearlyEqualTo</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html">AffineSubspace</a> &amp;other, <a class="el" href="classdouble.html">double</a> tol=1e-15) const</td></tr>
 <tr class="memdesc:a5d6c9e843c1772c0cade2a7ae80f3773"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the two AffineSubspaces describe the same set, by checking that each set is contained in the other.  <a href="#a5d6c9e843c1772c0cade2a7ae80f3773">More...</a><br /></td></tr>
 <tr class="separator:a5d6c9e843c1772c0cade2a7ae80f3773"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a767c3fafb6cb988dcad2dc3eef77d183"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a767c3fafb6cb988dcad2dc3eef77d183">OrthogonalComplementBasis</a> () const</td></tr>
+<tr class="memdesc:a767c3fafb6cb988dcad2dc3eef77d183"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an orthonormal basis of the vector subspace which is perpendicular to this <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html" title="An affine subspace (also known as a &quot;flat&quot;, a &quot;linear variety&quot;, or a &quot;linear manifold&quot;) is a vector s...">AffineSubspace</a>.  <a href="#a767c3fafb6cb988dcad2dc3eef77d183">More...</a><br /></td></tr>
+<tr class="separator:a767c3fafb6cb988dcad2dc3eef77d183"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
 <tr class="memitem:a69ca9f24815ca559fa2afadb9cef61fc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a69ca9f24815ca559fa2afadb9cef61fc">AffineSubspace</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html">AffineSubspace</a> &amp;)=default</td></tr>
 <tr class="separator:a69ca9f24815ca559fa2afadb9cef61fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -650,6 +653,25 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a767c3fafb6cb988dcad2dc3eef77d183"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a767c3fafb6cb988dcad2dc3eef77d183">&#9670;&nbsp;</a></span>OrthogonalComplementBasis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::MatrixXd OrthogonalComplementBasis </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns an orthonormal basis of the vector subspace which is perpendicular to this <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html" title="An affine subspace (also known as a &quot;flat&quot;, a &quot;linear variety&quot;, or a &quot;linear manifold&quot;) is a vector s...">AffineSubspace</a>. </p>
 
 </div>
 </div>

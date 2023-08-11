@@ -303,9 +303,9 @@ class drake::multibody::MultibodyPlant&lt; T &gt;</h3>
 <li>Build the underlying tree structure of the multibody model,</li>
 <li>declare the plant's state,</li>
 <li>declare the plant's input and output ports,</li>
-<li>declare collision filters to ignore collisions:<ul>
-<li>between bodies connected by a joint,</li>
-<li>within subgraphs of welded bodies.</li>
+<li>declare collision filters to ignore collisions among rigid bodies:<ul>
+<li>between rigid bodies connected by a joint,</li>
+<li>within subgraphs of welded rigid bodies. Note that <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> will <em>not</em> introduce <em>any</em> collision filters on deformable bodies.</li>
 </ul>
 </li>
 </ul>
@@ -429,6 +429,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4edf1daa65069a26255c903b02bce4c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a4edf1daa65069a26255c903b02bce4c6">AddModelInstance</a> (const std::string &amp;name)</td></tr>
 <tr class="memdesc:a4edf1daa65069a26255c903b02bce4c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new model instance.  <a href="#a4edf1daa65069a26255c903b02bce4c6">More...</a><br /></td></tr>
 <tr class="separator:a4edf1daa65069a26255c903b02bce4c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43433a05aa2c28c03644da7319adab9f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a43433a05aa2c28c03644da7319adab9f">RenameModelInstance</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance, const std::string &amp;name)</td></tr>
+<tr class="memdesc:a43433a05aa2c28c03644da7319adab9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renames an existing model instance.  <a href="#a43433a05aa2c28c03644da7319adab9f">More...</a><br /></td></tr>
+<tr class="separator:a43433a05aa2c28c03644da7319adab9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8fee61d7a783cade1a3d07fe86284d27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27">Finalize</a> ()</td></tr>
 <tr class="memdesc:a8fee61d7a783cade1a3d07fe86284d27"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method must be called after all elements in the model (joints, bodies, force elements, constraints, etc.) are added and before any computations are performed.  <a href="#a8fee61d7a783cade1a3d07fe86284d27">More...</a><br /></td></tr>
 <tr class="separator:a8fee61d7a783cade1a3d07fe86284d27"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -521,7 +524,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:acb2b21ccb8a93f1929cdec2dc19a6b7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an array of GeometryId's identifying the different contact geometries for <code>body</code> previously registered with a SceneGraph.  <a href="#acb2b21ccb8a93f1929cdec2dc19a6b7f">More...</a><br /></td></tr>
 <tr class="separator:acb2b21ccb8a93f1929cdec2dc19a6b7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41edc1b3c920a1e48f27ad5661584fad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a41edc1b3c920a1e48f27ad5661584fad">ExcludeCollisionGeometriesWithCollisionFilterGroupPair</a> (const std::pair&lt; std::string, <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">geometry::GeometrySet</a> &gt; &amp;collision_filter_group_a, const std::pair&lt; std::string, <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">geometry::GeometrySet</a> &gt; &amp;collision_filter_group_b)</td></tr>
-<tr class="memdesc:a41edc1b3c920a1e48f27ad5661584fad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Excludes the collision geometries between two given collision filter groups.  <a href="#a41edc1b3c920a1e48f27ad5661584fad">More...</a><br /></td></tr>
+<tr class="memdesc:a41edc1b3c920a1e48f27ad5661584fad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Excludes the rigid collision geometries between two given collision filter groups.  <a href="#a41edc1b3c920a1e48f27ad5661584fad">More...</a><br /></td></tr>
 <tr class="separator:a41edc1b3c920a1e48f27ad5661584fad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a830e17ff113f70e86e1c6a8b1b60d662"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">geometry::GeometrySet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a830e17ff113f70e86e1c6a8b1b60d662">CollectRegisteredGeometries</a> (const std::vector&lt; const <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; * &gt; &amp;bodies) const</td></tr>
 <tr class="memdesc:a830e17ff113f70e86e1c6a8b1b60d662"><td class="mdescLeft">&#160;</td><td class="mdescRight">For each of the provided <code>bodies</code>, collects up all geometries that have been registered to that body.  <a href="#a830e17ff113f70e86e1c6a8b1b60d662">More...</a><br /></td></tr>
@@ -3828,8 +3831,8 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Excludes the collision geometries between two given collision filter groups. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a4a6d28ce9c8119bee923e827eb6f02ed" title="Registers this plant to serve as a source for an instance of SceneGraph.">RegisterAsSourceForSceneGraph()</a> has been called. </dd>
+<p>Excludes the rigid collision geometries between two given collision filter groups. </p>
+<p>Note that collisions involving deformable geometries are not filtered by this function. </p><dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a4a6d28ce9c8119bee923e827eb6f02ed" title="Registers this plant to serve as a source for an instance of SceneGraph.">RegisterAsSourceForSceneGraph()</a> has been called. </dd>
 <dd>
 <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a> has <em>not</em> been called. </dd></dl>
 
@@ -8332,6 +8335,51 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 </div><div class="memdoc">
 
 <p>Overload for visual geometry registration; it relies on the downstream <a class="el" href="classdrake_1_1geometry_1_1_illustration_properties.html" title="The set of properties for geometry used in an &quot;illustration&quot; role.">geometry::IllustrationProperties</a> <em>consumer</em> to provide default parameter values (see <a class="el" href="group__geometry__roles.html">Geometry Queries and Roles</a> for details). </p>
+
+</div>
+</div>
+<a id="a43433a05aa2c28c03644da7319adab9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43433a05aa2c28c03644da7319adab9f">&#9670;&nbsp;</a></span>RenameModelInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RenameModelInstance </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a>&#160;</td>
+          <td class="paramname"><em>model_instance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Renames an existing model instance. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">model_instance</td><td>The instance to rename. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>A string that uniquely identifies the instance within <code>this</code> model. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if called after <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>model_instance</code> is not a valid index. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if HasModelInstanceNamed(<code>name</code>) is true. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

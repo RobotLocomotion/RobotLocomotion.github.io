@@ -1,5 +1,16 @@
 var NAVTREEINDEX59 =
 {
+"structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_rational_function_01_4.html":[3,0,1,30],
+"structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_variable_01_4.html":[3,0,1,31],
+"structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_variable_1_1_type_01_4.html":[3,0,1,32],
+"structfmt_1_1formatter_3_01drake_1_1systems_1_1_vector_base_3_01_t_01_4_01_4.html":[3,0,1,34],
+"structfmt_1_1formatter_3_01drake_1_1systems_1_1sensors_1_1_color_3_01_t_01_4_01_4.html":[3,0,1,33],
+"structfmt_1_1formatter_3_01drake_1_1yaml_1_1_load_yaml_options_01_4.html":[3,0,1,36],
+"structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_expression_01_4.html":[3,0,2,0],
+"structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_expression_01_4.html#a538d122bb822306915eed589daae8627":[3,0,2,0,0],
+"structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_formula_01_4.html":[3,0,2,1],
+"structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_formula_01_4.html#ad8fefac14435343adfcc69f7348f0961":[3,0,2,1,0],
+"structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_variable_01_4.html":[3,0,2,2],
 "structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_variable_01_4.html#a69e9ace88f698342e05dcf0cc1899818":[3,0,2,2,0],
 "structstd_1_1hash_3_01drake_1_1_identifier_3_01_tag_01_4_01_4.html":[3,0,2,6],
 "structstd_1_1hash_3_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html":[3,0,2,9],
@@ -238,16 +249,5 @@ var NAVTREEINDEX59 =
 "variable_8h.html#ab16b3f1c2c4dba6f5b0f7d9a76766f7a":[4,0,0,1,3,0,11,6],
 "variable_8h.html#ab61ece2fbaa79f8aad11313fa4b36150":[4,0,0,1,3,0,11,7],
 "variable_8h.html#ab6e0055c99275292d22eb59c103fb0ae":[4,0,0,1,3,0,11,27],
-"variable_8h.html#ac3b123dcb60415c706814483e6b6d2a8":[4,0,0,1,3,0,11,26],
-"variable_8h.html#ac43a4b68b6447c593384282b8a9bc1bc":[4,0,0,1,3,0,11,16],
-"variable_8h.html#ad93b9abfad06da819d5460018eb49b5c":[4,0,0,1,3,0,11,12],
-"variables_8h.html":[4,0,0,1,3,0,12],
-"variables_8h.html#a062f8182804bd14f76a6f2ac17718a80":[4,0,0,1,3,0,12,9],
-"variables_8h.html#a3d93012a42e93f92eb3b7fab8bd60733":[4,0,0,1,3,0,12,8],
-"variables_8h.html#a3ee8a097ba9d2c5d5ee4643471c945ce":[4,0,0,1,3,0,12,7],
-"variables_8h.html#a497331a32f5911a18cef34b07df6c04a":[4,0,0,1,3,0,12,4],
-"variables_8h.html#a50ee50ee4e70ef4393128598d143a2a6":[4,0,0,1,3,0,12,11],
-"variables_8h.html#a668d0a0cca975453784c6cd77d638c56":[4,0,0,1,3,0,12,10],
-"variables_8h.html#a8dc4e8320720218ee84dc1fdc7439d17":[4,0,0,1,3,0,12,2],
-"variables_8h.html#aae117a884f72a1a73cc2863ec026c011":[4,0,0,1,3,0,12,5]
+"variable_8h.html#ac3b123dcb60415c706814483e6b6d2a8":[4,0,0,1,3,0,11,26]
 };

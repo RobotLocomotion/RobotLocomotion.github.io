@@ -410,6 +410,11 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
+<tr class="memitem:ad580d9f8e007396af59694d605245253"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#ad580d9f8e007396af59694d605245253">CollisionFilterScope</a> { <a class="el" href="namespacedrake_1_1geometry.html#ad580d9f8e007396af59694d605245253a34bdbffdb1c0e1b603f58fc0d49548b6">kAll</a>, 
+<a class="el" href="namespacedrake_1_1geometry.html#ad580d9f8e007396af59694d605245253add0cbaa458a6d1a39dfc809377ad2be8">kOmitDeformable</a>
+ }</td></tr>
+<tr class="memdesc:ad580d9f8e007396af59694d605245253"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum that defines the scope of the geometries that are affected by the collision filtering mechanism.  <a href="namespacedrake_1_1geometry.html#ad580d9f8e007396af59694d605245253">More...</a><br /></td></tr>
+<tr class="separator:ad580d9f8e007396af59694d605245253"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdd79a1a4f81dd6ee5cddcb21149b951"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#acdd79a1a4f81dd6ee5cddcb21149b951">Role</a> { <a class="el" href="namespacedrake_1_1geometry.html#acdd79a1a4f81dd6ee5cddcb21149b951a41ba12ed492ce20c3ff503a553ae85ea">kUnassigned</a> = 0x0, 
 <a class="el" href="namespacedrake_1_1geometry.html#acdd79a1a4f81dd6ee5cddcb21149b951ad909c44a5dea6ebbdb3a95e4cb701521">kProximity</a> = 0x1, 
 <a class="el" href="namespacedrake_1_1geometry.html#acdd79a1a4f81dd6ee5cddcb21149b951aac28e5ab68fbe5dc23f550aa18255c07">kIllustration</a> = 0x2, 
@@ -751,6 +756,37 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="ad580d9f8e007396af59694d605245253"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad580d9f8e007396af59694d605245253">&#9670;&nbsp;</a></span>CollisionFilterScope</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="namespacedrake_1_1geometry.html#ad580d9f8e007396af59694d605245253">CollisionFilterScope</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Enum that defines the scope of the geometries that are affected by the collision filtering mechanism. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad580d9f8e007396af59694d605245253a34bdbffdb1c0e1b603f58fc0d49548b6"></a>kAll&#160;</td><td class="fielddoc"><p>All geometries are considered when collision filters are applied. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad580d9f8e007396af59694d605245253add0cbaa458a6d1a39dfc809377ad2be8"></a>kOmitDeformable&#160;</td><td class="fielddoc"><p>Deformable geometries are omitted when applying collision filters. </p>
+<p>That means that all deformable geometries are not affected by the collision filter declaration even if they are included in the <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html" title="The GeometrySet, as its name implies, is a convenience class for defining a set of geometries.">GeometrySet</a> when the filter is declared. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a id="a227f80cb57c9c87f6ecc4e839e364979"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a227f80cb57c9c87f6ecc4e839e364979">&#9670;&nbsp;</a></span>HydroelasticContactRepresentation</h2>
 

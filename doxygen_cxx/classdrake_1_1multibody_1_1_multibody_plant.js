@@ -212,6 +212,7 @@ var classdrake_1_1multibody_1_1_multibody_plant =
     [ "RegisterVisualGeometry", "classdrake_1_1multibody_1_1_multibody_plant.html#ac2ae40642e0504217ada31209e1ecb80", null ],
     [ "RegisterVisualGeometry", "classdrake_1_1multibody_1_1_multibody_plant.html#ad31bebf1580d051c3a2e243c9b511175", null ],
     [ "RegisterVisualGeometry", "classdrake_1_1multibody_1_1_multibody_plant.html#ad27da771f6b43d4944b33dc6d6338f8e", null ],
+    [ "RenameModelInstance", "classdrake_1_1multibody_1_1_multibody_plant.html#a43433a05aa2c28c03644da7319adab9f", null ],
     [ "set_adjacent_bodies_collision_filters", "classdrake_1_1multibody_1_1_multibody_plant.html#ada6a17fc10f55293cc507b583220f8d7", null ],
     [ "set_contact_model", "classdrake_1_1multibody_1_1_multibody_plant.html#ad253ab790ff8e142080cedd210e982da", null ],
     [ "set_contact_surface_representation", "classdrake_1_1multibody_1_1_multibody_plant.html#ad6df8a26aa42b59344e931ac9d6f5357", null ],

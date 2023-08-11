@@ -1,5 +1,8 @@
 var NAVTREEINDEX5 =
 {
+"classdrake_1_1geometry_1_1_kinematics_vector.html#afa31ec21de4026953a4add92ab0e025b":[3,0,0,4,24,6],
+"classdrake_1_1geometry_1_1_mesh.html":[3,0,0,4,25],
+"classdrake_1_1geometry_1_1_mesh.html#a0d3626df50b3182819a2dba3433f8327":[3,0,0,4,25,5],
 "classdrake_1_1geometry_1_1_mesh.html#a18553ad65730d9f09bd921809e552efe":[3,0,0,4,25,1],
 "classdrake_1_1geometry_1_1_mesh.html#a5109cb042f782c4a77fcb072e4d4bf10":[3,0,0,4,25,7],
 "classdrake_1_1geometry_1_1_mesh.html#a5a2ba33fb44bb4a5f4e273a5d9d440ea":[3,0,0,4,25,3],
@@ -239,15 +242,12 @@ var NAVTREEINDEX5 =
 "classdrake_1_1geometry_1_1_rgba.html#aba2fb275f323b8161edded468244933e":[3,0,0,4,43,3],
 "classdrake_1_1geometry_1_1_rgba.html#add2e7e9ccd65020da30bd29a789358ec":[3,0,0,4,43,8],
 "classdrake_1_1geometry_1_1_scene_graph.html":[1,2,13],
-"classdrake_1_1geometry_1_1_scene_graph.html#a0a8b0295af9d14d2555ceca831cd8a14":[1,2,13,23],
-"classdrake_1_1geometry_1_1_scene_graph.html#a1124e1d23f8363e47ef7db90e57e4900":[1,2,13,22],
+"classdrake_1_1geometry_1_1_scene_graph.html#a0a8b0295af9d14d2555ceca831cd8a14":[1,2,13,22],
+"classdrake_1_1geometry_1_1_scene_graph.html#a1124e1d23f8363e47ef7db90e57e4900":[1,2,13,23],
 "classdrake_1_1geometry_1_1_scene_graph.html#a14fe2ae2ffcc6ef39c82b2ebf2561e9d":[1,2,13,17],
 "classdrake_1_1geometry_1_1_scene_graph.html#a1f967549c18523e7acffff7daa09bb7e":[1,2,13,34],
 "classdrake_1_1geometry_1_1_scene_graph.html#a2135ff8bc7d0e646f5cb5cf44a6afae9":[1,2,13,37],
 "classdrake_1_1geometry_1_1_scene_graph.html#a25dc47d81e495aad7dee6d2932dcd655":[1,2,13,8],
 "classdrake_1_1geometry_1_1_scene_graph.html#a26da55d64bd1dda5bda1ea5ae8b985c4":[1,2,13,16],
-"classdrake_1_1geometry_1_1_scene_graph.html#a26eded4be5dd50b32d8cba6151e850f1":[1,2,13,3],
-"classdrake_1_1geometry_1_1_scene_graph.html#a2ab7ed8e4ca812f1f02d7dce715104c4":[1,2,13,30],
-"classdrake_1_1geometry_1_1_scene_graph.html#a331f7bdcffde753165cd98d7081f75d4":[1,2,13,1],
-"classdrake_1_1geometry_1_1_scene_graph.html#a3d5bf882337dfed524c1da91fb96f618":[1,2,13,15]
+"classdrake_1_1geometry_1_1_scene_graph.html#a26eded4be5dd50b32d8cba6151e850f1":[1,2,13,3]
 };

@@ -3789,9 +3789,10 @@ option to deny Meshcat entirely.</p>
 </ol>
 <p>Constructs the Meshcat instance on <code class="docutils literal notranslate"><span class="pre">port</span></code>. If no port is specified,
 it will listen on the first available port starting at 7000 (up to
-7099).</p>
+7999). If port 0 is specified, it will listen on an arbitrary
+“ephemeral” port.</p>
 <dl class="simple">
-<dt>Precondition:</dt><dd><p>We require <code class="docutils literal notranslate"><span class="pre">port</span></code> &gt;= 1024.</p>
+<dt>Precondition:</dt><dd><p>We require <code class="docutils literal notranslate"><span class="pre">port</span></code> == 0 || <code class="docutils literal notranslate"><span class="pre">port</span></code> &gt;= 1024.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -5051,9 +5052,10 @@ appropriate default value will be chosen (currently “*”).</p>
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">port</span></span><a class="headerlink" href="#pydrake.geometry.MeshcatParams.port" title="Permalink to this definition"></a></dt>
 <dd><p>Meshcat will listen on the given http <code class="docutils literal notranslate"><span class="pre">port</span></code>. If no port is
 specified, then it will listen on the first available port starting at
-7000 (up to 7099).</p>
+7000 (up to 7999). If port 0 is specified, it will listen on an
+arbitrary “ephemeral” port.</p>
 <dl class="simple">
-<dt>Precondition:</dt><dd><p>We require <code class="docutils literal notranslate"><span class="pre">port</span></code> &gt;= 1024.</p>
+<dt>Precondition:</dt><dd><p>We require <code class="docutils literal notranslate"><span class="pre">port</span></code> == 0 || <code class="docutils literal notranslate"><span class="pre">port</span></code> &gt;= 1024.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -10137,6 +10139,54 @@ copy of the model stored in the provided context.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraph.RenameFrame">
+<span class="sig-name descname"><span class="pre">RenameFrame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraph" title="pydrake.geometry.SceneGraph"><span class="pre">pydrake.geometry.SceneGraph</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.FrameId" title="pydrake.geometry.FrameId"><span class="pre">pydrake.geometry.FrameId</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraph.RenameFrame" title="Permalink to this definition"></a></dt>
+<dd><p>Renames the frame to <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
+<p>This method modifies the underlying model and requires a new Context
+to be allocated. It does not modify the model versions (see
+scene_graph_versioning).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_id</span></code>:</dt><dd><p>The id of the frame to rename.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt><dd><p>The new name.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if a</strong><strong>) </strong><strong>the frame_id does not map to a valid frame</strong><strong>,</strong> – </p></li>
+<li><p><strong>or b</strong><strong>) </strong><strong>there is already a frame named name from the same</strong> – </p></li>
+<li><p><strong>source.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraph.RenameGeometry">
+<span class="sig-name descname"><span class="pre">RenameGeometry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraph" title="pydrake.geometry.SceneGraph"><span class="pre">pydrake.geometry.SceneGraph</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraph.RenameGeometry" title="Permalink to this definition"></a></dt>
+<dd><p>Renames the geometry to <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
+<p>This method modifies the underlying model and requires a new Context
+to be allocated. It does not modify the model versions (see
+scene_graph_versioning).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>:</dt><dd><p>The id of the geometry to rename.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt><dd><p>The new name.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if a</strong><strong>) </strong><strong>the geometry_id does not map to a valid</strong> – </p></li>
+<li><p><strong>geometry</strong><strong>, or </strong><strong>b</strong><strong>) </strong><strong>name is not unique within any assigned role of</strong> – </p></li>
+<li><p><strong>the geometry in its associated frame.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraph.RendererCount">
 <span class="sig-name descname"><span class="pre">RendererCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraph" title="pydrake.geometry.SceneGraph"><span class="pre">pydrake.geometry.SceneGraph</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraph.RendererCount" title="Permalink to this definition"></a></dt>
 <dd><p>Reports the number of renderers registered to this SceneGraph.</p>
@@ -10869,6 +10919,54 @@ copy of the model stored in the provided context.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraph_-AutoDiffXd-.RenameFrame">
+<span id="pydrake.geometry.SceneGraph_[AutoDiffXd].RenameFrame"></span><span class="sig-name descname"><span class="pre">RenameFrame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraph_" title="pydrake.geometry.SceneGraph_"><span class="pre">pydrake.geometry.SceneGraph_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.FrameId" title="pydrake.geometry.FrameId"><span class="pre">pydrake.geometry.FrameId</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-AutoDiffXd-.RenameFrame" title="Permalink to this definition"></a></dt>
+<dd><p>Renames the frame to <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
+<p>This method modifies the underlying model and requires a new Context
+to be allocated. It does not modify the model versions (see
+scene_graph_versioning).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_id</span></code>:</dt><dd><p>The id of the frame to rename.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt><dd><p>The new name.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if a</strong><strong>) </strong><strong>the frame_id does not map to a valid frame</strong><strong>,</strong> – </p></li>
+<li><p><strong>or b</strong><strong>) </strong><strong>there is already a frame named name from the same</strong> – </p></li>
+<li><p><strong>source.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraph_-AutoDiffXd-.RenameGeometry">
+<span id="pydrake.geometry.SceneGraph_[AutoDiffXd].RenameGeometry"></span><span class="sig-name descname"><span class="pre">RenameGeometry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraph_" title="pydrake.geometry.SceneGraph_"><span class="pre">pydrake.geometry.SceneGraph_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-AutoDiffXd-.RenameGeometry" title="Permalink to this definition"></a></dt>
+<dd><p>Renames the geometry to <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
+<p>This method modifies the underlying model and requires a new Context
+to be allocated. It does not modify the model versions (see
+scene_graph_versioning).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>:</dt><dd><p>The id of the geometry to rename.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt><dd><p>The new name.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if a</strong><strong>) </strong><strong>the geometry_id does not map to a valid</strong> – </p></li>
+<li><p><strong>geometry</strong><strong>, or </strong><strong>b</strong><strong>) </strong><strong>name is not unique within any assigned role of</strong> – </p></li>
+<li><p><strong>the geometry in its associated frame.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraph_-AutoDiffXd-.RendererCount">
 <span id="pydrake.geometry.SceneGraph_[AutoDiffXd].RendererCount"></span><span class="sig-name descname"><span class="pre">RendererCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraph_" title="pydrake.geometry.SceneGraph_"><span class="pre">pydrake.geometry.SceneGraph_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-AutoDiffXd-.RendererCount" title="Permalink to this definition"></a></dt>
 <dd><p>Reports the number of renderers registered to this SceneGraph.</p>
@@ -11592,6 +11690,54 @@ did not have the role assigned in the first place.</p>
 RemoveRole(SourceId,GeometryId,Role) “RemoveRole()” for individual
 geometries. Rather than modifying SceneGraph’s model, it modifies the
 copy of the model stored in the provided context.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraph_-Expression-.RenameFrame">
+<span id="pydrake.geometry.SceneGraph_[Expression].RenameFrame"></span><span class="sig-name descname"><span class="pre">RenameFrame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraph_" title="pydrake.geometry.SceneGraph_"><span class="pre">pydrake.geometry.SceneGraph_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.FrameId" title="pydrake.geometry.FrameId"><span class="pre">pydrake.geometry.FrameId</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-Expression-.RenameFrame" title="Permalink to this definition"></a></dt>
+<dd><p>Renames the frame to <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
+<p>This method modifies the underlying model and requires a new Context
+to be allocated. It does not modify the model versions (see
+scene_graph_versioning).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_id</span></code>:</dt><dd><p>The id of the frame to rename.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt><dd><p>The new name.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if a</strong><strong>) </strong><strong>the frame_id does not map to a valid frame</strong><strong>,</strong> – </p></li>
+<li><p><strong>or b</strong><strong>) </strong><strong>there is already a frame named name from the same</strong> – </p></li>
+<li><p><strong>source.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraph_-Expression-.RenameGeometry">
+<span id="pydrake.geometry.SceneGraph_[Expression].RenameGeometry"></span><span class="sig-name descname"><span class="pre">RenameGeometry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraph_" title="pydrake.geometry.SceneGraph_"><span class="pre">pydrake.geometry.SceneGraph_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-Expression-.RenameGeometry" title="Permalink to this definition"></a></dt>
+<dd><p>Renames the geometry to <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
+<p>This method modifies the underlying model and requires a new Context
+to be allocated. It does not modify the model versions (see
+scene_graph_versioning).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>:</dt><dd><p>The id of the geometry to rename.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt><dd><p>The new name.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if a</strong><strong>) </strong><strong>the geometry_id does not map to a valid</strong> – </p></li>
+<li><p><strong>geometry</strong><strong>, or </strong><strong>b</strong><strong>) </strong><strong>name is not unique within any assigned role of</strong> – </p></li>
+<li><p><strong>the geometry in its associated frame.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">

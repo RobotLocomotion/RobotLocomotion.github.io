@@ -1,5 +1,12 @@
 var NAVTREEINDEX11 =
 {
+"classdrake_1_1math_1_1_bspline_basis.html#a9fea6ec1de7bf2bfa739e23101c5b3f5":[3,0,0,8,1,9],
+"classdrake_1_1math_1_1_bspline_basis.html#aa86df05e5f4905e6d63f8ad4af0e9e53":[3,0,0,8,1,12],
+"classdrake_1_1math_1_1_bspline_basis.html#aac214fb6b5cac0a02570256141a5a3ec":[3,0,0,8,1,11],
+"classdrake_1_1math_1_1_bspline_basis.html#ab4a4feccc4a6e3983d0126711c548dd9":[3,0,0,8,1,2],
+"classdrake_1_1math_1_1_bspline_basis.html#abcc41a4e499b9ebcdc71c5e213c7c22f":[3,0,0,8,1,20],
+"classdrake_1_1math_1_1_bspline_basis.html#ac7ac2c4a102187c10daf091ab5d5b923":[3,0,0,8,1,19],
+"classdrake_1_1math_1_1_bspline_basis.html#aca4d3daca2fb14a7f974458de833ce8e":[3,0,0,8,1,14],
 "classdrake_1_1math_1_1_bspline_basis.html#acdb5921081f904477377b76b90953b12":[3,0,0,8,1,4],
 "classdrake_1_1math_1_1_bspline_basis.html#af4e5bebbe5c3fca068049c1ffe48c0fe":[3,0,0,8,1,3],
 "classdrake_1_1math_1_1_linear_solver.html":[3,0,0,8,7],
@@ -242,12 +249,5 @@ var NAVTREEINDEX11 =
 "classdrake_1_1multibody_1_1_body.html#abd26dede9af88af24e2971996b18a5a4":[3,0,0,9,12,37],
 "classdrake_1_1multibody_1_1_body.html#ac30c4ad9b052699cd01568d8bf024a3c":[3,0,0,9,12,13],
 "classdrake_1_1multibody_1_1_body.html#ace24ab6283a1ad4f7585fa3aabc79f12":[3,0,0,9,12,25],
-"classdrake_1_1multibody_1_1_body.html#ad6cb65d33b350a9ae5f21211c48a9b31":[3,0,0,9,12,26],
-"classdrake_1_1multibody_1_1_body.html#ad8227ba86a01f26e4f173cd5e219d5d1":[3,0,0,9,12,31],
-"classdrake_1_1multibody_1_1_body.html#adb15f7a08a083af61068735632ada406":[3,0,0,9,12,15],
-"classdrake_1_1multibody_1_1_body.html#adc1bbbf124d24c628bb23796cfa5c594":[3,0,0,9,12,20],
-"classdrake_1_1multibody_1_1_body.html#ae062c2e92129f7be1f2b7a9f20398714":[3,0,0,9,12,14],
-"classdrake_1_1multibody_1_1_body.html#ae2cf2457b20082313585ad750dc24672":[3,0,0,9,12,8],
-"classdrake_1_1multibody_1_1_body.html#ae594f732e1f00317aeb8c6cd83591db5":[3,0,0,9,12,5],
-"classdrake_1_1multibody_1_1_body.html#afa64a237a5acb010f896154c45bc5407":[3,0,0,9,12,27]
+"classdrake_1_1multibody_1_1_body.html#ad6cb65d33b350a9ae5f21211c48a9b31":[3,0,0,9,12,26]
 };
