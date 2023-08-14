@@ -1,5 +1,6 @@
 var NAVTREEINDEX59 =
 {
+"structfmt_1_1formatter_3_01drake_1_1_polynomial_3_01double_01_4_1_1_monomial_01_4.html":[3,0,1,15],
 "structfmt_1_1formatter_3_01drake_1_1_type_safe_index_3_01_tag_01_4_01_4.html":[3,0,1,35],
 "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_geometry_id_01_4.html":[3,0,1,1],
 "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_geometry_properties_01_4.html":[3,0,1,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX59 =
 "unused_8h.html":[4,0,0,1,61],
 "unused_8h.html#ade20b7bf635eecb13adbaac4df980af0":[4,0,0,1,61,0],
 "utilities_8h.html":[4,0,0,4,42],
-"validate__constraint__gradients_8h.html":[4,0,0,8,2,0,14],
-"value_8h.html":[4,0,0,1,62]
+"validate__constraint__gradients_8h.html":[4,0,0,8,2,0,15]
 };

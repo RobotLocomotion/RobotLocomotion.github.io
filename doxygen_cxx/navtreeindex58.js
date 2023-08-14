@@ -1,5 +1,6 @@
 var NAVTREEINDEX58 =
 {
+"structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html#aaeb33e652a26580e0b4af48b12fff998":[3,0,0,16,0,2,2],
 "structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html#adf3c6b6e481d6acc45e87b93d10d8f96":[3,0,0,16,0,2,0],
 "structdrake_1_1systems_1_1analysis__test_1_1_explicit_error_controlled_integrator_test.html":[3,0,0,16,1,1],
 "structdrake_1_1systems_1_1analysis__test_1_1_explicit_error_controlled_integrator_test.html#a03438bfa4d94bde06f020fd03bf119f7":[3,0,0,16,1,1,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX58 =
 "structfmt_1_1formatter_3_01_t_00_01std_1_1enable__if__t_3_01std_1_1is__base__of__v_3_01drake_1_12b85009adc7d5953d070359a51d8a68c.html":[3,0,1,37],
 "structfmt_1_1formatter_3_01drake_1_1_auto_diff_xd_01_4.html":[3,0,1,0],
 "structfmt_1_1formatter_3_01drake_1_1_identifier_3_01_tag_01_4_01_4.html":[3,0,1,6],
-"structfmt_1_1formatter_3_01drake_1_1_polynomial_3_01_t_01_4_01_4.html":[3,0,1,16],
-"structfmt_1_1formatter_3_01drake_1_1_polynomial_3_01double_01_4_1_1_monomial_01_4.html":[3,0,1,15]
+"structfmt_1_1formatter_3_01drake_1_1_polynomial_3_01_t_01_4_01_4.html":[3,0,1,16]
 };

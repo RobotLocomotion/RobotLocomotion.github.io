@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>pydrake.multibody.all &mdash; pydrake  documentation</title>
+  <title>pydrake.multibody.fix_inertia &mdash; pydrake  documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
@@ -16,8 +16,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="pydrake.multibody.benchmarks" href="pydrake.multibody.benchmarks.html" />
-    <link rel="prev" title="pydrake.multibody" href="pydrake.multibody.html" /> 
+    <link rel="next" title="pydrake.multibody.inverse_kinematics" href="pydrake.multibody.inverse_kinematics.html" />
+    <link rel="prev" title="pydrake.multibody.fem" href="pydrake.multibody.fem.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -87,10 +87,10 @@
 <li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.multibody.all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.all.html">pydrake.multibody.all</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.benchmarks.html">pydrake.multibody.benchmarks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.fem.html">pydrake.multibody.fem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.fix_inertia.html">pydrake.multibody.fix_inertia</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.multibody.fix_inertia</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.inverse_kinematics.html">pydrake.multibody.inverse_kinematics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.math.html">pydrake.multibody.math</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.mesh_to_model.html">pydrake.multibody.mesh_to_model</a></li>
@@ -128,7 +128,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="pydrake.multibody.html">pydrake.multibody</a> &raquo;</li>
-      <li>pydrake.multibody.all</li>
+      <li>pydrake.multibody.fix_inertia</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -137,16 +137,62 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-pydrake.multibody.all">
-<span id="pydrake-multibody-all"></span><h1>pydrake.multibody.all<a class="headerlink" href="#module-pydrake.multibody.all" title="Permalink to this headline"></a></h1>
+  <section id="module-pydrake.multibody.fix_inertia">
+<span id="pydrake-multibody-fix-inertia"></span><h1>pydrake.multibody.fix_inertia<a class="headerlink" href="#module-pydrake.multibody.fix_inertia" title="Permalink to this headline"></a></h1>
+<p>Utility for fixing invalid inertia data in URDF or SDFormat files, by
+writing a complete, updated file.</p>
+<p>Inertia properties for links are inferred from geometry. Only the file
+supplied as an input is updated; any included or referred-to files are left
+untouched.</p>
+<p>The output file should differ from the input file only by the contents of
+<cite>&lt;inertial&gt;</cite> tags. It is possible that some comments may be lost within those
+tags.</p>
+<p><strong>Running</strong>:</p>
+<blockquote>
+<div><p>From a Drake source build, run this as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bazel</span> <span class="n">run</span> <span class="o">//</span><span class="n">tools</span><span class="p">:</span><span class="n">fix_inertia</span> <span class="o">--</span> <span class="o">--</span><span class="n">help</span>
+</pre></div>
+</div>
+<p>From a Drake binary release (including pip releases), run this as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pydrake</span><span class="o">.</span><span class="n">multibody</span><span class="o">.</span><span class="n">fix_inertia</span> <span class="o">--</span><span class="n">help</span>
+</pre></div>
+</div>
+<p>Run with output to the standard output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bazel</span> <span class="n">run</span> <span class="o">//</span><span class="n">tools</span><span class="p">:</span><span class="n">fix_inertia</span> <span class="o">--</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">some_model</span><span class="o">.</span><span class="n">urdf</span>
+</pre></div>
+</div>
+<p>Run with output to a separate file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bazel</span> <span class="n">run</span> <span class="o">//</span><span class="n">tools</span><span class="p">:</span><span class="n">fix_inertia</span> <span class="o">--</span> \
+    <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">some_model</span><span class="o">.</span><span class="n">urdf</span> <span class="n">output</span><span class="o">.</span><span class="n">urdf</span>
+</pre></div>
+</div>
+<p>Run with output overwriting the input file (sometimes convenient within a
+source code control workspace):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bazel</span> <span class="n">run</span> <span class="o">//</span><span class="n">tools</span><span class="p">:</span><span class="n">fix_inertia</span> <span class="o">--</span> <span class="o">--</span><span class="n">in_place</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">some_model</span><span class="o">.</span><span class="n">urdf</span>
+</pre></div>
+</div>
+<p>This program respects the ROS_PACKAGE_PATH; if your model uses external
+resources then you will need to set that environment variable.</p>
+</div></blockquote>
+<p><strong>Using the results</strong>:</p>
+<blockquote>
+<div><p>The output file will be well-formed XML and parse cleanly in Drake, but it
+may not be exactly suited to the purpose at hand. Be sure to examine the
+model file differences, and use <cite>model_visualizer</cite> to examine the resulting
+inertial ellipsoids.</p>
+<p>See <cite>model_visualizer</cite> documentation here:
+<a class="reference external" href="https://drake.mit.edu/pydrake/pydrake.visualization.model_visualizer.html">https://drake.mit.edu/pydrake/pydrake.visualization.model_visualizer.html</a></p>
+<p>Once the effect of the changes is clear, either use the new output file
+as-is, or merge in the desired changes using any text file merging tool.</p>
+</div></blockquote>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="pydrake.multibody.html" class="btn btn-neutral float-left" title="pydrake.multibody" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="pydrake.multibody.benchmarks.html" class="btn btn-neutral float-right" title="pydrake.multibody.benchmarks" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="pydrake.multibody.fem.html" class="btn btn-neutral float-left" title="pydrake.multibody.fem" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pydrake.multibody.inverse_kinematics.html" class="btn btn-neutral float-right" title="pydrake.multibody.inverse_kinematics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
