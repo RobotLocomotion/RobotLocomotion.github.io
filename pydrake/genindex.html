@@ -1211,6 +1211,8 @@
 </li>
         <li><a href="pydrake.planning.html#pydrake.planning.DirectTranscription.TimeStep.__init__">(pydrake.planning.DirectTranscription.TimeStep method)</a>
 </li>
+        <li><a href="pydrake.planning.html#pydrake.planning.DistanceAndInterpolationProvider.__init__">(pydrake.planning.DistanceAndInterpolationProvider method)</a>
+</li>
         <li><a href="pydrake.planning.html#pydrake.planning.EdgeMeasure.__init__">(pydrake.planning.EdgeMeasure method)</a>
 </li>
         <li><a href="pydrake.planning.html#pydrake.planning.GcsTrajectoryOptimization.__init__">(pydrake.planning.GcsTrajectoryOptimization method)</a>
@@ -1220,6 +1222,8 @@
         <li><a href="pydrake.planning.html#pydrake.planning.GcsTrajectoryOptimization.Subgraph.__init__">(pydrake.planning.GcsTrajectoryOptimization.Subgraph method)</a>
 </li>
         <li><a href="pydrake.planning.html#pydrake.planning.KinematicTrajectoryOptimization.__init__">(pydrake.planning.KinematicTrajectoryOptimization method)</a>
+</li>
+        <li><a href="pydrake.planning.html#pydrake.planning.LinearDistanceAndInterpolationProvider.__init__">(pydrake.planning.LinearDistanceAndInterpolationProvider method)</a>
 </li>
         <li><a href="pydrake.planning.html#pydrake.planning.MultipleShooting.__init__">(pydrake.planning.MultipleShooting method)</a>
 </li>
@@ -4623,7 +4627,11 @@
 </li>
       </ul></li>
       <li><a href="pydrake.planning.html#pydrake.planning.CollisionChecker.ComputeConfigurationDistance">ComputeConfigurationDistance() (pydrake.planning.CollisionChecker method)</a>
+
+      <ul>
+        <li><a href="pydrake.planning.html#pydrake.planning.DistanceAndInterpolationProvider.ComputeConfigurationDistance">(pydrake.planning.DistanceAndInterpolationProvider method)</a>
 </li>
+      </ul></li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.QueryObject.ComputeContactSurfaces">ComputeContactSurfaces() (pydrake.geometry.QueryObject method)</a>
 
       <ul>
@@ -5562,12 +5570,12 @@
 </li>
       <li><a href="pydrake.multibody.fem.html#pydrake.multibody.fem.DeformableBodyConfig_-AutoDiffXd">DeformableBodyConfig_[AutoDiffXd] (class in pydrake.multibody.fem)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DeformableBodyId">DeformableBodyId (class in pydrake.multibody.plant)</a>
 </li>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DeformableModel">DeformableModel (class in pydrake.multibody.plant)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.common.schema.html#pydrake.common.schema.Rotation.Rpy.deg">deg (pydrake.common.schema.Rotation.Rpy property)</a>
 </li>
       <li><a href="pydrake.math.html#pydrake.math.BsplineBasis.degree">degree() (pydrake.math.BsplineBasis method)</a>
@@ -5851,6 +5859,14 @@
 </li>
       </ul></li>
       <li><a href="pydrake.planning.html#pydrake.planning.EdgeMeasure.distance">distance() (pydrake.planning.EdgeMeasure method)</a>
+</li>
+      <li><a href="pydrake.planning.html#pydrake.planning.CollisionCheckerParams.distance_and_interpolation_provider">distance_and_interpolation_provider (pydrake.planning.CollisionCheckerParams property)</a>
+</li>
+      <li><a href="pydrake.planning.html#pydrake.planning.CollisionChecker.distance_and_interpolation_provider">distance_and_interpolation_provider() (pydrake.planning.CollisionChecker method)</a>
+</li>
+      <li><a href="pydrake.planning.html#pydrake.planning.LinearDistanceAndInterpolationProvider.distance_weights">distance_weights() (pydrake.planning.LinearDistanceAndInterpolationProvider method)</a>
+</li>
+      <li><a href="pydrake.planning.html#pydrake.planning.DistanceAndInterpolationProvider">DistanceAndInterpolationProvider (class in pydrake.planning)</a>
 </li>
       <li><a href="pydrake.multibody.inverse_kinematics.html#pydrake.multibody.inverse_kinematics.DistanceConstraint">DistanceConstraint (class in pydrake.multibody.inverse_kinematics)</a>
 </li>
@@ -11175,7 +11191,11 @@
       <li><a href="pydrake.geometry.html#pydrake.geometry.LightParameter.intensity">intensity (pydrake.geometry.LightParameter property)</a>
 </li>
       <li><a href="pydrake.planning.html#pydrake.planning.CollisionChecker.InterpolateBetweenConfigurations">InterpolateBetweenConfigurations() (pydrake.planning.CollisionChecker method)</a>
+
+      <ul>
+        <li><a href="pydrake.planning.html#pydrake.planning.DistanceAndInterpolationProvider.InterpolateBetweenConfigurations">(pydrake.planning.DistanceAndInterpolationProvider method)</a>
 </li>
+      </ul></li>
       <li><a href="pydrake.symbolic.html#pydrake.symbolic.intersect">intersect() (in module pydrake.symbolic)</a>
 </li>
       <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.Intersection">Intersection (class in pydrake.geometry.optimization)</a>
@@ -12270,10 +12290,10 @@
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram.linear_costs">linear_costs() (pydrake.solvers.MathematicalProgram method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram.linear_equality_constraints">linear_equality_constraints() (pydrake.solvers.MathematicalProgram method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram.linear_matrix_inequality_constraints">linear_matrix_inequality_constraints() (pydrake.solvers.MathematicalProgram method)</a>
 </li>
       <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.LinearBushingRollPitchYaw">LinearBushingRollPitchYaw (class in pydrake.multibody.tree)</a>
@@ -12287,6 +12307,8 @@
       <li><a href="pydrake.solvers.html#pydrake.solvers.LinearConstraint">LinearConstraint (class in pydrake.solvers)</a>
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.LinearCost">LinearCost (class in pydrake.solvers)</a>
+</li>
+      <li><a href="pydrake.planning.html#pydrake.planning.LinearDistanceAndInterpolationProvider">LinearDistanceAndInterpolationProvider (class in pydrake.planning)</a>
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.LinearEqualityConstraint">LinearEqualityConstraint (class in pydrake.solvers)</a>
 </li>
@@ -15297,6 +15319,8 @@
 </li>
       <li><a href="pydrake.common.eigen_geometry.html#pydrake.common.eigen_geometry.Quaternion_-Expression">Quaternion_[Expression] (class in pydrake.common.eigen_geometry)</a>
 </li>
+      <li><a href="pydrake.planning.html#pydrake.planning.LinearDistanceAndInterpolationProvider.quaternion_dof_start_indices">quaternion_dof_start_indices() (pydrake.planning.LinearDistanceAndInterpolationProvider method)</a>
+</li>
       <li><a href="pydrake.multibody.optimization.html#pydrake.multibody.optimization.QuaternionEulerIntegrationConstraint">QuaternionEulerIntegrationConstraint (class in pydrake.multibody.optimization)</a>
 </li>
       <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.QuaternionFloatingJoint">QuaternionFloatingJoint (class in pydrake.multibody.tree)</a>
@@ -17447,6 +17471,8 @@
         <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.Context_-Expression-.SetDiscreteState">(pydrake.systems.framework.Context_[Expression] method)</a>
 </li>
       </ul></li>
+      <li><a href="pydrake.planning.html#pydrake.planning.CollisionChecker.SetDistanceAndInterpolationProvider">SetDistanceAndInterpolationProvider() (pydrake.planning.CollisionChecker method)</a>
+</li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.Meshcat.SetEnvironmentMap">SetEnvironmentMap() (pydrake.geometry.Meshcat method)</a>
 </li>
       <li><a href="pydrake.perception.html#pydrake.perception.PointCloud.SetFields">SetFields() (pydrake.perception.PointCloud method)</a>

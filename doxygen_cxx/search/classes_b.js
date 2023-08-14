@@ -49,6 +49,7 @@ var searchData=
   ['linearcomplementarityconstraint',['LinearComplementarityConstraint',['../classdrake_1_1solvers_1_1_linear_complementarity_constraint.html',1,'drake::solvers']]],
   ['linearconstraint',['LinearConstraint',['../classdrake_1_1solvers_1_1_linear_constraint.html',1,'drake::solvers']]],
   ['linearcost',['LinearCost',['../classdrake_1_1solvers_1_1_linear_cost.html',1,'drake::solvers']]],
+  ['lineardistanceandinterpolationprovider',['LinearDistanceAndInterpolationProvider',['../classdrake_1_1planning_1_1_linear_distance_and_interpolation_provider.html',1,'drake::planning']]],
   ['linearequalityconstraint',['LinearEqualityConstraint',['../classdrake_1_1solvers_1_1_linear_equality_constraint.html',1,'drake::solvers']]],
   ['linearmatrixinequalityconstraint',['LinearMatrixInequalityConstraint',['../classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html',1,'drake::solvers']]],
   ['linearmodelpredictivecontroller',['LinearModelPredictiveController',['../classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html',1,'drake::systems::controllers']]],

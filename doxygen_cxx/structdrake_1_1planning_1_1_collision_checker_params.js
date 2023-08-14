@@ -1,6 +1,7 @@
 var structdrake_1_1planning_1_1_collision_checker_params =
 [
     [ "configuration_distance_function", "structdrake_1_1planning_1_1_collision_checker_params.html#a35dcc56f9ad09e0a13d0bbb111554f32", null ],
+    [ "distance_and_interpolation_provider", "structdrake_1_1planning_1_1_collision_checker_params.html#afec931281f813128526846e5ee611e03", null ],
     [ "edge_step_size", "structdrake_1_1planning_1_1_collision_checker_params.html#a669492214e210900f93b70a27be26884", null ],
     [ "env_collision_padding", "structdrake_1_1planning_1_1_collision_checker_params.html#aba8ff17381c2ecbb2add791b7c97c226", null ],
     [ "model", "structdrake_1_1planning_1_1_collision_checker_params.html#a2c29aca77709a64d537303e01282e71f", null ],

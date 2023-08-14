@@ -43,6 +43,7 @@ var group__planning__collision__checker =
       [ "ComputeConfigurationDistance", "classdrake_1_1planning_1_1_collision_checker.html#ae76ac66c1677433ebe8cff135f77af58", null ],
       [ "CreatePrototypeContext", "classdrake_1_1planning_1_1_collision_checker.html#a7835992cd1ce72dcf315fee54b6f64fe", null ],
       [ "CriticizePaddingMatrix", "classdrake_1_1planning_1_1_collision_checker.html#ad9406112c93e430d27b84744b6f5fa77", null ],
+      [ "distance_and_interpolation_provider", "classdrake_1_1planning_1_1_collision_checker.html#aec1e2c7eed9a8e920dbe0b0db80af1be", null ],
       [ "DoAddCollisionShapeToBody", "classdrake_1_1planning_1_1_collision_checker.html#ac5e58c1024da16deb5af098bb798bbd9", null ],
       [ "DoCalcContextRobotClearance", "classdrake_1_1planning_1_1_collision_checker.html#a8393e34359ae424d80b7975551234652", null ],
       [ "DoCheckContextConfigCollisionFree", "classdrake_1_1planning_1_1_collision_checker.html#a751ed5a04cd06853f43ab40f1ac5dde6", null ],
@@ -98,6 +99,7 @@ var group__planning__collision__checker =
       [ "SetCollisionFilterMatrix", "classdrake_1_1planning_1_1_collision_checker.html#a5741d217236e45f7aed61d7a28c23d39", null ],
       [ "SetConfigurationDistanceFunction", "classdrake_1_1planning_1_1_collision_checker.html#ad399081b57b1becb847d9a6f77928903", null ],
       [ "SetConfigurationInterpolationFunction", "classdrake_1_1planning_1_1_collision_checker.html#aebf58f4817df47ff85f1e4f3de824382", null ],
+      [ "SetDistanceAndInterpolationProvider", "classdrake_1_1planning_1_1_collision_checker.html#afef8ab83612978d5deeb7cd6fc413b80", null ],
       [ "SetPaddingAllRobotEnvironmentPairs", "classdrake_1_1planning_1_1_collision_checker.html#af9df46cf7a999edaee7b5461a38a8e0d", null ],
       [ "SetPaddingAllRobotRobotPairs", "classdrake_1_1planning_1_1_collision_checker.html#af8423473a4d7b2c2b37c7f9c8108c7a3", null ],
       [ "SetPaddingBetween", "classdrake_1_1planning_1_1_collision_checker.html#a2abd1ef467638caa52681db77bd8ea18", null ],
@@ -128,6 +130,7 @@ var group__planning__collision__checker =
     ] ],
     [ "CollisionCheckerParams", "structdrake_1_1planning_1_1_collision_checker_params.html", [
       [ "configuration_distance_function", "structdrake_1_1planning_1_1_collision_checker_params.html#a35dcc56f9ad09e0a13d0bbb111554f32", null ],
+      [ "distance_and_interpolation_provider", "structdrake_1_1planning_1_1_collision_checker_params.html#afec931281f813128526846e5ee611e03", null ],
       [ "edge_step_size", "structdrake_1_1planning_1_1_collision_checker_params.html#a669492214e210900f93b70a27be26884", null ],
       [ "env_collision_padding", "structdrake_1_1planning_1_1_collision_checker_params.html#aba8ff17381c2ecbb2add791b7c97c226", null ],
       [ "model", "structdrake_1_1planning_1_1_collision_checker_params.html#a2c29aca77709a64d537303e01282e71f", null ],

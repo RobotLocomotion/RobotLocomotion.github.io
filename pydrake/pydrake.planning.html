@@ -630,6 +630,12 @@ SetConfigurationDistanceFunction().</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.CollisionChecker.distance_and_interpolation_provider">
+<span class="sig-name descname"><span class="pre">distance_and_interpolation_provider</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.CollisionChecker" title="pydrake.planning.CollisionChecker"><span class="pre">pydrake.planning.CollisionChecker</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.planning.DistanceAndInterpolationProvider" title="pydrake.planning.DistanceAndInterpolationProvider"><span class="pre">pydrake.planning.DistanceAndInterpolationProvider</span></a></span></span><a class="headerlink" href="#pydrake.planning.CollisionChecker.distance_and_interpolation_provider" title="Permalink to this definition"></a></dt>
+<dd><p>Gets the DistanceAndInterpolationProvider in use.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.CollisionChecker.edge_step_size">
 <span class="sig-name descname"><span class="pre">edge_step_size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.CollisionChecker" title="pydrake.planning.CollisionChecker"><span class="pre">pydrake.planning.CollisionChecker</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.planning.CollisionChecker.edge_step_size" title="Permalink to this definition"></a></dt>
 <dd><p>Gets the current edge step size.</p>
@@ -1140,7 +1146,12 @@ filter matrix.</p>
 <dd><p>Sets the configuration distance function to <code class="docutils literal notranslate"><span class="pre">distance_function</span></code>.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>distance_function satisfies the requirements documented on
-ConfigurationDistanceFunction.</p>
+ConfigurationDistanceFunction and a
+DistanceAndInterpolationProvider is not already in use.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>the collision checker was created with separate distance and
+interpolation functions, not a combined
+DistanceAndInterpolationProvider.</p>
 </dd>
 </dl>
 <div class="admonition note">
@@ -1161,7 +1172,12 @@ data then that data must outlive this collision checker.</p>
 configured and used.</p>
 </dd>
 <dt>Precondition:</dt><dd><p>interpolation_function satisfies the requirements documented on
-ConfigurationInterpolationFunction, or is nullptr.</p>
+ConfigurationInterpolationFunction, or is nullptr and a
+DistanceAndInterpolationProvider is not already in use.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>the collision checker was created with separate distance and
+interpolation functions, not a combined
+DistanceAndInterpolationProvider.</p>
 </dd>
 </dl>
 <div class="admonition note">
@@ -1176,6 +1192,19 @@ checker.</p>
 <p>the default function uses linear interpolation for most variables,
 and uses slerp for quaternion valued variables.</p>
 </div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.CollisionChecker.SetDistanceAndInterpolationProvider">
+<span class="sig-name descname"><span class="pre">SetDistanceAndInterpolationProvider</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.CollisionChecker" title="pydrake.planning.CollisionChecker"><span class="pre">pydrake.planning.CollisionChecker</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.DistanceAndInterpolationProvider" title="pydrake.planning.DistanceAndInterpolationProvider"><span class="pre">pydrake.planning.DistanceAndInterpolationProvider</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.CollisionChecker.SetDistanceAndInterpolationProvider" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the distance and interpolation provider to use. Note that in case
+any of the (to-be-deprecated) separate distance and interpolation
+functions were in use, this supplants <em>both</em> of them.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>provider satisfies the requirements documents on
+DistanceAndInterpolationProvider.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -1386,10 +1415,31 @@ configuration struct, but many do so.</p>
 <dd><p>Configuration (probably weighted) distance function.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
+<p>Either a DistanceAndInterpolationProvider OR a
+ConfigurationDistanceFunction may be provided, not both. If
+neither is provided, a LinearDistanceAndInterpolationProvider with
+default weights is used.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>the <code class="docutils literal notranslate"><span class="pre">configuration_distance_function</span></code> object will be copied and
 retained by a collision checker, so if the function has any
 lambda-captured data then that data must outlive the collision
 checker.</p>
+</div>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.planning.CollisionCheckerParams.distance_and_interpolation_provider">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">distance_and_interpolation_provider</span></span><a class="headerlink" href="#pydrake.planning.CollisionCheckerParams.distance_and_interpolation_provider" title="Permalink to this definition"></a></dt>
+<dd><p>A DistanceAndInterpolationProvider to support configuration distance
+and interpolation operations.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Either a DistanceAndInterpolationProvider OR a
+ConfigurationDistanceFunction may be provided, not both. If
+neither is provided, a LinearDistanceAndInterpolationProvider with
+default weights is used.</p>
 </div>
 </dd></dl>
 
@@ -1714,6 +1764,76 @@ set to their current values (if they are connected/fixed in
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.planning.DirectTranscription.TimeStep.value" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.planning.DistanceAndInterpolationProvider">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">DistanceAndInterpolationProvider</span></span><a class="headerlink" href="#pydrake.planning.DistanceAndInterpolationProvider" title="Permalink to this definition"></a></dt>
+<dd><p>This class represents the base interface for performing configuration
+distance and interpolation operations, used by CollisionChecker. See
+LinearDistanceAndInterpolationProvider for an implementation covering
+common “linear” distance and interpolation behavior.</p>
+<p>Configuration distance and interpolation are necessary for a
+CollisionChecker to perform edge collision checks, and an essential
+part of many motion planning problems. The C-spaces for many planning
+problems combine joints with widely differing effects (e.g. for a
+given angular change, the shoulder joint of a robot arm results in
+much more significant motion than the same change on a finger joint)
+or units (e.g. a mobile robot with translation in meters and yaw in
+radians). As a result, it is often necessary to weight elements of the
+configuration differently when computing configuration distance.</p>
+<p>Likewise, in more complex C-spaces, it may be necessary to perform
+more complex interpolation behavior (e.g. when planning for a mobile
+robot whose motion is modelled via Dubbins or Reeds-Shepp paths).</p>
+<p>Configuration distance takes two configurations of the robot, from and
+to, both as Eigen::VectorXd, and returns (potentially weighted)
+C-space distance as a double. The returned distance will be strictly
+non-negative.</p>
+<p>To be valid, distance must satisfy the following condition:</p>
+<ul class="simple">
+<li><p>ComputeConfigurationDistance(q, q) ≡ 0</p></li>
+</ul>
+<p>for values of q that are valid for the C-space in use.</p>
+<p>Configuration interpolation takes two configurations of the robot,
+from and to, both as Eigen::VectorXd, plus a ratio in [0, 1] and
+returns the interpolated configuration.</p>
+<p>To be valid, interpolation must satisfy the following conditions:</p>
+<ul class="simple">
+<li><p>InterpolateBetweenConfigurations(from, to, 0) ≡ from</p></li>
+<li><p>InterpolateBetweenConfigurations(from, to, 1) ≡ to</p></li>
+<li><p>InterpolateBetweenConfigurations(q, q, ratio) ≡ q, for all ratio in [0, 1]</p></li>
+</ul>
+<p>for values of q, from, and to that are valid for the C-space in use.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.DistanceAndInterpolationProvider.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.planning.DistanceAndInterpolationProvider.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.DistanceAndInterpolationProvider.ComputeConfigurationDistance">
+<span class="sig-name descname"><span class="pre">ComputeConfigurationDistance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.DistanceAndInterpolationProvider" title="pydrake.planning.DistanceAndInterpolationProvider"><span class="pre">pydrake.planning.DistanceAndInterpolationProvider</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.planning.DistanceAndInterpolationProvider.ComputeConfigurationDistance" title="Permalink to this definition"></a></dt>
+<dd><p>Computes the configuration distance from the provided configuration
+<code class="docutils literal notranslate"><span class="pre">from</span></code> to the provided configuration <code class="docutils literal notranslate"><span class="pre">to</span></code>. The returned distance
+will be strictly non-negative.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>from.size() == to.size()</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.DistanceAndInterpolationProvider.InterpolateBetweenConfigurations">
+<span class="sig-name descname"><span class="pre">InterpolateBetweenConfigurations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.DistanceAndInterpolationProvider" title="pydrake.planning.DistanceAndInterpolationProvider"><span class="pre">pydrake.planning.DistanceAndInterpolationProvider</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.DistanceAndInterpolationProvider.InterpolateBetweenConfigurations" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the interpolated configuration between <code class="docutils literal notranslate"><span class="pre">from</span></code> and <code class="docutils literal notranslate"><span class="pre">to</span></code> at
+<code class="docutils literal notranslate"><span class="pre">ratio</span></code>.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>from.size() == to.size()</p>
+</dd>
+<dt>Precondition:</dt><dd><p>ratio in [0, 1]</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -2487,6 +2607,69 @@ trajectory.</p>
 <dt>Precondition:</dt><dd><p>trajectory.columns() == 1</p>
 </dd>
 </dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.planning.LinearDistanceAndInterpolationProvider">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">LinearDistanceAndInterpolationProvider</span></span><a class="headerlink" href="#pydrake.planning.LinearDistanceAndInterpolationProvider" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.planning.DistanceAndInterpolationProvider" title="pydrake.planning.DistanceAndInterpolationProvider"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.planning.DistanceAndInterpolationProvider</span></code></a></p>
+<p>This class represents a basic “linear” implementation of
+DistanceAndInterpolationProvider.</p>
+<ul class="simple">
+<li><p>Configuration distance is computed as difference.cwiseProduct(weights).norm(),</p></li>
+</ul>
+<p>where difference is computed as the angle between quaternion DoF and difference
+between all other positions. Default weights are (1, 0, 0, 0) for quaternion
+DoF and 1 for all other positions.
+- Configuration interpolation is performed using slerp for quaternion DoF and
+linear interpolation for all other positions.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.LinearDistanceAndInterpolationProvider.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.planning.LinearDistanceAndInterpolationProvider.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.planning.LinearDistanceAndInterpolationProvider, plant: pydrake.multibody.plant.MultibodyPlant) -&gt; None</p></li>
+</ol>
+<p>Constructs a LinearDistanceAndInterpolationProvider for the specified
+<code class="docutils literal notranslate"><span class="pre">plant</span></code> with default distance weights (i.e. 1) for all positions.
+Equivalent to constructing with an empty map of named joint distance
+weights.</p>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.planning.LinearDistanceAndInterpolationProvider, plant: pydrake.multibody.plant.MultibodyPlant, distance_weights: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</p></li>
+</ol>
+<p>Constructs a LinearDistanceAndInterpolationProvider for the specified
+<code class="docutils literal notranslate"><span class="pre">plant</span></code> with the provided distance weights <code class="docutils literal notranslate"><span class="pre">distance_weights</span></code>.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>distance_weights must be the same size as plant.num_positions(),
+all weights must be non-negative and finite, and weights for
+quaternion DoF must be of the form (weight, 0, 0, 0).</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="3">
+<li><p>__init__(self: pydrake.planning.LinearDistanceAndInterpolationProvider, plant: pydrake.multibody.plant.MultibodyPlant, joint_distance_weights: Dict[pydrake.multibody.tree.JointIndex, numpy.ndarray[numpy.float64[m, 1]]]) -&gt; None</p></li>
+</ol>
+<p>Constructs a LinearDistanceAndInterpolationProvider for the specified
+<code class="docutils literal notranslate"><span class="pre">plant</span></code> using the provided map of distance weights
+<code class="docutils literal notranslate"><span class="pre">joint_distance_weights</span></code> and default weights (i.e. 1) for all other
+positions.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>all distance weights must be non-negative and finite.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.LinearDistanceAndInterpolationProvider.distance_weights">
+<span class="sig-name descname"><span class="pre">distance_weights</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.LinearDistanceAndInterpolationProvider" title="pydrake.planning.LinearDistanceAndInterpolationProvider"><span class="pre">pydrake.planning.LinearDistanceAndInterpolationProvider</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.LinearDistanceAndInterpolationProvider.distance_weights" title="Permalink to this definition"></a></dt>
+<dd><p>Gets the distance weights.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.LinearDistanceAndInterpolationProvider.quaternion_dof_start_indices">
+<span class="sig-name descname"><span class="pre">quaternion_dof_start_indices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.LinearDistanceAndInterpolationProvider" title="pydrake.planning.LinearDistanceAndInterpolationProvider"><span class="pre">pydrake.planning.LinearDistanceAndInterpolationProvider</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.LinearDistanceAndInterpolationProvider.quaternion_dof_start_indices" title="Permalink to this definition"></a></dt>
+<dd><p>Gets the start indices for quaternion DoF in the position vector.</p>
 </dd></dl>
 
 </dd></dl>

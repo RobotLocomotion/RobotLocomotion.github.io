@@ -423,6 +423,12 @@ Public Member Functions</h2></td></tr>
 <p>Increasing the padding can likewise reduce the likelihood of missing features. Adding padding has the effect of increasing the size of the workspace obstacles in C-space. The primary benefit is that it can be applied locally. If there is a particular obstacle with fine features that your robot will be near, padding between robot and that obstacle can be added so that interactions between robot and obstacle are more likely to be caught. Doing so leaves the global cost low for coarse features. However, padding comes at the cost that physically free edges may no longer be considered free.</p>
 <p>The best tuning will likely include configuring both edge step size and applying appropriate padding. </p>
 </div></td></tr>
+<tr class="memitem:afef8ab83612978d5deeb7cd6fc413b80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#afef8ab83612978d5deeb7cd6fc413b80">SetDistanceAndInterpolationProvider</a> (std::shared_ptr&lt; const <a class="el" href="classdrake_1_1planning_1_1_distance_and_interpolation_provider.html">DistanceAndInterpolationProvider</a> &gt; provider)</td></tr>
+<tr class="memdesc:afef8ab83612978d5deeb7cd6fc413b80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the distance and interpolation provider to use.  <a href="#afef8ab83612978d5deeb7cd6fc413b80">More...</a><br /></td></tr>
+<tr class="separator:afef8ab83612978d5deeb7cd6fc413b80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec1e2c7eed9a8e920dbe0b0db80af1be"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1planning_1_1_distance_and_interpolation_provider.html">DistanceAndInterpolationProvider</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#aec1e2c7eed9a8e920dbe0b0db80af1be">distance_and_interpolation_provider</a> () const</td></tr>
+<tr class="memdesc:aec1e2c7eed9a8e920dbe0b0db80af1be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the <a class="el" href="classdrake_1_1planning_1_1_distance_and_interpolation_provider.html" title="This class represents the base interface for performing configuration distance and interpolation oper...">DistanceAndInterpolationProvider</a> in use.  <a href="#aec1e2c7eed9a8e920dbe0b0db80af1be">More...</a><br /></td></tr>
+<tr class="separator:aec1e2c7eed9a8e920dbe0b0db80af1be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad399081b57b1becb847d9a6f77928903"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ad399081b57b1becb847d9a6f77928903">SetConfigurationDistanceFunction</a> (const <a class="el" href="namespacedrake_1_1planning.html#a1d0e3bfc71b80ae77e21ca5752dbaca4">ConfigurationDistanceFunction</a> &amp;distance_function)</td></tr>
 <tr class="memdesc:ad399081b57b1becb847d9a6f77928903"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the configuration distance function to <code>distance_function</code>.  <a href="#ad399081b57b1becb847d9a6f77928903">More...</a><br /></td></tr>
 <tr class="separator:ad399081b57b1becb847d9a6f77928903"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1433,6 +1439,25 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="aec1e2c7eed9a8e920dbe0b0db80af1be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec1e2c7eed9a8e920dbe0b0db80af1be">&#9670;&nbsp;</a></span>distance_and_interpolation_provider()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1planning_1_1_distance_and_interpolation_provider.html">DistanceAndInterpolationProvider</a>&amp; distance_and_interpolation_provider </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the <a class="el" href="classdrake_1_1planning_1_1_distance_and_interpolation_provider.html" title="This class represents the base interface for performing configuration distance and interpolation oper...">DistanceAndInterpolationProvider</a> in use. </p>
 
 </div>
 </div>
@@ -2881,7 +2906,9 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Sets the configuration distance function to <code>distance_function</code>. </p>
-<dl class="section pre"><dt>Precondition</dt><dd>distance_function satisfies the requirements documented on ConfigurationDistanceFunction. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>distance_function satisfies the requirements documented on ConfigurationDistanceFunction and a <a class="el" href="classdrake_1_1planning_1_1_distance_and_interpolation_provider.html" title="This class represents the base interface for performing configuration distance and interpolation oper...">DistanceAndInterpolationProvider</a> is not already in use. </dd>
+<dd>
+the collision checker was created with separate distance and interpolation functions, not a combined <a class="el" href="classdrake_1_1planning_1_1_distance_and_interpolation_provider.html" title="This class represents the base interface for performing configuration distance and interpolation oper...">DistanceAndInterpolationProvider</a>. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>the <code>distance_function</code> object will be copied and retained by this collision checker, so if the function has any lambda-captured data then that data must outlive this collision checker. </dd></dl>
 
 </div>
@@ -2909,10 +2936,33 @@ Protected Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd>interpolation_function satisfies the requirements documented on ConfigurationInterpolationFunction, or is nullptr. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>interpolation_function satisfies the requirements documented on ConfigurationInterpolationFunction, or is nullptr and a <a class="el" href="classdrake_1_1planning_1_1_distance_and_interpolation_provider.html" title="This class represents the base interface for performing configuration distance and interpolation oper...">DistanceAndInterpolationProvider</a> is not already in use. </dd>
+<dd>
+the collision checker was created with separate distance and interpolation functions, not a combined <a class="el" href="classdrake_1_1planning_1_1_distance_and_interpolation_provider.html" title="This class represents the base interface for performing configuration distance and interpolation oper...">DistanceAndInterpolationProvider</a>. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>the <code>interpolation_function</code> object will be copied and retained by this collision checker, so if the function has any lambda-captured data then that data must outlive this collision checker. </dd>
 <dd>
 the default function uses linear interpolation for most variables, and uses slerp for quaternion valued variables. </dd></dl>
+
+</div>
+</div>
+<a id="afef8ab83612978d5deeb7cd6fc413b80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afef8ab83612978d5deeb7cd6fc413b80">&#9670;&nbsp;</a></span>SetDistanceAndInterpolationProvider()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetDistanceAndInterpolationProvider </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; const <a class="el" href="classdrake_1_1planning_1_1_distance_and_interpolation_provider.html">DistanceAndInterpolationProvider</a> &gt;&#160;</td>
+          <td class="paramname"><em>provider</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the distance and interpolation provider to use. </p>
+<p>Note that in case any of the (to-be-deprecated) separate distance and interpolation functions were in use, this supplants <em>both</em> of them. </p><dl class="section pre"><dt>Precondition</dt><dd>provider satisfies the requirements documents on <a class="el" href="classdrake_1_1planning_1_1_distance_and_interpolation_provider.html" title="This class represents the base interface for performing configuration distance and interpolation oper...">DistanceAndInterpolationProvider</a>. </dd></dl>
 
 </div>
 </div>

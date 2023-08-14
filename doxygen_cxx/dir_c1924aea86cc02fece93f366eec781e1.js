@@ -9,7 +9,13 @@ var dir_c1924aea86cc02fece93f366eec781e1 =
     ] ],
     [ "collision_checker_context.h", "collision__checker__context_8h.html", null ],
     [ "collision_checker_params.h", "collision__checker__params_8h.html", "collision__checker__params_8h" ],
+    [ "distance_and_interpolation_provider.h", "distance__and__interpolation__provider_8h.html", [
+      [ "DistanceAndInterpolationProvider", "classdrake_1_1planning_1_1_distance_and_interpolation_provider.html", "classdrake_1_1planning_1_1_distance_and_interpolation_provider" ]
+    ] ],
     [ "edge_measure.h", "edge__measure_8h.html", null ],
+    [ "linear_distance_and_interpolation_provider.h", "linear__distance__and__interpolation__provider_8h.html", [
+      [ "LinearDistanceAndInterpolationProvider", "classdrake_1_1planning_1_1_linear_distance_and_interpolation_provider.html", "classdrake_1_1planning_1_1_linear_distance_and_interpolation_provider" ]
+    ] ],
     [ "planning_doxygen.h", "planning__doxygen_8h.html", null ],
     [ "robot_clearance.h", "robot__clearance_8h.html", null ],
     [ "robot_collision_type.h", "robot__collision__type_8h.html", "robot__collision__type_8h" ],

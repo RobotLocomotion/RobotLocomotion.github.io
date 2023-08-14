@@ -64,6 +64,7 @@ var searchData=
   ['discrete_5ftime_5ftrajectory_2eh',['discrete_time_trajectory.h',['../discrete__time__trajectory_8h.html',1,'']]],
   ['discrete_5fupdate_5fmanager_2eh',['discrete_update_manager.h',['../discrete__update__manager_8h.html',1,'']]],
   ['discrete_5fvalues_2eh',['discrete_values.h',['../discrete__values_8h.html',1,'']]],
+  ['distance_5fand_5finterpolation_5fprovider_2eh',['distance_and_interpolation_provider.h',['../distance__and__interpolation__provider_8h.html',1,'']]],
   ['distance_5fconstraint_2eh',['distance_constraint.h',['../distance__constraint_8h.html',1,'']]],
   ['distance_5fconstraint_5futilities_2eh',['distance_constraint_utilities.h',['../distance__constraint__utilities_8h.html',1,'']]],
   ['distance_5fto_5fpoint_5fcallback_2eh',['distance_to_point_callback.h',['../distance__to__point__callback_8h.html',1,'']]],
