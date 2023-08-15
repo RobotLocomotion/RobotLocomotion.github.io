@@ -159,6 +159,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1_discrete_upd
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classdrake_1_1systems_1_1_discrete_update_event-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -170,22 +171,18 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1_discrete_upd
 class drake::systems::DiscreteUpdateEvent&lt; T &gt;</h3>
 
 <p>This class represents a discrete update event. </p>
-<p>It has an optional callback function (two forms are supported) to do custom handling of this event, and that can write updates to a mutable, non-null <a class="el" href="classdrake_1_1systems_1_1_discrete_values.html" title="DiscreteValues is a container for numerical but non-continuous state and parameters.">DiscreteValues</a> object. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html" title="A superclass template that extends System with some convenience utilities that are not applicable to ...">LeafSystem</a> for more convenient interfaces to discrete update events via the Declare*DiscreteUpdateEvent() methods. </dd></dl>
+<p>It has an optional callback function to do custom handling of this event, and that can write updates to a mutable, non-null <a class="el" href="classdrake_1_1systems_1_1_discrete_values.html" title="DiscreteValues is a container for numerical but non-continuous state and parameters.">DiscreteValues</a> object. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html" title="A superclass template that extends System with some convenience utilities that are not applicable to ...">LeafSystem</a> for more convenient interfaces to discrete update events via the Declare*DiscreteUpdateEvent() methods. </dd></dl>
 </div>
 <p><code>#include &lt;drake/systems/framework/event.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td colspan="2"><div class="groupHeader">Discrete Update Callbacks</div></td></tr>
-<tr><td colspan="2"><div class="groupText"><p>Two callback signatures are supported.</p>
-<p>See <a class="el" href="group__event__callbacks.html">Event Callbacks</a> for a complete discussion. Both callback types receive a const reference to the context and this discrete update event, and a writable non-null pointer to discrete state which the callback may write to. They differ in whether a const reference to the owning system is also provided. </p>
-</div></td></tr>
-<tr class="memitem:a23625c08032a7d524544f45d76b66e77"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; void(const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;, const <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html">DiscreteUpdateEvent</a>&lt; T &gt; &amp;, <a class="el" href="classdrake_1_1systems_1_1_discrete_values.html">DiscreteValues</a>&lt; T &gt; *)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html#a23625c08032a7d524544f45d76b66e77">DiscreteUpdateCallback</a></td></tr>
-<tr class="memdesc:a23625c08032a7d524544f45d76b66e77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback without system reference.  <a href="#a23625c08032a7d524544f45d76b66e77">More...</a><br /></td></tr>
-<tr class="separator:a23625c08032a7d524544f45d76b66e77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3803b3bcfb450714b18a963148bf90ce"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; void(const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &amp;, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;, const <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html">DiscreteUpdateEvent</a>&lt; T &gt; &amp;, <a class="el" href="classdrake_1_1systems_1_1_discrete_values.html">DiscreteValues</a>&lt; T &gt; *)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html#a3803b3bcfb450714b18a963148bf90ce">SystemCallback</a></td></tr>
-<tr class="memdesc:a3803b3bcfb450714b18a963148bf90ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback with const system reference.  <a href="#a3803b3bcfb450714b18a963148bf90ce">More...</a><br /></td></tr>
-<tr class="separator:a3803b3bcfb450714b18a963148bf90ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3801db5591a8a5892cedfc3a9202d295"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html#a3801db5591a8a5892cedfc3a9202d295">DiscreteUpdateCallback</a> = std::function&lt; void(const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;, const <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html">DiscreteUpdateEvent</a>&lt; T &gt; &amp;, <a class="el" href="classdrake_1_1systems_1_1_discrete_values.html">DiscreteValues</a>&lt; T &gt; *)&gt;</td></tr>
+<tr class="memdesc:a3801db5591a8a5892cedfc3a9202d295"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a3801db5591a8a5892cedfc3a9202d295">More...</a><br /></td></tr>
+<tr class="separator:a3801db5591a8a5892cedfc3a9202d295"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7d12676d586aac6a6fc21eb12e0f551"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html#ab7d12676d586aac6a6fc21eb12e0f551">SystemCallback</a> = std::function&lt; void(const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &amp;, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;, const <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html">DiscreteUpdateEvent</a>&lt; T &gt; &amp;, <a class="el" href="classdrake_1_1systems_1_1_discrete_values.html">DiscreteValues</a>&lt; T &gt; *)&gt;</td></tr>
+<tr class="memdesc:ab7d12676d586aac6a6fc21eb12e0f551"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#ab7d12676d586aac6a6fc21eb12e0f551">More...</a><br /></td></tr>
+<tr class="separator:ab7d12676d586aac6a6fc21eb12e0f551"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_classdrake_1_1systems_1_1_event"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classdrake_1_1systems_1_1_event')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classdrake_1_1systems_1_1_event.html">Event&lt; T &gt;</a></td></tr>
 <tr class="memitem:a9fc02a89fe46ec20b0e5cf68ecf7eee7 inherit pub_types_classdrake_1_1systems_1_1_event"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event.html#a9fc02a89fe46ec20b0e5cf68ecf7eee7">TriggerType</a> = <a class="el" href="namespacedrake_1_1systems.html#a59b7f49353f2a99b6c22d2eaae0fe9e9">systems::TriggerType</a></td></tr>
 <tr class="separator:a9fc02a89fe46ec20b0e5cf68ecf7eee7 inherit pub_types_classdrake_1_1systems_1_1_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -195,18 +192,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6411929eebb98e856021335d43bcb7f4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html#a6411929eebb98e856021335d43bcb7f4">is_discrete_update</a> () const override</td></tr>
 <tr class="memdesc:a6411929eebb98e856021335d43bcb7f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if this is a <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html" title="This class represents a discrete update event.">DiscreteUpdateEvent</a>.  <a href="#a6411929eebb98e856021335d43bcb7f4">More...</a><br /></td></tr>
 <tr class="separator:a6411929eebb98e856021335d43bcb7f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac92214eaf09786073aa1018622733394"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html#ac92214eaf09786073aa1018622733394">DiscreteUpdateEvent</a> ()</td></tr>
-<tr class="memdesc:ac92214eaf09786073aa1018622733394"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes a <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html" title="This class represents a discrete update event.">DiscreteUpdateEvent</a> with no trigger type, no event data, and no specified callback function.  <a href="#ac92214eaf09786073aa1018622733394">More...</a><br /></td></tr>
-<tr class="separator:ac92214eaf09786073aa1018622733394"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c984fad162c5db62119c53952ce882c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html#a6c984fad162c5db62119c53952ce882c">DiscreteUpdateEvent</a> (const <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html#a23625c08032a7d524544f45d76b66e77">DiscreteUpdateCallback</a> &amp;callback)</td></tr>
-<tr class="memdesc:a6c984fad162c5db62119c53952ce882c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes a <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html" title="This class represents a discrete update event.">DiscreteUpdateEvent</a> with no trigger type, no event data, and the specified callback function.  <a href="#a6c984fad162c5db62119c53952ce882c">More...</a><br /></td></tr>
-<tr class="separator:a6c984fad162c5db62119c53952ce882c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31c4a2fd9147f7a30281ad93dbdace30"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html#a31c4a2fd9147f7a30281ad93dbdace30">DiscreteUpdateEvent</a> (const <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html#a3803b3bcfb450714b18a963148bf90ce">SystemCallback</a> &amp;system_callback)</td></tr>
-<tr class="memdesc:a31c4a2fd9147f7a30281ad93dbdace30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes a <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html" title="This class represents a discrete update event.">DiscreteUpdateEvent</a> with no trigger type, no event data, and the specified system callback function.  <a href="#a31c4a2fd9147f7a30281ad93dbdace30">More...</a><br /></td></tr>
-<tr class="separator:a31c4a2fd9147f7a30281ad93dbdace30"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a885763a51126dd01130107a8fbb07933"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html#a885763a51126dd01130107a8fbb07933">handle</a> (const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &amp;system, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1systems_1_1_discrete_values.html">DiscreteValues</a>&lt; T &gt; *discrete_state) const</td></tr>
-<tr class="memdesc:a885763a51126dd01130107a8fbb07933"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls the optional callback function, if one exists, with <code>system</code>, <code>context</code>, <code>this</code> and <code>discrete_state</code>.  <a href="#a885763a51126dd01130107a8fbb07933">More...</a><br /></td></tr>
-<tr class="separator:a885763a51126dd01130107a8fbb07933"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69dfa70adfc53ee7b4deaebd2d15f381"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html#a69dfa70adfc53ee7b4deaebd2d15f381">DiscreteUpdateEvent</a> ()=default</td></tr>
+<tr class="memdesc:a69dfa70adfc53ee7b4deaebd2d15f381"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an empty <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html" title="This class represents a discrete update event.">DiscreteUpdateEvent</a>.  <a href="#a69dfa70adfc53ee7b4deaebd2d15f381">More...</a><br /></td></tr>
+<tr class="separator:a69dfa70adfc53ee7b4deaebd2d15f381"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c449b462a25ed25a583a755cf4d0c5c"><td class="memTemplParams" colspan="2">template&lt;typename Function &gt; </td></tr>
+<tr class="memitem:a4c449b462a25ed25a583a755cf4d0c5c"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html#a4c449b462a25ed25a583a755cf4d0c5c">DiscreteUpdateEvent</a> (const Function &amp;callback)</td></tr>
+<tr class="memdesc:a4c449b462a25ed25a583a755cf4d0c5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html" title="This class represents a discrete update event.">DiscreteUpdateEvent</a> with the given callback function.  <a href="#a4c449b462a25ed25a583a755cf4d0c5c">More...</a><br /></td></tr>
+<tr class="separator:a4c449b462a25ed25a583a755cf4d0c5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae32cb14dfb503b2ab5de83c7983ddc62"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_event_status.html">EventStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html#ae32cb14dfb503b2ab5de83c7983ddc62">handle</a> (const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &amp;system, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1systems_1_1_discrete_values.html">DiscreteValues</a>&lt; T &gt; *discrete_state) const</td></tr>
+<tr class="memdesc:ae32cb14dfb503b2ab5de83c7983ddc62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls the optional callback function, if one exists, with <code>system</code>, <code>context</code>, <code>this</code> and <code>discrete_state</code>.  <a href="#ae32cb14dfb503b2ab5de83c7983ddc62">More...</a><br /></td></tr>
+<tr class="separator:ae32cb14dfb503b2ab5de83c7983ddc62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
 <tr class="memitem:ae9f4c8c54412f911fafb7fcd27b5673d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html#ae9f4c8c54412f911fafb7fcd27b5673d">DiscreteUpdateEvent</a> (const <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html">DiscreteUpdateEvent</a> &amp;)=default</td></tr>
 <tr class="separator:ae9f4c8c54412f911fafb7fcd27b5673d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -217,6 +212,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac65543aabc8ab1b8c4fcd1bcf1ec48c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html">DiscreteUpdateEvent</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html#ac65543aabc8ab1b8c4fcd1bcf1ec48c5">operator=</a> (<a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html">DiscreteUpdateEvent</a> &amp;&amp;)=default</td></tr>
 <tr class="separator:ac65543aabc8ab1b8c4fcd1bcf1ec48c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classdrake_1_1systems_1_1_event"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classdrake_1_1systems_1_1_event')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classdrake_1_1systems_1_1_event.html">Event&lt; T &gt;</a></td></tr>
+<tr class="memitem:ab259bf8791b9706ecd60c91988165e18 inherit pub_methods_classdrake_1_1systems_1_1_event"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event.html#ab259bf8791b9706ecd60c91988165e18">~Event</a> ()=default</td></tr>
+<tr class="separator:ab259bf8791b9706ecd60c91988165e18 inherit pub_methods_classdrake_1_1systems_1_1_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7e597688e8eb0d1d54d322964d49b35 inherit pub_methods_classdrake_1_1systems_1_1_event"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_event.html">Event</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event.html#ae7e597688e8eb0d1d54d322964d49b35">Clone</a> () const</td></tr>
 <tr class="memdesc:ae7e597688e8eb0d1d54d322964d49b35 inherit pub_methods_classdrake_1_1systems_1_1_event"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clones this instance.  <a href="classdrake_1_1systems_1_1_event.html#ae7e597688e8eb0d1d54d322964d49b35">More...</a><br /></td></tr>
 <tr class="separator:ae7e597688e8eb0d1d54d322964d49b35 inherit pub_methods_classdrake_1_1systems_1_1_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -245,6 +242,9 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_classdrake_1_1systems_1_1_event"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classdrake_1_1systems_1_1_event')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classdrake_1_1systems_1_1_event.html">Event&lt; T &gt;</a></td></tr>
+<tr class="memitem:a51e225b49b1437f3097bd83c7c97a048 inherit pro_methods_classdrake_1_1systems_1_1_event"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event.html#a51e225b49b1437f3097bd83c7c97a048">Event</a> ()=default</td></tr>
+<tr class="memdesc:a51e225b49b1437f3097bd83c7c97a048 inherit pro_methods_classdrake_1_1systems_1_1_event"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an empty <a class="el" href="classdrake_1_1systems_1_1_event.html" title="Abstract base class that represents an event.">Event</a>.  <a href="classdrake_1_1systems_1_1_event.html#a51e225b49b1437f3097bd83c7c97a048">More...</a><br /></td></tr>
+<tr class="separator:a51e225b49b1437f3097bd83c7c97a048 inherit pro_methods_classdrake_1_1systems_1_1_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b74d375f6271750885fd0e6b233bcb6 inherit pro_methods_classdrake_1_1systems_1_1_event"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event.html#a2b74d375f6271750885fd0e6b233bcb6">Event</a> (const <a class="el" href="classdrake_1_1systems_1_1_event.html">Event</a> &amp;)=default</td></tr>
 <tr class="separator:a2b74d375f6271750885fd0e6b233bcb6 inherit pro_methods_classdrake_1_1systems_1_1_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76adffb57a190939990260003698d993 inherit pro_methods_classdrake_1_1systems_1_1_event"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_event.html">Event</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event.html#a76adffb57a190939990260003698d993">operator=</a> (const <a class="el" href="classdrake_1_1systems_1_1_event.html">Event</a> &amp;)=default</td></tr>
@@ -255,41 +255,41 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a99acf4f42994cb58c4c5465d1cc61b9a inherit pro_methods_classdrake_1_1systems_1_1_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a23625c08032a7d524544f45d76b66e77"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a23625c08032a7d524544f45d76b66e77">&#9670;&nbsp;</a></span>DiscreteUpdateCallback</h2>
+<a id="a3801db5591a8a5892cedfc3a9202d295"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3801db5591a8a5892cedfc3a9202d295">&#9670;&nbsp;</a></span>DiscreteUpdateCallback</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::function&lt;void(const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt;T&gt;&amp;, const <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html">DiscreteUpdateEvent</a>&lt;T&gt;&amp;, <a class="el" href="classdrake_1_1systems_1_1_discrete_values.html">DiscreteValues</a>&lt;T&gt;*)&gt; <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html#a23625c08032a7d524544f45d76b66e77">DiscreteUpdateCallback</a></td>
+          <td class="memname">using <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html#a3801db5591a8a5892cedfc3a9202d295">DiscreteUpdateCallback</a> =  std::function&lt;void(const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt;T&gt;&amp;, const <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html">DiscreteUpdateEvent</a>&lt;T&gt;&amp;, <a class="el" href="classdrake_1_1systems_1_1_discrete_values.html">DiscreteValues</a>&lt;T&gt;*)&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Callback without system reference. </p>
+<p>(Deprecated.) </p>
 
 </div>
 </div>
-<a id="a3803b3bcfb450714b18a963148bf90ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3803b3bcfb450714b18a963148bf90ce">&#9670;&nbsp;</a></span>SystemCallback</h2>
+<a id="ab7d12676d586aac6a6fc21eb12e0f551"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7d12676d586aac6a6fc21eb12e0f551">&#9670;&nbsp;</a></span>SystemCallback</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::function&lt;void(const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt;T&gt;&amp;, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt;T&gt;&amp;, const <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html">DiscreteUpdateEvent</a>&lt;T&gt;&amp;, <a class="el" href="classdrake_1_1systems_1_1_discrete_values.html">DiscreteValues</a>&lt;T&gt;*)&gt; <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html#a3803b3bcfb450714b18a963148bf90ce">SystemCallback</a></td>
+          <td class="memname">using <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html#ab7d12676d586aac6a6fc21eb12e0f551">SystemCallback</a> =  std::function&lt;void(const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt;T&gt;&amp;, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt;T&gt;&amp;, const <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html">DiscreteUpdateEvent</a>&lt;T&gt;&amp;, <a class="el" href="classdrake_1_1systems_1_1_discrete_values.html">DiscreteValues</a>&lt;T&gt;*)&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Callback with const system reference. </p>
+<p>(Deprecated.) </p>
 
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ae9f4c8c54412f911fafb7fcd27b5673d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae9f4c8c54412f911fafb7fcd27b5673d">&#9670;&nbsp;</a></span>DiscreteUpdateEvent() <span class="overload">[1/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9f4c8c54412f911fafb7fcd27b5673d">&#9670;&nbsp;</a></span>DiscreteUpdateEvent() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -315,7 +315,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="acbfac42a00b3f308ad6f69dc6c654b6a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acbfac42a00b3f308ad6f69dc6c654b6a">&#9670;&nbsp;</a></span>DiscreteUpdateEvent() <span class="overload">[2/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#acbfac42a00b3f308ad6f69dc6c654b6a">&#9670;&nbsp;</a></span>DiscreteUpdateEvent() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -340,27 +340,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ac92214eaf09786073aa1018622733394"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac92214eaf09786073aa1018622733394">&#9670;&nbsp;</a></span>DiscreteUpdateEvent() <span class="overload">[3/5]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html">DiscreteUpdateEvent</a> </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Makes a <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html" title="This class represents a discrete update event.">DiscreteUpdateEvent</a> with no trigger type, no event data, and no specified callback function. </p>
-
-</div>
-</div>
-<a id="a6c984fad162c5db62119c53952ce882c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6c984fad162c5db62119c53952ce882c">&#9670;&nbsp;</a></span>DiscreteUpdateEvent() <span class="overload">[4/5]</span></h2>
+<a id="a69dfa70adfc53ee7b4deaebd2d15f381"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69dfa70adfc53ee7b4deaebd2d15f381">&#9670;&nbsp;</a></span>DiscreteUpdateEvent() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -371,7 +352,34 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html">DiscreteUpdateEvent</a> </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html#a23625c08032a7d524544f45d76b66e77">DiscreteUpdateCallback</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs an empty <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html" title="This class represents a discrete update event.">DiscreteUpdateEvent</a>. </p>
+
+</div>
+</div>
+<a id="a4c449b462a25ed25a583a755cf4d0c5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c449b462a25ed25a583a755cf4d0c5c">&#9670;&nbsp;</a></span>DiscreteUpdateEvent() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html">DiscreteUpdateEvent</a> </td>
+          <td>(</td>
+          <td class="paramtype">const Function &amp;&#160;</td>
           <td class="paramname"><em>callback</em></td><td>)</td>
           <td></td>
         </tr>
@@ -383,47 +391,25 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Makes a <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html" title="This class represents a discrete update event.">DiscreteUpdateEvent</a> with no trigger type, no event data, and the specified callback function. </p>
-
-</div>
-</div>
-<a id="a31c4a2fd9147f7a30281ad93dbdace30"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a31c4a2fd9147f7a30281ad93dbdace30">&#9670;&nbsp;</a></span>DiscreteUpdateEvent() <span class="overload">[5/5]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html">DiscreteUpdateEvent</a> </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html#a3803b3bcfb450714b18a963148bf90ce">SystemCallback</a> &amp;&#160;</td>
-          <td class="paramname"><em>system_callback</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Makes a <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html" title="This class represents a discrete update event.">DiscreteUpdateEvent</a> with no trigger type, no event data, and the specified system callback function. </p>
+<p>Constructs a <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html" title="This class represents a discrete update event.">DiscreteUpdateEvent</a> with the given callback function. </p>
+<p>The following three callback signatures are supported:</p><ul>
+<li><code>(const <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a>&lt;T&gt;&amp; const <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a>&lt;T&gt;&amp;, const <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html" title="This class represents a discrete update event.">DiscreteUpdateEvent</a>&lt;T&gt;&amp;, <a class="el" href="classdrake_1_1systems_1_1_discrete_values.html" title="DiscreteValues is a container for numerical but non-continuous state and parameters.">DiscreteValues</a>&lt;T&gt;*) -&gt; <a class="el" href="classdrake_1_1systems_1_1_event_status.html" title="Holds the return status from execution of an event handler function, or the effective status after a ...">EventStatus</a></code></li>
+<li><code>(const <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a>&lt;T&gt;&amp; const <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a>&lt;T&gt;&amp;, const <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html" title="This class represents a discrete update event.">DiscreteUpdateEvent</a>&lt;T&gt;&amp;, <a class="el" href="classdrake_1_1systems_1_1_discrete_values.html" title="DiscreteValues is a container for numerical but non-continuous state and parameters.">DiscreteValues</a>&lt;T&gt;*) -&gt; void</code></li>
+<li><code>(const <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a>&lt;T&gt;&amp;, const <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html" title="This class represents a discrete update event.">DiscreteUpdateEvent</a>&lt;T&gt;&amp;, <a class="el" href="classdrake_1_1systems_1_1_discrete_values.html" title="DiscreteValues is a container for numerical but non-continuous state and parameters.">DiscreteValues</a>&lt;T&gt;*) -&gt; void</code></li>
+</ul>
+<dl class="section warning"><dt>Warning</dt><dd>All signatures except the first one are deprecated and will be removed from Drake on or after 2023-12-01. </dd></dl>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a885763a51126dd01130107a8fbb07933"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a885763a51126dd01130107a8fbb07933">&#9670;&nbsp;</a></span>handle()</h2>
+<a id="ae32cb14dfb503b2ab5de83c7983ddc62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae32cb14dfb503b2ab5de83c7983ddc62">&#9670;&nbsp;</a></span>handle()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void handle </td>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_event_status.html">EventStatus</a> handle </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>system</em>, </td>

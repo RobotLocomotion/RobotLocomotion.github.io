@@ -1,7 +1,5 @@
 var NAVTREEINDEX49 =
 {
-"group__visualization.html":[1,2,11],
-"group__visualization.html#ga34c9c8f0a78446ac29edf4a3202127c3":[1,2,11,6],
 "group__visualization.html#ga732349f929601b37e30b15ad557057e7":[1,2,11,7],
 "group__yaml__serialization.html":[1,6,4],
 "gurobi__solver_8h.html":[4,0,0,11,21],
@@ -249,5 +247,7 @@ var NAVTREEINDEX49 =
 "light__parameter_8h.html#a102150e6763c0db325ca79bbf1148ffdab91a982133fa67e579d45373b64bbe7b":[4,0,0,4,4,1,1,1],
 "light__parameter_8h.html#a5a4729ba2516af248942df77db747f51":[4,0,0,4,4,1,6],
 "light__parameter_8h.html#a8f84eb20195999e4bb6c95cd47b69a76":[4,0,0,4,4,1,4],
-"light__parameter_8h.html#aab07aecacd083ebe574a44a2754b430a":[4,0,0,4,4,1,5]
+"light__parameter_8h.html#aab07aecacd083ebe574a44a2754b430a":[4,0,0,4,4,1,5],
+"light__parameter_8h.html#ab5284a5342f4a9295304af282c5e2653":[4,0,0,4,4,1,3],
+"light__parameter_8h.html#adc3ec8293e6a97ebe43f0196b9a7f638":[4,0,0,4,4,1,2]
 };

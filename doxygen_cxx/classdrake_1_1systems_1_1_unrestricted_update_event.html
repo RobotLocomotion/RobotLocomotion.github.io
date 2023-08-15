@@ -159,6 +159,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1_unrestricted
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classdrake_1_1systems_1_1_unrestricted_update_event-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -170,22 +171,18 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1_unrestricted
 class drake::systems::UnrestrictedUpdateEvent&lt; T &gt;</h3>
 
 <p>This class represents an unrestricted update event. </p>
-<p>It has an optional callback function (two forms are supported) to do custom handling of this event, and that can write updates to a mutable, non-null <a class="el" href="classdrake_1_1systems_1_1_state.html" title="State is a container for all the data comprising the complete state of a particular System at a parti...">State</a> object. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html" title="A superclass template that extends System with some convenience utilities that are not applicable to ...">LeafSystem</a> for more convenient interfaces to unrestricted update events via the Declare*UnrestrictedUpdateEvent() methods. </dd></dl>
+<p>It has an optional callback function to do custom handling of this event, and that can write updates to a mutable, non-null <a class="el" href="classdrake_1_1systems_1_1_state.html" title="State is a container for all the data comprising the complete state of a particular System at a parti...">State</a> object. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html" title="A superclass template that extends System with some convenience utilities that are not applicable to ...">LeafSystem</a> for more convenient interfaces to unrestricted update events via the Declare*UnrestrictedUpdateEvent() methods. </dd></dl>
 </div>
 <p><code>#include &lt;drake/systems/framework/event.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td colspan="2"><div class="groupHeader">Unrestricted Update Callbacks</div></td></tr>
-<tr><td colspan="2"><div class="groupText"><p>Two callback signatures are supported.</p>
-<p>See <a class="el" href="group__event__callbacks.html">Event Callbacks</a> for a complete discussion. Both callback types receive a const reference to the context and this unrestricted update event, and a writable non-null pointer to state which the callback may write to. They differ in whether a const reference to the owning system is also provided. </p>
-</div></td></tr>
-<tr class="memitem:a1ad5bc9187928229cce35a57b939b8ea"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; void(const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;, const <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html">UnrestrictedUpdateEvent</a>&lt; T &gt; &amp;, <a class="el" href="classdrake_1_1systems_1_1_state.html">State</a>&lt; T &gt; *)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html#a1ad5bc9187928229cce35a57b939b8ea">UnrestrictedUpdateCallback</a></td></tr>
-<tr class="memdesc:a1ad5bc9187928229cce35a57b939b8ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback without system reference.  <a href="#a1ad5bc9187928229cce35a57b939b8ea">More...</a><br /></td></tr>
-<tr class="separator:a1ad5bc9187928229cce35a57b939b8ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad05c437c96fd2f441af9a2b348bda4e5"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; void(const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &amp;, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;, const <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html">UnrestrictedUpdateEvent</a>&lt; T &gt; &amp;, <a class="el" href="classdrake_1_1systems_1_1_state.html">State</a>&lt; T &gt; *)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html#ad05c437c96fd2f441af9a2b348bda4e5">SystemCallback</a></td></tr>
-<tr class="memdesc:ad05c437c96fd2f441af9a2b348bda4e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback with const system reference.  <a href="#ad05c437c96fd2f441af9a2b348bda4e5">More...</a><br /></td></tr>
-<tr class="separator:ad05c437c96fd2f441af9a2b348bda4e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f3b1a8507e1231b1f2a62962ca8299c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html#a0f3b1a8507e1231b1f2a62962ca8299c">UnrestrictedUpdateCallback</a> = std::function&lt; void(const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;, const <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html">UnrestrictedUpdateEvent</a>&lt; T &gt; &amp;, <a class="el" href="classdrake_1_1systems_1_1_state.html">State</a>&lt; T &gt; *)&gt;</td></tr>
+<tr class="memdesc:a0f3b1a8507e1231b1f2a62962ca8299c"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a0f3b1a8507e1231b1f2a62962ca8299c">More...</a><br /></td></tr>
+<tr class="separator:a0f3b1a8507e1231b1f2a62962ca8299c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a914774cdf59cfb12d2ad970e6fe69f5b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html#a914774cdf59cfb12d2ad970e6fe69f5b">SystemCallback</a> = std::function&lt; void(const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &amp;, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;, const <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html">UnrestrictedUpdateEvent</a>&lt; T &gt; &amp;, <a class="el" href="classdrake_1_1systems_1_1_state.html">State</a>&lt; T &gt; *)&gt;</td></tr>
+<tr class="memdesc:a914774cdf59cfb12d2ad970e6fe69f5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a914774cdf59cfb12d2ad970e6fe69f5b">More...</a><br /></td></tr>
+<tr class="separator:a914774cdf59cfb12d2ad970e6fe69f5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_classdrake_1_1systems_1_1_event"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classdrake_1_1systems_1_1_event')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classdrake_1_1systems_1_1_event.html">Event&lt; T &gt;</a></td></tr>
 <tr class="memitem:a9fc02a89fe46ec20b0e5cf68ecf7eee7 inherit pub_types_classdrake_1_1systems_1_1_event"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event.html#a9fc02a89fe46ec20b0e5cf68ecf7eee7">TriggerType</a> = <a class="el" href="namespacedrake_1_1systems.html#a59b7f49353f2a99b6c22d2eaae0fe9e9">systems::TriggerType</a></td></tr>
 <tr class="separator:a9fc02a89fe46ec20b0e5cf68ecf7eee7 inherit pub_types_classdrake_1_1systems_1_1_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -195,18 +192,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6411929eebb98e856021335d43bcb7f4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html#a6411929eebb98e856021335d43bcb7f4">is_discrete_update</a> () const override</td></tr>
 <tr class="memdesc:a6411929eebb98e856021335d43bcb7f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if this is a <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html" title="This class represents a discrete update event.">DiscreteUpdateEvent</a>.  <a href="#a6411929eebb98e856021335d43bcb7f4">More...</a><br /></td></tr>
 <tr class="separator:a6411929eebb98e856021335d43bcb7f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a923254fc42e21319fabe9bff44453ff5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html#a923254fc42e21319fabe9bff44453ff5">UnrestrictedUpdateEvent</a> ()</td></tr>
-<tr class="memdesc:a923254fc42e21319fabe9bff44453ff5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes an <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html" title="This class represents an unrestricted update event.">UnrestrictedUpdateEvent</a> with no trigger type, no event data, and no specified callback function.  <a href="#a923254fc42e21319fabe9bff44453ff5">More...</a><br /></td></tr>
-<tr class="separator:a923254fc42e21319fabe9bff44453ff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67e1ce5f0ac183dab57d2335136e44e3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html#a67e1ce5f0ac183dab57d2335136e44e3">UnrestrictedUpdateEvent</a> (const <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html#a1ad5bc9187928229cce35a57b939b8ea">UnrestrictedUpdateCallback</a> &amp;callback)</td></tr>
-<tr class="memdesc:a67e1ce5f0ac183dab57d2335136e44e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes a <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html" title="This class represents an unrestricted update event.">UnrestrictedUpdateEvent</a> with no trigger type, no event data, and the specified callback function.  <a href="#a67e1ce5f0ac183dab57d2335136e44e3">More...</a><br /></td></tr>
-<tr class="separator:a67e1ce5f0ac183dab57d2335136e44e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a366cb097df6d7b213d58d46bb37e6deb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html#a366cb097df6d7b213d58d46bb37e6deb">UnrestrictedUpdateEvent</a> (const <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html#ad05c437c96fd2f441af9a2b348bda4e5">SystemCallback</a> &amp;system_callback)</td></tr>
-<tr class="memdesc:a366cb097df6d7b213d58d46bb37e6deb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes a <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html" title="This class represents an unrestricted update event.">UnrestrictedUpdateEvent</a> with no trigger type, no event data, and the specified system callback function.  <a href="#a366cb097df6d7b213d58d46bb37e6deb">More...</a><br /></td></tr>
-<tr class="separator:a366cb097df6d7b213d58d46bb37e6deb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48472a620e79d2e1e6c5c03b1accf9ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html#a48472a620e79d2e1e6c5c03b1accf9ec">handle</a> (const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &amp;system, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1systems_1_1_state.html">State</a>&lt; T &gt; *state) const</td></tr>
-<tr class="memdesc:a48472a620e79d2e1e6c5c03b1accf9ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls the optional callback function, if one exists, with <code>system</code>, <code>context</code>, <code>this</code> and <code>state</code>.  <a href="#a48472a620e79d2e1e6c5c03b1accf9ec">More...</a><br /></td></tr>
-<tr class="separator:a48472a620e79d2e1e6c5c03b1accf9ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dee3f44fec7d9de1aadb46a4901fd1e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html#a4dee3f44fec7d9de1aadb46a4901fd1e">UnrestrictedUpdateEvent</a> ()=default</td></tr>
+<tr class="memdesc:a4dee3f44fec7d9de1aadb46a4901fd1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an empty <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html" title="This class represents an unrestricted update event.">UnrestrictedUpdateEvent</a>.  <a href="#a4dee3f44fec7d9de1aadb46a4901fd1e">More...</a><br /></td></tr>
+<tr class="separator:a4dee3f44fec7d9de1aadb46a4901fd1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08eb56701d82c2c4e3881f5efde43caa"><td class="memTemplParams" colspan="2">template&lt;typename Function &gt; </td></tr>
+<tr class="memitem:a08eb56701d82c2c4e3881f5efde43caa"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html#a08eb56701d82c2c4e3881f5efde43caa">UnrestrictedUpdateEvent</a> (const Function &amp;callback)</td></tr>
+<tr class="memdesc:a08eb56701d82c2c4e3881f5efde43caa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html" title="This class represents an unrestricted update event.">UnrestrictedUpdateEvent</a> with the given callback function.  <a href="#a08eb56701d82c2c4e3881f5efde43caa">More...</a><br /></td></tr>
+<tr class="separator:a08eb56701d82c2c4e3881f5efde43caa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab94b0c99642bc276833c561af34c9bc4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_event_status.html">EventStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html#ab94b0c99642bc276833c561af34c9bc4">handle</a> (const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &amp;system, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1systems_1_1_state.html">State</a>&lt; T &gt; *state) const</td></tr>
+<tr class="memdesc:ab94b0c99642bc276833c561af34c9bc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls the optional callback function, if one exists, with <code>system</code>, <code>context</code>, <code>this</code> and <code>state</code>.  <a href="#ab94b0c99642bc276833c561af34c9bc4">More...</a><br /></td></tr>
+<tr class="separator:ab94b0c99642bc276833c561af34c9bc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
 <tr class="memitem:a530cc315fb2d94f53632268092b5e264"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html#a530cc315fb2d94f53632268092b5e264">UnrestrictedUpdateEvent</a> (const <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html">UnrestrictedUpdateEvent</a> &amp;)=default</td></tr>
 <tr class="separator:a530cc315fb2d94f53632268092b5e264"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -217,6 +212,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1050c4b17cc59bd9e5e57cde7083537d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html">UnrestrictedUpdateEvent</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html#a1050c4b17cc59bd9e5e57cde7083537d">operator=</a> (<a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html">UnrestrictedUpdateEvent</a> &amp;&amp;)=default</td></tr>
 <tr class="separator:a1050c4b17cc59bd9e5e57cde7083537d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classdrake_1_1systems_1_1_event"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classdrake_1_1systems_1_1_event')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classdrake_1_1systems_1_1_event.html">Event&lt; T &gt;</a></td></tr>
+<tr class="memitem:ab259bf8791b9706ecd60c91988165e18 inherit pub_methods_classdrake_1_1systems_1_1_event"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event.html#ab259bf8791b9706ecd60c91988165e18">~Event</a> ()=default</td></tr>
+<tr class="separator:ab259bf8791b9706ecd60c91988165e18 inherit pub_methods_classdrake_1_1systems_1_1_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7e597688e8eb0d1d54d322964d49b35 inherit pub_methods_classdrake_1_1systems_1_1_event"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_event.html">Event</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event.html#ae7e597688e8eb0d1d54d322964d49b35">Clone</a> () const</td></tr>
 <tr class="memdesc:ae7e597688e8eb0d1d54d322964d49b35 inherit pub_methods_classdrake_1_1systems_1_1_event"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clones this instance.  <a href="classdrake_1_1systems_1_1_event.html#ae7e597688e8eb0d1d54d322964d49b35">More...</a><br /></td></tr>
 <tr class="separator:ae7e597688e8eb0d1d54d322964d49b35 inherit pub_methods_classdrake_1_1systems_1_1_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -245,6 +242,9 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_classdrake_1_1systems_1_1_event"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classdrake_1_1systems_1_1_event')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classdrake_1_1systems_1_1_event.html">Event&lt; T &gt;</a></td></tr>
+<tr class="memitem:a51e225b49b1437f3097bd83c7c97a048 inherit pro_methods_classdrake_1_1systems_1_1_event"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event.html#a51e225b49b1437f3097bd83c7c97a048">Event</a> ()=default</td></tr>
+<tr class="memdesc:a51e225b49b1437f3097bd83c7c97a048 inherit pro_methods_classdrake_1_1systems_1_1_event"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an empty <a class="el" href="classdrake_1_1systems_1_1_event.html" title="Abstract base class that represents an event.">Event</a>.  <a href="classdrake_1_1systems_1_1_event.html#a51e225b49b1437f3097bd83c7c97a048">More...</a><br /></td></tr>
+<tr class="separator:a51e225b49b1437f3097bd83c7c97a048 inherit pro_methods_classdrake_1_1systems_1_1_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b74d375f6271750885fd0e6b233bcb6 inherit pro_methods_classdrake_1_1systems_1_1_event"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event.html#a2b74d375f6271750885fd0e6b233bcb6">Event</a> (const <a class="el" href="classdrake_1_1systems_1_1_event.html">Event</a> &amp;)=default</td></tr>
 <tr class="separator:a2b74d375f6271750885fd0e6b233bcb6 inherit pro_methods_classdrake_1_1systems_1_1_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76adffb57a190939990260003698d993 inherit pro_methods_classdrake_1_1systems_1_1_event"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_event.html">Event</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event.html#a76adffb57a190939990260003698d993">operator=</a> (const <a class="el" href="classdrake_1_1systems_1_1_event.html">Event</a> &amp;)=default</td></tr>
@@ -255,41 +255,41 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a99acf4f42994cb58c4c5465d1cc61b9a inherit pro_methods_classdrake_1_1systems_1_1_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="ad05c437c96fd2f441af9a2b348bda4e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad05c437c96fd2f441af9a2b348bda4e5">&#9670;&nbsp;</a></span>SystemCallback</h2>
+<a id="a914774cdf59cfb12d2ad970e6fe69f5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a914774cdf59cfb12d2ad970e6fe69f5b">&#9670;&nbsp;</a></span>SystemCallback</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::function&lt;void(const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt;T&gt;&amp;, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt;T&gt;&amp;, const <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html">UnrestrictedUpdateEvent</a>&lt;T&gt;&amp;, <a class="el" href="classdrake_1_1systems_1_1_state.html">State</a>&lt;T&gt;*)&gt; <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html#ad05c437c96fd2f441af9a2b348bda4e5">SystemCallback</a></td>
+          <td class="memname">using <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html#a914774cdf59cfb12d2ad970e6fe69f5b">SystemCallback</a> =  std::function&lt;void(const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt;T&gt;&amp;, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt;T&gt;&amp;, const <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html">UnrestrictedUpdateEvent</a>&lt;T&gt;&amp;, <a class="el" href="classdrake_1_1systems_1_1_state.html">State</a>&lt;T&gt;*)&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Callback with const system reference. </p>
+<p>(Deprecated.) </p>
 
 </div>
 </div>
-<a id="a1ad5bc9187928229cce35a57b939b8ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ad5bc9187928229cce35a57b939b8ea">&#9670;&nbsp;</a></span>UnrestrictedUpdateCallback</h2>
+<a id="a0f3b1a8507e1231b1f2a62962ca8299c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f3b1a8507e1231b1f2a62962ca8299c">&#9670;&nbsp;</a></span>UnrestrictedUpdateCallback</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::function&lt;void(const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt;T&gt;&amp;, const <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html">UnrestrictedUpdateEvent</a>&lt;T&gt;&amp;, <a class="el" href="classdrake_1_1systems_1_1_state.html">State</a>&lt;T&gt;*)&gt; <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html#a1ad5bc9187928229cce35a57b939b8ea">UnrestrictedUpdateCallback</a></td>
+          <td class="memname">using <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html#a0f3b1a8507e1231b1f2a62962ca8299c">UnrestrictedUpdateCallback</a> =  std::function&lt;void(const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt;T&gt;&amp;, const <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html">UnrestrictedUpdateEvent</a>&lt;T&gt;&amp;, <a class="el" href="classdrake_1_1systems_1_1_state.html">State</a>&lt;T&gt;*)&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Callback without system reference. </p>
+<p>(Deprecated.) </p>
 
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a530cc315fb2d94f53632268092b5e264"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a530cc315fb2d94f53632268092b5e264">&#9670;&nbsp;</a></span>UnrestrictedUpdateEvent() <span class="overload">[1/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a530cc315fb2d94f53632268092b5e264">&#9670;&nbsp;</a></span>UnrestrictedUpdateEvent() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -315,7 +315,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="a6a9cde87fbe37b03d9bafc989e09a3b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a9cde87fbe37b03d9bafc989e09a3b9">&#9670;&nbsp;</a></span>UnrestrictedUpdateEvent() <span class="overload">[2/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a9cde87fbe37b03d9bafc989e09a3b9">&#9670;&nbsp;</a></span>UnrestrictedUpdateEvent() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -340,27 +340,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a923254fc42e21319fabe9bff44453ff5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a923254fc42e21319fabe9bff44453ff5">&#9670;&nbsp;</a></span>UnrestrictedUpdateEvent() <span class="overload">[3/5]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html">UnrestrictedUpdateEvent</a> </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Makes an <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html" title="This class represents an unrestricted update event.">UnrestrictedUpdateEvent</a> with no trigger type, no event data, and no specified callback function. </p>
-
-</div>
-</div>
-<a id="a67e1ce5f0ac183dab57d2335136e44e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a67e1ce5f0ac183dab57d2335136e44e3">&#9670;&nbsp;</a></span>UnrestrictedUpdateEvent() <span class="overload">[4/5]</span></h2>
+<a id="a4dee3f44fec7d9de1aadb46a4901fd1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dee3f44fec7d9de1aadb46a4901fd1e">&#9670;&nbsp;</a></span>UnrestrictedUpdateEvent() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -371,7 +352,34 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html">UnrestrictedUpdateEvent</a> </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html#a1ad5bc9187928229cce35a57b939b8ea">UnrestrictedUpdateCallback</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs an empty <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html" title="This class represents an unrestricted update event.">UnrestrictedUpdateEvent</a>. </p>
+
+</div>
+</div>
+<a id="a08eb56701d82c2c4e3881f5efde43caa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08eb56701d82c2c4e3881f5efde43caa">&#9670;&nbsp;</a></span>UnrestrictedUpdateEvent() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html">UnrestrictedUpdateEvent</a> </td>
+          <td>(</td>
+          <td class="paramtype">const Function &amp;&#160;</td>
           <td class="paramname"><em>callback</em></td><td>)</td>
           <td></td>
         </tr>
@@ -383,47 +391,25 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Makes a <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html" title="This class represents an unrestricted update event.">UnrestrictedUpdateEvent</a> with no trigger type, no event data, and the specified callback function. </p>
-
-</div>
-</div>
-<a id="a366cb097df6d7b213d58d46bb37e6deb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a366cb097df6d7b213d58d46bb37e6deb">&#9670;&nbsp;</a></span>UnrestrictedUpdateEvent() <span class="overload">[5/5]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html">UnrestrictedUpdateEvent</a> </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html#ad05c437c96fd2f441af9a2b348bda4e5">SystemCallback</a> &amp;&#160;</td>
-          <td class="paramname"><em>system_callback</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Makes a <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html" title="This class represents an unrestricted update event.">UnrestrictedUpdateEvent</a> with no trigger type, no event data, and the specified system callback function. </p>
+<p>Constructs an <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html" title="This class represents an unrestricted update event.">UnrestrictedUpdateEvent</a> with the given callback function. </p>
+<p>The following three callback signatures are supported:</p><ul>
+<li><code>(const <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a>&lt;T&gt;&amp; const <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a>&lt;T&gt;&amp;, const <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html" title="This class represents an unrestricted update event.">UnrestrictedUpdateEvent</a>&lt;T&gt;&amp;, <a class="el" href="classdrake_1_1systems_1_1_state.html" title="State is a container for all the data comprising the complete state of a particular System at a parti...">State</a>&lt;T&gt;*) -&gt; <a class="el" href="classdrake_1_1systems_1_1_event_status.html" title="Holds the return status from execution of an event handler function, or the effective status after a ...">EventStatus</a></code></li>
+<li><code>(const <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a>&lt;T&gt;&amp; const <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a>&lt;T&gt;&amp;, const <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html" title="This class represents an unrestricted update event.">UnrestrictedUpdateEvent</a>&lt;T&gt;&amp;, <a class="el" href="classdrake_1_1systems_1_1_state.html" title="State is a container for all the data comprising the complete state of a particular System at a parti...">State</a>&lt;T&gt;*) -&gt; void</code></li>
+<li><code>(const <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a>&lt;T&gt;&amp;, const <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html" title="This class represents an unrestricted update event.">UnrestrictedUpdateEvent</a>&lt;T&gt;&amp;, <a class="el" href="classdrake_1_1systems_1_1_state.html" title="State is a container for all the data comprising the complete state of a particular System at a parti...">State</a>&lt;T&gt;*) -&gt; void</code></li>
+</ul>
+<dl class="section warning"><dt>Warning</dt><dd>All signatures except the first one are deprecated and will be removed from Drake on or after 2023-12-01. </dd></dl>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a48472a620e79d2e1e6c5c03b1accf9ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a48472a620e79d2e1e6c5c03b1accf9ec">&#9670;&nbsp;</a></span>handle()</h2>
+<a id="ab94b0c99642bc276833c561af34c9bc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab94b0c99642bc276833c561af34c9bc4">&#9670;&nbsp;</a></span>handle()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void handle </td>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_event_status.html">EventStatus</a> handle </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>system</em>, </td>

@@ -172,8 +172,10 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1_event.html',
 class drake::systems::Event&lt; T &gt;</h3>
 
 <p>Abstract base class that represents an event. </p>
-<p>The base event contains two main pieces of information: an enum trigger type and an optional attribute that can be used to explain why the event is triggered. Derived classes should contain a function pointer to an optional callback function that handles the event. See <a class="el" href="group__event__callbacks.html">Event Callbacks</a> for detail. No-op is the default handling behavior. Currently, the <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> framework supports three concrete event types: <a class="el" href="classdrake_1_1systems_1_1_publish_event.html" title="This class represents a publish event.">PublishEvent</a>, <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html" title="This class represents a discrete update event.">DiscreteUpdateEvent</a>, and <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html" title="This class represents an unrestricted update event.">UnrestrictedUpdateEvent</a> distinguished by their callback functions' write access level to the <a class="el" href="classdrake_1_1systems_1_1_state.html" title="State is a container for all the data comprising the complete state of a particular System at a parti...">State</a>.</p>
-<p><a class="el" href="classdrake_1_1systems_1_1_event.html" title="Abstract base class that represents an event.">Event</a> handling occurs during a simulation of a system. The logic that describes when particular event types are handled is described in the class documentation for <a class="el" href="classdrake_1_1systems_1_1_simulator.html" title="A class for advancing the state of hybrid dynamic systems, represented by System&lt;T&gt; objects,...">Simulator</a>. </p>
+<p>The base event contains two main pieces of information: an enum trigger type and an optional attribute that can be used to explain why the event is triggered.</p>
+<p>Concrete derived classes contain a function pointer to an optional callback that handles the event. No-op is the default handling behavior. The <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> framework supports three concrete event types: <a class="el" href="classdrake_1_1systems_1_1_publish_event.html" title="This class represents a publish event.">PublishEvent</a>, <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html" title="This class represents a discrete update event.">DiscreteUpdateEvent</a>, and <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html" title="This class represents an unrestricted update event.">UnrestrictedUpdateEvent</a> distinguished by their callback functions' write access level to the <a class="el" href="classdrake_1_1systems_1_1_state.html" title="State is a container for all the data comprising the complete state of a particular System at a parti...">State</a>.</p>
+<p>The most common and convenient use of events and callbacks will happen via the <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html" title="A superclass template that extends System with some convenience utilities that are not applicable to ...">LeafSystem</a> Declare*Event() methods. To that end, the callback signature always passes the <code>const System&lt;T&gt;&amp;</code> as the first argument, so that LeafSystem does not need to capture <code>this</code> into the lambda; typically only a pointer-to-member- function is captured. Capturing any more than that would defeat std::function's small buffer optimization and cause heap allocations when scheduling events.</p>
+<p>Event handling occurs during a simulation of a system. The logic that describes when particular event types are handled is described in the class documentation for <a class="el" href="classdrake_1_1systems_1_1_simulator.html" title="A class for advancing the state of hybrid dynamic systems, represented by System&lt;T&gt; objects,...">Simulator</a>. </p>
 </div>
 <p><code>#include &lt;drake/systems/framework/event.h&gt;</code></p>
 <table class="memberdecls">
@@ -184,6 +186,8 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:ab259bf8791b9706ecd60c91988165e18"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event.html#ab259bf8791b9706ecd60c91988165e18">~Event</a> ()=default</td></tr>
+<tr class="separator:ab259bf8791b9706ecd60c91988165e18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5c6549d0b80154472789124fcfb6b52"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event.html#ab5c6549d0b80154472789124fcfb6b52">is_discrete_update</a> () const =0</td></tr>
 <tr class="memdesc:ab5c6549d0b80154472789124fcfb6b52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if this is a <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html" title="This class represents a discrete update event.">DiscreteUpdateEvent</a>.  <a href="#ab5c6549d0b80154472789124fcfb6b52">More...</a><br /></td></tr>
 <tr class="separator:ab5c6549d0b80154472789124fcfb6b52"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -214,6 +218,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:a51e225b49b1437f3097bd83c7c97a048"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event.html#a51e225b49b1437f3097bd83c7c97a048">Event</a> ()=default</td></tr>
+<tr class="memdesc:a51e225b49b1437f3097bd83c7c97a048"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an empty <a class="el" href="classdrake_1_1systems_1_1_event.html" title="Abstract base class that represents an event.">Event</a>.  <a href="#a51e225b49b1437f3097bd83c7c97a048">More...</a><br /></td></tr>
+<tr class="separator:a51e225b49b1437f3097bd83c7c97a048"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb8c69f1dbd050fd614aef81f50bd104"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event.html#abb8c69f1dbd050fd614aef81f50bd104">DoAddToComposite</a> (<a class="el" href="namespacedrake_1_1systems.html#a59b7f49353f2a99b6c22d2eaae0fe9e9">TriggerType</a> trigger_type, <a class="el" href="classdrake_1_1systems_1_1_composite_event_collection.html">CompositeEventCollection</a>&lt; T &gt; *events) const =0</td></tr>
 <tr class="memdesc:abb8c69f1dbd050fd614aef81f50bd104"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derived classes must implement this to add a clone of this <a class="el" href="classdrake_1_1systems_1_1_event.html" title="Abstract base class that represents an event.">Event</a> to the event collection and unconditionally set its trigger type.  <a href="#abb8c69f1dbd050fd614aef81f50bd104">More...</a><br /></td></tr>
 <tr class="separator:abb8c69f1dbd050fd614aef81f50bd104"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -246,8 +253,33 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ab259bf8791b9706ecd60c91988165e18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab259bf8791b9706ecd60c91988165e18">&#9670;&nbsp;</a></span>~Event()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ~<a class="el" href="classdrake_1_1systems_1_1_event.html">Event</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a2b74d375f6271750885fd0e6b233bcb6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2b74d375f6271750885fd0e6b233bcb6">&#9670;&nbsp;</a></span>Event() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b74d375f6271750885fd0e6b233bcb6">&#9670;&nbsp;</a></span>Event() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -273,7 +305,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a83bcf6124a582959b59daa1e053203eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a83bcf6124a582959b59daa1e053203eb">&#9670;&nbsp;</a></span>Event() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a83bcf6124a582959b59daa1e053203eb">&#9670;&nbsp;</a></span>Event() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -295,6 +327,33 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a51e225b49b1437f3097bd83c7c97a048"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51e225b49b1437f3097bd83c7c97a048">&#9670;&nbsp;</a></span>Event() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_event.html">Event</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs an empty <a class="el" href="classdrake_1_1systems_1_1_event.html" title="Abstract base class that represents an event.">Event</a>. </p>
 
 </div>
 </div>

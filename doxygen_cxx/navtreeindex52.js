@@ -1,7 +1,5 @@
 var NAVTREEINDEX52 =
 {
-"output__port__base_8h.html":[4,0,0,12,3,31],
-"pack__value_8h.html":[4,0,0,12,3,0,2],
 "pack__value_8h.html#a630c2f64d295eef980808464e32dd2af":[4,0,0,12,3,0,2,3],
 "pack__value_8h.html#a764f9ec73e3d42fcfc984b5eb4db20f7":[4,0,0,12,3,0,2,1],
 "pack__value_8h.html#ad5de41a07d83e0324802a38f91c9287b":[4,0,0,12,3,0,2,2],
@@ -249,5 +247,7 @@ var NAVTREEINDEX52 =
 "random__source_8h.html#a0545ab65838b464875abb7385495531a":[4,0,0,12,6,19,1],
 "rational__forward__kinematics_8h.html":[4,0,0,8,11,0],
 "rational__forward__kinematics__internal_8h.html":[4,0,0,8,11,1],
-"rational__function_8h.html":[4,0,0,1,3,14]
+"rational__function_8h.html":[4,0,0,1,3,14],
+"rational__function_8h.html#a0dc08ea95543252bcf2b31fdfe723d26":[4,0,0,1,3,14,16],
+"rational__function_8h.html#a0ec6e83953a4663403fcb08592e16b01":[4,0,0,1,3,14,18]
 };

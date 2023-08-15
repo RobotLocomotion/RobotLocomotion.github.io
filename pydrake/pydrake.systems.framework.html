@@ -4811,9 +4811,8 @@ that doesn’t throw an exception in Debug builds.</p>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">DiscreteUpdateEvent</span></span><a class="headerlink" href="#pydrake.systems.framework.DiscreteUpdateEvent" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.Event" title="pydrake.systems.framework.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Event</span></code></a></p>
 <p>This class represents a discrete update event. It has an optional
-callback function (two forms are supported) to do custom handling of
-this event, and that can write updates to a mutable, non-null
-DiscreteValues object.</p>
+callback function to do custom handling of this event, and that can
+write updates to a mutable, non-null DiscreteValues object.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>LeafSystem for more convenient interfaces to discrete update
@@ -4842,9 +4841,8 @@ for the list of instantiations.</p>
 <span id="pydrake.systems.framework.DiscreteUpdateEvent_[AutoDiffXd]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">DiscreteUpdateEvent_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.systems.framework.DiscreteUpdateEvent_-AutoDiffXd" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.Event_-AutoDiffXd" title="pydrake.systems.framework.Event_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Event_[AutoDiffXd]</span></code></a></p>
 <p>This class represents a discrete update event. It has an optional
-callback function (two forms are supported) to do custom handling of
-this event, and that can write updates to a mutable, non-null
-DiscreteValues object.</p>
+callback function to do custom handling of this event, and that can
+write updates to a mutable, non-null DiscreteValues object.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>LeafSystem for more convenient interfaces to discrete update
@@ -4862,9 +4860,8 @@ events via the Declare*DiscreteUpdateEvent() methods.</p>
 <span id="pydrake.systems.framework.DiscreteUpdateEvent_[Expression]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">DiscreteUpdateEvent_[Expression]</span></span><a class="headerlink" href="#pydrake.systems.framework.DiscreteUpdateEvent_-Expression" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.Event_-Expression" title="pydrake.systems.framework.Event_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Event_[Expression]</span></code></a></p>
 <p>This class represents a discrete update event. It has an optional
-callback function (two forms are supported) to do custom handling of
-this event, and that can write updates to a mutable, non-null
-DiscreteValues object.</p>
+callback function to do custom handling of this event, and that can
+write updates to a mutable, non-null DiscreteValues object.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>LeafSystem for more convenient interfaces to discrete update
@@ -5262,13 +5259,20 @@ examining the value of a group.</p>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">Event</span></span><a class="headerlink" href="#pydrake.systems.framework.Event" title="Permalink to this definition"></a></dt>
 <dd><p>Abstract base class that represents an event. The base event contains
 two main pieces of information: an enum trigger type and an optional
-attribute that can be used to explain why the event is triggered.
-Derived classes should contain a function pointer to an optional
-callback function that handles the event. See event_callbacks for
-detail. No-op is the default handling behavior. Currently, the System
-framework supports three concrete event types: PublishEvent,
-DiscreteUpdateEvent, and UnrestrictedUpdateEvent distinguished by
-their callback functions’ write access level to the State.</p>
+attribute that can be used to explain why the event is triggered.</p>
+<p>Concrete derived classes contain a function pointer to an optional
+callback that handles the event. No-op is the default handling
+behavior. The System framework supports three concrete event types:
+PublishEvent, DiscreteUpdateEvent, and UnrestrictedUpdateEvent
+distinguished by their callback functions’ write access level to the
+State.</p>
+<p>The most common and convenient use of events and callbacks will happen
+via the LeafSystem Declare*Event() methods. To that end, the callback
+signature always passes the <code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">System&lt;T&gt;&amp;</span></code> as the first
+argument, so that LeafSystem does not need to capture <code class="docutils literal notranslate"><span class="pre">this</span></code> into
+the lambda; typically only a pointer-to-member- function is captured.
+Capturing any more than that would defeat std::function’s small buffer
+optimization and cause heap allocations when scheduling events.</p>
 <p>Event handling occurs during a simulation of a system. The logic that
 describes when particular event types are handled is described in the
 class documentation for Simulator.</p>
@@ -5301,13 +5305,20 @@ for the list of instantiations.</p>
 <span id="pydrake.systems.framework.Event_[AutoDiffXd]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">Event_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.systems.framework.Event_-AutoDiffXd" title="Permalink to this definition"></a></dt>
 <dd><p>Abstract base class that represents an event. The base event contains
 two main pieces of information: an enum trigger type and an optional
-attribute that can be used to explain why the event is triggered.
-Derived classes should contain a function pointer to an optional
-callback function that handles the event. See event_callbacks for
-detail. No-op is the default handling behavior. Currently, the System
-framework supports three concrete event types: PublishEvent,
-DiscreteUpdateEvent, and UnrestrictedUpdateEvent distinguished by
-their callback functions’ write access level to the State.</p>
+attribute that can be used to explain why the event is triggered.</p>
+<p>Concrete derived classes contain a function pointer to an optional
+callback that handles the event. No-op is the default handling
+behavior. The System framework supports three concrete event types:
+PublishEvent, DiscreteUpdateEvent, and UnrestrictedUpdateEvent
+distinguished by their callback functions’ write access level to the
+State.</p>
+<p>The most common and convenient use of events and callbacks will happen
+via the LeafSystem Declare*Event() methods. To that end, the callback
+signature always passes the <code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">System&lt;T&gt;&amp;</span></code> as the first
+argument, so that LeafSystem does not need to capture <code class="docutils literal notranslate"><span class="pre">this</span></code> into
+the lambda; typically only a pointer-to-member- function is captured.
+Capturing any more than that would defeat std::function’s small buffer
+optimization and cause heap allocations when scheduling events.</p>
 <p>Event handling occurs during a simulation of a system. The logic that
 describes when particular event types are handled is described in the
 class documentation for Simulator.</p>
@@ -5329,13 +5340,20 @@ class documentation for Simulator.</p>
 <span id="pydrake.systems.framework.Event_[Expression]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">Event_[Expression]</span></span><a class="headerlink" href="#pydrake.systems.framework.Event_-Expression" title="Permalink to this definition"></a></dt>
 <dd><p>Abstract base class that represents an event. The base event contains
 two main pieces of information: an enum trigger type and an optional
-attribute that can be used to explain why the event is triggered.
-Derived classes should contain a function pointer to an optional
-callback function that handles the event. See event_callbacks for
-detail. No-op is the default handling behavior. Currently, the System
-framework supports three concrete event types: PublishEvent,
-DiscreteUpdateEvent, and UnrestrictedUpdateEvent distinguished by
-their callback functions’ write access level to the State.</p>
+attribute that can be used to explain why the event is triggered.</p>
+<p>Concrete derived classes contain a function pointer to an optional
+callback that handles the event. No-op is the default handling
+behavior. The System framework supports three concrete event types:
+PublishEvent, DiscreteUpdateEvent, and UnrestrictedUpdateEvent
+distinguished by their callback functions’ write access level to the
+State.</p>
+<p>The most common and convenient use of events and callbacks will happen
+via the LeafSystem Declare*Event() methods. To that end, the callback
+signature always passes the <code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">System&lt;T&gt;&amp;</span></code> as the first
+argument, so that LeafSystem does not need to capture <code class="docutils literal notranslate"><span class="pre">this</span></code> into
+the lambda; typically only a pointer-to-member- function is captured.
+Capturing any more than that would defeat std::function’s small buffer
+optimization and cause heap allocations when scheduling events.</p>
 <p>Event handling occurs during a simulation of a system. The logic that
 describes when particular event types are handled is described in the
 class documentation for Simulator.</p>
@@ -9971,8 +9989,7 @@ period_sec, where i is a non-negative integer.</p>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">PublishEvent</span></span><a class="headerlink" href="#pydrake.systems.framework.PublishEvent" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.Event" title="pydrake.systems.framework.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Event</span></code></a></p>
 <p>This class represents a publish event. It has an optional callback
-function (two forms are supported) to do custom handling of this
-event.</p>
+function to do custom handling of this event.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>System::Publish for more details.</p>
@@ -9992,21 +10009,19 @@ for the list of instantiations.</p>
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.PublishEvent.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>__init__(self: pydrake.systems.framework.PublishEvent, callback: Callable[[pydrake.systems.framework.Context, pydrake.systems.framework.PublishEvent], None]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.systems.framework.PublishEvent, callback: Callable[[pydrake.systems.framework.Context, pydrake.systems.framework.PublishEvent], Optional[pydrake.systems.framework.EventStatus]]) -&gt; None</p></li>
 </ol>
-<p>Makes a PublishEvent with no trigger type, no event data, and the
-specified callback function.</p>
+<p>Constructs a PublishEvent with the given callback function.</p>
 <ol class="arabic simple" start="2">
-<li><p>__init__(self: pydrake.systems.framework.PublishEvent, system_callback: Callable[[drake::systems::System&lt;double&gt;, pydrake.systems.framework.Context, pydrake.systems.framework.PublishEvent], None]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.systems.framework.PublishEvent, system_callback: Callable[[drake::systems::System&lt;double&gt;, pydrake.systems.framework.Context, pydrake.systems.framework.PublishEvent], Optional[pydrake.systems.framework.EventStatus]]) -&gt; None</p></li>
 </ol>
-<p>Makes a PublishEvent with no trigger type, no event data, and the
-specified system callback function.</p>
+<p>Constructs a PublishEvent with the given callback function.</p>
 <ol class="arabic simple" start="3">
-<li><p>__init__(self: pydrake.systems.framework.PublishEvent, trigger_type: pydrake.systems.framework.TriggerType, callback: Callable[[pydrake.systems.framework.Context, pydrake.systems.framework.PublishEvent], None]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.systems.framework.PublishEvent, trigger_type: pydrake.systems.framework.TriggerType, callback: Callable[[pydrake.systems.framework.Context, pydrake.systems.framework.PublishEvent], Optional[pydrake.systems.framework.EventStatus]]) -&gt; None</p></li>
 </ol>
 <p>Users should not be calling these</p>
 <ol class="arabic simple" start="4">
-<li><p>__init__(self: pydrake.systems.framework.PublishEvent, trigger_type: pydrake.systems.framework.TriggerType, system_callback: Callable[[drake::systems::System&lt;double&gt;, pydrake.systems.framework.Context, pydrake.systems.framework.PublishEvent], None]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.systems.framework.PublishEvent, trigger_type: pydrake.systems.framework.TriggerType, system_callback: Callable[[drake::systems::System&lt;double&gt;, pydrake.systems.framework.Context, pydrake.systems.framework.PublishEvent], Optional[pydrake.systems.framework.EventStatus]]) -&gt; None</p></li>
 </ol>
 <p>Users should not be calling these</p>
 </dd></dl>
@@ -10024,8 +10039,7 @@ specified system callback function.</p>
 <span id="pydrake.systems.framework.PublishEvent_[AutoDiffXd]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">PublishEvent_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.systems.framework.PublishEvent_-AutoDiffXd" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.Event_-AutoDiffXd" title="pydrake.systems.framework.Event_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Event_[AutoDiffXd]</span></code></a></p>
 <p>This class represents a publish event. It has an optional callback
-function (two forms are supported) to do custom handling of this
-event.</p>
+function to do custom handling of this event.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>System::Publish for more details.</p>
@@ -10040,21 +10054,19 @@ the Declare*PublishEvent() methods.</p>
 <span id="pydrake.systems.framework.PublishEvent_[AutoDiffXd].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.PublishEvent_-AutoDiffXd-.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>__init__(self: pydrake.systems.framework.PublishEvent_[AutoDiffXd], callback: Callable[[pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.PublishEvent_[AutoDiffXd]], None]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.systems.framework.PublishEvent_[AutoDiffXd], callback: Callable[[pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.PublishEvent_[AutoDiffXd]], Optional[pydrake.systems.framework.EventStatus]]) -&gt; None</p></li>
 </ol>
-<p>Makes a PublishEvent with no trigger type, no event data, and the
-specified callback function.</p>
+<p>Constructs a PublishEvent with the given callback function.</p>
 <ol class="arabic simple" start="2">
-<li><p>__init__(self: pydrake.systems.framework.PublishEvent_[AutoDiffXd], system_callback: Callable[[drake::systems::System&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;, pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.PublishEvent_[AutoDiffXd]], None]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.systems.framework.PublishEvent_[AutoDiffXd], system_callback: Callable[[drake::systems::System&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;, pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.PublishEvent_[AutoDiffXd]], Optional[pydrake.systems.framework.EventStatus]]) -&gt; None</p></li>
 </ol>
-<p>Makes a PublishEvent with no trigger type, no event data, and the
-specified system callback function.</p>
+<p>Constructs a PublishEvent with the given callback function.</p>
 <ol class="arabic simple" start="3">
-<li><p>__init__(self: pydrake.systems.framework.PublishEvent_[AutoDiffXd], trigger_type: pydrake.systems.framework.TriggerType, callback: Callable[[pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.PublishEvent_[AutoDiffXd]], None]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.systems.framework.PublishEvent_[AutoDiffXd], trigger_type: pydrake.systems.framework.TriggerType, callback: Callable[[pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.PublishEvent_[AutoDiffXd]], Optional[pydrake.systems.framework.EventStatus]]) -&gt; None</p></li>
 </ol>
 <p>Users should not be calling these</p>
 <ol class="arabic simple" start="4">
-<li><p>__init__(self: pydrake.systems.framework.PublishEvent_[AutoDiffXd], trigger_type: pydrake.systems.framework.TriggerType, system_callback: Callable[[drake::systems::System&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;, pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.PublishEvent_[AutoDiffXd]], None]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.systems.framework.PublishEvent_[AutoDiffXd], trigger_type: pydrake.systems.framework.TriggerType, system_callback: Callable[[drake::systems::System&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;, pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.PublishEvent_[AutoDiffXd]], Optional[pydrake.systems.framework.EventStatus]]) -&gt; None</p></li>
 </ol>
 <p>Users should not be calling these</p>
 </dd></dl>
@@ -10066,8 +10078,7 @@ specified system callback function.</p>
 <span id="pydrake.systems.framework.PublishEvent_[Expression]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">PublishEvent_[Expression]</span></span><a class="headerlink" href="#pydrake.systems.framework.PublishEvent_-Expression" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.Event_-Expression" title="pydrake.systems.framework.Event_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Event_[Expression]</span></code></a></p>
 <p>This class represents a publish event. It has an optional callback
-function (two forms are supported) to do custom handling of this
-event.</p>
+function to do custom handling of this event.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>System::Publish for more details.</p>
@@ -10082,21 +10093,19 @@ the Declare*PublishEvent() methods.</p>
 <span id="pydrake.systems.framework.PublishEvent_[Expression].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.PublishEvent_-Expression-.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>__init__(self: pydrake.systems.framework.PublishEvent_[Expression], callback: Callable[[pydrake.systems.framework.Context_[Expression], pydrake.systems.framework.PublishEvent_[Expression]], None]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.systems.framework.PublishEvent_[Expression], callback: Callable[[pydrake.systems.framework.Context_[Expression], pydrake.systems.framework.PublishEvent_[Expression]], Optional[pydrake.systems.framework.EventStatus]]) -&gt; None</p></li>
 </ol>
-<p>Makes a PublishEvent with no trigger type, no event data, and the
-specified callback function.</p>
+<p>Constructs a PublishEvent with the given callback function.</p>
 <ol class="arabic simple" start="2">
-<li><p>__init__(self: pydrake.systems.framework.PublishEvent_[Expression], system_callback: Callable[[drake::systems::System&lt;drake::symbolic::Expression&gt;, pydrake.systems.framework.Context_[Expression], pydrake.systems.framework.PublishEvent_[Expression]], None]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.systems.framework.PublishEvent_[Expression], system_callback: Callable[[drake::systems::System&lt;drake::symbolic::Expression&gt;, pydrake.systems.framework.Context_[Expression], pydrake.systems.framework.PublishEvent_[Expression]], Optional[pydrake.systems.framework.EventStatus]]) -&gt; None</p></li>
 </ol>
-<p>Makes a PublishEvent with no trigger type, no event data, and the
-specified system callback function.</p>
+<p>Constructs a PublishEvent with the given callback function.</p>
 <ol class="arabic simple" start="3">
-<li><p>__init__(self: pydrake.systems.framework.PublishEvent_[Expression], trigger_type: pydrake.systems.framework.TriggerType, callback: Callable[[pydrake.systems.framework.Context_[Expression], pydrake.systems.framework.PublishEvent_[Expression]], None]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.systems.framework.PublishEvent_[Expression], trigger_type: pydrake.systems.framework.TriggerType, callback: Callable[[pydrake.systems.framework.Context_[Expression], pydrake.systems.framework.PublishEvent_[Expression]], Optional[pydrake.systems.framework.EventStatus]]) -&gt; None</p></li>
 </ol>
 <p>Users should not be calling these</p>
 <ol class="arabic simple" start="4">
-<li><p>__init__(self: pydrake.systems.framework.PublishEvent_[Expression], trigger_type: pydrake.systems.framework.TriggerType, system_callback: Callable[[drake::systems::System&lt;drake::symbolic::Expression&gt;, pydrake.systems.framework.Context_[Expression], pydrake.systems.framework.PublishEvent_[Expression]], None]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.systems.framework.PublishEvent_[Expression], trigger_type: pydrake.systems.framework.TriggerType, system_callback: Callable[[drake::systems::System&lt;drake::symbolic::Expression&gt;, pydrake.systems.framework.Context_[Expression], pydrake.systems.framework.PublishEvent_[Expression]], Optional[pydrake.systems.framework.EventStatus]]) -&gt; None</p></li>
 </ol>
 <p>Users should not be calling these</p>
 </dd></dl>
@@ -14717,9 +14726,8 @@ correspond to receiving sensory data from the hardware.</p>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">UnrestrictedUpdateEvent</span></span><a class="headerlink" href="#pydrake.systems.framework.UnrestrictedUpdateEvent" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.Event" title="pydrake.systems.framework.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Event</span></code></a></p>
 <p>This class represents an unrestricted update event. It has an optional
-callback function (two forms are supported) to do custom handling of
-this event, and that can write updates to a mutable, non-null State
-object.</p>
+callback function to do custom handling of this event, and that can
+write updates to a mutable, non-null State object.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>LeafSystem for more convenient interfaces to unrestricted update
@@ -14735,15 +14743,13 @@ for the list of instantiations.</p>
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.UnrestrictedUpdateEvent.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>__init__(self: pydrake.systems.framework.UnrestrictedUpdateEvent, callback: Callable[[pydrake.systems.framework.Context, pydrake.systems.framework.UnrestrictedUpdateEvent, drake::systems::State&lt;double&gt;], None]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.systems.framework.UnrestrictedUpdateEvent, callback: Callable[[pydrake.systems.framework.Context, pydrake.systems.framework.UnrestrictedUpdateEvent, drake::systems::State&lt;double&gt;], Optional[pydrake.systems.framework.EventStatus]]) -&gt; None</p></li>
 </ol>
-<p>Makes a UnrestrictedUpdateEvent with no trigger type, no event data,
-and the specified callback function.</p>
+<p>Constructs an UnrestrictedUpdateEvent with the given callback function.</p>
 <ol class="arabic simple" start="2">
-<li><p>__init__(self: pydrake.systems.framework.UnrestrictedUpdateEvent, system_callback: Callable[[drake::systems::System&lt;double&gt;, pydrake.systems.framework.Context, pydrake.systems.framework.UnrestrictedUpdateEvent, drake::systems::State&lt;double&gt;], None]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.systems.framework.UnrestrictedUpdateEvent, system_callback: Callable[[drake::systems::System&lt;double&gt;, pydrake.systems.framework.Context, pydrake.systems.framework.UnrestrictedUpdateEvent, drake::systems::State&lt;double&gt;], Optional[pydrake.systems.framework.EventStatus]]) -&gt; None</p></li>
 </ol>
-<p>Makes a UnrestrictedUpdateEvent with no trigger type, no event data,
-and the specified system callback function.</p>
+<p>Constructs an UnrestrictedUpdateEvent with the given callback function.</p>
 </dd></dl>
 
 </dd></dl>
@@ -14759,9 +14765,8 @@ and the specified system callback function.</p>
 <span id="pydrake.systems.framework.UnrestrictedUpdateEvent_[AutoDiffXd]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">UnrestrictedUpdateEvent_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.systems.framework.UnrestrictedUpdateEvent_-AutoDiffXd" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.Event_-AutoDiffXd" title="pydrake.systems.framework.Event_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Event_[AutoDiffXd]</span></code></a></p>
 <p>This class represents an unrestricted update event. It has an optional
-callback function (two forms are supported) to do custom handling of
-this event, and that can write updates to a mutable, non-null State
-object.</p>
+callback function to do custom handling of this event, and that can
+write updates to a mutable, non-null State object.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>LeafSystem for more convenient interfaces to unrestricted update
@@ -14772,15 +14777,13 @@ events via the Declare*UnrestrictedUpdateEvent() methods.</p>
 <span id="pydrake.systems.framework.UnrestrictedUpdateEvent_[AutoDiffXd].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.UnrestrictedUpdateEvent_-AutoDiffXd-.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>__init__(self: pydrake.systems.framework.UnrestrictedUpdateEvent_[AutoDiffXd], callback: Callable[[pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.UnrestrictedUpdateEvent_[AutoDiffXd], drake::systems::State&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;], None]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.systems.framework.UnrestrictedUpdateEvent_[AutoDiffXd], callback: Callable[[pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.UnrestrictedUpdateEvent_[AutoDiffXd], drake::systems::State&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;], Optional[pydrake.systems.framework.EventStatus]]) -&gt; None</p></li>
 </ol>
-<p>Makes a UnrestrictedUpdateEvent with no trigger type, no event data,
-and the specified callback function.</p>
+<p>Constructs an UnrestrictedUpdateEvent with the given callback function.</p>
 <ol class="arabic simple" start="2">
-<li><p>__init__(self: pydrake.systems.framework.UnrestrictedUpdateEvent_[AutoDiffXd], system_callback: Callable[[drake::systems::System&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;, pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.UnrestrictedUpdateEvent_[AutoDiffXd], drake::systems::State&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;], None]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.systems.framework.UnrestrictedUpdateEvent_[AutoDiffXd], system_callback: Callable[[drake::systems::System&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;, pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.UnrestrictedUpdateEvent_[AutoDiffXd], drake::systems::State&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;], Optional[pydrake.systems.framework.EventStatus]]) -&gt; None</p></li>
 </ol>
-<p>Makes a UnrestrictedUpdateEvent with no trigger type, no event data,
-and the specified system callback function.</p>
+<p>Constructs an UnrestrictedUpdateEvent with the given callback function.</p>
 </dd></dl>
 
 </dd></dl>
@@ -14790,9 +14793,8 @@ and the specified system callback function.</p>
 <span id="pydrake.systems.framework.UnrestrictedUpdateEvent_[Expression]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">UnrestrictedUpdateEvent_[Expression]</span></span><a class="headerlink" href="#pydrake.systems.framework.UnrestrictedUpdateEvent_-Expression" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.Event_-Expression" title="pydrake.systems.framework.Event_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Event_[Expression]</span></code></a></p>
 <p>This class represents an unrestricted update event. It has an optional
-callback function (two forms are supported) to do custom handling of
-this event, and that can write updates to a mutable, non-null State
-object.</p>
+callback function to do custom handling of this event, and that can
+write updates to a mutable, non-null State object.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>LeafSystem for more convenient interfaces to unrestricted update
@@ -14803,15 +14805,13 @@ events via the Declare*UnrestrictedUpdateEvent() methods.</p>
 <span id="pydrake.systems.framework.UnrestrictedUpdateEvent_[Expression].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.UnrestrictedUpdateEvent_-Expression-.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>__init__(self: pydrake.systems.framework.UnrestrictedUpdateEvent_[Expression], callback: Callable[[pydrake.systems.framework.Context_[Expression], pydrake.systems.framework.UnrestrictedUpdateEvent_[Expression], drake::systems::State&lt;drake::symbolic::Expression&gt;], None]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.systems.framework.UnrestrictedUpdateEvent_[Expression], callback: Callable[[pydrake.systems.framework.Context_[Expression], pydrake.systems.framework.UnrestrictedUpdateEvent_[Expression], drake::systems::State&lt;drake::symbolic::Expression&gt;], Optional[pydrake.systems.framework.EventStatus]]) -&gt; None</p></li>
 </ol>
-<p>Makes a UnrestrictedUpdateEvent with no trigger type, no event data,
-and the specified callback function.</p>
+<p>Constructs an UnrestrictedUpdateEvent with the given callback function.</p>
 <ol class="arabic simple" start="2">
-<li><p>__init__(self: pydrake.systems.framework.UnrestrictedUpdateEvent_[Expression], system_callback: Callable[[drake::systems::System&lt;drake::symbolic::Expression&gt;, pydrake.systems.framework.Context_[Expression], pydrake.systems.framework.UnrestrictedUpdateEvent_[Expression], drake::systems::State&lt;drake::symbolic::Expression&gt;], None]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.systems.framework.UnrestrictedUpdateEvent_[Expression], system_callback: Callable[[drake::systems::System&lt;drake::symbolic::Expression&gt;, pydrake.systems.framework.Context_[Expression], pydrake.systems.framework.UnrestrictedUpdateEvent_[Expression], drake::systems::State&lt;drake::symbolic::Expression&gt;], Optional[pydrake.systems.framework.EventStatus]]) -&gt; None</p></li>
 </ol>
-<p>Makes a UnrestrictedUpdateEvent with no trigger type, no event data,
-and the specified system callback function.</p>
+<p>Constructs an UnrestrictedUpdateEvent with the given callback function.</p>
 </dd></dl>
 
 </dd></dl>

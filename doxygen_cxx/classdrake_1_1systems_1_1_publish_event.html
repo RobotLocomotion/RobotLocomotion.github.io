@@ -159,6 +159,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1_publish_even
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classdrake_1_1systems_1_1_publish_event-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -170,7 +171,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1_publish_even
 class drake::systems::PublishEvent&lt; T &gt;</h3>
 
 <p>This class represents a publish event. </p>
-<p>It has an optional callback function (two forms are supported) to do custom handling of this event. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_system.html#a31898e0276f6bbc4edf7111f809afb01" title="This method is the public entry point for dispatching all publish event handlers.">System::Publish</a> for more details. </dd>
+<p>It has an optional callback function to do custom handling of this event. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_system.html#a31898e0276f6bbc4edf7111f809afb01" title="This method is the public entry point for dispatching all publish event handlers.">System::Publish</a> for more details. </dd>
 <dd>
 <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html" title="A superclass template that extends System with some convenience utilities that are not applicable to ...">LeafSystem</a> for more convenient interfaces to publish events via the Declare*PublishEvent() methods. </dd></dl>
 </div>
@@ -178,16 +179,12 @@ class drake::systems::PublishEvent&lt; T &gt;</h3>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td colspan="2"><div class="groupHeader">Publish Callbacks</div></td></tr>
-<tr><td colspan="2"><div class="groupText"><p>Two callback signatures are supported.</p>
-<p>See <a class="el" href="group__event__callbacks.html">Event Callbacks</a> for a complete discussion. Both callback types receive a const reference to the context and this publish event. They differ in whether a const reference to the owning system is also provided. </p>
-</div></td></tr>
-<tr class="memitem:a0cf70b000f61313a4f86c9a2be6a1eff"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; void(const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;, const <a class="el" href="classdrake_1_1systems_1_1_publish_event.html">PublishEvent</a>&lt; T &gt; &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_publish_event.html#a0cf70b000f61313a4f86c9a2be6a1eff">PublishCallback</a></td></tr>
-<tr class="memdesc:a0cf70b000f61313a4f86c9a2be6a1eff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback without system reference.  <a href="#a0cf70b000f61313a4f86c9a2be6a1eff">More...</a><br /></td></tr>
-<tr class="separator:a0cf70b000f61313a4f86c9a2be6a1eff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56368284da4f5dced254e40e05f40daf"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; void(const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &amp;, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;, const <a class="el" href="classdrake_1_1systems_1_1_publish_event.html">PublishEvent</a>&lt; T &gt; &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_publish_event.html#a56368284da4f5dced254e40e05f40daf">SystemCallback</a></td></tr>
-<tr class="memdesc:a56368284da4f5dced254e40e05f40daf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback with const system reference.  <a href="#a56368284da4f5dced254e40e05f40daf">More...</a><br /></td></tr>
-<tr class="separator:a56368284da4f5dced254e40e05f40daf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f214a6b01db45064c3f1532cfb025c4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_publish_event.html#a0f214a6b01db45064c3f1532cfb025c4">PublishCallback</a> = std::function&lt; void(const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;, const <a class="el" href="classdrake_1_1systems_1_1_publish_event.html">PublishEvent</a>&lt; T &gt; &amp;)&gt;</td></tr>
+<tr class="memdesc:a0f214a6b01db45064c3f1532cfb025c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a0f214a6b01db45064c3f1532cfb025c4">More...</a><br /></td></tr>
+<tr class="separator:a0f214a6b01db45064c3f1532cfb025c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac87580a0008b39e58817e263c15e57e4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_publish_event.html#ac87580a0008b39e58817e263c15e57e4">SystemCallback</a> = std::function&lt; void(const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &amp;, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;, const <a class="el" href="classdrake_1_1systems_1_1_publish_event.html">PublishEvent</a>&lt; T &gt; &amp;)&gt;</td></tr>
+<tr class="memdesc:ac87580a0008b39e58817e263c15e57e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#ac87580a0008b39e58817e263c15e57e4">More...</a><br /></td></tr>
+<tr class="separator:ac87580a0008b39e58817e263c15e57e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_classdrake_1_1systems_1_1_event"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classdrake_1_1systems_1_1_event')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classdrake_1_1systems_1_1_event.html">Event&lt; T &gt;</a></td></tr>
 <tr class="memitem:a9fc02a89fe46ec20b0e5cf68ecf7eee7 inherit pub_types_classdrake_1_1systems_1_1_event"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event.html#a9fc02a89fe46ec20b0e5cf68ecf7eee7">TriggerType</a> = <a class="el" href="namespacedrake_1_1systems.html#a59b7f49353f2a99b6c22d2eaae0fe9e9">systems::TriggerType</a></td></tr>
 <tr class="separator:a9fc02a89fe46ec20b0e5cf68ecf7eee7 inherit pub_types_classdrake_1_1systems_1_1_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -197,18 +194,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6411929eebb98e856021335d43bcb7f4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_publish_event.html#a6411929eebb98e856021335d43bcb7f4">is_discrete_update</a> () const override</td></tr>
 <tr class="memdesc:a6411929eebb98e856021335d43bcb7f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if this is a <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html" title="This class represents a discrete update event.">DiscreteUpdateEvent</a>.  <a href="#a6411929eebb98e856021335d43bcb7f4">More...</a><br /></td></tr>
 <tr class="separator:a6411929eebb98e856021335d43bcb7f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe3c91c4e794783ccd6c04a6066fe3b2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_publish_event.html#abe3c91c4e794783ccd6c04a6066fe3b2">PublishEvent</a> ()</td></tr>
-<tr class="memdesc:abe3c91c4e794783ccd6c04a6066fe3b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes a <a class="el" href="classdrake_1_1systems_1_1_publish_event.html" title="This class represents a publish event.">PublishEvent</a> with no trigger type, no event data, and no specified callback function.  <a href="#abe3c91c4e794783ccd6c04a6066fe3b2">More...</a><br /></td></tr>
-<tr class="separator:abe3c91c4e794783ccd6c04a6066fe3b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a967af3edb36cb226ae3d4cab98dd0d72"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_publish_event.html#a967af3edb36cb226ae3d4cab98dd0d72">PublishEvent</a> (const <a class="el" href="classdrake_1_1systems_1_1_publish_event.html#a0cf70b000f61313a4f86c9a2be6a1eff">PublishCallback</a> &amp;callback)</td></tr>
-<tr class="memdesc:a967af3edb36cb226ae3d4cab98dd0d72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes a <a class="el" href="classdrake_1_1systems_1_1_publish_event.html" title="This class represents a publish event.">PublishEvent</a> with no trigger type, no event data, and the specified callback function.  <a href="#a967af3edb36cb226ae3d4cab98dd0d72">More...</a><br /></td></tr>
-<tr class="separator:a967af3edb36cb226ae3d4cab98dd0d72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36b1660ac0d2d4e401f453b7cd725237"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_publish_event.html#a36b1660ac0d2d4e401f453b7cd725237">PublishEvent</a> (const <a class="el" href="classdrake_1_1systems_1_1_publish_event.html#a56368284da4f5dced254e40e05f40daf">SystemCallback</a> &amp;system_callback)</td></tr>
-<tr class="memdesc:a36b1660ac0d2d4e401f453b7cd725237"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes a <a class="el" href="classdrake_1_1systems_1_1_publish_event.html" title="This class represents a publish event.">PublishEvent</a> with no trigger type, no event data, and the specified system callback function.  <a href="#a36b1660ac0d2d4e401f453b7cd725237">More...</a><br /></td></tr>
-<tr class="separator:a36b1660ac0d2d4e401f453b7cd725237"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a941b7783a64eaddecfafcf9dc45a40cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_publish_event.html#a941b7783a64eaddecfafcf9dc45a40cd">handle</a> (const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &amp;system, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context) const</td></tr>
-<tr class="memdesc:a941b7783a64eaddecfafcf9dc45a40cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls the optional callback or system callback function, if one exists, with <code>system</code>, <code>context</code>, and <code>this</code>.  <a href="#a941b7783a64eaddecfafcf9dc45a40cd">More...</a><br /></td></tr>
-<tr class="separator:a941b7783a64eaddecfafcf9dc45a40cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2636d39ad3ee95ae2d8f018b4e6e785a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_publish_event.html#a2636d39ad3ee95ae2d8f018b4e6e785a">PublishEvent</a> ()=default</td></tr>
+<tr class="memdesc:a2636d39ad3ee95ae2d8f018b4e6e785a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an empty <a class="el" href="classdrake_1_1systems_1_1_publish_event.html" title="This class represents a publish event.">PublishEvent</a>.  <a href="#a2636d39ad3ee95ae2d8f018b4e6e785a">More...</a><br /></td></tr>
+<tr class="separator:a2636d39ad3ee95ae2d8f018b4e6e785a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a596593e0782b801dc3a658e8f9c93370"><td class="memTemplParams" colspan="2">template&lt;typename Function &gt; </td></tr>
+<tr class="memitem:a596593e0782b801dc3a658e8f9c93370"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_publish_event.html#a596593e0782b801dc3a658e8f9c93370">PublishEvent</a> (const Function &amp;callback)</td></tr>
+<tr class="memdesc:a596593e0782b801dc3a658e8f9c93370"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1systems_1_1_publish_event.html" title="This class represents a publish event.">PublishEvent</a> with the given callback function.  <a href="#a596593e0782b801dc3a658e8f9c93370">More...</a><br /></td></tr>
+<tr class="separator:a596593e0782b801dc3a658e8f9c93370"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af64fc85154304170ae8b65f2fbeb628f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_event_status.html">EventStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_publish_event.html#af64fc85154304170ae8b65f2fbeb628f">handle</a> (const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &amp;system, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context) const</td></tr>
+<tr class="memdesc:af64fc85154304170ae8b65f2fbeb628f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls the optional callback or system callback function, if one exists, with <code>system</code>, <code>context</code>, and <code>this</code>.  <a href="#af64fc85154304170ae8b65f2fbeb628f">More...</a><br /></td></tr>
+<tr class="separator:af64fc85154304170ae8b65f2fbeb628f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
 <tr class="memitem:a245348a75b3952d74d41beb533c2a1e8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_publish_event.html#a245348a75b3952d74d41beb533c2a1e8">PublishEvent</a> (const <a class="el" href="classdrake_1_1systems_1_1_publish_event.html">PublishEvent</a> &amp;)=default</td></tr>
 <tr class="separator:a245348a75b3952d74d41beb533c2a1e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -219,6 +214,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5a7b0d90cc5c676b46edf49330b3e0f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_publish_event.html">PublishEvent</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_publish_event.html#a5a7b0d90cc5c676b46edf49330b3e0f5">operator=</a> (<a class="el" href="classdrake_1_1systems_1_1_publish_event.html">PublishEvent</a> &amp;&amp;)=default</td></tr>
 <tr class="separator:a5a7b0d90cc5c676b46edf49330b3e0f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classdrake_1_1systems_1_1_event"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classdrake_1_1systems_1_1_event')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classdrake_1_1systems_1_1_event.html">Event&lt; T &gt;</a></td></tr>
+<tr class="memitem:ab259bf8791b9706ecd60c91988165e18 inherit pub_methods_classdrake_1_1systems_1_1_event"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event.html#ab259bf8791b9706ecd60c91988165e18">~Event</a> ()=default</td></tr>
+<tr class="separator:ab259bf8791b9706ecd60c91988165e18 inherit pub_methods_classdrake_1_1systems_1_1_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7e597688e8eb0d1d54d322964d49b35 inherit pub_methods_classdrake_1_1systems_1_1_event"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_event.html">Event</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event.html#ae7e597688e8eb0d1d54d322964d49b35">Clone</a> () const</td></tr>
 <tr class="memdesc:ae7e597688e8eb0d1d54d322964d49b35 inherit pub_methods_classdrake_1_1systems_1_1_event"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clones this instance.  <a href="classdrake_1_1systems_1_1_event.html#ae7e597688e8eb0d1d54d322964d49b35">More...</a><br /></td></tr>
 <tr class="separator:ae7e597688e8eb0d1d54d322964d49b35 inherit pub_methods_classdrake_1_1systems_1_1_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -247,6 +244,9 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_classdrake_1_1systems_1_1_event"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classdrake_1_1systems_1_1_event')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classdrake_1_1systems_1_1_event.html">Event&lt; T &gt;</a></td></tr>
+<tr class="memitem:a51e225b49b1437f3097bd83c7c97a048 inherit pro_methods_classdrake_1_1systems_1_1_event"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event.html#a51e225b49b1437f3097bd83c7c97a048">Event</a> ()=default</td></tr>
+<tr class="memdesc:a51e225b49b1437f3097bd83c7c97a048 inherit pro_methods_classdrake_1_1systems_1_1_event"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an empty <a class="el" href="classdrake_1_1systems_1_1_event.html" title="Abstract base class that represents an event.">Event</a>.  <a href="classdrake_1_1systems_1_1_event.html#a51e225b49b1437f3097bd83c7c97a048">More...</a><br /></td></tr>
+<tr class="separator:a51e225b49b1437f3097bd83c7c97a048 inherit pro_methods_classdrake_1_1systems_1_1_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b74d375f6271750885fd0e6b233bcb6 inherit pro_methods_classdrake_1_1systems_1_1_event"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event.html#a2b74d375f6271750885fd0e6b233bcb6">Event</a> (const <a class="el" href="classdrake_1_1systems_1_1_event.html">Event</a> &amp;)=default</td></tr>
 <tr class="separator:a2b74d375f6271750885fd0e6b233bcb6 inherit pro_methods_classdrake_1_1systems_1_1_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76adffb57a190939990260003698d993 inherit pro_methods_classdrake_1_1systems_1_1_event"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_event.html">Event</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event.html#a76adffb57a190939990260003698d993">operator=</a> (const <a class="el" href="classdrake_1_1systems_1_1_event.html">Event</a> &amp;)=default</td></tr>
@@ -257,41 +257,41 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a99acf4f42994cb58c4c5465d1cc61b9a inherit pro_methods_classdrake_1_1systems_1_1_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a0cf70b000f61313a4f86c9a2be6a1eff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0cf70b000f61313a4f86c9a2be6a1eff">&#9670;&nbsp;</a></span>PublishCallback</h2>
+<a id="a0f214a6b01db45064c3f1532cfb025c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f214a6b01db45064c3f1532cfb025c4">&#9670;&nbsp;</a></span>PublishCallback</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::function&lt;void(const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt;T&gt;&amp;, const <a class="el" href="classdrake_1_1systems_1_1_publish_event.html">PublishEvent</a>&lt;T&gt;&amp;)&gt; <a class="el" href="classdrake_1_1systems_1_1_publish_event.html#a0cf70b000f61313a4f86c9a2be6a1eff">PublishCallback</a></td>
+          <td class="memname">using <a class="el" href="classdrake_1_1systems_1_1_publish_event.html#a0f214a6b01db45064c3f1532cfb025c4">PublishCallback</a> =  std::function&lt;void(const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt;T&gt;&amp;, const <a class="el" href="classdrake_1_1systems_1_1_publish_event.html">PublishEvent</a>&lt;T&gt;&amp;)&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Callback without system reference. </p>
+<p>(Deprecated.) </p>
 
 </div>
 </div>
-<a id="a56368284da4f5dced254e40e05f40daf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a56368284da4f5dced254e40e05f40daf">&#9670;&nbsp;</a></span>SystemCallback</h2>
+<a id="ac87580a0008b39e58817e263c15e57e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac87580a0008b39e58817e263c15e57e4">&#9670;&nbsp;</a></span>SystemCallback</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::function&lt;void(const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt;T&gt;&amp;, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt;T&gt;&amp;, const <a class="el" href="classdrake_1_1systems_1_1_publish_event.html">PublishEvent</a>&lt;T&gt;&amp;)&gt; <a class="el" href="classdrake_1_1systems_1_1_publish_event.html#a56368284da4f5dced254e40e05f40daf">SystemCallback</a></td>
+          <td class="memname">using <a class="el" href="classdrake_1_1systems_1_1_publish_event.html#ac87580a0008b39e58817e263c15e57e4">SystemCallback</a> =  std::function&lt;void(const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt;T&gt;&amp;, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt;T&gt;&amp;, const <a class="el" href="classdrake_1_1systems_1_1_publish_event.html">PublishEvent</a>&lt;T&gt;&amp;)&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Callback with const system reference. </p>
+<p>(Deprecated.) </p>
 
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a245348a75b3952d74d41beb533c2a1e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a245348a75b3952d74d41beb533c2a1e8">&#9670;&nbsp;</a></span>PublishEvent() <span class="overload">[1/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a245348a75b3952d74d41beb533c2a1e8">&#9670;&nbsp;</a></span>PublishEvent() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -317,7 +317,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="a507f41be52238d4af4ade4d7f530cfc9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a507f41be52238d4af4ade4d7f530cfc9">&#9670;&nbsp;</a></span>PublishEvent() <span class="overload">[2/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a507f41be52238d4af4ade4d7f530cfc9">&#9670;&nbsp;</a></span>PublishEvent() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -342,27 +342,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="abe3c91c4e794783ccd6c04a6066fe3b2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe3c91c4e794783ccd6c04a6066fe3b2">&#9670;&nbsp;</a></span>PublishEvent() <span class="overload">[3/5]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_publish_event.html">PublishEvent</a> </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Makes a <a class="el" href="classdrake_1_1systems_1_1_publish_event.html" title="This class represents a publish event.">PublishEvent</a> with no trigger type, no event data, and no specified callback function. </p>
-
-</div>
-</div>
-<a id="a967af3edb36cb226ae3d4cab98dd0d72"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a967af3edb36cb226ae3d4cab98dd0d72">&#9670;&nbsp;</a></span>PublishEvent() <span class="overload">[4/5]</span></h2>
+<a id="a2636d39ad3ee95ae2d8f018b4e6e785a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2636d39ad3ee95ae2d8f018b4e6e785a">&#9670;&nbsp;</a></span>PublishEvent() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -373,7 +354,34 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_publish_event.html">PublishEvent</a> </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_publish_event.html#a0cf70b000f61313a4f86c9a2be6a1eff">PublishCallback</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs an empty <a class="el" href="classdrake_1_1systems_1_1_publish_event.html" title="This class represents a publish event.">PublishEvent</a>. </p>
+
+</div>
+</div>
+<a id="a596593e0782b801dc3a658e8f9c93370"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a596593e0782b801dc3a658e8f9c93370">&#9670;&nbsp;</a></span>PublishEvent() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_publish_event.html">PublishEvent</a> </td>
+          <td>(</td>
+          <td class="paramtype">const Function &amp;&#160;</td>
           <td class="paramname"><em>callback</em></td><td>)</td>
           <td></td>
         </tr>
@@ -385,47 +393,25 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Makes a <a class="el" href="classdrake_1_1systems_1_1_publish_event.html" title="This class represents a publish event.">PublishEvent</a> with no trigger type, no event data, and the specified callback function. </p>
-
-</div>
-</div>
-<a id="a36b1660ac0d2d4e401f453b7cd725237"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a36b1660ac0d2d4e401f453b7cd725237">&#9670;&nbsp;</a></span>PublishEvent() <span class="overload">[5/5]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_publish_event.html">PublishEvent</a> </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_publish_event.html#a56368284da4f5dced254e40e05f40daf">SystemCallback</a> &amp;&#160;</td>
-          <td class="paramname"><em>system_callback</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Makes a <a class="el" href="classdrake_1_1systems_1_1_publish_event.html" title="This class represents a publish event.">PublishEvent</a> with no trigger type, no event data, and the specified system callback function. </p>
+<p>Constructs a <a class="el" href="classdrake_1_1systems_1_1_publish_event.html" title="This class represents a publish event.">PublishEvent</a> with the given callback function. </p>
+<p>The following three callback signatures are supported:</p><ul>
+<li><code>(const <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a>&lt;T&gt;&amp; const <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a>&lt;T&gt;&amp;, const <a class="el" href="classdrake_1_1systems_1_1_publish_event.html" title="This class represents a publish event.">PublishEvent</a>&lt;T&gt;&amp;) -&gt; <a class="el" href="classdrake_1_1systems_1_1_event_status.html" title="Holds the return status from execution of an event handler function, or the effective status after a ...">EventStatus</a></code></li>
+<li><code>(const <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a>&lt;T&gt;&amp; const <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a>&lt;T&gt;&amp;, const <a class="el" href="classdrake_1_1systems_1_1_publish_event.html" title="This class represents a publish event.">PublishEvent</a>&lt;T&gt;&amp;) -&gt; void</code></li>
+<li><code>(const <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a>&lt;T&gt;&amp;, const <a class="el" href="classdrake_1_1systems_1_1_publish_event.html" title="This class represents a publish event.">PublishEvent</a>&lt;T&gt;&amp;) -&gt; void</code></li>
+</ul>
+<dl class="section warning"><dt>Warning</dt><dd>All signatures except the first one are deprecated and will be removed from Drake on or after 2023-12-01. </dd></dl>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a941b7783a64eaddecfafcf9dc45a40cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a941b7783a64eaddecfafcf9dc45a40cd">&#9670;&nbsp;</a></span>handle()</h2>
+<a id="af64fc85154304170ae8b65f2fbeb628f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af64fc85154304170ae8b65f2fbeb628f">&#9670;&nbsp;</a></span>handle()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void handle </td>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_event_status.html">EventStatus</a> handle </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>system</em>, </td>

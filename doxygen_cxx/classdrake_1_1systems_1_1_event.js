@@ -1,8 +1,10 @@
 var classdrake_1_1systems_1_1_event =
 [
     [ "TriggerType", "classdrake_1_1systems_1_1_event.html#a9fc02a89fe46ec20b0e5cf68ecf7eee7", null ],
+    [ "~Event", "classdrake_1_1systems_1_1_event.html#ab259bf8791b9706ecd60c91988165e18", null ],
     [ "Event", "classdrake_1_1systems_1_1_event.html#a2b74d375f6271750885fd0e6b233bcb6", null ],
     [ "Event", "classdrake_1_1systems_1_1_event.html#a83bcf6124a582959b59daa1e053203eb", null ],
+    [ "Event", "classdrake_1_1systems_1_1_event.html#a51e225b49b1437f3097bd83c7c97a048", null ],
     [ "AddToComposite", "classdrake_1_1systems_1_1_event.html#ad715f1cc5984c07268a9b447ac869684", null ],
     [ "AddToComposite", "classdrake_1_1systems_1_1_event.html#a1d68e526e2d4c46b67ca6793968b9b5e", null ],
     [ "Clone", "classdrake_1_1systems_1_1_event.html#ae7e597688e8eb0d1d54d322964d49b35", null ],
