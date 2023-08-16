@@ -8473,6 +8473,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 </div><div class="memdoc">
 
 <p>Sets the contact solver type used for discrete MultibodyPlant models. </p>
+<dl class="section warning"><dt>Warning</dt><dd>This function is a no-op for continuous models (when is_discrete() is false.) </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>iff called post-finalize. </td></tr>

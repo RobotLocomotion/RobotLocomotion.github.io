@@ -393,14 +393,20 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a224f50a8d9351914db96e47ddb5767fb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#a224f50a8d9351914db96e47ddb5767fb">SolidCube</a> (const T &amp;L)</td></tr>
 <tr class="memdesc:a224f50a8d9351914db96e47ddb5767fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the unit inertia for a unit-mass solid cube (a box with equal-sized sides) of uniform density taken about its geometric center.  <a href="#a224f50a8d9351914db96e47ddb5767fb">More...</a><br /></td></tr>
 <tr class="separator:a224f50a8d9351914db96e47ddb5767fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa752eb88a4a3eb76242ccb373b81ccf3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#aa752eb88a4a3eb76242ccb373b81ccf3">SolidCylinder</a> (const T &amp;r, const T &amp;L, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;b_E=<a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;::UnitZ())</td></tr>
-<tr class="memdesc:aa752eb88a4a3eb76242ccb373b81ccf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the unit inertia for a unit-mass cylinder B, of uniform density, having its axis of revolution along input vector <code>b_E</code>.  <a href="#aa752eb88a4a3eb76242ccb373b81ccf3">More...</a><br /></td></tr>
-<tr class="separator:aa752eb88a4a3eb76242ccb373b81ccf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a069e5dcab9f2119cc2c4eadb6e91abab"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#a069e5dcab9f2119cc2c4eadb6e91abab">SolidCapsule</a> (const T &amp;r, const T &amp;L, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;unit_vector=<a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;::UnitZ())</td></tr>
-<tr class="memdesc:a069e5dcab9f2119cc2c4eadb6e91abab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the unit inertia for a uniform density unit-mass capsule C whose axis of revolution is along the z-axis.  <a href="#a069e5dcab9f2119cc2c4eadb6e91abab">More...</a><br /></td></tr>
-<tr class="separator:a069e5dcab9f2119cc2c4eadb6e91abab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73671675bcab7c63b6f985a818e4650f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#a73671675bcab7c63b6f985a818e4650f">SolidCylinder</a> (const T &amp;r, const T &amp;L)</td></tr>
+<tr class="memdesc:a73671675bcab7c63b6f985a818e4650f"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a73671675bcab7c63b6f985a818e4650f">More...</a><br /></td></tr>
+<tr class="separator:a73671675bcab7c63b6f985a818e4650f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6be8e4e7a449f933a0829058d0c02c94"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#a6be8e4e7a449f933a0829058d0c02c94">SolidCylinder</a> (const T &amp;radius, const T &amp;length, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;unit_vector)</td></tr>
+<tr class="memdesc:a6be8e4e7a449f933a0829058d0c02c94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a unit inertia for a uniform density solid cylinder B about its center of mass Bcm (which is coincident with B's geometric center Bo).  <a href="#a6be8e4e7a449f933a0829058d0c02c94">More...</a><br /></td></tr>
+<tr class="separator:a6be8e4e7a449f933a0829058d0c02c94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed68ed5145171fc5505a5c7c848bfae5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#aed68ed5145171fc5505a5c7c848bfae5">SolidCapsule</a> (const T &amp;r, const T &amp;L)</td></tr>
+<tr class="memdesc:aed68ed5145171fc5505a5c7c848bfae5"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#aed68ed5145171fc5505a5c7c848bfae5">More...</a><br /></td></tr>
+<tr class="separator:aed68ed5145171fc5505a5c7c848bfae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada41695fe8dd895dfb54e155b95a96e5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#ada41695fe8dd895dfb54e155b95a96e5">SolidCapsule</a> (const T &amp;radius, const T &amp;length, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;unit_vector)</td></tr>
+<tr class="memdesc:ada41695fe8dd895dfb54e155b95a96e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a unit inertia for a uniform density solid capsule B about its center of mass Bcm (which is coincident with B's geometric center Bo).  <a href="#ada41695fe8dd895dfb54e155b95a96e5">More...</a><br /></td></tr>
+<tr class="separator:ada41695fe8dd895dfb54e155b95a96e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af26c23e707688c5fe5f0c71f22fbee62"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#af26c23e707688c5fe5f0c71f22fbee62">SolidCylinderAboutEnd</a> (const T &amp;r, const T &amp;L)</td></tr>
-<tr class="memdesc:af26c23e707688c5fe5f0c71f22fbee62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the unit inertia for a unit-mass cylinder of uniform density oriented along the z-axis computed about a point at the center of its base.  <a href="#af26c23e707688c5fe5f0c71f22fbee62">More...</a><br /></td></tr>
+<tr class="memdesc:af26c23e707688c5fe5f0c71f22fbee62"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#af26c23e707688c5fe5f0c71f22fbee62">More...</a><br /></td></tr>
 <tr class="separator:af26c23e707688c5fe5f0c71f22fbee62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2feaaa8887c6fbcf994cf374fa57eb48"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#a2feaaa8887c6fbcf994cf374fa57eb48">SolidCylinderAboutEnd</a> (const T &amp;radius, const T &amp;length, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;unit_vector)</td></tr>
 <tr class="memdesc:a2feaaa8887c6fbcf994cf374fa57eb48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a unit inertia for a uniform-density solid cylinder B about an end-point Bp of the cylinder's axis (see below for more about Bp).  <a href="#a2feaaa8887c6fbcf994cf374fa57eb48">More...</a><br /></td></tr>
@@ -411,15 +417,15 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a6e2e286c361e5b64ae13f179c20b8dc8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#a6e2e286c361e5b64ae13f179c20b8dc8">SolidTetrahedronAboutVertex</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p1, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p2, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p3)</td></tr>
 <tr class="memdesc:a6e2e286c361e5b64ae13f179c20b8dc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Creates a unit inertia for a unit-mass uniform density solid tetrahedron B about its vertex B0, from which position vectors to B's other 3 vertices B1, B2, B3 are measured (vectors are all expressed in a common frame E).  <a href="#a6e2e286c361e5b64ae13f179c20b8dc8">More...</a><br /></td></tr>
 <tr class="separator:a6e2e286c361e5b64ae13f179c20b8dc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa66b55a2788b7027b92ef7434da5569b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#aa66b55a2788b7027b92ef7434da5569b">AxiallySymmetric</a> (const T &amp;J, const T &amp;K, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;b_E)</td></tr>
-<tr class="memdesc:aa66b55a2788b7027b92ef7434da5569b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the unit inertia for a unit-mass body B for which there exists a line L passing through the body's center of mass <code>Bcm</code> having the property that the body's moment of inertia about all lines perpendicular to L are equal.  <a href="#aa66b55a2788b7027b92ef7434da5569b">More...</a><br /></td></tr>
-<tr class="separator:aa66b55a2788b7027b92ef7434da5569b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7e6f8e48b01a027112221c2e59ddbad"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#aa7e6f8e48b01a027112221c2e59ddbad">StraightLine</a> (const T &amp;K, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;b_E)</td></tr>
-<tr class="memdesc:aa7e6f8e48b01a027112221c2e59ddbad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the unit inertia for a body B of unit-mass uniformly distributed along a straight, finite, line L with direction <code>b_E</code> and with moment of inertia K about any axis perpendicular to this line.  <a href="#aa7e6f8e48b01a027112221c2e59ddbad">More...</a><br /></td></tr>
-<tr class="separator:aa7e6f8e48b01a027112221c2e59ddbad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a902f33de7ecd8ef964190051ee56588c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#a902f33de7ecd8ef964190051ee56588c">ThinRod</a> (const T &amp;L, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;b_E)</td></tr>
-<tr class="memdesc:a902f33de7ecd8ef964190051ee56588c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the unit inertia for a unit mass rod B of length L, about its center of mass, with its mass uniformly distributed along a line parallel to vector <code>b_E</code>.  <a href="#a902f33de7ecd8ef964190051ee56588c">More...</a><br /></td></tr>
-<tr class="separator:a902f33de7ecd8ef964190051ee56588c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacf0c407a773a8dc1ee702afefc21506"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#aacf0c407a773a8dc1ee702afefc21506">AxiallySymmetric</a> (const T &amp;moment_parallel, const T &amp;moment_perpendicular, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;unit_vector)</td></tr>
+<tr class="memdesc:aacf0c407a773a8dc1ee702afefc21506"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the unit inertia for a body B for which there exists an axis L passing through the body's center of mass Bcm having the property that B's moment of inertia about all lines perpendicular to L are equal.  <a href="#aacf0c407a773a8dc1ee702afefc21506">More...</a><br /></td></tr>
+<tr class="separator:aacf0c407a773a8dc1ee702afefc21506"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52f73d20377357699b72dbd40e949942"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#a52f73d20377357699b72dbd40e949942">StraightLine</a> (const T &amp;moment_perpendicular, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;unit_vector)</td></tr>
+<tr class="memdesc:a52f73d20377357699b72dbd40e949942"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a unit inertia for a straight line segment B about a point Bp on the line segment.  <a href="#a52f73d20377357699b72dbd40e949942">More...</a><br /></td></tr>
+<tr class="separator:a52f73d20377357699b72dbd40e949942"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c7894ad8a5d50f09aa4155eb1bcafc5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#a4c7894ad8a5d50f09aa4155eb1bcafc5">ThinRod</a> (const T &amp;length, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;unit_vector)</td></tr>
+<tr class="memdesc:a4c7894ad8a5d50f09aa4155eb1bcafc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a unit inertia for a uniform density thin rod B about its center of mass Bcm (which is coincident with B's geometric center Bo).  <a href="#a4c7894ad8a5d50f09aa4155eb1bcafc5">More...</a><br /></td></tr>
+<tr class="separator:a4c7894ad8a5d50f09aa4155eb1bcafc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a870636b327cc9cd813547c32c45a06c1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#a870636b327cc9cd813547c32c45a06c1">TriaxiallySymmetric</a> (const T &amp;I_triaxial)</td></tr>
 <tr class="memdesc:a870636b327cc9cd813547c32c45a06c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a unit inertia with equal moments of inertia along its diagonal and with each product of inertia set to zero.  <a href="#a870636b327cc9cd813547c32c45a06c1">More...</a><br /></td></tr>
 <tr class="separator:a870636b327cc9cd813547c32c45a06c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -637,8 +643,8 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aa66b55a2788b7027b92ef7434da5569b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa66b55a2788b7027b92ef7434da5569b">&#9670;&nbsp;</a></span>AxiallySymmetric()</h2>
+<a id="aacf0c407a773a8dc1ee702afefc21506"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacf0c407a773a8dc1ee702afefc21506">&#9670;&nbsp;</a></span>AxiallySymmetric()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -650,19 +656,19 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname">static <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt;T&gt; AxiallySymmetric </td>
           <td>(</td>
           <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>J</em>, </td>
+          <td class="paramname"><em>moment_parallel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>K</em>, </td>
+          <td class="paramname"><em>moment_perpendicular</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>b_E</em>&#160;</td>
+          <td class="paramname"><em>unit_vector</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -677,37 +683,32 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the unit inertia for a unit-mass body B for which there exists a line L passing through the body's center of mass <code>Bcm</code> having the property that the body's moment of inertia about all lines perpendicular to L are equal. </p>
-<p>Examples of bodies with an axially symmetric inertia include axisymmetric objects such as cylinders and cones. Other commonly occurring geometries with this property are, for instance, propellers with 3+ evenly spaced blades. Given a unit vector b defining the symmetry line L, the moment of inertia J about this line L and the moment of inertia K about any line perpendicular to L, the axially symmetric unit inertia G is computed as: </p><pre>
-  G = K * Id + (J - K) * b ⊗ b
-</pre><p> where <code>Id</code> is the identity matrix and ⊗ denotes the tensor product operator. See Mitiguy, P., 2016. Advanced Dynamics &amp; Motion Simulation.</p>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::exception</td><td><ul>
-<li>J is negative. J can be zero.</li>
-<li>K is negative. K can be zero.</li>
-<li>J ≤ 2 * K, this corresponds to the triangle inequality, see <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several necessary checks to verify whether this rotational inertia could be physically valid...">CouldBePhysicallyValid()</a>.</li>
-<li><code>b_E</code> is the zero vector. That is if <code>‖b_E‖₂ ≤ ε</code>, where ε is the machine epsilon.</li>
-</ul>
-</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>J is a principal moment of inertia with principal axis equal to b. K is a principal moment with multiplicity of two. Any two axes perpendicular to b are principal axes with principal moment K.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Returns the unit inertia for a body B for which there exists an axis L passing through the body's center of mass Bcm having the property that B's moment of inertia about all lines perpendicular to L are equal. </p>
+<p>Bodies with this "axially symmetric inertia" property include axisymmetric cylinders or cones and propellers with 3⁺ evenly spaced blades. For a body B with axially symmetric inertia, B's unit inertia about a point Bp on axis L can be written in terms of a unit_vector parallel to L; the parallel moment of inertia J about L; and the perpendicular moment of inertia K about any line perpendicular to axis L; as: </p><pre>
+  G = K * Identity + (J - K) * unit_vector ⊗ unit_vector
+</pre><p> where <code>Identity</code> is the identity matrix and ⊗ denotes the tensor product operator. See Mitiguy, P., 2016. Advanced Dynamics &amp; Motion Simulation. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">J</td><td>Unit inertia about axis b. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">K</td><td>Unit inertia about any axis perpendicular to b. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">b_E</td><td>Vector defining the symmetry axis, expressed in a frame E. <code>b_E</code> can have a norm different from one; however, it will be normalized before using it. Therefore its norm is ignored and only its direction is used. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">moment_parallel</td><td>(J) B's unit moment of inertia about axis L. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">moment_perpendicular</td><td>(K) B's unit moment of inertia about Bp for any line perpendicular to unit_vector. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">unit_vector</td><td>unit vector parallel to axis L, expressed in a frame E. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">G_Bcm_E</td><td>An axially symmetric unit inertia about body B's center of mass, expressed in the same frame E as the input unit vector <code>b_E</code>. </td></tr>
+    <tr><td class="paramname">G_BBp_E</td><td>B's unit inertia about point Bp on B's symmetry axis, expressed in the same frame E as the unit_vector is expressed. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section pre"><dt>Precondition</dt><dd>Points Bp and Bcm are both on B's symmetry axis. The actual location of these points is not known by this function. However, the value of moment_perpendicular (K) is associated with point Bp. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>B's unit inertia about Bp is axially symmetric, meaning B has an equal moment of inertia about any line that both passes through Bp and is perpendicular to unit_vector. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if moment_parallel (J) or moment_perpendicular (K) is negative or if J &gt; 2 K (violates the triangle inequality, see <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several necessary checks to verify whether this rotational inertia could be physically valid...">CouldBePhysicallyValid()</a>) or ‖unit_vector‖ is not within 1.0E-14 of 1.0.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>Previously the <code>unit_vector</code> argument was named <code>b_E</code> and was not required to be a unit vector. The use of a non-unit-vector third argument has been deprecated and will become an exception on or after 2023-12-01. </dd></dl>
 
 </div>
 </div>
@@ -1219,8 +1220,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a069e5dcab9f2119cc2c4eadb6e91abab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a069e5dcab9f2119cc2c4eadb6e91abab">&#9670;&nbsp;</a></span>SolidCapsule()</h2>
+<a id="aed68ed5145171fc5505a5c7c848bfae5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed68ed5145171fc5505a5c7c848bfae5">&#9670;&nbsp;</a></span>SolidCapsule() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1238,13 +1239,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>L</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>unit_vector</em> = <code><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt;&#160;T&#160;&gt;::UnitZ()</code>&#160;</td>
+          <td class="paramname"><em>L</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1259,18 +1254,71 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Computes the unit inertia for a uniform density unit-mass capsule C whose axis of revolution is along the z-axis. </p>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000009">Deprecated:</a></b></dt><dd>SolidCapsule now requires the capsules's axis  direction to be explicitly given. <br />
+ This will be removed from Drake on or after 2023-12-01.</dd></dl>
+
+</div>
+</div>
+<a id="ada41695fe8dd895dfb54e155b95a96e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada41695fe8dd895dfb54e155b95a96e5">&#9670;&nbsp;</a></span>SolidCapsule() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt;T&gt; SolidCapsule </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>length</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>unit_vector</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a unit inertia for a uniform density solid capsule B about its center of mass Bcm (which is coincident with B's geometric center Bo). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td>radius of the cylinder/half-sphere parts of the capsule. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">L</td><td>length of the cylindrical part of the capsule. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">unit_vector</td><td>direction of the cylindrical part of the capsule. It defaults to <code>Vector3&lt;T&gt;::UnitZ()</code>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">radius</td><td>radius of the cylinder/half-sphere parts of the capsule. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>length of cylindrical part of the capsule. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">unit_vector</td><td>unit vector defining the axial direction of the cylindrical part of the capsule, expressed in a frame E. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">G_BBcm_E</td><td>B's unit inertia about Bcm expressed in the same frame E as the unit_vector is expressed. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>B's unit inertia about Bcm is axially symmetric, meaning B has an equal moment of inertia about any line that both passes through Bcm and is perpendicular to unit_vector. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if r or L is negative or if ‖unit_vector‖ is not within 1.0E-14 of 1.0. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if radius or length is negative or if ‖unit_vector‖ is not within 1.0E-14 of 1.0. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1311,8 +1359,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="aa752eb88a4a3eb76242ccb373b81ccf3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa752eb88a4a3eb76242ccb373b81ccf3">&#9670;&nbsp;</a></span>SolidCylinder()</h2>
+<a id="a73671675bcab7c63b6f985a818e4650f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73671675bcab7c63b6f985a818e4650f">&#9670;&nbsp;</a></span>SolidCylinder() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1330,13 +1378,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>L</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>b_E</em> = <code><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt;&#160;T&#160;&gt;::UnitZ()</code>&#160;</td>
+          <td class="paramname"><em>L</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1351,33 +1393,76 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Computes the unit inertia for a unit-mass cylinder B, of uniform density, having its axis of revolution along input vector <code>b_E</code>. </p>
-<p>The resulting unit inertia is computed about the cylinder's center of mass <code>Bcm</code> and is expressed in the same frame E as the input axis of revolution <code>b_E</code>.</p>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000008">Deprecated:</a></b></dt><dd>SolidCylinder now requires the cylinder's axis  direction to be explicitly given and to be a unit vector. <br />
+ This will be removed from Drake on or after 2023-12-01.</dd></dl>
+
+</div>
+</div>
+<a id="a6be8e4e7a449f933a0829058d0c02c94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6be8e4e7a449f933a0829058d0c02c94">&#9670;&nbsp;</a></span>SolidCylinder() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt;T&gt; SolidCylinder </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>length</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>unit_vector</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a unit inertia for a uniform density solid cylinder B about its center of mass Bcm (which is coincident with B's geometric center Bo). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td>The radius of the cylinder, it must be non-negative. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">L</td><td>The length of the cylinder, it must be non-negative. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">b_E</td><td>Vector defining the axis of revolution of the cylinder, expressed in a frame E. <code>b_E</code> can have a norm different from one; however, it will be normalized before using it. Therefore its norm is ignored and only its direction is used. It defaults to <code>Vector3&lt;T&gt;::UnitZ()</code>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">radius</td><td>radius of the cylinder (meters). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>length of cylinder in unit_vector direction (meters). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">unit_vector</td><td>unit vector defining the axial direction of the cylinder, expressed in a frame E. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">G_Bcm_E</td><td>The unit inertia for a solid cylinder B, of uniform density, with axis of revolution along <code>b_E</code>, computed about the cylinder's center of mass <code>Bcm</code>, and expressed in the same frame E as the input axis of rotation <code>b_E</code>.</td></tr>
+    <tr><td class="paramname">G_BBcm_E</td><td>B's unit inertia about Bcm expressed in the same frame E as the unit_vector is expressed. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>B's unit inertia about Bcm is axially symmetric, meaning B has an equal moment of inertia about any line that both passes through Bcm and is perpendicular to unit_vector. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td><ul>
-<li>Radius r is negative.</li>
-<li>Length L is negative.</li>
-<li><code>b_E</code> is the zero vector. That is if <code>‖b_E‖₂ ≤ ε</code>, where ε is the machine epsilon. </li>
-</ul>
-</td></tr>
+    <tr><td class="paramname">std::exception</td><td>if radius or length is negative or if ‖unit_vector‖ is not within 1.0E-14 of 1.0. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#af26c23e707688c5fe5f0c71f22fbee62" title="(Deprecated.)">SolidCylinderAboutEnd()</a> to calculate G_BBp_E, B's unit inertia about point Bp (Bp is at the center of one of the cylinder's circular ends).</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Previously the <code>unit_vector</code> argument was named <code>b_E</code> and was not required to be a unit vector. The use of a non-unit-vector third argument has been deprecated and will become an exception on or after 2023-12-01. </dd></dl>
 
 </div>
 </div>
@@ -1415,22 +1500,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Computes the unit inertia for a unit-mass cylinder of uniform density oriented along the z-axis computed about a point at the center of its base. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td>The radius of the cylinder. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">L</td><td>The length of the cylinder. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if r or L is negative. (Deprecated.) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000008">Deprecated:</a></b></dt><dd>SolidCylinderAboutEnd now requires the cylinder's axis  direction to be explicitly given. <br />
- This will be removed from Drake on or after 2023-11-01.</dd></dl>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000010">Deprecated:</a></b></dt><dd>SolidCylinderAboutEnd now requires the cylinder's axis  direction to be explicitly given. <br />
+ This will be removed from Drake on or after 2023-12-01.</dd></dl>
 
 </div>
 </div>
@@ -1479,11 +1551,19 @@ Additional Inherited Members</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">radius</td><td>radius of cylinder (meters). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>length of cylinder in unit_vector direction (meters). </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">unit_vector</td><td>unit vector parallel to the axis of the cylinder and directed from Bp to Bcm (B's center of mass), expressed in B. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">unit_vector</td><td>unit vector parallel to the axis of the cylinder and directed from Bp to Bcm (B's center of mass), expressed in a frame E. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>The position from Bp to Bcm is p_BpBcm = length / 2 * unit_vector. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">G_BBp_E</td><td>B's unit inertia about Bp expressed in the same frame E as the unit_vector is expressed. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>The position from Bp to Bcm is p_BpBcm = length / 2 * unit_vector. </dd>
+<dd>
+B's unit inertia about Bp is axially symmetric, meaning B has an equal moment of inertia about any line that both passes through Bp and is perpendicular to unit_vector. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if radius or length is negative or if ‖unit_vector‖ is not within 1.0E-14 of 1.0. </td></tr>
@@ -1692,8 +1772,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="aa7e6f8e48b01a027112221c2e59ddbad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa7e6f8e48b01a027112221c2e59ddbad">&#9670;&nbsp;</a></span>StraightLine()</h2>
+<a id="a52f73d20377357699b72dbd40e949942"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52f73d20377357699b72dbd40e949942">&#9670;&nbsp;</a></span>StraightLine()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1705,13 +1785,13 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname">static <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt;T&gt; StraightLine </td>
           <td>(</td>
           <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>K</em>, </td>
+          <td class="paramname"><em>moment_perpendicular</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>b_E</em>&#160;</td>
+          <td class="paramname"><em>unit_vector</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1726,28 +1806,35 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Computes the unit inertia for a body B of unit-mass uniformly distributed along a straight, finite, line L with direction <code>b_E</code> and with moment of inertia K about any axis perpendicular to this line. </p>
-<p>Since the mass of the body is uniformly distributed on this line L, its center of mass is located right at the center. As an example, consider the inertia of a thin rod for which its transversal dimensions can be neglected, see <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#a902f33de7ecd8ef964190051ee56588c" title="Computes the unit inertia for a unit mass rod B of length L, about its center of mass,...">ThinRod()</a>.</p>
-<p>This method aborts if K is not positive.</p>
-<dl class="section note"><dt>Note</dt><dd>This is the particular case for an axially symmetric unit inertia with zero moment about its axis, see <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#aa66b55a2788b7027b92ef7434da5569b" title="Returns the unit inertia for a unit-mass body B for which there exists a line L passing through the b...">AxiallySymmetric()</a>.</dd></dl>
+<p>Creates a unit inertia for a straight line segment B about a point Bp on the line segment. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">K</td><td>Unit inertia about any axis perpendicular to the line. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">b_E</td><td>Vector defining the direction of the line, expressed in a frame E. <code>b_E</code> can have a norm different from one. Its norm is ignored and only its direction is needed. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">moment_perpendicular</td><td>Unit moment of inertia about any axis that passes through Bp and is perpendicular to the line segment. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">unit_vector</td><td>unit vector defining the line segment's direction, expressed in a frame E. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">G_Bcm_E</td><td>The unit inertia for a body B of unit mass uniformly distributed along a straight line L, about its center of mass <code>Bcm</code> which is located at the center of the line, expressed in the same frame E as the input unit vector <code>b_E</code>. </td></tr>
+    <tr><td class="paramname">G_BBp_E</td><td>B's unit inertia about Bp, expressed in the same frame E that the unit_vector is expressed. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>B's unit inertia about Bp is axially symmetric, meaning B has an equal moment of inertia about any line that both passes through Bp and is perpendicular to unit_vector. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if moment_perpendicular is not positive or if ‖unit_vector‖ is not within 1.0E-14 of 1.0. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>B's axial moment of inertia (along the line segment) is zero. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#a4c7894ad8a5d50f09aa4155eb1bcafc5" title="Creates a unit inertia for a uniform density thin rod B about its center of mass Bcm (which is coinci...">ThinRod()</a> is an example of an object that is axially symmetric and that has a zero moment of inertia about Bp in the unit_vector direction.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Previously the <code>unit_vector</code> argument was named <code>b_E</code> and was not required to be a unit vector. The use of a non-unit-vector second argument has been deprecated and will become an exception on or after 2023-12-01. </dd></dl>
 
 </div>
 </div>
-<a id="a902f33de7ecd8ef964190051ee56588c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a902f33de7ecd8ef964190051ee56588c">&#9670;&nbsp;</a></span>ThinRod()</h2>
+<a id="a4c7894ad8a5d50f09aa4155eb1bcafc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c7894ad8a5d50f09aa4155eb1bcafc5">&#9670;&nbsp;</a></span>ThinRod()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1759,13 +1846,13 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname">static <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt;T&gt; ThinRod </td>
           <td>(</td>
           <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>L</em>, </td>
+          <td class="paramname"><em>length</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>b_E</em>&#160;</td>
+          <td class="paramname"><em>unit_vector</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1780,21 +1867,29 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Computes the unit inertia for a unit mass rod B of length L, about its center of mass, with its mass uniformly distributed along a line parallel to vector <code>b_E</code>. </p>
-<p>This method aborts if L is not positive.</p>
+<p>Creates a unit inertia for a uniform density thin rod B about its center of mass Bcm (which is coincident with B's geometric center Bo). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">L</td><td>The length of the rod. It must be positive. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">b_E</td><td>Vector defining the axis of the rod, expressed in a frame E. <code>b_E</code> can have a norm different from one. Its norm is ignored and only its direction is needed. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>length of rod in unit_vector direction (meters). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">unit_vector</td><td>unit vector defining the rod's axial direction, expressed in a frame E. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">G_Bcm_E</td><td>The unit inertia of the rod B about its center of mass <code>Bcm</code>, expressed in the same frame E as the input unit vector <code>b_E</code>. </td></tr>
+    <tr><td class="paramname">G_BBcm_E</td><td>B's unit inertia about Bcm expressed in the same frame E that the unit_vector is expressed. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>B's unit inertia about Bcm is axially symmetric, meaning B has an equal moment of inertia about any line that both passes through Bcm and is perpendicular to unit_vector. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if length is not positive or if ‖unit_vector‖ is not within 1.0E-14 of 1.0. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>B's axial moment of inertia (along the rod) is zero..</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Previously the <code>unit_vector</code> argument was named <code>b_E</code> and was not required to be a unit vector. The use of a non-unit-vector second argument has been deprecated and will become an exception on or after 2023-12-01. </dd></dl>
 
 </div>
 </div>

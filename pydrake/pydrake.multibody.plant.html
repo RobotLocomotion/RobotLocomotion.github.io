@@ -5793,6 +5793,11 @@ explanation of default values.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.set_discrete_contact_solver">
 <span class="sig-name descname"><span class="pre">set_discrete_contact_solver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">contact_solver</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DiscreteContactSolver" title="pydrake.multibody.plant.DiscreteContactSolver"><span class="pre">pydrake.multibody.plant.DiscreteContactSolver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.set_discrete_contact_solver" title="Permalink to this definition"></a></dt>
 <dd><p>Sets the contact solver type used for discrete MultibodyPlant models.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This function is a no-op for continuous models (when is_discrete()
+is false.)</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError iff called post-finalize.</strong> – </p>
@@ -10326,6 +10331,11 @@ explanation of default values.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.set_discrete_contact_solver">
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].set_discrete_contact_solver"></span><span class="sig-name descname"><span class="pre">set_discrete_contact_solver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contact_solver</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DiscreteContactSolver" title="pydrake.multibody.plant.DiscreteContactSolver"><span class="pre">pydrake.multibody.plant.DiscreteContactSolver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.set_discrete_contact_solver" title="Permalink to this definition"></a></dt>
 <dd><p>Sets the contact solver type used for discrete MultibodyPlant models.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This function is a no-op for continuous models (when is_discrete()
+is false.)</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError iff called post-finalize.</strong> – </p>
@@ -14853,6 +14863,11 @@ explanation of default values.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.set_discrete_contact_solver">
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].set_discrete_contact_solver"></span><span class="sig-name descname"><span class="pre">set_discrete_contact_solver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contact_solver</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DiscreteContactSolver" title="pydrake.multibody.plant.DiscreteContactSolver"><span class="pre">pydrake.multibody.plant.DiscreteContactSolver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.set_discrete_contact_solver" title="Permalink to this definition"></a></dt>
 <dd><p>Sets the contact solver type used for discrete MultibodyPlant models.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This function is a no-op for continuous models (when is_discrete()
+is false.)</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError iff called post-finalize.</strong> – </p>

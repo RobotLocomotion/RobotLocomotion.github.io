@@ -531,7 +531,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructs a new HPolyedron from a <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html" title="A polytope described using the vertex representation.">VPolytope</a> object. </p>
-<p>This function will use qhull. </p>
+<p>This function will use qhull. If the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html" title="A polytope described using the vertex representation.">VPolytope</a> is empty, then the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html" title="Implements a polyhedral convex set using the half-space representation: {x| A x ≤ b}.">HPolyhedron</a> will also be empty. </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if vpoly is empty and zero dimensional. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

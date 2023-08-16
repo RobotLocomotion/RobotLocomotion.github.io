@@ -1405,7 +1405,13 @@ in the world frame.</p>
 <li><p>__init__(self: pydrake.geometry.optimization.HPolyhedron, vpoly: drake::geometry::optimization::VPolytope) -&gt; None</p></li>
 </ol>
 <p>Constructs a new HPolyedron from a VPolytope object. This function
-will use qhull.</p>
+will use qhull. If the VPolytope is empty, then the HPolyhedron will
+also be empty.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if vpoly is empty and zero dimensional.</strong> – </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">

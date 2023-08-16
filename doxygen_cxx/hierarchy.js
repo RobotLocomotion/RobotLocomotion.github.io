@@ -728,8 +728,8 @@ var hierarchy =
     [ "ScopeExit", "classdrake_1_1_scope_exit.html", null ],
     [ "ScsSolverDetails", "structdrake_1_1solvers_1_1_scs_solver_details.html", null ],
     [ "CspaceFreePolytope::SearchResult", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html", null ],
-    [ "CspaceFreeBox::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html", null ],
     [ "CspaceFreePolytope::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html", null ],
+    [ "CspaceFreeBox::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html", null ],
     [ "CspaceFreeBox::SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate.html", null ],
     [ "CspaceFreePolytope::SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate.html", null ],
     [ "SeparationCertificateProgramBase", "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_program_base.html", [
@@ -1213,7 +1213,6 @@ var hierarchy =
     [ "VolumeMesh< T >", "classdrake_1_1geometry_1_1_volume_mesh.html", null ],
     [ "VolumeMeshTester< T >", "classdrake_1_1geometry_1_1_volume_mesh_tester.html", null ],
     [ "vtkCommand", "classvtk_command.html", null ],
-    [ "Warn", "structdrake_1_1logging_1_1_warn.html", null ],
     [ "WitnessFunction< T >", "classdrake_1_1systems_1_1_witness_function.html", null ],
     [ "WitnessTriggeredEventData< T >", "classdrake_1_1systems_1_1_witness_triggered_event_data.html", null ],
     [ "wrap_arg_default< T >", "structdrake_1_1pydrake_1_1wrap__arg__default.html", null ],
