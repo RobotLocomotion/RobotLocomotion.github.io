@@ -1,5 +1,7 @@
 var NAVTREEINDEX50 =
 {
+"light__parameter_8h.html#a8f84eb20195999e4bb6c95cd47b69a76":[4,0,0,4,4,1,4],
+"light__parameter_8h.html#aab07aecacd083ebe574a44a2754b430a":[4,0,0,4,4,1,5],
 "light__parameter_8h.html#ab5284a5342f4a9295304af282c5e2653":[4,0,0,4,4,1,3],
 "light__parameter_8h.html#adc3ec8293e6a97ebe43f0196b9a7f638":[4,0,0,4,4,1,2],
 "light__parameter_8h.html#adc3ec8293e6a97ebe43f0196b9a7f638a20e722b15a1b587c30633f0a136b7009":[4,0,0,4,4,1,2,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX50 =
 "multiple__shooting_8h.html":[4,0,0,10,1,5],
 "multiplexer_8h.html":[4,0,0,12,6,16],
 "my__spring__mass__system_8h.html":[4,0,0,12,0,0,8],
-"my__vector_8h.html":[4,0,0,12,3,0,1],
-"my__vector_8h.html#a00a8360b0e2596f08240ca4159578935":[4,0,0,12,3,0,1,2],
-"my__vector_8h.html#a12aaf169acd19bb9d296a35a1eb110d1":[4,0,0,12,3,0,1,3]
+"my__vector_8h.html":[4,0,0,12,3,0,1]
 };

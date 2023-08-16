@@ -1,5 +1,7 @@
 var NAVTREEINDEX49 =
 {
+"group__templates.html":[1,6,5],
+"group__terminology__and__notation.html":[1,0],
 "group__visualization.html":[1,2,11],
 "group__visualization.html#ga34c9c8f0a78446ac29edf4a3202127c3":[1,2,11,6],
 "group__visualization.html#ga732349f929601b37e30b15ad557057e7":[1,2,11,7],
@@ -247,7 +249,5 @@ var NAVTREEINDEX49 =
 "light__parameter_8h.html#a102150e6763c0db325ca79bbf1148ffd":[4,0,0,4,4,1,1],
 "light__parameter_8h.html#a102150e6763c0db325ca79bbf1148ffda5346a7e9e23cbcc5a9ddf739ee74bc4d":[4,0,0,4,4,1,1,0],
 "light__parameter_8h.html#a102150e6763c0db325ca79bbf1148ffdab91a982133fa67e579d45373b64bbe7b":[4,0,0,4,4,1,1,1],
-"light__parameter_8h.html#a5a4729ba2516af248942df77db747f51":[4,0,0,4,4,1,6],
-"light__parameter_8h.html#a8f84eb20195999e4bb6c95cd47b69a76":[4,0,0,4,4,1,4],
-"light__parameter_8h.html#aab07aecacd083ebe574a44a2754b430a":[4,0,0,4,4,1,5]
+"light__parameter_8h.html#a5a4729ba2516af248942df77db747f51":[4,0,0,4,4,1,6]
 };

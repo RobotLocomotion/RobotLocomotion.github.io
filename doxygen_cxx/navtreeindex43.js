@@ -1,5 +1,7 @@
 var NAVTREEINDEX43 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9145f61319cb888cb71fc58cebc8fe38":[3,0,0,17,5,5],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a923a4ac5ef6f85f444519188d9dbd3e1":[3,0,0,17,5,52],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a97030415f23deb1b1244d33b95c1b0fb":[3,0,0,17,5,45],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9a7863e6bf8a3ccb5335563370305add":[3,0,0,17,5,54],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9aa1f1cfff6dcb352d5fbb15a80ee1a9":[3,0,0,17,5,50],
@@ -247,7 +249,5 @@ var NAVTREEINDEX43 =
 "cond_8h.html":[4,0,0,1,11],
 "cond_8h.html#a0b6d557a3ef060688cb028f17975ffca":[4,0,0,1,11,0],
 "cond_8h.html#ac20110c691980f564476914e3fda5991":[4,0,0,1,11,1],
-"conex__supernodal__solver_8h.html":[4,0,0,8,2,6],
-"constant__value__source_8h.html":[4,0,0,12,6,3],
-"constant__vector__source_8h.html":[4,0,0,12,6,4]
+"conex__supernodal__solver_8h.html":[4,0,0,8,2,6]
 };

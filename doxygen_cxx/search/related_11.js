@@ -49,5 +49,6 @@ var searchData=
   ['to_5fvariable',['to_variable',['../classdrake_1_1symbolic_1_1_expression.html#a7675408d0322a3c6b5aa1a448c2b93fc',1,'drake::symbolic::Expression::to_variable()'],['../classdrake_1_1symbolic_1_1_expression.html#a91edb2cdf86af1087b2e99bf71c81e55',1,'drake::symbolic::Expression::to_variable()'],['../classdrake_1_1symbolic_1_1_formula.html#a306c52ef5935226641a98751d4e4de2d',1,'drake::symbolic::Formula::to_variable()']]],
   ['trajectoryaffinesystem',['TrajectoryAffineSystem',['../classdrake_1_1systems_1_1_trajectory_affine_system.html#a765619415f84359e645e673d149d9c72',1,'drake::systems::TrajectoryAffineSystem']]],
   ['trajectorylinearsystem',['TrajectoryLinearSystem',['../classdrake_1_1systems_1_1_trajectory_linear_system.html#a86b3ded6f53bfd2386bf6982dbc0f787',1,'drake::systems::TrajectoryLinearSystem']]],
+  ['trajectorysource',['TrajectorySource',['../classdrake_1_1systems_1_1_trajectory_source.html#a6acd575d9e855bfe3d813a0c4852edf2',1,'drake::systems::TrajectorySource']]],
   ['trianglesurfacemeshtester_3c_20t_20_3e',['TriangleSurfaceMeshTester&lt; T &gt;',['../classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a421490ed6cab1812d3a8380432739880',1,'drake::geometry::TriangleSurfaceMesh']]]
 ];

@@ -36,7 +36,9 @@ var dir_55f8630d5466d97e74952e939680a0a0 =
     [ "trajectory_linear_system.h", "trajectory__linear__system_8h.html", [
       [ "Traits< TrajectoryLinearSystem >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_trajectory_linear_system_01_4.html", null ]
     ] ],
-    [ "trajectory_source.h", "trajectory__source_8h.html", null ],
+    [ "trajectory_source.h", "trajectory__source_8h.html", [
+      [ "Traits< TrajectorySource >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_trajectory_source_01_4.html", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_trajectory_source_01_4" ]
+    ] ],
     [ "vector_log.h", "vector__log_8h.html", [
       [ "VectorLog", "classdrake_1_1systems_1_1_vector_log.html", "classdrake_1_1systems_1_1_vector_log" ]
     ] ],

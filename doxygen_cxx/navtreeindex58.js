@@ -1,5 +1,7 @@
 var NAVTREEINDEX58 =
 {
+"structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html#adf3c6b6e481d6acc45e87b93d10d8f96":[3,0,0,15,0,2,0],
+"structdrake_1_1systems_1_1analysis__test_1_1_explicit_error_controlled_integrator_test.html":[3,0,0,15,1,1],
 "structdrake_1_1systems_1_1analysis__test_1_1_explicit_error_controlled_integrator_test.html#a03438bfa4d94bde06f020fd03bf119f7":[3,0,0,15,1,1,4],
 "structdrake_1_1systems_1_1analysis__test_1_1_explicit_error_controlled_integrator_test.html#a06b4bf90f560eba55ebfe4c6c87092a4":[3,0,0,15,1,1,2],
 "structdrake_1_1systems_1_1analysis__test_1_1_explicit_error_controlled_integrator_test.html#a2dddadb7fdc7410ae7d2d76e4934ff38":[3,0,0,15,1,1,1],
@@ -67,17 +69,19 @@ var NAVTREEINDEX58 =
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_random_source_01_4.html":[3,0,0,15,7,9],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_trajectory_affine_system_01_4.html":[3,0,0,15,7,11],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_trajectory_linear_system_01_4.html":[3,0,0,15,7,12],
+"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_trajectory_source_01_4.html":[3,0,0,15,7,13],
+"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_trajectory_source_01_4.html#a53fd56f948ec8fa9e2aaf9640f2fff44":[3,0,0,15,7,13,0],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01drake_1_1multibody_1_1meshcat_1_1_contact_visualizer_01_4.html":[3,0,0,15,7,3],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01examples_1_1rimless__wheel_1_1_rimless_wheel_01_4.html":[3,0,0,15,7,4],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_drake_visualizer_01_4.html":[3,0,0,15,7,5],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_meshcat_point_cloud_visualizer_01_4.html":[3,0,0,15,7,6],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_meshcat_visualizer_01_4.html":[3,0,0,15,7,7],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01sensors_1_1_beam_model_01_4.html":[3,0,0,15,7,10],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter.html":[3,0,0,15,7,13],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter.html#a8a63ad999f7b515a27e608907704a113":[3,0,0,15,7,13,0],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter_3_01_t_00_01_t_01_4.html":[3,0,0,15,7,14],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter_3_01_t_00_01_t_01_4.html#a8a63ad999f7b515a27e608907704a113":[3,0,0,15,7,14,1],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter_3_01_t_00_01_t_01_4.html#a922b853b1fa03c63528dda71698c419a":[3,0,0,15,7,14,0],
+"structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter.html":[3,0,0,15,7,14],
+"structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter.html#a8a63ad999f7b515a27e608907704a113":[3,0,0,15,7,14,0],
+"structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter_3_01_t_00_01_t_01_4.html":[3,0,0,15,7,15],
+"structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter_3_01_t_00_01_t_01_4.html#a8a63ad999f7b515a27e608907704a113":[3,0,0,15,7,15,1],
+"structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter_3_01_t_00_01_t_01_4.html#a922b853b1fa03c63528dda71698c419a":[3,0,0,15,7,15,0],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config.html":[3,0,0,15,8,2],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a01a2a4e8cf420c179bc1253ca3d3a1c3":[3,0,0,15,8,2,8],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a079f690a782b18a752952851aafd792a":[3,0,0,15,8,2,22],
@@ -245,9 +249,5 @@ var NAVTREEINDEX58 =
 "structdrake_1_1yaml_1_1_load_yaml_options.html#aea27c3ce8aaf9792e86b006e57659938":[3,0,0,19,0,2],
 "structfmt_1_1formatter_3_01_t_00_01std_1_1enable__if__t_3_01std_1_1is__base__of__v_3_01drake_1_12b85009adc7d5953d070359a51d8a68c.html":[3,0,1,37],
 "structfmt_1_1formatter_3_01drake_1_1_auto_diff_xd_01_4.html":[3,0,1,0],
-"structfmt_1_1formatter_3_01drake_1_1_identifier_3_01_tag_01_4_01_4.html":[3,0,1,6],
-"structfmt_1_1formatter_3_01drake_1_1_polynomial_3_01_t_01_4_01_4.html":[3,0,1,16],
-"structfmt_1_1formatter_3_01drake_1_1_polynomial_3_01double_01_4_1_1_monomial_01_4.html":[3,0,1,15],
-"structfmt_1_1formatter_3_01drake_1_1_type_safe_index_3_01_tag_01_4_01_4.html":[3,0,1,35],
-"structfmt_1_1formatter_3_01drake_1_1geometry_1_1_geometry_id_01_4.html":[3,0,1,1]
+"structfmt_1_1formatter_3_01drake_1_1_identifier_3_01_tag_01_4_01_4.html":[3,0,1,6]
 };

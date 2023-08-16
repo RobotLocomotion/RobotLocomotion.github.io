@@ -22,6 +22,7 @@ var searchData=
   ['traits_3c_20sensors_3a_3abeammodel_20_3e',['Traits&lt; sensors::BeamModel &gt;',['../structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01sensors_1_1_beam_model_01_4.html',1,'drake::systems::scalar_conversion']]],
   ['traits_3c_20trajectoryaffinesystem_20_3e',['Traits&lt; TrajectoryAffineSystem &gt;',['../structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_trajectory_affine_system_01_4.html',1,'drake::systems::scalar_conversion']]],
   ['traits_3c_20trajectorylinearsystem_20_3e',['Traits&lt; TrajectoryLinearSystem &gt;',['../structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_trajectory_linear_system_01_4.html',1,'drake::systems::scalar_conversion']]],
+  ['traits_3c_20trajectorysource_20_3e',['Traits&lt; TrajectorySource &gt;',['../structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_trajectory_source_01_4.html',1,'drake::systems::scalar_conversion']]],
   ['trajectory',['Trajectory',['../classdrake_1_1trajectories_1_1_trajectory.html',1,'drake::trajectories']]],
   ['trajectory_3c_20autodiffxd_20_3e',['Trajectory&lt; AutoDiffXd &gt;',['../classdrake_1_1trajectories_1_1_trajectory.html',1,'drake::trajectories']]],
   ['trajectory_3c_20double_20_3e',['Trajectory&lt; double &gt;',['../classdrake_1_1trajectories_1_1_trajectory.html',1,'drake::trajectories']]],

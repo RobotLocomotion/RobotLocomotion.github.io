@@ -13,6 +13,7 @@ var namespacedrake_1_1systems_1_1scalar__conversion =
     [ "Traits< sensors::BeamModel >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01sensors_1_1_beam_model_01_4.html", null ],
     [ "Traits< TrajectoryAffineSystem >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_trajectory_affine_system_01_4.html", null ],
     [ "Traits< TrajectoryLinearSystem >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_trajectory_linear_system_01_4.html", null ],
+    [ "Traits< TrajectorySource >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_trajectory_source_01_4.html", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_trajectory_source_01_4" ],
     [ "ValueConverter", "structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter.html", "structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter" ],
     [ "ValueConverter< T, T >", "structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter_3_01_t_00_01_t_01_4.html", "structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter_3_01_t_00_01_t_01_4" ]
 ];

@@ -5553,7 +5553,16 @@ of the trajectory evaluated at the current time.</p>
 Diagram is being constructed, one can create a TrajectorySource with a
 placeholder trajectory (e.g. PiecewisePolynomimal(Eigen::VectorXd))
 with the correct number of rows, and then use UpdateTrajectory().</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>TrajectorySource</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="py method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>TrajectorySource</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><p>Note: Scalar conversion is supported from double to any other scalar,
+but the stored Trajectory is not automatically scalar converted. You
+must call UpdateTrajectory() with an updated Trajectory&lt;T&gt; in order to
+fully enable scalar-type support on the trajectory parameters/values.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This class is templated; see <a class="reference internal" href="#pydrake.systems.primitives.TrajectorySource_" title="pydrake.systems.primitives.TrajectorySource_"><code class="xref py py-class docutils literal notranslate"><span class="pre">TrajectorySource_</span></code></a>
+for the list of instantiations.</p>
+</div>
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.primitives.TrajectorySource.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">pydrake.systems.primitives.TrajectorySource</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trajectory:</span> <span class="pre">drake::trajectories::Trajectory&lt;double&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_derivative_order:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zero_derivatives_beyond_limits:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.TrajectorySource.__init__" title="Permalink to this definition"></a></dt>
 <dd><dl class="simple">
@@ -5563,7 +5572,8 @@ with the correct number of rows, and then use UpdateTrajectory().</p>
 or equal to zero.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">zero_derivatives_beyond_limits</span></code>:</dt><dd><p>All derivatives will be zero before the start time or after the
-end time of <code class="docutils literal notranslate"><span class="pre">trajectory</span></code>.</p>
+end time of <code class="docutils literal notranslate"><span class="pre">trajectory</span></code>. However, this clamping is ignored for
+T=Expression.</p>
 </dd>
 <dt>Precondition:</dt><dd><p>The value of <code class="docutils literal notranslate"><span class="pre">trajectory</span></code> is a column vector. More precisely,
 trajectory.cols() == 1.</p>
@@ -5574,6 +5584,96 @@ trajectory.cols() == 1.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.primitives.TrajectorySource.UpdateTrajectory">
 <span class="sig-name descname"><span class="pre">UpdateTrajectory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">pydrake.systems.primitives.TrajectorySource</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trajectory:</span> <span class="pre">drake::trajectories::Trajectory&lt;double&gt;</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.TrajectorySource.UpdateTrajectory" title="Permalink to this definition"></a></dt>
+<dd><p>Updates the stored trajectory. <code class="docutils literal notranslate"><span class="pre">trajectory</span></code> must have the same
+number of rows as the trajectory passed to the constructor.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py template">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.TrajectorySource_">
+<em class="property"><span class="pre">template</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.primitives.</span></span><span class="sig-name descname"><span class="pre">TrajectorySource_</span></span><a class="headerlink" href="#pydrake.systems.primitives.TrajectorySource_" title="Permalink to this definition"></a></dt>
+<dd><p>Instantiations: <code class="xref py py-class docutils literal notranslate"><span class="pre">TrajectorySource_[float]</span></code>, <a class="reference internal" href="#pydrake.systems.primitives.TrajectorySource_-AutoDiffXd" title="pydrake.systems.primitives.TrajectorySource_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">TrajectorySource_[AutoDiffXd]</span></code></a>, <a class="reference internal" href="#pydrake.systems.primitives.TrajectorySource_-Expression" title="pydrake.systems.primitives.TrajectorySource_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">TrajectorySource_[Expression]</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.TrajectorySource_-AutoDiffXd">
+<span id="pydrake.systems.primitives.TrajectorySource_[AutoDiffXd]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.primitives.</span></span><span class="sig-name descname"><span class="pre">TrajectorySource_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.systems.primitives.TrajectorySource_-AutoDiffXd" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-AutoDiffXd" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[AutoDiffXd]</span></code></a></p>
+<p>Given a Trajectory, this System provides an output port with the value
+of the trajectory evaluated at the current time.</p>
+<p>If the particular Trajectory is not available at the time the System /
+Diagram is being constructed, one can create a TrajectorySource with a
+placeholder trajectory (e.g. PiecewisePolynomimal(Eigen::VectorXd))
+with the correct number of rows, and then use UpdateTrajectory().</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>TrajectorySource</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><p>Note: Scalar conversion is supported from double to any other scalar,
+but the stored Trajectory is not automatically scalar converted. You
+must call UpdateTrajectory() with an updated Trajectory&lt;T&gt; in order to
+fully enable scalar-type support on the trajectory parameters/values.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.TrajectorySource_-AutoDiffXd-.__init__">
+<span id="pydrake.systems.primitives.TrajectorySource_[AutoDiffXd].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.systems.primitives.TrajectorySource_[AutoDiffXd],</span> <span class="pre">trajectory:</span> <span class="pre">drake::trajectories::Trajectory&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double,</span> <span class="pre">-1,</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">-1,</span> <span class="pre">1&gt;</span> <span class="pre">&gt;</span> <span class="pre">&gt;,</span> <span class="pre">output_derivative_order:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">0,</span> <span class="pre">zero_derivatives_beyond_limits:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">True</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.TrajectorySource_-AutoDiffXd-.__init__" title="Permalink to this definition"></a></dt>
+<dd><dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">trajectory</span></code>:</dt><dd><p>Trajectory used by the system.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">output_derivative_order</span></code>:</dt><dd><p>The number of times to take the derivative. Must be greater than
+or equal to zero.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">zero_derivatives_beyond_limits</span></code>:</dt><dd><p>All derivatives will be zero before the start time or after the
+end time of <code class="docutils literal notranslate"><span class="pre">trajectory</span></code>. However, this clamping is ignored for
+T=Expression.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>The value of <code class="docutils literal notranslate"><span class="pre">trajectory</span></code> is a column vector. More precisely,
+trajectory.cols() == 1.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.TrajectorySource_-AutoDiffXd-.UpdateTrajectory">
+<span id="pydrake.systems.primitives.TrajectorySource_[AutoDiffXd].UpdateTrajectory"></span><span class="sig-name descname"><span class="pre">UpdateTrajectory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.systems.primitives.TrajectorySource_[AutoDiffXd],</span> <span class="pre">trajectory:</span> <span class="pre">drake::trajectories::Trajectory&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double,</span> <span class="pre">-1,</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">-1,</span> <span class="pre">1&gt;</span> <span class="pre">&gt;</span> <span class="pre">&gt;</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.TrajectorySource_-AutoDiffXd-.UpdateTrajectory" title="Permalink to this definition"></a></dt>
+<dd><p>Updates the stored trajectory. <code class="docutils literal notranslate"><span class="pre">trajectory</span></code> must have the same
+number of rows as the trajectory passed to the constructor.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.TrajectorySource_-Expression">
+<span id="pydrake.systems.primitives.TrajectorySource_[Expression]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.primitives.</span></span><span class="sig-name descname"><span class="pre">TrajectorySource_[Expression]</span></span><a class="headerlink" href="#pydrake.systems.primitives.TrajectorySource_-Expression" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-Expression" title="pydrake.systems.framework.LeafSystem_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[Expression]</span></code></a></p>
+<p>Given a Trajectory, this System provides an output port with the value
+of the trajectory evaluated at the current time.</p>
+<p>If the particular Trajectory is not available at the time the System /
+Diagram is being constructed, one can create a TrajectorySource with a
+placeholder trajectory (e.g. PiecewisePolynomimal(Eigen::VectorXd))
+with the correct number of rows, and then use UpdateTrajectory().</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>TrajectorySource</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><p>Note: Scalar conversion is supported from double to any other scalar,
+but the stored Trajectory is not automatically scalar converted. You
+must call UpdateTrajectory() with an updated Trajectory&lt;T&gt; in order to
+fully enable scalar-type support on the trajectory parameters/values.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.TrajectorySource_-Expression-.__init__">
+<span id="pydrake.systems.primitives.TrajectorySource_[Expression].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.systems.primitives.TrajectorySource_[Expression],</span> <span class="pre">trajectory:</span> <span class="pre">drake::trajectories::Trajectory&lt;drake::symbolic::Expression&gt;,</span> <span class="pre">output_derivative_order:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">0,</span> <span class="pre">zero_derivatives_beyond_limits:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">True</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.TrajectorySource_-Expression-.__init__" title="Permalink to this definition"></a></dt>
+<dd><dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">trajectory</span></code>:</dt><dd><p>Trajectory used by the system.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">output_derivative_order</span></code>:</dt><dd><p>The number of times to take the derivative. Must be greater than
+or equal to zero.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">zero_derivatives_beyond_limits</span></code>:</dt><dd><p>All derivatives will be zero before the start time or after the
+end time of <code class="docutils literal notranslate"><span class="pre">trajectory</span></code>. However, this clamping is ignored for
+T=Expression.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>The value of <code class="docutils literal notranslate"><span class="pre">trajectory</span></code> is a column vector. More precisely,
+trajectory.cols() == 1.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.TrajectorySource_-Expression-.UpdateTrajectory">
+<span id="pydrake.systems.primitives.TrajectorySource_[Expression].UpdateTrajectory"></span><span class="sig-name descname"><span class="pre">UpdateTrajectory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.systems.primitives.TrajectorySource_[Expression],</span> <span class="pre">trajectory:</span> <span class="pre">drake::trajectories::Trajectory&lt;drake::symbolic::Expression&gt;</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.TrajectorySource_-Expression-.UpdateTrajectory" title="Permalink to this definition"></a></dt>
 <dd><p>Updates the stored trajectory. <code class="docutils literal notranslate"><span class="pre">trajectory</span></code> must have the same
 number of rows as the trajectory passed to the constructor.</p>
 </dd></dl>
