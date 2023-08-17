@@ -1,5 +1,6 @@
 var NAVTREEINDEX59 =
 {
+"structfmt_1_1formatter_3_01drake_1_1_identifier_3_01_tag_01_4_01_4.html":[3,0,1,6],
 "structfmt_1_1formatter_3_01drake_1_1_polynomial_3_01_t_01_4_01_4.html":[3,0,1,16],
 "structfmt_1_1formatter_3_01drake_1_1_polynomial_3_01double_01_4_1_1_monomial_01_4.html":[3,0,1,15],
 "structfmt_1_1formatter_3_01drake_1_1_type_safe_index_3_01_tag_01_4_01_4.html":[3,0,1,35],
@@ -248,6 +249,5 @@ var NAVTREEINDEX59 =
 "universal__mobilizer_8h.html":[4,0,0,8,14,53],
 "unrevised__lemke__solver_8h.html":[4,0,0,11,56],
 "unused_8h.html":[4,0,0,1,61],
-"unused_8h.html#ade20b7bf635eecb13adbaac4df980af0":[4,0,0,1,61,0],
-"utilities_8h.html":[4,0,0,4,42]
+"unused_8h.html#ade20b7bf635eecb13adbaac4df980af0":[4,0,0,1,61,0]
 };

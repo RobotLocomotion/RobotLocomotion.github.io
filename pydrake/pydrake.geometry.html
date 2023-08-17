@@ -9130,6 +9130,16 @@ unused by RenderEngineVtk.</p>
 <p>This will be removed from Drake on or after 2023-12-01.</p>
 </dd></dl>
 
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.RenderEngineVtkParams.lights">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lights</span></span><a class="headerlink" href="#pydrake.geometry.RenderEngineVtkParams.lights" title="Permalink to this definition"></a></dt>
+<dd><p>Lights in the scene. If no lights are defined, a single directional
+light, fixed to the camera frame, is used.</p>
+<p>Note: RenderEngineVtk does not have a hard-coded limit on the number
+of lights; but more lights increases rendering cost. Note: the
+attenuation values have no effect on VTK <em>directional</em> lights.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">

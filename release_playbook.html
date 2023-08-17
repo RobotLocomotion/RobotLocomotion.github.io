@@ -304,7 +304,12 @@ new browser tab):
 will use your GitHub credentials.</li>
       <li>Click “Build with Parameters”.</li>
       <li>Change “sha1” to the full <strong>git sha</strong> corresponding to <code class="language-plaintext highlighter-rouge">v1.N.0</code> and
-“release_version” to <code class="language-plaintext highlighter-rouge">1.N.0</code> (no “v”).</li>
+“release_version” to <code class="language-plaintext highlighter-rouge">1.N.0</code> (no “v”).
+        <ul>
+          <li>If you mistakenly provide the “v” in “release_version”, your build will
+appear to work, but actually fail 5-6 minutes later.</li>
+        </ul>
+      </li>
       <li>Click “Build”; each build will take around an hour, give or take.</li>
       <li>Note: The macOS wheel jobs will produce one <code class="language-plaintext highlighter-rouge">.whl</code> file, whereas the linux
 job will produce multiple <code class="language-plaintext highlighter-rouge">.whl</code> files (in the same job).</li>
@@ -362,15 +367,19 @@ appropriate edits as follows:
           <li>The version number</li>
         </ul>
       </li>
-      <li>Into the box labeled “Attach binaries by dropping them here or selecting
-them.”, drag and drop the 36 release files from
-<code class="language-plaintext highlighter-rouge">/tmp/drake-release/v1.N.0</code>:
+      <li>Click the box labeled “Attach binaries by dropping them here or selecting
+them.” and then choose for upload the 36 release files from
+<code class="language-plaintext highlighter-rouge">/tmp/drake-release/v1.N.0/...</code>:
         <ul>
           <li>12: 4 <code class="language-plaintext highlighter-rouge">.tar.gz</code> + 8 checksums</li>
           <li>6: 2 <code class="language-plaintext highlighter-rouge">.deb</code> + 4 checksums</li>
           <li>12: 4 linux <code class="language-plaintext highlighter-rouge">.whl</code> + 8 checksums</li>
           <li>3: 1 macOS x86 <code class="language-plaintext highlighter-rouge">.whl</code> + 2 checksums</li>
           <li>3: 1 macOS arm <code class="language-plaintext highlighter-rouge">.whl</code> + 2 checksums</li>
+          <li>Note that on Jammy with <code class="language-plaintext highlighter-rouge">snap</code> provided Firefox, drag-and-drop from
+Nautilus will fail, and drop all of your release page inputs typed so
+far. Use the Firefox-provided selection dialog instead, by clicking on
+the box.</li>
         </ul>
       </li>
       <li>Choose “Save draft” and take a deep breath.</li>
@@ -384,7 +393,9 @@ page actually works.</li>
       <li>Notify <code class="language-plaintext highlighter-rouge">@BetsyMcPhail</code> by creating a GitHub issue asking her to manually 
 tag docker images and upload the releases to S3. Be sure to provide her 
 with the release tag in the same ping.</li>
-      <li>Create a GitHub issue on the <a href="https://github.com/RobotLocomotion/drake-ros/issues">drake-ros</a> repository, requesting an update of the <code class="language-plaintext highlighter-rouge">DRAKE_SUGGESTED_VERSION</code> constant.</li>
+      <li>Create a GitHub issue on the <a href="https://github.com/RobotLocomotion/drake-ros/issues">drake-ros</a>
+repository, requesting an update of the <code class="language-plaintext highlighter-rouge">DRAKE_SUGGESTED_VERSION</code>
+constant.</li>
       <li>Announce on Drake Slack, <code class="language-plaintext highlighter-rouge">#general</code>.</li>
       <li>Party on, Wayne.</li>
     </ol>
@@ -398,6 +409,13 @@ with the release tag in the same ping.</li>
 <p>If you haven’t done so already, follow Drake’s PyPI
 <a href="https://docs.google.com/document/d/17D0yzyr0kGH44eWpiNY7E33A8hW1aiJRmADaoAlVISE/edit#">account setup</a>
 instructions to obtain a username and password.</p>
+
+<p>Most likely, you will want to use an api token to authenticate yourself to the
+<code class="language-plaintext highlighter-rouge">twine</code> uploader. See <a href="https://pypi.org/help/#apitoken">https://pypi.org/help/#apitoken</a> and <a href="https://packaging.python.org/en/latest/guides/distributing-packages-using-setuptools/#create-an-account">https://packaging.python.org/en/latest/guides/distributing-packages-using-setuptools/#create-an-account</a>
+for advice on managing api tokens.</p>
+
+<p>For Jammy (and later?), <code class="language-plaintext highlighter-rouge">apt install twine</code> gives a perfectly adequate
+version of <code class="language-plaintext highlighter-rouge">twine</code>.</p>
 
 <ol>
   <li>
@@ -494,7 +512,7 @@ click “Open Controls”, then click “Stop JointSliders” repeatedly until
 the option vanishes and the notebook completes.</li>
           <li>The <code class="language-plaintext highlighter-rouge">rendering_multibody_plant</code> sometimes crashes with an interrupted
 error. In that case, click through to the “Environment” gear in the
-right-hand panel, then into the <code class="language-plaintext highlighter-rouge">init.ipynb</code> notebook and re-run the
+left-hand panel, then into the <code class="language-plaintext highlighter-rouge">init.ipynb</code> notebook and re-run the
 initialization. Then go back to  <code class="language-plaintext highlighter-rouge">rendering_multibody_plant</code> and try
 again.</li>
         </ol>
@@ -503,7 +521,7 @@ again.</li>
 <code class="language-plaintext highlighter-rouge">authoring_leaf_system</code> then <code class="language-plaintext highlighter-rouge">authoring_multibody_simulation</code> then
 … etc.):
         <ol>
-          <li>In the right-hand panel of your screen, take note that each notebook
+          <li>In the left-hand panel of your screen, take note that each notebook
 appears in two places – in “NOTEBOOKS” near the top and in “FILES”
 near the bottom. The “NOTEBOOKS” is the old copy; the “FILES” is the
 new copy. Our goal is to replace the old copy with the new.</li>
@@ -539,7 +557,7 @@ one to tackle next.</li>
       </li>
     </ol>
   </li>
-  <li>On the right side, click “Environment” then “Stop Machine”, as a
+  <li>On the left side, click “Environment” then “Stop Machine”, as a
 courtesy. (It will time out on its own within the hour, but we might as
 well save a few nanograms of CO2 where we can.)</li>
 </ol>

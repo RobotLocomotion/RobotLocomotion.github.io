@@ -189,6 +189,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a21e03ddd563337ed39c36bc8f4463d8a"><td class="memItemLeft" align="right" valign="top">Eigen::Vector3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_vtk_params.html#a21e03ddd563337ed39c36bc8f4463d8a">default_clear_color</a> {204 / 255., 229 / 255., 255 / 255.}</td></tr>
 <tr class="memdesc:a21e03ddd563337ed39c36bc8f4463d8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The rgb color to which the color buffer is cleared (each channel in the range [0, 1]).  <a href="#a21e03ddd563337ed39c36bc8f4463d8a">More...</a><br /></td></tr>
 <tr class="separator:a21e03ddd563337ed39c36bc8f4463d8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c649edac2bf38690cac11ff4730c9d5"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structdrake_1_1geometry_1_1render_1_1_light_parameter.html">render::LightParameter</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_vtk_params.html#a7c649edac2bf38690cac11ff4730c9d5">lights</a></td></tr>
+<tr class="memdesc:a7c649edac2bf38690cac11ff4730c9d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lights in the scene.  <a href="#a7c649edac2bf38690cac11ff4730c9d5">More...</a><br /></td></tr>
+<tr class="separator:a7c649edac2bf38690cac11ff4730c9d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a8e8824802dedfbc36776227f7482b6bc"></a>
@@ -262,6 +265,24 @@ Public Attributes</h2></td></tr>
 <p>(Deprecated.) The default_label is no longer configurable. </p>
 <p><br />
  This will be removed from Drake on or after 2023-12-01. </p>
+
+</div>
+</div>
+<a id="a7c649edac2bf38690cac11ff4730c9d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c649edac2bf38690cac11ff4730c9d5">&#9670;&nbsp;</a></span>lights</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structdrake_1_1geometry_1_1render_1_1_light_parameter.html">render::LightParameter</a>&gt; lights</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lights in the scene. </p>
+<p>If no lights are defined, a single directional light, fixed to the camera frame, is used.</p>
+<p>Note: RenderEngineVtk does not have a hard-coded limit on the number of lights; but more lights increases rendering cost. Note: the attenuation values have no effect on VTK <em>directional</em> lights. </p>
 
 </div>
 </div>
