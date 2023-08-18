@@ -56,6 +56,7 @@ var NAVTREE =
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
         [ "Functions", "globals_func.html", null ],
+        [ "Variables", "globals_vars.html", null ],
         [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
@@ -113,18 +114,18 @@ var NAVTREEINDEX =
 "expression_2expression_8h.html#a36042c0cb53373d2a578f0734b1acd47",
 "formula_8h.html#a6869e7044dd90be5d972ee7dd4e821b6a1fbc164d3e50b7fd20690a21f1b7b2f2",
 "generic__polynomial_8h.html#a4e5300a119664e3092e90248af90a376",
-"group__templates.html",
-"light__parameter_8h.html#a8f84eb20195999e4bb6c95cd47b69a76",
-"my__vector_8h.html#a00a8360b0e2596f08240ca4159578935",
-"output__port_8h.html",
-"rational__function_8h.html",
-"solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fa78cb430cc349315a2ba0f3602ef64b6d",
-"structdrake_1_1geometry_1_1_meshcat_visualizer_params.html",
-"structdrake_1_1is__eigen__type.html",
-"structdrake_1_1multibody_1_1parsing_1_1_add_model.html",
-"structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html#aaeb33e652a26580e0b4af48b12fff998",
-"structfmt_1_1formatter_3_01drake_1_1_identifier_3_01_tag_01_4_01_4.html",
-"utilities_8h.html"
+"group__technical__notes.html",
+"light__parameter_8h.html#a5a4729ba2516af248942df77db747f51",
+"my__vector_8h.html",
+"osqp__solver_8h.html",
+"random_8h.html#a72383be4710d27584d0821effc6506a5ab933cd0242085c2dbf804dbf288ce7f0",
+"soft__min__max_8h.html",
+"structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html",
+"structdrake_1_1geometry_1_1render_1_1_light_parameter.html",
+"structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#a8e8824802dedfbc36776227f7482b6bc",
+"structdrake_1_1systems_1_1_system_type_tag.html#a379e6a18189f3ab144292c07cd2cd1d9",
+"structdrake_1_1uhash.html#aec09227295d6a2c005ec578d42120039",
+"type__pack_8h.html#a7421f3f5801e3e393c7a52105aeb876e"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

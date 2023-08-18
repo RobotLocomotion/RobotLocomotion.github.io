@@ -503,7 +503,7 @@ var searchData=
   ['drake_5fexpect_5fthrows_5fmessage_5fif_5farmed',['DRAKE_EXPECT_THROWS_MESSAGE_IF_ARMED',['../expect__throws__message_8h.html#abe6fd77a193e735aab16e277f20ab7d1',1,'expect_throws_message.h']]],
   ['drake_5fexport_2eh',['drake_export.h',['../drake__export_8h.html',1,'']]],
   ['drake_5ffmt8_5fconst',['DRAKE_FMT8_CONST',['../fmt_8h.html#a80dfcf0f454f77a9fb769f3fbeb09e5b',1,'fmt.h']]],
-  ['drake_5fformatter_5fas',['DRAKE_FORMATTER_AS',['../fmt_8h.html#a4bc413f041460d4e1af1c1d647a9912f',1,'fmt.h']]],
+  ['drake_5fformatter_5fas',['DRAKE_FORMATTER_AS',['../fmt_8h.html#a4bc413f041460d4e1af1c1d647a9912f',1,'DRAKE_FORMATTER_AS():&#160;fmt.h'],['../pixel__types_8h.html#a71e237783020d662652f8ab4fed9bd63',1,'DRAKE_FORMATTER_AS(, drake::systems::sensors, PixelType, x, drake::systems::sensors::to_string(x)) DRAKE_FORMATTER_AS(:&#160;pixel_types.h']]],
   ['drake_5fkuka_5fiiwa_5frobot_2eh',['drake_kuka_iiwa_robot.h',['../drake__kuka__iiwa__robot_8h.html',1,'']]],
   ['drake_5flcm_2eh',['drake_lcm.h',['../drake__lcm_8h.html',1,'']]],
   ['drake_5flcm_5fbase_2eh',['drake_lcm_base.h',['../drake__lcm__base_8h.html',1,'']]],

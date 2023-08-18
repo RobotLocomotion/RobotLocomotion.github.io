@@ -21,6 +21,12 @@ var pixel__types_8h =
       [ "kLabel", "pixel__types_8h.html#a60883d4958a60b91661e97027a85072aa6608e709edce0bfd1bb1eb49eb5f8bea", null ],
       [ "kExpr", "pixel__types_8h.html#a60883d4958a60b91661e97027a85072aad87b61f50587e7841b2d192c6e8afe05", null ]
     ] ],
+    [ "PixelScalar", "pixel__types_8h.html#aa27964439659a0be90e567d865ffb792", [
+      [ "k8U", "pixel__types_8h.html#aa27964439659a0be90e567d865ffb792a01f5fa4aac9e911952ef4bfac3d864ab", null ],
+      [ "k16I", "pixel__types_8h.html#aa27964439659a0be90e567d865ffb792a00582391087709af581a9e896ef882ef", null ],
+      [ "k16U", "pixel__types_8h.html#aa27964439659a0be90e567d865ffb792a9368b1a6dc329fd741e75949a4c8b99a", null ],
+      [ "k32F", "pixel__types_8h.html#aa27964439659a0be90e567d865ffb792a0e8d8cf2ebb8164d8a669d983eca5276", null ]
+    ] ],
     [ "PixelType", "pixel__types_8h.html#a37140413518dff2aa63096a2e31b9b3d", [
       [ "kRgb8U", "pixel__types_8h.html#a37140413518dff2aa63096a2e31b9b3daeee66110e8b7e5d4ffd4f739ba15f5f6", null ],
       [ "kBgr8U", "pixel__types_8h.html#a37140413518dff2aa63096a2e31b9b3da0326c4bed4ffb3b2f430e119a147b530", null ],
@@ -31,5 +37,12 @@ var pixel__types_8h =
       [ "kDepth32F", "pixel__types_8h.html#a37140413518dff2aa63096a2e31b9b3da238a889ea664dc69a583c89712b4f96c", null ],
       [ "kLabel16I", "pixel__types_8h.html#a37140413518dff2aa63096a2e31b9b3da2a67266021c4dc63b8ed214bff50abec", null ],
       [ "kExpr", "pixel__types_8h.html#a37140413518dff2aa63096a2e31b9b3dad87b61f50587e7841b2d192c6e8afe05", null ]
-    ] ]
+    ] ],
+    [ "DRAKE_FORMATTER_AS", "pixel__types_8h.html#a71e237783020d662652f8ab4fed9bd63", null ],
+    [ "to_string", "pixel__types_8h.html#ac61c1ea072a9ad8e4c238c2029712b44", null ],
+    [ "to_string", "pixel__types_8h.html#aeee61963e066e7ce017d584fe2123c7d", null ],
+    [ "to_string", "pixel__types_8h.html#a266fb9c71cff0c0c0039862c33d7298a", null ],
+    [ "PixelFormat", "pixel__types_8h.html#a60883d4958a60b91661e97027a85072a", null ],
+    [ "PixelScalar", "pixel__types_8h.html#aa27964439659a0be90e567d865ffb792", null ],
+    [ "x", "pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1", null ]
 ];

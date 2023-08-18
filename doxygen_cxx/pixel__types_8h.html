@@ -161,13 +161,17 @@ $(document).ready(function(){initNavTree('pixel__types_8h.html','');});
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#enum-members">Enumerations</a>  </div>
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">pixel_types.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;cstdint&gt;</code><br />
 <code>#include &lt;limits&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &quot;<a class="el" href="fmt_8h.html">drake/common/fmt.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="hash_8h.html">drake/common/hash.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="expression_8h.html">drake/common/symbolic/expression.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -221,7 +225,7 @@ Namespaces</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:a37140413518dff2aa63096a2e31b9b3d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3d">PixelType</a> { <br />
-&#160;&#160;<a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3daeee66110e8b7e5d4ffd4f739ba15f5f6">kRgb8U</a> = 0, 
+&#160;&#160;<a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3daeee66110e8b7e5d4ffd4f739ba15f5f6">kRgb8U</a>, 
 <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3da0326c4bed4ffb3b2f430e119a147b530">kBgr8U</a>, 
 <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3dab2ba7d59e9ac2edec71ea18cc201b478">kRgba8U</a>, 
 <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3dad9ccb61d94c4349b5471a40a5b5c7ea8">kBgra8U</a>, 
@@ -237,7 +241,7 @@ Enumerations</h2></td></tr>
 <tr class="memdesc:a37140413518dff2aa63096a2e31b9b3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The enum class to be used for describing pixel type in Image class.  <a href="namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3d">More...</a><br /></td></tr>
 <tr class="separator:a37140413518dff2aa63096a2e31b9b3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60883d4958a60b91661e97027a85072a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a60883d4958a60b91661e97027a85072a">PixelFormat</a> { <br />
-&#160;&#160;<a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a60883d4958a60b91661e97027a85072aa79c7503f0e2c40a13957e8aac9ac9f7b">kRgb</a> = 0, 
+&#160;&#160;<a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a60883d4958a60b91661e97027a85072aa79c7503f0e2c40a13957e8aac9ac9f7b">kRgb</a>, 
 <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a60883d4958a60b91661e97027a85072aaa604150389917b572788fdd3138143b8">kBgr</a>, 
 <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a60883d4958a60b91661e97027a85072aaeec9741abc081cf5a144d85d2be07fc0">kRgba</a>, 
 <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a60883d4958a60b91661e97027a85072aaf34c9bbc14fec59d55cb4a75ec163294">kBgra</a>, 
@@ -250,7 +254,118 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a60883d4958a60b91661e97027a85072a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The enum class to be used to express semantic meaning of pixels.  <a href="namespacedrake_1_1systems_1_1sensors.html#a60883d4958a60b91661e97027a85072a">More...</a><br /></td></tr>
 <tr class="separator:a60883d4958a60b91661e97027a85072a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa27964439659a0be90e567d865ffb792"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#aa27964439659a0be90e567d865ffb792">PixelScalar</a> { <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#aa27964439659a0be90e567d865ffb792a01f5fa4aac9e911952ef4bfac3d864ab">k8U</a>, 
+<a class="el" href="namespacedrake_1_1systems_1_1sensors.html#aa27964439659a0be90e567d865ffb792a00582391087709af581a9e896ef882ef">k16I</a>, 
+<a class="el" href="namespacedrake_1_1systems_1_1sensors.html#aa27964439659a0be90e567d865ffb792a9368b1a6dc329fd741e75949a4c8b99a">k16U</a>, 
+<a class="el" href="namespacedrake_1_1systems_1_1sensors.html#aa27964439659a0be90e567d865ffb792a0e8d8cf2ebb8164d8a669d983eca5276">k32F</a>
+ }</td></tr>
+<tr class="memdesc:aa27964439659a0be90e567d865ffb792"><td class="mdescLeft">&#160;</td><td class="mdescRight">The enum class to be used to express channel type.  <a href="namespacedrake_1_1systems_1_1sensors.html#aa27964439659a0be90e567d865ffb792">More...</a><br /></td></tr>
+<tr class="separator:aa27964439659a0be90e567d865ffb792"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ac61c1ea072a9ad8e4c238c2029712b44"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#ac61c1ea072a9ad8e4c238c2029712b44">to_string</a> (PixelType)</td></tr>
+<tr class="separator:ac61c1ea072a9ad8e4c238c2029712b44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeee61963e066e7ce017d584fe2123c7d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#aeee61963e066e7ce017d584fe2123c7d">to_string</a> (<a class="el" href="pixel__types_8h.html#a60883d4958a60b91661e97027a85072a">PixelFormat</a>)</td></tr>
+<tr class="separator:aeee61963e066e7ce017d584fe2123c7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a266fb9c71cff0c0c0039862c33d7298a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a266fb9c71cff0c0c0039862c33d7298a">to_string</a> (<a class="el" href="pixel__types_8h.html#aa27964439659a0be90e567d865ffb792">PixelScalar</a>)</td></tr>
+<tr class="separator:a266fb9c71cff0c0c0039862c33d7298a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71e237783020d662652f8ab4fed9bd63"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pixel__types_8h.html#a71e237783020d662652f8ab4fed9bd63">DRAKE_FORMATTER_AS</a> (, drake::systems::sensors, PixelType, <a class="el" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>, <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#ac61c1ea072a9ad8e4c238c2029712b44">drake::systems::sensors::to_string</a>(<a class="el" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>)) DRAKE_FORMATTER_AS(</td></tr>
+<tr class="separator:a71e237783020d662652f8ab4fed9bd63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a60883d4958a60b91661e97027a85072a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pixel__types_8h.html#a60883d4958a60b91661e97027a85072a">PixelFormat</a></td></tr>
+<tr class="separator:a60883d4958a60b91661e97027a85072a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9336ebf25087d91c818ee6e9ec29f8c1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a></td></tr>
+<tr class="separator:a9336ebf25087d91c818ee6e9ec29f8c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa27964439659a0be90e567d865ffb792"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pixel__types_8h.html#aa27964439659a0be90e567d865ffb792">PixelScalar</a></td></tr>
+<tr class="separator:aa27964439659a0be90e567d865ffb792"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a71e237783020d662652f8ab4fed9bd63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71e237783020d662652f8ab4fed9bd63">&#9670;&nbsp;</a></span>DRAKE_FORMATTER_AS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DRAKE_FORMATTER_AS </td>
+          <td>(</td>
+          <td class="paramtype">drake::systems::sensors&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PixelType&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#ac61c1ea072a9ad8e4c238c2029712b44">drake::systems::sensors::to_string</a>(<a class="el" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>)&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a60883d4958a60b91661e97027a85072a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60883d4958a60b91661e97027a85072a">&#9670;&nbsp;</a></span>PixelFormat</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PixelFormat</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa27964439659a0be90e567d865ffb792"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa27964439659a0be90e567d865ffb792">&#9670;&nbsp;</a></span>PixelScalar</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PixelScalar</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9336ebf25087d91c818ee6e9ec29f8c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9336ebf25087d91c818ee6e9ec29f8c1">&#9670;&nbsp;</a></span>x</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">x</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- footer -->
