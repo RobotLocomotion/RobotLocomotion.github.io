@@ -58,6 +58,7 @@ var searchData=
   ['image_2eh',['image.h',['../image_8h.html',1,'']]],
   ['image_5farray_5ft_5finput_5fport',['image_array_t_input_port',['../classdrake_1_1systems_1_1sensors_1_1_lcm_image_array_to_images.html#a9729873cb441fce4ec04bbe36747d22f',1,'drake::systems::sensors::LcmImageArrayToImages']]],
   ['image_5farray_5ft_5fmsg_5foutput_5fport',['image_array_t_msg_output_port',['../classdrake_1_1systems_1_1sensors_1_1_image_to_lcm_image_array_t.html#af5492c500c683813e9286c68f036c57f',1,'drake::systems::sensors::ImageToLcmImageArrayT']]],
+  ['image_5fcompare_2eh',['image_compare.h',['../image__compare_8h.html',1,'']]],
   ['image_5ftime_5foutput_5fport',['image_time_output_port',['../classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a96a36d6a07e828f5d59df2fd3f254495',1,'drake::systems::sensors::RgbdSensor::image_time_output_port()'],['../classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_async.html#a96a36d6a07e828f5d59df2fd3f254495',1,'drake::systems::sensors::RgbdSensorAsync::image_time_output_port()'],['../classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#a96a36d6a07e828f5d59df2fd3f254495',1,'drake::systems::sensors::RgbdSensorDiscrete::image_time_output_port()']]],
   ['image_5fto_5flcm_5fimage_5farray_5ft_2eh',['image_to_lcm_image_array_t.h',['../image__to__lcm__image__array__t_8h.html',1,'']]],
   ['image_5fwriter_2eh',['image_writer.h',['../image__writer_8h.html',1,'']]],

@@ -42,6 +42,7 @@ var classdrake_1_1planning_1_1_collision_checker =
     [ "GetLargestPadding", "classdrake_1_1planning_1_1_collision_checker.html#abbe38491db7dbc7136d180ed55698538", null ],
     [ "GetMutableSetupModel", "classdrake_1_1planning_1_1_collision_checker.html#ada50f47e85f4e372c1e75873731a4c7d", null ],
     [ "GetNominalFilteredCollisionMatrix", "classdrake_1_1planning_1_1_collision_checker.html#add86c374f69f86b7ac9feafb127b0738", null ],
+    [ "GetNumberOfThreads", "classdrake_1_1planning_1_1_collision_checker.html#a71074f52f2a117d4b26a193f7adbfd57", null ],
     [ "GetPaddingBetween", "classdrake_1_1planning_1_1_collision_checker.html#a642639c3ef89987db37c8ba232f0f494", null ],
     [ "GetPaddingBetween", "classdrake_1_1planning_1_1_collision_checker.html#a7c03d02cc94803a222f42da8032fb8e8", null ],
     [ "GetPaddingMatrix", "classdrake_1_1planning_1_1_collision_checker.html#aaf8617f3f3e43613b77a61b303035b7a", null ],

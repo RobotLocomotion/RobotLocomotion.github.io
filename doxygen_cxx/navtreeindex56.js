@@ -1,5 +1,10 @@
 var NAVTREEINDEX56 =
 {
+"structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#ab44bb940daf4a1747f92bae32d54c67a":[3,0,0,4,1,19,8],
+"structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#ac57821371edcae4eaee405d04a76ae66":[3,0,0,4,1,19,4],
+"structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#aeff55dd0e18e3aeb13a86310e6ed35e5":[3,0,0,4,1,19,1],
+"structdrake_1_1geometry_1_1promoted__numerical.html":[3,0,0,4,37],
+"structdrake_1_1geometry_1_1promoted__numerical.html#ac7ff24def79100330b2186638f93afe1":[3,0,0,4,37,0],
 "structdrake_1_1geometry_1_1render_1_1_light_parameter.html":[3,0,0,4,2,4],
 "structdrake_1_1geometry_1_1render_1_1_light_parameter.html#a0dc037cf2bcfb547da23636bd58f37dd":[3,0,0,4,2,4,3],
 "structdrake_1_1geometry_1_1render_1_1_light_parameter.html#a2118076db8e8f8a25c2376e1d4acfb67":[3,0,0,4,2,4,6],
@@ -244,10 +249,5 @@ var NAVTREEINDEX56 =
 "structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a7efd266a84dc02bc8bb42bb8d73273e5":[3,0,0,8,3,1,6],
 "structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,8,3,1,0],
 "structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a99fd5bfdf69925c53ed14a93a238065f":[3,0,0,8,3,1,1],
-"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#aa320d63d28f6de621da0a93f91d6ed9f":[3,0,0,8,3,1,2],
-"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#abf7bcad233bb525d781901c05545b68e":[3,0,0,8,3,1,5],
-"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#ae3c085d0521d5da888d23da447ae4328":[3,0,0,8,3,1,3],
-"structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html":[3,0,0,8,4,0],
-"structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#a1ac4262e3bb2a1be1e29ce90bd7c2377":[3,0,0,8,4,0,2],
-"structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#a37624b00959bd2e6080521c344fcfd1e":[3,0,0,8,4,0,3]
+"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#aa320d63d28f6de621da0a93f91d6ed9f":[3,0,0,8,3,1,2]
 };

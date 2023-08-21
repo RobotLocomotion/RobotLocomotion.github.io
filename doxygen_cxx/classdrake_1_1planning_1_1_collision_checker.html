@@ -210,6 +210,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6831872639ff530b78810ef26115bb26"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a6831872639ff530b78810ef26115bb26">SupportsParallelChecking</a> () const</td></tr>
 <tr class="memdesc:a6831872639ff530b78810ef26115bb26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does the collision checker support true parallel collision checks?  <a href="#a6831872639ff530b78810ef26115bb26">More...</a><br /></td></tr>
 <tr class="separator:a6831872639ff530b78810ef26115bb26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71074f52f2a117d4b26a193f7adbfd57"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a71074f52f2a117d4b26a193f7adbfd57">GetNumberOfThreads</a> (bool parallelize) const</td></tr>
+<tr class="memdesc:a71074f52f2a117d4b26a193f7adbfd57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number of threads that may be used in an OpenMP-parallelized loop, if parallelize=true, or 1 if parallelize=false.  <a href="#a71074f52f2a117d4b26a193f7adbfd57">More...</a><br /></td></tr>
+<tr class="separator:a71074f52f2a117d4b26a193f7adbfd57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment.</div></td></tr>
 <tr class="memitem:a236e58ced4f42c22e7395000ecaaeb7b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a236e58ced4f42c22e7395000ecaaeb7b">CollisionChecker</a> (<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html">CollisionChecker</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:a236e58ced4f42c22e7395000ecaaeb7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1860,6 +1863,26 @@ Protected Member Functions</h2></td></tr>
 <li>SceneGraph has filtered the collisions between <em>all</em> pairs of geometries of A and B.</li>
 </ul>
 <p>Note: SceneGraph allows arbitrary collision filter configuration at the geometry* level. The filters on one geometry of body need not be the same as another geometry on the same body. CollisionChecker is body centric. It requires all geometries on a body to be filtered homogeneously. A SceneGraph that violates this stricter requirement cannot be used in a CollisionChecker. It is highly unlikely that a SceneGraph instance will ever be in this configuration by accident. </p>
+
+</div>
+</div>
+<a id="a71074f52f2a117d4b26a193f7adbfd57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71074f52f2a117d4b26a193f7adbfd57">&#9670;&nbsp;</a></span>GetNumberOfThreads()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> GetNumberOfThreads </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>parallelize</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the number of threads that may be used in an OpenMP-parallelized loop, if parallelize=true, or 1 if parallelize=false. </p>
 
 </div>
 </div>

@@ -24,5 +24,6 @@ var dir_c1924aea86cc02fece93f366eec781e1 =
     [ "scene_graph_collision_checker.h", "scene__graph__collision__checker_8h.html", null ],
     [ "unimplemented_collision_checker.h", "unimplemented__collision__checker_8h.html", [
       [ "UnimplementedCollisionChecker", "classdrake_1_1planning_1_1_unimplemented_collision_checker.html", "classdrake_1_1planning_1_1_unimplemented_collision_checker" ]
-    ] ]
+    ] ],
+    [ "visibility_graph.h", "visibility__graph_8h.html", "visibility__graph_8h" ]
 ];
