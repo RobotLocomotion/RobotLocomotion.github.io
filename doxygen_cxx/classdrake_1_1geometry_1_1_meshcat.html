@@ -280,8 +280,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a1464f94b8c5d602566dee2b83f47c5df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies a number of settings to make <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> act as a 2D renderer.  <a href="#a1464f94b8c5d602566dee2b83f47c5df">More...</a><br /></td></tr>
 <tr class="separator:a1464f94b8c5d602566dee2b83f47c5df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adeec831adfeef24453c8c5b8b9d69625"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#adeec831adfeef24453c8c5b8b9d69625">ResetRenderMode</a> ()</td></tr>
-<tr class="memdesc:adeec831adfeef24453c8c5b8b9d69625"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the default camera, background, grid lines, and axes to their default settings.  <a href="#adeec831adfeef24453c8c5b8b9d69625">More...</a><br /></td></tr>
+<tr class="memdesc:adeec831adfeef24453c8c5b8b9d69625"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the default camera, camera target, background, grid lines, and axes to their default settings.  <a href="#adeec831adfeef24453c8c5b8b9d69625">More...</a><br /></td></tr>
 <tr class="separator:adeec831adfeef24453c8c5b8b9d69625"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6eb7d73d258c297ed9a3074ab7582e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#aa6eb7d73d258c297ed9a3074ab7582e6">SetCameraTarget</a> (const Eigen::Vector3d &amp;target_in_world)</td></tr>
+<tr class="memdesc:aa6eb7d73d258c297ed9a3074ab7582e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Positions the camera's view target point T to the location in <code>target_in_world</code> (<code>p_WT</code>).  <a href="#aa6eb7d73d258c297ed9a3074ab7582e6">More...</a><br /></td></tr>
+<tr class="separator:aa6eb7d73d258c297ed9a3074ab7582e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab54373b0959cc8b3fa4f8cb8c02b742a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#ab54373b0959cc8b3fa4f8cb8c02b742a">SetCameraPose</a> (const Eigen::Vector3d &amp;camera_in_world, const Eigen::Vector3d &amp;target_in_world)</td></tr>
+<tr class="memdesc:ab54373b0959cc8b3fa4f8cb8c02b742a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A convenience function for positioning the camera and its view target in the world frame.  <a href="#ab54373b0959cc8b3fa4f8cb8c02b742a">More...</a><br /></td></tr>
+<tr class="separator:ab54373b0959cc8b3fa4f8cb8c02b742a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46b83a319d679595b5b30a39f448e5c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a46b83a319d679595b5b30a39f448e5c3">SetTransform</a> (std::string_view path, const math::RigidTransformd &amp;X_ParentPath, const std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;time_in_recording=std::nullopt)</td></tr>
 <tr class="memdesc:a46b83a319d679595b5b30a39f448e5c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the RigidTransform for a given path in the scene tree relative to its parent path.  <a href="#a46b83a319d679595b5b30a39f448e5c3">More...</a><br /></td></tr>
 <tr class="separator:a46b83a319d679595b5b30a39f448e5c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1201,7 +1207,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Resets the default camera, background, grid lines, and axes to their default settings. </p>
+<p>Resets the default camera, camera target, background, grid lines, and axes to their default settings. </p>
 
 </div>
 </div>
@@ -1335,6 +1341,75 @@ Public Member Functions</h2></td></tr>
 
 <p>Sets the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> object on <code>path</code> to an orthographic camera. </p>
 <p>We provide a default value of <code>path</code> corresponding to the default camera object in <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a>. </p>
+
+</div>
+</div>
+<a id="ab54373b0959cc8b3fa4f8cb8c02b742a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab54373b0959cc8b3fa4f8cb8c02b742a">&#9670;&nbsp;</a></span>SetCameraPose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetCameraPose </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Vector3d &amp;&#160;</td>
+          <td class="paramname"><em>camera_in_world</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Vector3d &amp;&#160;</td>
+          <td class="paramname"><em>target_in_world</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A convenience function for positioning the camera and its view target in the world frame. </p>
+<p>The camera is placed at <code>camera_in_world</code> and looks toward <code>target_in_world</code>. The camera is oriented around this view direction so that the camera's up vector points in the positive Wz direction as much as possible.</p>
+<p>Unlike <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#aa6eb7d73d258c297ed9a3074ab7582e6" title="Positions the camera&#39;s view target point T to the location in target_in_world (p_WT).">SetCameraTarget()</a> this can be used to orient orthographic cameras as well.</p>
+<dl class="section note"><dt>Note</dt><dd>This is Drake's z-up world frame and not the three.js world frame you'd have to use if you set the "position" on the camera directly.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>The behavior is undefined if camera and target positions are coincident.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">camera_in_world</td><td>the position of the camera's origin C in Drake's z-up world frame (p_WC). </td></tr>
+    <tr><td class="paramname">target_in_world</td><td>the position of the target point T in Drake's z-up world frame (p_WT). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa6eb7d73d258c297ed9a3074ab7582e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6eb7d73d258c297ed9a3074ab7582e6">&#9670;&nbsp;</a></span>SetCameraTarget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetCameraTarget </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Vector3d &amp;&#160;</td>
+          <td class="paramname"><em>target_in_world</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Positions the camera's view target point T to the location in <code>target_in_world</code> (<code>p_WT</code>). </p>
+<p>If the camera is orthographic (i.e., by calling Set2DRenderMode() or SetCamera(OrthographicCamera)), this will have no effect.</p>
+<dl class="section warning"><dt>Warning</dt><dd>Setting the target position to be coincident with the camera position will lead to undefined behavior.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target_in_world</td><td>the position of the target point T in Drake's z-up world frame (p_WT). </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

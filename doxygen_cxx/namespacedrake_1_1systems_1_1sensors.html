@@ -309,9 +309,9 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a1d38997213d63bf974b9ea19fc5abf0d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a1d38997213d63bf974b9ea19fc5abf0d">ImageGrey8U</a> = <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image.html">Image</a>&lt; <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3da3798842b1f11a731f5e11d9744c29774">PixelType::kGrey8U</a> &gt;</td></tr>
 <tr class="memdesc:a1d38997213d63bf974b9ea19fc5abf0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type for greyscale image where the channel has the type of uint8_t.  <a href="#a1d38997213d63bf974b9ea19fc5abf0d">More...</a><br /></td></tr>
 <tr class="separator:a1d38997213d63bf974b9ea19fc5abf0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6393b712a3bad92da3403b2fe09c4dad"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a6393b712a3bad92da3403b2fe09c4dad">ImageExpr</a> = <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image.html">Image</a>&lt; <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3dad87b61f50587e7841b2d192c6e8afe05">PixelType::kExpr</a> &gt;</td></tr>
-<tr class="memdesc:a6393b712a3bad92da3403b2fe09c4dad"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type for symbolic image where the channel has the type of <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a>.  <a href="#a6393b712a3bad92da3403b2fe09c4dad">More...</a><br /></td></tr>
-<tr class="separator:a6393b712a3bad92da3403b2fe09c4dad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85ab3d34256b5ae6cbee35a8bdbfb4ab"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a85ab3d34256b5ae6cbee35a8bdbfb4ab">ImageExpr</a> = <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image.html">Image</a>&lt; kInternalPixelTypeExpr &gt;</td></tr>
+<tr class="memdesc:a85ab3d34256b5ae6cbee35a8bdbfb4ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type for symbolic image where the channel has the type of <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a>.  <a href="#a85ab3d34256b5ae6cbee35a8bdbfb4ab">More...</a><br /></td></tr>
+<tr class="separator:a85ab3d34256b5ae6cbee35a8bdbfb4ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -492,14 +492,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a6393b712a3bad92da3403b2fe09c4dad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6393b712a3bad92da3403b2fe09c4dad">&#9670;&nbsp;</a></span>ImageExpr</h2>
+<a id="a85ab3d34256b5ae6cbee35a8bdbfb4ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85ab3d34256b5ae6cbee35a8bdbfb4ab">&#9670;&nbsp;</a></span>ImageExpr</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a6393b712a3bad92da3403b2fe09c4dad">ImageExpr</a> =  <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image.html">Image</a>&lt;<a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3dad87b61f50587e7841b2d192c6e8afe05">PixelType::kExpr</a>&gt;</td>
+          <td class="memname">using <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a85ab3d34256b5ae6cbee35a8bdbfb4ab">ImageExpr</a> =  <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image.html">Image</a>&lt;kInternalPixelTypeExpr&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -611,6 +611,8 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="a60883d4958a60b91661e97027a85072aa6608e709edce0bfd1bb1eb49eb5f8bea"></a>kLabel&#160;</td><td class="fielddoc"><p>The pixel format used for all the labe images. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a60883d4958a60b91661e97027a85072aad87b61f50587e7841b2d192c6e8afe05"></a>kExpr&#160;</td><td class="fielddoc"><p>The pixel format used for all the symbolic images. </p>
+<p>(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000024">Deprecated:</a></b></dt><dd>kExpr is no longer a supported PixelType <br />
+ This will be removed from Drake on or after 2023-12-01.</dd></dl>
 </td></tr>
 </table>
 
@@ -695,6 +697,8 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="a37140413518dff2aa63096a2e31b9b3da2a67266021c4dc63b8ed214bff50abec"></a>kLabel16I&#160;</td><td class="fielddoc"><p>The pixel format used by ImageLabel16I. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a37140413518dff2aa63096a2e31b9b3dad87b61f50587e7841b2d192c6e8afe05"></a>kExpr&#160;</td><td class="fielddoc"><p>The pixel format representing <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a>. </p>
+<p>(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000023">Deprecated:</a></b></dt><dd>kExpr is no longer a supported PixelType <br />
+ This will be removed from Drake on or after 2023-12-01.</dd></dl>
 </td></tr>
 </table>
 

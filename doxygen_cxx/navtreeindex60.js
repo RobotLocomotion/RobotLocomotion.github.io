@@ -1,5 +1,7 @@
 var NAVTREEINDEX60 =
 {
+"trigonometric__polynomial_8h.html#a1db53e224c37b630f7ec9d1615215449":[4,0,0,1,3,17,4],
+"trigonometric__polynomial_8h.html#a6639ded5e13e34eee457b3ceb92a1d62":[4,0,0,1,3,17,3],
 "trigonometric__polynomial_8h.html#ad88f58019962d307b9da7ebc9d32ec87":[4,0,0,1,3,17,5],
 "type__pack_8h.html":[4,0,0,0,0,0,11],
 "type__pack_8h.html#a1becf7d91b4613c259a888ef35590d76":[4,0,0,0,0,0,11,9],

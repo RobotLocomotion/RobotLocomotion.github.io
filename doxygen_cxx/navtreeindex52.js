@@ -1,5 +1,7 @@
 var NAVTREEINDEX52 =
 {
+"obj__to__surface__mesh_8h.html#a434be853a96eb8f2554128917d1e1a53":[4,0,0,4,2,42,1],
+"optimization__pybind_8h.html":[4,0,0,0,0,2,1],
 "optimization__pybind_8h.html#a3d712eb0a12e5f78078993172f842dfe":[4,0,0,0,0,2,1,0],
 "optitrack__receiver_8h.html":[4,0,0,12,8,13],
 "optitrack__sender_8h.html":[4,0,0,12,8,14],
@@ -247,7 +249,5 @@ var NAVTREEINDEX52 =
 "quaternion__floating__mobilizer_8h.html":[4,0,0,8,14,37],
 "quaternion__integration__constraint_8h.html":[4,0,0,8,8,4],
 "query__object_8h.html":[4,0,0,4,35],
-"quintic__scalar__system_8h.html":[4,0,0,12,0,0,12],
-"radau__integrator_8h.html":[4,0,0,12,0,13],
-"radau__integrator_8h.html#a0ef69bdb57d87753b8f827a134371822":[4,0,0,12,0,13,1]
+"quintic__scalar__system_8h.html":[4,0,0,12,0,0,12]
 };

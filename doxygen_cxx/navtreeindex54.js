@@ -1,5 +1,7 @@
 var NAVTREEINDEX54 =
 {
+"sine_8h.html":[4,0,0,12,6,22],
+"single__output__vector__source_8h.html":[4,0,0,12,3,35],
 "slicing__and__indexing_8h.html":[4,0,0,8,10,32],
 "sliding__friction__complementarity__constraint_8h.html":[4,0,0,8,8,5],
 "sliding__friction__complementarity__constraint_8h.html#gaa1fd44e85ab30519ef7a904a4ebeb82d":[4,0,0,8,8,5,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX54 =
 "structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html#aa0de0a897162ef2c7d4a43529b8f25f7":[3,0,0,4,26,0,1],
 "structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html#ae484f63d5fef688b4c3f438455d6eec9":[3,0,0,4,26,0,3],
 "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html":[3,0,0,4,26,1],
-"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a24c109489bdfad4b0937c2d19d9c0e20":[3,0,0,4,26,1,1],
-"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a3b79efd873843125dabba312ddde65a3":[3,0,0,4,26,1,4],
-"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a4467598fbba812fe1339ab4e83806573":[3,0,0,4,26,1,6]
+"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a24c109489bdfad4b0937c2d19d9c0e20":[3,0,0,4,26,1,1]
 };

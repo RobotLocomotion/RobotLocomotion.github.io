@@ -193,7 +193,7 @@ $(document).ready(function(){initNavTree('group__render__engine__benchmarks.html
 <li><b>save_image_path</b>: Enables saving the rendered images in the given location. Defaults to no saving.</li>
 <li><b>show_window</b>: Whether to display the rendered images. Defaults to false.</li>
 </ul>
-<p>For example: </p><div class="fragment"><div class="line">bazel run <span class="comment">//geometry/benchmarking:render_experiment -- \</span></div><div class="line"><span class="comment">   --output_dir=trial2 --save_image_path=&quot;/tmp&quot; --show_window=true</span></div></div><!-- fragment --><h4>Interpreting the benchmark</h4>
+<p>For example: </p><div class="fragment"><div class="line">bazel run <span class="comment">//geometry/benchmarking:render_experiment -- \</span></div><div class="line"><span class="comment">   --output_dir=trial2 -- -save_image_path=&quot;/tmp&quot; -show_window=true</span></div></div><!-- fragment --><h4>Interpreting the benchmark</h4>
 <p>Each line in the table represents a particular configuration of the benchmark parameters of the form:</p>
 <div class="fragment"><div class="line">RenderBenchmark/TestName/sphere_count/camera_count/image_width/image_height</div></div><!-- fragment --><ul>
 <li><b>TestName</b>: One of<ul>

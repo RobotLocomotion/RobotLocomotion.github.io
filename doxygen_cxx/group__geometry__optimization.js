@@ -266,7 +266,7 @@ var group__geometry__optimization =
       [ "VPolytope", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a10263a95681a903c83052465a41e8e14", null ],
       [ "VPolytope", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a684737cf917c2d16d0f69d211f7bb879", null ],
       [ "VPolytope", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a998766f2cd4f7b1388bf2881f81cb92c", null ],
-      [ "VPolytope", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a24a4273586a8615db9cc3b904577a49e", null ],
+      [ "VPolytope", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a2872331c68751970450831305f497b24", null ],
       [ "VPolytope", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#ab0523f84331ef73195b38a43b8d24519", null ],
       [ "~VPolytope", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#af39035d161c3b21e796ed5ed8ee960da", null ],
       [ "CalcVolume", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a7a2847efc4f87e996464d9d71159e27b", null ],

@@ -1,5 +1,7 @@
 var NAVTREEINDEX48 =
 {
+"generic__polynomial_8h.html#a34397d7d032b5c4214a92123e3c6752d":[4,0,0,1,3,6,20],
+"generic__polynomial_8h.html#a434f1953d9800d1c40dc223609904ecf":[4,0,0,1,3,6,19],
 "generic__polynomial_8h.html#a46745f049faa36c24020902f121e900c":[4,0,0,1,3,6,7],
 "generic__polynomial_8h.html#a4af9f402cc780cda79d4f27807f75d39":[4,0,0,1,3,6,14],
 "generic__polynomial_8h.html#a4e5300a119664e3092e90248af90a376":[4,0,0,1,3,6,9],
@@ -146,8 +148,8 @@ var NAVTREEINDEX48 =
 "group__default__scalars.html":[1,6,1],
 "group__default__scalars.html#ga0659aa8320fcb199bb53a153120a4d14":[4,0,0,1,14,1],
 "group__default__scalars.html#ga0659aa8320fcb199bb53a153120a4d14":[1,6,1,1],
-"group__default__scalars.html#ga3273477e81e9dcb7d96cfb28382798b6":[1,6,1,5],
 "group__default__scalars.html#ga3273477e81e9dcb7d96cfb28382798b6":[4,0,0,1,14,5],
+"group__default__scalars.html#ga3273477e81e9dcb7d96cfb28382798b6":[1,6,1,5],
 "group__default__scalars.html#ga6333534b3097a37c55fbacf434491e2e":[1,6,1,0],
 "group__default__scalars.html#ga6333534b3097a37c55fbacf434491e2e":[4,0,0,1,14,0],
 "group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[1,6,1,4],
@@ -172,10 +174,10 @@ var NAVTREEINDEX48 =
 "group__example__systems.html":[1,2,12],
 "group__geometry.html":[1,5],
 "group__geometry__infrastructure.html":[1,5,0],
-"group__geometry__optimization.html":[1,1,1],
 "group__geometry__optimization.html":[1,5,4],
-"group__geometry__optimization.html#ga3a51e0fec449a0abcf498f78a2a390a8":[1,5,4,13],
+"group__geometry__optimization.html":[1,1,1],
 "group__geometry__optimization.html#ga3a51e0fec449a0abcf498f78a2a390a8":[1,1,1,13],
+"group__geometry__optimization.html#ga3a51e0fec449a0abcf498f78a2a390a8":[1,5,4,13],
 "group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af":[1,5,4,14],
 "group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af":[1,1,1,14],
 "group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6":[1,1,1,12],
@@ -247,7 +249,5 @@ var NAVTREEINDEX48 =
 "group__solver__evaluators.html#gaea88a3c59172c77e8537633348a057a9":[1,1,0,48],
 "group__solvers.html":[1,1],
 "group__stochastic__systems.html":[1,2,10],
-"group__stribeck__approximation.html":[1,3,3,2],
-"group__system__compatibility.html":[1,6,8],
-"group__system__scalar__conversion.html":[1,6,9]
+"group__stribeck__approximation.html":[1,3,3,2]
 };

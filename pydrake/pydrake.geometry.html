@@ -4208,8 +4208,8 @@ Publish()).</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.Meshcat.ResetRenderMode">
 <span class="sig-name descname"><span class="pre">ResetRenderMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Meshcat" title="pydrake.geometry.Meshcat"><span class="pre">pydrake.geometry.Meshcat</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.Meshcat.ResetRenderMode" title="Permalink to this definition"></a></dt>
-<dd><p>Resets the default camera, background, grid lines, and axes to their
-default settings.</p>
+<dd><p>Resets the default camera, camera target, background, grid lines, and
+axes to their default settings.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -4263,6 +4263,56 @@ camera object in Meshcat.</p>
 <p>Sets the Meshcat object on <code class="docutils literal notranslate"><span class="pre">path</span></code> to an orthographic camera. We
 provide a default value of <code class="docutils literal notranslate"><span class="pre">path</span></code> corresponding to the default
 camera object in Meshcat.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.Meshcat.SetCameraPose">
+<span class="sig-name descname"><span class="pre">SetCameraPose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Meshcat" title="pydrake.geometry.Meshcat"><span class="pre">pydrake.geometry.Meshcat</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">camera_in_world</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_in_world</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.Meshcat.SetCameraPose" title="Permalink to this definition"></a></dt>
+<dd><p>A convenience function for positioning the camera and its view target
+in the world frame. The camera is placed at <code class="docutils literal notranslate"><span class="pre">camera_in_world</span></code> and
+looks toward <code class="docutils literal notranslate"><span class="pre">target_in_world</span></code>. The camera is oriented around this
+view direction so that the camera’s up vector points in the positive
+Wz direction as much as possible.</p>
+<p>Unlike SetCameraTarget() this can be used to orient orthographic
+cameras as well.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is Drake’s z-up world frame and not the three.js world frame
+you’d have to use if you set the “position” on the camera
+directly.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The behavior is undefined if camera and target positions are
+coincident.</p>
+</div>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">camera_in_world</span></code>:</dt><dd><p>the position of the camera’s origin C in Drake’s z-up world frame
+(p_WC).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">target_in_world</span></code>:</dt><dd><p>the position of the target point T in Drake’s z-up world frame
+(p_WT).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.Meshcat.SetCameraTarget">
+<span class="sig-name descname"><span class="pre">SetCameraTarget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Meshcat" title="pydrake.geometry.Meshcat"><span class="pre">pydrake.geometry.Meshcat</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_in_world</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.Meshcat.SetCameraTarget" title="Permalink to this definition"></a></dt>
+<dd><p>Positions the camera’s view target point T to the location in
+<code class="docutils literal notranslate"><span class="pre">target_in_world</span></code> (<cite>p_WT</cite>).</p>
+<p>If the camera is orthographic (i.e., by calling Set2DRenderMode() or
+SetCamera(OrthographicCamera)), this will have no effect.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Setting the target position to be coincident with the camera
+position will lead to undefined behavior.</p>
+</div>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">target_in_world</span></code>:</dt><dd><p>the position of the target point T in Drake’s z-up world frame
+(p_WT).</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">

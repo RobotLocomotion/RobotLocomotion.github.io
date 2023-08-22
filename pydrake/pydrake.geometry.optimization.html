@@ -370,6 +370,103 @@ the product.</p>
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CIrisCollisionGeometry">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.optimization.</span></span><span class="sig-name descname"><span class="pre">CIrisCollisionGeometry</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CIrisCollisionGeometry" title="Permalink to this definition"></a></dt>
+<dd><p>This class contains the necessary information about the collision
+geometry used in C-IRIS. Most notably it transcribes the geometric
+condition that the collision geometry is on one side of the plane to
+mathematical constraints. For the detailed algorithm please refer to
+the paper Certified Polyhedral Decompositions of Collision-Free
+Configuration Space by Hongkai Dai*, Alexandre Amice*, Peter Werner,
+Annan Zhang and Russ Tedrake.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CIrisCollisionGeometry.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.CIrisCollisionGeometry.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CIrisCollisionGeometry.body_index">
+<span class="sig-name descname"><span class="pre">body_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.CIrisCollisionGeometry" title="pydrake.geometry.optimization.CIrisCollisionGeometry"><span class="pre">pydrake.geometry.optimization.CIrisCollisionGeometry</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::TypeSafeIndex&lt;drake::multibody::BodyTag&gt;</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CIrisCollisionGeometry.body_index" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CIrisCollisionGeometry.geometry">
+<span class="sig-name descname"><span class="pre">geometry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.CIrisCollisionGeometry" title="pydrake.geometry.optimization.CIrisCollisionGeometry"><span class="pre">pydrake.geometry.optimization.CIrisCollisionGeometry</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.Shape" title="pydrake.geometry.Shape"><span class="pre">pydrake.geometry.Shape</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CIrisCollisionGeometry.geometry" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CIrisCollisionGeometry.id">
+<span class="sig-name descname"><span class="pre">id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.CIrisCollisionGeometry" title="pydrake.geometry.optimization.CIrisCollisionGeometry"><span class="pre">pydrake.geometry.optimization.CIrisCollisionGeometry</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CIrisCollisionGeometry.id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CIrisCollisionGeometry.num_rationals">
+<span class="sig-name descname"><span class="pre">num_rationals</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.CIrisCollisionGeometry" title="pydrake.geometry.optimization.CIrisCollisionGeometry"><span class="pre">pydrake.geometry.optimization.CIrisCollisionGeometry</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CIrisCollisionGeometry.num_rationals" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the number of rationals in the condition “this geometry is on
+one side of the plane.”</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CIrisCollisionGeometry.type">
+<span class="sig-name descname"><span class="pre">type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.CIrisCollisionGeometry" title="pydrake.geometry.optimization.CIrisCollisionGeometry"><span class="pre">pydrake.geometry.optimization.CIrisCollisionGeometry</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.optimization.CIrisGeometryType" title="pydrake.geometry.optimization.CIrisGeometryType"><span class="pre">pydrake.geometry.optimization.CIrisGeometryType</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CIrisCollisionGeometry.type" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CIrisCollisionGeometry.X_BG">
+<span class="sig-name descname"><span class="pre">X_BG</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.CIrisCollisionGeometry" title="pydrake.geometry.optimization.CIrisCollisionGeometry"><span class="pre">pydrake.geometry.optimization.CIrisCollisionGeometry</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CIrisCollisionGeometry.X_BG" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CIrisGeometryType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.optimization.</span></span><span class="sig-name descname"><span class="pre">CIrisGeometryType</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CIrisGeometryType" title="Permalink to this definition"></a></dt>
+<dd><p>The supported type of geometries in C-IRIS.</p>
+<p>Members:</p>
+<blockquote>
+<div><p>kPolytope :</p>
+<p>kSphere :</p>
+<p>kCylinder :</p>
+<p>kCapsule :</p>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CIrisGeometryType.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.CIrisGeometryType" title="pydrake.geometry.optimization.CIrisGeometryType"><span class="pre">pydrake.geometry.optimization.CIrisGeometryType</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CIrisGeometryType.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CIrisGeometryType.kCapsule">
+<span class="sig-name descname"><span class="pre">kCapsule</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;CIrisGeometryType.kCapsule:</span> <span class="pre">3&gt;</span></em><a class="headerlink" href="#pydrake.geometry.optimization.CIrisGeometryType.kCapsule" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CIrisGeometryType.kCylinder">
+<span class="sig-name descname"><span class="pre">kCylinder</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;CIrisGeometryType.kCylinder:</span> <span class="pre">2&gt;</span></em><a class="headerlink" href="#pydrake.geometry.optimization.CIrisGeometryType.kCylinder" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CIrisGeometryType.kPolytope">
+<span class="sig-name descname"><span class="pre">kPolytope</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;CIrisGeometryType.kPolytope:</span> <span class="pre">1&gt;</span></em><a class="headerlink" href="#pydrake.geometry.optimization.CIrisGeometryType.kPolytope" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CIrisGeometryType.kSphere">
+<span class="sig-name descname"><span class="pre">kSphere</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;CIrisGeometryType.kSphere:</span> <span class="pre">0&gt;</span></em><a class="headerlink" href="#pydrake.geometry.optimization.CIrisGeometryType.kSphere" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CIrisGeometryType.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CIrisGeometryType.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CIrisGeometryType.value">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CIrisGeometryType.value" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.ConvexSet">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.optimization.</span></span><span class="sig-name descname"><span class="pre">ConvexSet</span></span><a class="headerlink" href="#pydrake.geometry.optimization.ConvexSet" title="Permalink to this definition"></a></dt>
 <dd><p>Abstract base class for defining a convex set.</p>
@@ -554,6 +651,691 @@ the SceneGraph geometry ecosystem.</p>
 </dd>
 </dl>
 </dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.optimization.</span></span><span class="sig-name descname"><span class="pre">CspaceFreePolytope</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.optimization.CspaceFreePolytopeBase" title="pydrake.geometry.optimization.CspaceFreePolytopeBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.geometry.optimization.CspaceFreePolytopeBase</span></code></a></p>
+<p>This class tries to find large convex polytopes in the
+tangential-configuration space, such that all configurations in the
+convex polytopes is collision free. By tangential-configuration space,
+we mean the revolute joint angle θ is replaced by t = tan(θ/2). For
+more details, refer to the paper</p>
+<p>Certified Polyhedral Decomposition of Collisoin-Free Configuration
+Space by Hongkai Dai*, Alexandre Amice*, Peter Werner, Annan Zhang and
+Russ Tedrake.</p>
+<p>A conference version is published at</p>
+<p>Finding and Optimizing Certified, Colision-Free Regions in
+Configuration Space for Robot Manipulators by Alexandre Amice*,
+Hongkai Dai*, Peter Werner, Annan Zhang and Russ Tedrake.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.geometry.optimization.CspaceFreePolytope,</span> <span class="pre">plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;,</span> <span class="pre">scene_graph:</span> <span class="pre">pydrake.geometry.SceneGraph,</span> <span class="pre">plane_order:</span> <span class="pre">pydrake.geometry.optimization.SeparatingPlaneOrder,</span> <span class="pre">q_star:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]],</span> <span class="pre">options:</span> <span class="pre">pydrake.geometry.optimization.CspaceFreePolytopeBase.Options</span> <span class="pre">=</span> <span class="pre">&lt;pydrake.geometry.optimization.CspaceFreePolytopeBase.Options</span> <span class="pre">object</span> <span class="pre">at</span> <span class="pre">0x7fc25cb387f0&gt;</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.__init__" title="Permalink to this definition"></a></dt>
+<dd><dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt><dd><p>The plant for which we compute the C-space free polytopes. It must
+outlive this CspaceFreePolytope object.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">scene_graph</span></code>:</dt><dd><p>The scene graph that has been connected with <code class="docutils literal notranslate"><span class="pre">plant</span></code>. It must
+outlive this CspaceFreePolytope object.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plane_order</span></code>:</dt><dd><p>The order of the polynomials in the plane to separate a pair of
+collision geometries.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">q_star</span></code>:</dt><dd><p>Refer to RationalForwardKinematics for its meaning.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>CspaceFreePolytope knows nothing about contexts. The plant and
+scene_graph must be fully configured before instantiating this
+class.</p>
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.BilinearAlternationOptions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">BilinearAlternationOptions</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.BilinearAlternationOptions" title="Permalink to this definition"></a></dt>
+<dd><p>Options for bilinear alternation.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.BilinearAlternationOptions.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.CspaceFreePolytope.BilinearAlternationOptions" title="pydrake.geometry.optimization.CspaceFreePolytope.BilinearAlternationOptions"><span class="pre">pydrake.geometry.optimization.CspaceFreePolytope.BilinearAlternationOptions</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.BilinearAlternationOptions.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.BilinearAlternationOptions.convergence_tol">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">convergence_tol</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.BilinearAlternationOptions.convergence_tol" title="Permalink to this definition"></a></dt>
+<dd><p>When the change of the cost function between two consecutive
+iterations in bilinear alternation is no larger than this number, stop
+the bilinear alternation. Must be non-negative.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.BilinearAlternationOptions.ellipsoid_scaling">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ellipsoid_scaling</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.BilinearAlternationOptions.ellipsoid_scaling" title="Permalink to this definition"></a></dt>
+<dd><p>After finding the maximal inscribed ellipsoid in C-space polytope {s |
+C*s&lt;=d, s_lower&lt;=s&lt;=s_upper}, we scale this ellipsoid by
+ellipsoid_scaling, and require the new C-space polytope to contain
+this scaled ellipsoid. ellipsoid_scaling=1 corresponds to no scaling.
+Must be strictly positive and no greater than 1.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.BilinearAlternationOptions.find_lagrangian_options">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">find_lagrangian_options</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.BilinearAlternationOptions.find_lagrangian_options" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.BilinearAlternationOptions.find_polytope_options">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">find_polytope_options</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.BilinearAlternationOptions.find_polytope_options" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.BilinearAlternationOptions.max_iter">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_iter</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.BilinearAlternationOptions.max_iter" title="Permalink to this definition"></a></dt>
+<dd><p>The maximum number of bilinear alternation iterations. Must be
+non-negative.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.BinarySearch">
+<span class="sig-name descname"><span class="pre">BinarySearch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.geometry.optimization.CspaceFreePolytope,</span> <span class="pre">ignored_collision_pairs:</span> <span class="pre">Set[Tuple[pydrake.geometry.GeometryId]],</span> <span class="pre">C:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">n],</span> <span class="pre">flags.f_contiguous],</span> <span class="pre">d:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]],</span> <span class="pre">s_center:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]],</span> <span class="pre">options:</span> <span class="pre">drake::geometry::optimization::CspaceFreePolytope::BinarySearchOptions</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional[drake::geometry::optimization::CspaceFreePolytope::SearchResult]</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.BinarySearch" title="Permalink to this definition"></a></dt>
+<dd><p>Binary search on d such that the C-space polytope {s | C*s&lt;=d,
+s_lower&lt;=s&lt;=s_upper} is collision free. We scale the polytope {s |
+C*s&lt;=d_init} about its center <code class="docutils literal notranslate"><span class="pre">s_center</span></code> and search the scaling
+factor.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>s_center is in the polytope {s | C*s&lt;=d_init, s_lower&lt;=s&lt;=s_upper}</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.BinarySearchOptions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">BinarySearchOptions</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.BinarySearchOptions" title="Permalink to this definition"></a></dt>
+<dd><p>Options for binary search.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.BinarySearchOptions.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.CspaceFreePolytope.BinarySearchOptions" title="pydrake.geometry.optimization.CspaceFreePolytope.BinarySearchOptions"><span class="pre">pydrake.geometry.optimization.CspaceFreePolytope.BinarySearchOptions</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.BinarySearchOptions.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.BinarySearchOptions.convergence_tol">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">convergence_tol</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.BinarySearchOptions.convergence_tol" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.BinarySearchOptions.find_lagrangian_options">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">find_lagrangian_options</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.BinarySearchOptions.find_lagrangian_options" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.BinarySearchOptions.max_iter">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_iter</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.BinarySearchOptions.max_iter" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.BinarySearchOptions.scale_max">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">scale_max</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.BinarySearchOptions.scale_max" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.BinarySearchOptions.scale_min">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">scale_min</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.BinarySearchOptions.scale_min" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.EllipsoidMarginCost">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">EllipsoidMarginCost</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.EllipsoidMarginCost" title="Permalink to this definition"></a></dt>
+<dd><p>The cost used when fixing the Lagrangian multiplier and search for C
+and d in the C-space polytope {s | C*s &lt;=d, s_lower&lt;=s&lt;=s_upper}. We
+denote δᵢ as the margin between the i’th face C.row(i)&lt;=d(i) to the
+inscribed ellipsoid.</p>
+<p>Members:</p>
+<blockquote>
+<div><p>kSum</p>
+<p>kGeometricMean</p>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.EllipsoidMarginCost.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.CspaceFreePolytope.EllipsoidMarginCost" title="pydrake.geometry.optimization.CspaceFreePolytope.EllipsoidMarginCost"><span class="pre">pydrake.geometry.optimization.CspaceFreePolytope.EllipsoidMarginCost</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.EllipsoidMarginCost.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.EllipsoidMarginCost.kGeometricMean">
+<span class="sig-name descname"><span class="pre">kGeometricMean</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;EllipsoidMarginCost.kGeometricMean:</span> <span class="pre">1&gt;</span></em><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.EllipsoidMarginCost.kGeometricMean" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.EllipsoidMarginCost.kSum">
+<span class="sig-name descname"><span class="pre">kSum</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;EllipsoidMarginCost.kSum:</span> <span class="pre">0&gt;</span></em><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.EllipsoidMarginCost.kSum" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.EllipsoidMarginCost.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.EllipsoidMarginCost.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.EllipsoidMarginCost.value">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.EllipsoidMarginCost.value" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.FindPolytopeGivenLagrangianOptions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">FindPolytopeGivenLagrangianOptions</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.FindPolytopeGivenLagrangianOptions" title="Permalink to this definition"></a></dt>
+<dd><p>Options for finding polytope with given Lagrangians.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.FindPolytopeGivenLagrangianOptions.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.CspaceFreePolytope.FindPolytopeGivenLagrangianOptions" title="pydrake.geometry.optimization.CspaceFreePolytope.FindPolytopeGivenLagrangianOptions"><span class="pre">pydrake.geometry.optimization.CspaceFreePolytope.FindPolytopeGivenLagrangianOptions</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.FindPolytopeGivenLagrangianOptions.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.FindPolytopeGivenLagrangianOptions.backoff_scale">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">backoff_scale</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.FindPolytopeGivenLagrangianOptions.backoff_scale" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.FindPolytopeGivenLagrangianOptions.ellipsoid_margin_cost">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ellipsoid_margin_cost</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.FindPolytopeGivenLagrangianOptions.ellipsoid_margin_cost" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.FindPolytopeGivenLagrangianOptions.ellipsoid_margin_epsilon">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ellipsoid_margin_epsilon</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.FindPolytopeGivenLagrangianOptions.ellipsoid_margin_epsilon" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.FindPolytopeGivenLagrangianOptions.s_inner_pts">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">s_inner_pts</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.FindPolytopeGivenLagrangianOptions.s_inner_pts" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.FindPolytopeGivenLagrangianOptions.search_s_bounds_lagrangians">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">search_s_bounds_lagrangians</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.FindPolytopeGivenLagrangianOptions.search_s_bounds_lagrangians" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.FindPolytopeGivenLagrangianOptions.solver_id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">solver_id</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.FindPolytopeGivenLagrangianOptions.solver_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.FindPolytopeGivenLagrangianOptions.solver_options">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">solver_options</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.FindPolytopeGivenLagrangianOptions.solver_options" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.FindSeparationCertificateGivenPolytope">
+<span class="sig-name descname"><span class="pre">FindSeparationCertificateGivenPolytope</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.geometry.optimization.CspaceFreePolytope,</span> <span class="pre">C:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">n],</span> <span class="pre">flags.f_contiguous],</span> <span class="pre">d:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]],</span> <span class="pre">ignored_collision_pairs:</span> <span class="pre">Set[Tuple[pydrake.geometry.GeometryId]],</span> <span class="pre">options:</span> <span class="pre">drake::geometry::optimization::CspaceFreePolytope::FindSeparationCertificateGivenPolytopeOptions</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple[bool,</span> <span class="pre">Dict[Tuple[pydrake.geometry.GeometryId],</span> <span class="pre">drake::geometry::optimization::CspaceFreePolytope::SeparationCertificateResult]]</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.FindSeparationCertificateGivenPolytope" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.FindSeparationCertificateGivenPolytopeOptions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">FindSeparationCertificateGivenPolytopeOptions</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.FindSeparationCertificateGivenPolytopeOptions" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.optimization.FindSeparationCertificateOptions" title="pydrake.geometry.optimization.FindSeparationCertificateOptions"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.geometry.optimization.FindSeparationCertificateOptions</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.FindSeparationCertificateGivenPolytopeOptions.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.CspaceFreePolytope.FindSeparationCertificateGivenPolytopeOptions" title="pydrake.geometry.optimization.CspaceFreePolytope.FindSeparationCertificateGivenPolytopeOptions"><span class="pre">pydrake.geometry.optimization.CspaceFreePolytope.FindSeparationCertificateGivenPolytopeOptions</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.FindSeparationCertificateGivenPolytopeOptions.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.FindSeparationCertificateGivenPolytopeOptions.ignore_redundant_C">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ignore_redundant_C</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.FindSeparationCertificateGivenPolytopeOptions.ignore_redundant_C" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.MakeIsGeometrySeparableProgram">
+<span class="sig-name descname"><span class="pre">MakeIsGeometrySeparableProgram</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.CspaceFreePolytope" title="pydrake.geometry.optimization.CspaceFreePolytope"><span class="pre">pydrake.geometry.optimization.CspaceFreePolytope</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry_pair</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">C</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::geometry::optimization::CspaceFreePolytope::SeparationCertificateProgram</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.MakeIsGeometrySeparableProgram" title="Permalink to this definition"></a></dt>
+<dd><p>Constructs the MathematicalProgram which searches for a separation
+certificate for a pair of geometries for a C-space polytope. Search
+for the separation certificate for a pair of geometries for a C-space
+polytope {s | C*s&lt;=d, s_lower&lt;=s&lt;=s_upper}.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>an error if this geometry_pair doesn't need separation</strong> – </p></li>
+<li><p><strong>certificate</strong><strong> (</strong><strong>for example</strong><strong>, </strong><strong>they are on the same body</strong><strong>)</strong><strong></strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.SearchResult">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SearchResult</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.SearchResult" title="Permalink to this definition"></a></dt>
+<dd><p>Result on searching the C-space polytope and separating planes.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.SearchResult.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.CspaceFreePolytope.SearchResult" title="pydrake.geometry.optimization.CspaceFreePolytope.SearchResult"><span class="pre">pydrake.geometry.optimization.CspaceFreePolytope.SearchResult</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.SearchResult.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.SearchResult.a">
+<span class="sig-name descname"><span class="pre">a</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.CspaceFreePolytope.SearchResult" title="pydrake.geometry.optimization.CspaceFreePolytope.SearchResult"><span class="pre">pydrake.geometry.optimization.CspaceFreePolytope.SearchResult</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.SearchResult.a" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.SearchResult.b">
+<span class="sig-name descname"><span class="pre">b</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.CspaceFreePolytope.SearchResult" title="pydrake.geometry.optimization.CspaceFreePolytope.SearchResult"><span class="pre">pydrake.geometry.optimization.CspaceFreePolytope.SearchResult</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Polynomial" title="pydrake.symbolic.Polynomial"><span class="pre">pydrake.symbolic.Polynomial</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.SearchResult.b" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.SearchResult.C">
+<span class="sig-name descname"><span class="pre">C</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.CspaceFreePolytope.SearchResult" title="pydrake.geometry.optimization.CspaceFreePolytope.SearchResult"><span class="pre">pydrake.geometry.optimization.CspaceFreePolytope.SearchResult</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.SearchResult.C" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.SearchResult.certified_polytope">
+<span class="sig-name descname"><span class="pre">certified_polytope</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.CspaceFreePolytope.SearchResult" title="pydrake.geometry.optimization.CspaceFreePolytope.SearchResult"><span class="pre">pydrake.geometry.optimization.CspaceFreePolytope.SearchResult</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.optimization.HPolyhedron" title="pydrake.geometry.optimization.HPolyhedron"><span class="pre">pydrake.geometry.optimization.HPolyhedron</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.SearchResult.certified_polytope" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.SearchResult.d">
+<span class="sig-name descname"><span class="pre">d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.CspaceFreePolytope.SearchResult" title="pydrake.geometry.optimization.CspaceFreePolytope.SearchResult"><span class="pre">pydrake.geometry.optimization.CspaceFreePolytope.SearchResult</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.SearchResult.d" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.SearchResult.num_iter">
+<span class="sig-name descname"><span class="pre">num_iter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.CspaceFreePolytope.SearchResult" title="pydrake.geometry.optimization.CspaceFreePolytope.SearchResult"><span class="pre">pydrake.geometry.optimization.CspaceFreePolytope.SearchResult</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.SearchResult.num_iter" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.SearchWithBilinearAlternation">
+<span class="sig-name descname"><span class="pre">SearchWithBilinearAlternation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.geometry.optimization.CspaceFreePolytope,</span> <span class="pre">ignored_collision_pairs:</span> <span class="pre">Set[Tuple[pydrake.geometry.GeometryId]],</span> <span class="pre">C_init:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">n],</span> <span class="pre">flags.f_contiguous],</span> <span class="pre">d_init:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]],</span> <span class="pre">options:</span> <span class="pre">drake::geometry::optimization::CspaceFreePolytope::BilinearAlternationOptions</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List[drake::geometry::optimization::CspaceFreePolytope::SearchResult]</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.SearchWithBilinearAlternation" title="Permalink to this definition"></a></dt>
+<dd><p>Search for a collision-free C-space polytope. {s | C*s&lt;=d,
+s_lower&lt;=s&lt;=s_upper} through bilinear alternation. The goal is to
+maximize the volume the C-space polytope. Since we can’t compute the
+polytope volume in the closed form, we use the volume of the maximal
+inscribed ellipsoid as a surrogate function of the polytope volume.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">ignored_collision_pairs</span></code>:</dt><dd><p>The pairs of geometries that we ignore when searching for
+separation certificates.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">C_init</span></code>:</dt><dd><p>The initial value of C.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">d_init</span></code>:</dt><dd><p>The initial value of d.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">options</span></code>:</dt><dd><p>The options for the bilinear alternation.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">results</span></code>:</dt><dd><p>Stores the certification result in each iteration of the bilinear
+alternation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.SeparatingPlaneLagrangians">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SeparatingPlaneLagrangians</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.SeparatingPlaneLagrangians" title="Permalink to this definition"></a></dt>
+<dd><p>When searching for the separating plane, we want to certify that the
+numerator of a rational is non-negative in the C-space region C*s&lt;=d,
+s_lower &lt;= s &lt;= s_upper. Hence for each of the rational we will
+introduce Lagrangian multipliers for the polytopic constraint d-C*s &gt;=
+0, s - s_lower &gt;= 0, s_upper - s &gt;= 0.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.SeparatingPlaneLagrangians.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.CspaceFreePolytope.SeparatingPlaneLagrangians" title="pydrake.geometry.optimization.CspaceFreePolytope.SeparatingPlaneLagrangians"><span class="pre">pydrake.geometry.optimization.CspaceFreePolytope.SeparatingPlaneLagrangians</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">C_rows</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.SeparatingPlaneLagrangians.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.SeparatingPlaneLagrangians.GetSolution">
+<span class="sig-name descname"><span class="pre">GetSolution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.CspaceFreePolytope.SeparatingPlaneLagrangians" title="pydrake.geometry.optimization.CspaceFreePolytope.SeparatingPlaneLagrangians"><span class="pre">pydrake.geometry.optimization.CspaceFreePolytope.SeparatingPlaneLagrangians</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.MathematicalProgramResult" title="pydrake.solvers.MathematicalProgramResult"><span class="pre">pydrake.solvers.MathematicalProgramResult</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.optimization.CspaceFreePolytope.SeparatingPlaneLagrangians" title="pydrake.geometry.optimization.CspaceFreePolytope.SeparatingPlaneLagrangians"><span class="pre">pydrake.geometry.optimization.CspaceFreePolytope.SeparatingPlaneLagrangians</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.SeparatingPlaneLagrangians.GetSolution" title="Permalink to this definition"></a></dt>
+<dd><p>Substitutes the decision variables in each Lagrangians with its value
+in result, returns the substitution result.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.SeparatingPlaneLagrangians.polytope">
+<span class="sig-name descname"><span class="pre">polytope</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.CspaceFreePolytope.SeparatingPlaneLagrangians" title="pydrake.geometry.optimization.CspaceFreePolytope.SeparatingPlaneLagrangians"><span class="pre">pydrake.geometry.optimization.CspaceFreePolytope.SeparatingPlaneLagrangians</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.SeparatingPlaneLagrangians.polytope" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.SeparatingPlaneLagrangians.s_lower">
+<span class="sig-name descname"><span class="pre">s_lower</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.CspaceFreePolytope.SeparatingPlaneLagrangians" title="pydrake.geometry.optimization.CspaceFreePolytope.SeparatingPlaneLagrangians"><span class="pre">pydrake.geometry.optimization.CspaceFreePolytope.SeparatingPlaneLagrangians</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.SeparatingPlaneLagrangians.s_lower" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.SeparatingPlaneLagrangians.s_upper">
+<span class="sig-name descname"><span class="pre">s_upper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.CspaceFreePolytope.SeparatingPlaneLagrangians" title="pydrake.geometry.optimization.CspaceFreePolytope.SeparatingPlaneLagrangians"><span class="pre">pydrake.geometry.optimization.CspaceFreePolytope.SeparatingPlaneLagrangians</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.SeparatingPlaneLagrangians.s_upper" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificate">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SeparationCertificate</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificate" title="Permalink to this definition"></a></dt>
+<dd><p>This struct stores the necessary information to search for the
+separating plane for the polytopic C-space region C*s &lt;= d, s_lower &lt;=
+s &lt;= s_upper. We need to impose that N rationals are non-negative in
+this C-space polytope. The denominator of each rational is always
+positive hence we need to impose the N numerators are non-negative in
+this C-space region. We impose the condition numerator_i(s) - λ(s)ᵀ *
+(d - C*s) - λ_lower(s)ᵀ * (s - s_lower) -λ_upper(s)ᵀ * (s_upper - s)
+is sos λ(s) are sos, λ_lower(s) are sos, λ_upper(s) are sos.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificate.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificate.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificate.GetSolution">
+<span class="sig-name descname"><span class="pre">GetSolution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificate" title="pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificate"><span class="pre">pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificate</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">plane_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Polynomial" title="pydrake.symbolic.Polynomial"><span class="pre">pydrake.symbolic.Polynomial</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">plane_decision_vars</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.MathematicalProgramResult" title="pydrake.solvers.MathematicalProgramResult"><span class="pre">pydrake.solvers.MathematicalProgramResult</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificateResult" title="pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificateResult"><span class="pre">pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificateResult</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificate.GetSolution" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificate.negative_side_rational_lagrangians">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">negative_side_rational_lagrangians</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificate.negative_side_rational_lagrangians" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificate.positive_side_rational_lagrangians">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">positive_side_rational_lagrangians</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificate.positive_side_rational_lagrangians" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificateProgram">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SeparationCertificateProgram</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificateProgram" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.optimization.SeparationCertificateProgramBase" title="pydrake.geometry.optimization.SeparationCertificateProgramBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.geometry.optimization.SeparationCertificateProgramBase</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificateProgram.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificateProgram" title="pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificateProgram"><span class="pre">pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificateProgram</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificateProgram.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificateProgram.certificate">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">certificate</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificateProgram.certificate" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificateProgram.plane_index">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">plane_index</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificateProgram.plane_index" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificateResult">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SeparationCertificateResult</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificateResult" title="Permalink to this definition"></a></dt>
+<dd><p>We certify that a pair of geometries is collision free in the C-space
+region {s | Cs&lt;=d, s_lower&lt;=s&lt;=s_upper} by finding the separating
+plane and the Lagrangian multipliers. This struct contains the
+certificate, that the separating plane {x | aᵀx+b=0 } separates the
+two geometries in separating_planes()[plane_index] in the C-space
+polytope.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificateResult.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificateResult.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificateResult.a">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">a</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificateResult.a" title="Permalink to this definition"></a></dt>
+<dd><p>The separating plane is { x | aᵀx+b=0 }</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificateResult.b">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">b</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificateResult.b" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificateResult.negative_side_rational_lagrangians">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">negative_side_rational_lagrangians</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificateResult.negative_side_rational_lagrangians" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificateResult.plane_decision_var_vals">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">plane_decision_var_vals</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificateResult.plane_decision_var_vals" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificateResult.plane_index">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">plane_index</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificateResult.plane_index" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificateResult.positive_side_rational_lagrangians">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">positive_side_rational_lagrangians</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificateResult.positive_side_rational_lagrangians" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificateResult.result">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">result</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificateResult.result" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.SolveSeparationCertificateProgram">
+<span class="sig-name descname"><span class="pre">SolveSeparationCertificateProgram</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">pydrake.geometry.optimization.CspaceFreePolytope</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">certificate_program:</span> <span class="pre">drake::geometry::optimization::CspaceFreePolytope::SeparationCertificateProgram</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options:</span> <span class="pre">drake::geometry::optimization::CspaceFreePolytope::FindSeparationCertificateGivenPolytopeOptions</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional[drake::geometry::optimization::CspaceFreePolytope::SeparationCertificateResult]</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.SolveSeparationCertificateProgram" title="Permalink to this definition"></a></dt>
+<dd><p>Solves a SeparationCertificateProgram with the given options</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>result If we find the separation certificate, then <code class="docutils literal notranslate"><span class="pre">result</span></code>
+contains the separation plane and the Lagrangian polynomials;
+otherwise result is empty.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytopeBase">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.optimization.</span></span><span class="sig-name descname"><span class="pre">CspaceFreePolytopeBase</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytopeBase" title="Permalink to this definition"></a></dt>
+<dd><p>This virtual class is the base of CspaceFreePolytope and
+CspaceFreeBox. We take the common functionality between these concrete
+derived class to this shared parent class.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytopeBase.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytopeBase.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytopeBase.map_geometries_to_separating_planes">
+<span class="sig-name descname"><span class="pre">map_geometries_to_separating_planes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.CspaceFreePolytopeBase" title="pydrake.geometry.optimization.CspaceFreePolytopeBase"><span class="pre">pydrake.geometry.optimization.CspaceFreePolytopeBase</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytopeBase.map_geometries_to_separating_planes" title="Permalink to this definition"></a></dt>
+<dd><p>separating_planes()[map_geometries_to_separating_planes.at(geometry1_id,
+geometry2_id)] is the separating plane that separates geometry 1 and
+geometry 2.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytopeBase.Options">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Options</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytopeBase.Options" title="Permalink to this definition"></a></dt>
+<dd><p>Optional argument for constructing CspaceFreePolytopeBase</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytopeBase.Options.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.CspaceFreePolytopeBase.Options" title="pydrake.geometry.optimization.CspaceFreePolytopeBase.Options"><span class="pre">pydrake.geometry.optimization.CspaceFreePolytopeBase.Options</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytopeBase.Options.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytopeBase.Options.with_cross_y">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">with_cross_y</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytopeBase.Options.with_cross_y" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytopeBase.separating_planes">
+<span class="sig-name descname"><span class="pre">separating_planes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.CspaceFreePolytopeBase" title="pydrake.geometry.optimization.CspaceFreePolytopeBase"><span class="pre">pydrake.geometry.optimization.CspaceFreePolytopeBase</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.geometry.optimization.CSpaceSeparatingPlane_" title="pydrake.geometry.optimization.CSpaceSeparatingPlane_"><span class="pre">pydrake.geometry.optimization.CSpaceSeparatingPlane_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Variable</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytopeBase.separating_planes" title="Permalink to this definition"></a></dt>
+<dd><p>All the separating planes between each pair of geometries.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytopeBase.y_slack">
+<span class="sig-name descname"><span class="pre">y_slack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.CspaceFreePolytopeBase" title="pydrake.geometry.optimization.CspaceFreePolytopeBase"><span class="pre">pydrake.geometry.optimization.CspaceFreePolytopeBase</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytopeBase.y_slack" title="Permalink to this definition"></a></dt>
+<dd><p>Get the slack variable used for non-polytopic collision geometries.
+Check Options class for more details.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CSpaceSeparatingPlane">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.optimization.</span></span><span class="sig-name descname"><span class="pre">CSpaceSeparatingPlane</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CSpaceSeparatingPlane" title="Permalink to this definition"></a></dt>
+<dd><p>Wraps the information that a pair of collision geometries are
+separated by a plane. One collision geometry is on the “positive” side
+of the separating plane, namely {x| aᵀx + b ≥ δ} (with δ ≥ 0}, and the
+other collision geometry is on the “negative” side of the separating
+plane, namely {x|aᵀx+b ≤ −δ}.</p>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">T</span></code>:</dt><dd><p>The type of decision_variables. T= symbolic::Variable or double.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This class is templated; see <a class="reference internal" href="#pydrake.geometry.optimization.CSpaceSeparatingPlane_" title="pydrake.geometry.optimization.CSpaceSeparatingPlane_"><code class="xref py py-class docutils literal notranslate"><span class="pre">CSpaceSeparatingPlane_</span></code></a>
+for the list of instantiations.</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CSpaceSeparatingPlane.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.CSpaceSeparatingPlane.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CSpaceSeparatingPlane.a">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">a</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CSpaceSeparatingPlane.a" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CSpaceSeparatingPlane.b">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">b</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CSpaceSeparatingPlane.b" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CSpaceSeparatingPlane.decision_variables">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">decision_variables</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CSpaceSeparatingPlane.decision_variables" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CSpaceSeparatingPlane.expressed_body">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">expressed_body</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CSpaceSeparatingPlane.expressed_body" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CSpaceSeparatingPlane.negative_side_geometry">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">negative_side_geometry</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CSpaceSeparatingPlane.negative_side_geometry" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CSpaceSeparatingPlane.plane_degree">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">plane_degree</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CSpaceSeparatingPlane.plane_degree" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CSpaceSeparatingPlane.positive_side_geometry">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">positive_side_geometry</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CSpaceSeparatingPlane.positive_side_geometry" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py template">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CSpaceSeparatingPlane_">
+<em class="property"><span class="pre">template</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.optimization.</span></span><span class="sig-name descname"><span class="pre">CSpaceSeparatingPlane_</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CSpaceSeparatingPlane_" title="Permalink to this definition"></a></dt>
+<dd><p>Instantiations: <code class="xref py py-class docutils literal notranslate"><span class="pre">CSpaceSeparatingPlane_[float]</span></code>, <a class="reference internal" href="#pydrake.geometry.optimization.CSpaceSeparatingPlane_-Variable" title="pydrake.geometry.optimization.CSpaceSeparatingPlane_[Variable]"><code class="xref py py-class docutils literal notranslate"><span class="pre">CSpaceSeparatingPlane_[Variable]</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CSpaceSeparatingPlane_-Variable">
+<span id="pydrake.geometry.optimization.CSpaceSeparatingPlane_[Variable]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.optimization.</span></span><span class="sig-name descname"><span class="pre">CSpaceSeparatingPlane_[Variable]</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CSpaceSeparatingPlane_-Variable" title="Permalink to this definition"></a></dt>
+<dd><p>Wraps the information that a pair of collision geometries are
+separated by a plane. One collision geometry is on the “positive” side
+of the separating plane, namely {x| aᵀx + b ≥ δ} (with δ ≥ 0}, and the
+other collision geometry is on the “negative” side of the separating
+plane, namely {x|aᵀx+b ≤ −δ}.</p>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">T</span></code>:</dt><dd><p>The type of decision_variables. T= symbolic::Variable or double.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CSpaceSeparatingPlane_-Variable-.__init__">
+<span id="pydrake.geometry.optimization.CSpaceSeparatingPlane_[Variable].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.CSpaceSeparatingPlane_-Variable-.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CSpaceSeparatingPlane_-Variable-.a">
+<span id="pydrake.geometry.optimization.CSpaceSeparatingPlane_[Variable].a"></span><em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">a</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CSpaceSeparatingPlane_-Variable-.a" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CSpaceSeparatingPlane_-Variable-.b">
+<span id="pydrake.geometry.optimization.CSpaceSeparatingPlane_[Variable].b"></span><em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">b</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CSpaceSeparatingPlane_-Variable-.b" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CSpaceSeparatingPlane_-Variable-.decision_variables">
+<span id="pydrake.geometry.optimization.CSpaceSeparatingPlane_[Variable].decision_variables"></span><em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">decision_variables</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CSpaceSeparatingPlane_-Variable-.decision_variables" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CSpaceSeparatingPlane_-Variable-.expressed_body">
+<span id="pydrake.geometry.optimization.CSpaceSeparatingPlane_[Variable].expressed_body"></span><em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">expressed_body</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CSpaceSeparatingPlane_-Variable-.expressed_body" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CSpaceSeparatingPlane_-Variable-.negative_side_geometry">
+<span id="pydrake.geometry.optimization.CSpaceSeparatingPlane_[Variable].negative_side_geometry"></span><em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">negative_side_geometry</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CSpaceSeparatingPlane_-Variable-.negative_side_geometry" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CSpaceSeparatingPlane_-Variable-.plane_degree">
+<span id="pydrake.geometry.optimization.CSpaceSeparatingPlane_[Variable].plane_degree"></span><em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">plane_degree</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CSpaceSeparatingPlane_-Variable-.plane_degree" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CSpaceSeparatingPlane_-Variable-.positive_side_geometry">
+<span id="pydrake.geometry.optimization.CSpaceSeparatingPlane_[Variable].positive_side_geometry"></span><em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">positive_side_geometry</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CSpaceSeparatingPlane_-Variable-.positive_side_geometry" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.FindSeparationCertificateOptions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.optimization.</span></span><span class="sig-name descname"><span class="pre">FindSeparationCertificateOptions</span></span><a class="headerlink" href="#pydrake.geometry.optimization.FindSeparationCertificateOptions" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.FindSeparationCertificateOptions.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.FindSeparationCertificateOptions" title="pydrake.geometry.optimization.FindSeparationCertificateOptions"><span class="pre">pydrake.geometry.optimization.FindSeparationCertificateOptions</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.FindSeparationCertificateOptions.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.FindSeparationCertificateOptions.num_threads">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_threads</span></span><a class="headerlink" href="#pydrake.geometry.optimization.FindSeparationCertificateOptions.num_threads" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.FindSeparationCertificateOptions.solver_id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">solver_id</span></span><a class="headerlink" href="#pydrake.geometry.optimization.FindSeparationCertificateOptions.solver_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.FindSeparationCertificateOptions.solver_options">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">solver_options</span></span><a class="headerlink" href="#pydrake.geometry.optimization.FindSeparationCertificateOptions.solver_options" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.FindSeparationCertificateOptions.terminate_at_failure">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">terminate_at_failure</span></span><a class="headerlink" href="#pydrake.geometry.optimization.FindSeparationCertificateOptions.terminate_at_failure" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.FindSeparationCertificateOptions.verbose">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">verbose</span></span><a class="headerlink" href="#pydrake.geometry.optimization.FindSeparationCertificateOptions.verbose" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 
@@ -2110,6 +2892,41 @@ the sum.</p>
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.PlaneSide">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.optimization.</span></span><span class="sig-name descname"><span class="pre">PlaneSide</span></span><a class="headerlink" href="#pydrake.geometry.optimization.PlaneSide" title="Permalink to this definition"></a></dt>
+<dd><p>Members:</p>
+<blockquote>
+<div><p>kPositive</p>
+<p>kNegative</p>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.PlaneSide.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.PlaneSide" title="pydrake.geometry.optimization.PlaneSide"><span class="pre">pydrake.geometry.optimization.PlaneSide</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.PlaneSide.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.PlaneSide.kNegative">
+<span class="sig-name descname"><span class="pre">kNegative</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;PlaneSide.kNegative:</span> <span class="pre">1&gt;</span></em><a class="headerlink" href="#pydrake.geometry.optimization.PlaneSide.kNegative" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.PlaneSide.kPositive">
+<span class="sig-name descname"><span class="pre">kPositive</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;PlaneSide.kPositive:</span> <span class="pre">0&gt;</span></em><a class="headerlink" href="#pydrake.geometry.optimization.PlaneSide.kPositive" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.PlaneSide.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pydrake.geometry.optimization.PlaneSide.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.PlaneSide.value">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.geometry.optimization.PlaneSide.value" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.Point">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.optimization.</span></span><span class="sig-name descname"><span class="pre">Point</span></span><a class="headerlink" href="#pydrake.geometry.optimization.Point" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></code></a></p>
@@ -2167,6 +2984,98 @@ in the world frame.</p>
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.SaveIrisRegionsYamlFile">
 <span class="sig-prename descclassname"><span class="pre">pydrake.geometry.optimization.</span></span><span class="sig-name descname"><span class="pre">SaveIrisRegionsYamlFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">os.PathLike</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#pydrake.geometry.optimization.HPolyhedron" title="pydrake.geometry.optimization.HPolyhedron"><span class="pre">pydrake.geometry.optimization.HPolyhedron</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">child_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.SaveIrisRegionsYamlFile" title="Permalink to this definition"></a></dt>
 <dd><p>Calls SaveYamlFile() to serialize an IrisRegions object.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.SeparatingPlaneOrder">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.optimization.</span></span><span class="sig-name descname"><span class="pre">SeparatingPlaneOrder</span></span><a class="headerlink" href="#pydrake.geometry.optimization.SeparatingPlaneOrder" title="Permalink to this definition"></a></dt>
+<dd><p>The separating plane aᵀx + b ≥ δ, aᵀx + b ≤ −δ has parameters a and b.
+These parameterize a polynomial function of <code class="docutils literal notranslate"><span class="pre">s_for_plane</span></code> with the
+specified order. <code class="docutils literal notranslate"><span class="pre">s_for_plane</span></code> is a sub set of the
+configuration-space variable <code class="docutils literal notranslate"><span class="pre">s</span></code>, please refer to the
+RationalForwardKinematics class or the paper above on the meaning of
+s.</p>
+<p>Members:</p>
+<blockquote>
+<div><p>kAffine : a and b are affine functions of s.</p>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.SeparatingPlaneOrder.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.SeparatingPlaneOrder" title="pydrake.geometry.optimization.SeparatingPlaneOrder"><span class="pre">pydrake.geometry.optimization.SeparatingPlaneOrder</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.SeparatingPlaneOrder.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.SeparatingPlaneOrder.kAffine">
+<span class="sig-name descname"><span class="pre">kAffine</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;SeparatingPlaneOrder.kAffine:</span> <span class="pre">1&gt;</span></em><a class="headerlink" href="#pydrake.geometry.optimization.SeparatingPlaneOrder.kAffine" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.SeparatingPlaneOrder.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pydrake.geometry.optimization.SeparatingPlaneOrder.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.SeparatingPlaneOrder.value">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.geometry.optimization.SeparatingPlaneOrder.value" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.SeparationCertificateProgramBase">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.optimization.</span></span><span class="sig-name descname"><span class="pre">SeparationCertificateProgramBase</span></span><a class="headerlink" href="#pydrake.geometry.optimization.SeparationCertificateProgramBase" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.SeparationCertificateProgramBase.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.SeparationCertificateProgramBase.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.SeparationCertificateProgramBase.plane_index">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">plane_index</span></span><a class="headerlink" href="#pydrake.geometry.optimization.SeparationCertificateProgramBase.plane_index" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.SeparationCertificateProgramBase.prog">
+<span class="sig-name descname"><span class="pre">prog</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.SeparationCertificateProgramBase" title="pydrake.geometry.optimization.SeparationCertificateProgramBase"><span class="pre">pydrake.geometry.optimization.SeparationCertificateProgramBase</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.SeparationCertificateProgramBase.prog" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.SeparationCertificateResultBase">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.optimization.</span></span><span class="sig-name descname"><span class="pre">SeparationCertificateResultBase</span></span><a class="headerlink" href="#pydrake.geometry.optimization.SeparationCertificateResultBase" title="Permalink to this definition"></a></dt>
+<dd><p>We certify that a pair of geometries is collision free by finding the
+separating plane over a range of configuration. The Lagrangian
+multipliers used for certifying this condition will differ in derived
+classes. This struct contains the the separating plane {x | aᵀx+b=0 }
+and derived classes may store the Lagrangians certifying that the
+plane separates the two geometries in separating_planes()[plane_index]
+in the C-space region.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.SeparationCertificateResultBase.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.SeparationCertificateResultBase.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.SeparationCertificateResultBase.a">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">a</span></span><a class="headerlink" href="#pydrake.geometry.optimization.SeparationCertificateResultBase.a" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.SeparationCertificateResultBase.b">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">b</span></span><a class="headerlink" href="#pydrake.geometry.optimization.SeparationCertificateResultBase.b" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.SeparationCertificateResultBase.plane_decision_var_vals">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">plane_decision_var_vals</span></span><a class="headerlink" href="#pydrake.geometry.optimization.SeparationCertificateResultBase.plane_decision_var_vals" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.SeparationCertificateResultBase.result">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">result</span></span><a class="headerlink" href="#pydrake.geometry.optimization.SeparationCertificateResultBase.result" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
@@ -2238,7 +3147,13 @@ convex hull).</p>
 <ol class="arabic simple" start="3">
 <li><p>__init__(self: pydrake.geometry.optimization.VPolytope, H: pydrake.geometry.optimization.HPolyhedron) -&gt; None</p></li>
 </ol>
-<p>Constructs the polytope from a bounded polyhedron (using Qhull).</p>
+<p>Constructs the polytope from a bounded polyhedron (using Qhull). If
+the HPolyhedron is not full-dimensional, we perform computations in a
+coordinate system of its affine hull. <code class="docutils literal notranslate"><span class="pre">tol</span></code> specifies the numerical
+tolerance used in the computation of the affine hull. See the
+documentation of AffineSubspace for more details. A loose tolerance is
+necessary for the built-in solvers, but a tighter tolerance can be
+used with commercial solvers (e.g. Gurobi and Mosek).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">

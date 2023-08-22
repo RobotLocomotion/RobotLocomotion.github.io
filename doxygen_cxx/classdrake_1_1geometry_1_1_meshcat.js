@@ -42,6 +42,8 @@ var classdrake_1_1geometry_1_1_meshcat =
     [ "SetAnimation", "classdrake_1_1geometry_1_1_meshcat.html#a385b6142ccc841b5b51a14825b7cebdf", null ],
     [ "SetCamera", "classdrake_1_1geometry_1_1_meshcat.html#af3dc13928478563343ff6ef72c16fc98", null ],
     [ "SetCamera", "classdrake_1_1geometry_1_1_meshcat.html#a9d89514b4f0f06e38a7bf5ea480435b9", null ],
+    [ "SetCameraPose", "classdrake_1_1geometry_1_1_meshcat.html#ab54373b0959cc8b3fa4f8cb8c02b742a", null ],
+    [ "SetCameraTarget", "classdrake_1_1geometry_1_1_meshcat.html#aa6eb7d73d258c297ed9a3074ab7582e6", null ],
     [ "SetEnvironmentMap", "classdrake_1_1geometry_1_1_meshcat.html#a4e604b24e8ece3d7d7ac74a8b4fe2783", null ],
     [ "SetLine", "classdrake_1_1geometry_1_1_meshcat.html#aa5b082d79e267c040cbd066a11cdcb54", null ],
     [ "SetLineSegments", "classdrake_1_1geometry_1_1_meshcat.html#a7094785eea6bf85ebfef30083e7c1dda", null ],

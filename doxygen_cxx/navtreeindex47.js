@@ -1,5 +1,7 @@
 var NAVTREEINDEX47 =
 {
+"formula_8h.html#a665bbf538eb986af44631f116c34a83d":[4,0,0,1,3,0,7,48],
+"formula_8h.html#a6718d0b755c47edc3fade14221574a03":[4,0,0,1,3,0,7,59],
 "formula_8h.html#a6869e7044dd90be5d972ee7dd4e821b6":[4,0,0,1,3,0,7,5],
 "formula_8h.html#a6869e7044dd90be5d972ee7dd4e821b6a086cb8308e5a36e7c4ed1f8873ad801f":[4,0,0,1,3,0,7,5,5],
 "formula_8h.html#a6869e7044dd90be5d972ee7dd4e821b6a1fbc164d3e50b7fd20690a21f1b7b2f2":[4,0,0,1,3,0,7,5,14],
@@ -172,8 +174,8 @@ var NAVTREEINDEX47 =
 "functions_p.html":[3,3,0,15],
 "functions_q.html":[3,3,0,16],
 "functions_r.html":[3,3,0,17],
-"functions_rela.html":[3,3,6],
 "functions_rela.html":[3,3,6,0],
+"functions_rela.html":[3,3,6],
 "functions_rela_b.html":[3,3,6,1],
 "functions_rela_c.html":[3,3,6,2],
 "functions_rela_d.html":[3,3,6,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX47 =
 "generic__polynomial_8h.html#a173be3cb77f72bb9481db5c8fd04741e":[4,0,0,1,3,6,6],
 "generic__polynomial_8h.html#a2176f7eb786ddec5cd9ea0683a019482":[4,0,0,1,3,6,16],
 "generic__polynomial_8h.html#a21d8313aa6cdb78da3f2cd6d84b92e39":[4,0,0,1,3,6,22],
-"generic__polynomial_8h.html#a2296b14ee573d8deafe90b3615281e68":[4,0,0,1,3,6,15],
-"generic__polynomial_8h.html#a34397d7d032b5c4214a92123e3c6752d":[4,0,0,1,3,6,20],
-"generic__polynomial_8h.html#a434f1953d9800d1c40dc223609904ecf":[4,0,0,1,3,6,19]
+"generic__polynomial_8h.html#a2296b14ee573d8deafe90b3615281e68":[4,0,0,1,3,6,15]
 };
