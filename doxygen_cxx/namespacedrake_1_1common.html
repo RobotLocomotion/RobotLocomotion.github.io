@@ -295,7 +295,21 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Pauses execution for the user to examine visualization output, for use within bazel unit tests. </p>
-<p>This function will not pause execution when running as a bazel test, but when running as a command-line executable, it will enable users to see the visualization outputs. </p>
+<p>This function will not pause execution when running as a bazel test, but when running as a command-line executable, it will enable users to see the visualization outputs.</p>
+<p>The complete behavior is somewhat more subtle, depending on the bazel rules used to build the program, and the way it is invoked:</p>
+<ul>
+<li>built with a bazel test rule<ul>
+<li>invoked with "bazel test" &ndash; does not pause</li>
+<li>invoked with "bazel run" &ndash; does not pause</li>
+<li>invoked directly ("bazel/bin/[PROGRAM]") &ndash; does pause</li>
+</ul>
+</li>
+<li>built with a bazel binary rule<ul>
+<li>invoked with "bazel run" &ndash; does pause</li>
+<li>invoked directly ("bazel/bin/[PROGRAM]") &ndash; does pause </li>
+</ul>
+</li>
+</ul>
 
 </div>
 </div>

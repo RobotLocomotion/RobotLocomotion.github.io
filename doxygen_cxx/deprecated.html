@@ -170,16 +170,16 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 <dd><a class="anchor" id="_deprecated000001"></a>This function was not intended for public use. <br />
  This will be removed from Drake on or after 2023-09-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1solvers.html#a2393a50b2a4547a3a88aa89c9f77e4bb">drake::solvers::FindNonconvexQuadraticCost</a>  (const std::vector&lt; Binding&lt; QuadraticCost &gt;&gt; &amp;quadratic_costs)</dt>
-<dd><a class="anchor" id="_deprecated000014"></a>This function is no longer public. <br />
+<dd><a class="anchor" id="_deprecated000016"></a>This function is no longer public. <br />
  This will be removed from Drake on or after 2023-11-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3dad87b61f50587e7841b2d192c6e8afe05">drake::systems::sensors::kExpr</a>  </dt>
-<dd><a class="anchor" id="_deprecated000023"></a>kExpr is no longer a supported PixelType <br />
+<dd><a class="anchor" id="_deprecated000025"></a>kExpr is no longer a supported PixelType <br />
  This will be removed from Drake on or after 2023-12-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a60883d4958a60b91661e97027a85072aad87b61f50587e7841b2d192c6e8afe05">drake::systems::sensors::kExpr</a>  </dt>
-<dd><a class="anchor" id="_deprecated000024"></a>kExpr is no longer a supported PixelType <br />
+<dd><a class="anchor" id="_deprecated000026"></a>kExpr is no longer a supported PixelType <br />
  This will be removed from Drake on or after 2023-12-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1visualization.html#a91350b14472fa922d11a6ced06e72bc8">drake::visualization::ApplyVisualizationConfig</a>  (const <a class="el" href="structdrake_1_1visualization_1_1_visualization_config.html" title="Settings for what MultibodyPlant and SceneGraph should send to Meshcat, Meldis, and/or the legacy dra...">VisualizationConfig</a> &amp;config, systems::DiagramBuilder&lt; double &gt; *builder, const <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html" title="A mapping from {bus_name: interface} with sugar for error checking with nice error messages during ac...">systems::lcm::LcmBuses</a> *lcm_buses, const multibody::MultibodyPlant&lt; double &gt; *plant, const geometry::SceneGraph&lt; double &gt; *scene_graph, std::shared_ptr&lt; geometry::Meshcat &gt; meshcat=nullptr, <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html" title="A pure virtual interface that enables LCM to be mocked.">lcm::DrakeLcmInterface</a> *lcm=nullptr)</dt>
-<dd><a class="anchor" id="_deprecated000025"></a>Pass a non-const SceneGraph pointer <br />
+<dd><a class="anchor" id="_deprecated000027"></a>Pass a non-const SceneGraph pointer <br />
  This will be removed from Drake on or after 2023-09-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#aecfcd22d9fc70def7603d35a77660195">GraphOfConvexSets::AddEdge</a>  (VertexId u_id, VertexId v_id, std::string name="")</dt>
 <dd><a class="anchor" id="_deprecated000003"></a>Use the overload that takes Vertex* instead. <br />
@@ -197,28 +197,34 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 <dd><a class="anchor" id="_deprecated000007"></a>Use minimum_distance_lower() instead. <br />
  This will be removed from Drake on or after 2023-11-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1solvers_1_1_minimum_value_constraint.html#ab401d591e846938bc37b33dfa80119f8">MinimumValueConstraint::minimum_value</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000015"></a>Use minimum_value_lower() instead. <br />
+<dd><a class="anchor" id="_deprecated000017"></a>Use minimum_value_lower() instead. <br />
  This will be removed from Drake on or after 2023-11-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#adb23e0ee6a1a0fa9904a0b3247baacb6">MultipleShooting::fixed_timestep</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000012"></a>Use fixed_time_step() instead. <br />
+<dd><a class="anchor" id="_deprecated000014"></a>Use fixed_time_step() instead. <br />
  This will be removed from Drake on or after 2023-09-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ab0a28fec382d5b41c8193e698d9d3d99">MultipleShooting::timestep</a>  (int index) const</dt>
-<dd><a class="anchor" id="_deprecated000011"></a>Use time_step() instead. <br />
+<dd><a class="anchor" id="_deprecated000013"></a>Use time_step() instead. <br />
  This will be removed from Drake on or after 2023-09-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ae6f30b165f1275d62dea7f27b441a41b">MultipleShooting::timesteps_are_decision_variables</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000013"></a>Use time_steps_are_decision_variables() instead. <br />
+<dd><a class="anchor" id="_deprecated000015"></a>Use time_steps_are_decision_variables() instead. <br />
  This will be removed from Drake on or after 2023-09-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_parser.html#a9b40bb492d33e373b3bfcf5d440a36c2">Parser::AddAllModelsFromFile</a>  (const std::string &amp;file_name)</dt>
+<dd><a class="anchor" id="_deprecated000008"></a>Use AddModels() instead. <br />
+ This will be removed from Drake on or after 2023-12-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_parser.html#a2bc82a9937f1710e5da413dcad7a3ded">Parser::AddModelFromFile</a>  (const std::string &amp;file_name, const std::string &amp;model_name={})</dt>
+<dd><a class="anchor" id="_deprecated000009"></a>Use parser.AddModels() instead. To port the  2-argument form, rename models using  parser.SetAutoRenaming() and plant.RenameModelInstance().  See PR #19978 for more details. <br />
+ This will be removed from Drake on or after 2023-12-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html#acbee7f3497ff5244da916e6997c54872">SerializerInterface::Clone</a>  () const =0</dt>
-<dd><a class="anchor" id="_deprecated000022"></a>Use a shared_ptr&lt;const SerializerInterface&gt; instead of cloning. <br />
+<dd><a class="anchor" id="_deprecated000024"></a>Use a shared_ptr&lt;const SerializerInterface&gt; instead of cloning. <br />
  This will be removed from Drake on or after 2023-09-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#aed68ed5145171fc5505a5c7c848bfae5">UnitInertia&lt; T &gt;::SolidCapsule</a>  (const T &amp;r, const T &amp;L)</dt>
-<dd><a class="anchor" id="_deprecated000009"></a>SolidCapsule now requires the capsules's axis  direction to be explicitly given. <br />
+<dd><a class="anchor" id="_deprecated000011"></a>SolidCapsule now requires the capsules's axis  direction to be explicitly given. <br />
  This will be removed from Drake on or after 2023-12-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#a73671675bcab7c63b6f985a818e4650f">UnitInertia&lt; T &gt;::SolidCylinder</a>  (const T &amp;r, const T &amp;L)</dt>
-<dd><a class="anchor" id="_deprecated000008"></a>SolidCylinder now requires the cylinder's axis  direction to be explicitly given and to be a unit vector. <br />
+<dd><a class="anchor" id="_deprecated000010"></a>SolidCylinder now requires the cylinder's axis  direction to be explicitly given and to be a unit vector. <br />
  This will be removed from Drake on or after 2023-12-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#af26c23e707688c5fe5f0c71f22fbee62">UnitInertia&lt; T &gt;::SolidCylinderAboutEnd</a>  (const T &amp;r, const T &amp;L)</dt>
-<dd><a class="anchor" id="_deprecated000010"></a>SolidCylinderAboutEnd now requires the cylinder's axis  direction to be explicitly given. <br />
+<dd><a class="anchor" id="_deprecated000012"></a>SolidCylinderAboutEnd now requires the cylinder's axis  direction to be explicitly given. <br />
  This will be removed from Drake on or after 2023-12-01.</dd>
 </dl>
 </div></div><!-- PageDoc -->
