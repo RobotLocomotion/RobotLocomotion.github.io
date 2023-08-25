@@ -2003,17 +2003,17 @@ SolverInterface::enabled() returns true. If it is set to any non-empty
 value, then the solver is enabled; otherwise, the solver is not
 enabled.</p>
 <p>Gurobi solver supports options/parameters listed in
-<a class="reference external" href="https://www.gurobi.com/documentation/9.1/refman/parameters.html">https://www.gurobi.com/documentation/9.1/refman/parameters.html</a>. On
+<a class="reference external" href="https://www.gurobi.com/documentation/10.0/refman/parameters.html">https://www.gurobi.com/documentation/10.0/refman/parameters.html</a>. On
 top of these options, we provide the following additional options 1.
 “GRBwrite”, set to a file name so that Gurobi solver will write the
 optimization model to this file, check
-<a class="reference external" href="https://www.gurobi.com/documentation/9.1/refman/py_model_write.html">https://www.gurobi.com/documentation/9.1/refman/py_model_write.html</a>
+<a class="reference external" href="https://www.gurobi.com/documentation/10.0/refman/py_model_write.html">https://www.gurobi.com/documentation/10.0/refman/py_model_write.html</a>
 for more details, such as all supported file extensions. Set this
 option to “” if you don’t want to write to file. Default is not to
 write to a file. 2. “GRBcomputeIIS”, set to 1 to compute an
 Irreducible Inconsistent Subsystem (IIS) when the problem is
 infeasible. Refer to
-<a class="reference external" href="https://www.gurobi.com/documentation/9.1/refman/py_model_computeiis.html">https://www.gurobi.com/documentation/9.1/refman/py_model_computeiis.html</a>
+<a class="reference external" href="https://www.gurobi.com/documentation/10.0/refman/py_model_computeiis.html">https://www.gurobi.com/documentation/10.0/refman/py_model_computeiis.html</a>
 for more details. Often this method is called together with setting
 GRBwrite to “FILENAME.ilp” to write IIS to a file with extension
 “ilp”. Default is not to compute IIS.</p>
@@ -2178,7 +2178,7 @@ obtain the details.</p>
 <dt class="sig sig-object py" id="pydrake.solvers.GurobiSolverDetails.error_code">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">error_code</span></span><a class="headerlink" href="#pydrake.solvers.GurobiSolverDetails.error_code" title="Permalink to this definition"></a></dt>
 <dd><p>The error message returned from Gurobi call. Please refer to
-<a class="reference external" href="https://www.gurobi.com/documentation/9.5/refman/error_codes.html">https://www.gurobi.com/documentation/9.5/refman/error_codes.html</a></p>
+<a class="reference external" href="https://www.gurobi.com/documentation/10.0/refman/error_codes.html">https://www.gurobi.com/documentation/10.0/refman/error_codes.html</a></p>
 </dd></dl>
 
 <dl class="py property">
@@ -2186,21 +2186,21 @@ obtain the details.</p>
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">objective_bound</span></span><a class="headerlink" href="#pydrake.solvers.GurobiSolverDetails.objective_bound" title="Permalink to this definition"></a></dt>
 <dd><p>The best known bound on the optimal objective. This is used in mixed
 integer optimization. Please refer to
-<a class="reference external" href="https://www.gurobi.com/documentation/9.5/refman/objbound.html">https://www.gurobi.com/documentation/9.5/refman/objbound.html</a></p>
+<a class="reference external" href="https://www.gurobi.com/documentation/10.0/refman/objbound.html">https://www.gurobi.com/documentation/10.0/refman/objbound.html</a></p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.solvers.GurobiSolverDetails.optimization_status">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">optimization_status</span></span><a class="headerlink" href="#pydrake.solvers.GurobiSolverDetails.optimization_status" title="Permalink to this definition"></a></dt>
 <dd><p>The status code when the optimize call has returned. Please refer to
-<a class="reference external" href="https://www.gurobi.com/documentation/9.5/refman/optimization_status_codes.html">https://www.gurobi.com/documentation/9.5/refman/optimization_status_codes.html</a></p>
+<a class="reference external" href="https://www.gurobi.com/documentation/10.0/refman/optimization_status_codes.html">https://www.gurobi.com/documentation/10.0/refman/optimization_status_codes.html</a></p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.solvers.GurobiSolverDetails.optimizer_time">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">optimizer_time</span></span><a class="headerlink" href="#pydrake.solvers.GurobiSolverDetails.optimizer_time" title="Permalink to this definition"></a></dt>
 <dd><p>The gurobi optimization time. Please refer to
-<a class="reference external" href="https://www.gurobi.com/documentation/9.5/refman/runtime.html">https://www.gurobi.com/documentation/9.5/refman/runtime.html</a></p>
+<a class="reference external" href="https://www.gurobi.com/documentation/10.0/refman/runtime.html">https://www.gurobi.com/documentation/10.0/refman/runtime.html</a></p>
 </dd></dl>
 
 </dd></dl>
@@ -5378,7 +5378,7 @@ solution.</p>
    <span class="n">GurobiSolver</span> <span class="n">solver</span><span class="p">;</span>
    <span class="o">//</span> <span class="n">Explicitly</span> <span class="n">tell</span> <span class="n">the</span> <span class="n">solver</span> <span class="n">to</span> <span class="n">compute</span> <span class="n">the</span> <span class="n">dual</span> <span class="n">solution</span> <span class="k">for</span> <span class="n">Lorentz</span>
    <span class="o">//</span> <span class="n">cone</span> <span class="ow">or</span> <span class="n">rotated</span> <span class="n">Lorentz</span> <span class="n">cone</span> <span class="n">constraint</span><span class="p">,</span> <span class="n">check</span>
-   <span class="o">//</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">gurobi</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">documentation</span><span class="o">/</span><span class="mf">9.5</span><span class="o">/</span><span class="n">refman</span><span class="o">/</span><span class="n">qcpdual</span><span class="o">.</span><span class="n">html</span> <span class="k">for</span>
+   <span class="o">//</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">gurobi</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">documentation</span><span class="o">/</span><span class="mf">10.0</span><span class="o">/</span><span class="n">refman</span><span class="o">/</span><span class="n">qcpdual</span><span class="o">.</span><span class="n">html</span> <span class="k">for</span>
    <span class="o">//</span> <span class="n">more</span> <span class="n">information</span><span class="o">.</span>
    <span class="n">SolverOptions</span> <span class="n">options</span><span class="p">;</span>
    <span class="n">options</span><span class="o">.</span><span class="n">SetOption</span><span class="p">(</span><span class="n">GurobiSolver</span><span class="p">::</span><span class="nb">id</span><span class="p">(),</span> <span class="s2">&quot;QCPDual&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
@@ -7576,7 +7576,7 @@ NLOPT_LD_SLSQP, call <code class="docutils literal notranslate"><span class="pre
 <span class="pre">NloptSolver::AlgorithmName(),</span> <span class="pre">&quot;LD_SLSQP&quot;);</span></code></p>
 <p>“GUROBI” – Parameter name and values as specified in Gurobi Reference
 Manual, section 10.2 “Parameter Descriptions”
-<a class="reference external" href="https://www.gurobi.com/documentation/9.5/refman/parameters.html">https://www.gurobi.com/documentation/9.5/refman/parameters.html</a></p>
+<a class="reference external" href="https://www.gurobi.com/documentation/10.0/refman/parameters.html">https://www.gurobi.com/documentation/10.0/refman/parameters.html</a></p>
 <p>“SCS” – Parameter name and values as specified in the struct
 SCS_SETTINGS in SCS header file
 <a class="reference external" href="https://github.com/cvxgrp/scs/blob/master/include/scs.h">https://github.com/cvxgrp/scs/blob/master/include/scs.h</a> Note that the
