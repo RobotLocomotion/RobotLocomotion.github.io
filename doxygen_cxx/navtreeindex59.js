@@ -1,5 +1,11 @@
 var NAVTREEINDEX59 =
 {
+"structdrake_1_1type__check__different__from.html#a0860509034ec6a8bc624149afad18d42":[3,0,0,52,0],
+"structdrake_1_1type__pack.html":[3,0,0,53],
+"structdrake_1_1type__pack.html#a0d7ec463ea247ebd6d235632c14544ba":[3,0,0,53,1],
+"structdrake_1_1type__pack.html#a3d3a828636762306b3bf4b16e74236cb":[3,0,0,53,0],
+"structdrake_1_1type__pack.html#a5bedf34ecf2bf4cc8e7a9d7df1f91172":[3,0,0,53,2],
+"structdrake_1_1type__tag.html":[3,0,0,54],
 "structdrake_1_1type__tag.html#a834c467da58ea1d81821952d3c473b64":[3,0,0,54,0],
 "structdrake_1_1type__visit__with__default.html":[3,0,0,55],
 "structdrake_1_1type__visit__with__default.html#a9a1b7f1cdcb3d709ba4b3a40746c5e54":[3,0,0,55,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX59 =
 "triangle__quadrature__rule_8h.html":[4,0,0,8,15,2],
 "triangle__surface__mesh_8h.html":[4,0,0,4,2,53],
 "triangle__surface__mesh__field_8h.html":[4,0,0,4,2,54],
-"triangle__surface__mesh__field_8h.html#a982d81c894c425051f4cbb03cd3ca4dd":[4,0,0,4,2,54,0],
-"trigonometric__polynomial_8h.html":[4,0,0,1,3,17],
-"trigonometric__polynomial_8h.html#a0f7729e9ae50c2b5ca1d86021ad1ae44":[4,0,0,1,3,17,2],
-"trigonometric__polynomial_8h.html#a0f7729e9ae50c2b5ca1d86021ad1ae44acdf5f9e766a4e04d5ac3bf38e82da0f0":[4,0,0,1,3,17,2,2],
-"trigonometric__polynomial_8h.html#a0f7729e9ae50c2b5ca1d86021ad1ae44aea1eea0840dd2bfd79a5cbfdf49ea143":[4,0,0,1,3,17,2,1],
-"trigonometric__polynomial_8h.html#a0f7729e9ae50c2b5ca1d86021ad1ae44af4d2017f452ed392e963b2d8ddf591bb":[4,0,0,1,3,17,2,0],
-"trigonometric__polynomial_8h.html#a13c5d9eccfc9643fdd5764d6e72b8faf":[4,0,0,1,3,17,1]
+"triangle__surface__mesh__field_8h.html#a982d81c894c425051f4cbb03cd3ca4dd":[4,0,0,4,2,54,0]
 };

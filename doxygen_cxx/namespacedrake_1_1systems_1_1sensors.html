@@ -315,6 +315,12 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
+<tr class="memitem:aec0f265ffb95497b48b9e1989da0f7e3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#aec0f265ffb95497b48b9e1989da0f7e3">ImageFileFormat</a> { <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#aec0f265ffb95497b48b9e1989da0f7e3a56fb481831bf55c2dcf25f84e0b41401">kJpeg</a>, 
+<a class="el" href="namespacedrake_1_1systems_1_1sensors.html#aec0f265ffb95497b48b9e1989da0f7e3aed86cf85de32aa0a6ded67ee8944c34f">kPng</a>, 
+<a class="el" href="namespacedrake_1_1systems_1_1sensors.html#aec0f265ffb95497b48b9e1989da0f7e3a2a303d92441e04d26d330b18576a48af">kTiff</a>
+ }</td></tr>
+<tr class="memdesc:aec0f265ffb95497b48b9e1989da0f7e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The image file formats known to Drake.  <a href="namespacedrake_1_1systems_1_1sensors.html#aec0f265ffb95497b48b9e1989da0f7e3">More...</a><br /></td></tr>
+<tr class="separator:aec0f265ffb95497b48b9e1989da0f7e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37140413518dff2aa63096a2e31b9b3d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3d">PixelType</a> { <br />
 &#160;&#160;<a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3daeee66110e8b7e5d4ffd4f739ba15f5f6">kRgb8U</a>, 
 <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3da0326c4bed4ffb3b2f430e119a147b530">kBgr8U</a>, 
@@ -367,6 +373,8 @@ Functions</h2></td></tr>
 <tr class="memitem:aee1067f28975226f673193243893def2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#aee1067f28975226f673193243893def2">ConvertDepth16UTo32F</a> (const <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a12ae113c6f13e4c9c37430a988afeef8">ImageDepth16U</a> &amp;input, <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a0558960d25000bd7cc8607cef2fd223b">ImageDepth32F</a> *output)</td></tr>
 <tr class="memdesc:aee1067f28975226f673193243893def2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a single channel 16-bit unsigned int depth image with depths in millimeters to a single channel 32-bit float depth image with depths in meters.  <a href="#aee1067f28975226f673193243893def2">More...</a><br /></td></tr>
 <tr class="separator:aee1067f28975226f673193243893def2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7459772d0326bd1ccb635cda5d48326"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#ae7459772d0326bd1ccb635cda5d48326">to_string</a> (<a class="el" href="namespacedrake_1_1systems_1_1sensors.html#aec0f265ffb95497b48b9e1989da0f7e3">ImageFileFormat</a>)</td></tr>
+<tr class="separator:ae7459772d0326bd1ccb635cda5d48326"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac61c1ea072a9ad8e4c238c2029712b44"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#ac61c1ea072a9ad8e4c238c2029712b44">to_string</a> (<a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3d">PixelType</a>)</td></tr>
 <tr class="separator:ac61c1ea072a9ad8e4c238c2029712b44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeee61963e066e7ce017d584fe2123c7d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#aeee61963e066e7ce017d584fe2123c7d">to_string</a> (<a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a60883d4958a60b91661e97027a85072a">PixelFormat</a>)</td></tr>
@@ -573,6 +581,38 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="aec0f265ffb95497b48b9e1989da0f7e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec0f265ffb95497b48b9e1989da0f7e3">&#9670;&nbsp;</a></span>ImageFileFormat</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#aec0f265ffb95497b48b9e1989da0f7e3">ImageFileFormat</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The image file formats known to Drake. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aec0f265ffb95497b48b9e1989da0f7e3a56fb481831bf55c2dcf25f84e0b41401"></a>kJpeg&#160;</td><td class="fielddoc"><p>mime-type: image/jpeg. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aec0f265ffb95497b48b9e1989da0f7e3aed86cf85de32aa0a6ded67ee8944c34f"></a>kPng&#160;</td><td class="fielddoc"><p>mime-type: image/png. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aec0f265ffb95497b48b9e1989da0f7e3a2a303d92441e04d26d330b18576a48af"></a>kTiff&#160;</td><td class="fielddoc"><p>mime-type: image/tiff. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a id="a60883d4958a60b91661e97027a85072a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a60883d4958a60b91661e97027a85072a">&#9670;&nbsp;</a></span>PixelFormat</h2>
 
@@ -1002,8 +1042,26 @@ Either the given <code>builder</code> contains a SceneGraph system named "scene_
 
 </div>
 </div>
+<a id="ae7459772d0326bd1ccb635cda5d48326"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7459772d0326bd1ccb635cda5d48326">&#9670;&nbsp;</a></span>to_string() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string drake::systems::sensors::to_string </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#aec0f265ffb95497b48b9e1989da0f7e3">ImageFileFormat</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ac61c1ea072a9ad8e4c238c2029712b44"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac61c1ea072a9ad8e4c238c2029712b44">&#9670;&nbsp;</a></span>to_string() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac61c1ea072a9ad8e4c238c2029712b44">&#9670;&nbsp;</a></span>to_string() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1021,7 +1079,7 @@ Either the given <code>builder</code> contains a SceneGraph system named "scene_
 </div>
 </div>
 <a id="aeee61963e066e7ce017d584fe2123c7d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeee61963e066e7ce017d584fe2123c7d">&#9670;&nbsp;</a></span>to_string() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aeee61963e066e7ce017d584fe2123c7d">&#9670;&nbsp;</a></span>to_string() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1039,7 +1097,7 @@ Either the given <code>builder</code> contains a SceneGraph system named "scene_
 </div>
 </div>
 <a id="a266fb9c71cff0c0c0039862c33d7298a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a266fb9c71cff0c0c0039862c33d7298a">&#9670;&nbsp;</a></span>to_string() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a266fb9c71cff0c0c0039862c33d7298a">&#9670;&nbsp;</a></span>to_string() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

@@ -1,5 +1,11 @@
 var NAVTREEINDEX56 =
 {
+"structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#a1155fe07f46b586ad6bf51b9b2f8a496":[3,0,0,4,1,19,9],
+"structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#a17e04d21a0a53ce5c7047c2c4bd796e9":[3,0,0,4,1,19,7],
+"structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#a1b65827009ded0cf39865dc6a600d289":[3,0,0,4,1,19,5],
+"structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#a746afa5ed1772820723903386c20143d":[3,0,0,4,1,19,2],
+"structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#a7537ffd73509fb56cff43f5effb4a4c3":[3,0,0,4,1,19,3],
+"structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#a7dc410c05ba6ca93696709bee9242a6d":[3,0,0,4,1,19,0],
 "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#a9bcd2beab49aa2bbcc29485e8c15774b":[3,0,0,4,1,19,6],
 "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#ab3f1efd3efefa056724514d6d247de2f":[3,0,0,4,1,19,10],
 "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#ab44bb940daf4a1747f92bae32d54c67a":[3,0,0,4,1,19,8],
@@ -243,11 +249,5 @@ var NAVTREEINDEX56 =
 "structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#aecfdc8cfc228ee64e73c891738c3863d":[3,0,0,8,1,2,20],
 "structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html":[3,0,0,8,3,1],
 "structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a0d562bb51530219612deccbd4319091f":[3,0,0,8,3,1,8],
-"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a2f34a2f66899dfd008ab76f9fee983de":[3,0,0,8,3,1,4],
-"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a3a415b5e7e1f412ec0002e0251ced626":[3,0,0,8,3,1,10],
-"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a3f67c53b80389c5f53961936edba04c9":[3,0,0,8,3,1,11],
-"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a78fb15511f687fe7fdb8e3ba9613648b":[3,0,0,8,3,1,9],
-"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a796122705bf6508783b49e113fb500b1":[3,0,0,8,3,1,7],
-"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a7efd266a84dc02bc8bb42bb8d73273e5":[3,0,0,8,3,1,6],
-"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,8,3,1,0]
+"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a2f34a2f66899dfd008ab76f9fee983de":[3,0,0,8,3,1,4]
 };
