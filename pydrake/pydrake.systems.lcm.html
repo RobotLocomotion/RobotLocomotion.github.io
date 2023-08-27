@@ -241,6 +241,34 @@ class and must remain valid for the lifetime of this object. Users
 MUST NOT start the receive thread on this object.</p>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.lcm.LcmInterfaceSystem.get_lcm_url">
+<span class="sig-name descname"><span class="pre">get_lcm_url</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.lcm.LcmInterfaceSystem" title="pydrake.systems.lcm.LcmInterfaceSystem"><span class="pre">pydrake.systems.lcm.LcmInterfaceSystem</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.systems.lcm.LcmInterfaceSystem.get_lcm_url" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a URL describing the transport of this LCM interface.</p>
+<p>When the URL refers to a transport offered by LCM itself (e.g., memq
+or udpm), then this function must return the conventional URL
+spelling. If the implementation of DrakeLcmInterface is using a
+non-standard back end, the result implementation-defined.</p>
+<p>In either case, it is always formatted using URI syntax rules per the
+RFC(s).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.lcm.LcmInterfaceSystem.HandleSubscriptions">
+<span class="sig-name descname"><span class="pre">HandleSubscriptions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.lcm.LcmInterfaceSystem" title="pydrake.systems.lcm.LcmInterfaceSystem"><span class="pre">pydrake.systems.lcm.LcmInterfaceSystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_millis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.systems.lcm.LcmInterfaceSystem.HandleSubscriptions" title="Permalink to this definition"></a></dt>
+<dd><p>Invokes the HandlerFunction callbacks for all subscriptions’ pending
+messages. If <code class="docutils literal notranslate"><span class="pre">timeout_millis</span></code> is &gt;0, blocks for up to that long
+until at least one message is handled.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the number of messages handled, or 0 on timeout.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>RuntimeError when a subscribed handler throws.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
