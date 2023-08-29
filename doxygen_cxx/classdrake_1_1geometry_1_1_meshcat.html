@@ -168,12 +168,12 @@ $(document).ready(function(){initNavTree('classdrake_1_1geometry_1_1_meshcat.htm
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Provides an interface to Meshcat (<a href="https://github.com/rdeits/meshcat">https://github.com/rdeits/meshcat</a>). </p>
-<p>Each instance of this class spawns a thread which runs an http/websocket server. Users can navigate their browser to the hosted URL to visualize the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> scene. Note that, unlike many visualizers, one cannot open the visualizer until this server is running.</p>
-<dl class="section warning"><dt>Warning</dt><dd>In the current implementation, <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> methods must be called from the same thread where the class instance was constructed. For example, running multiple simulations in parallel using the same <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> instance is not yet supported. We may generalize this in the future.</dd></dl>
+<div class="textblock"><p>Provides an interface to Meshcat (<a href="https://github.com/meshcat-dev/meshcat">https://github.com/meshcat-dev/meshcat</a>). </p>
+<p>Each instance of this class spawns a thread which runs an http/websocket server. Users can navigate their browser to the hosted URL to visualize the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> scene. Note that, unlike many visualizers, one cannot open the visualizer until this server is running.</p>
+<dl class="section warning"><dt>Warning</dt><dd>In the current implementation, <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> methods must be called from the same thread where the class instance was constructed. For example, running multiple simulations in parallel using the same <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> instance is not yet supported. We may generalize this in the future.</dd></dl>
 <h1><a class="anchor" id="meshcat_path"></a>
 Meshcat paths and the scene tree</h1>
-<p><a href="https://github.com/rdeits/meshcat#api">https://github.com/rdeits/meshcat#api</a> provides a nice introduction to the websocket API that we wrap with this class. One of the core concepts is the "scene tree" &ndash; a directory-like structure of objects, transforms, and properties. The scene tree is viewable in the browser by clicking on "Open
+<p><a href="https://github.com/meshcat-dev/meshcat#api">https://github.com/meshcat-dev/meshcat#api</a> provides a nice introduction to the websocket API that we wrap with this class. One of the core concepts is the "scene tree" &ndash; a directory-like structure of objects, transforms, and properties. The scene tree is viewable in the browser by clicking on "Open
 Controls" in the top right corner.</p>
 <p>Elements of the tree are referenced programmatically by a "/"-delimited string indicating the object's <b>path</b> in the scene tree. An object at path "/foo/bar" is a child of an object at path "/foo", so setting the transform of (or deleting) "/foo" will also affect its children.</p>
 <p>The string path arguments to the methods in this class use the following semantics:</p><ul>
@@ -190,7 +190,7 @@ Controls" in the top right corner.</p>
 </ul>
 <h1><a class="anchor" id="meshcat_recommended_workflow"></a>
 Recommended workflow</h1>
-<p>For convenience, <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> fosters a work flow in which all user-created objects created in Drake are contained in the "/drake" folder. Objects added with a relative path are placed in the "/drake" folder for you. The benefits are:</p><ul>
+<p>For convenience, <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> fosters a work flow in which all user-created objects created in Drake are contained in the "/drake" folder. Objects added with a relative path are placed in the "/drake" folder for you. The benefits are:</p><ul>
 <li>It's simple to distinguish between user objects and "infrastructure" objects in the visualizer.</li>
 <li>All user objects can easily be cleared by a single, parameter-free call to <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#af4681ade5efb8da0d67f86ecae9b9ac8" title="Deletes the object at the given path as well as all of its children.">Delete()</a>. You are welcome to use absolute paths to organize your data, but the burden on tracking and cleaning them up lie on you.</li>
 </ul>
@@ -204,7 +204,7 @@ Network access</h1>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html">Gamepad</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status of a gamepad obtained from the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> javascript client.  <a href="structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status of a gamepad obtained from the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> javascript client.  <a href="structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html">OrthographicCamera</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Properties for an orthographic camera in three.js: <a href="https://threejs.org/docs/#api/en/cameras/OrthographicCamera">https://threejs.org/docs/#api/en/cameras/OrthographicCamera</a>.  <a href="structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#details">More...</a><br /></td></tr>
@@ -271,13 +271,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:abea3ef7b90af7253344d6d90e177ee2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the "object" at <code>path</code> to be a triangle surface mesh representing a 3D surface, via an API that roughly follows matplotlib's plot_surface() method.  <a href="#abea3ef7b90af7253344d6d90e177ee2a">More...</a><br /></td></tr>
 <tr class="separator:abea3ef7b90af7253344d6d90e177ee2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3dc13928478563343ff6ef72c16fc98"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#af3dc13928478563343ff6ef72c16fc98">SetCamera</a> (<a class="el" href="structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html">PerspectiveCamera</a> camera, std::string path=&quot;/Cameras/default/rotated&quot;)</td></tr>
-<tr class="memdesc:af3dc13928478563343ff6ef72c16fc98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> object on <code>path</code> to a perspective camera.  <a href="#af3dc13928478563343ff6ef72c16fc98">More...</a><br /></td></tr>
+<tr class="memdesc:af3dc13928478563343ff6ef72c16fc98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> object on <code>path</code> to a perspective camera.  <a href="#af3dc13928478563343ff6ef72c16fc98">More...</a><br /></td></tr>
 <tr class="separator:af3dc13928478563343ff6ef72c16fc98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d89514b4f0f06e38a7bf5ea480435b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a9d89514b4f0f06e38a7bf5ea480435b9">SetCamera</a> (<a class="el" href="structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html">OrthographicCamera</a> camera, std::string path=&quot;/Cameras/default/rotated&quot;)</td></tr>
-<tr class="memdesc:a9d89514b4f0f06e38a7bf5ea480435b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> object on <code>path</code> to an orthographic camera.  <a href="#a9d89514b4f0f06e38a7bf5ea480435b9">More...</a><br /></td></tr>
+<tr class="memdesc:a9d89514b4f0f06e38a7bf5ea480435b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> object on <code>path</code> to an orthographic camera.  <a href="#a9d89514b4f0f06e38a7bf5ea480435b9">More...</a><br /></td></tr>
 <tr class="separator:a9d89514b4f0f06e38a7bf5ea480435b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1464f94b8c5d602566dee2b83f47c5df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a1464f94b8c5d602566dee2b83f47c5df">Set2dRenderMode</a> (const math::RigidTransformd &amp;X_WC=math::RigidTransformd(Eigen::Vector3d{0, -1, 0}), <a class="el" href="classdouble.html">double</a> xmin=-1, <a class="el" href="classdouble.html">double</a> xmax=1, <a class="el" href="classdouble.html">double</a> ymin=-1, <a class="el" href="classdouble.html">double</a> ymax=1)</td></tr>
-<tr class="memdesc:a1464f94b8c5d602566dee2b83f47c5df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies a number of settings to make <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> act as a 2D renderer.  <a href="#a1464f94b8c5d602566dee2b83f47c5df">More...</a><br /></td></tr>
+<tr class="memdesc:a1464f94b8c5d602566dee2b83f47c5df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies a number of settings to make <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> act as a 2D renderer.  <a href="#a1464f94b8c5d602566dee2b83f47c5df">More...</a><br /></td></tr>
 <tr class="separator:a1464f94b8c5d602566dee2b83f47c5df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adeec831adfeef24453c8c5b8b9d69625"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#adeec831adfeef24453c8c5b8b9d69625">ResetRenderMode</a> ()</td></tr>
 <tr class="memdesc:adeec831adfeef24453c8c5b8b9d69625"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the default camera, camera target, background, grid lines, and axes to their default settings.  <a href="#adeec831adfeef24453c8c5b8b9d69625">More...</a><br /></td></tr>
@@ -328,13 +328,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ab4e410341b1ca35649cafd7b099a1819"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a flag to pause/stop recording.  <a href="#ab4e410341b1ca35649cafd7b099a1819">More...</a><br /></td></tr>
 <tr class="separator:ab4e410341b1ca35649cafd7b099a1819"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a455ab0b35fdab06f2cc5e0cb9b1b2845"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a455ab0b35fdab06f2cc5e0cb9b1b2845">PublishRecording</a> ()</td></tr>
-<tr class="memdesc:a455ab0b35fdab06f2cc5e0cb9b1b2845"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends the recording to <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> as an animation.  <a href="#a455ab0b35fdab06f2cc5e0cb9b1b2845">More...</a><br /></td></tr>
+<tr class="memdesc:a455ab0b35fdab06f2cc5e0cb9b1b2845"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends the recording to <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> as an animation.  <a href="#a455ab0b35fdab06f2cc5e0cb9b1b2845">More...</a><br /></td></tr>
 <tr class="separator:a455ab0b35fdab06f2cc5e0cb9b1b2845"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4272f092573240b5824fbc8caa049ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#aa4272f092573240b5824fbc8caa049ce">DeleteRecording</a> ()</td></tr>
 <tr class="memdesc:aa4272f092573240b5824fbc8caa049ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes the current animation holding the recorded frames.  <a href="#aa4272f092573240b5824fbc8caa049ce">More...</a><br /></td></tr>
 <tr class="separator:aa4272f092573240b5824fbc8caa049ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74916eddef1ba24184bf974d233a1b59"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html">MeshcatAnimation</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a74916eddef1ba24184bf974d233a1b59">get_mutable_recording</a> ()</td></tr>
-<tr class="memdesc:a74916eddef1ba24184bf974d233a1b59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a mutable pointer to this <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a>'s unique <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html" title="An interface for recording/playback animations in Meshcat.">MeshcatAnimation</a> object, if it exists, in which the frames will be recorded.  <a href="#a74916eddef1ba24184bf974d233a1b59">More...</a><br /></td></tr>
+<tr class="memdesc:a74916eddef1ba24184bf974d233a1b59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a mutable pointer to this <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a>'s unique <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html" title="An interface for recording/playback animations in Meshcat.">MeshcatAnimation</a> object, if it exists, in which the frames will be recorded.  <a href="#a74916eddef1ba24184bf974d233a1b59">More...</a><br /></td></tr>
 <tr class="separator:a74916eddef1ba24184bf974d233a1b59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae40769135bba976dde79af9499e8d000"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#ae40769135bba976dde79af9499e8d000">HasPath</a> (std::string_view path) const</td></tr>
 <tr class="separator:ae40769135bba976dde79af9499e8d000"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -354,12 +354,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a37b1b4538dd47e4dc5fd9c671454b4d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">Meshcat</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a37b1b4538dd47e4dc5fd9c671454b4d2">operator=</a> (<a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">Meshcat</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:a37b1b4538dd47e4dc5fd9c671454b4d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Meshcat Controls</div></td></tr>
-<tr><td colspan="2"><div class="groupText"><p><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> "Controls" are user interface elements in the browser.</p>
+<tr><td colspan="2"><div class="groupText"><p><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> "Controls" are user interface elements in the browser.</p>
 <p>These currently include buttons and sliders.</p><ul>
 <li>Controls appear in the browser under the "Open Controls" dropdown menu, and are appended to the root node of the tree (they do not have a path in the "scene tree"), in the order in which they are added.</li>
 <li>Controls must have unique names. Adding a control with a name that was already in use will overwrite the existing control. If you add a slider with a name that was previous used for a button, then the button will be replaced by the slider, etc.</li>
-<li>Users of this <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> instance are responsible for polling the GUI to retrieve the user interface events.</li>
-<li>Controls can be added/deleted/accessed anytime during the lifetime of this <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> instance. </li>
+<li>Users of this <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> instance are responsible for polling the GUI to retrieve the user interface events.</li>
+<li>Controls can be added/deleted/accessed anytime during the lifetime of this <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> instance. </li>
 </ul>
 </div></td></tr>
 <tr class="memitem:a5d8348a53b80daf5b86c879e1c720bbf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a5d8348a53b80daf5b86c879e1c720bbf">AddButton</a> (std::string name, std::string keycode=&quot;&quot;)</td></tr>
@@ -387,10 +387,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a50fc49ac1d55ac00b10946b748db02dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the slider <code>name</code> from the GUI.  <a href="#a50fc49ac1d55ac00b10946b748db02dc">More...</a><br /></td></tr>
 <tr class="separator:a50fc49ac1d55ac00b10946b748db02dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1bb2f8edfd7ee327ff24ad088e1c607"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#af1bb2f8edfd7ee327ff24ad088e1c607">DeleteAddedControls</a> ()</td></tr>
-<tr class="memdesc:af1bb2f8edfd7ee327ff24ad088e1c607"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all buttons and sliders from the GUI that have been registered by this <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> instance.  <a href="#af1bb2f8edfd7ee327ff24ad088e1c607">More...</a><br /></td></tr>
+<tr class="memdesc:af1bb2f8edfd7ee327ff24ad088e1c607"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all buttons and sliders from the GUI that have been registered by this <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> instance.  <a href="#af1bb2f8edfd7ee327ff24ad088e1c607">More...</a><br /></td></tr>
 <tr class="separator:af1bb2f8edfd7ee327ff24ad088e1c607"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99102c7b2a8ca0cd1a9f1d55b3819b7d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html">Gamepad</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a99102c7b2a8ca0cd1a9f1d55b3819b7d">GetGamepad</a> () const</td></tr>
-<tr class="memdesc:a99102c7b2a8ca0cd1a9f1d55b3819b7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the status from the most recently updated gamepad data in the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a>.  <a href="#a99102c7b2a8ca0cd1a9f1d55b3819b7d">More...</a><br /></td></tr>
+<tr class="memdesc:a99102c7b2a8ca0cd1a9f1d55b3819b7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the status from the most recently updated gamepad data in the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a>.  <a href="#a99102c7b2a8ca0cd1a9f1d55b3819b7d">More...</a><br /></td></tr>
 <tr class="separator:a99102c7b2a8ca0cd1a9f1d55b3819b7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Enumeration Documentation</h2>
@@ -642,7 +642,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Adds a slider with the label <code>name</code> to the meshcat browser controls GUI. </p>
-<p>The slider range is given by [<code>min</code>, <code>max</code>]. <code>step</code> is the smallest increment by which the slider can change values (and therefore send updates back to this <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> instance). <code>value</code> specifies the initial value; it will be truncated to the slider range and rounded to the nearest increment. If the optional <code>decrement_keycode</code> or <code>increment_keycode</code> are set to a javascript string key code (such as "KeyG" or "ArrowLeft", see <a href="https://developer.mozilla.org/en-US/docs/Web/API/UI_Events/Keyboard_event_code_values">https://developer.mozilla.org/en-US/docs/Web/API/UI_Events/Keyboard_event_code_values</a>), then keydown callbacks will be registered in the GUI that will move the slider by <code>step</code> (within the limits) when those buttons are pressed.</p>
+<p>The slider range is given by [<code>min</code>, <code>max</code>]. <code>step</code> is the smallest increment by which the slider can change values (and therefore send updates back to this <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> instance). <code>value</code> specifies the initial value; it will be truncated to the slider range and rounded to the nearest increment. If the optional <code>decrement_keycode</code> or <code>increment_keycode</code> are set to a javascript string key code (such as "KeyG" or "ArrowLeft", see <a href="https://developer.mozilla.org/en-US/docs/Web/API/UI_Events/Keyboard_event_code_values">https://developer.mozilla.org/en-US/docs/Web/API/UI_Events/Keyboard_event_code_values</a>), then keydown callbacks will be registered in the GUI that will move the slider by <code>step</code> (within the limits) when those buttons are pressed.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if <code>name</code> has already been added as any type of control (e.g., either button or slider). </td></tr>
@@ -688,7 +688,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Removes all buttons and sliders from the GUI that have been registered by this <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> instance. </p>
+<p>Removes all buttons and sliders from the GUI that have been registered by this <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> instance. </p>
 <p>It does <em>not</em> clear the default GUI elements set in the meshcat browser (e.g. for cameras and lights). </p>
 
 </div>
@@ -735,7 +735,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Deletes the current animation holding the recorded frames. </p>
-<p>Animation options (autoplay, repetitions, etc) will also be reset, and any pointers obtained from <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a74916eddef1ba24184bf974d233a1b59" title="Returns a mutable pointer to this Meshcat&#39;s unique MeshcatAnimation object, if it exists,...">get_mutable_recording()</a> will be rendered invalid. This does not* currently remove the animation from <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a>. </p>
+<p>Animation options (autoplay, repetitions, etc) will also be reset, and any pointers obtained from <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a74916eddef1ba24184bf974d233a1b59" title="Returns a mutable pointer to this Meshcat&#39;s unique MeshcatAnimation object, if it exists,...">get_mutable_recording()</a> will be rendered invalid. This does not* currently remove the animation from <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a>. </p>
 
 </div>
 </div>
@@ -800,7 +800,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns a mutable pointer to this <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a>'s unique <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html" title="An interface for recording/playback animations in Meshcat.">MeshcatAnimation</a> object, if it exists, in which the frames will be recorded. </p>
+<p>Returns a mutable pointer to this <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a>'s unique <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html" title="An interface for recording/playback animations in Meshcat.">MeshcatAnimation</a> object, if it exists, in which the frames will be recorded. </p>
 <p>This pointer can be used to set animation properties (like autoplay, the loop mode, number of repetitions, etc).</p>
 <p>The <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html" title="An interface for recording/playback animations in Meshcat.">MeshcatAnimation</a> object will only remain valid for the lifetime of <code>this</code> or until <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#aa4272f092573240b5824fbc8caa049ce" title="Deletes the current animation holding the recorded frames.">DeleteRecording()</a> is called.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
@@ -853,11 +853,11 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the status from the most recently updated gamepad data in the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a>. </p>
+<p>Returns the status from the most recently updated gamepad data in the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a>. </p>
 <p>See <a class="el" href="structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html" title="Status of a gamepad obtained from the Meshcat javascript client.">Gamepad</a> for details on the returned values.</p>
-<p>Note that in javascript, gamepads are not detected until users "opt-in" by pressing a gamepad button or moving the thumbstick in the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> window. If no gamepad information is available in javascript, then no messages are sent and the returned gamepad index will not have a value.</p>
-<p>Currently <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> only attempts to support one gamepad. If multiple gamepads are detected in the same <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> window, then only the status of the first connected gamepad in <code>navigator.GetGamepads()</code> is returned. If multiple <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> windows are connected to this <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> instance, and gamepads are being used in multiple windows, then the returned status will be the most recently received status message. Therefore using multiple gamepads simultaneously is not recommended.</p>
-<p>This feature is provided primarily to support applications where Drake is running on a remote machine (e.g. in the cloud), and the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> javascript in the browser is the only code running on the local machine which has access to the gamepad.</p>
+<p>Note that in javascript, gamepads are not detected until users "opt-in" by pressing a gamepad button or moving the thumbstick in the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> window. If no gamepad information is available in javascript, then no messages are sent and the returned gamepad index will not have a value.</p>
+<p>Currently <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> only attempts to support one gamepad. If multiple gamepads are detected in the same <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> window, then only the status of the first connected gamepad in <code>navigator.GetGamepads()</code> is returned. If multiple <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> windows are connected to this <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> instance, and gamepads are being used in multiple windows, then the returned status will be the most recently received status message. Therefore using multiple gamepads simultaneously is not recommended.</p>
+<p>This feature is provided primarily to support applications where Drake is running on a remote machine (e.g. in the cloud), and the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> javascript in the browser is the only code running on the local machine which has access to the gamepad.</p>
 <p>For more details on javascript support for gamepads (or to test that your gamepad is working), see <a href="https://beej.us/blog/data/javascript-gamepad/">https://beej.us/blog/data/javascript-gamepad/</a>. </p>
 
 </div>
@@ -1187,7 +1187,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Sends the recording to <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> as an animation. </p>
+<p>Sends the recording to <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> as an animation. </p>
 <p>The published animation only includes transforms and properties; the objects that they modify must be sent to the visualizer separately (e.g. by calling <a class="el" href="namespacedrake_1_1lcm.html#a7f10e39fd5048940095d76f21bdf760d" title="Publishes an LCM message on channel channel.">Publish()</a>). </p>
 
 </div>
@@ -1255,7 +1255,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Applies a number of settings to make <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> act as a 2D renderer. </p>
+<p>Applies a number of settings to make <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> act as a 2D renderer. </p>
 <p>The camera is set to an orthographic camera with <code>X_WC</code> specifying the pose of the camera in world. The camera looks down the +Cy axis, with +Cz corresponding to positive y in the 2D frame, and -Cx corresponding to positive x in the 2D frame.</p>
 <p>Additionally sets the background, grid lines, and axes "visible" properties to false. </p>
 
@@ -1308,8 +1308,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Sets the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> object on <code>path</code> to a perspective camera. </p>
-<p>We provide a default value of <code>path</code> corresponding to the default camera object in <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a>. </p>
+<p>Sets the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> object on <code>path</code> to a perspective camera. </p>
+<p>We provide a default value of <code>path</code> corresponding to the default camera object in <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a>. </p>
 
 </div>
 </div>
@@ -1339,8 +1339,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Sets the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> object on <code>path</code> to an orthographic camera. </p>
-<p>We provide a default value of <code>path</code> corresponding to the default camera object in <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a>. </p>
+<p>Sets the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> object on <code>path</code> to an orthographic camera. </p>
+<p>We provide a default value of <code>path</code> corresponding to the default camera object in <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a>. </p>
 
 </div>
 </div>
@@ -1817,7 +1817,7 @@ Public Member Functions</h2></td></tr>
     <tr><td class="paramname">path</td><td>a "/"-delimited string indicating the path in the scene tree. See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#meshcat_path">Meshcat paths and the scene tree</a> for the semantics. </td></tr>
     <tr><td class="paramname">property</td><td>the string name of the property to set </td></tr>
     <tr><td class="paramname">value</td><td>the new value. </td></tr>
-    <tr><td class="paramname">time_in_recording</td><td>(optional) the time at which this property should be applied, if <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> is current recording (see <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#af90068fe4f578b23dc79f61c48a69491" title="Sets a flag indicating that subsequent calls to SetTransform and SetProperty should also be &quot;recorded...">StartRecording()</a>). If <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> is not currently recording, then this value is simply ignored. </td></tr>
+    <tr><td class="paramname">time_in_recording</td><td>(optional) the time at which this property should be applied, if <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> is current recording (see <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#af90068fe4f578b23dc79f61c48a69491" title="Sets a flag indicating that subsequent calls to SetTransform and SetProperty should also be &quot;recorded...">StartRecording()</a>). If <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> is not currently recording, then this value is simply ignored. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1870,7 +1870,7 @@ Public Member Functions</h2></td></tr>
     <tr><td class="paramname">path</td><td>a "/"-delimited string indicating the path in the scene tree. See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#meshcat_path">Meshcat paths and the scene tree</a> for the semantics. </td></tr>
     <tr><td class="paramname">property</td><td>the string name of the property to set </td></tr>
     <tr><td class="paramname">value</td><td>the new value. </td></tr>
-    <tr><td class="paramname">time_in_recording</td><td>(optional) the time at which this property should be applied, if <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> is current recording (see <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#af90068fe4f578b23dc79f61c48a69491" title="Sets a flag indicating that subsequent calls to SetTransform and SetProperty should also be &quot;recorded...">StartRecording()</a>). If <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> is not currently recording, then this value is simply ignored. </td></tr>
+    <tr><td class="paramname">time_in_recording</td><td>(optional) the time at which this property should be applied, if <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> is current recording (see <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#af90068fe4f578b23dc79f61c48a69491" title="Sets a flag indicating that subsequent calls to SetTransform and SetProperty should also be &quot;recorded...">StartRecording()</a>). If <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> is not currently recording, then this value is simply ignored. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2019,7 +2019,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <p>Note: Prefer to use the overload which takes a RigidTransformd unless you need the fully parameterized homogeneous transform (which additionally allows scale and sheer).</p>
-<p>Note: <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> does not properly support non-uniform scaling. See Drake issue #18095. </p>
+<p>Note: <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> does not properly support non-uniform scaling. See Drake issue #18095. </p>
 
 </div>
 </div>
@@ -2195,7 +2195,7 @@ Public Member Functions</h2></td></tr>
 <p>The data in these events will be combined with any frames previously added to the animation; if the same transform/property is set at the same time, then it will overwrite the existing frame in the animation.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">set_visualizations_while_recording</td><td>if true, then each method will send the visualization immediately to <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> <em>and</em> record the visualization in the animation. Set to false to avoid updating the visualization during recording. One exception is calls to SetObject, which will always be sent to the visualizer immediately (because meshcat animations do not support SetObject). </td></tr>
+    <tr><td class="paramname">set_visualizations_while_recording</td><td>if true, then each method will send the visualization immediately to <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> <em>and</em> record the visualization in the animation. Set to false to avoid updating the visualization during recording. One exception is calls to SetObject, which will always be sent to the visualizer immediately (because meshcat animations do not support SetObject). </td></tr>
   </table>
   </dd>
 </dl>
@@ -2218,7 +2218,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns an HTML string that can be saved to a file for a snapshot of the visualizer and its contents. </p>
-<p>The HTML can be viewed in the browser without any connection to a <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> "server" (e.g. <code>this</code>). This is a great way to save and share your 3D content.</p>
+<p>The HTML can be viewed in the browser without any connection to a <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> "server" (e.g. <code>this</code>). This is a great way to save and share your 3D content.</p>
 <p>Note that controls (e.g. sliders and buttons) are not included in the HTML output, because their usefulness relies on a connection to the server. </p>
 
 </div>

@@ -182,17 +182,17 @@ class drake::systems::controllers::InverseDynamics&lt; T &gt;</h3>
 <tr align="center">
 <td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
 <tr>
-<td align="right" style="padding:5px 0px 5px 0px">u0 (estimated state)&rarr;</td></tr>
+<td align="right" style="padding:5px 0px 5px 0px">estimated_state&rarr;</td></tr>
 <tr>
-<td align="right" style="padding:5px 0px 5px 0px"><span style="color:gray">u1</span> (desired accelerations)&rarr;</td></tr>
+<td align="right" style="padding:5px 0px 5px 0px"><span style="color:gray">desired_acceleration</span>&rarr;</td></tr>
 </table>
 </td><td align="center" style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor="#F0F0F0"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html" title="Solves inverse dynamics with no consideration for joint actuator force limits.">InverseDynamics</a></td><td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
 <tr>
-<td align="left" style="padding:5px 0px 5px 0px">&rarr; y0 (force)</td></tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; generalized_force</td></tr>
 </table>
 </td></tr>
 </table>
-<p>Port <code>u0</code> accepts system estimated state; port <code>y0</code> emits generalized forces. Port <code>u1</code> is only present when the <code>mode</code> at construction is not <code>kGravityCompensation</code>. When present, <code>u1</code> accepts desired accelerations.</p>
+<p>The desired acceleration port shown in <span style="color:gray">gray</span> is only present when the <code>mode</code> at construction is not <code>kGravityCompensation</code>.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>
@@ -232,8 +232,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a87fbace92efba2a49277e2be09510e57"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">InputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html#a87fbace92efba2a49277e2be09510e57">get_input_port_desired_acceleration</a> () const</td></tr>
 <tr class="memdesc:a87fbace92efba2a49277e2be09510e57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the input port for the desired acceleration.  <a href="#a87fbace92efba2a49277e2be09510e57">More...</a><br /></td></tr>
 <tr class="separator:a87fbace92efba2a49277e2be09510e57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1296b665521a703cc08e6d98f5b6f64"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html#ae1296b665521a703cc08e6d98f5b6f64">get_output_port_generalized_force</a> () const</td></tr>
+<tr class="memdesc:ae1296b665521a703cc08e6d98f5b6f64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the output port for the generalized forces that realize the desired acceleration.  <a href="#ae1296b665521a703cc08e6d98f5b6f64">More...</a><br /></td></tr>
+<tr class="separator:ae1296b665521a703cc08e6d98f5b6f64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0b7b597fdd8385d9aa4c1ceea1d59a3"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html#af0b7b597fdd8385d9aa4c1ceea1d59a3">get_output_port_force</a> () const</td></tr>
-<tr class="memdesc:af0b7b597fdd8385d9aa4c1ceea1d59a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the output port for the generalized forces that realize the desired acceleration.  <a href="#af0b7b597fdd8385d9aa4c1ceea1d59a3">More...</a><br /></td></tr>
+<tr class="memdesc:af0b7b597fdd8385d9aa4c1ceea1d59a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#af0b7b597fdd8385d9aa4c1ceea1d59a3">More...</a><br /></td></tr>
 <tr class="separator:af0b7b597fdd8385d9aa4c1ceea1d59a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a886c4d74a756a93f2d3deeac70983cbe"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html#a886c4d74a756a93f2d3deeac70983cbe">is_pure_gravity_compensation</a> () const</td></tr>
 <tr class="separator:a886c4d74a756a93f2d3deeac70983cbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1571,6 +1574,27 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000018">Deprecated:</a></b></dt><dd>Use get_output_port_generalized_force() instead. <br />
+ This will be removed from Drake on or after 2024-01-01.</dd></dl>
+
+</div>
+</div>
+<a id="ae1296b665521a703cc08e6d98f5b6f64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1296b665521a703cc08e6d98f5b6f64">&#9670;&nbsp;</a></span>get_output_port_generalized_force()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt;T&gt;&amp; get_output_port_generalized_force </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
 <p>Returns the output port for the generalized forces that realize the desired acceleration. </p>
 <p>The dimension of that force vector will be identical to the dimensionality of the generalized velocities. </p>
 
@@ -1593,8 +1617,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="affd6049ae2daea3c3b8645b79546937f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#affd6049ae2daea3c3b8645b79546937f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a9c30f7c13a4993ef4eb011f26f1e01bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c30f7c13a4993ef4eb011f26f1e01bb">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1605,7 +1629,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html">InverseDynamics</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html">InverseDynamics</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html">InverseDynamics</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1619,8 +1643,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a9c30f7c13a4993ef4eb011f26f1e01bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9c30f7c13a4993ef4eb011f26f1e01bb">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="affd6049ae2daea3c3b8645b79546937f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affd6049ae2daea3c3b8645b79546937f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1631,7 +1655,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html">InverseDynamics</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html">InverseDynamics</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html">InverseDynamics</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

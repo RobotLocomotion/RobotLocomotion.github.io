@@ -596,6 +596,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a7e468aa35ef6a84196ac20a13065ca0c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html">AddMultibodyPlantSceneGraphResult</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a7e468aa35ef6a84196ac20a13065ca0c">AddMultibodyPlant</a> (const <a class="el" href="structdrake_1_1multibody_1_1_multibody_plant_config.html">MultibodyPlantConfig</a> &amp;config, <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *builder)</td></tr>
 <tr class="memdesc:a7e468aa35ef6a84196ac20a13065ca0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a new <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> and SceneGraph to the given <code>builder</code>.  <a href="#a7e468aa35ef6a84196ac20a13065ca0c">More...</a><br /></td></tr>
 <tr class="separator:a7e468aa35ef6a84196ac20a13065ca0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51df2ec1bd2eb651cb428c5a950481db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a51df2ec1bd2eb651cb428c5a950481db">ApplyMultibodyPlantConfig</a> (const <a class="el" href="structdrake_1_1multibody_1_1_multibody_plant_config.html">MultibodyPlantConfig</a> &amp;config, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *plant)</td></tr>
+<tr class="memdesc:a51df2ec1bd2eb651cb428c5a950481db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies settings given in <code>config</code> to an existing <code>plant</code>.  <a href="#a51df2ec1bd2eb651cb428c5a950481db">More...</a><br /></td></tr>
+<tr class="separator:a51df2ec1bd2eb651cb428c5a950481db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23055924c0c775334973d978ac3c1f54"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a23055924c0c775334973d978ac3c1f54">CalcSpatialInertia</a> (const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">geometry::Shape</a> &amp;shape, <a class="el" href="classdouble.html">double</a> density)</td></tr>
 <tr class="memdesc:a23055924c0c775334973d978ac3c1f54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html" title="This class represents the physical concept of a Spatial Inertia.">SpatialInertia</a> of a body made up of a homogeneous material (of given <code>density</code> in kg/m³) uniformly distributed in the volume of the given <code>shape</code>.  <a href="#a23055924c0c775334973d978ac3c1f54">More...</a><br /></td></tr>
 <tr class="separator:a23055924c0c775334973d978ac3c1f54"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1110,6 +1113,43 @@ Functions</h2></td></tr>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a51df2ec1bd2eb651cb428c5a950481db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51df2ec1bd2eb651cb428c5a950481db">&#9670;&nbsp;</a></span>ApplyMultibodyPlantConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drake::multibody::ApplyMultibodyPlantConfig </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1multibody_1_1_multibody_plant_config.html">MultibodyPlantConfig</a> &amp;&#160;</td>
+          <td class="paramname"><em>config</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td>
+          <td class="paramname"><em>plant</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Applies settings given in <code>config</code> to an existing <code>plant</code>. </p>
+<p>The <code>time_step</code> is the one value in <code>config</code> that cannot be updated &ndash; it can only be set in the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> constructor. Consider using <a class="el" href="namespacedrake_1_1multibody.html#a7e468aa35ef6a84196ac20a13065ca0c" title="Adds a new MultibodyPlant and SceneGraph to the given builder.">AddMultibodyPlant()</a> or manually passing <code>config.time_step</code> when you construct the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>.</p>
+<p>This method must be called pre-Finalize. </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>plant</code> is finalized or if time_step is changed. </td></tr>
   </table>
   </dd>
 </dl>

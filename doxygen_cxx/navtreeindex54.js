@@ -1,5 +1,9 @@
 var NAVTREEINDEX54 =
 {
+"simulator__gflags_8h.html":[4,0,0,12,0,25],
+"simulator__gflags_8h.html#a03ad7235991b77cba364074f82049d31":[4,0,0,12,0,25,2],
+"simulator__gflags_8h.html#a0cc9deeb95a8594918a525db7ac445c2":[4,0,0,12,0,25,3],
+"simulator__gflags_8h.html#a1de575cbf61e7155e7ed13858b9ce177":[4,0,0,12,0,25,5],
 "simulator__gflags_8h.html#a2ddf6e3d8e5f2ecb32db146fad3ce6bd":[4,0,0,12,0,25,1],
 "simulator__gflags_8h.html#a612cd2f0112fbe6b3f1465cdc6f90b0e":[4,0,0,12,0,25,0],
 "simulator__gflags_8h.html#aae7184a96835fe5037011cff956df981":[4,0,0,12,0,25,4],
@@ -245,9 +249,5 @@ var NAVTREEINDEX54 =
 "structdrake_1_1geometry_1_1_drake_visualizer_params.html":[3,0,0,4,11],
 "structdrake_1_1geometry_1_1_drake_visualizer_params.html#a2d836029fd25573125bd231e1ad19ecb":[3,0,0,4,11,3],
 "structdrake_1_1geometry_1_1_drake_visualizer_params.html#a3a415b5e7e1f412ec0002e0251ced626":[3,0,0,4,11,2],
-"structdrake_1_1geometry_1_1_drake_visualizer_params.html#a3fa2976e721c8d9ed2ed3c79c6fdab2e":[3,0,0,4,11,1],
-"structdrake_1_1geometry_1_1_drake_visualizer_params.html#a802a9c3334d60afa02164d2d559365e8":[3,0,0,4,11,5],
-"structdrake_1_1geometry_1_1_drake_visualizer_params.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,11,0],
-"structdrake_1_1geometry_1_1_drake_visualizer_params.html#ae7f364184aa2780e090858d0b3cfda14":[3,0,0,4,11,4],
-"structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html":[3,0,0,4,26,0]
+"structdrake_1_1geometry_1_1_drake_visualizer_params.html#a3fa2976e721c8d9ed2ed3c79c6fdab2e":[3,0,0,4,11,1]
 };

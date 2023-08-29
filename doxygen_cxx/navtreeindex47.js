@@ -1,5 +1,8 @@
 var NAVTREEINDEX47 =
 {
+"formula_8h.html#a6035c678aac2dd9201f9e8e294ece8d6":[4,0,0,1,3,0,7,68],
+"formula_8h.html#a642d11dbe47e027614a5a3bcfe12d34e":[4,0,0,1,3,0,7,71],
+"formula_8h.html#a648f540fa40e1e281133b972e394574a":[4,0,0,1,3,0,7,80],
 "formula_8h.html#a665bbf538eb986af44631f116c34a83d":[4,0,0,1,3,0,7,48],
 "formula_8h.html#a6718d0b755c47edc3fade14221574a03":[4,0,0,1,3,0,7,59],
 "formula_8h.html#a6869e7044dd90be5d972ee7dd4e821b6":[4,0,0,1,3,0,7,5],
@@ -125,8 +128,8 @@ var NAVTREEINDEX47 =
 "framework__py__values_8h.html#ae073851bc679a64d47dc27c133b8d89d":[4,0,0,0,0,7,2,0],
 "free__body_8h.html":[4,0,0,8,0,1,0],
 "function_8h.html":[4,0,0,11,19],
-"functions.html":[3,3,0,0],
 "functions.html":[3,3,0],
+"functions.html":[3,3,0,0],
 "functions_b.html":[3,3,0,1],
 "functions_c.html":[3,3,0,2],
 "functions_d.html":[3,3,0,3],
@@ -134,8 +137,8 @@ var NAVTREEINDEX47 =
 "functions_enum.html":[3,3,4],
 "functions_eval.html":[3,3,5],
 "functions_f.html":[3,3,0,5],
-"functions_func.html":[3,3,1,0],
 "functions_func.html":[3,3,1],
+"functions_func.html":[3,3,1,0],
 "functions_func_b.html":[3,3,1,1],
 "functions_func_c.html":[3,3,1,2],
 "functions_func_d.html":[3,3,1,3],
@@ -246,8 +249,5 @@ var NAVTREEINDEX47 =
 "generic__polynomial_8h.html":[4,0,0,1,3,6],
 "generic__polynomial_8h.html#a120ae90dfc24dd3f7b4f42aededbabfd":[4,0,0,1,3,6,32],
 "generic__polynomial_8h.html#a1504176a6220b744ee8b07a0ed920f15":[4,0,0,1,3,6,34],
-"generic__polynomial_8h.html#a173be3cb77f72bb9481db5c8fd04741e":[4,0,0,1,3,6,6],
-"generic__polynomial_8h.html#a2176f7eb786ddec5cd9ea0683a019482":[4,0,0,1,3,6,16],
-"generic__polynomial_8h.html#a21d8313aa6cdb78da3f2cd6d84b92e39":[4,0,0,1,3,6,22],
-"generic__polynomial_8h.html#a2296b14ee573d8deafe90b3615281e68":[4,0,0,1,3,6,15]
+"generic__polynomial_8h.html#a173be3cb77f72bb9481db5c8fd04741e":[4,0,0,1,3,6,6]
 };

@@ -11196,6 +11196,8 @@ CalcForcedUnrestrictedUpdate()</p>
 <span class="sig-name descname"><span class="pre">GetGraphvizString</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System" title="pydrake.systems.framework.System"><span class="pre">pydrake.systems.framework.System</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_depth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2147483647</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#pydrake.systems.framework.System.GetGraphvizString" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a Graphviz string describing this System. To render the
 string, use the Graphviz tool, <code class="docutils literal notranslate"><span class="pre">dot</span></code>. <a class="reference external" href="http://www.graphviz.org/">http://www.graphviz.org/</a></p>
+<p>Deprecated ports are flagged with a headstone emoji (🪦) after their
+name.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">max_depth</span></code>:</dt><dd><p>Sets a limit to the depth of nested diagrams to visualize. Set to
 zero to render a diagram as a single system block.</p>
@@ -12293,6 +12295,8 @@ CalcForcedUnrestrictedUpdate()</p>
 <span id="pydrake.systems.framework.System_[AutoDiffXd].GetGraphvizString"></span><span class="sig-name descname"><span class="pre">GetGraphvizString</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_depth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2147483647</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#pydrake.systems.framework.System_-AutoDiffXd-.GetGraphvizString" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a Graphviz string describing this System. To render the
 string, use the Graphviz tool, <code class="docutils literal notranslate"><span class="pre">dot</span></code>. <a class="reference external" href="http://www.graphviz.org/">http://www.graphviz.org/</a></p>
+<p>Deprecated ports are flagged with a headstone emoji (🪦) after their
+name.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">max_depth</span></code>:</dt><dd><p>Sets a limit to the depth of nested diagrams to visualize. Set to
 zero to render a diagram as a single system block.</p>
@@ -13384,6 +13388,8 @@ CalcForcedUnrestrictedUpdate()</p>
 <span id="pydrake.systems.framework.System_[Expression].GetGraphvizString"></span><span class="sig-name descname"><span class="pre">GetGraphvizString</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_depth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2147483647</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#pydrake.systems.framework.System_-Expression-.GetGraphvizString" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a Graphviz string describing this System. To render the
 string, use the Graphviz tool, <code class="docutils literal notranslate"><span class="pre">dot</span></code>. <a class="reference external" href="http://www.graphviz.org/">http://www.graphviz.org/</a></p>
+<p>Deprecated ports are flagged with a headstone emoji (🪦) after their
+name.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">max_depth</span></code>:</dt><dd><p>Sets a limit to the depth of nested diagrams to visualize. Set to
 zero to render a diagram as a single system block.</p>
@@ -14195,6 +14201,21 @@ ticket for all systems and refers to the same time value.</p>
 This does <em>not</em> also indicate a dependence on configuration variables
 q – you must list that explicitly or use kinematics_ticket() instead.
 There is no ticket representing just one of the state variables vᵢ.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.SystemBase.ValidateContext">
+<span class="sig-name descname"><span class="pre">ValidateContext</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.SystemBase" title="pydrake.systems.framework.SystemBase"><span class="pre">pydrake.systems.framework.SystemBase</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.ContextBase" title="pydrake.systems.framework.ContextBase"><span class="pre">pydrake.systems.framework.ContextBase</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.SystemBase.ValidateContext" title="Permalink to this definition"></a></dt>
+<dd><p>Checks whether the given context was created for this system.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This method is sufficiently fast for performance sensitive code.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if the System Ids don't match.</strong> – </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">

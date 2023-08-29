@@ -500,7 +500,7 @@ zero, the LcmPublisherSystem will publish every step.</p>
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.lcm.LcmSubscriberSystem.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>__init__(self: pydrake.systems.lcm.LcmSubscriberSystem, channel: str, serializer: pydrake.systems.lcm.SerializerInterface, lcm: pydrake.systems.lcm.LcmInterfaceSystem) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.systems.lcm.LcmSubscriberSystem, channel: str, serializer: pydrake.systems.lcm.SerializerInterface, lcm: pydrake.systems.lcm.LcmInterfaceSystem, wait_for_message_on_initialization_timeout: float = 0.0) -&gt; None</p></li>
 </ol>
 <p>Constructor that returns a subscriber System that provides message
 objects on its sole abstract-valued output port. The type of the
@@ -511,11 +511,23 @@ message object is determined by the <code class="docutils literal notranslate"><
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">serializer</span></code>:</dt><dd><p>The serializer that converts between byte vectors and LCM message
 objects. Cannot be null.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lcm</span></code>:</dt><dd><p>A non-null pointer to the LCM subsystem to subscribe on.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lcm</span></code>:</dt><dd><p>A non-null pointer to the LCM subsystem to subscribe on. If
+<code class="docutils literal notranslate"><span class="pre">wait_for_message_on_initialization_timeout</span> <span class="pre">&gt;</span> <span class="pre">0</span></code>, then the
+pointer must remain valid for the lifetime of the returned system.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">wait_for_message_on_initialization_timeout</span></code>:</dt><dd><p>Configures the behavior of initialization events (see
+System::ExecuteInitializationEvents() and Simulator::Initialize())
+by specifying the number of seconds (wall-clock elapsed time) to
+wait for a new message. If this timeout is &lt;= 0, initialization
+will copy any already-received messages into the Context but will
+not process any new messages. If this timeout is &gt; 0,
+initialization will call lcm-&gt;HandleSubscriptions() until at least
+one message is received or until the timeout. Pass ∞ to wait
+indefinitely.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>__init__(self: pydrake.systems.lcm.LcmSubscriberSystem, channel: str, serializer: pydrake.systems.lcm.SerializerInterface, lcm: pydrake.lcm.DrakeLcmInterface) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.systems.lcm.LcmSubscriberSystem, channel: str, serializer: pydrake.systems.lcm.SerializerInterface, lcm: pydrake.lcm.DrakeLcmInterface, wait_for_message_on_initialization_timeout: float = 0.0) -&gt; None</p></li>
 </ol>
 <p>Constructor that returns a subscriber System that provides message
 objects on its sole abstract-valued output port. The type of the
@@ -526,14 +538,26 @@ message object is determined by the <code class="docutils literal notranslate"><
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">serializer</span></code>:</dt><dd><p>The serializer that converts between byte vectors and LCM message
 objects. Cannot be null.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lcm</span></code>:</dt><dd><p>A non-null pointer to the LCM subsystem to subscribe on.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lcm</span></code>:</dt><dd><p>A non-null pointer to the LCM subsystem to subscribe on. If
+<code class="docutils literal notranslate"><span class="pre">wait_for_message_on_initialization_timeout</span> <span class="pre">&gt;</span> <span class="pre">0</span></code>, then the
+pointer must remain valid for the lifetime of the returned system.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">wait_for_message_on_initialization_timeout</span></code>:</dt><dd><p>Configures the behavior of initialization events (see
+System::ExecuteInitializationEvents() and Simulator::Initialize())
+by specifying the number of seconds (wall-clock elapsed time) to
+wait for a new message. If this timeout is &lt;= 0, initialization
+will copy any already-received messages into the Context but will
+not process any new messages. If this timeout is &gt; 0,
+initialization will call lcm-&gt;HandleSubscriptions() until at least
+one message is received or until the timeout. Pass ∞ to wait
+indefinitely.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.lcm.LcmSubscriberSystem.Make">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Make</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lcm_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lcm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_cpp_serializer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.lcm.LcmSubscriberSystem.Make" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Make</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lcm_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lcm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_cpp_serializer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_for_message_on_initialization_timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.lcm.LcmSubscriberSystem.Make" title="Permalink to this definition"></a></dt>
 <dd><p>Convenience to create an LCM subscriber system with a concrete type.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -543,7 +567,16 @@ objects. Cannot be null.</p>
 <li><p><strong>lcm</strong> – LCM service instance.</p></li>
 <li><p><strong>use_cpp_serializer</strong> – Use C++ serializer to interface with LCM converter
 systems that are implemented in C++. LCM types must be registered
-in C++ via <cite>BindCppSerializer</cite>.</p></li>
+in C++ via <code class="docutils literal notranslate"><span class="pre">BindCppSerializer</span></code>.</p></li>
+<li><p><strong>wait_for_message_on_initialization_timeout</strong> – Configures the behavior of
+initialization events (see <code class="docutils literal notranslate"><span class="pre">System.ExecuteInitializationEvents</span></code>
+and <code class="docutils literal notranslate"><span class="pre">Simulator.Initialize</span></code>) by specifying the number of seconds
+(wall-clock elapsed time) to wait for a new message. If this
+timeout is &lt;= 0, initialization will copy any already-received
+messages into the Context but will not process any new messages.
+If this timeout is &gt; 0, initialization will call
+<code class="docutils literal notranslate"><span class="pre">lcm.HandleSubscriptions()</span></code> until at least one message is
+received or until the timeout. Pass ∞ to wait indefinitely.</p></li>
 </ul>
 </dd>
 </dl>

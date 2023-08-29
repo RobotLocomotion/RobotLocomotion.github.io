@@ -247,6 +247,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab05415c859297c32d4fc415ea438680f"><td class="memItemLeft" align="right" valign="top">const internal::DirichletBoundaryCondition&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#ab05415c859297c32d4fc415ea438680f">dirichlet_boundary_condition</a> () const</td></tr>
 <tr class="memdesc:ab05415c859297c32d4fc415ea438680f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Dirichlet boundary condition that this model is subject to.  <a href="#ab05415c859297c32d4fc415ea438680f">More...</a><br /></td></tr>
 <tr class="separator:ab05415c859297c32d4fc415ea438680f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3245959dc148eb85166b0a5f9fd65ec0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a3245959dc148eb85166b0a5f9fd65ec0">is_linear</a> () const</td></tr>
+<tr class="memdesc:a3245959dc148eb85166b0a5f9fd65ec0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true the equation G(x, v, a) = 0 (see class documentation) corresponding to this FemModel is linear.  <a href="#a3245959dc148eb85166b0a5f9fd65ec0">More...</a><br /></td></tr>
+<tr class="separator:a3245959dc148eb85166b0a5f9fd65ec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93f9e9287217253c4148bcff802b0fd6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a93f9e9287217253c4148bcff802b0fd6">ThrowIfModelStateIncompatible</a> (const char *func, const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html">FemState</a>&lt; T &gt; &amp;fem_state) const</td></tr>
 <tr class="memdesc:a93f9e9287217253c4148bcff802b0fd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Throws std::exception to report a mismatch between the FEM model and state that were passed to API method <code>func</code>.  <a href="#a93f9e9287217253c4148bcff802b0fd6">More...</a><br /></td></tr>
 <tr class="separator:a93f9e9287217253c4148bcff802b0fd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -289,6 +292,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a4e0e23b8877740039d58b314565edf8b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a4e0e23b8877740039d58b314565edf8b">DeclareCacheEntries</a> (internal::FemStateSystem&lt; T &gt; *<a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a007a1278d4d247d81ed980ab3652e65d">fem_state_system</a>)=0</td></tr>
 <tr class="memdesc:a4e0e23b8877740039d58b314565edf8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derived classes should override this method to declare cache entries in the given <code>fem_state_system</code>.  <a href="#a4e0e23b8877740039d58b314565edf8b">More...</a><br /></td></tr>
 <tr class="separator:a4e0e23b8877740039d58b314565edf8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8f1f08e7eed5d5816691d49f5abaa11"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#ac8f1f08e7eed5d5816691d49f5abaa11">do_is_linear</a> () const =0</td></tr>
+<tr class="memdesc:ac8f1f08e7eed5d5816691d49f5abaa11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derived classes should override this method to indicate if the model is linear.  <a href="#ac8f1f08e7eed5d5816691d49f5abaa11">More...</a><br /></td></tr>
+<tr class="separator:ac8f1f08e7eed5d5816691d49f5abaa11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a007a1278d4d247d81ed980ab3652e65d"><td class="memItemLeft" align="right" valign="top">const internal::FemStateSystem&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a007a1278d4d247d81ed980ab3652e65d">fem_state_system</a> () const</td></tr>
 <tr class="memdesc:a007a1278d4d247d81ed980ab3652e65d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the FemStateSystem that manages the states and cache entries in this FemModel.  <a href="#a007a1278d4d247d81ed980ab3652e65d">More...</a><br /></td></tr>
 <tr class="separator:a007a1278d4d247d81ed980ab3652e65d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -626,6 +632,33 @@ All entries in <code>weights</code> are non-negative. </dd></dl>
 
 </div>
 </div>
+<a id="ac8f1f08e7eed5d5816691d49f5abaa11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8f1f08e7eed5d5816691d49f5abaa11">&#9670;&nbsp;</a></span>do_is_linear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool do_is_linear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Derived classes should override this method to indicate if the model is linear. </p>
+
+</div>
+</div>
 <a id="a9c156c34378cf3221bc26e474ac10327"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9c156c34378cf3221bc26e474ac10327">&#9670;&nbsp;</a></span>DoCalcResidual()</h2>
 
@@ -855,6 +888,25 @@ All entries in <code>weights</code> are non-negative. </dd></dl>
 
 </div>
 </div>
+<a id="a3245959dc148eb85166b0a5f9fd65ec0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3245959dc148eb85166b0a5f9fd65ec0">&#9670;&nbsp;</a></span>is_linear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool is_linear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true the equation G(x, v, a) = 0 (see class documentation) corresponding to this FemModel is linear. </p>
+
+</div>
+</div>
 <a id="aef81f0727ef93e6f31d39e6521c30198"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aef81f0727ef93e6f31d39e6521c30198">&#9670;&nbsp;</a></span>MakeFemState()</h2>
 
@@ -1016,8 +1068,8 @@ All entries in <code>weights</code> are non-negative. </dd></dl>
 
 </div>
 </div>
-<a id="a22e6cae04151e6b39cf8ceecfc7f4cf9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22e6cae04151e6b39cf8ceecfc7f4cf9">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a52811120b5134c610e2af3fc096c92af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52811120b5134c610e2af3fc096c92af">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1028,7 +1080,7 @@ All entries in <code>weights</code> are non-negative. </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html">FemModel</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html">FemModel</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html">FemModel</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1042,8 +1094,8 @@ All entries in <code>weights</code> are non-negative. </dd></dl>
 
 </div>
 </div>
-<a id="a52811120b5134c610e2af3fc096c92af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52811120b5134c610e2af3fc096c92af">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a22e6cae04151e6b39cf8ceecfc7f4cf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22e6cae04151e6b39cf8ceecfc7f4cf9">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1054,7 +1106,7 @@ All entries in <code>weights</code> are non-negative. </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html">FemModel</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html">FemModel</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html">FemModel</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

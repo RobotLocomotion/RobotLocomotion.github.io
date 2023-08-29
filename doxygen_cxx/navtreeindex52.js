@@ -1,5 +1,9 @@
 var NAVTREEINDEX52 =
 {
+"nice__type__name__override_8h.html":[4,0,0,1,47],
+"nlopt__solver_8h.html":[4,0,0,11,37],
+"non__convex__optimization__util_8h.html":[4,0,0,11,38],
+"non__convex__optimization__util_8h.html#af6b2d302506a6a2fe144c79bd2598131":[4,0,0,11,38,1],
 "non__convex__optimization__util_8h.html#gaea88a3c59172c77e8537633348a057a9":[4,0,0,11,38,0],
 "normalize__vector_8h.html":[4,0,0,7,25],
 "normalize__vector_8h.html#a48484009086db12d881bea6bcaab2514":[4,0,0,7,25,0],
@@ -60,8 +64,8 @@ var NAVTREEINDEX52 =
 "pixel__types_8h.html#a37140413518dff2aa63096a2e31b9b3dad9ccb61d94c4349b5471a40a5b5c7ea8":[4,0,0,12,8,16,13,3],
 "pixel__types_8h.html#a37140413518dff2aa63096a2e31b9b3daeee66110e8b7e5d4ffd4f739ba15f5f6":[4,0,0,12,8,16,13,0],
 "pixel__types_8h.html#a37140413518dff2aa63096a2e31b9b3daf85535e7c32140b6d5a5544342787ced":[4,0,0,12,8,16,13,5],
-"pixel__types_8h.html#a60883d4958a60b91661e97027a85072a":[4,0,0,12,8,16,18],
 "pixel__types_8h.html#a60883d4958a60b91661e97027a85072a":[4,0,0,12,8,16,11],
+"pixel__types_8h.html#a60883d4958a60b91661e97027a85072a":[4,0,0,12,8,16,18],
 "pixel__types_8h.html#a60883d4958a60b91661e97027a85072aa40cd0e65ffc5f6da4b0de71c32a1849c":[4,0,0,12,8,16,11,4],
 "pixel__types_8h.html#a60883d4958a60b91661e97027a85072aa6608e709edce0bfd1bb1eb49eb5f8bea":[4,0,0,12,8,16,11,6],
 "pixel__types_8h.html#a60883d4958a60b91661e97027a85072aa79c7503f0e2c40a13957e8aac9ac9f7b":[4,0,0,12,8,16,11,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX52 =
 "quaternion_8h.html#a6dfe7fd8584105c4527a18548abd8550":[4,0,0,7,27,6],
 "quaternion_8h.html#a7e6bdc00adb60394da9687fc9aa5b0aa":[4,0,0,7,27,9],
 "quaternion_8h.html#a89206220569d0454a3c5aefe7562df7b":[4,0,0,7,27,0],
-"quaternion_8h.html#a98411a94334e6d40ef2ca10bfc053118":[4,0,0,7,27,1],
-"quaternion_8h.html#aad74d3c5baa84fa6ef04b6ada5ffcbe5":[4,0,0,7,27,12],
-"quaternion_8h.html#ab4bf90f81dcf655d829ed2d718251215":[4,0,0,7,27,3],
-"quaternion_8h.html#ac76b7fdc13fe823e119b891df82688ae":[4,0,0,7,27,5],
-"quaternion_8h.html#ad298b049679492bf3e846165c6c7e023":[4,0,0,7,27,11]
+"quaternion_8h.html#a98411a94334e6d40ef2ca10bfc053118":[4,0,0,7,27,1]
 };

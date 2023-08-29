@@ -345,6 +345,7 @@ var searchData=
   ['applydriverconfigs',['ApplyDriverConfigs',['../namespacedrake_1_1manipulation.html#adb8ec6471d1a13e6fcea69aebb9ee7ab',1,'drake::manipulation']]],
   ['applyjointvelocitylimits',['ApplyJointVelocityLimits',['../namespacedrake_1_1manipulation_1_1util.html#a03defeaacd8e6e4a43260eb910c1913c',1,'drake::manipulation::util']]],
   ['applylcmbusconfig',['ApplyLcmBusConfig',['../namespacedrake_1_1systems_1_1lcm.html#a727199867bdc2433a7269c76dd7f3973',1,'drake::systems::lcm']]],
+  ['applymultibodyplantconfig',['ApplyMultibodyPlantConfig',['../namespacedrake_1_1multibody.html#a51df2ec1bd2eb651cb428c5a950481db',1,'drake::multibody']]],
   ['applysimulatorconfig',['ApplySimulatorConfig',['../group__simulator__configuration.html#ga6875fa2f1e9eb22cee800a29b0ca61b9',1,'drake::systems']]],
   ['applytransient',['ApplyTransient',['../classdrake_1_1geometry_1_1_collision_filter_manager.html#a0685b9bd25f37bd2cf50694b5c909e69',1,'drake::geometry::CollisionFilterManager']]],
   ['applyunrestrictedupdate',['ApplyUnrestrictedUpdate',['../classdrake_1_1systems_1_1_system.html#a1bc3701622107a616b3e45f9f0735233',1,'drake::systems::System']]],

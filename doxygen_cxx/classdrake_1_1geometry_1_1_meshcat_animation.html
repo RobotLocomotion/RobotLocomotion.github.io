@@ -169,7 +169,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1geometry_1_1_meshcat_ani
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>An interface for recording/playback animations in <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a>. </p>
+<div class="textblock"><p>An interface for recording/playback animations in <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a>. </p>
 <p>Use <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a385b6142ccc841b5b51a14825b7cebdf" title="Sets the MeshcatAnimation, which creates a slider interface element to play/pause/rewind through a se...">Meshcat::SetAnimation</a> to publish a <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html" title="An interface for recording/playback animations in Meshcat.">MeshcatAnimation</a> to the visualizer.</p>
 <p>Currently, an animation consists of (only) transforms and properties that are set at a particular integer frame number. Although we do not support calls to SetObject/Delete in an animation, you can consider using <code>SetProperty(frame, path, "visible", true/false)</code> in your animation to make the object appear or disappear at a particular frame. </p>
 </div>
@@ -713,7 +713,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Set the start time of the animation. </p>
-<p>This is only for convenience; it is used in the <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html#abef5586ed551fb5d4ff06983a94dfde7" title="Uses the frame rate to convert from time to the frame number, using std::floor.">frame()</a> method to allow callers to look up the frame number based on the current time, the start time, and the frame rate. It is not passed to <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a>. It does not change any frames that have previously been set. The default is zero. </p>
+<p>This is only for convenience; it is used in the <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html#abef5586ed551fb5d4ff06983a94dfde7" title="Uses the frame rate to convert from time to the frame number, using std::floor.">frame()</a> method to allow callers to look up the frame number based on the current time, the start time, and the frame rate. It is not passed to <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a>. It does not change any frames that have previously been set. The default is zero. </p>
 
 </div>
 </div>

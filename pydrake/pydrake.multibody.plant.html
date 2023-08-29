@@ -335,6 +335,22 @@ be created and used.</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.ApplyMultibodyPlantConfig">
+<span class="sig-prename descclassname"><span class="pre">pydrake.multibody.plant.</span></span><span class="sig-name descname"><span class="pre">ApplyMultibodyPlantConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlantConfig" title="pydrake.multibody.plant.MultibodyPlantConfig"><span class="pre">pydrake.multibody.plant.MultibodyPlantConfig</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">plant</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.ApplyMultibodyPlantConfig" title="Permalink to this definition"></a></dt>
+<dd><p>Applies settings given in <code class="docutils literal notranslate"><span class="pre">config</span></code> to an existing <code class="docutils literal notranslate"><span class="pre">plant</span></code>. The
+<code class="docutils literal notranslate"><span class="pre">time_step</span></code> is the one value in <code class="docutils literal notranslate"><span class="pre">config</span></code> that cannot be updated –
+it can only be set in the MultibodyPlant constructor. Consider using
+AddMultibodyPlant() or manually passing <code class="docutils literal notranslate"><span class="pre">config.time_step</span></code> when you
+construct the MultibodyPlant.</p>
+<p>This method must be called pre-Finalize.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if plant is finalized</strong><strong> or </strong><strong>if time_step is changed.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.CalcContactFrictionFromSurfaceProperties">
 <span class="sig-prename descclassname"><span class="pre">pydrake.multibody.plant.</span></span><span class="sig-name descname"><span class="pre">CalcContactFrictionFromSurfaceProperties</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.CalcContactFrictionFromSurfaceProperties" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>

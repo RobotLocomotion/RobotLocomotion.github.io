@@ -1,5 +1,9 @@
 var NAVTREEINDEX53 =
 {
+"quaternion_8h.html#aad74d3c5baa84fa6ef04b6ada5ffcbe5":[4,0,0,7,27,12],
+"quaternion_8h.html#ab4bf90f81dcf655d829ed2d718251215":[4,0,0,7,27,3],
+"quaternion_8h.html#ac76b7fdc13fe823e119b891df82688ae":[4,0,0,7,27,5],
+"quaternion_8h.html#ad298b049679492bf3e846165c6c7e023":[4,0,0,7,27,11],
 "quaternion_8h.html#ae2ef93ff1fa2dc788507d6eadb4bb78f":[4,0,0,7,27,10],
 "quaternion__floating__joint_8h.html":[4,0,0,8,14,36],
 "quaternion__floating__mobilizer_8h.html":[4,0,0,8,14,37],
@@ -245,9 +249,5 @@ var NAVTREEINDEX53 =
 "simulator__config__functions_8h.html#ga00b67f54aba155c982e8a1038278eed6":[4,0,0,12,0,24,1],
 "simulator__config__functions_8h.html#ga5d1fc9d510c450590826170fca172e5a":[4,0,0,12,0,24,2],
 "simulator__config__functions_8h.html#ga6875fa2f1e9eb22cee800a29b0ca61b9":[4,0,0,12,0,24,0],
-"simulator__config__functions_8h.html#gad32461bc90073aac39049d636974a04b":[4,0,0,12,0,24,3],
-"simulator__gflags_8h.html":[4,0,0,12,0,25],
-"simulator__gflags_8h.html#a03ad7235991b77cba364074f82049d31":[4,0,0,12,0,25,2],
-"simulator__gflags_8h.html#a0cc9deeb95a8594918a525db7ac445c2":[4,0,0,12,0,25,3],
-"simulator__gflags_8h.html#a1de575cbf61e7155e7ed13858b9ce177":[4,0,0,12,0,25,5]
+"simulator__config__functions_8h.html#gad32461bc90073aac39049d636974a04b":[4,0,0,12,0,24,3]
 };

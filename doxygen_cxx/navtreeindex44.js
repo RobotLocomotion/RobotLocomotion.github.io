@@ -1,5 +1,8 @@
 var NAVTREEINDEX44 =
 {
+"compute__torque_8h.html":[4,0,0,12,1,0,0],
+"compute__torque_8h.html#a66eda6d10bb53572748c1f28aaf5d6ab":[4,0,0,12,1,0,0,0],
+"cond_8h.html":[4,0,0,1,11],
 "cond_8h.html#a0b6d557a3ef060688cb028f17975ffca":[4,0,0,1,11,0],
 "cond_8h.html#ac20110c691980f564476914e3fda5991":[4,0,0,1,11,1],
 "conex__supernodal__solver_8h.html":[4,0,0,8,2,6],
@@ -246,8 +249,5 @@ var NAVTREEINDEX44 =
 "dir_68f515a9ecea1af7d296cc4b56524b28.html":[4,0,0,3,15],
 "dir_6902f0bfef501365a3845194d27e0ad3.html":[4,0,0,10,0],
 "dir_69fa97bb6e53092a4b06d6253fe335a2.html":[4,0,0,12,7],
-"dir_6b4eff1308767c1c4adf75190a464e09.html":[4,0,0,1,0,0],
-"dir_6c83ef925edcdfdf0a2f376978e93167.html":[4,0,0,6,2],
-"dir_747259117fa90714ed7dadfdb71f4370.html":[4,0,0,0,0,0],
-"dir_758aa030403a70af025108ac41d12d0d.html":[4,0,0,6]
+"dir_6b4eff1308767c1c4adf75190a464e09.html":[4,0,0,1,0,0]
 };

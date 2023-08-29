@@ -549,6 +549,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the vector value of the slack variables associated with ϕxᵤ in a <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html" title="The result returned by MathematicalProgram::Solve().">solvers::MathematicalProgramResult</a>. </p>
+<p>This can obtain a different value than <code>result.GetSolution(edge-&gt;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#aeacbc2abb655b394b863536ddcd78036" title="Returns the continuous decision variables associated with vertex u.">xu()</a>)</code>, which is equivalent to <code>result.GetSolution(edge-&gt;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#ad2f7bac85a5ba53836843b62bea2ff2a" title="Returns a mutable reference to the &quot;left&quot; Vertex that this edge connects to.">u()</a>-&gt;<a class="el" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x()</a>)</code>; in the case of a loose convex relaxation <code>result.GetSolution(edge-&gt;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#aeacbc2abb655b394b863536ddcd78036" title="Returns the continuous decision variables associated with vertex u.">xu()</a>)</code> will be the <em>averaged</em> value of the edge slacks for all non-zero-flow edges. </p>
 
 </div>
 </div>
@@ -569,6 +570,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the vector value of the slack variables associated with ϕxᵥ in a <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html" title="The result returned by MathematicalProgram::Solve().">solvers::MathematicalProgramResult</a>. </p>
+<p>See <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a41ea35f2dc43edde726bc0d68fb8eb54" title="Returns the vector value of the slack variables associated with ϕxᵤ in a solvers::MathematicalProgram...">GetSolutionPhiXu()</a>. </p>
 
 </div>
 </div>
@@ -774,7 +776,8 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the continuous decision variables associated with vertex <code>u</code>. </p>
-<p>This can be used for constructing <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> costs and constraints. </p>
+<p>This can be used for constructing <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> costs and constraints.</p>
+<p>See also <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a41ea35f2dc43edde726bc0d68fb8eb54" title="Returns the vector value of the slack variables associated with ϕxᵤ in a solvers::MathematicalProgram...">GetSolutionPhiXu()</a>; using <code>result.GetSolution(xu())</code> may not be what you want. </p>
 
 </div>
 </div>
@@ -794,7 +797,8 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the continuous decision variables associated with vertex <code>v</code>. </p>
-<p>This can be used for constructing <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> costs and constraints. </p>
+<p>This can be used for constructing <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> costs and constraints.</p>
+<p>See also <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#aa5a517418d1cf8ab7bf2bf38605090e8" title="Returns the vector value of the slack variables associated with ϕxᵥ in a solvers::MathematicalProgram...">GetSolutionPhiXv()</a>; using <code>result.GetSolution(xv())</code> may not be what you want. </p>
 
 </div>
 </div>

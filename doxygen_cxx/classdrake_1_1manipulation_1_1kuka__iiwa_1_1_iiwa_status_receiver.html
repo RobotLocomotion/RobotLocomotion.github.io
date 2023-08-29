@@ -167,7 +167,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1manipulation_1_1kuka__ii
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Handles lcmt_iiwa_status messages from a LcmSubscriberSystem. </p>
-<p>Note that this system does not actually subscribe to an LCM channel. To receive the message, the input of this system should be connected to a <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_subscriber_system.html#ae4c8ea51d7cc6205ac01333ea7842d4c" title="Factory method that returns a subscriber System that provides Value&lt;LcmMessage&gt; message objects on it...">systems::lcm::LcmSubscriberSystem::Make&lt;lcmt_iiwa_status&gt;()</a>.</p>
+<p>Note that this system does not actually subscribe to an LCM channel. To receive the message, the input of this system should be connected to a <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_subscriber_system.html#a841675233a39162a2eb0efa72ea381aa" title="Factory method that returns a subscriber System that provides Value&lt;LcmMessage&gt; message objects on it...">systems::lcm::LcmSubscriberSystem::Make&lt;lcmt_iiwa_status&gt;()</a>.</p>
 <p>This system has one abstract-valued input port of type lcmt_iiwa_status.</p>
 <p>This system has many vector-valued output ports, most of which emit vector values of exactly <code>num_joints</code> elements. The exception is <code>time_measured</code>, which has a one-dimensional measured time output in seconds, i.e., the timestamp from the hardware in microseconds converted into seconds. All ports will output zeros until an input message is received. </p><table align="center" cellpadding="0" cellspacing="0">
 <tr align="center">
