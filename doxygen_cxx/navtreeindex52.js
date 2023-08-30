@@ -1,5 +1,7 @@
 var NAVTREEINDEX52 =
 {
+"newton__with__bisection_8h.html":[4,0,0,8,2,14],
+"nice__type__name_8h.html":[4,0,0,1,46],
 "nice__type__name__override_8h.html":[4,0,0,1,47],
 "nlopt__solver_8h.html":[4,0,0,11,37],
 "non__convex__optimization__util_8h.html":[4,0,0,11,38],
@@ -247,7 +249,5 @@ var NAVTREEINDEX52 =
 "quaternion_8h.html#a3a0adc68819c94157139c9d6c2e9bca6":[4,0,0,7,27,8],
 "quaternion_8h.html#a6a490fce7fb78c13f9af3b650cf36dd5":[4,0,0,7,27,4],
 "quaternion_8h.html#a6dfe7fd8584105c4527a18548abd8550":[4,0,0,7,27,6],
-"quaternion_8h.html#a7e6bdc00adb60394da9687fc9aa5b0aa":[4,0,0,7,27,9],
-"quaternion_8h.html#a89206220569d0454a3c5aefe7562df7b":[4,0,0,7,27,0],
-"quaternion_8h.html#a98411a94334e6d40ef2ca10bfc053118":[4,0,0,7,27,1]
+"quaternion_8h.html#a7e6bdc00adb60394da9687fc9aa5b0aa":[4,0,0,7,27,9]
 };

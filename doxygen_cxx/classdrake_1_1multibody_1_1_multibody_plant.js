@@ -108,6 +108,8 @@ var classdrake_1_1multibody_1_1_multibody_plant =
     [ "GetConstraintActiveStatus", "classdrake_1_1multibody_1_1_multibody_plant.html#a8f75638f952ae11ee62d8c8458a47415", null ],
     [ "GetDefaultContactSurfaceRepresentation", "classdrake_1_1multibody_1_1_multibody_plant.html#a93cf63581a2d40a28d9cf65a3017839b", null ],
     [ "GetDefaultFreeBodyPose", "classdrake_1_1multibody_1_1_multibody_plant.html#a337dfd55bba06a92d37269fb8fac0567", null ],
+    [ "GetDefaultPositions", "classdrake_1_1multibody_1_1_multibody_plant.html#a3006ffe8df9e2662c3902b45857b2608", null ],
+    [ "GetDefaultPositions", "classdrake_1_1multibody_1_1_multibody_plant.html#ad849fcf3c696b0c627f811989bad6837", null ],
     [ "GetEffortLowerLimits", "classdrake_1_1multibody_1_1_multibody_plant.html#ad6ba00d3cda29df375aefa5a73a6140f", null ],
     [ "GetEffortUpperLimits", "classdrake_1_1multibody_1_1_multibody_plant.html#a94c9ef552f3eb454086bf3bdddff0eb9", null ],
     [ "GetFloatingBaseBodies", "classdrake_1_1multibody_1_1_multibody_plant.html#a6a2813d5472e88bc58bbb9c3129811f5", null ],

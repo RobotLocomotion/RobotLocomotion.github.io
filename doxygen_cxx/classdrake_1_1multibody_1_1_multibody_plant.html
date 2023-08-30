@@ -585,6 +585,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad80034d8fb4f8b696ff866fb92e790a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ad80034d8fb4f8b696ff866fb92e790a9">SetPositions</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1systems_1_1_state.html">systems::State</a>&lt; T &gt; *state, <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;q_instance) const</td></tr>
 <tr class="memdesc:ad80034d8fb4f8b696ff866fb92e790a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Sets the generalized positions q for a particular model instance in a given State from a given vector.  <a href="#ad80034d8fb4f8b696ff866fb92e790a9">More...</a><br /></td></tr>
 <tr class="separator:ad80034d8fb4f8b696ff866fb92e790a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3006ffe8df9e2662c3902b45857b2608"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a3006ffe8df9e2662c3902b45857b2608">GetDefaultPositions</a> () const</td></tr>
+<tr class="memdesc:a3006ffe8df9e2662c3902b45857b2608"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the default positions for the plant, which can be changed via <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aa293696b845c071deb902d3ee6d3bcc3" title="Sets the default positions for the plant.">SetDefaultPositions()</a>.  <a href="#a3006ffe8df9e2662c3902b45857b2608">More...</a><br /></td></tr>
+<tr class="separator:a3006ffe8df9e2662c3902b45857b2608"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad849fcf3c696b0c627f811989bad6837"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ad849fcf3c696b0c627f811989bad6837">GetDefaultPositions</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance) const</td></tr>
+<tr class="memdesc:ad849fcf3c696b0c627f811989bad6837"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the default positions for the plant for a given model instance, which can be changed via <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aa293696b845c071deb902d3ee6d3bcc3" title="Sets the default positions for the plant.">SetDefaultPositions()</a>.  <a href="#ad849fcf3c696b0c627f811989bad6837">More...</a><br /></td></tr>
+<tr class="separator:ad849fcf3c696b0c627f811989bad6837"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa293696b845c071deb902d3ee6d3bcc3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aa293696b845c071deb902d3ee6d3bcc3">SetDefaultPositions</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;q)</td></tr>
 <tr class="memdesc:aa293696b845c071deb902d3ee6d3bcc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the default positions for the plant.  <a href="#aa293696b845c071deb902d3ee6d3bcc3">More...</a><br /></td></tr>
 <tr class="separator:aa293696b845c071deb902d3ee6d3bcc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -5230,6 +5236,57 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 <p>If no pose is specified for the body, returns the identity pose. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">body</td><td><a class="el" href="classdrake_1_1multibody_1_1_body.html" title="Body provides the general abstraction of a body with an API that makes no assumption about whether a ...">Body</a> whose default pose will be retrieved. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3006ffe8df9e2662c3902b45857b2608"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3006ffe8df9e2662c3902b45857b2608">&#9670;&nbsp;</a></span>GetDefaultPositions() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt; GetDefaultPositions </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the default positions for the plant, which can be changed via <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aa293696b845c071deb902d3ee6d3bcc3" title="Sets the default positions for the plant.">SetDefaultPositions()</a>. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the plant is not finalized. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad849fcf3c696b0c627f811989bad6837"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad849fcf3c696b0c627f811989bad6837">&#9670;&nbsp;</a></span>GetDefaultPositions() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt; GetDefaultPositions </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a>&#160;</td>
+          <td class="paramname"><em>model_instance</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the default positions for the plant for a given model instance, which can be changed via <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aa293696b845c071deb902d3ee6d3bcc3" title="Sets the default positions for the plant.">SetDefaultPositions()</a>. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the plant is not finalized, or if the model_instance is invalid, </td></tr>
   </table>
   </dd>
 </dl>

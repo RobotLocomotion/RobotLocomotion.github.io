@@ -4278,6 +4278,35 @@ If no pose is specified for the body, returns the identity pose.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.GetDefaultPositions">
+<span class="sig-name descname"><span class="pre">GetDefaultPositions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.GetDefaultPositions" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>GetDefaultPositions(self: pydrake.multibody.plant.MultibodyPlant) -&gt; numpy.ndarray[numpy.float64[m, 1]]</p></li>
+</ol>
+<p>Gets the default positions for the plant, which can be changed via
+SetDefaultPositions().</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if the plant is not finalized.</strong> – </p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>GetDefaultPositions(self: pydrake.multibody.plant.MultibodyPlant, model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; numpy.ndarray[numpy.float64[m, 1]]</p></li>
+</ol>
+<p>Gets the default positions for the plant for a given model instance,
+which can be changed via SetDefaultPositions().</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the plant is not finalized</strong><strong>, or </strong><strong>if the</strong> – </p></li>
+<li><p><strong>model_instance is invalid</strong><strong>,</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.GetEffortLowerLimits">
 <span class="sig-name descname"><span class="pre">GetEffortLowerLimits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.GetEffortLowerLimits" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a vector of size <code class="docutils literal notranslate"><span class="pre">num_actuators()</span></code> containing the lower
@@ -8854,6 +8883,35 @@ If no pose is specified for the body, returns the identity pose.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetDefaultPositions">
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].GetDefaultPositions"></span><span class="sig-name descname"><span class="pre">GetDefaultPositions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetDefaultPositions" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>GetDefaultPositions(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd]) -&gt; numpy.ndarray[object[m, 1]]</p></li>
+</ol>
+<p>Gets the default positions for the plant, which can be changed via
+SetDefaultPositions().</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if the plant is not finalized.</strong> – </p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>GetDefaultPositions(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; numpy.ndarray[object[m, 1]]</p></li>
+</ol>
+<p>Gets the default positions for the plant for a given model instance,
+which can be changed via SetDefaultPositions().</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the plant is not finalized</strong><strong>, or </strong><strong>if the</strong> – </p></li>
+<li><p><strong>model_instance is invalid</strong><strong>,</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetEffortLowerLimits">
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].GetEffortLowerLimits"></span><span class="sig-name descname"><span class="pre">GetEffortLowerLimits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetEffortLowerLimits" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a vector of size <code class="docutils literal notranslate"><span class="pre">num_actuators()</span></code> containing the lower
@@ -13381,6 +13439,35 @@ systems default to use triangles.</p>
 If no pose is specified for the body, returns the identity pose.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">body</span></code>:</dt><dd><p>Body whose default pose will be retrieved.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.GetDefaultPositions">
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].GetDefaultPositions"></span><span class="sig-name descname"><span class="pre">GetDefaultPositions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetDefaultPositions" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>GetDefaultPositions(self: pydrake.multibody.plant.MultibodyPlant_[Expression]) -&gt; numpy.ndarray[object[m, 1]]</p></li>
+</ol>
+<p>Gets the default positions for the plant, which can be changed via
+SetDefaultPositions().</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if the plant is not finalized.</strong> – </p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>GetDefaultPositions(self: pydrake.multibody.plant.MultibodyPlant_[Expression], model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; numpy.ndarray[object[m, 1]]</p></li>
+</ol>
+<p>Gets the default positions for the plant for a given model instance,
+which can be changed via SetDefaultPositions().</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the plant is not finalized</strong><strong>, or </strong><strong>if the</strong> – </p></li>
+<li><p><strong>model_instance is invalid</strong><strong>,</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>

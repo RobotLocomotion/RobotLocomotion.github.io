@@ -1,5 +1,7 @@
 var NAVTREEINDEX53 =
 {
+"quaternion_8h.html#a89206220569d0454a3c5aefe7562df7b":[4,0,0,7,27,0],
+"quaternion_8h.html#a98411a94334e6d40ef2ca10bfc053118":[4,0,0,7,27,1],
 "quaternion_8h.html#aad74d3c5baa84fa6ef04b6ada5ffcbe5":[4,0,0,7,27,12],
 "quaternion_8h.html#ab4bf90f81dcf655d829ed2d718251215":[4,0,0,7,27,3],
 "quaternion_8h.html#ac76b7fdc13fe823e119b891df82688ae":[4,0,0,7,27,5],
@@ -247,7 +249,5 @@ var NAVTREEINDEX53 =
 "simulator__config_8h.html":[4,0,0,12,0,23],
 "simulator__config__functions_8h.html":[4,0,0,12,0,24],
 "simulator__config__functions_8h.html#ga00b67f54aba155c982e8a1038278eed6":[4,0,0,12,0,24,1],
-"simulator__config__functions_8h.html#ga5d1fc9d510c450590826170fca172e5a":[4,0,0,12,0,24,2],
-"simulator__config__functions_8h.html#ga6875fa2f1e9eb22cee800a29b0ca61b9":[4,0,0,12,0,24,0],
-"simulator__config__functions_8h.html#gad32461bc90073aac39049d636974a04b":[4,0,0,12,0,24,3]
+"simulator__config__functions_8h.html#ga5d1fc9d510c450590826170fca172e5a":[4,0,0,12,0,24,2]
 };
