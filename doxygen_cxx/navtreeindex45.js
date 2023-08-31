@@ -1,5 +1,16 @@
 var NAVTREEINDEX45 =
 {
+"dir_563cbebf3859612cccbc3edeae15a602.html":[4,0,0,8,2,0],
+"dir_5d8dbe7a82c2c188fa06f6391bb290bd.html":[4,0,0,8,0],
+"dir_5f7a2023092b91a1e02609fa2c012f50.html":[4,0,0,1,5],
+"dir_5fa915364d7caf39d2fac1314fb2fd74.html":[4,0,0,3,16],
+"dir_646ca0e8f46938429d8373c5298698fa.html":[4,0,0,13],
+"dir_64eb7e16d7e9848cfd92d3316c4eb5e4.html":[4,0,0,3,14],
+"dir_652567ca0f7e786d5ffa3ef8ea9e7fa7.html":[4,0,0,8,10,0],
+"dir_656f7d340c0f5b4ecaf881820f2aea38.html":[4,0,0,8,10],
+"dir_66d630ac47407fe11bcb76d9e7e25510.html":[4,0,0,1,3],
+"dir_68f515a9ecea1af7d296cc4b56524b28.html":[4,0,0,3,15],
+"dir_6902f0bfef501365a3845194d27e0ad3.html":[4,0,0,10,0],
 "dir_69fa97bb6e53092a4b06d6253fe335a2.html":[4,0,0,12,7],
 "dir_6b4eff1308767c1c4adf75190a464e09.html":[4,0,0,1,0,0],
 "dir_6c83ef925edcdfdf0a2f376978e93167.html":[4,0,0,6,2],
@@ -238,16 +249,5 @@ var NAVTREEINDEX45 =
 "explicit__error__controlled__integrator__test_8h.html#ac4153fde9da9c197ba8f8019d0e5698d":[4,0,0,12,0,0,3,4],
 "explicit__error__controlled__integrator__test_8h.html#ae954f985e4690afb38b9895d3a3cad05":[4,0,0,12,0,0,3,7],
 "explicit__error__controlled__integrator__test_8h.html#afad80830ebb314cc10d44158a26e0baf":[4,0,0,12,0,0,3,13],
-"explicit__euler__integrator_8h.html":[4,0,0,12,0,4],
-"exponential__plus__piecewise__polynomial_8h.html":[4,0,0,1,5,4],
-"expression_2expression_8h.html":[4,0,0,1,3,0,3],
-"expression_2expression_8h.html#a03d536a13db7de62414f5279c60148aa":[4,0,0,1,3,0,3,16],
-"expression_2expression_8h.html#a0a84ca31e769b94d1adcc69789826934":[4,0,0,1,3,0,3,62],
-"expression_2expression_8h.html#a105ae15b8e85984cf3ae81a7b67de38c":[4,0,0,1,3,0,3,98],
-"expression_2expression_8h.html#a1519bc7275ec68c904b395067f8ff775":[4,0,0,1,3,0,3,100],
-"expression_2expression_8h.html#a1525a5e26f678130b369bc1414d9891a":[4,0,0,1,3,0,3,52],
-"expression_2expression_8h.html#a184038d04f0ab628e12fb53a6f7cb5d9":[4,0,0,1,3,0,3,76],
-"expression_2expression_8h.html#a1b317498b02b74b0937f7cdb31b0ef52":[4,0,0,1,3,0,3,34],
-"expression_2expression_8h.html#a1c5d6073354479ca8e507536cd36f844":[4,0,0,1,3,0,3,106],
-"expression_2expression_8h.html#a1dbec6a09664cb563d86071a7be38913":[4,0,0,1,3,0,3,83]
+"explicit__euler__integrator_8h.html":[4,0,0,12,0,4]
 };

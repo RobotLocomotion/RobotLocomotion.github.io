@@ -1,0 +1,517 @@
+<!-- HTML header for doxygen 1.8.15-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: Parallelism Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/%2Findex.ipynb">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+ </div>
+</div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classdrake_1_1_parallelism.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="classdrake_1_1_parallelism-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">Parallelism Class Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Specifies a desired degree of parallelism for a parallelized operation. </p>
+<p>This class denotes a specific number of threads; either 1 (no parallelism), a user-specified value (any number &gt;= 1), or the maximum number. For convenience, conversion from <code>bool</code> is provided so that <code>false</code> is no parallelism and <code>true</code> is maximum parallelism.</p>
+<p>Drake's API uses this class to allow users to control the degree of parallelism, regardless of how the parallelization is implemented (e.g., <code>std::async</code>, OpenMP, TBB, etc).</p>
+<h1><a class="anchor" id="DRAKE_NUM_THREADS"></a>
+Configuring the process-wide maximum parallelism</h1>
+<p>The number of threads denoted by <a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819" title="Constructs a Parallelism with the maximum number of threads.">Parallelism::Max()</a> is configurable with environment variables, but will be invariant within a single process. The first time it's accessed, the configured value will be latched into a global variable indefinitely. To ensure your configuration is obeyed, any changes to the environment variables that govern the max parallelism should be made prior to importing or calling any Drake code.</p>
+<p>The following recipe determines the value that <a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819" title="Constructs a Parallelism with the maximum number of threads.">Parallelism::Max()</a>.<a class="el" href="classdrake_1_1_parallelism.html#ab3c45da58cb1363920de72ba6209652f" title="Returns the degree of parallelism.">num_threads()</a> will report:</p>
+<ol type="1">
+<li>The default is the hardware limit from <code>std::thread::hardware_concurrency()</code>; this will be used when none of the special cases below are in effect.</li>
+<li>If the environment variable <code>DRAKE_NUM_THREADS</code> is set to a positive integer less than <code>hardware_concurrency()</code>, the <code>num_threads</code> will be that value.</li>
+<li>If the environment variable <code>DRAKE_NUM_THREADS</code> is not set but the environment variable <code>OMP_NUM_THREADS</code> is set to a positive integer less than <code>hardware_concurrency()</code>, the <code>num_threads</code> will be that value. (Note in particular that a comma-separated <code>OMP_NUM_THREADS</code> value will be ignored, even though that syntax might be valid for an OpenMP library).</li>
+</ol>
+<p>The configuration recipe above does not require Drake to be built with OpenMP enabled. The inspection of <code>OMP_NUM_THREADS</code> as a configuration value is provided for convenience, regardless of whether OpenMP is enabled.</p>
+<p><b>A note for Drake developers</b></p>
+<p>In Drake's unit tests, <code>DRAKE_NUM_THREADS</code> is set to "1" by default. If your unit test requires actual parallelism, use the <code>num_threads = N</code> attribute in the <code>BUILD.bazel</code> file to declare a different value. </p>
+</div>
+<p><code>#include &lt;drake/common/parallelism.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ab0d9d0717e7903607c9b66e3fc00b19b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_parallelism.html#ab0d9d0717e7903607c9b66e3fc00b19b">Parallelism</a> ()=default</td></tr>
+<tr class="memdesc:ab0d9d0717e7903607c9b66e3fc00b19b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructs with no parallelism (i.e., num_threads=1).  <a href="#ab0d9d0717e7903607c9b66e3fc00b19b">More...</a><br /></td></tr>
+<tr class="separator:ab0d9d0717e7903607c9b66e3fc00b19b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae799e481d047b101dbabbd4250f8e109"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_parallelism.html#ae799e481d047b101dbabbd4250f8e109">Parallelism</a> (bool parallelize)</td></tr>
+<tr class="memdesc:ae799e481d047b101dbabbd4250f8e109"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a Parallelism with either no parallelism (i.e., num_threads=1) or the maximum number of threads (<a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819" title="Constructs a Parallelism with the maximum number of threads.">Max()</a>), as selected by <code>parallelize</code>.  <a href="#ae799e481d047b101dbabbd4250f8e109">More...</a><br /></td></tr>
+<tr class="separator:ae799e481d047b101dbabbd4250f8e109"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad54de9b4a6c9b53f9ad672ca833eb208"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_parallelism.html#ad54de9b4a6c9b53f9ad672ca833eb208">Parallelism</a> (<a class="el" href="classint.html">int</a> <a class="el" href="classdrake_1_1_parallelism.html#ab3c45da58cb1363920de72ba6209652f">num_threads</a>)</td></tr>
+<tr class="memdesc:ad54de9b4a6c9b53f9ad672ca833eb208"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs with the provided number of threads <code>num_threads</code>.  <a href="#ad54de9b4a6c9b53f9ad672ca833eb208">More...</a><br /></td></tr>
+<tr class="separator:ad54de9b4a6c9b53f9ad672ca833eb208"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3c45da58cb1363920de72ba6209652f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_parallelism.html#ab3c45da58cb1363920de72ba6209652f">num_threads</a> () const</td></tr>
+<tr class="memdesc:ab3c45da58cb1363920de72ba6209652f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the degree of parallelism.  <a href="#ab3c45da58cb1363920de72ba6209652f">More...</a><br /></td></tr>
+<tr class="separator:ab3c45da58cb1363920de72ba6209652f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
+<tr class="memitem:a085309f8a14847855499d6aa6925781f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_parallelism.html#a085309f8a14847855499d6aa6925781f">Parallelism</a> (const <a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> &amp;)=default</td></tr>
+<tr class="separator:a085309f8a14847855499d6aa6925781f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2a82791591646555174b9fbba2b3c09"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_parallelism.html#ab2a82791591646555174b9fbba2b3c09">operator=</a> (const <a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> &amp;)=default</td></tr>
+<tr class="separator:ab2a82791591646555174b9fbba2b3c09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a335624229d7cdd1e79961a1dc63cedea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_parallelism.html#a335624229d7cdd1e79961a1dc63cedea">Parallelism</a> (<a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:a335624229d7cdd1e79961a1dc63cedea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a7afad97a1d315b49e6d012f9cfde89"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_parallelism.html#a8a7afad97a1d315b49e6d012f9cfde89">operator=</a> (<a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:a8a7afad97a1d315b49e6d012f9cfde89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a7eba2010dfc9482ef2ae0bb0539a3083"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_parallelism.html#a7eba2010dfc9482ef2ae0bb0539a3083">None</a> ()</td></tr>
+<tr class="memdesc:a7eba2010dfc9482ef2ae0bb0539a3083"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a Parallelism with no parallelism (i.e., num_threads=1).  <a href="#a7eba2010dfc9482ef2ae0bb0539a3083">More...</a><br /></td></tr>
+<tr class="separator:a7eba2010dfc9482ef2ae0bb0539a3083"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f5d962dfeec6e675996074f913df819"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819">Max</a> ()</td></tr>
+<tr class="memdesc:a5f5d962dfeec6e675996074f913df819"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a Parallelism with the maximum number of threads.  <a href="#a5f5d962dfeec6e675996074f913df819">More...</a><br /></td></tr>
+<tr class="separator:a5f5d962dfeec6e675996074f913df819"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a085309f8a14847855499d6aa6925781f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a085309f8a14847855499d6aa6925781f">&#9670;&nbsp;</a></span>Parallelism() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a335624229d7cdd1e79961a1dc63cedea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a335624229d7cdd1e79961a1dc63cedea">&#9670;&nbsp;</a></span>Parallelism() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab0d9d0717e7903607c9b66e3fc00b19b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0d9d0717e7903607c9b66e3fc00b19b">&#9670;&nbsp;</a></span>Parallelism() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Default constructs with no parallelism (i.e., num_threads=1). </p>
+
+</div>
+</div>
+<a id="ae799e481d047b101dbabbd4250f8e109"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae799e481d047b101dbabbd4250f8e109">&#9670;&nbsp;</a></span>Parallelism() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>parallelize</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a Parallelism with either no parallelism (i.e., num_threads=1) or the maximum number of threads (<a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819" title="Constructs a Parallelism with the maximum number of threads.">Max()</a>), as selected by <code>parallelize</code>. </p>
+<p>This constructor allows for implicit conversion, for convenience. </p>
+
+</div>
+</div>
+<a id="ad54de9b4a6c9b53f9ad672ca833eb208"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad54de9b4a6c9b53f9ad672ca833eb208">&#9670;&nbsp;</a></span>Parallelism() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>num_threads</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs with the provided number of threads <code>num_threads</code>. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>num_threads &gt;= 1. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Constructing and using a Parallelism with num_threads greater than the actual hardware concurrency may result in fewer than the specified number of threads actually being launched or poor performance due to CPU contention. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a5f5d962dfeec6e675996074f913df819"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f5d962dfeec6e675996074f913df819">&#9670;&nbsp;</a></span>Max()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> Max </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a Parallelism with the maximum number of threads. </p>
+<p>Refer to the class overview documentation for how to configure the maximum. </p>
+
+</div>
+</div>
+<a id="a7eba2010dfc9482ef2ae0bb0539a3083"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7eba2010dfc9482ef2ae0bb0539a3083">&#9670;&nbsp;</a></span>None()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> None </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a Parallelism with no parallelism (i.e., num_threads=1). </p>
+<p>Python note: This function is not bound in pydrake (due to its name); instead, use the default constructor (or pass either <code>1</code> or <code>False</code> to the 1-argument constructor). </p>
+
+</div>
+</div>
+<a id="ab3c45da58cb1363920de72ba6209652f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3c45da58cb1363920de72ba6209652f">&#9670;&nbsp;</a></span>num_threads()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> num_threads </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the degree of parallelism. </p>
+<p>The result will always be &gt;= 1. </p>
+
+</div>
+</div>
+<a id="ab2a82791591646555174b9fbba2b3c09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2a82791591646555174b9fbba2b3c09">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8a7afad97a1d315b49e6d012f9cfde89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a7afad97a1d315b49e6d012f9cfde89">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/common/<a class="el" href="parallelism_8h.html">parallelism.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a class="el" href="namespacedrake.html">drake</a></li><li class="navelem"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>    
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>    
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().value = searchBox.searchLabel;
+</script>
+</body>
+</html>

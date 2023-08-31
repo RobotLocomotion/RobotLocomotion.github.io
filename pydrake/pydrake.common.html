@@ -235,6 +235,92 @@ only exists for legacy compatibility reasons, and might eventually be
 removed.</p>
 </dd></dl>
 
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.common.Parallelism">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.</span></span><span class="sig-name descname"><span class="pre">Parallelism</span></span><a class="headerlink" href="#pydrake.common.Parallelism" title="Permalink to this definition"></a></dt>
+<dd><p>Specifies a desired degree of parallelism for a parallelized
+operation.</p>
+<p>This class denotes a specific number of threads; either 1 (no
+parallelism), a user-specified value (any number &gt;= 1), or the maximum
+number. For convenience, conversion from <code class="docutils literal notranslate"><span class="pre">bool</span></code> is provided so that
+<code class="docutils literal notranslate"><span class="pre">False</span></code> is no parallelism and <code class="docutils literal notranslate"><span class="pre">True</span></code> is maximum parallelism.</p>
+<p>Drake’s API uses this class to allow users to control the degree of
+parallelism, regardless of how the parallelization is implemented
+(e.g., <code class="docutils literal notranslate"><span class="pre">std::async</span></code>, OpenMP, TBB, etc).</p>
+<p>The number of threads denoted by Parallelism::Max() is configurable
+with environment variables, but will be invariant within a single
+process. The first time it’s accessed, the configured value will be
+latched into a global variable indefinitely. To ensure your
+configuration is obeyed, any changes to the environment variables that
+govern the max parallelism should be made prior to importing or
+calling any Drake code.</p>
+<p>The following recipe determines the value that
+Parallelism::Max().num_threads() will report:</p>
+<p>1. The default is the hardware limit from <code class="docutils literal notranslate"><span class="pre">std::thread::hardware_concurrency()</span></code>;
+this will be used when none of the special cases below are in effect.</p>
+<p>2. If the environment variable <code class="docutils literal notranslate"><span class="pre">DRAKE_NUM_THREADS</span></code> is set to a positive integer
+less than <code class="docutils literal notranslate"><span class="pre">hardware_concurrency()</span></code>, the <code class="docutils literal notranslate"><span class="pre">num_threads</span></code> will be that value.</p>
+<p>3. If the environment variable <code class="docutils literal notranslate"><span class="pre">DRAKE_NUM_THREADS</span></code> is not set but the
+environment variable <code class="docutils literal notranslate"><span class="pre">OMP_NUM_THREADS</span></code> is set to a positive integer less than
+<code class="docutils literal notranslate"><span class="pre">hardware_concurrency()</span></code>, the <code class="docutils literal notranslate"><span class="pre">num_threads</span></code> will be that value. (Note in
+particular that a comma-separated <code class="docutils literal notranslate"><span class="pre">OMP_NUM_THREADS</span></code> value will be ignored, even
+though that syntax might be valid for an OpenMP library).</p>
+<p>The configuration recipe above does not require Drake to be built with
+OpenMP enabled. The inspection of <code class="docutils literal notranslate"><span class="pre">OMP_NUM_THREADS</span></code> as a
+configuration value is provided for convenience, regardless of whether
+OpenMP is enabled.</p>
+<p><strong>A note for Drake developers</strong></p>
+<p>In Drake’s unit tests, <code class="docutils literal notranslate"><span class="pre">DRAKE_NUM_THREADS</span></code> is set to “1” by default.
+If your unit test requires actual parallelism, use the <code class="docutils literal notranslate"><span class="pre">num_threads</span> <span class="pre">=</span>
+<span class="pre">N</span></code> attribute in the <code class="docutils literal notranslate"><span class="pre">BUILD.bazel</span></code> file to declare a different
+value.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.Parallelism.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.Parallelism.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.common._module_py.Parallelism) -&gt; None</p></li>
+</ol>
+<p>Default constructs with no parallelism (i.e., num_threads=1).</p>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.common._module_py.Parallelism, parallelize: bool) -&gt; None</p></li>
+</ol>
+<p>Constructs a Parallelism with either no parallelism (i.e.,
+num_threads=1) or the maximum number of threads (Max()), as selected
+by <code class="docutils literal notranslate"><span class="pre">parallelize</span></code>. This constructor allows for implicit conversion,
+for convenience.</p>
+<ol class="arabic simple" start="3">
+<li><p>__init__(self: pydrake.common._module_py.Parallelism, num_threads: int) -&gt; None</p></li>
+</ol>
+<p>Constructs with the provided number of threads <code class="docutils literal notranslate"><span class="pre">num_threads</span></code>.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>num_threads &gt;= 1.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Constructing and using a Parallelism with num_threads greater than
+the actual hardware concurrency may result in fewer than the
+specified number of threads actually being launched or poor
+performance due to CPU contention.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.Parallelism.Max">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Max</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.common._module_py.Parallelism</span></span></span><a class="headerlink" href="#pydrake.common.Parallelism.Max" title="Permalink to this definition"></a></dt>
+<dd><p>Constructs a Parallelism with the maximum number of threads. Refer to
+the class overview documentation for how to configure the maximum.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.Parallelism.num_threads">
+<span class="sig-name descname"><span class="pre">num_threads</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.common._module_py.Parallelism</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.common.Parallelism.num_threads" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the degree of parallelism. The result will always be &gt;= 1.</p>
+</dd></dl>
+
+</dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="pydrake.common.pretty_class_name">
 <span class="sig-prename descclassname"><span class="pre">pydrake.common.</span></span><span class="sig-name descname"><span class="pre">pretty_class_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cls</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">type</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_qualname</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.common.pretty_class_name" title="Permalink to this definition"></a></dt>

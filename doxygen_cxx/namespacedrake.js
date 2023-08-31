@@ -40,6 +40,7 @@ var namespacedrake =
     [ "never_destroyed", "classdrake_1_1never__destroyed.html", "classdrake_1_1never__destroyed" ],
     [ "NiceTypeName", "classdrake_1_1_nice_type_name.html", "classdrake_1_1_nice_type_name" ],
     [ "ostream_formatter", "structdrake_1_1ostream__formatter.html", "structdrake_1_1ostream__formatter" ],
+    [ "Parallelism", "classdrake_1_1_parallelism.html", "classdrake_1_1_parallelism" ],
     [ "Polynomial", "classdrake_1_1_polynomial.html", "classdrake_1_1_polynomial" ],
     [ "RandomGenerator", "classdrake_1_1_random_generator.html", "classdrake_1_1_random_generator" ],
     [ "reset_after_move", "classdrake_1_1reset__after__move.html", "classdrake_1_1reset__after__move" ],

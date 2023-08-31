@@ -1,5 +1,17 @@
 var NAVTREEINDEX56 =
 {
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ae65f515b41261e98fb16dd1e810cba48":[1,1,1,7,12],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ae65f515b41261e98fb16dd1e810cba48":[1,5,4,7,12],
+"structdrake_1_1geometry_1_1optimization_1_1_plane_separates_geometries.html":[3,0,0,4,1,16],
+"structdrake_1_1geometry_1_1optimization_1_1_plane_separates_geometries.html#a03e5fab625d4e87ceecc0100d793136a":[3,0,0,4,1,16,4],
+"structdrake_1_1geometry_1_1optimization_1_1_plane_separates_geometries.html#a1155fe07f46b586ad6bf51b9b2f8a496":[3,0,0,4,1,16,3],
+"structdrake_1_1geometry_1_1optimization_1_1_plane_separates_geometries.html#a1a72a53f9bc312168974c66d62544e18":[3,0,0,4,1,16,0],
+"structdrake_1_1geometry_1_1optimization_1_1_plane_separates_geometries.html#a6dfcbf68255d3ab9bd1afc3b4a32488e":[3,0,0,4,1,16,1],
+"structdrake_1_1geometry_1_1optimization_1_1_plane_separates_geometries.html#ae98047439219b174dc4d41d13ec29119":[3,0,0,4,1,16,2],
+"structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_program_base.html":[3,0,0,4,1,18],
+"structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_program_base.html#a1155fe07f46b586ad6bf51b9b2f8a496":[3,0,0,4,1,18,6],
+"structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_program_base.html#a1b98d7d1d3924dcb426e9dde3d996360":[3,0,0,4,1,18,1],
+"structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_program_base.html#a6296d4a52606df5f26fb2fa494397a4c":[3,0,0,4,1,18,7],
 "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_program_base.html#a7fc3383d3d43faa1cfeacc796e5e52ca":[3,0,0,4,1,18,3],
 "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_program_base.html#abe80cbb94400005e982b8abfdef97acd":[3,0,0,4,1,18,5],
 "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_program_base.html#ad4c84ec0db48a4100b9f060a2c529e98":[3,0,0,4,1,18,0],
@@ -237,17 +249,5 @@ var NAVTREEINDEX56 =
 "structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#a16c5614af40edee599284c373fba9c09":[3,0,0,8,1,2,21],
 "structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#a1b267a517e862262fc1f50dd62c48f41":[3,0,0,8,1,2,2],
 "structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#a235e103284e33844b7704d12373bcbd5":[3,0,0,8,1,2,9],
-"structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#a25efbc7b4af31078308a2eb610edb0c9":[3,0,0,8,1,2,1],
-"structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#a274d84c1487d6903a06861fea93b6165":[3,0,0,8,1,2,17],
-"structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#a29af929fcff5a59a15ac072ebe89d26e":[3,0,0,8,1,2,18],
-"structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#a34f9c5615cadcbffa3bfbfd8fe849952":[3,0,0,8,1,2,8],
-"structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#a3815aa96e3f447bd132aea97ff48bdb9":[3,0,0,8,1,2,7],
-"structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#a3cde9da79a1a8aba25ee8aacdb2ffd39":[3,0,0,8,1,2,11],
-"structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#a613d499d309c4906c2df5db6580dd665":[3,0,0,8,1,2,13],
-"structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#a7c4a40b91dff8e9d8d5c4d39b3e93df2":[3,0,0,8,1,2,15],
-"structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#a7e0a73ed81afb10613aa17eb4902e879":[3,0,0,8,1,2,19],
-"structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#a83d22b9ce633cccb2b57d1739e59d94d":[3,0,0,8,1,2,10],
-"structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#aa24636f116f235120b6b9c48c083a7e2":[3,0,0,8,1,2,4],
-"structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#ab3761062bae0c167009fd92d36f460fc":[3,0,0,8,1,2,0],
-"structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#ac3d38d1b83f93e18d5a4633beef4639f":[3,0,0,8,1,2,5]
+"structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#a25efbc7b4af31078308a2eb610edb0c9":[3,0,0,8,1,2,1]
 };

@@ -1,5 +1,16 @@
 var NAVTREEINDEX46 =
 {
+"exponential__plus__piecewise__polynomial_8h.html":[4,0,0,1,5,4],
+"expression_2expression_8h.html":[4,0,0,1,3,0,3],
+"expression_2expression_8h.html#a03d536a13db7de62414f5279c60148aa":[4,0,0,1,3,0,3,16],
+"expression_2expression_8h.html#a0a84ca31e769b94d1adcc69789826934":[4,0,0,1,3,0,3,62],
+"expression_2expression_8h.html#a105ae15b8e85984cf3ae81a7b67de38c":[4,0,0,1,3,0,3,98],
+"expression_2expression_8h.html#a1519bc7275ec68c904b395067f8ff775":[4,0,0,1,3,0,3,100],
+"expression_2expression_8h.html#a1525a5e26f678130b369bc1414d9891a":[4,0,0,1,3,0,3,52],
+"expression_2expression_8h.html#a184038d04f0ab628e12fb53a6f7cb5d9":[4,0,0,1,3,0,3,76],
+"expression_2expression_8h.html#a1b317498b02b74b0937f7cdb31b0ef52":[4,0,0,1,3,0,3,34],
+"expression_2expression_8h.html#a1c5d6073354479ca8e507536cd36f844":[4,0,0,1,3,0,3,106],
+"expression_2expression_8h.html#a1dbec6a09664cb563d86071a7be38913":[4,0,0,1,3,0,3,83],
 "expression_2expression_8h.html#a1dfe436e1c70779badecad19c8a039fe":[4,0,0,1,3,0,3,45],
 "expression_2expression_8h.html#a1e74ffdcbc8c474503d2a3249df15b54":[4,0,0,1,3,0,3,85],
 "expression_2expression_8h.html#a208a1c5a02e5bff9ba66d7b7db588ba0":[4,0,0,1,3,0,3,55],
@@ -238,16 +249,5 @@ var NAVTREEINDEX46 =
 "formula_8h.html#a3f5db567077a794c0bb1653699c84a95":[4,0,0,1,3,0,7,12],
 "formula_8h.html#a40dd892a8b6492f65a8995abc666b3f3":[4,0,0,1,3,0,7,52],
 "formula_8h.html#a45d3790aa8f813be2264913fd250bbcf":[4,0,0,1,3,0,7,67],
-"formula_8h.html#a463b86323b82db42856d70b2537759e3":[4,0,0,1,3,0,7,61],
-"formula_8h.html#a4758fb8f36a1a85b9fa932003216fe2e":[4,0,0,1,3,0,7,41],
-"formula_8h.html#a47616389df9ab060d41105d51db82be4":[4,0,0,1,3,0,7,74],
-"formula_8h.html#a486a9821c4235aeda4e39ff0652f72e7":[4,0,0,1,3,0,7,15],
-"formula_8h.html#a489c472556030b17c10028a04ba70aad":[4,0,0,1,3,0,7,42],
-"formula_8h.html#a50548d8092f6c0fa9796daf743a91d56":[4,0,0,1,3,0,7,24],
-"formula_8h.html#a514b594b37dbb603af40803e175b5f6a":[4,0,0,1,3,0,7,81],
-"formula_8h.html#a52208f3bf9cb2720f5d99223c20382f9":[4,0,0,1,3,0,7,16],
-"formula_8h.html#a52479ecb229048e750782273796768c2":[4,0,0,1,3,0,7,57],
-"formula_8h.html#a528367e2321df46235c2fed21eb0d433":[4,0,0,1,3,0,7,53],
-"formula_8h.html#a571adc7bcdc056eec761a657f9354cd7":[4,0,0,1,3,0,7,32],
-"formula_8h.html#a5a12a5db3a9b2e8520e002e437354717":[4,0,0,1,3,0,7,66]
+"formula_8h.html#a463b86323b82db42856d70b2537759e3":[4,0,0,1,3,0,7,61]
 };
