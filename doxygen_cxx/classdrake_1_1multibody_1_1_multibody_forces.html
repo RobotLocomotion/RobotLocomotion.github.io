@@ -170,7 +170,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_multibody_
 class drake::multibody::MultibodyForces&lt; T &gt;</h3>
 
 <p>A class to hold a set of forces applied to a MultibodyTree system. </p>
-<p>Forces can include generalized forces as well as body spatial forces.</p>
+<p>Forces can include generalized forces as well as body spatial forces. <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a05d83f939cc098d1c25eabecf41ff588" title="Computes the generalized forces result of a set of MultibodyForces applied to this model.">MultibodyPlant::CalcGeneralizedForces()</a> can be used to compute the <em>total</em> generalized force, combining <a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html#a8823f94494d680a558889504d46a6f6e" title="(Advanced) Returns a constant reference to the vector of generalized forces stored by this forces obj...">generalized_forces()</a> and <a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html#a91264c805be8c0a30df5eb481316dd65" title="(Advanced) Returns a constant reference to the vector of spatial body forces F_BBo_W on each body B i...">body_forces()</a>.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>

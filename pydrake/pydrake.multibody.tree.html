@@ -8611,7 +8611,10 @@ builds.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.MultibodyForces">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.tree.</span></span><span class="sig-name descname"><span class="pre">MultibodyForces</span></span><a class="headerlink" href="#pydrake.multibody.tree.MultibodyForces" title="Permalink to this definition"></a></dt>
 <dd><p>A class to hold a set of forces applied to a MultibodyTree system.
-Forces can include generalized forces as well as body spatial forces.</p>
+Forces can include generalized forces as well as body spatial forces.
+MultibodyPlant::CalcGeneralizedForces() can be used to compute the
+<em>total</em> generalized force, combining generalized_forces() and
+body_forces().</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This class is templated; see <a class="reference internal" href="#pydrake.multibody.tree.MultibodyForces_" title="pydrake.multibody.tree.MultibodyForces_"><code class="xref py py-class docutils literal notranslate"><span class="pre">MultibodyForces_</span></code></a>
@@ -8690,7 +8693,10 @@ at construction from the given model MultibodyTree object.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.MultibodyForces_-AutoDiffXd">
 <span id="pydrake.multibody.tree.MultibodyForces_[AutoDiffXd]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.tree.</span></span><span class="sig-name descname"><span class="pre">MultibodyForces_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.multibody.tree.MultibodyForces_-AutoDiffXd" title="Permalink to this definition"></a></dt>
 <dd><p>A class to hold a set of forces applied to a MultibodyTree system.
-Forces can include generalized forces as well as body spatial forces.</p>
+Forces can include generalized forces as well as body spatial forces.
+MultibodyPlant::CalcGeneralizedForces() can be used to compute the
+<em>total</em> generalized force, combining generalized_forces() and
+body_forces().</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.MultibodyForces_-AutoDiffXd-.__init__">
 <span id="pydrake.multibody.tree.MultibodyForces_[AutoDiffXd].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.MultibodyForces_-AutoDiffXd-.__init__" title="Permalink to this definition"></a></dt>
@@ -8758,7 +8764,10 @@ at construction from the given model MultibodyTree object.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.MultibodyForces_-Expression">
 <span id="pydrake.multibody.tree.MultibodyForces_[Expression]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.tree.</span></span><span class="sig-name descname"><span class="pre">MultibodyForces_[Expression]</span></span><a class="headerlink" href="#pydrake.multibody.tree.MultibodyForces_-Expression" title="Permalink to this definition"></a></dt>
 <dd><p>A class to hold a set of forces applied to a MultibodyTree system.
-Forces can include generalized forces as well as body spatial forces.</p>
+Forces can include generalized forces as well as body spatial forces.
+MultibodyPlant::CalcGeneralizedForces() can be used to compute the
+<em>total</em> generalized force, combining generalized_forces() and
+body_forces().</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.MultibodyForces_-Expression-.__init__">
 <span id="pydrake.multibody.tree.MultibodyForces_[Expression].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.MultibodyForces_-Expression-.__init__" title="Permalink to this definition"></a></dt>
