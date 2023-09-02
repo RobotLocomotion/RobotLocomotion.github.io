@@ -7294,7 +7294,7 @@ valid.</p>
 <span class="sig-name descname"><span class="pre">MakeWitnessFunction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem.MakeWitnessFunction" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>MakeWitnessFunction(self: pydrake.systems.framework.LeafSystem, description: str, direction_type: pydrake.systems.framework.WitnessFunctionDirection, calc: Callable[[pydrake.systems.framework.Context], float]) -&gt; pydrake.systems.framework.WitnessFunction</p></li>
+<li><p>MakeWitnessFunction(self: pydrake.systems.framework.LeafSystem, description: str, direction_type: pydrake.systems.framework.WitnessFunctionDirection, calc: Callable[[pydrake.systems.framework.Context], Optional[float]]) -&gt; pydrake.systems.framework.WitnessFunction</p></li>
 </ol>
 <p>Constructs the witness function with the given description (used
 primarily for debugging and logging), direction type, and calculator
@@ -8209,7 +8209,7 @@ valid.</p>
 <span id="pydrake.systems.framework.LeafSystem_[AutoDiffXd].MakeWitnessFunction"></span><span class="sig-name descname"><span class="pre">MakeWitnessFunction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_-AutoDiffXd-.MakeWitnessFunction" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>MakeWitnessFunction(self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], description: str, direction_type: pydrake.systems.framework.WitnessFunctionDirection, calc: Callable[[pydrake.systems.framework.Context_[AutoDiffXd]], pydrake.autodiffutils.AutoDiffXd]) -&gt; pydrake.systems.framework.WitnessFunction_[AutoDiffXd]</p></li>
+<li><p>MakeWitnessFunction(self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], description: str, direction_type: pydrake.systems.framework.WitnessFunctionDirection, calc: Callable[[pydrake.systems.framework.Context_[AutoDiffXd]], Optional[pydrake.autodiffutils.AutoDiffXd]]) -&gt; pydrake.systems.framework.WitnessFunction_[AutoDiffXd]</p></li>
 </ol>
 <p>Constructs the witness function with the given description (used
 primarily for debugging and logging), direction type, and calculator
@@ -9118,7 +9118,7 @@ valid.</p>
 <span id="pydrake.systems.framework.LeafSystem_[Expression].MakeWitnessFunction"></span><span class="sig-name descname"><span class="pre">MakeWitnessFunction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_-Expression-.MakeWitnessFunction" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>MakeWitnessFunction(self: pydrake.systems.framework.LeafSystem_[Expression], description: str, direction_type: pydrake.systems.framework.WitnessFunctionDirection, calc: Callable[[pydrake.systems.framework.Context_[Expression]], pydrake.symbolic.Expression]) -&gt; pydrake.systems.framework.WitnessFunction_[Expression]</p></li>
+<li><p>MakeWitnessFunction(self: pydrake.systems.framework.LeafSystem_[Expression], description: str, direction_type: pydrake.systems.framework.WitnessFunctionDirection, calc: Callable[[pydrake.systems.framework.Context_[Expression]], Optional[pydrake.symbolic.Expression]]) -&gt; pydrake.systems.framework.WitnessFunction_[Expression]</p></li>
 </ol>
 <p>Constructs the witness function with the given description (used
 primarily for debugging and logging), direction type, and calculator
