@@ -1130,13 +1130,19 @@ codebase. In general, a user of this class should explicitly call
 <ol class="arabic simple">
 <li><p>__init__(self: pydrake.symbolic.Formula) -&gt; None</p></li>
 </ol>
-<p>Default constructor. It constructs Zero().</p>
+<p>Default constructor. Sets the value to Formula::False, to be
+consistent with value-initialized <a href="#id3"><span class="problematic" id="id4">`</span></a>bool`s.</p>
 <ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.symbolic.Formula, value: bool) -&gt; None</p></li>
+</ol>
+<p>Constructs from a <code class="docutils literal notranslate"><span class="pre">bool</span></code>. This overload is also used by Eigen when
+EIGEN_INITIALIZE_MATRICES_BY_ZERO is enabled.</p>
+<ol class="arabic simple" start="3">
 <li><p>__init__(self: pydrake.symbolic.Formula, var: pydrake.symbolic.Variable) -&gt; None</p></li>
 </ol>
-<p>Constructs an expression from <code class="docutils literal notranslate"><span class="pre">var</span></code>.</p>
+<p>Constructs a formula from <code class="docutils literal notranslate"><span class="pre">var</span></code>.</p>
 <dl class="simple">
-<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">var</span></code> is neither a dummy nor a BOOLEAN variable.</p>
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">var</span></code> is of BOOLEAN type and not a dummy variable.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1248,7 +1254,7 @@ the substitutions occur simultaneously. For example, (x / y &gt;
 <dt class="sig sig-object py" id="pydrake.symbolic.Formula.Unapply">
 <span class="sig-name descname"><span class="pre">Unapply</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.symbolic.Formula" title="pydrake.symbolic.Formula"><span class="pre">pydrake.symbolic.Formula</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#pydrake.symbolic.Formula.Unapply" title="Permalink to this definition"></a></dt>
 <dd><p>Given a formula, returns a tuple (ctor, args) that would re-create an
-equivalent formula when called as ctor(<a href="#id3"><span class="problematic" id="id4">*</span></a>args).  This is a useful way to
+equivalent formula when called as ctor(<a href="#id5"><span class="problematic" id="id6">*</span></a>args).  This is a useful way to
 unpack the contents of a compound formula, e.g., to obtain the terms of
 a comparison.  For relational formulae (==, &lt;, &gt;, etc.) the returned args
 will both be of type Expression.  For compound formulae (and, or, not) the
@@ -1265,8 +1271,8 @@ ctor’s identity.</p>
 <dd><p>Kinds of symbolic formulas.</p>
 <p>Members:</p>
 <blockquote>
-<div><p><a href="#id9"><span class="problematic" id="id10">False_</span></a> : ⊥</p>
-<p><a href="#id11"><span class="problematic" id="id12">True_</span></a> : ⊤</p>
+<div><p><a href="#id11"><span class="problematic" id="id12">False_</span></a> : ⊥</p>
+<p><a href="#id13"><span class="problematic" id="id14">True_</span></a> : ⊤</p>
 <p>Var : Boolean Variable</p>
 <p>Eq : =</p>
 <p>Neq : !=</p>
@@ -1411,7 +1417,7 @@ expression <code class="docutils literal notranslate"><span class="pre">expr_els
 expression <code class="docutils literal notranslate"><span class="pre">cond</span></code> is evaluated to <strong>true</strong> (respectively, when <code class="docutils literal notranslate"><span class="pre">cond</span></code> is
 evaluated to <strong>false)</strong>.</p>
 <ul class="simple">
-<li><p>In case of the symbolic expression, <a href="#id5"><span class="problematic" id="id6">``</span></a>if_then_else(cond, expr_then,</p></li>
+<li><p>In case of the symbolic expression, <a href="#id7"><span class="problematic" id="id8">``</span></a>if_then_else(cond, expr_then,</p></li>
 </ul>
 <p>expr_else)``, however, <strong>both</strong> arguments <code class="docutils literal notranslate"><span class="pre">expr_then</span></code> and <code class="docutils literal notranslate"><span class="pre">expr_else</span></code>
 are evaluated first and then passed to the <code class="docutils literal notranslate"><span class="pre">if_then_else</span></code> function.</p>
@@ -2441,7 +2447,7 @@ the corresponding term in <code class="docutils literal notranslate"><span class
 </dl>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">y</span></code>:</dt><dd><p>The bilinear product between <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> will be replaced by
-the corresponding term in <a href="#id7"><span class="problematic" id="id8">``</span></a>W.</p>
+the corresponding term in <a href="#id9"><span class="problematic" id="id10">``</span></a>W.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
