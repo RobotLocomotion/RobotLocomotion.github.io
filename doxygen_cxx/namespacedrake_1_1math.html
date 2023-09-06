@@ -1533,12 +1533,13 @@ d₁ = P*d
 <p>AᵀXA − X − AᵀXB(BᵀXB + R)⁻¹BᵀXA + Q = 0</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if Q is not positive semi-definite. </td></tr>
-    <tr><td class="paramname">std::exception</td><td>if R is not positive definite.</td></tr>
+    <tr><td class="paramname">std::exception</td><td>if Q is not symmetric positive semidefinite. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if R is not symmetric positive definite. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if (A, B) isn't a stabilizable pair. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if (A, C) isn't a detectable pair where Q = CᵀC. </td></tr>
   </table>
   </dd>
 </dl>
-<p>Based on the Schur Vector approach outlined in this paper: "On the Numerical Solution of the Discrete-Time Algebraic Riccati Equation" by Thrasyvoulos Pappas, Alan J. Laub, and Nils R. Sandell </p>
 
 </div>
 </div>
@@ -1606,8 +1607,10 @@ J = Σ [uₖ] [0 R][uₖ] ΔT
    k=0
 </pre><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if Q − NR⁻¹Nᵀ is not positive semi-definite. </td></tr>
-    <tr><td class="paramname">std::runtime_error</td><td>if R is not positive definite. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if Q₂ is not symmetric positive semidefinite. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if R is not symmetric positive definite. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if (A₂, B) isn't a stabilizable pair. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if (A₂, C) isn't a detectable pair where Q₂ = CᵀC. </td></tr>
   </table>
   </dd>
 </dl>

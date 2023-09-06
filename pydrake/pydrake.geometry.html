@@ -526,13 +526,13 @@ below), and the result of the invocation, is that the statement is
 appended to the declaration.</p>
 <p>Each statement method returns a reference to the declaration instance,
 so a number of statements can be chained together, i.e.,</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">collision_filter_manager</span><span class="o">.</span><span class="n">Apply</span><span class="p">(</span>
-<span class="n">CollisionFilterDeclaration</span><span class="p">()</span>
-<span class="o">.</span><span class="n">ExcludeWithin</span><span class="p">(</span><span class="n">some_geometry_set</span><span class="p">)</span>
-<span class="o">.</span><span class="n">ExcludeBetween</span><span class="p">(</span><span class="n">set_A</span><span class="p">,</span> <span class="n">set_B</span><span class="p">));</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">collision_filter_manager</span><span class="p">.</span><span class="n">Apply</span><span class="p">(</span><span class="w"></span>
+<span class="n">CollisionFilterDeclaration</span><span class="p">()</span><span class="w"></span>
+<span class="p">.</span><span class="n">ExcludeWithin</span><span class="p">(</span><span class="n">some_geometry_set</span><span class="p">)</span><span class="w"></span>
+<span class="p">.</span><span class="n">ExcludeBetween</span><span class="p">(</span><span class="n">set_A</span><span class="p">,</span><span class="w"> </span><span class="n">set_B</span><span class="p">));</span><span class="w"></span>
 </pre></div>
 </div>
-<p>It’s worth noting, that the statements are evaluated in <em>invocation</em>
+</details><p>It’s worth noting, that the statements are evaluated in <em>invocation</em>
 order such that a later statement can partially or completely undo the
 effect of an earlier statement. The full declaration is evaluated by
 CollisionFilterManager::Apply().</p>
@@ -2168,41 +2168,41 @@ data) are varying. It is an internal class and one should never
 interact with it directly. The template aliases FramePoseVector and
 GeometryConfigurationVector that instantiate KinematicsVector should
 be used instead.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">template</span> <span class="o">&lt;</span><span class="n">typename</span> <span class="n">T</span><span class="o">&gt;</span>
-<span class="k">class</span> <span class="nc">MySystem</span> <span class="p">:</span> <span class="n">public</span> <span class="n">LeafSystem</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="p">{</span>
-<span class="n">public</span><span class="p">:</span>
-<span class="n">MySystem</span><span class="p">()</span> <span class="p">{</span>
-<span class="o">...</span>
-<span class="n">this</span><span class="o">-&gt;</span><span class="n">DeclareAbstractOutputPort</span><span class="p">(</span>
-<span class="o">&amp;</span><span class="n">AllocInConstructorSystem</span><span class="p">::</span><span class="n">CalcFramePoseOutput</span><span class="p">);</span>
-<span class="o">...</span>
-<span class="p">}</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"></span>
+<span class="k">class</span><span class="w"> </span><span class="nc">MySystem</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">LeafSystem</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="n">MySystem</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="p">...</span><span class="w"></span>
+<span class="k">this</span><span class="o">-&gt;</span><span class="n">DeclareAbstractOutputPort</span><span class="p">(</span><span class="w"></span>
+<span class="o">&amp;</span><span class="n">AllocInConstructorSystem</span><span class="o">::</span><span class="n">CalcFramePoseOutput</span><span class="p">);</span><span class="w"></span>
+<span class="p">...</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 
-<span class="n">private</span><span class="p">:</span>
-<span class="n">void</span> <span class="n">CalcFramePoseOutput</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">context</span><span class="p">,</span>
-<span class="n">geometry</span><span class="p">::</span><span class="n">FramePoseVector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span> <span class="n">poses</span><span class="p">)</span> <span class="n">const</span> <span class="p">{</span>
-<span class="n">poses</span><span class="o">-&gt;</span><span class="n">clear</span><span class="p">();</span>
-<span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">static_cast</span><span class="o">&lt;</span><span class="nb">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">frame_ids_</span><span class="o">.</span><span class="n">size</span><span class="p">());</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
-<span class="n">poses</span><span class="o">-&gt;</span><span class="n">set_value</span><span class="p">(</span><span class="n">frame_ids_</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">poses_</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
-<span class="p">}</span>
-<span class="p">}</span>
+<span class="k">private</span><span class="o">:</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="n">CalcFramePoseOutput</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">context</span><span class="p">,</span><span class="w"></span>
+<span class="n">geometry</span><span class="o">::</span><span class="n">FramePoseVector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="w"> </span><span class="n">poses</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="n">poses</span><span class="o">-&gt;</span><span class="n">clear</span><span class="p">();</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">frame_ids_</span><span class="p">.</span><span class="n">size</span><span class="p">());</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="n">poses</span><span class="o">-&gt;</span><span class="n">set_value</span><span class="p">(</span><span class="n">frame_ids_</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">poses_</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 
-<span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">FrameId</span><span class="o">&gt;</span> <span class="n">frame_ids_</span><span class="p">;</span>
-<span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span> <span class="n">poses_</span><span class="p">;</span>
-<span class="p">};</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">FrameId</span><span class="o">&gt;</span><span class="w"> </span><span class="n">frame_ids_</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">poses_</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
 </pre></div>
 </div>
-<p>If a System only ever emits a single frame/geometry (or
+</details><p>If a System only ever emits a single frame/geometry (or
 small-constant-number of frames/geometries), then there’s a shorter
 alternative way to write a Calc method, using an initializer_list:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">void</span> <span class="n">CalcFramePoseOutput</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">context</span><span class="p">,</span>
-<span class="n">geometry</span><span class="p">::</span><span class="n">FramePoseVector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span> <span class="n">poses</span><span class="p">)</span> <span class="n">const</span> <span class="p">{</span>
-<span class="n">const</span> <span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">pose</span> <span class="o">=</span> <span class="o">...</span><span class="p">;</span>
-<span class="n">poses</span> <span class="o">=</span> <span class="p">{{</span><span class="n">frame_id_</span><span class="p">,</span> <span class="n">pose</span><span class="p">}};</span>
-<span class="p">}</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">CalcFramePoseOutput</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">context</span><span class="p">,</span><span class="w"></span>
+<span class="n">geometry</span><span class="o">::</span><span class="n">FramePoseVector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="w"> </span><span class="n">poses</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">pose</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span><span class="w"></span>
+<span class="n">poses</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="n">frame_id_</span><span class="p">,</span><span class="w"> </span><span class="n">pose</span><span class="p">}};</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<p>N.B. When the systems framework calls the <code class="docutils literal notranslate"><span class="pre">Calc</span></code> method, the value
+</details><p>N.B. When the systems framework calls the <code class="docutils literal notranslate"><span class="pre">Calc</span></code> method, the value
 pointed to by <code class="docutils literal notranslate"><span class="pre">poses</span></code> is in an unspecified state. The implementation
 of <code class="docutils literal notranslate"><span class="pre">Calc</span></code> must always ensure that <code class="docutils literal notranslate"><span class="pre">poses</span></code> contains the correct
 value upon return, no matter what value it started with. The easy ways
@@ -2259,14 +2259,14 @@ for the list of instantiations.</p>
 <span class="sig-name descname"><span class="pre">ids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.FramePoseVector" title="pydrake.geometry.FramePoseVector"><span class="pre">pydrake.geometry.FramePoseVector</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.geometry.FrameId" title="pydrake.geometry.FrameId"><span class="pre">pydrake.geometry.FrameId</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.FramePoseVector.ids" title="Permalink to this definition"></a></dt>
 <dd><p>Provides a range object for all of the existing ids in the vector.
 This is intended to be used as:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for (Id id : this_vector.ids()) {
-...
-// Obtain the KinematicsValue of an id by ``this_vector.value(id)``
-...
-}
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Id</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">this_vector</span><span class="p">.</span><span class="n">ids</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="p">...</span><span class="w"></span>
+<span class="c1">// Obtain the KinematicsValue of an id by `this_vector.value(id)`</span>
+<span class="p">...</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.FramePoseVector.set_value">
@@ -2310,41 +2310,41 @@ data) are varying. It is an internal class and one should never
 interact with it directly. The template aliases FramePoseVector and
 GeometryConfigurationVector that instantiate KinematicsVector should
 be used instead.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">template</span> <span class="o">&lt;</span><span class="n">typename</span> <span class="n">T</span><span class="o">&gt;</span>
-<span class="k">class</span> <span class="nc">MySystem</span> <span class="p">:</span> <span class="n">public</span> <span class="n">LeafSystem</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="p">{</span>
-<span class="n">public</span><span class="p">:</span>
-<span class="n">MySystem</span><span class="p">()</span> <span class="p">{</span>
-<span class="o">...</span>
-<span class="n">this</span><span class="o">-&gt;</span><span class="n">DeclareAbstractOutputPort</span><span class="p">(</span>
-<span class="o">&amp;</span><span class="n">AllocInConstructorSystem</span><span class="p">::</span><span class="n">CalcFramePoseOutput</span><span class="p">);</span>
-<span class="o">...</span>
-<span class="p">}</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"></span>
+<span class="k">class</span><span class="w"> </span><span class="nc">MySystem</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">LeafSystem</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="n">MySystem</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="p">...</span><span class="w"></span>
+<span class="k">this</span><span class="o">-&gt;</span><span class="n">DeclareAbstractOutputPort</span><span class="p">(</span><span class="w"></span>
+<span class="o">&amp;</span><span class="n">AllocInConstructorSystem</span><span class="o">::</span><span class="n">CalcFramePoseOutput</span><span class="p">);</span><span class="w"></span>
+<span class="p">...</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 
-<span class="n">private</span><span class="p">:</span>
-<span class="n">void</span> <span class="n">CalcFramePoseOutput</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">context</span><span class="p">,</span>
-<span class="n">geometry</span><span class="p">::</span><span class="n">FramePoseVector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span> <span class="n">poses</span><span class="p">)</span> <span class="n">const</span> <span class="p">{</span>
-<span class="n">poses</span><span class="o">-&gt;</span><span class="n">clear</span><span class="p">();</span>
-<span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">static_cast</span><span class="o">&lt;</span><span class="nb">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">frame_ids_</span><span class="o">.</span><span class="n">size</span><span class="p">());</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
-<span class="n">poses</span><span class="o">-&gt;</span><span class="n">set_value</span><span class="p">(</span><span class="n">frame_ids_</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">poses_</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
-<span class="p">}</span>
-<span class="p">}</span>
+<span class="k">private</span><span class="o">:</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="n">CalcFramePoseOutput</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">context</span><span class="p">,</span><span class="w"></span>
+<span class="n">geometry</span><span class="o">::</span><span class="n">FramePoseVector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="w"> </span><span class="n">poses</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="n">poses</span><span class="o">-&gt;</span><span class="n">clear</span><span class="p">();</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">frame_ids_</span><span class="p">.</span><span class="n">size</span><span class="p">());</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="n">poses</span><span class="o">-&gt;</span><span class="n">set_value</span><span class="p">(</span><span class="n">frame_ids_</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">poses_</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 
-<span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">FrameId</span><span class="o">&gt;</span> <span class="n">frame_ids_</span><span class="p">;</span>
-<span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span> <span class="n">poses_</span><span class="p">;</span>
-<span class="p">};</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">FrameId</span><span class="o">&gt;</span><span class="w"> </span><span class="n">frame_ids_</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">poses_</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
 </pre></div>
 </div>
-<p>If a System only ever emits a single frame/geometry (or
+</details><p>If a System only ever emits a single frame/geometry (or
 small-constant-number of frames/geometries), then there’s a shorter
 alternative way to write a Calc method, using an initializer_list:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">void</span> <span class="n">CalcFramePoseOutput</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">context</span><span class="p">,</span>
-<span class="n">geometry</span><span class="p">::</span><span class="n">FramePoseVector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span> <span class="n">poses</span><span class="p">)</span> <span class="n">const</span> <span class="p">{</span>
-<span class="n">const</span> <span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">pose</span> <span class="o">=</span> <span class="o">...</span><span class="p">;</span>
-<span class="n">poses</span> <span class="o">=</span> <span class="p">{{</span><span class="n">frame_id_</span><span class="p">,</span> <span class="n">pose</span><span class="p">}};</span>
-<span class="p">}</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">CalcFramePoseOutput</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">context</span><span class="p">,</span><span class="w"></span>
+<span class="n">geometry</span><span class="o">::</span><span class="n">FramePoseVector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="w"> </span><span class="n">poses</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">pose</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span><span class="w"></span>
+<span class="n">poses</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="n">frame_id_</span><span class="p">,</span><span class="w"> </span><span class="n">pose</span><span class="p">}};</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<p>N.B. When the systems framework calls the <code class="docutils literal notranslate"><span class="pre">Calc</span></code> method, the value
+</details><p>N.B. When the systems framework calls the <code class="docutils literal notranslate"><span class="pre">Calc</span></code> method, the value
 pointed to by <code class="docutils literal notranslate"><span class="pre">poses</span></code> is in an unspecified state. The implementation
 of <code class="docutils literal notranslate"><span class="pre">Calc</span></code> must always ensure that <code class="docutils literal notranslate"><span class="pre">poses</span></code> contains the correct
 value upon return, no matter what value it started with. The easy ways
@@ -2396,14 +2396,14 @@ double/AutoDiffXd/Expression</p>
 <span id="pydrake.geometry.FramePoseVector_[AutoDiffXd].ids"></span><span class="sig-name descname"><span class="pre">ids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.FramePoseVector_" title="pydrake.geometry.FramePoseVector_"><span class="pre">pydrake.geometry.FramePoseVector_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.geometry.FrameId" title="pydrake.geometry.FrameId"><span class="pre">pydrake.geometry.FrameId</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.FramePoseVector_-AutoDiffXd-.ids" title="Permalink to this definition"></a></dt>
 <dd><p>Provides a range object for all of the existing ids in the vector.
 This is intended to be used as:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for (Id id : this_vector.ids()) {
-...
-// Obtain the KinematicsValue of an id by ``this_vector.value(id)``
-...
-}
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Id</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">this_vector</span><span class="p">.</span><span class="n">ids</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="p">...</span><span class="w"></span>
+<span class="c1">// Obtain the KinematicsValue of an id by `this_vector.value(id)`</span>
+<span class="p">...</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.FramePoseVector_-AutoDiffXd-.set_value">
@@ -2441,41 +2441,41 @@ data) are varying. It is an internal class and one should never
 interact with it directly. The template aliases FramePoseVector and
 GeometryConfigurationVector that instantiate KinematicsVector should
 be used instead.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">template</span> <span class="o">&lt;</span><span class="n">typename</span> <span class="n">T</span><span class="o">&gt;</span>
-<span class="k">class</span> <span class="nc">MySystem</span> <span class="p">:</span> <span class="n">public</span> <span class="n">LeafSystem</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="p">{</span>
-<span class="n">public</span><span class="p">:</span>
-<span class="n">MySystem</span><span class="p">()</span> <span class="p">{</span>
-<span class="o">...</span>
-<span class="n">this</span><span class="o">-&gt;</span><span class="n">DeclareAbstractOutputPort</span><span class="p">(</span>
-<span class="o">&amp;</span><span class="n">AllocInConstructorSystem</span><span class="p">::</span><span class="n">CalcFramePoseOutput</span><span class="p">);</span>
-<span class="o">...</span>
-<span class="p">}</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"></span>
+<span class="k">class</span><span class="w"> </span><span class="nc">MySystem</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">LeafSystem</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="n">MySystem</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="p">...</span><span class="w"></span>
+<span class="k">this</span><span class="o">-&gt;</span><span class="n">DeclareAbstractOutputPort</span><span class="p">(</span><span class="w"></span>
+<span class="o">&amp;</span><span class="n">AllocInConstructorSystem</span><span class="o">::</span><span class="n">CalcFramePoseOutput</span><span class="p">);</span><span class="w"></span>
+<span class="p">...</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 
-<span class="n">private</span><span class="p">:</span>
-<span class="n">void</span> <span class="n">CalcFramePoseOutput</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">context</span><span class="p">,</span>
-<span class="n">geometry</span><span class="p">::</span><span class="n">FramePoseVector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span> <span class="n">poses</span><span class="p">)</span> <span class="n">const</span> <span class="p">{</span>
-<span class="n">poses</span><span class="o">-&gt;</span><span class="n">clear</span><span class="p">();</span>
-<span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">static_cast</span><span class="o">&lt;</span><span class="nb">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">frame_ids_</span><span class="o">.</span><span class="n">size</span><span class="p">());</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
-<span class="n">poses</span><span class="o">-&gt;</span><span class="n">set_value</span><span class="p">(</span><span class="n">frame_ids_</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">poses_</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
-<span class="p">}</span>
-<span class="p">}</span>
+<span class="k">private</span><span class="o">:</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="n">CalcFramePoseOutput</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">context</span><span class="p">,</span><span class="w"></span>
+<span class="n">geometry</span><span class="o">::</span><span class="n">FramePoseVector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="w"> </span><span class="n">poses</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="n">poses</span><span class="o">-&gt;</span><span class="n">clear</span><span class="p">();</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">frame_ids_</span><span class="p">.</span><span class="n">size</span><span class="p">());</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="n">poses</span><span class="o">-&gt;</span><span class="n">set_value</span><span class="p">(</span><span class="n">frame_ids_</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">poses_</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 
-<span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">FrameId</span><span class="o">&gt;</span> <span class="n">frame_ids_</span><span class="p">;</span>
-<span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span> <span class="n">poses_</span><span class="p">;</span>
-<span class="p">};</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">FrameId</span><span class="o">&gt;</span><span class="w"> </span><span class="n">frame_ids_</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">poses_</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
 </pre></div>
 </div>
-<p>If a System only ever emits a single frame/geometry (or
+</details><p>If a System only ever emits a single frame/geometry (or
 small-constant-number of frames/geometries), then there’s a shorter
 alternative way to write a Calc method, using an initializer_list:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">void</span> <span class="n">CalcFramePoseOutput</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">context</span><span class="p">,</span>
-<span class="n">geometry</span><span class="p">::</span><span class="n">FramePoseVector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span> <span class="n">poses</span><span class="p">)</span> <span class="n">const</span> <span class="p">{</span>
-<span class="n">const</span> <span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">pose</span> <span class="o">=</span> <span class="o">...</span><span class="p">;</span>
-<span class="n">poses</span> <span class="o">=</span> <span class="p">{{</span><span class="n">frame_id_</span><span class="p">,</span> <span class="n">pose</span><span class="p">}};</span>
-<span class="p">}</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">CalcFramePoseOutput</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">context</span><span class="p">,</span><span class="w"></span>
+<span class="n">geometry</span><span class="o">::</span><span class="n">FramePoseVector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="w"> </span><span class="n">poses</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">pose</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span><span class="w"></span>
+<span class="n">poses</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="n">frame_id_</span><span class="p">,</span><span class="w"> </span><span class="n">pose</span><span class="p">}};</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<p>N.B. When the systems framework calls the <code class="docutils literal notranslate"><span class="pre">Calc</span></code> method, the value
+</details><p>N.B. When the systems framework calls the <code class="docutils literal notranslate"><span class="pre">Calc</span></code> method, the value
 pointed to by <code class="docutils literal notranslate"><span class="pre">poses</span></code> is in an unspecified state. The implementation
 of <code class="docutils literal notranslate"><span class="pre">Calc</span></code> must always ensure that <code class="docutils literal notranslate"><span class="pre">poses</span></code> contains the correct
 value upon return, no matter what value it started with. The easy ways
@@ -2527,14 +2527,14 @@ double/AutoDiffXd/Expression</p>
 <span id="pydrake.geometry.FramePoseVector_[Expression].ids"></span><span class="sig-name descname"><span class="pre">ids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.FramePoseVector_" title="pydrake.geometry.FramePoseVector_"><span class="pre">pydrake.geometry.FramePoseVector_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.geometry.FrameId" title="pydrake.geometry.FrameId"><span class="pre">pydrake.geometry.FrameId</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.FramePoseVector_-Expression-.ids" title="Permalink to this definition"></a></dt>
 <dd><p>Provides a range object for all of the existing ids in the vector.
 This is intended to be used as:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for (Id id : this_vector.ids()) {
-...
-// Obtain the KinematicsValue of an id by ``this_vector.value(id)``
-...
-}
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Id</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">this_vector</span><span class="p">.</span><span class="n">ids</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="p">...</span><span class="w"></span>
+<span class="c1">// Obtain the KinematicsValue of an id by `this_vector.value(id)`</span>
+<span class="p">...</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.FramePoseVector_-Expression-.set_value">
@@ -2676,28 +2676,28 @@ to the geometry.</p>
 <p>The silent transformation of a user-defined name to canonical name
 mirrors that of specifying geometry names in an SDF file. Consider the
 following SDF snippet:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">xml</span><span class="p">}</span>
-<span class="o">...</span>
-<span class="o">&lt;</span><span class="n">visual</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;  visual&quot;</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">geometry</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">sphere</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">radius</span><span class="o">&gt;</span><span class="mf">1.0</span><span class="o">&lt;/</span><span class="n">radius</span><span class="o">&gt;</span>
-<span class="o">&lt;/</span><span class="n">sphere</span><span class="o">&gt;</span>
-<span class="o">&lt;/</span><span class="n">geometry</span><span class="o">&gt;</span>
-<span class="o">&lt;/</span><span class="n">visual</span><span class="o">&gt;</span>
-<span class="o">...</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">xml</span><span class="p">}</span><span class="w"></span>
+<span class="p">...</span><span class="w"></span>
+<span class="o">&lt;</span><span class="n">visual</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s">&quot;  visual&quot;</span><span class="o">&gt;</span><span class="w"></span>
+<span class="o">&lt;</span><span class="n">geometry</span><span class="o">&gt;</span><span class="w"></span>
+<span class="o">&lt;</span><span class="n">sphere</span><span class="o">&gt;</span><span class="w"></span>
+<span class="o">&lt;</span><span class="n">radius</span><span class="o">&gt;</span><span class="mf">1.0</span><span class="o">&lt;/</span><span class="n">radius</span><span class="o">&gt;</span><span class="w"></span>
+<span class="o">&lt;/</span><span class="n">sphere</span><span class="o">&gt;</span><span class="w"></span>
+<span class="o">&lt;/</span><span class="n">geometry</span><span class="o">&gt;</span><span class="w"></span>
+<span class="o">&lt;/</span><span class="n">visual</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">...</span><span class="w"></span>
 </pre></div>
 </div>
-<p>The name has two leading whitespace characters. The parsing process
+</details><p>The name has two leading whitespace characters. The parsing process
 will consider this name as equivalent to “visual” and tests for
 uniqueness and non-emptiness will be applied to that trimmed result.
 The following code has an analogous effect:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scene_graph</span><span class="o">-&gt;</span><span class="n">RegisterGeometry</span><span class="p">(</span>
-<span class="n">source_id</span><span class="p">,</span> <span class="n">frame_id</span><span class="p">,</span>
-<span class="n">make_unique</span><span class="o">&lt;</span><span class="n">GeometryInstance</span><span class="o">&gt;</span><span class="p">(</span><span class="n">pose</span><span class="p">,</span> <span class="n">make_unique</span><span class="o">&lt;</span><span class="n">Sphere</span><span class="o">&gt;</span><span class="p">(</span><span class="mf">1.0</span><span class="p">),</span> <span class="s2">&quot;  visual&quot;</span><span class="p">));</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">scene_graph</span><span class="o">-&gt;</span><span class="n">RegisterGeometry</span><span class="p">(</span><span class="w"></span>
+<span class="n">source_id</span><span class="p">,</span><span class="w"> </span><span class="n">frame_id</span><span class="p">,</span><span class="w"></span>
+<span class="n">make_unique</span><span class="o">&lt;</span><span class="n">GeometryInstance</span><span class="o">&gt;</span><span class="p">(</span><span class="n">pose</span><span class="p">,</span><span class="w"> </span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">Sphere</span><span class="o">&gt;</span><span class="p">(</span><span class="mf">1.0</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;  visual&quot;</span><span class="p">));</span><span class="w"></span>
 </pre></div>
 </div>
-<p>The specified name includes leading whitespace. That name will be
+</details><p>The specified name includes leading whitespace. That name will be
 trimmed and the <em>result</em> will be stored in the GeometryInstance (to be
 later validated by SceneGraph as part of geometry registration).
 Querying the instance of its name will return this <em>canonicalized</em>
@@ -2890,27 +2890,27 @@ not the only way to avoid such bugs.</p>
 <p><em>Creating properties in a new group</em></p>
 <p>This is a simple example in which a single group is added with
 properties of various types.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">const</span> <span class="n">std</span><span class="p">::</span><span class="n">string</span> <span class="n">group_name</span><span class="p">(</span><span class="s2">&quot;my_group&quot;</span><span class="p">);</span>
-<span class="n">ProximityProperties</span> <span class="n">properties</span><span class="p">;</span>
-<span class="o">//</span> <span class="n">This</span> <span class="n">first</span> <span class="n">invocation</span> <span class="n">implicitly</span> <span class="n">creates</span> <span class="n">the</span> <span class="n">group</span> <span class="s2">&quot;my_group&quot;</span><span class="o">.</span>
-<span class="n">properties</span><span class="o">.</span><span class="n">AddProperty</span><span class="p">(</span><span class="n">group_name</span><span class="p">,</span> <span class="s2">&quot;count&quot;</span><span class="p">,</span> <span class="mi">7</span><span class="p">);</span>     <span class="o">//</span> <span class="nb">int</span> <span class="nb">type</span>
-<span class="n">properties</span><span class="o">.</span><span class="n">AddProperty</span><span class="p">(</span><span class="n">group_name</span><span class="p">,</span> <span class="s2">&quot;length&quot;</span><span class="p">,</span> <span class="mf">7.</span><span class="p">);</span>   <span class="o">//</span> <span class="n">double</span> <span class="nb">type</span>
-<span class="n">properties</span><span class="o">.</span><span class="n">AddProperty</span><span class="p">(</span><span class="n">group_name</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;7&quot;</span><span class="p">);</span>    <span class="o">//</span> <span class="n">std</span><span class="p">::</span><span class="n">string</span> <span class="nb">type</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="nf">group_name</span><span class="p">(</span><span class="s">&quot;my_group&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="n">ProximityProperties</span><span class="w"> </span><span class="n">properties</span><span class="p">;</span><span class="w"></span>
+<span class="c1">// This first invocation implicitly creates the group &quot;my_group&quot;.</span>
+<span class="n">properties</span><span class="p">.</span><span class="n">AddProperty</span><span class="p">(</span><span class="n">group_name</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;count&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">);</span><span class="w">     </span><span class="c1">// int type</span>
+<span class="n">properties</span><span class="p">.</span><span class="n">AddProperty</span><span class="p">(</span><span class="n">group_name</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;length&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">7.</span><span class="p">);</span><span class="w">   </span><span class="c1">// double type</span>
+<span class="n">properties</span><span class="p">.</span><span class="n">AddProperty</span><span class="p">(</span><span class="n">group_name</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;name&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;7&quot;</span><span class="p">);</span><span class="w">    </span><span class="c1">// std::string type</span>
 </pre></div>
 </div>
-<p><em>Creating properties in the default group</em></p>
+</details><p><em>Creating properties in the default group</em></p>
 <p>Similar to the previous examples, the properties are added to the
 default group. Just be aware that if multiple sites in your code add
 properties to the default group, the possibility that names get
 repeated increases. Property names <em>must</em> be unique within a single
 group, including the default group.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ProximityProperties</span> <span class="n">properties</span><span class="p">;</span>
-<span class="n">properties</span><span class="o">.</span><span class="n">AddProperty</span><span class="p">(</span><span class="n">ProximityProperties</span><span class="p">::</span><span class="n">default_group_name</span><span class="p">(),</span> <span class="s2">&quot;count&quot;</span><span class="p">,</span> <span class="mi">7</span><span class="p">);</span>
-<span class="n">properties</span><span class="o">.</span><span class="n">AddProperty</span><span class="p">(</span><span class="n">ProximityProperties</span><span class="p">::</span><span class="n">default_group_name</span><span class="p">(),</span> <span class="s2">&quot;width&quot;</span><span class="p">,</span> <span class="mf">7.</span><span class="p">);</span>
-<span class="n">properties</span><span class="o">.</span><span class="n">AddProperty</span><span class="p">(</span><span class="n">ProximityProperties</span><span class="p">::</span><span class="n">default_group_name</span><span class="p">(),</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;7&quot;</span><span class="p">);</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">ProximityProperties</span><span class="w"> </span><span class="n">properties</span><span class="p">;</span><span class="w"></span>
+<span class="n">properties</span><span class="p">.</span><span class="n">AddProperty</span><span class="p">(</span><span class="n">ProximityProperties</span><span class="o">::</span><span class="n">default_group_name</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;count&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">);</span><span class="w"></span>
+<span class="n">properties</span><span class="p">.</span><span class="n">AddProperty</span><span class="p">(</span><span class="n">ProximityProperties</span><span class="o">::</span><span class="n">default_group_name</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;width&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">7.</span><span class="p">);</span><span class="w"></span>
+<span class="n">properties</span><span class="p">.</span><span class="n">AddProperty</span><span class="p">(</span><span class="n">ProximityProperties</span><span class="o">::</span><span class="n">default_group_name</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;name&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;7&quot;</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-<p><em>Aggregate properties in a struct</em></p>
+</details><p><em>Aggregate properties in a struct</em></p>
 <p>In some cases, there is a set of values that will <em>always</em> be accessed
 together (specified with coordinated semantics). In these cases, it
 makes sense to aggregate them into a struct and store that as a single
@@ -2921,23 +2921,23 @@ the property <em>struct</em> exists, it will be returned, if it’s missing the
 default struct will be returned. There is no concept of a “partial”
 struct in which some undefined values in the struct will be replaced
 with their corresponding values in the default struct.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">struct</span> <span class="n">MyData</span> <span class="p">{</span>
-<span class="nb">int</span> <span class="n">i</span><span class="p">{};</span>
-<span class="n">double</span> <span class="n">d</span><span class="p">{};</span>
-<span class="n">std</span><span class="p">::</span><span class="n">string</span> <span class="n">s</span><span class="p">;</span>
-<span class="p">};</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">MyData</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">{};</span><span class="w"></span>
+<span class="kt">double</span><span class="w"> </span><span class="n">d</span><span class="p">{};</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
 
-<span class="n">ProximityProperties</span> <span class="n">properties</span><span class="p">;</span>
-<span class="n">const</span> <span class="n">std</span><span class="p">::</span><span class="n">string</span> <span class="n">group_name</span><span class="p">(</span><span class="s2">&quot;my_group&quot;</span><span class="p">);</span>
-<span class="n">MyData</span> <span class="n">data</span><span class="p">{</span><span class="mi">7</span><span class="p">,</span> <span class="mf">7.</span><span class="p">,</span> <span class="s2">&quot;7&quot;</span><span class="p">};</span>
-<span class="n">properties</span><span class="o">.</span><span class="n">AddProperty</span><span class="p">(</span><span class="n">group_name</span><span class="p">,</span> <span class="s2">&quot;data1&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">);</span>
-<span class="o">//</span> <span class="n">These</span> <span class="n">alternate</span> <span class="n">forms</span> <span class="n">are</span> <span class="n">also</span> <span class="n">acceptable</span> <span class="p">(</span><span class="n">but</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">succession</span><span class="p">,</span> <span class="k">as</span> <span class="n">the</span>
-<span class="o">//</span> <span class="nb">property</span> <span class="n">name</span> <span class="n">has</span> <span class="n">already</span> <span class="n">been</span> <span class="n">used</span> <span class="n">by</span> <span class="n">the</span> <span class="n">first</span> <span class="n">invocation</span><span class="p">)</span><span class="o">.</span>
-<span class="n">properties</span><span class="o">.</span><span class="n">AddProperty</span><span class="p">(</span><span class="n">group_name</span><span class="p">,</span> <span class="s2">&quot;data2&quot;</span><span class="p">,</span> <span class="n">MyData</span><span class="p">{</span><span class="mi">6</span><span class="p">,</span> <span class="mf">6.</span><span class="p">,</span> <span class="s2">&quot;6&quot;</span><span class="p">});</span>
-<span class="n">properties</span><span class="o">.</span><span class="n">AddProperty</span><span class="o">&lt;</span><span class="n">MyData</span><span class="o">&gt;</span><span class="p">(</span><span class="n">group_name</span><span class="p">,</span> <span class="s2">&quot;data2&quot;</span><span class="p">,</span> <span class="p">{</span><span class="mi">6</span><span class="p">,</span> <span class="mf">6.</span><span class="p">,</span> <span class="s2">&quot;6&quot;</span><span class="p">});</span>
+<span class="n">ProximityProperties</span><span class="w"> </span><span class="n">properties</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="nf">group_name</span><span class="p">(</span><span class="s">&quot;my_group&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="n">MyData</span><span class="w"> </span><span class="n">data</span><span class="p">{</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mf">7.</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;7&quot;</span><span class="p">};</span><span class="w"></span>
+<span class="n">properties</span><span class="p">.</span><span class="n">AddProperty</span><span class="p">(</span><span class="n">group_name</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;data1&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="p">);</span><span class="w"></span>
+<span class="c1">// These alternate forms are also acceptable (but not in succession, as the</span>
+<span class="c1">// property name has already been used by the first invocation).</span>
+<span class="n">properties</span><span class="p">.</span><span class="n">AddProperty</span><span class="p">(</span><span class="n">group_name</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;data2&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">MyData</span><span class="p">{</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mf">6.</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;6&quot;</span><span class="p">});</span><span class="w"></span>
+<span class="n">properties</span><span class="p">.</span><span class="n">AddProperty</span><span class="o">&lt;</span><span class="n">MyData</span><span class="o">&gt;</span><span class="p">(</span><span class="n">group_name</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;data2&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mf">6.</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;6&quot;</span><span class="p">});</span><span class="w"></span>
 </pre></div>
 </div>
-<p><strong>Reading properties</strong></p>
+</details><p><strong>Reading properties</strong></p>
 <p>This section describes how to read properties under several different
 scenarios: (a) when specific properties are required, (b) when the
 consumer provides a default value for missing properties, and (c) when
@@ -2951,24 +2951,24 @@ runtime error and an exception is thrown.</p>
 exception generated by GeometryProperties propagate upward, or detect
 the missing property and throw an exception with a custom message. The
 example below shows both approaches.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>const IllustrationProperties&amp; properties = FunctionThatReturnsProperties();
-// Looking for a Rgba of rgba colors named &quot;rgba&quot; - send generic error that
-// the property set is missing the required property.
-const Rgba rgba =
-properties.GetProperty&lt;Rgba&gt;(&quot;MyGroup&quot;, &quot;rgba&quot;);
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="n">IllustrationProperties</span><span class="o">&amp;</span><span class="w"> </span><span class="n">properties</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FunctionThatReturnsProperties</span><span class="p">();</span><span class="w"></span>
+<span class="c1">// Looking for a Rgba of rgba colors named &quot;rgba&quot; - send generic error that</span>
+<span class="c1">// the property set is missing the required property.</span>
+<span class="k">const</span><span class="w"> </span><span class="n">Rgba</span><span class="w"> </span><span class="n">rgba</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="n">properties</span><span class="p">.</span><span class="n">GetProperty</span><span class="o">&lt;</span><span class="n">Rgba</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;MyGroup&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;rgba&quot;</span><span class="p">);</span><span class="w"></span>
 
-// Explicitly detect missing property and throw exception with custom message.
-if (!properties.HasProperty(&quot;MyGroup&quot;, &quot;rgba&quot;)) {
-throw RuntimeError(
-&quot;ThisClass: Missing the necessary &#39;rgba&#39; property; the object cannot be &quot;
-&quot;rendered&quot;);
-}
-// Otherwise acquire value, confident that no exception will be thrown.
-const Rgba rgba =
-properties.GetProperty&lt;Rgba&gt;(&quot;MyGroup&quot;, &quot;rgba&quot;);
+<span class="c1">// Explicitly detect missing property and throw exception with custom message.</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">properties</span><span class="p">.</span><span class="n">HasProperty</span><span class="p">(</span><span class="s">&quot;MyGroup&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;rgba&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="k">throw</span><span class="w"> </span><span class="n">RuntimeError</span><span class="p">(</span><span class="w"></span>
+<span class="s">&quot;ThisClass: Missing the necessary &#39;rgba&#39; property; the object cannot be &quot;</span><span class="w"></span>
+<span class="s">&quot;rendered&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="c1">// Otherwise acquire value, confident that no exception will be thrown.</span>
+<span class="k">const</span><span class="w"> </span><span class="n">Rgba</span><span class="w"> </span><span class="n">rgba</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="n">properties</span><span class="p">.</span><span class="n">GetProperty</span><span class="o">&lt;</span><span class="n">Rgba</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;MyGroup&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;rgba&quot;</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-<div class="admonition note">
+</details><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>calls to <code class="docutils literal notranslate"><span class="pre">GetProperty()</span></code> always require the return type template
 value (e.g., <code class="docutils literal notranslate"><span class="pre">Rgba</span></code>) to be specified in the call.</p>
@@ -2980,22 +2980,22 @@ default value to use in case the target property is not defined. In
 this invocation, the template parameter need not be explicitly
 declared – the inferred return type will be the same as the default
 value.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">const</span> <span class="n">IllustrationProperties</span><span class="o">&amp;</span> <span class="n">properties</span> <span class="o">=</span> <span class="n">FunctionThatReturnsProperties</span><span class="p">();</span>
-<span class="o">//</span> <span class="n">Looking</span> <span class="k">for</span> <span class="n">a</span> <span class="n">Rgba</span> <span class="n">of</span> <span class="n">rgba</span> <span class="n">colors</span> <span class="n">named</span> <span class="s2">&quot;rgba&quot;</span><span class="o">.</span>
-<span class="n">const</span> <span class="n">Rgba</span> <span class="n">default_color</span><span class="p">{</span><span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">};</span>
-<span class="n">const</span> <span class="n">Rgba</span> <span class="n">rgba</span> <span class="o">=</span>
-<span class="n">properties</span><span class="o">.</span><span class="n">GetPropertyOrDefault</span><span class="p">(</span><span class="s2">&quot;MyGroup&quot;</span><span class="p">,</span> <span class="s2">&quot;rgba&quot;</span><span class="p">,</span> <span class="n">default_color</span><span class="p">);</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="n">IllustrationProperties</span><span class="o">&amp;</span><span class="w"> </span><span class="n">properties</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FunctionThatReturnsProperties</span><span class="p">();</span><span class="w"></span>
+<span class="c1">// Looking for a Rgba of rgba colors named &quot;rgba&quot;.</span>
+<span class="k">const</span><span class="w"> </span><span class="n">Rgba</span><span class="w"> </span><span class="n">default_color</span><span class="p">{</span><span class="mf">0.9</span><span class="p">,</span><span class="w"> </span><span class="mf">0.9</span><span class="p">,</span><span class="w"> </span><span class="mf">0.9</span><span class="p">};</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Rgba</span><span class="w"> </span><span class="n">rgba</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="n">properties</span><span class="p">.</span><span class="n">GetPropertyOrDefault</span><span class="p">(</span><span class="s">&quot;MyGroup&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;rgba&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">default_color</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Alternatively, the default value can be provided in one of the
+</details><p>Alternatively, the default value can be provided in one of the
 following forms:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">properties</span><span class="o">.</span><span class="n">GetPropertyOrDefault</span><span class="p">(</span><span class="s2">&quot;MyGroup&quot;</span><span class="p">,</span> <span class="s2">&quot;rgba&quot;</span><span class="p">,</span>
-<span class="n">Rgba</span><span class="p">{</span><span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">});</span>
-<span class="n">properties</span><span class="o">.</span><span class="n">GetPropertyOrDefault</span><span class="o">&lt;</span><span class="n">Rgba</span><span class="o">&gt;</span><span class="p">(</span><span class="s2">&quot;MyGroup&quot;</span><span class="p">,</span> <span class="s2">&quot;rgba&quot;</span><span class="p">,</span>
-<span class="p">{</span><span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">});</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">properties</span><span class="p">.</span><span class="n">GetPropertyOrDefault</span><span class="p">(</span><span class="s">&quot;MyGroup&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;rgba&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="n">Rgba</span><span class="p">{</span><span class="mf">0.9</span><span class="p">,</span><span class="w"> </span><span class="mf">0.9</span><span class="p">,</span><span class="w"> </span><span class="mf">0.9</span><span class="p">});</span><span class="w"></span>
+<span class="n">properties</span><span class="p">.</span><span class="n">GetPropertyOrDefault</span><span class="o">&lt;</span><span class="n">Rgba</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;MyGroup&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;rgba&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="p">{</span><span class="mf">0.9</span><span class="p">,</span><span class="w"> </span><span class="mf">0.9</span><span class="p">,</span><span class="w"> </span><span class="mf">0.9</span><span class="p">});</span><span class="w"></span>
 </pre></div>
 </div>
-<p><em>Iterating through provided properties</em></p>
+</details><p><em>Iterating through provided properties</em></p>
 <p>Another alternative is to iterate through the properties that <em>have</em>
 been provided. This might be done for several reasons, e.g.:</p>
 <ul class="simple">
@@ -3007,18 +3007,18 @@ registering code to define only those properties that deviate from the
 specified default.</p>
 <p>Working with properties in this manner requires knowledge of how to
 work with AbstractValue.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">const</span> <span class="n">IllustrationProperties</span><span class="o">&amp;</span> <span class="n">properties</span> <span class="o">=</span> <span class="n">FunctionThatReturnsProperties</span><span class="p">();</span>
-<span class="k">for</span> <span class="p">(</span><span class="n">const</span> <span class="n">auto</span><span class="o">&amp;</span> <span class="n">pair</span> <span class="p">:</span> <span class="n">properties</span><span class="o">.</span><span class="n">GetGroupProperties</span><span class="p">(</span><span class="s2">&quot;MyGroup&quot;</span><span class="p">)</span> <span class="p">{</span>
-<span class="n">const</span> <span class="n">std</span><span class="p">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">name</span> <span class="o">=</span> <span class="n">pair</span><span class="o">.</span><span class="n">first</span><span class="p">;</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;rgba&quot;</span><span class="p">)</span> <span class="p">{</span>
-<span class="o">//</span> <span class="n">Throws</span> <span class="n">an</span> <span class="n">exception</span> <span class="k">if</span> <span class="n">the</span> <span class="n">named</span> <span class="n">parameter</span> <span class="ow">is</span> <span class="n">of</span> <span class="n">the</span> <span class="n">wrong</span> <span class="nb">type</span><span class="o">.</span>
-<span class="n">const</span> <span class="n">Rgba</span><span class="o">&amp;</span> <span class="n">rgba</span> <span class="o">=</span>
-<span class="n">pair</span><span class="o">.</span><span class="n">second</span><span class="o">-&gt;</span><span class="n">GetValueOrThrow</span><span class="o">&lt;</span><span class="n">Rgba</span><span class="o">&gt;</span><span class="p">();</span>
-<span class="p">}</span>
-<span class="p">}</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="n">IllustrationProperties</span><span class="o">&amp;</span><span class="w"> </span><span class="n">properties</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FunctionThatReturnsProperties</span><span class="p">();</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">pair</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">properties</span><span class="p">.</span><span class="n">GetGroupProperties</span><span class="p">(</span><span class="s">&quot;MyGroup&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pair</span><span class="p">.</span><span class="n">first</span><span class="p">;</span><span class="w"></span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;rgba&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="c1">// Throws an exception if the named parameter is of the wrong type.</span>
+<span class="k">const</span><span class="w"> </span><span class="n">Rgba</span><span class="o">&amp;</span><span class="w"> </span><span class="n">rgba</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="n">pair</span><span class="p">.</span><span class="n">second</span><span class="o">-&gt;</span><span class="n">GetValueOrThrow</span><span class="o">&lt;</span><span class="n">Rgba</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<dl class="py method">
+</details><dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.GeometryProperties.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.GeometryProperties.__init__" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
@@ -3120,11 +3120,11 @@ value. Sometimes it is convenient to provide the default value in a
 form that can be implicitly converted to the final type. In that case,
 it is necessary to explicitly declare the desired <code class="docutils literal notranslate"><span class="pre">ValueType</span></code> so the
 compiler does not infer the wrong type, e.g.:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Note</span> <span class="n">the</span> <span class="o">*</span><span class="n">integer</span><span class="o">*</span> <span class="n">value</span> <span class="k">as</span> <span class="n">default</span> <span class="n">value</span><span class="o">.</span>
-<span class="n">const</span> <span class="n">double</span> <span class="n">my_value</span> <span class="o">=</span> <span class="n">properties</span><span class="o">.</span><span class="n">GetPropertyOrDefault</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span><span class="p">(</span><span class="s2">&quot;g&quot;</span><span class="p">,</span> <span class="s2">&quot;p&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Note the _integer_ value as default value.</span>
+<span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">my_value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">properties</span><span class="p">.</span><span class="n">GetPropertyOrDefault</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;g&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;p&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-<dl class="simple">
+</details><dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">group_name</span></code>:</dt><dd><p>The name of the group to which the property belongs.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt><dd><p>The name of the desired property.</p>
@@ -3300,15 +3300,15 @@ variously documented) will cause one or more role versions to change.
 This class provides the API <code class="docutils literal notranslate"><span class="pre">IsSameAs</span></code> that takes another
 GeometryVersion as well as a Role to help detect whether the provided
 role of the geometries may have changed. For example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>// Downstream system holds an instance of GeometryVersion ``old_version`` as a
-// reference to compare against.
-// Get the version under test from SceneGraphInspector.
-const GeometryVersion&amp; test_version = scene_graph_inspector.geometry_version();
-// Determine if two versions have the same proximity data.
-bool same_proximity = old_version.IsSameAs(test_version, Role::kProximity);
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Downstream system holds an instance of GeometryVersion `old_version` as a</span>
+<span class="c1">// reference to compare against.</span>
+<span class="c1">// Get the version under test from SceneGraphInspector.</span>
+<span class="k">const</span><span class="w"> </span><span class="n">GeometryVersion</span><span class="o">&amp;</span><span class="w"> </span><span class="n">test_version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scene_graph_inspector</span><span class="p">.</span><span class="n">geometry_version</span><span class="p">();</span><span class="w"></span>
+<span class="c1">// Determine if two versions have the same proximity data.</span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">same_proximity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">old_version</span><span class="p">.</span><span class="n">IsSameAs</span><span class="p">(</span><span class="n">test_version</span><span class="p">,</span><span class="w"> </span><span class="n">Role</span><span class="o">::</span><span class="n">kProximity</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-<dl class="py method">
+</details><dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.GeometryVersion.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.GeometryVersion.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
@@ -3570,17 +3570,17 @@ you <strong>must</strong> instantiate this RenderEngine via MakeRenderEngineGltf
 from the main thread <strong>before</strong> spawning your threaded workers.  As soon
 as one of these RenderEngine instances has been constructed, libcurl will
 have been initialized.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Setup</span> <span class="n">your</span> <span class="n">server</span> <span class="n">information</span> <span class="ow">and</span> <span class="n">create</span> <span class="n">the</span> <span class="n">RenderEngine</span><span class="o">.</span>  <span class="n">This</span> <span class="n">must</span>
-<span class="o">//</span> <span class="n">be</span> <span class="n">done</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">non</span><span class="o">-</span><span class="n">threaded</span> <span class="n">context</span> <span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="p">,</span> <span class="n">at</span> <span class="n">the</span> <span class="n">program</span> <span class="n">start</span><span class="p">)</span><span class="o">.</span>
-<span class="n">RenderEngineGltfClientParams</span> <span class="n">params</span><span class="p">;</span>
-<span class="n">params</span><span class="o">.</span><span class="n">base_url</span> <span class="o">=</span> <span class="s2">&quot;http://some-server.url&quot;</span><span class="p">;</span>
-<span class="n">auto</span> <span class="n">render_engine</span> <span class="o">=</span> <span class="n">MakeRenderEngineGltfClient</span><span class="p">(</span><span class="n">params</span><span class="p">);</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Setup your server information and create the RenderEngine.  This must</span>
+<span class="c1">// be done in a non-threaded context (e.g., at the program start).</span>
+<span class="n">RenderEngineGltfClientParams</span><span class="w"> </span><span class="n">params</span><span class="p">;</span><span class="w"></span>
+<span class="n">params</span><span class="p">.</span><span class="n">base_url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;http://some-server.url&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">render_engine</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MakeRenderEngineGltfClient</span><span class="p">(</span><span class="n">params</span><span class="p">);</span><span class="w"></span>
 
-<span class="o">//</span> <span class="n">After</span> <span class="n">MakeRenderEngineGltfClient</span><span class="p">()</span> <span class="n">function</span> <span class="n">call</span><span class="p">,</span> <span class="n">libcurl</span> <span class="n">has</span> <span class="n">been</span>
-<span class="o">//</span> <span class="n">initialized</span> <span class="ow">and</span> <span class="n">you</span> <span class="n">may</span> <span class="n">now</span> <span class="n">create</span> <span class="n">threads</span> <span class="k">if</span> <span class="n">desired</span><span class="o">.</span>
+<span class="c1">// After MakeRenderEngineGltfClient() function call, libcurl has been</span>
+<span class="c1">// initialized and you may now create threads if desired.</span>
 </pre></div>
 </div>
-<p>3. If you need to use a different initialization strategy for libcurl in your
+</details><p>3. If you need to use a different initialization strategy for libcurl in your
 application, you should first create the RenderEngine using
 MakeRenderEngineGltfClient, then manually call
 [<cite>curl_global_cleanup()</cite>][libcurl_cleanup], followed by manually calling
@@ -3589,19 +3589,19 @@ general, this scenario is <strong>atypical</strong> and you should not need to w
 about this.  Applications with specialized libcurl needs, though, must
 understand the construction and initialization order to be able to modify
 the behavior to suit their needs.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Follow</span> <span class="n">the</span> <span class="n">steps</span> <span class="n">above</span> <span class="n">to</span> <span class="n">construct</span> <span class="n">the</span> <span class="n">RenderEngine</span> <span class="n">given</span> <span class="n">the</span>
-<span class="o">//</span> <span class="n">specified</span> <span class="n">RenderEngineGltfClientParams</span><span class="o">.</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Follow the steps above to construct the RenderEngine given the</span>
+<span class="c1">// specified RenderEngineGltfClientParams.</span>
 
-<span class="o">//</span> <span class="n">Libcurl</span> <span class="n">has</span> <span class="n">been</span> <span class="n">initialized</span> <span class="n">at</span> <span class="n">this</span> <span class="n">point</span><span class="p">,</span> <span class="n">so</span> <span class="n">your</span> <span class="n">application</span> <span class="n">needs</span>
-<span class="o">//</span> <span class="n">to</span> <span class="n">reset</span> <span class="ow">and</span> <span class="n">re</span><span class="o">-</span><span class="n">initialize</span> <span class="n">curl</span> <span class="n">again</span><span class="o">.</span>
-<span class="n">curl_global_cleanup</span><span class="p">();</span>
-<span class="n">curl_global_init</span><span class="p">(</span><span class="o">...</span><span class="p">);</span>  <span class="o">//</span> <span class="o">&lt;&lt;&lt;</span> <span class="n">your</span> <span class="n">custom</span> <span class="n">flags</span> <span class="n">here</span>
+<span class="c1">// Libcurl has been initialized at this point, so your application needs</span>
+<span class="c1">// to reset and re-initialize curl again.</span>
+<span class="n">curl_global_cleanup</span><span class="p">();</span><span class="w"></span>
+<span class="n">curl_global_init</span><span class="p">(...);</span><span class="w">  </span><span class="c1">// &lt;&lt;&lt; your custom flags here</span>
 
-<span class="o">//</span> <span class="n">Now</span> <span class="n">that</span> <span class="n">libcurl</span> <span class="n">has</span> <span class="n">been</span> <span class="n">re</span><span class="o">-</span><span class="n">initialized</span> <span class="n">to</span> <span class="n">suit</span> <span class="n">your</span> <span class="n">application</span><span class="s1">&#39;s</span>
-<span class="o">//</span> <span class="n">needs</span><span class="p">,</span> <span class="n">you</span> <span class="n">may</span> <span class="n">now</span> <span class="n">create</span> <span class="n">threads</span> <span class="k">if</span> <span class="n">desired</span><span class="o">.</span>
+<span class="c1">// Now that libcurl has been re-initialized to suit your application&#39;s</span>
+<span class="c1">// needs, you may now create threads if desired.</span>
 </pre></div>
 </div>
-<p>[libcurl]: <a class="reference external" href="https://curl.se/libcurl/">https://curl.se/libcurl/</a> [libcurl_threadsafe]:
+</details><p>[libcurl]: <a class="reference external" href="https://curl.se/libcurl/">https://curl.se/libcurl/</a> [libcurl_threadsafe]:
 <a class="reference external" href="https://curl.se/libcurl/c/threadsafe.html">https://curl.se/libcurl/c/threadsafe.html</a> [libcurl_init]:
 <a class="reference external" href="https://curl.se/libcurl/c/curl_global_init.html">https://curl.se/libcurl/c/curl_global_init.html</a> [libcurl_cleanup]:
 <a class="reference external" href="https://curl.se/libcurl/c/curl_global_cleanup.html">https://curl.se/libcurl/c/curl_global_cleanup.html</a></p>
@@ -4173,18 +4173,18 @@ value.</p>
 </dd>
 </dl>
 <p>Typically, X and Y are obtained via, e.g.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">constexpr</span> <span class="nb">int</span> <span class="n">nx</span> <span class="o">=</span> <span class="mi">15</span><span class="p">,</span> <span class="n">ny</span> <span class="o">=</span> <span class="mi">11</span><span class="p">;</span>
-<span class="n">X</span> <span class="o">=</span> <span class="n">RowVector</span><span class="o">&lt;</span><span class="n">double</span><span class="p">,</span> <span class="n">nx</span><span class="o">&gt;</span><span class="p">::</span><span class="n">LinSpaced</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">replicate</span><span class="o">&lt;</span><span class="n">ny</span><span class="p">,</span> <span class="mi">1</span><span class="o">&gt;</span><span class="p">();</span>
-<span class="n">Y</span> <span class="o">=</span> <span class="n">Vector</span><span class="o">&lt;</span><span class="n">double</span><span class="p">,</span> <span class="n">ny</span><span class="o">&gt;</span><span class="p">::</span><span class="n">LinSpaced</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">replicate</span><span class="o">&lt;</span><span class="mi">1</span><span class="p">,</span> <span class="n">nx</span><span class="o">&gt;</span><span class="p">();</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">constexpr</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="n">ny</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">11</span><span class="p">;</span><span class="w"></span>
+<span class="n">X</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RowVector</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="n">nx</span><span class="o">&gt;::</span><span class="n">LinSpaced</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">).</span><span class="n">replicate</span><span class="o">&lt;</span><span class="n">ny</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
+<span class="n">Y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="n">ny</span><span class="o">&gt;::</span><span class="n">LinSpaced</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">).</span><span class="n">replicate</span><span class="o">&lt;</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">nx</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
 </pre></div>
 </div>
-<p>in C++ or e.g.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">xs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
-<span class="n">ys</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span>
-<span class="p">[</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">)</span>
+</details><p>in C++ or e.g.</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">xs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">np</span><span class="p">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">)</span><span class="w"></span>
+<span class="n">ys</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">np</span><span class="p">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">)</span><span class="w"></span>
+<span class="p">[</span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">Y</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">np</span><span class="p">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span><span class="w"> </span><span class="n">ys</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
-<p>in Python, and Z is the surface evaluated on each X, Y value.</p>
+</details><p>in Python, and Z is the surface evaluated on each X, Y value.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>X, Y, and Z must be the same shape.</p>
 </dd>
@@ -4467,10 +4467,10 @@ value.</p>
 </ol>
 <p>Sets a single named property of the object at the given path. For
 example,</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">meshcat</span><span class="o">.</span><span class="n">SetProperty</span><span class="p">(</span><span class="s2">&quot;/Background&quot;</span><span class="p">,</span> <span class="s2">&quot;visible&quot;</span><span class="p">,</span> <span class="n">false</span><span class="p">);</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">meshcat</span><span class="p">.</span><span class="n">SetProperty</span><span class="p">(</span><span class="s">&quot;/Background&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;visible&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-<p>will turn off the background. See meshcat_path “Meshcat paths” for
+</details><p>will turn off the background. See meshcat_path “Meshcat paths” for
 more details about these properties and how to address them.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">path</span></code>:</dt><dd><p>a “/”-delimited string indicating the path in the scene tree. See
@@ -4491,10 +4491,10 @@ this transform is saved to the current animation at
 </ol>
 <p>Sets a single named property of the object at the given path. For
 example,</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">meshcat</span><span class="o">.</span><span class="n">SetProperty</span><span class="p">(</span><span class="s2">&quot;/Lights/DirectionalLight/&lt;object&gt;&quot;</span><span class="p">,</span> <span class="s2">&quot;intensity&quot;</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">);</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">meshcat</span><span class="p">.</span><span class="n">SetProperty</span><span class="p">(</span><span class="s">&quot;/Lights/DirectionalLight/&lt;object&gt;&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;intensity&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-<p>See meshcat_path “Meshcat paths” for more details about these
+</details><p>See meshcat_path “Meshcat paths” for more details about these
 properties and how to address them.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">path</span></code>:</dt><dd><p>a “/”-delimited string indicating the path in the scene tree. See
@@ -4514,10 +4514,10 @@ not currently recording, then this value is simply ignored.</p>
 </ol>
 <p>Sets a single named property of the object at the given path. For
 example,</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">meshcat</span><span class="o">.</span><span class="n">SetProperty</span><span class="p">(</span><span class="s2">&quot;/Background&quot;</span><span class="p">,</span> <span class="s2">&quot;top_color&quot;</span><span class="p">,</span> <span class="p">{</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">});</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">meshcat</span><span class="p">.</span><span class="n">SetProperty</span><span class="p">(</span><span class="s">&quot;/Background&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;top_color&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">});</span><span class="w"></span>
 </pre></div>
 </div>
-<p>See meshcat_path “Meshcat paths” for more details about these
+</details><p>See meshcat_path “Meshcat paths” for more details about these
 properties and how to address them.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">path</span></code>:</dt><dd><p>a “/”-delimited string indicating the path in the scene tree. See
@@ -9649,21 +9649,40 @@ recognize if the data has been modified since last examined.</p>
 illustration, and perception; each role has its own, independent
 version. Any operation that affects geometry with one of those roles
 will modify the corresponding version. For example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Does</span> <span class="o">*</span><span class="ow">not</span><span class="o">*</span> <span class="n">modify</span> <span class="nb">any</span> <span class="n">version</span><span class="p">;</span> <span class="n">no</span> <span class="n">roles</span> <span class="n">have</span> <span class="n">been</span> <span class="n">assigned</span><span class="o">.</span>
-<span class="n">const</span> <span class="n">GeometryId</span> <span class="n">geometry_id</span> <span class="o">=</span> <span class="n">scene_graph</span><span class="o">.</span><span class="n">RegisterGeometry</span><span class="p">(</span>
-<span class="n">source_id</span><span class="p">,</span> <span class="n">frame_id</span><span class="p">,</span> <span class="n">make_unique</span><span class="o">&lt;</span><span class="n">GeometryInstance</span><span class="o">&gt;</span><span class="p">(</span><span class="o">...</span><span class="p">));</span>
-<span class="o">//</span> <span class="n">Modifies</span> <span class="n">the</span> <span class="n">proximity</span> <span class="n">version</span><span class="o">.</span>
-<span class="n">scene_graph</span><span class="o">.</span><span class="n">AssignRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="n">geometry_id</span><span class="p">,</span> <span class="n">ProximityProperties</span><span class="p">());</span>
-<span class="o">//</span> <span class="n">Modifies</span> <span class="n">the</span> <span class="n">illustration</span> <span class="n">version</span><span class="o">.</span>
-<span class="n">scene_graph</span><span class="o">.</span><span class="n">AssignRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="n">geometry_id</span><span class="p">,</span> <span class="n">IllustrationProperties</span><span class="p">());</span>
-<span class="o">//</span> <span class="n">Modifies</span> <span class="n">the</span> <span class="n">perception</span> <span class="n">version</span> <span class="k">if</span> <span class="n">there</span> <span class="n">exists</span> <span class="n">a</span> <span class="n">renderer</span> <span class="n">that</span> <span class="n">accepts</span> <span class="n">the</span>
-<span class="o">//</span> <span class="n">geometry</span><span class="o">.</span>
-<span class="n">scene_graph</span><span class="o">.</span><span class="n">AssignRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="n">geometry_id</span><span class="p">,</span> <span class="n">PerceptionProperties</span><span class="p">());</span>
-<span class="o">//</span> <span class="n">Modifies</span> <span class="n">the</span> <span class="n">illustration</span> <span class="n">version</span><span class="o">.</span>
-<span class="n">scene_graph</span><span class="o">.</span><span class="n">RemoveRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="n">geometry_id</span><span class="p">,</span> <span class="n">Role</span><span class="p">::</span><span class="n">kIllustration</span><span class="p">);</span>
-<span class="o">//</span> <span class="n">Modifies</span> <span class="n">proximity</span> <span class="n">version</span> <span class="ow">and</span> <span class="n">perception</span> <span class="n">version</span> <span class="k">if</span> <span class="n">the</span> <span class="n">geometry</span> <span class="ow">is</span>
-<span class="o">//</span> <span class="n">registered</span> <span class="k">with</span> <span class="nb">any</span> <span class="n">renderer</span><span class="o">.</span>
-<span class="n">scene_graph</span><span class="o">.</span><span class="n">RemoveGeometry</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="n">geometry_id</span><span class="p">);</span>
+<p>In C++:</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Does *not* modify any version; no roles have been assigned.</span>
+<span class="k">const</span><span class="w"> </span><span class="n">GeometryId</span><span class="w"> </span><span class="n">geometry_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scene_graph</span><span class="p">.</span><span class="n">RegisterGeometry</span><span class="p">(</span><span class="w"></span>
+<span class="n">source_id</span><span class="p">,</span><span class="w"> </span><span class="n">frame_id</span><span class="p">,</span><span class="w"> </span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">GeometryInstance</span><span class="o">&gt;</span><span class="p">(...));</span><span class="w"></span>
+<span class="c1">// Modifies the proximity version.</span>
+<span class="n">scene_graph</span><span class="p">.</span><span class="n">AssignRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span><span class="w"> </span><span class="n">geometry_id</span><span class="p">,</span><span class="w"> </span><span class="n">ProximityProperties</span><span class="p">());</span><span class="w"></span>
+<span class="c1">// Modifies the illustration version.</span>
+<span class="n">scene_graph</span><span class="p">.</span><span class="n">AssignRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span><span class="w"> </span><span class="n">geometry_id</span><span class="p">,</span><span class="w"> </span><span class="n">IllustrationProperties</span><span class="p">());</span><span class="w"></span>
+<span class="c1">// Modifies the perception version if there exists a renderer that accepts the</span>
+<span class="c1">// geometry.</span>
+<span class="n">scene_graph</span><span class="p">.</span><span class="n">AssignRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span><span class="w"> </span><span class="n">geometry_id</span><span class="p">,</span><span class="w"> </span><span class="n">PerceptionProperties</span><span class="p">());</span><span class="w"></span>
+<span class="c1">// Modifies the illustration version.</span>
+<span class="n">scene_graph</span><span class="p">.</span><span class="n">RemoveRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span><span class="w"> </span><span class="n">geometry_id</span><span class="p">,</span><span class="w"> </span><span class="n">Role</span><span class="o">::</span><span class="n">kIllustration</span><span class="p">);</span><span class="w"></span>
+<span class="c1">// Modifies proximity version and perception version if the geometry is</span>
+<span class="c1">// registered with any renderer.</span>
+<span class="n">scene_graph</span><span class="p">.</span><span class="n">RemoveGeometry</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span><span class="w"> </span><span class="n">geometry_id</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+</details><p>In Python:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Does *not* modify any version; no roles have been assigned.</span>
+<span class="n">geometry_id</span> <span class="o">=</span> <span class="n">scene_graph</span><span class="o">.</span><span class="n">RegisterGeometry</span><span class="p">(</span>
+<span class="n">source_id</span><span class="p">,</span> <span class="n">frame_id</span><span class="p">,</span> <span class="n">GeometryInstance</span><span class="p">(</span><span class="o">...</span><span class="p">))</span>
+<span class="c1"># Modifies the proximity version.</span>
+<span class="n">scene_graph</span><span class="o">.</span><span class="n">AssignRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="n">geometry_id</span><span class="p">,</span> <span class="n">ProximityProperties</span><span class="p">())</span>
+<span class="c1"># Modifies the illustration version.</span>
+<span class="n">scene_graph</span><span class="o">.</span><span class="n">AssignRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="n">geometry_id</span><span class="p">,</span> <span class="n">IllustrationProperties</span><span class="p">())</span>
+<span class="c1"># Modifies the perception version if there exists a renderer that accepts the</span>
+<span class="c1"># geometry.</span>
+<span class="n">scene_graph</span><span class="o">.</span><span class="n">AssignRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="n">geometry_id</span><span class="p">,</span> <span class="n">PerceptionProperties</span><span class="p">())</span>
+<span class="c1"># Modifies the illustration version.</span>
+<span class="n">scene_graph</span><span class="o">.</span><span class="n">RemoveRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="n">geometry_id</span><span class="p">,</span> <span class="n">Role</span><span class="o">.</span><span class="n">kIllustration</span><span class="p">)</span>
+<span class="c1"># Modifies proximity version and perception version if the geometry is</span>
+<span class="c1"># registered with any renderer.</span>
+<span class="n">scene_graph</span><span class="o">.</span><span class="n">RemoveGeometry</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="n">geometry_id</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Each copy of geometry data maintains its own set of versions.
@@ -9713,15 +9732,15 @@ geometry registration and role assignment. Given a representative
 sequence of registration and perception role assignment, the addition
 of the renderer can be introduced anywhere in the sequence and the end
 result would be the same.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">GeometryId</span> <span class="n">id1</span> <span class="o">=</span> <span class="n">scene_graph</span><span class="o">.</span><span class="n">RegisterGeometry</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="o">...</span><span class="p">);</span>
-<span class="n">scene_graph</span><span class="o">.</span><span class="n">AssignRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="n">id1</span><span class="p">,</span> <span class="n">PerceptionProperties</span><span class="p">());</span>
-<span class="n">GeometryId</span> <span class="n">id2</span> <span class="o">=</span> <span class="n">scene_graph</span><span class="o">.</span><span class="n">RegisterGeometry</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="o">...</span><span class="p">);</span>
-<span class="n">scene_graph</span><span class="o">.</span><span class="n">AssignRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="n">id2</span><span class="p">,</span> <span class="n">PerceptionProperties</span><span class="p">());</span>
-<span class="n">GeometryId</span> <span class="n">id3</span> <span class="o">=</span> <span class="n">scene_graph</span><span class="o">.</span><span class="n">RegisterGeometry</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="o">...</span><span class="p">);</span>
-<span class="n">scene_graph</span><span class="o">.</span><span class="n">AssignRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="n">id3</span><span class="p">,</span> <span class="n">PerceptionProperties</span><span class="p">());</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">GeometryId</span><span class="w"> </span><span class="n">id1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scene_graph</span><span class="p">.</span><span class="n">RegisterGeometry</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span><span class="w"> </span><span class="p">...);</span><span class="w"></span>
+<span class="n">scene_graph</span><span class="p">.</span><span class="n">AssignRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span><span class="w"> </span><span class="n">id1</span><span class="p">,</span><span class="w"> </span><span class="n">PerceptionProperties</span><span class="p">());</span><span class="w"></span>
+<span class="n">GeometryId</span><span class="w"> </span><span class="n">id2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scene_graph</span><span class="p">.</span><span class="n">RegisterGeometry</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span><span class="w"> </span><span class="p">...);</span><span class="w"></span>
+<span class="n">scene_graph</span><span class="p">.</span><span class="n">AssignRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span><span class="w"> </span><span class="n">id2</span><span class="p">,</span><span class="w"> </span><span class="n">PerceptionProperties</span><span class="p">());</span><span class="w"></span>
+<span class="n">GeometryId</span><span class="w"> </span><span class="n">id3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scene_graph</span><span class="p">.</span><span class="n">RegisterGeometry</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span><span class="w"> </span><span class="p">...);</span><span class="w"></span>
+<span class="n">scene_graph</span><span class="p">.</span><span class="n">AssignRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span><span class="w"> </span><span class="n">id3</span><span class="p">,</span><span class="w"> </span><span class="n">PerceptionProperties</span><span class="p">());</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Modifies the perception version if <code class="docutils literal notranslate"><span class="pre">renderer</span></code> accepts any previously
+</details><p>Modifies the perception version if <code class="docutils literal notranslate"><span class="pre">renderer</span></code> accepts any previously
 existing geometries (see scene_graph_versioning).</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt><dd><p>The unique name of the renderer.</p>
@@ -10434,21 +10453,40 @@ recognize if the data has been modified since last examined.</p>
 illustration, and perception; each role has its own, independent
 version. Any operation that affects geometry with one of those roles
 will modify the corresponding version. For example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Does</span> <span class="o">*</span><span class="ow">not</span><span class="o">*</span> <span class="n">modify</span> <span class="nb">any</span> <span class="n">version</span><span class="p">;</span> <span class="n">no</span> <span class="n">roles</span> <span class="n">have</span> <span class="n">been</span> <span class="n">assigned</span><span class="o">.</span>
-<span class="n">const</span> <span class="n">GeometryId</span> <span class="n">geometry_id</span> <span class="o">=</span> <span class="n">scene_graph</span><span class="o">.</span><span class="n">RegisterGeometry</span><span class="p">(</span>
-<span class="n">source_id</span><span class="p">,</span> <span class="n">frame_id</span><span class="p">,</span> <span class="n">make_unique</span><span class="o">&lt;</span><span class="n">GeometryInstance</span><span class="o">&gt;</span><span class="p">(</span><span class="o">...</span><span class="p">));</span>
-<span class="o">//</span> <span class="n">Modifies</span> <span class="n">the</span> <span class="n">proximity</span> <span class="n">version</span><span class="o">.</span>
-<span class="n">scene_graph</span><span class="o">.</span><span class="n">AssignRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="n">geometry_id</span><span class="p">,</span> <span class="n">ProximityProperties</span><span class="p">());</span>
-<span class="o">//</span> <span class="n">Modifies</span> <span class="n">the</span> <span class="n">illustration</span> <span class="n">version</span><span class="o">.</span>
-<span class="n">scene_graph</span><span class="o">.</span><span class="n">AssignRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="n">geometry_id</span><span class="p">,</span> <span class="n">IllustrationProperties</span><span class="p">());</span>
-<span class="o">//</span> <span class="n">Modifies</span> <span class="n">the</span> <span class="n">perception</span> <span class="n">version</span> <span class="k">if</span> <span class="n">there</span> <span class="n">exists</span> <span class="n">a</span> <span class="n">renderer</span> <span class="n">that</span> <span class="n">accepts</span> <span class="n">the</span>
-<span class="o">//</span> <span class="n">geometry</span><span class="o">.</span>
-<span class="n">scene_graph</span><span class="o">.</span><span class="n">AssignRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="n">geometry_id</span><span class="p">,</span> <span class="n">PerceptionProperties</span><span class="p">());</span>
-<span class="o">//</span> <span class="n">Modifies</span> <span class="n">the</span> <span class="n">illustration</span> <span class="n">version</span><span class="o">.</span>
-<span class="n">scene_graph</span><span class="o">.</span><span class="n">RemoveRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="n">geometry_id</span><span class="p">,</span> <span class="n">Role</span><span class="p">::</span><span class="n">kIllustration</span><span class="p">);</span>
-<span class="o">//</span> <span class="n">Modifies</span> <span class="n">proximity</span> <span class="n">version</span> <span class="ow">and</span> <span class="n">perception</span> <span class="n">version</span> <span class="k">if</span> <span class="n">the</span> <span class="n">geometry</span> <span class="ow">is</span>
-<span class="o">//</span> <span class="n">registered</span> <span class="k">with</span> <span class="nb">any</span> <span class="n">renderer</span><span class="o">.</span>
-<span class="n">scene_graph</span><span class="o">.</span><span class="n">RemoveGeometry</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="n">geometry_id</span><span class="p">);</span>
+<p>In C++:</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Does *not* modify any version; no roles have been assigned.</span>
+<span class="k">const</span><span class="w"> </span><span class="n">GeometryId</span><span class="w"> </span><span class="n">geometry_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scene_graph</span><span class="p">.</span><span class="n">RegisterGeometry</span><span class="p">(</span><span class="w"></span>
+<span class="n">source_id</span><span class="p">,</span><span class="w"> </span><span class="n">frame_id</span><span class="p">,</span><span class="w"> </span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">GeometryInstance</span><span class="o">&gt;</span><span class="p">(...));</span><span class="w"></span>
+<span class="c1">// Modifies the proximity version.</span>
+<span class="n">scene_graph</span><span class="p">.</span><span class="n">AssignRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span><span class="w"> </span><span class="n">geometry_id</span><span class="p">,</span><span class="w"> </span><span class="n">ProximityProperties</span><span class="p">());</span><span class="w"></span>
+<span class="c1">// Modifies the illustration version.</span>
+<span class="n">scene_graph</span><span class="p">.</span><span class="n">AssignRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span><span class="w"> </span><span class="n">geometry_id</span><span class="p">,</span><span class="w"> </span><span class="n">IllustrationProperties</span><span class="p">());</span><span class="w"></span>
+<span class="c1">// Modifies the perception version if there exists a renderer that accepts the</span>
+<span class="c1">// geometry.</span>
+<span class="n">scene_graph</span><span class="p">.</span><span class="n">AssignRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span><span class="w"> </span><span class="n">geometry_id</span><span class="p">,</span><span class="w"> </span><span class="n">PerceptionProperties</span><span class="p">());</span><span class="w"></span>
+<span class="c1">// Modifies the illustration version.</span>
+<span class="n">scene_graph</span><span class="p">.</span><span class="n">RemoveRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span><span class="w"> </span><span class="n">geometry_id</span><span class="p">,</span><span class="w"> </span><span class="n">Role</span><span class="o">::</span><span class="n">kIllustration</span><span class="p">);</span><span class="w"></span>
+<span class="c1">// Modifies proximity version and perception version if the geometry is</span>
+<span class="c1">// registered with any renderer.</span>
+<span class="n">scene_graph</span><span class="p">.</span><span class="n">RemoveGeometry</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span><span class="w"> </span><span class="n">geometry_id</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+</details><p>In Python:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Does *not* modify any version; no roles have been assigned.</span>
+<span class="n">geometry_id</span> <span class="o">=</span> <span class="n">scene_graph</span><span class="o">.</span><span class="n">RegisterGeometry</span><span class="p">(</span>
+<span class="n">source_id</span><span class="p">,</span> <span class="n">frame_id</span><span class="p">,</span> <span class="n">GeometryInstance</span><span class="p">(</span><span class="o">...</span><span class="p">))</span>
+<span class="c1"># Modifies the proximity version.</span>
+<span class="n">scene_graph</span><span class="o">.</span><span class="n">AssignRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="n">geometry_id</span><span class="p">,</span> <span class="n">ProximityProperties</span><span class="p">())</span>
+<span class="c1"># Modifies the illustration version.</span>
+<span class="n">scene_graph</span><span class="o">.</span><span class="n">AssignRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="n">geometry_id</span><span class="p">,</span> <span class="n">IllustrationProperties</span><span class="p">())</span>
+<span class="c1"># Modifies the perception version if there exists a renderer that accepts the</span>
+<span class="c1"># geometry.</span>
+<span class="n">scene_graph</span><span class="o">.</span><span class="n">AssignRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="n">geometry_id</span><span class="p">,</span> <span class="n">PerceptionProperties</span><span class="p">())</span>
+<span class="c1"># Modifies the illustration version.</span>
+<span class="n">scene_graph</span><span class="o">.</span><span class="n">RemoveRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="n">geometry_id</span><span class="p">,</span> <span class="n">Role</span><span class="o">.</span><span class="n">kIllustration</span><span class="p">)</span>
+<span class="c1"># Modifies proximity version and perception version if the geometry is</span>
+<span class="c1"># registered with any renderer.</span>
+<span class="n">scene_graph</span><span class="o">.</span><span class="n">RemoveGeometry</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="n">geometry_id</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Each copy of geometry data maintains its own set of versions.
@@ -10493,15 +10531,15 @@ geometry registration and role assignment. Given a representative
 sequence of registration and perception role assignment, the addition
 of the renderer can be introduced anywhere in the sequence and the end
 result would be the same.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">GeometryId</span> <span class="n">id1</span> <span class="o">=</span> <span class="n">scene_graph</span><span class="o">.</span><span class="n">RegisterGeometry</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="o">...</span><span class="p">);</span>
-<span class="n">scene_graph</span><span class="o">.</span><span class="n">AssignRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="n">id1</span><span class="p">,</span> <span class="n">PerceptionProperties</span><span class="p">());</span>
-<span class="n">GeometryId</span> <span class="n">id2</span> <span class="o">=</span> <span class="n">scene_graph</span><span class="o">.</span><span class="n">RegisterGeometry</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="o">...</span><span class="p">);</span>
-<span class="n">scene_graph</span><span class="o">.</span><span class="n">AssignRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="n">id2</span><span class="p">,</span> <span class="n">PerceptionProperties</span><span class="p">());</span>
-<span class="n">GeometryId</span> <span class="n">id3</span> <span class="o">=</span> <span class="n">scene_graph</span><span class="o">.</span><span class="n">RegisterGeometry</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="o">...</span><span class="p">);</span>
-<span class="n">scene_graph</span><span class="o">.</span><span class="n">AssignRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="n">id3</span><span class="p">,</span> <span class="n">PerceptionProperties</span><span class="p">());</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">GeometryId</span><span class="w"> </span><span class="n">id1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scene_graph</span><span class="p">.</span><span class="n">RegisterGeometry</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span><span class="w"> </span><span class="p">...);</span><span class="w"></span>
+<span class="n">scene_graph</span><span class="p">.</span><span class="n">AssignRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span><span class="w"> </span><span class="n">id1</span><span class="p">,</span><span class="w"> </span><span class="n">PerceptionProperties</span><span class="p">());</span><span class="w"></span>
+<span class="n">GeometryId</span><span class="w"> </span><span class="n">id2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scene_graph</span><span class="p">.</span><span class="n">RegisterGeometry</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span><span class="w"> </span><span class="p">...);</span><span class="w"></span>
+<span class="n">scene_graph</span><span class="p">.</span><span class="n">AssignRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span><span class="w"> </span><span class="n">id2</span><span class="p">,</span><span class="w"> </span><span class="n">PerceptionProperties</span><span class="p">());</span><span class="w"></span>
+<span class="n">GeometryId</span><span class="w"> </span><span class="n">id3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scene_graph</span><span class="p">.</span><span class="n">RegisterGeometry</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span><span class="w"> </span><span class="p">...);</span><span class="w"></span>
+<span class="n">scene_graph</span><span class="p">.</span><span class="n">AssignRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span><span class="w"> </span><span class="n">id3</span><span class="p">,</span><span class="w"> </span><span class="n">PerceptionProperties</span><span class="p">());</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Modifies the perception version if <code class="docutils literal notranslate"><span class="pre">renderer</span></code> accepts any previously
+</details><p>Modifies the perception version if <code class="docutils literal notranslate"><span class="pre">renderer</span></code> accepts any previously
 existing geometries (see scene_graph_versioning).</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt><dd><p>The unique name of the renderer.</p>
@@ -11208,21 +11246,40 @@ recognize if the data has been modified since last examined.</p>
 illustration, and perception; each role has its own, independent
 version. Any operation that affects geometry with one of those roles
 will modify the corresponding version. For example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Does</span> <span class="o">*</span><span class="ow">not</span><span class="o">*</span> <span class="n">modify</span> <span class="nb">any</span> <span class="n">version</span><span class="p">;</span> <span class="n">no</span> <span class="n">roles</span> <span class="n">have</span> <span class="n">been</span> <span class="n">assigned</span><span class="o">.</span>
-<span class="n">const</span> <span class="n">GeometryId</span> <span class="n">geometry_id</span> <span class="o">=</span> <span class="n">scene_graph</span><span class="o">.</span><span class="n">RegisterGeometry</span><span class="p">(</span>
-<span class="n">source_id</span><span class="p">,</span> <span class="n">frame_id</span><span class="p">,</span> <span class="n">make_unique</span><span class="o">&lt;</span><span class="n">GeometryInstance</span><span class="o">&gt;</span><span class="p">(</span><span class="o">...</span><span class="p">));</span>
-<span class="o">//</span> <span class="n">Modifies</span> <span class="n">the</span> <span class="n">proximity</span> <span class="n">version</span><span class="o">.</span>
-<span class="n">scene_graph</span><span class="o">.</span><span class="n">AssignRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="n">geometry_id</span><span class="p">,</span> <span class="n">ProximityProperties</span><span class="p">());</span>
-<span class="o">//</span> <span class="n">Modifies</span> <span class="n">the</span> <span class="n">illustration</span> <span class="n">version</span><span class="o">.</span>
-<span class="n">scene_graph</span><span class="o">.</span><span class="n">AssignRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="n">geometry_id</span><span class="p">,</span> <span class="n">IllustrationProperties</span><span class="p">());</span>
-<span class="o">//</span> <span class="n">Modifies</span> <span class="n">the</span> <span class="n">perception</span> <span class="n">version</span> <span class="k">if</span> <span class="n">there</span> <span class="n">exists</span> <span class="n">a</span> <span class="n">renderer</span> <span class="n">that</span> <span class="n">accepts</span> <span class="n">the</span>
-<span class="o">//</span> <span class="n">geometry</span><span class="o">.</span>
-<span class="n">scene_graph</span><span class="o">.</span><span class="n">AssignRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="n">geometry_id</span><span class="p">,</span> <span class="n">PerceptionProperties</span><span class="p">());</span>
-<span class="o">//</span> <span class="n">Modifies</span> <span class="n">the</span> <span class="n">illustration</span> <span class="n">version</span><span class="o">.</span>
-<span class="n">scene_graph</span><span class="o">.</span><span class="n">RemoveRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="n">geometry_id</span><span class="p">,</span> <span class="n">Role</span><span class="p">::</span><span class="n">kIllustration</span><span class="p">);</span>
-<span class="o">//</span> <span class="n">Modifies</span> <span class="n">proximity</span> <span class="n">version</span> <span class="ow">and</span> <span class="n">perception</span> <span class="n">version</span> <span class="k">if</span> <span class="n">the</span> <span class="n">geometry</span> <span class="ow">is</span>
-<span class="o">//</span> <span class="n">registered</span> <span class="k">with</span> <span class="nb">any</span> <span class="n">renderer</span><span class="o">.</span>
-<span class="n">scene_graph</span><span class="o">.</span><span class="n">RemoveGeometry</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="n">geometry_id</span><span class="p">);</span>
+<p>In C++:</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Does *not* modify any version; no roles have been assigned.</span>
+<span class="k">const</span><span class="w"> </span><span class="n">GeometryId</span><span class="w"> </span><span class="n">geometry_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scene_graph</span><span class="p">.</span><span class="n">RegisterGeometry</span><span class="p">(</span><span class="w"></span>
+<span class="n">source_id</span><span class="p">,</span><span class="w"> </span><span class="n">frame_id</span><span class="p">,</span><span class="w"> </span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">GeometryInstance</span><span class="o">&gt;</span><span class="p">(...));</span><span class="w"></span>
+<span class="c1">// Modifies the proximity version.</span>
+<span class="n">scene_graph</span><span class="p">.</span><span class="n">AssignRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span><span class="w"> </span><span class="n">geometry_id</span><span class="p">,</span><span class="w"> </span><span class="n">ProximityProperties</span><span class="p">());</span><span class="w"></span>
+<span class="c1">// Modifies the illustration version.</span>
+<span class="n">scene_graph</span><span class="p">.</span><span class="n">AssignRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span><span class="w"> </span><span class="n">geometry_id</span><span class="p">,</span><span class="w"> </span><span class="n">IllustrationProperties</span><span class="p">());</span><span class="w"></span>
+<span class="c1">// Modifies the perception version if there exists a renderer that accepts the</span>
+<span class="c1">// geometry.</span>
+<span class="n">scene_graph</span><span class="p">.</span><span class="n">AssignRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span><span class="w"> </span><span class="n">geometry_id</span><span class="p">,</span><span class="w"> </span><span class="n">PerceptionProperties</span><span class="p">());</span><span class="w"></span>
+<span class="c1">// Modifies the illustration version.</span>
+<span class="n">scene_graph</span><span class="p">.</span><span class="n">RemoveRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span><span class="w"> </span><span class="n">geometry_id</span><span class="p">,</span><span class="w"> </span><span class="n">Role</span><span class="o">::</span><span class="n">kIllustration</span><span class="p">);</span><span class="w"></span>
+<span class="c1">// Modifies proximity version and perception version if the geometry is</span>
+<span class="c1">// registered with any renderer.</span>
+<span class="n">scene_graph</span><span class="p">.</span><span class="n">RemoveGeometry</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span><span class="w"> </span><span class="n">geometry_id</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+</details><p>In Python:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Does *not* modify any version; no roles have been assigned.</span>
+<span class="n">geometry_id</span> <span class="o">=</span> <span class="n">scene_graph</span><span class="o">.</span><span class="n">RegisterGeometry</span><span class="p">(</span>
+<span class="n">source_id</span><span class="p">,</span> <span class="n">frame_id</span><span class="p">,</span> <span class="n">GeometryInstance</span><span class="p">(</span><span class="o">...</span><span class="p">))</span>
+<span class="c1"># Modifies the proximity version.</span>
+<span class="n">scene_graph</span><span class="o">.</span><span class="n">AssignRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="n">geometry_id</span><span class="p">,</span> <span class="n">ProximityProperties</span><span class="p">())</span>
+<span class="c1"># Modifies the illustration version.</span>
+<span class="n">scene_graph</span><span class="o">.</span><span class="n">AssignRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="n">geometry_id</span><span class="p">,</span> <span class="n">IllustrationProperties</span><span class="p">())</span>
+<span class="c1"># Modifies the perception version if there exists a renderer that accepts the</span>
+<span class="c1"># geometry.</span>
+<span class="n">scene_graph</span><span class="o">.</span><span class="n">AssignRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="n">geometry_id</span><span class="p">,</span> <span class="n">PerceptionProperties</span><span class="p">())</span>
+<span class="c1"># Modifies the illustration version.</span>
+<span class="n">scene_graph</span><span class="o">.</span><span class="n">RemoveRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="n">geometry_id</span><span class="p">,</span> <span class="n">Role</span><span class="o">.</span><span class="n">kIllustration</span><span class="p">)</span>
+<span class="c1"># Modifies proximity version and perception version if the geometry is</span>
+<span class="c1"># registered with any renderer.</span>
+<span class="n">scene_graph</span><span class="o">.</span><span class="n">RemoveGeometry</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="n">geometry_id</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Each copy of geometry data maintains its own set of versions.
@@ -11267,15 +11324,15 @@ geometry registration and role assignment. Given a representative
 sequence of registration and perception role assignment, the addition
 of the renderer can be introduced anywhere in the sequence and the end
 result would be the same.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">GeometryId</span> <span class="n">id1</span> <span class="o">=</span> <span class="n">scene_graph</span><span class="o">.</span><span class="n">RegisterGeometry</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="o">...</span><span class="p">);</span>
-<span class="n">scene_graph</span><span class="o">.</span><span class="n">AssignRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="n">id1</span><span class="p">,</span> <span class="n">PerceptionProperties</span><span class="p">());</span>
-<span class="n">GeometryId</span> <span class="n">id2</span> <span class="o">=</span> <span class="n">scene_graph</span><span class="o">.</span><span class="n">RegisterGeometry</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="o">...</span><span class="p">);</span>
-<span class="n">scene_graph</span><span class="o">.</span><span class="n">AssignRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="n">id2</span><span class="p">,</span> <span class="n">PerceptionProperties</span><span class="p">());</span>
-<span class="n">GeometryId</span> <span class="n">id3</span> <span class="o">=</span> <span class="n">scene_graph</span><span class="o">.</span><span class="n">RegisterGeometry</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="o">...</span><span class="p">);</span>
-<span class="n">scene_graph</span><span class="o">.</span><span class="n">AssignRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="n">id3</span><span class="p">,</span> <span class="n">PerceptionProperties</span><span class="p">());</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">GeometryId</span><span class="w"> </span><span class="n">id1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scene_graph</span><span class="p">.</span><span class="n">RegisterGeometry</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span><span class="w"> </span><span class="p">...);</span><span class="w"></span>
+<span class="n">scene_graph</span><span class="p">.</span><span class="n">AssignRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span><span class="w"> </span><span class="n">id1</span><span class="p">,</span><span class="w"> </span><span class="n">PerceptionProperties</span><span class="p">());</span><span class="w"></span>
+<span class="n">GeometryId</span><span class="w"> </span><span class="n">id2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scene_graph</span><span class="p">.</span><span class="n">RegisterGeometry</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span><span class="w"> </span><span class="p">...);</span><span class="w"></span>
+<span class="n">scene_graph</span><span class="p">.</span><span class="n">AssignRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span><span class="w"> </span><span class="n">id2</span><span class="p">,</span><span class="w"> </span><span class="n">PerceptionProperties</span><span class="p">());</span><span class="w"></span>
+<span class="n">GeometryId</span><span class="w"> </span><span class="n">id3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scene_graph</span><span class="p">.</span><span class="n">RegisterGeometry</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span><span class="w"> </span><span class="p">...);</span><span class="w"></span>
+<span class="n">scene_graph</span><span class="p">.</span><span class="n">AssignRole</span><span class="p">(</span><span class="n">source_id</span><span class="p">,</span><span class="w"> </span><span class="n">id3</span><span class="p">,</span><span class="w"> </span><span class="n">PerceptionProperties</span><span class="p">());</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Modifies the perception version if <code class="docutils literal notranslate"><span class="pre">renderer</span></code> accepts any previously
+</details><p>Modifies the perception version if <code class="docutils literal notranslate"><span class="pre">renderer</span></code> accepts any previously
 existing geometries (see scene_graph_versioning).</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt><dd><p>The unique name of the renderer.</p>
@@ -12323,15 +12380,15 @@ non-null.</p>
 does not* mean there is necessarily a mesh associated with it. Some
 shape types (e.g., half space) have non-mesh representations.</p>
 <p>The result can be tested as follows:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">auto</span> <span class="n">maybe_mesh</span> <span class="o">=</span> <span class="n">inspector</span><span class="o">.</span><span class="n">maybe_get_hydroelastic_mesh</span><span class="p">(</span><span class="nb">id</span><span class="p">);</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">maybe_mesh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">inspector</span><span class="p">.</span><span class="n">maybe_get_hydroelastic_mesh</span><span class="p">(</span><span class="n">id</span><span class="p">);</span><span class="w"></span>
 
-<span class="o">//</span> <span class="n">These</span> <span class="n">two</span> <span class="n">methods</span> <span class="n">are</span> <span class="n">equivalent</span><span class="p">,</span> <span class="n">although</span> <span class="n">testing</span> <span class="n">index</span> <span class="ow">is</span> <span class="n">more</span>
-<span class="o">//</span> <span class="n">brittle</span><span class="o">.</span>
-<span class="n">const</span> <span class="nb">bool</span> <span class="n">no_mesh1</span> <span class="o">=</span> <span class="n">maybe_mesh</span><span class="o">.</span><span class="n">index</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">;</span>
-<span class="n">const</span> <span class="nb">bool</span> <span class="n">no_mesh2</span> <span class="o">=</span> <span class="n">std</span><span class="p">::</span><span class="n">holds_alternative</span><span class="o">&lt;</span><span class="n">std</span><span class="p">::</span><span class="n">monostate</span><span class="o">&gt;</span><span class="p">(</span><span class="n">maybe_mesh</span><span class="p">);</span>
+<span class="c1">// These two methods are equivalent, although testing index is more</span>
+<span class="c1">// brittle.</span>
+<span class="k">const</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">no_mesh1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">maybe_mesh</span><span class="p">.</span><span class="n">index</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">no_mesh2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">holds_alternative</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">monostate</span><span class="o">&gt;</span><span class="p">(</span><span class="n">maybe_mesh</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-<dl class="simple">
+</details><dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>:</dt><dd><p>The id of the geometry to query.</p>
 </dd>
 </dl>
@@ -12948,15 +13005,15 @@ non-null.</p>
 does not* mean there is necessarily a mesh associated with it. Some
 shape types (e.g., half space) have non-mesh representations.</p>
 <p>The result can be tested as follows:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">auto</span> <span class="n">maybe_mesh</span> <span class="o">=</span> <span class="n">inspector</span><span class="o">.</span><span class="n">maybe_get_hydroelastic_mesh</span><span class="p">(</span><span class="nb">id</span><span class="p">);</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">maybe_mesh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">inspector</span><span class="p">.</span><span class="n">maybe_get_hydroelastic_mesh</span><span class="p">(</span><span class="n">id</span><span class="p">);</span><span class="w"></span>
 
-<span class="o">//</span> <span class="n">These</span> <span class="n">two</span> <span class="n">methods</span> <span class="n">are</span> <span class="n">equivalent</span><span class="p">,</span> <span class="n">although</span> <span class="n">testing</span> <span class="n">index</span> <span class="ow">is</span> <span class="n">more</span>
-<span class="o">//</span> <span class="n">brittle</span><span class="o">.</span>
-<span class="n">const</span> <span class="nb">bool</span> <span class="n">no_mesh1</span> <span class="o">=</span> <span class="n">maybe_mesh</span><span class="o">.</span><span class="n">index</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">;</span>
-<span class="n">const</span> <span class="nb">bool</span> <span class="n">no_mesh2</span> <span class="o">=</span> <span class="n">std</span><span class="p">::</span><span class="n">holds_alternative</span><span class="o">&lt;</span><span class="n">std</span><span class="p">::</span><span class="n">monostate</span><span class="o">&gt;</span><span class="p">(</span><span class="n">maybe_mesh</span><span class="p">);</span>
+<span class="c1">// These two methods are equivalent, although testing index is more</span>
+<span class="c1">// brittle.</span>
+<span class="k">const</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">no_mesh1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">maybe_mesh</span><span class="p">.</span><span class="n">index</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">no_mesh2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">holds_alternative</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">monostate</span><span class="o">&gt;</span><span class="p">(</span><span class="n">maybe_mesh</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-<dl class="simple">
+</details><dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>:</dt><dd><p>The id of the geometry to query.</p>
 </dd>
 </dl>
@@ -13567,15 +13624,15 @@ non-null.</p>
 does not* mean there is necessarily a mesh associated with it. Some
 shape types (e.g., half space) have non-mesh representations.</p>
 <p>The result can be tested as follows:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">auto</span> <span class="n">maybe_mesh</span> <span class="o">=</span> <span class="n">inspector</span><span class="o">.</span><span class="n">maybe_get_hydroelastic_mesh</span><span class="p">(</span><span class="nb">id</span><span class="p">);</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">maybe_mesh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">inspector</span><span class="p">.</span><span class="n">maybe_get_hydroelastic_mesh</span><span class="p">(</span><span class="n">id</span><span class="p">);</span><span class="w"></span>
 
-<span class="o">//</span> <span class="n">These</span> <span class="n">two</span> <span class="n">methods</span> <span class="n">are</span> <span class="n">equivalent</span><span class="p">,</span> <span class="n">although</span> <span class="n">testing</span> <span class="n">index</span> <span class="ow">is</span> <span class="n">more</span>
-<span class="o">//</span> <span class="n">brittle</span><span class="o">.</span>
-<span class="n">const</span> <span class="nb">bool</span> <span class="n">no_mesh1</span> <span class="o">=</span> <span class="n">maybe_mesh</span><span class="o">.</span><span class="n">index</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">;</span>
-<span class="n">const</span> <span class="nb">bool</span> <span class="n">no_mesh2</span> <span class="o">=</span> <span class="n">std</span><span class="p">::</span><span class="n">holds_alternative</span><span class="o">&lt;</span><span class="n">std</span><span class="p">::</span><span class="n">monostate</span><span class="o">&gt;</span><span class="p">(</span><span class="n">maybe_mesh</span><span class="p">);</span>
+<span class="c1">// These two methods are equivalent, although testing index is more</span>
+<span class="c1">// brittle.</span>
+<span class="k">const</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">no_mesh1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">maybe_mesh</span><span class="p">.</span><span class="n">index</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">no_mesh2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">holds_alternative</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">monostate</span><span class="o">&gt;</span><span class="p">(</span><span class="n">maybe_mesh</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-<dl class="simple">
+</details><dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>:</dt><dd><p>The id of the geometry to query.</p>
 </dd>
 </dl>

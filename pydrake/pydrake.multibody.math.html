@@ -252,92 +252,92 @@ velocity_of_moving_frame = 0 and acceleration_of_moving_frame = 0.</p>
 acceleration α_MC_E and translational acceleration a_MCo_E that
 are calculated as:</p>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">α_MC_E</span>  <span class="o">=</span> <span class="n">α_MB_E</span> <span class="o">+</span> <span class="n">α_BC_E</span> <span class="o">+</span> <span class="n">ω_MB_E</span> <span class="n">x</span> <span class="n">ω_BC_E</span>
- <span class="n">a_MCo_E</span> <span class="o">=</span> <span class="n">a_BCo_E</span> <span class="o">+</span> <span class="n">α_MB_E</span> <span class="n">x</span> <span class="n">p_BoCo_E</span> <span class="o">+</span> <span class="n">ω_MB_E</span> <span class="n">x</span> <span class="p">(</span><span class="n">ω_MB_E</span> <span class="n">x</span> <span class="n">p_BoCo_E</span><span class="p">)</span>
-         <span class="o">+</span> <span class="mi">2</span> <span class="n">ω_MB_E</span> <span class="n">x</span> <span class="n">v_BCo_E</span> <span class="o">+</span> <span class="n">a_BCo_E</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">α_MC_E</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">α_MB_E</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">α_BC_E</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB_E</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">ω_BC_E</span><span class="w"></span>
+<span class="w"> </span><span class="n">a_MCo_E</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a_BCo_E</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">α_MB_E</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo_E</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB_E</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="n">ω_MB_E</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo_E</span><span class="p">)</span><span class="w"></span>
+<span class="w">         </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">ω_MB_E</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">v_BCo_E</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">a_BCo_E</span><span class="w"></span>
 </pre></div>
 </div>
-<p>If frame C is rigidly fixed to frame B, A_BC_E = 0 and V_BC_E = 0 and
+</details><p>If frame C is rigidly fixed to frame B, A_BC_E = 0 and V_BC_E = 0 and
 this method produces a Shift() operation (albeit inefficiently). The
 previous equations show composing spatial acceleration is not simply
 adding A_MB + A_BC and these equations differ significantly from their
 spatial velocity counterparts. For example, angular velocities simply
 add as</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ω_MC</span> <span class="o">=</span> <span class="n">ω_MB</span> <span class="o">+</span> <span class="n">ω_BC</span><span class="p">,</span>   <span class="n">but</span> <span class="mi">3</span><span class="n">D</span> <span class="n">angular</span> <span class="n">acceleration</span> <span class="ow">is</span> <span class="n">more</span> <span class="n">complicated</span> <span class="k">as</span>
-  <span class="n">α_MC</span> <span class="o">=</span> <span class="n">α_MB</span> <span class="o">+</span> <span class="n">α_BC</span> <span class="o">+</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">ω_BC</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">ω_MC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_BC</span><span class="p">,</span><span class="w">   </span><span class="n">but</span><span class="w"> </span><span class="mi">3</span><span class="n">D</span><span class="w"> </span><span class="n">angular</span><span class="w"> </span><span class="n">acceleration</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">more</span><span class="w"> </span><span class="n">complicated</span><span class="w"> </span><span class="n">as</span><span class="w"></span>
+<span class="w">  </span><span class="n">α_MC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">α_MB</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">α_BC</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">ω_BC</span><span class="w"></span>
 </pre></div>
 </div>
-<p>** Derivation **</p>
+</details><p>** Derivation **</p>
 <ul class="simple">
 <li><p>Rotational acceleration component *</p></li>
 </ul>
 <p>ω_MC (frame C’s angular velocity in frame M) can be calculated with
 the angular velocity addition theorem as</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ω_MC</span> <span class="o">=</span> <span class="n">ω_MB</span> <span class="o">+</span> <span class="n">ω_BC</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">ω_MC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_BC</span><span class="w"></span>
 </pre></div>
 </div>
-<p>α_MC (frame C’s angular acceleration measured in frame M) is defined
+</details><p>α_MC (frame C’s angular acceleration measured in frame M) is defined
 as the time-derivative in frame M of ω_MC, and can be calculated using
 the “Transport Theorem” (Golden rule for vector differentation) which
 converts the time-derivative of a vector in frame M to frame B, e.g.,
 as DtM(ω_BC) = DtB(ω_BC) + ω_MB x ω_BC, as</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">α_MC</span> <span class="o">=</span> <span class="n">DtM</span><span class="p">(</span><span class="n">ω_MC</span><span class="p">)</span> <span class="o">=</span> <span class="n">DtM</span><span class="p">(</span><span class="n">ω_MB</span><span class="p">)</span> <span class="o">+</span> <span class="n">DtM</span><span class="p">(</span><span class="n">ω_BC</span><span class="p">)</span>
-                   <span class="o">=</span>     <span class="n">α_MB</span>  <span class="o">+</span> <span class="n">DtB</span><span class="p">(</span><span class="n">ω_BC</span><span class="p">)</span> <span class="o">+</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">ω_BC</span>
-                   <span class="o">=</span>     <span class="n">α_MB</span>  <span class="o">+</span>     <span class="n">α_BC</span>  <span class="o">+</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">ω_BC</span>   <span class="p">(</span><span class="n">End</span> <span class="n">of</span> <span class="n">proof</span><span class="p">)</span><span class="o">.</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">α_MC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">ω_MC</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">ω_MB</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">ω_BC</span><span class="p">)</span><span class="w"></span>
+<span class="w">                   </span><span class="o">=</span><span class="w">     </span><span class="n">α_MB</span><span class="w">  </span><span class="o">+</span><span class="w"> </span><span class="n">DtB</span><span class="p">(</span><span class="n">ω_BC</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">ω_BC</span><span class="w"></span>
+<span class="w">                   </span><span class="o">=</span><span class="w">     </span><span class="n">α_MB</span><span class="w">  </span><span class="o">+</span><span class="w">     </span><span class="n">α_BC</span><span class="w">  </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">ω_BC</span><span class="w">   </span><span class="p">(</span><span class="n">End</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">proof</span><span class="p">).</span><span class="w"></span>
 </pre></div>
 </div>
-<ul class="simple">
+</details><ul class="simple">
 <li><p>Translational acceleration component *</p></li>
 </ul>
 <p>v_MCo (frame C’s translational velocity in frame M) is calculated in
 SpatialVelocity::ComposeWithMovingFrameVelocity) as</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">v_MCo</span> <span class="o">=</span> <span class="n">v_MBo</span> <span class="o">+</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">p_BoCo</span> <span class="o">+</span> <span class="n">v_BCo</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">v_MCo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v_MBo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">v_BCo</span><span class="w"></span>
 </pre></div>
 </div>
-<p>a_MCo (frame C’s translational acceleration measured in frame M) is
+</details><p>a_MCo (frame C’s translational acceleration measured in frame M) is
 defined as the time-derivative in frame M of v_MCo, calculated as</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a_MCo</span> <span class="o">=</span> <span class="n">DtM</span><span class="p">(</span><span class="n">v_MCo</span><span class="p">)</span>                             <span class="n">Definition</span><span class="o">.</span>
-       <span class="o">=</span> <span class="n">DtM</span><span class="p">(</span><span class="n">v_MBo</span> <span class="o">+</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">p_BoCo</span> <span class="o">+</span> <span class="n">v_BCo</span><span class="p">)</span>     <span class="n">Substitution</span><span class="o">.</span>
-       <span class="o">=</span> <span class="n">DtM</span><span class="p">(</span><span class="n">v_MBo</span><span class="p">)</span> <span class="o">+</span> <span class="n">DtM</span><span class="p">(</span><span class="n">ω_MB</span><span class="p">)</span> <span class="n">x</span> <span class="n">p_BoCo</span> <span class="o">+</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">DtM</span><span class="p">(</span><span class="n">p_BoCo</span><span class="p">)</span> <span class="o">+</span> <span class="n">DtM</span><span class="p">(</span><span class="n">v_BCo</span><span class="p">)</span>
-       <span class="o">=</span>     <span class="n">a_MBo</span>  <span class="o">+</span>     <span class="n">α_MB</span>  <span class="n">x</span> <span class="n">p_BoCo</span> <span class="o">+</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">DtM</span><span class="p">(</span><span class="n">p_BoCo</span><span class="p">)</span> <span class="o">+</span> <span class="n">DtM</span><span class="p">(</span><span class="n">v_BCo</span><span class="p">)</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">a_MCo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">v_MCo</span><span class="p">)</span><span class="w">                             </span><span class="n">Definition</span><span class="p">.</span><span class="w"></span>
+<span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">v_MBo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">v_BCo</span><span class="p">)</span><span class="w">     </span><span class="n">Substitution</span><span class="p">.</span><span class="w"></span>
+<span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">v_MBo</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">ω_MB</span><span class="p">)</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">p_BoCo</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">v_BCo</span><span class="p">)</span><span class="w"></span>
+<span class="w">       </span><span class="o">=</span><span class="w">     </span><span class="n">a_MBo</span><span class="w">  </span><span class="o">+</span><span class="w">     </span><span class="n">α_MB</span><span class="w">  </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">p_BoCo</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">v_BCo</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
-<p>The last two terms are modified using the “Transport Theorem” (Golden
+</details><p>The last two terms are modified using the “Transport Theorem” (Golden
 rule for vector differentation) which converts time-derivatives of
 vectors in frame M to frame B via DtM(vec) = DtB(vec) + ω_MB x vec.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DtM</span><span class="p">(</span><span class="n">p_BoCo</span><span class="p">)</span> <span class="o">=</span> <span class="n">DtB</span><span class="p">(</span><span class="n">p_BoCo</span><span class="p">)</span> <span class="o">+</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">p_BoCo</span>
-             <span class="o">=</span>     <span class="n">v_BCo</span>   <span class="o">+</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">p_BoCo</span>
- <span class="n">DtM</span><span class="p">(</span><span class="n">v_BCo</span><span class="p">)</span>  <span class="o">=</span> <span class="n">DtB</span><span class="p">(</span><span class="n">v_BCo</span><span class="p">)</span>  <span class="o">+</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">v_BCo</span>
-             <span class="o">=</span>     <span class="n">a_BCo</span>   <span class="o">+</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">v_BCo</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">DtM</span><span class="p">(</span><span class="n">p_BoCo</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DtB</span><span class="p">(</span><span class="n">p_BoCo</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="w"></span>
+<span class="w">             </span><span class="o">=</span><span class="w">     </span><span class="n">v_BCo</span><span class="w">   </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="w"></span>
+<span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">v_BCo</span><span class="p">)</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">DtB</span><span class="p">(</span><span class="n">v_BCo</span><span class="p">)</span><span class="w">  </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">v_BCo</span><span class="w"></span>
+<span class="w">             </span><span class="o">=</span><span class="w">     </span><span class="n">a_BCo</span><span class="w">   </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">v_BCo</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Combining the last few equations proves the formula for a_MCo as:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a_MCo</span> <span class="o">=</span> <span class="n">a_MBo</span> <span class="o">+</span> <span class="n">α_MB</span> <span class="n">x</span> <span class="n">p_BoCo</span> <span class="o">+</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="p">(</span><span class="n">ω_MB</span> <span class="n">x</span> <span class="n">p_BoCo</span><span class="p">)</span>
-        <span class="o">+</span> <span class="mi">2</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">v_BCo</span> <span class="o">+</span> <span class="n">a_BCo</span>                           <span class="p">(</span><span class="n">End</span> <span class="n">of</span> <span class="n">proof</span><span class="p">)</span><span class="o">.</span>
+</details><p>Combining the last few equations proves the formula for a_MCo as:</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">a_MCo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a_MBo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">α_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">v_BCo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">a_BCo</span><span class="w">                           </span><span class="p">(</span><span class="n">End</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">proof</span><span class="p">).</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Some terms in the previous equation have names, e.g.,</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">centripetal</span> <span class="n">acceleration</span>   <span class="n">ω_MB</span> <span class="n">x</span> <span class="p">(</span><span class="n">ω_MB</span> <span class="n">x</span> <span class="n">p_BoCo</span><span class="p">)</span>
-  <span class="n">Coriolis</span> <span class="n">acceleration</span>    <span class="mi">2</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">v_BCo</span>
-  <span class="n">Coincident</span> <span class="n">point</span> <span class="n">acceleration</span><span class="p">,</span> <span class="n">i</span><span class="o">.</span><span class="n">e</span><span class="o">.</span><span class="p">,</span> <span class="n">acceleration</span> <span class="n">of</span> <span class="n">the</span> <span class="n">point</span> <span class="n">of</span> <span class="n">frame</span>
-  <span class="n">B</span> <span class="n">coincident</span> <span class="k">with</span> <span class="n">Co</span>      <span class="n">a_MBo</span> <span class="o">+</span> <span class="n">α_MB</span> <span class="n">x</span> <span class="n">p_BoCo</span> <span class="o">+</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="p">(</span><span class="n">ω_MB</span> <span class="n">x</span> <span class="n">p_BoCo</span><span class="p">)</span>
+</details><p>Some terms in the previous equation have names, e.g.,</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">centripetal</span><span class="w"> </span><span class="n">acceleration</span><span class="w">   </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">Coriolis</span><span class="w"> </span><span class="n">acceleration</span><span class="w">    </span><span class="mi">2</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">v_BCo</span><span class="w"></span>
+<span class="w">  </span><span class="n">Coincident</span><span class="w"> </span><span class="n">point</span><span class="w"> </span><span class="n">acceleration</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">.</span><span class="n">e</span><span class="p">.,</span><span class="w"> </span><span class="n">acceleration</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">point</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">frame</span><span class="w"></span>
+<span class="w">  </span><span class="n">B</span><span class="w"> </span><span class="n">coincident</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">Co</span><span class="w">      </span><span class="n">a_MBo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">α_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Note: The coincident point acceleration can be calculated with a
+</details><p>Note: The coincident point acceleration can be calculated with a
 Shift().</p>
 <p>Note: The three cross products appearing in the previous calculation
 of a_MCo can be reduced to one, possibly improving efficiency via</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ω_MB</span> <span class="n">x</span> <span class="p">(</span><span class="n">ω_MB</span> <span class="n">x</span> <span class="n">p_BoCo</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">v_BCo</span> <span class="o">=</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="p">(</span><span class="n">v_MCo</span> <span class="o">-</span> <span class="n">v_MBo</span> <span class="o">+</span> <span class="n">v_BCo</span><span class="p">)</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">v_BCo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="n">v_MCo</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v_MBo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">v_BCo</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
-<p>To show this, we rearrange and substitute our expression for v_MCo.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">v_MCo</span> <span class="o">=</span> <span class="n">v_MBo</span> <span class="o">+</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">p_BoCo</span> <span class="o">+</span> <span class="n">v_BCo</span>        <span class="n">which</span> <span class="n">rearranges</span> <span class="n">to</span>
-  <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">p_BoCo</span> <span class="o">=</span> <span class="n">v_MCo</span> <span class="o">-</span> <span class="n">v_MBo</span> <span class="o">-</span> <span class="n">v_BCo</span><span class="o">.</span>             <span class="n">Substitution</span> <span class="n">produces</span>
-  <span class="n">ω_MB</span> <span class="n">x</span> <span class="p">(</span><span class="n">ω_MB</span> <span class="n">x</span> <span class="n">p_BoCo</span><span class="p">)</span> <span class="o">=</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="p">(</span><span class="n">v_MCo</span> <span class="o">-</span> <span class="n">v_MBo</span> <span class="o">-</span> <span class="n">v_BCo</span><span class="p">)</span>           <span class="n">Hence</span><span class="p">,</span>
-  <span class="n">ω_MB</span> <span class="n">x</span> <span class="p">(</span><span class="n">ω_MB</span> <span class="n">x</span> <span class="n">p_BoCo</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">v_BCo</span> <span class="o">=</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="p">(</span><span class="n">v_MCo</span> <span class="o">-</span> <span class="n">v_MBo</span> <span class="o">+</span> <span class="n">v_BCo</span><span class="p">)</span>
+</details><p>To show this, we rearrange and substitute our expression for v_MCo.</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">v_MCo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v_MBo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">v_BCo</span><span class="w">        </span><span class="n">which</span><span class="w"> </span><span class="n">rearranges</span><span class="w"> </span><span class="n">to</span><span class="w"></span>
+<span class="w">  </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v_MCo</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v_MBo</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v_BCo</span><span class="p">.</span><span class="w">             </span><span class="n">Substitution</span><span class="w"> </span><span class="n">produces</span><span class="w"></span>
+<span class="w">  </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="n">v_MCo</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v_MBo</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v_BCo</span><span class="p">)</span><span class="w">           </span><span class="n">Hence</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">v_BCo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="n">v_MCo</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v_MBo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">v_BCo</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.math.SpatialAcceleration.get_coeffs">
@@ -560,92 +560,92 @@ velocity_of_moving_frame = 0 and acceleration_of_moving_frame = 0.</p>
 acceleration α_MC_E and translational acceleration a_MCo_E that
 are calculated as:</p>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">α_MC_E</span>  <span class="o">=</span> <span class="n">α_MB_E</span> <span class="o">+</span> <span class="n">α_BC_E</span> <span class="o">+</span> <span class="n">ω_MB_E</span> <span class="n">x</span> <span class="n">ω_BC_E</span>
- <span class="n">a_MCo_E</span> <span class="o">=</span> <span class="n">a_BCo_E</span> <span class="o">+</span> <span class="n">α_MB_E</span> <span class="n">x</span> <span class="n">p_BoCo_E</span> <span class="o">+</span> <span class="n">ω_MB_E</span> <span class="n">x</span> <span class="p">(</span><span class="n">ω_MB_E</span> <span class="n">x</span> <span class="n">p_BoCo_E</span><span class="p">)</span>
-         <span class="o">+</span> <span class="mi">2</span> <span class="n">ω_MB_E</span> <span class="n">x</span> <span class="n">v_BCo_E</span> <span class="o">+</span> <span class="n">a_BCo_E</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">α_MC_E</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">α_MB_E</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">α_BC_E</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB_E</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">ω_BC_E</span><span class="w"></span>
+<span class="w"> </span><span class="n">a_MCo_E</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a_BCo_E</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">α_MB_E</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo_E</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB_E</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="n">ω_MB_E</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo_E</span><span class="p">)</span><span class="w"></span>
+<span class="w">         </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">ω_MB_E</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">v_BCo_E</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">a_BCo_E</span><span class="w"></span>
 </pre></div>
 </div>
-<p>If frame C is rigidly fixed to frame B, A_BC_E = 0 and V_BC_E = 0 and
+</details><p>If frame C is rigidly fixed to frame B, A_BC_E = 0 and V_BC_E = 0 and
 this method produces a Shift() operation (albeit inefficiently). The
 previous equations show composing spatial acceleration is not simply
 adding A_MB + A_BC and these equations differ significantly from their
 spatial velocity counterparts. For example, angular velocities simply
 add as</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ω_MC</span> <span class="o">=</span> <span class="n">ω_MB</span> <span class="o">+</span> <span class="n">ω_BC</span><span class="p">,</span>   <span class="n">but</span> <span class="mi">3</span><span class="n">D</span> <span class="n">angular</span> <span class="n">acceleration</span> <span class="ow">is</span> <span class="n">more</span> <span class="n">complicated</span> <span class="k">as</span>
-  <span class="n">α_MC</span> <span class="o">=</span> <span class="n">α_MB</span> <span class="o">+</span> <span class="n">α_BC</span> <span class="o">+</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">ω_BC</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">ω_MC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_BC</span><span class="p">,</span><span class="w">   </span><span class="n">but</span><span class="w"> </span><span class="mi">3</span><span class="n">D</span><span class="w"> </span><span class="n">angular</span><span class="w"> </span><span class="n">acceleration</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">more</span><span class="w"> </span><span class="n">complicated</span><span class="w"> </span><span class="n">as</span><span class="w"></span>
+<span class="w">  </span><span class="n">α_MC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">α_MB</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">α_BC</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">ω_BC</span><span class="w"></span>
 </pre></div>
 </div>
-<p>** Derivation **</p>
+</details><p>** Derivation **</p>
 <ul class="simple">
 <li><p>Rotational acceleration component *</p></li>
 </ul>
 <p>ω_MC (frame C’s angular velocity in frame M) can be calculated with
 the angular velocity addition theorem as</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ω_MC</span> <span class="o">=</span> <span class="n">ω_MB</span> <span class="o">+</span> <span class="n">ω_BC</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">ω_MC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_BC</span><span class="w"></span>
 </pre></div>
 </div>
-<p>α_MC (frame C’s angular acceleration measured in frame M) is defined
+</details><p>α_MC (frame C’s angular acceleration measured in frame M) is defined
 as the time-derivative in frame M of ω_MC, and can be calculated using
 the “Transport Theorem” (Golden rule for vector differentation) which
 converts the time-derivative of a vector in frame M to frame B, e.g.,
 as DtM(ω_BC) = DtB(ω_BC) + ω_MB x ω_BC, as</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">α_MC</span> <span class="o">=</span> <span class="n">DtM</span><span class="p">(</span><span class="n">ω_MC</span><span class="p">)</span> <span class="o">=</span> <span class="n">DtM</span><span class="p">(</span><span class="n">ω_MB</span><span class="p">)</span> <span class="o">+</span> <span class="n">DtM</span><span class="p">(</span><span class="n">ω_BC</span><span class="p">)</span>
-                   <span class="o">=</span>     <span class="n">α_MB</span>  <span class="o">+</span> <span class="n">DtB</span><span class="p">(</span><span class="n">ω_BC</span><span class="p">)</span> <span class="o">+</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">ω_BC</span>
-                   <span class="o">=</span>     <span class="n">α_MB</span>  <span class="o">+</span>     <span class="n">α_BC</span>  <span class="o">+</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">ω_BC</span>   <span class="p">(</span><span class="n">End</span> <span class="n">of</span> <span class="n">proof</span><span class="p">)</span><span class="o">.</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">α_MC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">ω_MC</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">ω_MB</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">ω_BC</span><span class="p">)</span><span class="w"></span>
+<span class="w">                   </span><span class="o">=</span><span class="w">     </span><span class="n">α_MB</span><span class="w">  </span><span class="o">+</span><span class="w"> </span><span class="n">DtB</span><span class="p">(</span><span class="n">ω_BC</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">ω_BC</span><span class="w"></span>
+<span class="w">                   </span><span class="o">=</span><span class="w">     </span><span class="n">α_MB</span><span class="w">  </span><span class="o">+</span><span class="w">     </span><span class="n">α_BC</span><span class="w">  </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">ω_BC</span><span class="w">   </span><span class="p">(</span><span class="n">End</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">proof</span><span class="p">).</span><span class="w"></span>
 </pre></div>
 </div>
-<ul class="simple">
+</details><ul class="simple">
 <li><p>Translational acceleration component *</p></li>
 </ul>
 <p>v_MCo (frame C’s translational velocity in frame M) is calculated in
 SpatialVelocity::ComposeWithMovingFrameVelocity) as</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">v_MCo</span> <span class="o">=</span> <span class="n">v_MBo</span> <span class="o">+</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">p_BoCo</span> <span class="o">+</span> <span class="n">v_BCo</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">v_MCo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v_MBo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">v_BCo</span><span class="w"></span>
 </pre></div>
 </div>
-<p>a_MCo (frame C’s translational acceleration measured in frame M) is
+</details><p>a_MCo (frame C’s translational acceleration measured in frame M) is
 defined as the time-derivative in frame M of v_MCo, calculated as</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a_MCo</span> <span class="o">=</span> <span class="n">DtM</span><span class="p">(</span><span class="n">v_MCo</span><span class="p">)</span>                             <span class="n">Definition</span><span class="o">.</span>
-       <span class="o">=</span> <span class="n">DtM</span><span class="p">(</span><span class="n">v_MBo</span> <span class="o">+</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">p_BoCo</span> <span class="o">+</span> <span class="n">v_BCo</span><span class="p">)</span>     <span class="n">Substitution</span><span class="o">.</span>
-       <span class="o">=</span> <span class="n">DtM</span><span class="p">(</span><span class="n">v_MBo</span><span class="p">)</span> <span class="o">+</span> <span class="n">DtM</span><span class="p">(</span><span class="n">ω_MB</span><span class="p">)</span> <span class="n">x</span> <span class="n">p_BoCo</span> <span class="o">+</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">DtM</span><span class="p">(</span><span class="n">p_BoCo</span><span class="p">)</span> <span class="o">+</span> <span class="n">DtM</span><span class="p">(</span><span class="n">v_BCo</span><span class="p">)</span>
-       <span class="o">=</span>     <span class="n">a_MBo</span>  <span class="o">+</span>     <span class="n">α_MB</span>  <span class="n">x</span> <span class="n">p_BoCo</span> <span class="o">+</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">DtM</span><span class="p">(</span><span class="n">p_BoCo</span><span class="p">)</span> <span class="o">+</span> <span class="n">DtM</span><span class="p">(</span><span class="n">v_BCo</span><span class="p">)</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">a_MCo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">v_MCo</span><span class="p">)</span><span class="w">                             </span><span class="n">Definition</span><span class="p">.</span><span class="w"></span>
+<span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">v_MBo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">v_BCo</span><span class="p">)</span><span class="w">     </span><span class="n">Substitution</span><span class="p">.</span><span class="w"></span>
+<span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">v_MBo</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">ω_MB</span><span class="p">)</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">p_BoCo</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">v_BCo</span><span class="p">)</span><span class="w"></span>
+<span class="w">       </span><span class="o">=</span><span class="w">     </span><span class="n">a_MBo</span><span class="w">  </span><span class="o">+</span><span class="w">     </span><span class="n">α_MB</span><span class="w">  </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">p_BoCo</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">v_BCo</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
-<p>The last two terms are modified using the “Transport Theorem” (Golden
+</details><p>The last two terms are modified using the “Transport Theorem” (Golden
 rule for vector differentation) which converts time-derivatives of
 vectors in frame M to frame B via DtM(vec) = DtB(vec) + ω_MB x vec.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DtM</span><span class="p">(</span><span class="n">p_BoCo</span><span class="p">)</span> <span class="o">=</span> <span class="n">DtB</span><span class="p">(</span><span class="n">p_BoCo</span><span class="p">)</span> <span class="o">+</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">p_BoCo</span>
-             <span class="o">=</span>     <span class="n">v_BCo</span>   <span class="o">+</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">p_BoCo</span>
- <span class="n">DtM</span><span class="p">(</span><span class="n">v_BCo</span><span class="p">)</span>  <span class="o">=</span> <span class="n">DtB</span><span class="p">(</span><span class="n">v_BCo</span><span class="p">)</span>  <span class="o">+</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">v_BCo</span>
-             <span class="o">=</span>     <span class="n">a_BCo</span>   <span class="o">+</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">v_BCo</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">DtM</span><span class="p">(</span><span class="n">p_BoCo</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DtB</span><span class="p">(</span><span class="n">p_BoCo</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="w"></span>
+<span class="w">             </span><span class="o">=</span><span class="w">     </span><span class="n">v_BCo</span><span class="w">   </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="w"></span>
+<span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">v_BCo</span><span class="p">)</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">DtB</span><span class="p">(</span><span class="n">v_BCo</span><span class="p">)</span><span class="w">  </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">v_BCo</span><span class="w"></span>
+<span class="w">             </span><span class="o">=</span><span class="w">     </span><span class="n">a_BCo</span><span class="w">   </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">v_BCo</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Combining the last few equations proves the formula for a_MCo as:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a_MCo</span> <span class="o">=</span> <span class="n">a_MBo</span> <span class="o">+</span> <span class="n">α_MB</span> <span class="n">x</span> <span class="n">p_BoCo</span> <span class="o">+</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="p">(</span><span class="n">ω_MB</span> <span class="n">x</span> <span class="n">p_BoCo</span><span class="p">)</span>
-        <span class="o">+</span> <span class="mi">2</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">v_BCo</span> <span class="o">+</span> <span class="n">a_BCo</span>                           <span class="p">(</span><span class="n">End</span> <span class="n">of</span> <span class="n">proof</span><span class="p">)</span><span class="o">.</span>
+</details><p>Combining the last few equations proves the formula for a_MCo as:</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">a_MCo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a_MBo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">α_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">v_BCo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">a_BCo</span><span class="w">                           </span><span class="p">(</span><span class="n">End</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">proof</span><span class="p">).</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Some terms in the previous equation have names, e.g.,</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">centripetal</span> <span class="n">acceleration</span>   <span class="n">ω_MB</span> <span class="n">x</span> <span class="p">(</span><span class="n">ω_MB</span> <span class="n">x</span> <span class="n">p_BoCo</span><span class="p">)</span>
-  <span class="n">Coriolis</span> <span class="n">acceleration</span>    <span class="mi">2</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">v_BCo</span>
-  <span class="n">Coincident</span> <span class="n">point</span> <span class="n">acceleration</span><span class="p">,</span> <span class="n">i</span><span class="o">.</span><span class="n">e</span><span class="o">.</span><span class="p">,</span> <span class="n">acceleration</span> <span class="n">of</span> <span class="n">the</span> <span class="n">point</span> <span class="n">of</span> <span class="n">frame</span>
-  <span class="n">B</span> <span class="n">coincident</span> <span class="k">with</span> <span class="n">Co</span>      <span class="n">a_MBo</span> <span class="o">+</span> <span class="n">α_MB</span> <span class="n">x</span> <span class="n">p_BoCo</span> <span class="o">+</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="p">(</span><span class="n">ω_MB</span> <span class="n">x</span> <span class="n">p_BoCo</span><span class="p">)</span>
+</details><p>Some terms in the previous equation have names, e.g.,</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">centripetal</span><span class="w"> </span><span class="n">acceleration</span><span class="w">   </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">Coriolis</span><span class="w"> </span><span class="n">acceleration</span><span class="w">    </span><span class="mi">2</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">v_BCo</span><span class="w"></span>
+<span class="w">  </span><span class="n">Coincident</span><span class="w"> </span><span class="n">point</span><span class="w"> </span><span class="n">acceleration</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">.</span><span class="n">e</span><span class="p">.,</span><span class="w"> </span><span class="n">acceleration</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">point</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">frame</span><span class="w"></span>
+<span class="w">  </span><span class="n">B</span><span class="w"> </span><span class="n">coincident</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">Co</span><span class="w">      </span><span class="n">a_MBo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">α_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Note: The coincident point acceleration can be calculated with a
+</details><p>Note: The coincident point acceleration can be calculated with a
 Shift().</p>
 <p>Note: The three cross products appearing in the previous calculation
 of a_MCo can be reduced to one, possibly improving efficiency via</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ω_MB</span> <span class="n">x</span> <span class="p">(</span><span class="n">ω_MB</span> <span class="n">x</span> <span class="n">p_BoCo</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">v_BCo</span> <span class="o">=</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="p">(</span><span class="n">v_MCo</span> <span class="o">-</span> <span class="n">v_MBo</span> <span class="o">+</span> <span class="n">v_BCo</span><span class="p">)</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">v_BCo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="n">v_MCo</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v_MBo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">v_BCo</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
-<p>To show this, we rearrange and substitute our expression for v_MCo.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">v_MCo</span> <span class="o">=</span> <span class="n">v_MBo</span> <span class="o">+</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">p_BoCo</span> <span class="o">+</span> <span class="n">v_BCo</span>        <span class="n">which</span> <span class="n">rearranges</span> <span class="n">to</span>
-  <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">p_BoCo</span> <span class="o">=</span> <span class="n">v_MCo</span> <span class="o">-</span> <span class="n">v_MBo</span> <span class="o">-</span> <span class="n">v_BCo</span><span class="o">.</span>             <span class="n">Substitution</span> <span class="n">produces</span>
-  <span class="n">ω_MB</span> <span class="n">x</span> <span class="p">(</span><span class="n">ω_MB</span> <span class="n">x</span> <span class="n">p_BoCo</span><span class="p">)</span> <span class="o">=</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="p">(</span><span class="n">v_MCo</span> <span class="o">-</span> <span class="n">v_MBo</span> <span class="o">-</span> <span class="n">v_BCo</span><span class="p">)</span>           <span class="n">Hence</span><span class="p">,</span>
-  <span class="n">ω_MB</span> <span class="n">x</span> <span class="p">(</span><span class="n">ω_MB</span> <span class="n">x</span> <span class="n">p_BoCo</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">v_BCo</span> <span class="o">=</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="p">(</span><span class="n">v_MCo</span> <span class="o">-</span> <span class="n">v_MBo</span> <span class="o">+</span> <span class="n">v_BCo</span><span class="p">)</span>
+</details><p>To show this, we rearrange and substitute our expression for v_MCo.</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">v_MCo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v_MBo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">v_BCo</span><span class="w">        </span><span class="n">which</span><span class="w"> </span><span class="n">rearranges</span><span class="w"> </span><span class="n">to</span><span class="w"></span>
+<span class="w">  </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v_MCo</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v_MBo</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v_BCo</span><span class="p">.</span><span class="w">             </span><span class="n">Substitution</span><span class="w"> </span><span class="n">produces</span><span class="w"></span>
+<span class="w">  </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="n">v_MCo</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v_MBo</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v_BCo</span><span class="p">)</span><span class="w">           </span><span class="n">Hence</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">v_BCo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="n">v_MCo</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v_MBo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">v_BCo</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.math.SpatialAcceleration_-AutoDiffXd-.get_coeffs">
@@ -862,92 +862,92 @@ velocity_of_moving_frame = 0 and acceleration_of_moving_frame = 0.</p>
 acceleration α_MC_E and translational acceleration a_MCo_E that
 are calculated as:</p>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">α_MC_E</span>  <span class="o">=</span> <span class="n">α_MB_E</span> <span class="o">+</span> <span class="n">α_BC_E</span> <span class="o">+</span> <span class="n">ω_MB_E</span> <span class="n">x</span> <span class="n">ω_BC_E</span>
- <span class="n">a_MCo_E</span> <span class="o">=</span> <span class="n">a_BCo_E</span> <span class="o">+</span> <span class="n">α_MB_E</span> <span class="n">x</span> <span class="n">p_BoCo_E</span> <span class="o">+</span> <span class="n">ω_MB_E</span> <span class="n">x</span> <span class="p">(</span><span class="n">ω_MB_E</span> <span class="n">x</span> <span class="n">p_BoCo_E</span><span class="p">)</span>
-         <span class="o">+</span> <span class="mi">2</span> <span class="n">ω_MB_E</span> <span class="n">x</span> <span class="n">v_BCo_E</span> <span class="o">+</span> <span class="n">a_BCo_E</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">α_MC_E</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">α_MB_E</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">α_BC_E</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB_E</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">ω_BC_E</span><span class="w"></span>
+<span class="w"> </span><span class="n">a_MCo_E</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a_BCo_E</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">α_MB_E</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo_E</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB_E</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="n">ω_MB_E</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo_E</span><span class="p">)</span><span class="w"></span>
+<span class="w">         </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">ω_MB_E</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">v_BCo_E</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">a_BCo_E</span><span class="w"></span>
 </pre></div>
 </div>
-<p>If frame C is rigidly fixed to frame B, A_BC_E = 0 and V_BC_E = 0 and
+</details><p>If frame C is rigidly fixed to frame B, A_BC_E = 0 and V_BC_E = 0 and
 this method produces a Shift() operation (albeit inefficiently). The
 previous equations show composing spatial acceleration is not simply
 adding A_MB + A_BC and these equations differ significantly from their
 spatial velocity counterparts. For example, angular velocities simply
 add as</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ω_MC</span> <span class="o">=</span> <span class="n">ω_MB</span> <span class="o">+</span> <span class="n">ω_BC</span><span class="p">,</span>   <span class="n">but</span> <span class="mi">3</span><span class="n">D</span> <span class="n">angular</span> <span class="n">acceleration</span> <span class="ow">is</span> <span class="n">more</span> <span class="n">complicated</span> <span class="k">as</span>
-  <span class="n">α_MC</span> <span class="o">=</span> <span class="n">α_MB</span> <span class="o">+</span> <span class="n">α_BC</span> <span class="o">+</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">ω_BC</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">ω_MC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_BC</span><span class="p">,</span><span class="w">   </span><span class="n">but</span><span class="w"> </span><span class="mi">3</span><span class="n">D</span><span class="w"> </span><span class="n">angular</span><span class="w"> </span><span class="n">acceleration</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">more</span><span class="w"> </span><span class="n">complicated</span><span class="w"> </span><span class="n">as</span><span class="w"></span>
+<span class="w">  </span><span class="n">α_MC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">α_MB</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">α_BC</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">ω_BC</span><span class="w"></span>
 </pre></div>
 </div>
-<p>** Derivation **</p>
+</details><p>** Derivation **</p>
 <ul class="simple">
 <li><p>Rotational acceleration component *</p></li>
 </ul>
 <p>ω_MC (frame C’s angular velocity in frame M) can be calculated with
 the angular velocity addition theorem as</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ω_MC</span> <span class="o">=</span> <span class="n">ω_MB</span> <span class="o">+</span> <span class="n">ω_BC</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">ω_MC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_BC</span><span class="w"></span>
 </pre></div>
 </div>
-<p>α_MC (frame C’s angular acceleration measured in frame M) is defined
+</details><p>α_MC (frame C’s angular acceleration measured in frame M) is defined
 as the time-derivative in frame M of ω_MC, and can be calculated using
 the “Transport Theorem” (Golden rule for vector differentation) which
 converts the time-derivative of a vector in frame M to frame B, e.g.,
 as DtM(ω_BC) = DtB(ω_BC) + ω_MB x ω_BC, as</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">α_MC</span> <span class="o">=</span> <span class="n">DtM</span><span class="p">(</span><span class="n">ω_MC</span><span class="p">)</span> <span class="o">=</span> <span class="n">DtM</span><span class="p">(</span><span class="n">ω_MB</span><span class="p">)</span> <span class="o">+</span> <span class="n">DtM</span><span class="p">(</span><span class="n">ω_BC</span><span class="p">)</span>
-                   <span class="o">=</span>     <span class="n">α_MB</span>  <span class="o">+</span> <span class="n">DtB</span><span class="p">(</span><span class="n">ω_BC</span><span class="p">)</span> <span class="o">+</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">ω_BC</span>
-                   <span class="o">=</span>     <span class="n">α_MB</span>  <span class="o">+</span>     <span class="n">α_BC</span>  <span class="o">+</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">ω_BC</span>   <span class="p">(</span><span class="n">End</span> <span class="n">of</span> <span class="n">proof</span><span class="p">)</span><span class="o">.</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">α_MC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">ω_MC</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">ω_MB</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">ω_BC</span><span class="p">)</span><span class="w"></span>
+<span class="w">                   </span><span class="o">=</span><span class="w">     </span><span class="n">α_MB</span><span class="w">  </span><span class="o">+</span><span class="w"> </span><span class="n">DtB</span><span class="p">(</span><span class="n">ω_BC</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">ω_BC</span><span class="w"></span>
+<span class="w">                   </span><span class="o">=</span><span class="w">     </span><span class="n">α_MB</span><span class="w">  </span><span class="o">+</span><span class="w">     </span><span class="n">α_BC</span><span class="w">  </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">ω_BC</span><span class="w">   </span><span class="p">(</span><span class="n">End</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">proof</span><span class="p">).</span><span class="w"></span>
 </pre></div>
 </div>
-<ul class="simple">
+</details><ul class="simple">
 <li><p>Translational acceleration component *</p></li>
 </ul>
 <p>v_MCo (frame C’s translational velocity in frame M) is calculated in
 SpatialVelocity::ComposeWithMovingFrameVelocity) as</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">v_MCo</span> <span class="o">=</span> <span class="n">v_MBo</span> <span class="o">+</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">p_BoCo</span> <span class="o">+</span> <span class="n">v_BCo</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">v_MCo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v_MBo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">v_BCo</span><span class="w"></span>
 </pre></div>
 </div>
-<p>a_MCo (frame C’s translational acceleration measured in frame M) is
+</details><p>a_MCo (frame C’s translational acceleration measured in frame M) is
 defined as the time-derivative in frame M of v_MCo, calculated as</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a_MCo</span> <span class="o">=</span> <span class="n">DtM</span><span class="p">(</span><span class="n">v_MCo</span><span class="p">)</span>                             <span class="n">Definition</span><span class="o">.</span>
-       <span class="o">=</span> <span class="n">DtM</span><span class="p">(</span><span class="n">v_MBo</span> <span class="o">+</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">p_BoCo</span> <span class="o">+</span> <span class="n">v_BCo</span><span class="p">)</span>     <span class="n">Substitution</span><span class="o">.</span>
-       <span class="o">=</span> <span class="n">DtM</span><span class="p">(</span><span class="n">v_MBo</span><span class="p">)</span> <span class="o">+</span> <span class="n">DtM</span><span class="p">(</span><span class="n">ω_MB</span><span class="p">)</span> <span class="n">x</span> <span class="n">p_BoCo</span> <span class="o">+</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">DtM</span><span class="p">(</span><span class="n">p_BoCo</span><span class="p">)</span> <span class="o">+</span> <span class="n">DtM</span><span class="p">(</span><span class="n">v_BCo</span><span class="p">)</span>
-       <span class="o">=</span>     <span class="n">a_MBo</span>  <span class="o">+</span>     <span class="n">α_MB</span>  <span class="n">x</span> <span class="n">p_BoCo</span> <span class="o">+</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">DtM</span><span class="p">(</span><span class="n">p_BoCo</span><span class="p">)</span> <span class="o">+</span> <span class="n">DtM</span><span class="p">(</span><span class="n">v_BCo</span><span class="p">)</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">a_MCo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">v_MCo</span><span class="p">)</span><span class="w">                             </span><span class="n">Definition</span><span class="p">.</span><span class="w"></span>
+<span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">v_MBo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">v_BCo</span><span class="p">)</span><span class="w">     </span><span class="n">Substitution</span><span class="p">.</span><span class="w"></span>
+<span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">v_MBo</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">ω_MB</span><span class="p">)</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">p_BoCo</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">v_BCo</span><span class="p">)</span><span class="w"></span>
+<span class="w">       </span><span class="o">=</span><span class="w">     </span><span class="n">a_MBo</span><span class="w">  </span><span class="o">+</span><span class="w">     </span><span class="n">α_MB</span><span class="w">  </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">p_BoCo</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">v_BCo</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
-<p>The last two terms are modified using the “Transport Theorem” (Golden
+</details><p>The last two terms are modified using the “Transport Theorem” (Golden
 rule for vector differentation) which converts time-derivatives of
 vectors in frame M to frame B via DtM(vec) = DtB(vec) + ω_MB x vec.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DtM</span><span class="p">(</span><span class="n">p_BoCo</span><span class="p">)</span> <span class="o">=</span> <span class="n">DtB</span><span class="p">(</span><span class="n">p_BoCo</span><span class="p">)</span> <span class="o">+</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">p_BoCo</span>
-             <span class="o">=</span>     <span class="n">v_BCo</span>   <span class="o">+</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">p_BoCo</span>
- <span class="n">DtM</span><span class="p">(</span><span class="n">v_BCo</span><span class="p">)</span>  <span class="o">=</span> <span class="n">DtB</span><span class="p">(</span><span class="n">v_BCo</span><span class="p">)</span>  <span class="o">+</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">v_BCo</span>
-             <span class="o">=</span>     <span class="n">a_BCo</span>   <span class="o">+</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">v_BCo</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">DtM</span><span class="p">(</span><span class="n">p_BoCo</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DtB</span><span class="p">(</span><span class="n">p_BoCo</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="w"></span>
+<span class="w">             </span><span class="o">=</span><span class="w">     </span><span class="n">v_BCo</span><span class="w">   </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="w"></span>
+<span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">v_BCo</span><span class="p">)</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">DtB</span><span class="p">(</span><span class="n">v_BCo</span><span class="p">)</span><span class="w">  </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">v_BCo</span><span class="w"></span>
+<span class="w">             </span><span class="o">=</span><span class="w">     </span><span class="n">a_BCo</span><span class="w">   </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">v_BCo</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Combining the last few equations proves the formula for a_MCo as:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a_MCo</span> <span class="o">=</span> <span class="n">a_MBo</span> <span class="o">+</span> <span class="n">α_MB</span> <span class="n">x</span> <span class="n">p_BoCo</span> <span class="o">+</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="p">(</span><span class="n">ω_MB</span> <span class="n">x</span> <span class="n">p_BoCo</span><span class="p">)</span>
-        <span class="o">+</span> <span class="mi">2</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">v_BCo</span> <span class="o">+</span> <span class="n">a_BCo</span>                           <span class="p">(</span><span class="n">End</span> <span class="n">of</span> <span class="n">proof</span><span class="p">)</span><span class="o">.</span>
+</details><p>Combining the last few equations proves the formula for a_MCo as:</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">a_MCo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a_MBo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">α_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">v_BCo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">a_BCo</span><span class="w">                           </span><span class="p">(</span><span class="n">End</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">proof</span><span class="p">).</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Some terms in the previous equation have names, e.g.,</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">centripetal</span> <span class="n">acceleration</span>   <span class="n">ω_MB</span> <span class="n">x</span> <span class="p">(</span><span class="n">ω_MB</span> <span class="n">x</span> <span class="n">p_BoCo</span><span class="p">)</span>
-  <span class="n">Coriolis</span> <span class="n">acceleration</span>    <span class="mi">2</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">v_BCo</span>
-  <span class="n">Coincident</span> <span class="n">point</span> <span class="n">acceleration</span><span class="p">,</span> <span class="n">i</span><span class="o">.</span><span class="n">e</span><span class="o">.</span><span class="p">,</span> <span class="n">acceleration</span> <span class="n">of</span> <span class="n">the</span> <span class="n">point</span> <span class="n">of</span> <span class="n">frame</span>
-  <span class="n">B</span> <span class="n">coincident</span> <span class="k">with</span> <span class="n">Co</span>      <span class="n">a_MBo</span> <span class="o">+</span> <span class="n">α_MB</span> <span class="n">x</span> <span class="n">p_BoCo</span> <span class="o">+</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="p">(</span><span class="n">ω_MB</span> <span class="n">x</span> <span class="n">p_BoCo</span><span class="p">)</span>
+</details><p>Some terms in the previous equation have names, e.g.,</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">centripetal</span><span class="w"> </span><span class="n">acceleration</span><span class="w">   </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">Coriolis</span><span class="w"> </span><span class="n">acceleration</span><span class="w">    </span><span class="mi">2</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">v_BCo</span><span class="w"></span>
+<span class="w">  </span><span class="n">Coincident</span><span class="w"> </span><span class="n">point</span><span class="w"> </span><span class="n">acceleration</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">.</span><span class="n">e</span><span class="p">.,</span><span class="w"> </span><span class="n">acceleration</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">point</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">frame</span><span class="w"></span>
+<span class="w">  </span><span class="n">B</span><span class="w"> </span><span class="n">coincident</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">Co</span><span class="w">      </span><span class="n">a_MBo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">α_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Note: The coincident point acceleration can be calculated with a
+</details><p>Note: The coincident point acceleration can be calculated with a
 Shift().</p>
 <p>Note: The three cross products appearing in the previous calculation
 of a_MCo can be reduced to one, possibly improving efficiency via</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ω_MB</span> <span class="n">x</span> <span class="p">(</span><span class="n">ω_MB</span> <span class="n">x</span> <span class="n">p_BoCo</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">v_BCo</span> <span class="o">=</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="p">(</span><span class="n">v_MCo</span> <span class="o">-</span> <span class="n">v_MBo</span> <span class="o">+</span> <span class="n">v_BCo</span><span class="p">)</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">v_BCo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="n">v_MCo</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v_MBo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">v_BCo</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
-<p>To show this, we rearrange and substitute our expression for v_MCo.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">v_MCo</span> <span class="o">=</span> <span class="n">v_MBo</span> <span class="o">+</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">p_BoCo</span> <span class="o">+</span> <span class="n">v_BCo</span>        <span class="n">which</span> <span class="n">rearranges</span> <span class="n">to</span>
-  <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">p_BoCo</span> <span class="o">=</span> <span class="n">v_MCo</span> <span class="o">-</span> <span class="n">v_MBo</span> <span class="o">-</span> <span class="n">v_BCo</span><span class="o">.</span>             <span class="n">Substitution</span> <span class="n">produces</span>
-  <span class="n">ω_MB</span> <span class="n">x</span> <span class="p">(</span><span class="n">ω_MB</span> <span class="n">x</span> <span class="n">p_BoCo</span><span class="p">)</span> <span class="o">=</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="p">(</span><span class="n">v_MCo</span> <span class="o">-</span> <span class="n">v_MBo</span> <span class="o">-</span> <span class="n">v_BCo</span><span class="p">)</span>           <span class="n">Hence</span><span class="p">,</span>
-  <span class="n">ω_MB</span> <span class="n">x</span> <span class="p">(</span><span class="n">ω_MB</span> <span class="n">x</span> <span class="n">p_BoCo</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="n">v_BCo</span> <span class="o">=</span> <span class="n">ω_MB</span> <span class="n">x</span> <span class="p">(</span><span class="n">v_MCo</span> <span class="o">-</span> <span class="n">v_MBo</span> <span class="o">+</span> <span class="n">v_BCo</span><span class="p">)</span>
+</details><p>To show this, we rearrange and substitute our expression for v_MCo.</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">v_MCo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v_MBo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">v_BCo</span><span class="w">        </span><span class="n">which</span><span class="w"> </span><span class="n">rearranges</span><span class="w"> </span><span class="n">to</span><span class="w"></span>
+<span class="w">  </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v_MCo</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v_MBo</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v_BCo</span><span class="p">.</span><span class="w">             </span><span class="n">Substitution</span><span class="w"> </span><span class="n">produces</span><span class="w"></span>
+<span class="w">  </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="n">v_MCo</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v_MBo</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v_BCo</span><span class="p">)</span><span class="w">           </span><span class="n">Hence</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">v_BCo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="n">v_MCo</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v_MBo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">v_BCo</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.math.SpatialAcceleration_-Expression-.get_coeffs">
@@ -1579,22 +1579,22 @@ multibody_quantities.</p>
 particles Qᵢ, L_MSP contains S’s angular momentum 𝐡 about-point P,
 measured in frame M and S’s translational momentum 𝐥 measured in frame
 M, defined as</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>h_MSP = ∑ h_MQᵢP = ∑ p_PQᵢ x l_MQᵢ  where l_MQᵢ = mᵢ v_MQᵢ.
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>h_MSP = ∑ h_MQᵢP = ∑ p_PQᵢ x l_MQᵢ  where l_MQᵢ = mᵢ v_MQᵢ.
   l_MS  = ∑ l_MQᵢ  = ∑ mᵢ v_MQᵢ
 </pre></div>
 </div>
-<p>where mᵢ is the mass of particle Qᵢ, v_MQᵢ is Qᵢ’s translational
+</details><p>where mᵢ is the mass of particle Qᵢ, v_MQᵢ is Qᵢ’s translational
 velocity measured in frame M, l_MQᵢ = mᵢ v_MQQᵢ is Qᵢ’s translational
 momentum measured in frame M, h_MQᵢP is Qᵢ’s angular momentum about
 point P measured in frame M, and p_PQᵢ is the position vector from
 point P to Qᵢ. These definitions extend to a body (continuum of
 particles) by using the density ρ(r) of the body at each material
 location r as:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>h_MSP = ∫p_PQ(r) x v_MQ(r) ρ(r) d³r
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>h_MSP = ∫p_PQ(r) x v_MQ(r) ρ(r) d³r
   l_MS  = ∫v_MQ(r) ρ(r) d³r
 </pre></div>
 </div>
-<div class="admonition note">
+</details><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This class is templated; see <a class="reference internal" href="#pydrake.multibody.math.SpatialMomentum_" title="pydrake.multibody.math.SpatialMomentum_"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpatialMomentum_</span></code></a>
 for the list of instantiations.</p>
@@ -1670,10 +1670,10 @@ spatial momentum and spatial velocity shift from Bcm to Bp. For
 more information, see SpatialMomentum::Shift() and
 SpatialVelocity::Shift().</p>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>K_MB = 1/2 (L_MBp · V_MBp) = 1/2 (L_MBcm · V_MBcm)
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>K_MB = 1/2 (L_MBp · V_MBp) = 1/2 (L_MBcm · V_MBcm)
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.math.SpatialMomentum.get_coeffs">
@@ -1784,22 +1784,22 @@ multibody_quantities.</p>
 particles Qᵢ, L_MSP contains S’s angular momentum 𝐡 about-point P,
 measured in frame M and S’s translational momentum 𝐥 measured in frame
 M, defined as</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>h_MSP = ∑ h_MQᵢP = ∑ p_PQᵢ x l_MQᵢ  where l_MQᵢ = mᵢ v_MQᵢ.
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>h_MSP = ∑ h_MQᵢP = ∑ p_PQᵢ x l_MQᵢ  where l_MQᵢ = mᵢ v_MQᵢ.
   l_MS  = ∑ l_MQᵢ  = ∑ mᵢ v_MQᵢ
 </pre></div>
 </div>
-<p>where mᵢ is the mass of particle Qᵢ, v_MQᵢ is Qᵢ’s translational
+</details><p>where mᵢ is the mass of particle Qᵢ, v_MQᵢ is Qᵢ’s translational
 velocity measured in frame M, l_MQᵢ = mᵢ v_MQQᵢ is Qᵢ’s translational
 momentum measured in frame M, h_MQᵢP is Qᵢ’s angular momentum about
 point P measured in frame M, and p_PQᵢ is the position vector from
 point P to Qᵢ. These definitions extend to a body (continuum of
 particles) by using the density ρ(r) of the body at each material
 location r as:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>h_MSP = ∫p_PQ(r) x v_MQ(r) ρ(r) d³r
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>h_MSP = ∫p_PQ(r) x v_MQ(r) ρ(r) d³r
   l_MS  = ∫v_MQ(r) ρ(r) d³r
 </pre></div>
 </div>
-<dl class="py method">
+</details><dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.math.SpatialMomentum_-AutoDiffXd-.__init__">
 <span id="pydrake.multibody.math.SpatialMomentum_[AutoDiffXd].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.math.SpatialMomentum_-AutoDiffXd-.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
@@ -1870,10 +1870,10 @@ spatial momentum and spatial velocity shift from Bcm to Bp. For
 more information, see SpatialMomentum::Shift() and
 SpatialVelocity::Shift().</p>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>K_MB = 1/2 (L_MBp · V_MBp) = 1/2 (L_MBcm · V_MBcm)
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>K_MB = 1/2 (L_MBp · V_MBp) = 1/2 (L_MBcm · V_MBcm)
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.math.SpatialMomentum_-AutoDiffXd-.get_coeffs">
@@ -1978,22 +1978,22 @@ multibody_quantities.</p>
 particles Qᵢ, L_MSP contains S’s angular momentum 𝐡 about-point P,
 measured in frame M and S’s translational momentum 𝐥 measured in frame
 M, defined as</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>h_MSP = ∑ h_MQᵢP = ∑ p_PQᵢ x l_MQᵢ  where l_MQᵢ = mᵢ v_MQᵢ.
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>h_MSP = ∑ h_MQᵢP = ∑ p_PQᵢ x l_MQᵢ  where l_MQᵢ = mᵢ v_MQᵢ.
   l_MS  = ∑ l_MQᵢ  = ∑ mᵢ v_MQᵢ
 </pre></div>
 </div>
-<p>where mᵢ is the mass of particle Qᵢ, v_MQᵢ is Qᵢ’s translational
+</details><p>where mᵢ is the mass of particle Qᵢ, v_MQᵢ is Qᵢ’s translational
 velocity measured in frame M, l_MQᵢ = mᵢ v_MQQᵢ is Qᵢ’s translational
 momentum measured in frame M, h_MQᵢP is Qᵢ’s angular momentum about
 point P measured in frame M, and p_PQᵢ is the position vector from
 point P to Qᵢ. These definitions extend to a body (continuum of
 particles) by using the density ρ(r) of the body at each material
 location r as:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>h_MSP = ∫p_PQ(r) x v_MQ(r) ρ(r) d³r
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>h_MSP = ∫p_PQ(r) x v_MQ(r) ρ(r) d³r
   l_MS  = ∫v_MQ(r) ρ(r) d³r
 </pre></div>
 </div>
-<dl class="py method">
+</details><dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.math.SpatialMomentum_-Expression-.__init__">
 <span id="pydrake.multibody.math.SpatialMomentum_[Expression].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.math.SpatialMomentum_-Expression-.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
@@ -2064,10 +2064,10 @@ spatial momentum and spatial velocity shift from Bcm to Bp. For
 more information, see SpatialMomentum::Shift() and
 SpatialVelocity::Shift().</p>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>K_MB = 1/2 (L_MBp · V_MBp) = 1/2 (L_MBcm · V_MBcm)
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>K_MB = 1/2 (L_MBp · V_MBp) = 1/2 (L_MBcm · V_MBcm)
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.math.SpatialMomentum_-Expression-.get_coeffs">
@@ -2227,11 +2227,11 @@ E.</p>
 <p>The returned spatial velocity V_MC_E contains an angular velocity
 ω_MC_E and translational velocity v_MCo_E that are calculated as:</p>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ω_MC_E</span>  <span class="o">=</span> <span class="n">ω_MB_E</span> <span class="o">+</span> <span class="n">ω_BC_E</span>
- <span class="n">v_MCo_E</span> <span class="o">=</span> <span class="n">v_MBo_E</span> <span class="o">+</span> <span class="n">ω_MB_E</span> <span class="n">x</span> <span class="n">p_BoCo_E</span> <span class="o">+</span> <span class="n">v_BCo_E</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">ω_MC_E</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">ω_MB_E</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_BC_E</span><span class="w"></span>
+<span class="w"> </span><span class="n">v_MCo_E</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v_MBo_E</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB_E</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo_E</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">v_BCo_E</span><span class="w"></span>
 </pre></div>
 </div>
-<p>If frame C is rigidly fixed to frame B, V_BC_E = 0 and this method
+</details><p>If frame C is rigidly fixed to frame B, V_BC_E = 0 and this method
 produces a Shift() operation (albeit inefficiently). In other words,
 use Shift() if velocity_of_moving_frame = 0.</p>
 <div class="admonition seealso">
@@ -2317,10 +2317,10 @@ spatial momentum and spatial velocity shift from Bcm to Bp. For
 more information, see SpatialMomentum::Shift() and
 SpatialVelocity::Shift().</p>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>K_MB = 1/2 (L_MBp · V_MBp) = 1/2 (L_MBcm · V_MBcm)
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>K_MB = 1/2 (L_MBp · V_MBp) = 1/2 (L_MBcm · V_MBcm)
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.math.SpatialVelocity.get_coeffs">
@@ -2481,11 +2481,11 @@ E.</p>
 <p>The returned spatial velocity V_MC_E contains an angular velocity
 ω_MC_E and translational velocity v_MCo_E that are calculated as:</p>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ω_MC_E</span>  <span class="o">=</span> <span class="n">ω_MB_E</span> <span class="o">+</span> <span class="n">ω_BC_E</span>
- <span class="n">v_MCo_E</span> <span class="o">=</span> <span class="n">v_MBo_E</span> <span class="o">+</span> <span class="n">ω_MB_E</span> <span class="n">x</span> <span class="n">p_BoCo_E</span> <span class="o">+</span> <span class="n">v_BCo_E</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">ω_MC_E</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">ω_MB_E</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_BC_E</span><span class="w"></span>
+<span class="w"> </span><span class="n">v_MCo_E</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v_MBo_E</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB_E</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo_E</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">v_BCo_E</span><span class="w"></span>
 </pre></div>
 </div>
-<p>If frame C is rigidly fixed to frame B, V_BC_E = 0 and this method
+</details><p>If frame C is rigidly fixed to frame B, V_BC_E = 0 and this method
 produces a Shift() operation (albeit inefficiently). In other words,
 use Shift() if velocity_of_moving_frame = 0.</p>
 <div class="admonition seealso">
@@ -2571,10 +2571,10 @@ spatial momentum and spatial velocity shift from Bcm to Bp. For
 more information, see SpatialMomentum::Shift() and
 SpatialVelocity::Shift().</p>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>K_MB = 1/2 (L_MBp · V_MBp) = 1/2 (L_MBcm · V_MBcm)
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>K_MB = 1/2 (L_MBp · V_MBp) = 1/2 (L_MBcm · V_MBcm)
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.math.SpatialVelocity_-AutoDiffXd-.get_coeffs">
@@ -2729,11 +2729,11 @@ E.</p>
 <p>The returned spatial velocity V_MC_E contains an angular velocity
 ω_MC_E and translational velocity v_MCo_E that are calculated as:</p>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ω_MC_E</span>  <span class="o">=</span> <span class="n">ω_MB_E</span> <span class="o">+</span> <span class="n">ω_BC_E</span>
- <span class="n">v_MCo_E</span> <span class="o">=</span> <span class="n">v_MBo_E</span> <span class="o">+</span> <span class="n">ω_MB_E</span> <span class="n">x</span> <span class="n">p_BoCo_E</span> <span class="o">+</span> <span class="n">v_BCo_E</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">ω_MC_E</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">ω_MB_E</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_BC_E</span><span class="w"></span>
+<span class="w"> </span><span class="n">v_MCo_E</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v_MBo_E</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB_E</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo_E</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">v_BCo_E</span><span class="w"></span>
 </pre></div>
 </div>
-<p>If frame C is rigidly fixed to frame B, V_BC_E = 0 and this method
+</details><p>If frame C is rigidly fixed to frame B, V_BC_E = 0 and this method
 produces a Shift() operation (albeit inefficiently). In other words,
 use Shift() if velocity_of_moving_frame = 0.</p>
 <div class="admonition seealso">
@@ -2819,10 +2819,10 @@ spatial momentum and spatial velocity shift from Bcm to Bp. For
 more information, see SpatialMomentum::Shift() and
 SpatialVelocity::Shift().</p>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>K_MB = 1/2 (L_MBp · V_MBp) = 1/2 (L_MBcm · V_MBcm)
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>K_MB = 1/2 (L_MBp · V_MBp) = 1/2 (L_MBcm · V_MBcm)
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.math.SpatialVelocity_-Expression-.get_coeffs">

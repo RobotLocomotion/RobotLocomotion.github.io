@@ -146,24 +146,24 @@ instance will be created.)</p>
 </dd>
 </dl>
 <p><strong>Example</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Create</span> <span class="n">a</span> <span class="n">builder</span><span class="o">.</span>
-<span class="n">DiagramBuilder</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">builder</span><span class="p">;</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Create a builder.</span>
+<span class="n">DiagramBuilder</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">builder</span><span class="p">;</span><span class="w"></span>
 
-<span class="o">//</span> <span class="n">Add</span> <span class="n">the</span> <span class="n">MultibodyPlant</span> <span class="ow">and</span> <span class="n">SceneGraph</span><span class="o">.</span>
-<span class="n">const</span> <span class="n">MultibodyPlantConfig</span> <span class="n">plant_config</span> <span class="o">=</span> <span class="o">...</span><span class="p">;</span>
-<span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;&amp;</span> <span class="n">plant</span> <span class="o">=</span> <span class="n">AddMultibodyPlant</span><span class="p">(</span><span class="n">plant_config</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">builder</span><span class="p">);</span>
-<span class="o">//</span> <span class="o">...</span> <span class="n">populate</span> <span class="n">the</span> <span class="n">plant</span><span class="p">,</span> <span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="p">,</span> <span class="k">with</span> <span class="n">a</span> <span class="n">Parser</span><span class="p">,</span> <span class="o">...</span>
-<span class="n">plant</span><span class="o">.</span><span class="n">Finalize</span><span class="p">();</span>
+<span class="c1">// Add the MultibodyPlant and SceneGraph.</span>
+<span class="k">const</span><span class="w"> </span><span class="n">MultibodyPlantConfig</span><span class="w"> </span><span class="n">plant_config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span><span class="w"></span>
+<span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">plant</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AddMultibodyPlant</span><span class="p">(</span><span class="n">plant_config</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">builder</span><span class="p">);</span><span class="w"></span>
+<span class="c1">// ... populate the plant, e.g., with a Parser, ...</span>
+<span class="n">plant</span><span class="p">.</span><span class="n">Finalize</span><span class="p">();</span><span class="w"></span>
 
-<span class="o">//</span> <span class="n">Add</span> <span class="n">the</span> <span class="n">visualization</span><span class="o">.</span>
-<span class="n">AddDefaultVisualization</span><span class="p">(</span><span class="o">&amp;</span><span class="n">builder</span><span class="p">);</span>
+<span class="c1">// Add the visualization.</span>
+<span class="n">AddDefaultVisualization</span><span class="p">(</span><span class="o">&amp;</span><span class="n">builder</span><span class="p">);</span><span class="w"></span>
 
-<span class="o">//</span> <span class="n">Simulate</span><span class="o">.</span>
-<span class="n">Simulator</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">simulator</span><span class="p">(</span><span class="n">builder</span><span class="o">.</span><span class="n">Build</span><span class="p">());</span>
-<span class="o">//</span> <span class="o">...</span> <span class="n">etc</span> <span class="o">...</span>
+<span class="c1">// Simulate.</span>
+<span class="n">Simulator</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">simulator</span><span class="p">(</span><span class="n">builder</span><span class="p">.</span><span class="n">Build</span><span class="p">());</span><span class="w"></span>
+<span class="c1">// ... etc ...</span>
 </pre></div>
 </div>
-<dl class="simple">
+</details><dl class="simple">
 <dt>Precondition:</dt><dd><p>AddMultibodyPlant() or AddMultibodyPlantSceneGraph() has already
 been called on the given <code class="docutils literal notranslate"><span class="pre">builder</span></code>.</p>
 </dd>
@@ -219,25 +219,25 @@ identity transform and therefore the triad will depict F.</p></li>
 <dd><p>Adds LCM visualization publishers to communicate to Meshcat, Meldis,
 and/or the legacy <code class="docutils literal notranslate"><span class="pre">drake_visualizer</span></code> application of days past.</p>
 <p><strong>Example</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Create</span> <span class="n">a</span> <span class="n">builder</span><span class="o">.</span>
-<span class="n">DiagramBuilder</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">builder</span><span class="p">;</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Create a builder.</span>
+<span class="n">DiagramBuilder</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">builder</span><span class="p">;</span><span class="w"></span>
 
-<span class="o">//</span> <span class="n">Add</span> <span class="n">the</span> <span class="n">MultibodyPlant</span> <span class="ow">and</span> <span class="n">SceneGraph</span><span class="o">.</span>
-<span class="n">const</span> <span class="n">MultibodyPlantConfig</span> <span class="n">plant_config</span> <span class="o">=</span> <span class="o">...</span><span class="p">;</span>
-<span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;&amp;</span> <span class="n">plant</span> <span class="o">=</span> <span class="n">AddMultibodyPlant</span><span class="p">(</span><span class="n">plant_config</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">builder</span><span class="p">);</span>
-<span class="o">//</span> <span class="o">...</span> <span class="n">populate</span> <span class="n">the</span> <span class="n">plant</span><span class="p">,</span> <span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="p">,</span> <span class="k">with</span> <span class="n">a</span> <span class="n">Parser</span><span class="p">,</span> <span class="o">...</span>
-<span class="n">plant</span><span class="o">.</span><span class="n">Finalize</span><span class="p">();</span>
+<span class="c1">// Add the MultibodyPlant and SceneGraph.</span>
+<span class="k">const</span><span class="w"> </span><span class="n">MultibodyPlantConfig</span><span class="w"> </span><span class="n">plant_config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span><span class="w"></span>
+<span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">plant</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AddMultibodyPlant</span><span class="p">(</span><span class="n">plant_config</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">builder</span><span class="p">);</span><span class="w"></span>
+<span class="c1">// ... populate the plant, e.g., with a Parser, ...</span>
+<span class="n">plant</span><span class="p">.</span><span class="n">Finalize</span><span class="p">();</span><span class="w"></span>
 
-<span class="o">//</span> <span class="n">Add</span> <span class="n">the</span> <span class="n">visualization</span><span class="o">.</span>
-<span class="n">const</span> <span class="n">VisualizationConfig</span> <span class="n">vis_config</span> <span class="o">=</span> <span class="o">...</span><span class="p">;</span>
-<span class="n">ApplyVisualizationConfig</span><span class="p">(</span><span class="n">vis_config</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">builder</span><span class="p">);</span>
+<span class="c1">// Add the visualization.</span>
+<span class="k">const</span><span class="w"> </span><span class="n">VisualizationConfig</span><span class="w"> </span><span class="n">vis_config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span><span class="w"></span>
+<span class="n">ApplyVisualizationConfig</span><span class="p">(</span><span class="n">vis_config</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">builder</span><span class="p">);</span><span class="w"></span>
 
-<span class="o">//</span> <span class="n">Simulate</span><span class="o">.</span>
-<span class="n">Simulator</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">simulator</span><span class="p">(</span><span class="n">builder</span><span class="o">.</span><span class="n">Build</span><span class="p">());</span>
-<span class="o">//</span> <span class="o">...</span> <span class="n">etc</span> <span class="o">...</span>
+<span class="c1">// Simulate.</span>
+<span class="n">Simulator</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">simulator</span><span class="p">(</span><span class="n">builder</span><span class="p">.</span><span class="n">Build</span><span class="p">());</span><span class="w"></span>
+<span class="c1">// ... etc ...</span>
 </pre></div>
 </div>
-<dl class="simple">
+</details><dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">config</span></code>:</dt><dd><p>The visualization configuration.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">builder</span></code>:</dt><dd><p>The diagram to add visualization systems into.</p>
@@ -516,7 +516,7 @@ be useful, for instance, if one only wants to control the pose in
 </dd>
 </dl>
 <p>The default keycodes provide the following keyboard mapping:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>┌───────┬┬───────┬┬───────┐        ┌───────┬┬───────┬┬───────┐
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>┌───────┬┬───────┬┬───────┐        ┌───────┬┬───────┬┬───────┐
 │   Q   ││   W   ││   E   │        │   U   ││   I   ││   O   │
 │ roll- ││ pitch+││ roll+ │        │   z-  ││   y+  ││   z+  │
 ├───────┼┼───────┼┼───────┤        ├───────┼┼───────┼┼───────┤
@@ -526,7 +526,7 @@ be useful, for instance, if one only wants to control the pose in
 └───────┴┴───────┴┴───────┘        └───────┴┴───────┴┴───────┘
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.visualization.MeshcatPoseSliders.Delete">
@@ -664,7 +664,7 @@ be useful, for instance, if one only wants to control the pose in
 </dd>
 </dl>
 <p>The default keycodes provide the following keyboard mapping:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>┌───────┬┬───────┬┬───────┐        ┌───────┬┬───────┬┬───────┐
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>┌───────┬┬───────┬┬───────┐        ┌───────┬┬───────┬┬───────┐
 │   Q   ││   W   ││   E   │        │   U   ││   I   ││   O   │
 │ roll- ││ pitch+││ roll+ │        │   z-  ││   y+  ││   z+  │
 ├───────┼┼───────┼┼───────┤        ├───────┼┼───────┼┼───────┤
@@ -674,7 +674,7 @@ be useful, for instance, if one only wants to control the pose in
 └───────┴┴───────┴┴───────┘        └───────┴┴───────┴┴───────┘
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.visualization.MeshcatPoseSliders_-AutoDiffXd-.Delete">

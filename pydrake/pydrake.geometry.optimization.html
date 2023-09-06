@@ -484,11 +484,11 @@ one side of the plane.”</p>
 </ol>
 <p>Let S be this convex set. When S is bounded, this method adds the
 convex constraints to imply</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>x ∈ t S,
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>x ∈ t S,
 t ≥ 0,
 </pre></div>
 </div>
-<p>where x is a point in ℜⁿ (with n the ambient_dimension) and t is a
+</details><p>where x is a point in ℜⁿ (with n the ambient_dimension) and t is a
 scalar.</p>
 <p>When S is unbounded, then the behavior is almost identical, except
 when t=0. In this case, the constraints imply t ≥ 0, x ∈ t S ⊕ rec(S),
@@ -505,20 +505,20 @@ equivalent to x ∈ t S, but for t = 0, we have only x ∈ rec(S).</p>
 </ol>
 <p>Let S be this convex set. When S is bounded, this method adds the
 convex constraints to imply</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>A * x + b ∈ (c&#39; * t + d) S,
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>A * x + b ∈ (c&#39; * t + d) S,
 c&#39; * t + d ≥ 0,
 </pre></div>
 </div>
-<p>where A is an n-by-m matrix (with n the ambient_dimension), b is a
+</details><p>where A is an n-by-m matrix (with n the ambient_dimension), b is a
 vector of size n, c is a vector of size p, x is a point in ℜᵐ, and t
 is a point in ℜᵖ.</p>
 <p>When S is unbounded, then the behavior is almost identical, except
 when c’ * t+d=0. In this case, the constraints imply</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>A * x + b ∈ (c&#39; * t + d) S ⊕ rec(S),
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>A * x + b ∈ (c&#39; * t + d) S ⊕ rec(S),
 c&#39; * t + d ≥ 0,
 </pre></div>
 </div>
-<p>where rec(S) is the recession cone of S (the asymptotic directions in
+</details><p>where rec(S) is the recession cone of S (the asymptotic directions in
 which S is not bounded) and ⊕ is the Minkowski sum. For c’ * t + d &gt;
 0, this is equivalent to A * x + b ∈ (c’ * t + d) S, but for c’ * t +
 d = 0, we have only A * x + b ∈ rec(S).</p>
@@ -672,7 +672,7 @@ Configuration Space for Robot Manipulators by Alexandre Amice*,
 Hongkai Dai*, Peter Werner, Annan Zhang and Russ Tedrake.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.geometry.optimization.CspaceFreePolytope,</span> <span class="pre">plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;,</span> <span class="pre">scene_graph:</span> <span class="pre">pydrake.geometry.SceneGraph,</span> <span class="pre">plane_order:</span> <span class="pre">pydrake.geometry.optimization.SeparatingPlaneOrder,</span> <span class="pre">q_star:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]],</span> <span class="pre">options:</span> <span class="pre">pydrake.geometry.optimization.CspaceFreePolytopeBase.Options</span> <span class="pre">=</span> <span class="pre">&lt;pydrake.geometry.optimization.CspaceFreePolytopeBase.Options</span> <span class="pre">object</span> <span class="pre">at</span> <span class="pre">0x7f2dd8beb530&gt;</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.geometry.optimization.CspaceFreePolytope,</span> <span class="pre">plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;,</span> <span class="pre">scene_graph:</span> <span class="pre">pydrake.geometry.SceneGraph,</span> <span class="pre">plane_order:</span> <span class="pre">pydrake.geometry.optimization.SeparatingPlaneOrder,</span> <span class="pre">q_star:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]],</span> <span class="pre">options:</span> <span class="pre">pydrake.geometry.optimization.CspaceFreePolytopeBase.Options</span> <span class="pre">=</span> <span class="pre">&lt;pydrake.geometry.optimization.CspaceFreePolytopeBase.Options</span> <span class="pre">object</span> <span class="pre">at</span> <span class="pre">0x7f2c6e7600f0&gt;</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.__init__" title="Permalink to this definition"></a></dt>
 <dd><dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt><dd><p>The plant for which we compute the C-space free polytopes. It must
 outlive this CspaceFreePolytope object.</p>
@@ -1447,10 +1447,10 @@ containing <em>only</em> elements of xu() and xv() as variables.</p>
 xu() and xv() as variables. For technical reasons relating to being
 able to “turn-off” the cost on inactive edges, all costs are
 eventually implemented with a slack variable and a constraint:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>min g(xu, xv) ⇒ min ℓ, s.t. ℓ ≥ g(xu,xv)
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>min g(xu, xv) ⇒ min ℓ, s.t. ℓ ≥ g(xu,xv)
 </pre></div>
 </div>
-<div class="admonition note">
+</details><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Linear costs lead to negative costs if decision variables are not
 properly constrained. Users may want to check that the solution
@@ -1481,10 +1481,10 @@ containing <em>only</em> elements of xu() and xv() as variables. For
 technical reasons relating to being able to “turn-off” the cost on
 inactive edges, all costs are eventually implemented with a slack
 variable and a constraint:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>min g(xu, xv) ⇒ min ℓ, s.t. ℓ ≥ g(xu,xv)
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>min g(xu, xv) ⇒ min ℓ, s.t. ℓ ≥ g(xu,xv)
 </pre></div>
 </div>
-<div class="admonition note">
+</details><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Linear costs lead to negative costs if decision variables are not
 properly constrained. Users may want to check that the solution
@@ -1505,10 +1505,10 @@ does not contain negative costs.</p>
 xu() and xv() as variables. For technical reasons relating to being
 able to “turn-off” the cost on inactive edges, all costs are
 eventually implemented with a slack variable and a constraint:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>min g(xu, xv) ⇒ min ℓ, s.t. ℓ ≥ g(xu,xv)
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>min g(xu, xv) ⇒ min ℓ, s.t. ℓ ≥ g(xu,xv)
 </pre></div>
 </div>
-<div class="admonition note">
+</details><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Linear costs lead to negative costs if decision variables are not
 properly constrained. Users may want to check that the solution
@@ -1882,10 +1882,10 @@ std::string name.</p>
 of x() as variables. For technical reasons relating to being able to
 “turn-off” the cost on inactive vertices, all costs are eventually
 implemented with a slack variable and a constraint:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>min g(x) ⇒ min ℓ, s.t. ℓ ≥ g(x)
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>min g(x) ⇒ min ℓ, s.t. ℓ ≥ g(x)
 </pre></div>
 </div>
-<div class="admonition note">
+</details><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Linear costs lead to negative costs if decision variables are not
 properly constrained. Users may want to check that the solution
@@ -1913,10 +1913,10 @@ containing <em>only</em> elements of x() as variables. For technical reasons
 relating to being able to “turn-off” the cost on inactive vertices,
 all costs are eventually implemented with a slack variable and a
 constraint:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>min g(x) ⇒ min ℓ, s.t. ℓ ≥ g(x)
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>min g(x) ⇒ min ℓ, s.t. ℓ ≥ g(x)
 </pre></div>
 </div>
-<div class="admonition note">
+</details><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Linear costs lead to negative costs if decision variables are not
 properly constrained. Users may want to check that the solution
@@ -1937,10 +1937,10 @@ does not contain negative costs.</p>
 of x() as variables. For technical reasons relating to being able to
 “turn-off” the cost on inactive vertices, all costs are eventually
 implemented with a slack variable and a constraint:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>min g(x) ⇒ min ℓ, s.t. ℓ ≥ g(x)
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>min g(x) ⇒ min ℓ, s.t. ℓ ≥ g(x)
 </pre></div>
 </div>
-<div class="admonition note">
+</details><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Linear costs lead to negative costs if decision variables are not
 properly constrained. Users may want to check that the solution
@@ -2242,14 +2242,14 @@ conform to the point that one might consider the “visual center” of
 the set. For example, for a long thin rectangle, any point in the
 center line segment illustrated below would be a valid center point.
 The solver may return any point on that line segment.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>┌──────────────────────────────────┐
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>┌──────────────────────────────────┐
 │                                  │
 │   ────────────────────────────   │
 │                                  │
 └──────────────────────────────────┘
 </pre></div>
 </div>
-<p>To find the visual center, consider using the more expensive
+</details><p>To find the visual center, consider using the more expensive
 MaximumVolumeInscribedEllipsoid() method, and then taking the center
 of the returned Hyperellipsoid.</p>
 <dl class="field-list simple">
@@ -2330,12 +2330,12 @@ length 2.</p>
 <dd><p>Solves a semi-definite program to compute the inscribed ellipsoid.
 This is also known as the inner Löwner-John ellipsoid. From Section
 8.4.2 in Boyd and Vandenberghe, 2004, we solve</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>max_{C,d} log det (C)
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>max_{C,d} log det (C)
 s.t. |aᵢC|₂ ≤ bᵢ - aᵢd, ∀i
 C ≽ 0
 </pre></div>
 </div>
-<p>where aᵢ and bᵢ denote the ith row. This defines the ellipsoid E = {
+</details><p>where aᵢ and bᵢ denote the ith row. This defines the ellipsoid E = {
 Cx + d | <a href="#id5"><span class="problematic" id="id6">|</span></a>x|₂ ≤ 1}.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>the HPolyhedron is bounded.</p>

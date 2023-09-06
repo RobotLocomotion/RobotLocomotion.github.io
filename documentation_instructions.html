@@ -243,6 +243,57 @@ the latter.</p>
 <p>Each build command has a corresponding test defined as part of the
 <code class="language-plaintext highlighter-rouge">//doc:manual_tests</code> test suite.</p>
 
+<h1 id="custom-markup">Custom markup</h1>
+
+<p>Drake has a few local conventions for adding markup to documentation strings.</p>
+
+<h2 id="experimental">@experimental</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">@experimental</code> command generates a documentation paragraph that opts-out
+of the <a href="/stable.html">Stable API</a>.</p>
+
+<h2 id="python_detail_">@python_detail_…</h2>
+
+<p>In Drake Doxygen, we can collapse Python example code under an “accordion”, so
+that it only appears when the user clicks to expand it. Use the Drake-specific
+custom commands <code class="language-plaintext highlighter-rouge">@python_details_begin</code> and <code class="language-plaintext highlighter-rouge">@python_details_end</code>.
+Here’s an example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/** Some overview.
+
+A code example in C++:
+@code{.cpp}
+int foo = 123;
+fmt:print("foo={}", foo);
+@endcode
+
+A code example in Python:
+@python_details_begin
+@code{.py}
+foo = 123
+print(f"foo={foo}")
+@endcode
+@python_details_end
+
+See also https://fmt.dev/.
+*/
+</code></pre></div></div>
+
+<h2 id="tparam_">@tparam_…</h2>
+
+<p><code class="language-plaintext highlighter-rouge">@tparam</code> is a built-in Doxygen command to describe a template argument. In
+Drake, for code templated on the “scalar type”, writing out the description of
+the scalar type template in every class would be onerous boilerplate. Instead,
+we have a few custom abbreviations for the common cases:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@tparam_default_scalar
+@tparam_nonsymbolic_scalar
+@tparam_double_only
+</code></pre></div></div>
+
+<p>See the <a href="/doxygen_cxx/group__default__scalars.html">C++ API documentation</a>
+for a full description.</p>
+
       </article>
     </div>
   </section>

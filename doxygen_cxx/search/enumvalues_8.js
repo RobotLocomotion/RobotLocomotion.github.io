@@ -235,7 +235,6 @@ var searchData=
   ['kunbounded',['kUnbounded',['../namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136fa4b9de95ee3087851acd98262e09f0be8',1,'drake::solvers']]],
   ['kuniform',['kUniform',['../namespacedrake.html#a72383be4710d27584d0821effc6506a5a3ea9f7aca87fd7b64469a0d1119f0b50',1,'drake::kUniform()'],['../namespacedrake_1_1math.html#a2dc222f66e0f5092e8cfe879f24874b2a3ea9f7aca87fd7b64469a0d1119f0b50',1,'drake::math::kUniform()']]],
   ['kunknown',['kUnknown',['../namespacedrake_1_1solvers.html#ab09ca5e1afe9e5a4e8744ecb27839b15a25c2dc47991b3df171ed5192bcf70390',1,'drake::solvers::kUnknown()'],['../namespacedrake_1_1systems.html#a59b7f49353f2a99b6c22d2eaae0fe9e9a25c2dc47991b3df171ed5192bcf70390',1,'drake::systems::kUnknown()']]],
-  ['kunknownerror',['kUnknownError',['../namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136fabca339897d605430456c35a1a10a4a9f',1,'drake::solvers']]],
   ['kunrevisedlemke',['kUnrevisedLemke',['../namespacedrake_1_1solvers.html#a8b06041d7c1fb05f379714f4312306eca045139748552611db2ba18934b6f89f6',1,'drake::solvers']]],
   ['kusefirstinputifitexists',['kUseFirstInputIfItExists',['../namespacedrake_1_1systems.html#a5484375bdbfb17f525cd2ed396d747f9ae969b88961b5a19a96fee66796e8d713',1,'drake::systems']]],
   ['kusefirstoutputifitexists',['kUseFirstOutputIfItExists',['../namespacedrake_1_1systems.html#a00432489001229d1f63cb6d373403a6ea2e0016ab225d09e0af0e4648992d8be5',1,'drake::systems']]],

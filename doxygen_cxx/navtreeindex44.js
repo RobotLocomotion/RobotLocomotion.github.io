@@ -1,8 +1,5 @@
 var NAVTREEINDEX44 =
 {
-"common__solver__option_8h.html#ae07229124cd16e9d8b62fe359c7d0b40aca5719f05d0aceacc42e256644394100":[4,0,0,11,7,1,1],
-"common__solver__option_8h.html#aed794af38e7da9270528fd2185861862":[4,0,0,11,7,2],
-"compass__gait_8h.html":[4,0,0,3,4,0],
 "compass__gait__geometry_8h.html":[4,0,0,3,4,1],
 "compliant__contact__manager_8h.html":[4,0,0,8,10,2],
 "compliant__contact__manager_8h.html#ac599f4f3a6b1e2f688346350cd2d5577":[4,0,0,8,10,2,0],
@@ -101,7 +98,6 @@ var NAVTREEINDEX44 =
 "cspace__free__box_8h.html":[4,0,0,4,1,4],
 "cspace__free__internal_8h.html":[4,0,0,4,1,5],
 "cspace__free__polytope_8h.html":[4,0,0,4,1,6],
-"cspace__free__polytope_8h.html#ac52a87949354e558c4a05a11acb655ec":[4,0,0,4,1,6,10],
 "cspace__free__polytope__base_8h.html":[4,0,0,4,1,7],
 "cspace__free__structs_8h.html":[4,0,0,4,1,8],
 "cspace__separating__plane_8h.html":[4,0,0,4,1,9],
@@ -249,5 +245,9 @@ var NAVTREEINDEX44 =
 "dir_4d6afa0018d27b03aafc768625d5f8d5.html":[4,0,0,8,12],
 "dir_4e7f59081b2683f4314b7e1101ce9a3e.html":[4,0,0,8,7],
 "dir_53ba7bb0d6f8be46971cdf8f3cbf5491.html":[4,0,0,0,0,2],
-"dir_55f8630d5466d97e74952e939680a0a0.html":[4,0,0,12,6]
+"dir_55f8630d5466d97e74952e939680a0a0.html":[4,0,0,12,6],
+"dir_563cbebf3859612cccbc3edeae15a602.html":[4,0,0,8,2,0],
+"dir_5d8dbe7a82c2c188fa06f6391bb290bd.html":[4,0,0,8,0],
+"dir_5f7a2023092b91a1e02609fa2c012f50.html":[4,0,0,1,5],
+"dir_5fa915364d7caf39d2fac1314fb2fd74.html":[4,0,0,3,16]
 };

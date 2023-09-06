@@ -811,7 +811,7 @@ MultibodyPlant&lt;AutoDiffXd&gt;.</p>
 </ol>
 <p>Computes a generalized velocity v_next, via the following
 MathematicalProgram:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>min_{v_next,alpha}
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>min_{v_next,alpha}
     -100 * alpha + |P⋅(v_next - N⁺(q)⋅K⋅(q_nominal - q_current))|²
 
   s.t.
@@ -823,7 +823,7 @@ MathematicalProgram:</p>
     and additional linear velocity constraints,
 </pre></div>
 </div>
-<p>where: - The rows of P form an orthonormal basis for the nullspace of
+</details><p>where: - The rows of P form an orthonormal basis for the nullspace of
 J, - J.rows() == V.size(), - J.cols() == v_current.size() ==
 v_next.size(), - V can have any size, with each element representing a
 constraint on the solution (6 constraints specifying an end-effector
@@ -1412,21 +1412,21 @@ connected to a SceneGraph, with the corresponding plant_context,
 the steps are:</p>
 </dd>
 </dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="mf">1.</span> <span class="n">Add</span> <span class="n">a</span> <span class="n">diagram</span> <span class="n">containing</span> <span class="n">the</span> <span class="n">MultibodyPlant</span> <span class="ow">and</span> <span class="n">SceneGraph</span>
-<span class="n">systems</span><span class="p">::</span><span class="n">DiagramBuilder</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">builder</span><span class="p">;</span>
-<span class="n">auto</span> <span class="n">items</span> <span class="o">=</span> <span class="n">AddMultibodyPlantSceneGraph</span><span class="p">(</span><span class="o">&amp;</span><span class="n">builder</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">);</span>
-<span class="o">//</span> <span class="mf">2.</span> <span class="n">Add</span> <span class="n">collision</span> <span class="n">geometries</span> <span class="n">to</span> <span class="n">the</span> <span class="n">plant</span>
-<span class="n">Parser</span><span class="p">(</span><span class="o">&amp;</span><span class="p">(</span><span class="n">items</span><span class="o">.</span><span class="n">plant</span><span class="p">))</span><span class="o">.</span><span class="n">AddModels</span><span class="p">(</span><span class="s2">&quot;model.sdf&quot;</span><span class="p">);</span>
-<span class="o">//</span> <span class="mf">3.</span> <span class="n">Construct</span> <span class="n">the</span> <span class="n">diagram</span>
-<span class="n">auto</span> <span class="n">diagram</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">Build</span><span class="p">();</span>
-<span class="o">//</span> <span class="mf">4.</span> <span class="n">Create</span> <span class="n">diagram</span> <span class="n">context</span><span class="o">.</span>
-<span class="n">auto</span> <span class="n">diagram_context</span><span class="o">=</span> <span class="n">diagram</span><span class="o">-&gt;</span><span class="n">CreateDefaultContext</span><span class="p">();</span>
-<span class="o">//</span> <span class="mf">5.</span> <span class="n">Get</span> <span class="n">the</span> <span class="n">context</span> <span class="k">for</span> <span class="n">the</span> <span class="n">plant</span><span class="o">.</span>
-<span class="n">auto</span> <span class="n">plant_context</span> <span class="o">=</span> <span class="o">&amp;</span><span class="p">(</span><span class="n">diagram</span><span class="o">-&gt;</span><span class="n">GetMutableSubsystemContext</span><span class="p">(</span><span class="n">items</span><span class="o">.</span><span class="n">plant</span><span class="p">,</span>
-<span class="n">diagram_context</span><span class="o">.</span><span class="n">get</span><span class="p">()));</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// 1. Add a diagram containing the MultibodyPlant and SceneGraph</span>
+<span class="n">systems</span><span class="o">::</span><span class="n">DiagramBuilder</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">builder</span><span class="p">;</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">items</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AddMultibodyPlantSceneGraph</span><span class="p">(</span><span class="o">&amp;</span><span class="n">builder</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">);</span><span class="w"></span>
+<span class="c1">// 2. Add collision geometries to the plant</span>
+<span class="n">Parser</span><span class="p">(</span><span class="o">&amp;</span><span class="p">(</span><span class="n">items</span><span class="p">.</span><span class="n">plant</span><span class="p">)).</span><span class="n">AddModels</span><span class="p">(</span><span class="s">&quot;model.sdf&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="c1">// 3. Construct the diagram</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">diagram</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="p">.</span><span class="n">Build</span><span class="p">();</span><span class="w"></span>
+<span class="c1">// 4. Create diagram context.</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">diagram_context</span><span class="o">=</span><span class="w"> </span><span class="n">diagram</span><span class="o">-&gt;</span><span class="n">CreateDefaultContext</span><span class="p">();</span><span class="w"></span>
+<span class="c1">// 5. Get the context for the plant.</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">plant_context</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="p">(</span><span class="n">diagram</span><span class="o">-&gt;</span><span class="n">GetMutableSubsystemContext</span><span class="p">(</span><span class="n">items</span><span class="p">.</span><span class="n">plant</span><span class="p">,</span><span class="w"></span>
+<span class="n">diagram_context</span><span class="p">.</span><span class="n">get</span><span class="p">()));</span><span class="w"></span>
 </pre></div>
 </div>
-<p>This context will be modified during calling ik.prog.Solve(…). When
+</details><p>This context will be modified during calling ik.prog.Solve(…). When
 Solve() returns <code class="docutils literal notranslate"><span class="pre">result</span></code>, context will store the optimized posture,
 namely plant.GetPositions(<a href="#id3"><span class="problematic" id="id4">*</span></a>context) will be the same as in
 result.GetSolution(ik.q()). The user could then use this context to

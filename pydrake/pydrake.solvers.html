@@ -135,11 +135,11 @@ product x * y is approximated by w, using Special Ordered Set of Type
 2 (sos2) constraint. To do so, we assume that the range of x is
 [x_min, x_max], and the range of y is [y_min, y_max]. We first
 consider two arrays φˣ, φʸ, satisfying</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>x_min = φˣ₀ &lt; φˣ₁ &lt; ... &lt; φˣₘ = x_max
-y_min = φʸ₀ &lt; φʸ₁ &lt; ... &lt; φʸₙ = y_max
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">x_min</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">φˣ₀</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">φˣ₁</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">φˣₘ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x_max</span><span class="w"></span>
+<span class="n">y_min</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">φʸ₀</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">φʸ₁</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">φʸₙ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y_max</span><span class="w"></span>
 </pre></div>
 </div>
-<p>, and divide the range of x into intervals [φˣ₀, φˣ₁], [φˣ₁, φˣ₂], …
+</details><p>, and divide the range of x into intervals [φˣ₀, φˣ₁], [φˣ₁, φˣ₂], …
 , [φˣₘ₋₁, φˣₘ] and the range of y into intervals [φʸ₀, φʸ₁], [φʸ₁,
 φʸ₂], … , [φʸₙ₋₁, φʸₙ]. The xy plane is thus cut into rectangles,
 with each rectangle as [φˣᵢ, φˣᵢ₊₁] x [φʸⱼ, φʸⱼ₊₁]. The convex hull of
@@ -182,14 +182,14 @@ described above.</p>
 </dd>
 </dl>
 <p>The constraints we impose are</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>x = (φˣ)ᵀ * ∑ⱼ λᵢⱼ
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>x = (φˣ)ᵀ * ∑ⱼ λᵢⱼ
 y = (φʸ)ᵀ * ∑ᵢ λᵢⱼ
 w = ∑ᵢⱼ φˣᵢ * φʸⱼ * λᵢⱼ
 Both ∑ⱼ λᵢⱼ = λ.rowwise().sum() and ∑ᵢ λᵢⱼ = λ.colwise().sum() satisfy SOS2
 constraint.
 </pre></div>
 </div>
-<p>If x ∈ [φx(M), φx(M+1)] and y ∈ [φy(N), φy(N+1)], then only λ(M, N),
+</details><p>If x ∈ [φx(M), φx(M+1)] and y ∈ [φy(N), φy(N+1)], then only λ(M, N),
 λ(M + 1, N), λ(M, N + 1) and λ(M+1, N+1) can be strictly positive, all
 other λ(i, j) are zero.</p>
 <div class="admonition note">
@@ -204,12 +204,12 @@ these constraints are enforced.</p>
 <dt class="sig sig-object py" id="pydrake.solvers.AddLogarithmicSos1Constraint">
 <span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">AddLogarithmicSos1Constraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prog</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_lambda</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.solvers.AddLogarithmicSos1Constraint" title="Permalink to this definition"></a></dt>
 <dd><p>Adds the special ordered set of type 1 (SOS1) constraint. Namely</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>λ(0) + ... + λ(n-1) = 1
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>λ(0) + ... + λ(n-1) = 1
   λ(i) ≥ 0 ∀i
   ∃ j ∈ {0, 1, ..., n-1}, s.t λ(j) = 1
 </pre></div>
 </div>
-<p>where one and only one of λ(i) is 1, all other λ(j) are 0. We will
+</details><p>where one and only one of λ(i) is 1, all other λ(j) are 0. We will
 need to add ⌈log₂(n)⌉ binary variables, where n is the number of rows
 in λ. For more information, please refer to Modeling Disjunctive
 Constraints with a Logarithmic Number of Binary Variables and
@@ -249,10 +249,10 @@ Gray code.</p>
 <span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">AddSos2Constraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prog</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">lambdas</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.AddSos2Constraint" title="Permalink to this definition"></a></dt>
 <dd><p>Adds the special ordered set 2 (SOS2) constraint. y(i) takes binary
 values (either 0 or 1).</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">y</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">=&gt;</span> <span class="n">λ</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="n">λ</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="mf">1.</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">y</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">λ</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">λ</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.</span><span class="w"></span>
 </pre></div>
 </div>
-<div class="admonition seealso">
+</details><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>AddLogarithmicSos2Constraint for a complete explanation on SOS2
 constraint.</p>
@@ -1625,16 +1625,16 @@ MathematicalProgram into CSDP format, we provide several
 approaches to remove free variables. You can set the approach
 through</p>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">cc</span><span class="p">}</span>
-<span class="n">SolverOptions</span> <span class="n">solver_options</span><span class="p">;</span>
-<span class="n">solver_options</span><span class="o">.</span><span class="n">SetOption</span><span class="p">(</span><span class="n">CsdpSolver</span><span class="p">::</span><span class="nb">id</span><span class="p">(),</span>
-   <span class="s2">&quot;drake::RemoveFreeVariableMethod&quot;</span><span class="p">,</span>
-   <span class="n">static_cast</span><span class="o">&lt;</span><span class="nb">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">RemoveFreeVariableMethod</span><span class="p">::</span><span class="n">kNullspace</span><span class="p">));</span>
-<span class="n">CsdpSolver</span> <span class="n">solver</span><span class="p">;</span>
-<span class="n">auto</span> <span class="n">result</span> <span class="o">=</span> <span class="n">solver</span><span class="o">.</span><span class="n">Solve</span><span class="p">(</span><span class="n">prog</span><span class="p">,</span> <span class="n">std</span><span class="p">::</span><span class="n">nullopt</span><span class="p">,</span> <span class="n">solver_options</span><span class="p">);</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">cc</span><span class="p">}</span><span class="w"></span>
+<span class="n">SolverOptions</span><span class="w"> </span><span class="n">solver_options</span><span class="p">;</span><span class="w"></span>
+<span class="n">solver_options</span><span class="p">.</span><span class="n">SetOption</span><span class="p">(</span><span class="n">CsdpSolver</span><span class="o">::</span><span class="n">id</span><span class="p">(),</span><span class="w"></span>
+<span class="w">   </span><span class="s">&quot;drake::RemoveFreeVariableMethod&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">   </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">RemoveFreeVariableMethod</span><span class="o">::</span><span class="n">kNullspace</span><span class="p">));</span><span class="w"></span>
+<span class="n">CsdpSolver</span><span class="w"> </span><span class="n">solver</span><span class="p">;</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">solver</span><span class="p">.</span><span class="n">Solve</span><span class="p">(</span><span class="n">prog</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">nullopt</span><span class="p">,</span><span class="w"> </span><span class="n">solver_options</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-<p>For more details, check out RemoveFreeVariableMethod.</p>
+</details><p>For more details, check out RemoveFreeVariableMethod.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.CsdpSolver.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.CsdpSolver" title="pydrake.solvers.CsdpSolver"><span class="pre">pydrake.solvers.CsdpSolver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.CsdpSolver.__init__" title="Permalink to this definition"></a></dt>
@@ -2408,16 +2408,16 @@ variables (columns of A) cannot change.</p>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">LinearComplementarityConstraint</span></span><a class="headerlink" href="#pydrake.solvers.LinearComplementarityConstraint" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
 <p>Implements a constraint of the form:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Mx + q ≥ 0
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>Mx + q ≥ 0
   x ≥ 0
   x&#39;(Mx + q) == 0
 </pre></div>
 </div>
-<p>Often this is summarized with the short-hand:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>0 ≤ z ⊥ Mz+q ≥ 0
+</details><p>Often this is summarized with the short-hand:</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>0 ≤ z ⊥ Mz+q ≥ 0
 </pre></div>
 </div>
-<p>An implied slack variable complements any 0 component of x. To get the
+</details><p>An implied slack variable complements any 0 component of x. To get the
 slack values at a given solution x, use Eval(x).</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.LinearComplementarityConstraint.__init__">
@@ -3024,14 +3024,14 @@ or Eigen::Array&lt;symbolic::Formula&gt; to the program. A common use-case
 of this function is to add a constraint with the element-wise
 comparison between two Eigen matrices, using <code class="docutils literal notranslate"><span class="pre">A.array()</span> <span class="pre">&lt;=</span>
 <span class="pre">B.array()</span></code>. See the following example.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MathematicalProgram</span> <span class="n">prog</span><span class="p">;</span>
-  <span class="n">Eigen</span><span class="p">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="n">double</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="o">&gt;</span> <span class="n">A</span> <span class="o">=</span> <span class="o">...</span><span class="p">;</span>
-  <span class="n">Eigen</span><span class="p">::</span><span class="n">Vector2d</span> <span class="n">b</span> <span class="o">=</span> <span class="o">...</span><span class="p">;</span>
-  <span class="n">auto</span> <span class="n">x</span> <span class="o">=</span> <span class="n">prog</span><span class="o">.</span><span class="n">NewContinuousVariables</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">);</span>
-  <span class="n">prog</span><span class="o">.</span><span class="n">AddConstraint</span><span class="p">((</span><span class="n">A</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">array</span><span class="p">()</span> <span class="o">&lt;=</span> <span class="n">b</span><span class="o">.</span><span class="n">array</span><span class="p">());</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MathematicalProgram</span><span class="w"> </span><span class="n">prog</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span><span class="w"></span>
+<span class="w">  </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Vector2d</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span><span class="w"></span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prog</span><span class="p">.</span><span class="n">NewContinuousVariables</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;x&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">prog</span><span class="p">.</span><span class="n">AddConstraint</span><span class="p">((</span><span class="n">A</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="p">).</span><span class="n">array</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">array</span><span class="p">());</span><span class="w"></span>
 </pre></div>
 </div>
-<p>A formula in <code class="docutils literal notranslate"><span class="pre">formulas</span></code> can be of the following forms:</p>
+</details><p>A formula in <code class="docutils literal notranslate"><span class="pre">formulas</span></code> can be of the following forms:</p>
 <ol class="arabic simple">
 <li><p>e1 &lt;= e2</p></li>
 <li><p>e1 &gt;= e2</p></li>
@@ -3348,15 +3348,15 @@ Eigen::Array&lt;symbolic::Formula&gt; to the program. A common use-case of
 this function is to add a linear constraint with the element-wise
 comparison between two Eigen matrices, using <code class="docutils literal notranslate"><span class="pre">A.array()</span> <span class="pre">&lt;=</span>
 <span class="pre">B.array()</span></code>. See the following example.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MathematicalProgram</span> <span class="n">prog</span><span class="p">;</span>
-  <span class="n">Eigen</span><span class="p">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="n">double</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="o">&gt;</span> <span class="n">A</span><span class="p">;</span>
-  <span class="n">auto</span> <span class="n">x</span> <span class="o">=</span> <span class="n">prog</span><span class="o">.</span><span class="n">NewContinuousVariables</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">);</span>
-  <span class="n">Eigen</span><span class="p">::</span><span class="n">Vector2d</span> <span class="n">b</span><span class="p">;</span>
-  <span class="o">...</span> <span class="o">//</span> <span class="nb">set</span> <span class="n">up</span> <span class="n">A</span> <span class="ow">and</span> <span class="n">b</span>
-  <span class="n">prog</span><span class="o">.</span><span class="n">AddLinearConstraint</span><span class="p">((</span><span class="n">A</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">array</span><span class="p">()</span> <span class="o">&lt;=</span> <span class="n">b</span><span class="o">.</span><span class="n">array</span><span class="p">());</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MathematicalProgram</span><span class="w"> </span><span class="n">prog</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">A</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prog</span><span class="p">.</span><span class="n">NewContinuousVariables</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;x&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Vector2d</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">...</span><span class="w"> </span><span class="c1">// set up A and b</span>
+<span class="w">  </span><span class="n">prog</span><span class="p">.</span><span class="n">AddLinearConstraint</span><span class="p">((</span><span class="n">A</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="p">).</span><span class="n">array</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">array</span><span class="p">());</span><span class="w"></span>
 </pre></div>
 </div>
-<p>A formula in <code class="docutils literal notranslate"><span class="pre">formulas</span></code> can be of the following forms:</p>
+</details><p>A formula in <code class="docutils literal notranslate"><span class="pre">formulas</span></code> can be of the following forms:</p>
 <ol class="arabic simple">
 <li><p>e1 &lt;= e2 2. e1 &gt;= e2 3. e1 == e2</p></li>
 </ol>
@@ -3413,18 +3413,18 @@ variables and pushes onto the linear cost data structure.</p>
 the decision variables.</p>
 <p>Example: to add two equality constraints which only depend on two of
 the elements of x, you could use</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">auto</span> <span class="n">x</span> <span class="o">=</span> <span class="n">prog</span><span class="o">.</span><span class="n">NewContinuousVariables</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="s2">&quot;myvar&quot;</span><span class="p">);</span>
-  <span class="n">Eigen</span><span class="p">::</span><span class="n">Matrix2d</span> <span class="n">Aeq</span><span class="p">;</span>
-  <span class="n">Aeq</span> <span class="o">&lt;&lt;</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span>
-          <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">;</span>
-  <span class="n">Eigen</span><span class="p">::</span><span class="n">Vector2d</span> <span class="n">beq</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
-  <span class="o">//</span> <span class="n">Imposes</span> <span class="n">constraint</span>
-  <span class="o">//</span> <span class="o">-</span><span class="n">x</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span><span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span>
-  <span class="o">//</span>  <span class="n">x</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">+</span>  <span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="mi">3</span>
-  <span class="n">prog</span><span class="o">.</span><span class="n">AddLinearEqualityConstraint</span><span class="p">(</span><span class="n">Aeq</span><span class="p">,</span> <span class="n">beq</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">head</span><span class="o">&lt;</span><span class="mi">2</span><span class="o">&gt;</span><span class="p">());</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prog</span><span class="p">.</span><span class="n">NewContinuousVariables</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="s">&quot;myvar&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix2d</span><span class="w"> </span><span class="n">Aeq</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">Aeq</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Vector2d</span><span class="w"> </span><span class="nf">beq</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// Imposes constraint</span>
+<span class="w">  </span><span class="c1">// -x(0) + 2x(1) = 1</span>
+<span class="w">  </span><span class="c1">//  x(0) +  x(1) = 3</span>
+<span class="w">  </span><span class="n">prog</span><span class="p">.</span><span class="n">AddLinearEqualityConstraint</span><span class="p">(</span><span class="n">Aeq</span><span class="p">,</span><span class="w"> </span><span class="n">beq</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">.</span><span class="n">head</span><span class="o">&lt;</span><span class="mi">2</span><span class="o">&gt;</span><span class="p">());</span><span class="w"></span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="2">
+</details><ol class="arabic simple" start="2">
 <li><p>AddLinearEqualityConstraint(self: pydrake.solvers.MathematicalProgram, e: pydrake.symbolic.Expression, b: float) -&gt; pydrake.solvers.Binding[LinearEqualityConstraint]</p></li>
 </ol>
 <p>Adds one row of linear constraint e = b where <code class="docutils literal notranslate"><span class="pre">e</span></code> is a symbolic
@@ -3523,12 +3523,12 @@ variables. For example, to add the Lorentz cone constraint</p>
 </dl>
 <p>x+1 &gt;= sqrt(y² + 2y + x² + 5), = sqrt((y+1)²+x²+2²) The user could
 call</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">cc</span><span class="p">}</span>
-<span class="n">Vector4</span><span class="o">&lt;</span><span class="n">symbolic</span><span class="p">::</span><span class="n">Expression</span><span class="o">&gt;</span> <span class="n">v</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">y</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="mf">2.</span><span class="p">);</span>
-<span class="n">prog</span><span class="o">.</span><span class="n">AddLorentzConeConstraint</span><span class="p">(</span><span class="n">v</span><span class="p">);</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">cc</span><span class="p">}</span><span class="w"></span>
+<span class="n">Vector4</span><span class="o">&lt;</span><span class="n">symbolic</span><span class="o">::</span><span class="n">Expression</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="mf">2.</span><span class="p">);</span><span class="w"></span>
+<span class="n">prog</span><span class="p">.</span><span class="n">AddLorentzConeConstraint</span><span class="p">(</span><span class="n">v</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-<dl class="simple">
+</details><dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">eval_type</span></code>:</dt><dd><p>The evaluation type when evaluating the lorentz cone constraint in
 generic optimization. Refer to LorentzConeConstraint::EvalType for
 more details.</p>
@@ -3565,10 +3565,10 @@ variables.</p>
 <p>Precondition:
 1. <code class="docutils literal notranslate"><span class="pre">v1</span></code> is a linear expression, in the form of c’<a href="#id21"><span class="problematic" id="id22">*</span></a>x + d.
 2. <code class="docutils literal notranslate"><span class="pre">v2</span></code> is a quadratic expression, in the form of</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="s1">&#39;*Q*x + b&#39;</span><span class="n">x</span> <span class="o">+</span> <span class="n">a</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>x&#39;*Q*x + b&#39;x + a
 </pre></div>
 </div>
-<p>Also the quadratic expression has to be convex, namely Q is a positive
+</details><p>Also the quadratic expression has to be convex, namely Q is a positive
 semidefinite matrix, and the quadratic expression needs to be
 non-negative for any x.</p>
 <dl class="field-list simple">
@@ -3578,18 +3578,18 @@ non-negative for any x.</p>
 </dl>
 <p>Notice this constraint is equivalent to the vector [z;y] is within a
 Lorentz cone, where</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">z</span> <span class="o">=</span> <span class="n">v1</span>
- <span class="n">y</span> <span class="o">=</span> <span class="n">R</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">d</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v1</span><span class="w"></span>
+<span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">R</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">d</span><span class="w"></span>
 </pre></div>
 </div>
-<p>while (R, d) satisfies y’<a href="#id23"><span class="problematic" id="id24">*</span></a>y = x’<a href="#id25"><span class="problematic" id="id26">*</span></a>Q*x + b’<a href="#id27"><span class="problematic" id="id28">*</span></a>x + a For example, to add
+</details><p>while (R, d) satisfies y’<a href="#id23"><span class="problematic" id="id24">*</span></a>y = x’<a href="#id25"><span class="problematic" id="id26">*</span></a>Q*x + b’<a href="#id27"><span class="problematic" id="id28">*</span></a>x + a For example, to add
 the Lorentz cone constraint</p>
 <p>x+1 &gt;= sqrt(y² + 2y + x² + 4), the user could call</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">cc</span><span class="p">}</span>
-<span class="n">prog</span><span class="o">.</span><span class="n">AddLorentzConeConstraint</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nb">pow</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">y</span> <span class="o">+</span> <span class="nb">pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="mi">4</span><span class="p">);</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">cc</span><span class="p">}</span><span class="w"></span>
+<span class="n">prog</span><span class="p">.</span><span class="n">AddLorentzConeConstraint</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">pow</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="3">
+</details><ol class="arabic simple" start="3">
 <li><p>AddLorentzConeConstraint(self: pydrake.solvers.MathematicalProgram, A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], b: numpy.ndarray[numpy.float64[m, 1]], vars: numpy.ndarray[object[m, 1]], eval_type: pydrake.solvers.LorentzConeConstraint.EvalType = &lt;EvalType.kConvexSmooth: 1&gt;) -&gt; pydrake.solvers.Binding[LorentzConeConstraint]</p></li>
 </ol>
 <p>Adds Lorentz cone constraint referencing potentially a subset of the
@@ -3620,16 +3620,16 @@ more details.</p>
 <p>For example, to add the Lorentz cone constraint</p>
 <p>x+1 &gt;= sqrt(y² + 2y + x² + 5) = sqrt((y+1)² + x² + 2²), the user could
 call</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">cc</span><span class="p">}</span>
-<span class="n">Eigen</span><span class="p">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="n">double</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="o">&gt;</span> <span class="n">A</span><span class="p">;</span>
-<span class="n">Eigen</span><span class="p">::</span><span class="n">Vector4d</span> <span class="n">b</span><span class="p">;</span>
-<span class="n">A</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">;</span>
-<span class="n">b</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">;</span>
-<span class="o">//</span> <span class="n">A</span> <span class="o">*</span> <span class="p">[</span><span class="n">x</span><span class="p">;</span><span class="n">y</span><span class="p">]</span> <span class="o">+</span> <span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span> <span class="n">y</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span> <span class="n">x</span><span class="p">;</span> <span class="mi">2</span><span class="p">]</span>
-<span class="n">prog</span><span class="o">.</span><span class="n">AddLorentzConeConstraint</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">Vector2</span><span class="o">&lt;</span><span class="n">symbolic</span><span class="p">::</span><span class="n">Variable</span><span class="o">&gt;</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">));</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">cc</span><span class="p">}</span><span class="w"></span>
+<span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">A</span><span class="p">;</span><span class="w"></span>
+<span class="n">Eigen</span><span class="o">::</span><span class="n">Vector4d</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="n">A</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="n">b</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
+<span class="c1">// A * [x;y] + b = [x+1; y+1; x; 2]</span>
+<span class="n">prog</span><span class="p">.</span><span class="n">AddLorentzConeConstraint</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">Vector2</span><span class="o">&lt;</span><span class="n">symbolic</span><span class="o">::</span><span class="n">Variable</span><span class="o">&gt;</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">));</span><span class="w"></span>
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.MathematicalProgram.AddMaximizeGeometricMeanCost">
@@ -3793,15 +3793,15 @@ variable M that are also newly added.</p>
 <p>For example, to add a constraint that</p>
 <p>⌈x + 1 2x + 3 x+y⌉ <a href="#id53"><span class="problematic" id="id54">|2x+ 3 2 0|</span></a> is positive semidefinite ⌊x + y 0 x⌋
 The user could call</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">cc</span><span class="p">}</span>
-<span class="n">Matrix3</span><span class="o">&lt;</span><span class="n">symbolic</span><span class="p">::</span><span class="n">Expression</span><span class="o">&gt;</span> <span class="n">e</span>
-<span class="n">e</span> <span class="o">&lt;&lt;</span> <span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">3</span><span class="p">,</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">,</span>
-     <span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">3</span><span class="p">,</span>   <span class="mi">2</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>
-     <span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">,</span>     <span class="mi">0</span><span class="p">,</span>   <span class="n">x</span><span class="p">;</span>
-<span class="n">prog</span><span class="o">.</span><span class="n">AddPositiveSemidefiniteConstraint</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">cc</span><span class="p">}</span><span class="w"></span>
+<span class="n">Matrix3</span><span class="o">&lt;</span><span class="n">symbolic</span><span class="o">::</span><span class="n">Expression</span><span class="o">&gt;</span><span class="w"> </span><span class="n">e</span><span class="w"></span>
+<span class="n">e</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">,</span><span class="w"></span>
+<span class="w">     </span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">3</span><span class="p">,</span><span class="w">   </span><span class="mi">2</span><span class="p">,</span><span class="w">   </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">     </span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">,</span><span class="w">     </span><span class="mi">0</span><span class="p">,</span><span class="w">   </span><span class="n">x</span><span class="p">;</span><span class="w"></span>
+<span class="n">prog</span><span class="p">.</span><span class="n">AddPositiveSemidefiniteConstraint</span><span class="p">(</span><span class="n">e</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.MathematicalProgram.AddQuadraticAsRotatedLorentzConeConstraint">
@@ -3976,10 +3976,10 @@ v2 = c2’<a href="#id41"><span class="problematic" id="id42">*</span></a>x + d2
 <ol class="arabic simple" start="2">
 <li><p><code class="docutils literal notranslate"><span class="pre">quadratic_expression</span></code> is a quadratic expression, in the form of</p></li>
 </ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">u</span> <span class="o">=</span> <span class="n">x</span><span class="s1">&#39;*Q*x + b&#39;</span><span class="n">x</span> <span class="o">+</span> <span class="n">a</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>u = x&#39;*Q*x + b&#39;x + a
 </pre></div>
 </div>
-<p>Also the quadratic expression has to be convex, namely Q is a positive
+</details><p>Also the quadratic expression has to be convex, namely Q is a positive
 semidefinite matrix, and the quadratic expression needs to be
 non-negative for any x.</p>
 <dl class="field-list simple">
@@ -3989,12 +3989,12 @@ non-negative for any x.</p>
 </dl>
 <p>For example, to add the rotated Lorentz cone constraint</p>
 <p>(x+1)(x+y) &gt;= x²+z²+2z+5 x+1 &gt;= 0 x+y &gt;= 0 The user could call</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">cc</span><span class="p">}</span>
-<span class="n">prog</span><span class="o">.</span><span class="n">AddRotatedLorentzConeConstraint</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">,</span> <span class="nb">pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="nb">pow</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span>
-<span class="mi">2</span><span class="o">*</span><span class="n">z</span><span class="o">+</span><span class="mi">5</span><span class="p">);</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">cc</span><span class="p">}</span><span class="w"></span>
+<span class="n">prog</span><span class="p">.</span><span class="n">AddRotatedLorentzConeConstraint</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pow</span><span class="p">(</span><span class="n">z</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"></span>
+<span class="mi">2</span><span class="o">*</span><span class="n">z</span><span class="o">+</span><span class="mi">5</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="2">
+</details><ol class="arabic simple" start="2">
 <li><p>AddRotatedLorentzConeConstraint(self: pydrake.solvers.MathematicalProgram, v: numpy.ndarray[object[m, 1]]) -&gt; pydrake.solvers.Binding[RotatedLorentzConeConstraint]</p></li>
 </ol>
 <p>Adds a constraint that a symbolic expression</p>
@@ -4017,13 +4017,13 @@ bound variables.</p>
 <p>For example, to add the rotated Lorentz cone constraint</p>
 <p>(x+1)(x+y) &gt;= x²+z²+2z+5 = x² + (z+1)² + 2² x+1 &gt;= 0 x+y &gt;= 0 The user
 could call</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">cc</span><span class="p">}</span>
-<span class="n">Eigen</span><span class="p">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="n">symbolic</span><span class="p">::</span><span class="n">Expression</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="o">&gt;</span> <span class="n">v</span><span class="p">;</span>
-<span class="n">v</span> <span class="o">&lt;&lt;</span> <span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">z</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">;</span>
-<span class="n">prog</span><span class="o">.</span><span class="n">AddRotatedLorentzConeConstraint</span><span class="p">(</span><span class="n">v</span><span class="p">);</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">cc</span><span class="p">}</span><span class="w"></span>
+<span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="n">symbolic</span><span class="o">::</span><span class="n">Expression</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v</span><span class="p">;</span><span class="w"></span>
+<span class="n">v</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">z</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
+<span class="n">prog</span><span class="p">.</span><span class="n">AddRotatedLorentzConeConstraint</span><span class="p">(</span><span class="n">v</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="3">
+</details><ol class="arabic simple" start="3">
 <li><p>AddRotatedLorentzConeConstraint(self: pydrake.solvers.MathematicalProgram, A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], b: numpy.ndarray[numpy.float64[m, 1]], vars: numpy.ndarray[object[m, 1]]) -&gt; pydrake.solvers.Binding[RotatedLorentzConeConstraint]</p></li>
 </ol>
 <p>Adds a rotated Lorentz cone constraint referencing potentially a
@@ -4067,11 +4067,11 @@ matrix constraint”</p>
 M[i][j] is</p>
 </dd>
 </dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Mⁱʲ</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span> <span class="n">Mⁱʲ</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)]</span>
-<span class="p">[</span><span class="n">Mⁱʲ</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">),</span> <span class="n">Mⁱʲ</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">j</span><span class="p">)]</span><span class="o">.</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Mⁱʲ</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">),</span><span class="w"> </span><span class="n">Mⁱʲ</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">)]</span><span class="w"></span>
+<span class="p">[</span><span class="n">Mⁱʲ</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">),</span><span class="w"> </span><span class="n">Mⁱʲ</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">)].</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Note that M[i][j](0, 1) = Mⁱʲ(i, j) = (X(i, j) + X(j, i)) / 2 for i &gt;=
+</details><p>Note that M[i][j](0, 1) = Mⁱʲ(i, j) = (X(i, j) + X(j, i)) / 2 for i &gt;=
 j, M[i][j] is the zero matrix.</p>
 <ol class="arabic simple" start="2">
 <li><p>AddScaledDiagonallyDominantMatrixConstraint(self: pydrake.solvers.MathematicalProgram, X: numpy.ndarray[object[m, n], flags.f_contiguous]) -&gt; List[List[numpy.ndarray[object[2, 2]]]]</p></li>
@@ -4718,11 +4718,11 @@ vars (not all the vars stored).</p>
 </dd>
 </dl>
 <p>Example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MathematicalProgram</span> <span class="n">prog</span><span class="p">;</span>
-<span class="n">auto</span> <span class="n">b</span> <span class="o">=</span> <span class="n">prog</span><span class="o">.</span><span class="n">NewBinaryVariables</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">);</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MathematicalProgram</span><span class="w"> </span><span class="n">prog</span><span class="p">;</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prog</span><span class="p">.</span><span class="n">NewBinaryVariables</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;b&quot;</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-<p>This adds a 2 x 3 matrix decision variables into the program.</p>
+</details><p>This adds a 2 x 3 matrix decision variables into the program.</p>
 <p>The name of the variable is only used for the user in order to ease
 readability.</p>
 </dd></dl>
@@ -4754,11 +4754,11 @@ vars (not all the vars stored).</p>
 </dd>
 </dl>
 <p>Example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MathematicalProgram</span> <span class="n">prog</span><span class="p">;</span>
-<span class="n">auto</span> <span class="n">x</span> <span class="o">=</span> <span class="n">prog</span><span class="o">.</span><span class="n">NewContinuousVariables</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">);</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MathematicalProgram</span><span class="w"> </span><span class="n">prog</span><span class="p">;</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prog</span><span class="p">.</span><span class="n">NewContinuousVariables</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;x&quot;</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-<p>This adds a 2 x 1 vector containing decision variables into the
+</details><p>This adds a 2 x 1 vector containing decision variables into the
 program. The names of the variables are “x(0)” and “x(1)”.</p>
 <p>The name of the variable is only used for the user in order to ease
 readability.</p>
@@ -4793,12 +4793,12 @@ vars (not all the vars stored).</p>
 </dd>
 </dl>
 <p>Example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MathematicalProgram</span> <span class="n">prog</span><span class="p">;</span>
-<span class="n">auto</span> <span class="n">x</span> <span class="o">=</span> <span class="n">prog</span><span class="o">.</span><span class="n">NewContinuousVariables</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;X&quot;</span><span class="p">);</span>
-<span class="n">auto</span> <span class="n">y</span> <span class="o">=</span> <span class="n">prog</span><span class="o">.</span><span class="n">NewContinuousVariables</span><span class="o">&lt;</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;X&quot;</span><span class="p">);</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MathematicalProgram</span><span class="w"> </span><span class="n">prog</span><span class="p">;</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prog</span><span class="p">.</span><span class="n">NewContinuousVariables</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;X&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prog</span><span class="p">.</span><span class="n">NewContinuousVariables</span><span class="o">&lt;</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;X&quot;</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-<p>This adds a 2 x 3 matrix decision variables into the program.</p>
+</details><p>This adds a 2 x 3 matrix decision variables into the program.</p>
 <p>The name of the variable is only used for the user in order to ease
 readability.</p>
 </dd></dl>
@@ -4985,13 +4985,13 @@ the optimization program. The default name is “Symmetric”, and
 each variable will be named as</p>
 </dd>
 </dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Symmetric</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>     <span class="n">Symmetric</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>     <span class="o">...</span> <span class="n">Symmetric</span><span class="p">(</span><span class="n">rows</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-<span class="n">Symmetric</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>     <span class="n">Symmetric</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>     <span class="o">...</span> <span class="n">Symmetric</span><span class="p">(</span><span class="n">rows</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-           <span class="o">...</span>
-<span class="n">Symmetric</span><span class="p">(</span><span class="n">rows</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="n">Symmetric</span><span class="p">(</span><span class="n">rows</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="o">...</span> <span class="n">Symmetric</span><span class="p">(</span><span class="n">rows</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">rows</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Symmetric</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w">     </span><span class="n">Symmetric</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w">     </span><span class="p">...</span><span class="w"> </span><span class="n">Symmetric</span><span class="p">(</span><span class="n">rows</span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="n">Symmetric</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w">     </span><span class="n">Symmetric</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w">     </span><span class="p">...</span><span class="w"> </span><span class="n">Symmetric</span><span class="p">(</span><span class="n">rows</span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
+<span class="w">           </span><span class="p">...</span><span class="w"></span>
+<span class="n">Symmetric</span><span class="p">(</span><span class="n">rows</span><span class="mi">-1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="n">Symmetric</span><span class="p">(</span><span class="n">rows</span><span class="mi">-1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="n">Symmetric</span><span class="p">(</span><span class="n">rows</span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="n">rows</span><span class="mi">-1</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Notice that the (i,j)’th entry and (j,i)’th entry has the same name.</p>
+</details><p>Notice that the (i,j)’th entry and (j,i)’th entry has the same name.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The newly added decision variables.</p>
@@ -5250,11 +5250,11 @@ the provided solver options.</p>
 <span class="sig-name descname"><span class="pre">ToLatex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.MathematicalProgram.ToLatex" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a string representation of this program in LaTeX.</p>
 <p>This can be particularly useful e.g. in a Jupyter (python) notebook:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Markdown</span><span class="p">,</span> <span class="n">display</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="n">prog</span><span class="o">.</span><span class="n">ToLatex</span><span class="p">()))</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">from</span><span class="w"> </span><span class="n">IPython</span><span class="p">.</span><span class="n">display</span><span class="w"> </span><span class="k">import</span><span class="w"> </span><span class="n">Markdown</span><span class="p">,</span><span class="w"> </span><span class="n">display</span><span class="w"></span>
+<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="n">prog</span><span class="p">.</span><span class="n">ToLatex</span><span class="p">()))</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Note that by default, we do not require variables to have unique
+</details><p>Note that by default, we do not require variables to have unique
 names. Providing useful variable names and calling
 Evaluator::set_description() to describe the costs and constraints can
 dramatically improve the readability of the output. See the tutorial
@@ -5374,19 +5374,19 @@ in the cone, depending on the solver, the dual solution has different
 meanings: 1. If the solver is Gurobi, then the user can only obtain
 the dual solution by explicitly setting the options for computing dual
 solution.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">auto</span> <span class="n">constraint</span> <span class="o">=</span> <span class="n">prog</span><span class="o">.</span><span class="n">AddLorentzConeConstraint</span><span class="p">(</span><span class="o">...</span><span class="p">);</span>
-   <span class="n">GurobiSolver</span> <span class="n">solver</span><span class="p">;</span>
-   <span class="o">//</span> <span class="n">Explicitly</span> <span class="n">tell</span> <span class="n">the</span> <span class="n">solver</span> <span class="n">to</span> <span class="n">compute</span> <span class="n">the</span> <span class="n">dual</span> <span class="n">solution</span> <span class="k">for</span> <span class="n">Lorentz</span>
-   <span class="o">//</span> <span class="n">cone</span> <span class="ow">or</span> <span class="n">rotated</span> <span class="n">Lorentz</span> <span class="n">cone</span> <span class="n">constraint</span><span class="p">,</span> <span class="n">check</span>
-   <span class="o">//</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">gurobi</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">documentation</span><span class="o">/</span><span class="mf">10.0</span><span class="o">/</span><span class="n">refman</span><span class="o">/</span><span class="n">qcpdual</span><span class="o">.</span><span class="n">html</span> <span class="k">for</span>
-   <span class="o">//</span> <span class="n">more</span> <span class="n">information</span><span class="o">.</span>
-   <span class="n">SolverOptions</span> <span class="n">options</span><span class="p">;</span>
-   <span class="n">options</span><span class="o">.</span><span class="n">SetOption</span><span class="p">(</span><span class="n">GurobiSolver</span><span class="p">::</span><span class="nb">id</span><span class="p">(),</span> <span class="s2">&quot;QCPDual&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
-   <span class="n">MathematicalProgramResult</span> <span class="n">result</span> <span class="o">=</span> <span class="n">solver</span><span class="o">.</span><span class="n">Solve</span><span class="p">(</span><span class="n">prog</span><span class="p">,</span> <span class="p">{},</span> <span class="n">options</span><span class="p">);</span>
-   <span class="n">Eigen</span><span class="p">::</span><span class="n">VectorXd</span> <span class="n">dual_solution</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">GetDualSolution</span><span class="p">(</span><span class="n">constraint</span><span class="p">);</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">constraint</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prog</span><span class="p">.</span><span class="n">AddLorentzConeConstraint</span><span class="p">(...);</span><span class="w"></span>
+<span class="w">   </span><span class="n">GurobiSolver</span><span class="w"> </span><span class="n">solver</span><span class="p">;</span><span class="w"></span>
+<span class="w">   </span><span class="c1">// Explicitly tell the solver to compute the dual solution for Lorentz</span>
+<span class="w">   </span><span class="c1">// cone or rotated Lorentz cone constraint, check</span>
+<span class="w">   </span><span class="c1">// https://www.gurobi.com/documentation/10.0/refman/qcpdual.html for</span>
+<span class="w">   </span><span class="c1">// more information.</span>
+<span class="w">   </span><span class="n">SolverOptions</span><span class="w"> </span><span class="n">options</span><span class="p">;</span><span class="w"></span>
+<span class="w">   </span><span class="n">options</span><span class="p">.</span><span class="n">SetOption</span><span class="p">(</span><span class="n">GurobiSolver</span><span class="o">::</span><span class="n">id</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;QCPDual&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+<span class="w">   </span><span class="n">MathematicalProgramResult</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">solver</span><span class="p">.</span><span class="n">Solve</span><span class="p">(</span><span class="n">prog</span><span class="p">,</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="n">options</span><span class="p">);</span><span class="w"></span>
+<span class="w">   </span><span class="n">Eigen</span><span class="o">::</span><span class="n">VectorXd</span><span class="w"> </span><span class="n">dual_solution</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">GetDualSolution</span><span class="p">(</span><span class="n">constraint</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-<p>The dual solution has size 1, dual_solution(0) is the shadow price for
+</details><p>The dual solution has size 1, dual_solution(0) is the shadow price for
 the constraint z₁² + … +zₙ² ≤ z₀² for Lorentz cone constraint, and
 the shadow price for the constraint z₂² + … +zₙ² ≤ z₀z₁ for rotated
 Lorentz cone constraint, where z is the slack variable representing z
@@ -5678,11 +5678,11 @@ returned by the user-provided function to be no smaller than a
 specified minimum value <code class="docutils literal notranslate"><span class="pre">lb</span></code>, and the minimal element of the vector
 is no larger than another specified value <code class="docutils literal notranslate"><span class="pre">ub</span></code>.</p>
 <p>The formulation of the constraint is</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>SmoothOverMax( φ((vᵢ - v_influence)/(v_influence - lb)) / φ(-1) ) ≤ 1
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>SmoothOverMax( φ((vᵢ - v_influence)/(v_influence - lb)) / φ(-1) ) ≤ 1
 SmoothUnderMax( φ((vᵢ - v_influence)/(v_influence - ub)) / φ(-1) ) ≥ 1
 </pre></div>
 </div>
-<p>where vᵢ is the i-th value returned by the user-provided function,
+</details><p>where vᵢ is the i-th value returned by the user-provided function,
 <code class="docutils literal notranslate"><span class="pre">lb</span></code> is the minimum allowable value, <code class="docutils literal notranslate"><span class="pre">ub</span></code> is the upper bound for
 the min(v). (Note that <code class="docutils literal notranslate"><span class="pre">ub</span></code> is NOT the upper bound of <code class="docutils literal notranslate"><span class="pre">v</span></code>).
 v_influence is the “influence value” (the value below which an element
@@ -5973,12 +5973,12 @@ are described in Global Inverse Kinematics via Mixed-integer Convex
 Optimization by Hongkai Dai, Gregory Izatt and Russ Tedrake, ISRR,
 2017</p>
 <p>The SO(3) constraint on a rotation matrix R = [r₁, r₂, r₃], rᵢ∈ℝ³ is</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>rᵢᵀrᵢ = 1    (1)
-rᵢᵀrⱼ = 0    (2)
-r₁ x r₂ = r₃ (3)
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">rᵢᵀrᵢ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w">    </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
+<span class="n">rᵢᵀrⱼ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w">    </span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="n">r₁</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">r₂</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">r₃</span><span class="w"> </span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
-<p>To relax SO(3) constraint on rotation matrix R, we divide the range
+</details><p>To relax SO(3) constraint on rotation matrix R, we divide the range
 [-1, 1] (the range of each entry in R) into smaller intervals [φ(i),
 φ(i+1)], and then relax the SO(3) constraint within each interval. We
 provide 3 approaches for relaxation 1. By replacing each bilinear
@@ -6132,17 +6132,17 @@ in the interval [φ(k), φ(k+1)].</p>
 <dt class="sig sig-object py" id="pydrake.solvers.MixedIntegerRotationConstraintGenerator.ReturnType.lambda_">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lambda_</span></span><a class="headerlink" href="#pydrake.solvers.MixedIntegerRotationConstraintGenerator.ReturnType.lambda_" title="Permalink to this definition"></a></dt>
 <dd><p>λ contains part of the new continuous variables added to the program.
-λ_`i][j] is of length 2 * <a href="#id61"><span class="problematic" id="id62">num_intervals_per_half_axis_</span></a> + 1, such that
+λ_[i][j] is of length 2 * <a href="#id61"><span class="problematic" id="id62">num_intervals_per_half_axis_</span></a> + 1, such that
 R(i, j) = φᵀ * λ_[i][j]. Notice that λ_[i][j] satisfies the special
 ordered set of type 2 (SOS2) constraint. Namely at most two entries in
 λ_[i][j] can be strictly positive, and these two entries have to be
 consecutive. Mathematically</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>∑ₖ λ_[i][j &lt;k&gt;`_ = 1
-λ_`i][j &lt;k&gt;`_ ≥ 0 ∀ k
-∃ m s.t λ_`i][j &lt;n&gt;`_ = 0 if n ≠ m and n ≠ m+1
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>∑ₖ λ_[i][j](k) = 1
+λ_[i][j](k) ≥ 0 ∀ k
+∃ m s.t λ_[i][j](n) = 0 if n ≠ m and n ≠ m+1
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 </dd></dl>
 
@@ -6154,25 +6154,25 @@ consecutive. Mathematically</p>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.SolverInterface" title="pydrake.solvers.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.SolverInterface</span></code></a></p>
 <p>A class for solving Linear Complementarity Problems (LCPs). Solving a
 LCP requires finding a solution to the problem:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Mz + q = w
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>Mz + q = w
 z ≥ 0
 w ≥ 0
 zᵀw = 0
 </pre></div>
 </div>
-<p>(where M ∈ ℝⁿˣⁿ and q ∈ ℝⁿ are problem inputs and z ∈ ℝⁿ and w ∈ ℝⁿ
+</details><p>(where M ∈ ℝⁿˣⁿ and q ∈ ℝⁿ are problem inputs and z ∈ ℝⁿ and w ∈ ℝⁿ
 are unknown vectors) or correctly reporting that such a solution does
 not exist. In spite of their linear structure, solving LCPs is NP-Hard
 [Cottle 1992]. However, some LCPs are significantly easier to solve.
 For instance, it can be seen that the LCP is solvable in worst-case
 polynomial time for the case of symmetric positive-semi-definite M by
 formulating it as the following convex quadratic program:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>minimize:   f(z) = zᵀw = zᵀ(Mz + q)
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>minimize:   f(z) = zᵀw = zᵀ(Mz + q)
 subject to: z ≥ 0
             Mz + q ≥ 0
 </pre></div>
 </div>
-<p>Note that this quadratic program’s (QP) objective function at the
+</details><p>Note that this quadratic program’s (QP) objective function at the
 minimum z cannot be less than zero, and the LCP is only solved if the
 objective function at the minimum is equal to zero. Since the seminal
 result of Karmarkar, it has been known that convex QPs are solvable in
@@ -6569,48 +6569,48 @@ indicate the positive semidefiniteness of some decision variables.</p>
 </dd>
 </dl>
 <p>Example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Create</span> <span class="n">a</span> <span class="n">MathematicalProgram</span> <span class="nb">object</span><span class="o">.</span>
-<span class="n">auto</span> <span class="n">prog</span> <span class="o">=</span> <span class="n">MathematicalProgram</span><span class="p">();</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Create a MathematicalProgram object.</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">prog</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MathematicalProgram</span><span class="p">();</span><span class="w"></span>
 
-<span class="o">//</span> <span class="n">Add</span> <span class="n">a</span> <span class="mi">2</span> <span class="n">x</span> <span class="mi">2</span> <span class="n">symmetric</span> <span class="n">matrix</span> <span class="n">S</span> <span class="n">to</span> <span class="n">optimization</span> <span class="n">program</span> <span class="k">as</span> <span class="n">new</span> <span class="n">decision</span>
-<span class="o">//</span> <span class="n">variables</span><span class="o">.</span>
-<span class="n">auto</span> <span class="n">S</span> <span class="o">=</span> <span class="n">prog</span><span class="o">.</span><span class="n">NewSymmetricContinuousVariables</span><span class="o">&lt;</span><span class="mi">2</span><span class="o">&gt;</span><span class="p">(</span><span class="s2">&quot;S&quot;</span><span class="p">);</span>
+<span class="c1">// Add a 2 x 2 symmetric matrix S to optimization program as new decision</span>
+<span class="c1">// variables.</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prog</span><span class="p">.</span><span class="n">NewSymmetricContinuousVariables</span><span class="o">&lt;</span><span class="mi">2</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;S&quot;</span><span class="p">);</span><span class="w"></span>
 
-<span class="o">//</span> <span class="n">Impose</span> <span class="n">a</span> <span class="n">positive</span> <span class="n">semidefinite</span> <span class="n">constraint</span> <span class="n">on</span> <span class="n">S</span><span class="o">.</span>
-<span class="n">std</span><span class="p">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">PositiveSemidefiniteConstraint</span><span class="o">&gt;</span> <span class="n">psd_constraint</span> <span class="o">=</span>
-    <span class="n">prog</span><span class="o">.</span><span class="n">AddPositiveSemidefiniteConstraint</span><span class="p">(</span><span class="n">S</span><span class="p">);</span>
+<span class="c1">// Impose a positive semidefinite constraint on S.</span>
+<span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">PositiveSemidefiniteConstraint</span><span class="o">&gt;</span><span class="w"> </span><span class="n">psd_constraint</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="w">    </span><span class="n">prog</span><span class="p">.</span><span class="n">AddPositiveSemidefiniteConstraint</span><span class="p">(</span><span class="n">S</span><span class="p">);</span><span class="w"></span>
 
-<span class="o">/////////////////////////////////////////////////////////////</span>
-<span class="o">//</span> <span class="n">Add</span> <span class="n">more</span> <span class="n">constraints</span> <span class="n">to</span> <span class="n">make</span> <span class="n">the</span> <span class="n">program</span> <span class="n">more</span> <span class="n">interesting</span><span class="p">,</span>
-<span class="o">//</span> <span class="n">but</span> <span class="n">this</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">needed</span><span class="o">.</span>
+<span class="c1">/////////////////////////////////////////////////////////////</span>
+<span class="c1">// Add more constraints to make the program more interesting,</span>
+<span class="c1">// but this is not needed.</span>
 
-<span class="o">//</span> <span class="n">Add</span> <span class="n">the</span> <span class="n">constraint</span> <span class="n">that</span> <span class="n">S</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">=</span> <span class="mf">1.</span>
-<span class="n">prog</span><span class="o">.</span><span class="n">AddBoundingBoxConstraint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">S</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">));</span>
+<span class="c1">// Add the constraint that S(1, 0) = 1.</span>
+<span class="n">prog</span><span class="p">.</span><span class="n">AddBoundingBoxConstraint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">));</span><span class="w"></span>
 
-<span class="o">//</span> <span class="n">Minimize</span> <span class="n">S</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="n">S</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span>
-<span class="n">prog</span><span class="o">.</span><span class="n">AddLinearCost</span><span class="p">(</span><span class="n">Eigen</span><span class="p">::</span><span class="n">RowVector2d</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">{</span><span class="n">S</span><span class="o">.</span><span class="n">diagonal</span><span class="p">()});</span>
+<span class="c1">// Minimize S(0, 0) + S(1, 1).</span>
+<span class="n">prog</span><span class="p">.</span><span class="n">AddLinearCost</span><span class="p">(</span><span class="n">Eigen</span><span class="o">::</span><span class="n">RowVector2d</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="p">{</span><span class="n">S</span><span class="p">.</span><span class="n">diagonal</span><span class="p">()});</span><span class="w"></span>
 
-<span class="o">/////////////////////////////////////////////////////////////</span>
+<span class="c1">/////////////////////////////////////////////////////////////</span>
 
-<span class="o">//</span> <span class="n">Now</span> <span class="n">solve</span> <span class="n">the</span> <span class="n">program</span><span class="o">.</span>
-<span class="n">auto</span> <span class="n">result</span> <span class="o">=</span> <span class="n">Solve</span><span class="p">(</span><span class="n">prog</span><span class="p">);</span>
+<span class="c1">// Now solve the program.</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Solve</span><span class="p">(</span><span class="n">prog</span><span class="p">);</span><span class="w"></span>
 
-<span class="o">//</span> <span class="n">Retrieve</span> <span class="n">the</span> <span class="n">solution</span> <span class="n">of</span> <span class="n">matrix</span> <span class="n">S</span><span class="o">.</span>
-<span class="n">auto</span> <span class="n">S_value</span> <span class="o">=</span> <span class="n">GetSolution</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">result</span><span class="p">);</span>
+<span class="c1">// Retrieve the solution of matrix S.</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">S_value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetSolution</span><span class="p">(</span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="n">result</span><span class="p">);</span><span class="w"></span>
 
-<span class="o">//</span> <span class="n">Compute</span> <span class="n">the</span> <span class="n">eigen</span> <span class="n">values</span> <span class="n">of</span> <span class="n">the</span> <span class="n">solution</span><span class="p">,</span> <span class="n">to</span> <span class="n">see</span> <span class="k">if</span> <span class="n">they</span> <span class="n">are</span>
-<span class="o">//</span> <span class="nb">all</span> <span class="n">non</span><span class="o">-</span><span class="n">negative</span><span class="o">.</span>
-<span class="n">Eigen</span><span class="p">::</span><span class="n">Vector4d</span> <span class="n">S_stacked</span><span class="p">;</span>
-<span class="n">S_stacked</span> <span class="o">&lt;&lt;</span> <span class="n">S_value</span><span class="o">.</span><span class="n">col</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">S_value</span><span class="o">.</span><span class="n">col</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="c1">// Compute the eigen values of the solution, to see if they are</span>
+<span class="c1">// all non-negative.</span>
+<span class="n">Eigen</span><span class="o">::</span><span class="n">Vector4d</span><span class="w"> </span><span class="n">S_stacked</span><span class="p">;</span><span class="w"></span>
+<span class="n">S_stacked</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">S_value</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="n">S_value</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
 
-<span class="n">Eigen</span><span class="p">::</span><span class="n">VectorXd</span> <span class="n">S_eigen_values</span><span class="p">;</span>
-<span class="n">psd_constraint</span><span class="o">-&gt;</span><span class="n">Eval</span><span class="p">(</span><span class="n">S_stacked</span><span class="p">,</span> <span class="n">S_eigen_values</span><span class="p">);</span>
+<span class="n">Eigen</span><span class="o">::</span><span class="n">VectorXd</span><span class="w"> </span><span class="n">S_eigen_values</span><span class="p">;</span><span class="w"></span>
+<span class="n">psd_constraint</span><span class="o">-&gt;</span><span class="n">Eval</span><span class="p">(</span><span class="n">S_stacked</span><span class="p">,</span><span class="w"> </span><span class="n">S_eigen_values</span><span class="p">);</span><span class="w"></span>
 
-<span class="n">std</span><span class="p">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s2">&quot;S solution is: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">S</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="p">::</span><span class="n">endl</span><span class="p">;</span>
-<span class="n">std</span><span class="p">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s2">&quot;The eigen value of S is &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">S_eigen_values</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="p">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&quot;S solution is: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&quot;The eigen value of S is &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">S_eigen_values</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.PositiveSemidefiniteConstraint.matrix_rows">
@@ -7322,9 +7322,6 @@ solver output.)</p>
 <div><p>kSolutionResultNotSet : The initial (invalid) solution result. This value should be</p>
 </div></blockquote>
 <p>overwritten by the solver during Solve().</p>
-<blockquote>
-<div><p>kUnknownError : Deprecated. This has been renamed to kSolverSpecificError; for details, see <a class="reference external" href="https://github.com/RobotLocomotion/drake/pull/19450">https://github.com/RobotLocomotion/drake/pull/19450</a>. The deprecated code will be removed from Drake on or after 2023-09-01.</p>
-</div></blockquote>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.SolutionResult.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.SolutionResult" title="pydrake.solvers.SolutionResult"><span class="pre">pydrake.solvers.SolutionResult</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.SolutionResult.__init__" title="Permalink to this definition"></a></dt>
@@ -7373,11 +7370,6 @@ solver output.)</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pydrake.solvers.SolutionResult.kUnbounded">
 <span class="sig-name descname"><span class="pre">kUnbounded</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;SolutionResult.kUnbounded:</span> <span class="pre">-3&gt;</span></em><a class="headerlink" href="#pydrake.solvers.SolutionResult.kUnbounded" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="pydrake.solvers.SolutionResult.kUnknownError">
-<span class="sig-name descname"><span class="pre">kUnknownError</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;SolutionResult.kSolverSpecificError:</span> <span class="pre">-4&gt;</span></em><a class="headerlink" href="#pydrake.solvers.SolutionResult.kUnknownError" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">

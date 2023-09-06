@@ -24,7 +24,6 @@ var classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting =
     [ "AddTimeIntervalBounds", "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a5495e0b649d3c61e05c6d3e2082bbe46", null ],
     [ "final_state", "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#abb8b403c020ea0cc825ebf70d011ea54", null ],
     [ "fixed_time_step", "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ac0a72307ec708171880ffe207bd89ba2", null ],
-    [ "fixed_timestep", "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#adb23e0ee6a1a0fa9904a0b3247baacb6", null ],
     [ "GetInputSamples", "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a9eb8351c5e1b3a7a35793ae13a35fdd7", null ],
     [ "GetSampleTimes", "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#af9709cba7f24bc9a9e84bbd09fdc0cde", null ],
     [ "GetSampleTimes", "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#adfdd25520386a4df952c26050e544f0f", null ],
@@ -54,8 +53,6 @@ var classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting =
     [ "time", "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a48f817634e4b7a64663f19d1d635a7d6", null ],
     [ "time_step", "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a48d167cc27136f423047426ba50a01f0", null ],
     [ "time_steps_are_decision_variables", "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a075c4b2d53d71727ebf6ab412fc171e9", null ],
-    [ "timestep", "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ab0a28fec382d5b41c8193e698d9d3d99", null ],
-    [ "timesteps_are_decision_variables", "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ae6f30b165f1275d62dea7f27b441a41b", null ],
     [ "u_vars", "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ad0da7cef1acfba329513b0c072bbe784", null ],
     [ "x_vars", "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a2bba238b83d8a4a8cfc34e763937a0b7", null ]
 ];

@@ -1,9 +1,5 @@
 var NAVTREEINDEX47 =
 {
-"formula_8h.html#a4758fb8f36a1a85b9fa932003216fe2e":[4,0,0,1,3,0,7,41],
-"formula_8h.html#a47616389df9ab060d41105d51db82be4":[4,0,0,1,3,0,7,74],
-"formula_8h.html#a486a9821c4235aeda4e39ff0652f72e7":[4,0,0,1,3,0,7,15],
-"formula_8h.html#a489c472556030b17c10028a04ba70aad":[4,0,0,1,3,0,7,42],
 "formula_8h.html#a50548d8092f6c0fa9796daf743a91d56":[4,0,0,1,3,0,7,24],
 "formula_8h.html#a514b594b37dbb603af40803e175b5f6a":[4,0,0,1,3,0,7,81],
 "formula_8h.html#a52208f3bf9cb2720f5d99223c20382f9":[4,0,0,1,3,0,7,16],
@@ -141,8 +137,8 @@ var NAVTREEINDEX47 =
 "framework__py__values_8h.html#ae073851bc679a64d47dc27c133b8d89d":[4,0,0,0,0,7,2,0],
 "free__body_8h.html":[4,0,0,8,0,1,0],
 "function_8h.html":[4,0,0,11,19],
-"functions.html":[3,3,0,0],
 "functions.html":[3,3,0],
+"functions.html":[3,3,0,0],
 "functions_b.html":[3,3,0,1],
 "functions_c.html":[3,3,0,2],
 "functions_d.html":[3,3,0,3],
@@ -218,8 +214,8 @@ var NAVTREEINDEX47 =
 "functions_type.html":[3,3,3],
 "functions_u.html":[3,3,0,20],
 "functions_v.html":[3,3,0,21],
-"functions_vars.html":[3,3,2],
 "functions_vars.html":[3,3,2,0],
+"functions_vars.html":[3,3,2],
 "functions_vars_b.html":[3,3,2,1],
 "functions_vars_c.html":[3,3,2,2],
 "functions_vars_d.html":[3,3,2,3],
@@ -249,5 +245,9 @@ var NAVTREEINDEX47 =
 "functions_x.html":[3,3,0,23],
 "functions_y.html":[3,3,0,24],
 "functions_z.html":[3,3,0,25],
-"functions_~.html":[3,3,0,26]
+"functions_~.html":[3,3,0,26],
+"gain_8h.html":[4,0,0,12,6,9],
+"gaussian__triangle__quadrature__rule_8h.html":[4,0,0,8,15,0],
+"gaze__target__constraint_8h.html":[4,0,0,8,5,9],
+"gcs__trajectory__optimization_8h.html":[4,0,0,10,1,2]
 };

@@ -1013,19 +1013,19 @@ errors per issue
 and τ == torque.</p>
 <p>This model of the IIWA internal controller in the FRI software’s
 <code class="docutils literal notranslate"><span class="pre">JointImpedanceControlMode</span></code> is:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">τ_commanded</span> <span class="o">=</span> <span class="n">Mₑ</span><span class="p">(</span><span class="n">qₑ</span><span class="p">)</span><span class="n">vdot_desired</span> <span class="o">+</span> <span class="n">Cₑ</span><span class="p">(</span><span class="n">qₑ</span><span class="p">,</span> <span class="n">vₑ</span><span class="p">)</span><span class="n">vₑ</span> <span class="o">-</span> <span class="n">τₑ_g</span><span class="p">(</span><span class="n">q</span><span class="p">)</span> <span class="o">-</span>
-                <span class="n">τₑ_joint_friction</span> <span class="o">+</span> <span class="n">τ_feedforward</span>
-  <span class="n">vdot_desired</span> <span class="o">=</span> <span class="n">PID</span><span class="p">(</span><span class="n">q_commanded</span><span class="p">,</span> <span class="n">qₑ</span><span class="p">,</span> <span class="n">v_commanded</span><span class="p">,</span> <span class="n">vₑ</span><span class="p">)</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">τ_commanded</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Mₑ</span><span class="p">(</span><span class="n">qₑ</span><span class="p">)</span><span class="n">vdot_desired</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Cₑ</span><span class="p">(</span><span class="n">qₑ</span><span class="p">,</span><span class="w"> </span><span class="n">vₑ</span><span class="p">)</span><span class="n">vₑ</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">τₑ_g</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"></span>
+<span class="w">                </span><span class="n">τₑ_joint_friction</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">τ_feedforward</span><span class="w"></span>
+<span class="w">  </span><span class="n">vdot_desired</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PID</span><span class="p">(</span><span class="n">q_commanded</span><span class="p">,</span><span class="w"> </span><span class="n">qₑ</span><span class="p">,</span><span class="w"> </span><span class="n">v_commanded</span><span class="p">,</span><span class="w"> </span><span class="n">vₑ</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
-<p>where Mₑ, Cₑ, τₑ_g, and τₑ_friction terms are now (Kuka’s) estimates
+</details><p>where Mₑ, Cₑ, τₑ_g, and τₑ_friction terms are now (Kuka’s) estimates
 of the true model, qₑ and vₑ are measured/estimation, and v_commanded
 must be obtained from an online (causal) derivative of q_commanded.
 The result is</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>M(q)vdot ≈ Mₑ(q)vdot_desired + τ_feedforward + τ_external,
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>M(q)vdot ≈ Mₑ(q)vdot_desired + τ_feedforward + τ_external,
 </pre></div>
 </div>
-<p>where the “approximately equal” comes from the differences due to the
+</details><p>where the “approximately equal” comes from the differences due to the
 estimated model/state.</p>
 <p>The model implemented in this System assumes that M, C, and τ_friction
 terms are perfect (except that they contain only a lumped mass
@@ -1041,16 +1041,16 @@ are welded).</p>
 </div>
 <p>To add objects into the environment for the robot to manipulate, use,
 e.g.:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ManipulationStation</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">station</span><span class="p">;</span>
-<span class="n">Parser</span> <span class="n">parser</span><span class="p">(</span><span class="o">&amp;</span><span class="n">station</span><span class="o">.</span><span class="n">get_mutable_multibody_plant</span><span class="p">(),</span>
-               <span class="o">&amp;</span><span class="n">station</span><span class="o">.</span><span class="n">get_mutable_scene_graph</span><span class="p">());</span>
-<span class="n">parser</span><span class="o">.</span><span class="n">AddModels</span><span class="p">(</span><span class="s2">&quot;my.sdf&quot;</span><span class="p">);</span>
-<span class="o">...</span>
-<span class="o">//</span> <span class="n">coming</span> <span class="n">soon</span> <span class="o">--</span> <span class="n">sugar</span> <span class="n">API</span> <span class="k">for</span> <span class="n">adding</span> <span class="n">additional</span> <span class="n">objects</span><span class="o">.</span>
-<span class="n">station</span><span class="o">.</span><span class="n">Finalize</span><span class="p">()</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">ManipulationStation</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">station</span><span class="p">;</span><span class="w"></span>
+<span class="n">Parser</span><span class="w"> </span><span class="nf">parser</span><span class="p">(</span><span class="o">&amp;</span><span class="n">station</span><span class="p">.</span><span class="n">get_mutable_multibody_plant</span><span class="p">(),</span><span class="w"></span>
+<span class="w">               </span><span class="o">&amp;</span><span class="n">station</span><span class="p">.</span><span class="n">get_mutable_scene_graph</span><span class="p">());</span><span class="w"></span>
+<span class="n">parser</span><span class="p">.</span><span class="n">AddModels</span><span class="p">(</span><span class="s">&quot;my.sdf&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="p">...</span><span class="w"></span>
+<span class="c1">// coming soon -- sugar API for adding additional objects.</span>
+<span class="n">station</span><span class="p">.</span><span class="n">Finalize</span><span class="p">()</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Note that you <em>must</em> call Finalize() before you can use this class as
+</details><p>Note that you <em>must</em> call Finalize() before you can use this class as
 a System.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.examples.ManipulationStation.__init__">

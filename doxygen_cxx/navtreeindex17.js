@@ -1,5 +1,6 @@
 var NAVTREEINDEX17 =
 {
+"classdrake_1_1multibody_1_1_screw_joint.html#a47c9c178dbbe338d4ef11a6dcfbf3f90":[3,0,0,8,80,17],
 "classdrake_1_1multibody_1_1_screw_joint.html#a5cc13f9bc5254c723bf7ce65b3f74db1":[3,0,0,8,80,1],
 "classdrake_1_1multibody_1_1_screw_joint.html#a663d4e5c0ea17804db0824246381a47f":[3,0,0,8,80,10],
 "classdrake_1_1multibody_1_1_screw_joint.html#a6dae14ed5a3eff0195cceb21dd5b0b37":[3,0,0,8,80,8],
@@ -248,6 +249,5 @@ var NAVTREEINDEX17 =
 "classdrake_1_1multibody_1_1_triangle_quadrature.html#aa85b8dec31c1606ed502553bee32c195":[3,0,0,8,96,1],
 "classdrake_1_1multibody_1_1_triangle_quadrature_rule.html":[3,0,0,8,97],
 "classdrake_1_1multibody_1_1_triangle_quadrature_rule.html#a1f6623bbb6af50824c6c0c3d2733e809":[3,0,0,8,97,7],
-"classdrake_1_1multibody_1_1_triangle_quadrature_rule.html#a3061509e2566159ffd0d70258932901c":[3,0,0,8,97,6],
-"classdrake_1_1multibody_1_1_triangle_quadrature_rule.html#a7e3b1644467cb91e5b886b97a10ce047":[3,0,0,8,97,0]
+"classdrake_1_1multibody_1_1_triangle_quadrature_rule.html#a3061509e2566159ffd0d70258932901c":[3,0,0,8,97,6]
 };

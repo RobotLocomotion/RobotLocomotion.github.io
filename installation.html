@@ -155,6 +155,7 @@ officially supports:</p>
       <th>Operating System ⁽¹⁾</th>
       <th>Architecture</th>
       <th>Python ⁽²⁾</th>
+      <th>End of life ⁽⁴⁾</th>
     </tr>
   </thead>
   <tbody>
@@ -162,26 +163,31 @@ officially supports:</p>
       <td>Ubuntu 20.04 LTS (Focal Fossa)</td>
       <td>x86_64</td>
       <td>3.8 ⁽³⁾</td>
+      <td>March 2024</td>
     </tr>
     <tr>
       <td>Ubuntu 22.04 LTS (Jammy Jellyfish)</td>
       <td>x86_64</td>
       <td>3.10 ⁽³⁾</td>
+      <td>March 2026</td>
     </tr>
     <tr>
       <td>macOS Monterey (12)</td>
       <td>x86_64</td>
       <td>3.11</td>
+      <td>October 2023</td>
     </tr>
     <tr>
       <td>macOS Monterey (12)</td>
       <td>arm64</td>
       <td>3.11</td>
+      <td>October 2023</td>
     </tr>
     <tr>
       <td>macOS Ventura (13)</td>
       <td>arm64</td>
       <td>3.11</td>
+      <td>October 2024</td>
     </tr>
   </tbody>
 </table>
@@ -206,7 +212,12 @@ that Conda is involved.</p>
 
 <p>⁽³⁾ The Python version shown in the table is supported for all installation
 channels. Additionally, on Ubuntu when installing via <code class="language-plaintext highlighter-rouge">pip</code> Python versions
-3.8 through 3.11 (inclusive) are supported.</p>
+3.8 through 3.11 (inclusive) are supported.
+Refer to <a href="/stable.html#os-support">OS Support</a> for details on our “end of life”
+timeline for changing which Python versions are supported.</p>
+
+<p>⁽⁴⁾ These end-of-life dates are estimates.
+Refer to <a href="/stable.html#os-support">OS Support</a> for details.</p>
 
 <p>Additionally, if you are compiling your own C++ code against Drake’s C++ code
 and are using Drake’s pre-compiled binaries, then you must use the same

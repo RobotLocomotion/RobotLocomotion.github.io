@@ -1,10 +1,5 @@
 var NAVTREEINDEX60 =
 {
-"text__logging_8h.html#ae6e439f4584cc1f0a6dd0990378604a5":[4,0,0,1,59,7],
-"text__logging_8h.html#aed13fee35863fff48d177f80c979bca0":[4,0,0,1,59,1],
-"text__logging__pybind_8h.html":[4,0,0,0,0,0,10],
-"timer_8h.html":[4,0,0,1,60],
-"toppra_8h.html":[4,0,0,8,8,11],
 "toppra_8h.html#ad8fa828762d54ed2db5efec5df1b5082":[4,0,0,8,8,11,1],
 "toppra_8h.html#ad8fa828762d54ed2db5efec5df1b5082a8adcba0ce62338780719c9d3d29a0c6a":[4,0,0,8,8,11,1,0],
 "toppra_8h.html#ad8fa828762d54ed2db5efec5df1b5082a9ef15c126044c94d6440bfbf02f6c55d":[4,0,0,8,8,11,1,1],
@@ -110,7 +105,6 @@ var NAVTREEINDEX60 =
 "visualization__config_8h.html":[4,0,0,13,2],
 "visualization__config__functions_8h.html":[4,0,0,13,3],
 "visualization__config__functions_8h.html#a02befd8c90155c339a042f2af39d4c12":[4,0,0,13,3,0],
-"visualization__config__functions_8h.html#a91350b14472fa922d11a6ced06e72bc8":[4,0,0,13,3,2],
 "visualization__config__functions_8h.html#acfe50d1cfd6c229aab5986a0a3c97494":[4,0,0,13,3,1],
 "visualization__py_8h.html":[4,0,0,0,0,8,0],
 "volume__mesh_8h.html":[4,0,0,4,2,55],

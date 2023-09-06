@@ -445,11 +445,11 @@ its scalar index to <code class="docutils literal notranslate"><span class="pre"
 <dd><p>Evaluates <code class="docutils literal notranslate"><span class="pre">vector_func</span></code> at all input mesh points and extracts the
 mesh value matrix that should be used to approximate the function with
 this barycentric interpolation.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MatrixXd</span> <span class="n">mesh_values</span> <span class="o">=</span> <span class="n">bary</span><span class="o">.</span><span class="n">MeshValuesFrom</span><span class="p">(</span>
-    <span class="p">[](</span><span class="n">const</span> <span class="n">auto</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">Vector1d</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]));</span> <span class="p">});</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MatrixXd</span><span class="w"> </span><span class="n">mesh_values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bary</span><span class="p">.</span><span class="n">MeshValuesFrom</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">Vector1d</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]));</span><span class="w"> </span><span class="p">});</span><span class="w"></span>
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 </dd></dl>
 
@@ -1281,25 +1281,25 @@ DerivedY&gt;(calc_func, x);</p>
 </dd>
 </dl>
 <p>Examples:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">cc</span><span class="p">}</span>
-<span class="o">//</span> <span class="n">Create</span> <span class="n">a</span> <span class="n">std</span><span class="p">::</span><span class="n">function</span> <span class="kn">from</span> <span class="nn">a</span> <span class="k">lambda</span> <span class="n">expression</span><span class="o">.</span>
-<span class="n">std</span><span class="p">::</span><span class="n">function</span><span class="o">&lt;</span><span class="n">void</span> <span class="p">(</span><span class="n">const</span> <span class="n">Eigen</span><span class="p">::</span><span class="n">Vector2d</span><span class="o">&amp;</span><span class="p">,</span> <span class="n">Vector3d</span><span class="o">*</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">foo</span> <span class="o">=</span> <span class="p">[](</span><span class="n">const</span>
-<span class="n">Eigen</span><span class="p">::</span><span class="n">Vector2d</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">,</span> <span class="n">Vector3d</span><span class="o">*</span><span class="n">y</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="o">*</span><span class="n">y</span><span class="p">)(</span><span class="mi">0</span><span class="p">)</span> <span class="o">=</span> <span class="n">x</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="p">(</span><span class="o">*</span><span class="n">y</span><span class="p">)(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">x</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">*</span> <span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-<span class="p">(</span><span class="o">*</span><span class="n">y</span><span class="p">)(</span><span class="mi">2</span><span class="p">)</span> <span class="o">=</span> <span class="n">x</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">*</span> <span class="n">std</span><span class="p">::</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">));};</span>
-<span class="n">Eigen</span><span class="p">::</span><span class="n">Vector3d</span> <span class="n">x_eval</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
-<span class="n">auto</span> <span class="n">J</span> <span class="o">=</span> <span class="n">ComputeNumericalGradient</span><span class="p">(</span><span class="n">foo</span><span class="p">,</span> <span class="n">x_eval</span><span class="p">);</span>
-<span class="o">//</span> <span class="n">Note</span> <span class="n">that</span> <span class="k">if</span> <span class="n">we</span> <span class="k">pass</span> <span class="ow">in</span> <span class="n">a</span> <span class="k">lambda</span> <span class="n">to</span> <span class="n">ComputeNumericalGradient</span><span class="p">,</span> <span class="n">then</span>
-<span class="o">//</span> <span class="n">ComputeNumericalGradient</span> <span class="n">has</span> <span class="n">to</span> <span class="n">instantiate</span> <span class="n">the</span> <span class="n">template</span> <span class="n">types</span> <span class="n">explicitly</span><span class="p">,</span>
-<span class="o">//</span> <span class="k">as</span> <span class="ow">in</span> <span class="n">this</span> <span class="n">example</span><span class="o">.</span> <span class="n">The</span> <span class="n">issue</span> <span class="n">of</span> <span class="n">template</span> <span class="n">deduction</span> <span class="k">with</span> <span class="n">std</span><span class="p">::</span><span class="n">function</span> <span class="ow">is</span>
-<span class="o">//</span> <span class="n">explained</span> <span class="ow">in</span>
-<span class="o">//</span>
-<span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">stackoverflow</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">questions</span><span class="o">/</span><span class="mi">48529410</span><span class="o">/</span><span class="n">template</span><span class="o">-</span><span class="n">arguments</span><span class="o">-</span><span class="n">deduction</span><span class="o">-</span><span class="n">failed</span><span class="o">-</span><span class="n">passing</span><span class="o">-</span><span class="n">func</span><span class="o">-</span><span class="n">pointer</span><span class="o">-</span><span class="n">to</span><span class="o">-</span><span class="n">stdfunction</span>
-<span class="n">auto</span> <span class="n">bar</span> <span class="o">=</span> <span class="p">[](</span><span class="n">const</span> <span class="n">Eigen</span><span class="p">::</span><span class="n">Vector2d</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">,</span> <span class="n">Eigen</span><span class="p">::</span><span class="n">Vector2d</span><span class="o">*</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span><span class="o">*</span><span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span> <span class="p">};</span>
-<span class="n">auto</span> <span class="n">J2</span> <span class="o">=</span> <span class="n">ComputeNumericalGradient</span><span class="o">&lt;</span><span class="n">Eigen</span><span class="p">::</span><span class="n">Vector2d</span><span class="p">,</span>
-<span class="n">Eigen</span><span class="p">::</span><span class="n">Vector2d</span><span class="p">,</span> <span class="n">Eigen</span><span class="p">::</span><span class="n">Vector2d</span><span class="o">&gt;</span><span class="p">(</span><span class="n">bar</span><span class="p">,</span> <span class="n">Eigen</span><span class="p">::</span><span class="n">Vector2d</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">cc</span><span class="p">}</span><span class="w"></span>
+<span class="c1">// Create a std::function from a lambda expression.</span>
+<span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Vector2d</span><span class="o">&amp;</span><span class="p">,</span><span class="w"> </span><span class="n">Vector3d</span><span class="o">*</span><span class="p">)</span><span class="o">&gt;</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"></span>
+<span class="n">Eigen</span><span class="o">::</span><span class="n">Vector2d</span><span class="o">&amp;</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">Vector3d</span><span class="o">*</span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">y</span><span class="p">)(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">y</span><span class="p">)(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+<span class="p">(</span><span class="o">*</span><span class="n">y</span><span class="p">)(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">));};</span><span class="w"></span>
+<span class="n">Eigen</span><span class="o">::</span><span class="n">Vector3d</span><span class="w"> </span><span class="nf">x_eval</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">J</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ComputeNumericalGradient</span><span class="p">(</span><span class="n">foo</span><span class="p">,</span><span class="w"> </span><span class="n">x_eval</span><span class="p">);</span><span class="w"></span>
+<span class="c1">// Note that if we pass in a lambda to ComputeNumericalGradient, then</span>
+<span class="c1">// ComputeNumericalGradient has to instantiate the template types explicitly,</span>
+<span class="c1">// as in this example. The issue of template deduction with std::function is</span>
+<span class="c1">// explained in</span>
+<span class="c1">//</span>
+<span class="nl">https</span><span class="p">:</span><span class="c1">//stackoverflow.com/questions/48529410/template-arguments-deduction-failed-passing-func-pointer-to-stdfunction</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">bar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Vector2d</span><span class="o">&amp;</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Vector2d</span><span class="o">*</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="o">*</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">J2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ComputeNumericalGradient</span><span class="o">&lt;</span><span class="n">Eigen</span><span class="o">::</span><span class="n">Vector2d</span><span class="p">,</span><span class="w"></span>
+<span class="n">Eigen</span><span class="o">::</span><span class="n">Vector2d</span><span class="p">,</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Vector2d</span><span class="o">&gt;</span><span class="p">(</span><span class="n">bar</span><span class="p">,</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Vector2d</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">));</span><span class="w"></span>
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pydrake.math.ContinuousAlgebraicRiccatiEquation">
@@ -1313,11 +1313,11 @@ algebraic Riccati equation:</p>
 <dd class="field-odd"><p><strong>RuntimeError if the Hamiltanoian matrix</strong> – </p>
 </dd>
 </dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>⌈A   BR⁻¹Bᵀ⌉
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>⌈A   BR⁻¹Bᵀ⌉
 ⌊Q      −Aᵀ⌋
 </pre></div>
 </div>
-<p>is not invertible.</p>
+</details><p>is not invertible.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if R is not positive definite.</strong> – </p>
@@ -1359,39 +1359,39 @@ Linear Systems by Thomas Kailath.</p>
 <dt class="sig sig-object py" id="pydrake.math.DecomposePositiveQuadraticForm">
 <span class="sig-prename descclassname"><span class="pre">pydrake.math.</span></span><span class="sig-name descname"><span class="pre">DecomposePositiveQuadraticForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Q</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.math.DecomposePositiveQuadraticForm" title="Permalink to this definition"></a></dt>
 <dd><p>Rewrite a quadratic form xᵀQx + bᵀx + c to (Rx+d)ᵀ(Rx+d) where</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">RᵀR</span> <span class="o">=</span> <span class="n">Q</span>
-<span class="n">Rᵀd</span> <span class="o">=</span> <span class="n">b</span> <span class="o">/</span> <span class="mi">2</span>
-<span class="n">dᵀd</span> <span class="o">=</span> <span class="n">c</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">RᵀR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Q</span><span class="w"></span>
+<span class="n">Rᵀd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+<span class="n">dᵀd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c</span><span class="w"></span>
 </pre></div>
 </div>
-<p>This decomposition requires the matrix</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>⌈Q     b/2⌉
+</details><p>This decomposition requires the matrix</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>⌈Q     b/2⌉
 ⌊bᵀ/2    c⌋
 </pre></div>
 </div>
-<p>to be positive semidefinite.</p>
+</details><p>to be positive semidefinite.</p>
 <p>We return R and d with the minimal number of rows, namely the rows of
 R and d equal to the rank of the matrix</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>⌈Q     b/2⌉
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>⌈Q     b/2⌉
 ⌊bᵀ/2    c⌋
 </pre></div>
 </div>
-<p>Notice that R might have more rows than Q, For example, the quadratic
+</details><p>Notice that R might have more rows than Q, For example, the quadratic
 expression x² + 2x + 5 =(x+1)² + 2², it can be decomposed as</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>⎛⌈1⌉ * x + ⌈1⌉⎞ᵀ * ⎛⌈1⌉ * x + ⌈1⌉⎞
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>⎛⌈1⌉ * x + ⌈1⌉⎞ᵀ * ⎛⌈1⌉ * x + ⌈1⌉⎞
 ⎝⌊0⌋       ⌊2⌋⎠    ⎝⌊0⌋       ⌊2⌋⎠
 </pre></div>
 </div>
-<p>Here R has 2 rows while Q only has 1 row.</p>
+</details><p>Here R has 2 rows while Q only has 1 row.</p>
 <p>On the other hand the quadratic expression x² + 2x + 1 can be
 decomposed as (x+1) * (x+1), where R has 1 row, same as Q.</p>
 <p>Also notice that this decomposition is not unique. For example, with
 any permutation matrix P, we can define</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>R₁ = P*R
-d₁ = P*d
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">R₁</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">P</span><span class="o">*</span><span class="n">R</span><span class="w"></span>
+<span class="n">d₁</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">P</span><span class="o">*</span><span class="n">d</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Then (R₁*x+d₁)ᵀ(R₁*x+d₁) gives the same quadratic form.</p>
+</details><p>Then (R₁*x+d₁)ᵀ(R₁*x+d₁) gives the same quadratic form.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">Q</span></code>:</dt><dd><p>The square matrix.</p>
 </dd>
@@ -1407,17 +1407,17 @@ all greater than -tol. $*Default:* is 0.</p>
 R.rows() equals to the rank of the matrix</p>
 </dd>
 </dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Q</span>    <span class="n">b</span><span class="o">/</span><span class="mi">2</span><span class="p">]</span>
-   <span class="p">[</span><span class="n">bᵀ</span><span class="o">/</span><span class="mi">2</span>   <span class="n">c</span><span class="p">]</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Q</span><span class="w">    </span><span class="n">b</span><span class="o">/</span><span class="mi">2</span><span class="p">]</span><span class="w"></span>
+<span class="w">   </span><span class="p">[</span><span class="n">bᵀ</span><span class="o">/</span><span class="mi">2</span><span class="w">   </span><span class="n">c</span><span class="p">]</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Precondition:
+</details><p>Precondition:
 1. The quadratic form is always non-negative, namely the matrix</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Q</span>    <span class="n">b</span><span class="o">/</span><span class="mi">2</span><span class="p">]</span>
-        <span class="p">[</span><span class="n">bᵀ</span><span class="o">/</span><span class="mi">2</span>   <span class="n">c</span><span class="p">]</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Q</span><span class="w">    </span><span class="n">b</span><span class="o">/</span><span class="mi">2</span><span class="p">]</span><span class="w"></span>
+<span class="w">        </span><span class="p">[</span><span class="n">bᵀ</span><span class="o">/</span><span class="mi">2</span><span class="w">   </span><span class="n">c</span><span class="p">]</span><span class="w"></span>
 </pre></div>
 </div>
-<p>is positive semidefinite. 2. <code class="docutils literal notranslate"><span class="pre">Q</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code> are of the correct size.
+</details><p>is positive semidefinite. 2. <code class="docutils literal notranslate"><span class="pre">Q</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code> are of the correct size.
 3. <code class="docutils literal notranslate"><span class="pre">tol</span></code> is non-negative.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
@@ -1474,14 +1474,13 @@ algebraic Riccati equation:</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if Q is not positive semi-definite.</strong> – </p></li>
-<li><p><strong>RuntimeError if R is not positive definite.</strong> – </p></li>
+<li><p><strong>RuntimeError if Q is not symmetric positive semidefinite.</strong> – </p></li>
+<li><p><strong>RuntimeError if R is not symmetric positive definite.</strong> – </p></li>
+<li><p><strong>RuntimeError if</strong><strong> (</strong><strong>A</strong><strong>, </strong><strong>B</strong><strong>) </strong><strong>isn't a stabilizable pair.</strong> – </p></li>
+<li><p><strong>RuntimeError if</strong><strong> (</strong><strong>A</strong><strong>, </strong><strong>C</strong><strong>) </strong><strong>isn't a detectable pair where Q = CᵀC.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
-<p>Based on the Schur Vector approach outlined in this paper: “On the
-Numerical Solution of the Discrete-Time Algebraic Riccati Equation” by
-Thrasyvoulos Pappas, Alan J. Laub, and Nils R. Sandell</p>
 <ol class="arabic simple" start="2">
 <li><p>DiscreteAlgebraicRiccatiEquation(A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], B: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], Q: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], R: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], N: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]) -&gt; numpy.ndarray[numpy.float64[m, n]]</p></li>
 </ol>
@@ -1495,30 +1494,32 @@ algebraic Riccati equation:</p>
 <p>This overload of the DARE is useful for finding the control law uₖ
 that minimizes the following cost function subject to xₖ₊₁ = Axₖ +
 Buₖ.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>∞ [xₖ]ᵀ[Q  N][xₖ]
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>∞ [xₖ]ᵀ[Q  N][xₖ]
 J = Σ [uₖ] [Nᵀ R][uₖ] ΔT
 k=0
 </pre></div>
 </div>
-<p>This is a more general form of the following. The linear-quadratic
+</details><p>This is a more general form of the following. The linear-quadratic
 regulator is the feedback control law uₖ that minimizes the following
 cost function subject to xₖ₊₁ = Axₖ + Buₖ:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>∞
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>∞
 J = Σ (xₖᵀQxₖ + uₖᵀRuₖ) ΔT
 k=0
 </pre></div>
 </div>
-<p>This can be refactored as:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>∞ [xₖ]ᵀ[Q 0][xₖ]
+</details><p>This can be refactored as:</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>∞ [xₖ]ᵀ[Q 0][xₖ]
 J = Σ [uₖ] [0 R][uₖ] ΔT
 k=0
 </pre></div>
 </div>
-<dl class="field-list simple">
+</details><dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if Q − NR⁻¹Nᵀ is not positive semi-definite.</strong> – </p></li>
-<li><p><strong>RuntimeError if R is not positive definite.</strong> – </p></li>
+<li><p><strong>RuntimeError if Q₂ is not symmetric positive semidefinite.</strong> – </p></li>
+<li><p><strong>RuntimeError if R is not symmetric positive definite.</strong> – </p></li>
+<li><p><strong>RuntimeError if</strong><strong> (</strong><strong>A₂</strong><strong>, </strong><strong>B</strong><strong>) </strong><strong>isn't a stabilizable pair.</strong> – </p></li>
+<li><p><strong>RuntimeError if</strong><strong> (</strong><strong>A₂</strong><strong>, </strong><strong>C</strong><strong>) </strong><strong>isn't a detectable pair where Q₂ = CᵀC.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -2480,21 +2481,21 @@ RotationMatrix::ProjectToRotationMatrix().</p>
 a RigidTransform constructor whose argument is an Eigen
 <strong>expression</strong>.</p>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">const</span> <span class="n">Vector3</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">position</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">);</span>
-<span class="n">const</span> <span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">X1</span><span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="n">position</span><span class="p">);</span>
-<span class="o">----------------------------------------------</span>
-<span class="n">const</span> <span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">R</span><span class="p">(</span><span class="n">RollPitchYaw</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span>
-<span class="n">Eigen</span><span class="p">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="n">double</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="o">&gt;</span> <span class="n">pose34</span><span class="p">;</span>
-<span class="n">pose34</span> <span class="o">&lt;&lt;</span> <span class="n">R</span><span class="o">.</span><span class="n">matrix</span><span class="p">(),</span> <span class="n">position</span><span class="p">;</span>
-<span class="n">const</span> <span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">X2</span><span class="p">(</span><span class="mf">1.0</span> <span class="o">*</span> <span class="n">pose34</span><span class="p">);</span>
-<span class="o">----------------------------------------------</span>
-<span class="n">Eigen</span><span class="p">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="n">double</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="o">&gt;</span> <span class="n">pose4</span><span class="p">;</span>
-<span class="n">pose4</span> <span class="o">&lt;&lt;</span> <span class="n">R</span><span class="o">.</span><span class="n">matrix</span><span class="p">(),</span> <span class="n">position</span><span class="p">,</span>
-         <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">;</span>
-<span class="n">const</span> <span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">X3</span><span class="p">(</span><span class="n">pose4</span> <span class="o">*</span> <span class="n">pose4</span><span class="p">);</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">position</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">);</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">X1</span><span class="p">(</span><span class="mi">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">position</span><span class="p">);</span><span class="w"></span>
+<span class="o">----------------------------------------------</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">R</span><span class="p">(</span><span class="n">RollPitchYaw</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">));</span><span class="w"></span>
+<span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pose34</span><span class="p">;</span><span class="w"></span>
+<span class="n">pose34</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">R</span><span class="p">.</span><span class="n">matrix</span><span class="p">(),</span><span class="w"> </span><span class="n">position</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">X2</span><span class="p">(</span><span class="mf">1.0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">pose34</span><span class="p">);</span><span class="w"></span>
+<span class="o">----------------------------------------------</span><span class="w"></span>
+<span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pose4</span><span class="p">;</span><span class="w"></span>
+<span class="n">pose4</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">R</span><span class="p">.</span><span class="n">matrix</span><span class="p">(),</span><span class="w"> </span><span class="n">position</span><span class="p">,</span><span class="w"></span>
+<span class="w">         </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">X3</span><span class="p">(</span><span class="n">pose4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">pose4</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py template">
 <dt class="sig sig-object py" id="pydrake.math.RigidTransform.cast">
@@ -2507,11 +2508,11 @@ a RigidTransform constructor whose argument is an Eigen
 <span id="pydrake.math.RigidTransform.cast[AutoDiffXd]"></span><span class="sig-name descname"><span class="pre">cast[AutoDiffXd]</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::math::RigidTransform&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double,</span> <span class="pre">-1,</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">-1,</span> <span class="pre">1&gt;</span> <span class="pre">&gt;</span> <span class="pre">&gt;</span></span></span><a class="headerlink" href="#pydrake.math.RigidTransform.cast-AutoDiffXd" title="Permalink to this definition"></a></dt>
 <dd><p>Creates a RigidTransform templatized on a scalar type U from a
 RigidTransform templatized on scalar type T. For example,</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">source</span> <span class="o">=</span> <span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span><span class="p">::</span><span class="n">Identity</span><span class="p">();</span>
-<span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span> <span class="n">foo</span> <span class="o">=</span> <span class="n">source</span><span class="o">.</span><span class="n">cast</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="p">();</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;::</span><span class="n">Identity</span><span class="p">();</span><span class="w"></span>
+<span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">source</span><span class="p">.</span><span class="n">cast</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
 </pre></div>
 </div>
-<dl class="simple">
+</details><dl class="simple">
 <dt>Template parameter <code class="docutils literal notranslate"><span class="pre">U</span></code>:</dt><dd><p>Scalar type on which the returned RigidTransform is templated.</p>
 </dd>
 </dl>
@@ -2531,11 +2532,11 @@ allows cast from type double to AutoDiffXd, but not vice-versa.</p>
 <span id="pydrake.math.RigidTransform.cast[Expression]"></span><span class="sig-name descname"><span class="pre">cast[Expression]</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::math::RigidTransform&lt;drake::symbolic::Expression&gt;</span></span></span><a class="headerlink" href="#pydrake.math.RigidTransform.cast-Expression" title="Permalink to this definition"></a></dt>
 <dd><p>Creates a RigidTransform templatized on a scalar type U from a
 RigidTransform templatized on scalar type T. For example,</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">source</span> <span class="o">=</span> <span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span><span class="p">::</span><span class="n">Identity</span><span class="p">();</span>
-<span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span> <span class="n">foo</span> <span class="o">=</span> <span class="n">source</span><span class="o">.</span><span class="n">cast</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="p">();</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;::</span><span class="n">Identity</span><span class="p">();</span><span class="w"></span>
+<span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">source</span><span class="p">.</span><span class="n">cast</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
 </pre></div>
 </div>
-<dl class="simple">
+</details><dl class="simple">
 <dt>Template parameter <code class="docutils literal notranslate"><span class="pre">U</span></code>:</dt><dd><p>Scalar type on which the returned RigidTransform is templated.</p>
 </dd>
 </dl>
@@ -2555,11 +2556,11 @@ allows cast from type double to AutoDiffXd, but not vice-versa.</p>
 <span id="pydrake.math.RigidTransform.cast[float]"></span><span class="sig-name descname"><span class="pre">cast[float]</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.math.RigidTransform.cast-float" title="Permalink to this definition"></a></dt>
 <dd><p>Creates a RigidTransform templatized on a scalar type U from a
 RigidTransform templatized on scalar type T. For example,</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">source</span> <span class="o">=</span> <span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span><span class="p">::</span><span class="n">Identity</span><span class="p">();</span>
-<span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span> <span class="n">foo</span> <span class="o">=</span> <span class="n">source</span><span class="o">.</span><span class="n">cast</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="p">();</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;::</span><span class="n">Identity</span><span class="p">();</span><span class="w"></span>
+<span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">source</span><span class="p">.</span><span class="n">cast</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
 </pre></div>
 </div>
-<dl class="simple">
+</details><dl class="simple">
 <dt>Template parameter <code class="docutils literal notranslate"><span class="pre">U</span></code>:</dt><dd><p>Scalar type on which the returned RigidTransform is templated.</p>
 </dd>
 </dl>
@@ -2585,26 +2586,26 @@ allows cast from type double to AutoDiffXd, but not vice-versa.</p>
 <span class="sig-name descname"><span class="pre">GetAsMatrix34</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.math.RigidTransform.GetAsMatrix34" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the 3x4 matrix associated with this RigidTransform, i.e.,
 X_AB.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>┌                ┐
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>┌                ┐
  │ R_AB  p_AoBo_A │
  └                ┘
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.math.RigidTransform.GetAsMatrix4">
 <span class="sig-name descname"><span class="pre">GetAsMatrix4</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.math.RigidTransform.GetAsMatrix4" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the 4x4 matrix associated with this RigidTransform, i.e.,
 X_AB.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>┌                ┐
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>┌                ┐
  │ R_AB  p_AoBo_A │
  │                │
  │   0      1     │
  └                ┘
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.math.RigidTransform.GetMaximumAbsoluteDifference">
@@ -2845,15 +2846,15 @@ frames A and B.</p>
 see this, let <code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">=</span> <span class="pre">p_AoBo_A</span></code>, <cite>q = p_BoQ_B</cite> and note (X_AB * q)
 * 7 = (p + R_AB * q) * 7 ≠ X_AB * (q * 7) = p + R_AB * (q * 7).</p>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">const</span> <span class="n">RollPitchYaw</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">rpy</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">);</span>
-<span class="n">const</span> <span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">X_AB</span><span class="p">(</span><span class="n">rpy</span><span class="p">,</span> <span class="n">Vector3d</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span>
-<span class="n">Eigen</span><span class="p">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="n">double</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="o">&gt;</span> <span class="n">p_BoQ_B</span><span class="p">;</span>
-<span class="n">p_BoQ_B</span><span class="o">.</span><span class="n">col</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">=</span> <span class="n">Vector3d</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">);</span>
-<span class="n">p_BoQ_B</span><span class="o">.</span><span class="n">col</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">Vector3d</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">);</span>
-<span class="n">const</span> <span class="n">Eigen</span><span class="p">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="n">double</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="o">&gt;</span> <span class="n">p_AoQ_A</span> <span class="o">=</span> <span class="n">X_AB</span> <span class="o">*</span> <span class="n">p_BoQ_B</span><span class="p">;</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="n">RollPitchYaw</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">rpy</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="mf">0.3</span><span class="p">);</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">X_AB</span><span class="p">(</span><span class="n">rpy</span><span class="p">,</span><span class="w"> </span><span class="n">Vector3d</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">));</span><span class="w"></span>
+<span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">p_BoQ_B</span><span class="p">;</span><span class="w"></span>
+<span class="n">p_BoQ_B</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector3d</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">);</span><span class="w"></span>
+<span class="n">p_BoQ_B</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector3d</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">);</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">p_AoQ_A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">X_AB</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">p_BoQ_B</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.math.RigidTransform.rotation">
@@ -3238,21 +3239,21 @@ RotationMatrix::ProjectToRotationMatrix().</p>
 a RigidTransform constructor whose argument is an Eigen
 <strong>expression</strong>.</p>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">const</span> <span class="n">Vector3</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">position</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">);</span>
-<span class="n">const</span> <span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">X1</span><span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="n">position</span><span class="p">);</span>
-<span class="o">----------------------------------------------</span>
-<span class="n">const</span> <span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">R</span><span class="p">(</span><span class="n">RollPitchYaw</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span>
-<span class="n">Eigen</span><span class="p">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="n">double</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="o">&gt;</span> <span class="n">pose34</span><span class="p">;</span>
-<span class="n">pose34</span> <span class="o">&lt;&lt;</span> <span class="n">R</span><span class="o">.</span><span class="n">matrix</span><span class="p">(),</span> <span class="n">position</span><span class="p">;</span>
-<span class="n">const</span> <span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">X2</span><span class="p">(</span><span class="mf">1.0</span> <span class="o">*</span> <span class="n">pose34</span><span class="p">);</span>
-<span class="o">----------------------------------------------</span>
-<span class="n">Eigen</span><span class="p">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="n">double</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="o">&gt;</span> <span class="n">pose4</span><span class="p">;</span>
-<span class="n">pose4</span> <span class="o">&lt;&lt;</span> <span class="n">R</span><span class="o">.</span><span class="n">matrix</span><span class="p">(),</span> <span class="n">position</span><span class="p">,</span>
-         <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">;</span>
-<span class="n">const</span> <span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">X3</span><span class="p">(</span><span class="n">pose4</span> <span class="o">*</span> <span class="n">pose4</span><span class="p">);</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">position</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">);</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">X1</span><span class="p">(</span><span class="mi">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">position</span><span class="p">);</span><span class="w"></span>
+<span class="o">----------------------------------------------</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">R</span><span class="p">(</span><span class="n">RollPitchYaw</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">));</span><span class="w"></span>
+<span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pose34</span><span class="p">;</span><span class="w"></span>
+<span class="n">pose34</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">R</span><span class="p">.</span><span class="n">matrix</span><span class="p">(),</span><span class="w"> </span><span class="n">position</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">X2</span><span class="p">(</span><span class="mf">1.0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">pose34</span><span class="p">);</span><span class="w"></span>
+<span class="o">----------------------------------------------</span><span class="w"></span>
+<span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pose4</span><span class="p">;</span><span class="w"></span>
+<span class="n">pose4</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">R</span><span class="p">.</span><span class="n">matrix</span><span class="p">(),</span><span class="w"> </span><span class="n">position</span><span class="p">,</span><span class="w"></span>
+<span class="w">         </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">X3</span><span class="p">(</span><span class="n">pose4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">pose4</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py template">
 <dt class="sig sig-object py" id="pydrake.math.RigidTransform_-AutoDiffXd-.cast">
@@ -3265,11 +3266,11 @@ a RigidTransform constructor whose argument is an Eigen
 <span id="pydrake.math.RigidTransform_[AutoDiffXd].cast[AutoDiffXd]"></span><span class="sig-name descname"><span class="pre">cast[AutoDiffXd]</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RigidTransform_" title="pydrake.math.RigidTransform_"><span class="pre">pydrake.math.RigidTransform_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.math.RigidTransform_" title="pydrake.math.RigidTransform_"><span class="pre">pydrake.math.RigidTransform_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.math.RigidTransform_-AutoDiffXd-.cast-AutoDiffXd" title="Permalink to this definition"></a></dt>
 <dd><p>Creates a RigidTransform templatized on a scalar type U from a
 RigidTransform templatized on scalar type T. For example,</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">source</span> <span class="o">=</span> <span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span><span class="p">::</span><span class="n">Identity</span><span class="p">();</span>
-<span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span> <span class="n">foo</span> <span class="o">=</span> <span class="n">source</span><span class="o">.</span><span class="n">cast</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="p">();</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;::</span><span class="n">Identity</span><span class="p">();</span><span class="w"></span>
+<span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">source</span><span class="p">.</span><span class="n">cast</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
 </pre></div>
 </div>
-<dl class="simple">
+</details><dl class="simple">
 <dt>Template parameter <code class="docutils literal notranslate"><span class="pre">U</span></code>:</dt><dd><p>Scalar type on which the returned RigidTransform is templated.</p>
 </dd>
 </dl>
@@ -3295,26 +3296,26 @@ allows cast from type double to AutoDiffXd, but not vice-versa.</p>
 <span id="pydrake.math.RigidTransform_[AutoDiffXd].GetAsMatrix34"></span><span class="sig-name descname"><span class="pre">GetAsMatrix34</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RigidTransform_" title="pydrake.math.RigidTransform_"><span class="pre">pydrake.math.RigidTransform_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.math.RigidTransform_-AutoDiffXd-.GetAsMatrix34" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the 3x4 matrix associated with this RigidTransform, i.e.,
 X_AB.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>┌                ┐
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>┌                ┐
  │ R_AB  p_AoBo_A │
  └                ┘
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.math.RigidTransform_-AutoDiffXd-.GetAsMatrix4">
 <span id="pydrake.math.RigidTransform_[AutoDiffXd].GetAsMatrix4"></span><span class="sig-name descname"><span class="pre">GetAsMatrix4</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RigidTransform_" title="pydrake.math.RigidTransform_"><span class="pre">pydrake.math.RigidTransform_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.math.RigidTransform_-AutoDiffXd-.GetAsMatrix4" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the 4x4 matrix associated with this RigidTransform, i.e.,
 X_AB.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>┌                ┐
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>┌                ┐
  │ R_AB  p_AoBo_A │
  │                │
  │   0      1     │
  └                ┘
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.math.RigidTransform_-AutoDiffXd-.GetMaximumAbsoluteDifference">
@@ -3555,15 +3556,15 @@ frames A and B.</p>
 see this, let <code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">=</span> <span class="pre">p_AoBo_A</span></code>, <cite>q = p_BoQ_B</cite> and note (X_AB * q)
 * 7 = (p + R_AB * q) * 7 ≠ X_AB * (q * 7) = p + R_AB * (q * 7).</p>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">const</span> <span class="n">RollPitchYaw</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">rpy</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">);</span>
-<span class="n">const</span> <span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">X_AB</span><span class="p">(</span><span class="n">rpy</span><span class="p">,</span> <span class="n">Vector3d</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span>
-<span class="n">Eigen</span><span class="p">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="n">double</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="o">&gt;</span> <span class="n">p_BoQ_B</span><span class="p">;</span>
-<span class="n">p_BoQ_B</span><span class="o">.</span><span class="n">col</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">=</span> <span class="n">Vector3d</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">);</span>
-<span class="n">p_BoQ_B</span><span class="o">.</span><span class="n">col</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">Vector3d</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">);</span>
-<span class="n">const</span> <span class="n">Eigen</span><span class="p">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="n">double</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="o">&gt;</span> <span class="n">p_AoQ_A</span> <span class="o">=</span> <span class="n">X_AB</span> <span class="o">*</span> <span class="n">p_BoQ_B</span><span class="p">;</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="n">RollPitchYaw</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">rpy</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="mf">0.3</span><span class="p">);</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">X_AB</span><span class="p">(</span><span class="n">rpy</span><span class="p">,</span><span class="w"> </span><span class="n">Vector3d</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">));</span><span class="w"></span>
+<span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">p_BoQ_B</span><span class="p">;</span><span class="w"></span>
+<span class="n">p_BoQ_B</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector3d</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">);</span><span class="w"></span>
+<span class="n">p_BoQ_B</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector3d</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">);</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">p_AoQ_A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">X_AB</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">p_BoQ_B</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.math.RigidTransform_-AutoDiffXd-.rotation">
@@ -3942,21 +3943,21 @@ RotationMatrix::ProjectToRotationMatrix().</p>
 a RigidTransform constructor whose argument is an Eigen
 <strong>expression</strong>.</p>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">const</span> <span class="n">Vector3</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">position</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">);</span>
-<span class="n">const</span> <span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">X1</span><span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="n">position</span><span class="p">);</span>
-<span class="o">----------------------------------------------</span>
-<span class="n">const</span> <span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">R</span><span class="p">(</span><span class="n">RollPitchYaw</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span>
-<span class="n">Eigen</span><span class="p">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="n">double</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="o">&gt;</span> <span class="n">pose34</span><span class="p">;</span>
-<span class="n">pose34</span> <span class="o">&lt;&lt;</span> <span class="n">R</span><span class="o">.</span><span class="n">matrix</span><span class="p">(),</span> <span class="n">position</span><span class="p">;</span>
-<span class="n">const</span> <span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">X2</span><span class="p">(</span><span class="mf">1.0</span> <span class="o">*</span> <span class="n">pose34</span><span class="p">);</span>
-<span class="o">----------------------------------------------</span>
-<span class="n">Eigen</span><span class="p">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="n">double</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="o">&gt;</span> <span class="n">pose4</span><span class="p">;</span>
-<span class="n">pose4</span> <span class="o">&lt;&lt;</span> <span class="n">R</span><span class="o">.</span><span class="n">matrix</span><span class="p">(),</span> <span class="n">position</span><span class="p">,</span>
-         <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">;</span>
-<span class="n">const</span> <span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">X3</span><span class="p">(</span><span class="n">pose4</span> <span class="o">*</span> <span class="n">pose4</span><span class="p">);</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">position</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">);</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">X1</span><span class="p">(</span><span class="mi">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">position</span><span class="p">);</span><span class="w"></span>
+<span class="o">----------------------------------------------</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">R</span><span class="p">(</span><span class="n">RollPitchYaw</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">));</span><span class="w"></span>
+<span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pose34</span><span class="p">;</span><span class="w"></span>
+<span class="n">pose34</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">R</span><span class="p">.</span><span class="n">matrix</span><span class="p">(),</span><span class="w"> </span><span class="n">position</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">X2</span><span class="p">(</span><span class="mf">1.0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">pose34</span><span class="p">);</span><span class="w"></span>
+<span class="o">----------------------------------------------</span><span class="w"></span>
+<span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pose4</span><span class="p">;</span><span class="w"></span>
+<span class="n">pose4</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">R</span><span class="p">.</span><span class="n">matrix</span><span class="p">(),</span><span class="w"> </span><span class="n">position</span><span class="p">,</span><span class="w"></span>
+<span class="w">         </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">X3</span><span class="p">(</span><span class="n">pose4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">pose4</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py template">
 <dt class="sig sig-object py" id="pydrake.math.RigidTransform_-Expression-.cast">
@@ -3969,11 +3970,11 @@ a RigidTransform constructor whose argument is an Eigen
 <span id="pydrake.math.RigidTransform_[Expression].cast[Expression]"></span><span class="sig-name descname"><span class="pre">cast[Expression]</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RigidTransform_" title="pydrake.math.RigidTransform_"><span class="pre">pydrake.math.RigidTransform_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.math.RigidTransform_" title="pydrake.math.RigidTransform_"><span class="pre">pydrake.math.RigidTransform_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.math.RigidTransform_-Expression-.cast-Expression" title="Permalink to this definition"></a></dt>
 <dd><p>Creates a RigidTransform templatized on a scalar type U from a
 RigidTransform templatized on scalar type T. For example,</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">source</span> <span class="o">=</span> <span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span><span class="p">::</span><span class="n">Identity</span><span class="p">();</span>
-<span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span> <span class="n">foo</span> <span class="o">=</span> <span class="n">source</span><span class="o">.</span><span class="n">cast</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="p">();</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;::</span><span class="n">Identity</span><span class="p">();</span><span class="w"></span>
+<span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">source</span><span class="p">.</span><span class="n">cast</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
 </pre></div>
 </div>
-<dl class="simple">
+</details><dl class="simple">
 <dt>Template parameter <code class="docutils literal notranslate"><span class="pre">U</span></code>:</dt><dd><p>Scalar type on which the returned RigidTransform is templated.</p>
 </dd>
 </dl>
@@ -3999,26 +4000,26 @@ allows cast from type double to AutoDiffXd, but not vice-versa.</p>
 <span id="pydrake.math.RigidTransform_[Expression].GetAsMatrix34"></span><span class="sig-name descname"><span class="pre">GetAsMatrix34</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RigidTransform_" title="pydrake.math.RigidTransform_"><span class="pre">pydrake.math.RigidTransform_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.math.RigidTransform_-Expression-.GetAsMatrix34" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the 3x4 matrix associated with this RigidTransform, i.e.,
 X_AB.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>┌                ┐
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>┌                ┐
  │ R_AB  p_AoBo_A │
  └                ┘
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.math.RigidTransform_-Expression-.GetAsMatrix4">
 <span id="pydrake.math.RigidTransform_[Expression].GetAsMatrix4"></span><span class="sig-name descname"><span class="pre">GetAsMatrix4</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RigidTransform_" title="pydrake.math.RigidTransform_"><span class="pre">pydrake.math.RigidTransform_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.math.RigidTransform_-Expression-.GetAsMatrix4" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the 4x4 matrix associated with this RigidTransform, i.e.,
 X_AB.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>┌                ┐
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>┌                ┐
  │ R_AB  p_AoBo_A │
  │                │
  │   0      1     │
  └                ┘
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.math.RigidTransform_-Expression-.GetMaximumAbsoluteDifference">
@@ -4259,15 +4260,15 @@ frames A and B.</p>
 see this, let <code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">=</span> <span class="pre">p_AoBo_A</span></code>, <cite>q = p_BoQ_B</cite> and note (X_AB * q)
 * 7 = (p + R_AB * q) * 7 ≠ X_AB * (q * 7) = p + R_AB * (q * 7).</p>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">const</span> <span class="n">RollPitchYaw</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">rpy</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">);</span>
-<span class="n">const</span> <span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">X_AB</span><span class="p">(</span><span class="n">rpy</span><span class="p">,</span> <span class="n">Vector3d</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span>
-<span class="n">Eigen</span><span class="p">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="n">double</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="o">&gt;</span> <span class="n">p_BoQ_B</span><span class="p">;</span>
-<span class="n">p_BoQ_B</span><span class="o">.</span><span class="n">col</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">=</span> <span class="n">Vector3d</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">);</span>
-<span class="n">p_BoQ_B</span><span class="o">.</span><span class="n">col</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">Vector3d</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">);</span>
-<span class="n">const</span> <span class="n">Eigen</span><span class="p">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="n">double</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="o">&gt;</span> <span class="n">p_AoQ_A</span> <span class="o">=</span> <span class="n">X_AB</span> <span class="o">*</span> <span class="n">p_BoQ_B</span><span class="p">;</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="n">RollPitchYaw</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">rpy</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="mf">0.3</span><span class="p">);</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">X_AB</span><span class="p">(</span><span class="n">rpy</span><span class="p">,</span><span class="w"> </span><span class="n">Vector3d</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">));</span><span class="w"></span>
+<span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">p_BoQ_B</span><span class="p">;</span><span class="w"></span>
+<span class="n">p_BoQ_B</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector3d</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">);</span><span class="w"></span>
+<span class="n">p_BoQ_B</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector3d</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">);</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">p_AoQ_A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">X_AB</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">p_BoQ_B</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.math.RigidTransform_-Expression-.rotation">
@@ -4415,13 +4416,13 @@ Body-fixed (intrinsic) Z-Y-X rotation by “yaw-pitch-roll” angles <code class
 <span class="pre">p,</span> <span class="pre">r]</span></code>. The rotation matrix <code class="docutils literal notranslate"><span class="pre">R_AD</span></code> associated with this
 roll-pitch-yaw <code class="docutils literal notranslate"><span class="pre">[r,</span> <span class="pre">p,</span> <span class="pre">y]</span></code> rotation sequence is equal to the matrix
 multiplication shown below.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>⎡cos(y) -sin(y)  0⎤   ⎡ cos(p)  0  sin(p)⎤   ⎡1      0        0 ⎤
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>⎡cos(y) -sin(y)  0⎤   ⎡ cos(p)  0  sin(p)⎤   ⎡1      0        0 ⎤
 R_AD = ⎢sin(y)  cos(y)  0⎥ * ⎢     0   1      0 ⎥ * ⎢0  cos(r)  -sin(r)⎥
        ⎣    0       0   1⎦   ⎣-sin(p)  0  cos(p)⎦   ⎣0  sin(r)   cos(r)⎦
      =       R_AB          *        R_BC          *        R_CD
 </pre></div>
 </div>
-<div class="admonition note">
+</details><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>In this discussion, A is the Space frame and D is the Body frame.
 One way to visualize this rotation sequence is by introducing
@@ -4562,12 +4563,12 @@ calculated via the 3x3 matrix Nc⁻¹ (the inverse of the matrix Nc
 documented in CalcMatrixRelatingRpyDtToAngularVelocityInChild()).</p>
 </dd>
 </dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>⌈ ω0 ⌉         ⌈ ṙ ⌉            ⌈ 1      0        -sin(p)    ⌉
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>⌈ ω0 ⌉         ⌈ ṙ ⌉            ⌈ 1      0        -sin(p)    ⌉
 | ω1 |  = Nc⁻¹ | ṗ |     Nc⁻¹ = | 0   cos(r)   sin(r)*cos(p) |
 ⌊ ω2 ⌋ᴅ        ⌊ ẏ ⌋            ⌊ 0  -sin(r)   cos(r)*cos(p) ⌋
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.math.RollPitchYaw.CalcAngularVelocityInParentFromRpyDt">
@@ -4589,12 +4590,12 @@ Np documented in
 CalcMatrixRelatingRpyDtToAngularVelocityInParent()).</p>
 </dd>
 </dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>⌈ ωx ⌉         ⌈ ṙ ⌉            ⌈ cos(y)*cos(p)  -sin(y)  0 ⌉
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>⌈ ωx ⌉         ⌈ ṙ ⌉            ⌈ cos(y)*cos(p)  -sin(y)  0 ⌉
 | ωy |  = Np⁻¹ | ṗ |     Np⁻¹ = | sin(y)*cos(p)   cos(y)  0 |
 ⌊ ωz ⌋ᴀ        ⌊ ẏ ⌋            ⌊   -sin(p)         0     1 ⌋
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.math.RollPitchYaw.CalcRotationMatrixDt">
@@ -4799,13 +4800,13 @@ Body-fixed (intrinsic) Z-Y-X rotation by “yaw-pitch-roll” angles <code class
 <span class="pre">p,</span> <span class="pre">r]</span></code>. The rotation matrix <code class="docutils literal notranslate"><span class="pre">R_AD</span></code> associated with this
 roll-pitch-yaw <code class="docutils literal notranslate"><span class="pre">[r,</span> <span class="pre">p,</span> <span class="pre">y]</span></code> rotation sequence is equal to the matrix
 multiplication shown below.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>⎡cos(y) -sin(y)  0⎤   ⎡ cos(p)  0  sin(p)⎤   ⎡1      0        0 ⎤
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>⎡cos(y) -sin(y)  0⎤   ⎡ cos(p)  0  sin(p)⎤   ⎡1      0        0 ⎤
 R_AD = ⎢sin(y)  cos(y)  0⎥ * ⎢     0   1      0 ⎥ * ⎢0  cos(r)  -sin(r)⎥
        ⎣    0       0   1⎦   ⎣-sin(p)  0  cos(p)⎦   ⎣0  sin(r)   cos(r)⎦
      =       R_AB          *        R_BC          *        R_CD
 </pre></div>
 </div>
-<div class="admonition note">
+</details><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>In this discussion, A is the Space frame and D is the Body frame.
 One way to visualize this rotation sequence is by introducing
@@ -4941,12 +4942,12 @@ calculated via the 3x3 matrix Nc⁻¹ (the inverse of the matrix Nc
 documented in CalcMatrixRelatingRpyDtToAngularVelocityInChild()).</p>
 </dd>
 </dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>⌈ ω0 ⌉         ⌈ ṙ ⌉            ⌈ 1      0        -sin(p)    ⌉
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>⌈ ω0 ⌉         ⌈ ṙ ⌉            ⌈ 1      0        -sin(p)    ⌉
 | ω1 |  = Nc⁻¹ | ṗ |     Nc⁻¹ = | 0   cos(r)   sin(r)*cos(p) |
 ⌊ ω2 ⌋ᴅ        ⌊ ẏ ⌋            ⌊ 0  -sin(r)   cos(r)*cos(p) ⌋
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.math.RollPitchYaw_-AutoDiffXd-.CalcAngularVelocityInParentFromRpyDt">
@@ -4968,12 +4969,12 @@ Np documented in
 CalcMatrixRelatingRpyDtToAngularVelocityInParent()).</p>
 </dd>
 </dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>⌈ ωx ⌉         ⌈ ṙ ⌉            ⌈ cos(y)*cos(p)  -sin(y)  0 ⌉
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>⌈ ωx ⌉         ⌈ ṙ ⌉            ⌈ cos(y)*cos(p)  -sin(y)  0 ⌉
 | ωy |  = Np⁻¹ | ṗ |     Np⁻¹ = | sin(y)*cos(p)   cos(y)  0 |
 ⌊ ωz ⌋ᴀ        ⌊ ẏ ⌋            ⌊   -sin(p)         0     1 ⌋
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.math.RollPitchYaw_-AutoDiffXd-.CalcRotationMatrixDt">
@@ -5172,13 +5173,13 @@ Body-fixed (intrinsic) Z-Y-X rotation by “yaw-pitch-roll” angles <code class
 <span class="pre">p,</span> <span class="pre">r]</span></code>. The rotation matrix <code class="docutils literal notranslate"><span class="pre">R_AD</span></code> associated with this
 roll-pitch-yaw <code class="docutils literal notranslate"><span class="pre">[r,</span> <span class="pre">p,</span> <span class="pre">y]</span></code> rotation sequence is equal to the matrix
 multiplication shown below.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>⎡cos(y) -sin(y)  0⎤   ⎡ cos(p)  0  sin(p)⎤   ⎡1      0        0 ⎤
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>⎡cos(y) -sin(y)  0⎤   ⎡ cos(p)  0  sin(p)⎤   ⎡1      0        0 ⎤
 R_AD = ⎢sin(y)  cos(y)  0⎥ * ⎢     0   1      0 ⎥ * ⎢0  cos(r)  -sin(r)⎥
        ⎣    0       0   1⎦   ⎣-sin(p)  0  cos(p)⎦   ⎣0  sin(r)   cos(r)⎦
      =       R_AB          *        R_BC          *        R_CD
 </pre></div>
 </div>
-<div class="admonition note">
+</details><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>In this discussion, A is the Space frame and D is the Body frame.
 One way to visualize this rotation sequence is by introducing
@@ -5314,12 +5315,12 @@ calculated via the 3x3 matrix Nc⁻¹ (the inverse of the matrix Nc
 documented in CalcMatrixRelatingRpyDtToAngularVelocityInChild()).</p>
 </dd>
 </dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>⌈ ω0 ⌉         ⌈ ṙ ⌉            ⌈ 1      0        -sin(p)    ⌉
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>⌈ ω0 ⌉         ⌈ ṙ ⌉            ⌈ 1      0        -sin(p)    ⌉
 | ω1 |  = Nc⁻¹ | ṗ |     Nc⁻¹ = | 0   cos(r)   sin(r)*cos(p) |
 ⌊ ω2 ⌋ᴅ        ⌊ ẏ ⌋            ⌊ 0  -sin(r)   cos(r)*cos(p) ⌋
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.math.RollPitchYaw_-Expression-.CalcAngularVelocityInParentFromRpyDt">
@@ -5341,12 +5342,12 @@ Np documented in
 CalcMatrixRelatingRpyDtToAngularVelocityInParent()).</p>
 </dd>
 </dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>⌈ ωx ⌉         ⌈ ṙ ⌉            ⌈ cos(y)*cos(p)  -sin(y)  0 ⌉
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>⌈ ωx ⌉         ⌈ ṙ ⌉            ⌈ cos(y)*cos(p)  -sin(y)  0 ⌉
 | ωy |  = Np⁻¹ | ṗ |     Np⁻¹ = | sin(y)*cos(p)   cos(y)  0 |
 ⌊ ωz ⌋ᴀ        ⌊ ẏ ⌋            ⌊   -sin(p)         0     1 ⌋
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.math.RollPitchYaw_-Expression-.CalcRotationMatrixDt">
@@ -5670,13 +5671,13 @@ fixed (intrinsic) Z-Y-X rotation with “yaw-pitch-roll” angles
 rotation matrix <code class="docutils literal notranslate"><span class="pre">R_AD</span></code> equal to the matrix multiplication shown
 below.</p>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>⎡cos(y) -sin(y)  0⎤   ⎡ cos(p)  0  sin(p)⎤   ⎡1      0        0 ⎤
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>⎡cos(y) -sin(y)  0⎤   ⎡ cos(p)  0  sin(p)⎤   ⎡1      0        0 ⎤
 R_AD = ⎢sin(y)  cos(y)  0⎥ * ⎢     0   1      0 ⎥ * ⎢0  cos(r)  -sin(r)⎥
        ⎣    0       0   1⎦   ⎣-sin(p)  0  cos(p)⎦   ⎣0  sin(r)   cos(r)⎦
      =       R_AB          *        R_BC          *        R_CD
 </pre></div>
 </div>
-<div class="admonition note">
+</details><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>In this discussion, A is the Space frame and D is the Body frame.
 One way to visualize this rotation sequence is by introducing
@@ -5719,11 +5720,11 @@ matrix.</p>
 <span id="pydrake.math.RotationMatrix.cast[AutoDiffXd]"></span><span class="sig-name descname"><span class="pre">cast[AutoDiffXd]</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RotationMatrix" title="pydrake.math.RotationMatrix"><span class="pre">pydrake.math.RotationMatrix</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::math::RotationMatrix&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double,</span> <span class="pre">-1,</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">-1,</span> <span class="pre">1&gt;</span> <span class="pre">&gt;</span> <span class="pre">&gt;</span></span></span><a class="headerlink" href="#pydrake.math.RotationMatrix.cast-AutoDiffXd" title="Permalink to this definition"></a></dt>
 <dd><p>Creates a RotationMatrix templatized on a scalar type U from a
 RotationMatrix templatized on scalar type T. For example,</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">source</span> <span class="o">=</span> <span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span><span class="p">::</span><span class="n">Identity</span><span class="p">();</span>
-<span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span> <span class="n">foo</span> <span class="o">=</span> <span class="n">source</span><span class="o">.</span><span class="n">cast</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="p">();</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;::</span><span class="n">Identity</span><span class="p">();</span><span class="w"></span>
+<span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">source</span><span class="p">.</span><span class="n">cast</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
 </pre></div>
 </div>
-<dl class="simple">
+</details><dl class="simple">
 <dt>Template parameter <code class="docutils literal notranslate"><span class="pre">U</span></code>:</dt><dd><p>Scalar type on which the returned RotationMatrix is templated.</p>
 </dd>
 </dl>
@@ -5743,11 +5744,11 @@ allows cast from type double to AutoDiffXd, but not vice-versa.</p>
 <span id="pydrake.math.RotationMatrix.cast[Expression]"></span><span class="sig-name descname"><span class="pre">cast[Expression]</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RotationMatrix" title="pydrake.math.RotationMatrix"><span class="pre">pydrake.math.RotationMatrix</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::math::RotationMatrix&lt;drake::symbolic::Expression&gt;</span></span></span><a class="headerlink" href="#pydrake.math.RotationMatrix.cast-Expression" title="Permalink to this definition"></a></dt>
 <dd><p>Creates a RotationMatrix templatized on a scalar type U from a
 RotationMatrix templatized on scalar type T. For example,</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">source</span> <span class="o">=</span> <span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span><span class="p">::</span><span class="n">Identity</span><span class="p">();</span>
-<span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span> <span class="n">foo</span> <span class="o">=</span> <span class="n">source</span><span class="o">.</span><span class="n">cast</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="p">();</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;::</span><span class="n">Identity</span><span class="p">();</span><span class="w"></span>
+<span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">source</span><span class="p">.</span><span class="n">cast</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
 </pre></div>
 </div>
-<dl class="simple">
+</details><dl class="simple">
 <dt>Template parameter <code class="docutils literal notranslate"><span class="pre">U</span></code>:</dt><dd><p>Scalar type on which the returned RotationMatrix is templated.</p>
 </dd>
 </dl>
@@ -5767,11 +5768,11 @@ allows cast from type double to AutoDiffXd, but not vice-versa.</p>
 <span id="pydrake.math.RotationMatrix.cast[float]"></span><span class="sig-name descname"><span class="pre">cast[float]</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RotationMatrix" title="pydrake.math.RotationMatrix"><span class="pre">pydrake.math.RotationMatrix</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.math.RotationMatrix" title="pydrake.math.RotationMatrix"><span class="pre">pydrake.math.RotationMatrix</span></a></span></span><a class="headerlink" href="#pydrake.math.RotationMatrix.cast-float" title="Permalink to this definition"></a></dt>
 <dd><p>Creates a RotationMatrix templatized on a scalar type U from a
 RotationMatrix templatized on scalar type T. For example,</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">source</span> <span class="o">=</span> <span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span><span class="p">::</span><span class="n">Identity</span><span class="p">();</span>
-<span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span> <span class="n">foo</span> <span class="o">=</span> <span class="n">source</span><span class="o">.</span><span class="n">cast</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="p">();</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;::</span><span class="n">Identity</span><span class="p">();</span><span class="w"></span>
+<span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">source</span><span class="p">.</span><span class="n">cast</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
 </pre></div>
 </div>
-<dl class="simple">
+</details><dl class="simple">
 <dt>Template parameter <code class="docutils literal notranslate"><span class="pre">U</span></code>:</dt><dd><p>Scalar type on which the returned RotationMatrix is templated.</p>
 </dd>
 </dl>
@@ -5950,12 +5951,12 @@ and Bx, By, Bz. Initially, <code class="docutils literal notranslate"><span clas
 then B undergoes a right-handed rotation relative to A by an angle
 <code class="docutils literal notranslate"><span class="pre">theta</span></code> about <code class="docutils literal notranslate"><span class="pre">Ax</span> <span class="pre">=</span> <span class="pre">Bx</span></code>.</p>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>⎡ 1       0                 0  ⎤
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>⎡ 1       0                 0  ⎤
 R_AB = ⎢ 0   cos(theta)   -sin(theta) ⎥
        ⎣ 0   sin(theta)    cos(theta) ⎦
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.math.RotationMatrix.MakeYRotation">
@@ -5979,12 +5980,12 @@ and Bx, By, Bz. Initially, <code class="docutils literal notranslate"><span clas
 then B undergoes a right-handed rotation relative to A by an angle
 <code class="docutils literal notranslate"><span class="pre">theta</span></code> about <code class="docutils literal notranslate"><span class="pre">Ay</span> <span class="pre">=</span> <span class="pre">By</span></code>.</p>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>⎡  cos(theta)   0   sin(theta) ⎤
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>⎡  cos(theta)   0   sin(theta) ⎤
 R_AB = ⎢          0    1           0  ⎥
        ⎣ -sin(theta)   0   cos(theta) ⎦
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.math.RotationMatrix.MakeZRotation">
@@ -6008,12 +6009,12 @@ and Bx, By, Bz. Initially, <code class="docutils literal notranslate"><span clas
 then B undergoes a right-handed rotation relative to A by an angle
 <code class="docutils literal notranslate"><span class="pre">theta</span></code> about <code class="docutils literal notranslate"><span class="pre">Az</span> <span class="pre">=</span> <span class="pre">Bz</span></code>.</p>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>⎡ cos(theta)  -sin(theta)   0 ⎤
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>⎡ cos(theta)  -sin(theta)   0 ⎤
 R_AB = ⎢ sin(theta)   cos(theta)   0 ⎥
        ⎣         0            0    1 ⎦
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.math.RotationMatrix.matrix">
@@ -6078,15 +6079,15 @@ B.</p>
 expressed in frame A.</p>
 </dd>
 </dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">const</span> <span class="n">RollPitchYaw</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">rpy</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">);</span>
-<span class="n">const</span> <span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">R_AB</span><span class="p">(</span><span class="n">rpy</span><span class="p">);</span>
-<span class="n">Eigen</span><span class="p">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="n">double</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="o">&gt;</span> <span class="n">v_B</span><span class="p">;</span>
-<span class="n">v_B</span><span class="o">.</span><span class="n">col</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">=</span> <span class="n">Vector3d</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">);</span>
-<span class="n">v_B</span><span class="o">.</span><span class="n">col</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">Vector3d</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">);</span>
-<span class="n">const</span> <span class="n">Eigen</span><span class="p">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="n">double</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="o">&gt;</span> <span class="n">v_A</span> <span class="o">=</span> <span class="n">R_AB</span> <span class="o">*</span> <span class="n">v_B</span><span class="p">;</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="n">RollPitchYaw</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">rpy</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="mf">0.3</span><span class="p">);</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">R_AB</span><span class="p">(</span><span class="n">rpy</span><span class="p">);</span><span class="w"></span>
+<span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v_B</span><span class="p">;</span><span class="w"></span>
+<span class="n">v_B</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector3d</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">);</span><span class="w"></span>
+<span class="n">v_B</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector3d</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">);</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v_A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">R_AB</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">v_B</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.math.RotationMatrix.ProjectToRotationMatrix">
@@ -6375,13 +6376,13 @@ fixed (intrinsic) Z-Y-X rotation with “yaw-pitch-roll” angles
 rotation matrix <code class="docutils literal notranslate"><span class="pre">R_AD</span></code> equal to the matrix multiplication shown
 below.</p>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>⎡cos(y) -sin(y)  0⎤   ⎡ cos(p)  0  sin(p)⎤   ⎡1      0        0 ⎤
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>⎡cos(y) -sin(y)  0⎤   ⎡ cos(p)  0  sin(p)⎤   ⎡1      0        0 ⎤
 R_AD = ⎢sin(y)  cos(y)  0⎥ * ⎢     0   1      0 ⎥ * ⎢0  cos(r)  -sin(r)⎥
        ⎣    0       0   1⎦   ⎣-sin(p)  0  cos(p)⎦   ⎣0  sin(r)   cos(r)⎦
      =       R_AB          *        R_BC          *        R_CD
 </pre></div>
 </div>
-<div class="admonition note">
+</details><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>In this discussion, A is the Space frame and D is the Body frame.
 One way to visualize this rotation sequence is by introducing
@@ -6424,11 +6425,11 @@ matrix.</p>
 <span id="pydrake.math.RotationMatrix_[AutoDiffXd].cast[AutoDiffXd]"></span><span class="sig-name descname"><span class="pre">cast[AutoDiffXd]</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RotationMatrix_" title="pydrake.math.RotationMatrix_"><span class="pre">pydrake.math.RotationMatrix_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.math.RotationMatrix_" title="pydrake.math.RotationMatrix_"><span class="pre">pydrake.math.RotationMatrix_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.math.RotationMatrix_-AutoDiffXd-.cast-AutoDiffXd" title="Permalink to this definition"></a></dt>
 <dd><p>Creates a RotationMatrix templatized on a scalar type U from a
 RotationMatrix templatized on scalar type T. For example,</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">source</span> <span class="o">=</span> <span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span><span class="p">::</span><span class="n">Identity</span><span class="p">();</span>
-<span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span> <span class="n">foo</span> <span class="o">=</span> <span class="n">source</span><span class="o">.</span><span class="n">cast</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="p">();</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;::</span><span class="n">Identity</span><span class="p">();</span><span class="w"></span>
+<span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">source</span><span class="p">.</span><span class="n">cast</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
 </pre></div>
 </div>
-<dl class="simple">
+</details><dl class="simple">
 <dt>Template parameter <code class="docutils literal notranslate"><span class="pre">U</span></code>:</dt><dd><p>Scalar type on which the returned RotationMatrix is templated.</p>
 </dd>
 </dl>
@@ -6607,12 +6608,12 @@ and Bx, By, Bz. Initially, <code class="docutils literal notranslate"><span clas
 then B undergoes a right-handed rotation relative to A by an angle
 <code class="docutils literal notranslate"><span class="pre">theta</span></code> about <code class="docutils literal notranslate"><span class="pre">Ax</span> <span class="pre">=</span> <span class="pre">Bx</span></code>.</p>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>⎡ 1       0                 0  ⎤
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>⎡ 1       0                 0  ⎤
 R_AB = ⎢ 0   cos(theta)   -sin(theta) ⎥
        ⎣ 0   sin(theta)    cos(theta) ⎦
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.math.RotationMatrix_-AutoDiffXd-.MakeYRotation">
@@ -6636,12 +6637,12 @@ and Bx, By, Bz. Initially, <code class="docutils literal notranslate"><span clas
 then B undergoes a right-handed rotation relative to A by an angle
 <code class="docutils literal notranslate"><span class="pre">theta</span></code> about <code class="docutils literal notranslate"><span class="pre">Ay</span> <span class="pre">=</span> <span class="pre">By</span></code>.</p>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>⎡  cos(theta)   0   sin(theta) ⎤
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>⎡  cos(theta)   0   sin(theta) ⎤
 R_AB = ⎢          0    1           0  ⎥
        ⎣ -sin(theta)   0   cos(theta) ⎦
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.math.RotationMatrix_-AutoDiffXd-.MakeZRotation">
@@ -6665,12 +6666,12 @@ and Bx, By, Bz. Initially, <code class="docutils literal notranslate"><span clas
 then B undergoes a right-handed rotation relative to A by an angle
 <code class="docutils literal notranslate"><span class="pre">theta</span></code> about <code class="docutils literal notranslate"><span class="pre">Az</span> <span class="pre">=</span> <span class="pre">Bz</span></code>.</p>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>⎡ cos(theta)  -sin(theta)   0 ⎤
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>⎡ cos(theta)  -sin(theta)   0 ⎤
 R_AB = ⎢ sin(theta)   cos(theta)   0 ⎥
        ⎣         0            0    1 ⎦
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.math.RotationMatrix_-AutoDiffXd-.matrix">
@@ -6735,15 +6736,15 @@ B.</p>
 expressed in frame A.</p>
 </dd>
 </dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">const</span> <span class="n">RollPitchYaw</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">rpy</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">);</span>
-<span class="n">const</span> <span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">R_AB</span><span class="p">(</span><span class="n">rpy</span><span class="p">);</span>
-<span class="n">Eigen</span><span class="p">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="n">double</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="o">&gt;</span> <span class="n">v_B</span><span class="p">;</span>
-<span class="n">v_B</span><span class="o">.</span><span class="n">col</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">=</span> <span class="n">Vector3d</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">);</span>
-<span class="n">v_B</span><span class="o">.</span><span class="n">col</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">Vector3d</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">);</span>
-<span class="n">const</span> <span class="n">Eigen</span><span class="p">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="n">double</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="o">&gt;</span> <span class="n">v_A</span> <span class="o">=</span> <span class="n">R_AB</span> <span class="o">*</span> <span class="n">v_B</span><span class="p">;</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="n">RollPitchYaw</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">rpy</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="mf">0.3</span><span class="p">);</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">R_AB</span><span class="p">(</span><span class="n">rpy</span><span class="p">);</span><span class="w"></span>
+<span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v_B</span><span class="p">;</span><span class="w"></span>
+<span class="n">v_B</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector3d</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">);</span><span class="w"></span>
+<span class="n">v_B</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector3d</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">);</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v_A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">R_AB</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">v_B</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.math.RotationMatrix_-AutoDiffXd-.ProjectToRotationMatrix">
@@ -7026,13 +7027,13 @@ fixed (intrinsic) Z-Y-X rotation with “yaw-pitch-roll” angles
 rotation matrix <code class="docutils literal notranslate"><span class="pre">R_AD</span></code> equal to the matrix multiplication shown
 below.</p>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>⎡cos(y) -sin(y)  0⎤   ⎡ cos(p)  0  sin(p)⎤   ⎡1      0        0 ⎤
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>⎡cos(y) -sin(y)  0⎤   ⎡ cos(p)  0  sin(p)⎤   ⎡1      0        0 ⎤
 R_AD = ⎢sin(y)  cos(y)  0⎥ * ⎢     0   1      0 ⎥ * ⎢0  cos(r)  -sin(r)⎥
        ⎣    0       0   1⎦   ⎣-sin(p)  0  cos(p)⎦   ⎣0  sin(r)   cos(r)⎦
      =       R_AB          *        R_BC          *        R_CD
 </pre></div>
 </div>
-<div class="admonition note">
+</details><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>In this discussion, A is the Space frame and D is the Body frame.
 One way to visualize this rotation sequence is by introducing
@@ -7075,11 +7076,11 @@ matrix.</p>
 <span id="pydrake.math.RotationMatrix_[Expression].cast[Expression]"></span><span class="sig-name descname"><span class="pre">cast[Expression]</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RotationMatrix_" title="pydrake.math.RotationMatrix_"><span class="pre">pydrake.math.RotationMatrix_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.math.RotationMatrix_" title="pydrake.math.RotationMatrix_"><span class="pre">pydrake.math.RotationMatrix_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.math.RotationMatrix_-Expression-.cast-Expression" title="Permalink to this definition"></a></dt>
 <dd><p>Creates a RotationMatrix templatized on a scalar type U from a
 RotationMatrix templatized on scalar type T. For example,</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">source</span> <span class="o">=</span> <span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span><span class="p">::</span><span class="n">Identity</span><span class="p">();</span>
-<span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span> <span class="n">foo</span> <span class="o">=</span> <span class="n">source</span><span class="o">.</span><span class="n">cast</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="p">();</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;::</span><span class="n">Identity</span><span class="p">();</span><span class="w"></span>
+<span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">source</span><span class="p">.</span><span class="n">cast</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
 </pre></div>
 </div>
-<dl class="simple">
+</details><dl class="simple">
 <dt>Template parameter <code class="docutils literal notranslate"><span class="pre">U</span></code>:</dt><dd><p>Scalar type on which the returned RotationMatrix is templated.</p>
 </dd>
 </dl>
@@ -7258,12 +7259,12 @@ and Bx, By, Bz. Initially, <code class="docutils literal notranslate"><span clas
 then B undergoes a right-handed rotation relative to A by an angle
 <code class="docutils literal notranslate"><span class="pre">theta</span></code> about <code class="docutils literal notranslate"><span class="pre">Ax</span> <span class="pre">=</span> <span class="pre">Bx</span></code>.</p>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>⎡ 1       0                 0  ⎤
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>⎡ 1       0                 0  ⎤
 R_AB = ⎢ 0   cos(theta)   -sin(theta) ⎥
        ⎣ 0   sin(theta)    cos(theta) ⎦
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.math.RotationMatrix_-Expression-.MakeYRotation">
@@ -7287,12 +7288,12 @@ and Bx, By, Bz. Initially, <code class="docutils literal notranslate"><span clas
 then B undergoes a right-handed rotation relative to A by an angle
 <code class="docutils literal notranslate"><span class="pre">theta</span></code> about <code class="docutils literal notranslate"><span class="pre">Ay</span> <span class="pre">=</span> <span class="pre">By</span></code>.</p>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>⎡  cos(theta)   0   sin(theta) ⎤
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>⎡  cos(theta)   0   sin(theta) ⎤
 R_AB = ⎢          0    1           0  ⎥
        ⎣ -sin(theta)   0   cos(theta) ⎦
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.math.RotationMatrix_-Expression-.MakeZRotation">
@@ -7316,12 +7317,12 @@ and Bx, By, Bz. Initially, <code class="docutils literal notranslate"><span clas
 then B undergoes a right-handed rotation relative to A by an angle
 <code class="docutils literal notranslate"><span class="pre">theta</span></code> about <code class="docutils literal notranslate"><span class="pre">Az</span> <span class="pre">=</span> <span class="pre">Bz</span></code>.</p>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>⎡ cos(theta)  -sin(theta)   0 ⎤
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>⎡ cos(theta)  -sin(theta)   0 ⎤
 R_AB = ⎢ sin(theta)   cos(theta)   0 ⎥
        ⎣         0            0    1 ⎦
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.math.RotationMatrix_-Expression-.matrix">
@@ -7386,15 +7387,15 @@ B.</p>
 expressed in frame A.</p>
 </dd>
 </dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">const</span> <span class="n">RollPitchYaw</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">rpy</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">);</span>
-<span class="n">const</span> <span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">R_AB</span><span class="p">(</span><span class="n">rpy</span><span class="p">);</span>
-<span class="n">Eigen</span><span class="p">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="n">double</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="o">&gt;</span> <span class="n">v_B</span><span class="p">;</span>
-<span class="n">v_B</span><span class="o">.</span><span class="n">col</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">=</span> <span class="n">Vector3d</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">);</span>
-<span class="n">v_B</span><span class="o">.</span><span class="n">col</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">Vector3d</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">);</span>
-<span class="n">const</span> <span class="n">Eigen</span><span class="p">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="n">double</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="o">&gt;</span> <span class="n">v_A</span> <span class="o">=</span> <span class="n">R_AB</span> <span class="o">*</span> <span class="n">v_B</span><span class="p">;</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="n">RollPitchYaw</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">rpy</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="mf">0.3</span><span class="p">);</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">R_AB</span><span class="p">(</span><span class="n">rpy</span><span class="p">);</span><span class="w"></span>
+<span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v_B</span><span class="p">;</span><span class="w"></span>
+<span class="n">v_B</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector3d</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">);</span><span class="w"></span>
+<span class="n">v_B</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector3d</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">);</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v_A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">R_AB</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">v_B</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.math.RotationMatrix_-Expression-.ProjectToRotationMatrix">

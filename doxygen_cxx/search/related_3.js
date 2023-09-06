@@ -7,6 +7,7 @@ var searchData=
   ['discretetimedelay',['DiscreteTimeDelay',['../classdrake_1_1systems_1_1_discrete_time_delay.html#ad76d8c0407a349406ddfcf1e8fb101cd',1,'drake::systems::DiscreteTimeDelay']]],
   ['doorhinge',['DoorHinge',['../classdrake_1_1multibody_1_1_door_hinge.html#a14f1e33beb90541be76fcb45dea6af74',1,'drake::multibody::DoorHinge']]],
   ['doorhingetest',['DoorHingeTest',['../classdrake_1_1multibody_1_1_door_hinge.html#a94e1abf642466ad4417b7aab5b124e01',1,'drake::multibody::DoorHinge']]],
+  ['drakelcmtester',['DrakeLcmTester',['../classdrake_1_1lcm_1_1_drake_lcm.html#ab89da93f23549481dfbe2463f10c8f7b',1,'drake::lcm::DrakeLcm']]],
   ['drakevisualizer',['DrakeVisualizer',['../classdrake_1_1geometry_1_1_drake_visualizer.html#a7e2bf083378f08a73a9b5fe47d370c68',1,'drake::geometry::DrakeVisualizer']]],
   ['drakevisualizertester',['DrakeVisualizerTester',['../classdrake_1_1geometry_1_1_drake_visualizer.html#ad3c15e2053dcf9e7d5b1dc0ed4fda467',1,'drake::geometry::DrakeVisualizer']]]
 ];

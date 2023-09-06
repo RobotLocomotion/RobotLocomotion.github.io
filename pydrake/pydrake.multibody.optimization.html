@@ -837,10 +837,10 @@ control the interpolation error of the optimization. The gridpoints
 are selected such that the distance between them is below
 <code class="docutils literal notranslate"><span class="pre">max_seg_length</span></code>, there are at least <code class="docutils literal notranslate"><span class="pre">min_points</span></code> number of
 gridpoints and the interpolation error, estimated with the equation</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>errₑₛₜ = max(|q̈ Δₛ²|) / 2
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>errₑₛₜ = max(|q̈ Δₛ²|) / 2
 </pre></div>
 </div>
-<p>where Δₛ is the distance between sequential gridpoints, is less than
+</details><p>where Δₛ is the distance between sequential gridpoints, is less than
 <code class="docutils literal notranslate"><span class="pre">max_err</span></code>. Gridpoints are selected by adding the midpoint between
 two gridpoints whenever the distance between them is too large or the
 estimated error is too high. This results in more points in parts of

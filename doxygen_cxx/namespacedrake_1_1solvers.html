@@ -538,8 +538,7 @@ Enumerations</h2></td></tr>
 <a class="el" href="namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136fa97600ae7efdb5c8fecf91e99463ef4ef">kIterationLimit</a> = -6, 
 <a class="el" href="namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136fae1f645d6b81b09a506f807a18d5e1d4b">kDualInfeasible</a> = -7, 
 <br />
-&#160;&#160;<a class="el" href="namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136fab42685181d035fb42e3da3462b4c0b55">kSolutionResultNotSet</a> = -8, 
-<a class="el" href="namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136fabca339897d605430456c35a1a10a4a9f">kUnknownError</a> = kSolverSpecificError
+&#160;&#160;<a class="el" href="namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136fab42685181d035fb42e3da3462b4c0b55">kSolutionResultNotSet</a> = -8
 <br />
  }</td></tr>
 <tr class="separator:a331f41a3139a87d16e1422bc818c136f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1285,7 +1284,6 @@ s.t tr(FᵢX̂) = (Nᵀa)(i)
 <tr><td class="fieldname"><a id="a331f41a3139a87d16e1422bc818c136fab42685181d035fb42e3da3462b4c0b55"></a>kSolutionResultNotSet&#160;</td><td class="fielddoc"><p>The initial (invalid) solution result. </p>
 <p>This value should be overwritten by the solver during <a class="el" href="namespacedrake_1_1solvers.html#a07bf1722e3e347d7878ae44be98b4b92" title="Solves an optimization program, with optional initial guess and solver options.">Solve()</a>. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a331f41a3139a87d16e1422bc818c136fabca339897d605430456c35a1a10a4a9f"></a>kUnknownError&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
@@ -2651,7 +2649,7 @@ Kinematics" by Hongkai Dai, Andres Valenzuela and Russ Tedrake, IEEE-RAS Interna
 </div><div class="memdoc">
 
 <p>Returns the first non-convex quadratic cost among <code>quadratic_costs</code>. </p>
-<p>If all quadratic costs are convex, then return a nullptr.(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000016">Deprecated:</a></b></dt><dd>This function is no longer public. <br />
+<p>If all quadratic costs are convex, then return a nullptr.(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000013">Deprecated:</a></b></dt><dd>This function is no longer public. <br />
  This will be removed from Drake on or after 2023-11-01.</dd></dl>
 
 </div>

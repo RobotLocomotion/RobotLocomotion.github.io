@@ -1081,25 +1081,25 @@ will be the size of the input port.</p>
 <p>System that outputs the discrete-time derivative of its input: y(t) =
 (u[n] - u[n-1])/h, where n = floor(t/h), where h is the time period.</p>
 <p>This is implemented as the linear system</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>x₀[n+1] = u[n],
-  x₁[n+1] = x₀[n],
-  y(t) = (x₀[n]-x₁[n])/h.
-  x₀[0] and x₁[0] are initialized in the Context (default is zeros).
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">x₀</span><span class="p">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="p">[</span><span class="n">n</span><span class="p">],</span><span class="w"></span>
+<span class="w">  </span><span class="n">x₁</span><span class="p">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x₀</span><span class="p">[</span><span class="n">n</span><span class="p">],</span><span class="w"></span>
+<span class="w">  </span><span class="n">y</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">x₀</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">-</span><span class="n">x₁</span><span class="p">[</span><span class="n">n</span><span class="p">])</span><span class="o">/</span><span class="n">h</span><span class="p">.</span><span class="w"></span>
+<span class="w">  </span><span class="n">x₀</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">x₁</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">initialized</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Context</span><span class="w"> </span><span class="p">(</span><span class="k">default</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">zeros</span><span class="p">).</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Alternatively, when <code class="docutils literal notranslate"><span class="pre">suppress_initial_transient</span> <span class="pre">=</span> <span class="pre">true</span></code> is passed to
+</details><p>Alternatively, when <code class="docutils literal notranslate"><span class="pre">suppress_initial_transient</span> <span class="pre">=</span> <span class="pre">true</span></code> is passed to
 the constructor, the output remains zero until u[n] has been sampled
 twice.</p>
 <p>This is implemented as the non-linear system</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>x₀[n+1] = u[n],
-  x₁[n+1] = x₀[n],
-  x₂[n+1] = x₂[n] + 1,
-  y(t) = { 0.0              if x₂ &lt;  2 }
-         { (x₀[n]-x₁[n])/h  if x₂ &gt;= 2 }
-  x₀[0], x₁[0], x₂[0] are initialized in the Context (default is zeros).
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">x₀</span><span class="p">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="p">[</span><span class="n">n</span><span class="p">],</span><span class="w"></span>
+<span class="w">  </span><span class="n">x₁</span><span class="p">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x₀</span><span class="p">[</span><span class="n">n</span><span class="p">],</span><span class="w"></span>
+<span class="w">  </span><span class="n">x₂</span><span class="p">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x₂</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">y</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mf">0.0</span><span class="w">              </span><span class="k">if</span><span class="w"> </span><span class="n">x₂</span><span class="w"> </span><span class="o">&lt;</span><span class="w">  </span><span class="mi">2</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">         </span><span class="p">{</span><span class="w"> </span><span class="p">(</span><span class="n">x₀</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">-</span><span class="n">x₁</span><span class="p">[</span><span class="n">n</span><span class="p">])</span><span class="o">/</span><span class="n">h</span><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="n">x₂</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="n">x₀</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">x₁</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">x₂</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">initialized</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Context</span><span class="w"> </span><span class="p">(</span><span class="k">default</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">zeros</span><span class="p">).</span><span class="w"></span>
 </pre></div>
 </div>
-<div class="admonition note">
+</details><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Calling set_input_history() effectively disables the transient
 suppression by setting x_2 = 2.</p>
@@ -1153,25 +1153,25 @@ for details and exceptions).</p>
 <p>System that outputs the discrete-time derivative of its input: y(t) =
 (u[n] - u[n-1])/h, where n = floor(t/h), where h is the time period.</p>
 <p>This is implemented as the linear system</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>x₀[n+1] = u[n],
-  x₁[n+1] = x₀[n],
-  y(t) = (x₀[n]-x₁[n])/h.
-  x₀[0] and x₁[0] are initialized in the Context (default is zeros).
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">x₀</span><span class="p">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="p">[</span><span class="n">n</span><span class="p">],</span><span class="w"></span>
+<span class="w">  </span><span class="n">x₁</span><span class="p">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x₀</span><span class="p">[</span><span class="n">n</span><span class="p">],</span><span class="w"></span>
+<span class="w">  </span><span class="n">y</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">x₀</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">-</span><span class="n">x₁</span><span class="p">[</span><span class="n">n</span><span class="p">])</span><span class="o">/</span><span class="n">h</span><span class="p">.</span><span class="w"></span>
+<span class="w">  </span><span class="n">x₀</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">x₁</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">initialized</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Context</span><span class="w"> </span><span class="p">(</span><span class="k">default</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">zeros</span><span class="p">).</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Alternatively, when <code class="docutils literal notranslate"><span class="pre">suppress_initial_transient</span> <span class="pre">=</span> <span class="pre">true</span></code> is passed to
+</details><p>Alternatively, when <code class="docutils literal notranslate"><span class="pre">suppress_initial_transient</span> <span class="pre">=</span> <span class="pre">true</span></code> is passed to
 the constructor, the output remains zero until u[n] has been sampled
 twice.</p>
 <p>This is implemented as the non-linear system</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>x₀[n+1] = u[n],
-  x₁[n+1] = x₀[n],
-  x₂[n+1] = x₂[n] + 1,
-  y(t) = { 0.0              if x₂ &lt;  2 }
-         { (x₀[n]-x₁[n])/h  if x₂ &gt;= 2 }
-  x₀[0], x₁[0], x₂[0] are initialized in the Context (default is zeros).
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">x₀</span><span class="p">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="p">[</span><span class="n">n</span><span class="p">],</span><span class="w"></span>
+<span class="w">  </span><span class="n">x₁</span><span class="p">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x₀</span><span class="p">[</span><span class="n">n</span><span class="p">],</span><span class="w"></span>
+<span class="w">  </span><span class="n">x₂</span><span class="p">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x₂</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">y</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mf">0.0</span><span class="w">              </span><span class="k">if</span><span class="w"> </span><span class="n">x₂</span><span class="w"> </span><span class="o">&lt;</span><span class="w">  </span><span class="mi">2</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">         </span><span class="p">{</span><span class="w"> </span><span class="p">(</span><span class="n">x₀</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">-</span><span class="n">x₁</span><span class="p">[</span><span class="n">n</span><span class="p">])</span><span class="o">/</span><span class="n">h</span><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="n">x₂</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="n">x₀</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">x₁</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">x₂</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">initialized</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Context</span><span class="w"> </span><span class="p">(</span><span class="k">default</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">zeros</span><span class="p">).</span><span class="w"></span>
 </pre></div>
 </div>
-<div class="admonition note">
+</details><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Calling set_input_history() effectively disables the transient
 suppression by setting x_2 = 2.</p>
@@ -1214,25 +1214,25 @@ for details and exceptions).</p>
 <p>System that outputs the discrete-time derivative of its input: y(t) =
 (u[n] - u[n-1])/h, where n = floor(t/h), where h is the time period.</p>
 <p>This is implemented as the linear system</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>x₀[n+1] = u[n],
-  x₁[n+1] = x₀[n],
-  y(t) = (x₀[n]-x₁[n])/h.
-  x₀[0] and x₁[0] are initialized in the Context (default is zeros).
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">x₀</span><span class="p">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="p">[</span><span class="n">n</span><span class="p">],</span><span class="w"></span>
+<span class="w">  </span><span class="n">x₁</span><span class="p">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x₀</span><span class="p">[</span><span class="n">n</span><span class="p">],</span><span class="w"></span>
+<span class="w">  </span><span class="n">y</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">x₀</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">-</span><span class="n">x₁</span><span class="p">[</span><span class="n">n</span><span class="p">])</span><span class="o">/</span><span class="n">h</span><span class="p">.</span><span class="w"></span>
+<span class="w">  </span><span class="n">x₀</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">x₁</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">initialized</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Context</span><span class="w"> </span><span class="p">(</span><span class="k">default</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">zeros</span><span class="p">).</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Alternatively, when <code class="docutils literal notranslate"><span class="pre">suppress_initial_transient</span> <span class="pre">=</span> <span class="pre">true</span></code> is passed to
+</details><p>Alternatively, when <code class="docutils literal notranslate"><span class="pre">suppress_initial_transient</span> <span class="pre">=</span> <span class="pre">true</span></code> is passed to
 the constructor, the output remains zero until u[n] has been sampled
 twice.</p>
 <p>This is implemented as the non-linear system</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>x₀[n+1] = u[n],
-  x₁[n+1] = x₀[n],
-  x₂[n+1] = x₂[n] + 1,
-  y(t) = { 0.0              if x₂ &lt;  2 }
-         { (x₀[n]-x₁[n])/h  if x₂ &gt;= 2 }
-  x₀[0], x₁[0], x₂[0] are initialized in the Context (default is zeros).
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">x₀</span><span class="p">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="p">[</span><span class="n">n</span><span class="p">],</span><span class="w"></span>
+<span class="w">  </span><span class="n">x₁</span><span class="p">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x₀</span><span class="p">[</span><span class="n">n</span><span class="p">],</span><span class="w"></span>
+<span class="w">  </span><span class="n">x₂</span><span class="p">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x₂</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">y</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mf">0.0</span><span class="w">              </span><span class="k">if</span><span class="w"> </span><span class="n">x₂</span><span class="w"> </span><span class="o">&lt;</span><span class="w">  </span><span class="mi">2</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">         </span><span class="p">{</span><span class="w"> </span><span class="p">(</span><span class="n">x₀</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">-</span><span class="n">x₁</span><span class="p">[</span><span class="n">n</span><span class="p">])</span><span class="o">/</span><span class="n">h</span><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="n">x₂</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="n">x₀</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">x₁</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">x₂</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">initialized</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Context</span><span class="w"> </span><span class="p">(</span><span class="k">default</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">zeros</span><span class="p">).</span><span class="w"></span>
 </pre></div>
 </div>
-<div class="admonition note">
+</details><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Calling set_input_history() effectively disables the transient
 suppression by setting x_2 = 2.</p>
@@ -1282,12 +1282,12 @@ size. For abstract-valued DiscreteTimeDelay, z is 1. The state x ∈
 ℝ⁽ᵗ⁺¹⁾ᶻ is partitioned into t+1 blocks x[0] x[1] … x[t], each of
 size z. The input and output are u,y ∈ ℝᶻ. The discrete state space
 dynamics of DiscreteTimeDelay is:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>xₙ₊₁ = xₙ[1] xₙ[2] ... xₙ[t] uₙ  // update
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>xₙ₊₁ = xₙ[1] xₙ[2] ... xₙ[t] uₙ  // update
   yₙ = xₙ[0]                       // output
   x₀ = xᵢₙᵢₜ                       // initialize
 </pre></div>
 </div>
-<p>where xᵢₙᵢₜ = 0 for vector-valued DiscreteTimeDelay and xᵢₙᵢₜ is a
+</details><p>where xᵢₙᵢₜ = 0 for vector-valued DiscreteTimeDelay and xᵢₙᵢₜ is a
 given value for abstract-valued DiscreteTimeDelay.</p>
 <p>See discrete_systems “Discrete Systems” for general information about
 discrete systems in Drake, including how they interact with continuous
@@ -1318,18 +1318,6 @@ and delaying a vector-valued input of size <code class="docutils literal notrans
 <p>Constructs a DiscreteTimeDelay system updating every <code class="docutils literal notranslate"><span class="pre">update_sec</span></code>
 and delaying an abstract-valued input of type <code class="docutils literal notranslate"><span class="pre">abstract_model_value</span></code>
 for <code class="docutils literal notranslate"><span class="pre">delay_time_steps</span></code> number of updates.</p>
-<ol class="arabic simple" start="3">
-<li><p>__init__(self: pydrake.systems.primitives.DiscreteTimeDelay, update_sec: float, delay_timesteps: int, vector_size: int) -&gt; None</p></li>
-</ol>
-<p>Constructs a DiscreteTimeDelay system updating every <code class="docutils literal notranslate"><span class="pre">update_sec</span></code>
-and delaying a vector-valued input of size <code class="docutils literal notranslate"><span class="pre">vector_size</span></code> for
-<code class="docutils literal notranslate"><span class="pre">delay_time_steps</span></code> number of updates.</p>
-<ol class="arabic simple" start="4">
-<li><p>__init__(self: pydrake.systems.primitives.DiscreteTimeDelay, update_sec: float, delay_timesteps: int, abstract_model_value: pydrake.common.value.AbstractValue) -&gt; None</p></li>
-</ol>
-<p>Constructs a DiscreteTimeDelay system updating every <code class="docutils literal notranslate"><span class="pre">update_sec</span></code>
-and delaying an abstract-valued input of type <code class="docutils literal notranslate"><span class="pre">abstract_model_value</span></code>
-for <code class="docutils literal notranslate"><span class="pre">delay_time_steps</span></code> number of updates.</p>
 </dd></dl>
 
 </dd></dl>
@@ -1354,12 +1342,12 @@ size. For abstract-valued DiscreteTimeDelay, z is 1. The state x ∈
 ℝ⁽ᵗ⁺¹⁾ᶻ is partitioned into t+1 blocks x[0] x[1] … x[t], each of
 size z. The input and output are u,y ∈ ℝᶻ. The discrete state space
 dynamics of DiscreteTimeDelay is:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>xₙ₊₁ = xₙ[1] xₙ[2] ... xₙ[t] uₙ  // update
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>xₙ₊₁ = xₙ[1] xₙ[2] ... xₙ[t] uₙ  // update
   yₙ = xₙ[0]                       // output
   x₀ = xᵢₙᵢₜ                       // initialize
 </pre></div>
 </div>
-<p>where xᵢₙᵢₜ = 0 for vector-valued DiscreteTimeDelay and xᵢₙᵢₜ is a
+</details><p>where xᵢₙᵢₜ = 0 for vector-valued DiscreteTimeDelay and xᵢₙᵢₜ is a
 given value for abstract-valued DiscreteTimeDelay.</p>
 <p>See discrete_systems “Discrete Systems” for general information about
 discrete systems in Drake, including how they interact with continuous
@@ -1385,18 +1373,6 @@ and delaying a vector-valued input of size <code class="docutils literal notrans
 <p>Constructs a DiscreteTimeDelay system updating every <code class="docutils literal notranslate"><span class="pre">update_sec</span></code>
 and delaying an abstract-valued input of type <code class="docutils literal notranslate"><span class="pre">abstract_model_value</span></code>
 for <code class="docutils literal notranslate"><span class="pre">delay_time_steps</span></code> number of updates.</p>
-<ol class="arabic simple" start="3">
-<li><p>__init__(self: pydrake.systems.primitives.DiscreteTimeDelay_[AutoDiffXd], update_sec: float, delay_timesteps: int, vector_size: int) -&gt; None</p></li>
-</ol>
-<p>Constructs a DiscreteTimeDelay system updating every <code class="docutils literal notranslate"><span class="pre">update_sec</span></code>
-and delaying a vector-valued input of size <code class="docutils literal notranslate"><span class="pre">vector_size</span></code> for
-<code class="docutils literal notranslate"><span class="pre">delay_time_steps</span></code> number of updates.</p>
-<ol class="arabic simple" start="4">
-<li><p>__init__(self: pydrake.systems.primitives.DiscreteTimeDelay_[AutoDiffXd], update_sec: float, delay_timesteps: int, abstract_model_value: pydrake.common.value.AbstractValue) -&gt; None</p></li>
-</ol>
-<p>Constructs a DiscreteTimeDelay system updating every <code class="docutils literal notranslate"><span class="pre">update_sec</span></code>
-and delaying an abstract-valued input of type <code class="docutils literal notranslate"><span class="pre">abstract_model_value</span></code>
-for <code class="docutils literal notranslate"><span class="pre">delay_time_steps</span></code> number of updates.</p>
 </dd></dl>
 
 </dd></dl>
@@ -1415,12 +1391,12 @@ size. For abstract-valued DiscreteTimeDelay, z is 1. The state x ∈
 ℝ⁽ᵗ⁺¹⁾ᶻ is partitioned into t+1 blocks x[0] x[1] … x[t], each of
 size z. The input and output are u,y ∈ ℝᶻ. The discrete state space
 dynamics of DiscreteTimeDelay is:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>xₙ₊₁ = xₙ[1] xₙ[2] ... xₙ[t] uₙ  // update
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>xₙ₊₁ = xₙ[1] xₙ[2] ... xₙ[t] uₙ  // update
   yₙ = xₙ[0]                       // output
   x₀ = xᵢₙᵢₜ                       // initialize
 </pre></div>
 </div>
-<p>where xᵢₙᵢₜ = 0 for vector-valued DiscreteTimeDelay and xᵢₙᵢₜ is a
+</details><p>where xᵢₙᵢₜ = 0 for vector-valued DiscreteTimeDelay and xᵢₙᵢₜ is a
 given value for abstract-valued DiscreteTimeDelay.</p>
 <p>See discrete_systems “Discrete Systems” for general information about
 discrete systems in Drake, including how they interact with continuous
@@ -1446,18 +1422,6 @@ and delaying a vector-valued input of size <code class="docutils literal notrans
 <p>Constructs a DiscreteTimeDelay system updating every <code class="docutils literal notranslate"><span class="pre">update_sec</span></code>
 and delaying an abstract-valued input of type <code class="docutils literal notranslate"><span class="pre">abstract_model_value</span></code>
 for <code class="docutils literal notranslate"><span class="pre">delay_time_steps</span></code> number of updates.</p>
-<ol class="arabic simple" start="3">
-<li><p>__init__(self: pydrake.systems.primitives.DiscreteTimeDelay_[Expression], update_sec: float, delay_timesteps: int, vector_size: int) -&gt; None</p></li>
-</ol>
-<p>Constructs a DiscreteTimeDelay system updating every <code class="docutils literal notranslate"><span class="pre">update_sec</span></code>
-and delaying a vector-valued input of size <code class="docutils literal notranslate"><span class="pre">vector_size</span></code> for
-<code class="docutils literal notranslate"><span class="pre">delay_time_steps</span></code> number of updates.</p>
-<ol class="arabic simple" start="4">
-<li><p>__init__(self: pydrake.systems.primitives.DiscreteTimeDelay_[Expression], update_sec: float, delay_timesteps: int, abstract_model_value: pydrake.common.value.AbstractValue) -&gt; None</p></li>
-</ol>
-<p>Constructs a DiscreteTimeDelay system updating every <code class="docutils literal notranslate"><span class="pre">update_sec</span></code>
-and delaying an abstract-valued input of type <code class="docutils literal notranslate"><span class="pre">abstract_model_value</span></code>
-for <code class="docutils literal notranslate"><span class="pre">delay_time_steps</span></code> number of updates.</p>
 </dd></dl>
 
 </dd></dl>
@@ -1470,19 +1434,19 @@ for <code class="docutils literal notranslate"><span class="pre">delay_time_step
 i-th input uᵢ into the i-th output zᵢ. This system has one continuous
 state per filtered input signal. Therefore, the i-th state of the
 system zᵢ evolves according to:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">żᵢ</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="n">τᵢ</span> <span class="p">(</span><span class="n">zᵢ</span> <span class="o">-</span> <span class="n">uᵢ</span><span class="p">)</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>żᵢ = -1/τᵢ (zᵢ - uᵢ)
 </pre></div>
 </div>
-<p>where τᵢ is the time constant of the i-th filter. The i-th output of
+</details><p>where τᵢ is the time constant of the i-th filter. The i-th output of
 the system is given by:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yᵢ</span> <span class="o">=</span> <span class="n">zᵢ</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">yᵢ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">zᵢ</span><span class="w"></span>
 </pre></div>
 </div>
-<p>The transfer function for the i-th filter corresponds to:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">H</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">τᵢ</span> <span class="n">s</span><span class="p">)</span>
+</details><p>The transfer function for the i-th filter corresponds to:</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">H</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">τᵢ</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
-<p>The Bode plot for the i-th filter exhibits a cutoff frequency (angular
+</details><p>The Bode plot for the i-th filter exhibits a cutoff frequency (angular
 frequency) at 1/τᵢ and a gain of one. For frequencies higher than the
 cutoff frequency, the Bode plot approaches a 20 dB per decade negative
 slope. The Bode plot in phase exhibits a -90 degrees shift (lag) for
@@ -1568,19 +1532,19 @@ signal.</p>
 i-th input uᵢ into the i-th output zᵢ. This system has one continuous
 state per filtered input signal. Therefore, the i-th state of the
 system zᵢ evolves according to:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">żᵢ</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="n">τᵢ</span> <span class="p">(</span><span class="n">zᵢ</span> <span class="o">-</span> <span class="n">uᵢ</span><span class="p">)</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>żᵢ = -1/τᵢ (zᵢ - uᵢ)
 </pre></div>
 </div>
-<p>where τᵢ is the time constant of the i-th filter. The i-th output of
+</details><p>where τᵢ is the time constant of the i-th filter. The i-th output of
 the system is given by:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yᵢ</span> <span class="o">=</span> <span class="n">zᵢ</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">yᵢ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">zᵢ</span><span class="w"></span>
 </pre></div>
 </div>
-<p>The transfer function for the i-th filter corresponds to:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">H</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">τᵢ</span> <span class="n">s</span><span class="p">)</span>
+</details><p>The transfer function for the i-th filter corresponds to:</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">H</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">τᵢ</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
-<p>The Bode plot for the i-th filter exhibits a cutoff frequency (angular
+</details><p>The Bode plot for the i-th filter exhibits a cutoff frequency (angular
 frequency) at 1/τᵢ and a gain of one. For frequencies higher than the
 cutoff frequency, the Bode plot approaches a 20 dB per decade negative
 slope. The Bode plot in phase exhibits a -90 degrees shift (lag) for
@@ -1655,19 +1619,19 @@ signal.</p>
 i-th input uᵢ into the i-th output zᵢ. This system has one continuous
 state per filtered input signal. Therefore, the i-th state of the
 system zᵢ evolves according to:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">żᵢ</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="n">τᵢ</span> <span class="p">(</span><span class="n">zᵢ</span> <span class="o">-</span> <span class="n">uᵢ</span><span class="p">)</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>żᵢ = -1/τᵢ (zᵢ - uᵢ)
 </pre></div>
 </div>
-<p>where τᵢ is the time constant of the i-th filter. The i-th output of
+</details><p>where τᵢ is the time constant of the i-th filter. The i-th output of
 the system is given by:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yᵢ</span> <span class="o">=</span> <span class="n">zᵢ</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">yᵢ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">zᵢ</span><span class="w"></span>
 </pre></div>
 </div>
-<p>The transfer function for the i-th filter corresponds to:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">H</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">τᵢ</span> <span class="n">s</span><span class="p">)</span>
+</details><p>The transfer function for the i-th filter corresponds to:</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">H</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">τᵢ</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
-<p>The Bode plot for the i-th filter exhibits a cutoff frequency (angular
+</details><p>The Bode plot for the i-th filter exhibits a cutoff frequency (angular
 frequency) at 1/τᵢ and a gain of one. For frequencies higher than the
 cutoff frequency, the Bode plot approaches a 20 dB per decade negative
 slope. The Bode plot in phase exhibits a -90 degrees shift (lag) for
@@ -4655,7 +4619,7 @@ an input port is created.</p>
 with a velocity estimated with the DiscreteDerivative into a single
 output vector with positions and velocities stacked. This assumes that
 the velocities are equal to the time derivative of the positions.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>┌─────┐
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>┌─────┐
 position ───┬───────────────────&gt;│     │
             │                    │ Mux ├──&gt; state
             │   ┌────────────┐   │     │
@@ -4664,7 +4628,7 @@ position ───┬───────────────────&g
                 └────────────┘
 </pre></div>
 </div>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">position&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>StateInterpolatorWithDiscreteDerivative</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; state</td></tr></table></td></tr></table><div class="admonition note">
+</details><table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">position&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>StateInterpolatorWithDiscreteDerivative</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; state</td></tr></table></td></tr></table><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This class is templated; see <a class="reference internal" href="#pydrake.systems.primitives.StateInterpolatorWithDiscreteDerivative_" title="pydrake.systems.primitives.StateInterpolatorWithDiscreteDerivative_"><code class="xref py py-class docutils literal notranslate"><span class="pre">StateInterpolatorWithDiscreteDerivative_</span></code></a>
 for the list of instantiations.</p>
@@ -4735,7 +4699,7 @@ of the output port; it has no effect on the feedthrough position.</p>
 with a velocity estimated with the DiscreteDerivative into a single
 output vector with positions and velocities stacked. This assumes that
 the velocities are equal to the time derivative of the positions.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>┌─────┐
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>┌─────┐
 position ───┬───────────────────&gt;│     │
             │                    │ Mux ├──&gt; state
             │   ┌────────────┐   │     │
@@ -4744,7 +4708,7 @@ position ───┬───────────────────&g
                 └────────────┘
 </pre></div>
 </div>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">position&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>StateInterpolatorWithDiscreteDerivative</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; state</td></tr></table></td></tr></table><dl class="py method">
+</details><table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">position&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>StateInterpolatorWithDiscreteDerivative</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; state</td></tr></table></td></tr></table><dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.primitives.StateInterpolatorWithDiscreteDerivative_-AutoDiffXd-.__init__">
 <span id="pydrake.systems.primitives.StateInterpolatorWithDiscreteDerivative_[AutoDiffXd].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.StateInterpolatorWithDiscreteDerivative_" title="pydrake.systems.primitives.StateInterpolatorWithDiscreteDerivative_"><span class="pre">pydrake.systems.primitives.StateInterpolatorWithDiscreteDerivative_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_positions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_step</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">suppress_initial_transient</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.StateInterpolatorWithDiscreteDerivative_-AutoDiffXd-.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Constructor taking <code class="docutils literal notranslate"><span class="pre">num_positions</span></code>, the size of the position vector
@@ -4804,7 +4768,7 @@ of the output port; it has no effect on the feedthrough position.</p>
 with a velocity estimated with the DiscreteDerivative into a single
 output vector with positions and velocities stacked. This assumes that
 the velocities are equal to the time derivative of the positions.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>┌─────┐
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>┌─────┐
 position ───┬───────────────────&gt;│     │
             │                    │ Mux ├──&gt; state
             │   ┌────────────┐   │     │
@@ -4813,7 +4777,7 @@ position ───┬───────────────────&g
                 └────────────┘
 </pre></div>
 </div>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">position&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>StateInterpolatorWithDiscreteDerivative</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; state</td></tr></table></td></tr></table><dl class="py method">
+</details><table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">position&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>StateInterpolatorWithDiscreteDerivative</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; state</td></tr></table></td></tr></table><dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.primitives.StateInterpolatorWithDiscreteDerivative_-Expression-.__init__">
 <span id="pydrake.systems.primitives.StateInterpolatorWithDiscreteDerivative_[Expression].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.StateInterpolatorWithDiscreteDerivative_" title="pydrake.systems.primitives.StateInterpolatorWithDiscreteDerivative_"><span class="pre">pydrake.systems.primitives.StateInterpolatorWithDiscreteDerivative_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_positions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_step</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">suppress_initial_transient</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.StateInterpolatorWithDiscreteDerivative_-Expression-.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Constructor taking <code class="docutils literal notranslate"><span class="pre">num_positions</span></code>, the size of the position vector
@@ -4878,14 +4842,14 @@ ports.</p>
 <p>See SymbolicVectorSystemBuilder to make the construction a little
 nicer.</p>
 <p>For example, to define the system: ẋ = -x + x³, y = x, we could write</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">symbolic</span><span class="p">::</span><span class="n">Variable</span> <span class="n">x</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">);</span>
-  <span class="n">auto</span> <span class="n">system</span> <span class="o">=</span> <span class="n">SymbolicVectorSystemBuilder</span><span class="p">()</span><span class="o">.</span><span class="n">state</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-                                             <span class="o">.</span><span class="n">dynamics</span><span class="p">(</span><span class="o">-</span><span class="n">x</span> <span class="o">+</span> <span class="nb">pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
-                                             <span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-                                             <span class="o">.</span><span class="n">Build</span><span class="p">();</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">symbolic</span><span class="o">::</span><span class="n">Variable</span><span class="w"> </span><span class="nf">x</span><span class="p">(</span><span class="s">&quot;x&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">system</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SymbolicVectorSystemBuilder</span><span class="p">().</span><span class="n">state</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"></span>
+<span class="w">                                             </span><span class="p">.</span><span class="n">dynamics</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span><span class="w"></span>
+<span class="w">                                             </span><span class="p">.</span><span class="n">output</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"></span>
+<span class="w">                                             </span><span class="p">.</span><span class="n">Build</span><span class="p">();</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Note: This will not be as performant as writing your own LeafSystem.
+</details><p>Note: This will not be as performant as writing your own LeafSystem.
 It is meant primarily for rapid prototyping.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:gray">u0</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>SymbolicVectorSystem</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <span style="color:gray">y0</span></td></tr></table></td></tr></table><p>Either port <code class="docutils literal notranslate"><span class="pre">u0</span></code> or port <code class="docutils literal notranslate"><span class="pre">y0</span></code> may be absent, depending on the
 values supplied at construction.</p>
@@ -5006,14 +4970,14 @@ ports.</p>
 <p>See SymbolicVectorSystemBuilder to make the construction a little
 nicer.</p>
 <p>For example, to define the system: ẋ = -x + x³, y = x, we could write</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">symbolic</span><span class="p">::</span><span class="n">Variable</span> <span class="n">x</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">);</span>
-  <span class="n">auto</span> <span class="n">system</span> <span class="o">=</span> <span class="n">SymbolicVectorSystemBuilder</span><span class="p">()</span><span class="o">.</span><span class="n">state</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-                                             <span class="o">.</span><span class="n">dynamics</span><span class="p">(</span><span class="o">-</span><span class="n">x</span> <span class="o">+</span> <span class="nb">pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
-                                             <span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-                                             <span class="o">.</span><span class="n">Build</span><span class="p">();</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">symbolic</span><span class="o">::</span><span class="n">Variable</span><span class="w"> </span><span class="nf">x</span><span class="p">(</span><span class="s">&quot;x&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">system</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SymbolicVectorSystemBuilder</span><span class="p">().</span><span class="n">state</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"></span>
+<span class="w">                                             </span><span class="p">.</span><span class="n">dynamics</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span><span class="w"></span>
+<span class="w">                                             </span><span class="p">.</span><span class="n">output</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"></span>
+<span class="w">                                             </span><span class="p">.</span><span class="n">Build</span><span class="p">();</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Note: This will not be as performant as writing your own LeafSystem.
+</details><p>Note: This will not be as performant as writing your own LeafSystem.
 It is meant primarily for rapid prototyping.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:gray">u0</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>SymbolicVectorSystem</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <span style="color:gray">y0</span></td></tr></table></td></tr></table><p>Either port <code class="docutils literal notranslate"><span class="pre">u0</span></code> or port <code class="docutils literal notranslate"><span class="pre">y0</span></code> may be absent, depending on the
 values supplied at construction.</p>
@@ -5123,14 +5087,14 @@ ports.</p>
 <p>See SymbolicVectorSystemBuilder to make the construction a little
 nicer.</p>
 <p>For example, to define the system: ẋ = -x + x³, y = x, we could write</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">symbolic</span><span class="p">::</span><span class="n">Variable</span> <span class="n">x</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">);</span>
-  <span class="n">auto</span> <span class="n">system</span> <span class="o">=</span> <span class="n">SymbolicVectorSystemBuilder</span><span class="p">()</span><span class="o">.</span><span class="n">state</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-                                             <span class="o">.</span><span class="n">dynamics</span><span class="p">(</span><span class="o">-</span><span class="n">x</span> <span class="o">+</span> <span class="nb">pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
-                                             <span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-                                             <span class="o">.</span><span class="n">Build</span><span class="p">();</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">symbolic</span><span class="o">::</span><span class="n">Variable</span><span class="w"> </span><span class="nf">x</span><span class="p">(</span><span class="s">&quot;x&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">system</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SymbolicVectorSystemBuilder</span><span class="p">().</span><span class="n">state</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"></span>
+<span class="w">                                             </span><span class="p">.</span><span class="n">dynamics</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span><span class="w"></span>
+<span class="w">                                             </span><span class="p">.</span><span class="n">output</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"></span>
+<span class="w">                                             </span><span class="p">.</span><span class="n">Build</span><span class="p">();</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Note: This will not be as performant as writing your own LeafSystem.
+</details><p>Note: This will not be as performant as writing your own LeafSystem.
 It is meant primarily for rapid prototyping.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:gray">u0</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>SymbolicVectorSystem</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <span style="color:gray">y0</span></td></tr></table></td></tr></table><p>Either port <code class="docutils literal notranslate"><span class="pre">u0</span></code> or port <code class="docutils literal notranslate"><span class="pre">y0</span></code> may be absent, depending on the
 values supplied at construction.</p>
@@ -6402,10 +6366,10 @@ logging.</p>
 <p>An element-wise wrapping block that transforms the specified indices
 of the input signal <code class="docutils literal notranslate"><span class="pre">u</span></code> into the interval <code class="docutils literal notranslate"><span class="pre">[low,</span> <span class="pre">high)</span></code>.
 Precisely, the output element <code class="docutils literal notranslate"><span class="pre">i</span></code> is given the value:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">outputᵢ</span> <span class="o">=</span> <span class="n">inputᵢ</span> <span class="o">+</span> <span class="n">kᵢ</span><span class="o">*</span><span class="p">(</span><span class="n">highᵢ</span><span class="o">-</span><span class="n">lowᵢ</span><span class="p">)</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">outputᵢ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">inputᵢ</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">kᵢ</span><span class="o">*</span><span class="p">(</span><span class="n">highᵢ</span><span class="o">-</span><span class="n">lowᵢ</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
-<p>for the unique integer value <code class="docutils literal notranslate"><span class="pre">kᵢ</span></code> that lands the output in the
+</details><p>for the unique integer value <code class="docutils literal notranslate"><span class="pre">kᵢ</span></code> that lands the output in the
 desired interval.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>WrapToSystem</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -6444,10 +6408,10 @@ and <code class="docutils literal notranslate"><span class="pre">high</span></co
 <p>An element-wise wrapping block that transforms the specified indices
 of the input signal <code class="docutils literal notranslate"><span class="pre">u</span></code> into the interval <code class="docutils literal notranslate"><span class="pre">[low,</span> <span class="pre">high)</span></code>.
 Precisely, the output element <code class="docutils literal notranslate"><span class="pre">i</span></code> is given the value:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">outputᵢ</span> <span class="o">=</span> <span class="n">inputᵢ</span> <span class="o">+</span> <span class="n">kᵢ</span><span class="o">*</span><span class="p">(</span><span class="n">highᵢ</span><span class="o">-</span><span class="n">lowᵢ</span><span class="p">)</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">outputᵢ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">inputᵢ</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">kᵢ</span><span class="o">*</span><span class="p">(</span><span class="n">highᵢ</span><span class="o">-</span><span class="n">lowᵢ</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
-<p>for the unique integer value <code class="docutils literal notranslate"><span class="pre">kᵢ</span></code> that lands the output in the
+</details><p>for the unique integer value <code class="docutils literal notranslate"><span class="pre">kᵢ</span></code> that lands the output in the
 desired interval.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>WrapToSystem</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.primitives.WrapToSystem_-AutoDiffXd-.__init__">
@@ -6475,10 +6439,10 @@ and <code class="docutils literal notranslate"><span class="pre">high</span></co
 <p>An element-wise wrapping block that transforms the specified indices
 of the input signal <code class="docutils literal notranslate"><span class="pre">u</span></code> into the interval <code class="docutils literal notranslate"><span class="pre">[low,</span> <span class="pre">high)</span></code>.
 Precisely, the output element <code class="docutils literal notranslate"><span class="pre">i</span></code> is given the value:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">outputᵢ</span> <span class="o">=</span> <span class="n">inputᵢ</span> <span class="o">+</span> <span class="n">kᵢ</span><span class="o">*</span><span class="p">(</span><span class="n">highᵢ</span><span class="o">-</span><span class="n">lowᵢ</span><span class="p">)</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">outputᵢ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">inputᵢ</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">kᵢ</span><span class="o">*</span><span class="p">(</span><span class="n">highᵢ</span><span class="o">-</span><span class="n">lowᵢ</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
-<p>for the unique integer value <code class="docutils literal notranslate"><span class="pre">kᵢ</span></code> that lands the output in the
+</details><p>for the unique integer value <code class="docutils literal notranslate"><span class="pre">kᵢ</span></code> that lands the output in the
 desired interval.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>WrapToSystem</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.primitives.WrapToSystem_-Expression-.__init__">
@@ -6507,12 +6471,12 @@ and <code class="docutils literal notranslate"><span class="pre">high</span></co
 (discrete or continuous) or abstract, and discrete output y, where the
 y is sampled from u with a fixed period (and optional offset).</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>ZeroOrderHold</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y</td></tr></table></td></tr></table><p>The discrete state space dynamics of ZeroOrderHold is:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>xₙ₊₁ = uₙ     // update
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>xₙ₊₁ = uₙ     // update
   yₙ   = xₙ     // output
   x₀   = xᵢₙᵢₜ  // initialize
 </pre></div>
 </div>
-<p>where xᵢₙᵢₜ = 0 for vector-valued ZeroOrderHold, and xᵢₙᵢₜ is a given
+</details><p>where xᵢₙᵢₜ = 0 for vector-valued ZeroOrderHold, and xᵢₙᵢₜ is a given
 value for abstract-valued ZeroOrderHold.</p>
 <p>See discrete_systems “Discrete Systems” for general information about
 discrete systems in Drake, including how they interact with continuous
@@ -6584,12 +6548,12 @@ update occurs at t=offset_sec, which must be &gt;= 0.</p>
 (discrete or continuous) or abstract, and discrete output y, where the
 y is sampled from u with a fixed period (and optional offset).</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>ZeroOrderHold</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y</td></tr></table></td></tr></table><p>The discrete state space dynamics of ZeroOrderHold is:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>xₙ₊₁ = uₙ     // update
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>xₙ₊₁ = uₙ     // update
   yₙ   = xₙ     // output
   x₀   = xᵢₙᵢₜ  // initialize
 </pre></div>
 </div>
-<p>where xᵢₙᵢₜ = 0 for vector-valued ZeroOrderHold, and xᵢₙᵢₜ is a given
+</details><p>where xᵢₙᵢₜ = 0 for vector-valued ZeroOrderHold, and xᵢₙᵢₜ is a given
 value for abstract-valued ZeroOrderHold.</p>
 <p>See discrete_systems “Discrete Systems” for general information about
 discrete systems in Drake, including how they interact with continuous
@@ -6650,12 +6614,12 @@ update occurs at t=offset_sec, which must be &gt;= 0.</p>
 (discrete or continuous) or abstract, and discrete output y, where the
 y is sampled from u with a fixed period (and optional offset).</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>ZeroOrderHold</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y</td></tr></table></td></tr></table><p>The discrete state space dynamics of ZeroOrderHold is:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>xₙ₊₁ = uₙ     // update
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>xₙ₊₁ = uₙ     // update
   yₙ   = xₙ     // output
   x₀   = xᵢₙᵢₜ  // initialize
 </pre></div>
 </div>
-<p>where xᵢₙᵢₜ = 0 for vector-valued ZeroOrderHold, and xᵢₙᵢₜ is a given
+</details><p>where xᵢₙᵢₜ = 0 for vector-valued ZeroOrderHold, and xᵢₙᵢₜ is a given
 value for abstract-valued ZeroOrderHold.</p>
 <p>See discrete_systems “Discrete Systems” for general information about
 discrete systems in Drake, including how they interact with continuous

@@ -320,7 +320,6 @@ var searchData=
   ['kunboundedcost',['kUnboundedCost',['../classdrake_1_1solvers_1_1_mathematical_program.html#ab953e201d71c0ce608e7c95607a4f256',1,'drake::solvers::MathematicalProgram']]],
   ['kuniform',['kUniform',['../namespacedrake.html#a72383be4710d27584d0821effc6506a5a3ea9f7aca87fd7b64469a0d1119f0b50',1,'drake::kUniform()'],['../namespacedrake_1_1math.html#a2dc222f66e0f5092e8cfe879f24874b2a3ea9f7aca87fd7b64469a0d1119f0b50',1,'drake::math::kUniform()']]],
   ['kunknown',['kUnknown',['../namespacedrake_1_1solvers.html#ab09ca5e1afe9e5a4e8744ecb27839b15a25c2dc47991b3df171ed5192bcf70390',1,'drake::solvers::kUnknown()'],['../namespacedrake_1_1systems.html#a59b7f49353f2a99b6c22d2eaae0fe9e9a25c2dc47991b3df171ed5192bcf70390',1,'drake::systems::kUnknown()']]],
-  ['kunknownerror',['kUnknownError',['../namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136fabca339897d605430456c35a1a10a4a9f',1,'drake::solvers']]],
   ['kunrevisedlemke',['kUnrevisedLemke',['../namespacedrake_1_1solvers.html#a8b06041d7c1fb05f379714f4312306eca045139748552611db2ba18934b6f89f6',1,'drake::solvers']]],
   ['kunspecified',['kUnspecified',['../classdrake_1_1geometry_1_1render_1_1_render_label.html#a1daa747be5f9a14fbc5bec2a244f27f8',1,'drake::geometry::render::RenderLabel']]],
   ['kusedefaultname',['kUseDefaultName',['../namespacedrake_1_1systems.html#a399dec16d9f072ee3a256c35ba3379fa',1,'drake::systems']]],

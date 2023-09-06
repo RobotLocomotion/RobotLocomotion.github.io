@@ -218,14 +218,14 @@ will then update their outputs using their own declared events.</p>
 <p>Note that because this class implements DrakeLcmInterface, any
 subscriber registered on that interface will be serviced during
 simulation, not just <a href="#id1"><span class="problematic" id="id2">`</span></a>LcmSubscriberSystem`s.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">cpp</span><span class="p">}</span>
-<span class="n">DiagramBuilder</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">builder</span><span class="p">;</span>
-<span class="n">auto</span> <span class="n">lcm</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">AddSystem</span><span class="o">&lt;</span><span class="n">LcmInterfaceSystem</span><span class="o">&gt;</span><span class="p">();</span>
-<span class="n">auto</span> <span class="n">subscriber</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">AddSystem</span><span class="p">(</span>
-    <span class="n">LcmSubscriberSystem</span><span class="p">::</span><span class="n">Make</span><span class="o">&lt;</span><span class="n">lcmt_drake_signal</span><span class="o">&gt;</span><span class="p">(</span><span class="s2">&quot;channel&quot;</span><span class="p">,</span> <span class="n">lcm</span><span class="p">));</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">cpp</span><span class="p">}</span><span class="w"></span>
+<span class="n">DiagramBuilder</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">builder</span><span class="p">;</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">lcm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="p">.</span><span class="n">AddSystem</span><span class="o">&lt;</span><span class="n">LcmInterfaceSystem</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">subscriber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="p">.</span><span class="n">AddSystem</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="n">LcmSubscriberSystem</span><span class="o">::</span><span class="n">Make</span><span class="o">&lt;</span><span class="n">lcmt_drake_signal</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;channel&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">lcm</span><span class="p">));</span><span class="w"></span>
 </pre></div>
 </div>
-<div class="admonition warning">
+</details><div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>In C++, this class inherits both LeafSystem and DrakeLcmInterface. However,
 in Python, this only inherits from LeafSystem since our fork of pybind11
@@ -623,12 +623,6 @@ with <cite>LcmPublisherSystem</cite> and <cite>LcmSubscriberSystem</cite> when t
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.lcm.PySerializer.Clone">
-<span class="sig-name descname"><span class="pre">Clone</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.lcm.PySerializer.Clone" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.lcm.PySerializer.CreateDefaultValue">
 <span class="sig-name descname"><span class="pre">CreateDefaultValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.lcm.SerializerInterface" title="pydrake.systems.lcm.SerializerInterface"><span class="pre">pydrake.systems.lcm.SerializerInterface</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.common.value.html#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><span class="pre">pydrake.common.value.AbstractValue</span></a></span></span><a class="headerlink" href="#pydrake.systems.lcm.PySerializer.CreateDefaultValue" title="Permalink to this definition"></a></dt>
 <dd><p>Creates a value-initialized (zeroed) instance of the message object.
@@ -656,12 +650,6 @@ The result can be used as the output object filled in by Deserialize.</p>
 <dt class="sig sig-object py" id="pydrake.systems.lcm.SerializerInterface.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.lcm.SerializerInterface" title="pydrake.systems.lcm.SerializerInterface"><span class="pre">pydrake.systems.lcm.SerializerInterface</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.lcm.SerializerInterface.__init__" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.lcm.SerializerInterface.Clone">
-<span class="sig-name descname"><span class="pre">Clone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.lcm.SerializerInterface" title="pydrake.systems.lcm.SerializerInterface"><span class="pre">pydrake.systems.lcm.SerializerInterface</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.lcm.SerializerInterface" title="pydrake.systems.lcm.SerializerInterface"><span class="pre">pydrake.systems.lcm.SerializerInterface</span></a></span></span><a class="headerlink" href="#pydrake.systems.lcm.SerializerInterface.Clone" title="Permalink to this definition"></a></dt>
-<dd><p>PySerializer objects are immutable, there is no need to copy nor clone them. The deprecated code will be removed from Drake on or after 2023-09-01.</p>
-</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.lcm.SerializerInterface.CreateDefaultValue">

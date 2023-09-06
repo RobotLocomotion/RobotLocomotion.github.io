@@ -523,52 +523,52 @@ following examples illustrate how the <code class="docutils literal notranslate"
 defined in YAML files.</p>
 <p>1. Use the RenderEngineVtk with all default parameters - providing the class
 name as a string.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">yaml</span><span class="p">}</span>
-<span class="n">renderer_class</span><span class="p">:</span> <span class="n">RenderEngineVtk</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">yaml</span><span class="p">}</span><span class="w"></span>
+<span class="nl">renderer_class</span><span class="p">:</span><span class="w"> </span><span class="n">RenderEngineVtk</span><span class="w"></span>
 </pre></div>
 </div>
-<p>2. Use the RenderEngineVtk with all default parameters - providing the
+</details><p>2. Use the RenderEngineVtk with all default parameters - providing the
 engine parameters with default values.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{yaml}
-renderer_class: !RenderEngineVtkParams {}
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">yaml</span><span class="p">}</span><span class="w"></span>
+<span class="nl">renderer_class</span><span class="p">:</span><span class="w"> </span><span class="o">!</span><span class="n">RenderEngineVtkParams</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="3">
+</details><ol class="arabic simple" start="3">
 <li><p>Use the RenderEngineVtk with a customized clear color (black).</p></li>
 </ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{yaml}
-renderer_class: !RenderEngineVtkParams
-default_clear_color: [0, 0, 0]
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">yaml</span><span class="p">}</span><span class="w"></span>
+<span class="nl">renderer_class</span><span class="p">:</span><span class="w"> </span><span class="o">!</span><span class="n">RenderEngineVtkParams</span><span class="w"></span>
+<span class="nl">default_clear_color</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">]</span><span class="w"></span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="4">
+</details><ol class="arabic simple" start="4">
 <li><p>Use the RenderEngineGl with a customized clear color (black).</p></li>
 </ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{yaml}
-renderer_class: !RenderEngineGlParams
-default_clear_color:
-rgba: [0, 0, 0, 1]
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">yaml</span><span class="p">}</span><span class="w"></span>
+<span class="nl">renderer_class</span><span class="p">:</span><span class="w"> </span><span class="o">!</span><span class="n">RenderEngineGlParams</span><span class="w"></span>
+<span class="nl">default_clear_color</span><span class="p">:</span><span class="w"></span>
+<span class="nl">rgba</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"></span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="5">
+</details><ol class="arabic simple" start="5">
 <li><p>Use the RenderEngineGltfClient with fully specified properties.</p></li>
 </ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{yaml}
-renderer_class: !RenderEngineGltfClientParams
-base_url: http://10.10.10.1
-render_endpoint: server
-verbose: true
-cleanup: false
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">yaml</span><span class="p">}</span><span class="w"></span>
+<span class="nl">renderer_class</span><span class="p">:</span><span class="w"> </span><span class="o">!</span><span class="n">RenderEngineGltfClientParams</span><span class="w"></span>
+<span class="nl">base_url</span><span class="p">:</span><span class="w"> </span><span class="n">http</span><span class="o">:</span><span class="c1">//10.10.10.1</span>
+<span class="nl">render_endpoint</span><span class="p">:</span><span class="w"> </span><span class="n">server</span><span class="w"></span>
+<span class="nl">verbose</span><span class="p">:</span><span class="w"> </span><span class="nb">true</span><span class="w"></span>
+<span class="nl">cleanup</span><span class="p">:</span><span class="w"> </span><span class="nb">false</span><span class="w"></span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="6">
+</details><ol class="arabic simple" start="6">
 <li><p>Explicitly request Drake’s default render engine.</p></li>
 </ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">yaml</span><span class="p">}</span>
-<span class="n">renderer_class</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">yaml</span><span class="p">}</span><span class="w"></span>
+<span class="nl">renderer_class</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Things to note:</p>
+</details><p>Things to note:</p>
 <ul class="simple">
 <li><p>When providing the <em>parameters</em> for the engine, the declaration must</p></li>
 </ul>

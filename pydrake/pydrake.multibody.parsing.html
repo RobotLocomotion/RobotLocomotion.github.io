@@ -722,30 +722,30 @@ plant, Parser offers a few different strategies.</p>
 <p>Parser has constructors that take a model name prefix, which gets
 applied to all models loaded with that Parser instance. The resulting
 workflow makes multiple parsers to build models for a single plant:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Parser</span> <span class="n">left_parser</span><span class="p">(</span><span class="n">plant</span><span class="p">,</span> <span class="s2">&quot;left&quot;</span><span class="p">);</span>
- <span class="n">Parser</span> <span class="n">right_parser</span><span class="p">(</span><span class="n">plant</span><span class="p">,</span> <span class="s2">&quot;right&quot;</span><span class="p">);</span>
- <span class="n">left_parser</span><span class="o">.</span><span class="n">AddModels</span><span class="p">(</span><span class="n">arm_model</span><span class="p">);</span>  <span class="o">//</span> <span class="s2">&quot;left::arm&quot;</span>
- <span class="n">right_parser</span><span class="o">.</span><span class="n">AddModels</span><span class="p">(</span><span class="n">arm_model</span><span class="p">);</span>  <span class="o">//</span> <span class="s2">&quot;right::arm&quot;</span>
- <span class="n">left_parser</span><span class="o">.</span><span class="n">AddModels</span><span class="p">(</span><span class="n">gripper_model</span><span class="p">);</span>  <span class="o">//</span> <span class="s2">&quot;left::gripper&quot;</span>
- <span class="n">right_parser</span><span class="o">.</span><span class="n">AddModels</span><span class="p">(</span><span class="n">gripper_model</span><span class="p">);</span>  <span class="o">//</span> <span class="s2">&quot;right::gripper&quot;</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Parser</span><span class="w"> </span><span class="nf">left_parser</span><span class="p">(</span><span class="n">plant</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;left&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w"> </span><span class="n">Parser</span><span class="w"> </span><span class="nf">right_parser</span><span class="p">(</span><span class="n">plant</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;right&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w"> </span><span class="n">left_parser</span><span class="p">.</span><span class="n">AddModels</span><span class="p">(</span><span class="n">arm_model</span><span class="p">);</span><span class="w">  </span><span class="c1">// &quot;left::arm&quot;</span>
+<span class="w"> </span><span class="n">right_parser</span><span class="p">.</span><span class="n">AddModels</span><span class="p">(</span><span class="n">arm_model</span><span class="p">);</span><span class="w">  </span><span class="c1">// &quot;right::arm&quot;</span>
+<span class="w"> </span><span class="n">left_parser</span><span class="p">.</span><span class="n">AddModels</span><span class="p">(</span><span class="n">gripper_model</span><span class="p">);</span><span class="w">  </span><span class="c1">// &quot;left::gripper&quot;</span>
+<span class="w"> </span><span class="n">right_parser</span><span class="p">.</span><span class="n">AddModels</span><span class="p">(</span><span class="n">gripper_model</span><span class="p">);</span><span class="w">  </span><span class="c1">// &quot;right::gripper&quot;</span>
 </pre></div>
 </div>
-<p>For situations where it is convenient to load a model many times,
+</details><p>For situations where it is convenient to load a model many times,
 Parser offers optional auto-renaming. When auto-renaming is enabled,
 name collisions will be resolved by adding a subscript to the name.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Parser</span> <span class="n">parser</span><span class="p">(</span><span class="n">plant</span><span class="p">);</span>
- <span class="n">parser</span><span class="o">.</span><span class="n">SetAutoRenaming</span><span class="p">(</span><span class="n">true</span><span class="p">);</span>
- <span class="o">//</span> <span class="n">Subscripts</span> <span class="n">are</span> <span class="n">compact</span><span class="p">,</span> <span class="ow">and</span> <span class="n">start</span> <span class="n">at</span> <span class="mf">1.</span>
- <span class="n">parser</span><span class="o">.</span><span class="n">AddModels</span><span class="p">(</span><span class="n">rock</span><span class="p">);</span>  <span class="o">//</span> <span class="s2">&quot;rock&quot;</span>
- <span class="n">parser</span><span class="o">.</span><span class="n">AddModels</span><span class="p">(</span><span class="n">rock</span><span class="p">);</span>  <span class="o">//</span> <span class="s2">&quot;rock_1&quot;</span>
- <span class="n">parser</span><span class="o">.</span><span class="n">AddModels</span><span class="p">(</span><span class="n">rock</span><span class="p">);</span>  <span class="o">//</span> <span class="s2">&quot;rock_2&quot;</span>
- <span class="o">//</span> <span class="n">Subscripts</span> <span class="n">of</span> <span class="n">different</span> <span class="n">base</span> <span class="n">names</span> <span class="n">are</span> <span class="n">independent</span><span class="o">.</span>
- <span class="n">parser</span><span class="o">.</span><span class="n">AddModels</span><span class="p">(</span><span class="n">stone</span><span class="p">);</span>  <span class="o">//</span> <span class="s2">&quot;stone&quot;</span>
- <span class="n">parser</span><span class="o">.</span><span class="n">AddModels</span><span class="p">(</span><span class="n">stone</span><span class="p">);</span>  <span class="o">//</span> <span class="s2">&quot;stone_1&quot;</span>
- <span class="n">parser</span><span class="o">.</span><span class="n">AddModels</span><span class="p">(</span><span class="n">stone</span><span class="p">);</span>  <span class="o">//</span> <span class="s2">&quot;stone_2&quot;</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Parser</span><span class="w"> </span><span class="nf">parser</span><span class="p">(</span><span class="n">plant</span><span class="p">);</span><span class="w"></span>
+<span class="w"> </span><span class="n">parser</span><span class="p">.</span><span class="n">SetAutoRenaming</span><span class="p">(</span><span class="nb">true</span><span class="p">);</span><span class="w"></span>
+<span class="w"> </span><span class="c1">// Subscripts are compact, and start at 1.</span>
+<span class="w"> </span><span class="n">parser</span><span class="p">.</span><span class="n">AddModels</span><span class="p">(</span><span class="n">rock</span><span class="p">);</span><span class="w">  </span><span class="c1">// &quot;rock&quot;</span>
+<span class="w"> </span><span class="n">parser</span><span class="p">.</span><span class="n">AddModels</span><span class="p">(</span><span class="n">rock</span><span class="p">);</span><span class="w">  </span><span class="c1">// &quot;rock_1&quot;</span>
+<span class="w"> </span><span class="n">parser</span><span class="p">.</span><span class="n">AddModels</span><span class="p">(</span><span class="n">rock</span><span class="p">);</span><span class="w">  </span><span class="c1">// &quot;rock_2&quot;</span>
+<span class="w"> </span><span class="c1">// Subscripts of different base names are independent.</span>
+<span class="w"> </span><span class="n">parser</span><span class="p">.</span><span class="n">AddModels</span><span class="p">(</span><span class="n">stone</span><span class="p">);</span><span class="w">  </span><span class="c1">// &quot;stone&quot;</span>
+<span class="w"> </span><span class="n">parser</span><span class="p">.</span><span class="n">AddModels</span><span class="p">(</span><span class="n">stone</span><span class="p">);</span><span class="w">  </span><span class="c1">// &quot;stone_1&quot;</span>
+<span class="w"> </span><span class="n">parser</span><span class="p">.</span><span class="n">AddModels</span><span class="p">(</span><span class="n">stone</span><span class="p">);</span><span class="w">  </span><span class="c1">// &quot;stone_2&quot;</span>
 </pre></div>
 </div>
-<p>(Advanced) In the rare case where the user is parsing into a
+</details><p>(Advanced) In the rare case where the user is parsing into a
 MultibodyPlant and SceneGraph but has created them one at a time
 instead of using the more convenient AddMultibodyPlant() or
 AddMultibodyPlantSceneGraph() functions, the Parser constructors

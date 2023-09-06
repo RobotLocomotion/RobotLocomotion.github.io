@@ -1,9 +1,5 @@
 var NAVTREEINDEX45 =
 {
-"dir_563cbebf3859612cccbc3edeae15a602.html":[4,0,0,8,2,0],
-"dir_5d8dbe7a82c2c188fa06f6391bb290bd.html":[4,0,0,8,0],
-"dir_5f7a2023092b91a1e02609fa2c012f50.html":[4,0,0,1,5],
-"dir_5fa915364d7caf39d2fac1314fb2fd74.html":[4,0,0,3,16],
 "dir_646ca0e8f46938429d8373c5298698fa.html":[4,0,0,13],
 "dir_64eb7e16d7e9848cfd92d3316c4eb5e4.html":[4,0,0,3,14],
 "dir_652567ca0f7e786d5ffa3ef8ea9e7fa7.html":[4,0,0,8,10,0],
@@ -249,5 +245,9 @@ var NAVTREEINDEX45 =
 "explicit__error__controlled__integrator__test_8h.html#ac4153fde9da9c197ba8f8019d0e5698d":[4,0,0,12,0,0,3,4],
 "explicit__error__controlled__integrator__test_8h.html#ae954f985e4690afb38b9895d3a3cad05":[4,0,0,12,0,0,3,7],
 "explicit__error__controlled__integrator__test_8h.html#afad80830ebb314cc10d44158a26e0baf":[4,0,0,12,0,0,3,13],
-"explicit__euler__integrator_8h.html":[4,0,0,12,0,4]
+"explicit__euler__integrator_8h.html":[4,0,0,12,0,4],
+"exponential__plus__piecewise__polynomial_8h.html":[4,0,0,1,5,4],
+"expression_2expression_8h.html":[4,0,0,1,3,0,3],
+"expression_2expression_8h.html#a03d536a13db7de62414f5279c60148aa":[4,0,0,1,3,0,3,16],
+"expression_2expression_8h.html#a0a84ca31e769b94d1adcc69789826934":[4,0,0,1,3,0,3,62]
 };

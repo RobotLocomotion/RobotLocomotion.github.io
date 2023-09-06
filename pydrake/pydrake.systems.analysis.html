@@ -239,10 +239,10 @@ default; it may be useful to suppress them when reusing a simulator.</p>
 <dd><p>An abstract class for an integrator for ODEs and DAEs as represented
 by a Drake System. Integrators solve initial value problems of the
 form:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ẋ(t) = f(t, x(t)) with f : ℝ × ℝⁿ → ℝⁿ
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>ẋ(t) = f(t, x(t)) with f : ℝ × ℝⁿ → ℝⁿ
 </pre></div>
 </div>
-<p>(i.e., <code class="docutils literal notranslate"><span class="pre">f()</span></code> is an ordinary differential equation) given initial
+</details><p>(i.e., <code class="docutils literal notranslate"><span class="pre">f()</span></code> is an ordinary differential equation) given initial
 conditions (t₀, x₀). Thus, integrators advance the continuous state of
 a dynamical system forward in time.</p>
 <p>Drake’s subclasses of IntegratorBase&lt;T&gt; should follow the naming
@@ -694,10 +694,10 @@ integrator anymore.</p>
 <dd><p>An abstract class for an integrator for ODEs and DAEs as represented
 by a Drake System. Integrators solve initial value problems of the
 form:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ẋ(t) = f(t, x(t)) with f : ℝ × ℝⁿ → ℝⁿ
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>ẋ(t) = f(t, x(t)) with f : ℝ × ℝⁿ → ℝⁿ
 </pre></div>
 </div>
-<p>(i.e., <code class="docutils literal notranslate"><span class="pre">f()</span></code> is an ordinary differential equation) given initial
+</details><p>(i.e., <code class="docutils literal notranslate"><span class="pre">f()</span></code> is an ordinary differential equation) given initial
 conditions (t₀, x₀). Thus, integrators advance the continuous state of
 a dynamical system forward in time.</p>
 <p>Drake’s subclasses of IntegratorBase&lt;T&gt; should follow the naming
@@ -1138,10 +1138,10 @@ integrator anymore.</p>
 <dd><p>An abstract class for an integrator for ODEs and DAEs as represented
 by a Drake System. Integrators solve initial value problems of the
 form:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ẋ(t) = f(t, x(t)) with f : ℝ × ℝⁿ → ℝⁿ
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>ẋ(t) = f(t, x(t)) with f : ℝ × ℝⁿ → ℝⁿ
 </pre></div>
 </div>
-<p>(i.e., <code class="docutils literal notranslate"><span class="pre">f()</span></code> is an ordinary differential equation) given initial
+</details><p>(i.e., <code class="docutils literal notranslate"><span class="pre">f()</span></code> is an ordinary differential equation) given initial
 conditions (t₀, x₀). Thus, integrators advance the continuous state of
 a dynamical system forward in time.</p>
 <p>Drake’s subclasses of IntegratorBase&lt;T&gt; should follow the naming
@@ -1583,14 +1583,14 @@ integrator anymore.</p>
 random simulations drawn from independent samples of the distributions
 governing the stochastic simulation.</p>
 <p>In pseudo-code, this algorithm implements:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">:</span><span class="n">num_samples</span>
-    <span class="n">const</span> <span class="n">generator_snapshot</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">generator</span><span class="p">)</span>
-    <span class="n">output</span> <span class="o">=</span> <span class="n">RandomSimulation</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">generator</span><span class="p">)</span>
-    <span class="n">data</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">std</span><span class="p">::</span><span class="n">pair</span><span class="p">(</span><span class="n">generator_snapshot</span><span class="p">,</span> <span class="n">output</span><span class="p">)</span>
-  <span class="k">return</span> <span class="n">data</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="o">:</span><span class="n">num_samples</span><span class="w"></span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">generator_snapshot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">deepcopy</span><span class="p">(</span><span class="n">generator</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RandomSimulation</span><span class="p">(...,</span><span class="w"> </span><span class="n">generator</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">data</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="p">(</span><span class="n">generator_snapshot</span><span class="p">,</span><span class="w"> </span><span class="n">output</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">data</span><span class="w"></span>
 </pre></div>
 </div>
-<div class="admonition seealso">
+</details><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>RandomSimulation() for details about <code class="docutils literal notranslate"><span class="pre">make_simulator</span></code>,
 <code class="docutils literal notranslate"><span class="pre">output</span></code>, and <code class="docutils literal notranslate"><span class="pre">final_time</span></code>.</p>
@@ -1664,13 +1664,13 @@ simulator that advanced the state of a system forward in time.</p>
 <dd><p>Run a deterministic simulation of a (stochastic) System using the
 <code class="docutils literal notranslate"><span class="pre">generator</span></code> to instantiate all “random” quantities.</p>
 <p>In pseudo-code, this algorithm implements:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">simulator</span> <span class="o">=</span> <span class="n">make_simulator</span><span class="p">(</span><span class="n">generator</span><span class="p">)</span>
-  <span class="n">simulator</span><span class="o">.</span><span class="n">get_system</span><span class="p">()</span><span class="o">.</span><span class="n">SetRandomContext</span><span class="p">(</span><span class="n">generator</span><span class="p">)</span>
-  <span class="n">simulator</span><span class="o">.</span><span class="n">AdvanceTo</span><span class="p">(</span><span class="n">final_time</span><span class="p">)</span>
-  <span class="k">return</span> <span class="n">output</span><span class="p">(</span><span class="n">simulator</span><span class="o">.</span><span class="n">get_context</span><span class="p">())</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">simulator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">make_simulator</span><span class="p">(</span><span class="n">generator</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">simulator</span><span class="p">.</span><span class="n">get_system</span><span class="p">().</span><span class="n">SetRandomContext</span><span class="p">(</span><span class="n">generator</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">simulator</span><span class="p">.</span><span class="n">AdvanceTo</span><span class="p">(</span><span class="n">final_time</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">output</span><span class="p">(</span><span class="n">simulator</span><span class="p">.</span><span class="n">get_context</span><span class="p">())</span><span class="w"></span>
 </pre></div>
 </div>
-<dl class="simple">
+</details><dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">make_simulator</span></code>:</dt><dd><p>Callers to this method define a stochastic simulation by providing
 the <code class="docutils literal notranslate"><span class="pre">make_simulator</span></code> factory method to return a Simulator using
 the supplied RandomGenerator as the only source of randomness.
@@ -1708,11 +1708,11 @@ premature termination of the simulation (see #4447).</p>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">RandomSimulationResult</span></span><a class="headerlink" href="#pydrake.systems.analysis.RandomSimulationResult" title="Permalink to this definition"></a></dt>
 <dd><p>A snapshot of the generator used to produce the random simulation.
 Use, e.g.,</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">RandomGenerator</span> <span class="n">generator</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">generator_snapshot</span><span class="p">)</span>
-  <span class="n">RandomSimulation</span><span class="p">(</span><span class="n">make_simulator</span><span class="p">,</span> <span class="n">output</span><span class="p">,</span> <span class="n">final_time</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">generator</span><span class="p">)</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">RandomGenerator</span><span class="w"> </span><span class="n">generator</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">generator_snapshot</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">RandomSimulation</span><span class="p">(</span><span class="n">make_simulator</span><span class="p">,</span><span class="w"> </span><span class="n">output</span><span class="p">,</span><span class="w"> </span><span class="n">final_time</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">generator</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
-<p>for a deterministic playback of the sampled simulation.
+</details><p>for a deterministic playback of the sampled simulation.
 RandomNumberEngine concept&lt;/a&gt;, if you wish to serialize the results.
 Note that performing any non-const operations on generator_snapshot
 may advance the state of the generator and make it no longer capable
@@ -1981,16 +1981,16 @@ estimate.</p>
 embedded error estimate was derived using the method mentioned in
 [Hairer, 1993].</p>
 <p>The Butcher tableau for this integrator follows:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">|</span>
-<span class="mi">0</span>      <span class="o">|</span>
-<span class="mi">1</span><span class="o">/</span><span class="mi">2</span>    <span class="o">|</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span>
-<span class="mi">1</span>      <span class="o">|</span> <span class="o">-</span><span class="mi">1</span>          <span class="mi">2</span>
-<span class="o">---------------------------------------------------------------------------</span>
-         <span class="mi">1</span><span class="o">/</span><span class="mi">6</span>         <span class="mi">2</span><span class="o">/</span><span class="mi">3</span>       <span class="mi">1</span><span class="o">/</span><span class="mi">6</span>
-         <span class="mi">0</span>           <span class="mi">1</span>         <span class="mi">0</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="o">|</span><span class="w"></span>
+<span class="mi">0</span><span class="w">      </span><span class="o">|</span><span class="w"></span>
+<span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="w"></span>
+<span class="mi">1</span><span class="w">      </span><span class="o">|</span><span class="w"> </span><span class="mi">-1</span><span class="w">          </span><span class="mi">2</span><span class="w"></span>
+<span class="o">---------------------------------------------------------------------------</span><span class="w"></span>
+<span class="w">         </span><span class="mi">1</span><span class="o">/</span><span class="mi">6</span><span class="w">         </span><span class="mi">2</span><span class="o">/</span><span class="mi">3</span><span class="w">       </span><span class="mi">1</span><span class="o">/</span><span class="mi">6</span><span class="w"></span>
+<span class="w">         </span><span class="mi">0</span><span class="w">           </span><span class="mi">1</span><span class="w">         </span><span class="mi">0</span><span class="w"></span>
 </pre></div>
 </div>
-<p>where the second to last row is the 3rd-order propagated solution and
+</details><p>where the second to last row is the 3rd-order propagated solution and
 the last row is the 2nd-order midpoint used for the error estimate.</p>
 <p>The following documentation is pulled from Simbody’s implementation of
 this integrator: “This is a 3-stage, first-same-as-last (FSAL) 3rd
@@ -2036,16 +2036,16 @@ estimate.</p>
 embedded error estimate was derived using the method mentioned in
 [Hairer, 1993].</p>
 <p>The Butcher tableau for this integrator follows:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">|</span>
-<span class="mi">0</span>      <span class="o">|</span>
-<span class="mi">1</span><span class="o">/</span><span class="mi">2</span>    <span class="o">|</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span>
-<span class="mi">1</span>      <span class="o">|</span> <span class="o">-</span><span class="mi">1</span>          <span class="mi">2</span>
-<span class="o">---------------------------------------------------------------------------</span>
-         <span class="mi">1</span><span class="o">/</span><span class="mi">6</span>         <span class="mi">2</span><span class="o">/</span><span class="mi">3</span>       <span class="mi">1</span><span class="o">/</span><span class="mi">6</span>
-         <span class="mi">0</span>           <span class="mi">1</span>         <span class="mi">0</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="o">|</span><span class="w"></span>
+<span class="mi">0</span><span class="w">      </span><span class="o">|</span><span class="w"></span>
+<span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="w"></span>
+<span class="mi">1</span><span class="w">      </span><span class="o">|</span><span class="w"> </span><span class="mi">-1</span><span class="w">          </span><span class="mi">2</span><span class="w"></span>
+<span class="o">---------------------------------------------------------------------------</span><span class="w"></span>
+<span class="w">         </span><span class="mi">1</span><span class="o">/</span><span class="mi">6</span><span class="w">         </span><span class="mi">2</span><span class="o">/</span><span class="mi">3</span><span class="w">       </span><span class="mi">1</span><span class="o">/</span><span class="mi">6</span><span class="w"></span>
+<span class="w">         </span><span class="mi">0</span><span class="w">           </span><span class="mi">1</span><span class="w">         </span><span class="mi">0</span><span class="w"></span>
 </pre></div>
 </div>
-<p>where the second to last row is the 3rd-order propagated solution and
+</details><p>where the second to last row is the 3rd-order propagated solution and
 the last row is the 2nd-order midpoint used for the error estimate.</p>
 <p>The following documentation is pulled from Simbody’s implementation of
 this integrator: “This is a 3-stage, first-same-as-last (FSAL) 3rd
@@ -2144,7 +2144,7 @@ the pseudocode below.</p>
 the update stages above. This algorithm is given a starting Context
 value <code class="docutils literal notranslate"><span class="pre">{tₛ,</span> <span class="pre">x⁻(tₛ)}</span></code> and returns an end Context value <code class="docutils literal notranslate"><span class="pre">{tₑ,</span>
 <span class="pre">x⁻(tₑ)}</span></code>, where tₑ is <em>no later</em> than a given tₘₐₓ.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>// Advance the trajectory (time and state) from start value {tₛ, x⁻(tₛ)} to an
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>// Advance the trajectory (time and state) from start value {tₛ, x⁻(tₛ)} to an
 // end value {tₑ, x⁻(tₑ)}, where tₛ ≤ tₑ ≤ tₘₐₓ.
 procedure Step(tₛ, x⁻(tₛ), tₘₐₓ)
 
@@ -2186,11 +2186,11 @@ CallMonitor(tₑ, x⁻(tₑ))
 return {tₑ, x⁻(tₑ)}
 </pre></div>
 </div>
-<p>We can use the notation and pseudocode to flesh out the AdvanceTo(),
+</details><p>We can use the notation and pseudocode to flesh out the AdvanceTo(),
 AdvancePendingEvents(), and Initialize() functions. Termination and
 error conditions detected by event handlers or the monitor are
 reported as status returns from these methods.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>// Advance the simulation until time tₘₐₓ.
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>// Advance the simulation until time tₘₐₓ.
 procedure AdvanceTo(tₘₐₓ) → status
 t ← current_time
 while t &lt; tₘₐₓ
@@ -2223,7 +2223,7 @@ DoAnyPublishes(t₀, x⁻(t₀))
 CallMonitor(t₀, x⁻(t₀))
 </pre></div>
 </div>
-<p>Initialize() can be viewed as a “0ᵗʰ step” that occurs before the
+</details><p>Initialize() can be viewed as a “0ᵗʰ step” that occurs before the
 first Step() call as described above. Like Step(), Initialize() first
 performs pending updates (in this case only initialization events can
 be “pending”, and even those may be optionally suppressed). Time
@@ -2354,12 +2354,12 @@ time. A return of 1 means the simulation just matched real time, 2
 means the simulation was twice as fast as real time, 0.5 means it was
 running in 2X slow motion, etc.</p>
 <p>The value returned here is calculated as follows:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">simulated_time_now</span> <span class="o">-</span> <span class="n">initial_simulated_time</span>
-  <span class="n">rate</span> <span class="o">=</span> <span class="o">-------------------------------------------</span>
-               <span class="n">realtime_now</span> <span class="o">-</span> <span class="n">initial_realtime</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">simulated_time_now</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">initial_simulated_time</span><span class="w"></span>
+<span class="w">  </span><span class="n">rate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-------------------------------------------</span><span class="w"></span>
+<span class="w">               </span><span class="n">realtime_now</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">initial_realtime</span><span class="w"></span>
 </pre></div>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">initial</span></code> times are recorded when Initialize() or
+</details><p>The <code class="docutils literal notranslate"><span class="pre">initial</span></code> times are recorded when Initialize() or
 ResetStatistics() is called. The returned rate is undefined if
 Initialize() has not yet been called.</p>
 <dl class="field-list simple">
@@ -2576,46 +2576,46 @@ which any sub-Context can be obtained using
 reference has been captured for use in the monitor.</p>
 <p>** Examples Output time and continuous states whenever the trajectory
 is advanced:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">simulator</span><span class="o">.</span><span class="n">set_monitor</span><span class="p">([](</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">root_context</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">std</span><span class="p">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">root_context</span><span class="o">.</span><span class="n">get_time</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot; &quot;</span>
-            <span class="o">&lt;&lt;</span> <span class="n">root_context</span><span class="o">.</span><span class="n">get_continuous_state_vector</span><span class="p">()</span>
-            <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="p">::</span><span class="n">endl</span><span class="p">;</span>
-  <span class="k">return</span> <span class="n">EventStatus</span><span class="p">::</span><span class="n">Succeeded</span><span class="p">();</span>
-<span class="p">});</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">simulator</span><span class="p">.</span><span class="n">set_monitor</span><span class="p">([](</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">root_context</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">root_context</span><span class="p">.</span><span class="n">get_time</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"></span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">root_context</span><span class="p">.</span><span class="n">get_continuous_state_vector</span><span class="p">()</span><span class="w"></span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">EventStatus</span><span class="o">::</span><span class="n">Succeeded</span><span class="p">();</span><span class="w"></span>
+<span class="p">});</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Terminate early but successfully on a condition in a subsystem of the
+</details><p>Terminate early but successfully on a condition in a subsystem of the
 System diagram being simulated:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">simulator</span><span class="o">.</span><span class="n">set_monitor</span><span class="p">([</span><span class="o">&amp;</span><span class="n">my_subsystem</span><span class="p">](</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">root_context</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">subcontext</span> <span class="o">=</span>
-      <span class="n">my_subsystem</span><span class="o">.</span><span class="n">GetMyContextFromRoot</span><span class="p">(</span><span class="n">root_context</span><span class="p">);</span>
-  <span class="k">if</span> <span class="p">(</span><span class="n">my_subsystem</span><span class="o">.</span><span class="n">GoalReached</span><span class="p">(</span><span class="n">subcontext</span><span class="p">))</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="n">EventStatus</span><span class="p">::</span><span class="n">ReachedTermination</span><span class="p">(</span><span class="n">my_subsystem</span><span class="p">,</span>
-        <span class="s2">&quot;Simulation achieved the desired goal.&quot;</span><span class="p">);</span>
-  <span class="p">}</span>
-  <span class="k">return</span> <span class="n">EventStatus</span><span class="p">::</span><span class="n">Succeeded</span><span class="p">();</span>
-<span class="p">});</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">simulator</span><span class="p">.</span><span class="n">set_monitor</span><span class="p">([</span><span class="o">&amp;</span><span class="n">my_subsystem</span><span class="p">](</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">root_context</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">subcontext</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="w">      </span><span class="n">my_subsystem</span><span class="p">.</span><span class="n">GetMyContextFromRoot</span><span class="p">(</span><span class="n">root_context</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">my_subsystem</span><span class="p">.</span><span class="n">GoalReached</span><span class="p">(</span><span class="n">subcontext</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">EventStatus</span><span class="o">::</span><span class="n">ReachedTermination</span><span class="p">(</span><span class="n">my_subsystem</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s">&quot;Simulation achieved the desired goal.&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">EventStatus</span><span class="o">::</span><span class="n">Succeeded</span><span class="p">();</span><span class="w"></span>
+<span class="p">});</span><span class="w"></span>
 </pre></div>
 </div>
-<p>In the above case, the Simulator’s AdvanceTo() method will return
+</details><p>In the above case, the Simulator’s AdvanceTo() method will return
 early when the subsystem reports that it has reached its goal. The
 returned status will indicate the termination reason, and a
 human-readable termination message containing the message provided by
 the monitor can be obtained with status.FormatMessage().</p>
 <p>Failure due to plant center of mass falling below a threshold:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">simulator</span><span class="o">.</span><span class="n">set_monitor</span><span class="p">([</span><span class="o">&amp;</span><span class="n">plant</span><span class="p">](</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">root_context</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">plant_context</span> <span class="o">=</span>
-      <span class="n">plant</span><span class="o">.</span><span class="n">GetMyContextFromRoot</span><span class="p">(</span><span class="n">root_context</span><span class="p">);</span>
-  <span class="n">const</span> <span class="n">Vector3</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">com</span> <span class="o">=</span>
-      <span class="n">plant</span><span class="o">.</span><span class="n">CalcCenterOfMassPositionInWorld</span><span class="p">(</span><span class="n">plant_context</span><span class="p">);</span>
-  <span class="k">if</span> <span class="p">(</span><span class="n">com</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mf">0.1</span><span class="p">)</span> <span class="p">{</span>  <span class="o">//</span> <span class="n">Check</span> <span class="n">z</span> <span class="n">height</span> <span class="n">of</span> <span class="n">com</span><span class="o">.</span>
-    <span class="k">return</span> <span class="n">EventStatus</span><span class="p">::</span><span class="n">Failed</span><span class="p">(</span><span class="n">plant</span><span class="p">,</span> <span class="s2">&quot;System fell over.&quot;</span><span class="p">);</span>
-  <span class="p">}</span>
-  <span class="k">return</span> <span class="n">EventStatus</span><span class="p">::</span><span class="n">Succeeded</span><span class="p">();</span>
-<span class="p">});</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">simulator</span><span class="p">.</span><span class="n">set_monitor</span><span class="p">([</span><span class="o">&amp;</span><span class="n">plant</span><span class="p">](</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">root_context</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">plant_context</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="w">      </span><span class="n">plant</span><span class="p">.</span><span class="n">GetMyContextFromRoot</span><span class="p">(</span><span class="n">root_context</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">com</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="w">      </span><span class="n">plant</span><span class="p">.</span><span class="n">CalcCenterOfMassPositionInWorld</span><span class="p">(</span><span class="n">plant_context</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">com</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0.1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// Check z height of com.</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">EventStatus</span><span class="o">::</span><span class="n">Failed</span><span class="p">(</span><span class="n">plant</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;System fell over.&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">EventStatus</span><span class="o">::</span><span class="n">Succeeded</span><span class="p">();</span><span class="w"></span>
+<span class="p">});</span><span class="w"></span>
 </pre></div>
 </div>
-<p>In the above case the Simulator’s AdvanceTo() method will throw an
+</details><p>In the above case the Simulator’s AdvanceTo() method will throw an
 RuntimeError containing a human-readable message including the text
 provided in the monitor.</p>
 <div class="admonition note">
@@ -2779,7 +2779,7 @@ the pseudocode below.</p>
 the update stages above. This algorithm is given a starting Context
 value <code class="docutils literal notranslate"><span class="pre">{tₛ,</span> <span class="pre">x⁻(tₛ)}</span></code> and returns an end Context value <code class="docutils literal notranslate"><span class="pre">{tₑ,</span>
 <span class="pre">x⁻(tₑ)}</span></code>, where tₑ is <em>no later</em> than a given tₘₐₓ.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>// Advance the trajectory (time and state) from start value {tₛ, x⁻(tₛ)} to an
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>// Advance the trajectory (time and state) from start value {tₛ, x⁻(tₛ)} to an
 // end value {tₑ, x⁻(tₑ)}, where tₛ ≤ tₑ ≤ tₘₐₓ.
 procedure Step(tₛ, x⁻(tₛ), tₘₐₓ)
 
@@ -2821,11 +2821,11 @@ CallMonitor(tₑ, x⁻(tₑ))
 return {tₑ, x⁻(tₑ)}
 </pre></div>
 </div>
-<p>We can use the notation and pseudocode to flesh out the AdvanceTo(),
+</details><p>We can use the notation and pseudocode to flesh out the AdvanceTo(),
 AdvancePendingEvents(), and Initialize() functions. Termination and
 error conditions detected by event handlers or the monitor are
 reported as status returns from these methods.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>// Advance the simulation until time tₘₐₓ.
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>// Advance the simulation until time tₘₐₓ.
 procedure AdvanceTo(tₘₐₓ) → status
 t ← current_time
 while t &lt; tₘₐₓ
@@ -2858,7 +2858,7 @@ DoAnyPublishes(t₀, x⁻(t₀))
 CallMonitor(t₀, x⁻(t₀))
 </pre></div>
 </div>
-<p>Initialize() can be viewed as a “0ᵗʰ step” that occurs before the
+</details><p>Initialize() can be viewed as a “0ᵗʰ step” that occurs before the
 first Step() call as described above. Like Step(), Initialize() first
 performs pending updates (in this case only initialization events can
 be “pending”, and even those may be optionally suppressed). Time
@@ -2984,12 +2984,12 @@ time. A return of 1 means the simulation just matched real time, 2
 means the simulation was twice as fast as real time, 0.5 means it was
 running in 2X slow motion, etc.</p>
 <p>The value returned here is calculated as follows:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">simulated_time_now</span> <span class="o">-</span> <span class="n">initial_simulated_time</span>
-  <span class="n">rate</span> <span class="o">=</span> <span class="o">-------------------------------------------</span>
-               <span class="n">realtime_now</span> <span class="o">-</span> <span class="n">initial_realtime</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">simulated_time_now</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">initial_simulated_time</span><span class="w"></span>
+<span class="w">  </span><span class="n">rate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-------------------------------------------</span><span class="w"></span>
+<span class="w">               </span><span class="n">realtime_now</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">initial_realtime</span><span class="w"></span>
 </pre></div>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">initial</span></code> times are recorded when Initialize() or
+</details><p>The <code class="docutils literal notranslate"><span class="pre">initial</span></code> times are recorded when Initialize() or
 ResetStatistics() is called. The returned rate is undefined if
 Initialize() has not yet been called.</p>
 <dl class="field-list simple">
@@ -3206,46 +3206,46 @@ which any sub-Context can be obtained using
 reference has been captured for use in the monitor.</p>
 <p>** Examples Output time and continuous states whenever the trajectory
 is advanced:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">simulator</span><span class="o">.</span><span class="n">set_monitor</span><span class="p">([](</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">root_context</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">std</span><span class="p">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">root_context</span><span class="o">.</span><span class="n">get_time</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot; &quot;</span>
-            <span class="o">&lt;&lt;</span> <span class="n">root_context</span><span class="o">.</span><span class="n">get_continuous_state_vector</span><span class="p">()</span>
-            <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="p">::</span><span class="n">endl</span><span class="p">;</span>
-  <span class="k">return</span> <span class="n">EventStatus</span><span class="p">::</span><span class="n">Succeeded</span><span class="p">();</span>
-<span class="p">});</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">simulator</span><span class="p">.</span><span class="n">set_monitor</span><span class="p">([](</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">root_context</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">root_context</span><span class="p">.</span><span class="n">get_time</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"></span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">root_context</span><span class="p">.</span><span class="n">get_continuous_state_vector</span><span class="p">()</span><span class="w"></span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">EventStatus</span><span class="o">::</span><span class="n">Succeeded</span><span class="p">();</span><span class="w"></span>
+<span class="p">});</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Terminate early but successfully on a condition in a subsystem of the
+</details><p>Terminate early but successfully on a condition in a subsystem of the
 System diagram being simulated:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">simulator</span><span class="o">.</span><span class="n">set_monitor</span><span class="p">([</span><span class="o">&amp;</span><span class="n">my_subsystem</span><span class="p">](</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">root_context</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">subcontext</span> <span class="o">=</span>
-      <span class="n">my_subsystem</span><span class="o">.</span><span class="n">GetMyContextFromRoot</span><span class="p">(</span><span class="n">root_context</span><span class="p">);</span>
-  <span class="k">if</span> <span class="p">(</span><span class="n">my_subsystem</span><span class="o">.</span><span class="n">GoalReached</span><span class="p">(</span><span class="n">subcontext</span><span class="p">))</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="n">EventStatus</span><span class="p">::</span><span class="n">ReachedTermination</span><span class="p">(</span><span class="n">my_subsystem</span><span class="p">,</span>
-        <span class="s2">&quot;Simulation achieved the desired goal.&quot;</span><span class="p">);</span>
-  <span class="p">}</span>
-  <span class="k">return</span> <span class="n">EventStatus</span><span class="p">::</span><span class="n">Succeeded</span><span class="p">();</span>
-<span class="p">});</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">simulator</span><span class="p">.</span><span class="n">set_monitor</span><span class="p">([</span><span class="o">&amp;</span><span class="n">my_subsystem</span><span class="p">](</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">root_context</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">subcontext</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="w">      </span><span class="n">my_subsystem</span><span class="p">.</span><span class="n">GetMyContextFromRoot</span><span class="p">(</span><span class="n">root_context</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">my_subsystem</span><span class="p">.</span><span class="n">GoalReached</span><span class="p">(</span><span class="n">subcontext</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">EventStatus</span><span class="o">::</span><span class="n">ReachedTermination</span><span class="p">(</span><span class="n">my_subsystem</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s">&quot;Simulation achieved the desired goal.&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">EventStatus</span><span class="o">::</span><span class="n">Succeeded</span><span class="p">();</span><span class="w"></span>
+<span class="p">});</span><span class="w"></span>
 </pre></div>
 </div>
-<p>In the above case, the Simulator’s AdvanceTo() method will return
+</details><p>In the above case, the Simulator’s AdvanceTo() method will return
 early when the subsystem reports that it has reached its goal. The
 returned status will indicate the termination reason, and a
 human-readable termination message containing the message provided by
 the monitor can be obtained with status.FormatMessage().</p>
 <p>Failure due to plant center of mass falling below a threshold:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">simulator</span><span class="o">.</span><span class="n">set_monitor</span><span class="p">([</span><span class="o">&amp;</span><span class="n">plant</span><span class="p">](</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">root_context</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">plant_context</span> <span class="o">=</span>
-      <span class="n">plant</span><span class="o">.</span><span class="n">GetMyContextFromRoot</span><span class="p">(</span><span class="n">root_context</span><span class="p">);</span>
-  <span class="n">const</span> <span class="n">Vector3</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">com</span> <span class="o">=</span>
-      <span class="n">plant</span><span class="o">.</span><span class="n">CalcCenterOfMassPositionInWorld</span><span class="p">(</span><span class="n">plant_context</span><span class="p">);</span>
-  <span class="k">if</span> <span class="p">(</span><span class="n">com</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mf">0.1</span><span class="p">)</span> <span class="p">{</span>  <span class="o">//</span> <span class="n">Check</span> <span class="n">z</span> <span class="n">height</span> <span class="n">of</span> <span class="n">com</span><span class="o">.</span>
-    <span class="k">return</span> <span class="n">EventStatus</span><span class="p">::</span><span class="n">Failed</span><span class="p">(</span><span class="n">plant</span><span class="p">,</span> <span class="s2">&quot;System fell over.&quot;</span><span class="p">);</span>
-  <span class="p">}</span>
-  <span class="k">return</span> <span class="n">EventStatus</span><span class="p">::</span><span class="n">Succeeded</span><span class="p">();</span>
-<span class="p">});</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">simulator</span><span class="p">.</span><span class="n">set_monitor</span><span class="p">([</span><span class="o">&amp;</span><span class="n">plant</span><span class="p">](</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">root_context</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">plant_context</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="w">      </span><span class="n">plant</span><span class="p">.</span><span class="n">GetMyContextFromRoot</span><span class="p">(</span><span class="n">root_context</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">com</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="w">      </span><span class="n">plant</span><span class="p">.</span><span class="n">CalcCenterOfMassPositionInWorld</span><span class="p">(</span><span class="n">plant_context</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">com</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0.1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// Check z height of com.</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">EventStatus</span><span class="o">::</span><span class="n">Failed</span><span class="p">(</span><span class="n">plant</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;System fell over.&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">EventStatus</span><span class="o">::</span><span class="n">Succeeded</span><span class="p">();</span><span class="w"></span>
+<span class="p">});</span><span class="w"></span>
 </pre></div>
 </div>
-<p>In the above case the Simulator’s AdvanceTo() method will throw an
+</details><p>In the above case the Simulator’s AdvanceTo() method will throw an
 RuntimeError containing a human-readable message including the text
 provided in the monitor.</p>
 <div class="admonition note">

@@ -271,9 +271,6 @@ Functions</h2></td></tr>
 <tr class="memitem:ac9a3a5006f20615946f5b466fe9446b6"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">ConvexSets</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#ac9a3a5006f20615946f5b466fe9446b6">MakeConvexSets</a> (Args &amp;&amp;... args)</td></tr>
 <tr class="memdesc:ac9a3a5006f20615946f5b466fe9446b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function that allows the ConvexSets to be initialized from arguments containing <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html" title="Abstract base class for defining a convex set.">ConvexSet</a> references, or unique_ptr&lt;ConvexSet&gt; instances, or any object that can be assigned to ConvexSets::value_type.  <a href="#ac9a3a5006f20615946f5b466fe9446b6">More...</a><br /></td></tr>
 <tr class="separator:ac9a3a5006f20615946f5b466fe9446b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac52a87949354e558c4a05a11acb655ec"><td class="memItemLeft" align="right" valign="top">std::map&lt; <a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">multibody::BodyIndex</a>, std::vector&lt; std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html">CIrisCollisionGeometry</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#ac52a87949354e558c4a05a11acb655ec">GetCollisionGeometries</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant, const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;scene_graph)</td></tr>
-<tr class="memdesc:ac52a87949354e558c4a05a11acb655ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#ac52a87949354e558c4a05a11acb655ec">More...</a><br /></td></tr>
-<tr class="separator:ac52a87949354e558c4a05a11acb655ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d1ae826ab17a7ccd2b08fab3222813d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a6febb8c28b6d49e494dbe16b5ed5b089">SeparatingPlaneOrder</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a6d1ae826ab17a7ccd2b08fab3222813d">ToPlaneOrder</a> (<a class="el" href="classint.html">int</a> plane_degree)</td></tr>
 <tr class="memdesc:a6d1ae826ab17a7ccd2b08fab3222813d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert an integer degree to the SeparatingPlaneOrder.  <a href="#a6d1ae826ab17a7ccd2b08fab3222813d">More...</a><br /></td></tr>
 <tr class="separator:a6d1ae826ab17a7ccd2b08fab3222813d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -535,38 +532,6 @@ Functions</h2></td></tr>
 
 <p>Computes the signed distance from <code>collision_geometry</code> to the half space ℋ, where ℋ = {x | aᵀx+b &gt;= 0} if plane_side=<a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a4013454f1b2c236ff18e572d12436fefafe449700ac27fbd09863263d74e7735f">PlaneSide::kPositive</a>, and ℋ = {x | aᵀx+b &lt;= 0} if plane_side=<a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a4013454f1b2c236ff18e572d12436fefa25b105cbe0fd4622cdb36360c85e89c3">PlaneSide::kNegative</a>. </p>
 <p>The half space is measured and expressed in the expressed_body's body frame. This works for both <code>collision_geometry</code> separated from the half space, and <code>collision geometry</code> in penetration with the halfspace. </p><dl class="section note"><dt>Note</dt><dd><code>a</code> does not need to be a unit length vector (but should be non-zero). </dd></dl>
-
-</div>
-</div>
-<a id="ac52a87949354e558c4a05a11acb655ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac52a87949354e558c4a05a11acb655ec">&#9670;&nbsp;</a></span>GetCollisionGeometries()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::map&lt;<a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">multibody::BodyIndex</a>, std::vector&lt;std::unique_ptr&lt;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html">CIrisCollisionGeometry</a>&gt; &gt; &gt; drake::geometry::optimization::GetCollisionGeometries </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>plant</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>scene_graph</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">Deprecated:</a></b></dt><dd>This function was not intended for public use. <br />
- This will be removed from Drake on or after 2023-09-01.</dd></dl>
 
 </div>
 </div>

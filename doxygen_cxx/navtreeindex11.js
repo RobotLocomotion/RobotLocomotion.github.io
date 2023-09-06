@@ -1,5 +1,6 @@
 var NAVTREEINDEX11 =
 {
+"classdrake_1_1math_1_1_bspline_basis.html":[3,0,0,7,1],
 "classdrake_1_1math_1_1_bspline_basis.html#a06260fec558901e71d412974a410c12b":[3,0,0,7,1,18],
 "classdrake_1_1math_1_1_bspline_basis.html#a0b2383f7cbcf2f4a8bc47c1ccde3134b":[3,0,0,7,1,10],
 "classdrake_1_1math_1_1_bspline_basis.html#a0d0ff4b1966bdc1dadcd8b548ecd4a61":[3,0,0,7,1,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX11 =
 "classdrake_1_1multibody_1_1_body.html#a621333fb4661e24ffc0a51891118b2e5":[3,0,0,8,12,0],
 "classdrake_1_1multibody_1_1_body.html#a6471b919b4ead11fb6d9a2fc0b29b781":[3,0,0,8,12,6],
 "classdrake_1_1multibody_1_1_body.html#a64de0960e4ea0ac2144af8c2295a7871":[3,0,0,8,12,4],
-"classdrake_1_1multibody_1_1_body.html#a686c86e06e668050d80c096e1200fe5a":[3,0,0,8,12,24],
-"classdrake_1_1multibody_1_1_body.html#a6876fd491bb5bbb889916a0e19d3d154":[3,0,0,8,12,10]
+"classdrake_1_1multibody_1_1_body.html#a686c86e06e668050d80c096e1200fe5a":[3,0,0,8,12,24]
 };

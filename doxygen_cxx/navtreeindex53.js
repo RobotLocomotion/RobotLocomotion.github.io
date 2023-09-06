@@ -1,9 +1,5 @@
 var NAVTREEINDEX53 =
 {
-"quadrotor__plant_8h.html":[4,0,0,3,14,1],
-"quadrotor__plant_8h.html#aa6256a6ff0f305345c9d8b99a5392739":[4,0,0,3,14,1,1],
-"quartic__scalar__system_8h.html":[4,0,0,12,0,0,11],
-"quaternion_8h.html":[4,0,0,7,27],
 "quaternion_8h.html#a06541dcb249b4b951ea73d45d2067337":[4,0,0,7,27,2],
 "quaternion_8h.html#a0fc70ebdc0ea497711e6e7b69eddef2d":[4,0,0,7,27,14],
 "quaternion_8h.html#a29059591a43a840c9a7e2f31a2d55130":[4,0,0,7,27,13],
@@ -249,5 +245,9 @@ var NAVTREEINDEX53 =
 "shape__specification_8h.html#ae129ecc1484c1fab6e4d4b3e04d25198":[4,0,0,4,40,14],
 "shape__to__string_8h.html":[4,0,0,4,41],
 "shared__pointer__system_8h.html":[4,0,0,12,6,21],
-"signed__distance__pair_8h.html":[4,0,0,4,3,3]
+"signed__distance__pair_8h.html":[4,0,0,4,3,3],
+"signed__distance__to__point_8h.html":[4,0,0,4,3,4],
+"sim__rgbd__sensor_8h.html":[4,0,0,12,8,21],
+"simplex__gaussian__quadrature_8h.html":[4,0,0,8,3,28],
+"simplification_8h.html":[4,0,0,1,3,16]
 };

@@ -183,9 +183,6 @@ Functions</h2></td></tr>
 <tr class="memitem:acfe50d1cfd6c229aab5986a0a3c97494"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1visualization.html#acfe50d1cfd6c229aab5986a0a3c97494">ApplyVisualizationConfig</a> (const <a class="el" href="structdrake_1_1visualization_1_1_visualization_config.html">VisualizationConfig</a> &amp;config, <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *builder, const <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html">systems::lcm::LcmBuses</a> *lcm_buses=nullptr, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *plant=nullptr, <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *scene_graph=nullptr, std::shared_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">geometry::Meshcat</a> &gt; meshcat=nullptr, <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html">lcm::DrakeLcmInterface</a> *lcm=nullptr)</td></tr>
 <tr class="memdesc:acfe50d1cfd6c229aab5986a0a3c97494"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds LCM visualization publishers to communicate to Meshcat, Meldis, and/or the legacy <code>drake_visualizer</code> application of days past.  <a href="#acfe50d1cfd6c229aab5986a0a3c97494">More...</a><br /></td></tr>
 <tr class="separator:acfe50d1cfd6c229aab5986a0a3c97494"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91350b14472fa922d11a6ced06e72bc8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1visualization.html#a91350b14472fa922d11a6ced06e72bc8">ApplyVisualizationConfig</a> (const <a class="el" href="structdrake_1_1visualization_1_1_visualization_config.html">VisualizationConfig</a> &amp;config, <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *builder, const <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html">systems::lcm::LcmBuses</a> *lcm_buses, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *plant, const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *scene_graph, std::shared_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">geometry::Meshcat</a> &gt; meshcat=nullptr, <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html">lcm::DrakeLcmInterface</a> *lcm=nullptr)</td></tr>
-<tr class="memdesc:a91350b14472fa922d11a6ced06e72bc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a91350b14472fa922d11a6ced06e72bc8">More...</a><br /></td></tr>
-<tr class="separator:a91350b14472fa922d11a6ced06e72bc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02befd8c90155c339a042f2af39d4c12"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1visualization.html#a02befd8c90155c339a042f2af39d4c12">AddDefaultVisualization</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *builder, std::shared_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">geometry::Meshcat</a> &gt; meshcat=nullptr)</td></tr>
 <tr class="memdesc:a02befd8c90155c339a042f2af39d4c12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds LCM visualization publishers to communicate to Meshcat, Meldis, and/or the legacy <code>drake_visualizer</code> application of days past, using all of the default configuration settings.  <a href="#a02befd8c90155c339a042f2af39d4c12">More...</a><br /></td></tr>
 <tr class="separator:a02befd8c90155c339a042f2af39d4c12"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -238,7 +235,7 @@ The MultibodyPlant in the given <code>builder</code> is already finalized, as in
 </div>
 </div>
 <a id="acfe50d1cfd6c229aab5986a0a3c97494"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acfe50d1cfd6c229aab5986a0a3c97494">&#9670;&nbsp;</a></span>ApplyVisualizationConfig() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#acfe50d1cfd6c229aab5986a0a3c97494">&#9670;&nbsp;</a></span>ApplyVisualizationConfig()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -324,68 +321,6 @@ The MultibodyPlant is already finalized, as in <code>plant.Finalize()</code>.</d
 <a class="el" href="namespacedrake_1_1multibody.html#a7e468aa35ef6a84196ac20a13065ca0c" title="Adds a new MultibodyPlant and SceneGraph to the given builder.">drake::multibody::AddMultibodyPlant()</a> </dd>
 <dd>
 <a class="el" href="namespacedrake_1_1systems_1_1lcm.html#a727199867bdc2433a7269c76dd7f3973" title="Given LCM bus names and parameters, adds an LcmInterfaceSystem for each bus within the given diagram ...">drake::systems::lcm::ApplyLcmBusConfig()</a> </dd></dl>
-
-</div>
-</div>
-<a id="a91350b14472fa922d11a6ced06e72bc8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91350b14472fa922d11a6ced06e72bc8">&#9670;&nbsp;</a></span>ApplyVisualizationConfig() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void drake::visualization::ApplyVisualizationConfig </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="structdrake_1_1visualization_1_1_visualization_config.html">VisualizationConfig</a> &amp;&#160;</td>
-          <td class="paramname"><em>config</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td>
-          <td class="paramname"><em>builder</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html">systems::lcm::LcmBuses</a> *&#160;</td>
-          <td class="paramname"><em>lcm_buses</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td>
-          <td class="paramname"><em>plant</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td>
-          <td class="paramname"><em>scene_graph</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">geometry::Meshcat</a> &gt;&#160;</td>
-          <td class="paramname"><em>meshcat</em> = <code>nullptr</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html">lcm::DrakeLcmInterface</a> *&#160;</td>
-          <td class="paramname"><em>lcm</em> = <code>nullptr</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000028">Deprecated:</a></b></dt><dd>Pass a non-const SceneGraph pointer <br />
- This will be removed from Drake on or after 2023-09-01.</dd></dl>
 
 </div>
 </div>

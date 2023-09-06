@@ -160,6 +160,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1lcm_1_1_drake_lcm.html',
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="classdrake_1_1lcm_1_1_drake_lcm-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">DrakeLcm Class Reference</div>  </div>
@@ -186,7 +187,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a7678d452d02b7abeed1fcc658e570497"><td class="mdescLeft">&#160;</td><td class="mdescRight">A destructor that forces the receive thread to be stopped.  <a href="#a7678d452d02b7abeed1fcc658e570497">More...</a><br /></td></tr>
 <tr class="separator:a7678d452d02b7abeed1fcc658e570497"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a053aa138ef7646bdd2ad76db0657b13b"><td class="memItemLeft" align="right" valign="top">::lcm::LCM *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm.html#a053aa138ef7646bdd2ad76db0657b13b">get_lcm_instance</a> ()</td></tr>
-<tr class="memdesc:a053aa138ef7646bdd2ad76db0657b13b"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced.) An accessor to the underlying LCM instance.  <a href="#a053aa138ef7646bdd2ad76db0657b13b">More...</a><br /></td></tr>
+<tr class="memdesc:a053aa138ef7646bdd2ad76db0657b13b"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a053aa138ef7646bdd2ad76db0657b13b">More...</a><br /></td></tr>
 <tr class="separator:a053aa138ef7646bdd2ad76db0657b13b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad12ebfa1b7ab6ec343cbde2667052991"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm.html#ad12ebfa1b7ab6ec343cbde2667052991">Publish</a> (const std::string &amp;, const void *, <a class="el" href="classint.html">int</a>, std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt;) override</td></tr>
 <tr class="memdesc:ad12ebfa1b7ab6ec343cbde2667052991"><td class="mdescLeft">&#160;</td><td class="mdescRight">Most users should use the <a class="el" href="namespacedrake_1_1lcm.html#a7f10e39fd5048940095d76f21bdf760d" title="Publishes an LCM message on channel channel.">drake::lcm::Publish()</a> free function, instead of this interface method.  <a href="#ad12ebfa1b7ab6ec343cbde2667052991">More...</a><br /></td></tr>
@@ -226,6 +227,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7b73a55d48495f81082838dad64bd57e inherit pub_methods_classdrake_1_1lcm_1_1_drake_lcm_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a437b788f32af8a9b80c59fe729f75865 inherit pub_methods_classdrake_1_1lcm_1_1_drake_lcm_interface"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html">DrakeLcmInterface</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html#a437b788f32af8a9b80c59fe729f75865">operator=</a> (<a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html">DrakeLcmInterface</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:a437b788f32af8a9b80c59fe729f75865 inherit pub_methods_classdrake_1_1lcm_1_1_drake_lcm_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:ab89da93f23549481dfbe2463f10c8f7b"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm.html#ab89da93f23549481dfbe2463f10c8f7b">DrakeLcmTester</a></td></tr>
+<tr class="separator:ab89da93f23549481dfbe2463f10c8f7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -412,8 +418,10 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>(Advanced.) An accessor to the underlying LCM instance. </p>
-<p>The returned pointer is guaranteed to be valid for the duration of this object's lifetime. </p>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000006">Deprecated:</a></b></dt><dd>Drake will no longer provide access to the underlying lcm::LCM object. <br />
+ This will be removed from Drake on or after 2024-01-01.</dd></dl>
+<p>(Advanced.) An accessor to the underlying LCM instance. The returned pointer is guaranteed to be valid for the duration of this object's lifetime. </p>
 
 </div>
 </div>
@@ -716,6 +724,29 @@ Additional Inherited Members</h2></td></tr>
 <p>The <code>regex</code> is treated as an anchored "match" not a "search", i.e., it must match the entire channel name. The specific regular expression grammar is left unspecified, so it's best to use only patterns that have identical semantics in all grammars, e.g., <code>".*"</code>. </p>
 
 <p>Implements <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html#ab442e399138d7e396aa536e605f9e7a6">DrakeLcmInterface</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="ab89da93f23549481dfbe2463f10c8f7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab89da93f23549481dfbe2463f10c8f7b">&#9670;&nbsp;</a></span>DrakeLcmTester</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class DrakeLcmTester</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
