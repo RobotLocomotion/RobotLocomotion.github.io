@@ -1,5 +1,6 @@
 var NAVTREEINDEX45 =
 {
+"dir_5fa915364d7caf39d2fac1314fb2fd74.html":[4,0,0,3,16],
 "dir_646ca0e8f46938429d8373c5298698fa.html":[4,0,0,13],
 "dir_64eb7e16d7e9848cfd92d3316c4eb5e4.html":[4,0,0,3,14],
 "dir_652567ca0f7e786d5ffa3ef8ea9e7fa7.html":[4,0,0,8,10,0],
@@ -90,8 +91,8 @@ var NAVTREEINDEX45 =
 "distance__and__interpolation__provider_8h.html":[4,0,0,10,7],
 "distance__constraint_8h.html":[4,0,0,8,5,7],
 "distance__constraint__utilities_8h.html":[4,0,0,8,5,8],
-"distance__to__point__callback_8h.html":[4,0,0,4,2,13],
-"distance__to__shape__callback_8h.html":[4,0,0,4,2,14],
+"distance__to__point__callback_8h.html":[4,0,0,4,2,14],
+"distance__to__shape__callback_8h.html":[4,0,0,4,2,15],
 "door__hinge_8h.html":[4,0,0,8,14,9],
 "double__overloads_8h.html":[4,0,0,1,16],
 "double__overloads_8h.html#ad14dd00683f82b89dc0f08f9adec904e":[4,0,0,1,16,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX45 =
 "explicit__euler__integrator_8h.html":[4,0,0,12,0,4],
 "exponential__plus__piecewise__polynomial_8h.html":[4,0,0,1,5,4],
 "expression_2expression_8h.html":[4,0,0,1,3,0,3],
-"expression_2expression_8h.html#a03d536a13db7de62414f5279c60148aa":[4,0,0,1,3,0,3,16],
-"expression_2expression_8h.html#a0a84ca31e769b94d1adcc69789826934":[4,0,0,1,3,0,3,62]
+"expression_2expression_8h.html#a03d536a13db7de62414f5279c60148aa":[4,0,0,1,3,0,3,16]
 };

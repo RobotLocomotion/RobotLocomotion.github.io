@@ -1,5 +1,7 @@
 var NAVTREEINDEX57 =
 {
+"structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#a3815aa96e3f447bd132aea97ff48bdb9":[3,0,0,8,1,2,7],
+"structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#a3cde9da79a1a8aba25ee8aacdb2ffd39":[3,0,0,8,1,2,11],
 "structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#a613d499d309c4906c2df5db6580dd665":[3,0,0,8,1,2,13],
 "structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#a7c4a40b91dff8e9d8d5c4d39b3e93df2":[3,0,0,8,1,2,15],
 "structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#a7e0a73ed81afb10613aa17eb4902e879":[3,0,0,8,1,2,19],
@@ -247,7 +249,5 @@ var NAVTREEINDEX57 =
 "structdrake_1_1symbolic_1_1_sin_cos.html":[3,0,0,14,63],
 "structdrake_1_1symbolic_1_1_sin_cos.html#a06a14e4a94aab4befcf2506ef07dc38f":[3,0,0,14,63,7],
 "structdrake_1_1symbolic_1_1_sin_cos.html#a0bee03f130c602c5c1fd0521c716ebbd":[3,0,0,14,63,5],
-"structdrake_1_1symbolic_1_1_sin_cos.html#a1c36ee4d69b2b1e95ea82cc4fff7fad6":[3,0,0,14,63,6],
-"structdrake_1_1symbolic_1_1_sin_cos.html#a1c615a950f134b68ee764a6b9d765e73":[3,0,0,14,63,3],
-"structdrake_1_1symbolic_1_1_sin_cos.html#a2c92f605c1db3ad56e29d2fdcb656360":[3,0,0,14,63,0]
+"structdrake_1_1symbolic_1_1_sin_cos.html#a1c36ee4d69b2b1e95ea82cc4fff7fad6":[3,0,0,14,63,6]
 };

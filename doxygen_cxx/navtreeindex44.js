@@ -184,6 +184,7 @@ var NAVTREEINDEX44 =
 "detail__tinyxml_8h.html":[4,0,0,8,9,14],
 "detail__urdf__geometry_8h.html":[4,0,0,8,9,16],
 "detail__urdf__parser_8h.html":[4,0,0,8,9,17],
+"detect__zero__simplex_8h.html":[4,0,0,4,2,13],
 "diagnostic__policy_8h.html":[4,0,0,1,15],
 "diagnostic__policy__test__base_8h.html":[4,0,0,1,4,0],
 "diagram_8h.html":[4,0,0,12,3,11],
@@ -248,6 +249,5 @@ var NAVTREEINDEX44 =
 "dir_55f8630d5466d97e74952e939680a0a0.html":[4,0,0,12,6],
 "dir_563cbebf3859612cccbc3edeae15a602.html":[4,0,0,8,2,0],
 "dir_5d8dbe7a82c2c188fa06f6391bb290bd.html":[4,0,0,8,0],
-"dir_5f7a2023092b91a1e02609fa2c012f50.html":[4,0,0,1,5],
-"dir_5fa915364d7caf39d2fac1314fb2fd74.html":[4,0,0,3,16]
+"dir_5f7a2023092b91a1e02609fa2c012f50.html":[4,0,0,1,5]
 };
