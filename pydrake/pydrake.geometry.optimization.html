@@ -563,6 +563,25 @@ is the dimension of <code class="docutils literal notranslate"><span class="pre"
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.ConvexSet.CalcVolume">
+<span class="sig-name descname"><span class="pre">CalcVolume</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.ConvexSet.CalcVolume" title="Permalink to this definition"></a></dt>
+<dd><p>Computes the exact volume for the convex set.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Not every convex set can report an exact volume. In that case, use
+CalcVolumeViaSampling() instead.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if has_exact_volume</strong><strong>(</strong><strong>) </strong><strong>returns False.</strong> – </p></li>
+<li><p><strong>if ambient_dimension</strong><strong>(</strong><strong>) </strong><strong>== 0.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.ConvexSet.Clone">
 <span class="sig-name descname"><span class="pre">Clone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.ConvexSet.Clone" title="Permalink to this definition"></a></dt>
 <dd><p>Creates a unique deep copy of this set.</p>
@@ -672,7 +691,7 @@ Configuration Space for Robot Manipulators by Alexandre Amice*,
 Hongkai Dai*, Peter Werner, Annan Zhang and Russ Tedrake.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.geometry.optimization.CspaceFreePolytope,</span> <span class="pre">plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;,</span> <span class="pre">scene_graph:</span> <span class="pre">pydrake.geometry.SceneGraph,</span> <span class="pre">plane_order:</span> <span class="pre">pydrake.geometry.optimization.SeparatingPlaneOrder,</span> <span class="pre">q_star:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]],</span> <span class="pre">options:</span> <span class="pre">pydrake.geometry.optimization.CspaceFreePolytopeBase.Options</span> <span class="pre">=</span> <span class="pre">&lt;pydrake.geometry.optimization.CspaceFreePolytopeBase.Options</span> <span class="pre">object</span> <span class="pre">at</span> <span class="pre">0x7f78395a8230&gt;</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.geometry.optimization.CspaceFreePolytope,</span> <span class="pre">plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;,</span> <span class="pre">scene_graph:</span> <span class="pre">pydrake.geometry.SceneGraph,</span> <span class="pre">plane_order:</span> <span class="pre">pydrake.geometry.optimization.SeparatingPlaneOrder,</span> <span class="pre">q_star:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]],</span> <span class="pre">options:</span> <span class="pre">pydrake.geometry.optimization.CspaceFreePolytopeBase.Options</span> <span class="pre">=</span> <span class="pre">&lt;pydrake.geometry.optimization.CspaceFreePolytopeBase.Options</span> <span class="pre">object</span> <span class="pre">at</span> <span class="pre">0x7f8f221ecfb0&gt;</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.__init__" title="Permalink to this definition"></a></dt>
 <dd><dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt><dd><p>The plant for which we compute the C-space free polytopes. It must
 outlive this CspaceFreePolytope object.</p>
@@ -2570,12 +2589,6 @@ instance, that points.cols() &gt; 1.</p>
 </dl>
 </dd></dl>
 
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.geometry.optimization.Hyperellipsoid.Volume">
-<span class="sig-name descname"><span class="pre">Volume</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.Hyperellipsoid" title="pydrake.geometry.optimization.Hyperellipsoid"><span class="pre">pydrake.geometry.optimization.Hyperellipsoid</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.Hyperellipsoid.Volume" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the volume of the hyperellipsoid (in Euclidean space).</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="py class">
@@ -3174,16 +3187,6 @@ used with commercial solvers (e.g. Gurobi and Mosek).</p>
 <li><p>__init__(self: pydrake.geometry.optimization.VPolytope, query_object: pydrake.geometry.QueryObject, geometry_id: pydrake.geometry.GeometryId, reference_frame: Optional[pydrake.geometry.FrameId] = None) -&gt; None</p></li>
 </ol>
 <p>Constructs the polytope from a SceneGraph geometry.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.geometry.optimization.VPolytope.CalcVolume">
-<span class="sig-name descname"><span class="pre">CalcVolume</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.VPolytope" title="pydrake.geometry.optimization.VPolytope"><span class="pre">pydrake.geometry.optimization.VPolytope</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.VPolytope.CalcVolume" title="Permalink to this definition"></a></dt>
-<dd><p>Computes the volume of this V-Polytope.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>this function calls qhull to compute the volume.</p>
-</div>
 </dd></dl>
 
 <dl class="py method">

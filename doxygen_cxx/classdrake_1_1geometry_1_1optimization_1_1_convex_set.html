@@ -211,6 +211,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af7add202067720eb1a04fac8f1781c87"><td class="memItemLeft" align="right" valign="top">std::pair&lt; std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &gt;, math::RigidTransformd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#af7add202067720eb1a04fac8f1781c87">ToShapeWithPose</a> () const</td></tr>
 <tr class="memdesc:af7add202067720eb1a04fac8f1781c87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The base interface for all shape specifications.">Shape</a> and a pose of the set in the world frame for use in the <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> geometry ecosystem.  <a href="#af7add202067720eb1a04fac8f1781c87">More...</a><br /></td></tr>
 <tr class="separator:af7add202067720eb1a04fac8f1781c87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a2847efc4f87e996464d9d71159e27b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a7a2847efc4f87e996464d9d71159e27b">CalcVolume</a> () const</td></tr>
+<tr class="memdesc:a7a2847efc4f87e996464d9d71159e27b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the exact volume for the convex set.  <a href="#a7a2847efc4f87e996464d9d71159e27b">More...</a><br /></td></tr>
+<tr class="separator:a7a2847efc4f87e996464d9d71159e27b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea6ff00adfe03e87223d06bd4627d5f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_sampled_volume.html">SampledVolume</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aea6ff00adfe03e87223d06bd4627d5f8">CalcVolumeViaSampling</a> (<a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a> *generator, const <a class="el" href="classdouble.html">double</a> desired_rel_accuracy=1e-2, const int max_num_samples=1e4) const</td></tr>
+<tr class="memdesc:aea6ff00adfe03e87223d06bd4627d5f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates an estimate of the volume of the convex set using sampling and performing Monte Carlo integration.  <a href="#aea6ff00adfe03e87223d06bd4627d5f8">More...</a><br /></td></tr>
+<tr class="separator:aea6ff00adfe03e87223d06bd4627d5f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d9beaa673ec9f46fcf52eb4c49b62bd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a7d9beaa673ec9f46fcf52eb4c49b62bd">has_exact_volume</a> () const</td></tr>
+<tr class="memdesc:a7d9beaa673ec9f46fcf52eb4c49b62bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the exact volume can be computed for this convex set instance.  <a href="#a7d9beaa673ec9f46fcf52eb4c49b62bd">More...</a><br /></td></tr>
+<tr class="separator:a7d9beaa673ec9f46fcf52eb4c49b62bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classdrake_1_1geometry_1_1_shape_reifier"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classdrake_1_1geometry_1_1_shape_reifier')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classdrake_1_1geometry_1_1_shape_reifier.html">ShapeReifier</a></td></tr>
 <tr class="memitem:a2b9a418dcb406a2c4cd4c4b0e29d093e inherit pub_methods_classdrake_1_1geometry_1_1_shape_reifier"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_shape_reifier.html#a2b9a418dcb406a2c4cd4c4b0e29d093e">~ShapeReifier</a> ()</td></tr>
 <tr class="separator:a2b9a418dcb406a2c4cd4c4b0e29d093e inherit pub_methods_classdrake_1_1geometry_1_1_shape_reifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -235,9 +244,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a9101996a1470abfbf0d1b44a69baa4b8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a9101996a1470abfbf0d1b44a69baa4b8">ConvexSet</a> (<a class="el" href="classint.html">int</a> <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e">ambient_dimension</a>)</td></tr>
-<tr class="memdesc:a9101996a1470abfbf0d1b44a69baa4b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">For use by derived classes to construct a ConvexSet.  <a href="#a9101996a1470abfbf0d1b44a69baa4b8">More...</a><br /></td></tr>
-<tr class="separator:a9101996a1470abfbf0d1b44a69baa4b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54c93f7f5c38bfb4996d8ef9fedf0ba8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a54c93f7f5c38bfb4996d8ef9fedf0ba8">ConvexSet</a> (<a class="el" href="classint.html">int</a> <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e">ambient_dimension</a>, bool <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a7d9beaa673ec9f46fcf52eb4c49b62bd">has_exact_volume</a>)</td></tr>
+<tr class="memdesc:a54c93f7f5c38bfb4996d8ef9fedf0ba8"><td class="mdescLeft">&#160;</td><td class="mdescRight">For use by derived classes to construct a ConvexSet.  <a href="#a54c93f7f5c38bfb4996d8ef9fedf0ba8">More...</a><br /></td></tr>
+<tr class="separator:a54c93f7f5c38bfb4996d8ef9fedf0ba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e8824802dedfbc36776227f7482b6bc"><td class="memTemplParams" colspan="2">template&lt;typename Archive &gt; </td></tr>
 <tr class="memitem:a8e8824802dedfbc36776227f7482b6bc"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a8e8824802dedfbc36776227f7482b6bc">Serialize</a> (Archive *a)</td></tr>
 <tr class="memdesc:a8e8824802dedfbc36776227f7482b6bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements non-virtual base class serialization.  <a href="#a8e8824802dedfbc36776227f7482b6bc">More...</a><br /></td></tr>
@@ -272,6 +281,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a2da746fed405258f0af4dc5c385f6e2a"><td class="memItemLeft" align="right" valign="top">virtual std::pair&lt; std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &gt;, math::RigidTransformd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a2da746fed405258f0af4dc5c385f6e2a">DoToShapeWithPose</a> () const =0</td></tr>
 <tr class="memdesc:a2da746fed405258f0af4dc5c385f6e2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#af7add202067720eb1a04fac8f1781c87" title="Constructs a Shape and a pose of the set in the world frame for use in the SceneGraph geometry ecosys...">ToShapeWithPose()</a>.  <a href="#a2da746fed405258f0af4dc5c385f6e2a">More...</a><br /></td></tr>
 <tr class="separator:a2da746fed405258f0af4dc5c385f6e2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2bcbfea8bf330173c41c6cbe4985361"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#af2bcbfea8bf330173c41c6cbe4985361">DoCalcVolume</a> () const</td></tr>
+<tr class="memdesc:af2bcbfea8bf330173c41c6cbe4985361"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a7a2847efc4f87e996464d9d71159e27b" title="Computes the exact volume for the convex set.">CalcVolume()</a>.  <a href="#af2bcbfea8bf330173c41c6cbe4985361">More...</a><br /></td></tr>
+<tr class="separator:af2bcbfea8bf330173c41c6cbe4985361"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7da589d9fc72f5064b7bbc48a97d0845"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a7da589d9fc72f5064b7bbc48a97d0845">HandleZeroAmbientDimensionConstraints</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *prog, const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;set, std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt;&gt; *constraints) const</td></tr>
 <tr class="memdesc:a7da589d9fc72f5064b7bbc48a97d0845"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instances of subclasses such as <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html" title="The Cartesian product of convex sets is a convex set: S = X₁ × X₂ × ⋯ × Xₙ = {(x₁,...">CartesianProduct</a> and <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html" title="A convex set that represents the Minkowski sum of multiple sets: S = X₁ ⨁ X₂ ⨁ ...">MinkowskiSum</a> can have constituent sets with zero ambient dimension, which much be handled in a special manner when calling methods such as DoAddPointInSetConstraints.  <a href="#a7da589d9fc72f5064b7bbc48a97d0845">More...</a><br /></td></tr>
 <tr class="separator:a7da589d9fc72f5064b7bbc48a97d0845"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -380,8 +392,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a9101996a1470abfbf0d1b44a69baa4b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9101996a1470abfbf0d1b44a69baa4b8">&#9670;&nbsp;</a></span>ConvexSet() <span class="overload">[3/3]</span></h2>
+<a id="a54c93f7f5c38bfb4996d8ef9fedf0ba8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54c93f7f5c38bfb4996d8ef9fedf0ba8">&#9670;&nbsp;</a></span>ConvexSet() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -393,8 +405,18 @@ Protected Member Functions</h2></td></tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
-          <td class="paramname"><em>ambient_dimension</em></td><td>)</td>
+          <td class="paramname"><em>ambient_dimension</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>has_exact_volume</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -405,6 +427,12 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>For use by derived classes to construct a ConvexSet. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">has_exact_volume</td><td>Derived classes should pass <code>true</code> if they've implemented <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#af2bcbfea8bf330173c41c6cbe4985361" title="Non-virtual interface implementation for CalcVolume().">DoCalcVolume()</a> to return a value (at least sometimes). </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -579,6 +607,87 @@ c' * t + d ≥ 0,
 
 <p>Returns the dimension of the vector space in which the elements of this set are evaluated. </p>
 <p>Contrast this with the <code>affine dimension</code>: the dimension of the smallest affine subset of the ambient space that contains our set. For example, if we define a set using <code>A*x = b</code>, where <code>A</code> has linearly independent rows, then the ambient dimension is the dimension of <code>x</code>, but the affine dimension of the set is <code><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> - rank(A)</code>. </p>
+
+</div>
+</div>
+<a id="a7a2847efc4f87e996464d9d71159e27b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a2847efc4f87e996464d9d71159e27b">&#9670;&nbsp;</a></span>CalcVolume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> CalcVolume </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes the exact volume for the convex set. </p>
+<dl class="section note"><dt>Note</dt><dd>Not every convex set can report an exact volume. In that case, use <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aea6ff00adfe03e87223d06bd4627d5f8" title="Calculates an estimate of the volume of the convex set using sampling and performing Monte Carlo inte...">CalcVolumeViaSampling()</a> instead. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a7d9beaa673ec9f46fcf52eb4c49b62bd" title="Returns true if the exact volume can be computed for this convex set instance.">has_exact_volume()</a></code> returns <code>false</code>. </td></tr>
+    <tr><td class="paramname">if</td><td><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> == 0. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aea6ff00adfe03e87223d06bd4627d5f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea6ff00adfe03e87223d06bd4627d5f8">&#9670;&nbsp;</a></span>CalcVolumeViaSampling()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_sampled_volume.html">SampledVolume</a> CalcVolumeViaSampling </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a> *&#160;</td>
+          <td class="paramname"><em>generator</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>desired_rel_accuracy</em> = <code>1e-2</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>max_num_samples</em> = <code>1e4</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates an estimate of the volume of the convex set using sampling and performing Monte Carlo integration. </p>
+<dl class="section note"><dt>Note</dt><dd>this method is intended to be used for low to moderate dimensions (d&lt;15). For larger dimensions, a telescopic product approach has yet to be implemented. See, e.g., <a href="https://proceedings.mlr.press/v151/chevallier22a/chevallier22a.pdf">https://proceedings.mlr.press/v151/chevallier22a/chevallier22a.pdf</a> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">generator</td><td>a random number generator. </td></tr>
+    <tr><td class="paramname">desired_rel_accuracy</td><td>the desired relative accuracy of the volume estimate in the sense that the estimated volume is likely to be within the interval defined by (1±2*desired_rel_accuracy)*true_volume with probability of at least* 0.95 according to the Law of Large Numbers. <a href="https://people.math.umass.edu/~lr7q/ps_files/teaching/math456/Chapter6.pdf">https://people.math.umass.edu/~lr7q/ps_files/teaching/math456/Chapter6.pdf</a> The computation will terminate when the relative error is less than rel_accuracy or when the maximum number of samples is reached. </td></tr>
+    <tr><td class="paramname">max_num_samples</td><td>the maximum number of samples to use. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd><code>desired_rel_accuracy</code> is in the range [0,1]. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a pair the estimated volume of the set and an upper bound for the relative accuracy </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> == 0. </td></tr>
+    <tr><td class="paramname">if</td><td>the minimum axis-aligned bounding box of the set cannot be computed. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -763,6 +872,34 @@ c.rows() == t.size() </dd></dl>
 <dl class="section pre"><dt>Precondition</dt><dd>vars.size() == <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> </dd>
 <dd>
 <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> &gt; 0 </dd></dl>
+
+</div>
+</div>
+<a id="af2bcbfea8bf330173c41c6cbe4985361"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2bcbfea8bf330173c41c6cbe4985361">&#9670;&nbsp;</a></span>DoCalcVolume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classdouble.html">double</a> DoCalcVolume </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a7a2847efc4f87e996464d9d71159e27b" title="Computes the exact volume for the convex set.">CalcVolume()</a>. </p>
+<p>This will <em>only</em> be called if <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a7d9beaa673ec9f46fcf52eb4c49b62bd" title="Returns true if the exact volume can be computed for this convex set instance.">has_exact_volume()</a> returns true and <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> &gt; 0 </p>
 
 </div>
 </div>
@@ -1019,6 +1156,26 @@ c.rows() == t.size() </dd></dl>
 
 </div>
 </div>
+<a id="a7d9beaa673ec9f46fcf52eb4c49b62bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d9beaa673ec9f46fcf52eb4c49b62bd">&#9670;&nbsp;</a></span>has_exact_volume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool has_exact_volume </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if the exact volume can be computed for this convex set instance. </p>
+<dl class="section note"><dt>Note</dt><dd>This value reasons about to the generic case of the convex set class rather than the specific instance of the convex set. For example, the exact volume of a box is trivival to compute, but if the box is created as a <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html" title="Implements a polyhedral convex set using the half-space representation: {x| A x ≤ b}.">HPolyhedron</a>, then the exact volume cannot be computed. </dd></dl>
+
+</div>
+</div>
 <a id="a9cf0f6eaece284fabedbab39956a0938"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9cf0f6eaece284fabedbab39956a0938">&#9670;&nbsp;</a></span>IntersectsWith()</h2>
 
@@ -1124,8 +1281,8 @@ c.rows() == t.size() </dd></dl>
 
 </div>
 </div>
-<a id="a35e9f9166891aeacbca14f74e73018f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a35e9f9166891aeacbca14f74e73018f3">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="aaf56e31cd3546020503a8d7b3b359703"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf56e31cd3546020503a8d7b3b359703">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1136,7 +1293,7 @@ c.rows() == t.size() </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1150,8 +1307,8 @@ c.rows() == t.size() </dd></dl>
 
 </div>
 </div>
-<a id="aaf56e31cd3546020503a8d7b3b359703"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaf56e31cd3546020503a8d7b3b359703">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a35e9f9166891aeacbca14f74e73018f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35e9f9166891aeacbca14f74e73018f3">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1162,7 +1319,7 @@ c.rows() == t.size() </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

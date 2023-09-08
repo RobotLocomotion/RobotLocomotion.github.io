@@ -171,27 +171,41 @@ $(document).ready(function(){initNavTree('classdrake_1_1planning_1_1_collision_c
 <div class="textblock"><p>Interface for collision checkers to use. </p>
 <p>This interface builds on the basic multi-threading idiom of Drake: one context per thread. It offers two models to achieve multi-threaded parallel collision checking:</p>
 <ul>
-<li>using OpenMP thread pools and "implicit contexts" managed by this object</li>
+<li>using thread pools (e.g. OpenMP or similar) and "implicit contexts" managed by this object</li>
 <li>using arbitrary threads and "explicit contexts" created by this object</li>
 </ul>
 <p><a class="anchor" id="ccb_implicit_contexts"></a></p><h5>Implicit Context <a class="el" href="classdrake_1_1_parallelism.html" title="Specifies a desired degree of parallelism for a parallelized operation.">Parallelism</a></h5>
-<p>Many methods of this class aren't designed for entry from arbitrary threads (e.g. from std::async threads), but rather are designed for use with a main thread and various thread-pool-parallel operations achieved by using directives like <code>omp parallel</code>. To support this usage, the base class <code><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a381697ea7e2a890f5cd018d7c6dc8bc2" title="Allocate the per-thread context pool, and discontinue mutable access to the robot model.">AllocateContexts()</a></code> protected method establishes a pool of contexts, one per OMP thread. <code><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a381697ea7e2a890f5cd018d7c6dc8bc2" title="Allocate the per-thread context pool, and discontinue mutable access to the robot model.">AllocateContexts()</a></code> must be called and only be called as part of the constructor of a derived class defined as final.</p>
-<p>Once the context pool is created, clients can access a thread-associated context by using <code><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a8c84d0251fa9fa71f687ea3fbb549cf7">model_context()</a></code> and related methods. The association between thread and context uses the OpenMP notion of thread number. As a result, these context access methods are only safe under the following conditions:</p>
+<p>Many methods of this class aren't designed for entry from arbitrary threads (e.g. from std::async threads), but rather are designed for use with a main thread and various thread-pool-parallel operations achieved by using directives like <code>omp parallel</code>. To support this usage, the base class <code><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a381697ea7e2a890f5cd018d7c6dc8bc2" title="Allocate the per-thread context pool, and discontinue mutable access to the robot model.">AllocateContexts()</a></code> protected method establishes a pool of contexts to support the implicit context parallelism specified in the constructor. (Note: if the collision checker declares that parallel checking is not supported, only one implict context will be allocated). <code><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a381697ea7e2a890f5cd018d7c6dc8bc2" title="Allocate the per-thread context pool, and discontinue mutable access to the robot model.">AllocateContexts()</a></code> must be called and only be called as part of the constructor of a derived class defined as final.</p>
+<p>Once the context pool is created, clients can access a thread-associated context by using <code>model_context(optional&lt;int&gt; context_number)</code> and related methods. These methods may be called in two ways:</p>
+<ul>
+<li>without a context number, the association between thread and context uses the OpenMP notion of thread number</li>
+<li>with a context number, the method uses the context corresponding to the provided number</li>
+</ul>
+<p>Without a context number, these context access methods are only safe under the following conditions:</p>
 <ul>
 <li>the caller is the "main thread"</li>
-<li>the caller is an OMP team thread <em>during execution of a parallel region</em></li>
+<li>the caller is an OpenMP team thread <em>during execution of a parallel region</em></li>
 </ul>
-<p>Methods supporting implicit context parallelism are noted below by having a reference to this section.</p>
-<p>Users of this class (derived classes and others) can write their own parallel operations using implicit contexts, provided they use OpenMP directives and limit parallel blocks to only use <code>const</code> methods or methods marked to support implicit contexts parallelism.</p>
+<p>With a context number, these context access methods are only safe under the following conditions:</p>
+<ul>
+<li>no two or more threads simultaneously use the same context number</li>
+</ul>
+<p>Methods supporting implicit context parallelism are noted below by having a reference to this section; as a rule of thumb, any public method that takes a <code>context_number</code> argument uses implicit context parallelism.</p>
+<p>Users of this class (derived classes and others) can write their own parallel operations using implicit contexts, provided they limit parallel blocks to only use <code>const</code> methods or methods marked to support implicit contexts parallelism, and the parallel operations are:</p>
+<ul>
+<li>without a context number, only with parallelism using OpenMP directives</li>
+<li>with a context number, via a parallelization method that provides a notion of thread numbers similar in behavior to OpenMP's (i.e. a thread number in [0, number of threads), not arbitrary values like <code>std::this_thread::get_id()</code>)</li>
+</ul>
+<p>To determine the greatest implicit context parallelism that can be achieved in an OpenMP-parallelized operation, <code>GetNumberOfThreads(Parallelism parallelize)</code> returns the lesser of the provided <code>parallelism</code> and the supported implicit context parallelism.</p>
 <p><a class="anchor" id="ccb_explicit_contexts"></a></p><h5>Explicit Context <a class="el" href="classdrake_1_1_parallelism.html" title="Specifies a desired degree of parallelism for a parallelized operation.">Parallelism</a></h5>
 <p>It is also possible to use arbitrary thread models to perform collision checking in parallel using explicitly created contexts from this class. Contexts returned from <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#afa782a122b868c688b6c7bce870a7c93" title="Make and track a CollisionCheckerContext.">MakeStandaloneModelContext()</a> may be used in any thread, using only <code>const</code> methods of this class, or "explicit context" methods.</p>
 <p>Explicit contexts are tracked by this class using <code>std::weak_ptr</code> to track their lifetimes. This mechanism is used by PerformOperationAgainstAllModelContexts to map an operation over all collision contexts, whether explicit or implicit.</p>
-<p>Methods supporting explicit context parallelism are noted below by having a reference to this section.</p>
+<p>Methods supporting explicit context parallelism are noted below by having a reference to this section; as a rule of thumb, any public method that takes a <code>model_context</code> first argument uses explicit context parallelism.</p>
 <p>In practice, multi-threaded collision checking with explicit contexts may look something like the example below.</p>
 <div class="fragment"><div class="line"><span class="keyword">const</span> Eigen::VectorXd start_q ...</div><div class="line">const Eigen::VectorXd sample_q1 ...</div><div class="line">const Eigen::VectorXd sample_q2 ...</div><div class="line"></div><div class="line">const <span class="keyword">auto</span> check_edge_to = [&amp;collision_checker, &amp;start_q] (</div><div class="line">    <span class="keyword">const</span> Eigen::VectorXd&amp; sample_q,</div><div class="line">    CollisionCheckerContext* explicit_context) {</div><div class="line">  <span class="keywordflow">return</span> collision_checker.CheckContextEdgeCollisionFree(</div><div class="line">      explicit_context, start_q, sample_q);</div><div class="line">};</div><div class="line"></div><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> context_1 = collision_checker.MakeStandaloneModelContext();</div><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> context_2 = collision_checker.MakeStandaloneModelContext();</div><div class="line"></div><div class="line"><span class="keyword">auto</span> future_q1 = std::async(std::launch::async, check_edge_to, sample_q1,</div><div class="line">                            context_1.get());</div><div class="line"><span class="keyword">auto</span> future_q2 = std::async(std::launch::async, check_edge_to, sample_q2,</div><div class="line">                            context_2.get());</div><div class="line"></div><div class="line"><span class="keyword">const</span> <span class="keywordtype">double</span> edge_1_valid = future_q1.get();</div><div class="line"><span class="keyword">const</span> <span class="keywordtype">double</span> edge_2_valid = future_q2.get();</div></div><!-- fragment --><h5>Mixing Threading Models</h5>
 <p>It is possible to support mixed threading models, i.e., using both OpenMP thread pools and arbitrary threads. In this case, each arbitrary thread (say, from std::async) should have its own instance of a collision checker made using <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a208522fd8609e0a9376f52e291aa28e9">Clone()</a>. Then each arbitrary thread will have its own implicit context pool.</p>
 <h5>Implementing Derived Classes</h5>
-<p>Collision checkers deriving from <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html" title="Interface for collision checkers to use.">CollisionChecker</a> <em>must</em> support parallel operations from both of the above parallelism models. This is generally accomplished by placing all mutable state within the per-thread context. If this cannot be accomplished, the shared mutable state must be accessed in a thread-safe manner. There are APIs that depend on <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a6831872639ff530b78810ef26115bb26" title="Does the collision checker support true parallel collision checks?">SupportsParallelChecking()</a> (e.g., <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a8322ee81a1e43e99e39d36997d79fe44" title="Checks a vector of configurations for collision, evaluating in parallel when supported and enabled by...">CheckConfigsCollisionFree()</a>, <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a9f045c9f1561be7764ed7c776a127d51" title="Checks a single configuration-to-configuration edge for collision.">CheckEdgeCollisionFreeParallel()</a>, <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a71fc6e4ab8e9d2d13ace057b381c2a8b" title="Checks multiple configuration-to-configuration edges for collision.">CheckEdgesCollisionFree()</a>, etc); a derived implementation should return <code>false</code> from <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a6831872639ff530b78810ef26115bb26" title="Does the collision checker support true parallel collision checks?">SupportsParallelChecking()</a> if there is no meaningful benefit to attempting to do work in parallel (e.g., they must fully serialize on shared state). </p>
+<p>Collision checkers deriving from <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html" title="Interface for collision checkers to use.">CollisionChecker</a> <em>must</em> support parallel operations from both of the above parallelism models. This is generally accomplished by placing all mutable state within the per-thread context. If this cannot be accomplished, the shared mutable state must be accessed in a thread-safe manner. There are APIs that depend on <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a6831872639ff530b78810ef26115bb26" title="Does the collision checker support true parallel collision checks?">SupportsParallelChecking()</a> (e.g., <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ab6fad600cdc1af035911735f62f09613" title="Checks a vector of configurations for collision, evaluating in parallel when supported and enabled by...">CheckConfigsCollisionFree()</a>, <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a6bb8c478f30ea78ac72ce0e557c6067d" title="Checks a single configuration-to-configuration edge for collision.">CheckEdgeCollisionFreeParallel()</a>, <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a9440fd892ebb54aa4d675dd4b2769b02" title="Checks multiple configuration-to-configuration edges for collision.">CheckEdgesCollisionFree()</a>, etc); a derived implementation should return <code>false</code> from <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a6831872639ff530b78810ef26115bb26" title="Does the collision checker support true parallel collision checks?">SupportsParallelChecking()</a> if there is no meaningful benefit to attempting to do work in parallel (e.g., they must fully serialize on shared state). </p>
 </div>
 <p><code>#include &lt;drake/planning/collision_checker.h&gt;</code></p>
 <table class="memberdecls">
@@ -210,9 +224,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6831872639ff530b78810ef26115bb26"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a6831872639ff530b78810ef26115bb26">SupportsParallelChecking</a> () const</td></tr>
 <tr class="memdesc:a6831872639ff530b78810ef26115bb26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does the collision checker support true parallel collision checks?  <a href="#a6831872639ff530b78810ef26115bb26">More...</a><br /></td></tr>
 <tr class="separator:a6831872639ff530b78810ef26115bb26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71074f52f2a117d4b26a193f7adbfd57"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a71074f52f2a117d4b26a193f7adbfd57">GetNumberOfThreads</a> (bool parallelize) const</td></tr>
-<tr class="memdesc:a71074f52f2a117d4b26a193f7adbfd57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number of threads that may be used in an OpenMP-parallelized loop, if parallelize=true, or 1 if parallelize=false.  <a href="#a71074f52f2a117d4b26a193f7adbfd57">More...</a><br /></td></tr>
-<tr class="separator:a71074f52f2a117d4b26a193f7adbfd57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment.</div></td></tr>
 <tr class="memitem:a236e58ced4f42c22e7395000ecaaeb7b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a236e58ced4f42c22e7395000ecaaeb7b">CollisionChecker</a> (<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html">CollisionChecker</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:a236e58ced4f42c22e7395000ecaaeb7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -241,15 +252,17 @@ Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Context management</div></td></tr>
 <tr class="memitem:a1db04299a725f279a9c49df91dc0deb2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a1db04299a725f279a9c49df91dc0deb2">num_allocated_contexts</a> () const</td></tr>
 <tr class="separator:a1db04299a725f279a9c49df91dc0deb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c84d0251fa9fa71f687ea3fbb549cf7"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a8c84d0251fa9fa71f687ea3fbb549cf7">model_context</a> () const</td></tr>
-<tr class="separator:a8c84d0251fa9fa71f687ea3fbb549cf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e7d2a81568c26350b120a592e55e174"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a1e7d2a81568c26350b120a592e55e174">plant_context</a> () const</td></tr>
-<tr class="separator:a1e7d2a81568c26350b120a592e55e174"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81c230b8ef6206e88617656df3cc7d30"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a81c230b8ef6206e88617656df3cc7d30">UpdatePositions</a> (const Eigen::VectorXd &amp;q) const</td></tr>
-<tr class="memdesc:a81c230b8ef6206e88617656df3cc7d30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the generalized positions <code>q</code> in the current thread's associated context, and returns a reference to the MultibodyPlant's now-updated context.  <a href="#a81c230b8ef6206e88617656df3cc7d30">More...</a><br /></td></tr>
-<tr class="separator:a81c230b8ef6206e88617656df3cc7d30"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8138de22d2de848cc6603ab263bc09b7"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a8138de22d2de848cc6603ab263bc09b7">UpdateContextPositions</a> (<a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> *<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a8c84d0251fa9fa71f687ea3fbb549cf7">model_context</a>, const Eigen::VectorXd &amp;q) const</td></tr>
-<tr class="memdesc:a8138de22d2de848cc6603ab263bc09b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Explicit Context-based version of <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a81c230b8ef6206e88617656df3cc7d30" title="Updates the generalized positions q in the current thread&#39;s associated context, and returns a referen...">UpdatePositions()</a>.  <a href="#a8138de22d2de848cc6603ab263bc09b7">More...</a><br /></td></tr>
+<tr class="memitem:ab207bdd2b5cd80d49c022f8924c0cc94"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ab207bdd2b5cd80d49c022f8924c0cc94">model_context</a> (std::optional&lt; <a class="el" href="classint.html">int</a> &gt; context_number=std::nullopt) const</td></tr>
+<tr class="memdesc:ab207bdd2b5cd80d49c022f8924c0cc94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesses a collision checking context from within the implicit context pool owned by this collision checker.  <a href="#ab207bdd2b5cd80d49c022f8924c0cc94">More...</a><br /></td></tr>
+<tr class="separator:ab207bdd2b5cd80d49c022f8924c0cc94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a333127515e4e2dccd74474e9cd074ab0"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a333127515e4e2dccd74474e9cd074ab0">plant_context</a> (std::optional&lt; <a class="el" href="classint.html">int</a> &gt; context_number=std::nullopt) const</td></tr>
+<tr class="memdesc:a333127515e4e2dccd74474e9cd074ab0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesses a multibody plant sub-context context from within the implicit context pool owned by this collision checker.  <a href="#a333127515e4e2dccd74474e9cd074ab0">More...</a><br /></td></tr>
+<tr class="separator:a333127515e4e2dccd74474e9cd074ab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1363af30369136f8b8f06f9719e36910"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a1363af30369136f8b8f06f9719e36910">UpdatePositions</a> (const Eigen::VectorXd &amp;q, std::optional&lt; <a class="el" href="classint.html">int</a> &gt; context_number=std::nullopt) const</td></tr>
+<tr class="memdesc:a1363af30369136f8b8f06f9719e36910"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the generalized positions <code>q</code> in the implicit context specified and returns a reference to the MultibodyPlant's now-updated context.  <a href="#a1363af30369136f8b8f06f9719e36910">More...</a><br /></td></tr>
+<tr class="separator:a1363af30369136f8b8f06f9719e36910"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8138de22d2de848cc6603ab263bc09b7"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a8138de22d2de848cc6603ab263bc09b7">UpdateContextPositions</a> (<a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> *<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ab207bdd2b5cd80d49c022f8924c0cc94">model_context</a>, const Eigen::VectorXd &amp;q) const</td></tr>
+<tr class="memdesc:a8138de22d2de848cc6603ab263bc09b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Explicit Context-based version of <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a1363af30369136f8b8f06f9719e36910" title="Updates the generalized positions q in the implicit context specified and returns a reference to the ...">UpdatePositions()</a>.  <a href="#a8138de22d2de848cc6603ab263bc09b7">More...</a><br /></td></tr>
 <tr class="separator:a8138de22d2de848cc6603ab263bc09b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa782a122b868c688b6c7bce870a7c93"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#afa782a122b868c688b6c7bce870a7c93">MakeStandaloneModelContext</a> () const</td></tr>
 <tr class="memdesc:afa782a122b868c688b6c7bce870a7c93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make and track a <a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html" title="This class represents the data necessary for CollisionChecker to operate safely across multiple threa...">CollisionCheckerContext</a>.  <a href="#afa782a122b868c688b6c7bce870a7c93">More...</a><br /></td></tr>
@@ -396,15 +409,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a2ab877a9a54d4f939d19ac93ec496d3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload that uses body references.  <a href="#a2ab877a9a54d4f939d19ac93ec496d3f">More...</a><br /></td></tr>
 <tr class="separator:a2ab877a9a54d4f939d19ac93ec496d3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Configuration collision checking</div></td></tr>
-<tr class="memitem:aa27a4faa38ce0e53514ae506061dd987"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#aa27a4faa38ce0e53514ae506061dd987">CheckConfigCollisionFree</a> (const Eigen::VectorXd &amp;q) const</td></tr>
-<tr class="memdesc:aa27a4faa38ce0e53514ae506061dd987"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks a single configuration for collision using the current thread's associated context.  <a href="#aa27a4faa38ce0e53514ae506061dd987">More...</a><br /></td></tr>
-<tr class="separator:aa27a4faa38ce0e53514ae506061dd987"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc6b89337adab829567d9be3fe350517"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#acc6b89337adab829567d9be3fe350517">CheckContextConfigCollisionFree</a> (<a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> *<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a8c84d0251fa9fa71f687ea3fbb549cf7">model_context</a>, const Eigen::VectorXd &amp;q) const</td></tr>
-<tr class="memdesc:acc6b89337adab829567d9be3fe350517"><td class="mdescLeft">&#160;</td><td class="mdescRight">Explicit Context-based version of <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#aa27a4faa38ce0e53514ae506061dd987" title="Checks a single configuration for collision using the current thread&#39;s associated context.">CheckConfigCollisionFree()</a>.  <a href="#acc6b89337adab829567d9be3fe350517">More...</a><br /></td></tr>
+<tr class="memitem:adb33fbe45f267be402e5e2a750428044"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#adb33fbe45f267be402e5e2a750428044">CheckConfigCollisionFree</a> (const Eigen::VectorXd &amp;q, std::optional&lt; <a class="el" href="classint.html">int</a> &gt; context_number=std::nullopt) const</td></tr>
+<tr class="memdesc:adb33fbe45f267be402e5e2a750428044"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks a single configuration for collision using the current thread's associated context.  <a href="#adb33fbe45f267be402e5e2a750428044">More...</a><br /></td></tr>
+<tr class="separator:adb33fbe45f267be402e5e2a750428044"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc6b89337adab829567d9be3fe350517"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#acc6b89337adab829567d9be3fe350517">CheckContextConfigCollisionFree</a> (<a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> *<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ab207bdd2b5cd80d49c022f8924c0cc94">model_context</a>, const Eigen::VectorXd &amp;q) const</td></tr>
+<tr class="memdesc:acc6b89337adab829567d9be3fe350517"><td class="mdescLeft">&#160;</td><td class="mdescRight">Explicit Context-based version of <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#adb33fbe45f267be402e5e2a750428044" title="Checks a single configuration for collision using the current thread&#39;s associated context.">CheckConfigCollisionFree()</a>.  <a href="#acc6b89337adab829567d9be3fe350517">More...</a><br /></td></tr>
 <tr class="separator:acc6b89337adab829567d9be3fe350517"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8322ee81a1e43e99e39d36997d79fe44"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a8322ee81a1e43e99e39d36997d79fe44">CheckConfigsCollisionFree</a> (const std::vector&lt; Eigen::VectorXd &gt; &amp;configs, bool parallelize=true) const</td></tr>
-<tr class="memdesc:a8322ee81a1e43e99e39d36997d79fe44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks a vector of configurations for collision, evaluating in parallel when supported and enabled by <code>parallelize</code>.  <a href="#a8322ee81a1e43e99e39d36997d79fe44">More...</a><br /></td></tr>
-<tr class="separator:a8322ee81a1e43e99e39d36997d79fe44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6fad600cdc1af035911735f62f09613"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ab6fad600cdc1af035911735f62f09613">CheckConfigsCollisionFree</a> (const std::vector&lt; Eigen::VectorXd &gt; &amp;configs, <a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> parallelize=<a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819">Parallelism::Max</a>()) const</td></tr>
+<tr class="memdesc:ab6fad600cdc1af035911735f62f09613"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks a vector of configurations for collision, evaluating in parallel when supported and enabled by <code>parallelize</code>.  <a href="#ab6fad600cdc1af035911735f62f09613">More...</a><br /></td></tr>
+<tr class="separator:ab6fad600cdc1af035911735f62f09613"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Edge collision checking</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>These functions serve motion planning methods, such as sampling-based planners and shortcut smoothers, which are concerned about checking that an "edge" between two configurations, q1 and q2, is free of collision.</p>
 <p>These functions <em>approximately</em> answer the question: is the edge collision free. The answer is determined by sampling configurations along the edge and reporting the edge to be collision free if all samples are collision free. Otherwise, we report the fraction of samples (starting with the start configuration) that reported to be collision free. The tested samples include the start and end configurations, q1 and q2, respectively.</p>
@@ -454,55 +467,55 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a285e992424a4197669a43d70f1208474"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a285e992424a4197669a43d70f1208474">set_edge_step_size</a> (<a class="el" href="classdouble.html">double</a> <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#adaa8d8cac0c3193bc48a6fb8229b85e8">edge_step_size</a>)</td></tr>
 <tr class="memdesc:a285e992424a4197669a43d70f1208474"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the edge step size to <code>edge_step_size</code>.  <a href="#a285e992424a4197669a43d70f1208474">More...</a><br /></td></tr>
 <tr class="separator:a285e992424a4197669a43d70f1208474"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acce2242b3fa411baff810a88cf59fa13"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#acce2242b3fa411baff810a88cf59fa13">CheckEdgeCollisionFree</a> (const Eigen::VectorXd &amp;q1, const Eigen::VectorXd &amp;q2) const</td></tr>
-<tr class="memdesc:acce2242b3fa411baff810a88cf59fa13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks a single configuration-to-configuration edge for collision, using the current thread's associated context.  <a href="#acce2242b3fa411baff810a88cf59fa13">More...</a><br /></td></tr>
-<tr class="separator:acce2242b3fa411baff810a88cf59fa13"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ab530c2f1db69b7fcb503447c63ef8f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a2ab530c2f1db69b7fcb503447c63ef8f">CheckContextEdgeCollisionFree</a> (<a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> *<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a8c84d0251fa9fa71f687ea3fbb549cf7">model_context</a>, const Eigen::VectorXd &amp;q1, const Eigen::VectorXd &amp;q2) const</td></tr>
-<tr class="memdesc:a2ab530c2f1db69b7fcb503447c63ef8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Explicit Context-based version of <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#acce2242b3fa411baff810a88cf59fa13" title="Checks a single configuration-to-configuration edge for collision, using the current thread&#39;s associa...">CheckEdgeCollisionFree()</a>.  <a href="#a2ab530c2f1db69b7fcb503447c63ef8f">More...</a><br /></td></tr>
+<tr class="memitem:acd7c5dd9a903bedc2d984fe12aa5c409"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#acd7c5dd9a903bedc2d984fe12aa5c409">CheckEdgeCollisionFree</a> (const Eigen::VectorXd &amp;q1, const Eigen::VectorXd &amp;q2, std::optional&lt; <a class="el" href="classint.html">int</a> &gt; context_number=std::nullopt) const</td></tr>
+<tr class="memdesc:acd7c5dd9a903bedc2d984fe12aa5c409"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks a single configuration-to-configuration edge for collision, using the current thread's associated context.  <a href="#acd7c5dd9a903bedc2d984fe12aa5c409">More...</a><br /></td></tr>
+<tr class="separator:acd7c5dd9a903bedc2d984fe12aa5c409"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ab530c2f1db69b7fcb503447c63ef8f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a2ab530c2f1db69b7fcb503447c63ef8f">CheckContextEdgeCollisionFree</a> (<a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> *<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ab207bdd2b5cd80d49c022f8924c0cc94">model_context</a>, const Eigen::VectorXd &amp;q1, const Eigen::VectorXd &amp;q2) const</td></tr>
+<tr class="memdesc:a2ab530c2f1db69b7fcb503447c63ef8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Explicit Context-based version of <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#acd7c5dd9a903bedc2d984fe12aa5c409" title="Checks a single configuration-to-configuration edge for collision, using the current thread&#39;s associa...">CheckEdgeCollisionFree()</a>.  <a href="#a2ab530c2f1db69b7fcb503447c63ef8f">More...</a><br /></td></tr>
 <tr class="separator:a2ab530c2f1db69b7fcb503447c63ef8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f045c9f1561be7764ed7c776a127d51"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a9f045c9f1561be7764ed7c776a127d51">CheckEdgeCollisionFreeParallel</a> (const Eigen::VectorXd &amp;q1, const Eigen::VectorXd &amp;q2) const</td></tr>
-<tr class="memdesc:a9f045c9f1561be7764ed7c776a127d51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks a single configuration-to-configuration edge for collision.  <a href="#a9f045c9f1561be7764ed7c776a127d51">More...</a><br /></td></tr>
-<tr class="separator:a9f045c9f1561be7764ed7c776a127d51"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71fc6e4ab8e9d2d13ace057b381c2a8b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a71fc6e4ab8e9d2d13ace057b381c2a8b">CheckEdgesCollisionFree</a> (const std::vector&lt; std::pair&lt; Eigen::VectorXd, Eigen::VectorXd &gt;&gt; &amp;edges, bool parallelize=true) const</td></tr>
-<tr class="memdesc:a71fc6e4ab8e9d2d13ace057b381c2a8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks multiple configuration-to-configuration edges for collision.  <a href="#a71fc6e4ab8e9d2d13ace057b381c2a8b">More...</a><br /></td></tr>
-<tr class="separator:a71fc6e4ab8e9d2d13ace057b381c2a8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1a0dd68196093bebd763380def4a1bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1_edge_measure.html">EdgeMeasure</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ab1a0dd68196093bebd763380def4a1bd">MeasureEdgeCollisionFree</a> (const Eigen::VectorXd &amp;q1, const Eigen::VectorXd &amp;q2) const</td></tr>
-<tr class="memdesc:ab1a0dd68196093bebd763380def4a1bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks a single configuration-to-configuration edge for collision, using the current thread's associated context.  <a href="#ab1a0dd68196093bebd763380def4a1bd">More...</a><br /></td></tr>
-<tr class="separator:ab1a0dd68196093bebd763380def4a1bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a769397ad377b0ff40c67cc3e373ee8a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1_edge_measure.html">EdgeMeasure</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a769397ad377b0ff40c67cc3e373ee8a1">MeasureContextEdgeCollisionFree</a> (<a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> *<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a8c84d0251fa9fa71f687ea3fbb549cf7">model_context</a>, const Eigen::VectorXd &amp;q1, const Eigen::VectorXd &amp;q2) const</td></tr>
-<tr class="memdesc:a769397ad377b0ff40c67cc3e373ee8a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Explicit Context-based version of <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ab1a0dd68196093bebd763380def4a1bd" title="Checks a single configuration-to-configuration edge for collision, using the current thread&#39;s associa...">MeasureEdgeCollisionFree()</a>.  <a href="#a769397ad377b0ff40c67cc3e373ee8a1">More...</a><br /></td></tr>
+<tr class="memitem:a6bb8c478f30ea78ac72ce0e557c6067d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a6bb8c478f30ea78ac72ce0e557c6067d">CheckEdgeCollisionFreeParallel</a> (const Eigen::VectorXd &amp;q1, const Eigen::VectorXd &amp;q2, <a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> parallelize=<a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819">Parallelism::Max</a>()) const</td></tr>
+<tr class="memdesc:a6bb8c478f30ea78ac72ce0e557c6067d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks a single configuration-to-configuration edge for collision.  <a href="#a6bb8c478f30ea78ac72ce0e557c6067d">More...</a><br /></td></tr>
+<tr class="separator:a6bb8c478f30ea78ac72ce0e557c6067d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9440fd892ebb54aa4d675dd4b2769b02"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a9440fd892ebb54aa4d675dd4b2769b02">CheckEdgesCollisionFree</a> (const std::vector&lt; std::pair&lt; Eigen::VectorXd, Eigen::VectorXd &gt;&gt; &amp;edges, <a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> parallelize=<a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819">Parallelism::Max</a>()) const</td></tr>
+<tr class="memdesc:a9440fd892ebb54aa4d675dd4b2769b02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks multiple configuration-to-configuration edges for collision.  <a href="#a9440fd892ebb54aa4d675dd4b2769b02">More...</a><br /></td></tr>
+<tr class="separator:a9440fd892ebb54aa4d675dd4b2769b02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac60fa98836f3dac1975ebc8f7a68b223"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1_edge_measure.html">EdgeMeasure</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ac60fa98836f3dac1975ebc8f7a68b223">MeasureEdgeCollisionFree</a> (const Eigen::VectorXd &amp;q1, const Eigen::VectorXd &amp;q2, std::optional&lt; <a class="el" href="classint.html">int</a> &gt; context_number=std::nullopt) const</td></tr>
+<tr class="memdesc:ac60fa98836f3dac1975ebc8f7a68b223"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks a single configuration-to-configuration edge for collision, using the current thread's associated context.  <a href="#ac60fa98836f3dac1975ebc8f7a68b223">More...</a><br /></td></tr>
+<tr class="separator:ac60fa98836f3dac1975ebc8f7a68b223"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a769397ad377b0ff40c67cc3e373ee8a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1_edge_measure.html">EdgeMeasure</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a769397ad377b0ff40c67cc3e373ee8a1">MeasureContextEdgeCollisionFree</a> (<a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> *<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ab207bdd2b5cd80d49c022f8924c0cc94">model_context</a>, const Eigen::VectorXd &amp;q1, const Eigen::VectorXd &amp;q2) const</td></tr>
+<tr class="memdesc:a769397ad377b0ff40c67cc3e373ee8a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Explicit Context-based version of <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ac60fa98836f3dac1975ebc8f7a68b223" title="Checks a single configuration-to-configuration edge for collision, using the current thread&#39;s associa...">MeasureEdgeCollisionFree()</a>.  <a href="#a769397ad377b0ff40c67cc3e373ee8a1">More...</a><br /></td></tr>
 <tr class="separator:a769397ad377b0ff40c67cc3e373ee8a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a019e3fae3f3ecc6d599345bca9480fcb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1_edge_measure.html">EdgeMeasure</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a019e3fae3f3ecc6d599345bca9480fcb">MeasureEdgeCollisionFreeParallel</a> (const Eigen::VectorXd &amp;q1, const Eigen::VectorXd &amp;q2) const</td></tr>
-<tr class="memdesc:a019e3fae3f3ecc6d599345bca9480fcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks a single configuration-to-configuration edge for collision.  <a href="#a019e3fae3f3ecc6d599345bca9480fcb">More...</a><br /></td></tr>
-<tr class="separator:a019e3fae3f3ecc6d599345bca9480fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab83a3cbdf60eb07937a81f0dd8d458c9"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1planning_1_1_edge_measure.html">EdgeMeasure</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ab83a3cbdf60eb07937a81f0dd8d458c9">MeasureEdgesCollisionFree</a> (const std::vector&lt; std::pair&lt; Eigen::VectorXd, Eigen::VectorXd &gt;&gt; &amp;edges, bool parallelize=true) const</td></tr>
-<tr class="memdesc:ab83a3cbdf60eb07937a81f0dd8d458c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks multiple configuration-to-configuration edge for collision.  <a href="#ab83a3cbdf60eb07937a81f0dd8d458c9">More...</a><br /></td></tr>
-<tr class="separator:ab83a3cbdf60eb07937a81f0dd8d458c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae06d7f2e61a9d56deb761d03a216f01b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1_edge_measure.html">EdgeMeasure</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ae06d7f2e61a9d56deb761d03a216f01b">MeasureEdgeCollisionFreeParallel</a> (const Eigen::VectorXd &amp;q1, const Eigen::VectorXd &amp;q2, <a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> parallelize=<a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819">Parallelism::Max</a>()) const</td></tr>
+<tr class="memdesc:ae06d7f2e61a9d56deb761d03a216f01b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks a single configuration-to-configuration edge for collision.  <a href="#ae06d7f2e61a9d56deb761d03a216f01b">More...</a><br /></td></tr>
+<tr class="separator:ae06d7f2e61a9d56deb761d03a216f01b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a444310966d4b5d748754393473500ffe"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1planning_1_1_edge_measure.html">EdgeMeasure</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a444310966d4b5d748754393473500ffe">MeasureEdgesCollisionFree</a> (const std::vector&lt; std::pair&lt; Eigen::VectorXd, Eigen::VectorXd &gt;&gt; &amp;edges, <a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> parallelize=<a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819">Parallelism::Max</a>()) const</td></tr>
+<tr class="memdesc:a444310966d4b5d748754393473500ffe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks multiple configuration-to-configuration edge for collision.  <a href="#a444310966d4b5d748754393473500ffe">More...</a><br /></td></tr>
+<tr class="separator:a444310966d4b5d748754393473500ffe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Robot collision state</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>These methods help characterize the robot's collision state with respect to a particular robot configuration.</p>
 <p>In this section, the "collision state" is characterized with two different APIs:</p>
 <ul>
-<li>"clearance", a measure of how near to collision the robot as computed by <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a678d1e0c7b171295455bea0b60ab85d3" title="Calculates the distance, ϕ, and distance Jacobian, Jqᵣ_ϕ, for each potential collision whose distance...">CalcRobotClearance()</a>, and</li>
-<li>a boolean colliding state for each robot body as computed by <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a512a6232b122ea6cc6cd51ba39d1adfc" title="Classifies which robot bodies are in collision (and which type of collision) for the provided configu...">ClassifyBodyCollisions()</a>. </li>
+<li>"clearance", a measure of how near to collision the robot as computed by <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a2b9fc782d20ef71bf845c913e3f9b7c8" title="Calculates the distance, ϕ, and distance Jacobian, Jqᵣ_ϕ, for each potential collision whose distance...">CalcRobotClearance()</a>, and</li>
+<li>a boolean colliding state for each robot body as computed by <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a581dd62ed28820d82da1e6162a1a4645" title="Classifies which robot bodies are in collision (and which type of collision) for the provided configu...">ClassifyBodyCollisions()</a>. </li>
 </ul>
 </div></td></tr>
-<tr class="memitem:a678d1e0c7b171295455bea0b60ab85d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1_robot_clearance.html">RobotClearance</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a678d1e0c7b171295455bea0b60ab85d3">CalcRobotClearance</a> (const Eigen::VectorXd &amp;q, <a class="el" href="classdouble.html">double</a> influence_distance) const</td></tr>
-<tr class="memdesc:a678d1e0c7b171295455bea0b60ab85d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the distance, ϕ, and distance Jacobian, Jqᵣ_ϕ, for each potential collision whose distance is less than <code>influence_distance</code>, using the current thread's associated context.  <a href="#a678d1e0c7b171295455bea0b60ab85d3">More...</a><br /></td></tr>
-<tr class="separator:a678d1e0c7b171295455bea0b60ab85d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a087708be5fd97325b70c6da77de44eae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1_robot_clearance.html">RobotClearance</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a087708be5fd97325b70c6da77de44eae">CalcContextRobotClearance</a> (<a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> *<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a8c84d0251fa9fa71f687ea3fbb549cf7">model_context</a>, const Eigen::VectorXd &amp;q, <a class="el" href="classdouble.html">double</a> influence_distance) const</td></tr>
-<tr class="memdesc:a087708be5fd97325b70c6da77de44eae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Explicit Context-based version of <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a678d1e0c7b171295455bea0b60ab85d3" title="Calculates the distance, ϕ, and distance Jacobian, Jqᵣ_ϕ, for each potential collision whose distance...">CalcRobotClearance()</a>.  <a href="#a087708be5fd97325b70c6da77de44eae">More...</a><br /></td></tr>
+<tr class="memitem:a2b9fc782d20ef71bf845c913e3f9b7c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1_robot_clearance.html">RobotClearance</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a2b9fc782d20ef71bf845c913e3f9b7c8">CalcRobotClearance</a> (const Eigen::VectorXd &amp;q, <a class="el" href="classdouble.html">double</a> influence_distance, std::optional&lt; <a class="el" href="classint.html">int</a> &gt; context_number=std::nullopt) const</td></tr>
+<tr class="memdesc:a2b9fc782d20ef71bf845c913e3f9b7c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the distance, ϕ, and distance Jacobian, Jqᵣ_ϕ, for each potential collision whose distance is less than <code>influence_distance</code>, using the current thread's associated context.  <a href="#a2b9fc782d20ef71bf845c913e3f9b7c8">More...</a><br /></td></tr>
+<tr class="separator:a2b9fc782d20ef71bf845c913e3f9b7c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a087708be5fd97325b70c6da77de44eae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1_robot_clearance.html">RobotClearance</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a087708be5fd97325b70c6da77de44eae">CalcContextRobotClearance</a> (<a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> *<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ab207bdd2b5cd80d49c022f8924c0cc94">model_context</a>, const Eigen::VectorXd &amp;q, <a class="el" href="classdouble.html">double</a> influence_distance) const</td></tr>
+<tr class="memdesc:a087708be5fd97325b70c6da77de44eae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Explicit Context-based version of <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a2b9fc782d20ef71bf845c913e3f9b7c8" title="Calculates the distance, ϕ, and distance Jacobian, Jqᵣ_ϕ, for each potential collision whose distance...">CalcRobotClearance()</a>.  <a href="#a087708be5fd97325b70c6da77de44eae">More...</a><br /></td></tr>
 <tr class="separator:a087708be5fd97325b70c6da77de44eae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f0eb0fde313a6653e5692173c759145"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a4f0eb0fde313a6653e5692173c759145">MaxNumDistances</a> () const</td></tr>
-<tr class="memdesc:a4f0eb0fde313a6653e5692173c759145"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an upper bound on the number of distances returned by <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a678d1e0c7b171295455bea0b60ab85d3" title="Calculates the distance, ϕ, and distance Jacobian, Jqᵣ_ϕ, for each potential collision whose distance...">CalcRobotClearance()</a>, using the current thread's associated context.  <a href="#a4f0eb0fde313a6653e5692173c759145">More...</a><br /></td></tr>
-<tr class="separator:a4f0eb0fde313a6653e5692173c759145"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23bcd057122f2a90fd8e673a51e9bcd3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a23bcd057122f2a90fd8e673a51e9bcd3">MaxContextNumDistances</a> (const <a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> &amp;<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a8c84d0251fa9fa71f687ea3fbb549cf7">model_context</a>) const</td></tr>
-<tr class="memdesc:a23bcd057122f2a90fd8e673a51e9bcd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Explicit Context-based version of <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a4f0eb0fde313a6653e5692173c759145" title="Returns an upper bound on the number of distances returned by CalcRobotClearance(),...">MaxNumDistances()</a>.  <a href="#a23bcd057122f2a90fd8e673a51e9bcd3">More...</a><br /></td></tr>
+<tr class="memitem:acb92e0e060e99a17ea72a57daba72251"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#acb92e0e060e99a17ea72a57daba72251">MaxNumDistances</a> (std::optional&lt; <a class="el" href="classint.html">int</a> &gt; context_number=std::nullopt) const</td></tr>
+<tr class="memdesc:acb92e0e060e99a17ea72a57daba72251"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an upper bound on the number of distances returned by <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a2b9fc782d20ef71bf845c913e3f9b7c8" title="Calculates the distance, ϕ, and distance Jacobian, Jqᵣ_ϕ, for each potential collision whose distance...">CalcRobotClearance()</a>, using the current thread's associated context.  <a href="#acb92e0e060e99a17ea72a57daba72251">More...</a><br /></td></tr>
+<tr class="separator:acb92e0e060e99a17ea72a57daba72251"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23bcd057122f2a90fd8e673a51e9bcd3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a23bcd057122f2a90fd8e673a51e9bcd3">MaxContextNumDistances</a> (const <a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> &amp;<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ab207bdd2b5cd80d49c022f8924c0cc94">model_context</a>) const</td></tr>
+<tr class="memdesc:a23bcd057122f2a90fd8e673a51e9bcd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Explicit Context-based version of <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#acb92e0e060e99a17ea72a57daba72251" title="Returns an upper bound on the number of distances returned by CalcRobotClearance(),...">MaxNumDistances()</a>.  <a href="#a23bcd057122f2a90fd8e673a51e9bcd3">More...</a><br /></td></tr>
 <tr class="separator:a23bcd057122f2a90fd8e673a51e9bcd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a512a6232b122ea6cc6cd51ba39d1adfc"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="group__planning__collision__checker.html#ga6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a512a6232b122ea6cc6cd51ba39d1adfc">ClassifyBodyCollisions</a> (const Eigen::VectorXd &amp;q) const</td></tr>
-<tr class="memdesc:a512a6232b122ea6cc6cd51ba39d1adfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Classifies which robot bodies are in collision (and which type of collision) for the provided configuration <code>q</code>, using the current thread's associated context.  <a href="#a512a6232b122ea6cc6cd51ba39d1adfc">More...</a><br /></td></tr>
-<tr class="separator:a512a6232b122ea6cc6cd51ba39d1adfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9dc9fdc559c30373b006561750b65e1d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="group__planning__collision__checker.html#ga6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a9dc9fdc559c30373b006561750b65e1d">ClassifyContextBodyCollisions</a> (<a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> *<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a8c84d0251fa9fa71f687ea3fbb549cf7">model_context</a>, const Eigen::VectorXd &amp;q) const</td></tr>
-<tr class="memdesc:a9dc9fdc559c30373b006561750b65e1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Explicit Context-based version of <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a512a6232b122ea6cc6cd51ba39d1adfc" title="Classifies which robot bodies are in collision (and which type of collision) for the provided configu...">ClassifyBodyCollisions()</a>.  <a href="#a9dc9fdc559c30373b006561750b65e1d">More...</a><br /></td></tr>
+<tr class="memitem:a581dd62ed28820d82da1e6162a1a4645"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="group__planning__collision__checker.html#ga6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a581dd62ed28820d82da1e6162a1a4645">ClassifyBodyCollisions</a> (const Eigen::VectorXd &amp;q, std::optional&lt; <a class="el" href="classint.html">int</a> &gt; context_number=std::nullopt) const</td></tr>
+<tr class="memdesc:a581dd62ed28820d82da1e6162a1a4645"><td class="mdescLeft">&#160;</td><td class="mdescRight">Classifies which robot bodies are in collision (and which type of collision) for the provided configuration <code>q</code>, using the current thread's associated context.  <a href="#a581dd62ed28820d82da1e6162a1a4645">More...</a><br /></td></tr>
+<tr class="separator:a581dd62ed28820d82da1e6162a1a4645"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dc9fdc559c30373b006561750b65e1d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="group__planning__collision__checker.html#ga6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a9dc9fdc559c30373b006561750b65e1d">ClassifyContextBodyCollisions</a> (<a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> *<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ab207bdd2b5cd80d49c022f8924c0cc94">model_context</a>, const Eigen::VectorXd &amp;q) const</td></tr>
+<tr class="memdesc:a9dc9fdc559c30373b006561750b65e1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Explicit Context-based version of <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a581dd62ed28820d82da1e6162a1a4645" title="Classifies which robot bodies are in collision (and which type of collision) for the provided configu...">ClassifyBodyCollisions()</a>.  <a href="#a9dc9fdc559c30373b006561750b65e1d">More...</a><br /></td></tr>
 <tr class="separator:a9dc9fdc559c30373b006561750b65e1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
@@ -531,10 +544,10 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:af43a938ad38ceb4d96258db6bbe668e5"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html">CollisionChecker</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#af43a938ad38ceb4d96258db6bbe668e5">DoClone</a> () const =0</td></tr>
 <tr class="memdesc:af43a938ad38ceb4d96258db6bbe668e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derived collision checkers implement can make use of the protected copy constructor to implement <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#af43a938ad38ceb4d96258db6bbe668e5" title="Derived collision checkers implement can make use of the protected copy constructor to implement DoCl...">DoClone()</a>.  <a href="#af43a938ad38ceb4d96258db6bbe668e5">More...</a><br /></td></tr>
 <tr class="separator:af43a938ad38ceb4d96258db6bbe668e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4a3f7ae74cf3f31e5f3a3b840d111a5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#af4a3f7ae74cf3f31e5f3a3b840d111a5">DoUpdateContextPositions</a> (<a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> *<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a8c84d0251fa9fa71f687ea3fbb549cf7">model_context</a>) const =0</td></tr>
+<tr class="memitem:af4a3f7ae74cf3f31e5f3a3b840d111a5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#af4a3f7ae74cf3f31e5f3a3b840d111a5">DoUpdateContextPositions</a> (<a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> *<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ab207bdd2b5cd80d49c022f8924c0cc94">model_context</a>) const =0</td></tr>
 <tr class="memdesc:af4a3f7ae74cf3f31e5f3a3b840d111a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derived collision checkers can do further work in this function in response to updates to the MultibodyPlant positions.  <a href="#af4a3f7ae74cf3f31e5f3a3b840d111a5">More...</a><br /></td></tr>
 <tr class="separator:af4a3f7ae74cf3f31e5f3a3b840d111a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a751ed5a04cd06853f43ab40f1ac5dde6"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a751ed5a04cd06853f43ab40f1ac5dde6">DoCheckContextConfigCollisionFree</a> (const <a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> &amp;<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a8c84d0251fa9fa71f687ea3fbb549cf7">model_context</a>) const =0</td></tr>
+<tr class="memitem:a751ed5a04cd06853f43ab40f1ac5dde6"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a751ed5a04cd06853f43ab40f1ac5dde6">DoCheckContextConfigCollisionFree</a> (const <a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> &amp;<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ab207bdd2b5cd80d49c022f8924c0cc94">model_context</a>) const =0</td></tr>
 <tr class="memdesc:a751ed5a04cd06853f43ab40f1ac5dde6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derived collision checkers are responsible for reporting the collision status of the configuration.  <a href="#a751ed5a04cd06853f43ab40f1ac5dde6">More...</a><br /></td></tr>
 <tr class="separator:a751ed5a04cd06853f43ab40f1ac5dde6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5e58c1024da16deb5af098bb798bbd9"><td class="memItemLeft" align="right" valign="top">virtual std::optional&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">geometry::GeometryId</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ac5e58c1024da16deb5af098bb798bbd9">DoAddCollisionShapeToBody</a> (const std::string &amp;group_name, const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;bodyA, const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">geometry::Shape</a> &amp;shape, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_AG)=0</td></tr>
@@ -546,13 +559,13 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a798297e12a4bdd3f95081215966ed07d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a798297e12a4bdd3f95081215966ed07d">UpdateCollisionFilters</a> ()=0</td></tr>
 <tr class="memdesc:a798297e12a4bdd3f95081215966ed07d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derived collision checkers can do further work in this function in response to changes in collision filters.  <a href="#a798297e12a4bdd3f95081215966ed07d">More...</a><br /></td></tr>
 <tr class="separator:a798297e12a4bdd3f95081215966ed07d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8393e34359ae424d80b7975551234652"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classdrake_1_1planning_1_1_robot_clearance.html">RobotClearance</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a8393e34359ae424d80b7975551234652">DoCalcContextRobotClearance</a> (const <a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> &amp;<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a8c84d0251fa9fa71f687ea3fbb549cf7">model_context</a>, <a class="el" href="classdouble.html">double</a> influence_distance) const =0</td></tr>
+<tr class="memitem:a8393e34359ae424d80b7975551234652"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classdrake_1_1planning_1_1_robot_clearance.html">RobotClearance</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a8393e34359ae424d80b7975551234652">DoCalcContextRobotClearance</a> (const <a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> &amp;<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ab207bdd2b5cd80d49c022f8924c0cc94">model_context</a>, <a class="el" href="classdouble.html">double</a> influence_distance) const =0</td></tr>
 <tr class="memdesc:a8393e34359ae424d80b7975551234652"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derived collision checkers are responsible for defining the reported measurements.  <a href="#a8393e34359ae424d80b7975551234652">More...</a><br /></td></tr>
 <tr class="separator:a8393e34359ae424d80b7975551234652"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a737510aa5fca00749a068c6e4a621feb"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; <a class="el" href="group__planning__collision__checker.html#ga6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a737510aa5fca00749a068c6e4a621feb">DoClassifyContextBodyCollisions</a> (const <a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> &amp;<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a8c84d0251fa9fa71f687ea3fbb549cf7">model_context</a>) const =0</td></tr>
+<tr class="memitem:a737510aa5fca00749a068c6e4a621feb"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; <a class="el" href="group__planning__collision__checker.html#ga6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a737510aa5fca00749a068c6e4a621feb">DoClassifyContextBodyCollisions</a> (const <a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> &amp;<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ab207bdd2b5cd80d49c022f8924c0cc94">model_context</a>) const =0</td></tr>
 <tr class="memdesc:a737510aa5fca00749a068c6e4a621feb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derived collision checkers are responsible for choosing a collision type for each of the robot bodies.  <a href="#a737510aa5fca00749a068c6e4a621feb">More...</a><br /></td></tr>
 <tr class="separator:a737510aa5fca00749a068c6e4a621feb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a145c8a89488c119f22a13557dd2376b9"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a145c8a89488c119f22a13557dd2376b9">DoMaxContextNumDistances</a> (const <a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> &amp;<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a8c84d0251fa9fa71f687ea3fbb549cf7">model_context</a>) const =0</td></tr>
+<tr class="memitem:a145c8a89488c119f22a13557dd2376b9"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a145c8a89488c119f22a13557dd2376b9">DoMaxContextNumDistances</a> (const <a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> &amp;<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ab207bdd2b5cd80d49c022f8924c0cc94">model_context</a>) const =0</td></tr>
 <tr class="memdesc:a145c8a89488c119f22a13557dd2376b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derived collision checkers must implement the semantics documented for MaxNumDistances.  <a href="#a145c8a89488c119f22a13557dd2376b9">More...</a><br /></td></tr>
 <tr class="separator:a145c8a89488c119f22a13557dd2376b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -643,7 +656,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Derived classes declare upon construction whether they support parallel checking (see <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a6831872639ff530b78810ef26115bb26" title="Does the collision checker support true parallel collision checks?">SupportsParallelChecking()</a>). </p>
-<dl class="exception"><dt>Exceptions</dt><dd>
+<p>If a derived class does not support parallel checking, it must set params.implicit_context_parallelism to <a class="el" href="classdrake_1_1_parallelism.html#a7eba2010dfc9482ef2ae0bb0539a3083" title="Constructs a Parallelism with no parallelism (i.e., num_threads=1).">Parallelism::None()</a>; otherwise this constructor will throw. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if params is invalid. </td></tr>
   </table>
@@ -954,7 +967,7 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Explicit Context-based version of <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a678d1e0c7b171295455bea0b60ab85d3" title="Calculates the distance, ϕ, and distance Jacobian, Jqᵣ_ϕ, for each potential collision whose distance...">CalcRobotClearance()</a>. </p>
+<p>Explicit Context-based version of <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a2b9fc782d20ef71bf845c913e3f9b7c8" title="Calculates the distance, ϕ, and distance Jacobian, Jqᵣ_ϕ, for each potential collision whose distance...">CalcRobotClearance()</a>. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if <code>model_context</code> is nullptr. </td></tr>
@@ -965,8 +978,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a678d1e0c7b171295455bea0b60ab85d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a678d1e0c7b171295455bea0b60ab85d3">&#9670;&nbsp;</a></span>CalcRobotClearance()</h2>
+<a id="a2b9fc782d20ef71bf845c913e3f9b7c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b9fc782d20ef71bf845c913e3f9b7c8">&#9670;&nbsp;</a></span>CalcRobotClearance()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -981,7 +994,13 @@ Protected Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
-          <td class="paramname"><em>influence_distance</em>&#160;</td>
+          <td class="paramname"><em>influence_distance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="classint.html">int</a> &gt;&#160;</td>
+          <td class="paramname"><em>context_number</em> = <code>std::nullopt</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -994,9 +1013,14 @@ Protected Member Functions</h2></td></tr>
 <p>Calculates the distance, ϕ, and distance Jacobian, Jqᵣ_ϕ, for each potential collision whose distance is less than <code>influence_distance</code>, using the current thread's associated context. </p>
 <p>Distances for filtered collisions will not be returned.</p>
 <p>Distances between a pair of robot bodies (i.e., where <code>collision_types()</code> reports <code>SelfCollision</code>) report one body's index in <code>robot_indices()</code> and the the other body's in <code>other_indices()</code>; which body appears in which column is arbitrary.</p>
-<p>The total number of rows can depend on how the model is defined and how a particular <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html" title="Interface for collision checkers to use.">CollisionChecker</a> instance is implemented (see <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a4f0eb0fde313a6653e5692173c759145" title="Returns an upper bound on the number of distances returned by CalcRobotClearance(),...">MaxNumDistances()</a>). </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1planning_1_1_robot_clearance.html" title="A summary of the clearance – a collection of distance measurements – between the robot and everything...">RobotClearance</a> for details on the quantities ϕ and Jqᵣ_ϕ (and other details). </dd>
-<dd>
-<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ccb_implicit_contexts">Implicit Context Parallelism</a>. </dd></dl>
+<p>The total number of rows can depend on how the model is defined and how a particular <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html" title="Interface for collision checkers to use.">CollisionChecker</a> instance is implemented (see <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#acb92e0e060e99a17ea72a57daba72251" title="Returns an upper bound on the number of distances returned by CalcRobotClearance(),...">MaxNumDistances()</a>). </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1planning_1_1_robot_clearance.html" title="A summary of the clearance – a collection of distance measurements – between the robot and everything...">RobotClearance</a> for details on the quantities ϕ and Jqᵣ_ϕ (and other details). </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context_number</td><td>Optional implicit context number. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ccb_implicit_contexts">Implicit Context Parallelism</a>. </dd></dl>
 
 </div>
 </div>
@@ -1026,8 +1050,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aa27a4faa38ce0e53514ae506061dd987"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa27a4faa38ce0e53514ae506061dd987">&#9670;&nbsp;</a></span>CheckConfigCollisionFree()</h2>
+<a id="adb33fbe45f267be402e5e2a750428044"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb33fbe45f267be402e5e2a750428044">&#9670;&nbsp;</a></span>CheckConfigCollisionFree()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1036,8 +1060,18 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">bool CheckConfigCollisionFree </td>
           <td>(</td>
           <td class="paramtype">const Eigen::VectorXd &amp;&#160;</td>
-          <td class="paramname"><em>q</em></td><td>)</td>
-          <td> const</td>
+          <td class="paramname"><em>q</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="classint.html">int</a> &gt;&#160;</td>
+          <td class="paramname"><em>context_number</em> = <code>std::nullopt</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1046,6 +1080,7 @@ Protected Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">q</td><td>Configuration to check </td></tr>
+    <tr><td class="paramname">context_number</td><td>Optional implicit context number. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1054,8 +1089,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a8322ee81a1e43e99e39d36997d79fe44"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8322ee81a1e43e99e39d36997d79fe44">&#9670;&nbsp;</a></span>CheckConfigsCollisionFree()</h2>
+<a id="ab6fad600cdc1af035911735f62f09613"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6fad600cdc1af035911735f62f09613">&#9670;&nbsp;</a></span>CheckConfigsCollisionFree()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1069,8 +1104,8 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>parallelize</em> = <code>true</code>&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a>&#160;</td>
+          <td class="paramname"><em>parallelize</em> = <code><a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819">Parallelism::Max</a>()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1084,7 +1119,7 @@ Protected Member Functions</h2></td></tr>
 <p>Parallelization in configuration collision checks is provided using OpenMP and is supported when both: (1) the collision checker declares that parallelization is supported (i.e. when <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a6831872639ff530b78810ef26115bb26" title="Does the collision checker support true parallel collision checks?">SupportsParallelChecking()</a> is true) and (2) when multiple OpenMP threads are available for execution. See <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#collision_checker_parallel_edge">function-level parallelism</a> for guidance on proper usage. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">configs</td><td>Configurations to check </td></tr>
-    <tr><td class="paramname">parallelize</td><td>Should configuration collision checks be parallelized? </td></tr>
+    <tr><td class="paramname">parallelize</td><td>How much should collision checks be parallelized? </td></tr>
   </table>
   </dd>
 </dl>
@@ -1118,7 +1153,7 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Explicit Context-based version of <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#aa27a4faa38ce0e53514ae506061dd987" title="Checks a single configuration for collision using the current thread&#39;s associated context.">CheckConfigCollisionFree()</a>. </p>
+<p>Explicit Context-based version of <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#adb33fbe45f267be402e5e2a750428044" title="Checks a single configuration for collision using the current thread&#39;s associated context.">CheckConfigCollisionFree()</a>. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if model_context is nullptr. </td></tr>
@@ -1161,7 +1196,7 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Explicit Context-based version of <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#acce2242b3fa411baff810a88cf59fa13" title="Checks a single configuration-to-configuration edge for collision, using the current thread&#39;s associa...">CheckEdgeCollisionFree()</a>. </p>
+<p>Explicit Context-based version of <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#acd7c5dd9a903bedc2d984fe12aa5c409" title="Checks a single configuration-to-configuration edge for collision, using the current thread&#39;s associa...">CheckEdgeCollisionFree()</a>. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if <code>model_context</code> is nullptr. </td></tr>
@@ -1172,8 +1207,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="acce2242b3fa411baff810a88cf59fa13"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acce2242b3fa411baff810a88cf59fa13">&#9670;&nbsp;</a></span>CheckEdgeCollisionFree()</h2>
+<a id="acd7c5dd9a903bedc2d984fe12aa5c409"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd7c5dd9a903bedc2d984fe12aa5c409">&#9670;&nbsp;</a></span>CheckEdgeCollisionFree()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1188,7 +1223,13 @@ Protected Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const Eigen::VectorXd &amp;&#160;</td>
-          <td class="paramname"><em>q2</em>&#160;</td>
+          <td class="paramname"><em>q2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="classint.html">int</a> &gt;&#160;</td>
+          <td class="paramname"><em>context_number</em> = <code>std::nullopt</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1203,6 +1244,7 @@ Protected Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">q1</td><td>Start configuration for edge. </td></tr>
     <tr><td class="paramname">q2</td><td>End configuration for edge. </td></tr>
+    <tr><td class="paramname">context_number</td><td>Optional implicit context number. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1211,8 +1253,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a9f045c9f1561be7764ed7c776a127d51"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f045c9f1561be7764ed7c776a127d51">&#9670;&nbsp;</a></span>CheckEdgeCollisionFreeParallel()</h2>
+<a id="a6bb8c478f30ea78ac72ce0e557c6067d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bb8c478f30ea78ac72ce0e557c6067d">&#9670;&nbsp;</a></span>CheckEdgeCollisionFreeParallel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1227,7 +1269,13 @@ Protected Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const Eigen::VectorXd &amp;&#160;</td>
-          <td class="paramname"><em>q2</em>&#160;</td>
+          <td class="paramname"><em>q2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a>&#160;</td>
+          <td class="paramname"><em>parallelize</em> = <code><a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819">Parallelism::Max</a>()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1242,6 +1290,7 @@ Protected Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">q1</td><td>Start configuration for edge. </td></tr>
     <tr><td class="paramname">q2</td><td>End configuration for edge. </td></tr>
+    <tr><td class="paramname">parallelize</td><td>How much should edge collision check be parallelized? </td></tr>
   </table>
   </dd>
 </dl>
@@ -1249,8 +1298,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a71fc6e4ab8e9d2d13ace057b381c2a8b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a71fc6e4ab8e9d2d13ace057b381c2a8b">&#9670;&nbsp;</a></span>CheckEdgesCollisionFree()</h2>
+<a id="a9440fd892ebb54aa4d675dd4b2769b02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9440fd892ebb54aa4d675dd4b2769b02">&#9670;&nbsp;</a></span>CheckEdgesCollisionFree()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1264,8 +1313,8 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>parallelize</em> = <code>true</code>&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a>&#160;</td>
+          <td class="paramname"><em>parallelize</em> = <code><a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819">Parallelism::Max</a>()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1279,7 +1328,7 @@ Protected Member Functions</h2></td></tr>
 <p>Collision checks are parallelized via OpenMP when supported and enabled by <code>parallelize</code>. See <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#collision_checker_parallel_edge">function-level parallelism</a> for guidance on proper usage. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">edges</td><td>Edges to check, each in the form of pair&lt;q1, q2&gt;. </td></tr>
-    <tr><td class="paramname">parallelize</td><td>Should edge collision checks be parallelized? </td></tr>
+    <tr><td class="paramname">parallelize</td><td>How much should edge collision checks be parallelized? </td></tr>
   </table>
   </dd>
 </dl>
@@ -1287,8 +1336,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a512a6232b122ea6cc6cd51ba39d1adfc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a512a6232b122ea6cc6cd51ba39d1adfc">&#9670;&nbsp;</a></span>ClassifyBodyCollisions()</h2>
+<a id="a581dd62ed28820d82da1e6162a1a4645"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a581dd62ed28820d82da1e6162a1a4645">&#9670;&nbsp;</a></span>ClassifyBodyCollisions()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1297,13 +1346,29 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">std::vector&lt;<a class="el" href="group__planning__collision__checker.html#ga6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a>&gt; ClassifyBodyCollisions </td>
           <td>(</td>
           <td class="paramtype">const Eigen::VectorXd &amp;&#160;</td>
-          <td class="paramname"><em>q</em></td><td>)</td>
-          <td> const</td>
+          <td class="paramname"><em>q</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="classint.html">int</a> &gt;&#160;</td>
+          <td class="paramname"><em>context_number</em> = <code>std::nullopt</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Classifies which robot bodies are in collision (and which type of collision) for the provided configuration <code>q</code>, using the current thread's associated context. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context_number</td><td>Optional implicit context number. </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>a vector of collision types arranged in body index order. Only entries for robot bodies are guaranteed to be valid; entries for environment bodies are populated with kNoCollision, regardless of their actual status. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ccb_implicit_contexts">Implicit Context Parallelism</a>. </dd></dl>
 
@@ -1335,7 +1400,7 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Explicit Context-based version of <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a512a6232b122ea6cc6cd51ba39d1adfc" title="Classifies which robot bodies are in collision (and which type of collision) for the provided configu...">ClassifyBodyCollisions()</a>. </p>
+<p>Explicit Context-based version of <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a581dd62ed28820d82da1e6162a1a4645" title="Classifies which robot bodies are in collision (and which type of collision) for the provided configu...">ClassifyBodyCollisions()</a>. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if <code>model_context</code> is nullptr. </td></tr>
@@ -1705,7 +1770,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Derived collision checkers can do further work in this function in response to updates to the MultibodyPlant positions. </p>
-<p><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html" title="Interface for collision checkers to use.">CollisionChecker</a> guarantees that <code>model_context</code> will not be nullptr and that the new positions are present in model_context-&gt;<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a1e7d2a81568c26350b120a592e55e174">plant_context()</a>. </p>
+<p><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html" title="Interface for collision checkers to use.">CollisionChecker</a> guarantees that <code>model_context</code> will not be nullptr and that the new positions are present in model_context-&gt;<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a333127515e4e2dccd74474e9cd074ab0" title="Accesses a multibody plant sub-context context from within the implicit context pool owned by this co...">plant_context()</a>. </p>
 
 <p>Implemented in <a class="el" href="classdrake_1_1planning_1_1_unimplemented_collision_checker.html#a5785657320b67a48e969d427e1ff9995">UnimplementedCollisionChecker</a>.</p>
 
@@ -1863,26 +1928,6 @@ Protected Member Functions</h2></td></tr>
 <li>SceneGraph has filtered the collisions between <em>all</em> pairs of geometries of A and B.</li>
 </ul>
 <p>Note: SceneGraph allows arbitrary collision filter configuration at the geometry* level. The filters on one geometry of body need not be the same as another geometry on the same body. CollisionChecker is body centric. It requires all geometries on a body to be filtered homogeneously. A SceneGraph that violates this stricter requirement cannot be used in a CollisionChecker. It is highly unlikely that a SceneGraph instance will ever be in this configuration by accident. </p>
-
-</div>
-</div>
-<a id="a71074f52f2a117d4b26a193f7adbfd57"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a71074f52f2a117d4b26a193f7adbfd57">&#9670;&nbsp;</a></span>GetNumberOfThreads()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classint.html">int</a> GetNumberOfThreads </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>parallelize</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Gets the number of threads that may be used in an OpenMP-parallelized loop, if parallelize=true, or 1 if parallelize=false. </p>
 
 </div>
 </div>
@@ -2244,13 +2289,13 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Explicit Context-based version of <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a4f0eb0fde313a6653e5692173c759145" title="Returns an upper bound on the number of distances returned by CalcRobotClearance(),...">MaxNumDistances()</a>. </p>
+<p>Explicit Context-based version of <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#acb92e0e060e99a17ea72a57daba72251" title="Returns an upper bound on the number of distances returned by CalcRobotClearance(),...">MaxNumDistances()</a>. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ccb_explicit_contexts">Explicit Context Parallelism</a>. </dd></dl>
 
 </div>
 </div>
-<a id="a4f0eb0fde313a6653e5692173c759145"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4f0eb0fde313a6653e5692173c759145">&#9670;&nbsp;</a></span>MaxNumDistances()</h2>
+<a id="acb92e0e060e99a17ea72a57daba72251"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb92e0e060e99a17ea72a57daba72251">&#9670;&nbsp;</a></span>MaxNumDistances()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2258,13 +2303,20 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classint.html">int</a> MaxNumDistances </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="classint.html">int</a> &gt;&#160;</td>
+          <td class="paramname"><em>context_number</em> = <code>std::nullopt</code></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns an upper bound on the number of distances returned by <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a678d1e0c7b171295455bea0b60ab85d3" title="Calculates the distance, ϕ, and distance Jacobian, Jqᵣ_ϕ, for each potential collision whose distance...">CalcRobotClearance()</a>, using the current thread's associated context. </p>
+<p>Returns an upper bound on the number of distances returned by <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a2b9fc782d20ef71bf845c913e3f9b7c8" title="Calculates the distance, ϕ, and distance Jacobian, Jqᵣ_ϕ, for each potential collision whose distance...">CalcRobotClearance()</a>, using the current thread's associated context. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context_number</td><td>Optional implicit context number. </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ccb_implicit_contexts">Implicit Context Parallelism</a>. </dd></dl>
 
 </div>
@@ -2341,7 +2393,7 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Explicit Context-based version of <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ab1a0dd68196093bebd763380def4a1bd" title="Checks a single configuration-to-configuration edge for collision, using the current thread&#39;s associa...">MeasureEdgeCollisionFree()</a>. </p>
+<p>Explicit Context-based version of <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ac60fa98836f3dac1975ebc8f7a68b223" title="Checks a single configuration-to-configuration edge for collision, using the current thread&#39;s associa...">MeasureEdgeCollisionFree()</a>. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if <code>model_context</code> is nullptr. </td></tr>
@@ -2352,8 +2404,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ab1a0dd68196093bebd763380def4a1bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1a0dd68196093bebd763380def4a1bd">&#9670;&nbsp;</a></span>MeasureEdgeCollisionFree()</h2>
+<a id="ac60fa98836f3dac1975ebc8f7a68b223"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac60fa98836f3dac1975ebc8f7a68b223">&#9670;&nbsp;</a></span>MeasureEdgeCollisionFree()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2368,7 +2420,13 @@ Protected Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const Eigen::VectorXd &amp;&#160;</td>
-          <td class="paramname"><em>q2</em>&#160;</td>
+          <td class="paramname"><em>q2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="classint.html">int</a> &gt;&#160;</td>
+          <td class="paramname"><em>context_number</em> = <code>std::nullopt</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -2383,6 +2441,7 @@ Protected Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">q1</td><td>Start configuration for edge. </td></tr>
     <tr><td class="paramname">q2</td><td>End configuration for edge. </td></tr>
+    <tr><td class="paramname">context_number</td><td>Optional implicit context number. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2391,8 +2450,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a019e3fae3f3ecc6d599345bca9480fcb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a019e3fae3f3ecc6d599345bca9480fcb">&#9670;&nbsp;</a></span>MeasureEdgeCollisionFreeParallel()</h2>
+<a id="ae06d7f2e61a9d56deb761d03a216f01b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae06d7f2e61a9d56deb761d03a216f01b">&#9670;&nbsp;</a></span>MeasureEdgeCollisionFreeParallel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2407,7 +2466,13 @@ Protected Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const Eigen::VectorXd &amp;&#160;</td>
-          <td class="paramname"><em>q2</em>&#160;</td>
+          <td class="paramname"><em>q2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a>&#160;</td>
+          <td class="paramname"><em>parallelize</em> = <code><a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819">Parallelism::Max</a>()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -2422,6 +2487,7 @@ Protected Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">q1</td><td>Start configuration for edge. </td></tr>
     <tr><td class="paramname">q2</td><td>End configuration for edge. </td></tr>
+    <tr><td class="paramname">parallelize</td><td>How much should edge collision check be parallelized? </td></tr>
   </table>
   </dd>
 </dl>
@@ -2429,8 +2495,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ab83a3cbdf60eb07937a81f0dd8d458c9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab83a3cbdf60eb07937a81f0dd8d458c9">&#9670;&nbsp;</a></span>MeasureEdgesCollisionFree()</h2>
+<a id="a444310966d4b5d748754393473500ffe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a444310966d4b5d748754393473500ffe">&#9670;&nbsp;</a></span>MeasureEdgesCollisionFree()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2444,8 +2510,8 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>parallelize</em> = <code>true</code>&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a>&#160;</td>
+          <td class="paramname"><em>parallelize</em> = <code><a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819">Parallelism::Max</a>()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -2459,7 +2525,7 @@ Protected Member Functions</h2></td></tr>
 <p>Collision checks are parallelized via OpenMP when supported and enabled by <code>parallelize</code>. See <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#collision_checker_parallel_edge">function-level parallelism</a> for guidance on proper usage. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">edges</td><td>Edges to check, each in the form of pair&lt;q1, q2&gt;. </td></tr>
-    <tr><td class="paramname">parallelize</td><td>Should edge collision checks be parallelized? </td></tr>
+    <tr><td class="paramname">parallelize</td><td>How much should edge collision checks be parallelized? </td></tr>
   </table>
   </dd>
 </dl>
@@ -2485,8 +2551,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a8c84d0251fa9fa71f687ea3fbb549cf7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8c84d0251fa9fa71f687ea3fbb549cf7">&#9670;&nbsp;</a></span>model_context()</h2>
+<a id="ab207bdd2b5cd80d49c022f8924c0cc94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab207bdd2b5cd80d49c022f8924c0cc94">&#9670;&nbsp;</a></span>model_context()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2494,12 +2560,21 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">const <a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a>&amp; model_context </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="classint.html">int</a> &gt;&#160;</td>
+          <td class="paramname"><em>context_number</em> = <code>std::nullopt</code></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>a <code>const</code> reference to the collision checking context to be used with the current thread. </dd></dl>
+
+<p>Accesses a collision checking context from within the implicit context pool owned by this collision checker. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context_number</td><td>Optional implicit context number. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a <code>const</code> reference to either the collision checking context given by the <code>context_number</code>, or when nullopt the context to be used with the current OpenMP thread. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ccb_implicit_contexts">Implicit Context Parallelism</a>. </dd></dl>
 
 </div>
@@ -2613,8 +2688,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a1e7d2a81568c26350b120a592e55e174"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e7d2a81568c26350b120a592e55e174">&#9670;&nbsp;</a></span>plant_context()</h2>
+<a id="a333127515e4e2dccd74474e9cd074ab0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a333127515e4e2dccd74474e9cd074ab0">&#9670;&nbsp;</a></span>plant_context()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2622,12 +2697,21 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;&amp; plant_context </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="classint.html">int</a> &gt;&#160;</td>
+          <td class="paramname"><em>context_number</em> = <code>std::nullopt</code></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>a <code>const</code> reference to the multibody plant sub-context within the context for the current thread. </dd></dl>
+
+<p>Accesses a multibody plant sub-context context from within the implicit context pool owned by this collision checker. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context_number</td><td>Optional implicit context number. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a <code>const</code> reference to the multibody plant sub-context within the context given by the <code>context_number</code>, or when nullopt the context to be used with the current OpenMP thread. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ccb_implicit_contexts">Implicit Context Parallelism</a>. </dd></dl>
 
 </div>
@@ -3265,7 +3349,7 @@ the default function uses linear interpolation for most variables, and uses sler
       </table>
 </div><div class="memdoc">
 
-<p>Explicit Context-based version of <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a81c230b8ef6206e88617656df3cc7d30" title="Updates the generalized positions q in the current thread&#39;s associated context, and returns a referen...">UpdatePositions()</a>. </p>
+<p>Explicit Context-based version of <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a1363af30369136f8b8f06f9719e36910" title="Updates the generalized positions q in the implicit context specified and returns a reference to the ...">UpdatePositions()</a>. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if <code>model_context</code> is <code>nullptr</code>. </td></tr>
@@ -3276,8 +3360,8 @@ the default function uses linear interpolation for most variables, and uses sler
 
 </div>
 </div>
-<a id="a81c230b8ef6206e88617656df3cc7d30"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a81c230b8ef6206e88617656df3cc7d30">&#9670;&nbsp;</a></span>UpdatePositions()</h2>
+<a id="a1363af30369136f8b8f06f9719e36910"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1363af30369136f8b8f06f9719e36910">&#9670;&nbsp;</a></span>UpdatePositions()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3286,13 +3370,29 @@ the default function uses linear interpolation for most variables, and uses sler
           <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;&amp; UpdatePositions </td>
           <td>(</td>
           <td class="paramtype">const Eigen::VectorXd &amp;&#160;</td>
-          <td class="paramname"><em>q</em></td><td>)</td>
-          <td> const</td>
+          <td class="paramname"><em>q</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="classint.html">int</a> &gt;&#160;</td>
+          <td class="paramname"><em>context_number</em> = <code>std::nullopt</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Updates the generalized positions <code>q</code> in the current thread's associated context, and returns a reference to the MultibodyPlant's now-updated context. </p>
+<p>Updates the generalized positions <code>q</code> in the implicit context specified and returns a reference to the MultibodyPlant's now-updated context. </p>
+<p>The implicit context is either that specified by <code>context_number</code>, or when nullopt the context to be used with the current OpenMP thread. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context_number</td><td>Optional implicit context number. </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ccb_implicit_contexts">Implicit Context Parallelism</a>. </dd></dl>
 
 </div>

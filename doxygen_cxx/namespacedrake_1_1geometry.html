@@ -1276,6 +1276,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructs a RenderEngine implementation which uses a VTK-based OpenGL renderer. </p>
+<dl class="section warning"><dt>Warning</dt><dd>On macOS, we've observed that RenderEngineVtk sometimes does not obey <a class="el" href="classdrake_1_1geometry_1_1render_1_1_color_render_camera.html#ace4c47773d7612ddd9396fb4e958058a" title="If true, requests that the RenderEngine display the rendered image.">render::ColorRenderCamera::show_window</a> when it's set to <code>true</code>. Refer to issue <a href="https://github.com/RobotLocomotion/drake/issues/20144">#20144</a> for further discussion.</dd></dl>
 <p><a class="anchor" id="render_engine_vtk_properties"></a> </p><h2>Geometry perception properties</h2>
 <p>This RenderEngine implementation looks for the following properties when registering visual geometry, categorized by rendered image type.</p>
 <h3>RGB images</h3>

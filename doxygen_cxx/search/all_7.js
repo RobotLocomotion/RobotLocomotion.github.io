@@ -781,7 +781,6 @@ var searchData=
   ['getnonslidingcontactframetoworldtransform',['GetNonSlidingContactFrameToWorldTransform',['../classdrake_1_1examples_1_1rod2d_1_1_rod2_d.html#a26b9d6c05261cc261d9ddbeebd2bca03',1,'drake::examples::rod2d::Rod2D']]],
   ['getnumactiveconnections',['GetNumActiveConnections',['../classdrake_1_1geometry_1_1_meshcat.html#a85bcb12442dbc8a27d51e005ec7a922f',1,'drake::geometry::Meshcat']]],
   ['getnumberofcoefficients',['GetNumberOfCoefficients',['../classdrake_1_1_polynomial.html#a3d04328e0ea4df22f47e1651c706082d',1,'drake::Polynomial']]],
-  ['getnumberofthreads',['GetNumberOfThreads',['../classdrake_1_1planning_1_1_collision_checker.html#a71074f52f2a117d4b26a193f7adbfd57',1,'drake::planning::CollisionChecker']]],
   ['getnumelements',['GetNumElements',['../classdrake_1_1solvers_1_1_binding.html#a865cec724a188ed5afb59dda367fe78c',1,'drake::solvers::Binding']]],
   ['getnumericparameter',['GetNumericParameter',['../classdrake_1_1systems_1_1_leaf_system.html#a4e4a60af942a6a568694334837d19931',1,'drake::systems::LeafSystem']]],
   ['getoneposition',['GetOnePosition',['../classdrake_1_1multibody_1_1_joint.html#add9135620b29f9786358b2e8aa146827',1,'drake::multibody::Joint']]],

@@ -194,6 +194,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a3a158076de3363e9927786d4732f3197"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1planning_1_1_collision_checker_params.html#a3a158076de3363e9927786d4732f3197">self_collision_padding</a> {}</td></tr>
 <tr class="memdesc:a3a158076de3363e9927786d4732f3197"><td class="mdescLeft">&#160;</td><td class="mdescRight">Additional padding to apply to all robot-robot self collision queries.  <a href="#a3a158076de3363e9927786d4732f3197">More...</a><br /></td></tr>
 <tr class="separator:a3a158076de3363e9927786d4732f3197"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97e6971c2938a484343028417a4614c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1planning_1_1_collision_checker_params.html#a97e6971c2938a484343028417a4614c9">implicit_context_parallelism</a> = <a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819">Parallelism::Max</a>()</td></tr>
+<tr class="memdesc:a97e6971c2938a484343028417a4614c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify how many contexts should be allocated to support collision checker implicit context parallelism.  <a href="#a97e6971c2938a484343028417a4614c9">More...</a><br /></td></tr>
+<tr class="separator:a97e6971c2938a484343028417a4614c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="a35dcc56f9ad09e0a13d0bbb111554f32"></a>
@@ -263,6 +266,23 @@ the <code>configuration_distance_function</code> object will be copied and retai
 
 <p>Additional padding to apply to all robot-environment collision queries. </p>
 <p>If distance between robot and environment is less than padding, the checker reports a collision. </p>
+
+</div>
+</div>
+<a id="a97e6971c2938a484343028417a4614c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97e6971c2938a484343028417a4614c9">&#9670;&nbsp;</a></span>implicit_context_parallelism</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> implicit_context_parallelism = <a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819">Parallelism::Max</a>()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Specify how many contexts should be allocated to support collision checker implicit context parallelism. </p>
+<p>Defaults to the maximum parallelism. If the specific collision checker type in use declares that it <em>does not</em> support parallel queries, then implicit context parallelism is set to None(). </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ccb_implicit_contexts">Implicit Context Parallelism</a>. </dd></dl>
 
 </div>
 </div>
