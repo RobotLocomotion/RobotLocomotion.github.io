@@ -1,5 +1,6 @@
 var NAVTREEINDEX44 =
 {
+"collision__avoidance_8h.html":[4,0,0,10,3],
 "collision__checker_8h.html":[4,0,0,10,4],
 "collision__checker__abstract__test__suite_8h.html":[4,0,0,10,0,0],
 "collision__checker__abstract__test__suite_8h.html#a59728e43537c3e540d128389b655d34e":[4,0,0,10,0,0,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX44 =
 "dir_1b53483452bb55d26e3cb66e1b6a096d.html":[4,0,0,8,0,0],
 "dir_1cfb1308721b0b1c7dbbf4fcf7c61022.html":[4,0,0,3,10],
 "dir_2186f45272e5c29e3ac18ec762ab7501.html":[4,0,0,12,3],
-"dir_265f5a0dc516db63016326957882384b.html":[4,0,0,4,4,0],
-"dir_2801189a4b16f72066eac0bdd511a19c.html":[4,0,0,0,0,7]
+"dir_265f5a0dc516db63016326957882384b.html":[4,0,0,4,4,0]
 };

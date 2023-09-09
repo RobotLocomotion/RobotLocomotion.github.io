@@ -1,5 +1,6 @@
 var NAVTREEINDEX41 =
 {
+"classdrake_1_1systems_1_1controllers_1_1_pid_controller.html#a156ea1ba36b533f126071089b8963842":[1,2,2,6,0],
 "classdrake_1_1systems_1_1controllers_1_1_pid_controller.html#a18737529bba0537a9fa06a649378b1a8":[1,2,2,6,6],
 "classdrake_1_1systems_1_1controllers_1_1_pid_controller.html#a2cdc3bbfd20618923a844cb668660b52":[1,2,2,6,14],
 "classdrake_1_1systems_1_1controllers_1_1_pid_controller.html#a45ab2364a45cc9e4c285375ffa87d97c":[1,2,2,6,13],
@@ -248,6 +249,5 @@ var NAVTREEINDEX41 =
 "classdrake_1_1systems_1_1sensors_1_1_color_palette.html#adacf846f73624ee81f656d6a2c0044d3":[3,0,0,15,8,5,8],
 "classdrake_1_1systems_1_1sensors_1_1_gyroscope.html":[1,2,4,2],
 "classdrake_1_1systems_1_1sensors_1_1_gyroscope.html#a5609ecc9abeb6eb02d34938bf4ad7106":[1,2,4,2,8],
-"classdrake_1_1systems_1_1sensors_1_1_gyroscope.html#a7ebb2e7c789b9c1a93f11584569f965f":[1,2,4,2,4],
-"classdrake_1_1systems_1_1sensors_1_1_gyroscope.html#a881f5c187422f03f5159f7e515899ede":[1,2,4,2,3]
+"classdrake_1_1systems_1_1sensors_1_1_gyroscope.html#a7ebb2e7c789b9c1a93f11584569f965f":[1,2,4,2,4]
 };

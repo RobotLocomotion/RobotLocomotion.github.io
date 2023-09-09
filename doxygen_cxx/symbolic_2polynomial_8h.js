@@ -19,7 +19,7 @@ var symbolic_2polynomial_8h =
     [ "operator *", "symbolic_2polynomial_8h.html#ab66975f1892907d118eb8cb98d6465c7", null ],
     [ "operator *", "symbolic_2polynomial_8h.html#a9ed4b0b5f2e0f804d54ab68b0195ec7a", null ],
     [ "operator *", "symbolic_2polynomial_8h.html#a7664d13fc20b1e7e30ebb16f3dfdeaac", null ],
-    [ "operator *", "symbolic_2polynomial_8h.html#aece6b8e4e48de49ed447c6d62b81ce88", null ],
+    [ "operator *", "symbolic_2polynomial_8h.html#ab9527491f78970e42f830e74808a0048", null ],
     [ "operator+", "symbolic_2polynomial_8h.html#affb3773f2d585ffce0253cb15c8c00a0", null ],
     [ "operator+", "symbolic_2polynomial_8h.html#a52a4be02d87d5a6d31efbbcb5d3ba934", null ],
     [ "operator+", "symbolic_2polynomial_8h.html#a96b091bab8bb06edd276c6b4a420903c", null ],

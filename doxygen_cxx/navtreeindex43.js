@@ -1,5 +1,6 @@
 var NAVTREEINDEX43 =
 {
+"classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#a6fbaa53b8b33b541654542c8e60c393e":[3,0,0,17,4,3],
 "classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#a822fbbf4dc76a7f195ce7e2c06579afb":[3,0,0,17,4,1],
 "classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#a9aa1f1cfff6dcb352d5fbb15a80ee1a9":[3,0,0,17,4,10],
 "classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#aa408f130541d6cb0d4142e6a819a8b93":[3,0,0,17,4,8],
@@ -248,6 +249,5 @@ var NAVTREEINDEX43 =
 "codegen_8h.html":[4,0,0,1,3,3],
 "codegen_8h.html#ga141de7c1e3ce45784c62e57a034a71ac":[4,0,0,1,3,3,2],
 "codegen_8h.html#ga2d07751d060ddf51dad4702d441f651a":[4,0,0,1,3,3,1],
-"codegen_8h.html#gada538db5c08eaa47546d2df1c6f442cb":[4,0,0,1,3,3,3],
-"collision__avoidance_8h.html":[4,0,0,10,3]
+"codegen_8h.html#gada538db5c08eaa47546d2df1c6f442cb":[4,0,0,1,3,3,3]
 };

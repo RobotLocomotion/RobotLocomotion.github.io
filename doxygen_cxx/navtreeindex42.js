@@ -1,5 +1,6 @@
 var NAVTREEINDEX42 =
 {
+"classdrake_1_1systems_1_1sensors_1_1_gyroscope.html#a881f5c187422f03f5159f7e515899ede":[1,2,4,2,3],
 "classdrake_1_1systems_1_1sensors_1_1_gyroscope.html#a9138e7b7ef3459968b28c912cc953aba":[1,2,4,2,9],
 "classdrake_1_1systems_1_1sensors_1_1_gyroscope.html#aaa70f40798dfe5ff556290a55d8e708d":[1,2,4,2,2],
 "classdrake_1_1systems_1_1sensors_1_1_gyroscope.html#aacf63e458daa370f3a050109aebc14fb":[1,2,4,2,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX42 =
 "classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#a1d2630303963dbd6257823c89b4164ce":[3,0,0,17,4,7],
 "classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#a1ffe41e9d9d04dc5cd0b0dd097435ebc":[3,0,0,17,4,2],
 "classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#a58fd4c3b54d164206645161e187bac25":[3,0,0,17,4,0],
-"classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#a641bfb18296d6976a000cf31c213dfdf":[3,0,0,17,4,6],
-"classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#a6fbaa53b8b33b541654542c8e60c393e":[3,0,0,17,4,3]
+"classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#a641bfb18296d6976a000cf31c213dfdf":[3,0,0,17,4,6]
 };

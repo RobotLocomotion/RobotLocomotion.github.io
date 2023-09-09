@@ -90,6 +90,7 @@ var expression_2expression_8h =
     [ "operator *", "expression_2expression_8h.html#a36042c0cb53373d2a578f0734b1acd47", null ],
     [ "operator *", "expression_2expression_8h.html#af0d832cf6612451c3eaa079df9ef8ec9", null ],
     [ "operator *", "expression_2expression_8h.html#ae6895bc9ae9e9e84f8f6a9bbc434b4e9", null ],
+    [ "operator *", "expression_2expression_8h.html#a99b295edb3a60b6a961bbc6f42e24547", null ],
     [ "operator *", "expression_2expression_8h.html#aee491180204fc8aa2b1c73da8ca18b85", null ],
     [ "operator *", "expression_2expression_8h.html#adac78e96efaa07849f158591192b2dca", null ],
     [ "operator *", "expression_2expression_8h.html#aac410f7e82c9d06e796d7fcb4508f5e4", null ],

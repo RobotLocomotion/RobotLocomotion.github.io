@@ -8,6 +8,7 @@ var classdrake_1_1symbolic_1_1_polynomial =
     [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html#a464c802c8b3157e578c64b7930859242", null ],
     [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html#a7807cae4e0d5c4388d481c46071c1e16", null ],
     [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html#a3964b57f6f9f9957e6000b10a0383a34", null ],
+    [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html#a3bcb87b0795a0152d3d7db7288868cec", null ],
     [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html#ab3a790dc3e4b639bd6e958b6e220904f", null ],
     [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html#a09e1a39fbe55c8dc2167b282aa952a40", null ],
     [ "AddProduct", "classdrake_1_1symbolic_1_1_polynomial.html#a55826a916b7c6f12060f7ff4e590813f", null ],

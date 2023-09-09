@@ -1938,20 +1938,88 @@ knots have multiplicity equal to the order of the spline.</p>
 <ol class="arabic simple" start="7">
 <li><p>matmul(arg0: numpy.ndarray[numpy.float64[m, n]], arg1: numpy.ndarray[object[m, n]]) -&gt; numpy.ndarray[object[m, n]]</p></li>
 </ol>
-<p>Matrix product for dtype=float &#64; dtype=Expression -&gt; dtype=Expression.</p>
+<p>Matrix product for dtype=float &#64; dtype=Monomial -&gt; dtype=Polynomial.</p>
 <ol class="arabic simple" start="8">
 <li><p>matmul(arg0: numpy.ndarray[object[m, n]], arg1: numpy.ndarray[numpy.float64[m, n]]) -&gt; numpy.ndarray[object[m, n]]</p></li>
 </ol>
-<p>Matrix product for dtype=Expression &#64; dtype=float -&gt; dtype=Expression.</p>
+<p>Matrix product for dtype=Monomial &#64; dtype=float -&gt; dtype=Polynomial.</p>
 <ol class="arabic simple" start="9">
+<li><p>matmul(arg0: numpy.ndarray[numpy.float64[m, n]], arg1: numpy.ndarray[object[m, n]]) -&gt; numpy.ndarray[object[m, n]]</p></li>
+</ol>
+<p>Matrix product for dtype=float &#64; dtype=Polynomial -&gt; dtype=Polynomial.</p>
+<ol class="arabic simple" start="10">
+<li><p>matmul(arg0: numpy.ndarray[object[m, n]], arg1: numpy.ndarray[numpy.float64[m, n]]) -&gt; numpy.ndarray[object[m, n]]</p></li>
+</ol>
+<p>Matrix product for dtype=Polynomial &#64; dtype=float -&gt; dtype=Polynomial.</p>
+<ol class="arabic simple" start="11">
+<li><p>matmul(arg0: numpy.ndarray[numpy.float64[m, n]], arg1: numpy.ndarray[object[m, n]]) -&gt; numpy.ndarray[object[m, n]]</p></li>
+</ol>
+<p>Matrix product for dtype=float &#64; dtype=Expression -&gt; dtype=Expression.</p>
+<ol class="arabic simple" start="12">
+<li><p>matmul(arg0: numpy.ndarray[object[m, n]], arg1: numpy.ndarray[numpy.float64[m, n]]) -&gt; numpy.ndarray[object[m, n]]</p></li>
+</ol>
+<p>Matrix product for dtype=Expression &#64; dtype=float -&gt; dtype=Expression.</p>
+<ol class="arabic simple" start="13">
+<li><p>matmul(arg0: numpy.ndarray[object[m, n]], arg1: numpy.ndarray[object[m, n]]) -&gt; numpy.ndarray[object[m, n]]</p></li>
+</ol>
+<p>Matrix product for dtype=Variable &#64; dtype=Variable -&gt; dtype=Expression.</p>
+<ol class="arabic simple" start="14">
+<li><p>matmul(arg0: numpy.ndarray[object[m, n]], arg1: numpy.ndarray[object[m, n]]) -&gt; numpy.ndarray[object[m, n]]</p></li>
+</ol>
+<p>Matrix product for dtype=Variable &#64; dtype=Monomial -&gt; dtype=Polynomial.</p>
+<ol class="arabic simple" start="15">
+<li><p>matmul(arg0: numpy.ndarray[object[m, n]], arg1: numpy.ndarray[object[m, n]]) -&gt; numpy.ndarray[object[m, n]]</p></li>
+</ol>
+<p>Matrix product for dtype=Monomial &#64; dtype=Variable -&gt; dtype=Polynomial.</p>
+<ol class="arabic simple" start="16">
+<li><p>matmul(arg0: numpy.ndarray[object[m, n]], arg1: numpy.ndarray[object[m, n]]) -&gt; numpy.ndarray[object[m, n]]</p></li>
+</ol>
+<p>Matrix product for dtype=Variable &#64; dtype=Polynomial -&gt; dtype=Polynomial.</p>
+<ol class="arabic simple" start="17">
+<li><p>matmul(arg0: numpy.ndarray[object[m, n]], arg1: numpy.ndarray[object[m, n]]) -&gt; numpy.ndarray[object[m, n]]</p></li>
+</ol>
+<p>Matrix product for dtype=Polynomial &#64; dtype=Variable -&gt; dtype=Polynomial.</p>
+<ol class="arabic simple" start="18">
 <li><p>matmul(arg0: numpy.ndarray[object[m, n]], arg1: numpy.ndarray[object[m, n]]) -&gt; numpy.ndarray[object[m, n]]</p></li>
 </ol>
 <p>Matrix product for dtype=Variable &#64; dtype=Expression -&gt; dtype=Expression.</p>
-<ol class="arabic simple" start="10">
+<ol class="arabic simple" start="19">
 <li><p>matmul(arg0: numpy.ndarray[object[m, n]], arg1: numpy.ndarray[object[m, n]]) -&gt; numpy.ndarray[object[m, n]]</p></li>
 </ol>
 <p>Matrix product for dtype=Expression &#64; dtype=Variable -&gt; dtype=Expression.</p>
-<ol class="arabic simple" start="11">
+<ol class="arabic simple" start="20">
+<li><p>matmul(arg0: numpy.ndarray[object[m, n]], arg1: numpy.ndarray[object[m, n]]) -&gt; numpy.ndarray[object[m, n]]</p></li>
+</ol>
+<p>Matrix product for dtype=Monomial &#64; dtype=Monomial -&gt; dtype=Polynomial.</p>
+<ol class="arabic simple" start="21">
+<li><p>matmul(arg0: numpy.ndarray[object[m, n]], arg1: numpy.ndarray[object[m, n]]) -&gt; numpy.ndarray[object[m, n]]</p></li>
+</ol>
+<p>Matrix product for dtype=Monomial &#64; dtype=Polynomial -&gt; dtype=Polynomial.</p>
+<ol class="arabic simple" start="22">
+<li><p>matmul(arg0: numpy.ndarray[object[m, n]], arg1: numpy.ndarray[object[m, n]]) -&gt; numpy.ndarray[object[m, n]]</p></li>
+</ol>
+<p>Matrix product for dtype=Polynomial &#64; dtype=Monomial -&gt; dtype=Polynomial.</p>
+<ol class="arabic simple" start="23">
+<li><p>matmul(arg0: numpy.ndarray[object[m, n]], arg1: numpy.ndarray[object[m, n]]) -&gt; numpy.ndarray[object[m, n]]</p></li>
+</ol>
+<p>Matrix product for dtype=Monomial &#64; dtype=Expression -&gt; dtype=Expression.</p>
+<ol class="arabic simple" start="24">
+<li><p>matmul(arg0: numpy.ndarray[object[m, n]], arg1: numpy.ndarray[object[m, n]]) -&gt; numpy.ndarray[object[m, n]]</p></li>
+</ol>
+<p>Matrix product for dtype=Expression &#64; dtype=Monomial -&gt; dtype=Expression.</p>
+<ol class="arabic simple" start="25">
+<li><p>matmul(arg0: numpy.ndarray[object[m, n]], arg1: numpy.ndarray[object[m, n]]) -&gt; numpy.ndarray[object[m, n]]</p></li>
+</ol>
+<p>Matrix product for dtype=Polynomial &#64; dtype=Polynomial -&gt; dtype=Polynomial.</p>
+<ol class="arabic simple" start="26">
+<li><p>matmul(arg0: numpy.ndarray[object[m, n]], arg1: numpy.ndarray[object[m, n]]) -&gt; numpy.ndarray[object[m, n]]</p></li>
+</ol>
+<p>Matrix product for dtype=Polynomial &#64; dtype=Expression -&gt; dtype=Expression.</p>
+<ol class="arabic simple" start="27">
+<li><p>matmul(arg0: numpy.ndarray[object[m, n]], arg1: numpy.ndarray[object[m, n]]) -&gt; numpy.ndarray[object[m, n]]</p></li>
+</ol>
+<p>Matrix product for dtype=Expression &#64; dtype=Polynomial -&gt; dtype=Expression.</p>
+<ol class="arabic simple" start="28">
 <li><p>matmul(arg0: numpy.ndarray[object[m, n]], arg1: numpy.ndarray[object[m, n]]) -&gt; numpy.ndarray[object[m, n]]</p></li>
 </ol>
 <p>Matrix product for dtype=Expression &#64; dtype=Expression -&gt; dtype=Expression.</p>
