@@ -3,7 +3,7 @@ var generic__polynomial_8h =
     [ "GenericPolynomial", "classdrake_1_1symbolic_1_1_generic_polynomial.html", "classdrake_1_1symbolic_1_1_generic_polynomial" ],
     [ "hash< drake::symbolic::GenericPolynomial< BasisElement > >", "structstd_1_1hash_3_01drake_1_1symbolic_1_1_generic_polynomial_3_01_basis_element_01_4_01_4.html", null ],
     [ "formatter< drake::symbolic::GenericPolynomial< BasisElement > >", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_generic_polynomial_3_01_basis_element_01_4_01_4.html", null ],
-    [ "GenericPolynomialEnable", "generic__polynomial_8h.html#a9acca4c621fa798c49dfce0461c6483d", null ],
+    [ "GenericPolynomialEnable", "generic__polynomial_8h.html#a4f60d4b8ada97a4fb724b2d66d273892", null ],
     [ "operator *", "generic__polynomial_8h.html#acf8ec1d6463a6936e7865e8cef04082f", null ],
     [ "operator *", "generic__polynomial_8h.html#a876c3318865d9ffaadd1c3f7a711fdfa", null ],
     [ "operator *", "generic__polynomial_8h.html#a173be3cb77f72bb9481db5c8fd04741e", null ],

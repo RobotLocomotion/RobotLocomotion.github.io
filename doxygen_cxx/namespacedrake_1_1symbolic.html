@@ -382,10 +382,10 @@ Classes</h2></td></tr>
 Typedefs</h2></td></tr>
 <tr class="memitem:acbfe43d34e6c71c503d4de11da53bbb7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#acbfe43d34e6c71c503d4de11da53bbb7">Substitution</a> = std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a>, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &gt;</td></tr>
 <tr class="separator:acbfe43d34e6c71c503d4de11da53bbb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9acca4c621fa798c49dfce0461c6483d"><td class="memTemplParams" colspan="2">template&lt;typename BasisElement &gt; </td></tr>
-<tr class="memitem:a9acca4c621fa798c49dfce0461c6483d"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a> = std::enable_if_t&lt; std::is_base_of_v&lt; <a class="el" href="classdrake_1_1symbolic_1_1_polynomial_basis_element.html">PolynomialBasisElement</a>, BasisElement &gt;, <a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; &gt;</td></tr>
-<tr class="memdesc:a9acca4c621fa798c49dfce0461c6483d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines an explicit SFINAE alias for use with return types to dissuade CTAD from trying to instantiate an invalid GenericElement&lt;&gt; for operator overloads, (if that's actually the case).  <a href="#a9acca4c621fa798c49dfce0461c6483d">More...</a><br /></td></tr>
-<tr class="separator:a9acca4c621fa798c49dfce0461c6483d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f60d4b8ada97a4fb724b2d66d273892"><td class="memTemplParams" colspan="2">template&lt;typename BasisElement &gt; </td></tr>
+<tr class="memitem:a4f60d4b8ada97a4fb724b2d66d273892"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a> = std::enable_if_t&lt; std::is_base_of_v&lt; <a class="el" href="classdrake_1_1symbolic_1_1_polynomial_basis_element.html">PolynomialBasisElement</a>, BasisElement &gt;, <a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; &gt;</td></tr>
+<tr class="memdesc:a4f60d4b8ada97a4fb724b2d66d273892"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines an explicit SFINAE alias for use with return types to dissuade CTAD from trying to instantiate an invalid GenericElement&lt;&gt; for operator overloads, (if that's actually the case).  <a href="#a4f60d4b8ada97a4fb724b2d66d273892">More...</a><br /></td></tr>
+<tr class="separator:a4f60d4b8ada97a4fb724b2d66d273892"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb27ddf30420e620beb8e6725d83208f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#aeb27ddf30420e620beb8e6725d83208f">Pattern</a> = <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a></td></tr>
 <tr class="memdesc:aeb27ddf30420e620beb8e6725d83208f"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pattern is an expression which possibly includes variables which represent placeholders.  <a href="#aeb27ddf30420e620beb8e6725d83208f">More...</a><br /></td></tr>
 <tr class="separator:aeb27ddf30420e620beb8e6725d83208f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1357,101 +1357,101 @@ Functions</h2></td></tr>
 <tr class="memdesc:a8dc4e8320720218ee84dc1fdc7439d17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the intersection of <code>vars1</code> and <code>vars2</code>.  <a href="#a8dc4e8320720218ee84dc1fdc7439d17">More...</a><br /></td></tr>
 <tr class="separator:a8dc4e8320720218ee84dc1fdc7439d17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e9f5fa3d4c2770a38947956973fe27e"><td class="memTemplParams" colspan="2">template&lt;typename BasisElement &gt; </td></tr>
-<tr class="memitem:a5e9f5fa3d4c2770a38947956973fe27e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a5e9f5fa3d4c2770a38947956973fe27e">operator-</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; &amp;p)</td></tr>
+<tr class="memitem:a5e9f5fa3d4c2770a38947956973fe27e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a5e9f5fa3d4c2770a38947956973fe27e">operator-</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; &amp;p)</td></tr>
 <tr class="separator:a5e9f5fa3d4c2770a38947956973fe27e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a687f88372c74f4500af3df50cb687b88"><td class="memTemplParams" colspan="2">template&lt;typename BasisElement &gt; </td></tr>
-<tr class="memitem:a687f88372c74f4500af3df50cb687b88"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a687f88372c74f4500af3df50cb687b88">operator+</a> (<a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; p1, const <a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; &amp;p2)</td></tr>
+<tr class="memitem:a687f88372c74f4500af3df50cb687b88"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a687f88372c74f4500af3df50cb687b88">operator+</a> (<a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; p1, const <a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; &amp;p2)</td></tr>
 <tr class="separator:a687f88372c74f4500af3df50cb687b88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4af9f402cc780cda79d4f27807f75d39"><td class="memTemplParams" colspan="2">template&lt;typename BasisElement &gt; </td></tr>
-<tr class="memitem:a4af9f402cc780cda79d4f27807f75d39"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a4af9f402cc780cda79d4f27807f75d39">operator+</a> (<a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; p, const BasisElement &amp;m)</td></tr>
+<tr class="memitem:a4af9f402cc780cda79d4f27807f75d39"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a4af9f402cc780cda79d4f27807f75d39">operator+</a> (<a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; p, const BasisElement &amp;m)</td></tr>
 <tr class="separator:a4af9f402cc780cda79d4f27807f75d39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2296b14ee573d8deafe90b3615281e68"><td class="memTemplParams" colspan="2">template&lt;typename BasisElement &gt; </td></tr>
-<tr class="memitem:a2296b14ee573d8deafe90b3615281e68"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a2296b14ee573d8deafe90b3615281e68">operator+</a> (<a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; p, <a class="el" href="classdouble.html">double</a> c)</td></tr>
+<tr class="memitem:a2296b14ee573d8deafe90b3615281e68"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a2296b14ee573d8deafe90b3615281e68">operator+</a> (<a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; p, <a class="el" href="classdouble.html">double</a> c)</td></tr>
 <tr class="separator:a2296b14ee573d8deafe90b3615281e68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2176f7eb786ddec5cd9ea0683a019482"><td class="memTemplParams" colspan="2">template&lt;typename BasisElement &gt; </td></tr>
-<tr class="memitem:a2176f7eb786ddec5cd9ea0683a019482"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a2176f7eb786ddec5cd9ea0683a019482">operator+</a> (const BasisElement &amp;m, <a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; p)</td></tr>
+<tr class="memitem:a2176f7eb786ddec5cd9ea0683a019482"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a2176f7eb786ddec5cd9ea0683a019482">operator+</a> (const BasisElement &amp;m, <a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; p)</td></tr>
 <tr class="separator:a2176f7eb786ddec5cd9ea0683a019482"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a635f8429c26e19e7582b7753751636"><td class="memTemplParams" colspan="2">template&lt;typename BasisElement &gt; </td></tr>
-<tr class="memitem:a6a635f8429c26e19e7582b7753751636"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a6a635f8429c26e19e7582b7753751636">operator+</a> (const BasisElement &amp;m1, const BasisElement &amp;m2)</td></tr>
+<tr class="memitem:a6a635f8429c26e19e7582b7753751636"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a6a635f8429c26e19e7582b7753751636">operator+</a> (const BasisElement &amp;m1, const BasisElement &amp;m2)</td></tr>
 <tr class="separator:a6a635f8429c26e19e7582b7753751636"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94b919a53ae2bebde988b237088cb822"><td class="memTemplParams" colspan="2">template&lt;typename BasisElement &gt; </td></tr>
-<tr class="memitem:a94b919a53ae2bebde988b237088cb822"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a94b919a53ae2bebde988b237088cb822">operator+</a> (const BasisElement &amp;m, <a class="el" href="classdouble.html">double</a> c)</td></tr>
+<tr class="memitem:a94b919a53ae2bebde988b237088cb822"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a94b919a53ae2bebde988b237088cb822">operator+</a> (const BasisElement &amp;m, <a class="el" href="classdouble.html">double</a> c)</td></tr>
 <tr class="separator:a94b919a53ae2bebde988b237088cb822"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a434f1953d9800d1c40dc223609904ecf"><td class="memTemplParams" colspan="2">template&lt;typename BasisElement &gt; </td></tr>
-<tr class="memitem:a434f1953d9800d1c40dc223609904ecf"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a434f1953d9800d1c40dc223609904ecf">operator+</a> (<a class="el" href="classdouble.html">double</a> c, <a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; p)</td></tr>
+<tr class="memitem:a434f1953d9800d1c40dc223609904ecf"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a434f1953d9800d1c40dc223609904ecf">operator+</a> (<a class="el" href="classdouble.html">double</a> c, <a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; p)</td></tr>
 <tr class="separator:a434f1953d9800d1c40dc223609904ecf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34397d7d032b5c4214a92123e3c6752d"><td class="memTemplParams" colspan="2">template&lt;typename BasisElement &gt; </td></tr>
-<tr class="memitem:a34397d7d032b5c4214a92123e3c6752d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a34397d7d032b5c4214a92123e3c6752d">operator+</a> (<a class="el" href="classdouble.html">double</a> c, const BasisElement &amp;m)</td></tr>
+<tr class="memitem:a34397d7d032b5c4214a92123e3c6752d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a34397d7d032b5c4214a92123e3c6752d">operator+</a> (<a class="el" href="classdouble.html">double</a> c, const BasisElement &amp;m)</td></tr>
 <tr class="separator:a34397d7d032b5c4214a92123e3c6752d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a580ca04916246340e08ec69b45276827"><td class="memTemplParams" colspan="2">template&lt;typename BasisElement &gt; </td></tr>
-<tr class="memitem:a580ca04916246340e08ec69b45276827"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a580ca04916246340e08ec69b45276827">operator+</a> (<a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; p, const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;v)</td></tr>
+<tr class="memitem:a580ca04916246340e08ec69b45276827"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a580ca04916246340e08ec69b45276827">operator+</a> (<a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; p, const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;v)</td></tr>
 <tr class="separator:a580ca04916246340e08ec69b45276827"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21d8313aa6cdb78da3f2cd6d84b92e39"><td class="memTemplParams" colspan="2">template&lt;typename BasisElement &gt; </td></tr>
-<tr class="memitem:a21d8313aa6cdb78da3f2cd6d84b92e39"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a21d8313aa6cdb78da3f2cd6d84b92e39">operator+</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;v, <a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; p)</td></tr>
+<tr class="memitem:a21d8313aa6cdb78da3f2cd6d84b92e39"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a21d8313aa6cdb78da3f2cd6d84b92e39">operator+</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;v, <a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; p)</td></tr>
 <tr class="separator:a21d8313aa6cdb78da3f2cd6d84b92e39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed13274bad687cfe8b3a1effa40d3117"><td class="memTemplParams" colspan="2">template&lt;typename BasisElement &gt; </td></tr>
-<tr class="memitem:aed13274bad687cfe8b3a1effa40d3117"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#aed13274bad687cfe8b3a1effa40d3117">operator-</a> (<a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; p1, const <a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; &amp;p2)</td></tr>
+<tr class="memitem:aed13274bad687cfe8b3a1effa40d3117"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#aed13274bad687cfe8b3a1effa40d3117">operator-</a> (<a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; p1, const <a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; &amp;p2)</td></tr>
 <tr class="separator:aed13274bad687cfe8b3a1effa40d3117"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac0c3464fe7d151d7846e659e8e1d281"><td class="memTemplParams" colspan="2">template&lt;typename BasisElement &gt; </td></tr>
-<tr class="memitem:aac0c3464fe7d151d7846e659e8e1d281"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#aac0c3464fe7d151d7846e659e8e1d281">operator-</a> (<a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; p, const BasisElement &amp;m)</td></tr>
+<tr class="memitem:aac0c3464fe7d151d7846e659e8e1d281"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#aac0c3464fe7d151d7846e659e8e1d281">operator-</a> (<a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; p, const BasisElement &amp;m)</td></tr>
 <tr class="separator:aac0c3464fe7d151d7846e659e8e1d281"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7632adf109d2b13d0a4fb81e7cb81f96"><td class="memTemplParams" colspan="2">template&lt;typename BasisElement &gt; </td></tr>
-<tr class="memitem:a7632adf109d2b13d0a4fb81e7cb81f96"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a7632adf109d2b13d0a4fb81e7cb81f96">operator-</a> (<a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; p, <a class="el" href="classdouble.html">double</a> c)</td></tr>
+<tr class="memitem:a7632adf109d2b13d0a4fb81e7cb81f96"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a7632adf109d2b13d0a4fb81e7cb81f96">operator-</a> (<a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; p, <a class="el" href="classdouble.html">double</a> c)</td></tr>
 <tr class="separator:a7632adf109d2b13d0a4fb81e7cb81f96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb122f4c4c5c71d0734c3b517a146df9"><td class="memTemplParams" colspan="2">template&lt;typename BasisElement &gt; </td></tr>
-<tr class="memitem:abb122f4c4c5c71d0734c3b517a146df9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#abb122f4c4c5c71d0734c3b517a146df9">operator-</a> (const BasisElement &amp;m, <a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; p)</td></tr>
+<tr class="memitem:abb122f4c4c5c71d0734c3b517a146df9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#abb122f4c4c5c71d0734c3b517a146df9">operator-</a> (const BasisElement &amp;m, <a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; p)</td></tr>
 <tr class="separator:abb122f4c4c5c71d0734c3b517a146df9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abaab72f1cd4050603b25467fa909ec24"><td class="memTemplParams" colspan="2">template&lt;typename BasisElement &gt; </td></tr>
-<tr class="memitem:abaab72f1cd4050603b25467fa909ec24"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#abaab72f1cd4050603b25467fa909ec24">operator-</a> (const BasisElement &amp;m1, const BasisElement &amp;m2)</td></tr>
+<tr class="memitem:abaab72f1cd4050603b25467fa909ec24"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#abaab72f1cd4050603b25467fa909ec24">operator-</a> (const BasisElement &amp;m1, const BasisElement &amp;m2)</td></tr>
 <tr class="separator:abaab72f1cd4050603b25467fa909ec24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6ff0b6772551662f2b02b77b5889504"><td class="memTemplParams" colspan="2">template&lt;typename BasisElement &gt; </td></tr>
-<tr class="memitem:ad6ff0b6772551662f2b02b77b5889504"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#ad6ff0b6772551662f2b02b77b5889504">operator-</a> (const BasisElement &amp;m, <a class="el" href="classdouble.html">double</a> c)</td></tr>
+<tr class="memitem:ad6ff0b6772551662f2b02b77b5889504"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#ad6ff0b6772551662f2b02b77b5889504">operator-</a> (const BasisElement &amp;m, <a class="el" href="classdouble.html">double</a> c)</td></tr>
 <tr class="separator:ad6ff0b6772551662f2b02b77b5889504"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51133160077bdcba90013d1f21b88410"><td class="memTemplParams" colspan="2">template&lt;typename BasisElement &gt; </td></tr>
-<tr class="memitem:a51133160077bdcba90013d1f21b88410"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a51133160077bdcba90013d1f21b88410">operator-</a> (<a class="el" href="classdouble.html">double</a> c, <a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; p)</td></tr>
+<tr class="memitem:a51133160077bdcba90013d1f21b88410"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a51133160077bdcba90013d1f21b88410">operator-</a> (<a class="el" href="classdouble.html">double</a> c, <a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; p)</td></tr>
 <tr class="separator:a51133160077bdcba90013d1f21b88410"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc778273d730c518678796b632e4de8f"><td class="memTemplParams" colspan="2">template&lt;typename BasisElement &gt; </td></tr>
-<tr class="memitem:afc778273d730c518678796b632e4de8f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#afc778273d730c518678796b632e4de8f">operator-</a> (<a class="el" href="classdouble.html">double</a> c, const BasisElement &amp;m)</td></tr>
+<tr class="memitem:afc778273d730c518678796b632e4de8f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#afc778273d730c518678796b632e4de8f">operator-</a> (<a class="el" href="classdouble.html">double</a> c, const BasisElement &amp;m)</td></tr>
 <tr class="separator:afc778273d730c518678796b632e4de8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a120ae90dfc24dd3f7b4f42aededbabfd"><td class="memTemplParams" colspan="2">template&lt;typename BasisElement &gt; </td></tr>
-<tr class="memitem:a120ae90dfc24dd3f7b4f42aededbabfd"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a120ae90dfc24dd3f7b4f42aededbabfd">operator-</a> (<a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; p, const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;v)</td></tr>
+<tr class="memitem:a120ae90dfc24dd3f7b4f42aededbabfd"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a120ae90dfc24dd3f7b4f42aededbabfd">operator-</a> (<a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; p, const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;v)</td></tr>
 <tr class="separator:a120ae90dfc24dd3f7b4f42aededbabfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adfcadf9b33656022c0c071a8af3fd85e"><td class="memTemplParams" colspan="2">template&lt;typename BasisElement &gt; </td></tr>
-<tr class="memitem:adfcadf9b33656022c0c071a8af3fd85e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#adfcadf9b33656022c0c071a8af3fd85e">operator-</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;v, <a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; p)</td></tr>
+<tr class="memitem:adfcadf9b33656022c0c071a8af3fd85e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#adfcadf9b33656022c0c071a8af3fd85e">operator-</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;v, <a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; p)</td></tr>
 <tr class="separator:adfcadf9b33656022c0c071a8af3fd85e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf8ec1d6463a6936e7865e8cef04082f"><td class="memTemplParams" colspan="2">template&lt;typename BasisElement &gt; </td></tr>
-<tr class="memitem:acf8ec1d6463a6936e7865e8cef04082f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#acf8ec1d6463a6936e7865e8cef04082f">operator *</a> (<a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; p1, const <a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; &amp;p2)</td></tr>
+<tr class="memitem:acf8ec1d6463a6936e7865e8cef04082f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#acf8ec1d6463a6936e7865e8cef04082f">operator *</a> (<a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; p1, const <a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; &amp;p2)</td></tr>
 <tr class="separator:acf8ec1d6463a6936e7865e8cef04082f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a876c3318865d9ffaadd1c3f7a711fdfa"><td class="memTemplParams" colspan="2">template&lt;typename BasisElement &gt; </td></tr>
-<tr class="memitem:a876c3318865d9ffaadd1c3f7a711fdfa"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a876c3318865d9ffaadd1c3f7a711fdfa">operator *</a> (<a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; p, const BasisElement &amp;m)</td></tr>
+<tr class="memitem:a876c3318865d9ffaadd1c3f7a711fdfa"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a876c3318865d9ffaadd1c3f7a711fdfa">operator *</a> (<a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; p, const BasisElement &amp;m)</td></tr>
 <tr class="separator:a876c3318865d9ffaadd1c3f7a711fdfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a173be3cb77f72bb9481db5c8fd04741e"><td class="memTemplParams" colspan="2">template&lt;typename BasisElement &gt; </td></tr>
-<tr class="memitem:a173be3cb77f72bb9481db5c8fd04741e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a173be3cb77f72bb9481db5c8fd04741e">operator *</a> (<a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; p, <a class="el" href="classdouble.html">double</a> c)</td></tr>
+<tr class="memitem:a173be3cb77f72bb9481db5c8fd04741e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a173be3cb77f72bb9481db5c8fd04741e">operator *</a> (<a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; p, <a class="el" href="classdouble.html">double</a> c)</td></tr>
 <tr class="separator:a173be3cb77f72bb9481db5c8fd04741e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46745f049faa36c24020902f121e900c"><td class="memTemplParams" colspan="2">template&lt;typename BasisElement &gt; </td></tr>
-<tr class="memitem:a46745f049faa36c24020902f121e900c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a46745f049faa36c24020902f121e900c">operator *</a> (const BasisElement &amp;m, <a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; p)</td></tr>
+<tr class="memitem:a46745f049faa36c24020902f121e900c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a46745f049faa36c24020902f121e900c">operator *</a> (const BasisElement &amp;m, <a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; p)</td></tr>
 <tr class="separator:a46745f049faa36c24020902f121e900c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca14414fd5dcd3628a3a5aff79eabebc"><td class="memTemplParams" colspan="2">template&lt;typename BasisElement &gt; </td></tr>
-<tr class="memitem:aca14414fd5dcd3628a3a5aff79eabebc"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#aca14414fd5dcd3628a3a5aff79eabebc">operator *</a> (const BasisElement &amp;m, <a class="el" href="classdouble.html">double</a> c)</td></tr>
+<tr class="memitem:aca14414fd5dcd3628a3a5aff79eabebc"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#aca14414fd5dcd3628a3a5aff79eabebc">operator *</a> (const BasisElement &amp;m, <a class="el" href="classdouble.html">double</a> c)</td></tr>
 <tr class="separator:aca14414fd5dcd3628a3a5aff79eabebc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e5300a119664e3092e90248af90a376"><td class="memTemplParams" colspan="2">template&lt;typename BasisElement &gt; </td></tr>
-<tr class="memitem:a4e5300a119664e3092e90248af90a376"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a4e5300a119664e3092e90248af90a376">operator *</a> (<a class="el" href="classdouble.html">double</a> c, <a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; p)</td></tr>
+<tr class="memitem:a4e5300a119664e3092e90248af90a376"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a4e5300a119664e3092e90248af90a376">operator *</a> (<a class="el" href="classdouble.html">double</a> c, <a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; p)</td></tr>
 <tr class="separator:a4e5300a119664e3092e90248af90a376"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d786db05bfa5937e62a34b9519424f3"><td class="memTemplParams" colspan="2">template&lt;typename BasisElement &gt; </td></tr>
-<tr class="memitem:a8d786db05bfa5937e62a34b9519424f3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a8d786db05bfa5937e62a34b9519424f3">operator *</a> (<a class="el" href="classdouble.html">double</a> c, const BasisElement &amp;m)</td></tr>
+<tr class="memitem:a8d786db05bfa5937e62a34b9519424f3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a8d786db05bfa5937e62a34b9519424f3">operator *</a> (<a class="el" href="classdouble.html">double</a> c, const BasisElement &amp;m)</td></tr>
 <tr class="separator:a8d786db05bfa5937e62a34b9519424f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5935b2c56af883d2bacdfa61998c0d2e"><td class="memTemplParams" colspan="2">template&lt;typename BasisElement &gt; </td></tr>
-<tr class="memitem:a5935b2c56af883d2bacdfa61998c0d2e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a5935b2c56af883d2bacdfa61998c0d2e">operator *</a> (<a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; p, const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;v)</td></tr>
+<tr class="memitem:a5935b2c56af883d2bacdfa61998c0d2e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a5935b2c56af883d2bacdfa61998c0d2e">operator *</a> (<a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; p, const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;v)</td></tr>
 <tr class="separator:a5935b2c56af883d2bacdfa61998c0d2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e51bfc83d5ab488518b664db9e5cd34"><td class="memTemplParams" colspan="2">template&lt;typename BasisElement &gt; </td></tr>
-<tr class="memitem:a6e51bfc83d5ab488518b664db9e5cd34"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a6e51bfc83d5ab488518b664db9e5cd34">operator *</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;v, <a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; p)</td></tr>
+<tr class="memitem:a6e51bfc83d5ab488518b664db9e5cd34"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a6e51bfc83d5ab488518b664db9e5cd34">operator *</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;v, <a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; p)</td></tr>
 <tr class="separator:a6e51bfc83d5ab488518b664db9e5cd34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1504176a6220b744ee8b07a0ed920f15"><td class="memTemplParams" colspan="2">template&lt;typename BasisElement &gt; </td></tr>
-<tr class="memitem:a1504176a6220b744ee8b07a0ed920f15"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a1504176a6220b744ee8b07a0ed920f15">operator/</a> (<a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; p, <a class="el" href="classdouble.html">double</a> v)</td></tr>
+<tr class="memitem:a1504176a6220b744ee8b07a0ed920f15"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a1504176a6220b744ee8b07a0ed920f15">operator/</a> (<a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; p, <a class="el" href="classdouble.html">double</a> v)</td></tr>
 <tr class="memdesc:a1504176a6220b744ee8b07a0ed920f15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>p / v</code>.  <a href="#a1504176a6220b744ee8b07a0ed920f15">More...</a><br /></td></tr>
 <tr class="separator:a1504176a6220b744ee8b07a0ed920f15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a830fbf97ac01bf807b4915e3087585da"><td class="memTemplParams" colspan="2">template&lt;typename BasisElement &gt; </td></tr>
-<tr class="memitem:a830fbf97ac01bf807b4915e3087585da"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a830fbf97ac01bf807b4915e3087585da">pow</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; &amp;p, <a class="el" href="classint.html">int</a> n)</td></tr>
+<tr class="memitem:a830fbf97ac01bf807b4915e3087585da"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a830fbf97ac01bf807b4915e3087585da">pow</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; &amp;p, <a class="el" href="classint.html">int</a> n)</td></tr>
 <tr class="memdesc:a830fbf97ac01bf807b4915e3087585da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns polynomial <code>raised</code> to <code>n</code>.  <a href="#a830fbf97ac01bf807b4915e3087585da">More...</a><br /></td></tr>
 <tr class="separator:a830fbf97ac01bf807b4915e3087585da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a673a4c5428fa87d2279c587959d5e3e7"><td class="memTemplParams" colspan="2">template&lt;typename BasisElement &gt; </td></tr>
@@ -1691,14 +1691,14 @@ Functions</h2></td></tr>
 <tr class="separator:ad88f58019962d307b9da7ebc9d32ec87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
-<a id="a9acca4c621fa798c49dfce0461c6483d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9acca4c621fa798c49dfce0461c6483d">&#9670;&nbsp;</a></span>GenericPolynomialEnable</h2>
+<a id="a4f60d4b8ada97a4fb724b2d66d273892"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f60d4b8ada97a4fb724b2d66d273892">&#9670;&nbsp;</a></span>GenericPolynomialEnable</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a> =  std::enable_if_t&lt; std::is_base_of_v&lt;<a class="el" href="classdrake_1_1symbolic_1_1_polynomial_basis_element.html">PolynomialBasisElement</a>, BasisElement&gt;, <a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt;BasisElement&gt; &gt;</td>
+          <td class="memname">using <a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a> =  std::enable_if_t&lt;std::is_base_of_v&lt;<a class="el" href="classdrake_1_1symbolic_1_1_polynomial_basis_element.html">PolynomialBasisElement</a>, BasisElement&gt;, <a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt;BasisElement&gt; &gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -7239,7 +7239,7 @@ we do not provide operator*= function for this class, since operator*= would ret
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator * </td>
+          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator * </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt;&#160;</td>
           <td class="paramname"><em>p1</em>, </td>
@@ -7267,7 +7267,7 @@ we do not provide operator*= function for this class, since operator*= would ret
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator * </td>
+          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator * </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt;&#160;</td>
           <td class="paramname"><em>p</em>, </td>
@@ -7295,7 +7295,7 @@ we do not provide operator*= function for this class, since operator*= would ret
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator * </td>
+          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator * </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt;&#160;</td>
           <td class="paramname"><em>p</em>, </td>
@@ -7323,7 +7323,7 @@ we do not provide operator*= function for this class, since operator*= would ret
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator * </td>
+          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator * </td>
           <td>(</td>
           <td class="paramtype">const BasisElement &amp;&#160;</td>
           <td class="paramname"><em>m</em>, </td>
@@ -7344,8 +7344,36 @@ we do not provide operator*= function for this class, since operator*= would ret
 
 </div>
 </div>
+<a id="aca14414fd5dcd3628a3a5aff79eabebc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca14414fd5dcd3628a3a5aff79eabebc">&#9670;&nbsp;</a></span>operator *() <span class="overload">[16/43]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator * </td>
+          <td>(</td>
+          <td class="paramtype">const BasisElement &amp;&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ae3b6eea79253234902bbcf4643e34d81"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae3b6eea79253234902bbcf4643e34d81">&#9670;&nbsp;</a></span>operator *() <span class="overload">[16/43]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3b6eea79253234902bbcf4643e34d81">&#9670;&nbsp;</a></span>operator *() <span class="overload">[17/43]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7361,34 +7389,6 @@ we do not provide operator*= function for this class, since operator*= would ret
           <td></td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;&#160;</td>
           <td class="paramname"><em>p2</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aca14414fd5dcd3628a3a5aff79eabebc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aca14414fd5dcd3628a3a5aff79eabebc">&#9670;&nbsp;</a></span>operator *() <span class="overload">[17/43]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator * </td>
-          <td>(</td>
-          <td class="paramtype">const BasisElement &amp;&#160;</td>
-          <td class="paramname"><em>m</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
-          <td class="paramname"><em>c</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -7491,7 +7491,7 @@ we do not provide operator*= function for this class, since operator*= would ret
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator * </td>
+          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator * </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>c</em>, </td>
@@ -7652,8 +7652,36 @@ we do not provide operator*= function for this class, since operator*= would ret
 
 </div>
 </div>
+<a id="a8d786db05bfa5937e62a34b9519424f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d786db05bfa5937e62a34b9519424f3">&#9670;&nbsp;</a></span>operator *() <span class="overload">[27/43]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator * </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const BasisElement &amp;&#160;</td>
+          <td class="paramname"><em>m</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a9ed4b0b5f2e0f804d54ab68b0195ec7a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ed4b0b5f2e0f804d54ab68b0195ec7a">&#9670;&nbsp;</a></span>operator *() <span class="overload">[27/43]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ed4b0b5f2e0f804d54ab68b0195ec7a">&#9670;&nbsp;</a></span>operator *() <span class="overload">[28/43]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7669,34 +7697,6 @@ we do not provide operator*= function for this class, since operator*= would ret
           <td></td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;&#160;</td>
           <td class="paramname"><em>p</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a8d786db05bfa5937e62a34b9519424f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d786db05bfa5937e62a34b9519424f3">&#9670;&nbsp;</a></span>operator *() <span class="overload">[28/43]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator * </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
-          <td class="paramname"><em>c</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const BasisElement &amp;&#160;</td>
-          <td class="paramname"><em>m</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -7743,7 +7743,7 @@ we do not provide operator*= function for this class, since operator*= would ret
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator * </td>
+          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator * </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt;&#160;</td>
           <td class="paramname"><em>p</em>, </td>
@@ -7771,7 +7771,7 @@ we do not provide operator*= function for this class, since operator*= would ret
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator * </td>
+          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator * </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;&#160;</td>
           <td class="paramname"><em>v</em>, </td>
@@ -8870,7 +8870,7 @@ we do not provide operator*= function for this class, since operator*= would ret
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator+ </td>
+          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator+ </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt;&#160;</td>
           <td class="paramname"><em>p1</em>, </td>
@@ -8898,7 +8898,7 @@ we do not provide operator*= function for this class, since operator*= would ret
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator+ </td>
+          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator+ </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt;&#160;</td>
           <td class="paramname"><em>p</em>, </td>
@@ -8926,7 +8926,7 @@ we do not provide operator*= function for this class, since operator*= would ret
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator+ </td>
+          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator+ </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt;&#160;</td>
           <td class="paramname"><em>p</em>, </td>
@@ -8954,7 +8954,7 @@ we do not provide operator*= function for this class, since operator*= would ret
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator+ </td>
+          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator+ </td>
           <td>(</td>
           <td class="paramtype">const BasisElement &amp;&#160;</td>
           <td class="paramname"><em>m</em>, </td>
@@ -8982,7 +8982,7 @@ we do not provide operator*= function for this class, since operator*= would ret
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator+ </td>
+          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator+ </td>
           <td>(</td>
           <td class="paramtype">const BasisElement &amp;&#160;</td>
           <td class="paramname"><em>m1</em>, </td>
@@ -9010,7 +9010,7 @@ we do not provide operator*= function for this class, since operator*= would ret
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator+ </td>
+          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator+ </td>
           <td>(</td>
           <td class="paramtype">const BasisElement &amp;&#160;</td>
           <td class="paramname"><em>m</em>, </td>
@@ -9038,7 +9038,7 @@ we do not provide operator*= function for this class, since operator*= would ret
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator+ </td>
+          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator+ </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>c</em>, </td>
@@ -9066,7 +9066,7 @@ we do not provide operator*= function for this class, since operator*= would ret
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator+ </td>
+          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator+ </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>c</em>, </td>
@@ -9094,7 +9094,7 @@ we do not provide operator*= function for this class, since operator*= would ret
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator+ </td>
+          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator+ </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt;&#160;</td>
           <td class="paramname"><em>p</em>, </td>
@@ -9122,7 +9122,7 @@ we do not provide operator*= function for this class, since operator*= would ret
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator+ </td>
+          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator+ </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;&#160;</td>
           <td class="paramname"><em>v</em>, </td>
@@ -9894,7 +9894,7 @@ we do not provide operator*= function for this class, since operator*= would ret
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator- </td>
+          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator- </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; &amp;&#160;</td>
           <td class="paramname"><em>p</em></td><td>)</td>
@@ -9912,7 +9912,7 @@ we do not provide operator*= function for this class, since operator*= would ret
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator- </td>
+          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator- </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt;&#160;</td>
           <td class="paramname"><em>p1</em>, </td>
@@ -9940,7 +9940,7 @@ we do not provide operator*= function for this class, since operator*= would ret
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator- </td>
+          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator- </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt;&#160;</td>
           <td class="paramname"><em>p</em>, </td>
@@ -9968,7 +9968,7 @@ we do not provide operator*= function for this class, since operator*= would ret
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator- </td>
+          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator- </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt;&#160;</td>
           <td class="paramname"><em>p</em>, </td>
@@ -9996,7 +9996,7 @@ we do not provide operator*= function for this class, since operator*= would ret
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator- </td>
+          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator- </td>
           <td>(</td>
           <td class="paramtype">const BasisElement &amp;&#160;</td>
           <td class="paramname"><em>m</em>, </td>
@@ -10024,7 +10024,7 @@ we do not provide operator*= function for this class, since operator*= would ret
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator- </td>
+          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator- </td>
           <td>(</td>
           <td class="paramtype">const BasisElement &amp;&#160;</td>
           <td class="paramname"><em>m1</em>, </td>
@@ -10052,7 +10052,7 @@ we do not provide operator*= function for this class, since operator*= would ret
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator- </td>
+          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator- </td>
           <td>(</td>
           <td class="paramtype">const BasisElement &amp;&#160;</td>
           <td class="paramname"><em>m</em>, </td>
@@ -10080,7 +10080,7 @@ we do not provide operator*= function for this class, since operator*= would ret
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator- </td>
+          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator- </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>c</em>, </td>
@@ -10108,7 +10108,7 @@ we do not provide operator*= function for this class, since operator*= would ret
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator- </td>
+          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator- </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>c</em>, </td>
@@ -10136,7 +10136,7 @@ we do not provide operator*= function for this class, since operator*= would ret
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator- </td>
+          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator- </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt;&#160;</td>
           <td class="paramname"><em>p</em>, </td>
@@ -10164,7 +10164,7 @@ we do not provide operator*= function for this class, since operator*= would ret
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator- </td>
+          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator- </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;&#160;</td>
           <td class="paramname"><em>v</em>, </td>
@@ -11040,7 +11040,7 @@ we do not provide operator*= function for this class, since operator*= would ret
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator/ </td>
+          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator/ </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt;&#160;</td>
           <td class="paramname"><em>p</em>, </td>
@@ -12652,7 +12652,7 @@ we do not provide operator*= function for this class, since operator*= would ret
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a9acca4c621fa798c49dfce0461c6483d">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::pow </td>
+          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::pow </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; &amp;&#160;</td>
           <td class="paramname"><em>p</em>, </td>
