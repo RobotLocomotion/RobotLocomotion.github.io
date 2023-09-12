@@ -1,5 +1,6 @@
 var NAVTREEINDEX13 =
 {
+"classdrake_1_1multibody_1_1_externally_applied_spatial_force_multiplexer.html#a601c73bc3ba42c1774d714ad60b07b99":[3,0,0,8,33,3],
 "classdrake_1_1multibody_1_1_externally_applied_spatial_force_multiplexer.html#a702d3e66e5c0187af82406b6c9459b2e":[3,0,0,8,33,0],
 "classdrake_1_1multibody_1_1_externally_applied_spatial_force_multiplexer.html#a91e813e568e0cdeeff70cc9e89236835":[3,0,0,8,33,2],
 "classdrake_1_1multibody_1_1_externally_applied_spatial_force_multiplexer.html#adf0752955b8df2ae041ed437405861a1":[3,0,0,8,33,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX13 =
 "classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#a8c287d611eb8e6efc4afbc58ad39d0fb":[3,0,0,8,47,25],
 "classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#a9a9591f454445acd72e2d67532d0d943":[3,0,0,8,47,21],
 "classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#aa0575e0cf14a1364e61f353eb16a22fd":[3,0,0,8,47,0],
-"classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#aa793ea4831b91b9086a8ae701754b5c4":[3,0,0,8,47,14],
-"classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#ab678384c2fb2d826359a8cb6b13c5513":[3,0,0,8,47,13]
+"classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#aa793ea4831b91b9086a8ae701754b5c4":[3,0,0,8,47,14]
 };

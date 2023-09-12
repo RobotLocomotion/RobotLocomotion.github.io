@@ -2188,6 +2188,22 @@ becomes 2x² + 3xy.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.symbolic.Polynomial.Roots">
+<span class="sig-name descname"><span class="pre">Roots</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.symbolic.Polynomial" title="pydrake.symbolic.Polynomial"><span class="pre">pydrake.symbolic.Polynomial</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.complex128</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.symbolic.Polynomial.Roots" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the roots of a <em>univariate</em> polynomial with constant
+coefficients as a column vector. There is no specific guarantee on the
+order of the returned roots.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this is not univariate with constant</strong> – </p></li>
+<li><p><strong>coefficients.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.symbolic.Polynomial.SetIndeterminates">
 <span class="sig-name descname"><span class="pre">SetIndeterminates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.symbolic.Polynomial" title="pydrake.symbolic.Polynomial"><span class="pre">pydrake.symbolic.Polynomial</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_indeterminates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.symbolic.Variables" title="pydrake.symbolic.Variables"><span class="pre">pydrake.symbolic.Variables</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.symbolic.Polynomial.SetIndeterminates" title="Permalink to this definition"></a></dt>
 <dd><p>Sets the indeterminates to <code class="docutils literal notranslate"><span class="pre">new_indeterminates</span></code>.</p>

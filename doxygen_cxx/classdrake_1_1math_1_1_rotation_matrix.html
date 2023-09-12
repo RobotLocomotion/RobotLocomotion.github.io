@@ -310,6 +310,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a43678622ab8237ba41aced26bd1cd4ff"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">RotationMatrix</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#a43678622ab8237ba41aced26bd1cd4ff">MakeFromOneUnitVector</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;u_A, <a class="el" href="classint.html">int</a> axis_index)</td></tr>
 <tr class="memdesc:a43678622ab8237ba41aced26bd1cd4ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Creates a right-handed orthonormal basis B from a given unit vector u_A, returned as a rotation matrix R_AB.  <a href="#a43678622ab8237ba41aced26bd1cd4ff">More...</a><br /></td></tr>
 <tr class="separator:a43678622ab8237ba41aced26bd1cd4ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa05a78601a5a8114c11a9ebb54153bf"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">RotationMatrix</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#afa05a78601a5a8114c11a9ebb54153bf">MakeClosestRotationToIdentityFromUnitZ</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;u_A)</td></tr>
+<tr class="memdesc:afa05a78601a5a8114c11a9ebb54153bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a 3D right-handed orthonormal basis B from a given unit vector u_A, returned as a rotation matrix R_AB.  <a href="#afa05a78601a5a8114c11a9ebb54153bf">More...</a><br /></td></tr>
+<tr class="separator:afa05a78601a5a8114c11a9ebb54153bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0441681fa380dda6c70fe5b5a001bb90"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">RotationMatrix</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#a0441681fa380dda6c70fe5b5a001bb90">Identity</a> ()</td></tr>
 <tr class="memdesc:a0441681fa380dda6c70fe5b5a001bb90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the 3x3 identity RotationMatrix.  <a href="#a0441681fa380dda6c70fe5b5a001bb90">More...</a><br /></td></tr>
 <tr class="separator:a0441681fa380dda6c70fe5b5a001bb90"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1122,6 +1125,52 @@ To orthonormalize a 3x3 matrix, use <a class="el" href="classdrake_1_1math_1_1_r
 
 <p>Tests if <code>this</code> rotation matrix R is a proper orthonormal rotation matrix to within the threshold of <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#a2013671d440f9093574739914d147280" title="Returns an internal tolerance that checks rotation matrix orthonormality.">get_internal_tolerance_for_orthonormality()</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if <code>this</code> is a valid rotation matrix. </dd></dl>
+
+</div>
+</div>
+<a id="afa05a78601a5a8114c11a9ebb54153bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa05a78601a5a8114c11a9ebb54153bf">&#9670;&nbsp;</a></span>MakeClosestRotationToIdentityFromUnitZ()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">RotationMatrix</a>&lt;T&gt; MakeClosestRotationToIdentityFromUnitZ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>u_A</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a 3D right-handed orthonormal basis B from a given unit vector u_A, returned as a rotation matrix R_AB. </p>
+<p>It consists of orthogonal unit vectors [Bx, By, Bz] where Bz is u_A. The angle-axis representation of the resulting rotation is the one with the minimum rotation angle that rotates A to B. When u_A is not parallel or antiparallel to [0, 0, 1], such rotation is unique. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">u_A</td><td>unit vector expressed in frame A that represents Bz. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if u_A is not a unit vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">R_AB</td><td>the rotation matrix with properties as described above. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

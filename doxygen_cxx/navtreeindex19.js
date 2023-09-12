@@ -1,5 +1,6 @@
 var NAVTREEINDEX19 =
 {
+"classdrake_1_1multibody_1_1benchmarks_1_1pendulum_1_1_pendulum_parameters.html#abcb28da0deceb7458a992cbcdd6d1137":[3,0,0,8,0,3,0,8],
 "classdrake_1_1multibody_1_1benchmarks_1_1pendulum_1_1_pendulum_parameters.html#ae864436ad95f750f6ad3f66894a9758a":[3,0,0,8,0,3,0,1],
 "classdrake_1_1multibody_1_1constraint_1_1_constraint_solver.html":[3,0,0,8,1,1],
 "classdrake_1_1multibody_1_1constraint_1_1_constraint_solver.html#a10078a950716e9baa641e7b11b30a0b7":[3,0,0,8,1,1,16],
@@ -248,6 +249,5 @@ var NAVTREEINDEX19 =
 "classdrake_1_1perception_1_1_point_cloud_to_lcm.html#af93b4c87b94fc5b66d94411cc065c7da":[3,0,0,9,3,3],
 "classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html":[3,0,0,9,0,0],
 "classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html#a02b2175ab5902fc277d6cce3dee4abb7":[3,0,0,9,0,0,2],
-"classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html#a1d89c28bd42ba9a52da008bb69367171":[3,0,0,9,0,0,3],
-"classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html#a5a53cab35e9f8a5785b8c72741dfc755":[3,0,0,9,0,0,1]
+"classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html#a1d89c28bd42ba9a52da008bb69367171":[3,0,0,9,0,0,3]
 };

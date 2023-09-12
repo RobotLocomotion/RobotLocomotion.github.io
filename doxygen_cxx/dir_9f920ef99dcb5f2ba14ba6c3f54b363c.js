@@ -47,6 +47,7 @@ var dir_9f920ef99dcb5f2ba14ba6c3f54b363c =
     [ "simulator_config_functions.h", "simulator__config__functions_8h.html", "simulator__config__functions_8h" ],
     [ "simulator_gflags.h", "simulator__gflags_8h.html", "simulator__gflags_8h" ],
     [ "simulator_print_stats.h", "simulator__print__stats_8h.html", "simulator__print__stats_8h" ],
+    [ "simulator_python_internal.h", "simulator__python__internal_8h.html", null ],
     [ "simulator_status.h", "simulator__status_8h.html", [
       [ "SimulatorStatus", "classdrake_1_1systems_1_1_simulator_status.html", "classdrake_1_1systems_1_1_simulator_status" ]
     ] ],

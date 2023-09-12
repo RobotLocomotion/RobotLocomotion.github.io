@@ -2290,7 +2290,7 @@ function.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.Simulator.AdvanceTo">
-<span class="sig-name descname"><span class="pre">AdvanceTo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.analysis.Simulator" title="pydrake.systems.analysis.Simulator"><span class="pre">pydrake.systems.analysis.Simulator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.analysis.SimulatorStatus" title="pydrake.systems.analysis.SimulatorStatus"><span class="pre">pydrake.systems.analysis.SimulatorStatus</span></a></span></span><a class="headerlink" href="#pydrake.systems.analysis.Simulator.AdvanceTo" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">AdvanceTo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.analysis.Simulator" title="pydrake.systems.analysis.Simulator"><span class="pre">pydrake.systems.analysis.Simulator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interruptible</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.analysis.SimulatorStatus" title="pydrake.systems.analysis.SimulatorStatus"><span class="pre">pydrake.systems.analysis.SimulatorStatus</span></a></span></span><a class="headerlink" href="#pydrake.systems.analysis.Simulator.AdvanceTo" title="Permalink to this definition"></a></dt>
 <dd><p>Advances the System’s trajectory until <code class="docutils literal notranslate"><span class="pre">boundary_time</span></code> is reached in
 the context or some other termination condition occurs. A variety of
 <code class="docutils literal notranslate"><span class="pre">RuntimeError</span></code> conditions are possible here, as well as error
@@ -2318,6 +2318,14 @@ conditions using a <em>monitor</em> function; see set_monitor().</p>
 call to AdvanceTo(). The method may return earlier if an event or
 the monitor function requests termination or reports an error
 condition.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">interruptible</span></code>:</dt><dd><p>When True, the simulator will check for <code class="docutils literal notranslate"><span class="pre">KeyboardInterrupt</span></code>
+signals (Ctrl-C) during the call to AdvanceTo(). When False,
+the AdvanceTo() may or may not be interruptible, depending on
+what systems and/or monitors have been added to the simulator.
+The check has a very minor runtime performance cost, so can be
+disabled by passing <code class="docutils literal notranslate"><span class="pre">False</span></code>. This is a Python-only parameter
+(not available in the C++ API).</p>
 </dd>
 <dt>Returns <code class="docutils literal notranslate"><span class="pre">status</span></code>:</dt><dd><p>A SimulatorStatus object indicating success, termination, or an
 error condition as reported by event handlers or the monitor
@@ -2920,7 +2928,7 @@ function.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.Simulator_-AutoDiffXd-.AdvanceTo">
-<span id="pydrake.systems.analysis.Simulator_[AutoDiffXd].AdvanceTo"></span><span class="sig-name descname"><span class="pre">AdvanceTo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.analysis.Simulator_" title="pydrake.systems.analysis.Simulator_"><span class="pre">pydrake.systems.analysis.Simulator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.analysis.SimulatorStatus" title="pydrake.systems.analysis.SimulatorStatus"><span class="pre">pydrake.systems.analysis.SimulatorStatus</span></a></span></span><a class="headerlink" href="#pydrake.systems.analysis.Simulator_-AutoDiffXd-.AdvanceTo" title="Permalink to this definition"></a></dt>
+<span id="pydrake.systems.analysis.Simulator_[AutoDiffXd].AdvanceTo"></span><span class="sig-name descname"><span class="pre">AdvanceTo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.analysis.Simulator_" title="pydrake.systems.analysis.Simulator_"><span class="pre">pydrake.systems.analysis.Simulator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">interruptible</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.analysis.SimulatorStatus" title="pydrake.systems.analysis.SimulatorStatus"><span class="pre">pydrake.systems.analysis.SimulatorStatus</span></a></span></span><a class="headerlink" href="#pydrake.systems.analysis.Simulator_-AutoDiffXd-.AdvanceTo" title="Permalink to this definition"></a></dt>
 <dd><p>Advances the System’s trajectory until <code class="docutils literal notranslate"><span class="pre">boundary_time</span></code> is reached in
 the context or some other termination condition occurs. A variety of
 <code class="docutils literal notranslate"><span class="pre">RuntimeError</span></code> conditions are possible here, as well as error
@@ -2948,6 +2956,14 @@ conditions using a <em>monitor</em> function; see set_monitor().</p>
 call to AdvanceTo(). The method may return earlier if an event or
 the monitor function requests termination or reports an error
 condition.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">interruptible</span></code>:</dt><dd><p>When True, the simulator will check for <code class="docutils literal notranslate"><span class="pre">KeyboardInterrupt</span></code>
+signals (Ctrl-C) during the call to AdvanceTo(). When False,
+the AdvanceTo() may or may not be interruptible, depending on
+what systems and/or monitors have been added to the simulator.
+The check has a very minor runtime performance cost, so can be
+disabled by passing <code class="docutils literal notranslate"><span class="pre">False</span></code>. This is a Python-only parameter
+(not available in the C++ API).</p>
 </dd>
 <dt>Returns <code class="docutils literal notranslate"><span class="pre">status</span></code>:</dt><dd><p>A SimulatorStatus object indicating success, termination, or an
 error condition as reported by event handlers or the monitor

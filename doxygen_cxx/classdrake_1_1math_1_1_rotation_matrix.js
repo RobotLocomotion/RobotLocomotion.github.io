@@ -24,6 +24,7 @@ var classdrake_1_1math_1_1_rotation_matrix =
     [ "IsValid", "classdrake_1_1math_1_1_rotation_matrix.html#a1ecdff2808f2ecf66cc0fe97f5173b98", null ],
     [ "IsValid", "classdrake_1_1math_1_1_rotation_matrix.html#af6346cc9235f2cedd86a802d0d4a8451", null ],
     [ "IsValid", "classdrake_1_1math_1_1_rotation_matrix.html#a0397fe475999596a9edb1797a418432a", null ],
+    [ "MakeClosestRotationToIdentityFromUnitZ", "classdrake_1_1math_1_1_rotation_matrix.html#afa05a78601a5a8114c11a9ebb54153bf", null ],
     [ "MakeFromOneUnitVector", "classdrake_1_1math_1_1_rotation_matrix.html#a43678622ab8237ba41aced26bd1cd4ff", null ],
     [ "MakeFromOneVector", "classdrake_1_1math_1_1_rotation_matrix.html#aa1f727008230bd6410b3ff8849fd78e9", null ],
     [ "MakeFromOrthonormalColumns", "classdrake_1_1math_1_1_rotation_matrix.html#aa1890eaa31728581cedbf2bd40457560", null ],

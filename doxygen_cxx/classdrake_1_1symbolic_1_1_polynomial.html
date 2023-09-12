@@ -278,6 +278,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab548898f3e47ba517d0513f8ef974da7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#ab548898f3e47ba517d0513f8ef974da7">IsOdd</a> () const</td></tr>
 <tr class="memdesc:ab548898f3e47ba517d0513f8ef974da7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the polynomial is odd, namely p(x) = -p(-x).  <a href="#ab548898f3e47ba517d0513f8ef974da7">More...</a><br /></td></tr>
 <tr class="separator:ab548898f3e47ba517d0513f8ef974da7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e5b1b2865b1774c65c42c7c2ef9bced"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXcd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#a8e5b1b2865b1774c65c42c7c2ef9bced">Roots</a> () const</td></tr>
+<tr class="memdesc:a8e5b1b2865b1774c65c42c7c2ef9bced"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the roots of a <em>univariate</em> polynomial with constant coefficients as a column vector.  <a href="#a8e5b1b2865b1774c65c42c7c2ef9bced">More...</a><br /></td></tr>
+<tr class="separator:a8e5b1b2865b1774c65c42c7c2ef9bced"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9529d30cb91325a367a10559fd88b06a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#a9529d30cb91325a367a10559fd88b06a">operator+=</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;p)</td></tr>
 <tr class="separator:a9529d30cb91325a367a10559fd88b06a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7a3fb26530d992d7b2278a5f6281c09"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#ad7a3fb26530d992d7b2278a5f6281c09">operator+=</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a> &amp;m)</td></tr>
@@ -1479,6 +1482,32 @@ Friends</h2></td></tr>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">polynomial_cleaned</td><td>A polynomial whose terms with small coefficients are removed. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8e5b1b2865b1774c65c42c7c2ef9bced"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e5b1b2865b1774c65c42c7c2ef9bced">&#9670;&nbsp;</a></span>Roots()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorXcd Roots </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the roots of a <em>univariate</em> polynomial with constant coefficients as a column vector. </p>
+<p>There is no specific guarantee on the order of the returned roots.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>this</code> is not univariate with constant coefficients. </td></tr>
   </table>
   </dd>
 </dl>

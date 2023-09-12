@@ -1,5 +1,6 @@
 var NAVTREEINDEX21 =
 {
+"classdrake_1_1planning_1_1test_1_1_collision_checker_abstract_test_suite.html#a4d3f70d63d14ecedd270f300deb5c856":[3,0,0,10,0,0,0],
 "classdrake_1_1planning_1_1test_1_1_collision_checker_abstract_test_suite.html#acd743c3e775134787ff62903fb99fda3":[3,0,0,10,0,0,1],
 "classdrake_1_1planning_1_1test_1_1_collision_checker_abstract_test_suite.html#ae36c5ce9740efa78e65d2eccdc7e2817":[3,0,0,10,0,0,2],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation.html":[1,4,2,1,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX21 =
 "classdrake_1_1schema_1_1_distribution_vector.html#ac55f9292f1e0f747e75526151ae869bc":[3,0,0,12,3,1],
 "classdrake_1_1schema_1_1_distribution_vector.html#ad3bfe7c8dd211e654d170fa8c3874e41":[3,0,0,12,3,5],
 "classdrake_1_1schema_1_1_gaussian.html":[3,0,0,12,4],
-"classdrake_1_1schema_1_1_gaussian.html#a00398c6c9c4a255df67ab03035ab5628":[3,0,0,12,4,1],
-"classdrake_1_1schema_1_1_gaussian.html#a13884ab1df4ecb9b600a2af9a2cf7eb9":[3,0,0,12,4,5]
+"classdrake_1_1schema_1_1_gaussian.html#a00398c6c9c4a255df67ab03035ab5628":[3,0,0,12,4,1]
 };

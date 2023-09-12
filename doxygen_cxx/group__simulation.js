@@ -40,6 +40,7 @@ var group__simulation =
       [ "set_monitor", "classdrake_1_1systems_1_1_simulator.html#aa92bce4d4205f51b3b17bcaae09566f7", null ],
       [ "set_publish_at_initialization", "classdrake_1_1systems_1_1_simulator.html#ac210a235b5e0865efb51fdd27c4b58ae", null ],
       [ "set_publish_every_time_step", "classdrake_1_1systems_1_1_simulator.html#aef1dc6aeb821503379ab1dd8c6044562", null ],
-      [ "set_target_realtime_rate", "classdrake_1_1systems_1_1_simulator.html#abda3671ab5939691e7e39fcba568174b", null ]
+      [ "set_target_realtime_rate", "classdrake_1_1systems_1_1_simulator.html#abda3671ab5939691e7e39fcba568174b", null ],
+      [ "internal::SimulatorPythonInternal", "classdrake_1_1systems_1_1_simulator.html#a96e2ab6b348d592cc8252506bb9dc3b5", null ]
     ] ]
 ];

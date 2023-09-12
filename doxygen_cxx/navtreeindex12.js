@@ -1,5 +1,6 @@
 var NAVTREEINDEX12 =
 {
+"classdrake_1_1multibody_1_1_ball_rpy_joint.html#a5372f8878091a3347783982aef46d3f3":[3,0,0,8,11,9],
 "classdrake_1_1multibody_1_1_ball_rpy_joint.html#a67bc0041929b5120c23f0deb76dfbf98":[3,0,0,8,11,17],
 "classdrake_1_1multibody_1_1_ball_rpy_joint.html#a83a06d8a7b5e79c67b09f98583b0d807":[3,0,0,8,11,6],
 "classdrake_1_1multibody_1_1_ball_rpy_joint.html#a885ca2794afaaf292681d6f725e3b09f":[3,0,0,8,11,14],
@@ -248,6 +249,5 @@ var NAVTREEINDEX12 =
 "classdrake_1_1multibody_1_1_door_hinge.html#aee83a80b0d92bc66464b6eadd01658f9":[3,0,0,8,30,12],
 "classdrake_1_1multibody_1_1_externally_applied_spatial_force_multiplexer.html":[3,0,0,8,33],
 "classdrake_1_1multibody_1_1_externally_applied_spatial_force_multiplexer.html#a030f11f21e3549041f7d6c0706fda67d":[3,0,0,8,33,4],
-"classdrake_1_1multibody_1_1_externally_applied_spatial_force_multiplexer.html#a558f680c1fd9b5b59870a531c6138592":[3,0,0,8,33,1],
-"classdrake_1_1multibody_1_1_externally_applied_spatial_force_multiplexer.html#a601c73bc3ba42c1774d714ad60b07b99":[3,0,0,8,33,3]
+"classdrake_1_1multibody_1_1_externally_applied_spatial_force_multiplexer.html#a558f680c1fd9b5b59870a531c6138592":[3,0,0,8,33,1]
 };
