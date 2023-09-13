@@ -30,6 +30,7 @@ var searchData=
   ['trajectoryaffinesystem',['TrajectoryAffineSystem',['../classdrake_1_1systems_1_1_trajectory_affine_system.html',1,'drake::systems']]],
   ['trajectorylinearsystem',['TrajectoryLinearSystem',['../classdrake_1_1systems_1_1_trajectory_linear_system.html',1,'drake::systems']]],
   ['trajectorysource',['TrajectorySource',['../classdrake_1_1systems_1_1_trajectory_source.html',1,'drake::systems']]],
+  ['transferfunction',['TransferFunction',['../classdrake_1_1systems_1_1_transfer_function.html',1,'drake::systems']]],
   ['transform',['Transform',['../classdrake_1_1schema_1_1_transform.html',1,'drake::schema']]],
   ['trianglequadrature',['TriangleQuadrature',['../classdrake_1_1multibody_1_1_triangle_quadrature.html',1,'drake::multibody']]],
   ['trianglequadraturerule',['TriangleQuadratureRule',['../classdrake_1_1multibody_1_1_triangle_quadrature_rule.html',1,'drake::multibody']]],

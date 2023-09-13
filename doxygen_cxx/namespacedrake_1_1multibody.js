@@ -60,6 +60,7 @@ var namespacedrake_1_1multibody =
     [ "OrientationCost", "classdrake_1_1multibody_1_1_orientation_cost.html", "classdrake_1_1multibody_1_1_orientation_cost" ],
     [ "PackageMap", "classdrake_1_1multibody_1_1_package_map.html", "classdrake_1_1multibody_1_1_package_map" ],
     [ "Parser", "classdrake_1_1multibody_1_1_parser.html", "classdrake_1_1multibody_1_1_parser" ],
+    [ "PdControllerGains", "structdrake_1_1multibody_1_1_pd_controller_gains.html", "structdrake_1_1multibody_1_1_pd_controller_gains" ],
     [ "PhysicalModel", "classdrake_1_1multibody_1_1_physical_model.html", "classdrake_1_1multibody_1_1_physical_model" ],
     [ "PlanarJoint", "classdrake_1_1multibody_1_1_planar_joint.html", "classdrake_1_1multibody_1_1_planar_joint" ],
     [ "PointPairContactInfo", "classdrake_1_1multibody_1_1_point_pair_contact_info.html", "classdrake_1_1multibody_1_1_point_pair_contact_info" ],

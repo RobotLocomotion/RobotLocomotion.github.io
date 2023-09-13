@@ -121,6 +121,7 @@ var namespacedrake_1_1systems =
     [ "TrajectoryAffineSystem", "classdrake_1_1systems_1_1_trajectory_affine_system.html", "classdrake_1_1systems_1_1_trajectory_affine_system" ],
     [ "TrajectoryLinearSystem", "classdrake_1_1systems_1_1_trajectory_linear_system.html", "classdrake_1_1systems_1_1_trajectory_linear_system" ],
     [ "TrajectorySource", "classdrake_1_1systems_1_1_trajectory_source.html", "classdrake_1_1systems_1_1_trajectory_source" ],
+    [ "TransferFunction", "classdrake_1_1systems_1_1_transfer_function.html", "classdrake_1_1systems_1_1_transfer_function" ],
     [ "UnrestrictedUpdateEvent", "classdrake_1_1systems_1_1_unrestricted_update_event.html", "classdrake_1_1systems_1_1_unrestricted_update_event" ],
     [ "UseDefaultName", "structdrake_1_1systems_1_1_use_default_name.html", null ],
     [ "ValueProducer", "classdrake_1_1systems_1_1_value_producer.html", "classdrake_1_1systems_1_1_value_producer" ],

@@ -2,6 +2,7 @@ var searchData=
 [
   ['penetration_20queries',['Penetration Queries',['../group__module__penetration__queries.html',1,'']]],
   ['parsing_20models_20for_20multibody_20dynamics',['Parsing Models for Multibody Dynamics',['../group__multibody__parsing.html',1,'']]],
+  ['p',['p',['../structdrake_1_1multibody_1_1_pd_controller_gains.html#aace2d484b0e3651abd108f04803d316c',1,'drake::multibody::PdControllerGains']]],
   ['p_5faca',['p_ACa',['../structdrake_1_1geometry_1_1_signed_distance_pair.html#a46d806554c238e27db8575ae5965b55e',1,'drake::geometry::SignedDistancePair']]],
   ['p_5fap',['p_AP',['../classdrake_1_1multibody_1_1_linear_spring_damper.html#a1d9140ecb720629803d4b02a6bfaf771',1,'drake::multibody::LinearSpringDamper']]],
   ['p_5fbcb',['p_BCb',['../structdrake_1_1geometry_1_1_signed_distance_pair.html#af12d609d561a11a0cec7a6fe270cce28',1,'drake::geometry::SignedDistancePair']]],
@@ -54,6 +55,7 @@ var searchData=
   ['pattern',['Pattern',['../namespacedrake_1_1symbolic.html#aeb27ddf30420e620beb8e6725d83208f',1,'drake::symbolic']]],
   ['pc_5fticket',['pc_ticket',['../classdrake_1_1systems_1_1_system_base.html#afdc60bc4c201f17bd35bf40c13a183b3',1,'drake::systems::SystemBase']]],
   ['pchip',['Pchip',['../namespacedrake_1_1manipulation_1_1util.html#ab43604da4098c31437718f710e587e4fa97b119ae7959071f7cc25b5ce4332c1e',1,'drake::manipulation::util']]],
+  ['pdcontrollergains',['PdControllerGains',['../structdrake_1_1multibody_1_1_pd_controller_gains.html',1,'drake::multibody']]],
   ['pe_5fticket',['pe_ticket',['../classdrake_1_1systems_1_1_system_base.html#a49f1689b1ae9f05b6e2f194db873927b',1,'drake::systems::SystemBase']]],
   ['peekabstractvalueorthrow',['PeekAbstractValueOrThrow',['../classdrake_1_1systems_1_1_cache_entry_value.html#acb2606afbac0579d141587f4352c79b2',1,'drake::systems::CacheEntryValue']]],
   ['peekvalueorthrow',['PeekValueOrThrow',['../classdrake_1_1systems_1_1_cache_entry_value.html#a47a88795aa99785d16305c215f68f047',1,'drake::systems::CacheEntryValue']]],
@@ -81,7 +83,6 @@ var searchData=
   ['perspectivecamera',['PerspectiveCamera',['../structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html',1,'drake::geometry::Meshcat']]],
   ['perspectivequadraticcost',['PerspectiveQuadraticCost',['../classdrake_1_1solvers_1_1_perspective_quadratic_cost.html',1,'PerspectiveQuadraticCost'],['../classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#a7753f51736cfaf47d79cccf47af3e6b7',1,'drake::solvers::PerspectiveQuadraticCost::PerspectiveQuadraticCost(const PerspectiveQuadraticCost &amp;)=delete'],['../classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#a9f514d254d676ff4db7124730f8b0e37',1,'drake::solvers::PerspectiveQuadraticCost::PerspectiveQuadraticCost(PerspectiveQuadraticCost &amp;&amp;)=delete'],['../classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#a05f12ff63f9849accf2405af287cf808',1,'drake::solvers::PerspectiveQuadraticCost::PerspectiveQuadraticCost(const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;A, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;b)']]],
   ['perturbation_5fsize',['perturbation_size',['../classdrake_1_1math_1_1_numerical_gradient_option.html#a42db421362be5c1e41414f3a3aedae04',1,'drake::math::NumericalGradientOption']]],
-  ['petsc_5fsymmetric_5fblock_5fsparse_5fmatrix_2eh',['petsc_symmetric_block_sparse_matrix.h',['../petsc__symmetric__block__sparse__matrix_8h.html',1,'']]],
   ['pgs_5fsolver_2eh',['pgs_solver.h',['../pgs__solver_8h.html',1,'']]],
   ['phase',['phase',['../classdrake_1_1systems_1_1_sine.html#aea1d7812e603f5c67bae19da90797778',1,'drake::systems::Sine']]],
   ['phase_5fvector',['phase_vector',['../classdrake_1_1systems_1_1_sine.html#a5bd08c73d2ebeaa1c676a7d4c2c49d18',1,'drake::systems::Sine']]],

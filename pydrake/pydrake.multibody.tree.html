@@ -6014,9 +6014,26 @@ velocity variables of joint().</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.JointActuator.get_controller_gains">
+<span class="sig-name descname"><span class="pre">get_controller_gains</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.JointActuator" title="pydrake.multibody.tree.JointActuator"><span class="pre">pydrake.multibody.tree.JointActuator</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.PdControllerGains" title="pydrake.multibody.tree.PdControllerGains"><span class="pre">pydrake.multibody.tree.PdControllerGains</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.JointActuator.get_controller_gains" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a reference to the controller gains for this actuator.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>has_controller() is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.JointActuator.GetParentPlant">
 <span class="sig-name descname"><span class="pre">GetParentPlant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.JointActuator" title="pydrake.multibody.tree.JointActuator"><span class="pre">pydrake.multibody.tree.JointActuator</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.JointActuator.GetParentPlant" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.JointActuator.has_controller">
+<span class="sig-name descname"><span class="pre">has_controller</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.JointActuator" title="pydrake.multibody.tree.JointActuator"><span class="pre">pydrake.multibody.tree.JointActuator</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.JointActuator.has_controller" title="Permalink to this definition"></a></dt>
+<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if controller gains have been specified with a call
+to set_controller_gains().</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.JointActuator.index">
@@ -6094,6 +6111,31 @@ MultibodyTree model to which <code class="docutils literal notranslate"><span cl
 <li><p><strong>RuntimeError if u is nullptr.</strong> – </p></li>
 <li><p><strong>RuntimeError if ``u.size</strong><strong>(</strong><strong>) </strong><strong>!=</strong> – </p></li>
 <li><p><strong>this-&gt;get_parent_tree</strong><strong>(</strong><strong>)</strong><strong>num_actuated_dofs</strong><strong>(</strong><strong>)</strong><strong>``.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.JointActuator.set_controller_gains">
+<span class="sig-name descname"><span class="pre">set_controller_gains</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.JointActuator" title="pydrake.multibody.tree.JointActuator"><span class="pre">pydrake.multibody.tree.JointActuator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">gains</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.PdControllerGains" title="pydrake.multibody.tree.PdControllerGains"><span class="pre">pydrake.multibody.tree.PdControllerGains</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.JointActuator.set_controller_gains" title="Permalink to this definition"></a></dt>
+<dd><p>Set controller gains for this joint actuator. This enables the
+modeling of a simple PD controller of the form: ũ = -Kp⋅(q − qd) -
+Kd⋅(v − vd) + u_ff u = max(−e, min(e, ũ)) where qd and vd are the
+desired configuration and velocity for joint(), Kp and Kd are the
+proportional and derivative gains specified in <code class="docutils literal notranslate"><span class="pre">gains</span></code>, u_ff is the
+feedforward actuation and <code class="docutils literal notranslate"><span class="pre">e</span></code> corresponds to effort_limit().</p>
+<p>For simulation, feedforward actuation can be provided through
+MultibodyPlant::get_actuation_input_port(). Desired configuration and
+velocity are specified through
+MultibodyPlant::get_desired_state_input_port().</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>iff the proportional gain is not strictly positive</strong><strong> or </strong><strong>if the</strong> – </p></li>
+<li><p><strong>derivative gain is negative.</strong> – </p></li>
+<li><p><strong>iff the owning MultibodyPlant is finalized. See</strong> – </p></li>
+<li><p><strong>MultibodyPlant::Finalize</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -6204,9 +6246,26 @@ velocity variables of joint().</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.JointActuator_-AutoDiffXd-.get_controller_gains">
+<span id="pydrake.multibody.tree.JointActuator_[AutoDiffXd].get_controller_gains"></span><span class="sig-name descname"><span class="pre">get_controller_gains</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.JointActuator_" title="pydrake.multibody.tree.JointActuator_"><span class="pre">pydrake.multibody.tree.JointActuator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.PdControllerGains" title="pydrake.multibody.tree.PdControllerGains"><span class="pre">pydrake.multibody.tree.PdControllerGains</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.JointActuator_-AutoDiffXd-.get_controller_gains" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a reference to the controller gains for this actuator.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>has_controller() is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.JointActuator_-AutoDiffXd-.GetParentPlant">
 <span id="pydrake.multibody.tree.JointActuator_[AutoDiffXd].GetParentPlant"></span><span class="sig-name descname"><span class="pre">GetParentPlant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.JointActuator_" title="pydrake.multibody.tree.JointActuator_"><span class="pre">pydrake.multibody.tree.JointActuator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::multibody::MultibodyPlant&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double,</span> <span class="pre">-1,</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">-1,</span> <span class="pre">1&gt;</span> <span class="pre">&gt;</span> <span class="pre">&gt;</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.JointActuator_-AutoDiffXd-.GetParentPlant" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.JointActuator_-AutoDiffXd-.has_controller">
+<span id="pydrake.multibody.tree.JointActuator_[AutoDiffXd].has_controller"></span><span class="sig-name descname"><span class="pre">has_controller</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.JointActuator_" title="pydrake.multibody.tree.JointActuator_"><span class="pre">pydrake.multibody.tree.JointActuator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.JointActuator_-AutoDiffXd-.has_controller" title="Permalink to this definition"></a></dt>
+<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if controller gains have been specified with a call
+to set_controller_gains().</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.JointActuator_-AutoDiffXd-.index">
@@ -6284,6 +6343,31 @@ MultibodyTree model to which <code class="docutils literal notranslate"><span cl
 <li><p><strong>RuntimeError if u is nullptr.</strong> – </p></li>
 <li><p><strong>RuntimeError if ``u.size</strong><strong>(</strong><strong>) </strong><strong>!=</strong> – </p></li>
 <li><p><strong>this-&gt;get_parent_tree</strong><strong>(</strong><strong>)</strong><strong>num_actuated_dofs</strong><strong>(</strong><strong>)</strong><strong>``.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.JointActuator_-AutoDiffXd-.set_controller_gains">
+<span id="pydrake.multibody.tree.JointActuator_[AutoDiffXd].set_controller_gains"></span><span class="sig-name descname"><span class="pre">set_controller_gains</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.JointActuator_" title="pydrake.multibody.tree.JointActuator_"><span class="pre">pydrake.multibody.tree.JointActuator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gains</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.PdControllerGains" title="pydrake.multibody.tree.PdControllerGains"><span class="pre">pydrake.multibody.tree.PdControllerGains</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.JointActuator_-AutoDiffXd-.set_controller_gains" title="Permalink to this definition"></a></dt>
+<dd><p>Set controller gains for this joint actuator. This enables the
+modeling of a simple PD controller of the form: ũ = -Kp⋅(q − qd) -
+Kd⋅(v − vd) + u_ff u = max(−e, min(e, ũ)) where qd and vd are the
+desired configuration and velocity for joint(), Kp and Kd are the
+proportional and derivative gains specified in <code class="docutils literal notranslate"><span class="pre">gains</span></code>, u_ff is the
+feedforward actuation and <code class="docutils literal notranslate"><span class="pre">e</span></code> corresponds to effort_limit().</p>
+<p>For simulation, feedforward actuation can be provided through
+MultibodyPlant::get_actuation_input_port(). Desired configuration and
+velocity are specified through
+MultibodyPlant::get_desired_state_input_port().</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>iff the proportional gain is not strictly positive</strong><strong> or </strong><strong>if the</strong> – </p></li>
+<li><p><strong>derivative gain is negative.</strong> – </p></li>
+<li><p><strong>iff the owning MultibodyPlant is finalized. See</strong> – </p></li>
+<li><p><strong>MultibodyPlant::Finalize</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -6388,9 +6472,26 @@ velocity variables of joint().</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.JointActuator_-Expression-.get_controller_gains">
+<span id="pydrake.multibody.tree.JointActuator_[Expression].get_controller_gains"></span><span class="sig-name descname"><span class="pre">get_controller_gains</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.JointActuator_" title="pydrake.multibody.tree.JointActuator_"><span class="pre">pydrake.multibody.tree.JointActuator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.PdControllerGains" title="pydrake.multibody.tree.PdControllerGains"><span class="pre">pydrake.multibody.tree.PdControllerGains</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.JointActuator_-Expression-.get_controller_gains" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a reference to the controller gains for this actuator.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>has_controller() is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.JointActuator_-Expression-.GetParentPlant">
 <span id="pydrake.multibody.tree.JointActuator_[Expression].GetParentPlant"></span><span class="sig-name descname"><span class="pre">GetParentPlant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.JointActuator_" title="pydrake.multibody.tree.JointActuator_"><span class="pre">pydrake.multibody.tree.JointActuator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::multibody::MultibodyPlant&lt;drake::symbolic::Expression&gt;</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.JointActuator_-Expression-.GetParentPlant" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.JointActuator_-Expression-.has_controller">
+<span id="pydrake.multibody.tree.JointActuator_[Expression].has_controller"></span><span class="sig-name descname"><span class="pre">has_controller</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.JointActuator_" title="pydrake.multibody.tree.JointActuator_"><span class="pre">pydrake.multibody.tree.JointActuator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.JointActuator_-Expression-.has_controller" title="Permalink to this definition"></a></dt>
+<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if controller gains have been specified with a call
+to set_controller_gains().</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.JointActuator_-Expression-.index">
@@ -6468,6 +6569,31 @@ MultibodyTree model to which <code class="docutils literal notranslate"><span cl
 <li><p><strong>RuntimeError if u is nullptr.</strong> – </p></li>
 <li><p><strong>RuntimeError if ``u.size</strong><strong>(</strong><strong>) </strong><strong>!=</strong> – </p></li>
 <li><p><strong>this-&gt;get_parent_tree</strong><strong>(</strong><strong>)</strong><strong>num_actuated_dofs</strong><strong>(</strong><strong>)</strong><strong>``.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.JointActuator_-Expression-.set_controller_gains">
+<span id="pydrake.multibody.tree.JointActuator_[Expression].set_controller_gains"></span><span class="sig-name descname"><span class="pre">set_controller_gains</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.JointActuator_" title="pydrake.multibody.tree.JointActuator_"><span class="pre">pydrake.multibody.tree.JointActuator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gains</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.PdControllerGains" title="pydrake.multibody.tree.PdControllerGains"><span class="pre">pydrake.multibody.tree.PdControllerGains</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.JointActuator_-Expression-.set_controller_gains" title="Permalink to this definition"></a></dt>
+<dd><p>Set controller gains for this joint actuator. This enables the
+modeling of a simple PD controller of the form: ũ = -Kp⋅(q − qd) -
+Kd⋅(v − vd) + u_ff u = max(−e, min(e, ũ)) where qd and vd are the
+desired configuration and velocity for joint(), Kp and Kd are the
+proportional and derivative gains specified in <code class="docutils literal notranslate"><span class="pre">gains</span></code>, u_ff is the
+feedforward actuation and <code class="docutils literal notranslate"><span class="pre">e</span></code> corresponds to effort_limit().</p>
+<p>For simulation, feedforward actuation can be provided through
+MultibodyPlant::get_actuation_input_port(). Desired configuration and
+velocity are specified through
+MultibodyPlant::get_desired_state_input_port().</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>iff the proportional gain is not strictly positive</strong><strong> or </strong><strong>if the</strong> – </p></li>
+<li><p><strong>derivative gain is negative.</strong> – </p></li>
+<li><p><strong>iff the owning MultibodyPlant is finalized. See</strong> – </p></li>
+<li><p><strong>MultibodyPlant::Finalize</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -8828,6 +8954,28 @@ at construction from the given model MultibodyTree object.</p>
 <span id="pydrake.multibody.tree.MultibodyForces_[Expression].SetZero"></span><span class="sig-name descname"><span class="pre">SetZero</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.MultibodyForces_" title="pydrake.multibody.tree.MultibodyForces_"><span class="pre">pydrake.multibody.tree.MultibodyForces_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.MultibodyForces_" title="pydrake.multibody.tree.MultibodyForces_"><span class="pre">pydrake.multibody.tree.MultibodyForces_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.MultibodyForces_-Expression-.SetZero" title="Permalink to this definition"></a></dt>
 <dd><p>Sets <code class="docutils literal notranslate"><span class="pre">this</span></code> to store zero forces (no applied forces).</p>
 </dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.PdControllerGains">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.tree.</span></span><span class="sig-name descname"><span class="pre">PdControllerGains</span></span><a class="headerlink" href="#pydrake.multibody.tree.PdControllerGains" title="Permalink to this definition"></a></dt>
+<dd><p>PD controller gains. This enables the modeling of a simple low level
+PD controllers, see JointActuator::set_controller_gains().</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.PdControllerGains.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.PdControllerGains" title="pydrake.multibody.tree.PdControllerGains"><span class="pre">pydrake.multibody.tree.PdControllerGains</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.PdControllerGains.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.PdControllerGains.d">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">d</span></span><a class="headerlink" href="#pydrake.multibody.tree.PdControllerGains.d" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.PdControllerGains.p">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">p</span></span><a class="headerlink" href="#pydrake.multibody.tree.PdControllerGains.p" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 

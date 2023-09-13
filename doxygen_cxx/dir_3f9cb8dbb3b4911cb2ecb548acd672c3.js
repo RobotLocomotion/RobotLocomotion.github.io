@@ -44,6 +44,7 @@ var dir_3f9cb8dbb3b4911cb2ecb548acd672c3 =
     ] ],
     [ "joint_actuator.h", "joint__actuator_8h.html", [
       [ "Joint", "classdrake_1_1multibody_1_1_joint.html", "classdrake_1_1multibody_1_1_joint" ],
+      [ "PdControllerGains", "structdrake_1_1multibody_1_1_pd_controller_gains.html", "structdrake_1_1multibody_1_1_pd_controller_gains" ],
       [ "JointActuator", "classdrake_1_1multibody_1_1_joint_actuator.html", "classdrake_1_1multibody_1_1_joint_actuator" ]
     ] ],
     [ "linear_bushing_roll_pitch_yaw.h", "linear__bushing__roll__pitch__yaw_8h.html", [

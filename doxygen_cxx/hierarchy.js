@@ -634,6 +634,7 @@ var hierarchy =
     [ "Parameters< double >", "classdrake_1_1systems_1_1_parameters.html", null ],
     [ "Parameters< drake::symbolic::Expression >", "classdrake_1_1systems_1_1_parameters.html", null ],
     [ "Parser", "classdrake_1_1multibody_1_1_parser.html", null ],
+    [ "PdControllerGains", "structdrake_1_1multibody_1_1_pd_controller_gains.html", null ],
     [ "PendulumParameters", "classdrake_1_1multibody_1_1benchmarks_1_1pendulum_1_1_pendulum_parameters.html", null ],
     [ "PenetrationAsPointPair< T >", "structdrake_1_1geometry_1_1_penetration_as_point_pair.html", null ],
     [ "DynamicProgrammingOptions::PeriodicBoundaryCondition", "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html", null ],
@@ -730,10 +731,10 @@ var hierarchy =
     [ "ScopeExit", "classdrake_1_1_scope_exit.html", null ],
     [ "ScsSolverDetails", "structdrake_1_1solvers_1_1_scs_solver_details.html", null ],
     [ "CspaceFreePolytope::SearchResult", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html", null ],
-    [ "CspaceFreePolytope::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html", null ],
     [ "CspaceFreeBox::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html", null ],
-    [ "CspaceFreeBox::SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate.html", null ],
+    [ "CspaceFreePolytope::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html", null ],
     [ "CspaceFreePolytope::SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate.html", null ],
+    [ "CspaceFreeBox::SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate.html", null ],
     [ "SeparationCertificateProgramBase", "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_program_base.html", [
       [ "CspaceFreeBox::SeparationCertificateProgram", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_program.html", null ],
       [ "CspaceFreePolytope::SeparationCertificateProgram", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_program.html", null ]
@@ -1113,6 +1114,7 @@ var hierarchy =
     [ "Trajectory< drake::symbolic::Expression >", "classdrake_1_1trajectories_1_1_trajectory.html", [
       [ "BsplineTrajectory< drake::symbolic::Expression >", "classdrake_1_1trajectories_1_1_bspline_trajectory.html", null ]
     ] ],
+    [ "TransferFunction", "classdrake_1_1systems_1_1_transfer_function.html", null ],
     [ "Transform", "classdrake_1_1schema_1_1_transform.html", null ],
     [ "TriangleQuadrature< NumericReturnType, T >", "classdrake_1_1multibody_1_1_triangle_quadrature.html", null ],
     [ "TriangleQuadratureRule", "classdrake_1_1multibody_1_1_triangle_quadrature_rule.html", [

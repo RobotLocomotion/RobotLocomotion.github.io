@@ -1664,7 +1664,7 @@ with <code class="docutils literal notranslate"><span class="pre">contact_surfac
 systems::System) for the model of a physical system consisting of a
 collection of interconnected bodies. See multibody for an overview of
 concepts/notation.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_generalized_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_spatial_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">model_instance_name[i]</em>_actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:green">geometry_query</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>MultibodyPlant</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_poses</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_velocities</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_accelerations</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; reaction_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; contact_results</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray"> model_instance_name[i]</em>_generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray"> model_instance_name[i]</em>_generalized_contact_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <span style="color:green">geometry_pose</span></td></tr></table></td></tr></table><p>The ports whose names begin with &lt;em style=”color:gray”&gt;
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_generalized_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_spatial_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">model_instance_name[i]</em>_actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">model_instance_name[i]</em>_desired_state&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:green">geometry_query</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>MultibodyPlant</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_poses</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_velocities</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_accelerations</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; reaction_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; contact_results</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray"> model_instance_name[i]</em>_generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray"> model_instance_name[i]</em>_generalized_contact_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <span style="color:green">geometry_pose</span></td></tr></table></td></tr></table><p>The ports whose names begin with &lt;em style=”color:gray”&gt;
 model_instance_name[i]&lt;/em&gt; represent groups of ports, one for each of
 the model_instances “model instances”, with i ∈ {0, …, N-1} for the
 N model instances. If a model instance does not contain any data of
@@ -1752,7 +1752,94 @@ generalized positions) and the generalized velocities v, [Seth 2010].
 hand side of Eq. (1) is the system’s generalized forces. These
 incorporate gravity, springs, externally applied body forces,
 constraint forces, and contact forces.</p>
-<p><a href="#id5"><span class="problematic" id="id6">**</span></a>** Loading models from SDFormat files</p>
+<p><a href="#id5"><span class="problematic" id="id6">**</span></a>** Actuation</p>
+<p>In a MultibodyPlant model an actuator can be added as a JointActuator,
+see AddJointActuator(). For models with actuators, the plant will
+declare an actuation input port to provide feedforward actuation, see
+get_actuation_input_port(). Actuation ports can be requested for each
+individual model_instances “model instance” in the MultibodyPlant.</p>
+<p>Unless PD controllers are defined (see pd_controllers “PD controlled
+actuators” next), actuation input ports are required to be connected.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Effort limits (JointActuator::effort_limit()) are not enforced,
+unless PD controllers are defined. See pd_controllers “PD
+controlled actuators”.</p>
+</div>
+<p>** Using PD controlled actuators</p>
+<p>While PD controllers can be modeled externally and be connected to the
+MultibodyPlant model via the get_actuation_input_port(), simulation
+stability at discrete time steps can be compromised for high
+controller gains. For such cases, simulation stability and robustness
+can be improved significantly by moving your PD controller into the
+plant where the discrete solver can strongly couple controller and
+model dynamics.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Currently, this feature is only supported for discrete models
+(is_discrete() is true) using the SAP solver
+(get_discrete_contact_solver() returns
+DiscreteContactSolver::kSap.)</p>
+</div>
+<p>PD controlled joint actuators can be defined by setting PD gains for
+each joint actuator, see JointActuator::set_controller_gains(). Unless
+these gains are specified, joint actuators will not be PD controlled
+and JointActuator::has_controller() will return <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>For PD controlled models, all joint actuators in a model instance
+are required to have PD controllers defined. That is, partially PD
+controlled model instances are not supported. An exception will be
+thrown when evaluating the actuation input ports if only a subset
+of the actuators in a model instance is PD controlled.</p>
+</div>
+<p>For models with PD controllers, the actuation torque per actuator is
+computed according to:</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>ũ = -Kp⋅(q − qd) - Kd⋅(v − vd) + u_ff
+u = max(−e, min(e, ũ))
+</pre></div>
+</div>
+</details><p>where qd and vd are desired configuration and velocity (see
+get_desired_state_input_port()) for the actuated joint (see
+JointActuator::joint()), Kp and Kd are the proportional and derivative
+gains of the actuator (see JointActuator::get_controller_gains()),
+<code class="docutils literal notranslate"><span class="pre">u_ff</span></code> is the feed-forward actuation specified with
+get_actuation_input_port(), and <code class="docutils literal notranslate"><span class="pre">e</span></code> corresponds to effort limit (see
+JointActuator::effort_limit()).</p>
+<p>Notice that actuation through get_actuation_input_port() and PD
+control are not mutually exclusive, and they can be used together.
+This is better explained through examples: 1. <strong>PD controlled
+gripper</strong>. In this case, only PD control is used to drive the opening
+and closing of the fingers. The feed-forward term is assumed to be
+zero and the actuation input port is not required to be connected. 2.
+<strong>Robot arm</strong>. A typical configuration consists on applying gravity
+compensation in the feed-forward term plus PD control to drive the
+robot to a given desired state.</p>
+<p>** Actuation input ports requirements</p>
+<p>The following table specifies whether actuation ports are required to
+be connected or not:</p>
+<div class="line-block">
+<div class="line">Port | without PD control | with PD control | |</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">——————————</dt>
+<dd class="field-odd"><div class="line-block">
+<div class="line">:——————-: |</div>
+</div>
+</dd>
+<dt class="field-even">————-</dt>
+<dd class="field-even"><div class="line-block">
+<div class="line">| get_actuation_input_port() | yes | no¹ | |</div>
+</div>
+</dd>
+</dl>
+<p>get_desired_state_input_port() | no² | yes |</p>
+<p>¹ Feed-forward actuation is not required for models with PD controlled
+actuators. This simplifies the diagram wiring for models that only
+rely on PD controllers.</p>
+<p>² This port is always declared, though it will be zero sized for model
+instances with no PD controllers.</p>
+<p><a href="#id7"><span class="problematic" id="id8">**</span></a>** Loading models from SDFormat files</p>
 <p>Drake has the capability to load multibody models from SDFormat and
 URDF files. Consider the example below which loads an acrobot model:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">acrobot</span><span class="p">;</span><span class="w"></span>
@@ -1773,7 +1860,7 @@ order to load multiple model instances. Other methods are available on
 Parser such as AddModels() which allows creating model instances per
 each <code class="docutils literal notranslate"><span class="pre">&lt;model&gt;</span></code> tag found in the file. Please refer to each of these
 methods’ documentation for further details.</p>
-<p><a href="#id7"><span class="problematic" id="id8">**</span></a>** Working with SceneGraph</p>
+<p><a href="#id9"><span class="problematic" id="id10">**</span></a>** Working with SceneGraph</p>
 <p>** Adding a MultibodyPlant connected to a SceneGraph to your Diagram</p>
 <p>Probably the simplest way to add and wire up a MultibodyPlant with a
 SceneGraph in your Diagram is using AddMultibodyPlantSceneGraph().</p>
@@ -1917,7 +2004,7 @@ as:</p>
 <span class="s">&quot;coulomb_friction&quot;</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-</details><p><a href="#id9"><span class="problematic" id="id10">**</span></a>** Working with MultibodyElement parameters Several
+</details><p><a href="#id11"><span class="problematic" id="id12">**</span></a>** Working with MultibodyElement parameters Several
 MultibodyElements expose parameters, allowing the user flexible
 modification of some aspects of the plant’s model, post
 systems::Context creation. For details, refer to the documentation for
@@ -1965,7 +2052,7 @@ take derivatives with respect to one of the bodies’ masses:</p>
 <span class="n">plant_autodiff</span><span class="o">-&gt;</span><span class="n">CalcMassMatrix</span><span class="p">(</span><span class="o">*</span><span class="n">context_autodiff</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">M_autodiff</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-</details><p><a href="#id11"><span class="problematic" id="id12">**</span></a>** Adding modeling elements</p>
+</details><p><a href="#id13"><span class="problematic" id="id14">**</span></a>** Adding modeling elements</p>
 <p>Add multibody elements to a MultibodyPlant with methods like:</p>
 <ul class="simple">
 <li><p>Bodies: AddRigidBody()</p></li>
@@ -1974,11 +2061,11 @@ take derivatives with respect to one of the bodies’ masses:</p>
 </ul>
 <p>All modeling elements <strong>must</strong> be added before Finalize() is called.
 See mbp_finalize_stage “Finalize stage” for a discussion.</p>
-<p><a href="#id13"><span class="problematic" id="id14">**</span></a>** Modeling contact</p>
+<p><a href="#id15"><span class="problematic" id="id16">**</span></a>** Modeling contact</p>
 <p>Please refer to drake_contacts “Contact Modeling in Drake” for details
 on the available approximations, setup, and considerations for a
 multibody simulation with frictional contact.</p>
-<p><a href="#id15"><span class="problematic" id="id16">**</span></a>** Energy and Power</p>
+<p><a href="#id17"><span class="problematic" id="id18">**</span></a>** Energy and Power</p>
 <p>MultibodyPlant implements the System energy and power methods, with
 some limitations. - Kinetic energy: fully implemented. - Potential
 energy and conservative power: currently include only gravity and
@@ -1989,7 +2076,7 @@ objects; actuation and input port forces, joint damping, and
 dissipation from joint limits, friction, and contact dissipation are
 not included.</p>
 <p>See Drake issue #12942 for more discussion.</p>
-<p><a href="#id17"><span class="problematic" id="id18">**</span></a>** Finalize() stage</p>
+<p><a href="#id19"><span class="problematic" id="id20">**</span></a>** Finalize() stage</p>
 <p>Once the user is done adding modeling elements and registering
 geometry, a call to Finalize() must be performed. This call will: -
 Build the underlying tree structure of the multibody model, - declare
@@ -1998,7 +2085,7 @@ declare collision filters to ignore collisions among rigid bodies: -
 between rigid bodies connected by a joint, - within subgraphs of
 welded rigid bodies. Note that MultibodyPlant will <em>not</em> introduce
 <em>any</em> collision filters on deformable bodies.</p>
-<p><a href="#id19"><span class="problematic" id="id20">**</span></a>** References</p>
+<p><a href="#id21"><span class="problematic" id="id22">**</span></a>** References</p>
 <ul class="simple">
 <li><p>[Featherstone 2008] Featherstone, R., 2008.</p></li>
 </ul>
@@ -2193,7 +2280,7 @@ to be strictly positive.</p>
 <span class="sig-name descname"><span class="pre">AddForceElement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_element</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ForceElement" title="pydrake.multibody.tree.ForceElement"><span class="pre">pydrake.multibody.tree.ForceElement</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ForceElement" title="pydrake.multibody.tree.ForceElement"><span class="pre">pydrake.multibody.tree.ForceElement</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.AddForceElement" title="Permalink to this definition"></a></dt>
 <dd><p>Adds a new force element model of type <code class="docutils literal notranslate"><span class="pre">ForceElementType</span></code> to
 <code class="docutils literal notranslate"><span class="pre">this</span></code> MultibodyPlant. The arguments to this method <code class="docutils literal notranslate"><span class="pre">args</span></code> are
-forwarded to <a href="#id21"><span class="problematic" id="id22">``</span></a>ForceElementType`’s constructor.</p>
+forwarded to <a href="#id23"><span class="problematic" id="id24">``</span></a>ForceElementType`’s constructor.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">args</span></code>:</dt><dd><p>Zero or more parameters provided to the constructor of the new
 force element. It must be the case that
@@ -2968,7 +3055,7 @@ in 𝑠. The Jacobian is a function of only generalized positions q
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The world_body() is ignored. <a href="#id85"><span class="problematic" id="id86">J𝑠_v_ACcm_</span></a> = ∑ (mᵢ Jᵢ) / mₛ, where mₛ
+<p>The world_body() is ignored. <a href="#id91"><span class="problematic" id="id92">J𝑠_v_ACcm_</span></a> = ∑ (mᵢ Jᵢ) / mₛ, where mₛ
 = ∑ mᵢ, mᵢ is the mass of the iᵗʰ body contained in
 model_instances, and Jᵢ is Bcm’s translational velocity Jacobian
 in frame A, expressed in frame E (Bcm is the center of mass of the
@@ -3609,7 +3696,8 @@ a SceneGraph, either pre- or post-finalize, see Finalize().</p>
 for all actuated dofs regardless the number of model instances that
 have actuated dofs. The input actuation is assumed to be ordered
 according to model instances. This input port is a vector valued port,
-which can be set with JointActuator::set_actuation_vector().</p>
+which can be set with JointActuator::set_actuation_vector(). Refer to
+mbp_actuation “Actuation” for further details.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
 </dd>
@@ -3627,7 +3715,35 @@ which can be set with JointActuator::set_actuation_vector().</p>
 </ol>
 <p>Returns a constant reference to the input port for external actuation
 for a specific model instance. This input port is a vector valued
-port, which can be set with JointActuator::set_actuation_vector().</p>
+port, which can be set with JointActuator::set_actuation_vector().
+Refer to mbp_actuation “Actuation” for further details.</p>
+<p>Each model instance in <code class="docutils literal notranslate"><span class="pre">this</span></code> plant model has an actuation input
+port, even if zero sized (for model instance with no actuators.)</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>GetJointActuatorIndices(), GetActuatedJointIndices().</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is a vector valued port of size num_actuators(model_instance)
+(where we assume only 1-DOF joints are actuated.)</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>It is required to connect this input port unless the model
+instance has PD controllers defined, see
+get_desired_state_input_port(), or if the full multibody version
+of this port is connected. For models with PD controllers,
+actuation defaults to zero. This allows the modeler to use PD
+controllers only, without the need to provide feed-forward
+torques.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This port cannot be used together with get_actuation_input_port()
+for the full multibody system. Either use the port for the full
+multibody system or the port per model instance, never both.</p>
+</div>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
 </dd>
@@ -3809,6 +3925,40 @@ MultibodyPlant.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.get_desired_state_input_port">
+<span class="sig-name descname"><span class="pre">get_desired_state_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.get_desired_state_input_port" title="Permalink to this definition"></a></dt>
+<dd><p>For models with PD controlled joint actuators, returns the port to
+provide the desired state for the full <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>. Refer to
+mbp_actuation “Actuation” for further details.</p>
+<p>For consistency with get_actuation_input_port(), each model instance
+in <code class="docutils literal notranslate"><span class="pre">this</span></code> plant model has a desired states input port, even if zero
+sized (for model instance with no actuators.)</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is a vector valued port of size
+2*num_actuators(model_instance), where we assumed 1-DOF actuated
+joints. This is true even for unactuated models, for which this
+port is zero sized. This port must provide one desired position
+and one desired velocity per joint actuator. Desired state is
+assumed to be packed as xd = [qd, vd] that is, configurations
+first followed by velocities. Configurations in qd are ordered by
+JointActuatorIndex, see JointActuator::set_actuation_vector().
+Similarly for velocities in vd.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If a user specifies a PD controller for an actuator from a given
+model instance, then all actuators of that model instance are
+required to be PD controlled.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>It is required to connect this port for PD controlled model
+instances.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.get_discrete_contact_solver">
 <span class="sig-name descname"><span class="pre">get_discrete_contact_solver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.plant.DiscreteContactSolver" title="pydrake.multibody.plant.DiscreteContactSolver"><span class="pre">pydrake.multibody.plant.DiscreteContactSolver</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.get_discrete_contact_solver" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the contact solver type used for discrete MultibodyPlant
@@ -3958,6 +4108,21 @@ collision geometry registration and connection with a SceneGraph.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError when joint_index does not correspond to a joint</strong> – </p></li>
 <li><p><strong>in this model.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.get_mutable_joint_actuator">
+<span class="sig-name descname"><span class="pre">get_mutable_joint_actuator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">actuator_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JointActuatorIndex" title="pydrake.multibody.tree.JointActuatorIndex"><span class="pre">pydrake.multibody.tree.JointActuatorIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JointActuator" title="pydrake.multibody.tree.JointActuator"><span class="pre">pydrake.multibody.tree.JointActuator</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.get_mutable_joint_actuator" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a mutable reference to the joint actuator with unique index
+<code class="docutils literal notranslate"><span class="pre">actuator_index</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if actuator_index does not correspond to a joint</strong> – </p></li>
+<li><p><strong>actuator in this tree.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -5933,7 +6098,7 @@ but non-zero number can be used, e.g. 1.0e-3.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.set_stiction_tolerance">
 <span class="sig-name descname"><span class="pre">set_stiction_tolerance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_stiction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.001</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.set_stiction_tolerance" title="Permalink to this definition"></a></dt>
-<dd><p><a href="#id25"><span class="problematic" id="id26">**</span></a>** Stribeck model of friction</p>
+<dd><p><a href="#id27"><span class="problematic" id="id28">**</span></a>** Stribeck model of friction</p>
 <p>Currently MultibodyPlant uses the Stribeck approximation to model dry
 friction. The Stribeck model of friction is an approximation to
 Coulomb’s law of friction that allows using continuous time
@@ -6316,7 +6481,7 @@ model. The new WeldJoint is named as: frame_on_parent_F.name() +
 systems::System) for the model of a physical system consisting of a
 collection of interconnected bodies. See multibody for an overview of
 concepts/notation.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_generalized_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_spatial_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">model_instance_name[i]</em>_actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:green">geometry_query</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>MultibodyPlant</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_poses</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_velocities</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_accelerations</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; reaction_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; contact_results</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray"> model_instance_name[i]</em>_generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray"> model_instance_name[i]</em>_generalized_contact_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <span style="color:green">geometry_pose</span></td></tr></table></td></tr></table><p>The ports whose names begin with &lt;em style=”color:gray”&gt;
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_generalized_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_spatial_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">model_instance_name[i]</em>_actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">model_instance_name[i]</em>_desired_state&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:green">geometry_query</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>MultibodyPlant</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_poses</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_velocities</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_accelerations</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; reaction_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; contact_results</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray"> model_instance_name[i]</em>_generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray"> model_instance_name[i]</em>_generalized_contact_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <span style="color:green">geometry_pose</span></td></tr></table></td></tr></table><p>The ports whose names begin with &lt;em style=”color:gray”&gt;
 model_instance_name[i]&lt;/em&gt; represent groups of ports, one for each of
 the model_instances “model instances”, with i ∈ {0, …, N-1} for the
 N model instances. If a model instance does not contain any data of
@@ -6350,7 +6515,7 @@ queries.
 Explicitly form matrices that appear in the equations of motion.
 - mbp_introspection “Introspection”:
 Perform introspection to find out what’s in the MultibodyPlant.</p>
-<p><a href="#id29"><span class="problematic" id="id30">**</span></a>** Model Instances</p>
+<p><a href="#id31"><span class="problematic" id="id32">**</span></a>** Model Instances</p>
 <p>A MultiBodyPlant may contain multiple model instances. Each model
 instance corresponds to a set of bodies and their connections
 (joints). Model instances provide methods to get or set the state of
@@ -6381,7 +6546,7 @@ GetVelocitiesFromArray(), SetPositionsInArray(),
 SetVelocitiesInArray(), SetActuationInArray(),
 HasModelInstanceNamed(), GetModelInstanceName(),
 get_state_output_port(), get_actuation_input_port().</p>
-<p><a href="#id31"><span class="problematic" id="id32">**</span></a>** System dynamics</p>
+<p><a href="#id33"><span class="problematic" id="id34">**</span></a>** System dynamics</p>
 <p>The state of a multibody system <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">[q;</span> <span class="pre">v]</span></code> is given by its
 generalized positions vector q, of size <code class="docutils literal notranslate"><span class="pre">nq</span></code> (see num_positions()),
 and by its generalized velocities vector v, of size <code class="docutils literal notranslate"><span class="pre">nv</span></code> (see
@@ -6404,7 +6569,94 @@ generalized positions) and the generalized velocities v, [Seth 2010].
 hand side of Eq. (1) is the system’s generalized forces. These
 incorporate gravity, springs, externally applied body forces,
 constraint forces, and contact forces.</p>
-<p><a href="#id33"><span class="problematic" id="id34">**</span></a>** Loading models from SDFormat files</p>
+<p><a href="#id35"><span class="problematic" id="id36">**</span></a>** Actuation</p>
+<p>In a MultibodyPlant model an actuator can be added as a JointActuator,
+see AddJointActuator(). For models with actuators, the plant will
+declare an actuation input port to provide feedforward actuation, see
+get_actuation_input_port(). Actuation ports can be requested for each
+individual model_instances “model instance” in the MultibodyPlant.</p>
+<p>Unless PD controllers are defined (see pd_controllers “PD controlled
+actuators” next), actuation input ports are required to be connected.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Effort limits (JointActuator::effort_limit()) are not enforced,
+unless PD controllers are defined. See pd_controllers “PD
+controlled actuators”.</p>
+</div>
+<p>** Using PD controlled actuators</p>
+<p>While PD controllers can be modeled externally and be connected to the
+MultibodyPlant model via the get_actuation_input_port(), simulation
+stability at discrete time steps can be compromised for high
+controller gains. For such cases, simulation stability and robustness
+can be improved significantly by moving your PD controller into the
+plant where the discrete solver can strongly couple controller and
+model dynamics.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Currently, this feature is only supported for discrete models
+(is_discrete() is true) using the SAP solver
+(get_discrete_contact_solver() returns
+DiscreteContactSolver::kSap.)</p>
+</div>
+<p>PD controlled joint actuators can be defined by setting PD gains for
+each joint actuator, see JointActuator::set_controller_gains(). Unless
+these gains are specified, joint actuators will not be PD controlled
+and JointActuator::has_controller() will return <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>For PD controlled models, all joint actuators in a model instance
+are required to have PD controllers defined. That is, partially PD
+controlled model instances are not supported. An exception will be
+thrown when evaluating the actuation input ports if only a subset
+of the actuators in a model instance is PD controlled.</p>
+</div>
+<p>For models with PD controllers, the actuation torque per actuator is
+computed according to:</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>ũ = -Kp⋅(q − qd) - Kd⋅(v − vd) + u_ff
+u = max(−e, min(e, ũ))
+</pre></div>
+</div>
+</details><p>where qd and vd are desired configuration and velocity (see
+get_desired_state_input_port()) for the actuated joint (see
+JointActuator::joint()), Kp and Kd are the proportional and derivative
+gains of the actuator (see JointActuator::get_controller_gains()),
+<code class="docutils literal notranslate"><span class="pre">u_ff</span></code> is the feed-forward actuation specified with
+get_actuation_input_port(), and <code class="docutils literal notranslate"><span class="pre">e</span></code> corresponds to effort limit (see
+JointActuator::effort_limit()).</p>
+<p>Notice that actuation through get_actuation_input_port() and PD
+control are not mutually exclusive, and they can be used together.
+This is better explained through examples: 1. <strong>PD controlled
+gripper</strong>. In this case, only PD control is used to drive the opening
+and closing of the fingers. The feed-forward term is assumed to be
+zero and the actuation input port is not required to be connected. 2.
+<strong>Robot arm</strong>. A typical configuration consists on applying gravity
+compensation in the feed-forward term plus PD control to drive the
+robot to a given desired state.</p>
+<p>** Actuation input ports requirements</p>
+<p>The following table specifies whether actuation ports are required to
+be connected or not:</p>
+<div class="line-block">
+<div class="line">Port | without PD control | with PD control | |</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">——————————</dt>
+<dd class="field-odd"><div class="line-block">
+<div class="line">:——————-: |</div>
+</div>
+</dd>
+<dt class="field-even">————-</dt>
+<dd class="field-even"><div class="line-block">
+<div class="line">| get_actuation_input_port() | yes | no¹ | |</div>
+</div>
+</dd>
+</dl>
+<p>get_desired_state_input_port() | no² | yes |</p>
+<p>¹ Feed-forward actuation is not required for models with PD controlled
+actuators. This simplifies the diagram wiring for models that only
+rely on PD controllers.</p>
+<p>² This port is always declared, though it will be zero sized for model
+instances with no PD controllers.</p>
+<p><a href="#id37"><span class="problematic" id="id38">**</span></a>** Loading models from SDFormat files</p>
 <p>Drake has the capability to load multibody models from SDFormat and
 URDF files. Consider the example below which loads an acrobot model:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">acrobot</span><span class="p">;</span><span class="w"></span>
@@ -6425,7 +6677,7 @@ order to load multiple model instances. Other methods are available on
 Parser such as AddModels() which allows creating model instances per
 each <code class="docutils literal notranslate"><span class="pre">&lt;model&gt;</span></code> tag found in the file. Please refer to each of these
 methods’ documentation for further details.</p>
-<p><a href="#id35"><span class="problematic" id="id36">**</span></a>** Working with SceneGraph</p>
+<p><a href="#id39"><span class="problematic" id="id40">**</span></a>** Working with SceneGraph</p>
 <p>** Adding a MultibodyPlant connected to a SceneGraph to your Diagram</p>
 <p>Probably the simplest way to add and wire up a MultibodyPlant with a
 SceneGraph in your Diagram is using AddMultibodyPlantSceneGraph().</p>
@@ -6569,7 +6821,7 @@ as:</p>
 <span class="s">&quot;coulomb_friction&quot;</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-</details><p><a href="#id37"><span class="problematic" id="id38">**</span></a>** Working with MultibodyElement parameters Several
+</details><p><a href="#id41"><span class="problematic" id="id42">**</span></a>** Working with MultibodyElement parameters Several
 MultibodyElements expose parameters, allowing the user flexible
 modification of some aspects of the plant’s model, post
 systems::Context creation. For details, refer to the documentation for
@@ -6617,7 +6869,7 @@ take derivatives with respect to one of the bodies’ masses:</p>
 <span class="n">plant_autodiff</span><span class="o">-&gt;</span><span class="n">CalcMassMatrix</span><span class="p">(</span><span class="o">*</span><span class="n">context_autodiff</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">M_autodiff</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-</details><p><a href="#id39"><span class="problematic" id="id40">**</span></a>** Adding modeling elements</p>
+</details><p><a href="#id43"><span class="problematic" id="id44">**</span></a>** Adding modeling elements</p>
 <p>Add multibody elements to a MultibodyPlant with methods like:</p>
 <ul class="simple">
 <li><p>Bodies: AddRigidBody()</p></li>
@@ -6626,11 +6878,11 @@ take derivatives with respect to one of the bodies’ masses:</p>
 </ul>
 <p>All modeling elements <strong>must</strong> be added before Finalize() is called.
 See mbp_finalize_stage “Finalize stage” for a discussion.</p>
-<p><a href="#id41"><span class="problematic" id="id42">**</span></a>** Modeling contact</p>
+<p><a href="#id45"><span class="problematic" id="id46">**</span></a>** Modeling contact</p>
 <p>Please refer to drake_contacts “Contact Modeling in Drake” for details
 on the available approximations, setup, and considerations for a
 multibody simulation with frictional contact.</p>
-<p><a href="#id43"><span class="problematic" id="id44">**</span></a>** Energy and Power</p>
+<p><a href="#id47"><span class="problematic" id="id48">**</span></a>** Energy and Power</p>
 <p>MultibodyPlant implements the System energy and power methods, with
 some limitations. - Kinetic energy: fully implemented. - Potential
 energy and conservative power: currently include only gravity and
@@ -6641,7 +6893,7 @@ objects; actuation and input port forces, joint damping, and
 dissipation from joint limits, friction, and contact dissipation are
 not included.</p>
 <p>See Drake issue #12942 for more discussion.</p>
-<p><a href="#id45"><span class="problematic" id="id46">**</span></a>** Finalize() stage</p>
+<p><a href="#id49"><span class="problematic" id="id50">**</span></a>** Finalize() stage</p>
 <p>Once the user is done adding modeling elements and registering
 geometry, a call to Finalize() must be performed. This call will: -
 Build the underlying tree structure of the multibody model, - declare
@@ -6650,7 +6902,7 @@ declare collision filters to ignore collisions among rigid bodies: -
 between rigid bodies connected by a joint, - within subgraphs of
 welded rigid bodies. Note that MultibodyPlant will <em>not</em> introduce
 <em>any</em> collision filters on deformable bodies.</p>
-<p><a href="#id47"><span class="problematic" id="id48">**</span></a>** References</p>
+<p><a href="#id51"><span class="problematic" id="id52">**</span></a>** References</p>
 <ul class="simple">
 <li><p>[Featherstone 2008] Featherstone, R., 2008.</p></li>
 </ul>
@@ -6840,7 +7092,7 @@ to be strictly positive.</p>
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].AddForceElement"></span><span class="sig-name descname"><span class="pre">AddForceElement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_element</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ForceElement_" title="pydrake.multibody.tree.ForceElement_"><span class="pre">pydrake.multibody.tree.ForceElement_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ForceElement_" title="pydrake.multibody.tree.ForceElement_"><span class="pre">pydrake.multibody.tree.ForceElement_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.AddForceElement" title="Permalink to this definition"></a></dt>
 <dd><p>Adds a new force element model of type <code class="docutils literal notranslate"><span class="pre">ForceElementType</span></code> to
 <code class="docutils literal notranslate"><span class="pre">this</span></code> MultibodyPlant. The arguments to this method <code class="docutils literal notranslate"><span class="pre">args</span></code> are
-forwarded to <a href="#id49"><span class="problematic" id="id50">``</span></a>ForceElementType`’s constructor.</p>
+forwarded to <a href="#id53"><span class="problematic" id="id54">``</span></a>ForceElementType`’s constructor.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">args</span></code>:</dt><dd><p>Zero or more parameters provided to the constructor of the new
 force element. It must be the case that
@@ -7615,7 +7867,7 @@ in 𝑠. The Jacobian is a function of only generalized positions q
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The world_body() is ignored. <a href="#id87"><span class="problematic" id="id88">J𝑠_v_ACcm_</span></a> = ∑ (mᵢ Jᵢ) / mₛ, where mₛ
+<p>The world_body() is ignored. <a href="#id93"><span class="problematic" id="id94">J𝑠_v_ACcm_</span></a> = ∑ (mᵢ Jᵢ) / mₛ, where mₛ
 = ∑ mᵢ, mᵢ is the mass of the iᵗʰ body contained in
 model_instances, and Jᵢ is Bcm’s translational velocity Jacobian
 in frame A, expressed in frame E (Bcm is the center of mass of the
@@ -8256,7 +8508,8 @@ a SceneGraph, either pre- or post-finalize, see Finalize().</p>
 for all actuated dofs regardless the number of model instances that
 have actuated dofs. The input actuation is assumed to be ordered
 according to model instances. This input port is a vector valued port,
-which can be set with JointActuator::set_actuation_vector().</p>
+which can be set with JointActuator::set_actuation_vector(). Refer to
+mbp_actuation “Actuation” for further details.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
 </dd>
@@ -8274,7 +8527,35 @@ which can be set with JointActuator::set_actuation_vector().</p>
 </ol>
 <p>Returns a constant reference to the input port for external actuation
 for a specific model instance. This input port is a vector valued
-port, which can be set with JointActuator::set_actuation_vector().</p>
+port, which can be set with JointActuator::set_actuation_vector().
+Refer to mbp_actuation “Actuation” for further details.</p>
+<p>Each model instance in <code class="docutils literal notranslate"><span class="pre">this</span></code> plant model has an actuation input
+port, even if zero sized (for model instance with no actuators.)</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>GetJointActuatorIndices(), GetActuatedJointIndices().</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is a vector valued port of size num_actuators(model_instance)
+(where we assume only 1-DOF joints are actuated.)</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>It is required to connect this input port unless the model
+instance has PD controllers defined, see
+get_desired_state_input_port(), or if the full multibody version
+of this port is connected. For models with PD controllers,
+actuation defaults to zero. This allows the modeler to use PD
+controllers only, without the need to provide feed-forward
+torques.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This port cannot be used together with get_actuation_input_port()
+for the full multibody system. Either use the port for the full
+multibody system or the port per model instance, never both.</p>
+</div>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
 </dd>
@@ -8456,6 +8737,40 @@ MultibodyPlant.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_desired_state_input_port">
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].get_desired_state_input_port"></span><span class="sig-name descname"><span class="pre">get_desired_state_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort_" title="pydrake.systems.framework.InputPort_"><span class="pre">pydrake.systems.framework.InputPort_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_desired_state_input_port" title="Permalink to this definition"></a></dt>
+<dd><p>For models with PD controlled joint actuators, returns the port to
+provide the desired state for the full <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>. Refer to
+mbp_actuation “Actuation” for further details.</p>
+<p>For consistency with get_actuation_input_port(), each model instance
+in <code class="docutils literal notranslate"><span class="pre">this</span></code> plant model has a desired states input port, even if zero
+sized (for model instance with no actuators.)</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is a vector valued port of size
+2*num_actuators(model_instance), where we assumed 1-DOF actuated
+joints. This is true even for unactuated models, for which this
+port is zero sized. This port must provide one desired position
+and one desired velocity per joint actuator. Desired state is
+assumed to be packed as xd = [qd, vd] that is, configurations
+first followed by velocities. Configurations in qd are ordered by
+JointActuatorIndex, see JointActuator::set_actuation_vector().
+Similarly for velocities in vd.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If a user specifies a PD controller for an actuator from a given
+model instance, then all actuators of that model instance are
+required to be PD controlled.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>It is required to connect this port for PD controlled model
+instances.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_discrete_contact_solver">
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].get_discrete_contact_solver"></span><span class="sig-name descname"><span class="pre">get_discrete_contact_solver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.plant.DiscreteContactSolver" title="pydrake.multibody.plant.DiscreteContactSolver"><span class="pre">pydrake.multibody.plant.DiscreteContactSolver</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_discrete_contact_solver" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the contact solver type used for discrete MultibodyPlant
@@ -8605,6 +8920,21 @@ collision geometry registration and connection with a SceneGraph.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError when joint_index does not correspond to a joint</strong> – </p></li>
 <li><p><strong>in this model.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_mutable_joint_actuator">
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].get_mutable_joint_actuator"></span><span class="sig-name descname"><span class="pre">get_mutable_joint_actuator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">actuator_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JointActuatorIndex" title="pydrake.multibody.tree.JointActuatorIndex"><span class="pre">pydrake.multibody.tree.JointActuatorIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JointActuator_" title="pydrake.multibody.tree.JointActuator_"><span class="pre">pydrake.multibody.tree.JointActuator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_mutable_joint_actuator" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a mutable reference to the joint actuator with unique index
+<code class="docutils literal notranslate"><span class="pre">actuator_index</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if actuator_index does not correspond to a joint</strong> – </p></li>
+<li><p><strong>actuator in this tree.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -10542,7 +10872,7 @@ but non-zero number can be used, e.g. 1.0e-3.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.set_stiction_tolerance">
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].set_stiction_tolerance"></span><span class="sig-name descname"><span class="pre">set_stiction_tolerance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_stiction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.001</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.set_stiction_tolerance" title="Permalink to this definition"></a></dt>
-<dd><p><a href="#id53"><span class="problematic" id="id54">**</span></a>** Stribeck model of friction</p>
+<dd><p><a href="#id57"><span class="problematic" id="id58">**</span></a>** Stribeck model of friction</p>
 <p>Currently MultibodyPlant uses the Stribeck approximation to model dry
 friction. The Stribeck model of friction is an approximation to
 Coulomb’s law of friction that allows using continuous time
@@ -10919,7 +11249,7 @@ model. The new WeldJoint is named as: frame_on_parent_F.name() +
 systems::System) for the model of a physical system consisting of a
 collection of interconnected bodies. See multibody for an overview of
 concepts/notation.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_generalized_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_spatial_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">model_instance_name[i]</em>_actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:green">geometry_query</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>MultibodyPlant</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_poses</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_velocities</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_accelerations</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; reaction_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; contact_results</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray"> model_instance_name[i]</em>_generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray"> model_instance_name[i]</em>_generalized_contact_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <span style="color:green">geometry_pose</span></td></tr></table></td></tr></table><p>The ports whose names begin with &lt;em style=”color:gray”&gt;
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_generalized_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_spatial_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">model_instance_name[i]</em>_actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">model_instance_name[i]</em>_desired_state&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:green">geometry_query</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>MultibodyPlant</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_poses</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_velocities</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_accelerations</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; reaction_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; contact_results</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray"> model_instance_name[i]</em>_generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray"> model_instance_name[i]</em>_generalized_contact_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <span style="color:green">geometry_pose</span></td></tr></table></td></tr></table><p>The ports whose names begin with &lt;em style=”color:gray”&gt;
 model_instance_name[i]&lt;/em&gt; represent groups of ports, one for each of
 the model_instances “model instances”, with i ∈ {0, …, N-1} for the
 N model instances. If a model instance does not contain any data of
@@ -10953,7 +11283,7 @@ queries.
 Explicitly form matrices that appear in the equations of motion.
 - mbp_introspection “Introspection”:
 Perform introspection to find out what’s in the MultibodyPlant.</p>
-<p><a href="#id57"><span class="problematic" id="id58">**</span></a>** Model Instances</p>
+<p><a href="#id61"><span class="problematic" id="id62">**</span></a>** Model Instances</p>
 <p>A MultiBodyPlant may contain multiple model instances. Each model
 instance corresponds to a set of bodies and their connections
 (joints). Model instances provide methods to get or set the state of
@@ -10984,7 +11314,7 @@ GetVelocitiesFromArray(), SetPositionsInArray(),
 SetVelocitiesInArray(), SetActuationInArray(),
 HasModelInstanceNamed(), GetModelInstanceName(),
 get_state_output_port(), get_actuation_input_port().</p>
-<p><a href="#id59"><span class="problematic" id="id60">**</span></a>** System dynamics</p>
+<p><a href="#id63"><span class="problematic" id="id64">**</span></a>** System dynamics</p>
 <p>The state of a multibody system <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">[q;</span> <span class="pre">v]</span></code> is given by its
 generalized positions vector q, of size <code class="docutils literal notranslate"><span class="pre">nq</span></code> (see num_positions()),
 and by its generalized velocities vector v, of size <code class="docutils literal notranslate"><span class="pre">nv</span></code> (see
@@ -11007,7 +11337,94 @@ generalized positions) and the generalized velocities v, [Seth 2010].
 hand side of Eq. (1) is the system’s generalized forces. These
 incorporate gravity, springs, externally applied body forces,
 constraint forces, and contact forces.</p>
-<p><a href="#id61"><span class="problematic" id="id62">**</span></a>** Loading models from SDFormat files</p>
+<p><a href="#id65"><span class="problematic" id="id66">**</span></a>** Actuation</p>
+<p>In a MultibodyPlant model an actuator can be added as a JointActuator,
+see AddJointActuator(). For models with actuators, the plant will
+declare an actuation input port to provide feedforward actuation, see
+get_actuation_input_port(). Actuation ports can be requested for each
+individual model_instances “model instance” in the MultibodyPlant.</p>
+<p>Unless PD controllers are defined (see pd_controllers “PD controlled
+actuators” next), actuation input ports are required to be connected.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Effort limits (JointActuator::effort_limit()) are not enforced,
+unless PD controllers are defined. See pd_controllers “PD
+controlled actuators”.</p>
+</div>
+<p>** Using PD controlled actuators</p>
+<p>While PD controllers can be modeled externally and be connected to the
+MultibodyPlant model via the get_actuation_input_port(), simulation
+stability at discrete time steps can be compromised for high
+controller gains. For such cases, simulation stability and robustness
+can be improved significantly by moving your PD controller into the
+plant where the discrete solver can strongly couple controller and
+model dynamics.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Currently, this feature is only supported for discrete models
+(is_discrete() is true) using the SAP solver
+(get_discrete_contact_solver() returns
+DiscreteContactSolver::kSap.)</p>
+</div>
+<p>PD controlled joint actuators can be defined by setting PD gains for
+each joint actuator, see JointActuator::set_controller_gains(). Unless
+these gains are specified, joint actuators will not be PD controlled
+and JointActuator::has_controller() will return <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>For PD controlled models, all joint actuators in a model instance
+are required to have PD controllers defined. That is, partially PD
+controlled model instances are not supported. An exception will be
+thrown when evaluating the actuation input ports if only a subset
+of the actuators in a model instance is PD controlled.</p>
+</div>
+<p>For models with PD controllers, the actuation torque per actuator is
+computed according to:</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>ũ = -Kp⋅(q − qd) - Kd⋅(v − vd) + u_ff
+u = max(−e, min(e, ũ))
+</pre></div>
+</div>
+</details><p>where qd and vd are desired configuration and velocity (see
+get_desired_state_input_port()) for the actuated joint (see
+JointActuator::joint()), Kp and Kd are the proportional and derivative
+gains of the actuator (see JointActuator::get_controller_gains()),
+<code class="docutils literal notranslate"><span class="pre">u_ff</span></code> is the feed-forward actuation specified with
+get_actuation_input_port(), and <code class="docutils literal notranslate"><span class="pre">e</span></code> corresponds to effort limit (see
+JointActuator::effort_limit()).</p>
+<p>Notice that actuation through get_actuation_input_port() and PD
+control are not mutually exclusive, and they can be used together.
+This is better explained through examples: 1. <strong>PD controlled
+gripper</strong>. In this case, only PD control is used to drive the opening
+and closing of the fingers. The feed-forward term is assumed to be
+zero and the actuation input port is not required to be connected. 2.
+<strong>Robot arm</strong>. A typical configuration consists on applying gravity
+compensation in the feed-forward term plus PD control to drive the
+robot to a given desired state.</p>
+<p>** Actuation input ports requirements</p>
+<p>The following table specifies whether actuation ports are required to
+be connected or not:</p>
+<div class="line-block">
+<div class="line">Port | without PD control | with PD control | |</div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">——————————</dt>
+<dd class="field-odd"><div class="line-block">
+<div class="line">:——————-: |</div>
+</div>
+</dd>
+<dt class="field-even">————-</dt>
+<dd class="field-even"><div class="line-block">
+<div class="line">| get_actuation_input_port() | yes | no¹ | |</div>
+</div>
+</dd>
+</dl>
+<p>get_desired_state_input_port() | no² | yes |</p>
+<p>¹ Feed-forward actuation is not required for models with PD controlled
+actuators. This simplifies the diagram wiring for models that only
+rely on PD controllers.</p>
+<p>² This port is always declared, though it will be zero sized for model
+instances with no PD controllers.</p>
+<p><a href="#id67"><span class="problematic" id="id68">**</span></a>** Loading models from SDFormat files</p>
 <p>Drake has the capability to load multibody models from SDFormat and
 URDF files. Consider the example below which loads an acrobot model:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">acrobot</span><span class="p">;</span><span class="w"></span>
@@ -11028,7 +11445,7 @@ order to load multiple model instances. Other methods are available on
 Parser such as AddModels() which allows creating model instances per
 each <code class="docutils literal notranslate"><span class="pre">&lt;model&gt;</span></code> tag found in the file. Please refer to each of these
 methods’ documentation for further details.</p>
-<p><a href="#id63"><span class="problematic" id="id64">**</span></a>** Working with SceneGraph</p>
+<p><a href="#id69"><span class="problematic" id="id70">**</span></a>** Working with SceneGraph</p>
 <p>** Adding a MultibodyPlant connected to a SceneGraph to your Diagram</p>
 <p>Probably the simplest way to add and wire up a MultibodyPlant with a
 SceneGraph in your Diagram is using AddMultibodyPlantSceneGraph().</p>
@@ -11172,7 +11589,7 @@ as:</p>
 <span class="s">&quot;coulomb_friction&quot;</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-</details><p><a href="#id65"><span class="problematic" id="id66">**</span></a>** Working with MultibodyElement parameters Several
+</details><p><a href="#id71"><span class="problematic" id="id72">**</span></a>** Working with MultibodyElement parameters Several
 MultibodyElements expose parameters, allowing the user flexible
 modification of some aspects of the plant’s model, post
 systems::Context creation. For details, refer to the documentation for
@@ -11220,7 +11637,7 @@ take derivatives with respect to one of the bodies’ masses:</p>
 <span class="n">plant_autodiff</span><span class="o">-&gt;</span><span class="n">CalcMassMatrix</span><span class="p">(</span><span class="o">*</span><span class="n">context_autodiff</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">M_autodiff</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-</details><p><a href="#id67"><span class="problematic" id="id68">**</span></a>** Adding modeling elements</p>
+</details><p><a href="#id73"><span class="problematic" id="id74">**</span></a>** Adding modeling elements</p>
 <p>Add multibody elements to a MultibodyPlant with methods like:</p>
 <ul class="simple">
 <li><p>Bodies: AddRigidBody()</p></li>
@@ -11229,11 +11646,11 @@ take derivatives with respect to one of the bodies’ masses:</p>
 </ul>
 <p>All modeling elements <strong>must</strong> be added before Finalize() is called.
 See mbp_finalize_stage “Finalize stage” for a discussion.</p>
-<p><a href="#id69"><span class="problematic" id="id70">**</span></a>** Modeling contact</p>
+<p><a href="#id75"><span class="problematic" id="id76">**</span></a>** Modeling contact</p>
 <p>Please refer to drake_contacts “Contact Modeling in Drake” for details
 on the available approximations, setup, and considerations for a
 multibody simulation with frictional contact.</p>
-<p><a href="#id71"><span class="problematic" id="id72">**</span></a>** Energy and Power</p>
+<p><a href="#id77"><span class="problematic" id="id78">**</span></a>** Energy and Power</p>
 <p>MultibodyPlant implements the System energy and power methods, with
 some limitations. - Kinetic energy: fully implemented. - Potential
 energy and conservative power: currently include only gravity and
@@ -11244,7 +11661,7 @@ objects; actuation and input port forces, joint damping, and
 dissipation from joint limits, friction, and contact dissipation are
 not included.</p>
 <p>See Drake issue #12942 for more discussion.</p>
-<p><a href="#id73"><span class="problematic" id="id74">**</span></a>** Finalize() stage</p>
+<p><a href="#id79"><span class="problematic" id="id80">**</span></a>** Finalize() stage</p>
 <p>Once the user is done adding modeling elements and registering
 geometry, a call to Finalize() must be performed. This call will: -
 Build the underlying tree structure of the multibody model, - declare
@@ -11253,7 +11670,7 @@ declare collision filters to ignore collisions among rigid bodies: -
 between rigid bodies connected by a joint, - within subgraphs of
 welded rigid bodies. Note that MultibodyPlant will <em>not</em> introduce
 <em>any</em> collision filters on deformable bodies.</p>
-<p><a href="#id75"><span class="problematic" id="id76">**</span></a>** References</p>
+<p><a href="#id81"><span class="problematic" id="id82">**</span></a>** References</p>
 <ul class="simple">
 <li><p>[Featherstone 2008] Featherstone, R., 2008.</p></li>
 </ul>
@@ -11443,7 +11860,7 @@ to be strictly positive.</p>
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].AddForceElement"></span><span class="sig-name descname"><span class="pre">AddForceElement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_element</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ForceElement_" title="pydrake.multibody.tree.ForceElement_"><span class="pre">pydrake.multibody.tree.ForceElement_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ForceElement_" title="pydrake.multibody.tree.ForceElement_"><span class="pre">pydrake.multibody.tree.ForceElement_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.AddForceElement" title="Permalink to this definition"></a></dt>
 <dd><p>Adds a new force element model of type <code class="docutils literal notranslate"><span class="pre">ForceElementType</span></code> to
 <code class="docutils literal notranslate"><span class="pre">this</span></code> MultibodyPlant. The arguments to this method <code class="docutils literal notranslate"><span class="pre">args</span></code> are
-forwarded to <a href="#id77"><span class="problematic" id="id78">``</span></a>ForceElementType`’s constructor.</p>
+forwarded to <a href="#id83"><span class="problematic" id="id84">``</span></a>ForceElementType`’s constructor.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">args</span></code>:</dt><dd><p>Zero or more parameters provided to the constructor of the new
 force element. It must be the case that
@@ -12218,7 +12635,7 @@ in 𝑠. The Jacobian is a function of only generalized positions q
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The world_body() is ignored. <a href="#id89"><span class="problematic" id="id90">J𝑠_v_ACcm_</span></a> = ∑ (mᵢ Jᵢ) / mₛ, where mₛ
+<p>The world_body() is ignored. <a href="#id95"><span class="problematic" id="id96">J𝑠_v_ACcm_</span></a> = ∑ (mᵢ Jᵢ) / mₛ, where mₛ
 = ∑ mᵢ, mᵢ is the mass of the iᵗʰ body contained in
 model_instances, and Jᵢ is Bcm’s translational velocity Jacobian
 in frame A, expressed in frame E (Bcm is the center of mass of the
@@ -12859,7 +13276,8 @@ a SceneGraph, either pre- or post-finalize, see Finalize().</p>
 for all actuated dofs regardless the number of model instances that
 have actuated dofs. The input actuation is assumed to be ordered
 according to model instances. This input port is a vector valued port,
-which can be set with JointActuator::set_actuation_vector().</p>
+which can be set with JointActuator::set_actuation_vector(). Refer to
+mbp_actuation “Actuation” for further details.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
 </dd>
@@ -12877,7 +13295,35 @@ which can be set with JointActuator::set_actuation_vector().</p>
 </ol>
 <p>Returns a constant reference to the input port for external actuation
 for a specific model instance. This input port is a vector valued
-port, which can be set with JointActuator::set_actuation_vector().</p>
+port, which can be set with JointActuator::set_actuation_vector().
+Refer to mbp_actuation “Actuation” for further details.</p>
+<p>Each model instance in <code class="docutils literal notranslate"><span class="pre">this</span></code> plant model has an actuation input
+port, even if zero sized (for model instance with no actuators.)</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>GetJointActuatorIndices(), GetActuatedJointIndices().</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is a vector valued port of size num_actuators(model_instance)
+(where we assume only 1-DOF joints are actuated.)</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>It is required to connect this input port unless the model
+instance has PD controllers defined, see
+get_desired_state_input_port(), or if the full multibody version
+of this port is connected. For models with PD controllers,
+actuation defaults to zero. This allows the modeler to use PD
+controllers only, without the need to provide feed-forward
+torques.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This port cannot be used together with get_actuation_input_port()
+for the full multibody system. Either use the port for the full
+multibody system or the port per model instance, never both.</p>
+</div>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
 </dd>
@@ -13059,6 +13505,40 @@ MultibodyPlant.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.get_desired_state_input_port">
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].get_desired_state_input_port"></span><span class="sig-name descname"><span class="pre">get_desired_state_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort_" title="pydrake.systems.framework.InputPort_"><span class="pre">pydrake.systems.framework.InputPort_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.get_desired_state_input_port" title="Permalink to this definition"></a></dt>
+<dd><p>For models with PD controlled joint actuators, returns the port to
+provide the desired state for the full <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>. Refer to
+mbp_actuation “Actuation” for further details.</p>
+<p>For consistency with get_actuation_input_port(), each model instance
+in <code class="docutils literal notranslate"><span class="pre">this</span></code> plant model has a desired states input port, even if zero
+sized (for model instance with no actuators.)</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is a vector valued port of size
+2*num_actuators(model_instance), where we assumed 1-DOF actuated
+joints. This is true even for unactuated models, for which this
+port is zero sized. This port must provide one desired position
+and one desired velocity per joint actuator. Desired state is
+assumed to be packed as xd = [qd, vd] that is, configurations
+first followed by velocities. Configurations in qd are ordered by
+JointActuatorIndex, see JointActuator::set_actuation_vector().
+Similarly for velocities in vd.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If a user specifies a PD controller for an actuator from a given
+model instance, then all actuators of that model instance are
+required to be PD controlled.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>It is required to connect this port for PD controlled model
+instances.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.get_discrete_contact_solver">
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].get_discrete_contact_solver"></span><span class="sig-name descname"><span class="pre">get_discrete_contact_solver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.plant.DiscreteContactSolver" title="pydrake.multibody.plant.DiscreteContactSolver"><span class="pre">pydrake.multibody.plant.DiscreteContactSolver</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.get_discrete_contact_solver" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the contact solver type used for discrete MultibodyPlant
@@ -13208,6 +13688,21 @@ collision geometry registration and connection with a SceneGraph.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError when joint_index does not correspond to a joint</strong> – </p></li>
 <li><p><strong>in this model.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.get_mutable_joint_actuator">
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].get_mutable_joint_actuator"></span><span class="sig-name descname"><span class="pre">get_mutable_joint_actuator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">actuator_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JointActuatorIndex" title="pydrake.multibody.tree.JointActuatorIndex"><span class="pre">pydrake.multibody.tree.JointActuatorIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JointActuator_" title="pydrake.multibody.tree.JointActuator_"><span class="pre">pydrake.multibody.tree.JointActuator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.get_mutable_joint_actuator" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a mutable reference to the joint actuator with unique index
+<code class="docutils literal notranslate"><span class="pre">actuator_index</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if actuator_index does not correspond to a joint</strong> – </p></li>
+<li><p><strong>actuator in this tree.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -15145,7 +15640,7 @@ but non-zero number can be used, e.g. 1.0e-3.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.set_stiction_tolerance">
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].set_stiction_tolerance"></span><span class="sig-name descname"><span class="pre">set_stiction_tolerance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_stiction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.001</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.set_stiction_tolerance" title="Permalink to this definition"></a></dt>
-<dd><p><a href="#id81"><span class="problematic" id="id82">**</span></a>** Stribeck model of friction</p>
+<dd><p><a href="#id87"><span class="problematic" id="id88">**</span></a>** Stribeck model of friction</p>
 <p>Currently MultibodyPlant uses the Stribeck approximation to model dry
 friction. The Stribeck model of friction is an approximation to
 Coulomb’s law of friction that allows using continuous time
