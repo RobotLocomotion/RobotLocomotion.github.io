@@ -3086,9 +3086,6 @@ f)</p>
 <dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">decision_variables</span></code> should not intersect with the existing
 indeterminates in the optimization program.</p>
 </dd>
-<dt>Precondition:</dt><dd><p>Each entry in <code class="docutils literal notranslate"><span class="pre">decision_variables</span></code> should not be a dummy
-variable.</p>
-</dd>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
@@ -3177,8 +3174,6 @@ prog.indeterminates()(indeterminate_index) = new_indeterminate.</p>
 <dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">new_indeterminate</span></code> should not intersect with the program’s
 decision variables.</p>
 </dd>
-<dt>Precondition:</dt><dd><p>new_indeterminate should not be dummy.</p>
-</dd>
 <dt>Precondition:</dt><dd><p>new_indeterminate should be of CONTINUOUS type.</p>
 </dd>
 </dl>
@@ -3200,8 +3195,6 @@ indeterminates.</p>
 <dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">new_indeterminates</span></code> should not intersect with the program’s old
 decision variables.</p>
 </dd>
-<dt>Precondition:</dt><dd><p>Each entry in new_indeterminates should not be dummy.</p>
-</dd>
 <dt>Precondition:</dt><dd><p>Each entry in new_indeterminates should be of CONTINUOUS type.</p>
 </dd>
 </dl>
@@ -3216,8 +3209,6 @@ indeterminates.</p>
 </dd>
 <dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">new_indeterminates</span></code> should not intersect with the program’s old
 decision variables.</p>
-</dd>
-<dt>Precondition:</dt><dd><p>Each entry in new_indeterminates should not be dummy.</p>
 </dd>
 <dt>Precondition:</dt><dd><p>Each entry in new_indeterminates should be of CONTINUOUS type.</p>
 </dd>
@@ -4087,7 +4078,8 @@ dominant.</p>
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>M For i &lt; j M[i][j] contains the slack variables, mentioned in
 addsdd “scaled diagonally dominant matrix constraint”. For i &gt;= j,
-M[i][j] contains dummy variables.</p>
+M[i][j] contains default-constructed variables (with get_id() ==
+0).</p>
 </dd>
 </dl>
 </dd></dl>

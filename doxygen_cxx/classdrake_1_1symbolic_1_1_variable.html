@@ -193,9 +193,9 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad57a167cb505659893c09faa703a8ec5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_variable.html#ad57a167cb505659893c09faa703a8ec5">Variable</a> ()</td></tr>
-<tr class="memdesc:ad57a167cb505659893c09faa703a8ec5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="#ad57a167cb505659893c09faa703a8ec5">More...</a><br /></td></tr>
-<tr class="separator:ad57a167cb505659893c09faa703a8ec5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66ae8ada34dafb779ee60b39f58459b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_variable.html#ae66ae8ada34dafb779ee60b39f58459b">Variable</a> ()=default</td></tr>
+<tr class="memdesc:ae66ae8ada34dafb779ee60b39f58459b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a default variable of type CONTINUOUS with an <code>Id</code> of zero.  <a href="#ae66ae8ada34dafb779ee60b39f58459b">More...</a><br /></td></tr>
+<tr class="separator:ae66ae8ada34dafb779ee60b39f58459b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3ae0a370426bdec708902b75342d71d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_variable.html#ae3ae0a370426bdec708902b75342d71d">Variable</a> (std::nullptr_t)</td></tr>
 <tr class="memdesc:ae3ae0a370426bdec708902b75342d71d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a default value.  <a href="#ae3ae0a370426bdec708902b75342d71d">More...</a><br /></td></tr>
 <tr class="separator:ae3ae0a370426bdec708902b75342d71d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -203,7 +203,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ab80a68408132bf57b854b0252aefb80a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a variable with a string.  <a href="#ab80a68408132bf57b854b0252aefb80a">More...</a><br /></td></tr>
 <tr class="separator:ab80a68408132bf57b854b0252aefb80a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ac3dfb9b4ce1004619750db2bb13194"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_variable.html#a1ac3dfb9b4ce1004619750db2bb13194">is_dummy</a> () const</td></tr>
-<tr class="memdesc:a1ac3dfb9b4ce1004619750db2bb13194"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if this is a dummy variable (ID = 0) which is created by the default constructor.  <a href="#a1ac3dfb9b4ce1004619750db2bb13194">More...</a><br /></td></tr>
+<tr class="memdesc:a1ac3dfb9b4ce1004619750db2bb13194"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if this is the variable created by the default constructor.  <a href="#a1ac3dfb9b4ce1004619750db2bb13194">More...</a><br /></td></tr>
 <tr class="separator:a1ac3dfb9b4ce1004619750db2bb13194"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5bc2131313b060e441972d85d917314"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_variable.html#ad045777573c866588ca72937e92c1a2c">Id</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_variable.html#af5bc2131313b060e441972d85d917314">get_id</a> () const</td></tr>
 <tr class="separator:af5bc2131313b060e441972d85d917314"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -347,11 +347,14 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="ad57a167cb505659893c09faa703a8ec5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad57a167cb505659893c09faa703a8ec5">&#9670;&nbsp;</a></span>Variable() <span class="overload">[3/5]</span></h2>
+<a id="ae66ae8ada34dafb779ee60b39f58459b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66ae8ada34dafb779ee60b39f58459b">&#9670;&nbsp;</a></span>Variable() <span class="overload">[3/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> </td>
@@ -360,11 +363,15 @@ Friends</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Default constructor. </p>
-<p>Constructs a dummy variable of CONTINUOUS type. This is needed to have Eigen::Matrix&lt;Variable&gt;. The objects created by the default constructor share the same ID, zero. As a result, they all are identified as a single variable by equality operator (==). They all have the same hash value as well.</p>
-<p>It is allowed to construct a dummy variable but it should not be used to construct a symbolic expression. </p>
+<p>Constructs a default variable of type CONTINUOUS with an <code>Id</code> of zero. </p>
+<p>All default-constructed variables are considered the same variable by the equality operator (==). Similarly, a moved-from variable is also identical to a default-constructed variable (in both its <code>name</code> and its <code>Id</code>). </p>
 
 </div>
 </div>
@@ -523,7 +530,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Checks if this is a dummy variable (ID = 0) which is created by the default constructor. </p>
+<p>Checks if this is the variable created by the default constructor. </p>
 
 </div>
 </div>
