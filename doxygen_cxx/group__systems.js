@@ -324,6 +324,5 @@ var group__systems =
       [ "internal::MultibodyPlantModelAttorney< T >", "classdrake_1_1multibody_1_1_multibody_plant.html#a7266290642dbb492700e7ebae2e00a20", null ],
       [ "MultibodyPlant", "classdrake_1_1multibody_1_1_multibody_plant.html#a47a63154823dffd5838329527aafbd58", null ],
       [ "MultibodyPlantTester", "classdrake_1_1multibody_1_1_multibody_plant.html#a42efef893a4d8eed1d593caff328f599", null ]
-    ] ],
-    [ "GenerateHtml", "group__systems.html#ga3e4e6a211dd145828511de57c117c5aa", null ]
+    ] ]
 ];

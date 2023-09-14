@@ -691,7 +691,7 @@ Configuration Space for Robot Manipulators by Alexandre Amice*,
 Hongkai Dai*, Peter Werner, Annan Zhang and Russ Tedrake.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.geometry.optimization.CspaceFreePolytope,</span> <span class="pre">plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;,</span> <span class="pre">scene_graph:</span> <span class="pre">pydrake.geometry.SceneGraph,</span> <span class="pre">plane_order:</span> <span class="pre">pydrake.geometry.optimization.SeparatingPlaneOrder,</span> <span class="pre">q_star:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]],</span> <span class="pre">options:</span> <span class="pre">pydrake.geometry.optimization.CspaceFreePolytopeBase.Options</span> <span class="pre">=</span> <span class="pre">&lt;pydrake.geometry.optimization.CspaceFreePolytopeBase.Options</span> <span class="pre">object</span> <span class="pre">at</span> <span class="pre">0x7f1c4e1afc70&gt;</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.geometry.optimization.CspaceFreePolytope,</span> <span class="pre">plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;,</span> <span class="pre">scene_graph:</span> <span class="pre">pydrake.geometry.SceneGraph,</span> <span class="pre">plane_order:</span> <span class="pre">pydrake.geometry.optimization.SeparatingPlaneOrder,</span> <span class="pre">q_star:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]],</span> <span class="pre">options:</span> <span class="pre">pydrake.geometry.optimization.CspaceFreePolytopeBase.Options</span> <span class="pre">=</span> <span class="pre">Options(with_cross_y=False)</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.__init__" title="Permalink to this definition"></a></dt>
 <dd><dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt><dd><p>The plant for which we compute the C-space free polytopes. It must
 outlive this CspaceFreePolytope object.</p>
@@ -1185,7 +1185,41 @@ geometry 2.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytopeBase.Options.with_cross_y">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">with_cross_y</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytopeBase.Options.with_cross_y" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>For non-polytopic collision geometries, we will impose a matrix-sos
+constraint X(s) being psd, with a slack indeterminates y, such that
+the polynomial</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>p(s, y) = ⌈ 1 ⌉ᵀ * X(s) * ⌈ 1 ⌉
+⌊ y ⌋           ⌊ y ⌋
+</pre></div>
+</div>
+</details><p>is positive. This p(s, y) polynomial doesn’t contain the cross term of
+y (namely it doesn’t have y(i)*y(j), i≠j). When we select the monomial
+basis for this polynomial, we can also exclude the cross term of y in
+the monomial basis.</p>
+<p>To illustrate the idea, let’s consider the following toy example: if
+we want to certify that a(0) + a(1)*y₀ + a(2)*y₁ + a(3)*y₀² + a(4)*y₁²
+is positive (this polynomial doesn’t have the cross term y₀*y₁), we
+can write it as</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>⌈ 1⌉ᵀ * A₀ * ⌈ 1⌉ + ⌈ 1⌉ᵀ * A₁ * ⌈ 1⌉
+⌊y₀⌋         ⌊y₀⌋   ⌊y₁⌋         ⌊y₁⌋
+</pre></div>
+</div>
+</details><p>with two small psd matrices A₀, A₁ Instead of</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>⌈ 1⌉ᵀ * A * ⌈ 1⌉
+|y₀|        |y₀|
+⌊y₁⌋        ⌊y₁⌋
+</pre></div>
+</div>
+</details><p>with one large psd matrix A. The first parameterization won’t have the
+cross term y₀*y₁ by construction, while the second parameterization
+requires imposing extra constraints on certain off-diagonal terms in A
+so that the cross term vanishes.</p>
+<p>If we set with_cross_y = false, then we will use the monomial basis
+that doesn’t generate cross terms of y, leading to smaller size sos
+problems. If we set with_cross_y = true, then we will use the monomial
+basis that will generate cross terms of y, causing larger size sos
+problems, but possibly able to certify a larger C-space polytope.</p>
+</dd></dl>
 
 </dd></dl>
 
