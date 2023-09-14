@@ -1,5 +1,6 @@
 var NAVTREEINDEX57 =
 {
+"structdrake_1_1multibody_1_1_spatial_velocity_constraint_1_1_angular_velocity_bounds.html#a67f516717a02d33ceb6885dc70206b28":[1,1,0,18,0,3],
 "structdrake_1_1multibody_1_1_spatial_velocity_constraint_1_1_angular_velocity_bounds.html#ad80deba1b41ca9286207d17a40d730ea":[1,1,0,18,0,0],
 "structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html":[3,0,0,8,94],
 "structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html#a372de693ad40b3f42839c8ec6ac845f4":[3,0,0,8,94,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX57 =
 "structdrake_1_1solvers_1_1_ipopt_solver_details.html#a7dd4e94a9d3e2b0f80ff9ff8c1971083":[3,0,0,13,23,5],
 "structdrake_1_1solvers_1_1_ipopt_solver_details.html#aa4ec74048b458de140ea7c2e2dd8e3f4":[3,0,0,13,23,1],
 "structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html":[3,0,0,13,33],
-"structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html#a527da69a2d40b178e693bb585e98506f":[3,0,0,13,33,0],
-"structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html#ad7023f370a56939d6a62930614f16911":[3,0,0,13,33,1]
+"structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html#a527da69a2d40b178e693bb585e98506f":[3,0,0,13,33,0]
 };
