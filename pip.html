@@ -187,39 +187,36 @@ env</span>/bin/pip <span class="nb">install</span> <span class="nt">--upgrade</s
 
 <h2 id="nightly-releases">Nightly Releases</h2>
 
-<p>Binary packages of Drake for Ubuntu 20.04 (Focal), Ubuntu 22.04 (Jammy), and
-macOS are generated nightly and are available to download at:</p>
+<p>Wheel packages for Ubuntu 20.04 (Focal), Ubuntu 22.04 (Jammy), and macOS are
+published nightly at a <a href="https://peps.python.org/pep-0503/">PEP 503</a> index url
+<a href="https://drake-packages.csail.mit.edu/whl/nightly/">https://drake-packages.csail.mit.edu/whl/nightly/</a>.</p>
 
 <ul>
-  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-cp38-cp38-manylinux_2_31_x86_64.whl">https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-cp38-cp38-manylinux_2_31_x86_64.whl</a></li>
-  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-cp39-cp39-manylinux_2_31_x86_64.whl">https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-cp39-cp39-manylinux_2_31_x86_64.whl</a></li>
-  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-cp310-cp310-manylinux_2_31_x86_64.whl">https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-cp310-cp310-manylinux_2_31_x86_64.whl</a></li>
-  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-cp311-cp311-manylinux_2_31_x86_64.whl">https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-cp311-cp311-manylinux_2_31_x86_64.whl</a></li>
-  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-cp311-cp311-macosx_12_0_x86_64.whl">https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-cp311-cp311-macosx_12_0_x86_64.whl</a></li>
-  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-cp311-cp311-macosx_12_0_arm64.whl">https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-cp311-cp311-macosx_12_0_arm64.whl</a></li>
+  <li>Nightly wheel version numbers are created as <code class="language-plaintext highlighter-rouge">0.0.YYYYMMDD</code>, e.g.,
+<code class="language-plaintext highlighter-rouge">0.0.20230914</code> for Septemper 14th, 2023.</li>
+  <li>Nightly wheel packages are retained for 56 days from their date of creation,
+and drop out of the index after 48 days.</li>
 </ul>
 
-<p>Older packages for specific dates are available by replacing <code class="language-plaintext highlighter-rouge">latest</code> with an
-8-digit date, e.g., <code class="language-plaintext highlighter-rouge">20230215</code> for February 15th, 2023.  The version number to
-replace <code class="language-plaintext highlighter-rouge">latest</code> with follows the pattern <code class="language-plaintext highlighter-rouge">0.0.YYYYMMDD</code>.</p>
+<p>To install a specific nightly wheel using <code class="language-plaintext highlighter-rouge">pip</code>, replace <code class="language-plaintext highlighter-rouge">YYYYMMDD</code> with the
+desired date:</p>
 
-<ul>
-  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-0.0.20230215-cp38-cp38-manylinux_2_31_x86_64.whl">https://drake-packages.csail.mit.edu/drake/nightly/drake-0.0.20230215-cp38-cp38-manylinux_2_31_x86_64.whl</a></li>
-  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-0.0.20230215-cp39-cp39-manylinux_2_31_x86_64.whl">https://drake-packages.csail.mit.edu/drake/nightly/drake-0.0.20230215-cp39-cp39-manylinux_2_31_x86_64.whl</a></li>
-  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-0.0.20230215-cp310-cp310-manylinux_2_31_x86_64.whl">https://drake-packages.csail.mit.edu/drake/nightly/drake-0.0.20230215-cp310-cp310-manylinux_2_31_x86_64.whl</a></li>
-  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-0.0.20230215-cp311-cp311-manylinux_2_31_x86_64.whl">https://drake-packages.csail.mit.edu/drake/nightly/drake-0.0.20230215-cp311-cp311-manylinux_2_31_x86_64.whl</a></li>
-  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-0.0.20230215-cp311-cp311-macosx_12_0_x86_64.whl">https://drake-packages.csail.mit.edu/drake/nightly/drake-0.0.20230215-cp311-cp311-macosx_12_0_x86_64.whl</a></li>
-  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-0.0.20230215-cp311-cp311-macosx_12_0_arm64.whl">https://drake-packages.csail.mit.edu/drake/nightly/drake-0.0.20230215-cp311-cp311-macosx_12_0_arm64.whl</a></li>
-</ul>
-
-<p>Nightly wheels are retained for 56 days from their date of creation.</p>
-
-<p>To install nightly wheel, install from the URL directly:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Example for python 3.8 (cp38-cp38).</span>
-python3 <span class="nt">-m</span> venv <span class="nb">env
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 <span class="nt">-m</span> venv <span class="nb">env
 env</span>/bin/pip <span class="nb">install</span> <span class="nt">--upgrade</span> pip
-<span class="nb">env</span>/bin/pip <span class="nb">install </span>https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-cp38-cp38-manylinux_2_31_x86_64.whl
+<span class="nb">env</span>/bin/pip <span class="nb">install</span> <span class="se">\</span>
+    <span class="nt">--extra-index-url</span> https://drake-packages.csail.mit.edu/whl/nightly/ <span class="se">\</span>
+    <span class="s1">'drake==0.0.YYYYMMDD'</span>
+<span class="nb">source env</span>/bin/activate
+</code></pre></div></div>
+
+<p>Or, to install today’s most recent nightly wheel using <code class="language-plaintext highlighter-rouge">pip</code>, specify <code class="language-plaintext highlighter-rouge">&lt;0.1</code>
+instead of <code class="language-plaintext highlighter-rouge">==0.0.YYYYMMDD</code> as shown below:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 <span class="nt">-m</span> venv <span class="nb">env
+env</span>/bin/pip <span class="nb">install</span> <span class="nt">--upgrade</span> pip
+<span class="nb">env</span>/bin/pip <span class="nb">install</span> <span class="se">\</span>
+    <span class="nt">--extra-index-url</span> https://drake-packages.csail.mit.edu/whl/nightly/ <span class="se">\</span>
+    <span class="s1">'drake&lt;0.1'</span>
 <span class="nb">source env</span>/bin/activate
 </code></pre></div></div>
 
