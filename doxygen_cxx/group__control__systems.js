@@ -101,9 +101,8 @@ var group__control__systems =
       [ "get_Kp_singleton", "classdrake_1_1systems_1_1controllers_1_1_pid_controller.html#a45ab2364a45cc9e4c285375ffa87d97c", null ],
       [ "get_Kp_vector", "classdrake_1_1systems_1_1controllers_1_1_pid_controller.html#a2cdc3bbfd20618923a844cb668660b52", null ],
       [ "get_output_port_control", "classdrake_1_1systems_1_1controllers_1_1_pid_controller.html#aad42796928b031670dc843a51e1967c2", null ],
-      [ "GetGraphvizFragment", "classdrake_1_1systems_1_1controllers_1_1_pid_controller.html#ac370e74eb508e94b3eee667977d7185a", null ],
-      [ "operator=", "classdrake_1_1systems_1_1controllers_1_1_pid_controller.html#ae9c9d82445bbc4e6db677340fe2dfc93", null ],
       [ "operator=", "classdrake_1_1systems_1_1controllers_1_1_pid_controller.html#a531cfe18df6e555f9f9e952469177f7f", null ],
+      [ "operator=", "classdrake_1_1systems_1_1controllers_1_1_pid_controller.html#ae9c9d82445bbc4e6db677340fe2dfc93", null ],
       [ "set_integral_value", "classdrake_1_1systems_1_1controllers_1_1_pid_controller.html#ab31e6c294928ac7c131675fad3777073", null ],
       [ "PidController", "classdrake_1_1systems_1_1controllers_1_1_pid_controller.html#a7774ce445791101414fcae49b9cf29d7", null ]
     ] ],

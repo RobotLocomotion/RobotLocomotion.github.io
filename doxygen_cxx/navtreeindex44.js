@@ -1,6 +1,5 @@
 var NAVTREEINDEX44 =
 {
-"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a3c7f8bf042ab4ed8bb90e99f17209f74":[3,0,2,31,4],
 "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a653b323ac62c21fd25d05d367ccc6259":[3,0,2,31,6],
 "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a7315c497b305140748d3266adb76cf32":[3,0,2,31,5],
 "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#aa7270c55d80df6ea173269cb29c8c917":[3,0,2,31,3],
@@ -249,5 +248,6 @@ var NAVTREEINDEX44 =
 "differential__inverse__kinematics_8h.html#a3e26d472253fc2fe452f8b4bb2d1bcdc":[4,0,0,8,5,5,3],
 "differential__inverse__kinematics_8h.html#a3e26d472253fc2fe452f8b4bb2d1bcdca2090aef3abe80df58a23b77aa3a10bc3":[4,0,0,8,5,5,3,2],
 "differential__inverse__kinematics_8h.html#a3e26d472253fc2fe452f8b4bb2d1bcdca7dbb41ec30548b5703863365ae83a5dc":[4,0,0,8,5,5,3,1],
-"differential__inverse__kinematics_8h.html#a3e26d472253fc2fe452f8b4bb2d1bcdcabc17c60a85668aa4d8463d9204acb6f9":[4,0,0,8,5,5,3,0]
+"differential__inverse__kinematics_8h.html#a3e26d472253fc2fe452f8b4bb2d1bcdcabc17c60a85668aa4d8463d9204acb6f9":[4,0,0,8,5,5,3,0],
+"differential__inverse__kinematics_8h.html#a8e6dc9bf6fd1e577239ddd20a083c5a4":[4,0,0,8,5,5,4]
 };

@@ -702,9 +702,6 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:ac370e74eb508e94b3eee667977d7185a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_pid_controller.html#ac370e74eb508e94b3eee667977d7185a">GetGraphvizFragment</a> (<a class="el" href="classint.html">int</a> max_depth, std::stringstream *dot) const override</td></tr>
-<tr class="memdesc:ac370e74eb508e94b3eee667977d7185a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends to <code>dot</code> a simplified Graphviz representation of the PID controller, since the internal wiring is unimportant and hard for human viewers to parse.  <a href="#ac370e74eb508e94b3eee667977d7185a">More...</a><br /></td></tr>
-<tr class="separator:ac370e74eb508e94b3eee667977d7185a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18737529bba0537a9fa06a649378b1a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_pid_controller.html#a18737529bba0537a9fa06a649378b1a8">DoCalcTimeDerivatives</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1systems_1_1_continuous_state.html">ContinuousState</a>&lt; T &gt; *derivatives) const override</td></tr>
 <tr class="memdesc:a18737529bba0537a9fa06a649378b1a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override this if you have any continuous state variables x꜀ in your concrete System to calculate their time derivatives.  <a href="#a18737529bba0537a9fa06a649378b1a8">More...</a><br /></td></tr>
 <tr class="separator:a18737529bba0537a9fa06a649378b1a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1846,48 +1843,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ac370e74eb508e94b3eee667977d7185a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac370e74eb508e94b3eee667977d7185a">&#9670;&nbsp;</a></span>GetGraphvizFragment()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void GetGraphvizFragment </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
-          <td class="paramname"><em>max_depth</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::stringstream *&#160;</td>
-          <td class="paramname"><em>dot</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Appends to <code>dot</code> a simplified Graphviz representation of the PID controller, since the internal wiring is unimportant and hard for human viewers to parse. </p>
-
-<p>Reimplemented from <a class="el" href="classdrake_1_1systems_1_1_system.html#a8946ae289e8ce80d9d03114e6f60bd86">System&lt; T &gt;</a>.</p>
-
-</div>
-</div>
-<a id="ae9c9d82445bbc4e6db677340fe2dfc93"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae9c9d82445bbc4e6db677340fe2dfc93">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a531cfe18df6e555f9f9e952469177f7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a531cfe18df6e555f9f9e952469177f7f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1898,7 +1855,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_pid_controller.html">PidController</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_pid_controller.html">PidController</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1controllers_1_1_pid_controller.html">PidController</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1912,8 +1869,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a531cfe18df6e555f9f9e952469177f7f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a531cfe18df6e555f9f9e952469177f7f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="ae9c9d82445bbc4e6db677340fe2dfc93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9c9d82445bbc4e6db677340fe2dfc93">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1924,7 +1881,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_pid_controller.html">PidController</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1controllers_1_1_pid_controller.html">PidController</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_pid_controller.html">PidController</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

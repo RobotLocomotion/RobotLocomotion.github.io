@@ -1,6 +1,5 @@
 var NAVTREEINDEX56 =
 {
-"structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html#a277d81c8e1df90b999ae693f460ab7f7":[3,0,0,4,1,8,2],
 "structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html#a32442a6353b886748a5053c445412660":[3,0,0,4,1,8,4],
 "structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html#a6c4438afbf2190941ebeae2f8e16dd11":[3,0,0,4,1,8,8],
 "structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html#a94b2fa6bd78e869a41f1b92030a2e777":[3,0,0,4,1,8,5],
@@ -22,10 +21,10 @@ var NAVTREEINDEX56 =
 "structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#abb7b16d4d092f7b7572de4c058b30d96":[3,0,0,4,1,10,6],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html":[1,5,4,7],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html":[1,1,1,7],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a033befdd75124d17abb45b56c75a71db":[1,1,1,7,3],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a033befdd75124d17abb45b56c75a71db":[1,5,4,7,3],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a11a479517bfa7e6c3d669c72380924ca":[1,5,4,7,13],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a033befdd75124d17abb45b56c75a71db":[1,1,1,7,3],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a11a479517bfa7e6c3d669c72380924ca":[1,1,1,7,13],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a11a479517bfa7e6c3d669c72380924ca":[1,5,4,7,13],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a20906a34b629e819d5d8a8df41638c2d":[1,1,1,7,11],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a20906a34b629e819d5d8a8df41638c2d":[1,5,4,7,11],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a2213eafbc5c4f73c4af52ecd163494c6":[1,5,4,7,2],
@@ -42,12 +41,12 @@ var NAVTREEINDEX56 =
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a985034493b538c4431e48f45ba012e75":[1,5,4,7,6],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#aafcf4ea1cbea01d087cc559402acddf2":[1,1,1,7,8],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#aafcf4ea1cbea01d087cc559402acddf2":[1,5,4,7,8],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ab9404d7dc104e7eb4e27ed7e38ccff72":[1,1,1,7,4],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ab9404d7dc104e7eb4e27ed7e38ccff72":[1,5,4,7,4],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ab9404d7dc104e7eb4e27ed7e38ccff72":[1,1,1,7,4],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#acb0bda48ae293b2b8a06f159001280ac":[1,5,4,7,0],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#acb0bda48ae293b2b8a06f159001280ac":[1,1,1,7,0],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ad9059bc845096b2f05414a66c836b4ee":[1,5,4,7,9],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ad9059bc845096b2f05414a66c836b4ee":[1,1,1,7,9],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ad9059bc845096b2f05414a66c836b4ee":[1,5,4,7,9],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ae65f515b41261e98fb16dd1e810cba48":[1,1,1,7,12],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ae65f515b41261e98fb16dd1e810cba48":[1,5,4,7,12],
 "structdrake_1_1geometry_1_1optimization_1_1_plane_separates_geometries.html":[3,0,0,4,1,17],
@@ -249,5 +248,6 @@ var NAVTREEINDEX56 =
 "structdrake_1_1multibody_1_1_signed_distance_with_time_derivative.html#a79b8e036dca6911e3295a47d99f21f43":[3,0,0,8,82,0],
 "structdrake_1_1multibody_1_1_spatial_velocity_constraint_1_1_angular_velocity_bounds.html":[1,1,0,18,0],
 "structdrake_1_1multibody_1_1_spatial_velocity_constraint_1_1_angular_velocity_bounds.html#a088a818f46f6f0e30da3349601732784":[1,1,0,18,0,1],
-"structdrake_1_1multibody_1_1_spatial_velocity_constraint_1_1_angular_velocity_bounds.html#a5515d4ab78b4b7db0f63e1a38959451f":[1,1,0,18,0,2]
+"structdrake_1_1multibody_1_1_spatial_velocity_constraint_1_1_angular_velocity_bounds.html#a5515d4ab78b4b7db0f63e1a38959451f":[1,1,0,18,0,2],
+"structdrake_1_1multibody_1_1_spatial_velocity_constraint_1_1_angular_velocity_bounds.html#a67f516717a02d33ceb6885dc70206b28":[1,1,0,18,0,3]
 };
