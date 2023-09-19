@@ -565,7 +565,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Takes ownership of <code>system</code> and adds it to the builder. </p>
 <p>Returns a bare pointer to the <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a>, which will remain valid for the lifetime of the <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a> built by this builder.</p>
-<p>If the system's name is unset, sets it to <a class="el" href="classdrake_1_1systems_1_1_system.html#a9714aaf76aca9169da6de7fbcb8339fb" title="Returns a name for this System based on a stringification of its type name and memory address.">System::GetMemoryObjectName()</a> as a default in order to have unique names within the diagram.</p>
+<p>If the system's name is unset, sets it to <a class="el" href="classdrake_1_1systems_1_1_system_base.html#a9714aaf76aca9169da6de7fbcb8339fb" title="Returns a name for this System based on a stringification of its type name and memory address.">System::GetMemoryObjectName()</a> as a default in order to have unique names within the diagram.</p>
 <div class="fragment"><div class="line">DiagramBuilder&lt;T&gt; builder;</div><div class="line"><span class="keyword">auto</span> foo = builder.AddSystem(std::make_unique&lt;Foo&lt;T&gt;&gt;());</div></div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">S</td><td>The type of system to add. </td></tr>

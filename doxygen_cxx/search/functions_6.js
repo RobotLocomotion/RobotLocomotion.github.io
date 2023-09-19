@@ -704,7 +704,7 @@ var searchData=
   ['getmaximumabsolutedifferences',['GetMaximumAbsoluteDifferences',['../classdrake_1_1multibody_1_1_spatial_vector.html#a3ec0b46e26e4295575e966033fb79f4c',1,'drake::multibody::SpatialVector']]],
   ['getmaximumabsolutetranslationdifference',['GetMaximumAbsoluteTranslationDifference',['../classdrake_1_1math_1_1_rigid_transform.html#aa8b1205e300a07901a70079bbbd1e566',1,'drake::math::RigidTransform']]],
   ['getmeasureoforthonormality',['GetMeasureOfOrthonormality',['../classdrake_1_1math_1_1_rotation_matrix.html#a6ca9317cbeb6cef80d12e0dee4fd179d',1,'drake::math::RotationMatrix']]],
-  ['getmemoryobjectname',['GetMemoryObjectName',['../classdrake_1_1systems_1_1_system.html#a9714aaf76aca9169da6de7fbcb8339fb',1,'drake::systems::System']]],
+  ['getmemoryobjectname',['GetMemoryObjectName',['../classdrake_1_1systems_1_1_system_base.html#a9714aaf76aca9169da6de7fbcb8339fb',1,'drake::systems::SystemBase']]],
   ['getmessagecount',['GetMessageCount',['../classdrake_1_1systems_1_1lcm_1_1_lcm_subscriber_system.html#aa915127fa059ee7f2f82cf95fc9115e2',1,'drake::systems::lcm::LcmSubscriberSystem']]],
   ['getminimalrepresentation',['GetMinimalRepresentation',['../classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#ad5d589780714066f1e6a1118a8e5a83e',1,'drake::geometry::optimization::VPolytope']]],
   ['getmodelinstancebyname',['GetModelInstanceByName',['../classdrake_1_1multibody_1_1_multibody_plant.html#ae6d03c873e08ade99e59d68af8375355',1,'drake::multibody::MultibodyPlant']]],

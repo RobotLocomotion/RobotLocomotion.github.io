@@ -191,6 +191,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aea1591b1773209f55ccc85356efb639a"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#aea1591b1773209f55ccc85356efb639a">get_name</a> () const</td></tr>
 <tr class="memdesc:aea1591b1773209f55ccc85356efb639a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name last supplied to <a class="el" href="classdrake_1_1systems_1_1_system_base.html#ad5260b9627048b854b45d05ed34adc22" title="Sets the name of the system.">set_name()</a>, if any.  <a href="#aea1591b1773209f55ccc85356efb639a">More...</a><br /></td></tr>
 <tr class="separator:aea1591b1773209f55ccc85356efb639a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9714aaf76aca9169da6de7fbcb8339fb"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a9714aaf76aca9169da6de7fbcb8339fb">GetMemoryObjectName</a> () const</td></tr>
+<tr class="memdesc:a9714aaf76aca9169da6de7fbcb8339fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a name for this System based on a stringification of its type name and memory address.  <a href="#a9714aaf76aca9169da6de7fbcb8339fb">More...</a><br /></td></tr>
+<tr class="separator:a9714aaf76aca9169da6de7fbcb8339fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf2143907221997b4bfd7cf5fc40b422"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#acf2143907221997b4bfd7cf5fc40b422">GetSystemName</a> () const final</td></tr>
 <tr class="memdesc:acf2143907221997b4bfd7cf5fc40b422"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a human-readable name for this system, for use in messages and logging.  <a href="#acf2143907221997b4bfd7cf5fc40b422">More...</a><br /></td></tr>
 <tr class="separator:acf2143907221997b4bfd7cf5fc40b422"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1822,6 +1825,26 @@ the port's value must be retrievable from the stored abstract value using <code>
 
 </div>
 </div>
+<a id="a9714aaf76aca9169da6de7fbcb8339fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9714aaf76aca9169da6de7fbcb8339fb">&#9670;&nbsp;</a></span>GetMemoryObjectName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string GetMemoryObjectName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a name for this System based on a stringification of its type name and memory address. </p>
+<p>This is intended for use in diagnostic output and should not be used for behavioral logic, because the stringification of the type name may produce differing results across platforms and because the address can vary from run to run. </p>
+
+</div>
+</div>
 <a id="aaf07bedd6db91eb448279aaea8254aa4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaf07bedd6db91eb448279aaea8254aa4">&#9670;&nbsp;</a></span>GetOutputPortBaseOrThrow()</h2>
 
@@ -2447,8 +2470,8 @@ the port's value must be retrievable from the stored abstract value using <code>
 
 </div>
 </div>
-<a id="aee4f8b3ccb41a8d6ce26373c7ae3c477"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aee4f8b3ccb41a8d6ce26373c7ae3c477">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="af4d56d3b45890e61f36e24199dd1e2aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4d56d3b45890e61f36e24199dd1e2aa">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2459,7 +2482,7 @@ the port's value must be retrievable from the stored abstract value using <code>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_system_base.html">SystemBase</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_system_base.html">SystemBase</a> &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_system_base.html">SystemBase</a> &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -2473,8 +2496,8 @@ the port's value must be retrievable from the stored abstract value using <code>
 
 </div>
 </div>
-<a id="af4d56d3b45890e61f36e24199dd1e2aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4d56d3b45890e61f36e24199dd1e2aa">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="aee4f8b3ccb41a8d6ce26373c7ae3c477"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee4f8b3ccb41a8d6ce26373c7ae3c477">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2485,7 +2508,7 @@ the port's value must be retrievable from the stored abstract value using <code>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_system_base.html">SystemBase</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_system_base.html">SystemBase</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_system_base.html">SystemBase</a> &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
