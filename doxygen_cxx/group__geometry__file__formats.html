@@ -1,0 +1,320 @@
+<!-- HTML header for doxygen 1.8.15-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: Supported file formats</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/%2Findex.ipynb">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+ </div>
+</div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('group__geometry__file__formats.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Supported file formats<div class="ingroups"><a class="el" href="group__geometry.html">Geometric Representations</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+<p>Drake offers a number of primitive types for representing objects' extents in space. </p>
+<p>They include:</p>
+<ul>
+<li><a class="el" href="classdrake_1_1geometry_1_1_box.html" title="Definition of a box.">Box</a></li>
+<li><a class="el" href="classdrake_1_1geometry_1_1_capsule.html" title="Definition of a capsule.">Capsule</a></li>
+<li><a class="el" href="classdrake_1_1geometry_1_1_cylinder.html" title="Definition of a cylinder.">Cylinder</a></li>
+<li><a class="el" href="classdrake_1_1geometry_1_1_ellipsoid.html" title="Definition of an ellipsoid.">Ellipsoid</a></li>
+<li><a class="el" href="classdrake_1_1geometry_1_1_half_space.html" title="Definition of a half space.">HalfSpace</a></li>
+<li><a class="el" href="classdrake_1_1geometry_1_1_sphere.html" title="Definition of sphere.">Sphere</a></li>
+</ul>
+<p>The primitives are good for coarse representations of real world shapes and, in some cases, may be preferred over more accurate representations for performance reasons (e.g., for <a class="el" href="group__proximity__queries.html">proximity queries</a>). However, there are cases where a higher fidelity representation is preferred. To this end, Drake also provides two more shapes:</p>
+<ul>
+<li><a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">Convex</a> <a class="el" href="group__geometry__file__formats.html#file_footnote_1">¹</a></li>
+<li><a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) triangular surface mesh.">Mesh</a> <a class="el" href="group__geometry__file__formats.html#file_footnote_1">¹</a></li>
+</ul>
+<p>Both of those <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The base interface for all shape specifications.">Shape</a> types reference on-disk geometry files. When a role is assigned to a geometry with the <a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">Convex</a> or <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) triangular surface mesh.">Mesh</a> shape, the file will be parsed and some portion of the data in the file will be used. To make good representation choices, it is important to understand what kind of files are supported, in what roles, and to what degree. This page aims to make the answers to those questions clear and provide best practices. As geometry file format support is in flux the contents of this page will change frequently.</p>
+<h1><a class="anchor" id="supported_file_types"></a>
+Supported file types</h1>
+<p>Drake is working towards a robust and consistent treatment of supported mesh types. During the transitional period, support will not be consistent. For each supported mesh type, we'll enumerate the nature of Drake's support for it, generally and with respect to each <a class="el" href="group__geometry__roles.html">geometry role</a>.</p>
+<p>You should assume that if a file format is not listed, it is not supported.</p>
+<p>Drake doesn't care about the capitalization of the geometry file extensions.</p>
+<p>Regarding the illustration role. While Drake has historically supported <code>drake_visualizer</code>, it no longer actively supports it. This documentation will focus on how the geometry is supported in <a href="https://github.com/meshcat-dev/meshcat">meshcat</a>.</p>
+<h2><a class="anchor" id="obj_support"></a>
+Wavefront (obj) file</h2>
+<p><a href="https://en.wikipedia.org/wiki/Wavefront_.obj_file">Wavefront obj</a> is a decades-old geometry format. The file is encoded in ASCII text with a simple syntax; simple objects can be created in a text editor. Most modern modeling packages can import and export .obj files. Its age has made it a universal format.</p>
+<p>The .obj specification includes an additional material library file (.mtl). The .mtl file defines materials that are applied to zero or more faces in the .obj file. The standard practice is for an .obj file to reference one or more .mtl files.</p>
+<p>Both <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) triangular surface mesh.">Mesh</a> and <a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">Convex</a> shapes can accept an .obj file for any role (with limitations).</p>
+<ul>
+<li>Illustration role<ul>
+<li>Both <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) triangular surface mesh.">Mesh</a> and <a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">Convex</a> can be used with this role.</li>
+<li>If the .obj file references an .mtl file (and that file is available) it will be used to define the materials.</li>
+<li>Lack of surface normals may lead to unexpected rendering artifacts.</li>
+<li>Lack of texture coordinates combined with a material with texture maps can likewise lead to unexpected rendering artifacts.</li>
+</ul>
+</li>
+<li>Perception role<ul>
+<li>The following notes apply to all Drake RenderEngine implementations.</li>
+<li>The mesh must have surface normals (Drake throws if they are missing).</li>
+<li>Texture coordinates are not required, but if present at all, all faces must have texture coordinates assigned.</li>
+<li>The material associated with the mesh is that defined by the <a class="el" href="group__geometry__file__formats.html#geometry_materials">material heuristic</a>.</li>
+<li>In contrast to the Proximity role, the mesh <em>can</em> have multiple objects (but only a single material &ndash; see below). This requirement will be relaxed in the future.</li>
+</ul>
+</li>
+<li>Proximity role<ul>
+<li>The material file is ignored.</li>
+<li>Drake currently requires the faces in the mesh to comprise a single object.</li>
+<li>A <a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">Convex</a> shape can be used to create a point-contact collision geometry or a hydroelastic collision geometry (either rigid or compliant).<ul>
+<li>Note: using a <a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">Convex</a> shape implies that the .obj contains a single convex shape. This is currently not verified.</li>
+</ul>
+</li>
+<li>A <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) triangular surface mesh.">Mesh</a> shape can only be used to create a rigid hydroelastic collision geometry.</li>
+</ul>
+</li>
+<li>Best practices<ul>
+<li>Generally, make the .obj as complete as possible. If it's being used for either illustration or perception, include normals, texture coordinates, and materials as appropriate. Even if Drake doesn't complain about them missing, there are undefined behaviors across the set of visualizing technologies when they are missing.</li>
+<li>If a source .obj has multiple materials, it currently needs to be converted to a single material (with varying properties "baked" into textures). There are various methods for baking materials into textures (such as those referenced <a href="https://github.com/RobotLocomotion/drake/issues/11949#issuecomment-1492230915">here</a>).</li>
+<li>You might find it simpler to use a <a class="el" href="group__geometry__file__formats.html#gltf_support">.gltf</a> file instead.</li>
+</ul>
+</li>
+</ul>
+<h2><a class="anchor" id="gltf_support"></a>
+glTFᵀᴹ (.gltf)</h2>
+<p>A <a href="https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html">glTF</a> file is an "open interoperable 3D asset 'transmission' format". Like an .obj file it can include the definition of meshes and materials. glTF is designed to include data for an entire scene, including such diverse elements as nodes, animations, transform hierarchies, cameras, animations, morph targets, etc. Drake does not necessarily use all of that data.</p>
+<p>It's worth noting that glTF is designed, from the start, to support <a href="https://en.wikipedia.org/wiki/Physically_based_rendering">Physically Based Rendering (PBR)</a>. While the Wavefront .obj specification has informal extensions to achieve the same (replacing Phong with PBR), glTF uses it as its native shading model. This can produce images with higher fidelity, in both rasterization and path-tracing rendering algorithms.</p>
+<p>Generally, Drake provides broad support of glTF features. But there are some notable exceptions:</p>
+<ul>
+<li>.glb files and .gltf files with external references (to image or .bin files) are not supported. Currently, Drake only supports .glTF files with all binary assets embedded (as buffers of base64-encoded data blobs).</li>
+<li>Support for glTF extensions depends on the ultimate consumer of the glTF file (see below).</li>
+<li>Animation and skinning. If such data is present, it is ignored.</li>
+</ul>
+<p>As with .obj files, both <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) triangular surface mesh.">Mesh</a> and <a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">Convex</a> shapes can accept a .gltf file.</p>
+<ul>
+<li>Illustration roles<ul>
+<li>.gltf features are well supported in meshcat-based visualizers (using either <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html" title="A system wrapper for Meshcat that publishes the current state of a SceneGraph instance (whose QueryOb...">MeshcatVisualizer</a> or <a class="el" href="classdrake_1_1geometry_1_1_drake_visualizer.html" title="A system that publishes LCM messages representing the current state of a SceneGraph instance (whose Q...">DrakeVisualizer</a> in conjunction with meldis).</li>
+<li>There is generally broad support for glTF extensions.</li>
+<li>To get optimal visual appearance, <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> should be configured to use an environment map (see <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a4e604b24e8ece3d7d7ac74a8b4fe2783" title="Sets the environment texture.">Meshcat::SetEnvironmentMap()</a>).</li>
+</ul>
+</li>
+<li>Perception roles<ul>
+<li>RenderEngineGl does not support .gltf files. A <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) triangular surface mesh.">Mesh</a> or <a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">Convex</a> which references such a file will be silently ignored.</li>
+<li>RenderEngineVtk does support .gltf files.<ul>
+<li>As VTK does not support extensions, RenderEngineVtk does not either.</li>
+<li>RenderEngineVtk does not yet support specifying an environment map. This will lead to PBR materials being under illuminated.</li>
+</ul>
+</li>
+<li>RenderEngineGltfClient does support .gltf files (as the name suggests).<ul>
+<li>Geometries defined by a .gltf file are based almost verbatim to the render server (animation and morphing data is excluded).</li>
+<li>The extensions are passed along, but whether or not they are supported depends on the server's implementation.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Proximity role<ul>
+<li>.gltf files are not currently supported for proximity roles at all. Assigning the proximity role to a <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) triangular surface mesh.">Mesh</a> with anything other than a .obj file will throw an exception.</li>
+</ul>
+</li>
+</ul>
+<h2><a class="anchor" id="vtk_support"></a>
+VTK file (.vtk)</h2>
+<p>Drake uses tetrahedral meshes a couple of different ways: as compliant hydroelastic geometries (see <a class="el" href="group__hydroelastic__user__guide.html#hug_title">here</a> for more details) and deformable bodies (see, e.g., <a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html" title="DeformableModel implements the interface in PhysicalModel and provides the functionalities to specify...">multibody::DeformableModel</a>). For some of the <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The base interface for all shape specifications.">Shape</a> types, Drake will provide a tetrahedralization of the shape at run time. However, Drake cannot yet do so for arbitrary surface meshes. Drake allows you to create your own tetrahedral mesh offline and request that Drake use it. We use the <a href="https://examples.vtk.org/site/VTKFileFormats/">.vtk</a> file format.</p>
+<p>Depending on the application (hydroelastics or deformable bodies), not every tetrahedralization is created equal. There are best practices for each domain which must be followed to get best results. More details on these best practices are coming.</p>
+<h1><a class="anchor" id="geometry_materials"></a>
+Drake materials and the specification heuristic</h1>
+<p>Drake has a very rudimentary <em>internal</em> definition of visual materials. Don't mistake a "visual" material from a "dynamics" material. The latter consists of parameters such as elasticity, friction, etc. The former models how <em>light</em> interacts with the object including parameters such as diffuse color, specularity, etc. Drakes visual material model is based on the <a href="https://en.wikipedia.org/wiki/Phong_shading">Phong shading model</a>, but only makes use of a subset of that model's parameters. Currently, only the diffuse color property is parameterized. It can be either a single <a class="el" href="classdrake_1_1geometry_1_1_rgba.html" title="Defines RGBA (red, green, blue, alpha) values on the range [0, 1].">Rgba</a> value, or a texture map.</p>
+<p>Even if a mesh file contains material definitions of its own, for some geometry operations, Drake will apply its own heuristic to define a Drake visual material. This may result in a visualization that appears different from the model itself. Drake is actively working on closing this gap.</p>
+<p>The heuristic defines a Phong material with the diffuse property defined with the following prioritized algorithm. The algorithm evaluates the following steps in sequence, but stops at the first step that provides a viable material definition.</p>
+<ol type="1">
+<li>If the mesh file specifies materials, then the diffuse color or texture specified in that material will be applied.<ul>
+<li>If diffuse properties are <em>also</em> defined in the mesh's <a class="el" href="classdrake_1_1geometry_1_1_geometry_properties.html" title="The base class for defining a set of geometry properties.">GeometryProperties</a>, a warning will be written to the console.</li>
+<li>If the material specifies a texture, but the mesh doesn't have texture coordinates, the texture is dismissed and only the material's diffuse color is used.</li>
+<li>If the material specifies a texture, but the texture isn't accessible, the texture is dismissed and only the material's diffuse color is used.</li>
+<li><b>If the mesh file contains <em>multiple</em> materials, then all materials are discarded as if they weren't present and the next step of the algorithm is evaluated.</b></li>
+</ul>
+</li>
+<li>If the geometry in <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> has had diffuse color or diffuse texture defined in its <a class="el" href="classdrake_1_1geometry_1_1_geometry_properties.html" title="The base class for defining a set of geometry properties.">GeometryProperties</a>, then that diffuse specification is used. The final diffuse color of the object is always the channel-wise product of the texture and the diffuse color. If the diffuse color is white the final diffuse color is defined solely by the texture. Otherwise, the final diffuse color can be a darkened texture (via a grey diffuse color) or tinted (via a diffuse color with a distinct hue). If the geometry properties define a texture but not a color, then the material is assigned a white diffuse color.<ul>
+<li>If a diffuse texture map is defined, but it isn't accessible, then only the white diffuse color is used.</li>
+</ul>
+</li>
+<li>For a mesh file named my_mesh.file, if the file my_mesh.png is located in the same directory (and readable by Drake), it will be applied as an unmodulated diffuse texture.</li>
+<li>Default diffuse color defined by geometry consumer (visualizer or render engine) will be applied.</li>
+</ol>
+<hr/>
+<p><a class="anchor" id="file_footnote_1"></a> ¹ The distinction between <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) triangular surface mesh.">Mesh</a> and <a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">Convex</a> is only relevant for proximity queries; a <a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">Convex</a> shape is treated differently from a <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) triangular surface mesh.">Mesh</a> shape. For illustration and perception roles, there is no practical distinction. </p>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>    
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>    
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().value = searchBox.searchLabel;
+</script>
+</body>
+</html>

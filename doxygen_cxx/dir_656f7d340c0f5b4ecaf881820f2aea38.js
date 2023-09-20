@@ -14,7 +14,10 @@ var dir_656f7d340c0f5b4ecaf881820f2aea38 =
     [ "contact_results_to_lcm.h", "contact__results__to__lcm_8h.html", "contact__results__to__lcm_8h" ],
     [ "coulomb_friction.h", "coulomb__friction_8h.html", "coulomb__friction_8h" ],
     [ "deformable_driver.h", "deformable__driver_8h.html", null ],
-    [ "deformable_model.h", "deformable__model_8h.html", "deformable__model_8h" ],
+    [ "deformable_ids.h", "deformable__ids_8h.html", "deformable__ids_8h" ],
+    [ "deformable_model.h", "deformable__model_8h.html", [
+      [ "DeformableModel", "classdrake_1_1multibody_1_1_deformable_model.html", "classdrake_1_1multibody_1_1_deformable_model" ]
+    ] ],
     [ "discrete_contact_pair.h", "discrete__contact__pair_8h.html", null ],
     [ "discrete_update_manager.h", "discrete__update__manager_8h.html", "discrete__update__manager_8h" ],
     [ "externally_applied_spatial_force.h", "externally__applied__spatial__force_8h.html", [

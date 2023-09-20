@@ -4,6 +4,7 @@ var searchData=
   ['system_20cache_20design_20and_20implementation_20notes',['System Cache Design and Implementation Notes',['../group__cache__design__notes.html',1,'']]],
   ['state_20estimation',['State Estimation',['../group__estimation.html',1,'']]],
   ['system_20events',['System Events',['../group__events__description.html',1,'']]],
+  ['supported_20file_20formats',['Supported file formats',['../group__geometry__file__formats.html',1,'']]],
   ['scenegraph_2c_20scenegraphinspector_2c_20queryobject',['SceneGraph, SceneGraphInspector, QueryObject',['../group__geometry__infrastructure.html',1,'']]],
   ['system_20identification',['System Identification',['../group__identification.html',1,'']]],
   ['less_3c_20solverid_20_3e',['less&lt; SolverId &gt;',['../classdrake_1_1solvers_1_1_solver_id.html#a8c448cbeb1e52bcb8dff99684d127ef0',1,'drake::solvers::SolverId']]],

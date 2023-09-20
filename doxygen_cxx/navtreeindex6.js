@@ -244,10 +244,10 @@ var NAVTREEINDEX6 =
 "classdrake_1_1geometry_1_1_volume_mesh.html#ae7f810a1d8f914db3d27e1fb817e7341":[3,0,0,4,58,18],
 "classdrake_1_1geometry_1_1_volume_mesh.html#aed478252fbae94deb7da1ab9f2003339":[3,0,0,4,58,5],
 "classdrake_1_1geometry_1_1_volume_mesh_tester.html":[3,0,0,4,59],
-"classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html":[1,5,4,0],
+"classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html":[1,5,5,0],
 "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html":[1,1,1,0],
 "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a21a288a410eefce77117064d05ca92ad":[1,1,1,0,2],
-"classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a21a288a410eefce77117064d05ca92ad":[1,5,4,0,2],
+"classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a21a288a410eefce77117064d05ca92ad":[1,5,5,0,2],
 "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a2e517d5b78e2fa08bdc06aea97a0d3b6":[1,1,1,0,7],
-"classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a2e517d5b78e2fa08bdc06aea97a0d3b6":[1,5,4,0,7]
+"classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a2e517d5b78e2fa08bdc06aea97a0d3b6":[1,5,5,0,7]
 };
