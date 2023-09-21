@@ -1520,7 +1520,7 @@ the following 3x2 matrix:</p>
 <p>Computes the Jacobian matrix J of the vector function <code class="docutils literal notranslate"><span class="pre">f</span></code> with
 respect to <code class="docutils literal notranslate"><span class="pre">vars</span></code>. J(i,j) contains ∂f(i)/∂vars(j).</p>
 <dl class="simple">
-<dt>Precondition:</dt><dd><p>{<code class="docutils literal notranslate"><span class="pre">vars</span></code> is non-empty}.</p>
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">vars</span></code> is non-empty.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1692,15 +1692,15 @@ coefficient part of a monomial.</p>
 <ol class="arabic simple" start="2">
 <li><p>__init__(self: pydrake.symbolic.Monomial, var: pydrake.symbolic.Variable) -&gt; None</p></li>
 </ol>
-<p>Constructs a Monomial from <code class="docutils literal notranslate"><span class="pre">var</span></code>.</p>
+<p>Constructs a monomial from <code class="docutils literal notranslate"><span class="pre">var</span></code>.</p>
 <ol class="arabic simple" start="3">
 <li><p>__init__(self: pydrake.symbolic.Monomial, var: pydrake.symbolic.Variable, exponent: int) -&gt; None</p></li>
 </ol>
-<p>Constructs a Monomial from <code class="docutils literal notranslate"><span class="pre">var</span></code> and <code class="docutils literal notranslate"><span class="pre">exponent</span></code>.</p>
+<p>Constructs a monomial from <code class="docutils literal notranslate"><span class="pre">var</span></code> and <code class="docutils literal notranslate"><span class="pre">exponent</span></code>.</p>
 <ol class="arabic simple" start="4">
 <li><p>__init__(self: pydrake.symbolic.Monomial, powers: Dict[pydrake.symbolic.Variable, int]) -&gt; None</p></li>
 </ol>
-<p>Constructs a Monomial from <code class="docutils literal notranslate"><span class="pre">powers</span></code>.</p>
+<p>Constructs a monomial from <code class="docutils literal notranslate"><span class="pre">powers</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if powers includes a negative exponent.</strong> – </p>
@@ -1709,9 +1709,9 @@ coefficient part of a monomial.</p>
 <ol class="arabic simple" start="5">
 <li><p>__init__(self: pydrake.symbolic.Monomial, vars: numpy.ndarray[object[m, 1]], exponents: numpy.ndarray[numpy.int32[m, 1]]) -&gt; None</p></li>
 </ol>
-<p>Constructs a Monomial from a vector of variables <code class="docutils literal notranslate"><span class="pre">vars</span></code> and their
+<p>Constructs a monomial from a vector of variables <code class="docutils literal notranslate"><span class="pre">vars</span></code> and their
 corresponding integer exponents <code class="docutils literal notranslate"><span class="pre">exponents</span></code>. For example,
-<code class="docutils literal notranslate"><span class="pre">Monomial([x,</span> <span class="pre">y,</span> <span class="pre">z],</span> <span class="pre">[2,</span> <span class="pre">0,</span> <span class="pre">1])</span></code> constructs a Monomial <code class="docutils literal notranslate"><span class="pre">x²z</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">%Monomial([x,</span> <span class="pre">y,</span> <span class="pre">z],</span> <span class="pre">[2,</span> <span class="pre">0,</span> <span class="pre">1])</span></code> constructs a monomial <code class="docutils literal notranslate"><span class="pre">x²z</span></code>.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>The size of <code class="docutils literal notranslate"><span class="pre">vars</span></code> should be the same as the size of
 <code class="docutils literal notranslate"><span class="pre">exponents</span></code>.</p>
@@ -1727,7 +1727,7 @@ corresponding integer exponents <code class="docutils literal notranslate"><span
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.symbolic.Monomial.degree">
 <span class="sig-name descname"><span class="pre">degree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.symbolic.Monomial" title="pydrake.symbolic.Monomial"><span class="pre">pydrake.symbolic.Monomial</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.symbolic.Variable" title="pydrake.symbolic.Variable"><span class="pre">pydrake.symbolic.Variable</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.symbolic.Monomial.degree" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the degree of this Monomial in a variable <code class="docutils literal notranslate"><span class="pre">v</span></code>.</p>
+<dd><p>Returns the degree of this monomial in a variable <code class="docutils literal notranslate"><span class="pre">v</span></code>.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1756,8 +1756,8 @@ corresponding integer exponents <code class="docutils literal notranslate"><span
 </ol>
 <p>Evaluates the monomial for a batch of data. We return monomial_vals
 such that monomial_vals(j) is obtained by substituting <code class="docutils literal notranslate"><span class="pre">vars(i)</span></code>
-with <code class="docutils literal notranslate"><span class="pre">vars_values(i,</span> <span class="pre">j)</span></code>, note that vars_values.rows() ==
-vars.rows() and vars_values.cols() == monomial_vals.rows().</p>
+with <code class="docutils literal notranslate"><span class="pre">vars_values(i,</span> <span class="pre">j)</span></code>, note that <code class="docutils literal notranslate"><span class="pre">vars_values.rows()</span> <span class="pre">==</span>
+<span class="pre">vars.rows()</span></code> and <code class="docutils literal notranslate"><span class="pre">vars_values.cols()</span> <span class="pre">==</span> <span class="pre">monomial_vals.rows()</span></code>.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">vars</span></code>:</dt><dd><p>The variables whose value will be substituted. <code class="docutils literal notranslate"><span class="pre">vars</span></code> must
 contain all variables in this-&gt;GetVariables(). Also <code class="docutils literal notranslate"><span class="pre">vars</span></code>
@@ -1770,8 +1770,8 @@ if i != j.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>an exception if vars doesn't contain all the variables in</strong> – </p></li>
-<li><p><strong>this-&gt;GetVariables.</strong> – </p></li>
+<li><p><strong>RuntimeError if vars doesn't contain all the variables in</strong> – </p></li>
+<li><p><strong>this-&gt;GetVariables</strong><strong>(</strong><strong>)</strong><strong>`</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -1781,9 +1781,9 @@ if i != j.</p>
 <dt class="sig sig-object py" id="pydrake.symbolic.Monomial.EvaluatePartial">
 <span class="sig-name descname"><span class="pre">EvaluatePartial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.symbolic.Monomial" title="pydrake.symbolic.Monomial"><span class="pre">pydrake.symbolic.Monomial</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">env</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.symbolic.Variable" title="pydrake.symbolic.Variable"><span class="pre">pydrake.symbolic.Variable</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#pydrake.symbolic.Monomial" title="pydrake.symbolic.Monomial"><span class="pre">pydrake.symbolic.Monomial</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.symbolic.Monomial.EvaluatePartial" title="Permalink to this definition"></a></dt>
 <dd><p>Partially evaluates using a given environment <code class="docutils literal notranslate"><span class="pre">env</span></code>. The evaluation
-result is of type pair&lt;double, Monomial&gt;. The first component (:
+result is of type pair&lt;double, Monomial&gt;. The first component (a
 double) represents the coefficient part while the second component
-represents the remaining parts of the Monomial which was not
+represents the remaining parts of the monomial which was not
 evaluated.</p>
 <p>Example 1. Evaluate with a fully-specified environment
 (x³*y²).EvaluatePartial({{x, 2}, {y, 3}}) = (2³ * 3² = 8 * 9 = 72,
@@ -1825,7 +1825,7 @@ Monomial{} = 1).</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.symbolic.Monomial.total_degree">
 <span class="sig-name descname"><span class="pre">total_degree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.symbolic.Monomial" title="pydrake.symbolic.Monomial"><span class="pre">pydrake.symbolic.Monomial</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.symbolic.Monomial.total_degree" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the total degree of this Monomial.</p>
+<dd><p>Returns the total degree of this monomial.</p>
 </dd></dl>
 
 </dd></dl>
@@ -1888,7 +1888,30 @@ For example, for a given variable ordering x &gt; y &gt; z,
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.symbolic.Polynomial">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.symbolic.</span></span><span class="sig-name descname"><span class="pre">Polynomial</span></span><a class="headerlink" href="#pydrake.symbolic.Polynomial" title="Permalink to this definition"></a></dt>
-<dd><dl class="py method">
+<dd><p>Represents symbolic polynomials. A symbolic polynomial keeps a mapping
+from a monomial of indeterminates to its coefficient in a symbolic
+expression.</p>
+<p>A polynomial <code class="docutils literal notranslate"><span class="pre">p</span></code> has to satisfy an invariant such that
+<code class="docutils literal notranslate"><span class="pre">p.decision_variables()</span> <span class="pre">∩</span> <span class="pre">p.indeterminates()</span> <span class="pre">=</span> <span class="pre">∅</span></code>. We have
+CheckInvariant() method to check the invariant.</p>
+<p>** Operation between a Polynomial and a Variable **</p>
+<p>Note that for arithmetic operations ⊕ (where ⊕ can be +,-,*) between a
+Polynomial <code class="docutils literal notranslate"><span class="pre">p</span></code> and a Variable <code class="docutils literal notranslate"><span class="pre">v</span></code>, if the variable <code class="docutils literal notranslate"><span class="pre">v</span></code> is an
+indeterminate of the polynomial <code class="docutils literal notranslate"><span class="pre">p</span></code>, then we regard <code class="docutils literal notranslate"><span class="pre">v</span></code> as a
+monomial with indeterminate <code class="docutils literal notranslate"><span class="pre">v</span></code> with coefficient 1; on the other
+hand, if the variable <code class="docutils literal notranslate"><span class="pre">v</span></code> is not an indeterminate of <code class="docutils literal notranslate"><span class="pre">p</span></code>, then we
+regard <code class="docutils literal notranslate"><span class="pre">v</span></code> as a monomial with 0 degree and coefficient <code class="docutils literal notranslate"><span class="pre">v</span></code>, and
+<code class="docutils literal notranslate"><span class="pre">v</span></code> will be appended to decision_variables() of the resulted
+polynomial. For example, if p = ax²+y where (x,y) are indeterminates
+and a is a decision variable, then in the operation p + y, the result
+stores the monomial-to-coefficient mapping as {(x² -&gt; a), (y -&gt; 2)};
+on the other hand, in the operation p + b, b is regarded as a 0-degree
+monomial with coefficient b, and p + b stores the
+monomial-to-coefficient mapping as {(x² -&gt; a), (y -&gt; 1), (1 -&gt; b)},
+with (p + b).decision_variables() being {a, b}. If you want to append
+the variable <code class="docutils literal notranslate"><span class="pre">v</span></code> to the indeterminates of the p⊕v, then explicitly
+convert it to a monomial as p ⊕ symbolic::Monomial(v).</p>
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.symbolic.Polynomial.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.symbolic.Polynomial.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
@@ -1904,7 +1927,9 @@ For example, for a given variable ordering x &gt; y &gt; z,
 <li><p>__init__(self: pydrake.symbolic.Polynomial, m: pydrake.symbolic.Monomial) -&gt; None</p></li>
 </ol>
 <p>Constructs a polynomial from a monomial <code class="docutils literal notranslate"><span class="pre">m</span></code>. Note that all variables
-in <code class="docutils literal notranslate"><span class="pre">m</span></code> are considered as indeterminates.</p>
+in <code class="docutils literal notranslate"><span class="pre">m</span></code> are considered as indeterminates. Note that this implicit
+conversion is desirable to have a dot product of two
+Eigen::Vector&lt;Monomial&gt;s return a Polynomial.</p>
 <ol class="arabic simple" start="4">
 <li><p>__init__(self: pydrake.symbolic.Polynomial, e: pydrake.symbolic.Expression) -&gt; None</p></li>
 </ol>
@@ -1958,7 +1983,7 @@ and the provided <code class="docutils literal notranslate"><span class="pre">in
 <span class="sig-name descname"><span class="pre">CoefficientsAlmostEqual</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.symbolic.Polynomial" title="pydrake.symbolic.Polynomial"><span class="pre">pydrake.symbolic.Polynomial</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.symbolic.Polynomial" title="pydrake.symbolic.Polynomial"><span class="pre">pydrake.symbolic.Polynomial</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.symbolic.Polynomial.CoefficientsAlmostEqual" title="Permalink to this definition"></a></dt>
 <dd><p>Returns true if this polynomial and <code class="docutils literal notranslate"><span class="pre">p</span></code> are almost equal (the
 difference in the corresponding coefficients are all less than
-<code class="docutils literal notranslate"><span class="pre">tolerance)</span></code>, after expanding the coefficients.</p>
+<code class="docutils literal notranslate"><span class="pre">tolerance</span></code>), after expanding the coefficients.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2006,11 +2031,11 @@ indeterminate.</p>
 <span class="sig-name descname"><span class="pre">EvaluateIndeterminates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.symbolic.Polynomial" title="pydrake.symbolic.Polynomial"><span class="pre">pydrake.symbolic.Polynomial</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">indeterminates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indeterminates_values</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.symbolic.Polynomial.EvaluateIndeterminates" title="Permalink to this definition"></a></dt>
 <dd><p>Evaluates the polynomial at a batch of indeterminates values.</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">indeterminates</span></code>:</dt><dd><p>Must include all this-&gt;indeterminates()</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">indeterminates</span></code>:</dt><dd><p>Must include all <code class="docutils literal notranslate"><span class="pre">this-&gt;indeterminates()</span></code></p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">indeterminates_values</span></code>:</dt><dd><p>Each column of <code class="docutils literal notranslate"><span class="pre">indeterminates_values</span></code> stores one specific value
-of <code class="docutils literal notranslate"><span class="pre">indeterminates</span></code>. indeterminates_values.rows() ==
-indeterminates.rows().</p>
+of <code class="docutils literal notranslate"><span class="pre">indeterminates</span></code>; <cite>indeterminates_values.rows() ==
+indeterminates.rows()</cite>.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -2071,8 +2096,8 @@ indeterminates_values.col(i).</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">indeterminates_values</span></code>:</dt><dd><p>A matrix representing a batch of values. Each column of
 <code class="docutils literal notranslate"><span class="pre">indeterminates_values</span></code> stores one specific value of
-<code class="docutils literal notranslate"><span class="pre">indeterminates</span></code>, where indeterminates_values.rows() ==
-indeterminates.rows().</p>
+<code class="docutils literal notranslate"><span class="pre">indeterminates</span></code>, where <code class="docutils literal notranslate"><span class="pre">indeterminates_values.rows()</span> <span class="pre">==</span>
+<span class="pre">indeterminates.rows()</span></code>.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">A</span></code>:</dt><dd><p>The coefficient of the evaluation results.</p>
 </dd>
@@ -2175,8 +2200,8 @@ is false.</p>
 <dt class="sig sig-object py" id="pydrake.symbolic.Polynomial.RemoveTermsWithSmallCoefficients">
 <span class="sig-name descname"><span class="pre">RemoveTermsWithSmallCoefficients</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.symbolic.Polynomial" title="pydrake.symbolic.Polynomial"><span class="pre">pydrake.symbolic.Polynomial</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">coefficient_tol</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.symbolic.Polynomial" title="pydrake.symbolic.Polynomial"><span class="pre">pydrake.symbolic.Polynomial</span></a></span></span><a class="headerlink" href="#pydrake.symbolic.Polynomial.RemoveTermsWithSmallCoefficients" title="Permalink to this definition"></a></dt>
 <dd><p>Removes the terms whose absolute value of the coefficients are smaller
-than or equal to <code class="docutils literal notranslate"><span class="pre">coefficient_tol</span></code> For example, if the polynomial is
-2x² + 3xy + 10⁻⁴x - 10⁻⁵, then after calling
+than or equal to <code class="docutils literal notranslate"><span class="pre">coefficient_tol</span></code>. For example, if the polynomial
+is 2x² + 3xy + 10⁻⁴x - 10⁻⁵, then after calling
 RemoveTermsWithSmallCoefficients(1e-3), the returned polynomial
 becomes 2x² + 3xy.</p>
 <dl class="simple">
@@ -2206,10 +2231,9 @@ order of the returned roots.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.symbolic.Polynomial.SetIndeterminates">
 <span class="sig-name descname"><span class="pre">SetIndeterminates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.symbolic.Polynomial" title="pydrake.symbolic.Polynomial"><span class="pre">pydrake.symbolic.Polynomial</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_indeterminates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.symbolic.Variables" title="pydrake.symbolic.Variables"><span class="pre">pydrake.symbolic.Variables</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.symbolic.Polynomial.SetIndeterminates" title="Permalink to this definition"></a></dt>
-<dd><p>Sets the indeterminates to <code class="docutils literal notranslate"><span class="pre">new_indeterminates</span></code>.</p>
-<p>Changing the indeterminates would change
-<code class="docutils literal notranslate"><span class="pre">monomial_to_coefficient_map()</span></code>, and also potentially the degree of
-the polynomial. Here is an example.</p>
+<dd><p>Sets the indeterminates to <code class="docutils literal notranslate"><span class="pre">new_indeterminates</span></code>. Changing the
+indeterminates would change <code class="docutils literal notranslate"><span class="pre">monomial_to_coefficient_map()</span></code>, and
+also potentially the degree of the polynomial. Here is an example.</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// p is a quadratic polynomial with x being the indeterminates.</span>
 <span class="n">symbolic</span><span class="o">::</span><span class="n">Polynomial</span><span class="w"> </span><span class="nf">p</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">x</span><span class="p">});</span><span class="w"></span>
 <span class="c1">// p.monomial_to_coefficient_map() contains {1: c, x: b, x*x:a}.</span>
@@ -2226,7 +2250,7 @@ the polynomial. Here is an example.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.symbolic.Polynomial.SubstituteAndExpand">
 <span class="sig-name descname"><span class="pre">SubstituteAndExpand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.symbolic.Polynomial,</span> <span class="pre">indeterminate_substitution:</span> <span class="pre">Dict[pydrake.symbolic.Variable,</span> <span class="pre">pydrake.symbolic.Polynomial],</span> <span class="pre">substitutions_cached_data:</span> <span class="pre">drake::symbolic::Polynomial::SubstituteAndExpandCacheData</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.symbolic.Polynomial" title="pydrake.symbolic.Polynomial"><span class="pre">pydrake.symbolic.Polynomial</span></a></span></span><a class="headerlink" href="#pydrake.symbolic.Polynomial.SubstituteAndExpand" title="Permalink to this definition"></a></dt>
-<dd><p>Substitute the monomials of this polynomial with new polynomial
+<dd><p>Substitutes the monomials of this polynomial with new polynomial
 expressions and expand the polynomial to the monomial basis. For
 example, consider the substitution x = a(1-y) into the polynomial x¹⁴
 + (x−1)². Repeatedly expanding the powers of x can take a long time
@@ -2257,17 +2281,14 @@ substitutions_cached_data) would be very fast.</p>
 </dl>
 <p>Never reuse substitutions_cached_data if indeterminate_substitutions
 changes as this function will then compute an incorrect result.</p>
-<p>Note that this function is NOT responsible for ensuring that</p>
-<dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">substitutions_cached_data</span></code>:</dt><dd><p>is consistent i.e. this method will not throw an error if
-substitutions_cached_data contains the inconsistent substitutions
-{x: y, x²: 2y}. To ensure correct results, ensure that the passed
-substitutions_cached_data object is consistent with
-indeterminate_substitutions. The easiest way to do this is to pass
-a pointer to an empty substitutions_cached_data or nullopt to this
+<p>Note that this function is NOT responsible for ensuring that
+<code class="docutils literal notranslate"><span class="pre">substitutions_cached_data</span></code> is consistent i.e. this method will not
+throw an error if substitutions_cached_data contains the inconsistent
+substitutions {x: y, x²: 2y}. To ensure correct results, ensure that
+the passed substitutions_cached_data object is consistent with
+indeterminate_substitutions. The easiest way to do this is to pass a
+pointer to an empty substitutions_cached_data or nullopt to this
 function.</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">

@@ -75,7 +75,6 @@ var classdrake_1_1systems_1_1_leaf_system =
     [ "DoPublish", "classdrake_1_1systems_1_1_leaf_system.html#a119e3a83eeb61b8eb99198348178afd2", null ],
     [ "DoValidateAllocatedLeafContext", "classdrake_1_1systems_1_1_leaf_system.html#a8bd6ca8a128bb2663ebaa27d6851c68d", null ],
     [ "GetDirectFeedthroughs", "classdrake_1_1systems_1_1_leaf_system.html#a83479e1867e83638b90266c1aed0b6a3", null ],
-    [ "GetGraphvizFragment", "classdrake_1_1systems_1_1_leaf_system.html#ac370e74eb508e94b3eee667977d7185a", null ],
     [ "GetGraphvizInputPortToken", "classdrake_1_1systems_1_1_leaf_system.html#acfd6d412aafdf2814ced8e8fe460fc23", null ],
     [ "GetGraphvizOutputPortToken", "classdrake_1_1systems_1_1_leaf_system.html#a37060c889e34319f11652b5ad21cfbb9", null ],
     [ "GetMutableNumericParameter", "classdrake_1_1systems_1_1_leaf_system.html#ab003f82ede0c6e8e6f1f1862ea54b31d", null ],

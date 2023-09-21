@@ -180,6 +180,12 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1_system_base_1_1_context_sizes.html">ContextSizes</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return type for <a class="el" href="classdrake_1_1systems_1_1_system_base.html#ad91661e6330ae28c6e7be235ed7bfd10" title="Obtains access to the declared Context partition sizes as accumulated during LeafSystem or Diagram co...">get_context_sizes()</a>.  <a href="structdrake_1_1systems_1_1_system_base_1_1_context_sizes.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment.html">GraphvizFragment</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) The return type of <a class="el" href="classdrake_1_1systems_1_1_system_base.html#abfd58214195f7fbebfb65a7ef0c84d06" title="(Advanced) Like GetGraphvizString() but does not wrap the string in a digraph { … }.">GetGraphvizFragment()</a>.  <a href="structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment_params.html">GraphvizFragmentParams</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The arguments to <a class="el" href="classdrake_1_1systems_1_1_system_base.html#a140f5e4ae62c9208e368ea15d7612155" title="The NVI implementation of GetGraphvizFragment() for subclasses to override if desired.">DoGetGraphvizFragment()</a>.  <a href="structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment_params.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -273,6 +279,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a14e502b9bccb8c93c30f872d3eb00e9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee4f8b3ccb41a8d6ce26373c7ae3c477"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_system_base.html">SystemBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#aee4f8b3ccb41a8d6ce26373c7ae3c477">operator=</a> (<a class="el" href="classdrake_1_1systems_1_1_system_base.html">SystemBase</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:aee4f8b3ccb41a8d6ce26373c7ae3c477"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Graphviz methods</div></td></tr>
+<tr class="memitem:a7af7e8c763be91ade9abe02f16bda206"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a7af7e8c763be91ade9abe02f16bda206">GetGraphvizString</a> (std::optional&lt; <a class="el" href="classint.html">int</a> &gt; max_depth={}, const std::map&lt; std::string, std::string &gt; &amp;options={}) const</td></tr>
+<tr class="memdesc:a7af7e8c763be91ade9abe02f16bda206"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a Graphviz string describing this System.  <a href="#a7af7e8c763be91ade9abe02f16bda206">More...</a><br /></td></tr>
+<tr class="separator:a7af7e8c763be91ade9abe02f16bda206"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfd58214195f7fbebfb65a7ef0c84d06"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment.html">GraphvizFragment</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#abfd58214195f7fbebfb65a7ef0c84d06">GetGraphvizFragment</a> (std::optional&lt; <a class="el" href="classint.html">int</a> &gt; max_depth={}, const std::map&lt; std::string, std::string &gt; &amp;options={}) const</td></tr>
+<tr class="memdesc:abfd58214195f7fbebfb65a7ef0c84d06"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Like <a class="el" href="classdrake_1_1systems_1_1_system_base.html#a7af7e8c763be91ade9abe02f16bda206" title="Returns a Graphviz string describing this System.">GetGraphvizString()</a> but does not wrap the string in a <code>digraph { … }</code>.  <a href="#abfd58214195f7fbebfb65a7ef0c84d06">More...</a><br /></td></tr>
+<tr class="separator:abfd58214195f7fbebfb65a7ef0c84d06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Input port evaluation (deprecated)</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>These <em>deprecated</em> methods provide scalar type-independent evaluation of a <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> input port in a particular <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a>.</p>
 <p>Instead of these, prefer to use <a class="el" href="classdrake_1_1systems_1_1_input_port.html#abab8fb340a13be101704b48e46c12724" title="Returns a reference to the up-to-date value of this input port contained in the given Context.">InputPort::Eval()</a>, acquiring the port with <code>get_input_port(port_index)</code>.</p>
@@ -380,6 +393,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a1b3f9382208d13e11984a54afa711577"><td class="memItemLeft" align="right" valign="top">internal::SystemId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a1b3f9382208d13e11984a54afa711577">get_system_id</a> () const</td></tr>
 <tr class="memdesc:a1b3f9382208d13e11984a54afa711577"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal) Gets the id used to tag context data as being created by this system.  <a href="#a1b3f9382208d13e11984a54afa711577">More...</a><br /></td></tr>
 <tr class="separator:a1b3f9382208d13e11984a54afa711577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a140f5e4ae62c9208e368ea15d7612155"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment.html">GraphvizFragment</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a140f5e4ae62c9208e368ea15d7612155">DoGetGraphvizFragment</a> (const <a class="el" href="structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment_params.html">GraphvizFragmentParams</a> &amp;params) const</td></tr>
+<tr class="memdesc:a140f5e4ae62c9208e368ea15d7612155"><td class="mdescLeft">&#160;</td><td class="mdescRight">The NVI implementation of <a class="el" href="classdrake_1_1systems_1_1_system_base.html#abfd58214195f7fbebfb65a7ef0c84d06" title="(Advanced) Like GetGraphvizString() but does not wrap the string in a digraph { … }.">GetGraphvizFragment()</a> for subclasses to override if desired.  <a href="#a140f5e4ae62c9208e368ea15d7612155">More...</a><br /></td></tr>
+<tr class="separator:a140f5e4ae62c9208e368ea15d7612155"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Declare cache entries</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="DeclareCacheEntry_documentation"></a> Methods in this section are used by derived classes to declare cache entries for their own internal computations. (Other cache entries are provided automatically for well-known computations such as output ports and time derivatives.) <a class="el" href="classdrake_1_1systems_1_1_cache.html" title="(Advanced) Stores all the CacheEntryValue objects owned by a particular Context, organized to allow f...">Cache</a> entries may contain values of any type, however the type for any particular cache entry is fixed after first allocation. Every cache entry must have an <em>allocator</em> function <code>Allocate()</code> and a <em>calculator</em> function <code>Calc()</code>. <code>Allocate()</code> returns an object suitable for holding a value of the cache entry. <code>Calc()</code> uses the contents of a given <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> to produce the cache entry's value, which is placed in an object of the type returned by <code>Allocate()</code>.</p>
 <h4>Prerequisites</h4>
@@ -1383,6 +1399,37 @@ variable group".) </p><dl class="section see"><dt>See also</dt><dd><a class="el"
 
 </div>
 </div>
+<a id="a140f5e4ae62c9208e368ea15d7612155"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a140f5e4ae62c9208e368ea15d7612155">&#9670;&nbsp;</a></span>DoGetGraphvizFragment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment.html">GraphvizFragment</a> DoGetGraphvizFragment </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment_params.html">GraphvizFragmentParams</a> &amp;&#160;</td>
+          <td class="paramname"><em>params</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The NVI implementation of <a class="el" href="classdrake_1_1systems_1_1_system_base.html#abfd58214195f7fbebfb65a7ef0c84d06" title="(Advanced) Like GetGraphvizString() but does not wrap the string in a digraph { … }.">GetGraphvizFragment()</a> for subclasses to override if desired. </p>
+<p>The default behavior should be sufficient in most cases. </p>
+
+<p>Reimplemented in <a class="el" href="classdrake_1_1systems_1_1_system.html#a41ffb58fe0e0572450287ff1c9caf29a">System&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_system.html#a41ffb58fe0e0572450287ff1c9caf29a">System&lt; Element::T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_system.html#a41ffb58fe0e0572450287ff1c9caf29a">System&lt; double &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_system.html#a41ffb58fe0e0572450287ff1c9caf29a">System&lt; AutoDiffXd &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_system.html#a41ffb58fe0e0572450287ff1c9caf29a">System&lt; drake::symbolic::Expression &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a41ffb58fe0e0572450287ff1c9caf29a">Diagram&lt; T &gt;</a>, and <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a41ffb58fe0e0572450287ff1c9caf29a">Diagram&lt; double &gt;</a>.</p>
+
+</div>
+</div>
 <a id="a2cb18001bedce2dfaf75b0ae8a14375e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2cb18001bedce2dfaf75b0ae8a14375e">&#9670;&nbsp;</a></span>EvalAbstractInput()</h2>
 
@@ -1777,6 +1824,86 @@ the port's value must be retrievable from the stored abstract value using <code>
 <p>See <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#DeclareLeafOutputPort_feedthrough">DeclareLeafOutputPort</a> documentation for how leaf systems can report their feedthrough. </p>
 
 <p>Implemented in <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a83479e1867e83638b90266c1aed0b6a3">Diagram&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a83479e1867e83638b90266c1aed0b6a3">Diagram&lt; double &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a83479e1867e83638b90266c1aed0b6a3">LeafSystem&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a83479e1867e83638b90266c1aed0b6a3">LeafSystem&lt; Element::T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a83479e1867e83638b90266c1aed0b6a3">LeafSystem&lt; double &gt;</a>, and <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a83479e1867e83638b90266c1aed0b6a3">LeafSystem&lt; AutoDiffXd &gt;</a>.</p>
+
+</div>
+</div>
+<a id="abfd58214195f7fbebfb65a7ef0c84d06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfd58214195f7fbebfb65a7ef0c84d06">&#9670;&nbsp;</a></span>GetGraphvizFragment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment.html">GraphvizFragment</a> GetGraphvizFragment </td>
+          <td>(</td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="classint.html">int</a> &gt;&#160;</td>
+          <td class="paramname"><em>max_depth</em> = <code>{}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::map&lt; std::string, std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Advanced) Like <a class="el" href="classdrake_1_1systems_1_1_system_base.html#a7af7e8c763be91ade9abe02f16bda206" title="Returns a Graphviz string describing this System.">GetGraphvizString()</a> but does not wrap the string in a <code>digraph { … }</code>. </p>
+<p>This is useful when merging the fragment into another graph, and is how Diagram obtains the Graphviz content for its subsystems. The parameters are identical to <a class="el" href="classdrake_1_1systems_1_1_system_base.html#a7af7e8c763be91ade9abe02f16bda206" title="Returns a Graphviz string describing this System.">GetGraphvizString()</a>. The return value contains additional metadata beyond the Graphviz content, to better support merging. </p>
+
+</div>
+</div>
+<a id="a7af7e8c763be91ade9abe02f16bda206"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7af7e8c763be91ade9abe02f16bda206">&#9670;&nbsp;</a></span>GetGraphvizString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string GetGraphvizString </td>
+          <td>(</td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="classint.html">int</a> &gt;&#160;</td>
+          <td class="paramname"><em>max_depth</em> = <code>{}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::map&lt; std::string, std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a Graphviz string describing this System. </p>
+<p>To render the string, use the <a href="http://www.graphviz.org/">Graphviz</a> tool, <code>dot</code>.</p>
+<p>Notes about the display conventions:</p>
+<ul>
+<li>The nodes of the graph are systems, and the solid edges are connections between system input and output ports.</li>
+<li>The class name of a System is shown in <b>Bold</b> atop the node.</li>
+<li>Under the class name, if a System has been given a name via <a class="el" href="classdrake_1_1systems_1_1_system_base.html#ad5260b9627048b854b45d05ed34adc22" title="Sets the name of the system.">set_name()</a>, it will be displayed as <code>name=...</code>.</li>
+<li>Systems can elect to display additional properties besides their name; see <a class="el" href="structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment_params.html#a6aac2cea9e3a7eab48aa0569a827edf7" title="The header line(s) to use for this Graphviz node&#39;s table.">GraphvizFragmentParams::header_lines</a> for implementation details.</li>
+<li>A <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a>'s input ports are shown with a <span style="border:2px solid blue;border-radius:4px">blue border</span> and output ports are shown with a <span style="border:2px solid green;border-radius:4px">green border</span>.</li>
+<li>Zero-sized ports are <span style="color:grey">greyed out</span>.</li>
+<li>Deprecated ports are <strike>struck through</strike> and flagged with a headstone emoji (🪦) after their name.</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">max_depth</td><td>Sets a limit to the depth of nested diagrams to visualize. Use zero to render a diagram as a single system block.</td></tr>
+    <tr><td class="paramname">options</td><td>Arbitrary strings to request alterations to the output. Options that are unknown will be silently skipped. These options are often bespoke flags that are only understood by particular systems, but Drake has one built-in flag that is generally applicable: <code>"split"</code>. When set to <code>"I/O"</code>, the system will be added as two nodes with all inputs on one node and all outputs on the other; this is useful for systems that might otherwise cause problematic visual cycles.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Options are applied only to this immediate system; they are not inherited by the subsystems of a Diagram. To specify an option for a Diagram's subsystem, prefix the option name with the subsystem's path, e.g., use <code>"plant/split"="I/O"</code> to set the <code>"split"</code> option on the subsystem named <code>"plant"</code>. </p>
 
 </div>
 </div>
@@ -2470,8 +2597,8 @@ the port's value must be retrievable from the stored abstract value using <code>
 
 </div>
 </div>
-<a id="af4d56d3b45890e61f36e24199dd1e2aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4d56d3b45890e61f36e24199dd1e2aa">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="aee4f8b3ccb41a8d6ce26373c7ae3c477"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee4f8b3ccb41a8d6ce26373c7ae3c477">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2482,7 +2609,7 @@ the port's value must be retrievable from the stored abstract value using <code>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_system_base.html">SystemBase</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_system_base.html">SystemBase</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_system_base.html">SystemBase</a> &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -2496,8 +2623,8 @@ the port's value must be retrievable from the stored abstract value using <code>
 
 </div>
 </div>
-<a id="aee4f8b3ccb41a8d6ce26373c7ae3c477"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aee4f8b3ccb41a8d6ce26373c7ae3c477">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="af4d56d3b45890e61f36e24199dd1e2aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4d56d3b45890e61f36e24199dd1e2aa">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2508,7 +2635,7 @@ the port's value must be retrievable from the stored abstract value using <code>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_system_base.html">SystemBase</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_system_base.html">SystemBase</a> &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_system_base.html">SystemBase</a> &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

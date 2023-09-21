@@ -277,6 +277,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aeeae905295e6378f7cec66806f2c6d61"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_state.html">State</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#aeeae905295e6378f7cec66806f2c6d61">GetSubsystemState</a> (const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &amp;subsystem, const <a class="el" href="classdrake_1_1systems_1_1_state.html">State</a>&lt; T &gt; &amp;state) const</td></tr>
 <tr class="memdesc:aeeae905295e6378f7cec66806f2c6d61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the state for a particular subsystem from the <code>state</code> for the entire diagram.  <a href="#aeeae905295e6378f7cec66806f2c6d61">More...</a><br /></td></tr>
 <tr class="separator:aeeae905295e6378f7cec66806f2c6d61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfd6d412aafdf2814ced8e8fe460fc23"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#acfd6d412aafdf2814ced8e8fe460fc23">GetGraphvizInputPortToken</a> (const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">InputPort</a>&lt; T &gt; &amp;port, <a class="el" href="classint.html">int</a> max_depth, std::stringstream *dot) const final</td></tr>
+<tr class="memdesc:acfd6d412aafdf2814ced8e8fe460fc23"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#acfd6d412aafdf2814ced8e8fe460fc23">More...</a><br /></td></tr>
+<tr class="separator:acfd6d412aafdf2814ced8e8fe460fc23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37060c889e34319f11652b5ad21cfbb9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a37060c889e34319f11652b5ad21cfbb9">GetGraphvizOutputPortToken</a> (const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt; T &gt; &amp;port, <a class="el" href="classint.html">int</a> max_depth, std::stringstream *dot) const final</td></tr>
+<tr class="memdesc:a37060c889e34319f11652b5ad21cfbb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a37060c889e34319f11652b5ad21cfbb9">More...</a><br /></td></tr>
+<tr class="separator:a37060c889e34319f11652b5ad21cfbb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a799bbe7a83d3ed9f08feea0143f79e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#a72b9d4d169dbb0f1f740e1b25697e65e">SubsystemIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a2a799bbe7a83d3ed9f08feea0143f79e">GetSystemIndexOrAbort</a> (const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; *sys) const</td></tr>
 <tr class="memdesc:a2a799bbe7a83d3ed9f08feea0143f79e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the index of the given <code>sys</code> in this diagram, or aborts if <code>sys</code> is not a member of the diagram.  <a href="#a2a799bbe7a83d3ed9f08feea0143f79e">More...</a><br /></td></tr>
 <tr class="separator:a2a799bbe7a83d3ed9f08feea0143f79e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -292,16 +298,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4073a2ae64c63d29775c5e5bad80cb0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b83dd5f96c886cc1b1a63583b943c39"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_diagram.html">Diagram</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a4b83dd5f96c886cc1b1a63583b943c39">operator=</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram.html">Diagram</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:a4b83dd5f96c886cc1b1a63583b943c39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Graphviz methods</div></td></tr>
-<tr class="memitem:ac370e74eb508e94b3eee667977d7185a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#ac370e74eb508e94b3eee667977d7185a">GetGraphvizFragment</a> (<a class="el" href="classint.html">int</a> max_depth, std::stringstream *dot) const override</td></tr>
-<tr class="memdesc:ac370e74eb508e94b3eee667977d7185a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a Graphviz fragment describing this <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a>.  <a href="#ac370e74eb508e94b3eee667977d7185a">More...</a><br /></td></tr>
-<tr class="separator:ac370e74eb508e94b3eee667977d7185a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acfd6d412aafdf2814ced8e8fe460fc23"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#acfd6d412aafdf2814ced8e8fe460fc23">GetGraphvizInputPortToken</a> (const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">InputPort</a>&lt; T &gt; &amp;port, <a class="el" href="classint.html">int</a> max_depth, std::stringstream *dot) const final</td></tr>
-<tr class="memdesc:acfd6d412aafdf2814ced8e8fe460fc23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a fragment to the <code>dot</code> stream identifying the graphviz node representing <code>port</code>.  <a href="#acfd6d412aafdf2814ced8e8fe460fc23">More...</a><br /></td></tr>
-<tr class="separator:acfd6d412aafdf2814ced8e8fe460fc23"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37060c889e34319f11652b5ad21cfbb9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a37060c889e34319f11652b5ad21cfbb9">GetGraphvizOutputPortToken</a> (const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt; T &gt; &amp;port, <a class="el" href="classint.html">int</a> max_depth, std::stringstream *dot) const final</td></tr>
-<tr class="memdesc:a37060c889e34319f11652b5ad21cfbb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a fragment to the <code>dot</code> stream identifying the graphviz node representing <code>port</code>.  <a href="#a37060c889e34319f11652b5ad21cfbb9">More...</a><br /></td></tr>
-<tr class="separator:a37060c889e34319f11652b5ad21cfbb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classdrake_1_1systems_1_1_system"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classdrake_1_1systems_1_1_system')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classdrake_1_1systems_1_1_system.html">System&lt; T &gt;</a></td></tr>
 <tr class="memitem:abfc527f890d8846b751645ab81a67bb1 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#abfc527f890d8846b751645ab81a67bb1">~System</a> () override</td></tr>
 <tr class="separator:abfc527f890d8846b751645ab81a67bb1 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -551,12 +547,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7ceec1b22b6b1b25fc675234e78e71be inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a7ceec1b22b6b1b25fc675234e78e71be">num_output_ports</a> () const</td></tr>
 <tr class="memdesc:a7ceec1b22b6b1b25fc675234e78e71be inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of output ports currently allocated in this <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a>.  <a href="classdrake_1_1systems_1_1_system.html#a7ceec1b22b6b1b25fc675234e78e71be">More...</a><br /></td></tr>
 <tr class="separator:a7ceec1b22b6b1b25fc675234e78e71be inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a588e4f7454694f04b4b654d154f170f3 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a588e4f7454694f04b4b654d154f170f3">GetGraphvizString</a> (<a class="el" href="classint.html">int</a> max_depth=std::numeric_limits&lt; <a class="el" href="classint.html">int</a> &gt;::max()) const</td></tr>
-<tr class="memdesc:a588e4f7454694f04b4b654d154f170f3 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a Graphviz string describing this <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a>.  <a href="classdrake_1_1systems_1_1_system.html#a588e4f7454694f04b4b654d154f170f3">More...</a><br /></td></tr>
-<tr class="separator:a588e4f7454694f04b4b654d154f170f3 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8946ae289e8ce80d9d03114e6f60bd86 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a8946ae289e8ce80d9d03114e6f60bd86">GetGraphvizFragment</a> (<a class="el" href="classint.html">int</a> max_depth, std::stringstream *dot) const</td></tr>
+<tr class="memdesc:a8946ae289e8ce80d9d03114e6f60bd86 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="classdrake_1_1systems_1_1_system.html#a8946ae289e8ce80d9d03114e6f60bd86">More...</a><br /></td></tr>
+<tr class="separator:a8946ae289e8ce80d9d03114e6f60bd86 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1fac664a1c120c425bc522d7ecb435c inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint64__t.html">int64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#aa1fac664a1c120c425bc522d7ecb435c">GetGraphvizId</a> () const</td></tr>
-<tr class="memdesc:aa1fac664a1c120c425bc522d7ecb435c inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an opaque integer that uniquely identifies this system in the Graphviz output.  <a href="classdrake_1_1systems_1_1_system.html#aa1fac664a1c120c425bc522d7ecb435c">More...</a><br /></td></tr>
+<tr class="memdesc:aa1fac664a1c120c425bc522d7ecb435c inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="classdrake_1_1systems_1_1_system.html#aa1fac664a1c120c425bc522d7ecb435c">More...</a><br /></td></tr>
 <tr class="separator:aa1fac664a1c120c425bc522d7ecb435c inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7af7e8c763be91ade9abe02f16bda206 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a7af7e8c763be91ade9abe02f16bda206">GetGraphvizString</a> (std::optional&lt; <a class="el" href="classint.html">int</a> &gt; max_depth={}, const std::map&lt; std::string, std::string &gt; &amp;options={}) const</td></tr>
+<tr class="memdesc:a7af7e8c763be91ade9abe02f16bda206 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a Graphviz string describing this System.  <a href="classdrake_1_1systems_1_1_system.html#a7af7e8c763be91ade9abe02f16bda206">More...</a><br /></td></tr>
+<tr class="separator:a7af7e8c763be91ade9abe02f16bda206 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfd58214195f7fbebfb65a7ef0c84d06 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment.html">GraphvizFragment</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#abfd58214195f7fbebfb65a7ef0c84d06">GetGraphvizFragment</a> (std::optional&lt; <a class="el" href="classint.html">int</a> &gt; max_depth={}, const std::map&lt; std::string, std::string &gt; &amp;options={}) const</td></tr>
+<tr class="memdesc:abfd58214195f7fbebfb65a7ef0c84d06 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Like <a class="el" href="classdrake_1_1systems_1_1_system_base.html#a7af7e8c763be91ade9abe02f16bda206" title="Returns a Graphviz string describing this System.">GetGraphvizString()</a> but does not wrap the string in a <code>digraph { … }</code>.  <a href="classdrake_1_1systems_1_1_system.html#abfd58214195f7fbebfb65a7ef0c84d06">More...</a><br /></td></tr>
+<tr class="separator:abfd58214195f7fbebfb65a7ef0c84d06 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a601fb2c6cf565d954253d25725ae9d6b inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a601fb2c6cf565d954253d25725ae9d6b">FixInputPortsFrom</a> (const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;other_system, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;other_context, <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; *target_context) const</td></tr>
 <tr class="memdesc:a601fb2c6cf565d954253d25725ae9d6b inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fixes all of the input ports in <code>target_context</code> to their current values in <code>other_context</code>, as evaluated by <code>other_system</code>.  <a href="classdrake_1_1systems_1_1_system.html#a601fb2c6cf565d954253d25725ae9d6b">More...</a><br /></td></tr>
 <tr class="separator:a601fb2c6cf565d954253d25725ae9d6b inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -673,6 +675,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a14e502b9bccb8c93c30f872d3eb00e9b inherit pub_methods_classdrake_1_1systems_1_1_system_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee4f8b3ccb41a8d6ce26373c7ae3c477 inherit pub_methods_classdrake_1_1systems_1_1_system_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_system_base.html">SystemBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#aee4f8b3ccb41a8d6ce26373c7ae3c477">operator=</a> (<a class="el" href="classdrake_1_1systems_1_1_system_base.html">SystemBase</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:aee4f8b3ccb41a8d6ce26373c7ae3c477 inherit pub_methods_classdrake_1_1systems_1_1_system_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7af7e8c763be91ade9abe02f16bda206 inherit pub_methods_classdrake_1_1systems_1_1_system_base"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a7af7e8c763be91ade9abe02f16bda206">GetGraphvizString</a> (std::optional&lt; <a class="el" href="classint.html">int</a> &gt; max_depth={}, const std::map&lt; std::string, std::string &gt; &amp;options={}) const</td></tr>
+<tr class="memdesc:a7af7e8c763be91ade9abe02f16bda206 inherit pub_methods_classdrake_1_1systems_1_1_system_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a Graphviz string describing this System.  <a href="classdrake_1_1systems_1_1_system_base.html#a7af7e8c763be91ade9abe02f16bda206">More...</a><br /></td></tr>
+<tr class="separator:a7af7e8c763be91ade9abe02f16bda206 inherit pub_methods_classdrake_1_1systems_1_1_system_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfd58214195f7fbebfb65a7ef0c84d06 inherit pub_methods_classdrake_1_1systems_1_1_system_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment.html">GraphvizFragment</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#abfd58214195f7fbebfb65a7ef0c84d06">GetGraphvizFragment</a> (std::optional&lt; <a class="el" href="classint.html">int</a> &gt; max_depth={}, const std::map&lt; std::string, std::string &gt; &amp;options={}) const</td></tr>
+<tr class="memdesc:abfd58214195f7fbebfb65a7ef0c84d06 inherit pub_methods_classdrake_1_1systems_1_1_system_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Like <a class="el" href="classdrake_1_1systems_1_1_system_base.html#a7af7e8c763be91ade9abe02f16bda206" title="Returns a Graphviz string describing this System.">GetGraphvizString()</a> but does not wrap the string in a <code>digraph { … }</code>.  <a href="classdrake_1_1systems_1_1_system_base.html#abfd58214195f7fbebfb65a7ef0c84d06">More...</a><br /></td></tr>
+<tr class="separator:abfd58214195f7fbebfb65a7ef0c84d06 inherit pub_methods_classdrake_1_1systems_1_1_system_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2cb18001bedce2dfaf75b0ae8a14375e inherit pub_methods_classdrake_1_1systems_1_1_system_base"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a2cb18001bedce2dfaf75b0ae8a14375e">EvalAbstractInput</a> (const <a class="el" href="classdrake_1_1systems_1_1_context_base.html">ContextBase</a> &amp;context, <a class="el" href="classint.html">int</a> port_index) const</td></tr>
 <tr class="memdesc:a2cb18001bedce2dfaf75b0ae8a14375e inherit pub_methods_classdrake_1_1systems_1_1_system_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value of the input port with the given <code>port_index</code> as an <a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">AbstractValue</a>, which is permitted for ports of any type.  <a href="classdrake_1_1systems_1_1_system_base.html#a2cb18001bedce2dfaf75b0ae8a14375e">More...</a><br /></td></tr>
 <tr class="separator:a2cb18001bedce2dfaf75b0ae8a14375e inherit pub_methods_classdrake_1_1systems_1_1_system_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -753,6 +761,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a0bde657bcb9f86ef4396dc5e0c537f42"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a0bde657bcb9f86ef4396dc5e0c537f42">GetUnsupportedScalarConversionMessage</a> (const std::type_info &amp;source_type, const std::type_info &amp;destination_type) const final</td></tr>
 <tr class="memdesc:a0bde657bcb9f86ef4396dc5e0c537f42"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns the message to use for a std::exception in the case of unsupported scalar type conversions.  <a href="#a0bde657bcb9f86ef4396dc5e0c537f42">More...</a><br /></td></tr>
 <tr class="separator:a0bde657bcb9f86ef4396dc5e0c537f42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41ffb58fe0e0572450287ff1c9caf29a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment.html">GraphvizFragment</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a41ffb58fe0e0572450287ff1c9caf29a">DoGetGraphvizFragment</a> (const <a class="el" href="structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment_params.html">GraphvizFragmentParams</a> &amp;params) const override</td></tr>
+<tr class="memdesc:a41ffb58fe0e0572450287ff1c9caf29a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The NVI implementation of <a class="el" href="classdrake_1_1systems_1_1_system_base.html#abfd58214195f7fbebfb65a7ef0c84d06" title="(Advanced) Like GetGraphvizString() but does not wrap the string in a digraph { … }.">SystemBase::GetGraphvizFragment()</a> for subclasses to override if desired.  <a href="#a41ffb58fe0e0572450287ff1c9caf29a">More...</a><br /></td></tr>
+<tr class="separator:a41ffb58fe0e0572450287ff1c9caf29a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classdrake_1_1systems_1_1_system"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classdrake_1_1systems_1_1_system')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classdrake_1_1systems_1_1_system.html">System&lt; T &gt;</a></td></tr>
 <tr class="memitem:ac9fbf92ac77db4d805a5a5cf980de130 inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#a69608eb99ec6982ed17d1ac6d3d6dce1">SystemConstraintIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#ac9fbf92ac77db4d805a5a5cf980de130">AddConstraint</a> (std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_system_constraint.html">SystemConstraint</a>&lt; T &gt;&gt; constraint)</td></tr>
 <tr class="memdesc:ac9fbf92ac77db4d805a5a5cf980de130 inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an already-created constraint to the list of constraints for this <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a>.  <a href="classdrake_1_1systems_1_1_system.html#ac9fbf92ac77db4d805a5a5cf980de130">More...</a><br /></td></tr>
@@ -784,6 +795,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a86649644cbbb5db1a63f2ef6dde59edd inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html">SystemScalarConverter</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a86649644cbbb5db1a63f2ef6dde59edd">get_mutable_system_scalar_converter</a> ()</td></tr>
 <tr class="memdesc:a86649644cbbb5db1a63f2ef6dde59edd inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html" title="Helper class to convert a System into a System&lt;T&gt;, intended for internal use by the System framework,...">SystemScalarConverter</a> for <code>this</code> system.  <a href="classdrake_1_1systems_1_1_system.html#a86649644cbbb5db1a63f2ef6dde59edd">More...</a><br /></td></tr>
 <tr class="separator:a86649644cbbb5db1a63f2ef6dde59edd inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41ffb58fe0e0572450287ff1c9caf29a inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment.html">GraphvizFragment</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a41ffb58fe0e0572450287ff1c9caf29a">DoGetGraphvizFragment</a> (const <a class="el" href="structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment_params.html">GraphvizFragmentParams</a> &amp;params) const override</td></tr>
+<tr class="memdesc:a41ffb58fe0e0572450287ff1c9caf29a inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">The NVI implementation of <a class="el" href="classdrake_1_1systems_1_1_system_base.html#abfd58214195f7fbebfb65a7ef0c84d06" title="(Advanced) Like GetGraphvizString() but does not wrap the string in a digraph { … }.">SystemBase::GetGraphvizFragment()</a> for subclasses to override if desired.  <a href="classdrake_1_1systems_1_1_system.html#a41ffb58fe0e0572450287ff1c9caf29a">More...</a><br /></td></tr>
+<tr class="separator:a41ffb58fe0e0572450287ff1c9caf29a inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7da4e8aa9a414faa5b40fc64e8ca40e3 inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_cache_entry.html">CacheEntry</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a7da4e8aa9a414faa5b40fc64e8ca40e3">DeclareCacheEntry</a> (std::string description, <a class="el" href="classdrake_1_1systems_1_1_value_producer.html">ValueProducer</a> value_producer, std::set&lt; <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> &gt; prerequisites_of_calc={ <a class="el" href="classdrake_1_1systems_1_1_system_base.html#af0b9bc9f93181e042bdb2c36f4dbea10">all_sources_ticket</a>()})</td></tr>
 <tr class="memdesc:a7da4e8aa9a414faa5b40fc64e8ca40e3 inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares a new CacheEntry in this <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> using the most generic form of the calculation function.  <a href="classdrake_1_1systems_1_1_system.html#a7da4e8aa9a414faa5b40fc64e8ca40e3">More...</a><br /></td></tr>
 <tr class="separator:a7da4e8aa9a414faa5b40fc64e8ca40e3 inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1598,6 +1612,37 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a41ffb58fe0e0572450287ff1c9caf29a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41ffb58fe0e0572450287ff1c9caf29a">&#9670;&nbsp;</a></span>DoGetGraphvizFragment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment.html">GraphvizFragment</a> DoGetGraphvizFragment </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment_params.html">GraphvizFragmentParams</a> &amp;&#160;</td>
+          <td class="paramname"><em>params</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The NVI implementation of <a class="el" href="classdrake_1_1systems_1_1_system_base.html#abfd58214195f7fbebfb65a7ef0c84d06" title="(Advanced) Like GetGraphvizString() but does not wrap the string in a digraph { … }.">SystemBase::GetGraphvizFragment()</a> for subclasses to override if desired. </p>
+<p>The default behavior should be sufficient in most cases. </p>
+
+<p>Reimplemented from <a class="el" href="classdrake_1_1systems_1_1_system_base.html#a140f5e4ae62c9208e368ea15d7612155">SystemBase</a>.</p>
+
+</div>
+</div>
 <a id="a5397584aad6c508e3863d5121c662432"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5397584aad6c508e3863d5121c662432">&#9670;&nbsp;</a></span>DoGetMutableTargetSystemCompositeEventCollection()</h2>
 
@@ -2071,47 +2116,6 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ac370e74eb508e94b3eee667977d7185a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac370e74eb508e94b3eee667977d7185a">&#9670;&nbsp;</a></span>GetGraphvizFragment()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void GetGraphvizFragment </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
-          <td class="paramname"><em>max_depth</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::stringstream *&#160;</td>
-          <td class="paramname"><em>dot</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a Graphviz fragment describing this <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a>. </p>
-<p>To obtain a complete Graphviz graph, call <a class="el" href="classdrake_1_1systems_1_1_system.html#a588e4f7454694f04b4b654d154f170f3" title="Returns a Graphviz string describing this System.">System&lt;T&gt;::GetGraphvizString</a>. </p>
-
-<p>Reimplemented from <a class="el" href="classdrake_1_1systems_1_1_system.html#a8946ae289e8ce80d9d03114e6f60bd86">System&lt; T &gt;</a>.</p>
-
-</div>
-</div>
 <a id="acfd6d412aafdf2814ced8e8fe460fc23"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acfd6d412aafdf2814ced8e8fe460fc23">&#9670;&nbsp;</a></span>GetGraphvizInputPortToken()</h2>
 
@@ -2152,8 +2156,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Appends a fragment to the <code>dot</code> stream identifying the graphviz node representing <code>port</code>. </p>
-<p>Does nothing by default. </p>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000016">Deprecated:</a></b></dt><dd>Instead of calling this function, call GetGraphvizFragment(). <br />
+ This will be removed from Drake on or after 2024-01-01.</dd></dl>
 
 <p>Reimplemented from <a class="el" href="classdrake_1_1systems_1_1_system.html#ab8056b92562217c25ff76fac7ad67961">System&lt; T &gt;</a>.</p>
 
@@ -2199,8 +2204,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Appends a fragment to the <code>dot</code> stream identifying the graphviz node representing <code>port</code>. </p>
-<p>Does nothing by default. </p>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000017">Deprecated:</a></b></dt><dd>Instead of calling this function, call GetGraphvizFragment() <br />
+ This will be removed from Drake on or after 2024-01-01.</dd></dl>
 
 <p>Reimplemented from <a class="el" href="classdrake_1_1systems_1_1_system.html#aa75de0b661eaa9b9a45959a9de4eaae0">System&lt; T &gt;</a>.</p>
 
@@ -2572,8 +2578,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a268013bacd119a14d00b1b14028cbd5c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a268013bacd119a14d00b1b14028cbd5c">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a4b83dd5f96c886cc1b1a63583b943c39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b83dd5f96c886cc1b1a63583b943c39">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2584,7 +2590,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_diagram.html">Diagram</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_diagram.html">Diagram</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram.html">Diagram</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -2598,8 +2604,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a4b83dd5f96c886cc1b1a63583b943c39"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4b83dd5f96c886cc1b1a63583b943c39">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a268013bacd119a14d00b1b14028cbd5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a268013bacd119a14d00b1b14028cbd5c">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2610,7 +2616,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_diagram.html">Diagram</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram.html">Diagram</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_diagram.html">Diagram</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

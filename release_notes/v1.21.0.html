@@ -161,6 +161,8 @@ hidden symbols. This is particularly an advantage for wheel builds.</li>
       <li>During manual testing on macOS, we found that RenderEngineVtk sometimes does
 not obey <code class="language-plaintext highlighter-rouge">show_window=true</code>. It is not clear whether this is a new bug due
 to the upgrade. Refer to <a href="https://github.com/RobotLocomotion/drake/pull/20144">#20144</a> for further discussion.</li>
+      <li>On macOS, when building Drake from source as a bazel external, you must not
+have <code class="language-plaintext highlighter-rouge">build --force_pic</code> in your <code class="language-plaintext highlighter-rouge">.bazelrc</code> file (<a href="https://github.com/RobotLocomotion/drake/pull/20217">#20217</a>).</li>
     </ul>
   </li>
   <li>CMake users no longer need to install Bazel when building Drake from source

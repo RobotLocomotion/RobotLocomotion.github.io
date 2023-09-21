@@ -11192,20 +11192,6 @@ which case it will return the deprecated port.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.framework.System.GetGraphvizString">
-<span class="sig-name descname"><span class="pre">GetGraphvizString</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System" title="pydrake.systems.framework.System"><span class="pre">pydrake.systems.framework.System</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_depth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2147483647</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#pydrake.systems.framework.System.GetGraphvizString" title="Permalink to this definition"></a></dt>
-<dd><p>Returns a Graphviz string describing this System. To render the
-string, use the Graphviz tool, <code class="docutils literal notranslate"><span class="pre">dot</span></code>. <a class="reference external" href="http://www.graphviz.org/">http://www.graphviz.org/</a></p>
-<p>Deprecated ports are flagged with a headstone emoji (🪦) after their
-name.</p>
-<dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">max_depth</span></code>:</dt><dd><p>Sets a limit to the depth of nested diagrams to visualize. Set to
-zero to render a diagram as a single system block.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.System.GetInputPort">
 <span class="sig-name descname"><span class="pre">GetInputPort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System" title="pydrake.systems.framework.System"><span class="pre">pydrake.systems.framework.System</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">port_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.framework.System.GetInputPort" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the typed input port with the unique name <code class="docutils literal notranslate"><span class="pre">port_name</span></code>. The
@@ -12291,20 +12277,6 @@ which case it will return the deprecated port.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.framework.System_-AutoDiffXd-.GetGraphvizString">
-<span id="pydrake.systems.framework.System_[AutoDiffXd].GetGraphvizString"></span><span class="sig-name descname"><span class="pre">GetGraphvizString</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_depth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2147483647</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#pydrake.systems.framework.System_-AutoDiffXd-.GetGraphvizString" title="Permalink to this definition"></a></dt>
-<dd><p>Returns a Graphviz string describing this System. To render the
-string, use the Graphviz tool, <code class="docutils literal notranslate"><span class="pre">dot</span></code>. <a class="reference external" href="http://www.graphviz.org/">http://www.graphviz.org/</a></p>
-<p>Deprecated ports are flagged with a headstone emoji (🪦) after their
-name.</p>
-<dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">max_depth</span></code>:</dt><dd><p>Sets a limit to the depth of nested diagrams to visualize. Set to
-zero to render a diagram as a single system block.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.System_-AutoDiffXd-.GetInputPort">
 <span id="pydrake.systems.framework.System_[AutoDiffXd].GetInputPort"></span><span class="sig-name descname"><span class="pre">GetInputPort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.framework.InputPort_" title="pydrake.systems.framework.InputPort_"><span class="pre">pydrake.systems.framework.InputPort_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.framework.System_-AutoDiffXd-.GetInputPort" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the typed input port with the unique name <code class="docutils literal notranslate"><span class="pre">port_name</span></code>. The
@@ -13384,20 +13356,6 @@ which case it will return the deprecated port.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.framework.System_-Expression-.GetGraphvizString">
-<span id="pydrake.systems.framework.System_[Expression].GetGraphvizString"></span><span class="sig-name descname"><span class="pre">GetGraphvizString</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_depth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2147483647</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#pydrake.systems.framework.System_-Expression-.GetGraphvizString" title="Permalink to this definition"></a></dt>
-<dd><p>Returns a Graphviz string describing this System. To render the
-string, use the Graphviz tool, <code class="docutils literal notranslate"><span class="pre">dot</span></code>. <a class="reference external" href="http://www.graphviz.org/">http://www.graphviz.org/</a></p>
-<p>Deprecated ports are flagged with a headstone emoji (🪦) after their
-name.</p>
-<dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">max_depth</span></code>:</dt><dd><p>Sets a limit to the depth of nested diagrams to visualize. Set to
-zero to render a diagram as a single system block.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.System_-Expression-.GetInputPort">
 <span id="pydrake.systems.framework.System_[Expression].GetInputPort"></span><span class="sig-name descname"><span class="pre">GetInputPort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.framework.InputPort_" title="pydrake.systems.framework.InputPort_"><span class="pre">pydrake.systems.framework.InputPort_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.framework.System_-Expression-.GetInputPort" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the typed input port with the unique name <code class="docutils literal notranslate"><span class="pre">port_name</span></code>. The
@@ -13960,6 +13918,14 @@ variable xdᵢ (may be a vector). (We sometimes refer to this as a
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.SystemBase.DoGetGraphvizFragment">
+<span class="sig-name descname"><span class="pre">DoGetGraphvizFragment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.SystemBase" title="pydrake.systems.framework.SystemBase"><span class="pre">pydrake.systems.framework.SystemBase</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.SystemBase.GraphvizFragmentParams" title="pydrake.systems.framework.SystemBase.GraphvizFragmentParams"><span class="pre">pydrake.systems.framework.SystemBase.GraphvizFragmentParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.framework.SystemBase.GraphvizFragment" title="pydrake.systems.framework.SystemBase.GraphvizFragment"><span class="pre">pydrake.systems.framework.SystemBase.GraphvizFragment</span></a></span></span><a class="headerlink" href="#pydrake.systems.framework.SystemBase.DoGetGraphvizFragment" title="Permalink to this definition"></a></dt>
+<dd><p>The NVI implementation of GetGraphvizFragment() for subclasses to
+override if desired. The default behavior should be sufficient in most
+cases.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.SystemBase.get_cache_entry">
 <span class="sig-name descname"><span class="pre">get_cache_entry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.SystemBase" title="pydrake.systems.framework.SystemBase"><span class="pre">pydrake.systems.framework.SystemBase</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.CacheIndex" title="pydrake.systems.framework.CacheIndex"><span class="pre">pydrake.systems.framework.CacheIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.framework.CacheEntry" title="pydrake.systems.framework.CacheEntry"><span class="pre">pydrake.systems.framework.CacheEntry</span></a></span></span><a class="headerlink" href="#pydrake.systems.framework.SystemBase.get_cache_entry" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a reference to a CacheEntry given its <code class="docutils literal notranslate"><span class="pre">index</span></code>.</p>
@@ -13974,6 +13940,68 @@ contained subsystem for which no user-provided name is available.
 Systems created by copying with a scalar type change have the same
 name as the source system. An empty string is returned if no name has
 been set.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.SystemBase.GetGraphvizFragment">
+<span class="sig-name descname"><span class="pre">GetGraphvizFragment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.SystemBase" title="pydrake.systems.framework.SystemBase"><span class="pre">pydrake.systems.framework.SystemBase</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_depth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.framework.SystemBase.GraphvizFragment" title="pydrake.systems.framework.SystemBase.GraphvizFragment"><span class="pre">pydrake.systems.framework.SystemBase.GraphvizFragment</span></a></span></span><a class="headerlink" href="#pydrake.systems.framework.SystemBase.GetGraphvizFragment" title="Permalink to this definition"></a></dt>
+<dd><p>(Advanced) Like GetGraphvizString() but does not wrap the string in a
+<code class="docutils literal notranslate"><span class="pre">digraph</span> <span class="pre">{</span> <span class="pre">…</span> <span class="pre">}</span></code>. This is useful when merging the fragment into
+another graph, and is how Diagram obtains the Graphviz content for its
+subsystems. The parameters are identical to GetGraphvizString(). The
+return value contains additional metadata beyond the Graphviz content,
+to better support merging.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.SystemBase.GetGraphvizString">
+<span class="sig-name descname"><span class="pre">GetGraphvizString</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.SystemBase" title="pydrake.systems.framework.SystemBase"><span class="pre">pydrake.systems.framework.SystemBase</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_depth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.systems.framework.SystemBase.GetGraphvizString" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a Graphviz string describing this System. To render the
+string, use the <a class="reference external" href="http://www.graphviz.org/">Graphviz</a> tool, <code class="docutils literal notranslate"><span class="pre">dot</span></code>.</p>
+<p>Notes about the display conventions:</p>
+<ul class="simple">
+<li><p>The nodes of the graph are systems, and the solid edges are connections</p></li>
+</ul>
+<p>between system input and output ports.</p>
+<ul class="simple">
+<li><p>The class name of a System is shown in <strong>Bold</strong> atop the node.</p></li>
+<li><p>Under the class name, if a System has been given a name via set_name(),</p></li>
+</ul>
+<p>it will be displayed as <code class="docutils literal notranslate"><span class="pre">name=...</span></code>.</p>
+<ul class="simple">
+<li><p>Systems can elect to display additional properties besides their name;</p></li>
+</ul>
+<p>see GraphvizFragmentParams::header_lines for implementation details.</p>
+<ul class="simple">
+<li><p>A Diagram’s input ports are shown with a</p></li>
+</ul>
+<p>&lt;span style=”border:2px solid blue;border-radius:4px”&gt;blue border&lt;/span&gt;
+and output ports are shown with a
+&lt;span style=”border:2px solid green;border-radius:4px”&gt;green border&lt;/span&gt;.</p>
+<ul class="simple">
+<li><p>Zero-sized ports are &lt;span style=”color:grey”&gt;greyed out&lt;/span&gt;.</p></li>
+<li><p>Deprecated ports are &lt;strike&gt;struck through&lt;/strike&gt; and flagged with a</p></li>
+</ul>
+<p>headstone emoji (🪦) after their name.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">max_depth</span></code>:</dt><dd><p>Sets a limit to the depth of nested diagrams to visualize. Use
+zero to render a diagram as a single system block.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">options</span></code>:</dt><dd><p>Arbitrary strings to request alterations to the output. Options
+that are unknown will be silently skipped. These options are often
+bespoke flags that are only understood by particular systems, but
+Drake has one built-in flag that is generally applicable:
+<code class="docutils literal notranslate"><span class="pre">&quot;split&quot;</span></code>. When set to <code class="docutils literal notranslate"><span class="pre">&quot;I/O&quot;</span></code>, the system will be added as
+two nodes with all inputs on one node and all outputs on the
+other; this is useful for systems that might otherwise cause
+problematic visual cycles.</p>
+</dd>
+</dl>
+<p>Options are applied only to this immediate system; they are not
+inherited by the subsystems of a Diagram. To specify an option for a
+Diagram’s subsystem, prefix the option name with the subsystem’s path,
+e.g., use <code class="docutils literal notranslate"><span class="pre">&quot;plant/split&quot;=&quot;I/O&quot;</span></code> to set the <code class="docutils literal notranslate"><span class="pre">&quot;split&quot;</span></code> option on the
+subsystem named <code class="docutils literal notranslate"><span class="pre">&quot;plant&quot;</span></code>.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -14006,6 +14034,88 @@ qualification if present.</p>
 <p class="admonition-title">See also</p>
 <p>NiceTypeName for more specifics.</p>
 </div>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.framework.SystemBase.GraphvizFragment">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GraphvizFragment</span></span><a class="headerlink" href="#pydrake.systems.framework.SystemBase.GraphvizFragment" title="Permalink to this definition"></a></dt>
+<dd><p>(Advanced) The return type of GetGraphvizFragment().</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.SystemBase.GraphvizFragment.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.SystemBase.GraphvizFragment.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.systems.framework.SystemBase.GraphvizFragment.fragments">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fragments</span></span><a class="headerlink" href="#pydrake.systems.framework.SystemBase.GraphvizFragment.fragments" title="Permalink to this definition"></a></dt>
+<dd><p>The Graphviz content for this System. The fragments must be a valid
+Graphviz figure when concatenated and then wrapped in a <code class="docutils literal notranslate"><span class="pre">digraph</span> <span class="pre">{</span> <span class="pre">…</span>
+<span class="pre">}</span></code> or <code class="docutils literal notranslate"><span class="pre">subgraph</span> <span class="pre">{</span> <span class="pre">…</span> <span class="pre">}</span></code> stanza. During concatenation, no extra
+newlines or any other kind of whitespace should be inserted. (This is
+a list of strings, rather than a single string, to avoid redundant
+string concatenation until the last moment when we return the final
+GetGraphvizString().)</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.systems.framework.SystemBase.GraphvizFragment.input_ports">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">input_ports</span></span><a class="headerlink" href="#pydrake.systems.framework.SystemBase.GraphvizFragment.input_ports" title="Permalink to this definition"></a></dt>
+<dd><p>The Graphviz IDs for this System’s input ports, to be used for adding
+Graphviz edges. The i’th element is the ID for <code class="docutils literal notranslate"><span class="pre">get_input_port(i)</span></code>.
+For a typical LeafSystem these will look like “s123:u0”, “s123:u1”, …
+but for diagrams and other special cases they might vary.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.systems.framework.SystemBase.GraphvizFragment.output_ports">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">output_ports</span></span><a class="headerlink" href="#pydrake.systems.framework.SystemBase.GraphvizFragment.output_ports" title="Permalink to this definition"></a></dt>
+<dd><p>The Graphviz IDs for this System’s output ports, to be used for adding
+Graphviz edges. The i’th element is the ID for <code class="docutils literal notranslate"><span class="pre">get_output_port(i)</span></code>.
+For a typical LeafSystem these will look like “s123:y0”, “s123:y1”, …
+but for diagrams and other special cases they might vary.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.framework.SystemBase.GraphvizFragmentParams">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GraphvizFragmentParams</span></span><a class="headerlink" href="#pydrake.systems.framework.SystemBase.GraphvizFragmentParams" title="Permalink to this definition"></a></dt>
+<dd><p>The arguments to DoGetGraphvizFragment(). These parameters constitute
+a polite request; a user’s System’s implementation of
+DoGetGraphvizFragment() is not strictly required to honor any of these
+parameters, but generally should attempt to honor as many as possible.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.SystemBase.GraphvizFragmentParams.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.SystemBase.GraphvizFragmentParams.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.systems.framework.SystemBase.GraphvizFragmentParams.header_lines">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">header_lines</span></span><a class="headerlink" href="#pydrake.systems.framework.SystemBase.GraphvizFragmentParams.header_lines" title="Permalink to this definition"></a></dt>
+<dd><p>The header line(s) to use for this Graphviz node’s table. The strings
+in <code class="docutils literal notranslate"><span class="pre">header_lines</span></code> should not contain newlines; those are added
+automatically, along with ``</p>
+<p>`` breaks between lines.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.systems.framework.SystemBase.GraphvizFragmentParams.max_depth">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_depth</span></span><a class="headerlink" href="#pydrake.systems.framework.SystemBase.GraphvizFragmentParams.max_depth" title="Permalink to this definition"></a></dt>
+<dd><p>As per GetGraphvizString().</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.systems.framework.SystemBase.GraphvizFragmentParams.node_id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">node_id</span></span><a class="headerlink" href="#pydrake.systems.framework.SystemBase.GraphvizFragmentParams.node_id" title="Permalink to this definition"></a></dt>
+<dd><p>The Graphviz ID to use for this node.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.systems.framework.SystemBase.GraphvizFragmentParams.options">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">options</span></span><a class="headerlink" href="#pydrake.systems.framework.SystemBase.GraphvizFragmentParams.options" title="Permalink to this definition"></a></dt>
+<dd><p>As per GetGraphvizString().</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py method">

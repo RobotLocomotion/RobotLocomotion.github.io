@@ -2506,6 +2506,35 @@ remain valid for the lifetime of <code class="docutils literal notranslate"><spa
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.AddWeldConstraint">
+<span class="sig-name descname"><span class="pre">AddWeldConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">body_A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Body" title="pydrake.multibody.tree.Body"><span class="pre">pydrake.multibody.tree.Body</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_AP</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">body_B</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Body" title="pydrake.multibody.tree.Body"><span class="pre">pydrake.multibody.tree.Body</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_BQ</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.MultibodyConstraintId" title="pydrake.multibody.tree.MultibodyConstraintId"><span class="pre">pydrake.multibody.tree.MultibodyConstraintId</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.AddWeldConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>Defines a constraint such that frame P affixed to body A is coincident
+at all times with frame Q affixed to body B, effectively modeling a
+weld joint.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body_A</span></code>:</dt><dd><p>Body to which frame P is rigidly attached.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_AP</span></code>:</dt><dd><p>Pose of frame P in body A’s frame.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body_B</span></code>:</dt><dd><p>Body to which frame Q is rigidly attached.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_BQ</span></code>:</dt><dd><p>Pose of frame Q in body B’s frame.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the id of the newly added constraint.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>RuntimeError if bodies A and B are the same body.</strong> – </p></li>
+<li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.CalcBiasCenterOfMassTranslationalAcceleration">
 <span class="sig-name descname"><span class="pre">CalcBiasCenterOfMassTranslationalAcceleration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_respect_to</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JacobianWrtVariable" title="pydrake.multibody.tree.JacobianWrtVariable"><span class="pre">pydrake.multibody.tree.JacobianWrtVariable</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame" title="pydrake.multibody.tree.Frame"><span class="pre">pydrake.multibody.tree.Frame</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_E</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame" title="pydrake.multibody.tree.Frame"><span class="pre">pydrake.multibody.tree.Frame</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.CalcBiasCenterOfMassTranslationalAcceleration" title="Permalink to this definition"></a></dt>
 <dd><p>Calculates abias_ACcm_E, point Ccm’s translational “bias” acceleration
@@ -7318,6 +7347,35 @@ remain valid for the lifetime of <code class="docutils literal notranslate"><spa
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.AddWeldConstraint">
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].AddWeldConstraint"></span><span class="sig-name descname"><span class="pre">AddWeldConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body_A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_AP</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">body_B</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_BQ</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.MultibodyConstraintId" title="pydrake.multibody.tree.MultibodyConstraintId"><span class="pre">pydrake.multibody.tree.MultibodyConstraintId</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.AddWeldConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>Defines a constraint such that frame P affixed to body A is coincident
+at all times with frame Q affixed to body B, effectively modeling a
+weld joint.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body_A</span></code>:</dt><dd><p>Body to which frame P is rigidly attached.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_AP</span></code>:</dt><dd><p>Pose of frame P in body A’s frame.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body_B</span></code>:</dt><dd><p>Body to which frame Q is rigidly attached.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_BQ</span></code>:</dt><dd><p>Pose of frame Q in body B’s frame.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the id of the newly added constraint.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>RuntimeError if bodies A and B are the same body.</strong> – </p></li>
+<li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.CalcBiasCenterOfMassTranslationalAcceleration">
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].CalcBiasCenterOfMassTranslationalAcceleration"></span><span class="sig-name descname"><span class="pre">CalcBiasCenterOfMassTranslationalAcceleration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_respect_to</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JacobianWrtVariable" title="pydrake.multibody.tree.JacobianWrtVariable"><span class="pre">pydrake.multibody.tree.JacobianWrtVariable</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame_" title="pydrake.multibody.tree.Frame_"><span class="pre">pydrake.multibody.tree.Frame_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_E</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame_" title="pydrake.multibody.tree.Frame_"><span class="pre">pydrake.multibody.tree.Frame_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.CalcBiasCenterOfMassTranslationalAcceleration" title="Permalink to this definition"></a></dt>
 <dd><p>Calculates abias_ACcm_E, point Ccm’s translational “bias” acceleration
@@ -12081,6 +12139,35 @@ expressed in the body frame B.</p>
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>A constant reference to the new RigidBody just added, which will
 remain valid for the lifetime of <code class="docutils literal notranslate"><span class="pre">this</span></code> MultibodyPlant.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.AddWeldConstraint">
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].AddWeldConstraint"></span><span class="sig-name descname"><span class="pre">AddWeldConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body_A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_AP</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">body_B</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_BQ</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.MultibodyConstraintId" title="pydrake.multibody.tree.MultibodyConstraintId"><span class="pre">pydrake.multibody.tree.MultibodyConstraintId</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.AddWeldConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>Defines a constraint such that frame P affixed to body A is coincident
+at all times with frame Q affixed to body B, effectively modeling a
+weld joint.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body_A</span></code>:</dt><dd><p>Body to which frame P is rigidly attached.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_AP</span></code>:</dt><dd><p>Pose of frame P in body A’s frame.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body_B</span></code>:</dt><dd><p>Body to which frame Q is rigidly attached.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_BQ</span></code>:</dt><dd><p>Pose of frame Q in body B’s frame.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the id of the newly added constraint.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>RuntimeError if bodies A and B are the same body.</strong> – </p></li>
+<li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>

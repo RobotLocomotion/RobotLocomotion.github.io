@@ -173,7 +173,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1symbolic_1_1_polynomial.
 <p>A symbolic polynomial keeps a mapping from a monomial of indeterminates to its coefficient in a symbolic expression.</p>
 <p>A polynomial <code>p</code> has to satisfy an invariant such that <code>p.decision_variables() ∩ p.indeterminates() = ∅</code>. We have CheckInvariant() method to check the invariant.</p>
 <p><a class="anchor" id="polynomial_variable_operation"></a></p><h3>Operation between a Polynomial and a Variable </h3>
-<p>Note that for arithmetic operations ⊕ (where ⊕ can be +,-,*) between a <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html" title="Represents symbolic polynomials.">Polynomial</a> <code>p</code> and a <a class="el" href="classdrake_1_1symbolic_1_1_variable.html" title="Represents a symbolic variable.">Variable</a> <code>v</code>, if the variable <code>v</code> is an indeterminate of the polynomial <code>p</code>, then we regard <code>v</code> as a monomial with indeterminate <code>v</code> with coefficient 1; on the other hand, if the variable <code>v</code> is not an indeterminate of <code>p</code>, then we regard <code>v</code> as a monomial with 0 degree and coefficient <code>v</code>, and <code>v</code> will be appended to <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#a26f55e6d78730b68a8d404a772d4c8a1" title="Returns the decision variables of this polynomial.">decision_variables()</a> of the resulted polynomial. For example, if p = ax²+y where (x,y) are indeterminates and a is a decision variable, then in the operation p + y, the result stores the monomial-to-coefficient mapping as {(x² -&gt; a), (y -&gt; 2)}; on the other hand, in the operation p + b, b is regarded as a 0-degree monomial with coefficient b, and p + b stores the monomial-to-coefficient mapping as {(x² -&gt; a), (y -&gt; 1), (1 -&gt; b)}, with (p + b).<a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#a26f55e6d78730b68a8d404a772d4c8a1" title="Returns the decision variables of this polynomial.">decision_variables()</a> being {a, b}. If you want to append the variable <code>v</code> to the indeterminates of the p⊕v, then explicitly convert it to a monomial as p +/-/* symbolic::Monomial(v). </p>
+<p>Note that for arithmetic operations ⊕ (where ⊕ can be +,-,*) between a <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html" title="Represents symbolic polynomials.">Polynomial</a> <code>p</code> and a <a class="el" href="classdrake_1_1symbolic_1_1_variable.html" title="Represents a symbolic variable.">Variable</a> <code>v</code>, if the variable <code>v</code> is an indeterminate of the polynomial <code>p</code>, then we regard <code>v</code> as a monomial with indeterminate <code>v</code> with coefficient 1; on the other hand, if the variable <code>v</code> is not an indeterminate of <code>p</code>, then we regard <code>v</code> as a monomial with 0 degree and coefficient <code>v</code>, and <code>v</code> will be appended to <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#a26f55e6d78730b68a8d404a772d4c8a1" title="Returns the decision variables of this polynomial.">decision_variables()</a> of the resulted polynomial. For example, if p = ax²+y where (x,y) are indeterminates and a is a decision variable, then in the operation p + y, the result stores the monomial-to-coefficient mapping as {(x² -&gt; a), (y -&gt; 2)}; on the other hand, in the operation p + b, b is regarded as a 0-degree monomial with coefficient b, and p + b stores the monomial-to-coefficient mapping as {(x² -&gt; a), (y -&gt; 1), (1 -&gt; b)}, with (p + b).<a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#a26f55e6d78730b68a8d404a772d4c8a1" title="Returns the decision variables of this polynomial.">decision_variables()</a> being {a, b}. If you want to append the variable <code>v</code> to the indeterminates of the p⊕v, then explicitly convert it to a monomial as p ⊕ symbolic::Monomial(v). </p>
 </div>
 <p><code>#include &lt;drake/common/symbolic/polynomial.h&gt;</code></p>
 <table class="memberdecls">
@@ -264,13 +264,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a55826a916b7c6f12060f7ff4e590813f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds <code>coeff</code> * <code>m</code> to this polynomial.  <a href="#a55826a916b7c6f12060f7ff4e590813f">More...</a><br /></td></tr>
 <tr class="separator:a55826a916b7c6f12060f7ff4e590813f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ae776f5eb8c539a884066d445307ffd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#a6ae776f5eb8c539a884066d445307ffd">SubstituteAndExpand</a> (const std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a>, <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &gt; &amp;indeterminate_substitution, <a class="el" href="structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data.html">SubstituteAndExpandCacheData</a> *substitutions_cached_data=nullptr) const</td></tr>
-<tr class="memdesc:a6ae776f5eb8c539a884066d445307ffd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Substitute the monomials of this polynomial with new polynomial expressions and expand the polynomial to the monomial basis.  <a href="#a6ae776f5eb8c539a884066d445307ffd">More...</a><br /></td></tr>
+<tr class="memdesc:a6ae776f5eb8c539a884066d445307ffd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Substitutes the monomials of this polynomial with new polynomial expressions and expand the polynomial to the monomial basis.  <a href="#a6ae776f5eb8c539a884066d445307ffd">More...</a><br /></td></tr>
 <tr class="separator:a6ae776f5eb8c539a884066d445307ffd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9cdee394fc34d52f16a1b62681df409d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#a9cdee394fc34d52f16a1b62681df409d">Expand</a> () const</td></tr>
 <tr class="memdesc:a9cdee394fc34d52f16a1b62681df409d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expands each coefficient expression and returns the expanded polynomial.  <a href="#a9cdee394fc34d52f16a1b62681df409d">More...</a><br /></td></tr>
 <tr class="separator:a9cdee394fc34d52f16a1b62681df409d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a376ec1877fc3946abaeddcefa6bf9a0a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#a376ec1877fc3946abaeddcefa6bf9a0a">RemoveTermsWithSmallCoefficients</a> (<a class="el" href="classdouble.html">double</a> coefficient_tol) const</td></tr>
-<tr class="memdesc:a376ec1877fc3946abaeddcefa6bf9a0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the terms whose absolute value of the coefficients are smaller than or equal to <code>coefficient_tol</code> For example, if the polynomial is 2x² + 3xy + 10⁻⁴x - 10⁻⁵, then after calling RemoveTermsWithSmallCoefficients(1e-3), the returned polynomial becomes 2x² + 3xy.  <a href="#a376ec1877fc3946abaeddcefa6bf9a0a">More...</a><br /></td></tr>
+<tr class="memdesc:a376ec1877fc3946abaeddcefa6bf9a0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the terms whose absolute value of the coefficients are smaller than or equal to <code>coefficient_tol</code>.  <a href="#a376ec1877fc3946abaeddcefa6bf9a0a">More...</a><br /></td></tr>
 <tr class="separator:a376ec1877fc3946abaeddcefa6bf9a0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48743d012fd5eb6d0eb9c2f2d34ef588"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#a48743d012fd5eb6d0eb9c2f2d34ef588">IsEven</a> () const</td></tr>
 <tr class="memdesc:a48743d012fd5eb6d0eb9c2f2d34ef588"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the polynomial is even, namely p(x) = p(-x).  <a href="#a48743d012fd5eb6d0eb9c2f2d34ef588">More...</a><br /></td></tr>
@@ -509,7 +509,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructs a polynomial from a monomial <code>m</code>. </p>
-<p>Note that all variables in <code>m</code> are considered as indeterminates. </p>
+<p>Note that all variables in <code>m</code> are considered as indeterminates. Note that this implicit conversion is desirable to have a dot product of two Eigen::Vector&lt;Monomial&gt;s return a <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html" title="Represents symbolic polynomials.">Polynomial</a>. </p>
 
 </div>
 </div>
@@ -567,8 +567,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructs a polynomial from an expression <code>e</code>. </p>
-<p>Note that all variables in <code>e</code> are considered as indeterminates.</p>
-<dl class="exception"><dt>Exceptions</dt><dd>
+<p>Note that all variables in <code>e</code> are considered as indeterminates. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if <code>e</code> is not a polynomial. </td></tr>
   </table>
@@ -810,8 +809,8 @@ Friends</h2></td></tr>
 <p>Evaluates the polynomial at a batch of indeterminates values. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">indeterminates</td><td>Must include all this-&gt;<a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#a0bc13b2cc5895e55e2bc5622c3fe4339" title="Returns the indeterminates of this polynomial.">indeterminates()</a> </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">indeterminates_values</td><td>Each column of <code>indeterminates_values</code> stores one specific value of <code>indeterminates</code>. indeterminates_values.rows() == indeterminates.rows(). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">indeterminates</td><td>Must include all <code>this-&gt;<a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#a0bc13b2cc5895e55e2bc5622c3fe4339" title="Returns the indeterminates of this polynomial.">indeterminates()</a></code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">indeterminates_values</td><td>Each column of <code>indeterminates_values</code> stores one specific value of <code>indeterminates</code>; <code>indeterminates_values.rows() == indeterminates.rows()</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -935,7 +934,7 @@ Friends</h2></td></tr>
 <p>For a polynomial whose coefficients are affine expressions of decision variables, we evaluate this polynomial on a batch of indeterminate values, and return the matrix representation of the evaluated affine expressions. For example if p(x) = (a+1)x² + b*x where a, b are decision variables, if we evaluate this polynomial on x = 1 and x = 2, then p(x) = a+b+1 and 4a+2b+4 respectively. We return the evaluation result as A * decision_variables + b, where A.row(i) * decision_variables + b(i) is the evaluation of the polynomial on indeterminates_values.col(i). </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">indeterminates</td><td>Must include all this-&gt;<a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#a0bc13b2cc5895e55e2bc5622c3fe4339" title="Returns the indeterminates of this polynomial.">indeterminates()</a> </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">indeterminates_values</td><td>A matrix representing a batch of values. Each column of <code>indeterminates_values</code> stores one specific value of <code>indeterminates</code>, where indeterminates_values.rows() == indeterminates.rows(). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">indeterminates_values</td><td>A matrix representing a batch of values. Each column of <code>indeterminates_values</code> stores one specific value of <code>indeterminates</code>, where <code>indeterminates_values.rows() == indeterminates.rows()</code>. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">A</td><td>The coefficient of the evaluation results. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">decision_variables</td><td>The decision variables in the evaluation results. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">b</td><td>The constant terms in the evaluation results. </td></tr>
@@ -1472,8 +1471,8 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Removes the terms whose absolute value of the coefficients are smaller than or equal to <code>coefficient_tol</code> For example, if the polynomial is 2x² + 3xy + 10⁻⁴x - 10⁻⁵, then after calling RemoveTermsWithSmallCoefficients(1e-3), the returned polynomial becomes 2x² + 3xy. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Removes the terms whose absolute value of the coefficients are smaller than or equal to <code>coefficient_tol</code>. </p>
+<p>For example, if the polynomial is 2x² + 3xy + 10⁻⁴x - 10⁻⁵, then after calling RemoveTermsWithSmallCoefficients(1e-3), the returned polynomial becomes 2x² + 3xy. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">coefficient_tol</td><td>A positive scalar. </td></tr>
   </table>
@@ -1504,8 +1503,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the roots of a <em>univariate</em> polynomial with constant coefficients as a column vector. </p>
-<p>There is no specific guarantee on the order of the returned roots.</p>
-<dl class="exception"><dt>Exceptions</dt><dd>
+<p>There is no specific guarantee on the order of the returned roots. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if <code>this</code> is not univariate with constant coefficients. </td></tr>
   </table>
@@ -1531,8 +1529,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Sets the indeterminates to <code>new_indeterminates</code>. </p>
-<p>Changing the indeterminates would change <code><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#a84683ddc5d37c81c0347b9ccf039ad4d" title="Returns the mapping from a Monomial to its corresponding coefficient of this polynomial.">monomial_to_coefficient_map()</a></code>, and also potentially the degree of the polynomial. Here is an example.</p>
-<div class="fragment"><div class="line"><span class="comment">// p is a quadratic polynomial with x being the indeterminates.</span></div><div class="line">symbolic::Polynomial p(a * <a class="code" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> * <a class="code" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> + b * <a class="code" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> + c, {<a class="code" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>});</div><div class="line"><span class="comment">// p.monomial_to_coefficient_map() contains {1: c, x: b, x*x:a}.</span></div><div class="line">std::cout &lt;&lt; p.TotalDegree(); <span class="comment">// prints 2.</span></div><div class="line"><span class="comment">// Now set (a, b, c) to the indeterminates. p becomes a linear</span></div><div class="line"><span class="comment">// polynomial of a, b, c.</span></div><div class="line">p.SetIndeterminates({a, b, c});</div><div class="line"><span class="comment">// p.monomial_to_coefficient_map() now is {a: x * x, b: x, c: 1}.</span></div><div class="line">std::cout &lt;&lt; p.TotalDegree(); <span class="comment">// prints 1.</span></div></div><!-- fragment --> 
+<p>Changing the indeterminates would change <code><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#a84683ddc5d37c81c0347b9ccf039ad4d" title="Returns the mapping from a Monomial to its corresponding coefficient of this polynomial.">monomial_to_coefficient_map()</a></code>, and also potentially the degree of the polynomial. Here is an example. </p><div class="fragment"><div class="line"><span class="comment">// p is a quadratic polynomial with x being the indeterminates.</span></div><div class="line">symbolic::Polynomial p(a * <a class="code" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> * <a class="code" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> + b * <a class="code" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> + c, {<a class="code" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>});</div><div class="line"><span class="comment">// p.monomial_to_coefficient_map() contains {1: c, x: b, x*x:a}.</span></div><div class="line">std::cout &lt;&lt; p.TotalDegree(); <span class="comment">// prints 2.</span></div><div class="line"><span class="comment">// Now set (a, b, c) to the indeterminates. p becomes a linear</span></div><div class="line"><span class="comment">// polynomial of a, b, c.</span></div><div class="line">p.SetIndeterminates({a, b, c});</div><div class="line"><span class="comment">// p.monomial_to_coefficient_map() now is {a: x * x, b: x, c: 1}.</span></div><div class="line">std::cout &lt;&lt; p.TotalDegree(); <span class="comment">// prints 1.</span></div></div><!-- fragment --> 
 </div>
 </div>
 <a id="a6ae776f5eb8c539a884066d445307ffd"></a>
@@ -1561,21 +1558,17 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Substitute the monomials of this polynomial with new polynomial expressions and expand the polynomial to the monomial basis. </p>
-<p>For example, consider the substitution x = a(1-y) into the polynomial x¹⁴ + (x−1)². Repeatedly expanding the powers of x can take a long time using factory methods, so we store intermediate computations in the substitution map to avoid recomputing very high powers. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Substitutes the monomials of this polynomial with new polynomial expressions and expand the polynomial to the monomial basis. </p>
+<p>For example, consider the substitution x = a(1-y) into the polynomial x¹⁴ + (x−1)². Repeatedly expanding the powers of x can take a long time using factory methods, so we store intermediate computations in the substitution map to avoid recomputing very high powers.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir"></td><td class="paramname">indeterminate_substitution</td><td>The substitutions of every indeterminate with the new desired expression. This map must contain each element of <code><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#a0bc13b2cc5895e55e2bc5622c3fe4339" title="Returns the indeterminates of this polynomial.">indeterminates()</a></code>. For performance reasons, it is recommended that this map contains Expanded polynomials as its values, but this is not necessary. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">indeterminate_substitution</td><td>The substitutions of every indeterminate with the new desired expression. This map must contain each element of <code><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#a0bc13b2cc5895e55e2bc5622c3fe4339" title="Returns the indeterminates of this polynomial.">indeterminates()</a></code>. For performance reasons, it is recommended that this map contains Expanded polynomials as its values, but this is not necessary.</td></tr>
     <tr><td class="paramdir">[in,out]</td><td class="paramname">substitutions_cached_data</td><td>A container caching the higher order expansions of the <code>indeterminate_substitutions</code>. Typically, the first time an indeterminate_substitution is performed, this will be empty. If the same indeterminate_substitutions is used for multiple polynomials, passing this value will enable the user to re-use the expansions across multiple calls. For example, suppose we wish to perform the substitution x = a(1-y) into the polynomials p1 = x¹⁴ + (x−1)² and p2 = x⁷. A user may call p1.SubstituteAndExpand({x : a(1-y), substitutions_cached_data}) where substitutions_cached_data is a pointer to an empty container. As part of computing the expansion of p1, the expansion of x⁷ may get computed and stored in substitutions_cached_data, and so a subsequent call of p2.SubstituteAndExpand({x : a(1-y)}, substitutions_cached_data) would be very fast.</td></tr>
   </table>
   </dd>
 </dl>
 <p>Never reuse substitutions_cached_data if indeterminate_substitutions changes as this function will then compute an incorrect result.</p>
-<p>Note that this function is NOT responsible for ensuring that</p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">substitutions_cached_data</td><td>is consistent i.e. this method will not throw an error if substitutions_cached_data contains the inconsistent substitutions {x: y, x²: 2y}. To ensure correct results, ensure that the passed substitutions_cached_data object is consistent with indeterminate_substitutions. The easiest way to do this is to pass a pointer to an empty substitutions_cached_data or nullopt to this function. </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Note that this function is NOT responsible for ensuring that <code>substitutions_cached_data</code> is consistent i.e. this method will not throw an error if substitutions_cached_data contains the inconsistent substitutions {x: y, x²: 2y}. To ensure correct results, ensure that the passed substitutions_cached_data object is consistent with indeterminate_substitutions. The easiest way to do this is to pass a pointer to an empty substitutions_cached_data or nullopt to this function. </p>
 
 </div>
 </div>

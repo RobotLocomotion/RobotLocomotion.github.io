@@ -1,5 +1,13 @@
 var NAVTREEINDEX41 =
 {
+"classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html#a575cafd239d48f8fe814d550d368b1bf":[1,2,2,4,4],
+"classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html#a5c008dea690853955447d85df934fa82":[1,2,2,4,1],
+"classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html#acdebbe41c8d9735aeee1920ac69b07e1":[1,2,2,4,6],
+"classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html#ae549539f28012cd0081d886d117aed5a":[1,2,2,4,0],
+"classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html#aefeee400d114825d8db97204a6999101":[1,2,2,4,2],
+"classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html":[1,2,2,5],
+"classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#a146f7ab66f76d0b5ca62e305cc070436":[1,2,2,5,17],
+"classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#a2684fb1c9068b9503a1cfd12f7b09256":[1,2,2,5,4],
 "classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#a31d6809bd4837dbc26ad2ff734737a21":[1,2,2,5,5],
 "classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#a32fdf6494a6c073762c1866cf8f4fcc9":[1,2,2,5,1],
 "classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#a510ef5819faf7dbd367d7bd569a9a9c8":[1,2,2,5,7],
@@ -241,13 +249,5 @@ var NAVTREEINDEX41 =
 "classdrake_1_1systems_1_1sensors_1_1_camera_info.html#a2a47edcba32f94edbb71f18864c70d92":[3,0,0,15,8,3,2],
 "classdrake_1_1systems_1_1sensors_1_1_camera_info.html#a3145619e4a819f4ae2ec061893bef1d5":[3,0,0,15,8,3,5],
 "classdrake_1_1systems_1_1sensors_1_1_camera_info.html#a5260647c6d73b9af547424968d24da09":[3,0,0,15,8,3,7],
-"classdrake_1_1systems_1_1sensors_1_1_camera_info.html#a5739989024f77d7903794db9b37ea9de":[3,0,0,15,8,3,3],
-"classdrake_1_1systems_1_1sensors_1_1_camera_info.html#a840e2471b3f05b98dbb7d9ec51f6efd7":[3,0,0,15,8,3,0],
-"classdrake_1_1systems_1_1sensors_1_1_camera_info.html#a91be32204a8f6bb1a73d2cebccac0035":[3,0,0,15,8,3,13],
-"classdrake_1_1systems_1_1sensors_1_1_camera_info.html#a9da086ab0710c0415d4c68d4bb1ab4ba":[3,0,0,15,8,3,1],
-"classdrake_1_1systems_1_1sensors_1_1_camera_info.html#aa1d16b9fcf585fe75becb5357c74ba72":[3,0,0,15,8,3,8],
-"classdrake_1_1systems_1_1sensors_1_1_camera_info.html#abb1027925f543f3d11d45ee908a6fbad":[3,0,0,15,8,3,14],
-"classdrake_1_1systems_1_1sensors_1_1_camera_info.html#abc9ba081bfe31e8224d9e40b96f0f717":[3,0,0,15,8,3,10],
-"classdrake_1_1systems_1_1sensors_1_1_camera_info.html#abf26f8c02fcada355b0278b7934b5321":[3,0,0,15,8,3,9],
-"classdrake_1_1systems_1_1sensors_1_1_camera_info.html#aca5377a1606d0d69d2a9365fafd51476":[3,0,0,15,8,3,12]
+"classdrake_1_1systems_1_1sensors_1_1_camera_info.html#a5739989024f77d7903794db9b37ea9de":[3,0,0,15,8,3,3]
 };
