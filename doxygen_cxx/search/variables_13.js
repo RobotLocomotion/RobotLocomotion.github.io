@@ -11,6 +11,7 @@ var searchData=
   ['thrust_5fratio',['thrust_ratio',['../structdrake_1_1multibody_1_1_propeller_info.html#ac154ef8cde7d8d7431d15790225c5b4d',1,'drake::multibody::PropellerInfo']]],
   ['time_5fstep',['time_step',['../structdrake_1_1multibody_1_1_multibody_plant_config.html#aa216048ea5d8bbcef641752b6d744ba8',1,'drake::multibody::MultibodyPlantConfig']]],
   ['top',['top',['../structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a4467598fbba812fe1339ab4e83806573',1,'drake::geometry::Meshcat::OrthographicCamera']]],
+  ['torque_5fmeasured',['torque_measured',['../structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html#a2cffe33598ee1fd17facb76335d653f2',1,'drake::manipulation::kuka_iiwa::IiwaControlPorts']]],
   ['traction_5faq_5fw',['traction_Aq_W',['../structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html#ac40878d3fef16be760e6104ad9c13666',1,'drake::multibody::HydroelasticQuadraturePointData']]],
   ['translation',['translation',['../classdrake_1_1schema_1_1_transform.html#a8aa32d1a678a8151398c7f904d522877',1,'drake::schema::Transform']]],
   ['type',['type',['../structdrake_1_1_polynomial_1_1_product.html#a7a4135c74ceab3342f130fb491ccbe29',1,'drake::Polynomial::Product::type()'],['../structdrake_1_1symbolic_1_1_sin_cos.html#a06a14e4a94aab4befcf2506ef07dc38f',1,'drake::symbolic::SinCos::type()'],['../structdrake_1_1geometry_1_1render_1_1_light_parameter.html#a75b160f574a0be26114bae2c7686a5e1',1,'drake::geometry::render::LightParameter::type()']]]
