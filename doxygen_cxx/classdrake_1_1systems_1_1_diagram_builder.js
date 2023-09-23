@@ -33,7 +33,9 @@ var classdrake_1_1systems_1_1_diagram_builder =
     [ "GetSystems", "classdrake_1_1systems_1_1_diagram_builder.html#a3ed5126a47b838a40adfce66bc85e841", null ],
     [ "HasSubsystemNamed", "classdrake_1_1systems_1_1_diagram_builder.html#a32f1da9ca2c03b9fea79bb06c27504c2", null ],
     [ "IsConnectedOrExported", "classdrake_1_1systems_1_1_diagram_builder.html#acd8bf3d351848a5e2344865a6e4b932e", null ],
-    [ "operator=", "classdrake_1_1systems_1_1_diagram_builder.html#a9707232e37c28463f285aaab01f88c49", null ],
+    [ "num_input_ports", "classdrake_1_1systems_1_1_diagram_builder.html#a94a6d73c74c7268734792b3703e8600d", null ],
+    [ "num_output_ports", "classdrake_1_1systems_1_1_diagram_builder.html#a7ceec1b22b6b1b25fc675234e78e71be", null ],
     [ "operator=", "classdrake_1_1systems_1_1_diagram_builder.html#a1c4553ec1b3caebff0d951e5795fd617", null ],
+    [ "operator=", "classdrake_1_1systems_1_1_diagram_builder.html#a9707232e37c28463f285aaab01f88c49", null ],
     [ "RemoveSystem", "classdrake_1_1systems_1_1_diagram_builder.html#ae7701a7c380b6015ae152d136fd61e5b", null ]
 ];

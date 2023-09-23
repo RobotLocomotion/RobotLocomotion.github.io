@@ -1,5 +1,7 @@
 var NAVTREEINDEX44 =
 {
+"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ac6b633da6524d9de1afa712a666e1c39":[3,0,2,27,6],
+"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#acc28ec4073a854a2d907085ecedd2cd3":[3,0,2,27,2],
 "classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ad20897c5c8bd47f5d4005989bead0e55":[3,0,2,27,13],
 "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html":[3,0,2,31],
 "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a03fe2fcbb54b17038f831ae97017f9a3":[3,0,2,31,13],
@@ -247,7 +249,5 @@ var NAVTREEINDEX44 =
 "diagram_8h.html":[4,0,0,12,3,11],
 "diagram__builder_8h.html":[4,0,0,12,3,12],
 "diagram__context_8h.html":[4,0,0,12,3,13],
-"diagram__continuous__state_8h.html":[4,0,0,12,3,14],
-"diagram__discrete__values_8h.html":[4,0,0,12,3,15],
-"diagram__output__port_8h.html":[4,0,0,12,3,16]
+"diagram__continuous__state_8h.html":[4,0,0,12,3,14]
 };

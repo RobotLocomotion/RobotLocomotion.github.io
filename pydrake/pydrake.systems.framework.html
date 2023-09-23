@@ -4065,6 +4065,20 @@ diagram input.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.DiagramBuilder.num_input_ports">
+<span class="sig-name descname"><span class="pre">num_input_ports</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.DiagramBuilder" title="pydrake.systems.framework.DiagramBuilder"><span class="pre">pydrake.systems.framework.DiagramBuilder</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder.num_input_ports" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the current number of diagram input ports. The count may
+change as more ports are exported.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.DiagramBuilder.num_output_ports">
+<span class="sig-name descname"><span class="pre">num_output_ports</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.DiagramBuilder" title="pydrake.systems.framework.DiagramBuilder"><span class="pre">pydrake.systems.framework.DiagramBuilder</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder.num_output_ports" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the current number of diagram output outputs. The count may
+change as more ports are exported.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.DiagramBuilder.RemoveSystem">
 <span class="sig-name descname"><span class="pre">RemoveSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">pydrake.systems.framework.DiagramBuilder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system:</span> <span class="pre">drake::systems::System&lt;double&gt;</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder.RemoveSystem" title="Permalink to this definition"></a></dt>
 <dd><p>Removes the given system from this builder and disconnects any
@@ -4415,6 +4429,20 @@ diagram input.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.DiagramBuilder_-AutoDiffXd-.num_input_ports">
+<span id="pydrake.systems.framework.DiagramBuilder_[AutoDiffXd].num_input_ports"></span><span class="sig-name descname"><span class="pre">num_input_ports</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.DiagramBuilder_" title="pydrake.systems.framework.DiagramBuilder_"><span class="pre">pydrake.systems.framework.DiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_-AutoDiffXd-.num_input_ports" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the current number of diagram input ports. The count may
+change as more ports are exported.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.DiagramBuilder_-AutoDiffXd-.num_output_ports">
+<span id="pydrake.systems.framework.DiagramBuilder_[AutoDiffXd].num_output_ports"></span><span class="sig-name descname"><span class="pre">num_output_ports</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.DiagramBuilder_" title="pydrake.systems.framework.DiagramBuilder_"><span class="pre">pydrake.systems.framework.DiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_-AutoDiffXd-.num_output_ports" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the current number of diagram output outputs. The count may
+change as more ports are exported.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.DiagramBuilder_-AutoDiffXd-.RemoveSystem">
 <span id="pydrake.systems.framework.DiagramBuilder_[AutoDiffXd].RemoveSystem"></span><span class="sig-name descname"><span class="pre">RemoveSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.systems.framework.DiagramBuilder_[AutoDiffXd],</span> <span class="pre">system:</span> <span class="pre">drake::systems::System&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double,</span> <span class="pre">-1,</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">-1,</span> <span class="pre">1&gt;</span> <span class="pre">&gt;</span> <span class="pre">&gt;</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_-AutoDiffXd-.RemoveSystem" title="Permalink to this definition"></a></dt>
 <dd><p>Removes the given system from this builder and disconnects any
@@ -4756,6 +4784,20 @@ returned by get_name().</p>
 <dd><p>Returns true iff the given input <code class="docutils literal notranslate"><span class="pre">port</span></code> of a constituent system is
 either connected to another constituent system or exported as a
 diagram input.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.DiagramBuilder_-Expression-.num_input_ports">
+<span id="pydrake.systems.framework.DiagramBuilder_[Expression].num_input_ports"></span><span class="sig-name descname"><span class="pre">num_input_ports</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.DiagramBuilder_" title="pydrake.systems.framework.DiagramBuilder_"><span class="pre">pydrake.systems.framework.DiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_-Expression-.num_input_ports" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the current number of diagram input ports. The count may
+change as more ports are exported.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.DiagramBuilder_-Expression-.num_output_ports">
+<span id="pydrake.systems.framework.DiagramBuilder_[Expression].num_output_ports"></span><span class="sig-name descname"><span class="pre">num_output_ports</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.DiagramBuilder_" title="pydrake.systems.framework.DiagramBuilder_"><span class="pre">pydrake.systems.framework.DiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_-Expression-.num_output_ports" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the current number of diagram output outputs. The count may
+change as more ports are exported.</p>
 </dd></dl>
 
 <dl class="py method">

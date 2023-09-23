@@ -290,6 +290,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acd8bf3d351848a5e2344865a6e4b932e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#acd8bf3d351848a5e2344865a6e4b932e">IsConnectedOrExported</a> (const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">InputPort</a>&lt; T &gt; &amp;port) const</td></tr>
 <tr class="memdesc:acd8bf3d351848a5e2344865a6e4b932e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff the given input <code>port</code> of a constituent system is either connected to another constituent system or exported as a diagram input.  <a href="#acd8bf3d351848a5e2344865a6e4b932e">More...</a><br /></td></tr>
 <tr class="separator:acd8bf3d351848a5e2344865a6e4b932e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94a6d73c74c7268734792b3703e8600d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a94a6d73c74c7268734792b3703e8600d">num_input_ports</a> () const</td></tr>
+<tr class="memdesc:a94a6d73c74c7268734792b3703e8600d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current number of diagram input ports.  <a href="#a94a6d73c74c7268734792b3703e8600d">More...</a><br /></td></tr>
+<tr class="separator:a94a6d73c74c7268734792b3703e8600d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ceec1b22b6b1b25fc675234e78e71be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a7ceec1b22b6b1b25fc675234e78e71be">num_output_ports</a> () const</td></tr>
+<tr class="memdesc:a7ceec1b22b6b1b25fc675234e78e71be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current number of diagram output outputs.  <a href="#a7ceec1b22b6b1b25fc675234e78e71be">More...</a><br /></td></tr>
+<tr class="separator:a7ceec1b22b6b1b25fc675234e78e71be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:aa3171750ccde03a5c67ba3acb598435a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#aa3171750ccde03a5c67ba3acb598435a">DiagramBuilder</a> (const <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a> &amp;)=delete</td></tr>
 <tr class="separator:aa3171750ccde03a5c67ba3acb598435a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1229,8 +1235,48 @@ A port indicated by the resolution of <code>name</code> must not exist. </dd></d
 
 </div>
 </div>
-<a id="a9707232e37c28463f285aaab01f88c49"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9707232e37c28463f285aaab01f88c49">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a94a6d73c74c7268734792b3703e8600d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94a6d73c74c7268734792b3703e8600d">&#9670;&nbsp;</a></span>num_input_ports()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> num_input_ports </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the current number of diagram input ports. </p>
+<p>The count may change as more ports are exported. </p>
+
+</div>
+</div>
+<a id="a7ceec1b22b6b1b25fc675234e78e71be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ceec1b22b6b1b25fc675234e78e71be">&#9670;&nbsp;</a></span>num_output_ports()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> num_output_ports </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the current number of diagram output outputs. </p>
+<p>The count may change as more ports are exported. </p>
+
+</div>
+</div>
+<a id="a1c4553ec1b3caebff0d951e5795fd617"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c4553ec1b3caebff0d951e5795fd617">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1241,7 +1287,7 @@ A port indicated by the resolution of <code>name</code> must not exist. </dd></d
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1255,8 +1301,8 @@ A port indicated by the resolution of <code>name</code> must not exist. </dd></d
 
 </div>
 </div>
-<a id="a1c4553ec1b3caebff0d951e5795fd617"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c4553ec1b3caebff0d951e5795fd617">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a9707232e37c28463f285aaab01f88c49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9707232e37c28463f285aaab01f88c49">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1267,7 +1313,7 @@ A port indicated by the resolution of <code>name</code> must not exist. </dd></d
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

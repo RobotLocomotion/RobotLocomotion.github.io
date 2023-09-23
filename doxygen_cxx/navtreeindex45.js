@@ -1,5 +1,7 @@
 var NAVTREEINDEX45 =
 {
+"diagram__discrete__values_8h.html":[4,0,0,12,3,15],
+"diagram__output__port_8h.html":[4,0,0,12,3,16],
 "diagram__state_8h.html":[4,0,0,12,3,17],
 "differentiable__norm_8h.html":[4,0,0,7,10],
 "differentiable__norm_8h.html#ae918eb0a5749b337a92058e92bd039c9":[4,0,0,7,10,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX45 =
 "eigen__types_8h.html#acda0b15d77e4c1701d160b17a2cb2ea8":[4,0,0,1,29,29],
 "eigen__types_8h.html#acfe2dee57bc492bfbd96fe078b65ab00":[4,0,0,1,29,11],
 "eigen__types_8h.html#ad5de4c858064cf0a457d6a18381e837b":[4,0,0,1,29,27],
-"eigen__types_8h.html#adfbacdba0566fe8958cfafd659b4373f":[4,0,0,1,29,37],
-"eigen__types_8h.html#ae2b0be18a912f9cacfec6d0a0a6d873c":[4,0,0,1,29,16],
-"eigen__types_8h.html#ae74155a11dfcdaad0adc0349f0956148":[4,0,0,1,29,12]
+"eigen__types_8h.html#adfbacdba0566fe8958cfafd659b4373f":[4,0,0,1,29,37]
 };
