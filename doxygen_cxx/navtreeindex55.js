@@ -1,5 +1,9 @@
 var NAVTREEINDEX55 =
 {
+"standard__operations_8h.html#ae015da9f4e757c85f102509932ce501a":[4,0,0,1,0,0,2,43],
+"standard__operations_8h.html#ae062b9210a5e3013e5582db753e9566b":[4,0,0,1,0,0,2,2],
+"standard__operations_8h.html#ae1e2fa6fbabe331a19c0e8614705ab92":[4,0,0,1,0,0,2,5],
+"standard__operations_8h.html#ae266fc063e51b2c1bffaf26c82c19f6c":[4,0,0,1,0,0,2,59],
 "standard__operations_8h.html#ae44e54592a38f223146ee6362a44320e":[4,0,0,1,0,0,2,46],
 "standard__operations_8h.html#ae521245b6aec25f233036d952061fb5b":[4,0,0,1,0,0,2,24],
 "standard__operations_8h.html#ae9c0dd77c635dceb7612cfeea18f258b":[4,0,0,1,0,0,2,40],
@@ -245,9 +249,5 @@ var NAVTREEINDEX55 =
 "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_program.html#a1376ba277587535525d068be4f642166":[3,0,0,4,1,5,7,4],
 "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_program.html#a6a35c03b3fba80f7c251bb744d6e1598":[3,0,0,4,1,5,7,0],
 "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_program.html#ab7bffa65ec11e79bbf74fc513d4407c6":[3,0,0,4,1,5,7,6],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_program.html#abc181d64361484d0aaa73ac7541b5c87":[3,0,0,4,1,5,7,1],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_program.html#ad85e4aeca46a2e4add3bb11a6f7bf0be":[3,0,0,4,1,5,7,3],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_program.html#adee98cdb6fa31a1d84099c44ce7c52bc":[3,0,0,4,1,5,7,2],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html":[3,0,0,4,1,5,8],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html#a4380dd4d6c777bb260d823e0f776c238":[3,0,0,4,1,5,8,0]
+"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_program.html#abc181d64361484d0aaa73ac7541b5c87":[3,0,0,4,1,5,7,1]
 };

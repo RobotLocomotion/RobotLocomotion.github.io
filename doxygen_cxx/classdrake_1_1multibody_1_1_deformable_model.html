@@ -194,6 +194,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8e4f2d02a025433b059374ae0023881c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a8e4f2d02a025433b059374ae0023881c">SetWallBoundaryCondition</a> (<a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a> id, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_WQ, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;n_W)</td></tr>
 <tr class="memdesc:a8e4f2d02a025433b059374ae0023881c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets wall boundary conditions for the body with the given <code>id</code>.  <a href="#a8e4f2d02a025433b059374ae0023881c">More...</a><br /></td></tr>
 <tr class="separator:a8e4f2d02a025433b059374ae0023881c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86fcd57b6e4d6ffffb703a174a254d77"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a86fcd57b6e4d6ffffb703a174a254d77">AddFixedConstraint</a> (<a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a> body_A_id, const <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; &amp;body_B, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_BA, const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">geometry::Shape</a> &amp;shape, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_BG)</td></tr>
+<tr class="memdesc:a86fcd57b6e4d6ffffb703a174a254d77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a fixed constraint between a deformable body A and a rigid body B.  <a href="#a86fcd57b6e4d6ffffb703a174a254d77">More...</a><br /></td></tr>
+<tr class="separator:a86fcd57b6e4d6ffffb703a174a254d77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4938896f6f6f3967f754e3941aa4b445"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#acf2a50397e9fa764d32553cf98460ba7">systems::DiscreteStateIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a4938896f6f6f3967f754e3941aa4b445">GetDiscreteStateIndex</a> (<a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a> id) const</td></tr>
 <tr class="memdesc:a4938896f6f6f3967f754e3941aa4b445"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the discrete state index of the deformable body identified by the given <code>id</code>.  <a href="#a4938896f6f6f3967f754e3941aa4b445">More...</a><br /></td></tr>
 <tr class="separator:a4938896f6f6f3967f754e3941aa4b445"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -215,6 +218,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a74e2fac4addeea2a100fbd378a3136ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a74e2fac4addeea2a100fbd378a3136ab">GetBodyId</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">geometry::GeometryId</a> geometry_id) const</td></tr>
 <tr class="memdesc:a74e2fac4addeea2a100fbd378a3136ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the DeformableBodyId associated with the given <code>geometry_id</code>.  <a href="#a74e2fac4addeea2a100fbd378a3136ab">More...</a><br /></td></tr>
 <tr class="separator:a74e2fac4addeea2a100fbd378a3136ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba11a421c05ac3fe0dec30c33cf6e244"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#aba11a421c05ac3fe0dec30c33cf6e244">HasConstraint</a> (<a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a> id) const</td></tr>
+<tr class="memdesc:aba11a421c05ac3fe0dec30c33cf6e244"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns the true iff the deformable body with the given <code>id</code> has constraints associated with it.  <a href="#aba11a421c05ac3fe0dec30c33cf6e244">More...</a><br /></td></tr>
+<tr class="separator:aba11a421c05ac3fe0dec30c33cf6e244"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30fb3e3a83ccc6c084e2366b891c5e70"><td class="memItemLeft" align="right" valign="top">const internal::DeformableRigidFixedConstraintSpec &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a30fb3e3a83ccc6c084e2366b891c5e70">fixed_constraint_spec</a> (<a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a> id) const</td></tr>
+<tr class="memdesc:a30fb3e3a83ccc6c084e2366b891c5e70"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns the fixed constraint specification corresponding to the given <code>id</code>.  <a href="#a30fb3e3a83ccc6c084e2366b891c5e70">More...</a><br /></td></tr>
+<tr class="separator:a30fb3e3a83ccc6c084e2366b891c5e70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fbbceb086e5b356101ff99949aaa0d3"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a1fbbceb086e5b356101ff99949aaa0d3">fixed_constraint_ids</a> (<a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a> id) const</td></tr>
+<tr class="memdesc:a1fbbceb086e5b356101ff99949aaa0d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns a reference to the all ids of fixed constraints registered with the deformable body with the given <code>id</code>.  <a href="#a1fbbceb086e5b356101ff99949aaa0d3">More...</a><br /></td></tr>
+<tr class="separator:a1fbbceb086e5b356101ff99949aaa0d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afac56d6fb777c0514c4be690ebd2d743"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#afac56d6fb777c0514c4be690ebd2d743">vertex_positions_port</a> () const</td></tr>
 <tr class="memdesc:afac56d6fb777c0514c4be690ebd2d743"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the output port of the vertex positions for all registered deformable bodies.  <a href="#afac56d6fb777c0514c4be690ebd2d743">More...</a><br /></td></tr>
 <tr class="separator:afac56d6fb777c0514c4be690ebd2d743"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -368,6 +380,123 @@ Finalize() has not been called on <code>plant</code>. </dd></dl>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a86fcd57b6e4d6ffffb703a174a254d77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86fcd57b6e4d6ffffb703a174a254d77">&#9670;&nbsp;</a></span>AddFixedConstraint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a> AddFixedConstraint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a>&#160;</td>
+          <td class="paramname"><em>body_A_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>body_B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>X_BA</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">geometry::Shape</a> &amp;&#160;</td>
+          <td class="paramname"><em>shape</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>X_BG</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Defines a fixed constraint between a deformable body A and a rigid body B. </p>
+<p>Such a fixed constraint is modeled as distance holonomic constraints:</p>
+<p>p_PᵢQᵢ(q) = 0 for each constrained vertex Pᵢ</p>
+<p>where Pᵢ is the i-th vertex of the deformable body under constraint and Qᵢ is a point rigidly affixed to the rigid body B. To specify the constraint, we put the reference mesh M of the deformable body A in B's body frame with the given pose <code>X_BA</code> and prescribe a shape G with pose <code>X_BG</code> in B's body frame. All vertices Pᵢ in M that are inside (or on the surface of) G are subject to the fixed constraints with Qᵢ being coincident with Pᵢ when M is in pose X_BA. p_PᵢQᵢ(q) denotes the relative position of point Qᵢ with respect to point Pᵢ as a function of the configuration of the model q. Imposing this constraint forces Pᵢ and Qᵢ to be coincident for each vertex i of the deformable body specified to be under constraint.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">body_A_id</td><td>The unique id of the deformable body under the fixed constraint. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">body_B</td><td>The rigid body under constraint. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">X_BA</td><td>The pose of deformable body A's reference mesh in B's body frame </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">shape</td><td>The prescribed geometry shape, attached to rigid body B, used to determine which vertices of the deformable body A is under constraint. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">X_BG</td><td>The fixed pose of the geometry frame of the given <code>shape</code> in body B's frame. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the unique id of the newly added constraint. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if no deformable body with the given <code>body_A_id</code> has been registered. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>unless <code>body_B</code> is registered with the same multibody plant owning this deformable model. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if shape is not supported by QueryObject::ComputeSignedDistanceToPoint(). Currently, supported shapes include Box, Capsule, Cylinder, Ellipsoid, HalfSpace, and Sphere. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if Finalize() has been called on the multibody plant owning this deformable model. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1fbbceb086e5b356101ff99949aaa0d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fbbceb086e5b356101ff99949aaa0d3">&#9670;&nbsp;</a></span>fixed_constraint_ids()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt;<a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a>&gt;&amp; fixed_constraint_ids </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a>&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Returns a reference to the all ids of fixed constraints registered with the deformable body with the given <code>id</code>. </p>
+
+</div>
+</div>
+<a id="a30fb3e3a83ccc6c084e2366b891c5e70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30fb3e3a83ccc6c084e2366b891c5e70">&#9670;&nbsp;</a></span>fixed_constraint_spec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const internal::DeformableRigidFixedConstraintSpec&amp; fixed_constraint_spec </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a>&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Returns the fixed constraint specification corresponding to the given <code>id</code>. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td><code>id</code> is not a valid identifier for a fixed constraint. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a3edee15645c6e2abd1f8d70b27f0a0cb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3edee15645c6e2abd1f8d70b27f0a0cb">&#9670;&nbsp;</a></span>GetBodyId() <span class="overload">[1/2]</span></h2>
 
@@ -547,6 +676,26 @@ Finalize() has not been called on <code>plant</code>. </dd></dl>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="aba11a421c05ac3fe0dec30c33cf6e244"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba11a421c05ac3fe0dec30c33cf6e244">&#9670;&nbsp;</a></span>HasConstraint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool HasConstraint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a>&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Returns the true iff the deformable body with the given <code>id</code> has constraints associated with it. </p>
 
 </div>
 </div>
