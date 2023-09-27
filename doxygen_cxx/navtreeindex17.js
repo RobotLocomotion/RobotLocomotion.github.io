@@ -1,5 +1,8 @@
 var NAVTREEINDEX17 =
 {
+"classdrake_1_1multibody_1_1_rotational_inertia.html#a7a0d8c42739dc16a87225c2b0057517b":[3,0,0,8,79,29],
+"classdrake_1_1multibody_1_1_rotational_inertia.html#a800af438924a7ab6a1eeaf5a58865f28":[3,0,0,8,79,34],
+"classdrake_1_1multibody_1_1_rotational_inertia.html#a82936d10a31afe3ae91f3025a39d3224":[3,0,0,8,79,48],
 "classdrake_1_1multibody_1_1_rotational_inertia.html#a82a43d32c412efc0f5e1b6ccc1b1cc17":[3,0,0,8,79,41],
 "classdrake_1_1multibody_1_1_rotational_inertia.html#a8509d6f7951179378f848f5f4cc37720":[3,0,0,8,79,10],
 "classdrake_1_1multibody_1_1_rotational_inertia.html#a87e215bccd4ce720b787f8b5195a7551":[3,0,0,8,79,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX17 =
 "classdrake_1_1multibody_1_1_static_friction_cone_constraint.html#a47b54b734c2907d4d30807cda630ca8a":[1,1,0,20,5],
 "classdrake_1_1multibody_1_1_static_friction_cone_constraint.html#a6a324051a7c2c1135b5de6c6b19a36c8":[1,1,0,20,0],
 "classdrake_1_1multibody_1_1_static_friction_cone_constraint.html#a8dc2f2fd87afb1bdc61c7a7d93b952bd":[1,1,0,20,3],
-"classdrake_1_1multibody_1_1_static_friction_cone_constraint.html#a924d231c07d032bc1207ced36b12cfb4":[1,1,0,20,6],
-"classdrake_1_1multibody_1_1_static_friction_cone_constraint.html#af8c78f1d87a7163440af74966fbabce0":[1,1,0,20,1],
-"classdrake_1_1multibody_1_1_tamsi_solver.html":[3,0,0,8,93],
-"classdrake_1_1multibody_1_1_tamsi_solver.html#a032d564905879232190e6b62afd0b8d0":[3,0,0,8,93,19]
+"classdrake_1_1multibody_1_1_static_friction_cone_constraint.html#a924d231c07d032bc1207ced36b12cfb4":[1,1,0,20,6]
 };

@@ -38,6 +38,7 @@ var classdrake_1_1math_1_1_roll_pitch_yaw =
     [ "ToRotationMatrix", "classdrake_1_1math_1_1_roll_pitch_yaw.html#ad0d6757e0538d9bba7c570b500a3ef31", null ],
     [ "vector", "classdrake_1_1math_1_1_roll_pitch_yaw.html#afe797018b3807c0431c41057d9073e24", null ],
     [ "yaw_angle", "classdrake_1_1math_1_1_roll_pitch_yaw.html#ab6b31ddfad6ec326ba32788b05954daa", null ],
+    [ "hash_append", "classdrake_1_1math_1_1_roll_pitch_yaw.html#a9def8efe29252cfb96e1d49ba4bfb952", null ],
     [ "operator<<", "classdrake_1_1math_1_1_roll_pitch_yaw.html#acc4f1cfde399c340eb155031eed2a485", null ],
     [ "RollPitchYawd", "classdrake_1_1math_1_1_roll_pitch_yaw.html#a752cee7d06a108142e5a63947d7431fe", null ]
 ];

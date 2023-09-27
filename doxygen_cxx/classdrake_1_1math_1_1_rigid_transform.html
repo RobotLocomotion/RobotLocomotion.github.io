@@ -350,6 +350,10 @@ Friends</h2></td></tr>
 <tr class="memitem:a10a6bee63e97e5697d2f4dac49cde380"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">RigidTransform</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html#a10a6bee63e97e5697d2f4dac49cde380">operator *</a> (const Eigen::Translation&lt; T, 3 &gt; &amp;X_AAq, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">RigidTransform</a>&lt; T &gt; &amp;X_AqB)</td></tr>
 <tr class="memdesc:a10a6bee63e97e5697d2f4dac49cde380"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies the translation-only transform <code>X_AAq</code> by the RigidTransform <code>X_AqB</code> and returns the RigidTransform <code>X_AB = X_AAq * X_AqB</code>.  <a href="#a10a6bee63e97e5697d2f4dac49cde380">More...</a><br /></td></tr>
 <tr class="separator:a10a6bee63e97e5697d2f4dac49cde380"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd2efdeddc4b64780058383e5c96c1a1"><td class="memTemplParams" colspan="2">template&lt;class HashAlgorithm &gt; </td></tr>
+<tr class="memitem:acd2efdeddc4b64780058383e5c96c1a1"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html#acd2efdeddc4b64780058383e5c96c1a1">hash_append</a> (HashAlgorithm &amp;hasher, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">RigidTransform</a> &amp;X) noexcept</td></tr>
+<tr class="memdesc:acd2efdeddc4b64780058383e5c96c1a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements the <a class="el" href="group__hash__append.html">hash_append generic hashing</a> concept.  <a href="#acd2efdeddc4b64780058383e5c96c1a1">More...</a><br /></td></tr>
+<tr class="separator:acd2efdeddc4b64780058383e5c96c1a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="related"></a>
 Related Functions</h2></td></tr>
@@ -1712,6 +1716,45 @@ This constructor prevents ambiguity that would otherwise exist for a RigidTransf
 </div>
 </div>
 <h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="acd2efdeddc4b64780058383e5c96c1a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd2efdeddc4b64780058383e5c96c1a1">&#9670;&nbsp;</a></span>hash_append</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void hash_append </td>
+          <td>(</td>
+          <td class="paramtype">HashAlgorithm &amp;&#160;</td>
+          <td class="paramname"><em>hasher</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">RigidTransform</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>X</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements the <a class="el" href="group__hash__append.html">hash_append generic hashing</a> concept. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>T implements the hash_append concept. </dd></dl>
+
+</div>
+</div>
 <a id="a10a6bee63e97e5697d2f4dac49cde380"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a10a6bee63e97e5697d2f4dac49cde380">&#9670;&nbsp;</a></span>operator *</h2>
 

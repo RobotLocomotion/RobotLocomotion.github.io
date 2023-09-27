@@ -161,6 +161,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1math_1_1_roll_pitch_yaw.
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="#related">Related Functions</a> &#124;
 <a href="classdrake_1_1math_1_1_roll_pitch_yaw-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -305,6 +306,13 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a25e97cc71253ec54a478126d98fccca6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html#a25e97cc71253ec54a478126d98fccca6">IsValid</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;rpy)</td></tr>
 <tr class="memdesc:a25e97cc71253ec54a478126d98fccca6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if <code>rpy</code> contains valid roll, pitch, yaw angles.  <a href="#a25e97cc71253ec54a478126d98fccca6">More...</a><br /></td></tr>
 <tr class="separator:a25e97cc71253ec54a478126d98fccca6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a9def8efe29252cfb96e1d49ba4bfb952"><td class="memTemplParams" colspan="2">template&lt;class HashAlgorithm &gt; </td></tr>
+<tr class="memitem:a9def8efe29252cfb96e1d49ba4bfb952"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html#a9def8efe29252cfb96e1d49ba4bfb952">hash_append</a> (HashAlgorithm &amp;hasher, const <a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html">RollPitchYaw</a> &amp;rpy) noexcept</td></tr>
+<tr class="memdesc:a9def8efe29252cfb96e1d49ba4bfb952"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements the <a class="el" href="group__hash__append.html">hash_append generic hashing</a> concept.  <a href="#a9def8efe29252cfb96e1d49ba4bfb952">More...</a><br /></td></tr>
+<tr class="separator:a9def8efe29252cfb96e1d49ba4bfb952"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="related"></a>
 Related Functions</h2></td></tr>
@@ -1465,6 +1473,45 @@ Related Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="a9def8efe29252cfb96e1d49ba4bfb952"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9def8efe29252cfb96e1d49ba4bfb952">&#9670;&nbsp;</a></span>hash_append</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void hash_append </td>
+          <td>(</td>
+          <td class="paramtype">HashAlgorithm &amp;&#160;</td>
+          <td class="paramname"><em>hasher</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html">RollPitchYaw</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rpy</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements the <a class="el" href="group__hash__append.html">hash_append generic hashing</a> concept. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>T implements the hash_append concept. </dd></dl>
+
+</div>
+</div>
 <a id="acc4f1cfde399c340eb155031eed2a485"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acc4f1cfde399c340eb155031eed2a485">&#9670;&nbsp;</a></span>operator&lt;&lt;()</h2>
 

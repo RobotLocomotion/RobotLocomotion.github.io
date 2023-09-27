@@ -45,6 +45,7 @@ var classdrake_1_1math_1_1_rigid_transform =
     [ "SetFromIsometry3", "classdrake_1_1math_1_1_rigid_transform.html#a6e77b1e5fde8184fd5d18a62d00297bf", null ],
     [ "SetIdentity", "classdrake_1_1math_1_1_rigid_transform.html#abd964513cdca714478e29210f7e9cf31", null ],
     [ "translation", "classdrake_1_1math_1_1_rigid_transform.html#a3ee702d4bdc143681fe2b84270e609f2", null ],
+    [ "hash_append", "classdrake_1_1math_1_1_rigid_transform.html#acd2efdeddc4b64780058383e5c96c1a1", null ],
     [ "operator *", "classdrake_1_1math_1_1_rigid_transform.html#a10a6bee63e97e5697d2f4dac49cde380", null ],
     [ "operator<<", "classdrake_1_1math_1_1_rigid_transform.html#a25d3e276d5e4e1fad974214851ce0b46", null ],
     [ "RigidTransform", "classdrake_1_1math_1_1_rigid_transform.html#a8bedd8c483aaf5bc48587d10d7a3d485", null ],
