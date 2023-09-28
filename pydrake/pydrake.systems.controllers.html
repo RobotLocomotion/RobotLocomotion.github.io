@@ -546,7 +546,13 @@ option in the constructor. In this case, the output is simply</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">τ_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">τ_g</span><span class="p">(</span><span class="n">q</span><span class="p">).</span><span class="w"></span>
 </pre></div>
 </div>
-</details><p>InverseDynamicsController uses a PID controller to generate desired
+</details><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As an alternative to adding a controller to your diagram, gravity
+compensation can be modeled by disabling gravity for a given model
+instance, see MultibodyPlant::set_gravity_enabled().</p>
+</div>
+<p>InverseDynamicsController uses a PID controller to generate desired
 acceleration and uses this class to compute generalized forces. Use
 this class directly if desired acceleration is computed differently.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">estimated_state&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:gray">desired_acceleration</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>InverseDynamics</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; generalized_force</td></tr></table></td></tr></table><p>The desired acceleration port shown in &lt;span
@@ -667,7 +673,16 @@ and <code class="docutils literal notranslate"><span class="pre">vd</span></code
 indicates desired values, and <code class="docutils literal notranslate"><span class="pre">vd_command</span></code> indicates the
 acceleration command (which includes the stabilization terms) passed
 to the inverse dynamics computation.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">estimated_state&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">desired_state&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:gray">desired_acceleration</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>InverseDynamicsController</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; generalized_force</td></tr></table></td></tr></table><p>The desired acceleration port shown in &lt;span
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">estimated_state&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">desired_state&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:gray">desired_acceleration</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>InverseDynamicsController</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; generalized_force</td></tr></table></td></tr></table><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As an alternative to adding a separate controller system to your
+diagram, you can model gravity compensation with PD controllers
+using MultibodyPlant APIs. Refer to
+MultibodyPlat::set_gravity_enabled() as an alternative to modeling
+gravity compensation. To model PD controlled actuators, refer to
+mbp_actuation “Actuation”.</p>
+</div>
+<p>The desired acceleration port shown in &lt;span
 style=”color:gray”&gt;gray&lt;/span&gt; may be absent, depending on the
 arguments passed to the constructor.</p>
 <p>Note that this class assumes the robot is fully actuated, its position

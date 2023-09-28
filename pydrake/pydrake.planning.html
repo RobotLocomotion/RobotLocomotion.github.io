@@ -3353,6 +3353,16 @@ planner-specific syntactic sugar for operating on a MultibodyPlant.
 For other purposes (e.g., simulation), users should generally prefer
 to just use a Diagram, instead.</p>
 <p>Use RobotDiagramBuilder to construct a RobotDiagram.</p>
+<p>By default, the ports exposed by a RobotDiagram are the set of all
+ports provided by the plant and scene graph (excluding the internal
+connections between the two). Refer to their individual overview
+figures for details (see multibody::MultibodyPlant and
+geometry::SceneGraph), or see the full list by viewing the
+robot_diagram.GetGraphvizString().</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">plant_actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">plant_applied_generalized_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">... etc ...&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>RobotDiagram</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; plant_state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; ... etc ...</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; scene_graph_query</td></tr></table></td></tr></table><p>However, if the RobotDiagramBuilder::builder() was used to change the
+diagram or if either the plant or scene graph were renamed, then no
+ports will be exported by default. In that case, you can use the
+builder to export any desired ports.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This class is templated; see <a class="reference internal" href="#pydrake.planning.RobotDiagram_" title="pydrake.planning.RobotDiagram_"><code class="xref py py-class docutils literal notranslate"><span class="pre">RobotDiagram_</span></code></a>
@@ -3453,6 +3463,16 @@ planner-specific syntactic sugar for operating on a MultibodyPlant.
 For other purposes (e.g., simulation), users should generally prefer
 to just use a Diagram, instead.</p>
 <p>Use RobotDiagramBuilder to construct a RobotDiagram.</p>
+<p>By default, the ports exposed by a RobotDiagram are the set of all
+ports provided by the plant and scene graph (excluding the internal
+connections between the two). Refer to their individual overview
+figures for details (see multibody::MultibodyPlant and
+geometry::SceneGraph), or see the full list by viewing the
+robot_diagram.GetGraphvizString().</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">plant_actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">plant_applied_generalized_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">... etc ...&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>RobotDiagram</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; plant_state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; ... etc ...</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; scene_graph_query</td></tr></table></td></tr></table><p>However, if the RobotDiagramBuilder::builder() was used to change the
+diagram or if either the plant or scene graph were renamed, then no
+ports will be exported by default. In that case, you can use the
+builder to export any desired ports.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagram_-AutoDiffXd-.__init__">
 <span id="pydrake.planning.RobotDiagram_[AutoDiffXd].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.planning.RobotDiagram_-AutoDiffXd-.__init__" title="Permalink to this definition"></a></dt>
@@ -3542,6 +3562,16 @@ planner-specific syntactic sugar for operating on a MultibodyPlant.
 For other purposes (e.g., simulation), users should generally prefer
 to just use a Diagram, instead.</p>
 <p>Use RobotDiagramBuilder to construct a RobotDiagram.</p>
+<p>By default, the ports exposed by a RobotDiagram are the set of all
+ports provided by the plant and scene graph (excluding the internal
+connections between the two). Refer to their individual overview
+figures for details (see multibody::MultibodyPlant and
+geometry::SceneGraph), or see the full list by viewing the
+robot_diagram.GetGraphvizString().</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">plant_actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">plant_applied_generalized_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">... etc ...&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>RobotDiagram</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; plant_state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; ... etc ...</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; scene_graph_query</td></tr></table></td></tr></table><p>However, if the RobotDiagramBuilder::builder() was used to change the
+diagram or if either the plant or scene graph were renamed, then no
+ports will be exported by default. In that case, you can use the
+builder to export any desired ports.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagram_-Expression-.__init__">
 <span id="pydrake.planning.RobotDiagram_[Expression].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.planning.RobotDiagram_-Expression-.__init__" title="Permalink to this definition"></a></dt>

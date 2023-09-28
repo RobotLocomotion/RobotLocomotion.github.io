@@ -190,12 +190,20 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a71f3f09fbee9e7eb8ef6bdf7ffa324aa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a71f3f09fbee9e7eb8ef6bdf7ffa324aa">UniformGravityFieldElement</a> (<a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; g_W)</td></tr>
 <tr class="memdesc:a71f3f09fbee9e7eb8ef6bdf7ffa324aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a uniform gravity field element with a strength given by the acceleration of gravity vector <code>g_W</code>, expressed in the world frame W.  <a href="#a71f3f09fbee9e7eb8ef6bdf7ffa324aa">More...</a><br /></td></tr>
 <tr class="separator:a71f3f09fbee9e7eb8ef6bdf7ffa324aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3938c9766d4ac06758562d35981290a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#ad3938c9766d4ac06758562d35981290a">UniformGravityFieldElement</a> (<a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; g_W, std::set&lt; <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> &gt; disabled_model_instances)</td></tr>
+<tr class="memdesc:ad3938c9766d4ac06758562d35981290a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a uniform gravity field element with a strength given by the acceleration of gravity vector <code>g_W</code>, expressed in the world frame W.  <a href="#ad3938c9766d4ac06758562d35981290a">More...</a><br /></td></tr>
+<tr class="separator:ad3938c9766d4ac06758562d35981290a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3bee007fc7ec9f8caaa2a61e24e8049a"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a3bee007fc7ec9f8caaa2a61e24e8049a">gravity_vector</a> () const</td></tr>
 <tr class="memdesc:a3bee007fc7ec9f8caaa2a61e24e8049a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the acceleration of the gravity vector in m/s², expressed in the world frame W.  <a href="#a3bee007fc7ec9f8caaa2a61e24e8049a">More...</a><br /></td></tr>
 <tr class="separator:a3bee007fc7ec9f8caaa2a61e24e8049a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9b1da34b5924f4441438ce5d7885673"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#af9b1da34b5924f4441438ce5d7885673">set_gravity_vector</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;g_W)</td></tr>
 <tr class="memdesc:af9b1da34b5924f4441438ce5d7885673"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the acceleration of gravity vector, expressed in the world frame W in m/s².  <a href="#af9b1da34b5924f4441438ce5d7885673">More...</a><br /></td></tr>
 <tr class="separator:af9b1da34b5924f4441438ce5d7885673"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a150e48b28dd069a27effb2df78759c35"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a150e48b28dd069a27effb2df78759c35">is_enabled</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#acd2192bbd60e8c8d2c14763041d66d50">model_instance</a>) const</td></tr>
+<tr class="separator:a150e48b28dd069a27effb2df78759c35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76fe07f23fbe0e458271cdb90b4303ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a76fe07f23fbe0e458271cdb90b4303ee">set_enabled</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#acd2192bbd60e8c8d2c14763041d66d50">model_instance</a>, bool <a class="el" href="classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a150e48b28dd069a27effb2df78759c35">is_enabled</a>)</td></tr>
+<tr class="memdesc:a76fe07f23fbe0e458271cdb90b4303ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets <a class="el" href="classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a150e48b28dd069a27effb2df78759c35">is_enabled()</a> for <code>model_instance</code> to <code>is_enabled</code>.  <a href="#a76fe07f23fbe0e458271cdb90b4303ee">More...</a><br /></td></tr>
+<tr class="separator:a76fe07f23fbe0e458271cdb90b4303ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad877d988ac4cd1942aa84e91e3c5d49a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#ad877d988ac4cd1942aa84e91e3c5d49a">CalcGravityGeneralizedForces</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
 <tr class="memdesc:ad877d988ac4cd1942aa84e91e3c5d49a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the generalized forces <code>tau_g(q)</code> due to <code>this</code> gravity field element as a function of the generalized positions <code>q</code> stored in the input <code>context</code>, for the multibody model to which <code>this</code> element belongs.  <a href="#ad877d988ac4cd1942aa84e91e3c5d49a">More...</a><br /></td></tr>
 <tr class="separator:ad877d988ac4cd1942aa84e91e3c5d49a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -313,7 +321,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a2584520d24c28aa2e857aa10414e57d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2584520d24c28aa2e857aa10414e57d2">&#9670;&nbsp;</a></span>UniformGravityFieldElement() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2584520d24c28aa2e857aa10414e57d2">&#9670;&nbsp;</a></span>UniformGravityFieldElement() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -339,7 +347,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a2b6449487792ed29d953cbb76241fc61"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2b6449487792ed29d953cbb76241fc61">&#9670;&nbsp;</a></span>UniformGravityFieldElement() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b6449487792ed29d953cbb76241fc61">&#9670;&nbsp;</a></span>UniformGravityFieldElement() <span class="overload">[2/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -365,7 +373,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a7550e320ab6c15635e57f8a8c75ab6c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7550e320ab6c15635e57f8a8c75ab6c8">&#9670;&nbsp;</a></span>UniformGravityFieldElement() <span class="overload">[3/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7550e320ab6c15635e57f8a8c75ab6c8">&#9670;&nbsp;</a></span>UniformGravityFieldElement() <span class="overload">[3/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -384,7 +392,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a71f3f09fbee9e7eb8ef6bdf7ffa324aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a71f3f09fbee9e7eb8ef6bdf7ffa324aa">&#9670;&nbsp;</a></span>UniformGravityFieldElement() <span class="overload">[4/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a71f3f09fbee9e7eb8ef6bdf7ffa324aa">&#9670;&nbsp;</a></span>UniformGravityFieldElement() <span class="overload">[4/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -408,6 +416,37 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructs a uniform gravity field element with a strength given by the acceleration of gravity vector <code>g_W</code>, expressed in the world frame W. </p>
+
+</div>
+</div>
+<a id="ad3938c9766d4ac06758562d35981290a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3938c9766d4ac06758562d35981290a">&#9670;&nbsp;</a></span>UniformGravityFieldElement() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_uniform_gravity_field_element.html">UniformGravityFieldElement</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td>
+          <td class="paramname"><em>g_W</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::set&lt; <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> &gt;&#160;</td>
+          <td class="paramname"><em>disabled_model_instances</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a uniform gravity field element with a strength given by the acceleration of gravity vector <code>g_W</code>, expressed in the world frame W. </p>
+<p>Gravity is disabled for the set of model instances <code>disabled_model_instances</code>. </p>
 
 </div>
 </div>
@@ -741,8 +780,60 @@ The velocity kinematics <code>vc</code> must have been previously updated with a
 
 </div>
 </div>
+<a id="a150e48b28dd069a27effb2df78759c35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a150e48b28dd069a27effb2df78759c35">&#9670;&nbsp;</a></span>is_enabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool is_enabled </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a>&#160;</td>
+          <td class="paramname"><em>model_instance</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> iff gravity is enabled for <code>model_instance</code>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>enable(), disable(). </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the model instance is invalid. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abee9ac3222a915113bf9f4b339e8ba0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abee9ac3222a915113bf9f4b339e8ba0e">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_uniform_gravity_field_element.html">UniformGravityFieldElement</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_uniform_gravity_field_element.html">UniformGravityFieldElement</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="adeb7d1c6793c4c1aa997582eb3b65197"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adeb7d1c6793c4c1aa997582eb3b65197">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adeb7d1c6793c4c1aa997582eb3b65197">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -767,29 +858,40 @@ The velocity kinematics <code>vc</code> must have been previously updated with a
 
 </div>
 </div>
-<a id="abee9ac3222a915113bf9f4b339e8ba0e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abee9ac3222a915113bf9f4b339e8ba0e">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a76fe07f23fbe0e458271cdb90b4303ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76fe07f23fbe0e458271cdb90b4303ee">&#9670;&nbsp;</a></span>set_enabled()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_uniform_gravity_field_element.html">UniformGravityFieldElement</a>&amp; operator= </td>
+          <td class="memname">void set_enabled </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_uniform_gravity_field_element.html">UniformGravityFieldElement</a>&lt; T &gt; &amp;&amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a>&#160;</td>
+          <td class="paramname"><em>model_instance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>is_enabled</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+
+<p>Sets <a class="el" href="classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a150e48b28dd069a27effb2df78759c35">is_enabled()</a> for <code>model_instance</code> to <code>is_enabled</code>. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td>the parent model is finalized. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the model instance is invalid. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

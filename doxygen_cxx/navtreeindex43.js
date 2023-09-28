@@ -1,5 +1,10 @@
 var NAVTREEINDEX43 =
 {
+"classdrake_1_1trajectories_1_1_bspline_trajectory.html#a34cedb829a75120bfb60c98f376c4c19":[3,0,0,17,1,10],
+"classdrake_1_1trajectories_1_1_bspline_trajectory.html#a3d0f848e23c2d6e2ff99c8838ad439f8":[3,0,0,17,1,4],
+"classdrake_1_1trajectories_1_1_bspline_trajectory.html#a576612a037dee8597b5975d3525b3a48":[3,0,0,17,1,6],
+"classdrake_1_1trajectories_1_1_bspline_trajectory.html#a641bfb18296d6976a000cf31c213dfdf":[3,0,0,17,1,13],
+"classdrake_1_1trajectories_1_1_bspline_trajectory.html#a76b00967f0f33d809b58469e8301e4cb":[3,0,0,17,1,15],
 "classdrake_1_1trajectories_1_1_bspline_trajectory.html#a7bf41e0881035d3f5e879b99ff8fc4c5":[3,0,0,17,1,17],
 "classdrake_1_1trajectories_1_1_bspline_trajectory.html#a7f8590290a608aae75e64e1037063a1e":[3,0,0,17,1,2],
 "classdrake_1_1trajectories_1_1_bspline_trajectory.html#a8ba65f057b09f645ebefbccd5b490fcc":[3,0,0,17,1,20],
@@ -244,10 +249,5 @@ var NAVTREEINDEX43 =
 "classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html":[3,0,2,3],
 "classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a03f87782de17fa3cc06eae968fe10b34":[3,0,2,3,12],
 "classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a04a274a495def8512740b2abae7247dd":[3,0,2,3,2],
-"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a1c819a8d5b38cc935879f361b40c4b75":[3,0,2,3,0],
-"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a26709732b110585adcbcc580e1e1d0e9":[3,0,2,3,10],
-"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a2f4a903b4dccbfa52fa4a2db82073b45":[3,0,2,3,8],
-"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a3af4f2d4069e14a1b6ff6d509f180e71":[3,0,2,3,6],
-"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a46fa4205ca3491f551cd0936632104c5":[3,0,2,3,11],
-"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a90e4c78138b3a7bb0bb23723daef33a8":[3,0,2,3,5]
+"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a1c819a8d5b38cc935879f361b40c4b75":[3,0,2,3,0]
 };

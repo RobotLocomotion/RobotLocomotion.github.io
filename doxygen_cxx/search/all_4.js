@@ -270,6 +270,7 @@ var searchData=
   ['discontinuousspringmassdampertest',['DiscontinuousSpringMassDamperTest',['../classdrake_1_1systems_1_1analysis__test_1_1_implicit_integrator_test.html#ad5f7520c949d2785ec3695b363126a6a',1,'drake::systems::analysis_test::ImplicitIntegratorTest']]],
   ['discount_5ffactor',['discount_factor',['../structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#ad7e0abe77b84e16a4224c12492730d30',1,'drake::systems::controllers::DynamicProgrammingOptions']]],
   ['discrete_5falgebraic_5friccati_5fequation_2eh',['discrete_algebraic_riccati_equation.h',['../discrete__algebraic__riccati__equation_8h.html',1,'']]],
+  ['discrete_5fcontact_5fdata_2eh',['discrete_contact_data.h',['../discrete__contact__data_8h.html',1,'']]],
   ['discrete_5fcontact_5fpair_2eh',['discrete_contact_pair.h',['../discrete__contact__pair_8h.html',1,'']]],
   ['discrete_5fcontact_5fsolver',['discrete_contact_solver',['../structdrake_1_1multibody_1_1_multibody_plant_config.html#ab293e1ad65932eebf57568303f28c326',1,'drake::multibody::MultibodyPlantConfig']]],
   ['discrete_5fderivative_2eh',['discrete_derivative.h',['../discrete__derivative_8h.html',1,'']]],

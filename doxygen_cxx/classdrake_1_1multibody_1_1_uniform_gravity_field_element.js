@@ -4,6 +4,7 @@ var classdrake_1_1multibody_1_1_uniform_gravity_field_element =
     [ "UniformGravityFieldElement", "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a2b6449487792ed29d953cbb76241fc61", null ],
     [ "UniformGravityFieldElement", "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a7550e320ab6c15635e57f8a8c75ab6c8", null ],
     [ "UniformGravityFieldElement", "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a71f3f09fbee9e7eb8ef6bdf7ffa324aa", null ],
+    [ "UniformGravityFieldElement", "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#ad3938c9766d4ac06758562d35981290a", null ],
     [ "CalcConservativePower", "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a28078a2e8016ea5fbbb37d5aa1a3dbf8", null ],
     [ "CalcGravityGeneralizedForces", "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#ad877d988ac4cd1942aa84e91e3c5d49a", null ],
     [ "CalcNonConservativePower", "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a51e284f0060fff10b85fac98a984210e", null ],
@@ -13,8 +14,10 @@ var classdrake_1_1multibody_1_1_uniform_gravity_field_element =
     [ "DoCloneToScalar", "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a89c49c8f7ca8e6215810784c48acae23", null ],
     [ "DoCloneToScalar", "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a4e415d777b3ac3e7e0071578d6ec62c9", null ],
     [ "gravity_vector", "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a3bee007fc7ec9f8caaa2a61e24e8049a", null ],
-    [ "operator=", "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#adeb7d1c6793c4c1aa997582eb3b65197", null ],
+    [ "is_enabled", "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a150e48b28dd069a27effb2df78759c35", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#abee9ac3222a915113bf9f4b339e8ba0e", null ],
+    [ "operator=", "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#adeb7d1c6793c4c1aa997582eb3b65197", null ],
+    [ "set_enabled", "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a76fe07f23fbe0e458271cdb90b4303ee", null ],
     [ "set_gravity_vector", "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#af9b1da34b5924f4441438ce5d7885673", null ],
     [ "kDefaultStrength", "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a8555862636cf3c684394b26aac1cb69b", null ]
 ];

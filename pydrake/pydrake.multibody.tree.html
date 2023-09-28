@@ -18860,10 +18860,43 @@ therefore to a decrease of potential energy.</p>
 the world frame W.</p>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.UniformGravityFieldElement.is_enabled">
+<span class="sig-name descname"><span class="pre">is_enabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.UniformGravityFieldElement" title="pydrake.multibody.tree.UniformGravityFieldElement"><span class="pre">pydrake.multibody.tree.UniformGravityFieldElement</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.UniformGravityFieldElement.is_enabled" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> iff gravity is enabled for <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>.</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>enable(), disable().</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if the model instance is invalid.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.UniformGravityFieldElement.kDefaultStrength">
 <span class="sig-name descname"><span class="pre">kDefaultStrength</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">9.81</span></em><a class="headerlink" href="#pydrake.multibody.tree.UniformGravityFieldElement.kDefaultStrength" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.UniformGravityFieldElement.set_enabled">
+<span class="sig-name descname"><span class="pre">set_enabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.UniformGravityFieldElement" title="pydrake.multibody.tree.UniformGravityFieldElement"><span class="pre">pydrake.multibody.tree.UniformGravityFieldElement</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_enabled</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.UniformGravityFieldElement.set_enabled" title="Permalink to this definition"></a></dt>
+<dd><p>Sets is_enabled() for <code class="docutils literal notranslate"><span class="pre">model_instance</span></code> to <code class="docutils literal notranslate"><span class="pre">is_enabled</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>if the parent model is finalized.</strong> – </p></li>
+<li><p><strong>RuntimeError if the model instance is invalid.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.UniformGravityFieldElement.set_gravity_vector">
@@ -18945,10 +18978,43 @@ therefore to a decrease of potential energy.</p>
 the world frame W.</p>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.UniformGravityFieldElement_-AutoDiffXd-.is_enabled">
+<span id="pydrake.multibody.tree.UniformGravityFieldElement_[AutoDiffXd].is_enabled"></span><span class="sig-name descname"><span class="pre">is_enabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.UniformGravityFieldElement_" title="pydrake.multibody.tree.UniformGravityFieldElement_"><span class="pre">pydrake.multibody.tree.UniformGravityFieldElement_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.UniformGravityFieldElement_-AutoDiffXd-.is_enabled" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> iff gravity is enabled for <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>.</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>enable(), disable().</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if the model instance is invalid.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.UniformGravityFieldElement_-AutoDiffXd-.kDefaultStrength">
 <span id="pydrake.multibody.tree.UniformGravityFieldElement_[AutoDiffXd].kDefaultStrength"></span><span class="sig-name descname"><span class="pre">kDefaultStrength</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">9.81</span></em><a class="headerlink" href="#pydrake.multibody.tree.UniformGravityFieldElement_-AutoDiffXd-.kDefaultStrength" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.UniformGravityFieldElement_-AutoDiffXd-.set_enabled">
+<span id="pydrake.multibody.tree.UniformGravityFieldElement_[AutoDiffXd].set_enabled"></span><span class="sig-name descname"><span class="pre">set_enabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.UniformGravityFieldElement_" title="pydrake.multibody.tree.UniformGravityFieldElement_"><span class="pre">pydrake.multibody.tree.UniformGravityFieldElement_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_enabled</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.UniformGravityFieldElement_-AutoDiffXd-.set_enabled" title="Permalink to this definition"></a></dt>
+<dd><p>Sets is_enabled() for <code class="docutils literal notranslate"><span class="pre">model_instance</span></code> to <code class="docutils literal notranslate"><span class="pre">is_enabled</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>if the parent model is finalized.</strong> – </p></li>
+<li><p><strong>RuntimeError if the model instance is invalid.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.UniformGravityFieldElement_-AutoDiffXd-.set_gravity_vector">
@@ -19024,10 +19090,43 @@ therefore to a decrease of potential energy.</p>
 the world frame W.</p>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.UniformGravityFieldElement_-Expression-.is_enabled">
+<span id="pydrake.multibody.tree.UniformGravityFieldElement_[Expression].is_enabled"></span><span class="sig-name descname"><span class="pre">is_enabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.UniformGravityFieldElement_" title="pydrake.multibody.tree.UniformGravityFieldElement_"><span class="pre">pydrake.multibody.tree.UniformGravityFieldElement_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.UniformGravityFieldElement_-Expression-.is_enabled" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> iff gravity is enabled for <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>.</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>enable(), disable().</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if the model instance is invalid.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.UniformGravityFieldElement_-Expression-.kDefaultStrength">
 <span id="pydrake.multibody.tree.UniformGravityFieldElement_[Expression].kDefaultStrength"></span><span class="sig-name descname"><span class="pre">kDefaultStrength</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">9.81</span></em><a class="headerlink" href="#pydrake.multibody.tree.UniformGravityFieldElement_-Expression-.kDefaultStrength" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.UniformGravityFieldElement_-Expression-.set_enabled">
+<span id="pydrake.multibody.tree.UniformGravityFieldElement_[Expression].set_enabled"></span><span class="sig-name descname"><span class="pre">set_enabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.UniformGravityFieldElement_" title="pydrake.multibody.tree.UniformGravityFieldElement_"><span class="pre">pydrake.multibody.tree.UniformGravityFieldElement_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_enabled</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.UniformGravityFieldElement_-Expression-.set_enabled" title="Permalink to this definition"></a></dt>
+<dd><p>Sets is_enabled() for <code class="docutils literal notranslate"><span class="pre">model_instance</span></code> to <code class="docutils literal notranslate"><span class="pre">is_enabled</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>if the parent model is finalized.</strong> – </p></li>
+<li><p><strong>RuntimeError if the model instance is invalid.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.UniformGravityFieldElement_-Expression-.set_gravity_vector">

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Drake: drake/multibody/plant/compliant_contact_manager.h File Reference</title>
+<title>Drake: drake/multibody/plant/discrete_contact_data.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -139,7 +139,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('compliant__contact__manager_8h.html','');});
+$(document).ready(function(){initNavTree('discrete__contact__data_8h.html','');});
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -159,35 +159,25 @@ $(document).ready(function(){initNavTree('compliant__contact__manager_8h.html','
 
 <div class="header">
   <div class="summary">
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
-<div class="title">compliant_contact_manager.h File Reference</div>  </div>
+<div class="title">discrete_contact_data.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;memory&gt;</code><br />
-<code>#include &lt;utility&gt;</code><br />
+<div class="textblock"><code>#include &lt;utility&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
-<code>#include &quot;<a class="el" href="default__scalars_8h.html">drake/common/default_scalars.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="drake__copyable_8h.html">drake/common/drake_copyable.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="eigen__types_8h.html">drake/common/eigen_types.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="scene__graph__inspector_8h.html">drake/geometry/scene_graph_inspector.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="contact__pair__kinematics_8h.html">drake/multibody/plant/contact_pair_kinematics.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="contact__results_8h.html">drake/multibody/plant/contact_results.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="deformable__driver_8h.html">drake/multibody/plant/deformable_driver.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="discrete__contact__data_8h.html">drake/multibody/plant/discrete_contact_data.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="discrete__update__manager_8h.html">drake/multibody/plant/discrete_update_manager.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="context_8h.html">drake/systems/framework/context.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="drake__throw_8h.html">drake/common/drake_throw.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for compliant_contact_manager.h:</div>
+Include dependency graph for discrete_contact_data.h:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="compliant__contact__manager_8h__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="discrete__contact__data_8h__incl.svg" width="582" height="306"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="compliant__contact__manager_8h__dep__incl.svg" width="234" height="156"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="discrete__contact__data_8h__dep__incl.svg" width="266" height="335"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><table class="memberdecls">
@@ -197,39 +187,13 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacedrake_1_1multibody"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html">drake::multibody</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacedrake_1_1multibody_1_1contact__solvers"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1contact__solvers.html">drake::multibody::contact_solvers</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:ac599f4f3a6b1e2f688346350cd2d5577"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="compliant__contact__manager_8h.html#ac599f4f3a6b1e2f688346350cd2d5577">DRAKE_DECLARE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_SCALARS</a> (class ::drake::multibody::internal::CompliantContactManager)</td></tr>
-<tr class="separator:ac599f4f3a6b1e2f688346350cd2d5577"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="ac599f4f3a6b1e2f688346350cd2d5577"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac599f4f3a6b1e2f688346350cd2d5577">&#9670;&nbsp;</a></span>DRAKE_DECLARE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_SCALARS()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">DRAKE_DECLARE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_SCALARS </td>
-          <td>(</td>
-          <td class="paramtype">class ::drake::multibody::internal::CompliantContactManager&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- footer -->
 <div class="navpath">
   <ul>
-    <li class="navelem"><a class="el" href="dir_f1666844dc41ec91c14125b680b7be1b.html">drake</a></li><li class="navelem"><a class="el" href="dir_39b8b3c6654246a9c12332c930bc7d3f.html">multibody</a></li><li class="navelem"><a class="el" href="dir_656f7d340c0f5b4ecaf881820f2aea38.html">plant</a></li><li class="navelem"><a class="el" href="compliant__contact__manager_8h.html">compliant_contact_manager.h</a></li>
+    <li class="navelem"><a class="el" href="dir_f1666844dc41ec91c14125b680b7be1b.html">drake</a></li><li class="navelem"><a class="el" href="dir_39b8b3c6654246a9c12332c930bc7d3f.html">multibody</a></li><li class="navelem"><a class="el" href="dir_656f7d340c0f5b4ecaf881820f2aea38.html">plant</a></li><li class="navelem"><a class="el" href="discrete__contact__data_8h.html">discrete_contact_data.h</a></li>
   </ul>
 </div>
 <footer id="nav-path", class="site-footer padding">

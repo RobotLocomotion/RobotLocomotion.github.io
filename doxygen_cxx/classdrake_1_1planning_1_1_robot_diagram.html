@@ -173,6 +173,28 @@ class drake::planning::RobotDiagram&lt; T &gt;</h3>
 <p>Storage for a combined diagram, plant, and scene graph. </p>
 <p>This class is a convenient syntactic sugar, especially in C++ code where it simplifies object lifetime tracking and downcasting of the plant and scene graph references. It's purpose is to serve as planner-specific syntactic sugar for operating on a MultibodyPlant. For other purposes (e.g., simulation), users should generally prefer to just use a Diagram, instead.</p>
 <p>Use <a class="el" href="classdrake_1_1planning_1_1_robot_diagram_builder.html" title="Storage for a combined diagram builder, plant, and scene graph.">RobotDiagramBuilder</a> to construct a <a class="el" href="classdrake_1_1planning_1_1_robot_diagram.html" title="Storage for a combined diagram, plant, and scene graph.">RobotDiagram</a>.</p>
+<p>By default, the ports exposed by a RobotDiagram are the set of all ports provided by the plant and scene graph (excluding the internal connections between the two). Refer to their individual overview figures for details (see <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">multibody::MultibodyPlant</a> and <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">geometry::SceneGraph</a>), or see the full list by viewing the robot_diagram.GetGraphvizString().</p>
+<table align="center" cellpadding="0" cellspacing="0">
+<tr align="center">
+<td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px">plant_actuation&rarr;</td></tr>
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px">plant_applied_generalized_force&rarr;</td></tr>
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px">... etc ...&rarr;</td></tr>
+</table>
+</td><td align="center" style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor="#F0F0F0"><a class="el" href="classdrake_1_1planning_1_1_robot_diagram.html" title="Storage for a combined diagram, plant, and scene graph.">RobotDiagram</a></td><td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; plant_state</td></tr>
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; ... etc ...</td></tr>
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; scene_graph_query</td></tr>
+</table>
+</td></tr>
+</table>
+<p>However, if the <a class="el" href="classdrake_1_1planning_1_1_robot_diagram_builder.html#adc75eb5d08543dbab60c9ff58eb96aeb" title="Gets the contained DiagramBuilder (mutable).">RobotDiagramBuilder::builder()</a> was used to change the diagram or if either the plant or scene graph were renamed, then no ports will be exported by default. In that case, you can use the builder to export any desired ports.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>
