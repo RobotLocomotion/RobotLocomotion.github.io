@@ -21,6 +21,8 @@ var dir_da11cd43e7bab310171e778f62212487 =
     [ "inverse_kinematics.h", "inverse__kinematics_8h.html", null ],
     [ "kinematic_evaluator_utilities.h", "kinematic__evaluator__utilities_8h.html", null ],
     [ "minimum_distance_constraint.h", "minimum__distance__constraint_8h.html", "minimum__distance__constraint_8h" ],
+    [ "minimum_distance_lower_bound_constraint.h", "minimum__distance__lower__bound__constraint_8h.html", null ],
+    [ "minimum_distance_upper_bound_constraint.h", "minimum__distance__upper__bound__constraint_8h.html", null ],
     [ "orientation_constraint.h", "orientation__constraint_8h.html", null ],
     [ "orientation_cost.h", "orientation__cost_8h.html", null ],
     [ "point_to_line_distance_constraint.h", "point__to__line__distance__constraint_8h.html", null ],

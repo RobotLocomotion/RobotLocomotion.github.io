@@ -215,6 +215,8 @@ var hierarchy =
         [ "GazeTargetConstraint", "classdrake_1_1multibody_1_1_gaze_target_constraint.html", null ],
         [ "ManipulatorEquationConstraint", "classdrake_1_1multibody_1_1_manipulator_equation_constraint.html", null ],
         [ "MinimumDistanceConstraint", "classdrake_1_1multibody_1_1_minimum_distance_constraint.html", null ],
+        [ "MinimumDistanceLowerBoundConstraint", "classdrake_1_1multibody_1_1_minimum_distance_lower_bound_constraint.html", null ],
+        [ "MinimumDistanceUpperBoundConstraint", "classdrake_1_1multibody_1_1_minimum_distance_upper_bound_constraint.html", null ],
         [ "OrientationConstraint", "classdrake_1_1multibody_1_1_orientation_constraint.html", null ],
         [ "PointToLineDistanceConstraint", "classdrake_1_1multibody_1_1_point_to_line_distance_constraint.html", null ],
         [ "PointToPointDistanceConstraint", "classdrake_1_1multibody_1_1_point_to_point_distance_constraint.html", null ],
@@ -649,8 +651,8 @@ var hierarchy =
     [ "PointCloud", "classdrake_1_1perception_1_1_point_cloud.html", null ],
     [ "PointPairContactInfo< T >", "classdrake_1_1multibody_1_1_point_pair_contact_info.html", null ],
     [ "PolygonSurfaceMesh< T >", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html", null ],
-    [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html", null ],
     [ "Polynomial< T >", "classdrake_1_1_polynomial.html", null ],
+    [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html", null ],
     [ "PolynomialBasisElement", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html", [
       [ "ChebyshevBasisElement", "classdrake_1_1symbolic_1_1_chebyshev_basis_element.html", null ],
       [ "MonomialBasisElement", "classdrake_1_1symbolic_1_1_monomial_basis_element.html", null ]
@@ -736,8 +738,8 @@ var hierarchy =
     [ "ScopeExit", "classdrake_1_1_scope_exit.html", null ],
     [ "ScsSolverDetails", "structdrake_1_1solvers_1_1_scs_solver_details.html", null ],
     [ "CspaceFreePolytope::SearchResult", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html", null ],
-    [ "CspaceFreeBox::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html", null ],
     [ "CspaceFreePolytope::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html", null ],
+    [ "CspaceFreeBox::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html", null ],
     [ "CspaceFreeBox::SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate.html", null ],
     [ "CspaceFreePolytope::SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate.html", null ],
     [ "SeparationCertificateProgramBase", "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_program_base.html", [

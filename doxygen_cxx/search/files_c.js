@@ -54,6 +54,8 @@ var searchData=
   ['meshing_5futilities_2eh',['meshing_utilities.h',['../meshing__utilities_8h.html',1,'']]],
   ['minimum_5fdegree_5fordering_2eh',['minimum_degree_ordering.h',['../minimum__degree__ordering_8h.html',1,'']]],
   ['minimum_5fdistance_5fconstraint_2eh',['minimum_distance_constraint.h',['../minimum__distance__constraint_8h.html',1,'']]],
+  ['minimum_5fdistance_5flower_5fbound_5fconstraint_2eh',['minimum_distance_lower_bound_constraint.h',['../minimum__distance__lower__bound__constraint_8h.html',1,'']]],
+  ['minimum_5fdistance_5fupper_5fbound_5fconstraint_2eh',['minimum_distance_upper_bound_constraint.h',['../minimum__distance__upper__bound__constraint_8h.html',1,'']]],
   ['minimum_5fvalue_5fconstraint_2eh',['minimum_value_constraint.h',['../minimum__value__constraint_8h.html',1,'']]],
   ['minkowski_5fsum_2eh',['minkowski_sum.h',['../minkowski__sum_8h.html',1,'']]],
   ['mixed_5finteger_5foptimization_5futil_2eh',['mixed_integer_optimization_util.h',['../mixed__integer__optimization__util_8h.html',1,'']]],

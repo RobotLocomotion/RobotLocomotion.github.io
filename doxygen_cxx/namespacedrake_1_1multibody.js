@@ -51,6 +51,8 @@ var namespacedrake_1_1multibody =
     [ "LinearSpringDamper", "classdrake_1_1multibody_1_1_linear_spring_damper.html", "classdrake_1_1multibody_1_1_linear_spring_damper" ],
     [ "ManipulatorEquationConstraint", "classdrake_1_1multibody_1_1_manipulator_equation_constraint.html", "classdrake_1_1multibody_1_1_manipulator_equation_constraint" ],
     [ "MinimumDistanceConstraint", "classdrake_1_1multibody_1_1_minimum_distance_constraint.html", "classdrake_1_1multibody_1_1_minimum_distance_constraint" ],
+    [ "MinimumDistanceLowerBoundConstraint", "classdrake_1_1multibody_1_1_minimum_distance_lower_bound_constraint.html", "classdrake_1_1multibody_1_1_minimum_distance_lower_bound_constraint" ],
+    [ "MinimumDistanceUpperBoundConstraint", "classdrake_1_1multibody_1_1_minimum_distance_upper_bound_constraint.html", "classdrake_1_1multibody_1_1_minimum_distance_upper_bound_constraint" ],
     [ "MultibodyElement", "classdrake_1_1multibody_1_1_multibody_element.html", "classdrake_1_1multibody_1_1_multibody_element" ],
     [ "MultibodyForces", "classdrake_1_1multibody_1_1_multibody_forces.html", "classdrake_1_1multibody_1_1_multibody_forces" ],
     [ "MultibodyPlant", "classdrake_1_1multibody_1_1_multibody_plant.html", "classdrake_1_1multibody_1_1_multibody_plant" ],
