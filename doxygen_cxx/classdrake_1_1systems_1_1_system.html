@@ -300,9 +300,9 @@ Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Publishing is the primary mechanism for a System to communicate with the world outside the System abstraction during a simulation.</p>
 <p>Publishing occurs at user-specified times or events and can generate side-effect results such as terminal output, visualization, logging, plotting, and network messages. Other than computational cost, publishing has no effect on the progress of a simulation. </p>
 </div></td></tr>
-<tr class="memitem:a31898e0276f6bbc4edf7111f809afb01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a31898e0276f6bbc4edf7111f809afb01">Publish</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, const <a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_publish_event.html">PublishEvent</a>&lt; T &gt;&gt; &amp;events) const</td></tr>
-<tr class="memdesc:a31898e0276f6bbc4edf7111f809afb01"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method is the public entry point for dispatching all publish event handlers.  <a href="#a31898e0276f6bbc4edf7111f809afb01">More...</a><br /></td></tr>
-<tr class="separator:a31898e0276f6bbc4edf7111f809afb01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb0983a770c179f97a4805c6bccb43cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_event_status.html">EventStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#aeb0983a770c179f97a4805c6bccb43cc">Publish</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, const <a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_publish_event.html">PublishEvent</a>&lt; T &gt;&gt; &amp;events) const</td></tr>
+<tr class="memdesc:aeb0983a770c179f97a4805c6bccb43cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method is the public entry point for dispatching all publish event handlers.  <a href="#aeb0983a770c179f97a4805c6bccb43cc">More...</a><br /></td></tr>
+<tr class="separator:aeb0983a770c179f97a4805c6bccb43cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59e69babd4887d33fc65c02fa7d0aafb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a59e69babd4887d33fc65c02fa7d0aafb">ForcedPublish</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context) const</td></tr>
 <tr class="memdesc:a59e69babd4887d33fc65c02fa7d0aafb"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Manually triggers any <a class="el" href="classdrake_1_1systems_1_1_publish_event.html" title="This class represents a publish event.">PublishEvent</a> that has trigger type kForced.  <a href="#a59e69babd4887d33fc65c02fa7d0aafb">More...</a><br /></td></tr>
 <tr class="separator:a59e69babd4887d33fc65c02fa7d0aafb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -349,20 +349,20 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2bb4c1e3572a8009863b5a342fcb5c49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a2bb4c1e3572a8009863b5a342fcb5c49">CalcImplicitTimeDerivativesResidual</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, const <a class="el" href="classdrake_1_1systems_1_1_continuous_state.html">ContinuousState</a>&lt; T &gt; &amp;proposed_derivatives, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; residual) const</td></tr>
 <tr class="memdesc:a2bb4c1e3572a8009863b5a342fcb5c49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the implicit form of the System equations and returns the residual.  <a href="#a2bb4c1e3572a8009863b5a342fcb5c49">More...</a><br /></td></tr>
 <tr class="separator:a2bb4c1e3572a8009863b5a342fcb5c49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8149a87420f63fc0835eece524e597c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a8149a87420f63fc0835eece524e597c6">CalcDiscreteVariableUpdate</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, const <a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html">DiscreteUpdateEvent</a>&lt; T &gt;&gt; &amp;events, <a class="el" href="classdrake_1_1systems_1_1_discrete_values.html">DiscreteValues</a>&lt; T &gt; *discrete_state) const</td></tr>
-<tr class="memdesc:a8149a87420f63fc0835eece524e597c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method is the public entry point for dispatching all discrete variable update event handlers.  <a href="#a8149a87420f63fc0835eece524e597c6">More...</a><br /></td></tr>
-<tr class="separator:a8149a87420f63fc0835eece524e597c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8548e53e7989e4a2ebd01dce2d9a605"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_event_status.html">EventStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#af8548e53e7989e4a2ebd01dce2d9a605">CalcDiscreteVariableUpdate</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, const <a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html">DiscreteUpdateEvent</a>&lt; T &gt;&gt; &amp;events, <a class="el" href="classdrake_1_1systems_1_1_discrete_values.html">DiscreteValues</a>&lt; T &gt; *discrete_state) const</td></tr>
+<tr class="memdesc:af8548e53e7989e4a2ebd01dce2d9a605"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method is the public entry point for dispatching all discrete variable update event handlers.  <a href="#af8548e53e7989e4a2ebd01dce2d9a605">More...</a><br /></td></tr>
+<tr class="separator:af8548e53e7989e4a2ebd01dce2d9a605"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3873890578a88001255c795f20f01e3f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a3873890578a88001255c795f20f01e3f">ApplyDiscreteVariableUpdate</a> (const <a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html">DiscreteUpdateEvent</a>&lt; T &gt;&gt; &amp;events, <a class="el" href="classdrake_1_1systems_1_1_discrete_values.html">DiscreteValues</a>&lt; T &gt; *discrete_state, <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; *context) const</td></tr>
-<tr class="memdesc:a3873890578a88001255c795f20f01e3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the <code>discrete_state</code> results of a previous call to <a class="el" href="classdrake_1_1systems_1_1_system.html#a8149a87420f63fc0835eece524e597c6" title="This method is the public entry point for dispatching all discrete variable update event handlers.">CalcDiscreteVariableUpdate()</a> that dispatched the given collection of events, modifies the <code>context</code> to reflect the updated <code>discrete_state</code>.  <a href="#a3873890578a88001255c795f20f01e3f">More...</a><br /></td></tr>
+<tr class="memdesc:a3873890578a88001255c795f20f01e3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the <code>discrete_state</code> results of a previous call to <a class="el" href="classdrake_1_1systems_1_1_system.html#af8548e53e7989e4a2ebd01dce2d9a605" title="This method is the public entry point for dispatching all discrete variable update event handlers.">CalcDiscreteVariableUpdate()</a> that dispatched the given collection of events, modifies the <code>context</code> to reflect the updated <code>discrete_state</code>.  <a href="#a3873890578a88001255c795f20f01e3f">More...</a><br /></td></tr>
 <tr class="separator:a3873890578a88001255c795f20f01e3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5fb4376d5f80e2fbaecae478c2ab10b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#ae5fb4376d5f80e2fbaecae478c2ab10b">CalcForcedDiscreteVariableUpdate</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1systems_1_1_discrete_values.html">DiscreteValues</a>&lt; T &gt; *discrete_state) const</td></tr>
 <tr class="memdesc:ae5fb4376d5f80e2fbaecae478c2ab10b"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Manually triggers any <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html" title="This class represents a discrete update event.">DiscreteUpdateEvent</a> that has trigger type kForced.  <a href="#ae5fb4376d5f80e2fbaecae478c2ab10b">More...</a><br /></td></tr>
 <tr class="separator:ae5fb4376d5f80e2fbaecae478c2ab10b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad195518c9c6d2c9421e6e2b222514d89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#ad195518c9c6d2c9421e6e2b222514d89">CalcUnrestrictedUpdate</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, const <a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html">UnrestrictedUpdateEvent</a>&lt; T &gt;&gt; &amp;events, <a class="el" href="classdrake_1_1systems_1_1_state.html">State</a>&lt; T &gt; *state) const</td></tr>
-<tr class="memdesc:ad195518c9c6d2c9421e6e2b222514d89"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method is the public entry point for dispatching all unrestricted update event handlers.  <a href="#ad195518c9c6d2c9421e6e2b222514d89">More...</a><br /></td></tr>
-<tr class="separator:ad195518c9c6d2c9421e6e2b222514d89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afed3d915574f9b99ff935af452481f21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_event_status.html">EventStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#afed3d915574f9b99ff935af452481f21">CalcUnrestrictedUpdate</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, const <a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html">UnrestrictedUpdateEvent</a>&lt; T &gt;&gt; &amp;events, <a class="el" href="classdrake_1_1systems_1_1_state.html">State</a>&lt; T &gt; *state) const</td></tr>
+<tr class="memdesc:afed3d915574f9b99ff935af452481f21"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method is the public entry point for dispatching all unrestricted update event handlers.  <a href="#afed3d915574f9b99ff935af452481f21">More...</a><br /></td></tr>
+<tr class="separator:afed3d915574f9b99ff935af452481f21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1bc3701622107a616b3e45f9f0735233"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a1bc3701622107a616b3e45f9f0735233">ApplyUnrestrictedUpdate</a> (const <a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html">UnrestrictedUpdateEvent</a>&lt; T &gt;&gt; &amp;events, <a class="el" href="classdrake_1_1systems_1_1_state.html">State</a>&lt; T &gt; *state, <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; *context) const</td></tr>
-<tr class="memdesc:a1bc3701622107a616b3e45f9f0735233"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the <code>state</code> results of a previous call to <a class="el" href="classdrake_1_1systems_1_1_system.html#ad195518c9c6d2c9421e6e2b222514d89" title="This method is the public entry point for dispatching all unrestricted update event handlers.">CalcUnrestrictedUpdate()</a> that dispatched the given collection of events, modifies the <code>context</code> to reflect the updated <code>state</code>.  <a href="#a1bc3701622107a616b3e45f9f0735233">More...</a><br /></td></tr>
+<tr class="memdesc:a1bc3701622107a616b3e45f9f0735233"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the <code>state</code> results of a previous call to <a class="el" href="classdrake_1_1systems_1_1_system.html#afed3d915574f9b99ff935af452481f21" title="This method is the public entry point for dispatching all unrestricted update event handlers.">CalcUnrestrictedUpdate()</a> that dispatched the given collection of events, modifies the <code>context</code> to reflect the updated <code>state</code>.  <a href="#a1bc3701622107a616b3e45f9f0735233">More...</a><br /></td></tr>
 <tr class="separator:a1bc3701622107a616b3e45f9f0735233"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38e86af4aa006febb699db0433d434da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a38e86af4aa006febb699db0433d434da">CalcForcedUnrestrictedUpdate</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1systems_1_1_state.html">State</a>&lt; T &gt; *state) const</td></tr>
 <tr class="memdesc:a38e86af4aa006febb699db0433d434da"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Manually triggers any <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html" title="This class represents an unrestricted update event.">UnrestrictedUpdateEvent</a> that has trigger type kForced.  <a href="#a38e86af4aa006febb699db0433d434da">More...</a><br /></td></tr>
@@ -810,8 +810,6 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:afed229e14777bd82382dc3ed6e715bd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad856b6c5b4d66151f1f28d8645bf215c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html">UnrestrictedUpdateEvent</a>&lt; T &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#ad856b6c5b4d66151f1f28d8645bf215c">get_mutable_forced_unrestricted_update_events</a> ()</td></tr>
 <tr class="separator:ad856b6c5b4d66151f1f28d8645bf215c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa532bcdc29e8be25c20b40968bb95b66"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_publish_event.html">PublishEvent</a>&lt; T &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#aa532bcdc29e8be25c20b40968bb95b66">get_forced_publish_events</a> () const</td></tr>
-<tr class="separator:aa532bcdc29e8be25c20b40968bb95b66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3137d050d040e4beb9ef60cd004ac112"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html">DiscreteUpdateEvent</a>&lt; T &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a3137d050d040e4beb9ef60cd004ac112">get_forced_discrete_update_events</a> () const</td></tr>
 <tr class="separator:a3137d050d040e4beb9ef60cd004ac112"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac53f82a39ea0c5e3240a9bab52b1415"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html">UnrestrictedUpdateEvent</a>&lt; T &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#aac53f82a39ea0c5e3240a9bab52b1415">get_forced_unrestricted_update_events</a> () const</td></tr>
@@ -839,31 +837,33 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a7d078e4f799ae50f07ae35389352835f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_cache_entry.html">CacheEntry</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a7d078e4f799ae50f07ae35389352835f">DeclareCacheEntry</a> (std::string description, void(MySystem::*calc)(const MyContext &amp;, ValueType *) const, std::set&lt; <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> &gt; prerequisites_of_calc={ <a class="el" href="classdrake_1_1systems_1_1_system_base.html#af0b9bc9f93181e042bdb2c36f4dbea10">all_sources_ticket</a>()})</td></tr>
 <tr class="memdesc:a7d078e4f799ae50f07ae35389352835f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares a cache entry by specifying only a calculator function that is a class member function (method) with signature:  <a href="#a7d078e4f799ae50f07ae35389352835f">More...</a><br /></td></tr>
 <tr class="separator:a7d078e4f799ae50f07ae35389352835f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Event handler dispatch mechanism</div></td></tr>
-<tr><td colspan="2"><div class="groupText"><p>For a <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html" title="A superclass template that extends System with some convenience utilities that are not applicable to ...">LeafSystem</a> (or user implemented equivalent classes), these functions need to call the appropriate LeafSystem::DoX event handler.</p>
-<p>E.g. LeafSystem::DispatchPublishHandler() calls <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a119e3a83eeb61b8eb99198348178afd2" title="Derived-class event dispatcher for all simultaneous publish events in events.">LeafSystem::DoPublish()</a>. User supplied custom event callbacks embedded in each individual event need to be further dispatched in the LeafSystem::DoX handlers if desired. For a <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html" title="A superclass template that extends System with some convenience utilities that are not applicable to ...">LeafSystem</a>, the pseudo code of the complete default publish event handler dispatching is roughly: </p><pre>
+<tr><td colspan="2"><div class="groupHeader">(Internal use only) Event handler dispatch mechanism</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>The pure virtuals declared here are intended to be implemented only by Drake's <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html" title="A superclass template that extends System with some convenience utilities that are not applicable to ...">LeafSystem</a> and <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a> (plus a few unit tests) and those implementations must be <code>final</code>.</p>
+<p>For a <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html" title="A superclass template that extends System with some convenience utilities that are not applicable to ...">LeafSystem</a>, these functions need to call the appropriate LeafSystem::DoX event dispatcher. E.g. LeafSystem::DispatchPublishHandler() calls <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a119e3a83eeb61b8eb99198348178afd2" title="Derived-class event dispatcher for all simultaneous publish events in events.">LeafSystem::DoPublish()</a>. User supplied custom event callbacks embedded in each individual event need to be invoked in the LeafSystem::DoX handlers if desired. For a <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html" title="A superclass template that extends System with some convenience utilities that are not applicable to ...">LeafSystem</a>, the pseudo code of the complete default publish event handler dispatching is roughly: </p><pre>
   leaf_sys.Publish(context, event_collection)
   -&gt; leaf_sys.DispatchPublishHandler(context, event_collection)
      -&gt; leaf_sys.DoPublish(context, event_collection.get_events())
         -&gt; for (event : event_collection_events):
              if (event.has_handler)
                event.handler(context)
-</pre><p> Discrete update events and unrestricted update events are dispatched similarly for a <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html" title="A superclass template that extends System with some convenience utilities that are not applicable to ...">LeafSystem</a>.</p>
-<p>For a <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a> (or user implemented equivalent classes), these functions must iterate through all subsystems, extract their corresponding subcontext and subevent collections from <code>context</code> and <code>events</code>, and pass those to the subsystems' public non-virtual event handlers if the subevent collection is nonempty (e.g. <a class="el" href="classdrake_1_1systems_1_1_system.html#a31898e0276f6bbc4edf7111f809afb01" title="This method is the public entry point for dispatching all publish event handlers.">System::Publish()</a> for publish events).</p>
+</pre><p> Discrete update events and unrestricted update events are dispatched similarly for a <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html" title="A superclass template that extends System with some convenience utilities that are not applicable to ...">LeafSystem</a>. <a class="el" href="classdrake_1_1systems_1_1_event_status.html" title="Holds the return status from execution of an event handler function, or the effective status after a ...">EventStatus</a> is propagated upwards from the individual event handlers with the first worst retained.</p>
+<p>For a <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a>, these functions must iterate through all subsystems, extract their corresponding subcontext and subevent collections from <code>context</code> and <code>events</code>, and pass those to the subsystems' public non-virtual event dispatchers if the subevent collection is nonempty (e.g. <a class="el" href="classdrake_1_1systems_1_1_system.html#aeb0983a770c179f97a4805c6bccb43cc" title="This method is the public entry point for dispatching all publish event handlers.">System::Publish()</a> for publish events).</p>
 <p>All of these functions are only called from their corresponding public non-virtual event dispatchers, where <code>context</code> is error checked. The derived implementations can assume that <code>context</code> is valid. See, e.g., LeafSystem::DispatchPublishHandler() and Diagram::DispatchPublishHandler() for more details. </p>
 </div></td></tr>
-<tr class="memitem:a84fe4f2e8e6d8a61dfae06f64fb6d5ce"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a84fe4f2e8e6d8a61dfae06f64fb6d5ce">DispatchPublishHandler</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, const <a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_publish_event.html">PublishEvent</a>&lt; T &gt;&gt; &amp;events) const =0</td></tr>
-<tr class="memdesc:a84fe4f2e8e6d8a61dfae06f64fb6d5ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function dispatches all publish events to the appropriate handlers.  <a href="#a84fe4f2e8e6d8a61dfae06f64fb6d5ce">More...</a><br /></td></tr>
-<tr class="separator:a84fe4f2e8e6d8a61dfae06f64fb6d5ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a921d9a050e25d0f2c55de265477c26f5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a921d9a050e25d0f2c55de265477c26f5">DispatchDiscreteVariableUpdateHandler</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, const <a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html">DiscreteUpdateEvent</a>&lt; T &gt;&gt; &amp;events, <a class="el" href="classdrake_1_1systems_1_1_discrete_values.html">DiscreteValues</a>&lt; T &gt; *discrete_state) const =0</td></tr>
-<tr class="memdesc:a921d9a050e25d0f2c55de265477c26f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function dispatches all discrete update events to the appropriate handlers.  <a href="#a921d9a050e25d0f2c55de265477c26f5">More...</a><br /></td></tr>
-<tr class="separator:a921d9a050e25d0f2c55de265477c26f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cd0b6015a657e50b7c6c60a1bf041ee"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classdrake_1_1systems_1_1_event_status.html">EventStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a8cd0b6015a657e50b7c6c60a1bf041ee">DispatchPublishHandler</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, const <a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_publish_event.html">PublishEvent</a>&lt; T &gt;&gt; &amp;events) const =0</td></tr>
+<tr class="memdesc:a8cd0b6015a657e50b7c6c60a1bf041ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) This function dispatches all publish events to the appropriate handlers.  <a href="#a8cd0b6015a657e50b7c6c60a1bf041ee">More...</a><br /></td></tr>
+<tr class="separator:a8cd0b6015a657e50b7c6c60a1bf041ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a796e0da170219dc29992874af53da6"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classdrake_1_1systems_1_1_event_status.html">EventStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a6a796e0da170219dc29992874af53da6">DispatchDiscreteVariableUpdateHandler</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, const <a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html">DiscreteUpdateEvent</a>&lt; T &gt;&gt; &amp;events, <a class="el" href="classdrake_1_1systems_1_1_discrete_values.html">DiscreteValues</a>&lt; T &gt; *discrete_state) const =0</td></tr>
+<tr class="memdesc:a6a796e0da170219dc29992874af53da6"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) This function dispatches all discrete update events to the appropriate handlers.  <a href="#a6a796e0da170219dc29992874af53da6">More...</a><br /></td></tr>
+<tr class="separator:a6a796e0da170219dc29992874af53da6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace4dcdf94807bb6d449aadbd4deb67c9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#ace4dcdf94807bb6d449aadbd4deb67c9">DoApplyDiscreteVariableUpdate</a> (const <a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html">DiscreteUpdateEvent</a>&lt; T &gt;&gt; &amp;events, <a class="el" href="classdrake_1_1systems_1_1_discrete_values.html">DiscreteValues</a>&lt; T &gt; *discrete_state, <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; *context) const =0</td></tr>
+<tr class="memdesc:ace4dcdf94807bb6d449aadbd4deb67c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Updates the given <code>context</code> with the results returned from a previous call to <a class="el" href="classdrake_1_1systems_1_1_system.html#a6a796e0da170219dc29992874af53da6" title="(Internal use only) This function dispatches all discrete update events to the appropriate handlers.">DispatchDiscreteVariableUpdateHandler()</a> that handled the given <code>events</code>.  <a href="#ace4dcdf94807bb6d449aadbd4deb67c9">More...</a><br /></td></tr>
 <tr class="separator:ace4dcdf94807bb6d449aadbd4deb67c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:affb56df9a1e83ab8cef21c9b122d6346"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#affb56df9a1e83ab8cef21c9b122d6346">DispatchUnrestrictedUpdateHandler</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, const <a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html">UnrestrictedUpdateEvent</a>&lt; T &gt;&gt; &amp;events, <a class="el" href="classdrake_1_1systems_1_1_state.html">State</a>&lt; T &gt; *state) const =0</td></tr>
-<tr class="memdesc:affb56df9a1e83ab8cef21c9b122d6346"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function dispatches all unrestricted update events to the appropriate handlers.  <a href="#affb56df9a1e83ab8cef21c9b122d6346">More...</a><br /></td></tr>
-<tr class="separator:affb56df9a1e83ab8cef21c9b122d6346"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88c0bf2c5ed05dba5cc91ac76423e058"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classdrake_1_1systems_1_1_event_status.html">EventStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a88c0bf2c5ed05dba5cc91ac76423e058">DispatchUnrestrictedUpdateHandler</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, const <a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html">UnrestrictedUpdateEvent</a>&lt; T &gt;&gt; &amp;events, <a class="el" href="classdrake_1_1systems_1_1_state.html">State</a>&lt; T &gt; *state) const =0</td></tr>
+<tr class="memdesc:a88c0bf2c5ed05dba5cc91ac76423e058"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) This function dispatches all unrestricted update events to the appropriate handlers.  <a href="#a88c0bf2c5ed05dba5cc91ac76423e058">More...</a><br /></td></tr>
+<tr class="separator:a88c0bf2c5ed05dba5cc91ac76423e058"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8cc318dbe5bed1302294f6d28ae0bbbc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a8cc318dbe5bed1302294f6d28ae0bbbc">DoApplyUnrestrictedUpdate</a> (const <a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html">UnrestrictedUpdateEvent</a>&lt; T &gt;&gt; &amp;events, <a class="el" href="classdrake_1_1systems_1_1_state.html">State</a>&lt; T &gt; *state, <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; *context) const =0</td></tr>
+<tr class="memdesc:a8cc318dbe5bed1302294f6d28ae0bbbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Updates the given <code>context</code> with the results returned from a previous call to <a class="el" href="classdrake_1_1systems_1_1_system.html#a88c0bf2c5ed05dba5cc91ac76423e058" title="(Internal use only) This function dispatches all unrestricted update events to the appropriate handle...">DispatchUnrestrictedUpdateHandler()</a> that handled the given <code>events</code>.  <a href="#a8cc318dbe5bed1302294f6d28ae0bbbc">More...</a><br /></td></tr>
 <tr class="separator:a8cc318dbe5bed1302294f6d28ae0bbbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">System construction</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Authors of derived Systems can use these methods in the constructor for those Systems.</p>
@@ -1748,16 +1748,16 @@ Scalar type conversion by template parameter</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Given the <code>discrete_state</code> results of a previous call to <a class="el" href="classdrake_1_1systems_1_1_system.html#a8149a87420f63fc0835eece524e597c6" title="This method is the public entry point for dispatching all discrete variable update event handlers.">CalcDiscreteVariableUpdate()</a> that dispatched the given collection of events, modifies the <code>context</code> to reflect the updated <code>discrete_state</code>. </p>
+<p>Given the <code>discrete_state</code> results of a previous call to <a class="el" href="classdrake_1_1systems_1_1_system.html#af8548e53e7989e4a2ebd01dce2d9a605" title="This method is the public entry point for dispatching all discrete variable update event handlers.">CalcDiscreteVariableUpdate()</a> that dispatched the given collection of events, modifies the <code>context</code> to reflect the updated <code>discrete_state</code>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">events</td><td>The <a class="el" href="classdrake_1_1systems_1_1_event.html" title="Abstract base class that represents an event.">Event</a> collection that resulted in the given <code>discrete_state</code>. </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">discrete_state</td><td>The updated discrete state from a <a class="el" href="classdrake_1_1systems_1_1_system.html#a8149a87420f63fc0835eece524e597c6" title="This method is the public entry point for dispatching all discrete variable update event handlers.">CalcDiscreteVariableUpdate()</a> call. This is mutable to permit its contents to be swapped with the corresponding <code>context</code> contents (rather than copied). </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">discrete_state</td><td>The updated discrete state from a <a class="el" href="classdrake_1_1systems_1_1_system.html#af8548e53e7989e4a2ebd01dce2d9a605" title="This method is the public entry point for dispatching all discrete variable update event handlers.">CalcDiscreteVariableUpdate()</a> call. This is mutable to permit its contents to be swapped with the corresponding <code>context</code> contents (rather than copied). </td></tr>
     <tr><td class="paramdir">[in,out]</td><td class="paramname">context</td><td>The <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> whose discrete state is modified to match <code>discrete_state</code>. Note that swapping contents with <code>discrete_state</code> may cause addresses of individual discrete state group vectors in <code>context</code> to be different on return than they were on entry. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd><code>discrete_state</code> is the result of a previous <a class="el" href="classdrake_1_1systems_1_1_system.html#a8149a87420f63fc0835eece524e597c6" title="This method is the public entry point for dispatching all discrete variable update event handlers.">CalcDiscreteVariableUpdate()</a> call that dispatched this <code>events</code> collection. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><code>discrete_state</code> is the result of a previous <a class="el" href="classdrake_1_1systems_1_1_system.html#af8548e53e7989e4a2ebd01dce2d9a605" title="This method is the public entry point for dispatching all discrete variable update event handlers.">CalcDiscreteVariableUpdate()</a> call that dispatched this <code>events</code> collection. </dd></dl>
 
 </div>
 </div>
@@ -1793,16 +1793,16 @@ Scalar type conversion by template parameter</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Given the <code>state</code> results of a previous call to <a class="el" href="classdrake_1_1systems_1_1_system.html#ad195518c9c6d2c9421e6e2b222514d89" title="This method is the public entry point for dispatching all unrestricted update event handlers.">CalcUnrestrictedUpdate()</a> that dispatched the given collection of events, modifies the <code>context</code> to reflect the updated <code>state</code>. </p>
+<p>Given the <code>state</code> results of a previous call to <a class="el" href="classdrake_1_1systems_1_1_system.html#afed3d915574f9b99ff935af452481f21" title="This method is the public entry point for dispatching all unrestricted update event handlers.">CalcUnrestrictedUpdate()</a> that dispatched the given collection of events, modifies the <code>context</code> to reflect the updated <code>state</code>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">events</td><td>The <a class="el" href="classdrake_1_1systems_1_1_event.html" title="Abstract base class that represents an event.">Event</a> collection that resulted in the given <code>state</code>. </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">state</td><td>The updated <a class="el" href="classdrake_1_1systems_1_1_state.html" title="State is a container for all the data comprising the complete state of a particular System at a parti...">State</a> from a <a class="el" href="classdrake_1_1systems_1_1_system.html#ad195518c9c6d2c9421e6e2b222514d89" title="This method is the public entry point for dispatching all unrestricted update event handlers.">CalcUnrestrictedUpdate()</a> call. This is mutable to permit its contents to be swapped with the corresponding <code>context</code> contents (rather than copied). </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">state</td><td>The updated <a class="el" href="classdrake_1_1systems_1_1_state.html" title="State is a container for all the data comprising the complete state of a particular System at a parti...">State</a> from a <a class="el" href="classdrake_1_1systems_1_1_system.html#afed3d915574f9b99ff935af452481f21" title="This method is the public entry point for dispatching all unrestricted update event handlers.">CalcUnrestrictedUpdate()</a> call. This is mutable to permit its contents to be swapped with the corresponding <code>context</code> contents (rather than copied). </td></tr>
     <tr><td class="paramdir">[in,out]</td><td class="paramname">context</td><td>The <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> whose <a class="el" href="classdrake_1_1systems_1_1_state.html" title="State is a container for all the data comprising the complete state of a particular System at a parti...">State</a> is modified to match <code>state</code>. Note that swapping contents with the <code>state</code> may cause addresses of continuous, discrete, and abstract state containers in <code>context</code> to be different on return than they were on entry. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd><code>state</code> is the result of a previous <a class="el" href="classdrake_1_1systems_1_1_system.html#ad195518c9c6d2c9421e6e2b222514d89" title="This method is the public entry point for dispatching all unrestricted update event handlers.">CalcUnrestrictedUpdate()</a> call that dispatched this <code>events</code> collection. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><code>state</code> is the result of a previous <a class="el" href="classdrake_1_1systems_1_1_system.html#afed3d915574f9b99ff935af452481f21" title="This method is the public entry point for dispatching all unrestricted update event handlers.">CalcUnrestrictedUpdate()</a> call that dispatched this <code>events</code> collection. </dd></dl>
 
 </div>
 </div>
@@ -1845,14 +1845,14 @@ Scalar type conversion by template parameter</h2></td></tr>
 
 </div>
 </div>
-<a id="a8149a87420f63fc0835eece524e597c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8149a87420f63fc0835eece524e597c6">&#9670;&nbsp;</a></span>CalcDiscreteVariableUpdate()</h2>
+<a id="af8548e53e7989e4a2ebd01dce2d9a605"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8548e53e7989e4a2ebd01dce2d9a605">&#9670;&nbsp;</a></span>CalcDiscreteVariableUpdate()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void CalcDiscreteVariableUpdate </td>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_event_status.html">EventStatus</a> CalcDiscreteVariableUpdate </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>context</em>, </td>
@@ -1878,7 +1878,7 @@ Scalar type conversion by template parameter</h2></td></tr>
 </div><div class="memdoc">
 
 <p>This method is the public entry point for dispatching all discrete variable update event handlers. </p>
-<p>Using all the discrete update handlers in <code>events</code>, the method calculates the update <code>xd(n+1)</code> to discrete variables <code>xd(n)</code> in <code>context</code> and outputs the results to <code>discrete_state</code>. See documentation for <a class="el" href="classdrake_1_1systems_1_1_system.html#a921d9a050e25d0f2c55de265477c26f5" title="This function dispatches all discrete update events to the appropriate handlers.">DispatchDiscreteVariableUpdateHandler()</a> for more details. </p>
+<p>Using all the discrete update handlers in <code>events</code>, the method calculates the update <code>xd(n+1)</code> to discrete variables <code>xd(n)</code> in <code>context</code> and outputs the results to <code>discrete_state</code>. See documentation for <a class="el" href="classdrake_1_1systems_1_1_system.html#a6a796e0da170219dc29992874af53da6" title="(Internal use only) This function dispatches all discrete update events to the appropriate handlers.">DispatchDiscreteVariableUpdateHandler()</a> for more details. </p>
 
 </div>
 </div>
@@ -1912,7 +1912,13 @@ Scalar type conversion by template parameter</h2></td></tr>
 <p>Invokes the discrete event dispatcher on this System with the given <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> providing the initial values for the discrete variables. The updated values of the discrete variables are written to the <code>discrete_state</code> output argument; no change is made to the Context.</p>
 <p>The default dispatcher will invoke the handlers (if any) associated with each force-triggered event.</p>
 <dl class="section note"><dt>Note</dt><dd>There will always be at least one force-triggered event, though with no associated handler. By default that will do nothing when triggered, but that behavior can be changed by overriding the dispatcher (not recommended).</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_system.html#a8149a87420f63fc0835eece524e597c6" title="This method is the public entry point for dispatching all discrete variable update event handlers.">CalcDiscreteVariableUpdate()</a>, <a class="el" href="classdrake_1_1systems_1_1_system.html#a38e86af4aa006febb699db0433d434da" title="(Advanced) Manually triggers any UnrestrictedUpdateEvent that has trigger type kForced.">CalcForcedUnrestrictedUpdate()</a> </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if it invokes an event handler that returns status indicating failure.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_system.html#af8548e53e7989e4a2ebd01dce2d9a605" title="This method is the public entry point for dispatching all discrete variable update event handlers.">CalcDiscreteVariableUpdate()</a>, <a class="el" href="classdrake_1_1systems_1_1_system.html#a38e86af4aa006febb699db0433d434da" title="(Advanced) Manually triggers any UnrestrictedUpdateEvent that has trigger type kForced.">CalcForcedUnrestrictedUpdate()</a> </dd></dl>
 
 </div>
 </div>
@@ -1946,7 +1952,13 @@ Scalar type conversion by template parameter</h2></td></tr>
 <p>Invokes the unrestricted event dispatcher on this System with the given <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> providing the initial values for the state variables. The updated values of the state variables are written to the <code>state</code> output argument; no change is made to the Context.</p>
 <p>The default dispatcher will invoke the handlers (if any) associated with each force-triggered event.</p>
 <dl class="section note"><dt>Note</dt><dd>There will always be at least one force-triggered event, though with no associated handler. By default that will do nothing when triggered, but that behavior can be changed by overriding the dispatcher (not recommended).</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_system.html#ad195518c9c6d2c9421e6e2b222514d89" title="This method is the public entry point for dispatching all unrestricted update event handlers.">CalcUnrestrictedUpdate()</a> </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if it invokes an event handler that returns status indicating failure.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_system.html#afed3d915574f9b99ff935af452481f21" title="This method is the public entry point for dispatching all unrestricted update event handlers.">CalcUnrestrictedUpdate()</a> </dd></dl>
 
 </div>
 </div>
@@ -2185,14 +2197,14 @@ Scalar type conversion by template parameter</h2></td></tr>
 
 </div>
 </div>
-<a id="ad195518c9c6d2c9421e6e2b222514d89"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad195518c9c6d2c9421e6e2b222514d89">&#9670;&nbsp;</a></span>CalcUnrestrictedUpdate()</h2>
+<a id="afed3d915574f9b99ff935af452481f21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afed3d915574f9b99ff935af452481f21">&#9670;&nbsp;</a></span>CalcUnrestrictedUpdate()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void CalcUnrestrictedUpdate </td>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_event_status.html">EventStatus</a> CalcUnrestrictedUpdate </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>context</em>, </td>
@@ -2218,7 +2230,7 @@ Scalar type conversion by template parameter</h2></td></tr>
 </div><div class="memdoc">
 
 <p>This method is the public entry point for dispatching all unrestricted update event handlers. </p>
-<p>Using all the unrestricted update handlers in <code>events</code>, it updates <em>any</em> state variables in the <code>context</code>, and outputs the results to <code>state</code>. It does not allow the dimensionality of the state variables to change. See the documentation for <a class="el" href="classdrake_1_1systems_1_1_system.html#affb56df9a1e83ab8cef21c9b122d6346" title="This function dispatches all unrestricted update events to the appropriate handlers.">DispatchUnrestrictedUpdateHandler()</a> for more details.</p>
+<p>Using all the unrestricted update handlers in <code>events</code>, it updates <em>any</em> state variables in the <code>context</code>, and outputs the results to <code>state</code>. It does not allow the dimensionality of the state variables to change. See the documentation for <a class="el" href="classdrake_1_1systems_1_1_system.html#a88c0bf2c5ed05dba5cc91ac76423e058" title="(Internal use only) This function dispatches all unrestricted update events to the appropriate handle...">DispatchUnrestrictedUpdateHandler()</a> for more details.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if the dimensionality of the state variables changes in the callback. </td></tr>
@@ -2415,8 +2427,8 @@ Scalar type conversion by template parameter</h2></td></tr>
 
 </div>
 </div>
-<a id="a7d078e4f799ae50f07ae35389352835f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d078e4f799ae50f07ae35389352835f">&#9670;&nbsp;</a></span>DeclareCacheEntry() <span class="overload">[1/3]</span></h2>
+<a id="a4076a7594095a9ca6936dd70c7254f84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4076a7594095a9ca6936dd70c7254f84">&#9670;&nbsp;</a></span>DeclareCacheEntry() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2455,10 +2467,8 @@ Scalar type conversion by template parameter</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Declares a cache entry by specifying only a calculator function that is a class member function (method) with signature: </p>
-<p><a class="anchor" id="DeclareCacheEntry_calc_only"></a></p><div class="fragment"><div class="line"><span class="keywordtype">void</span> MySystem::CalcCacheValue(<span class="keyword">const</span> MyContext&amp;, ValueType*) <span class="keyword">const</span>;</div></div><!-- fragment --><p> where <code>MySystem</code> is a class derived from <code><a class="el" href="classdrake_1_1systems_1_1_system_base.html" title="Provides non-templatized functionality shared by the templatized System classes.">SystemBase</a></code> and <code>MyContext</code> is a class derived from <code><a class="el" href="classdrake_1_1systems_1_1_context_base.html" title="Provides non-templatized Context functionality shared by the templatized derived classes.">ContextBase</a></code>. <code>ValueType</code> is a concrete type such that (a) <code><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">Value</a>&lt;ValueType&gt;</code> is permitted, and (b) <code>ValueType</code> is default constructible. That allows us to create a model value using <code><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">Value</a>&lt;ValueType&gt;{}</code> (value initialized so numerical types will be zeroed in the model). (The method name is arbitrary.) Template arguments will be deduced and do not need to be specified. See the first <a class="el" href="classdrake_1_1systems_1_1_system_base.html#a7da4e8aa9a414faa5b40fc64e8ca40e3" title="Declares a new CacheEntry in this System using the most generic form of the calculation function.">DeclareCacheEntry()</a> signature above for more information about the parameters and behavior.</p>
-<dl class="section note"><dt>Note</dt><dd>The default constructor will be called once immediately to create a model value, and subsequent allocations will just copy the model value without invoking the constructor again. If you want the constructor invoked again at each allocation (not common), use one of the other signatures to explicitly provide a method for the allocator to call; that method can then invoke the <code>ValueType</code> default constructor each time it is called. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">drake::Value</a> </dd></dl>
+<p>Declares a cache entry by specifying a model value of concrete type <code>ValueType</code> and a calculator function that is a class member function (method) with signature: </p>
+<p><a class="anchor" id="DeclareCacheEntry_model_and_calc"></a></p><div class="fragment"><div class="line"><span class="keywordtype">void</span> MySystem::CalcCacheValue(<span class="keyword">const</span> MyContext&amp;, ValueType*) <span class="keyword">const</span>;</div></div><!-- fragment --><p> where <code>MySystem</code> is a class derived from <code><a class="el" href="classdrake_1_1systems_1_1_system_base.html" title="Provides non-templatized functionality shared by the templatized System classes.">SystemBase</a></code>, <code>MyContext</code> is a class derived from <code><a class="el" href="classdrake_1_1systems_1_1_context_base.html" title="Provides non-templatized Context functionality shared by the templatized derived classes.">ContextBase</a></code>, and <code>ValueType</code> is any concrete type such that <code><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">Value</a>&lt;ValueType&gt;</code> is permitted. (The method names are arbitrary.) Template arguments will be deduced and do not need to be specified. See the <a class="el" href="classdrake_1_1systems_1_1_system_base.html#DeclareCacheEntry_primary">primary DeclareCacheEntry() signature</a> above for more information about the parameters and behavior. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">drake::Value</a> </dd></dl>
 
 </div>
 </div>
@@ -2502,8 +2512,8 @@ Scalar type conversion by template parameter</h2></td></tr>
 
 </div>
 </div>
-<a id="a4076a7594095a9ca6936dd70c7254f84"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4076a7594095a9ca6936dd70c7254f84">&#9670;&nbsp;</a></span>DeclareCacheEntry() <span class="overload">[3/3]</span></h2>
+<a id="a7d078e4f799ae50f07ae35389352835f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d078e4f799ae50f07ae35389352835f">&#9670;&nbsp;</a></span>DeclareCacheEntry() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2542,8 +2552,10 @@ Scalar type conversion by template parameter</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Declares a cache entry by specifying a model value of concrete type <code>ValueType</code> and a calculator function that is a class member function (method) with signature: </p>
-<p><a class="anchor" id="DeclareCacheEntry_model_and_calc"></a></p><div class="fragment"><div class="line"><span class="keywordtype">void</span> MySystem::CalcCacheValue(<span class="keyword">const</span> MyContext&amp;, ValueType*) <span class="keyword">const</span>;</div></div><!-- fragment --><p> where <code>MySystem</code> is a class derived from <code><a class="el" href="classdrake_1_1systems_1_1_system_base.html" title="Provides non-templatized functionality shared by the templatized System classes.">SystemBase</a></code>, <code>MyContext</code> is a class derived from <code><a class="el" href="classdrake_1_1systems_1_1_context_base.html" title="Provides non-templatized Context functionality shared by the templatized derived classes.">ContextBase</a></code>, and <code>ValueType</code> is any concrete type such that <code><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">Value</a>&lt;ValueType&gt;</code> is permitted. (The method names are arbitrary.) Template arguments will be deduced and do not need to be specified. See the <a class="el" href="classdrake_1_1systems_1_1_system_base.html#DeclareCacheEntry_primary">primary DeclareCacheEntry() signature</a> above for more information about the parameters and behavior. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">drake::Value</a> </dd></dl>
+<p>Declares a cache entry by specifying only a calculator function that is a class member function (method) with signature: </p>
+<p><a class="anchor" id="DeclareCacheEntry_calc_only"></a></p><div class="fragment"><div class="line"><span class="keywordtype">void</span> MySystem::CalcCacheValue(<span class="keyword">const</span> MyContext&amp;, ValueType*) <span class="keyword">const</span>;</div></div><!-- fragment --><p> where <code>MySystem</code> is a class derived from <code><a class="el" href="classdrake_1_1systems_1_1_system_base.html" title="Provides non-templatized functionality shared by the templatized System classes.">SystemBase</a></code> and <code>MyContext</code> is a class derived from <code><a class="el" href="classdrake_1_1systems_1_1_context_base.html" title="Provides non-templatized Context functionality shared by the templatized derived classes.">ContextBase</a></code>. <code>ValueType</code> is a concrete type such that (a) <code><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">Value</a>&lt;ValueType&gt;</code> is permitted, and (b) <code>ValueType</code> is default constructible. That allows us to create a model value using <code><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">Value</a>&lt;ValueType&gt;{}</code> (value initialized so numerical types will be zeroed in the model). (The method name is arbitrary.) Template arguments will be deduced and do not need to be specified. See the first <a class="el" href="classdrake_1_1systems_1_1_system_base.html#a7da4e8aa9a414faa5b40fc64e8ca40e3" title="Declares a new CacheEntry in this System using the most generic form of the calculation function.">DeclareCacheEntry()</a> signature above for more information about the parameters and behavior.</p>
+<dl class="section note"><dt>Note</dt><dd>The default constructor will be called once immediately to create a model value, and subsequent allocations will just copy the model value without invoking the constructor again. If you want the constructor invoked again at each allocation (not common), use one of the other signatures to explicitly provide a method for the allocator to call; that method can then invoke the <code>ValueType</code> default constructor each time it is called. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">drake::Value</a> </dd></dl>
 
 </div>
 </div>
@@ -2624,8 +2636,8 @@ variable group".) </p><dl class="section see"><dt>See also</dt><dd><a class="el"
 
 </div>
 </div>
-<a id="a921d9a050e25d0f2c55de265477c26f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a921d9a050e25d0f2c55de265477c26f5">&#9670;&nbsp;</a></span>DispatchDiscreteVariableUpdateHandler()</h2>
+<a id="a6a796e0da170219dc29992874af53da6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a796e0da170219dc29992874af53da6">&#9670;&nbsp;</a></span>DispatchDiscreteVariableUpdateHandler()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2634,7 +2646,7 @@ variable group".) </p><dl class="section see"><dt>See also</dt><dd><a class="el"
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void DispatchDiscreteVariableUpdateHandler </td>
+          <td class="memname">virtual <a class="el" href="classdrake_1_1systems_1_1_event_status.html">EventStatus</a> DispatchDiscreteVariableUpdateHandler </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>context</em>, </td>
@@ -2664,13 +2676,13 @@ variable group".) </p><dl class="section see"><dt>See also</dt><dd><a class="el"
 </table>
 </div><div class="memdoc">
 
-<p>This function dispatches all discrete update events to the appropriate handlers. </p>
-<p><code>discrete_state</code> cannot be null. </p>
+<p>(Internal use only) This function dispatches all discrete update events to the appropriate handlers. </p>
+<p><code>discrete_state</code> cannot be null. Only <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html" title="A superclass template that extends System with some convenience utilities that are not applicable to ...">LeafSystem</a> and <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a> (and some unit test code) provide implementations and those must be <code>final</code>. </p>
 
 </div>
 </div>
-<a id="a84fe4f2e8e6d8a61dfae06f64fb6d5ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a84fe4f2e8e6d8a61dfae06f64fb6d5ce">&#9670;&nbsp;</a></span>DispatchPublishHandler()</h2>
+<a id="a8cd0b6015a657e50b7c6c60a1bf041ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cd0b6015a657e50b7c6c60a1bf041ee">&#9670;&nbsp;</a></span>DispatchPublishHandler()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2679,7 +2691,7 @@ variable group".) </p><dl class="section see"><dt>See also</dt><dd><a class="el"
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void DispatchPublishHandler </td>
+          <td class="memname">virtual <a class="el" href="classdrake_1_1systems_1_1_event_status.html">EventStatus</a> DispatchPublishHandler </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>context</em>, </td>
@@ -2703,12 +2715,13 @@ variable group".) </p><dl class="section see"><dt>See also</dt><dd><a class="el"
 </table>
 </div><div class="memdoc">
 
-<p>This function dispatches all publish events to the appropriate handlers. </p>
+<p>(Internal use only) This function dispatches all publish events to the appropriate handlers. </p>
+<p>Only <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html" title="A superclass template that extends System with some convenience utilities that are not applicable to ...">LeafSystem</a> and <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a> (and some unit test code) provide implementations and those must be <code>final</code>. </p>
 
 </div>
 </div>
-<a id="affb56df9a1e83ab8cef21c9b122d6346"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#affb56df9a1e83ab8cef21c9b122d6346">&#9670;&nbsp;</a></span>DispatchUnrestrictedUpdateHandler()</h2>
+<a id="a88c0bf2c5ed05dba5cc91ac76423e058"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88c0bf2c5ed05dba5cc91ac76423e058">&#9670;&nbsp;</a></span>DispatchUnrestrictedUpdateHandler()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2717,7 +2730,7 @@ variable group".) </p><dl class="section see"><dt>See also</dt><dd><a class="el"
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void DispatchUnrestrictedUpdateHandler </td>
+          <td class="memname">virtual <a class="el" href="classdrake_1_1systems_1_1_event_status.html">EventStatus</a> DispatchUnrestrictedUpdateHandler </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>context</em>, </td>
@@ -2747,8 +2760,8 @@ variable group".) </p><dl class="section see"><dt>See also</dt><dd><a class="el"
 </table>
 </div><div class="memdoc">
 
-<p>This function dispatches all unrestricted update events to the appropriate handlers. </p>
-<p><code>state</code> cannot be null. </p>
+<p>(Internal use only) This function dispatches all unrestricted update events to the appropriate handlers. </p>
+<p><code>state</code> cannot be null. Only <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html" title="A superclass template that extends System with some convenience utilities that are not applicable to ...">LeafSystem</a> and <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a> (and some unit test code) provide implementations and those must be <code>final</code>. </p>
 
 </div>
 </div>
@@ -2792,6 +2805,8 @@ variable group".) </p><dl class="section see"><dt>See also</dt><dd><a class="el"
 </table>
 </div><div class="memdoc">
 
+<p>(Internal use only) Updates the given <code>context</code> with the results returned from a previous call to <a class="el" href="classdrake_1_1systems_1_1_system.html#a6a796e0da170219dc29992874af53da6" title="(Internal use only) This function dispatches all discrete update events to the appropriate handlers.">DispatchDiscreteVariableUpdateHandler()</a> that handled the given <code>events</code>. </p>
+
 </div>
 </div>
 <a id="a8cc318dbe5bed1302294f6d28ae0bbbc"></a>
@@ -2833,6 +2848,8 @@ variable group".) </p><dl class="section see"><dt>See also</dt><dd><a class="el"
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>(Internal use only) Updates the given <code>context</code> with the results returned from a previous call to <a class="el" href="classdrake_1_1systems_1_1_system.html#a88c0bf2c5ed05dba5cc91ac76423e058" title="(Internal use only) This function dispatches all unrestricted update events to the appropriate handle...">DispatchUnrestrictedUpdateHandler()</a> that handled the given <code>events</code>. </p>
 
 </div>
 </div>
@@ -3667,6 +3684,7 @@ variable group".) </p><dl class="section see"><dt>See also</dt><dd><a class="el"
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if there is not exactly one periodic timing in this System (which may be a <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a>) that triggers discrete update events.</td></tr>
+    <tr><td class="paramname">std::exception</td><td>if it invokes an event handler that returns status indicating failure.</td></tr>
   </table>
   </dd>
 </dl>
@@ -3736,7 +3754,14 @@ the port's value must be of type Vec&lt;T&gt;.</dd></dl>
 
 <p>This method triggers all of the initialization events returned by <a class="el" href="classdrake_1_1systems_1_1_system.html#ae6f84e649d76754f38ea7420a21a1a04" title="This method is called by Simulator::Initialize() to gather all update and publish events that need to...">GetInitializationEvents()</a>. </p>
 <p>The method allocates temporary storage to perform the updates, and is intended only as a convenience method for callers who do not want to use the full <a class="el" href="classdrake_1_1systems_1_1_simulator.html" title="A class for advancing the state of hybrid dynamic systems, represented by System&lt;T&gt; objects,...">Simulator</a> workflow.</p>
-<p>Note that this is not fully equivalent to <a class="el" href="classdrake_1_1systems_1_1_simulator.html#aa1862c2aeab9862e391194d157a96c21" title="Prepares the Simulator for a simulation.">Simulator::Initialize()</a> because <em>only</em> initialization events are handled here, while <a class="el" href="classdrake_1_1systems_1_1_simulator.html#aa1862c2aeab9862e391194d157a96c21" title="Prepares the Simulator for a simulation.">Simulator::Initialize()</a> also processes other events associated with time zero. </p>
+<p>Note that this is not fully equivalent to <a class="el" href="classdrake_1_1systems_1_1_simulator.html#aa1862c2aeab9862e391194d157a96c21" title="Prepares the Simulator for a simulation.">Simulator::Initialize()</a> because <em>only</em> initialization events are handled here, while <a class="el" href="classdrake_1_1systems_1_1_simulator.html#aa1862c2aeab9862e391194d157a96c21" title="Prepares the Simulator for a simulation.">Simulator::Initialize()</a> also processes other events associated with time zero. Also, "reached
+termination" returns are ignored here.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if it invokes an event handler that returns status indicating failure. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -3935,7 +3960,13 @@ the port's value must be of type Vec&lt;T&gt;.</dd></dl>
 <p>The default dispatcher will invoke the handlers (if any) associated with each force-triggered event.</p>
 <dl class="section note"><dt>Note</dt><dd>There will always be at least one force-triggered event, though with no associated handler. By default that will do nothing when triggered, but that behavior can be changed by overriding the dispatcher DoPublish() (not recommended).</dd></dl>
 <p>The <a class="el" href="classdrake_1_1systems_1_1_simulator.html" title="A class for advancing the state of hybrid dynamic systems, represented by System&lt;T&gt; objects,...">Simulator</a> can be configured to call this in <a class="el" href="classdrake_1_1systems_1_1_simulator.html#aa1862c2aeab9862e391194d157a96c21" title="Prepares the Simulator for a simulation.">Simulator::Initialize()</a> and at the start of each continuous integration step. See the <a class="el" href="classdrake_1_1systems_1_1_simulator.html" title="A class for advancing the state of hybrid dynamic systems, represented by System&lt;T&gt; objects,...">Simulator</a> API for more details.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_system.html#a31898e0276f6bbc4edf7111f809afb01" title="This method is the public entry point for dispatching all publish event handlers.">Publish()</a>, <a class="el" href="classdrake_1_1systems_1_1_system.html#ae5fb4376d5f80e2fbaecae478c2ab10b" title="(Advanced) Manually triggers any DiscreteUpdateEvent that has trigger type kForced.">CalcForcedDiscreteVariableUpdate()</a>, <a class="el" href="classdrake_1_1systems_1_1_system.html#a38e86af4aa006febb699db0433d434da" title="(Advanced) Manually triggers any UnrestrictedUpdateEvent that has trigger type kForced.">CalcForcedUnrestrictedUpdate()</a> </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if it invokes an event handler that returns status indicating failure.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_system.html#aeb0983a770c179f97a4805c6bccb43cc" title="This method is the public entry point for dispatching all publish event handlers.">Publish()</a>, <a class="el" href="classdrake_1_1systems_1_1_system.html#ae5fb4376d5f80e2fbaecae478c2ab10b" title="(Advanced) Manually triggers any DiscreteUpdateEvent that has trigger type kForced.">CalcForcedDiscreteVariableUpdate()</a>, <a class="el" href="classdrake_1_1systems_1_1_system.html#a38e86af4aa006febb699db0433d434da" title="(Advanced) Manually triggers any UnrestrictedUpdateEvent that has trigger type kForced.">CalcForcedUnrestrictedUpdate()</a> </dd></dl>
 
 </div>
 </div>
@@ -3976,31 +4007,6 @@ the port's value must be of type Vec&lt;T&gt;.</dd></dl>
       <table class="memname">
         <tr>
           <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt;<a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html">DiscreteUpdateEvent</a>&lt;T&gt; &gt;&amp; get_forced_discrete_update_events </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa532bcdc29e8be25c20b40968bb95b66"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa532bcdc29e8be25c20b40968bb95b66">&#9670;&nbsp;</a></span>get_forced_publish_events()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt;<a class="el" href="classdrake_1_1systems_1_1_publish_event.html">PublishEvent</a>&lt;T&gt; &gt;&amp; get_forced_publish_events </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -4361,7 +4367,7 @@ the port's value must be of type Vec&lt;T&gt;.</dd></dl>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000026">Deprecated:</a></b></dt><dd>Instead of calling or overriding this function, either  call GetGraphvizFragment() or override DoGetGraphvizFragment() <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000025">Deprecated:</a></b></dt><dd>Instead of calling or overriding this function, either  call GetGraphvizFragment() or override DoGetGraphvizFragment() <br />
  This will be removed from Drake on or after 2024-01-01.</dd></dl>
 
 </div>
@@ -4399,7 +4405,7 @@ the port's value must be of type Vec&lt;T&gt;.</dd></dl>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000029">Deprecated:</a></b></dt><dd>Call GetGraphvizFragment() instead <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000028">Deprecated:</a></b></dt><dd>Call GetGraphvizFragment() instead <br />
  This will be removed from Drake on or after 2024-01-01.</dd></dl>
 
 </div>
@@ -4445,7 +4451,7 @@ the port's value must be of type Vec&lt;T&gt;.</dd></dl>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000027">Deprecated:</a></b></dt><dd>Instead of calling or overriding this function, either  call GetGraphvizFragment() or override DoGetGraphvizFragment() <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000026">Deprecated:</a></b></dt><dd>Instead of calling or overriding this function, either  call GetGraphvizFragment() or override DoGetGraphvizFragment() <br />
  This will be removed from Drake on or after 2024-01-01.</dd></dl>
 
 <p>Reimplemented in <a class="el" href="classdrake_1_1systems_1_1_diagram.html#acfd6d412aafdf2814ced8e8fe460fc23">Diagram&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_diagram.html#acfd6d412aafdf2814ced8e8fe460fc23">Diagram&lt; double &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#acfd6d412aafdf2814ced8e8fe460fc23">LeafSystem&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#acfd6d412aafdf2814ced8e8fe460fc23">LeafSystem&lt; Element::T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#acfd6d412aafdf2814ced8e8fe460fc23">LeafSystem&lt; double &gt;</a>, and <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#acfd6d412aafdf2814ced8e8fe460fc23">LeafSystem&lt; AutoDiffXd &gt;</a>.</p>
@@ -4493,7 +4499,7 @@ the port's value must be of type Vec&lt;T&gt;.</dd></dl>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000028">Deprecated:</a></b></dt><dd>Instead of calling or overriding this function, either  call GetGraphvizFragment() or override DoGetGraphvizFragment() <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000027">Deprecated:</a></b></dt><dd>Instead of calling or overriding this function, either  call GetGraphvizFragment() or override DoGetGraphvizFragment() <br />
  This will be removed from Drake on or after 2024-01-01.</dd></dl>
 
 <p>Reimplemented in <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a37060c889e34319f11652b5ad21cfbb9">Diagram&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a37060c889e34319f11652b5ad21cfbb9">Diagram&lt; double &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a37060c889e34319f11652b5ad21cfbb9">LeafSystem&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a37060c889e34319f11652b5ad21cfbb9">LeafSystem&lt; Element::T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a37060c889e34319f11652b5ad21cfbb9">LeafSystem&lt; double &gt;</a>, and <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a37060c889e34319f11652b5ad21cfbb9">LeafSystem&lt; AutoDiffXd &gt;</a>.</p>
@@ -5401,8 +5407,8 @@ the port's value must be of type Vec&lt;T&gt;.</dd></dl>
 
 </div>
 </div>
-<a id="ac64a17bc4243a6ba605108281c6519de"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac64a17bc4243a6ba605108281c6519de">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a0a193dfa5e776f4c271dbb37a6bd03f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a193dfa5e776f4c271dbb37a6bd03f5">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -5413,7 +5419,7 @@ the port's value must be of type Vec&lt;T&gt;.</dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -5427,8 +5433,8 @@ the port's value must be of type Vec&lt;T&gt;.</dd></dl>
 
 </div>
 </div>
-<a id="a0a193dfa5e776f4c271dbb37a6bd03f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a193dfa5e776f4c271dbb37a6bd03f5">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="ac64a17bc4243a6ba605108281c6519de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac64a17bc4243a6ba605108281c6519de">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -5439,7 +5445,7 @@ the port's value must be of type Vec&lt;T&gt;.</dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -5578,14 +5584,14 @@ the port's value must be of type Vec&lt;T&gt;.</dd></dl>
 
 </div>
 </div>
-<a id="a31898e0276f6bbc4edf7111f809afb01"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a31898e0276f6bbc4edf7111f809afb01">&#9670;&nbsp;</a></span>Publish()</h2>
+<a id="aeb0983a770c179f97a4805c6bccb43cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb0983a770c179f97a4805c6bccb43cc">&#9670;&nbsp;</a></span>Publish()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Publish </td>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_event_status.html">EventStatus</a> Publish </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>context</em>, </td>

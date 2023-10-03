@@ -167,7 +167,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1_simulator_st
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Holds the status return value from a call to <a class="el" href="classdrake_1_1systems_1_1_simulator.html#aba4b04299c9b1d41d9dd85563600012d" title="Advances the System&#39;s trajectory until boundary_time is reached in the context or some other terminat...">Simulator::AdvanceTo()</a> and related methods. </p>
+<div class="textblock"><p>Holds the status return value from a call to <a class="el" href="classdrake_1_1systems_1_1_simulator.html#aba4b04299c9b1d41d9dd85563600012d" title="Advances the System&#39;s trajectory until boundary_time is reached in the Context or some other terminat...">Simulator::AdvanceTo()</a> and related methods. </p>
 <p>The argument t to AdvanceTo(t) is called the boundary time, and represents the maximum time to which the simulation trajectory will be advanced by a call to AdvanceTo(). (For methods that don't advance time, the current time is considered to be the boundary time.) A normal, successful return means that simulated time advanced successfully to the boundary time, without encountering a termination condition or error condition. AdvanceTo() may return earlier than the boundary time if one of those conditions is encountered. In that case the return object holds a reference to the subsystem that detected the condition and a human-friendly message from that subsystem that hopefully explains what happened. </p>
 </div>
 <p><code>#include &lt;drake/systems/analysis/simulator_status.h&gt;</code></p>

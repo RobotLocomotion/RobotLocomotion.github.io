@@ -5471,8 +5471,11 @@ terminate &lt; fatal.</p>
 <blockquote>
 <div><p>kDidNothing : Successful, but nothing happened; no state update needed.</p>
 <p>kSucceeded : Handler executed successfully; state may have been updated.</p>
-<p>kReachedTermination : Handler succeeded but detected a termination condition (has message).</p>
-<p>kFailed : Handler was unable to perform its job (has message).</p>
+<p>kReachedTermination : Handler succeeded but detected a normal termination condition (has</p>
+</div></blockquote>
+<p>message). Intended primarily for internal use by the Simulator.</p>
+<blockquote>
+<div><p>kFailed : Handler was unable to perform its job (has message).</p>
 </div></blockquote>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.EventStatus.Severity.__init__">
@@ -7286,6 +7289,14 @@ implementations may assume that <code class="docutils literal notranslate"><span
 <code class="docutils literal notranslate"><span class="pre">discrete_state</span></code> is non-null, and that the referenced object has the
 same constituent structure as was produced by
 AllocateDiscreteVariables().</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There is no provision for returning EventStatus from
+DoCalcDiscreteVariableUpdates() as there is if you use the default
+dispatcher. Instead, your DoCalcDiscreteVariableUpdates() will be
+assumed to return EventStatus::Succeeded() regardless of what
+happened.</p>
+</div>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The “before” state.</p>
 </dd>
@@ -7319,6 +7330,13 @@ event and a handler callback for it using one of the
 which is only called from the public non-virtual Publish(), which will
 have already error-checked <code class="docutils literal notranslate"><span class="pre">context</span></code> so you may assume that it is
 valid.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There is no provision for returning EventStatus from DoPublish()
+as there is if you use the default dispatcher. Instead, your
+DoPublish() will be assumed to return EventStatus::Succeeded()
+regardless of what happened.</p>
+</div>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>Const current context.</p>
 </dd>
@@ -8201,6 +8219,14 @@ implementations may assume that <code class="docutils literal notranslate"><span
 <code class="docutils literal notranslate"><span class="pre">discrete_state</span></code> is non-null, and that the referenced object has the
 same constituent structure as was produced by
 AllocateDiscreteVariables().</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There is no provision for returning EventStatus from
+DoCalcDiscreteVariableUpdates() as there is if you use the default
+dispatcher. Instead, your DoCalcDiscreteVariableUpdates() will be
+assumed to return EventStatus::Succeeded() regardless of what
+happened.</p>
+</div>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The “before” state.</p>
 </dd>
@@ -8234,6 +8260,13 @@ event and a handler callback for it using one of the
 which is only called from the public non-virtual Publish(), which will
 have already error-checked <code class="docutils literal notranslate"><span class="pre">context</span></code> so you may assume that it is
 valid.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There is no provision for returning EventStatus from DoPublish()
+as there is if you use the default dispatcher. Instead, your
+DoPublish() will be assumed to return EventStatus::Succeeded()
+regardless of what happened.</p>
+</div>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>Const current context.</p>
 </dd>
@@ -9110,6 +9143,14 @@ implementations may assume that <code class="docutils literal notranslate"><span
 <code class="docutils literal notranslate"><span class="pre">discrete_state</span></code> is non-null, and that the referenced object has the
 same constituent structure as was produced by
 AllocateDiscreteVariables().</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There is no provision for returning EventStatus from
+DoCalcDiscreteVariableUpdates() as there is if you use the default
+dispatcher. Instead, your DoCalcDiscreteVariableUpdates() will be
+assumed to return EventStatus::Succeeded() regardless of what
+happened.</p>
+</div>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The “before” state.</p>
 </dd>
@@ -9143,6 +9184,13 @@ event and a handler callback for it using one of the
 which is only called from the public non-virtual Publish(), which will
 have already error-checked <code class="docutils literal notranslate"><span class="pre">context</span></code> so you may assume that it is
 valid.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There is no provision for returning EventStatus from DoPublish()
+as there is if you use the default dispatcher. Instead, your
+DoPublish() will be assumed to return EventStatus::Succeeded()
+regardless of what happened.</p>
+</div>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>Const current context.</p>
 </dd>
@@ -10633,6 +10681,14 @@ with no associated handler. By default that will do nothing when
 triggered, but that behavior can be changed by overriding the
 dispatcher (not recommended).</p>
 </div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if it invokes an event handler that returns status</strong> – </p></li>
+<li><p><strong>indicating failure.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>CalcDiscreteVariableUpdate(), CalcForcedUnrestrictedUpdate()</p>
@@ -10657,6 +10713,14 @@ with no associated handler. By default that will do nothing when
 triggered, but that behavior can be changed by overriding the
 dispatcher (not recommended).</p>
 </div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if it invokes an event handler that returns status</strong> – </p></li>
+<li><p><strong>indicating failure.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>CalcUnrestrictedUpdate()</p>
@@ -11108,6 +11172,8 @@ just return the already-calculated value.</p>
 <li><p><strong>RuntimeError if there is not exactly one periodic timing in this</strong> – </p></li>
 <li><p><a class="reference internal" href="#pydrake.systems.framework.System" title="pydrake.systems.framework.System"><strong>System</strong></a><strong> (</strong><strong>which may be a Diagram</strong><strong>) </strong><strong>that triggers discrete update</strong> – </p></li>
 <li><p><strong>events.</strong> – </p></li>
+<li><p><strong>RuntimeError if it invokes an event handler that returns status</strong> – </p></li>
+<li><p><strong>indicating failure.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -11154,7 +11220,15 @@ callers who do not want to use the full Simulator workflow.</p>
 <p>Note that this is not fully equivalent to Simulator::Initialize()
 because <em>only</em> initialization events are handled here, while
 Simulator::Initialize() also processes other events associated with
-time zero.</p>
+time zero. Also, “reached termination” returns are ignored here.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if it invokes an event handler that returns status</strong> – </p></li>
+<li><p><strong>indicating failure.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -11194,6 +11268,14 @@ dispatcher DoPublish() (not recommended).</p>
 <p>The Simulator can be configured to call this in
 Simulator::Initialize() and at the start of each continuous
 integration step. See the Simulator API for more details.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if it invokes an event handler that returns status</strong> – </p></li>
+<li><p><strong>indicating failure.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>Publish(), CalcForcedDiscreteVariableUpdate(),
@@ -11718,6 +11800,14 @@ with no associated handler. By default that will do nothing when
 triggered, but that behavior can be changed by overriding the
 dispatcher (not recommended).</p>
 </div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if it invokes an event handler that returns status</strong> – </p></li>
+<li><p><strong>indicating failure.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>CalcDiscreteVariableUpdate(), CalcForcedUnrestrictedUpdate()</p>
@@ -11742,6 +11832,14 @@ with no associated handler. By default that will do nothing when
 triggered, but that behavior can be changed by overriding the
 dispatcher (not recommended).</p>
 </div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if it invokes an event handler that returns status</strong> – </p></li>
+<li><p><strong>indicating failure.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>CalcUnrestrictedUpdate()</p>
@@ -12193,6 +12291,8 @@ just return the already-calculated value.</p>
 <li><p><strong>RuntimeError if there is not exactly one periodic timing in this</strong> – </p></li>
 <li><p><a class="reference internal" href="#pydrake.systems.framework.System" title="pydrake.systems.framework.System"><strong>System</strong></a><strong> (</strong><strong>which may be a Diagram</strong><strong>) </strong><strong>that triggers discrete update</strong> – </p></li>
 <li><p><strong>events.</strong> – </p></li>
+<li><p><strong>RuntimeError if it invokes an event handler that returns status</strong> – </p></li>
+<li><p><strong>indicating failure.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -12239,7 +12339,15 @@ callers who do not want to use the full Simulator workflow.</p>
 <p>Note that this is not fully equivalent to Simulator::Initialize()
 because <em>only</em> initialization events are handled here, while
 Simulator::Initialize() also processes other events associated with
-time zero.</p>
+time zero. Also, “reached termination” returns are ignored here.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if it invokes an event handler that returns status</strong> – </p></li>
+<li><p><strong>indicating failure.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -12279,6 +12387,14 @@ dispatcher DoPublish() (not recommended).</p>
 <p>The Simulator can be configured to call this in
 Simulator::Initialize() and at the start of each continuous
 integration step. See the Simulator API for more details.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if it invokes an event handler that returns status</strong> – </p></li>
+<li><p><strong>indicating failure.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>Publish(), CalcForcedDiscreteVariableUpdate(),
@@ -12797,6 +12913,14 @@ with no associated handler. By default that will do nothing when
 triggered, but that behavior can be changed by overriding the
 dispatcher (not recommended).</p>
 </div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if it invokes an event handler that returns status</strong> – </p></li>
+<li><p><strong>indicating failure.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>CalcDiscreteVariableUpdate(), CalcForcedUnrestrictedUpdate()</p>
@@ -12821,6 +12945,14 @@ with no associated handler. By default that will do nothing when
 triggered, but that behavior can be changed by overriding the
 dispatcher (not recommended).</p>
 </div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if it invokes an event handler that returns status</strong> – </p></li>
+<li><p><strong>indicating failure.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>CalcUnrestrictedUpdate()</p>
@@ -13272,6 +13404,8 @@ just return the already-calculated value.</p>
 <li><p><strong>RuntimeError if there is not exactly one periodic timing in this</strong> – </p></li>
 <li><p><a class="reference internal" href="#pydrake.systems.framework.System" title="pydrake.systems.framework.System"><strong>System</strong></a><strong> (</strong><strong>which may be a Diagram</strong><strong>) </strong><strong>that triggers discrete update</strong> – </p></li>
 <li><p><strong>events.</strong> – </p></li>
+<li><p><strong>RuntimeError if it invokes an event handler that returns status</strong> – </p></li>
+<li><p><strong>indicating failure.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -13318,7 +13452,15 @@ callers who do not want to use the full Simulator workflow.</p>
 <p>Note that this is not fully equivalent to Simulator::Initialize()
 because <em>only</em> initialization events are handled here, while
 Simulator::Initialize() also processes other events associated with
-time zero.</p>
+time zero. Also, “reached termination” returns are ignored here.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if it invokes an event handler that returns status</strong> – </p></li>
+<li><p><strong>indicating failure.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -13358,6 +13500,14 @@ dispatcher DoPublish() (not recommended).</p>
 <p>The Simulator can be configured to call this in
 Simulator::Initialize() and at the start of each continuous
 integration step. See the Simulator API for more details.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if it invokes an event handler that returns status</strong> – </p></li>
+<li><p><strong>indicating failure.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>Publish(), CalcForcedDiscreteVariableUpdate(),
@@ -14122,10 +14272,13 @@ but for diagrams and other special cases they might vary.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.framework.SystemBase.GraphvizFragmentParams">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GraphvizFragmentParams</span></span><a class="headerlink" href="#pydrake.systems.framework.SystemBase.GraphvizFragmentParams" title="Permalink to this definition"></a></dt>
-<dd><p>The arguments to DoGetGraphvizFragment(). These parameters constitute
-a polite request; a user’s System’s implementation of
-DoGetGraphvizFragment() is not strictly required to honor any of these
-parameters, but generally should attempt to honor as many as possible.</p>
+<dd><p>(Advanced) The arguments to the protected method
+DoGetGraphvizFragment(). This struct typically is only used by
+subclasses of LeafSystem that need to customize their Graphviz
+representation. These parameters constitute a polite request; a user’s
+System’s implementation of DoGetGraphvizFragment() is not strictly
+required to honor any of these parameters, but generally should
+attempt to honor as many as possible.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.SystemBase.GraphvizFragmentParams.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.SystemBase.GraphvizFragmentParams.__init__" title="Permalink to this definition"></a></dt>

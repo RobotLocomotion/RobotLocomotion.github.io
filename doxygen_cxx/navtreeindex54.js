@@ -1,5 +1,10 @@
 var NAVTREEINDEX54 =
 {
+"roll__pitch__yaw_8h.html":[4,0,0,7,30],
+"rotary__encoders_8h.html":[4,0,0,12,8,20],
+"rotation_8h.html":[4,0,0,1,2,0],
+"rotation__constraint_8h.html":[4,0,0,11,41],
+"rotation__constraint_8h.html#a0c7466e7ce1b8db6de94ad0524f8106d":[4,0,0,11,41,2],
 "rotation__constraint_8h.html#a1949f5edc628077e2d780c150de88d74":[4,0,0,11,41,1],
 "rotation__constraint_8h.html#a1949f5edc628077e2d780c150de88d74a27402335e74462e03adf2c79e903705e":[4,0,0,11,41,1,8],
 "rotation__constraint_8h.html#a1949f5edc628077e2d780c150de88d74a34bbac4b028a742de1b931cc2694dcea":[4,0,0,11,41,1,0],
@@ -59,9 +64,9 @@ var NAVTREEINDEX54 =
 "scalar__initial__value__problem_8h.html":[4,0,0,12,0,19],
 "scalar__view__dense__output_8h.html":[4,0,0,12,0,20],
 "scenario_8h.html":[4,0,0,3,6,0],
-"scene__graph_8h.html":[4,0,0,4,39],
+"scene__graph_8h.html":[4,0,0,4,40],
 "scene__graph__collision__checker_8h.html":[4,0,0,10,15],
-"scene__graph__inspector_8h.html":[4,0,0,4,40],
+"scene__graph__inspector_8h.html":[4,0,0,4,41],
 "schunk__wsg__constants_8h.html":[4,0,0,6,2,1],
 "schunk__wsg__constants_8h.html#a2d50206e40178bb516bf578b4418af0a":[4,0,0,6,2,1,6],
 "schunk__wsg__constants_8h.html#a2fbb9739d01b7281a1633aa49c419d6e":[4,0,0,6,2,1,3],
@@ -107,9 +112,9 @@ var NAVTREEINDEX54 =
 "serialize__pybind_8h.html#a68be3d37cf9d6c6fcc2afb98d04c046f":[4,0,0,0,0,0,8,1],
 "serialize__pybind_8h.html#aa9814a507ba70a62d61b467c3ba06cce":[4,0,0,0,0,0,8,2],
 "serializer_8h.html":[4,0,0,12,4,7],
-"shape__specification_8h.html":[4,0,0,4,41],
-"shape__specification_8h.html#ae129ecc1484c1fab6e4d4b3e04d25198":[4,0,0,4,41,14],
-"shape__to__string_8h.html":[4,0,0,4,42],
+"shape__specification_8h.html":[4,0,0,4,42],
+"shape__specification_8h.html#ae129ecc1484c1fab6e4d4b3e04d25198":[4,0,0,4,42,14],
+"shape__to__string_8h.html":[4,0,0,4,43],
 "shared__pointer__system_8h.html":[4,0,0,12,6,21],
 "signed__distance__pair_8h.html":[4,0,0,4,3,3],
 "signed__distance__to__point_8h.html":[4,0,0,4,3,4],
@@ -244,10 +249,5 @@ var NAVTREEINDEX54 =
 "standard__operations_8h.html#a253ea74fad9476e4de67b656b97ef1cb":[4,0,0,1,0,0,2,35],
 "standard__operations_8h.html#a2646ff62a13c4b182f4523ade302cddb":[4,0,0,1,0,0,2,39],
 "standard__operations_8h.html#a31d584bed99ab67ec074687a94eb7c00":[4,0,0,1,0,0,2,77],
-"standard__operations_8h.html#a3b2e82538ea517c32aaafb58eccafba2":[4,0,0,1,0,0,2,3],
-"standard__operations_8h.html#a3e188bc8317b8d45912f1d59438edb91":[4,0,0,1,0,0,2,22],
-"standard__operations_8h.html#a432d88eed310c6be7478cdfa9d4b8eec":[4,0,0,1,0,0,2,65],
-"standard__operations_8h.html#a45d35259b01712e9c24f6f04c1f00408":[4,0,0,1,0,0,2,76],
-"standard__operations_8h.html#a4c3215480bf93e3e7304d1b5696083c6":[4,0,0,1,0,0,2,62],
-"standard__operations_8h.html#a4fac4d6f819713b6657e192c769ed1e8":[4,0,0,1,0,0,2,26]
+"standard__operations_8h.html#a3b2e82538ea517c32aaafb58eccafba2":[4,0,0,1,0,0,2,3]
 };

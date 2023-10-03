@@ -1,5 +1,9 @@
 var NAVTREEINDEX60 =
 {
+"structstd_1_1hash_3_01drake_1_1symbolic_1_1_variables_01_4.html":[3,0,2,19],
+"structstd_1_1hash_3_01drake_1_1systems_1_1sensors_1_1_color_3_01_t_01_4_01_4.html":[3,0,2,20],
+"structstd_1_1hash_3_01drake_1_1systems_1_1sensors_1_1_pixel_type_01_4.html":[3,0,2,21],
+"structstd_1_1less_3_01drake_1_1solvers_1_1_solver_id_01_4.html":[3,0,2,23],
 "structstd_1_1less_3_01drake_1_1solvers_1_1_solver_id_01_4.html#aacab57c845ae554fb21a347bf8137ef3":[3,0,2,23,0],
 "structstd_1_1less_3_01drake_1_1symbolic_1_1_expression_01_4.html":[3,0,2,24],
 "structstd_1_1less_3_01drake_1_1symbolic_1_1_expression_01_4.html#a538d122bb822306915eed589daae8627":[3,0,2,24,0],
@@ -188,7 +192,7 @@ var NAVTREEINDEX60 =
 "unrevised__lemke__solver_8h.html":[4,0,0,11,56],
 "unused_8h.html":[4,0,0,1,62],
 "unused_8h.html#ade20b7bf635eecb13adbaac4df980af0":[4,0,0,1,62,0],
-"utilities_8h.html":[4,0,0,4,43],
+"utilities_8h.html":[4,0,0,4,44],
 "validate__constraint__gradients_8h.html":[4,0,0,8,2,0,18],
 "value_8h.html":[4,0,0,1,63],
 "value__checker_8h.html":[4,0,0,12,3,50],
@@ -245,9 +249,5 @@ var NAVTREEINDEX60 =
 "visibility__graph_8h.html#adca2fc53de41fd4760fe9825e079456e":[4,0,0,10,17,0],
 "visualization__config_8h.html":[4,0,0,13,2],
 "visualization__config__functions_8h.html":[4,0,0,13,3],
-"visualization__config__functions_8h.html#a02befd8c90155c339a042f2af39d4c12":[4,0,0,13,3,0],
-"visualization__config__functions_8h.html#acfe50d1cfd6c229aab5986a0a3c97494":[4,0,0,13,3,1],
-"visualization__py_8h.html":[4,0,0,0,0,8,0],
-"volume__mesh_8h.html":[4,0,0,4,2,56],
-"volume__mesh_8h.html#a15599d92370af7b991c4a593f6103376":[4,0,0,4,2,56,3]
+"visualization__config__functions_8h.html#a02befd8c90155c339a042f2af39d4c12":[4,0,0,13,3,0]
 };

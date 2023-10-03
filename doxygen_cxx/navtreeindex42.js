@@ -1,5 +1,9 @@
 var NAVTREEINDEX42 =
 {
+"classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html#a0820513febb88c2ff24110d99fac8a23":[3,0,0,15,5,7,8],
+"classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html#a128de9914660c56b522f67d6bae412b2":[3,0,0,15,5,7,3],
+"classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html#a2fccdf5e8b33a94fdaf1a9b8826aa684":[3,0,0,15,5,7,2],
+"classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html#a301c222474fa97426845334d05ed727a":[3,0,0,15,5,7,6],
 "classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html#a43a2fc02cb2f5eb2db97ea5f3fe9a3bf":[3,0,0,15,5,7,7],
 "classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html#a5bfe2467e0ea22bbb13e0c4b9afa98a4":[3,0,0,15,5,7,4],
 "classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html#ab9c5d077a75cc19cd399abe892316543":[3,0,0,15,5,7,1],
@@ -245,9 +249,5 @@ var NAVTREEINDEX42 =
 "classdrake_1_1test_1_1_limit_malloc.html#a923eedb579481aa1bab9babf206d3ead":[3,0,0,16,1,3],
 "classdrake_1_1test_1_1_limit_malloc.html#aab5411a4588acfe4e13675e9234adedf":[3,0,0,16,1,7],
 "classdrake_1_1test_1_1_limit_malloc.html#afcdbfd967bf9091f3554dc4b5609c288":[3,0,0,16,1,5],
-"classdrake_1_1test_1_1_limit_malloc.html#afef229bd4c5ea3baf6feca1c8720d9da":[3,0,0,16,1,1],
-"classdrake_1_1trajectories_1_1_bezier_curve.html":[3,0,0,17,0],
-"classdrake_1_1trajectories_1_1_bezier_curve.html#a07c5c6d262d1976bc5f747cbb00e26fb":[3,0,0,17,0,9],
-"classdrake_1_1trajectories_1_1_bezier_curve.html#a0d37069b2edc37d7662aa809b6070e4e":[3,0,0,17,0,7],
-"classdrake_1_1trajectories_1_1_bezier_curve.html#a1140b71651392be777ab280996db81de":[3,0,0,17,0,10]
+"classdrake_1_1test_1_1_limit_malloc.html#afef229bd4c5ea3baf6feca1c8720d9da":[3,0,0,16,1,1]
 };

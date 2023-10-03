@@ -213,6 +213,13 @@ event and a handler callback for it using one of the
 which is only called from the public non-virtual Publish(), which will
 have already error-checked <code class="docutils literal notranslate"><span class="pre">context</span></code> so you may assume that it is
 valid.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There is no provision for returning EventStatus from DoPublish()
+as there is if you use the default dispatcher. Instead, your
+DoPublish() will be assumed to return EventStatus::Succeeded()
+regardless of what happened.</p>
+</div>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>Const current context.</p>
 </dd>

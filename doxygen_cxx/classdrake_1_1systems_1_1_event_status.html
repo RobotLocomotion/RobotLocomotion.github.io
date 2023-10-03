@@ -185,6 +185,18 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a137ef12ed8ec0fe56af556cb6fad6828"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event_status.html#a137ef12ed8ec0fe56af556cb6fad6828">did_nothing</a> () const</td></tr>
+<tr class="memdesc:a137ef12ed8ec0fe56af556cb6fad6828"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if the status is DidNothing.  <a href="#a137ef12ed8ec0fe56af556cb6fad6828">More...</a><br /></td></tr>
+<tr class="separator:a137ef12ed8ec0fe56af556cb6fad6828"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95d9229b7350a03a489707d4ca548d98"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event_status.html#a95d9229b7350a03a489707d4ca548d98">succeeded</a> () const</td></tr>
+<tr class="memdesc:a95d9229b7350a03a489707d4ca548d98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if the status is Succeeded.  <a href="#a95d9229b7350a03a489707d4ca548d98">More...</a><br /></td></tr>
+<tr class="separator:a95d9229b7350a03a489707d4ca548d98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60f9be6a8b498d2c35529cffbffa587b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event_status.html#a60f9be6a8b498d2c35529cffbffa587b">reached_termination</a> () const</td></tr>
+<tr class="memdesc:a60f9be6a8b498d2c35529cffbffa587b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if the status is ReachedTermination.  <a href="#a60f9be6a8b498d2c35529cffbffa587b">More...</a><br /></td></tr>
+<tr class="separator:a60f9be6a8b498d2c35529cffbffa587b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03c20ddaa381f1926a24672f545b70eb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event_status.html#a03c20ddaa381f1926a24672f545b70eb">failed</a> () const</td></tr>
+<tr class="memdesc:a03c20ddaa381f1926a24672f545b70eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if the status is Failed.  <a href="#a03c20ddaa381f1926a24672f545b70eb">More...</a><br /></td></tr>
+<tr class="separator:a03c20ddaa381f1926a24672f545b70eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61565d42b3a4c63dbfe14fb29b23c3aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_event_status.html#a11717da96dc4e4a5f79371318448f82b">Severity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event_status.html#a61565d42b3a4c63dbfe14fb29b23c3aa">severity</a> () const</td></tr>
 <tr class="memdesc:a61565d42b3a4c63dbfe14fb29b23c3aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the severity of the current status.  <a href="#a61565d42b3a4c63dbfe14fb29b23c3aa">More...</a><br /></td></tr>
 <tr class="separator:a61565d42b3a4c63dbfe14fb29b23c3aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -194,6 +206,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a77c231e47051f5ce971c8f1ce5976b41"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event_status.html#a77c231e47051f5ce971c8f1ce5976b41">message</a> () const</td></tr>
 <tr class="memdesc:a77c231e47051f5ce971c8f1ce5976b41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the optionally-provided human-readable message supplied by the event handler that produced the current status.  <a href="#a77c231e47051f5ce971c8f1ce5976b41">More...</a><br /></td></tr>
 <tr class="separator:a77c231e47051f5ce971c8f1ce5976b41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf765aa6445a1cd16e3380af0d33f944"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event_status.html#adf765aa6445a1cd16e3380af0d33f944">ThrowOnFailure</a> (const char *function_name) const</td></tr>
+<tr class="memdesc:adf765aa6445a1cd16e3380af0d33f944"><td class="mdescLeft">&#160;</td><td class="mdescRight">If <a class="el" href="classdrake_1_1systems_1_1_event_status.html#a03c20ddaa381f1926a24672f545b70eb" title="Returns true if the status is Failed.">failed()</a>, throws an std::exception with a human-readable message.  <a href="#adf765aa6445a1cd16e3380af0d33f944">More...</a><br /></td></tr>
+<tr class="separator:adf765aa6445a1cd16e3380af0d33f944"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab836ce65ca0a13d07413608f5e22d86b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_event_status.html">EventStatus</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event_status.html#ab836ce65ca0a13d07413608f5e22d86b">KeepMoreSevere</a> (<a class="el" href="classdrake_1_1systems_1_1_event_status.html">EventStatus</a> candidate)</td></tr>
 <tr class="memdesc:ab836ce65ca0a13d07413608f5e22d86b"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Replaces the contents of <code>this</code> with the more-severe status if <code>candidate</code> is a more severe status than <code>this</code> one.  <a href="#ab836ce65ca0a13d07413608f5e22d86b">More...</a><br /></td></tr>
 <tr class="separator:ab836ce65ca0a13d07413608f5e22d86b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -241,7 +256,8 @@ Static Public Member Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a11717da96dc4e4a5f79371318448f82ba6c37a7435a4069d24dd684abdb57d9ae"></a>kSucceeded&#160;</td><td class="fielddoc"><p>Handler executed successfully; state may have been updated. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a11717da96dc4e4a5f79371318448f82ba76d2ce0414adfab1eb799c27b3965197"></a>kReachedTermination&#160;</td><td class="fielddoc"><p>Handler succeeded but detected a termination condition (has message). </p>
+<tr><td class="fieldname"><a id="a11717da96dc4e4a5f79371318448f82ba76d2ce0414adfab1eb799c27b3965197"></a>kReachedTermination&#160;</td><td class="fielddoc"><p>Handler succeeded but detected a normal termination condition (has message). </p>
+<p>Intended primarily for internal use by the <a class="el" href="classdrake_1_1systems_1_1_simulator.html" title="A class for advancing the state of hybrid dynamic systems, represented by System&lt;T&gt; objects,...">Simulator</a>. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a11717da96dc4e4a5f79371318448f82ba48ee4661a1d96abae7dda31fbcaec970"></a>kFailed&#160;</td><td class="fielddoc"><p>Handler was unable to perform its job (has message). </p>
 </td></tr>
@@ -303,6 +319,25 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a137ef12ed8ec0fe56af556cb6fad6828"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a137ef12ed8ec0fe56af556cb6fad6828">&#9670;&nbsp;</a></span>did_nothing()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool did_nothing </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns <code>true</code> if the status is DidNothing. </p>
+
+</div>
+</div>
 <a id="a0de7932f15a164a46523113d36e922e3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0de7932f15a164a46523113d36e922e3">&#9670;&nbsp;</a></span>DidNothing()</h2>
 
@@ -368,6 +403,26 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a03c20ddaa381f1926a24672f545b70eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03c20ddaa381f1926a24672f545b70eb">&#9670;&nbsp;</a></span>failed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool failed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns <code>true</code> if the status is Failed. </p>
+<p>There will also be a <a class="el" href="classdrake_1_1systems_1_1_event_status.html#a77c231e47051f5ce971c8f1ce5976b41" title="Returns the optionally-provided human-readable message supplied by the event handler that produced th...">message()</a> with more detail. </p>
+
+</div>
+</div>
 <a id="ab836ce65ca0a13d07413608f5e22d86b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab836ce65ca0a13d07413608f5e22d86b">&#9670;&nbsp;</a></span>KeepMoreSevere()</h2>
 
@@ -409,8 +464,34 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a80dd62e79da55a23a418fe3d75ca3433"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80dd62e79da55a23a418fe3d75ca3433">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_event_status.html">EventStatus</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_event_status.html">EventStatus</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a7a92e363f6fca60671bddfe55344a345"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7a92e363f6fca60671bddfe55344a345">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a92e363f6fca60671bddfe55344a345">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -435,29 +516,23 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a80dd62e79da55a23a418fe3d75ca3433"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80dd62e79da55a23a418fe3d75ca3433">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a60f9be6a8b498d2c35529cffbffa587b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60f9be6a8b498d2c35529cffbffa587b">&#9670;&nbsp;</a></span>reached_termination()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_event_status.html">EventStatus</a>&amp; operator= </td>
+          <td class="memname">bool reached_termination </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_event_status.html">EventStatus</a> &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+
+<p>Returns <code>true</code> if the status is ReachedTermination. </p>
+<p>There will also be a <a class="el" href="classdrake_1_1systems_1_1_event_status.html#a77c231e47051f5ce971c8f1ce5976b41" title="Returns the optionally-provided human-readable message supplied by the event handler that produced th...">message()</a> with more detail. </p>
 
 </div>
 </div>
@@ -545,6 +620,26 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a95d9229b7350a03a489707d4ca548d98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95d9229b7350a03a489707d4ca548d98">&#9670;&nbsp;</a></span>succeeded()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool succeeded </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns <code>true</code> if the status is Succeeded. </p>
+<p>"Did nothing" can also be viewed as successful but you have to check for that separately. </p>
+
+</div>
+</div>
 <a id="a1eb3465a33107f25e731948cd3347aa1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1eb3465a33107f25e731948cd3347aa1">&#9670;&nbsp;</a></span>system()</h2>
 
@@ -562,6 +657,32 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Returns the optionally-provided subsystem that generated a status return that can include a message (reached termination or failed). </p>
 <p>Returns nullptr if no subsystem was provided. </p>
+
+</div>
+</div>
+<a id="adf765aa6445a1cd16e3380af0d33f944"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf765aa6445a1cd16e3380af0d33f944">&#9670;&nbsp;</a></span>ThrowOnFailure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ThrowOnFailure </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>function_name</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If <a class="el" href="classdrake_1_1systems_1_1_event_status.html#a03c20ddaa381f1926a24672f545b70eb" title="Returns true if the status is Failed.">failed()</a>, throws an std::exception with a human-readable message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">function_name</td><td>The name of the user-callable API that encountered the failure. Don't include "()". </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

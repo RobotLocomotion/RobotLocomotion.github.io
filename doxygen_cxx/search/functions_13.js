@@ -37,6 +37,7 @@ var searchData=
   ['throwmismatchedsize',['ThrowMismatchedSize',['../classdrake_1_1systems_1_1_vector_base.html#acfa12ab9f75a241f10fe4554da824957',1,'drake::systems::VectorBase']]],
   ['thrownegativeportindex',['ThrowNegativePortIndex',['../classdrake_1_1systems_1_1_system_base.html#aa640b3592c2af42c76fac2d8a048d25c',1,'drake::systems::SystemBase']]],
   ['thrownotavectorinputport',['ThrowNotAVectorInputPort',['../classdrake_1_1systems_1_1_system_base.html#aee2dfff6a2db34da2c791a7971e2af0c',1,'drake::systems::SystemBase']]],
+  ['throwonfailure',['ThrowOnFailure',['../classdrake_1_1systems_1_1_event_status.html#adf765aa6445a1cd16e3380af0d33f944',1,'drake::systems::EventStatus']]],
   ['throwoutofrange',['ThrowOutOfRange',['../classdrake_1_1systems_1_1_vector_base.html#abdd4d55ace1242d8a8deac5d5edcb8bd',1,'drake::systems::VectorBase']]],
   ['throwoutputportindexoutofrange',['ThrowOutputPortIndexOutOfRange',['../classdrake_1_1systems_1_1_system_base.html#af58594b987a3e5b1684d4e38bf00767e',1,'drake::systems::SystemBase']]],
   ['throwrequiredmissing',['ThrowRequiredMissing',['../classdrake_1_1systems_1_1_input_port_base.html#ad421365c1e90cb806365432ec9a1bbbe',1,'drake::systems::InputPortBase']]],

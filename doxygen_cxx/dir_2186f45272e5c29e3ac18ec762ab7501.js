@@ -123,8 +123,8 @@ var dir_2186f45272e5c29e3ac18ec762ab7501 =
     [ "system_base.h", "system__base_8h.html", [
       [ "SystemBase", "classdrake_1_1systems_1_1_system_base.html", "classdrake_1_1systems_1_1_system_base" ],
       [ "GraphvizFragment", "structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment.html", "structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment" ],
-      [ "ContextSizes", "structdrake_1_1systems_1_1_system_base_1_1_context_sizes.html", "structdrake_1_1systems_1_1_system_base_1_1_context_sizes" ],
-      [ "GraphvizFragmentParams", "structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment_params.html", "structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment_params" ]
+      [ "GraphvizFragmentParams", "structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment_params.html", "structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment_params" ],
+      [ "ContextSizes", "structdrake_1_1systems_1_1_system_base_1_1_context_sizes.html", "structdrake_1_1systems_1_1_system_base_1_1_context_sizes" ]
     ] ],
     [ "system_compatibility_doxygen.h", "system__compatibility__doxygen_8h.html", null ],
     [ "system_constraint.h", "system__constraint_8h.html", "system__constraint_8h" ],

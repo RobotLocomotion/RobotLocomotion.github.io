@@ -2137,9 +2137,25 @@ Step() algorithm. Each step consists of zero or more unrestricted
 updates, followed by zero or more discrete updates, followed by
 (possibly zero-length) continuous time and state advancement, followed
 by zero or more publishes, and then a call to the monitor() function
-if one has been defined. Updates, publishes, and the monitor can
-report errors or detect a termination condition; that is not shown in
-the pseudocode below.</p>
+if one has been defined.</p>
+<p>Updates, publishes, and the monitor can report errors or detect a
+termination condition; that is not shown in the pseudocode below. We
+follow this policy: - If any unrestricted update event fails, we leave
+the state unchanged and report failure. We leave unspecified whether
+the handlers for other simultaneous unrestricted update events are
+executed or skipped in this case. (That could affect behavior if they
+have side effects but in any case the state will not be modified.) -
+Next, if any discrete update event fails, we report failure. In this
+case the state may have been partially updated; don’t assume it has
+been left unchanged. We leave unspecified whether the handlers for
+other simultaneous discrete events are executed. - Next, if any
+publish event fails, we <em>continue</em> executing the handlers for all
+simultaneous publish events, and report failure after they have all
+been executed. The state is returned as updated since publish events
+can have external consequences based on that updated state. - A
+“reached termination” status from any event handler permits continued
+processing of simultaneous events, but doesn’t permit time to advance
+any further.</p>
 <p>The pseudocode will clarify the effects on time and state of each of
 the update stages above. This algorithm is given a starting Context
 value <code class="docutils literal notranslate"><span class="pre">{tₛ,</span> <span class="pre">x⁻(tₛ)}</span></code> and returns an end Context value <code class="docutils literal notranslate"><span class="pre">{tₑ,</span>
@@ -2276,6 +2292,11 @@ you are specifically interested in the <code class="docutils literal notranslate
 pending events, nothing happens except possibly a final per-step
 publish call (if enabled) followed by a call to the monitor() function
 (if one has been provided).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if any handled event reports failure.</strong> – </p>
+</dd>
+</dl>
 <dl class="simple">
 <dt>Returns <code class="docutils literal notranslate"><span class="pre">status</span></code>:</dt><dd><p>A SimulatorStatus object indicating success, termination, or an
 error condition as reported by event handlers or the monitor
@@ -2292,11 +2313,7 @@ function.</p>
 <dt class="sig sig-object py" id="pydrake.systems.analysis.Simulator.AdvanceTo">
 <span class="sig-name descname"><span class="pre">AdvanceTo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.analysis.Simulator" title="pydrake.systems.analysis.Simulator"><span class="pre">pydrake.systems.analysis.Simulator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interruptible</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.analysis.SimulatorStatus" title="pydrake.systems.analysis.SimulatorStatus"><span class="pre">pydrake.systems.analysis.SimulatorStatus</span></a></span></span><a class="headerlink" href="#pydrake.systems.analysis.Simulator.AdvanceTo" title="Permalink to this definition"></a></dt>
 <dd><p>Advances the System’s trajectory until <code class="docutils literal notranslate"><span class="pre">boundary_time</span></code> is reached in
-the context or some other termination condition occurs. A variety of
-<code class="docutils literal notranslate"><span class="pre">RuntimeError</span></code> conditions are possible here, as well as error
-conditions that may be thrown by the System when it is asked to
-perform computations. Be sure to enclose your simulation in a
-<code class="docutils literal notranslate"><span class="pre">try-catch</span></code> block and display the <code class="docutils literal notranslate"><span class="pre">what()</span></code> message.</p>
+the Context or some other termination condition occurs.</p>
 <p>We recommend that you call Initialize() prior to making the first call
 to AdvanceTo(). However, if you don’t it will be called for you the
 first time that you attempt a step, possibly resulting in unexpected
@@ -2313,6 +2330,14 @@ See Initialize() for more information.</p>
 <p>You can track simulation progress to terminate on arbitrary
 conditions using a <em>monitor</em> function; see set_monitor().</p>
 </div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if any handled event reports failure. Other error</strong> – </p></li>
+<li><p><strong>conditions are possible from the System and integrator in use.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">boundary_time</span></code>:</dt><dd><p>The maximum time to which the trajectory will be advanced by this
 call to AdvanceTo(). The method may return earlier if an event or
@@ -2429,30 +2454,40 @@ continuous state of the system.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.Simulator.get_num_discrete_updates">
 <span class="sig-name descname"><span class="pre">get_num_discrete_updates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.analysis.Simulator" title="pydrake.systems.analysis.Simulator"><span class="pre">pydrake.systems.analysis.Simulator</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.systems.analysis.Simulator.get_num_discrete_updates" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the number of discrete variable updates performed since the last
-Initialize() call.</p>
+<dd><p>Gets the number of effective discrete variable update dispatcher calls
+since the last Initialize() or ResetStatistics() call. A dispatch is
+ineffective (not counted) if <em>any</em> of the discrete update events fails
+or <em>all</em> the discrete update events return “did nothing”. A single
+dispatcher call may handle multiple discrete update events.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.Simulator.get_num_publishes">
 <span class="sig-name descname"><span class="pre">get_num_publishes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.analysis.Simulator" title="pydrake.systems.analysis.Simulator"><span class="pre">pydrake.systems.analysis.Simulator</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.systems.analysis.Simulator.get_num_publishes" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the number of publishes made since the last Initialize() or
-ResetStatistics() call.</p>
+<dd><p>Gets the number of effective publish dispatcher calls made since the
+last Initialize() or ResetStatistics() call. A dispatch is ineffective
+(not counted) if <em>any</em> of the publish events fails or <em>all</em> the
+publish events return “did nothing”. A single dispatcher call may
+handle multiple publish events.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.Simulator.get_num_steps_taken">
 <span class="sig-name descname"><span class="pre">get_num_steps_taken</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.analysis.Simulator" title="pydrake.systems.analysis.Simulator"><span class="pre">pydrake.systems.analysis.Simulator</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.systems.analysis.Simulator.get_num_steps_taken" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the number of steps since the last Initialize() call. (We’re not
-counting the Initialize() 0-length “step”.) Note that every
-AdvanceTo() call can potentially take many steps.</p>
+<dd><p>Gets the number of steps since the last Initialize() or
+ResetStatistics() call. (We’re not counting the Initialize() 0-length
+“step”.) Note that every AdvanceTo() call can potentially take many
+steps.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.Simulator.get_num_unrestricted_updates">
 <span class="sig-name descname"><span class="pre">get_num_unrestricted_updates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.analysis.Simulator" title="pydrake.systems.analysis.Simulator"><span class="pre">pydrake.systems.analysis.Simulator</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.systems.analysis.Simulator.get_num_unrestricted_updates" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the number of “unrestricted” updates performed since the last
-Initialize() call.</p>
+<dd><p>Gets the number of effective unrestricted update dispatcher calls
+since the last Initialize() or ResetStatistics() call. A dispatch is
+ineffective (not counted) if <em>any</em> of the unrestricted update events
+fails or <em>all</em> the unrestricted update events return “did nothing”. A
+single dispatcher call may handle multiple unrestricted update events.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2484,7 +2519,19 @@ called.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.Simulator.Initialize">
 <span class="sig-name descname"><span class="pre">Initialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.analysis.Simulator" title="pydrake.systems.analysis.Simulator"><span class="pre">pydrake.systems.analysis.Simulator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.analysis.InitializeParams" title="pydrake.systems.analysis.InitializeParams"><span class="pre">pydrake.systems.analysis.InitializeParams</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">InitializeParams(suppress_initialization_events=False)</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.analysis.SimulatorStatus" title="pydrake.systems.analysis.SimulatorStatus"><span class="pre">pydrake.systems.analysis.SimulatorStatus</span></a></span></span><a class="headerlink" href="#pydrake.systems.analysis.Simulator.Initialize" title="Permalink to this definition"></a></dt>
-<dd><p>See the class documentation for more information. We recommend calling
+<dd><p>Prepares the Simulator for a simulation. In order, the sequence of
+actions taken here is: - The active integrator’s Initialize() method
+is invoked. - Statistics are reset. - By default, initialization
+update events are triggered and handled to produce the initial
+trajectory value <code class="docutils literal notranslate"><span class="pre">{t₀,</span> <span class="pre">x(t₀)}</span></code>. If initialization events are
+suppressed, it is the caller’s responsibility to ensure the desired
+initial state. - Then that initial value is provided to the handlers
+for any publish events that have triggered, including initialization
+events if any, and per-step publish events, periodic or other
+time-triggered publish events that are scheduled for the initial time
+t₀, and finally a call to the monitor() function if one has been
+defined.</p>
+<p>See the class documentation for more information. We recommend calling
 Initialize() explicitly prior to beginning a simulation so that error
 conditions will be discovered early. However, Initialize() will be
 called automatically by the first AdvanceTo() call if it hasn’t
@@ -2507,9 +2554,11 @@ exception if the Initialize() call is missing.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The only way to suppress initialization events is by calling
-Initialize() explicitly. The most common scenario for this is when
-reusing a Simulator object. In this case, the caller is
-responsible for ensuring the correctness of the initial state.</p>
+Initialize() explicitly with the
+<code class="docutils literal notranslate"><span class="pre">suppress_initialization_events</span></code> parameter set. The most common
+scenario for this is when reusing a Simulator object. In this
+case, the caller is responsible for ensuring the correctness of
+the initial state.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -2517,9 +2566,15 @@ responsible for ensuring the correctness of the initial state.</p>
 constraints – it is up to you to make sure that constraints are
 satisfied by the initial conditions.</p>
 </div>
-<p>This method will throw <code class="docutils literal notranslate"><span class="pre">RuntimeError</span></code> if the combination of options
-doesn’t make sense. Other failures are possible from the System and
-integrator in use.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the combination of options doesn't make sense or</strong> – </p></li>
+<li><p><strong>if any handled event reports failure. Other error conditions are</strong> – </p></li>
+<li><p><strong>possible from the System and integrator in use.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">params</span></code>:</dt><dd><p>(optional) a parameter structure (</p>
 </dd>
@@ -2645,15 +2700,30 @@ precise isolation.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.Simulator.set_publish_at_initialization">
 <span class="sig-name descname"><span class="pre">set_publish_at_initialization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.analysis.Simulator" title="pydrake.systems.analysis.Simulator"><span class="pre">pydrake.systems.analysis.Simulator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">publish</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.analysis.Simulator.set_publish_at_initialization" title="Permalink to this definition"></a></dt>
-<dd><p>Sets whether the simulation should trigger a forced-Publish at the end
+<dd><p>(To be deprecated) Prefer using initialization or per-step publish
+events instead.</p>
+<p>Sets whether the simulation should trigger a forced-Publish at the end
 of Initialize(). See set_publish_every_time_step() documentation for
 more information.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>LeafSystem::DeclareInitializationPublishEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>LeafSystem::DeclarePerStepPublishEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>LeafSystem::DeclareForcedPublishEvent()</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.Simulator.set_publish_every_time_step">
 <span class="sig-name descname"><span class="pre">set_publish_every_time_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.analysis.Simulator" title="pydrake.systems.analysis.Simulator"><span class="pre">pydrake.systems.analysis.Simulator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">publish</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.analysis.Simulator.set_publish_every_time_step" title="Permalink to this definition"></a></dt>
-<dd><p>Sets whether the simulation should trigger a forced-Publish event on
+<dd><p>(To be deprecated) Prefer using per-step publish events instead.</p>
+<p>Sets whether the simulation should trigger a forced-Publish event on
 the System under simulation at the end of every trajectory-advancing
 step. Specifically, that means the System::Publish() event dispatcher
 will be invoked on each subsystem of the System and passed the current
@@ -2665,6 +2735,10 @@ at initialization; if you want that you should also call
 <code class="docutils literal notranslate"><span class="pre">set_publish_at_initialization(true)</span></code>. If you want a forced-publish
 at the end of every step, you will usually also want one at the end of
 initialization, requiring both options to be enabled.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>LeafSystem::DeclarePerStepPublishEvent()</p>
+</div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>LeafSystem::DeclareForcedPublishEvent()</p>
@@ -2780,9 +2854,25 @@ Step() algorithm. Each step consists of zero or more unrestricted
 updates, followed by zero or more discrete updates, followed by
 (possibly zero-length) continuous time and state advancement, followed
 by zero or more publishes, and then a call to the monitor() function
-if one has been defined. Updates, publishes, and the monitor can
-report errors or detect a termination condition; that is not shown in
-the pseudocode below.</p>
+if one has been defined.</p>
+<p>Updates, publishes, and the monitor can report errors or detect a
+termination condition; that is not shown in the pseudocode below. We
+follow this policy: - If any unrestricted update event fails, we leave
+the state unchanged and report failure. We leave unspecified whether
+the handlers for other simultaneous unrestricted update events are
+executed or skipped in this case. (That could affect behavior if they
+have side effects but in any case the state will not be modified.) -
+Next, if any discrete update event fails, we report failure. In this
+case the state may have been partially updated; don’t assume it has
+been left unchanged. We leave unspecified whether the handlers for
+other simultaneous discrete events are executed. - Next, if any
+publish event fails, we <em>continue</em> executing the handlers for all
+simultaneous publish events, and report failure after they have all
+been executed. The state is returned as updated since publish events
+can have external consequences based on that updated state. - A
+“reached termination” status from any event handler permits continued
+processing of simultaneous events, but doesn’t permit time to advance
+any further.</p>
 <p>The pseudocode will clarify the effects on time and state of each of
 the update stages above. This algorithm is given a starting Context
 value <code class="docutils literal notranslate"><span class="pre">{tₛ,</span> <span class="pre">x⁻(tₛ)}</span></code> and returns an end Context value <code class="docutils literal notranslate"><span class="pre">{tₑ,</span>
@@ -2914,6 +3004,11 @@ you are specifically interested in the <code class="docutils literal notranslate
 pending events, nothing happens except possibly a final per-step
 publish call (if enabled) followed by a call to the monitor() function
 (if one has been provided).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if any handled event reports failure.</strong> – </p>
+</dd>
+</dl>
 <dl class="simple">
 <dt>Returns <code class="docutils literal notranslate"><span class="pre">status</span></code>:</dt><dd><p>A SimulatorStatus object indicating success, termination, or an
 error condition as reported by event handlers or the monitor
@@ -2930,11 +3025,7 @@ function.</p>
 <dt class="sig sig-object py" id="pydrake.systems.analysis.Simulator_-AutoDiffXd-.AdvanceTo">
 <span id="pydrake.systems.analysis.Simulator_[AutoDiffXd].AdvanceTo"></span><span class="sig-name descname"><span class="pre">AdvanceTo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.analysis.Simulator_" title="pydrake.systems.analysis.Simulator_"><span class="pre">pydrake.systems.analysis.Simulator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">interruptible</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.analysis.SimulatorStatus" title="pydrake.systems.analysis.SimulatorStatus"><span class="pre">pydrake.systems.analysis.SimulatorStatus</span></a></span></span><a class="headerlink" href="#pydrake.systems.analysis.Simulator_-AutoDiffXd-.AdvanceTo" title="Permalink to this definition"></a></dt>
 <dd><p>Advances the System’s trajectory until <code class="docutils literal notranslate"><span class="pre">boundary_time</span></code> is reached in
-the context or some other termination condition occurs. A variety of
-<code class="docutils literal notranslate"><span class="pre">RuntimeError</span></code> conditions are possible here, as well as error
-conditions that may be thrown by the System when it is asked to
-perform computations. Be sure to enclose your simulation in a
-<code class="docutils literal notranslate"><span class="pre">try-catch</span></code> block and display the <code class="docutils literal notranslate"><span class="pre">what()</span></code> message.</p>
+the Context or some other termination condition occurs.</p>
 <p>We recommend that you call Initialize() prior to making the first call
 to AdvanceTo(). However, if you don’t it will be called for you the
 first time that you attempt a step, possibly resulting in unexpected
@@ -2951,6 +3042,14 @@ See Initialize() for more information.</p>
 <p>You can track simulation progress to terminate on arbitrary
 conditions using a <em>monitor</em> function; see set_monitor().</p>
 </div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if any handled event reports failure. Other error</strong> – </p></li>
+<li><p><strong>conditions are possible from the System and integrator in use.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">boundary_time</span></code>:</dt><dd><p>The maximum time to which the trajectory will be advanced by this
 call to AdvanceTo(). The method may return earlier if an event or
@@ -3067,30 +3166,40 @@ continuous state of the system.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.Simulator_-AutoDiffXd-.get_num_discrete_updates">
 <span id="pydrake.systems.analysis.Simulator_[AutoDiffXd].get_num_discrete_updates"></span><span class="sig-name descname"><span class="pre">get_num_discrete_updates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.analysis.Simulator_" title="pydrake.systems.analysis.Simulator_"><span class="pre">pydrake.systems.analysis.Simulator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.systems.analysis.Simulator_-AutoDiffXd-.get_num_discrete_updates" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the number of discrete variable updates performed since the last
-Initialize() call.</p>
+<dd><p>Gets the number of effective discrete variable update dispatcher calls
+since the last Initialize() or ResetStatistics() call. A dispatch is
+ineffective (not counted) if <em>any</em> of the discrete update events fails
+or <em>all</em> the discrete update events return “did nothing”. A single
+dispatcher call may handle multiple discrete update events.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.Simulator_-AutoDiffXd-.get_num_publishes">
 <span id="pydrake.systems.analysis.Simulator_[AutoDiffXd].get_num_publishes"></span><span class="sig-name descname"><span class="pre">get_num_publishes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.analysis.Simulator_" title="pydrake.systems.analysis.Simulator_"><span class="pre">pydrake.systems.analysis.Simulator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.systems.analysis.Simulator_-AutoDiffXd-.get_num_publishes" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the number of publishes made since the last Initialize() or
-ResetStatistics() call.</p>
+<dd><p>Gets the number of effective publish dispatcher calls made since the
+last Initialize() or ResetStatistics() call. A dispatch is ineffective
+(not counted) if <em>any</em> of the publish events fails or <em>all</em> the
+publish events return “did nothing”. A single dispatcher call may
+handle multiple publish events.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.Simulator_-AutoDiffXd-.get_num_steps_taken">
 <span id="pydrake.systems.analysis.Simulator_[AutoDiffXd].get_num_steps_taken"></span><span class="sig-name descname"><span class="pre">get_num_steps_taken</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.analysis.Simulator_" title="pydrake.systems.analysis.Simulator_"><span class="pre">pydrake.systems.analysis.Simulator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.systems.analysis.Simulator_-AutoDiffXd-.get_num_steps_taken" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the number of steps since the last Initialize() call. (We’re not
-counting the Initialize() 0-length “step”.) Note that every
-AdvanceTo() call can potentially take many steps.</p>
+<dd><p>Gets the number of steps since the last Initialize() or
+ResetStatistics() call. (We’re not counting the Initialize() 0-length
+“step”.) Note that every AdvanceTo() call can potentially take many
+steps.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.Simulator_-AutoDiffXd-.get_num_unrestricted_updates">
 <span id="pydrake.systems.analysis.Simulator_[AutoDiffXd].get_num_unrestricted_updates"></span><span class="sig-name descname"><span class="pre">get_num_unrestricted_updates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.analysis.Simulator_" title="pydrake.systems.analysis.Simulator_"><span class="pre">pydrake.systems.analysis.Simulator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.systems.analysis.Simulator_-AutoDiffXd-.get_num_unrestricted_updates" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the number of “unrestricted” updates performed since the last
-Initialize() call.</p>
+<dd><p>Gets the number of effective unrestricted update dispatcher calls
+since the last Initialize() or ResetStatistics() call. A dispatch is
+ineffective (not counted) if <em>any</em> of the unrestricted update events
+fails or <em>all</em> the unrestricted update events return “did nothing”. A
+single dispatcher call may handle multiple unrestricted update events.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -3122,7 +3231,19 @@ called.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.Simulator_-AutoDiffXd-.Initialize">
 <span id="pydrake.systems.analysis.Simulator_[AutoDiffXd].Initialize"></span><span class="sig-name descname"><span class="pre">Initialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.analysis.Simulator_" title="pydrake.systems.analysis.Simulator_"><span class="pre">pydrake.systems.analysis.Simulator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.analysis.InitializeParams" title="pydrake.systems.analysis.InitializeParams"><span class="pre">pydrake.systems.analysis.InitializeParams</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">InitializeParams(suppress_initialization_events=False)</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.analysis.SimulatorStatus" title="pydrake.systems.analysis.SimulatorStatus"><span class="pre">pydrake.systems.analysis.SimulatorStatus</span></a></span></span><a class="headerlink" href="#pydrake.systems.analysis.Simulator_-AutoDiffXd-.Initialize" title="Permalink to this definition"></a></dt>
-<dd><p>See the class documentation for more information. We recommend calling
+<dd><p>Prepares the Simulator for a simulation. In order, the sequence of
+actions taken here is: - The active integrator’s Initialize() method
+is invoked. - Statistics are reset. - By default, initialization
+update events are triggered and handled to produce the initial
+trajectory value <code class="docutils literal notranslate"><span class="pre">{t₀,</span> <span class="pre">x(t₀)}</span></code>. If initialization events are
+suppressed, it is the caller’s responsibility to ensure the desired
+initial state. - Then that initial value is provided to the handlers
+for any publish events that have triggered, including initialization
+events if any, and per-step publish events, periodic or other
+time-triggered publish events that are scheduled for the initial time
+t₀, and finally a call to the monitor() function if one has been
+defined.</p>
+<p>See the class documentation for more information. We recommend calling
 Initialize() explicitly prior to beginning a simulation so that error
 conditions will be discovered early. However, Initialize() will be
 called automatically by the first AdvanceTo() call if it hasn’t
@@ -3145,9 +3266,11 @@ exception if the Initialize() call is missing.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The only way to suppress initialization events is by calling
-Initialize() explicitly. The most common scenario for this is when
-reusing a Simulator object. In this case, the caller is
-responsible for ensuring the correctness of the initial state.</p>
+Initialize() explicitly with the
+<code class="docutils literal notranslate"><span class="pre">suppress_initialization_events</span></code> parameter set. The most common
+scenario for this is when reusing a Simulator object. In this
+case, the caller is responsible for ensuring the correctness of
+the initial state.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -3155,9 +3278,15 @@ responsible for ensuring the correctness of the initial state.</p>
 constraints – it is up to you to make sure that constraints are
 satisfied by the initial conditions.</p>
 </div>
-<p>This method will throw <code class="docutils literal notranslate"><span class="pre">RuntimeError</span></code> if the combination of options
-doesn’t make sense. Other failures are possible from the System and
-integrator in use.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the combination of options doesn't make sense or</strong> – </p></li>
+<li><p><strong>if any handled event reports failure. Other error conditions are</strong> – </p></li>
+<li><p><strong>possible from the System and integrator in use.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">params</span></code>:</dt><dd><p>(optional) a parameter structure (</p>
 </dd>
@@ -3283,15 +3412,30 @@ precise isolation.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.Simulator_-AutoDiffXd-.set_publish_at_initialization">
 <span id="pydrake.systems.analysis.Simulator_[AutoDiffXd].set_publish_at_initialization"></span><span class="sig-name descname"><span class="pre">set_publish_at_initialization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.analysis.Simulator_" title="pydrake.systems.analysis.Simulator_"><span class="pre">pydrake.systems.analysis.Simulator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">publish</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.analysis.Simulator_-AutoDiffXd-.set_publish_at_initialization" title="Permalink to this definition"></a></dt>
-<dd><p>Sets whether the simulation should trigger a forced-Publish at the end
+<dd><p>(To be deprecated) Prefer using initialization or per-step publish
+events instead.</p>
+<p>Sets whether the simulation should trigger a forced-Publish at the end
 of Initialize(). See set_publish_every_time_step() documentation for
 more information.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>LeafSystem::DeclareInitializationPublishEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>LeafSystem::DeclarePerStepPublishEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>LeafSystem::DeclareForcedPublishEvent()</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.Simulator_-AutoDiffXd-.set_publish_every_time_step">
 <span id="pydrake.systems.analysis.Simulator_[AutoDiffXd].set_publish_every_time_step"></span><span class="sig-name descname"><span class="pre">set_publish_every_time_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.analysis.Simulator_" title="pydrake.systems.analysis.Simulator_"><span class="pre">pydrake.systems.analysis.Simulator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">publish</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.analysis.Simulator_-AutoDiffXd-.set_publish_every_time_step" title="Permalink to this definition"></a></dt>
-<dd><p>Sets whether the simulation should trigger a forced-Publish event on
+<dd><p>(To be deprecated) Prefer using per-step publish events instead.</p>
+<p>Sets whether the simulation should trigger a forced-Publish event on
 the System under simulation at the end of every trajectory-advancing
 step. Specifically, that means the System::Publish() event dispatcher
 will be invoked on each subsystem of the System and passed the current
@@ -3303,6 +3447,10 @@ at initialization; if you want that you should also call
 <code class="docutils literal notranslate"><span class="pre">set_publish_at_initialization(true)</span></code>. If you want a forced-publish
 at the end of every step, you will usually also want one at the end of
 initialization, requiring both options to be enabled.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>LeafSystem::DeclarePerStepPublishEvent()</p>
+</div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>LeafSystem::DeclareForcedPublishEvent()</p>
