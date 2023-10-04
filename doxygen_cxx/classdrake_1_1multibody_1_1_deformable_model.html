@@ -445,6 +445,7 @@ Finalize() has not been called on <code>plant</code>. </dd></dl>
     <tr><td class="paramname">std::exception</td><td>unless <code>body_B</code> is registered with the same multibody plant owning this deformable model. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if shape is not supported by QueryObject::ComputeSignedDistanceToPoint(). Currently, supported shapes include Box, Capsule, Cylinder, Ellipsoid, HalfSpace, and Sphere. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if Finalize() has been called on the multibody plant owning this deformable model. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if no constraint is added (i.e. no vertex of the deformable body is inside the given <code>shape</code> with the given poses). </td></tr>
   </table>
   </dd>
 </dl>

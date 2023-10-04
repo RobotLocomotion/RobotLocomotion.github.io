@@ -1,5 +1,7 @@
 var NAVTREEINDEX60 =
 {
+"structstd_1_1hash_3_01drake_1_1symbolic_1_1_polynomial_01_4.html":[3,0,2,17],
+"structstd_1_1hash_3_01drake_1_1symbolic_1_1_variable_01_4.html":[3,0,2,18],
 "structstd_1_1hash_3_01drake_1_1symbolic_1_1_variables_01_4.html":[3,0,2,19],
 "structstd_1_1hash_3_01drake_1_1systems_1_1sensors_1_1_color_3_01_t_01_4_01_4.html":[3,0,2,20],
 "structstd_1_1hash_3_01drake_1_1systems_1_1sensors_1_1_pixel_type_01_4.html":[3,0,2,21],
@@ -247,7 +249,5 @@ var NAVTREEINDEX60 =
 "velocity__newmark__scheme_8h.html":[4,0,0,8,3,28],
 "visibility__graph_8h.html":[4,0,0,10,17],
 "visibility__graph_8h.html#adca2fc53de41fd4760fe9825e079456e":[4,0,0,10,17,0],
-"visualization__config_8h.html":[4,0,0,13,2],
-"visualization__config__functions_8h.html":[4,0,0,13,3],
-"visualization__config__functions_8h.html#a02befd8c90155c339a042f2af39d4c12":[4,0,0,13,3,0]
+"visualization__config_8h.html":[4,0,0,13,2]
 };

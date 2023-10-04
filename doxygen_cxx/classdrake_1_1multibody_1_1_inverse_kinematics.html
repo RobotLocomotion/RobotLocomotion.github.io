@@ -209,6 +209,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7d7e39fc0e8059b4894a60982bec5ee6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_inverse_kinematics.html#a7d7e39fc0e8059b4894a60982bec5ee6">AddMinimumDistanceConstraint</a> (<a class="el" href="classdouble.html">double</a> minimum_distance, <a class="el" href="classdouble.html">double</a> influence_distance_offset=1)</td></tr>
 <tr class="memdesc:a7d7e39fc0e8059b4894a60982bec5ee6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the constraint that the pairwise distance between objects should be no smaller than <code>minimum_distance</code>.  <a href="#a7d7e39fc0e8059b4894a60982bec5ee6">More...</a><br /></td></tr>
 <tr class="separator:a7d7e39fc0e8059b4894a60982bec5ee6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ecd71efd675a7e1a4293adb05c9b9df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_inverse_kinematics.html#a2ecd71efd675a7e1a4293adb05c9b9df">AddMinimumDistanceLowerBoundConstraint</a> (<a class="el" href="classdouble.html">double</a> bound, <a class="el" href="classdouble.html">double</a> influence_distance_offset=0.01)</td></tr>
+<tr class="memdesc:a2ecd71efd675a7e1a4293adb05c9b9df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the constraint that the pairwise distance between objects should be no smaller than <code>bound</code>.  <a href="#a2ecd71efd675a7e1a4293adb05c9b9df">More...</a><br /></td></tr>
+<tr class="separator:a2ecd71efd675a7e1a4293adb05c9b9df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62ffc93cde9bdefcaffea68960a793ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_inverse_kinematics.html#a62ffc93cde9bdefcaffea68960a793ea">AddMinimumDistanceUpperBoundConstraint</a> (<a class="el" href="classdouble.html">double</a> bound, <a class="el" href="classdouble.html">double</a> influence_distance_offset)</td></tr>
+<tr class="memdesc:a62ffc93cde9bdefcaffea68960a793ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the constraint that at least one pair of geometries has distance no larger than <code>bound</code>.  <a href="#a62ffc93cde9bdefcaffea68960a793ea">More...</a><br /></td></tr>
+<tr class="separator:a62ffc93cde9bdefcaffea68960a793ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5d998f612ea10349d08164d55d20ed8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_inverse_kinematics.html#ae5d998f612ea10349d08164d55d20ed8">AddDistanceConstraint</a> (const <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">geometry::GeometryId</a> &gt; &amp;geometry_pair, <a class="el" href="classdouble.html">double</a> distance_lower, <a class="el" href="classdouble.html">double</a> distance_upper)</td></tr>
 <tr class="memdesc:ae5d998f612ea10349d08164d55d20ed8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the constraint that the distance between a pair of geometries is within some bounds.  <a href="#ae5d998f612ea10349d08164d55d20ed8">More...</a><br /></td></tr>
 <tr class="separator:ae5d998f612ea10349d08164d55d20ed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -763,7 +769,97 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_minimum_distance_constraint.html" title="Constrain lb &lt;= min(d) &lt;= ub, namely the signed distance between all candidate pairs of geometries (a...">MinimumDistanceConstraint</a> for more details on the constraint formulation. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_minimum_distance_constraint.html" title="Constrain lb &lt;= min(d) &lt;= ub, namely the signed distance between all candidate pairs of geometries (a...">MinimumDistanceConstraint</a> for more details on the <a class="el" href="namespacedrake_1_1multibody_1_1constraint.html">constraint</a> formulation. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>The <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> passed to the constructor of <code>this</code> has registered its geometry with a SceneGraph. </dd>
+<dd>
+0 &lt; <code>influence_distance_offset</code> &lt; ∞(Deprecated.) </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000006">Deprecated:</a></b></dt><dd>Use AddMinimumDistanceLowerBoundConstraint() instead. The  default value for influence_distance_offset has *changed*.  It changes from 1 m to 0.01 m. If you're relying on the  1 m default value, make sure to pass that value explicitly  when calling AddMinimumDistanceLowerBoundConstraint(). <br />
+ This will be removed from Drake on or after 2024-02-01.</dd></dl>
+</li>
+</ol>
+
+</div>
+</div>
+<a id="a2ecd71efd675a7e1a4293adb05c9b9df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ecd71efd675a7e1a4293adb05c9b9df">&#9670;&nbsp;</a></span>AddMinimumDistanceLowerBoundConstraint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a>&gt; AddMinimumDistanceLowerBoundConstraint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>bound</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>influence_distance_offset</em> = <code>0.01</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds the constraint that the pairwise distance between objects should be no smaller than <code>bound</code>. </p>
+<p>We consider the distance between pairs of</p><ol type="1">
+<li>Anchored (static) object and a dynamic object.</li>
+<li>A dynamic object and another dynamic object, if one is not the parent link of the other. <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bound</td><td>The minimum allowed value, dₘᵢₙ, of the signed distance between any candidate pair of geometries. </td></tr>
+    <tr><td class="paramname">influence_distance_offset</td><td>See <a class="el" href="classdrake_1_1multibody_1_1_minimum_distance_lower_bound_constraint.html" title="Constrain min(d) &gt;= lb, namely the signed distance between all candidate pairs of geometries (accordi...">MinimumDistanceLowerBoundConstraint</a> for explanation. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>The <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> passed to the constructor of <code>this</code> has registered its geometry with a SceneGraph. </dd>
+<dd>
+0 &lt; <code>influence_distance_offset</code> &lt; ∞ </dd></dl>
+</li>
+</ol>
+
+</div>
+</div>
+<a id="a62ffc93cde9bdefcaffea68960a793ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62ffc93cde9bdefcaffea68960a793ea">&#9670;&nbsp;</a></span>AddMinimumDistanceUpperBoundConstraint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a>&gt; AddMinimumDistanceUpperBoundConstraint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>bound</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>influence_distance_offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds the constraint that at least one pair of geometries has distance no larger than <code>bound</code>. </p>
+<p>We consider the distance between pairs of</p><ol type="1">
+<li>Anchored (static) object and a dynamic object.</li>
+<li>A dynamic object and another dynamic object, if one is not the parent link of the other. <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bound</td><td>The upper bound of the minimum signed distance between any candidate pair of geometries. Notice this is NOT the upper bound of every distance, but the upper bound of the smallest distance. </td></tr>
+    <tr><td class="paramname">influence_distance_offset</td><td>See <a class="el" href="classdrake_1_1multibody_1_1_minimum_distance_upper_bound_constraint.html" title="Constrain min(d) &lt;= ub, namely at least one signed distance between a candidate pairs of geometries (...">MinimumDistanceUpperBoundConstraint</a> for more details on influence_distance_offset. </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section pre"><dt>Precondition</dt><dd>The <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> passed to the constructor of <code>this</code> has registered its geometry with a SceneGraph. </dd>
 <dd>
 0 &lt; <code>influence_distance_offset</code> &lt; ∞ </dd></dl>

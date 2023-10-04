@@ -164,22 +164,22 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 <div class="contents">
 <div class="textblock"><dl class="reflist">
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_diagram.html#acfd6d412aafdf2814ced8e8fe460fc23">Diagram&lt; T &gt;::GetGraphvizInputPortToken</a>  (const InputPort&lt; T &gt; &amp;port, int max_depth, std::stringstream *dot) const final</dt>
-<dd><a class="anchor" id="_deprecated000015"></a>Instead of calling this function, call GetGraphvizFragment(). <br />
+<dd><a class="anchor" id="_deprecated000016"></a>Instead of calling this function, call GetGraphvizFragment(). <br />
  This will be removed from Drake on or after 2024-01-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a37060c889e34319f11652b5ad21cfbb9">Diagram&lt; T &gt;::GetGraphvizOutputPortToken</a>  (const OutputPort&lt; T &gt; &amp;port, int max_depth, std::stringstream *dot) const final</dt>
-<dd><a class="anchor" id="_deprecated000016"></a>Instead of calling this function, call GetGraphvizFragment() <br />
+<dd><a class="anchor" id="_deprecated000017"></a>Instead of calling this function, call GetGraphvizFragment() <br />
  This will be removed from Drake on or after 2024-01-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1solvers.html#a2393a50b2a4547a3a88aa89c9f77e4bb">drake::solvers::FindNonconvexQuadraticCost</a>  (const std::vector&lt; Binding&lt; QuadraticCost &gt;&gt; &amp;quadratic_costs)</dt>
-<dd><a class="anchor" id="_deprecated000012"></a>This function is no longer public. <br />
+<dd><a class="anchor" id="_deprecated000013"></a>This function is no longer public. <br />
  This will be removed from Drake on or after 2023-11-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1systems.html#a3e4e6a211dd145828511de57c117c5aa">drake::systems::GenerateHtml</a>  (const <a class="el" href="classdrake_1_1systems_1_1_system.html">System&lt; double &gt;</a> &amp;system, int initial_depth=1)</dt>
-<dd><a class="anchor" id="_deprecated000029"></a>This feature has been removed from Drake. <br />
+<dd><a class="anchor" id="_deprecated000030"></a>This feature has been removed from Drake. <br />
  This will be removed from Drake on or after 2024-01-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3dad87b61f50587e7841b2d192c6e8afe05">drake::systems::sensors::kExpr</a>  </dt>
-<dd><a class="anchor" id="_deprecated000030"></a>kExpr is no longer a supported PixelType <br />
+<dd><a class="anchor" id="_deprecated000031"></a>kExpr is no longer a supported PixelType <br />
  This will be removed from Drake on or after 2023-12-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a60883d4958a60b91661e97027a85072aad87b61f50587e7841b2d192c6e8afe05">drake::systems::sensors::kExpr</a>  </dt>
-<dd><a class="anchor" id="_deprecated000031"></a>kExpr is no longer a supported PixelType <br />
+<dd><a class="anchor" id="_deprecated000032"></a>kExpr is no longer a supported PixelType <br />
  This will be removed from Drake on or after 2023-12-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm.html#a053aa138ef7646bdd2ad76db0657b13b">DrakeLcm::get_lcm_instance</a>  ()</dt>
 <dd><a class="anchor" id="_deprecated000005"></a>Drake will no longer provide access to the underlying lcm::LCM object. <br />
@@ -197,46 +197,49 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 <dd><a class="anchor" id="_deprecated000004"></a>Use the overload that takes Vertex&amp; instead. <br />
  This will be removed from Drake on or after 2023-11-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html#af0b7b597fdd8385d9aa4c1ceea1d59a3">InverseDynamics&lt; T &gt;::get_output_port_force</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000014"></a>Use get_output_port_generalized_force() instead. <br />
+<dd><a class="anchor" id="_deprecated000015"></a>Use get_output_port_generalized_force() instead. <br />
  This will be removed from Drake on or after 2024-01-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_inverse_kinematics.html#a7d7e39fc0e8059b4894a60982bec5ee6">InverseKinematics::AddMinimumDistanceConstraint</a>  (double minimum_distance, double influence_distance_offset=1)</dt>
+<dd><a class="anchor" id="_deprecated000006"></a>Use AddMinimumDistanceLowerBoundConstraint() instead. The  default value for influence_distance_offset has *changed*.  It changes from 1 m to 0.01 m. If you're relying on the  1 m default value, make sure to pass that value explicitly  when calling AddMinimumDistanceLowerBoundConstraint(). <br />
+ This will be removed from Drake on or after 2024-02-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#acfd6d412aafdf2814ced8e8fe460fc23">LeafSystem&lt; T &gt;::GetGraphvizInputPortToken</a>  (const InputPort&lt; T &gt; &amp;port, int max_depth, std::stringstream *dot) const final</dt>
-<dd><a class="anchor" id="_deprecated000023"></a>Instead of calling this function, call GetGraphvizFragment() <br />
- This will be removed from Drake on or after 2024-01-01. </dd>
-<dt>Member <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a37060c889e34319f11652b5ad21cfbb9">LeafSystem&lt; T &gt;::GetGraphvizOutputPortToken</a>  (const OutputPort&lt; T &gt; &amp;port, int max_depth, std::stringstream *dot) const final</dt>
 <dd><a class="anchor" id="_deprecated000024"></a>Instead of calling this function, call GetGraphvizFragment() <br />
  This will be removed from Drake on or after 2024-01-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a37060c889e34319f11652b5ad21cfbb9">LeafSystem&lt; T &gt;::GetGraphvizOutputPortToken</a>  (const OutputPort&lt; T &gt; &amp;port, int max_depth, std::stringstream *dot) const final</dt>
+<dd><a class="anchor" id="_deprecated000025"></a>Instead of calling this function, call GetGraphvizFragment() <br />
+ This will be removed from Drake on or after 2024-01-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_minimum_distance_constraint.html#a5f54fe1174b9d9de89ffefb622bb5161">MinimumDistanceConstraint::minimum_distance</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000006"></a>Use minimum_distance_lower() instead. <br />
+<dd><a class="anchor" id="_deprecated000007"></a>Use minimum_distance_lower() instead. <br />
  This will be removed from Drake on or after 2023-11-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1solvers_1_1_minimum_value_constraint.html#ab401d591e846938bc37b33dfa80119f8">MinimumValueConstraint::minimum_value</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000013"></a>Use minimum_value_lower() instead. <br />
+<dd><a class="anchor" id="_deprecated000014"></a>Use minimum_value_lower() instead. <br />
  This will be removed from Drake on or after 2023-11-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_parser.html#a9b40bb492d33e373b3bfcf5d440a36c2">Parser::AddAllModelsFromFile</a>  (const std::string &amp;file_name)</dt>
-<dd><a class="anchor" id="_deprecated000007"></a>Use AddModels() instead. <br />
+<dd><a class="anchor" id="_deprecated000008"></a>Use AddModels() instead. <br />
  This will be removed from Drake on or after 2023-12-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_parser.html#a2bc82a9937f1710e5da413dcad7a3ded">Parser::AddModelFromFile</a>  (const std::string &amp;file_name, const std::string &amp;model_name={})</dt>
-<dd><a class="anchor" id="_deprecated000008"></a>Use parser.AddModels() instead. To port the  2-argument form, rename models using  parser.SetAutoRenaming() and plant.RenameModelInstance().  See PR #19978 for more details. <br />
+<dd><a class="anchor" id="_deprecated000009"></a>Use parser.AddModels() instead. To port the  2-argument form, rename models using  parser.SetAutoRenaming() and plant.RenameModelInstance().  See PR #19978 for more details. <br />
  This will be removed from Drake on or after 2023-12-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_system.html#a8946ae289e8ce80d9d03114e6f60bd86">System&lt; T &gt;::GetGraphvizFragment</a>  (int max_depth, std::stringstream *dot) const</dt>
-<dd><a class="anchor" id="_deprecated000025"></a>Instead of calling or overriding this function, either  call GetGraphvizFragment() or override DoGetGraphvizFragment() <br />
- This will be removed from Drake on or after 2024-01-01. </dd>
-<dt>Member <a class="el" href="classdrake_1_1systems_1_1_system.html#aa1fac664a1c120c425bc522d7ecb435c">System&lt; T &gt;::GetGraphvizId</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000028"></a>Call GetGraphvizFragment() instead <br />
- This will be removed from Drake on or after 2024-01-01. </dd>
-<dt>Member <a class="el" href="classdrake_1_1systems_1_1_system.html#ab8056b92562217c25ff76fac7ad67961">System&lt; T &gt;::GetGraphvizInputPortToken</a>  (const InputPort&lt; T &gt; &amp;port, int max_depth, std::stringstream *dot) const</dt>
 <dd><a class="anchor" id="_deprecated000026"></a>Instead of calling or overriding this function, either  call GetGraphvizFragment() or override DoGetGraphvizFragment() <br />
  This will be removed from Drake on or after 2024-01-01. </dd>
-<dt>Member <a class="el" href="classdrake_1_1systems_1_1_system.html#aa75de0b661eaa9b9a45959a9de4eaae0">System&lt; T &gt;::GetGraphvizOutputPortToken</a>  (const OutputPort&lt; T &gt; &amp;port, int max_depth, std::stringstream *dot) const</dt>
+<dt>Member <a class="el" href="classdrake_1_1systems_1_1_system.html#aa1fac664a1c120c425bc522d7ecb435c">System&lt; T &gt;::GetGraphvizId</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000029"></a>Call GetGraphvizFragment() instead <br />
+ This will be removed from Drake on or after 2024-01-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1systems_1_1_system.html#ab8056b92562217c25ff76fac7ad67961">System&lt; T &gt;::GetGraphvizInputPortToken</a>  (const InputPort&lt; T &gt; &amp;port, int max_depth, std::stringstream *dot) const</dt>
 <dd><a class="anchor" id="_deprecated000027"></a>Instead of calling or overriding this function, either  call GetGraphvizFragment() or override DoGetGraphvizFragment() <br />
  This will be removed from Drake on or after 2024-01-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1systems_1_1_system.html#aa75de0b661eaa9b9a45959a9de4eaae0">System&lt; T &gt;::GetGraphvizOutputPortToken</a>  (const OutputPort&lt; T &gt; &amp;port, int max_depth, std::stringstream *dot) const</dt>
+<dd><a class="anchor" id="_deprecated000028"></a>Instead of calling or overriding this function, either  call GetGraphvizFragment() or override DoGetGraphvizFragment() <br />
+ This will be removed from Drake on or after 2024-01-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#aed68ed5145171fc5505a5c7c848bfae5">UnitInertia&lt; T &gt;::SolidCapsule</a>  (const T &amp;r, const T &amp;L)</dt>
-<dd><a class="anchor" id="_deprecated000010"></a>SolidCapsule now requires the capsules's axis  direction to be explicitly given. <br />
+<dd><a class="anchor" id="_deprecated000011"></a>SolidCapsule now requires the capsules's axis  direction to be explicitly given. <br />
  This will be removed from Drake on or after 2023-12-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#a73671675bcab7c63b6f985a818e4650f">UnitInertia&lt; T &gt;::SolidCylinder</a>  (const T &amp;r, const T &amp;L)</dt>
-<dd><a class="anchor" id="_deprecated000009"></a>SolidCylinder now requires the cylinder's axis  direction to be explicitly given and to be a unit vector. <br />
+<dd><a class="anchor" id="_deprecated000010"></a>SolidCylinder now requires the cylinder's axis  direction to be explicitly given and to be a unit vector. <br />
  This will be removed from Drake on or after 2023-12-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#af26c23e707688c5fe5f0c71f22fbee62">UnitInertia&lt; T &gt;::SolidCylinderAboutEnd</a>  (const T &amp;r, const T &amp;L)</dt>
-<dd><a class="anchor" id="_deprecated000011"></a>SolidCylinderAboutEnd now requires the cylinder's axis  direction to be explicitly given. <br />
+<dd><a class="anchor" id="_deprecated000012"></a>SolidCylinderAboutEnd now requires the cylinder's axis  direction to be explicitly given. <br />
  This will be removed from Drake on or after 2023-12-01.</dd>
 </dl>
 </div></div><!-- PageDoc -->

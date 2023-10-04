@@ -10,6 +10,8 @@ var classdrake_1_1multibody_1_1_inverse_kinematics =
     [ "AddDistanceConstraint", "classdrake_1_1multibody_1_1_inverse_kinematics.html#ae5d998f612ea10349d08164d55d20ed8", null ],
     [ "AddGazeTargetConstraint", "classdrake_1_1multibody_1_1_inverse_kinematics.html#a0bb60b773199c651ab8c8802501d4391", null ],
     [ "AddMinimumDistanceConstraint", "classdrake_1_1multibody_1_1_inverse_kinematics.html#a7d7e39fc0e8059b4894a60982bec5ee6", null ],
+    [ "AddMinimumDistanceLowerBoundConstraint", "classdrake_1_1multibody_1_1_inverse_kinematics.html#a2ecd71efd675a7e1a4293adb05c9b9df", null ],
+    [ "AddMinimumDistanceUpperBoundConstraint", "classdrake_1_1multibody_1_1_inverse_kinematics.html#a62ffc93cde9bdefcaffea68960a793ea", null ],
     [ "AddOrientationConstraint", "classdrake_1_1multibody_1_1_inverse_kinematics.html#a693b3a9627e08ae92d2978b4ca516b3c", null ],
     [ "AddOrientationCost", "classdrake_1_1multibody_1_1_inverse_kinematics.html#a303d8f5121c97abe13416887bab4a8a8", null ],
     [ "AddPointToLineDistanceConstraint", "classdrake_1_1multibody_1_1_inverse_kinematics.html#a990058faa76c8e80bc47a846385415aa", null ],

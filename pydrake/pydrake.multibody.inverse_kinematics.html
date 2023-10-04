@@ -832,7 +832,7 @@ joint_centering_gain, - the “additional linear velocity constraints”
 are added via
 DifferentialInverseKinematicsParameters::AddLinearVelocityConstraint().</p>
 <p>Intuitively, this finds a v_next such that J*v_next is in the same
-direction as V, and the difference between <a href="#id5"><span class="problematic" id="id6">|V|</span></a> and <a href="#id7"><span class="problematic" id="id8">|J * v_next|</span></a> is
+direction as V, and the difference between <a href="#id9"><span class="problematic" id="id10">|V|</span></a> and <a href="#id11"><span class="problematic" id="id12">|J * v_next|</span></a> is
 minimized while all constraints in <code class="docutils literal notranslate"><span class="pre">parameters</span></code> are satisfied as
 well. In the nullspace of this objective, we have a secondary
 objective to minimize <a href="#id1"><span class="problematic" id="id2">|</span></a>v_next - N⁺(q)⋅K⋅(q_nominal - q_current)|².</p>
@@ -1044,7 +1044,7 @@ cost</p>
 <p>∑ᵢ body_position_cost(i) * body_position_error(i) +
 body_orientation_cost(i) * body_orientation_error(i) where
 <code class="docutils literal notranslate"><span class="pre">body_position_error(i)</span></code> is computed as the Euclidean distance error
-<a href="#id9"><span class="problematic" id="id10">|p_WBo(i) - p_WBo_desired(i)|</span></a> where - p_WBo(i) : position of body i’th
+<a href="#id13"><span class="problematic" id="id14">|p_WBo(i) - p_WBo_desired(i)|</span></a> where - p_WBo(i) : position of body i’th
 origin <code class="docutils literal notranslate"><span class="pre">Bo</span></code> in the world frame <code class="docutils literal notranslate"><span class="pre">W</span></code>. - p_WBo_desired(i): position
 of body i’th origin <code class="docutils literal notranslate"><span class="pre">Bo</span></code> in the world frame <code class="docutils literal notranslate"><span class="pre">W</span></code>, computed from the
 desired posture <code class="docutils literal notranslate"><span class="pre">q_desired</span></code>.</p>
@@ -1636,6 +1636,35 @@ formulation.</p>
 <dt>Precondition:</dt><dd><p>The MultibodyPlant passed to the constructor of <code class="docutils literal notranslate"><span class="pre">this</span></code> has
 registered its geometry with a SceneGraph.</p>
 </dd>
+<dt>Precondition:</dt><dd><p>0 &lt; <code class="docutils literal notranslate"><span class="pre">influence_distance_offset</span></code> &lt; ∞ / (Deprecated.)</p>
+</dd>
+<dt>Deprecated:</dt><dd><p>Use AddMinimumDistanceLowerBoundConstraint() instead. The default
+value for influence_distance_offset has <em>changed</em>. It changes from
+1 m to 0.01 m. If you’re relying on the 1 m default value, make
+sure to pass that value explicitly when calling
+AddMinimumDistanceLowerBoundConstraint(). This will be removed
+from Drake on or after 2024-02-01.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.InverseKinematics.AddMinimumDistanceLowerBoundConstraint">
+<span class="sig-name descname"><span class="pre">AddMinimumDistanceLowerBoundConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.InverseKinematics" title="pydrake.multibody.inverse_kinematics.InverseKinematics"><span class="pre">pydrake.multibody.inverse_kinematics.InverseKinematics</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">bound</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">influence_distance_offset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.01</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Constraint</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.AddMinimumDistanceLowerBoundConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>Adds the constraint that the pairwise distance between objects should
+be no smaller than <code class="docutils literal notranslate"><span class="pre">bound</span></code>. We consider the distance between pairs
+of 1. Anchored (static) object and a dynamic object. 2. A dynamic
+object and another dynamic object, if one is not the parent link of
+the other.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">bound</span></code>:</dt><dd><p>The minimum allowed value, dₘᵢₙ, of the signed distance between
+any candidate pair of geometries.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">influence_distance_offset</span></code>:</dt><dd><p>See MinimumDistanceLowerBoundConstraint for explanation.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>The MultibodyPlant passed to the constructor of <code class="docutils literal notranslate"><span class="pre">this</span></code> has
+registered its geometry with a SceneGraph.</p>
+</dd>
 <dt>Precondition:</dt><dd><p>0 &lt; <code class="docutils literal notranslate"><span class="pre">influence_distance_offset</span></code> &lt; ∞</p>
 </dd>
 </dl>
@@ -1897,12 +1926,21 @@ associated MultibodyPlant.</p>
 <p>where dᵢ(q) is the signed distance of the i-th pair, lb is the minimum
 allowable distance, d_influence is the “influence distance” (the
 distance below which a pair of geometries influences the constraint),
-φ is a multibody::MinimumDistancePenaltyFunction. SmoothOverMax(d) and
+φ is a solvers::MinimumValuePenaltyFunction. SmoothOverMax(d) and
 SmoothUnderMax(d) is smooth over and under approximation of max(d). We
 require that lb &lt; d_influence. The input scaling (dᵢ(q) -
 d_influence)/(d_influence - lb) ensures that at the boundary of the
 feasible set (when dᵢ(q) == lb), we evaluate the penalty function at
 -1, where it is required to have a non-zero gradient.</p>
+<p>/ (Deprecated.)</p>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>Use MinimumDistanceLowerBoundConstraint if you want the smallest
+distance to be lower bounded, or
+MinimumDistanceUpperBoundConstraint if you want the smallest
+distance to be upper bounded. This will be removed from Drake on
+or after 2024-02-01.</p>
+</dd>
+</dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.MinimumDistanceConstraint.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.MinimumDistanceConstraint.__init__" title="Permalink to this definition"></a></dt>
@@ -1985,9 +2023,10 @@ for more details.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">minimum_distance_upper</span></code>:</dt><dd><p>The upper bound of the minimum distance. min(distance) &lt;= upper.
 If minimum_distance_upper is finite, then it must be smaller than
-influence_distance_offset.The penalty function penalty_function(x: float, compute_grad: bool) -&gt; tuple[float, Optional[float]] returns [penalty_val,  penalty_gradient] when compute_grad=True, or [penalty_value, None] when compute_grad=False. See minimum_value_constraint.h on the requirement on MinimumValuePenaltyFunction. Set penalty_function=None and then the constraint will use the default penalty function.</p>
+influence_distance_offset.</p>
 </dd>
 </dl>
+<p>The penalty function penalty_function(x: float, compute_grad: bool) -&gt; tuple[float, Optional[float]] returns [penalty_val,  penalty_gradient] when compute_grad=True, or [penalty_value, None] when compute_grad=False. See minimum_value_constraint.h on the requirement on MinimumValuePenaltyFunction. Set <cite>penalty_function=None</cite> and then the constraint will use the default penalty function.</p>
 <ol class="arabic simple" start="6">
 <li><p>__init__(self: pydrake.multibody.inverse_kinematics.MinimumDistanceConstraint, plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], minimum_distance_lower: float, minimum_distance_upper: float, plant_context: pydrake.systems.framework.Context_[AutoDiffXd], penalty_function: Callable[[float, bool], tuple], influence_distance: float) -&gt; None</p></li>
 </ol>
@@ -2001,9 +2040,217 @@ We must have minimum_distance_lower &lt;= influence_distance.</p>
 If minimum_distance_upper is finite, then it must be smaller than
 influence_distance.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">collision_checker_context</span></code>:</dt><dd><p>The context for the collision checker.The penalty function penalty_function(x: float, compute_grad: bool) -&gt; tuple[float, Optional[float]] returns [penalty_val,  penalty_gradient] when compute_grad=True, or [penalty_value, None] when compute_grad=False. See minimum_value_constraint.h on the requirement on MinimumValuePenaltyFunction. Set penalty_function=None and then the constraint will use the default penalty function.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">collision_checker_context</span></code>:</dt><dd><p>The context for the collision checker.</p>
 </dd>
 </dl>
+<p>The penalty function penalty_function(x: float, compute_grad: bool) -&gt; tuple[float, Optional[float]] returns [penalty_val,  penalty_gradient] when compute_grad=True, or [penalty_value, None] when compute_grad=False. See minimum_value_constraint.h on the requirement on MinimumValuePenaltyFunction. Set <cite>penalty_function=None</cite> and then the constraint will use the default penalty function.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.MinimumDistanceLowerBoundConstraint">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">MinimumDistanceLowerBoundConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.MinimumDistanceLowerBoundConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
+<p>Constrain min(d) &gt;= lb, namely the signed distance between all
+candidate pairs of geometries (according to the logic of
+SceneGraphInspector::GetCollisionCandidates()) to be no smaller than a
+specified minimum distance lb. This constraint should be bound to
+decision variables corresponding to the configuration vector, q, of
+the associated MultibodyPlant.</p>
+<p>The formulation of the constraint is</p>
+<p>SmoothOverMax( φ((dᵢ(q) - d_influence)/(d_influence - lb)) / φ(-1) ) ≤
+1</p>
+<p>where dᵢ(q) is the signed distance of the i-th pair, lb is the minimum
+allowable distance, d_influence is the “influence distance” (the
+distance below which a pair of geometries influences the constraint),
+φ is a solvers::MinimumValuePenaltyFunction. SmoothOverMax(d) is
+smooth over approximation of max(d). We require that lb &lt; d_influence.
+The input scaling (dᵢ(q) - d_influence)/(d_influence - lb) ensures
+that at the boundary of the feasible set (when dᵢ(q) == lb), we
+evaluate the penalty function at -1, where it is required to have a
+non-zero gradient.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.MinimumDistanceLowerBoundConstraint.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.MinimumDistanceLowerBoundConstraint.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.multibody.inverse_kinematics.MinimumDistanceLowerBoundConstraint, plant: pydrake.multibody.plant.MultibodyPlant, bound: float, plant_context: pydrake.systems.framework.Context, penalty_function: Callable[[float, bool], tuple] = None, influence_distance_offset: float = 0.01) -&gt; None</p></li>
+</ol>
+<p>Constructs a MinimumDistanceLowerBoundConstraint.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt><dd><p>The multibody system on which the constraint will be evaluated.
+<code class="docutils literal notranslate"><span class="pre">plant</span></code> cannot be a nullptr. <code class="docutils literal notranslate"><span class="pre">plant</span></code> must outlive this
+constraint.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">bound</span></code>:</dt><dd><p>The minimum allowed value, lb, of the signed distance between any
+candidate pair of geometries.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">penalty_function</span></code>:</dt><dd><p>The penalty function formulation.</p>
+</dd>
+</dl>
+<p><em>Default:</em> QuadraticallySmoothedHinge &#64;plant_context The context of
+<code class="docutils literal notranslate"><span class="pre">plant</span></code>. The context is obtained as a subsystem context from the
+diagram context, where the diagram (that contains both the
+MultibodyPlant and SceneGraph) creates the diagram context.
+<code class="docutils literal notranslate"><span class="pre">plant_context</span></code> cannot be a nullptr. <code class="docutils literal notranslate"><span class="pre">plant_context</span></code> must outlive
+this constraint.</p>
+<blockquote>
+<div><p>$Parameter <code class="docutils literal notranslate"><span class="pre">influence_distance_offset</span></code>:</p>
+</div></blockquote>
+<p>The difference (in meters) between the influence distance,
+d_influence, and the minimum distance, lb (see class documentation),
+namely influence_distance = bound + influence_distance_offset. This
+value must be finite and strictly positive, as it is used to scale the
+signed distances between pairs of geometries. Smaller values may
+improve performance, as fewer pairs of geometries need to be
+considered in each constraint evaluation. $*Default:* 0.01 meter. The
+chosen influence_distance_offset can significantly affect the runtime
+and optimization performance of using this constraint. Larger values
+result in more expensive collision checks (since more potential
+collision candidates must be considered) and may result in worse
+optimization performance (the optimizer may not be able to find a
+configuration that satisfies the constraint). In work at TRI, we have
+used much lower values (e.g. 1e-6) for influence_distance_offset with
+good results.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if plant has not registered its geometry with a</strong> – </p></li>
+<li><p><strong>SceneGraph object.</strong> – </p></li>
+<li><p><strong>RuntimeError if influence_distance_offset = ∞.</strong> – </p></li>
+<li><p><strong>RuntimeError if influence_distance_offset ≤ 0.The penalty function `penalty_function</strong><strong>(</strong><strong>x</strong> – <p>float, compute_grad: bool) -&gt; tuple[float, Optional[float]]` returns <cite>[penalty_val,  penalty_gradient]</cite> when <cite>compute_grad=True</cite>, or <cite>[penalty_value, None]</cite> when <cite>compute_grad=False</cite>. See minimum_value_constraint.h on the requirement on MinimumValuePenaltyFunction. Set penalty_function=None and then the constraint will use the default penalty function.</p>
+</p></li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.multibody.inverse_kinematics.MinimumDistanceLowerBoundConstraint, plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], bound: float, plant_context: pydrake.systems.framework.Context_[AutoDiffXd], penalty_function: Callable[[float, bool], tuple] = None, influence_distance_offset: float = 0.01) -&gt; None</p></li>
+</ol>
+<p>Overloaded constructor. Constructs the constraint using
+MultibodyPlant&lt;AutoDiffXd&gt;.The penalty function <cite>penalty_function(x: float, compute_grad: bool) -&gt; tuple[float, Optional[float]]</cite> returns <cite>[penalty_val,  penalty_gradient]</cite> when <cite>compute_grad=True</cite>, or <cite>[penalty_value, None]</cite> when <cite>compute_grad=False</cite>. See minimum_value_constraint.h on the requirement on MinimumValuePenaltyFunction. Set penalty_function=None and then the constraint will use the default penalty function.</p>
+<ol class="arabic simple" start="3">
+<li><p>__init__(self: pydrake.multibody.inverse_kinematics.MinimumDistanceLowerBoundConstraint, collision_checker: pydrake.planning.CollisionChecker, bound: float, collision_checker_context: pydrake.planning.CollisionCheckerContext, penalty_function: Callable[[float, bool], tuple] = None, influence_distance_offset: float = 0.01) -&gt; None</p></li>
+</ol>
+<p>Overloaded constructor. Constructs the constraint with
+CollisionChecker instead of MultibodyPlant.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">collision_checker</span></code>:</dt><dd><p>collision_checker must outlive this constraint.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">collision_checker_context</span></code>:</dt><dd><p>The context for the collision checker. See CollisionChecker class
+for more details.The penalty function <cite>penalty_function(x: float, compute_grad: bool) -&gt; tuple[float, Optional[float]]</cite> returns <cite>[penalty_val,  penalty_gradient]</cite> when <cite>compute_grad=True</cite>, or <cite>[penalty_value, None]</cite> when <cite>compute_grad=False</cite>. See minimum_value_constraint.h on the requirement on MinimumValuePenaltyFunction. Set penalty_function=None and then the constraint will use the default penalty function.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.MinimumDistanceLowerBoundConstraint.distance_bound">
+<span class="sig-name descname"><span class="pre">distance_bound</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.MinimumDistanceLowerBoundConstraint" title="pydrake.multibody.inverse_kinematics.MinimumDistanceLowerBoundConstraint"><span class="pre">pydrake.multibody.inverse_kinematics.MinimumDistanceLowerBoundConstraint</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.MinimumDistanceLowerBoundConstraint.distance_bound" title="Permalink to this definition"></a></dt>
+<dd><p>Getter for the lower bound of the minimum distance.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.MinimumDistanceLowerBoundConstraint.influence_distance">
+<span class="sig-name descname"><span class="pre">influence_distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.MinimumDistanceLowerBoundConstraint" title="pydrake.multibody.inverse_kinematics.MinimumDistanceLowerBoundConstraint"><span class="pre">pydrake.multibody.inverse_kinematics.MinimumDistanceLowerBoundConstraint</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.MinimumDistanceLowerBoundConstraint.influence_distance" title="Permalink to this definition"></a></dt>
+<dd><p>Getter for the influence distance.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.MinimumDistanceUpperBoundConstraint">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">MinimumDistanceUpperBoundConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.MinimumDistanceUpperBoundConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
+<p>Constrain min(d) &lt;= ub, namely at least one signed distance between a
+candidate pairs of geometries (according to the logic of
+SceneGraphInspector::GetCollisionCandidates()) to be no larger than a
+specified ub. This constraint should be bound to decision variables
+corresponding to the configuration vector, q, of the associated
+MultibodyPlant.</p>
+<p>The formulation of the constraint is</p>
+<p>SmoothUnderMax( φ((dᵢ(q) - d_influence)/(d_influence - ub)) / φ(-1) )
+≥ 1</p>
+<p>where dᵢ(q) is the signed distance of the i-th pair, ub is the upper
+bound of the minimum distance, d_influence is the “influence distance”
+(the distance below which a pair of geometries influences the
+constraint), φ is a solvers::MinimumValuePenaltyFunction.
+SmoothUnderMax(d) is smooth under approximation of max(d). We require
+that ub &lt; d_influence. The input scaling (dᵢ(q) -
+d_influence)/(d_influence - ub) ensures that at the boundary of the
+feasible set (when dᵢ(q) == ub), we evaluate the penalty function at
+-1, where it is required to have a non-zero gradient.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.MinimumDistanceUpperBoundConstraint.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.MinimumDistanceUpperBoundConstraint.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.multibody.inverse_kinematics.MinimumDistanceUpperBoundConstraint, plant: pydrake.multibody.plant.MultibodyPlant, bound: float, plant_context: pydrake.systems.framework.Context, influence_distance_offset: float, penalty_function: Callable[[float, bool], tuple] = None) -&gt; None</p></li>
+</ol>
+<p>Constructs a MinimumDistanceUpperBoundConstraint.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt><dd><p>The multibody system on which the constraint will be evaluated.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">bound</span></code>:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">ub</span></code> in the class documentation. The upper bound minimum signed
+distance between any candidate pair of geometries.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">penalty_function</span></code>:</dt><dd><p>The penalty function formulation.</p>
+</dd>
+<dt><em>Default:</em> QuadraticallySmoothedHinge</dt><dd><p>$Parameter <code class="docutils literal notranslate"><span class="pre">influence_distance_offset</span></code>:</p>
+</dd>
+</dl>
+<p>The difference (in meters) between the influence distance,
+d_influence, and the minimum distance_upper, ub (see class
+documentation), namely influence_distance = bound +
+influence_distance_offset. This value must be finite and strictly
+positive, as it is used to scale the signed distances between pairs of
+geometries. Larger value might increase the possibility of finding a
+solution through gradient based nonlinear optimization. This is
+because a geometry pair with distance larger than
+<code class="docutils literal notranslate"><span class="pre">influence_distance</span></code> is ignored, so is its gradient; hence the
+gradient-based optimizer doesn’t know to actively reduce the distance
+between that pair. We strongly suggest to use a different (and larger)
+<code class="docutils literal notranslate"><span class="pre">influence_distance_offset</span></code> as the one used in
+MinimumValueLowerBoundConstraint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if plant has not registered its geometry with a</strong> – </p></li>
+<li><p><strong>SceneGraph object.</strong> – </p></li>
+<li><p><strong>RuntimeError if influence_distance_offset = ∞.</strong> – </p></li>
+<li><p><strong>RuntimeError if influence_distance_offset ≤ 0.The penalty function `penalty_function</strong><strong>(</strong><strong>x</strong> – <p>float, compute_grad: bool) -&gt; tuple[float, Optional[float]]` returns <cite>[penalty_val,  penalty_gradient]</cite> when <cite>compute_grad=True</cite>, or <cite>[penalty_value, None]</cite> when <cite>compute_grad=False</cite>. See minimum_value_constraint.h on the requirement on MinimumValuePenaltyFunction. Set <cite>penalty_function=None</cite> and then the constraint will use the default penalty function.</p>
+</p></li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.multibody.inverse_kinematics.MinimumDistanceUpperBoundConstraint, plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], bound: float, plant_context: pydrake.systems.framework.Context_[AutoDiffXd], influence_distance_offset: float, penalty_function: Callable[[float, bool], tuple] = None) -&gt; None</p></li>
+</ol>
+<p>Overloaded constructor. Constructs the constraint using
+MultibodyPlant&lt;AutoDiffXd&gt;.The penalty function <cite>penalty_function(x: float, compute_grad: bool) -&gt; tuple[float, Optional[float]]</cite> returns <cite>[penalty_val,  penalty_gradient]</cite> when <cite>compute_grad=True</cite>, or <cite>[penalty_value, None]</cite> when <cite>compute_grad=False</cite>. See minimum_value_constraint.h on the requirement on MinimumValuePenaltyFunction. Set <cite>penalty_function=None</cite> and then the constraint will use the default penalty function.</p>
+<ol class="arabic simple" start="3">
+<li><p>__init__(self: pydrake.multibody.inverse_kinematics.MinimumDistanceUpperBoundConstraint, collision_checker: pydrake.planning.CollisionChecker, bound: float, collision_checker_context: pydrake.planning.CollisionCheckerContext, influence_distance_offset: float, penalty_function: Callable[[float, bool], tuple] = None) -&gt; None</p></li>
+</ol>
+<p>Overloaded constructor. Constructs the constraint with
+CollisionChecker instead of MultibodyPlant.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">collision_checker</span></code>:</dt><dd><p>collision_checker must outlive this constraint.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">collision_checker_context</span></code>:</dt><dd><p>The context for the collision checker. See CollisionChecker class
+for more details.The penalty function <cite>penalty_function(x: float, compute_grad: bool) -&gt; tuple[float, Optional[float]]</cite> returns <cite>[penalty_val,  penalty_gradient]</cite> when <cite>compute_grad=True</cite>, or <cite>[penalty_value, None]</cite> when <cite>compute_grad=False</cite>. See minimum_value_constraint.h on the requirement on MinimumValuePenaltyFunction. Set <cite>penalty_function=None</cite> and then the constraint will use the default penalty function.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.MinimumDistanceUpperBoundConstraint.distance_bound">
+<span class="sig-name descname"><span class="pre">distance_bound</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.MinimumDistanceUpperBoundConstraint" title="pydrake.multibody.inverse_kinematics.MinimumDistanceUpperBoundConstraint"><span class="pre">pydrake.multibody.inverse_kinematics.MinimumDistanceUpperBoundConstraint</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.MinimumDistanceUpperBoundConstraint.distance_bound" title="Permalink to this definition"></a></dt>
+<dd><p>Getter for the upper bound of the minimum distance.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.MinimumDistanceUpperBoundConstraint.influence_distance">
+<span class="sig-name descname"><span class="pre">influence_distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.MinimumDistanceUpperBoundConstraint" title="pydrake.multibody.inverse_kinematics.MinimumDistanceUpperBoundConstraint"><span class="pre">pydrake.multibody.inverse_kinematics.MinimumDistanceUpperBoundConstraint</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.MinimumDistanceUpperBoundConstraint.influence_distance" title="Permalink to this definition"></a></dt>
+<dd><p>Getter for the influence distance.</p>
 </dd></dl>
 
 </dd></dl>
