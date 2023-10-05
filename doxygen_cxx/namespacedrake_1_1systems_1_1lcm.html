@@ -196,15 +196,18 @@ Classes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a727199867bdc2433a7269c76dd7f3973"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html">LcmBuses</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1lcm.html#a727199867bdc2433a7269c76dd7f3973">ApplyLcmBusConfig</a> (const std::map&lt; std::string, <a class="el" href="structdrake_1_1lcm_1_1_drake_lcm_params.html">drake::lcm::DrakeLcmParams</a> &gt; &amp;lcm_buses, <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *builder)</td></tr>
-<tr class="memdesc:a727199867bdc2433a7269c76dd7f3973"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given LCM bus names and parameters, adds an <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_interface_system.html" title="LcmInterfaceSystem acts within a Diagram to allow LcmSubscriberSystem instances to receive data from ...">LcmInterfaceSystem</a> for each bus within the given diagram builder, and returns an <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html" title="A mapping from {bus_name: interface} with sugar for error checking with nice error messages during ac...">LcmBuses</a> object that provides access to the DrakeLcmInterface objects that were created.  <a href="#a727199867bdc2433a7269c76dd7f3973">More...</a><br /></td></tr>
+<tr class="memdesc:a727199867bdc2433a7269c76dd7f3973"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given LCM bus names and parameters, adds an <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_interface_system.html" title="LcmInterfaceSystem acts within a Diagram to allow LcmSubscriberSystem instances to receive data from ...">LcmInterfaceSystem</a> within the given diagram builder for each bus, and returns an <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html" title="A mapping from {bus_name: interface} with sugar for error checking with nice error messages during ac...">LcmBuses</a> object that provides access to the <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html" title="A pure virtual interface that enables LCM to be mocked.">drake::lcm::DrakeLcmInterface</a> objects that were created.  <a href="#a727199867bdc2433a7269c76dd7f3973">More...</a><br /></td></tr>
 <tr class="separator:a727199867bdc2433a7269c76dd7f3973"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13b327eb4db1c63bcf2b332bde733833"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html">LcmBuses</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1lcm.html#a13b327eb4db1c63bcf2b332bde733833">ApplyLcmBusConfig</a> (const std::map&lt; std::string, std::optional&lt; <a class="el" href="structdrake_1_1lcm_1_1_drake_lcm_params.html">drake::lcm::DrakeLcmParams</a> &gt;&gt; &amp;lcm_buses, <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *builder)</td></tr>
+<tr class="memdesc:a13b327eb4db1c63bcf2b332bde733833"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given LCM bus names and (nullable) parameters, adds an <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_interface_system.html" title="LcmInterfaceSystem acts within a Diagram to allow LcmSubscriberSystem instances to receive data from ...">LcmInterfaceSystem</a> within the given diagram builder for each bus, and returns an <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html" title="A mapping from {bus_name: interface} with sugar for error checking with nice error messages during ac...">LcmBuses</a> object that provides access to the <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html" title="A pure virtual interface that enables LCM to be mocked.">drake::lcm::DrakeLcmInterface</a> objects that were created.  <a href="#a13b327eb4db1c63bcf2b332bde733833">More...</a><br /></td></tr>
+<tr class="separator:a13b327eb4db1c63bcf2b332bde733833"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1e2532c4eb20c358ac867c245ae817e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html">drake::lcm::DrakeLcmInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1lcm.html#ae1e2532c4eb20c358ac867c245ae817e">FindOrCreateLcmBus</a> (<a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html">drake::lcm::DrakeLcmInterface</a> *forced_result, const <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html">LcmBuses</a> *lcm_buses, <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *builder, std::string_view description_of_caller, const std::string &amp;bus_name)</td></tr>
 <tr class="memdesc:ae1e2532c4eb20c358ac867c245ae817e"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Returns an LCM interface based on a convenient set of heuristics.  <a href="#ae1e2532c4eb20c358ac867c245ae817e">More...</a><br /></td></tr>
 <tr class="separator:ae1e2532c4eb20c358ac867c245ae817e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a727199867bdc2433a7269c76dd7f3973"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a727199867bdc2433a7269c76dd7f3973">&#9670;&nbsp;</a></span>ApplyLcmBusConfig()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a727199867bdc2433a7269c76dd7f3973">&#9670;&nbsp;</a></span>ApplyLcmBusConfig() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -229,12 +232,51 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Given LCM bus names and parameters, adds an <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_interface_system.html" title="LcmInterfaceSystem acts within a Diagram to allow LcmSubscriberSystem instances to receive data from ...">LcmInterfaceSystem</a> for each bus within the given diagram builder, and returns an <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html" title="A mapping from {bus_name: interface} with sugar for error checking with nice error messages during ac...">LcmBuses</a> object that provides access to the DrakeLcmInterface objects that were created. </p>
+<p>Given LCM bus names and parameters, adds an <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_interface_system.html" title="LcmInterfaceSystem acts within a Diagram to allow LcmSubscriberSystem instances to receive data from ...">LcmInterfaceSystem</a> within the given diagram builder for each bus, and returns an <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html" title="A mapping from {bus_name: interface} with sugar for error checking with nice error messages during ac...">LcmBuses</a> object that provides access to the <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html" title="A pure virtual interface that enables LCM to be mocked.">drake::lcm::DrakeLcmInterface</a> objects that were created. </p>
 <p>Because the interfaces live within the builder (and so eventually, the diagram), the diagram will pump the interfaces when it's used with a simulator. Refer to the <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_interface_system.html" title="LcmInterfaceSystem acts within a Diagram to allow LcmSubscriberSystem instances to receive data from ...">LcmInterfaceSystem</a> documentation for details.</p>
 <p>The interface pointers remain owned by the builder; the <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html" title="A mapping from {bus_name: interface} with sugar for error checking with nice error messages during ac...">LcmBuses</a> object merely aliases into the builder (and then eventually, the diagram).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">lcm_buses</td><td>A map of {bus_name: params} for LCM transceivers, to be used used by drivers, sensors, etc. </td></tr>
+    <tr><td class="paramname">lcm_buses</td><td>A map of {bus_name: params} for LCM transceivers, to be used by drivers, sensors, etc. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a13b327eb4db1c63bcf2b332bde733833"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13b327eb4db1c63bcf2b332bde733833">&#9670;&nbsp;</a></span>ApplyLcmBusConfig() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html">LcmBuses</a> drake::systems::lcm::ApplyLcmBusConfig </td>
+          <td>(</td>
+          <td class="paramtype">const std::map&lt; std::string, std::optional&lt; <a class="el" href="structdrake_1_1lcm_1_1_drake_lcm_params.html">drake::lcm::DrakeLcmParams</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>lcm_buses</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td>
+          <td class="paramname"><em>builder</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Given LCM bus names and (nullable) parameters, adds an <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_interface_system.html" title="LcmInterfaceSystem acts within a Diagram to allow LcmSubscriberSystem instances to receive data from ...">LcmInterfaceSystem</a> within the given diagram builder for each bus, and returns an <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html" title="A mapping from {bus_name: interface} with sugar for error checking with nice error messages during ac...">LcmBuses</a> object that provides access to the <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html" title="A pure virtual interface that enables LCM to be mocked.">drake::lcm::DrakeLcmInterface</a> objects that were created. </p>
+<p>Because the interfaces live within the builder (and so eventually, the diagram), the diagram will pump the interfaces when it's used with a simulator. Refer to the <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_interface_system.html" title="LcmInterfaceSystem acts within a Diagram to allow LcmSubscriberSystem instances to receive data from ...">LcmInterfaceSystem</a> documentation for details.</p>
+<p>The interface pointers remain owned by the builder; the <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html" title="A mapping from {bus_name: interface} with sugar for error checking with nice error messages during ac...">LcmBuses</a> object merely aliases into the builder (and then eventually, the diagram).</p>
+<p>As a special case, the user can opt-out of LCM either by passing <code>nullopt</code> as the <a class="el" href="structdrake_1_1lcm_1_1_drake_lcm_params.html" title="The set of parameters for configuring DrakeLcm.">drake::lcm::DrakeLcmParams</a>, or by setting the URL within the DrakeLcmParams to <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html#a4695460bb9e6819734d541a96b14f119" title="A magic LCM URL sentinel value for the &quot;null&quot; LCM interface.">LcmBuses::kLcmUrlMemqNull</a>. In that case, only a <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html" title="A pure virtual interface that enables LCM to be mocked.">drake::lcm::DrakeLcmInterface</a> object will be created (not a full <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_interface_system.html" title="LcmInterfaceSystem acts within a Diagram to allow LcmSubscriberSystem instances to receive data from ...">LcmInterfaceSystem</a>), and the LCM messages will <em>not</em> be pumped.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lcm_buses</td><td>A map of {bus_name: params} for LCM transceivers, to be used by drivers, sensors, etc. </td></tr>
   </table>
   </dd>
 </dl>

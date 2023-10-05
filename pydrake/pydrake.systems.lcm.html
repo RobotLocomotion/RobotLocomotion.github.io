@@ -141,20 +141,25 @@
 <span id="pydrake-systems-lcm"></span><h1>pydrake.systems.lcm<a class="headerlink" href="#module-pydrake.systems.lcm" title="Permalink to this headline"></a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="pydrake.systems.lcm.ApplyLcmBusConfig">
-<span class="sig-prename descclassname"><span class="pre">pydrake.systems.lcm.</span></span><span class="sig-name descname"><span class="pre">ApplyLcmBusConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lcm_buses</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="pydrake.lcm.html#pydrake.lcm.DrakeLcmParams" title="pydrake.lcm.DrakeLcmParams"><span class="pre">pydrake.lcm.DrakeLcmParams</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">builder</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.DiagramBuilder" title="pydrake.systems.framework.DiagramBuilder"><span class="pre">pydrake.systems.framework.DiagramBuilder</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.lcm.LcmBuses" title="pydrake.systems.lcm.LcmBuses"><span class="pre">pydrake.systems.lcm.LcmBuses</span></a></span></span><a class="headerlink" href="#pydrake.systems.lcm.ApplyLcmBusConfig" title="Permalink to this definition"></a></dt>
-<dd><p>Given LCM bus names and parameters, adds an LcmInterfaceSystem for
-each bus within the given diagram builder, and returns an LcmBuses
-object that provides access to the DrakeLcmInterface objects that were
-created.</p>
+<span class="sig-prename descclassname"><span class="pre">pydrake.systems.lcm.</span></span><span class="sig-name descname"><span class="pre">ApplyLcmBusConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lcm_buses</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.lcm.html#pydrake.lcm.DrakeLcmParams" title="pydrake.lcm.DrakeLcmParams"><span class="pre">pydrake.lcm.DrakeLcmParams</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">builder</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.DiagramBuilder" title="pydrake.systems.framework.DiagramBuilder"><span class="pre">pydrake.systems.framework.DiagramBuilder</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.lcm.LcmBuses" title="pydrake.systems.lcm.LcmBuses"><span class="pre">pydrake.systems.lcm.LcmBuses</span></a></span></span><a class="headerlink" href="#pydrake.systems.lcm.ApplyLcmBusConfig" title="Permalink to this definition"></a></dt>
+<dd><p>Given LCM bus names and (nullable) parameters, adds an
+LcmInterfaceSystem within the given diagram builder for each bus, and
+returns an LcmBuses object that provides access to the
+drake::lcm::DrakeLcmInterface objects that were created.</p>
 <p>Because the interfaces live within the builder (and so eventually, the
 diagram), the diagram will pump the interfaces when it’s used with a
 simulator. Refer to the LcmInterfaceSystem documentation for details.</p>
 <p>The interface pointers remain owned by the builder; the LcmBuses
 object merely aliases into the builder (and then eventually, the
 diagram).</p>
+<p>As a special case, the user can opt-out of LCM either by passing
+<code class="docutils literal notranslate"><span class="pre">nullopt</span></code> as the drake::lcm::DrakeLcmParams, or by setting the URL
+within the DrakeLcmParams to LcmBuses::kLcmUrlMemqNull. In that case,
+only a drake::lcm::DrakeLcmInterface object will be created (not a
+full LcmInterfaceSystem), and the LCM messages will <em>not</em> be pumped.</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lcm_buses</span></code>:</dt><dd><p>A map of {bus_name: params} for LCM transceivers, to be used used
-by drivers, sensors, etc.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lcm_buses</span></code>:</dt><dd><p>A map of {bus_name: params} for LCM transceivers, to be used by
+drivers, sensors, etc.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -194,6 +199,11 @@ controller”, “The default visualizer”, or etc.</p>
 <span class="sig-name descname"><span class="pre">GetAllBusNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.lcm.LcmBuses" title="pydrake.systems.lcm.LcmBuses"><span class="pre">pydrake.systems.lcm.LcmBuses</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.lcm.LcmBuses.GetAllBusNames" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a list of all known bus_name keys.</p>
 </dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.systems.lcm.LcmBuses.kLcmUrlMemqNull">
+<span class="sig-name descname"><span class="pre">kLcmUrlMemqNull</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'memq://null'</span></em><a class="headerlink" href="#pydrake.systems.lcm.LcmBuses.kLcmUrlMemqNull" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.lcm.LcmBuses.size">

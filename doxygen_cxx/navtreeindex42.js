@@ -1,5 +1,6 @@
 var NAVTREEINDEX42 =
 {
+"classdrake_1_1systems_1_1lcm_1_1_serializer.html#aeec1aea93f0d97cc9fe78175ba0ee048":[3,0,0,15,5,6,2],
 "classdrake_1_1systems_1_1lcm_1_1_serializer.html#af4a163890191ae19f7e61f4503179e24":[3,0,0,15,5,6,8],
 "classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html":[3,0,0,15,5,7],
 "classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html#a0820513febb88c2ff24110d99fac8a23":[3,0,0,15,5,7,8],
@@ -248,6 +249,5 @@ var NAVTREEINDEX42 =
 "classdrake_1_1test_1_1_limit_malloc.html#a5f80b3400acbfba343cc4c39c0770ebc":[3,0,0,16,1,8],
 "classdrake_1_1test_1_1_limit_malloc.html#a6c0c47e1e5af49b346ab24c53aaa6ded":[3,0,0,16,1,4],
 "classdrake_1_1test_1_1_limit_malloc.html#a8b0b677bcfc5aadb02adacc95d993b95":[3,0,0,16,1,2],
-"classdrake_1_1test_1_1_limit_malloc.html#a923eedb579481aa1bab9babf206d3ead":[3,0,0,16,1,3],
-"classdrake_1_1test_1_1_limit_malloc.html#aab5411a4588acfe4e13675e9234adedf":[3,0,0,16,1,7]
+"classdrake_1_1test_1_1_limit_malloc.html#a923eedb579481aa1bab9babf206d3ead":[3,0,0,16,1,3]
 };

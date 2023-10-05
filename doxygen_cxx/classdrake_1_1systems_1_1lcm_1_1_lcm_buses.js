@@ -9,5 +9,6 @@ var classdrake_1_1systems_1_1lcm_1_1_lcm_buses =
     [ "GetAllBusNames", "classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html#a248ce7b059109187cae1792d1ad3538e", null ],
     [ "operator=", "classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html#ad608ebac499d6b4696863370ffa35ec1", null ],
     [ "operator=", "classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html#a7648f7dcea8414a74c7de7e400888c6a", null ],
-    [ "size", "classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html#af9593d4a5ff4274efaf429cb4f9e57cc", null ]
+    [ "size", "classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html#af9593d4a5ff4274efaf429cb4f9e57cc", null ],
+    [ "kLcmUrlMemqNull", "classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html#a4695460bb9e6819734d541a96b14f119", null ]
 ];

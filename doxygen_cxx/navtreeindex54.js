@@ -1,5 +1,7 @@
 var NAVTREEINDEX54 =
 {
+"robot__plan__utils_8h.html#a34dd83b8c99f86f80129b54cf879beda":[4,0,0,6,3,5,1],
+"robot__plan__utils_8h.html#a8cac2550a9a52551ff82e51b3d5b29e3":[4,0,0,6,3,5,2],
 "rod2d_8h.html":[4,0,0,3,16,0],
 "rod2d__geometry_8h.html":[4,0,0,3,16,1],
 "roll__pitch__yaw_8h.html":[4,0,0,7,30],
@@ -247,7 +249,5 @@ var NAVTREEINDEX54 =
 "standard__operations_8h.html#a12086bbcf11e8d3c573c3647277b10b8":[4,0,0,1,0,0,2,55],
 "standard__operations_8h.html#a225f9f8ec6ae4f7494fdfc892eeaa761":[4,0,0,1,0,0,2,60],
 "standard__operations_8h.html#a23655b2da4e6919cc81511326f3c1235":[4,0,0,1,0,0,2,44],
-"standard__operations_8h.html#a24b8ca4f2a850dfa8eea7f408cf6a9de":[4,0,0,1,0,0,2,68],
-"standard__operations_8h.html#a253ea74fad9476e4de67b656b97ef1cb":[4,0,0,1,0,0,2,35],
-"standard__operations_8h.html#a2646ff62a13c4b182f4523ade302cddb":[4,0,0,1,0,0,2,39]
+"standard__operations_8h.html#a24b8ca4f2a850dfa8eea7f408cf6a9de":[4,0,0,1,0,0,2,68]
 };

@@ -160,6 +160,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1lcm_1_1_lcm_b
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">LcmBuses Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
@@ -199,6 +200,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0d170a7cd24d74b63f39a5cb5bdbdd8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad608ebac499d6b4696863370ffa35ec1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html">LcmBuses</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html#ad608ebac499d6b4696863370ffa35ec1">operator=</a> (<a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html">LcmBuses</a> &amp;&amp;)=default</td></tr>
 <tr class="separator:ad608ebac499d6b4696863370ffa35ec1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a4695460bb9e6819734d541a96b14f119"><td class="memItemLeft" align="right" valign="top">static constexpr char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html#a4695460bb9e6819734d541a96b14f119">kLcmUrlMemqNull</a> [] = &quot;memq://null&quot;</td></tr>
+<tr class="memdesc:a4695460bb9e6819734d541a96b14f119"><td class="mdescLeft">&#160;</td><td class="mdescRight">A magic LCM URL sentinel value for the "null" LCM interface.  <a href="#a4695460bb9e6819734d541a96b14f119">More...</a><br /></td></tr>
+<tr class="separator:a4695460bb9e6819734d541a96b14f119"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a08913c7a8969914949fc42c16f7f8567"></a>
@@ -446,6 +453,32 @@ controller", "The default visualizer", or etc. </td></tr>
 </div><div class="memdoc">
 
 <p>Returns the total number of buses. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a4695460bb9e6819734d541a96b14f119"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4695460bb9e6819734d541a96b14f119">&#9670;&nbsp;</a></span>kLcmUrlMemqNull</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr char kLcmUrlMemqNull[] = &quot;memq://null&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A magic LCM URL sentinel value for the "null" LCM interface. </p>
+<p>In some cases, LCM messages are unwanted but we need to pass around a well-formed DrakeLcmParams or DrakeLcmInterface object. Instead of passing <code>nullptr</code> objects, instead we pass an object set to use this URL. For example, this URL is used when <a class="el" href="namespacedrake_1_1systems_1_1lcm.html#a727199867bdc2433a7269c76dd7f3973" title="Given LCM bus names and parameters, adds an LcmInterfaceSystem within the given diagram builder for e...">ApplyLcmBusConfig()</a> is given a <code>nullopt</code> DrakeLcmParams. The expectation is that interfaces with this URL will not even be pumped (i.e., no calls to HandleSubscriptions). </p>
 
 </div>
 </div>
