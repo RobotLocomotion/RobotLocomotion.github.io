@@ -15,6 +15,8 @@ var classdrake_1_1multibody_1_1_body =
     [ "DoCloneToScalar", "classdrake_1_1multibody_1_1_body.html#a92f958ac0c25a9b239ba93ef5164ef3d", null ],
     [ "DoCloneToScalar", "classdrake_1_1multibody_1_1_body.html#ac30c4ad9b052699cd01568d8bf024a3c", null ],
     [ "DoCloneToScalar", "classdrake_1_1multibody_1_1_body.html#ae062c2e92129f7be1f2b7a9f20398714", null ],
+    [ "DoDeclareBodyParameters", "classdrake_1_1multibody_1_1_body.html#a4643a526c59877dea7612ecea410037e", null ],
+    [ "DoSetDefaultBodyParameters", "classdrake_1_1multibody_1_1_body.html#a812c06ba87a4ba8a5e941010d03f03c6", null ],
     [ "EvalPoseInWorld", "classdrake_1_1multibody_1_1_body.html#adb15f7a08a083af61068735632ada406", null ],
     [ "EvalSpatialAccelerationInWorld", "classdrake_1_1multibody_1_1_body.html#a87451694c9fdf67303c1550f11bdf3c2", null ],
     [ "EvalSpatialVelocityInWorld", "classdrake_1_1multibody_1_1_body.html#a9c07832f25dde3f8403e98c73dd24d1b", null ],
@@ -33,8 +35,8 @@ var classdrake_1_1multibody_1_1_body =
     [ "Lock", "classdrake_1_1multibody_1_1_body.html#a50c7f850050d4a94641ed72dd2d1968f", null ],
     [ "name", "classdrake_1_1multibody_1_1_body.html#ad8227ba86a01f26e4f173cd5e219d5d1", null ],
     [ "node_index", "classdrake_1_1multibody_1_1_body.html#a57367ee577b21dc678509209435858ec", null ],
-    [ "operator=", "classdrake_1_1multibody_1_1_body.html#a20f1ef3c39eacf3b33b85fa8a5cef621", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_body.html#a2d29729c246c174fc4dcf96b7d2c5ade", null ],
+    [ "operator=", "classdrake_1_1multibody_1_1_body.html#a20f1ef3c39eacf3b33b85fa8a5cef621", null ],
     [ "scoped_name", "classdrake_1_1multibody_1_1_body.html#a06542e4ec7c6a884bfcd61c9b00221b4", null ],
     [ "Unlock", "classdrake_1_1multibody_1_1_body.html#a154263b43696322ad958ee8565d960ff", null ],
     [ "internal::BodyAttorney< T >", "classdrake_1_1multibody_1_1_body.html#abd26dede9af88af24e2971996b18a5a4", null ]

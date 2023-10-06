@@ -371,6 +371,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a78bee989062e1b311dbd90831ac9959f inherit pub_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a78bee989062e1b311dbd90831ac9959f">DeclareParameters</a> (internal::MultibodyTreeSystem&lt; T &gt; *tree_system)</td></tr>
 <tr class="memdesc:a78bee989062e1b311dbd90831ac9959f inherit pub_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares MultibodyTreeSystem Parameters at MultibodyTreeSystem::Finalize() time.  <a href="classdrake_1_1multibody_1_1_multibody_element.html#a78bee989062e1b311dbd90831ac9959f">More...</a><br /></td></tr>
 <tr class="separator:a78bee989062e1b311dbd90831ac9959f inherit pub_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af084609147b7e91add9fb620a12735e3 inherit pub_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#af084609147b7e91add9fb620a12735e3">SetDefaultParameters</a> (<a class="el" href="classdrake_1_1systems_1_1_parameters.html">systems::Parameters</a>&lt; T &gt; *parameters) const</td></tr>
+<tr class="memdesc:af084609147b7e91add9fb620a12735e3 inherit pub_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets default values of parameters belonging to each MultibodyElement in <code>parameters</code> at a call to MultibodyTreeSystem::SetDefaultParameters().  <a href="classdrake_1_1multibody_1_1_multibody_element.html#af084609147b7e91add9fb620a12735e3">More...</a><br /></td></tr>
+<tr class="separator:af084609147b7e91add9fb620a12735e3 inherit pub_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d506f577f85b2c7c49a678007ef2f8b inherit pub_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a2d506f577f85b2c7c49a678007ef2f8b">MultibodyElement</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html">MultibodyElement</a> &amp;)=delete</td></tr>
 <tr class="separator:a2d506f577f85b2c7c49a678007ef2f8b inherit pub_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47e4f9cb97baf94b1cdc26585e2e1e3c inherit pub_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html">MultibodyElement</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a47e4f9cb97baf94b1cdc26585e2e1e3c">operator=</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html">MultibodyElement</a> &amp;)=delete</td></tr>
@@ -391,9 +394,12 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a44ef2814e310a93c35daacb210e759b8"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a44ef2814e310a93c35daacb210e759b8">DoCloneToScalar</a> (const internal::MultibodyTree&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &amp;tree_clone) const final</td></tr>
 <tr class="memdesc:a44ef2814e310a93c35daacb210e759b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clones this Body (templated on T) to a body templated on Expression.  <a href="#a44ef2814e310a93c35daacb210e759b8">More...</a><br /></td></tr>
 <tr class="separator:a44ef2814e310a93c35daacb210e759b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a522410fdf7fa3aaaeebf2bf5e66b5d5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a522410fdf7fa3aaaeebf2bf5e66b5d5e">DoDeclareParameters</a> (internal::MultibodyTreeSystem&lt; T &gt; *tree_system) override</td></tr>
-<tr class="memdesc:a522410fdf7fa3aaaeebf2bf5e66b5d5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a78bee989062e1b311dbd90831ac9959f" title="Declares MultibodyTreeSystem Parameters at MultibodyTreeSystem::Finalize() time.">DeclareParameters()</a>.  <a href="#a522410fdf7fa3aaaeebf2bf5e66b5d5e">More...</a><br /></td></tr>
-<tr class="separator:a522410fdf7fa3aaaeebf2bf5e66b5d5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4b0ccec2f86ab17f407400c1eec090c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#ab4b0ccec2f86ab17f407400c1eec090c">DoDeclareBodyParameters</a> (internal::MultibodyTreeSystem&lt; T &gt; *tree_system) final</td></tr>
+<tr class="memdesc:ab4b0ccec2f86ab17f407400c1eec090c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called by DoDeclareParameters().  <a href="#ab4b0ccec2f86ab17f407400c1eec090c">More...</a><br /></td></tr>
+<tr class="separator:ab4b0ccec2f86ab17f407400c1eec090c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68ddfcf73bb0be1d05af0ed7097408c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a68ddfcf73bb0be1d05af0ed7097408c6">DoSetDefaultBodyParameters</a> (<a class="el" href="classdrake_1_1systems_1_1_parameters.html">systems::Parameters</a>&lt; T &gt; *parameters) const final</td></tr>
+<tr class="memdesc:a68ddfcf73bb0be1d05af0ed7097408c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called by DoSetDefaultParameters().  <a href="#a68ddfcf73bb0be1d05af0ed7097408c6">More...</a><br /></td></tr>
+<tr class="separator:a68ddfcf73bb0be1d05af0ed7097408c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classdrake_1_1multibody_1_1_body"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classdrake_1_1multibody_1_1_body')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body&lt; T &gt;</a></td></tr>
 <tr class="memitem:a815485876dc2105848e1ddc80eafcc98 inherit pro_methods_classdrake_1_1multibody_1_1_body"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#a815485876dc2105848e1ddc80eafcc98">Body</a> (const std::string &amp;<a class="el" href="classdrake_1_1multibody_1_1_body.html#ad8227ba86a01f26e4f173cd5e219d5d1">name</a>, <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#acd2192bbd60e8c8d2c14763041d66d50">model_instance</a>)</td></tr>
 <tr class="memdesc:a815485876dc2105848e1ddc80eafcc98 inherit pro_methods_classdrake_1_1multibody_1_1_body"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a Body named <code>name</code> in model instance <code>model_instance</code>.  <a href="classdrake_1_1multibody_1_1_body.html#a815485876dc2105848e1ddc80eafcc98">More...</a><br /></td></tr>
@@ -910,8 +916,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a522410fdf7fa3aaaeebf2bf5e66b5d5e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a522410fdf7fa3aaaeebf2bf5e66b5d5e">&#9670;&nbsp;</a></span>DoDeclareParameters()</h2>
+<a id="ab4b0ccec2f86ab17f407400c1eec090c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4b0ccec2f86ab17f407400c1eec090c">&#9670;&nbsp;</a></span>DoDeclareBodyParameters()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -920,7 +926,7 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void DoDeclareParameters </td>
+          <td class="memname">void DoDeclareBodyParameters </td>
           <td>(</td>
           <td class="paramtype">internal::MultibodyTreeSystem&lt; T &gt; *&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -929,15 +935,46 @@ Protected Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a78bee989062e1b311dbd90831ac9959f" title="Declares MultibodyTreeSystem Parameters at MultibodyTreeSystem::Finalize() time.">DeclareParameters()</a>. </p>
-<p>MultibodyElement-derived objects must override to declare their specific parameters. If an object is not a direct descendent of <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html" title="A class representing an element (subcomponent) of a MultibodyPlant or (internally) a MultibodyTree.">MultibodyElement</a>, it must invoke its parent classes' <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a522410fdf7fa3aaaeebf2bf5e66b5d5e" title="Implementation of the NVI DeclareParameters().">DoDeclareParameters()</a> before declaring its own parameters. </p>
+<p>Called by DoDeclareParameters(). </p>
+<p>Derived classes may choose to override to declare their sub-class specific parameters. </p>
 
-<p>Reimplemented from <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a81c425ccd8cf5adb6b0d496ad7f4b314">MultibodyElement&lt; T &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classdrake_1_1multibody_1_1_body.html#a4643a526c59877dea7612ecea410037e">Body&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a68ddfcf73bb0be1d05af0ed7097408c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68ddfcf73bb0be1d05af0ed7097408c6">&#9670;&nbsp;</a></span>DoSetDefaultBodyParameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DoSetDefaultBodyParameters </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_parameters.html">systems::Parameters</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Called by DoSetDefaultParameters(). </p>
+<p>Derived classes may choose to override to set their sub-class specific parameters. </p>
+
+<p>Reimplemented from <a class="el" href="classdrake_1_1multibody_1_1_body.html#a812c06ba87a4ba8a5e941010d03f03c6">Body&lt; T &gt;</a>.</p>
 
 </div>
 </div>

@@ -1935,16 +1935,13 @@ geometry::ProximityProperties by geometry::SceneGraph. These
 properties can be obtained before or after context creation through
 geometry::SceneGraphInspector APIs as outlined below. MultibodyPlant
 expects the following properties for point contact modeling:</p>
-<div class="line-block">
-<div class="line">Group name | Property Name | Required | Property Type | Property</div>
-</div>
-<p>Description | | :——–: | :————–: | :——: |
-:—————-: | :——————- | | material |
-coulomb_friction | yes¹ | CoulombFriction&lt;T&gt; | Static and Dynamic
-friction. | | material | point_contact_stiffness | no² | T | Penalty
-method stiffness. | | material | hunt_crossley_dissipation | no²⁴ | T
-| Penalty method dissipation. | | material | relaxation_time | yes³⁴ |
-T | Parameter for a linear Kelvin–Voigt model of dissipation. |</p>
+<p><a href="#id91"><span class="problematic" id="id92">|Group name|Property Name|Required|Property Type|Property Description|</span></a>
+<a href="#id93"><span class="problematic" id="id94">|:--------:|</span></a>:———–:<a href="#id95"><span class="problematic" id="id96">|:------:|</span></a>:—————-:<a href="#id97"><span class="problematic" id="id98">|:-------------------|</span></a>
+<a href="#id99"><span class="problematic" id="id100">|material|coulomb_friction|yes¹|CoulombFriction&lt;T&gt;|Static and Dynamic
+friction.|</span></a> <a href="#id101"><span class="problematic" id="id102">|material|point_contact_stiffness|no²|T|</span></a> Penalty method
+stiffness.| <a href="#id103"><span class="problematic" id="id104">|material|hunt_crossley_dissipation |no²⁴|T|</span></a> Penalty
+method dissipation.| <a href="#id105"><span class="problematic" id="id106">|material|relaxation_time|yes³⁴|T|Linear
+Kelvin–Voigt model parameter.|</span></a></p>
 <p>¹ Collision geometry is required to be registered with a
 geometry::ProximityProperties object that contains the (“material”,
 “coulomb_friction”) property. If the property is missing,
@@ -3084,7 +3081,7 @@ in 𝑠. The Jacobian is a function of only generalized positions q
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The world_body() is ignored. <a href="#id91"><span class="problematic" id="id92">J𝑠_v_ACcm_</span></a> = ∑ (mᵢ Jᵢ) / mₛ, where mₛ
+<p>The world_body() is ignored. <a href="#id139"><span class="problematic" id="id140">J𝑠_v_ACcm_</span></a> = ∑ (mᵢ Jᵢ) / mₛ, where mₛ
 = ∑ mᵢ, mᵢ is the mass of the iᵗʰ body contained in
 model_instances, and Jᵢ is Bcm’s translational velocity Jacobian
 in frame A, expressed in frame E (Bcm is the center of mass of the
@@ -6818,16 +6815,13 @@ geometry::ProximityProperties by geometry::SceneGraph. These
 properties can be obtained before or after context creation through
 geometry::SceneGraphInspector APIs as outlined below. MultibodyPlant
 expects the following properties for point contact modeling:</p>
-<div class="line-block">
-<div class="line">Group name | Property Name | Required | Property Type | Property</div>
-</div>
-<p>Description | | :——–: | :————–: | :——: |
-:—————-: | :——————- | | material |
-coulomb_friction | yes¹ | CoulombFriction&lt;T&gt; | Static and Dynamic
-friction. | | material | point_contact_stiffness | no² | T | Penalty
-method stiffness. | | material | hunt_crossley_dissipation | no²⁴ | T
-| Penalty method dissipation. | | material | relaxation_time | yes³⁴ |
-T | Parameter for a linear Kelvin–Voigt model of dissipation. |</p>
+<p><a href="#id107"><span class="problematic" id="id108">|Group name|Property Name|Required|Property Type|Property Description|</span></a>
+<a href="#id109"><span class="problematic" id="id110">|:--------:|</span></a>:———–:<a href="#id111"><span class="problematic" id="id112">|:------:|</span></a>:—————-:<a href="#id113"><span class="problematic" id="id114">|:-------------------|</span></a>
+<a href="#id115"><span class="problematic" id="id116">|material|coulomb_friction|yes¹|CoulombFriction&lt;T&gt;|Static and Dynamic
+friction.|</span></a> <a href="#id117"><span class="problematic" id="id118">|material|point_contact_stiffness|no²|T|</span></a> Penalty method
+stiffness.| <a href="#id119"><span class="problematic" id="id120">|material|hunt_crossley_dissipation |no²⁴|T|</span></a> Penalty
+method dissipation.| <a href="#id121"><span class="problematic" id="id122">|material|relaxation_time|yes³⁴|T|Linear
+Kelvin–Voigt model parameter.|</span></a></p>
 <p>¹ Collision geometry is required to be registered with a
 geometry::ProximityProperties object that contains the (“material”,
 “coulomb_friction”) property. If the property is missing,
@@ -7962,7 +7956,7 @@ in 𝑠. The Jacobian is a function of only generalized positions q
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The world_body() is ignored. <a href="#id93"><span class="problematic" id="id94">J𝑠_v_ACcm_</span></a> = ∑ (mᵢ Jᵢ) / mₛ, where mₛ
+<p>The world_body() is ignored. <a href="#id141"><span class="problematic" id="id142">J𝑠_v_ACcm_</span></a> = ∑ (mᵢ Jᵢ) / mₛ, where mₛ
 = ∑ mᵢ, mᵢ is the mass of the iᵗʰ body contained in
 model_instances, and Jᵢ is Bcm’s translational velocity Jacobian
 in frame A, expressed in frame E (Bcm is the center of mass of the
@@ -11652,16 +11646,13 @@ geometry::ProximityProperties by geometry::SceneGraph. These
 properties can be obtained before or after context creation through
 geometry::SceneGraphInspector APIs as outlined below. MultibodyPlant
 expects the following properties for point contact modeling:</p>
-<div class="line-block">
-<div class="line">Group name | Property Name | Required | Property Type | Property</div>
-</div>
-<p>Description | | :——–: | :————–: | :——: |
-:—————-: | :——————- | | material |
-coulomb_friction | yes¹ | CoulombFriction&lt;T&gt; | Static and Dynamic
-friction. | | material | point_contact_stiffness | no² | T | Penalty
-method stiffness. | | material | hunt_crossley_dissipation | no²⁴ | T
-| Penalty method dissipation. | | material | relaxation_time | yes³⁴ |
-T | Parameter for a linear Kelvin–Voigt model of dissipation. |</p>
+<p><a href="#id123"><span class="problematic" id="id124">|Group name|Property Name|Required|Property Type|Property Description|</span></a>
+<a href="#id125"><span class="problematic" id="id126">|:--------:|</span></a>:———–:<a href="#id127"><span class="problematic" id="id128">|:------:|</span></a>:—————-:<a href="#id129"><span class="problematic" id="id130">|:-------------------|</span></a>
+<a href="#id131"><span class="problematic" id="id132">|material|coulomb_friction|yes¹|CoulombFriction&lt;T&gt;|Static and Dynamic
+friction.|</span></a> <a href="#id133"><span class="problematic" id="id134">|material|point_contact_stiffness|no²|T|</span></a> Penalty method
+stiffness.| <a href="#id135"><span class="problematic" id="id136">|material|hunt_crossley_dissipation |no²⁴|T|</span></a> Penalty
+method dissipation.| <a href="#id137"><span class="problematic" id="id138">|material|relaxation_time|yes³⁴|T|Linear
+Kelvin–Voigt model parameter.|</span></a></p>
 <p>¹ Collision geometry is required to be registered with a
 geometry::ProximityProperties object that contains the (“material”,
 “coulomb_friction”) property. If the property is missing,
@@ -12796,7 +12787,7 @@ in 𝑠. The Jacobian is a function of only generalized positions q
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The world_body() is ignored. <a href="#id95"><span class="problematic" id="id96">J𝑠_v_ACcm_</span></a> = ∑ (mᵢ Jᵢ) / mₛ, where mₛ
+<p>The world_body() is ignored. <a href="#id143"><span class="problematic" id="id144">J𝑠_v_ACcm_</span></a> = ∑ (mᵢ Jᵢ) / mₛ, where mₛ
 = ∑ mᵢ, mᵢ is the mass of the iᵗʰ body contained in
 model_instances, and Jᵢ is Bcm’s translational velocity Jacobian
 in frame A, expressed in frame E (Bcm is the center of mass of the

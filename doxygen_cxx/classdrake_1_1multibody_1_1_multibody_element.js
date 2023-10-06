@@ -9,6 +9,7 @@ var classdrake_1_1multibody_1_1_multibody_element =
     [ "DeclareNumericParameter", "classdrake_1_1multibody_1_1_multibody_element.html#a7a976e6fccd8686189b1fdbf1d2cc722", null ],
     [ "DeclareParameters", "classdrake_1_1multibody_1_1_multibody_element.html#a78bee989062e1b311dbd90831ac9959f", null ],
     [ "DoDeclareParameters", "classdrake_1_1multibody_1_1_multibody_element.html#a81c425ccd8cf5adb6b0d496ad7f4b314", null ],
+    [ "DoSetDefaultParameters", "classdrake_1_1multibody_1_1_multibody_element.html#ac10aa21a51e7dc4d31f33397cce842a3", null ],
     [ "DoSetTopology", "classdrake_1_1multibody_1_1_multibody_element.html#a7a5738fd3df2c9ea052b3c8312262071", null ],
     [ "get_parent_tree", "classdrake_1_1multibody_1_1_multibody_element.html#acf452ebe0b6b98c3ee73e04b6963feba", null ],
     [ "GetParentPlant", "classdrake_1_1multibody_1_1_multibody_element.html#a310da1a776ff08627f2f658ff2a6da11", null ],
@@ -17,6 +18,7 @@ var classdrake_1_1multibody_1_1_multibody_element =
     [ "model_instance", "classdrake_1_1multibody_1_1_multibody_element.html#acd2192bbd60e8c8d2c14763041d66d50", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_multibody_element.html#ac7d3ff54398a47f3c1e9ce9b4fb2e120", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_multibody_element.html#a47e4f9cb97baf94b1cdc26585e2e1e3c", null ],
+    [ "SetDefaultParameters", "classdrake_1_1multibody_1_1_multibody_element.html#af084609147b7e91add9fb620a12735e3", null ],
     [ "SetTopology", "classdrake_1_1multibody_1_1_multibody_element.html#a68e3e034aa4ff8fbfc3ae70b96923ccb", null ],
     [ "internal::MultibodyTree< T >", "classdrake_1_1multibody_1_1_multibody_element.html#a49109966f9505633199c07ad06b0632d", null ],
     [ "MultibodyElementTester", "classdrake_1_1multibody_1_1_multibody_element.html#a59cf1173a305d4864320bf9e1bf60f35", null ]

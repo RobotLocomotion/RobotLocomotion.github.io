@@ -1,5 +1,13 @@
 var NAVTREEINDEX59 =
 {
+"structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html#a1f3150ccf61b245d0363a198068ebf3d":[3,0,0,15,2,8,1],
+"structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html#a8f78ef113f89e86b283522fb7e59b308":[3,0,0,15,2,8,0],
+"structdrake_1_1systems_1_1controllers_1_1_pid_controlled_system_1_1_connect_result.html":[1,2,2,5,0],
+"structdrake_1_1systems_1_1controllers_1_1_pid_controlled_system_1_1_connect_result.html#a08e211873bd62f93a57ad06fdc27b3b2":[1,2,2,5,0,1],
+"structdrake_1_1systems_1_1controllers_1_1_pid_controlled_system_1_1_connect_result.html#a52ff55f212eefdef42762a59fd067f31":[1,2,2,5,0,0],
+"structdrake_1_1systems_1_1scalar__conversion_1_1_from_double_traits.html":[3,0,0,15,7,0],
+"structdrake_1_1systems_1_1scalar__conversion_1_1_from_double_traits.html#ada71661baddc01a12a0ca7a6a70d9c4f":[3,0,0,15,7,0,0],
+"structdrake_1_1systems_1_1scalar__conversion_1_1_non_symbolic_traits.html":[3,0,0,15,7,1],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_non_symbolic_traits.html#a585e598ef14189082cf26030c07b2db4":[3,0,0,15,7,1,0],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html":[3,0,0,15,7,2],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html#a76dde5043e78ffb5c870d4979d17e758":[3,0,0,15,7,2,0],
@@ -241,13 +249,5 @@ var NAVTREEINDEX59 =
 "structstd_1_1hash_3_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html":[3,0,2,9],
 "structstd_1_1hash_3_01drake_1_1_type_safe_index_3_01_tag_01_4_01_4.html":[3,0,2,22],
 "structstd_1_1hash_3_01drake_1_1geometry_1_1_geometry_id_01_4.html":[3,0,2,4],
-"structstd_1_1hash_3_01drake_1_1geometry_1_1_geometry_id_01_4.html#a8b7b545509f23efa1833182cf286125d":[3,0,2,4,0],
-"structstd_1_1hash_3_01drake_1_1geometry_1_1render_1_1_render_label_01_4.html":[3,0,2,5],
-"structstd_1_1hash_3_01drake_1_1solvers_1_1_binding_3_01_c_01_4_01_4.html":[3,0,2,7],
-"structstd_1_1hash_3_01drake_1_1solvers_1_1_solver_id_01_4.html":[3,0,2,8],
-"structstd_1_1hash_3_01drake_1_1symbolic_1_1_chebyshev_basis_element_01_4.html":[3,0,2,10],
-"structstd_1_1hash_3_01drake_1_1symbolic_1_1_chebyshev_polynomial_01_4.html":[3,0,2,11],
-"structstd_1_1hash_3_01drake_1_1symbolic_1_1_expression_01_4.html":[3,0,2,12],
-"structstd_1_1hash_3_01drake_1_1symbolic_1_1_formula_01_4.html":[3,0,2,13],
-"structstd_1_1hash_3_01drake_1_1symbolic_1_1_generic_polynomial_3_01_basis_element_01_4_01_4.html":[3,0,2,14]
+"structstd_1_1hash_3_01drake_1_1geometry_1_1_geometry_id_01_4.html#a8b7b545509f23efa1833182cf286125d":[3,0,2,4,0]
 };

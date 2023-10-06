@@ -25,6 +25,8 @@ var classdrake_1_1multibody_1_1_frame =
     [ "DoCloneToScalar", "classdrake_1_1multibody_1_1_frame.html#a0162ba098d0c07be12d3a7244914de38", null ],
     [ "DoCloneToScalar", "classdrake_1_1multibody_1_1_frame.html#a652a1d7c4d9d502fffcec5b9d27dd3ec", null ],
     [ "DoCloneToScalar", "classdrake_1_1multibody_1_1_frame.html#a21a1267a3cceabc6d0bec7768cd6f2c7", null ],
+    [ "DoDeclareFrameParameters", "classdrake_1_1multibody_1_1_frame.html#a1f059110215fa08c1fe519e29737f452", null ],
+    [ "DoSetDefaultFrameParameters", "classdrake_1_1multibody_1_1_frame.html#a358afbe8ee25409df05f9979a335e1ba", null ],
     [ "EvalAngularVelocityInWorld", "classdrake_1_1multibody_1_1_frame.html#a771e61be4b212f85aa8f00951ded51e6", null ],
     [ "GetFixedOffsetPoseInBody", "classdrake_1_1multibody_1_1_frame.html#a4a070ee83deb89bd6cca65946a5f8f37", null ],
     [ "GetFixedPoseInBodyFrame", "classdrake_1_1multibody_1_1_frame.html#a9f41fe43f53ca7807f256f0d5daa0734", null ],
@@ -33,7 +35,7 @@ var classdrake_1_1multibody_1_1_frame =
     [ "is_body_frame", "classdrake_1_1multibody_1_1_frame.html#a6681a8def9431af1311063721c46fe14", null ],
     [ "is_world_frame", "classdrake_1_1multibody_1_1_frame.html#a64d83126860c9766c12c88786177cf22", null ],
     [ "name", "classdrake_1_1multibody_1_1_frame.html#ad8227ba86a01f26e4f173cd5e219d5d1", null ],
-    [ "operator=", "classdrake_1_1multibody_1_1_frame.html#a8e197bedf7aa897596ace36baca53361", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_frame.html#a486765b5bb3145d29946d6dae95a9332", null ],
+    [ "operator=", "classdrake_1_1multibody_1_1_frame.html#a8e197bedf7aa897596ace36baca53361", null ],
     [ "scoped_name", "classdrake_1_1multibody_1_1_frame.html#a06542e4ec7c6a884bfcd61c9b00221b4", null ]
 ];

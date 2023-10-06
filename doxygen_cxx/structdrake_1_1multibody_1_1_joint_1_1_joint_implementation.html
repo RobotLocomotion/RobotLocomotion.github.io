@@ -170,8 +170,8 @@ $(document).ready(function(){initNavTree('structdrake_1_1multibody_1_1_joint_1_1
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
 struct drake::multibody::Joint&lt; T &gt;::JointImplementation</h3>
 
-<p>(Advanced) A <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> is implemented in terms of MultibodyTree elements such as bodies, mobilizers, force elements and constraints. </p>
-<p>This object contains the internal details of the MultibodyTree implementation for a joint. The implementation does not own the MBT elements, it just keeps references to them. This is intentionally made a protected member so that derived classes have access to its definition. </p>
+<p>(Advanced) A <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> is implemented in terms of MultibodyTree elements, typically a Mobilizer. </p>
+<p>However, some Joints may be better modeled with constraints or force elements. This object contains the internal details of the MultibodyTree implementation for a joint. The implementation does not own the MbT elements, it just keeps references to them. This is intentionally made a protected member so that derived classes have access to its definition. </p>
 </div>
 <p><code>#include &lt;drake/multibody/tree/joint.h&gt;</code></p>
 <table class="memberdecls">
@@ -183,15 +183,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a31729076a3bb78d786ce5573e0f39144"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html#a31729076a3bb78d786ce5573e0f39144">JointImplementation</a> (const <a class="el" href="structdrake_1_1multibody_1_1_joint_1_1_blue_print.html">BluePrint</a> &amp;blue_print)</td></tr>
 <tr class="memdesc:a31729076a3bb78d786ce5573e0f39144"><td class="mdescLeft">&#160;</td><td class="mdescRight">This constructor creates an implementation for <code>this</code> joint from the blueprint provided.  <a href="#a31729076a3bb78d786ce5573e0f39144">More...</a><br /></td></tr>
 <tr class="separator:a31729076a3bb78d786ce5573e0f39144"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4534e419e421208e87433f3e7243752"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html#ad4534e419e421208e87433f3e7243752">num_mobilizers</a> () const</td></tr>
-<tr class="memdesc:ad4534e419e421208e87433f3e7243752"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of mobilizers in this implementation.  <a href="#ad4534e419e421208e87433f3e7243752">More...</a><br /></td></tr>
-<tr class="separator:ad4534e419e421208e87433f3e7243752"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a2e7198dc47a29051d2896858f0f721"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html#a8a2e7198dc47a29051d2896858f0f721">has_mobilizer</a> () const</td></tr>
+<tr class="memdesc:a8a2e7198dc47a29051d2896858f0f721"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if the implementation of this <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> uses a Mobilizer.  <a href="#a8a2e7198dc47a29051d2896858f0f721">More...</a><br /></td></tr>
+<tr class="separator:a8a2e7198dc47a29051d2896858f0f721"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ae2a1485e0603938a4539ee2d179259f3"><td class="memItemLeft" align="right" valign="top">std::vector&lt; internal::Mobilizer&lt; T &gt; * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html#ae2a1485e0603938a4539ee2d179259f3">mobilizers_</a></td></tr>
-<tr class="memdesc:ae2a1485e0603938a4539ee2d179259f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">References (raw pointers) to the mobilizers that make part of this implementation.  <a href="#ae2a1485e0603938a4539ee2d179259f3">More...</a><br /></td></tr>
-<tr class="separator:ae2a1485e0603938a4539ee2d179259f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a497ba947ec5f475c2de347175fb488a5"><td class="memItemLeft" align="right" valign="top">internal::Mobilizer&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html#a497ba947ec5f475c2de347175fb488a5">mobilizer</a> {}</td></tr>
+<tr class="memdesc:a497ba947ec5f475c2de347175fb488a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference (raw pointer) to the mobilizer implementing this <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a>.  <a href="#a497ba947ec5f475c2de347175fb488a5">More...</a><br /></td></tr>
+<tr class="separator:a497ba947ec5f475c2de347175fb488a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a003ffd6a91f75e2a858b2fefaa2a061c"></a>
@@ -243,14 +243,14 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ad4534e419e421208e87433f3e7243752"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad4534e419e421208e87433f3e7243752">&#9670;&nbsp;</a></span>num_mobilizers()</h2>
+<a id="a8a2e7198dc47a29051d2896858f0f721"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a2e7198dc47a29051d2896858f0f721">&#9670;&nbsp;</a></span>has_mobilizer()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classint.html">int</a> num_mobilizers </td>
+          <td class="memname">bool has_mobilizer </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -258,24 +258,24 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the number of mobilizers in this implementation. </p>
+<p>Returns <code>true</code> if the implementation of this <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> uses a Mobilizer. </p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="ae2a1485e0603938a4539ee2d179259f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae2a1485e0603938a4539ee2d179259f3">&#9670;&nbsp;</a></span>mobilizers_</h2>
+<a id="a497ba947ec5f475c2de347175fb488a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a497ba947ec5f475c2de347175fb488a5">&#9670;&nbsp;</a></span>mobilizer</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;internal::Mobilizer&lt;T&gt;*&gt; mobilizers_</td>
+          <td class="memname">internal::Mobilizer&lt;T&gt;* mobilizer {}</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>References (raw pointers) to the mobilizers that make part of this implementation. </p>
+<p>Reference (raw pointer) to the mobilizer implementing this <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a>. </p>
 
 </div>
 </div>

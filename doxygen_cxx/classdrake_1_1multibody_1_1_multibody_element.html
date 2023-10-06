@@ -196,6 +196,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a78bee989062e1b311dbd90831ac9959f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a78bee989062e1b311dbd90831ac9959f">DeclareParameters</a> (internal::MultibodyTreeSystem&lt; T &gt; *tree_system)</td></tr>
 <tr class="memdesc:a78bee989062e1b311dbd90831ac9959f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares MultibodyTreeSystem Parameters at MultibodyTreeSystem::Finalize() time.  <a href="#a78bee989062e1b311dbd90831ac9959f">More...</a><br /></td></tr>
 <tr class="separator:a78bee989062e1b311dbd90831ac9959f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af084609147b7e91add9fb620a12735e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#af084609147b7e91add9fb620a12735e3">SetDefaultParameters</a> (<a class="el" href="classdrake_1_1systems_1_1_parameters.html">systems::Parameters</a>&lt; T &gt; *parameters) const</td></tr>
+<tr class="memdesc:af084609147b7e91add9fb620a12735e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets default values of parameters belonging to each MultibodyElement in <code>parameters</code> at a call to MultibodyTreeSystem::SetDefaultParameters().  <a href="#af084609147b7e91add9fb620a12735e3">More...</a><br /></td></tr>
+<tr class="separator:af084609147b7e91add9fb620a12735e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a2d506f577f85b2c7c49a678007ef2f8b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a2d506f577f85b2c7c49a678007ef2f8b">MultibodyElement</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html">MultibodyElement</a> &amp;)=delete</td></tr>
 <tr class="separator:a2d506f577f85b2c7c49a678007ef2f8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -233,6 +236,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a81c425ccd8cf5adb6b0d496ad7f4b314"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a81c425ccd8cf5adb6b0d496ad7f4b314">DoDeclareParameters</a> (internal::MultibodyTreeSystem&lt; T &gt; *)</td></tr>
 <tr class="memdesc:a81c425ccd8cf5adb6b0d496ad7f4b314"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a78bee989062e1b311dbd90831ac9959f" title="Declares MultibodyTreeSystem Parameters at MultibodyTreeSystem::Finalize() time.">DeclareParameters()</a>.  <a href="#a81c425ccd8cf5adb6b0d496ad7f4b314">More...</a><br /></td></tr>
 <tr class="separator:a81c425ccd8cf5adb6b0d496ad7f4b314"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac10aa21a51e7dc4d31f33397cce842a3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#ac10aa21a51e7dc4d31f33397cce842a3">DoSetDefaultParameters</a> (<a class="el" href="classdrake_1_1systems_1_1_parameters.html">systems::Parameters</a>&lt; T &gt; *) const</td></tr>
+<tr class="memdesc:ac10aa21a51e7dc4d31f33397cce842a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#af084609147b7e91add9fb620a12735e3" title="Sets default values of parameters belonging to each MultibodyElement in parameters at a call to Multi...">SetDefaultParameters()</a>.  <a href="#ac10aa21a51e7dc4d31f33397cce842a3">More...</a><br /></td></tr>
+<tr class="separator:ac10aa21a51e7dc4d31f33397cce842a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a976e6fccd8686189b1fdbf1d2cc722"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#af11369a06c5bfd3fa18acb79f85777df">systems::NumericParameterIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a7a976e6fccd8686189b1fdbf1d2cc722">DeclareNumericParameter</a> (internal::MultibodyTreeSystem&lt; T &gt; *tree_system, const <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html">systems::BasicVector</a>&lt; T &gt; &amp;model_vector)</td></tr>
 <tr class="memdesc:a7a976e6fccd8686189b1fdbf1d2cc722"><td class="mdescLeft">&#160;</td><td class="mdescRight">To be used by MultibodyElement-derived objects when declaring parameters in their implementation of <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a81c425ccd8cf5adb6b0d496ad7f4b314" title="Implementation of the NVI DeclareParameters().">DoDeclareParameters()</a>.  <a href="#a7a976e6fccd8686189b1fdbf1d2cc722">More...</a><br /></td></tr>
 <tr class="separator:a7a976e6fccd8686189b1fdbf1d2cc722"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -455,7 +461,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>To be used by MultibodyElement-derived objects when declaring parameters in their implementation of <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a81c425ccd8cf5adb6b0d496ad7f4b314" title="Implementation of the NVI DeclareParameters().">DoDeclareParameters()</a>. </p>
-<p>For an example, see <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a522410fdf7fa3aaaeebf2bf5e66b5d5e" title="Implementation of the NVI DeclareParameters().">RigidBody::DoDeclareParameters()</a>. </p>
+<p>For an example, see RigidBody::DoDeclareParameters(). </p>
 
 </div>
 </div>
@@ -511,9 +517,36 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a78bee989062e1b311dbd90831ac9959f" title="Declares MultibodyTreeSystem Parameters at MultibodyTreeSystem::Finalize() time.">DeclareParameters()</a>. </p>
-<p>MultibodyElement-derived objects must override to declare their specific parameters. If an object is not a direct descendent of <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html" title="A class representing an element (subcomponent) of a MultibodyPlant or (internally) a MultibodyTree.">MultibodyElement</a>, it must invoke its parent classes' <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a81c425ccd8cf5adb6b0d496ad7f4b314" title="Implementation of the NVI DeclareParameters().">DoDeclareParameters()</a> before declaring its own parameters. </p>
+<p>MultibodyElement-derived objects may override to declare their specific parameters. </p>
 
-<p>Reimplemented in <a class="el" href="classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#a522410fdf7fa3aaaeebf2bf5e66b5d5e">LinearBushingRollPitchYaw&lt; T &gt;</a>, and <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a522410fdf7fa3aaaeebf2bf5e66b5d5e">RigidBody&lt; T &gt;</a>.</p>
+</div>
+</div>
+<a id="ac10aa21a51e7dc4d31f33397cce842a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac10aa21a51e7dc4d31f33397cce842a3">&#9670;&nbsp;</a></span>DoSetDefaultParameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void DoSetDefaultParameters </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_parameters.html">systems::Parameters</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#af084609147b7e91add9fb620a12735e3" title="Sets default values of parameters belonging to each MultibodyElement in parameters at a call to Multi...">SetDefaultParameters()</a>. </p>
+<p>MultibodyElement-derived objects may override to set default values of their specific parameters. </p>
 
 </div>
 </div>
@@ -723,6 +756,33 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="af084609147b7e91add9fb620a12735e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af084609147b7e91add9fb620a12735e3">&#9670;&nbsp;</a></span>SetDefaultParameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetDefaultParameters </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_parameters.html">systems::Parameters</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>parameters</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets default values of parameters belonging to each MultibodyElement in <code>parameters</code> at a call to MultibodyTreeSystem::SetDefaultParameters(). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">parameters</td><td>A mutable collections of parameters in a context. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>parameters != nullptr </dd></dl>
 
 </div>
 </div>
