@@ -369,6 +369,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a72f7d830f6776bb7403c6bbc66d1d676"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a72f7d830f6776bb7403c6bbc66d1d676">AddRenderer</a> (std::string name, std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html">render::RenderEngine</a> &gt; renderer)</td></tr>
 <tr class="memdesc:a72f7d830f6776bb7403c6bbc66d1d676"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a new render engine to this SceneGraph.  <a href="#a72f7d830f6776bb7403c6bbc66d1d676">More...</a><br /></td></tr>
 <tr class="separator:a72f7d830f6776bb7403c6bbc66d1d676"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acaa0f71e9327ba0ba58b653046ca8619"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#acaa0f71e9327ba0ba58b653046ca8619">RemoveRenderer</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:acaa0f71e9327ba0ba58b653046ca8619"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes an existing renderer from this SceneGraph.  <a href="#acaa0f71e9327ba0ba58b653046ca8619">More...</a><br /></td></tr>
+<tr class="separator:acaa0f71e9327ba0ba58b653046ca8619"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ab68336b439ffd7ac7f1e1fe6a025db"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a9ab68336b439ffd7ac7f1e1fe6a025db">HasRenderer</a> (const std::string &amp;name) const</td></tr>
 <tr class="memdesc:a9ab68336b439ffd7ac7f1e1fe6a025db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports true if this SceneGraph has a renderer registered with the given name.  <a href="#a9ab68336b439ffd7ac7f1e1fe6a025db">More...</a><br /></td></tr>
 <tr class="separator:a9ab68336b439ffd7ac7f1e1fe6a025db"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2268,8 +2271,8 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
 
 </div>
 </div>
-<a id="a0a8b0295af9d14d2555ceca831cd8a14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a8b0295af9d14d2555ceca831cd8a14">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a1124e1d23f8363e47ef7db90e57e4900"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1124e1d23f8363e47ef7db90e57e4900">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2280,7 +2283,7 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -2294,8 +2297,8 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
 
 </div>
 </div>
-<a id="a1124e1d23f8363e47ef7db90e57e4900"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1124e1d23f8363e47ef7db90e57e4900">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a0a8b0295af9d14d2555ceca831cd8a14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a8b0295af9d14d2555ceca831cd8a14">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2306,7 +2309,7 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -2809,6 +2812,38 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
 
 <p><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>-modifying variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#afd98b48bb76635a3f5055f418908912d" title="Removes the given geometry G (indicated by geometry_id) from the given source&#39;s registered geometries...">RemoveGeometry()</a>. </p>
 <p>Rather than modifying SceneGraph's model, it modifies the copy of the model stored in the provided context. </p>
+
+</div>
+</div>
+<a id="acaa0f71e9327ba0ba58b653046ca8619"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acaa0f71e9327ba0ba58b653046ca8619">&#9670;&nbsp;</a></span>RemoveRenderer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RemoveRenderer </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes an existing renderer from this SceneGraph. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>The unique name of the renderer to be removed. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if this SceneGraph doesn't have a renderer with the specified name. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

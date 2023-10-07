@@ -1,5 +1,7 @@
 var NAVTREEINDEX13 =
 {
+"classdrake_1_1multibody_1_1_door_hinge.html#ace66480acefc240c2a3dd75a7c4e20ab":[3,0,0,8,30,0],
+"classdrake_1_1multibody_1_1_door_hinge.html#ad332fbe5b356d2d4d5eef63e3b74e488":[3,0,0,8,30,18],
 "classdrake_1_1multibody_1_1_door_hinge.html#ad7c53015a3eb09ec5f23397736182203":[3,0,0,8,30,9],
 "classdrake_1_1multibody_1_1_door_hinge.html#adb80046d035fd956ed690d2fe1b3cbfb":[3,0,0,8,30,15],
 "classdrake_1_1multibody_1_1_door_hinge.html#aea84c5e088a697ae4571e5b165e9b2bd":[3,0,0,8,30,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX13 =
 "classdrake_1_1multibody_1_1_joint_actuator.html#ad0a76a710eff20920ee421eeefc81072":[3,0,0,8,46,2],
 "classdrake_1_1multibody_1_1_joint_actuator.html#ad8227ba86a01f26e4f173cd5e219d5d1":[3,0,0,8,46,16],
 "classdrake_1_1multibody_1_1_joint_actuator.html#add3616abff99943233fb7dd73786465c":[3,0,0,8,46,23],
-"classdrake_1_1multibody_1_1_joint_actuator.html#af38616e070c9835a7a902c7d87c4a7b5":[3,0,0,8,46,7],
-"classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html":[3,0,0,8,47],
-"classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#a010d176ec7ea15d25bb4e70b85283db0":[3,0,0,8,47,2]
+"classdrake_1_1multibody_1_1_joint_actuator.html#af38616e070c9835a7a902c7d87c4a7b5":[3,0,0,8,46,7]
 };

@@ -80,6 +80,7 @@ var classdrake_1_1geometry_1_1_geometry_state =
     [ "RemoveFromRenderer", "classdrake_1_1geometry_1_1_geometry_state.html#a4a998a8a7048ca5d185da4ed60b208bd", null ],
     [ "RemoveFromRenderer", "classdrake_1_1geometry_1_1_geometry_state.html#a53f74c96535e83c3299952424f7c1e83", null ],
     [ "RemoveGeometry", "classdrake_1_1geometry_1_1_geometry_state.html#afd98b48bb76635a3f5055f418908912d", null ],
+    [ "RemoveRenderer", "classdrake_1_1geometry_1_1_geometry_state.html#acaa0f71e9327ba0ba58b653046ca8619", null ],
     [ "RemoveRole", "classdrake_1_1geometry_1_1_geometry_state.html#ae635d2258ffb4cf1a4998db9b2d0643f", null ],
     [ "RemoveRole", "classdrake_1_1geometry_1_1_geometry_state.html#a2135ff8bc7d0e646f5cb5cf44a6afae9", null ],
     [ "RenameFrame", "classdrake_1_1geometry_1_1_geometry_state.html#aa99fcb29cf43f2e9c21473665b34de80", null ],

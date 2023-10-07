@@ -10163,6 +10163,24 @@ in the provided context.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraph.RemoveRenderer">
+<span class="sig-name descname"><span class="pre">RemoveRenderer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraph" title="pydrake.geometry.SceneGraph"><span class="pre">pydrake.geometry.SceneGraph</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraph.RemoveRenderer" title="Permalink to this definition"></a></dt>
+<dd><p>Removes an existing renderer from this SceneGraph</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt><dd><p>The unique name of the renderer to be removed.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this SceneGraph doesn't have a renderer with the</strong> – </p></li>
+<li><p><strong>specified name.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraph.RemoveRole">
 <span class="sig-name descname"><span class="pre">RemoveRole</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph.RemoveRole" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
@@ -10962,6 +10980,24 @@ in the provided context.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraph_-AutoDiffXd-.RemoveRenderer">
+<span id="pydrake.geometry.SceneGraph_[AutoDiffXd].RemoveRenderer"></span><span class="sig-name descname"><span class="pre">RemoveRenderer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraph_" title="pydrake.geometry.SceneGraph_"><span class="pre">pydrake.geometry.SceneGraph_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-AutoDiffXd-.RemoveRenderer" title="Permalink to this definition"></a></dt>
+<dd><p>Removes an existing renderer from this SceneGraph</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt><dd><p>The unique name of the renderer to be removed.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this SceneGraph doesn't have a renderer with the</strong> – </p></li>
+<li><p><strong>specified name.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraph_-AutoDiffXd-.RemoveRole">
 <span id="pydrake.geometry.SceneGraph_[AutoDiffXd].RemoveRole"></span><span class="sig-name descname"><span class="pre">RemoveRole</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-AutoDiffXd-.RemoveRole" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
@@ -11752,6 +11788,24 @@ anchored).</p>
 <p>systems::Context-modifying variant of RemoveGeometry(). Rather than
 modifying SceneGraph’s model, it modifies the copy of the model stored
 in the provided context.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraph_-Expression-.RemoveRenderer">
+<span id="pydrake.geometry.SceneGraph_[Expression].RemoveRenderer"></span><span class="sig-name descname"><span class="pre">RemoveRenderer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraph_" title="pydrake.geometry.SceneGraph_"><span class="pre">pydrake.geometry.SceneGraph_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-Expression-.RemoveRenderer" title="Permalink to this definition"></a></dt>
+<dd><p>Removes an existing renderer from this SceneGraph</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt><dd><p>The unique name of the renderer to be removed.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this SceneGraph doesn't have a renderer with the</strong> – </p></li>
+<li><p><strong>specified name.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">

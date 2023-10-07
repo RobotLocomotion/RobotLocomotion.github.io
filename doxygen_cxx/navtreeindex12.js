@@ -1,5 +1,7 @@
 var NAVTREEINDEX12 =
 {
+"classdrake_1_1multibody_1_1_ball_rpy_joint.html#a0d678037778e0c4670e555685adfb15a":[3,0,0,8,11,11],
+"classdrake_1_1multibody_1_1_ball_rpy_joint.html#a240bba62591e40cdf7c52398d1217489":[3,0,0,8,11,13],
 "classdrake_1_1multibody_1_1_ball_rpy_joint.html#a28c50134f42cc652878abd18032d88dc":[3,0,0,8,11,15],
 "classdrake_1_1multibody_1_1_ball_rpy_joint.html#a414c753dc2f8b0d6c6bee12f6738eed4":[3,0,0,8,11,12],
 "classdrake_1_1multibody_1_1_ball_rpy_joint.html#a503af5e7b7477b89d8920f5ec29582e1":[3,0,0,8,11,18],
@@ -247,7 +249,5 @@ var NAVTREEINDEX12 =
 "classdrake_1_1multibody_1_1_door_hinge.html#a964ad746639499fbe624b6b3a24ad6fb":[3,0,0,8,30,19],
 "classdrake_1_1multibody_1_1_door_hinge.html#a97a2e708e234263ed4edabe99b7b43f5":[3,0,0,8,30,13],
 "classdrake_1_1multibody_1_1_door_hinge.html#aa5365cd13ca516aa4d7a005a5e010a1b":[3,0,0,8,30,10],
-"classdrake_1_1multibody_1_1_door_hinge.html#aa5dcbffaf94d72a77259e5d18f4dafcd":[3,0,0,8,30,14],
-"classdrake_1_1multibody_1_1_door_hinge.html#ace66480acefc240c2a3dd75a7c4e20ab":[3,0,0,8,30,0],
-"classdrake_1_1multibody_1_1_door_hinge.html#ad332fbe5b356d2d4d5eef63e3b74e488":[3,0,0,8,30,18]
+"classdrake_1_1multibody_1_1_door_hinge.html#aa5dcbffaf94d72a77259e5d18f4dafcd":[3,0,0,8,30,14]
 };

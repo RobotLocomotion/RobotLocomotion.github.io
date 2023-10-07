@@ -1,5 +1,7 @@
 var NAVTREEINDEX11 =
 {
+"classdrake_1_1manipulation_1_1util_1_1_robot_plan_interpolator.html#a1ba9e59fed168c02473ee4b1b760b374":[1,2,5,10,0],
+"classdrake_1_1manipulation_1_1util_1_1_robot_plan_interpolator.html#a404e1a2327bd744b60eb7b8e6bb313cc":[1,2,5,10,5],
 "classdrake_1_1manipulation_1_1util_1_1_robot_plan_interpolator.html#a4fc1b8e6bb1875eb36d4668b7b7e983e":[1,2,5,10,10],
 "classdrake_1_1manipulation_1_1util_1_1_robot_plan_interpolator.html#a5272382471553a1552daf97d5f9bee20":[1,2,5,10,1],
 "classdrake_1_1manipulation_1_1util_1_1_robot_plan_interpolator.html#a73f2e11fb9478740a01361a4a2277465":[1,2,5,10,6],
@@ -247,7 +249,5 @@ var NAVTREEINDEX11 =
 "classdrake_1_1multibody_1_1_articulated_body_inertia.html#aea774becb012c524dbd2b9d56b095c04":[3,0,0,8,10,18],
 "classdrake_1_1multibody_1_1_articulated_body_inertia.html#af8b25c3b08abdc24e4de1e63ab09ef04":[3,0,0,8,10,17],
 "classdrake_1_1multibody_1_1_ball_rpy_joint.html":[3,0,0,8,11],
-"classdrake_1_1multibody_1_1_ball_rpy_joint.html#a05ce551fdf49e69a409cdc13d5d1e595":[3,0,0,8,11,10],
-"classdrake_1_1multibody_1_1_ball_rpy_joint.html#a0d678037778e0c4670e555685adfb15a":[3,0,0,8,11,11],
-"classdrake_1_1multibody_1_1_ball_rpy_joint.html#a240bba62591e40cdf7c52398d1217489":[3,0,0,8,11,13]
+"classdrake_1_1multibody_1_1_ball_rpy_joint.html#a05ce551fdf49e69a409cdc13d5d1e595":[3,0,0,8,11,10]
 };

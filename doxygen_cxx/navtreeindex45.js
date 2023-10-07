@@ -1,5 +1,7 @@
 var NAVTREEINDEX45 =
 {
+"decompose_8h.html#ae3c6a31812dc3e509644dbbc95c9778e":[4,0,0,1,3,4,2],
+"decompose_8h.html#ae8c85e424b3109ed84a5bb309238bc3c":[4,0,0,1,3,4,4],
 "default__scalars_8h.html":[4,0,0,1,14],
 "default__scalars__pybind_8h.html":[4,0,0,0,0,0,2],
 "default__scalars__pybind_8h.html#a52292ed585da63084b8914356a744d04":[4,0,0,0,0,0,2,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX45 =
 "drake__lcm_8h.html":[4,0,0,5,0],
 "drake__lcm__base_8h.html":[4,0,0,5,1],
 "drake__lcm__interface_8h.html":[4,0,0,5,2],
-"drake__lcm__interface_8h.html#a6db1a743c5ddeef2341da48dbf5ab027":[4,0,0,5,2,3],
-"drake__lcm__interface_8h.html#a7f10e39fd5048940095d76f21bdf760d":[4,0,0,5,2,4],
-"drake__lcm__interface_8h.html#ac0dd1948e81c44942a67677e6cc43d07":[4,0,0,5,2,5]
+"drake__lcm__interface_8h.html#a6db1a743c5ddeef2341da48dbf5ab027":[4,0,0,5,2,3]
 };
