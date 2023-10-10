@@ -1,5 +1,6 @@
 var NAVTREEINDEX55 =
 {
+"ssize_8h.html":[4,0,0,1,57],
 "ssize_8h.html#a65f207e2f4d5cda4d2bc9da7b8a54256":[4,0,0,1,57,0],
 "ssize_8h.html#a7a5f6f92343ffa2502b5f2345c3d595f":[4,0,0,1,57,1],
 "stacked__trajectory_8h.html":[4,0,0,1,5,10],
@@ -248,6 +249,5 @@ var NAVTREEINDEX55 =
 "structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a17e04d21a0a53ce5c7047c2c4bd796e9":[3,0,0,4,1,7,8],
 "structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a2027b3136775228e993fb7e57ee68c5d":[3,0,0,4,1,7,12],
 "structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a6963913f739b2038ab3906727e36da71":[3,0,0,4,1,7,5],
-"structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a7e2b518ae9bdf51607ac6f17ceac7394":[3,0,0,4,1,7,1],
-"structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a829d61f108407c1c5546e170f2c9d48b":[3,0,0,4,1,7,4]
+"structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a7e2b518ae9bdf51607ac6f17ceac7394":[3,0,0,4,1,7,1]
 };

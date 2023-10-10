@@ -1,5 +1,6 @@
 var NAVTREEINDEX54 =
 {
+"robot__collision__type_8h.html#gga6e884b3a7afc04b1a0c132ce264c14b7ae9e690a25422e7ed157a6f924b06c20c":[4,0,0,10,12,0,0],
 "robot__diagram_8h.html":[4,0,0,10,13],
 "robot__diagram__builder_8h.html":[4,0,0,10,14],
 "robot__plan__interpolator_8h.html":[4,0,0,6,3,4],
@@ -125,7 +126,7 @@ var NAVTREEINDEX54 =
 "serialize__pybind_8h.html#a0b3e8f87bda821cd1fa9a52586e25f1e":[4,0,0,0,0,0,8,0],
 "serialize__pybind_8h.html#a68be3d37cf9d6c6fcc2afb98d04c046f":[4,0,0,0,0,0,8,1],
 "serialize__pybind_8h.html#aa9814a507ba70a62d61b467c3ba06cce":[4,0,0,0,0,0,8,2],
-"serializer_8h.html":[4,0,0,12,4,7],
+"serializer_8h.html":[4,0,0,12,4,8],
 "shape__specification_8h.html":[4,0,0,4,42],
 "shape__specification_8h.html#ae129ecc1484c1fab6e4d4b3e04d25198":[4,0,0,4,42,14],
 "shape__to__string_8h.html":[4,0,0,4,43],
@@ -248,6 +249,5 @@ var NAVTREEINDEX54 =
 "spectrahedron_8h.html":[4,0,0,4,1,19],
 "spong__controller_8h.html":[4,0,0,3,0,3],
 "spring__mass__damper__system_8h.html":[4,0,0,12,0,0,14],
-"spring__mass__system_8h.html":[4,0,0,12,0,0,15],
-"ssize_8h.html":[4,0,0,1,57]
+"spring__mass__system_8h.html":[4,0,0,12,0,0,15]
 };

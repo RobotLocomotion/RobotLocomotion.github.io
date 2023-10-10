@@ -1,5 +1,6 @@
 var NAVTREEINDEX53 =
 {
+"point__cloud__flags_8h.html#a2b85005afefc35fb842f7ad4ed1b0b20":[4,0,0,9,2,5],
 "point__cloud__flags_8h.html#a56d63c5b36bdd2d17582653cbc3a626c":[4,0,0,9,2,8],
 "point__cloud__flags_8h.html#a5936de647fa23e69aa865a4835e16f29":[4,0,0,9,2,6],
 "point__cloud__flags_8h.html#a84b827aabb8c80aa66feec1c385aa6a3":[4,0,0,9,2,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX53 =
 "robot__collision__type_8h.html#ga6e884b3a7afc04b1a0c132ce264c14b7":[4,0,0,10,12,0],
 "robot__collision__type_8h.html#gga6e884b3a7afc04b1a0c132ce264c14b7abff922fe7fd244bc34f5c20c2a55496f":[4,0,0,10,12,0,3],
 "robot__collision__type_8h.html#gga6e884b3a7afc04b1a0c132ce264c14b7acc814d0e7a27814a2db5ff00d3d84a2e":[4,0,0,10,12,0,2],
-"robot__collision__type_8h.html#gga6e884b3a7afc04b1a0c132ce264c14b7ad435a021513720293cbdafd945533b2f":[4,0,0,10,12,0,1],
-"robot__collision__type_8h.html#gga6e884b3a7afc04b1a0c132ce264c14b7ae9e690a25422e7ed157a6f924b06c20c":[4,0,0,10,12,0,0]
+"robot__collision__type_8h.html#gga6e884b3a7afc04b1a0c132ce264c14b7ad435a021513720293cbdafd945533b2f":[4,0,0,10,12,0,1]
 };
