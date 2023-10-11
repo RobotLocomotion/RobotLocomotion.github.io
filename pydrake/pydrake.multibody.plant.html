@@ -549,8 +549,8 @@ for the list of instantiations.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.plant.ContactResults.hydroelastic_contact_info">
 <span class="sig-name descname"><span class="pre">hydroelastic_contact_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.ContactResults" title="pydrake.multibody.plant.ContactResults"><span class="pre">pydrake.multibody.plant.ContactResults</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.plant.HydroelasticContactInfo" title="pydrake.multibody.plant.HydroelasticContactInfo"><span class="pre">pydrake.multibody.plant.HydroelasticContactInfo</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.ContactResults.hydroelastic_contact_info" title="Permalink to this definition"></a></dt>
 <dd><p>Retrieves the ith HydroelasticContactInfo instance. The input index i
-must be in the range [0, <code class="docutils literal notranslate"><span class="pre">num_hydroelastic_contacts()</span></code> - 1] or this
-method aborts.</p>
+must be in the range [0, <code class="docutils literal notranslate"><span class="pre">num_hydroelastic_contacts()</span></code>) or this
+method throws.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -577,8 +577,8 @@ have nulls.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.plant.ContactResults.point_pair_contact_info">
 <span class="sig-name descname"><span class="pre">point_pair_contact_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.ContactResults" title="pydrake.multibody.plant.ContactResults"><span class="pre">pydrake.multibody.plant.ContactResults</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.plant.PointPairContactInfo" title="pydrake.multibody.plant.PointPairContactInfo"><span class="pre">pydrake.multibody.plant.PointPairContactInfo</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.ContactResults.point_pair_contact_info" title="Permalink to this definition"></a></dt>
 <dd><p>Retrieves the ith PointPairContactInfo instance. The input index i
-must be in the range [0, <code class="docutils literal notranslate"><span class="pre">num_point_pair_contacts()</span></code> - 1] or this
-method aborts.</p>
+must be in the range [0, <code class="docutils literal notranslate"><span class="pre">num_point_pair_contacts()</span></code>) or this method
+throws.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -622,8 +622,8 @@ this data structure is expensive when <code class="docutils literal notranslate"
 <dt class="sig sig-object py" id="pydrake.multibody.plant.ContactResults_-AutoDiffXd-.hydroelastic_contact_info">
 <span id="pydrake.multibody.plant.ContactResults_[AutoDiffXd].hydroelastic_contact_info"></span><span class="sig-name descname"><span class="pre">hydroelastic_contact_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.ContactResults_" title="pydrake.multibody.plant.ContactResults_"><span class="pre">pydrake.multibody.plant.ContactResults_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.plant.HydroelasticContactInfo_" title="pydrake.multibody.plant.HydroelasticContactInfo_"><span class="pre">pydrake.multibody.plant.HydroelasticContactInfo_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.ContactResults_-AutoDiffXd-.hydroelastic_contact_info" title="Permalink to this definition"></a></dt>
 <dd><p>Retrieves the ith HydroelasticContactInfo instance. The input index i
-must be in the range [0, <code class="docutils literal notranslate"><span class="pre">num_hydroelastic_contacts()</span></code> - 1] or this
-method aborts.</p>
+must be in the range [0, <code class="docutils literal notranslate"><span class="pre">num_hydroelastic_contacts()</span></code>) or this
+method throws.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -650,8 +650,8 @@ have nulls.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.plant.ContactResults_-AutoDiffXd-.point_pair_contact_info">
 <span id="pydrake.multibody.plant.ContactResults_[AutoDiffXd].point_pair_contact_info"></span><span class="sig-name descname"><span class="pre">point_pair_contact_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.ContactResults_" title="pydrake.multibody.plant.ContactResults_"><span class="pre">pydrake.multibody.plant.ContactResults_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.plant.PointPairContactInfo_" title="pydrake.multibody.plant.PointPairContactInfo_"><span class="pre">pydrake.multibody.plant.PointPairContactInfo_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.ContactResults_-AutoDiffXd-.point_pair_contact_info" title="Permalink to this definition"></a></dt>
 <dd><p>Retrieves the ith PointPairContactInfo instance. The input index i
-must be in the range [0, <code class="docutils literal notranslate"><span class="pre">num_point_pair_contacts()</span></code> - 1] or this
-method aborts.</p>
+must be in the range [0, <code class="docutils literal notranslate"><span class="pre">num_point_pair_contacts()</span></code>) or this method
+throws.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -689,8 +689,8 @@ this data structure is expensive when <code class="docutils literal notranslate"
 <dt class="sig sig-object py" id="pydrake.multibody.plant.ContactResults_-Expression-.hydroelastic_contact_info">
 <span id="pydrake.multibody.plant.ContactResults_[Expression].hydroelastic_contact_info"></span><span class="sig-name descname"><span class="pre">hydroelastic_contact_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.ContactResults_" title="pydrake.multibody.plant.ContactResults_"><span class="pre">pydrake.multibody.plant.ContactResults_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.plant.HydroelasticContactInfo_" title="pydrake.multibody.plant.HydroelasticContactInfo_"><span class="pre">pydrake.multibody.plant.HydroelasticContactInfo_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.ContactResults_-Expression-.hydroelastic_contact_info" title="Permalink to this definition"></a></dt>
 <dd><p>Retrieves the ith HydroelasticContactInfo instance. The input index i
-must be in the range [0, <code class="docutils literal notranslate"><span class="pre">num_hydroelastic_contacts()</span></code> - 1] or this
-method aborts.</p>
+must be in the range [0, <code class="docutils literal notranslate"><span class="pre">num_hydroelastic_contacts()</span></code>) or this
+method throws.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -717,8 +717,8 @@ have nulls.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.plant.ContactResults_-Expression-.point_pair_contact_info">
 <span id="pydrake.multibody.plant.ContactResults_[Expression].point_pair_contact_info"></span><span class="sig-name descname"><span class="pre">point_pair_contact_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.ContactResults_" title="pydrake.multibody.plant.ContactResults_"><span class="pre">pydrake.multibody.plant.ContactResults_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.plant.PointPairContactInfo_" title="pydrake.multibody.plant.PointPairContactInfo_"><span class="pre">pydrake.multibody.plant.PointPairContactInfo_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.ContactResults_-Expression-.point_pair_contact_info" title="Permalink to this definition"></a></dt>
 <dd><p>Retrieves the ith PointPairContactInfo instance. The input index i
-must be in the range [0, <code class="docutils literal notranslate"><span class="pre">num_point_pair_contacts()</span></code> - 1] or this
-method aborts.</p>
+must be in the range [0, <code class="docutils literal notranslate"><span class="pre">num_point_pair_contacts()</span></code>) or this method
+throws.</p>
 </dd></dl>
 
 <dl class="py method">

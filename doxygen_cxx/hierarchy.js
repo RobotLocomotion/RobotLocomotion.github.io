@@ -136,6 +136,7 @@ var hierarchy =
     [ "CSpaceSeparatingPlane< drake::symbolic::Variable >", "structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html", null ],
     [ "DampingModel< T >", "classdrake_1_1multibody_1_1fem_1_1_damping_model.html", null ],
     [ "DeformableBodyConfig< T >", "classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html", null ],
+    [ "DeformableContactInfo< T >", "classdrake_1_1multibody_1_1_deformable_contact_info.html", null ],
     [ "DelegatingHasher", "structdrake_1_1_delegating_hasher.html", null ],
     [ "DenseOutput< T >", "classdrake_1_1systems_1_1_dense_output.html", [
       [ "ScalarDenseOutput< T >", "classdrake_1_1systems_1_1_scalar_dense_output.html", [
@@ -627,8 +628,8 @@ var hierarchy =
     ] ],
     [ "NumericalGradientOption", "classdrake_1_1math_1_1_numerical_gradient_option.html", null ],
     [ "Object", "classdrake_1_1pydrake_1_1_object.html", null ],
-    [ "MixedIntegerBranchAndBound::Options", "structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html", null ],
     [ "CspaceFreePolytopeBase::Options", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html", null ],
+    [ "MixedIntegerBranchAndBound::Options", "structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html", null ],
     [ "GlobalInverseKinematics::Options", "structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html", null ],
     [ "Meshcat::OrthographicCamera", "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html", null ],
     [ "OsqpSolverDetails", "structdrake_1_1solvers_1_1_osqp_solver_details.html", null ],

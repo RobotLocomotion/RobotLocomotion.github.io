@@ -197,38 +197,6 @@ matches the sample time step of the log.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.pyplot_visualizer.PyPlotVisualizer.DoPublish">
-<span class="sig-name descname"><span class="pre">DoPublish</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><span class="pre">pydrake.systems.framework.LeafSystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.PublishEvent" title="pydrake.systems.framework.PublishEvent"><span class="pre">pydrake.systems.framework.PublishEvent</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.pyplot_visualizer.PyPlotVisualizer.DoPublish" title="Permalink to this definition"></a></dt>
-<dd><p>Derived-class event dispatcher for all simultaneous publish events in
-<code class="docutils literal notranslate"><span class="pre">events</span></code>. Override this in your derived LeafSystem only if you
-require behavior other than the default dispatch behavior (not
-common). The default behavior is to traverse events in the arbitrary
-order they appear in <code class="docutils literal notranslate"><span class="pre">events</span></code>, and for each event that has a
-callback function, to invoke the callback with <code class="docutils literal notranslate"><span class="pre">context</span></code> and that
-event.</p>
-<p>Do not override this just to handle an event – instead declare the
-event and a handler callback for it using one of the
-<code class="docutils literal notranslate"><span class="pre">Declare...PublishEvent()</span></code> methods.</p>
-<p>This method is called only from the virtual DispatchPublishHandler,
-which is only called from the public non-virtual Publish(), which will
-have already error-checked <code class="docutils literal notranslate"><span class="pre">context</span></code> so you may assume that it is
-valid.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>There is no provision for returning EventStatus from DoPublish()
-as there is if you use the default dispatcher. Instead, your
-DoPublish() will be assumed to return EventStatus::Succeeded()
-regardless of what happened.</p>
-</div>
-<dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>Const current context.</p>
-</dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">events</span></code>:</dt><dd><p>All the publish events that need handling.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.pyplot_visualizer.PyPlotVisualizer.draw">
 <span class="sig-name descname"><span class="pre">draw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.pyplot_visualizer.PyPlotVisualizer.draw" title="Permalink to this definition"></a></dt>
 <dd><p>Draws a single frame.
