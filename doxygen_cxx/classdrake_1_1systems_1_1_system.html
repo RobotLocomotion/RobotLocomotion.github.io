@@ -839,7 +839,7 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a7d078e4f799ae50f07ae35389352835f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">(Internal use only) Event handler dispatch mechanism</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>The pure virtuals declared here are intended to be implemented only by Drake's <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html" title="A superclass template that extends System with some convenience utilities that are not applicable to ...">LeafSystem</a> and <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a> (plus a few unit tests) and those implementations must be <code>final</code>.</p>
-<p>For a <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html" title="A superclass template that extends System with some convenience utilities that are not applicable to ...">LeafSystem</a>, these functions need to call the appropriate LeafSystem::DoX event dispatcher. E.g. LeafSystem::DispatchPublishHandler() calls <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a119e3a83eeb61b8eb99198348178afd2" title="Derived-class event dispatcher for all simultaneous publish events in events.">LeafSystem::DoPublish()</a>. User supplied custom event callbacks embedded in each individual event need to be invoked in the LeafSystem::DoX handlers if desired. For a <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html" title="A superclass template that extends System with some convenience utilities that are not applicable to ...">LeafSystem</a>, the pseudo code of the complete default publish event handler dispatching is roughly: </p><pre>
+<p>For a <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html" title="A superclass template that extends System with some convenience utilities that are not applicable to ...">LeafSystem</a>, these functions need to call the appropriate LeafSystem::DoX event dispatcher. E.g. LeafSystem::DispatchPublishHandler() calls <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a119e3a83eeb61b8eb99198348178afd2" title="(Deprecated.)">LeafSystem::DoPublish()</a>. User supplied custom event callbacks embedded in each individual event need to be invoked in the LeafSystem::DoX handlers if desired. For a <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html" title="A superclass template that extends System with some convenience utilities that are not applicable to ...">LeafSystem</a>, the pseudo code of the complete default publish event handler dispatching is roughly: </p><pre>
   leaf_sys.Publish(context, event_collection)
   -&gt; leaf_sys.DispatchPublishHandler(context, event_collection)
      -&gt; leaf_sys.DoPublish(context, event_collection.get_events())
@@ -4367,7 +4367,7 @@ termination" returns are ignored here.</p>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000026">Deprecated:</a></b></dt><dd>Instead of calling or overriding this function, either  call GetGraphvizFragment() or override DoGetGraphvizFragment() <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000032">Deprecated:</a></b></dt><dd>Instead of calling or overriding this function, either  call GetGraphvizFragment() or override DoGetGraphvizFragment() <br />
  This will be removed from Drake on or after 2024-01-01.</dd></dl>
 
 </div>
@@ -4405,7 +4405,7 @@ termination" returns are ignored here.</p>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000029">Deprecated:</a></b></dt><dd>Call GetGraphvizFragment() instead <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000035">Deprecated:</a></b></dt><dd>Call GetGraphvizFragment() instead <br />
  This will be removed from Drake on or after 2024-01-01.</dd></dl>
 
 </div>
@@ -4451,7 +4451,7 @@ termination" returns are ignored here.</p>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000027">Deprecated:</a></b></dt><dd>Instead of calling or overriding this function, either  call GetGraphvizFragment() or override DoGetGraphvizFragment() <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000033">Deprecated:</a></b></dt><dd>Instead of calling or overriding this function, either  call GetGraphvizFragment() or override DoGetGraphvizFragment() <br />
  This will be removed from Drake on or after 2024-01-01.</dd></dl>
 
 <p>Reimplemented in <a class="el" href="classdrake_1_1systems_1_1_diagram.html#acfd6d412aafdf2814ced8e8fe460fc23">Diagram&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_diagram.html#acfd6d412aafdf2814ced8e8fe460fc23">Diagram&lt; double &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#acfd6d412aafdf2814ced8e8fe460fc23">LeafSystem&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#acfd6d412aafdf2814ced8e8fe460fc23">LeafSystem&lt; Element::T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#acfd6d412aafdf2814ced8e8fe460fc23">LeafSystem&lt; double &gt;</a>, and <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#acfd6d412aafdf2814ced8e8fe460fc23">LeafSystem&lt; AutoDiffXd &gt;</a>.</p>
@@ -4499,7 +4499,7 @@ termination" returns are ignored here.</p>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000028">Deprecated:</a></b></dt><dd>Instead of calling or overriding this function, either  call GetGraphvizFragment() or override DoGetGraphvizFragment() <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000034">Deprecated:</a></b></dt><dd>Instead of calling or overriding this function, either  call GetGraphvizFragment() or override DoGetGraphvizFragment() <br />
  This will be removed from Drake on or after 2024-01-01.</dd></dl>
 
 <p>Reimplemented in <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a37060c889e34319f11652b5ad21cfbb9">Diagram&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a37060c889e34319f11652b5ad21cfbb9">Diagram&lt; double &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a37060c889e34319f11652b5ad21cfbb9">LeafSystem&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a37060c889e34319f11652b5ad21cfbb9">LeafSystem&lt; Element::T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a37060c889e34319f11652b5ad21cfbb9">LeafSystem&lt; double &gt;</a>, and <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a37060c889e34319f11652b5ad21cfbb9">LeafSystem&lt; AutoDiffXd &gt;</a>.</p>

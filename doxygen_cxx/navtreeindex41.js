@@ -1,5 +1,6 @@
 var NAVTREEINDEX41 =
 {
+"classdrake_1_1systems_1_1analysis__test_1_1_my_spring_mass_system.html#aeff147efdbf2048727462995293019db":[3,0,0,15,1,6,5],
 "classdrake_1_1systems_1_1analysis__test_1_1_quadratic_scalar_system.html":[3,0,0,15,1,8],
 "classdrake_1_1systems_1_1analysis__test_1_1_quadratic_scalar_system.html#a5d10bc0c5eae442bf40d94e8200b3460":[3,0,0,15,1,8,1],
 "classdrake_1_1systems_1_1analysis__test_1_1_quadratic_scalar_system.html#a5d87f304b0414575e504e473976e4389":[3,0,0,15,1,8,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX41 =
 "classdrake_1_1systems_1_1lcm_1_1_lcm_scope_system.html":[1,2,6,2],
 "classdrake_1_1systems_1_1lcm_1_1_lcm_scope_system.html#a916efefbcfc360d3792d20df4a5cfe5f":[1,2,6,2,5],
 "classdrake_1_1systems_1_1lcm_1_1_lcm_scope_system.html#a9901eb69bec38ed73e1962c24388f380":[1,2,6,2,0],
-"classdrake_1_1systems_1_1lcm_1_1_lcm_scope_system.html#ab2654bb12e6044d4e4bc1c1eeb13c7a7":[1,2,6,2,1],
-"classdrake_1_1systems_1_1lcm_1_1_lcm_scope_system.html#ab6c5343f6fb480515189449e5fca48a6":[1,2,6,2,2]
+"classdrake_1_1systems_1_1lcm_1_1_lcm_scope_system.html#ab2654bb12e6044d4e4bc1c1eeb13c7a7":[1,2,6,2,1]
 };

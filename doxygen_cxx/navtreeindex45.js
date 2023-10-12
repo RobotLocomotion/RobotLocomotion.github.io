@@ -1,5 +1,6 @@
 var NAVTREEINDEX45 =
 {
+"decision__variable_8h.html#aa708f80d971209e3d46c1e41f05c1393":[4,0,0,11,16,0],
 "decision__variable_8h.html#ac04cfbe6b8d63ecb463fc087385ce061":[4,0,0,11,16,2],
 "decision__variable_8h.html#aca924499b3b011a50d3bd9d051295efa":[4,0,0,11,16,5],
 "decision__variable_8h.html#acf84184cb10b49233b007295d1880e17":[4,0,0,11,16,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX45 =
 "drake__bool_8h.html#a1f1c657c4d2cf400649123a7c2573d5b":[4,0,0,1,20,1],
 "drake__bool_8h.html#a624916a36af99a1ddfed08a25047cbea":[4,0,0,1,20,4],
 "drake__bool_8h.html#a66f0ced433e025116cf38c1cf2db6b76":[4,0,0,1,20,5],
-"drake__bool_8h.html#ab4011b0ee72e60112bfd3aee950765e8":[4,0,0,1,20,8],
-"drake__bool_8h.html#ac05a0ff629ccf3c38724b6d7f95e3bce":[4,0,0,1,20,3]
+"drake__bool_8h.html#ab4011b0ee72e60112bfd3aee950765e8":[4,0,0,1,20,8]
 };
