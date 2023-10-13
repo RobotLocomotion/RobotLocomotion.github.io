@@ -1,5 +1,15 @@
 var NAVTREEINDEX44 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#af360987538c584ed2a7c5ad8e2f3d6e4":[3,0,0,17,8,1],
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#af88c3d4b35f53401069500f721083309":[3,0,0,17,8,6],
+"classdrake_1_1trajectories_1_1_stacked_trajectory.html":[3,0,0,17,9],
+"classdrake_1_1trajectories_1_1_stacked_trajectory.html#a317bd0f1ce2f6a26a5063b6811c108a5":[3,0,0,17,9,9],
+"classdrake_1_1trajectories_1_1_stacked_trajectory.html#a67132081ac654cacdf3adefd7e95a2f7":[3,0,0,17,9,11],
+"classdrake_1_1trajectories_1_1_stacked_trajectory.html#a6f3379a2754487a0ec8bf752912a41bf":[3,0,0,17,9,6],
+"classdrake_1_1trajectories_1_1_stacked_trajectory.html#a74dc3c05dd9c37aa42ee21a90b7822f7":[3,0,0,17,9,8],
+"classdrake_1_1trajectories_1_1_stacked_trajectory.html#a9830891fd34cc2e0313c865ac201c8fc":[3,0,0,17,9,0],
+"classdrake_1_1trajectories_1_1_stacked_trajectory.html#aa445a1729df406e75359e3c87b757290":[3,0,0,17,9,2],
+"classdrake_1_1trajectories_1_1_stacked_trajectory.html#aaacb08cadfa67d9aabcc07dbf57fce30":[3,0,0,17,9,4],
 "classdrake_1_1trajectories_1_1_stacked_trajectory.html#aac002eea06875b91ada866e249fc7b6f":[3,0,0,17,9,3],
 "classdrake_1_1trajectories_1_1_stacked_trajectory.html#ab191f8ee68c549c494a6d49b0c381944":[3,0,0,17,9,7],
 "classdrake_1_1trajectories_1_1_stacked_trajectory.html#abec7b1f5c2c6face018616992476881f":[3,0,0,17,9,10],
@@ -239,15 +249,5 @@ var NAVTREEINDEX44 =
 "cspace__free__structs_8h.html":[4,0,0,4,1,8],
 "cspace__separating__plane_8h.html":[4,0,0,4,1,9],
 "cspace__separating__plane_8h.html#a0a6bfeb13bf4fc1924f61f81051d7561":[4,0,0,4,1,9,2],
-"cspace__separating__plane_8h.html#a6d1ae826ab17a7ccd2b08fab3222813d":[4,0,0,4,1,9,4],
-"cspace__separating__plane_8h.html#a6febb8c28b6d49e494dbe16b5ed5b089":[4,0,0,4,1,9,1],
-"cspace__separating__plane_8h.html#a6febb8c28b6d49e494dbe16b5ed5b089ac3af1341756d0c5a66c8ea473dc38927":[4,0,0,4,1,9,1,0],
-"cspace__separating__plane_8h.html#ac176296e2c3b79a9f480c7a38b0842b0":[4,0,0,4,1,9,3],
-"cubic__scalar__system_8h.html":[4,0,0,12,0,0,1],
-"damping__model_8h.html":[4,0,0,8,3,5],
-"damping__model_8h.html#a637b32bd5b13e55117670a553e19c54f":[4,0,0,8,3,5,1],
-"decision__variable_8h.html":[4,0,0,11,16],
-"decision__variable_8h.html#a062b182db5c52f5a71221a4c5958ea0b":[4,0,0,11,16,3],
-"decision__variable_8h.html#a8f304c33d467b0bf0ad02e25a2ced143":[4,0,0,11,16,6],
-"decision__variable_8h.html#aa20d09ae94d1e722c2961fbaca37f967":[4,0,0,11,16,4]
+"cspace__separating__plane_8h.html#a6d1ae826ab17a7ccd2b08fab3222813d":[4,0,0,4,1,9,4]
 };

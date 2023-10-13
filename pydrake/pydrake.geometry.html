@@ -9728,8 +9728,12 @@ for the list of instantiations.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraph.AddRenderer">
-<span class="sig-name descname"><span class="pre">AddRenderer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraph" title="pydrake.geometry.SceneGraph"><span class="pre">pydrake.geometry.SceneGraph</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">renderer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.RenderEngine" title="pydrake.geometry.RenderEngine"><span class="pre">pydrake.geometry.RenderEngine</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraph.AddRenderer" title="Permalink to this definition"></a></dt>
-<dd><p>Adds a new render engine to this SceneGraph. The SceneGraph owns the
+<span class="sig-name descname"><span class="pre">AddRenderer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph.AddRenderer" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>AddRenderer(self: pydrake.geometry.SceneGraph, name: str, renderer: pydrake.geometry.RenderEngine) -&gt; None</p></li>
+</ol>
+<p>Adds a new render engine to this SceneGraph. The SceneGraph owns the
 render engine. The render engine’s name should be referenced in the
 render::ColorRenderCamera “ColorRenderCamera” or
 render::DepthRenderCamera “DepthRenderCamera” provided in the render
@@ -9760,6 +9764,12 @@ existing geometries (see scene_graph_versioning).</p>
 <dd class="field-odd"><p><strong>RuntimeError if the name is not unique.</strong> – </p>
 </dd>
 </dl>
+<ol class="arabic simple" start="2">
+<li><p>AddRenderer(self: pydrake.geometry.SceneGraph, context: pydrake.systems.framework.Context, name: str, renderer: pydrake.geometry.RenderEngine) -&gt; None</p></li>
+</ol>
+<p>systems::Context-modifying variant of AddRenderer(). Rather than
+modifying SceneGraph’s model, it modifies the copy of the model stored
+in the provided context.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -9940,10 +9950,44 @@ registered frames.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraph.GetRendererTypeName">
+<span class="sig-name descname"><span class="pre">GetRendererTypeName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph.GetRendererTypeName" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>GetRendererTypeName(self: pydrake.geometry.SceneGraph, name: str) -&gt; str</p></li>
+</ol>
+<p>Reports the type name for the RenderEngine registered with the given
+<code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the name of the RenderEngine’s most derived type (as produced by
+NiceTypeName::Get()). An empty string if there is no RenderEngine
+registered with the given <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>GetRendererTypeName(self: pydrake.geometry.SceneGraph, context: pydrake.systems.framework.Context, name: str) -&gt; str</p></li>
+</ol>
+<p>systems::Context-query variant of GetRendererTypeName(). Rather than
+querying SceneGraph’s model, it queries the copy of the model stored
+in the provided context.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraph.HasRenderer">
-<span class="sig-name descname"><span class="pre">HasRenderer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraph" title="pydrake.geometry.SceneGraph"><span class="pre">pydrake.geometry.SceneGraph</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraph.HasRenderer" title="Permalink to this definition"></a></dt>
-<dd><p>Reports true if this SceneGraph has a renderer registered with the
+<span class="sig-name descname"><span class="pre">HasRenderer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph.HasRenderer" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>HasRenderer(self: pydrake.geometry.SceneGraph, name: str) -&gt; bool</p></li>
+</ol>
+<p>Reports true if this SceneGraph has a renderer registered with the
 given name.</p>
+<ol class="arabic simple" start="2">
+<li><p>HasRenderer(self: pydrake.geometry.SceneGraph, context: pydrake.systems.framework.Context, name: str) -&gt; bool</p></li>
+</ol>
+<p>systems::Context-query variant of HasRenderer(). Rather than querying
+SceneGraph’s model, it queries the copy of the model stored in the
+provided context.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -10164,8 +10208,12 @@ in the provided context.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraph.RemoveRenderer">
-<span class="sig-name descname"><span class="pre">RemoveRenderer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraph" title="pydrake.geometry.SceneGraph"><span class="pre">pydrake.geometry.SceneGraph</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraph.RemoveRenderer" title="Permalink to this definition"></a></dt>
-<dd><p>Removes an existing renderer from this SceneGraph</p>
+<span class="sig-name descname"><span class="pre">RemoveRenderer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph.RemoveRenderer" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>RemoveRenderer(self: pydrake.geometry.SceneGraph, name: str) -&gt; None</p></li>
+</ol>
+<p>Removes an existing renderer from this SceneGraph</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt><dd><p>The unique name of the renderer to be removed.</p>
 </dd>
@@ -10178,6 +10226,12 @@ in the provided context.</p>
 </ul>
 </dd>
 </dl>
+<ol class="arabic simple" start="2">
+<li><p>RemoveRenderer(self: pydrake.geometry.SceneGraph, context: pydrake.systems.framework.Context, name: str) -&gt; None</p></li>
+</ol>
+<p>systems::Context-modifying variant of RemoveRenderer(). Rather than
+modifying SceneGraph’s model, it modifies the copy of the model stored
+in the provided context.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -10293,8 +10347,18 @@ scene_graph_versioning).</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraph.RendererCount">
-<span class="sig-name descname"><span class="pre">RendererCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraph" title="pydrake.geometry.SceneGraph"><span class="pre">pydrake.geometry.SceneGraph</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraph.RendererCount" title="Permalink to this definition"></a></dt>
-<dd><p>Reports the number of renderers registered to this SceneGraph.</p>
+<span class="sig-name descname"><span class="pre">RendererCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph.RendererCount" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>RendererCount(self: pydrake.geometry.SceneGraph) -&gt; int</p></li>
+</ol>
+<p>Reports the number of renderers registered to this SceneGraph.</p>
+<ol class="arabic simple" start="2">
+<li><p>RendererCount(self: pydrake.geometry.SceneGraph, context: pydrake.systems.framework.Context) -&gt; int</p></li>
+</ol>
+<p>systems::Context-query variant of RendererCount(). Rather than
+querying SceneGraph’s model, it queries the copy of the model stored
+in the provided context.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -10545,8 +10609,12 @@ The system should <em>clearly</em> document this fact.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraph_-AutoDiffXd-.AddRenderer">
-<span id="pydrake.geometry.SceneGraph_[AutoDiffXd].AddRenderer"></span><span class="sig-name descname"><span class="pre">AddRenderer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraph_" title="pydrake.geometry.SceneGraph_"><span class="pre">pydrake.geometry.SceneGraph_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">renderer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.RenderEngine" title="pydrake.geometry.RenderEngine"><span class="pre">pydrake.geometry.RenderEngine</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-AutoDiffXd-.AddRenderer" title="Permalink to this definition"></a></dt>
-<dd><p>Adds a new render engine to this SceneGraph. The SceneGraph owns the
+<span id="pydrake.geometry.SceneGraph_[AutoDiffXd].AddRenderer"></span><span class="sig-name descname"><span class="pre">AddRenderer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-AutoDiffXd-.AddRenderer" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>AddRenderer(self: pydrake.geometry.SceneGraph_[AutoDiffXd], name: str, renderer: pydrake.geometry.RenderEngine) -&gt; None</p></li>
+</ol>
+<p>Adds a new render engine to this SceneGraph. The SceneGraph owns the
 render engine. The render engine’s name should be referenced in the
 render::ColorRenderCamera “ColorRenderCamera” or
 render::DepthRenderCamera “DepthRenderCamera” provided in the render
@@ -10577,6 +10645,12 @@ existing geometries (see scene_graph_versioning).</p>
 <dd class="field-odd"><p><strong>RuntimeError if the name is not unique.</strong> – </p>
 </dd>
 </dl>
+<ol class="arabic simple" start="2">
+<li><p>AddRenderer(self: pydrake.geometry.SceneGraph_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], name: str, renderer: pydrake.geometry.RenderEngine) -&gt; None</p></li>
+</ol>
+<p>systems::Context-modifying variant of AddRenderer(). Rather than
+modifying SceneGraph’s model, it modifies the copy of the model stored
+in the provided context.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -10757,10 +10831,44 @@ registered frames.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraph_-AutoDiffXd-.GetRendererTypeName">
+<span id="pydrake.geometry.SceneGraph_[AutoDiffXd].GetRendererTypeName"></span><span class="sig-name descname"><span class="pre">GetRendererTypeName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-AutoDiffXd-.GetRendererTypeName" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>GetRendererTypeName(self: pydrake.geometry.SceneGraph_[AutoDiffXd], name: str) -&gt; str</p></li>
+</ol>
+<p>Reports the type name for the RenderEngine registered with the given
+<code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the name of the RenderEngine’s most derived type (as produced by
+NiceTypeName::Get()). An empty string if there is no RenderEngine
+registered with the given <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>GetRendererTypeName(self: pydrake.geometry.SceneGraph_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], name: str) -&gt; str</p></li>
+</ol>
+<p>systems::Context-query variant of GetRendererTypeName(). Rather than
+querying SceneGraph’s model, it queries the copy of the model stored
+in the provided context.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraph_-AutoDiffXd-.HasRenderer">
-<span id="pydrake.geometry.SceneGraph_[AutoDiffXd].HasRenderer"></span><span class="sig-name descname"><span class="pre">HasRenderer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraph_" title="pydrake.geometry.SceneGraph_"><span class="pre">pydrake.geometry.SceneGraph_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-AutoDiffXd-.HasRenderer" title="Permalink to this definition"></a></dt>
-<dd><p>Reports true if this SceneGraph has a renderer registered with the
+<span id="pydrake.geometry.SceneGraph_[AutoDiffXd].HasRenderer"></span><span class="sig-name descname"><span class="pre">HasRenderer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-AutoDiffXd-.HasRenderer" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>HasRenderer(self: pydrake.geometry.SceneGraph_[AutoDiffXd], name: str) -&gt; bool</p></li>
+</ol>
+<p>Reports true if this SceneGraph has a renderer registered with the
 given name.</p>
+<ol class="arabic simple" start="2">
+<li><p>HasRenderer(self: pydrake.geometry.SceneGraph_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], name: str) -&gt; bool</p></li>
+</ol>
+<p>systems::Context-query variant of HasRenderer(). Rather than querying
+SceneGraph’s model, it queries the copy of the model stored in the
+provided context.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -10981,8 +11089,12 @@ in the provided context.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraph_-AutoDiffXd-.RemoveRenderer">
-<span id="pydrake.geometry.SceneGraph_[AutoDiffXd].RemoveRenderer"></span><span class="sig-name descname"><span class="pre">RemoveRenderer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraph_" title="pydrake.geometry.SceneGraph_"><span class="pre">pydrake.geometry.SceneGraph_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-AutoDiffXd-.RemoveRenderer" title="Permalink to this definition"></a></dt>
-<dd><p>Removes an existing renderer from this SceneGraph</p>
+<span id="pydrake.geometry.SceneGraph_[AutoDiffXd].RemoveRenderer"></span><span class="sig-name descname"><span class="pre">RemoveRenderer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-AutoDiffXd-.RemoveRenderer" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>RemoveRenderer(self: pydrake.geometry.SceneGraph_[AutoDiffXd], name: str) -&gt; None</p></li>
+</ol>
+<p>Removes an existing renderer from this SceneGraph</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt><dd><p>The unique name of the renderer to be removed.</p>
 </dd>
@@ -10995,6 +11107,12 @@ in the provided context.</p>
 </ul>
 </dd>
 </dl>
+<ol class="arabic simple" start="2">
+<li><p>RemoveRenderer(self: pydrake.geometry.SceneGraph_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], name: str) -&gt; None</p></li>
+</ol>
+<p>systems::Context-modifying variant of RemoveRenderer(). Rather than
+modifying SceneGraph’s model, it modifies the copy of the model stored
+in the provided context.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -11110,8 +11228,18 @@ scene_graph_versioning).</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraph_-AutoDiffXd-.RendererCount">
-<span id="pydrake.geometry.SceneGraph_[AutoDiffXd].RendererCount"></span><span class="sig-name descname"><span class="pre">RendererCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraph_" title="pydrake.geometry.SceneGraph_"><span class="pre">pydrake.geometry.SceneGraph_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-AutoDiffXd-.RendererCount" title="Permalink to this definition"></a></dt>
-<dd><p>Reports the number of renderers registered to this SceneGraph.</p>
+<span id="pydrake.geometry.SceneGraph_[AutoDiffXd].RendererCount"></span><span class="sig-name descname"><span class="pre">RendererCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-AutoDiffXd-.RendererCount" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>RendererCount(self: pydrake.geometry.SceneGraph_[AutoDiffXd]) -&gt; int</p></li>
+</ol>
+<p>Reports the number of renderers registered to this SceneGraph.</p>
+<ol class="arabic simple" start="2">
+<li><p>RendererCount(self: pydrake.geometry.SceneGraph_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd]) -&gt; int</p></li>
+</ol>
+<p>systems::Context-query variant of RendererCount(). Rather than
+querying SceneGraph’s model, it queries the copy of the model stored
+in the provided context.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -11356,8 +11484,12 @@ The system should <em>clearly</em> document this fact.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraph_-Expression-.AddRenderer">
-<span id="pydrake.geometry.SceneGraph_[Expression].AddRenderer"></span><span class="sig-name descname"><span class="pre">AddRenderer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraph_" title="pydrake.geometry.SceneGraph_"><span class="pre">pydrake.geometry.SceneGraph_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">renderer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.RenderEngine" title="pydrake.geometry.RenderEngine"><span class="pre">pydrake.geometry.RenderEngine</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-Expression-.AddRenderer" title="Permalink to this definition"></a></dt>
-<dd><p>Adds a new render engine to this SceneGraph. The SceneGraph owns the
+<span id="pydrake.geometry.SceneGraph_[Expression].AddRenderer"></span><span class="sig-name descname"><span class="pre">AddRenderer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-Expression-.AddRenderer" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>AddRenderer(self: pydrake.geometry.SceneGraph_[Expression], name: str, renderer: pydrake.geometry.RenderEngine) -&gt; None</p></li>
+</ol>
+<p>Adds a new render engine to this SceneGraph. The SceneGraph owns the
 render engine. The render engine’s name should be referenced in the
 render::ColorRenderCamera “ColorRenderCamera” or
 render::DepthRenderCamera “DepthRenderCamera” provided in the render
@@ -11388,6 +11520,12 @@ existing geometries (see scene_graph_versioning).</p>
 <dd class="field-odd"><p><strong>RuntimeError if the name is not unique.</strong> – </p>
 </dd>
 </dl>
+<ol class="arabic simple" start="2">
+<li><p>AddRenderer(self: pydrake.geometry.SceneGraph_[Expression], context: pydrake.systems.framework.Context_[Expression], name: str, renderer: pydrake.geometry.RenderEngine) -&gt; None</p></li>
+</ol>
+<p>systems::Context-modifying variant of AddRenderer(). Rather than
+modifying SceneGraph’s model, it modifies the copy of the model stored
+in the provided context.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -11568,10 +11706,44 @@ registered frames.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraph_-Expression-.GetRendererTypeName">
+<span id="pydrake.geometry.SceneGraph_[Expression].GetRendererTypeName"></span><span class="sig-name descname"><span class="pre">GetRendererTypeName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-Expression-.GetRendererTypeName" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>GetRendererTypeName(self: pydrake.geometry.SceneGraph_[Expression], name: str) -&gt; str</p></li>
+</ol>
+<p>Reports the type name for the RenderEngine registered with the given
+<code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the name of the RenderEngine’s most derived type (as produced by
+NiceTypeName::Get()). An empty string if there is no RenderEngine
+registered with the given <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>GetRendererTypeName(self: pydrake.geometry.SceneGraph_[Expression], context: pydrake.systems.framework.Context_[Expression], name: str) -&gt; str</p></li>
+</ol>
+<p>systems::Context-query variant of GetRendererTypeName(). Rather than
+querying SceneGraph’s model, it queries the copy of the model stored
+in the provided context.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraph_-Expression-.HasRenderer">
-<span id="pydrake.geometry.SceneGraph_[Expression].HasRenderer"></span><span class="sig-name descname"><span class="pre">HasRenderer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraph_" title="pydrake.geometry.SceneGraph_"><span class="pre">pydrake.geometry.SceneGraph_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-Expression-.HasRenderer" title="Permalink to this definition"></a></dt>
-<dd><p>Reports true if this SceneGraph has a renderer registered with the
+<span id="pydrake.geometry.SceneGraph_[Expression].HasRenderer"></span><span class="sig-name descname"><span class="pre">HasRenderer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-Expression-.HasRenderer" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>HasRenderer(self: pydrake.geometry.SceneGraph_[Expression], name: str) -&gt; bool</p></li>
+</ol>
+<p>Reports true if this SceneGraph has a renderer registered with the
 given name.</p>
+<ol class="arabic simple" start="2">
+<li><p>HasRenderer(self: pydrake.geometry.SceneGraph_[Expression], context: pydrake.systems.framework.Context_[Expression], name: str) -&gt; bool</p></li>
+</ol>
+<p>systems::Context-query variant of HasRenderer(). Rather than querying
+SceneGraph’s model, it queries the copy of the model stored in the
+provided context.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -11792,8 +11964,12 @@ in the provided context.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraph_-Expression-.RemoveRenderer">
-<span id="pydrake.geometry.SceneGraph_[Expression].RemoveRenderer"></span><span class="sig-name descname"><span class="pre">RemoveRenderer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraph_" title="pydrake.geometry.SceneGraph_"><span class="pre">pydrake.geometry.SceneGraph_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-Expression-.RemoveRenderer" title="Permalink to this definition"></a></dt>
-<dd><p>Removes an existing renderer from this SceneGraph</p>
+<span id="pydrake.geometry.SceneGraph_[Expression].RemoveRenderer"></span><span class="sig-name descname"><span class="pre">RemoveRenderer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-Expression-.RemoveRenderer" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>RemoveRenderer(self: pydrake.geometry.SceneGraph_[Expression], name: str) -&gt; None</p></li>
+</ol>
+<p>Removes an existing renderer from this SceneGraph</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt><dd><p>The unique name of the renderer to be removed.</p>
 </dd>
@@ -11806,6 +11982,12 @@ in the provided context.</p>
 </ul>
 </dd>
 </dl>
+<ol class="arabic simple" start="2">
+<li><p>RemoveRenderer(self: pydrake.geometry.SceneGraph_[Expression], context: pydrake.systems.framework.Context_[Expression], name: str) -&gt; None</p></li>
+</ol>
+<p>systems::Context-modifying variant of RemoveRenderer(). Rather than
+modifying SceneGraph’s model, it modifies the copy of the model stored
+in the provided context.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -11921,8 +12103,18 @@ scene_graph_versioning).</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraph_-Expression-.RendererCount">
-<span id="pydrake.geometry.SceneGraph_[Expression].RendererCount"></span><span class="sig-name descname"><span class="pre">RendererCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraph_" title="pydrake.geometry.SceneGraph_"><span class="pre">pydrake.geometry.SceneGraph_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-Expression-.RendererCount" title="Permalink to this definition"></a></dt>
-<dd><p>Reports the number of renderers registered to this SceneGraph.</p>
+<span id="pydrake.geometry.SceneGraph_[Expression].RendererCount"></span><span class="sig-name descname"><span class="pre">RendererCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-Expression-.RendererCount" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>RendererCount(self: pydrake.geometry.SceneGraph_[Expression]) -&gt; int</p></li>
+</ol>
+<p>Reports the number of renderers registered to this SceneGraph.</p>
+<ol class="arabic simple" start="2">
+<li><p>RendererCount(self: pydrake.geometry.SceneGraph_[Expression], context: pydrake.systems.framework.Context_[Expression]) -&gt; int</p></li>
+</ol>
+<p>systems::Context-query variant of RendererCount(). Rather than
+querying SceneGraph’s model, it queries the copy of the model stored
+in the provided context.</p>
 </dd></dl>
 
 <dl class="py method">

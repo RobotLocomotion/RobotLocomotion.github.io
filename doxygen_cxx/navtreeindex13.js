@@ -1,5 +1,11 @@
 var NAVTREEINDEX13 =
 {
+"classdrake_1_1multibody_1_1_distance_constraint.html#a6c6edcb36ead3f998b5f2ee32c5fbd66":[1,1,0,3,6],
+"classdrake_1_1multibody_1_1_distance_constraint.html#aa2ac8bf926f4c4b19a02873f753c344c":[1,1,0,3,3],
+"classdrake_1_1multibody_1_1_distance_constraint.html#aad75abb4221bf6e44091ed60c7721241":[1,1,0,3,2],
+"classdrake_1_1multibody_1_1_distance_constraint.html#ad04269b2bfa6bfa65dc5af30515d41a8":[1,1,0,3,4],
+"classdrake_1_1multibody_1_1_door_hinge.html":[3,0,0,8,31],
+"classdrake_1_1multibody_1_1_door_hinge.html#a0480114a02d8ac4edc2f4011a3f3e3cd":[3,0,0,8,31,3],
 "classdrake_1_1multibody_1_1_door_hinge.html#a0b35f9a15174cdbc86feb93ab4191cf2":[3,0,0,8,31,7],
 "classdrake_1_1multibody_1_1_door_hinge.html#a14f1e33beb90541be76fcb45dea6af74":[3,0,0,8,31,20],
 "classdrake_1_1multibody_1_1_door_hinge.html#a1a3872435692d59007761e82cb48b17e":[3,0,0,8,31,5],
@@ -243,11 +249,5 @@ var NAVTREEINDEX13 =
 "classdrake_1_1multibody_1_1_joint_actuator.html#a2ae9bfe9ff9fa92e86c62acc0179d459":[3,0,0,8,47,12],
 "classdrake_1_1multibody_1_1_joint_actuator.html#a31bc35162130a7675b6c289c5655fb56":[3,0,0,8,47,19],
 "classdrake_1_1multibody_1_1_joint_actuator.html#a42d883dde11e65819319f8060b0843b4":[3,0,0,8,47,14],
-"classdrake_1_1multibody_1_1_joint_actuator.html#a46550a493387368d4c5244ea6e0d49f9":[3,0,0,8,47,26],
-"classdrake_1_1multibody_1_1_joint_actuator.html#a51aefd06d016c29ee25018216a7d5ff2":[3,0,0,8,47,0],
-"classdrake_1_1multibody_1_1_joint_actuator.html#a5434b36ff862492d2aed1ba6a5dbe503":[3,0,0,8,47,5],
-"classdrake_1_1multibody_1_1_joint_actuator.html#a544e5bac743e6b9fa43ce300a4386f21":[3,0,0,8,47,9],
-"classdrake_1_1multibody_1_1_joint_actuator.html#a54bc3724965cc59e714c64cbeb147b86":[3,0,0,8,47,15],
-"classdrake_1_1multibody_1_1_joint_actuator.html#a5b0758f9f10b1a8a122a6e3c1ee1ff92":[3,0,0,8,47,4],
-"classdrake_1_1multibody_1_1_joint_actuator.html#a5e00d5f4ea204b3bab3d733b8a64b9eb":[3,0,0,8,47,8]
+"classdrake_1_1multibody_1_1_joint_actuator.html#a46550a493387368d4c5244ea6e0d49f9":[3,0,0,8,47,26]
 };

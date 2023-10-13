@@ -1,5 +1,15 @@
 var NAVTREEINDEX45 =
 {
+"cspace__separating__plane_8h.html#a6febb8c28b6d49e494dbe16b5ed5b089":[4,0,0,4,1,9,1],
+"cspace__separating__plane_8h.html#a6febb8c28b6d49e494dbe16b5ed5b089ac3af1341756d0c5a66c8ea473dc38927":[4,0,0,4,1,9,1,0],
+"cspace__separating__plane_8h.html#ac176296e2c3b79a9f480c7a38b0842b0":[4,0,0,4,1,9,3],
+"cubic__scalar__system_8h.html":[4,0,0,12,0,0,1],
+"damping__model_8h.html":[4,0,0,8,3,5],
+"damping__model_8h.html#a637b32bd5b13e55117670a553e19c54f":[4,0,0,8,3,5,1],
+"decision__variable_8h.html":[4,0,0,11,16],
+"decision__variable_8h.html#a062b182db5c52f5a71221a4c5958ea0b":[4,0,0,11,16,3],
+"decision__variable_8h.html#a8f304c33d467b0bf0ad02e25a2ced143":[4,0,0,11,16,6],
+"decision__variable_8h.html#aa20d09ae94d1e722c2961fbaca37f967":[4,0,0,11,16,4],
 "decision__variable_8h.html#aa708f80d971209e3d46c1e41f05c1393":[4,0,0,11,16,0],
 "decision__variable_8h.html#ac04cfbe6b8d63ecb463fc087385ce061":[4,0,0,11,16,2],
 "decision__variable_8h.html#aca924499b3b011a50d3bd9d051295efa":[4,0,0,11,16,5],
@@ -239,15 +249,5 @@ var NAVTREEINDEX45 =
 "doxygen_8h.html":[4,0,0,2,0,0],
 "doxygen__cxx_8h.html":[4,0,0,1,17],
 "drake__assert_8h.html":[4,0,0,1,18],
-"drake__assert_8h.html#a0d126d5c79d6e74d5f03f8c81e4b3a63":[4,0,0,1,18,0],
-"drake__assert_8h.html#a53797785bb2511ded7061028fcca65c5":[4,0,0,1,18,1],
-"drake__assert_8h.html#a90a6aa22721ddd3bc514c45d8e1d8674":[4,0,0,1,18,2],
-"drake__assert_8h.html#aaf9506c208e2a7d09f67d1a9ab84992a":[4,0,0,1,18,3],
-"drake__assertion__error_8h.html":[4,0,0,1,19],
-"drake__bool_8h.html":[4,0,0,1,20],
-"drake__bool_8h.html#a01aa931c5cbfd4b09d847cc4d7b4c699":[4,0,0,1,20,7],
-"drake__bool_8h.html#a1f1c657c4d2cf400649123a7c2573d5b":[4,0,0,1,20,1],
-"drake__bool_8h.html#a624916a36af99a1ddfed08a25047cbea":[4,0,0,1,20,4],
-"drake__bool_8h.html#a66f0ced433e025116cf38c1cf2db6b76":[4,0,0,1,20,5],
-"drake__bool_8h.html#ab4011b0ee72e60112bfd3aee950765e8":[4,0,0,1,20,8]
+"drake__assert_8h.html#a0d126d5c79d6e74d5f03f8c81e4b3a63":[4,0,0,1,18,0]
 };

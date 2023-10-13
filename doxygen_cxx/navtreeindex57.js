@@ -1,5 +1,15 @@
 var NAVTREEINDEX57 =
 {
+"structdrake_1_1math_1_1_gray_codes_matrix.html":[3,0,0,7,6],
+"structdrake_1_1math_1_1_gray_codes_matrix.html#a83c3b24ce255b931f182e59775510cb1":[3,0,0,7,6,0],
+"structdrake_1_1math_1_1_mat_grad_mult.html":[3,0,0,7,8],
+"structdrake_1_1math_1_1_mat_grad_mult.html#aace3454f69205e3b95dfe4e1176647ac":[3,0,0,7,8,0],
+"structdrake_1_1math_1_1_mat_grad_mult_mat.html":[3,0,0,7,9],
+"structdrake_1_1math_1_1_mat_grad_mult_mat.html#a21269c8d264a02b47f4bb4da4e41ec3d":[3,0,0,7,9,0],
+"structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html":[3,0,0,8,7],
+"structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html#a01c3e8a16f2e4c2d3ca103b183aa4f0d":[3,0,0,8,7,4],
+"structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html#a22edde1cca11d8d8bfb16621d27aecc4":[3,0,0,8,7,3],
+"structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html#a6a14f00b7d05307bc3cae0288beb6503":[3,0,0,8,7,2],
 "structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html#ac754f7e1ac2c0ce138d0c37c2ab2984d":[3,0,0,8,7,1],
 "structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html#add5c7dbef28836cc86021cd2d41307af":[3,0,0,8,7,0],
 "structdrake_1_1multibody_1_1_calc_grid_points_options.html":[3,0,0,8,14],
@@ -239,15 +249,5 @@ var NAVTREEINDEX57 =
 "structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html#a3a4672b6304d90f5da66f02b2586779b":[3,0,0,8,4,8,5],
 "structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html#a4a688dfea2f967b460be1a7c89f4412e":[3,0,0,8,4,8,4],
 "structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html#a4f479489d1860644526a4ecfc8889575":[3,0,0,8,4,8,3],
-"structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html#a8f5117f344d6eab6eb9a789f5ef03622":[3,0,0,8,4,8,2],
-"structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html#afeea5bea8394a61f0f0ce27ab5e3225c":[3,0,0,8,4,8,0],
-"structdrake_1_1ostream__formatter.html":[3,0,0,39],
-"structdrake_1_1ostream__formatter.html#aab8f913d74288ae04ca146910ed303bf":[3,0,0,39,0],
-"structdrake_1_1planning_1_1_collision_checker_1_1_added_shape.html":[1,4,2,2,1,0],
-"structdrake_1_1planning_1_1_collision_checker_1_1_added_shape.html#a58556183e6b44a317abcf3d0a8e0e2b4":[1,4,2,2,1,0,2],
-"structdrake_1_1planning_1_1_collision_checker_1_1_added_shape.html#a9444f7e141745392f1b3cd3c5667b41e":[1,4,2,2,1,0,0],
-"structdrake_1_1planning_1_1_collision_checker_1_1_added_shape.html#ab92ffdff0f2d44b618e368df195d3185":[1,4,2,2,1,0,1],
-"structdrake_1_1planning_1_1_collision_checker_params.html":[1,4,2,2,3],
-"structdrake_1_1planning_1_1_collision_checker_params.html#a2c29aca77709a64d537303e01282e71f":[1,4,2,2,3,5],
-"structdrake_1_1planning_1_1_collision_checker_params.html#a35dcc56f9ad09e0a13d0bbb111554f32":[1,4,2,2,3,0]
+"structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html#a8f5117f344d6eab6eb9a789f5ef03622":[3,0,0,8,4,8,2]
 };

@@ -1,5 +1,11 @@
 var NAVTREEINDEX11 =
 {
+"classdrake_1_1manipulation_1_1util_1_1_moving_average_filter.html#aab30aa03750b18983675691505a8ef77":[3,0,0,6,3,1,5],
+"classdrake_1_1manipulation_1_1util_1_1_moving_average_filter.html#ab9f961ae11f0c6dd185a9fda60b5c3ca":[3,0,0,6,3,1,7],
+"classdrake_1_1manipulation_1_1util_1_1_moving_average_filter.html#ac20c5ea6e965d2fc65f9f0358424d761":[3,0,0,6,3,1,4],
+"classdrake_1_1manipulation_1_1util_1_1_moving_average_filter.html#acde06b5cd22f9685109dae83fcb765ab":[3,0,0,6,3,1,6],
+"classdrake_1_1manipulation_1_1util_1_1_robot_plan_interpolator.html":[1,2,5,10],
+"classdrake_1_1manipulation_1_1util_1_1_robot_plan_interpolator.html#a08a9cb7bb8fa7a078e173c9db6669b32":[1,2,5,10,7],
 "classdrake_1_1manipulation_1_1util_1_1_robot_plan_interpolator.html#a1ba9e59fed168c02473ee4b1b760b374":[1,2,5,10,0],
 "classdrake_1_1manipulation_1_1util_1_1_robot_plan_interpolator.html#a404e1a2327bd744b60eb7b8e6bb313cc":[1,2,5,10,5],
 "classdrake_1_1manipulation_1_1util_1_1_robot_plan_interpolator.html#a4fc1b8e6bb1875eb36d4668b7b7e983e":[1,2,5,10,10],
@@ -243,11 +249,5 @@ var NAVTREEINDEX11 =
 "classdrake_1_1multibody_1_1_articulated_body_inertia.html#aa4218b7c32aa0b01cb0b9a6c2dc44a16":[3,0,0,8,10,7],
 "classdrake_1_1multibody_1_1_articulated_body_inertia.html#ab1114b94d5f66d6df3605856fa2c6cc6":[3,0,0,8,10,0],
 "classdrake_1_1multibody_1_1_articulated_body_inertia.html#acb919c29ad40fcea2d070cd32f8ff854":[3,0,0,8,10,4],
-"classdrake_1_1multibody_1_1_articulated_body_inertia.html#acd0afd330ef98eb2418ae915e3a1b024":[3,0,0,8,10,10],
-"classdrake_1_1multibody_1_1_articulated_body_inertia.html#ad47d1b4caefc3416208c61e09d221e18":[3,0,0,8,10,13],
-"classdrake_1_1multibody_1_1_articulated_body_inertia.html#adedfd4b2433e1fa289f02ca9dc2d50e0":[3,0,0,8,10,12],
-"classdrake_1_1multibody_1_1_articulated_body_inertia.html#aea774becb012c524dbd2b9d56b095c04":[3,0,0,8,10,18],
-"classdrake_1_1multibody_1_1_articulated_body_inertia.html#af8b25c3b08abdc24e4de1e63ab09ef04":[3,0,0,8,10,17],
-"classdrake_1_1multibody_1_1_ball_rpy_joint.html":[3,0,0,8,11],
-"classdrake_1_1multibody_1_1_ball_rpy_joint.html#a05ce551fdf49e69a409cdc13d5d1e595":[3,0,0,8,11,10]
+"classdrake_1_1multibody_1_1_articulated_body_inertia.html#acd0afd330ef98eb2418ae915e3a1b024":[3,0,0,8,10,10]
 };

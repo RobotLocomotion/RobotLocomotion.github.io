@@ -369,21 +369,39 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a72f7d830f6776bb7403c6bbc66d1d676"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a72f7d830f6776bb7403c6bbc66d1d676">AddRenderer</a> (std::string name, std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html">render::RenderEngine</a> &gt; renderer)</td></tr>
 <tr class="memdesc:a72f7d830f6776bb7403c6bbc66d1d676"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a new render engine to this SceneGraph.  <a href="#a72f7d830f6776bb7403c6bbc66d1d676">More...</a><br /></td></tr>
 <tr class="separator:a72f7d830f6776bb7403c6bbc66d1d676"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae60cd9b530abb0d20df2bd313cfbceec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#ae60cd9b530abb0d20df2bd313cfbceec">AddRenderer</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, std::string name, std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html">render::RenderEngine</a> &gt; renderer) const</td></tr>
+<tr class="memdesc:ae60cd9b530abb0d20df2bd313cfbceec"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>-modifying variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a72f7d830f6776bb7403c6bbc66d1d676" title="Adds a new render engine to this SceneGraph.">AddRenderer()</a>.  <a href="#ae60cd9b530abb0d20df2bd313cfbceec">More...</a><br /></td></tr>
+<tr class="separator:ae60cd9b530abb0d20df2bd313cfbceec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acaa0f71e9327ba0ba58b653046ca8619"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#acaa0f71e9327ba0ba58b653046ca8619">RemoveRenderer</a> (const std::string &amp;name)</td></tr>
 <tr class="memdesc:acaa0f71e9327ba0ba58b653046ca8619"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes an existing renderer from this SceneGraph.  <a href="#acaa0f71e9327ba0ba58b653046ca8619">More...</a><br /></td></tr>
 <tr class="separator:acaa0f71e9327ba0ba58b653046ca8619"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab22ffe764ea243344efa3c948acfc488"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#ab22ffe764ea243344efa3c948acfc488">RemoveRenderer</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, const std::string &amp;name) const</td></tr>
+<tr class="memdesc:ab22ffe764ea243344efa3c948acfc488"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>-modifying variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#acaa0f71e9327ba0ba58b653046ca8619" title="Removes an existing renderer from this SceneGraph.">RemoveRenderer()</a>.  <a href="#ab22ffe764ea243344efa3c948acfc488">More...</a><br /></td></tr>
+<tr class="separator:ab22ffe764ea243344efa3c948acfc488"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ab68336b439ffd7ac7f1e1fe6a025db"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a9ab68336b439ffd7ac7f1e1fe6a025db">HasRenderer</a> (const std::string &amp;name) const</td></tr>
 <tr class="memdesc:a9ab68336b439ffd7ac7f1e1fe6a025db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports true if this SceneGraph has a renderer registered with the given name.  <a href="#a9ab68336b439ffd7ac7f1e1fe6a025db">More...</a><br /></td></tr>
 <tr class="separator:a9ab68336b439ffd7ac7f1e1fe6a025db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa39ebc93a65b9352afab638b87940ac"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#afa39ebc93a65b9352afab638b87940ac">HasRenderer</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const std::string &amp;name) const</td></tr>
+<tr class="memdesc:afa39ebc93a65b9352afab638b87940ac"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>-query variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a9ab68336b439ffd7ac7f1e1fe6a025db" title="Reports true if this SceneGraph has a renderer registered with the given name.">HasRenderer()</a>.  <a href="#afa39ebc93a65b9352afab638b87940ac">More...</a><br /></td></tr>
+<tr class="separator:afa39ebc93a65b9352afab638b87940ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9cdf0a6693c255362906281ff2f7d880"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a9cdf0a6693c255362906281ff2f7d880">GetRendererTypeName</a> (const std::string &amp;name) const</td></tr>
 <tr class="memdesc:a9cdf0a6693c255362906281ff2f7d880"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the type name for the RenderEngine registered with the given <code>name</code>.  <a href="#a9cdf0a6693c255362906281ff2f7d880">More...</a><br /></td></tr>
 <tr class="separator:a9cdf0a6693c255362906281ff2f7d880"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bbf224327b53543c185b2c926821019"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a2bbf224327b53543c185b2c926821019">GetRendererTypeName</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const std::string &amp;name) const</td></tr>
+<tr class="memdesc:a2bbf224327b53543c185b2c926821019"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>-query variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a9cdf0a6693c255362906281ff2f7d880" title="Reports the type name for the RenderEngine registered with the given name.">GetRendererTypeName()</a>.  <a href="#a2bbf224327b53543c185b2c926821019">More...</a><br /></td></tr>
+<tr class="separator:a2bbf224327b53543c185b2c926821019"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae614976e788b66b5ceed6df5fa7fba5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#ae614976e788b66b5ceed6df5fa7fba5e">RendererCount</a> () const</td></tr>
 <tr class="memdesc:ae614976e788b66b5ceed6df5fa7fba5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the number of renderers registered to this SceneGraph.  <a href="#ae614976e788b66b5ceed6df5fa7fba5e">More...</a><br /></td></tr>
 <tr class="separator:ae614976e788b66b5ceed6df5fa7fba5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f10536d31003363a2e3d4b5056baf5d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a1f10536d31003363a2e3d4b5056baf5d">RendererCount</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
+<tr class="memdesc:a1f10536d31003363a2e3d4b5056baf5d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>-query variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#ae614976e788b66b5ceed6df5fa7fba5e" title="Reports the number of renderers registered to this SceneGraph.">RendererCount()</a>.  <a href="#a1f10536d31003363a2e3d4b5056baf5d">More...</a><br /></td></tr>
+<tr class="separator:a1f10536d31003363a2e3d4b5056baf5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55cfeaa6fd5edcdd91db50054941c1be"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a55cfeaa6fd5edcdd91db50054941c1be">RegisteredRendererNames</a> () const</td></tr>
 <tr class="memdesc:a55cfeaa6fd5edcdd91db50054941c1be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the names of all registered renderers.  <a href="#a55cfeaa6fd5edcdd91db50054941c1be">More...</a><br /></td></tr>
 <tr class="separator:a55cfeaa6fd5edcdd91db50054941c1be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52800c96ca0f78cdec060a1fb0e2bcac"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a52800c96ca0f78cdec060a1fb0e2bcac">RegisteredRendererNames</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
+<tr class="memdesc:a52800c96ca0f78cdec060a1fb0e2bcac"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>-query variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a55cfeaa6fd5edcdd91db50054941c1be" title="Reports the names of all registered renderers.">RegisteredRendererNames()</a>.  <a href="#a52800c96ca0f78cdec060a1fb0e2bcac">More...</a><br /></td></tr>
+<tr class="separator:a52800c96ca0f78cdec060a1fb0e2bcac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Managing geometry roles</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Geometries <em>must</em> be assigned one or more <em>roles</em> before they have an effect on <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> computations (see <a class="el" href="group__geometry__roles.html">Geometry Queries and Roles</a> for details).</p>
 <p>These methods provide the ability to manage roles for a registered geometry.</p>
@@ -1667,7 +1685,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a72f7d830f6776bb7403c6bbc66d1d676"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a72f7d830f6776bb7403c6bbc66d1d676">&#9670;&nbsp;</a></span>AddRenderer()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a72f7d830f6776bb7403c6bbc66d1d676">&#9670;&nbsp;</a></span>AddRenderer() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1709,6 +1727,43 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ae60cd9b530abb0d20df2bd313cfbceec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae60cd9b530abb0d20df2bd313cfbceec">&#9670;&nbsp;</a></span>AddRenderer() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddRenderer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html">render::RenderEngine</a> &gt;&#160;</td>
+          <td class="paramname"><em>renderer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>-modifying variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a72f7d830f6776bb7403c6bbc66d1d676" title="Adds a new render engine to this SceneGraph.">AddRenderer()</a>. </p>
+<p>Rather than modifying SceneGraph's model, it modifies the copy of the model stored in the provided context. </p>
 
 </div>
 </div>
@@ -2212,7 +2267,7 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
 </div>
 </div>
 <a id="a9cdf0a6693c255362906281ff2f7d880"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9cdf0a6693c255362906281ff2f7d880">&#9670;&nbsp;</a></span>GetRendererTypeName()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cdf0a6693c255362906281ff2f7d880">&#9670;&nbsp;</a></span>GetRendererTypeName() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2232,8 +2287,39 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
 
 </div>
 </div>
+<a id="a2bbf224327b53543c185b2c926821019"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bbf224327b53543c185b2c926821019">&#9670;&nbsp;</a></span>GetRendererTypeName() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string GetRendererTypeName </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>-query variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a9cdf0a6693c255362906281ff2f7d880" title="Reports the type name for the RenderEngine registered with the given name.">GetRendererTypeName()</a>. </p>
+<p>Rather than querying SceneGraph's model, it queries the copy of the model stored in the provided context. </p>
+
+</div>
+</div>
 <a id="a9ab68336b439ffd7ac7f1e1fe6a025db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ab68336b439ffd7ac7f1e1fe6a025db">&#9670;&nbsp;</a></span>HasRenderer()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ab68336b439ffd7ac7f1e1fe6a025db">&#9670;&nbsp;</a></span>HasRenderer() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2249,6 +2335,37 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
 </div><div class="memdoc">
 
 <p>Reports true if this SceneGraph has a renderer registered with the given name. </p>
+
+</div>
+</div>
+<a id="afa39ebc93a65b9352afab638b87940ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa39ebc93a65b9352afab638b87940ac">&#9670;&nbsp;</a></span>HasRenderer() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool HasRenderer </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>-query variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a9ab68336b439ffd7ac7f1e1fe6a025db" title="Reports true if this SceneGraph has a renderer registered with the given name.">HasRenderer()</a>. </p>
+<p>Rather than querying SceneGraph's model, it queries the copy of the model stored in the provided context. </p>
 
 </div>
 </div>
@@ -2271,8 +2388,8 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
 
 </div>
 </div>
-<a id="a1124e1d23f8363e47ef7db90e57e4900"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1124e1d23f8363e47ef7db90e57e4900">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a0a8b0295af9d14d2555ceca831cd8a14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a8b0295af9d14d2555ceca831cd8a14">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2283,7 +2400,7 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -2297,8 +2414,8 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
 
 </div>
 </div>
-<a id="a0a8b0295af9d14d2555ceca831cd8a14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a8b0295af9d14d2555ceca831cd8a14">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a1124e1d23f8363e47ef7db90e57e4900"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1124e1d23f8363e47ef7db90e57e4900">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2309,7 +2426,7 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -2483,7 +2600,7 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
 </div>
 </div>
 <a id="a55cfeaa6fd5edcdd91db50054941c1be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a55cfeaa6fd5edcdd91db50054941c1be">&#9670;&nbsp;</a></span>RegisteredRendererNames()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a55cfeaa6fd5edcdd91db50054941c1be">&#9670;&nbsp;</a></span>RegisteredRendererNames() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2498,6 +2615,27 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
 </div><div class="memdoc">
 
 <p>Reports the names of all registered renderers. </p>
+
+</div>
+</div>
+<a id="a52800c96ca0f78cdec060a1fb0e2bcac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52800c96ca0f78cdec060a1fb0e2bcac">&#9670;&nbsp;</a></span>RegisteredRendererNames() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::string&gt; RegisteredRendererNames </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>-query variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a55cfeaa6fd5edcdd91db50054941c1be" title="Reports the names of all registered renderers.">RegisteredRendererNames()</a>. </p>
+<p>Rather than querying SceneGraph's model, it queries the copy of the model stored in the provided context. </p>
 
 </div>
 </div>
@@ -2816,7 +2954,7 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
 </div>
 </div>
 <a id="acaa0f71e9327ba0ba58b653046ca8619"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acaa0f71e9327ba0ba58b653046ca8619">&#9670;&nbsp;</a></span>RemoveRenderer()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#acaa0f71e9327ba0ba58b653046ca8619">&#9670;&nbsp;</a></span>RemoveRenderer() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2844,6 +2982,37 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ab22ffe764ea243344efa3c948acfc488"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab22ffe764ea243344efa3c948acfc488">&#9670;&nbsp;</a></span>RemoveRenderer() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RemoveRenderer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>-modifying variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#acaa0f71e9327ba0ba58b653046ca8619" title="Removes an existing renderer from this SceneGraph.">RemoveRenderer()</a>. </p>
+<p>Rather than modifying SceneGraph's model, it modifies the copy of the model stored in the provided context. </p>
 
 </div>
 </div>
@@ -3108,7 +3277,7 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
 </div>
 </div>
 <a id="ae614976e788b66b5ceed6df5fa7fba5e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae614976e788b66b5ceed6df5fa7fba5e">&#9670;&nbsp;</a></span>RendererCount()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae614976e788b66b5ceed6df5fa7fba5e">&#9670;&nbsp;</a></span>RendererCount() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3123,6 +3292,27 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
 </div><div class="memdoc">
 
 <p>Reports the number of renderers registered to this SceneGraph. </p>
+
+</div>
+</div>
+<a id="a1f10536d31003363a2e3d4b5056baf5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f10536d31003363a2e3d4b5056baf5d">&#9670;&nbsp;</a></span>RendererCount() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> RendererCount </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>-query variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#ae614976e788b66b5ceed6df5fa7fba5e" title="Reports the number of renderers registered to this SceneGraph.">RendererCount()</a>. </p>
+<p>Rather than querying SceneGraph's model, it queries the copy of the model stored in the provided context. </p>
 
 </div>
 </div>

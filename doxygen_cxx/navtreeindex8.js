@@ -1,5 +1,11 @@
 var NAVTREEINDEX8 =
 {
+"classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a4371f3be108a7d70f7e797633b60c910":[1,5,5,3,26],
+"classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a4a8e888889d95b9ad42a70d3eff08801":[1,1,1,3,19],
+"classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a4a8e888889d95b9ad42a70d3eff08801":[1,5,5,3,19],
+"classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a4df1a3580f1ae7e96903c7b3f7b00974":[1,1,1,3,2],
+"classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a4df1a3580f1ae7e96903c7b3f7b00974":[1,5,5,3,2],
+"classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a51f263df76c721f1bbdeb5708bf7df86":[1,1,1,3,23],
 "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a51f263df76c721f1bbdeb5708bf7df86":[1,5,5,3,23],
 "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5a86ee0b1b2dea70ae192ecb3acb9ca7":[1,1,1,3,16],
 "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5a86ee0b1b2dea70ae192ecb3acb9ca7":[1,5,5,3,16],
@@ -243,11 +249,5 @@ var NAVTREEINDEX8 =
 "classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html#ad53e47e943684bee743276ad5027e5a2":[3,0,0,4,1,13,12],
 "classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html#adca2a945597082fc62567148c00ca299":[3,0,0,4,1,13,9],
 "classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html#ae859bfb72f4b3cfb74cd5745b5fa1c39":[3,0,0,4,1,13,8],
-"classdrake_1_1geometry_1_1optimization_1_1_intersection.html":[1,1,1,6],
-"classdrake_1_1geometry_1_1optimization_1_1_intersection.html":[1,5,5,6],
-"classdrake_1_1geometry_1_1optimization_1_1_intersection.html#a06cf8fec3d41afb4398baccb7d9ce347":[1,5,5,6,7],
-"classdrake_1_1geometry_1_1optimization_1_1_intersection.html#a06cf8fec3d41afb4398baccb7d9ce347":[1,1,1,6,7],
-"classdrake_1_1geometry_1_1optimization_1_1_intersection.html#a2a3f4bf8aea1252265f088592342060a":[1,1,1,6,4],
-"classdrake_1_1geometry_1_1optimization_1_1_intersection.html#a2a3f4bf8aea1252265f088592342060a":[1,5,5,6,4],
-"classdrake_1_1geometry_1_1optimization_1_1_intersection.html#a4bb118650a6b2616e008bdc642d043d8":[1,1,1,6,1]
+"classdrake_1_1geometry_1_1optimization_1_1_intersection.html":[1,1,1,6]
 };

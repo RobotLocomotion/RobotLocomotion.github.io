@@ -1,5 +1,11 @@
 var NAVTREEINDEX14 =
 {
+"classdrake_1_1multibody_1_1_joint_actuator.html#a51aefd06d016c29ee25018216a7d5ff2":[3,0,0,8,47,0],
+"classdrake_1_1multibody_1_1_joint_actuator.html#a5434b36ff862492d2aed1ba6a5dbe503":[3,0,0,8,47,5],
+"classdrake_1_1multibody_1_1_joint_actuator.html#a544e5bac743e6b9fa43ce300a4386f21":[3,0,0,8,47,9],
+"classdrake_1_1multibody_1_1_joint_actuator.html#a54bc3724965cc59e714c64cbeb147b86":[3,0,0,8,47,15],
+"classdrake_1_1multibody_1_1_joint_actuator.html#a5b0758f9f10b1a8a122a6e3c1ee1ff92":[3,0,0,8,47,4],
+"classdrake_1_1multibody_1_1_joint_actuator.html#a5e00d5f4ea204b3bab3d733b8a64b9eb":[3,0,0,8,47,8],
 "classdrake_1_1multibody_1_1_joint_actuator.html#a70bb0382f762152bb446666338300b6e":[3,0,0,8,47,11],
 "classdrake_1_1multibody_1_1_joint_actuator.html#a7f583cc35433f57b5096490cbc45f55a":[3,0,0,8,47,10],
 "classdrake_1_1multibody_1_1_joint_actuator.html#a933d2740c848bc263cbf64089066b275":[3,0,0,8,47,6],
@@ -243,11 +249,5 @@ var NAVTREEINDEX14 =
 "classdrake_1_1multibody_1_1_multibody_plant.html#a5f39a8f68fae3de53767a281503a3313":[1,2,14,34],
 "classdrake_1_1multibody_1_1_multibody_plant.html#a602bd19cfdb283686f9051b674611baa":[1,2,14,216],
 "classdrake_1_1multibody_1_1_multibody_plant.html#a60e9928aa7802359eaddab6ef5d92763":[1,2,14,255],
-"classdrake_1_1multibody_1_1_multibody_plant.html#a61c7f48d324a3d5936d03e42398168d2":[1,2,14,118],
-"classdrake_1_1multibody_1_1_multibody_plant.html#a62e48986f27ae208ab503a68fa1ba0be":[1,2,14,149],
-"classdrake_1_1multibody_1_1_multibody_plant.html#a636804b6c40e538d83d5c2dfefb7929e":[1,2,14,200],
-"classdrake_1_1multibody_1_1_multibody_plant.html#a65766d208b7d5aee43dd7bfac21c5fd9":[1,2,14,253],
-"classdrake_1_1multibody_1_1_multibody_plant.html#a6636bf1e0900fb58b6a2e465c404fa8d":[1,2,14,258],
-"classdrake_1_1multibody_1_1_multibody_plant.html#a665427ce00158743b848918b19efbc9f":[1,2,14,64],
-"classdrake_1_1multibody_1_1_multibody_plant.html#a675e84377c1bd3a1afa97df0de0a01a5":[1,2,14,161]
+"classdrake_1_1multibody_1_1_multibody_plant.html#a61c7f48d324a3d5936d03e42398168d2":[1,2,14,118]
 };

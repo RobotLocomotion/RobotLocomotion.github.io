@@ -1,5 +1,11 @@
 var NAVTREEINDEX17 =
 {
+"classdrake_1_1multibody_1_1_rigid_body.html#a27003ff567dea06be0181a4bd1e50fb6":[3,0,0,8,81,13],
+"classdrake_1_1multibody_1_1_rigid_body.html#a2974f916c9cac2e4a8b6700829c86148":[3,0,0,8,81,11],
+"classdrake_1_1multibody_1_1_rigid_body.html#a2c8f665d7455c39a14b370d73a264710":[3,0,0,8,81,20],
+"classdrake_1_1multibody_1_1_rigid_body.html#a2e83508afc2db2bda9a1f25ed5201918":[3,0,0,8,81,34],
+"classdrake_1_1multibody_1_1_rigid_body.html#a30f5d86d90593c091ca76f01925dd013":[3,0,0,8,81,22],
+"classdrake_1_1multibody_1_1_rigid_body.html#a3fb9d377594ec373e512901b23cab9ef":[3,0,0,8,81,1],
 "classdrake_1_1multibody_1_1_rigid_body.html#a44ef2814e310a93c35daacb210e759b8":[3,0,0,8,81,14],
 "classdrake_1_1multibody_1_1_rigid_body.html#a4d9df97dddf7534857366e087779a080":[3,0,0,8,81,19],
 "classdrake_1_1multibody_1_1_rigid_body.html#a5863612fb1c1f58b05b9ec378e6c70fb":[3,0,0,8,81,26],
@@ -243,11 +249,5 @@ var NAVTREEINDEX17 =
 "classdrake_1_1multibody_1_1_spatial_vector.html#ad42341fefab8db02a40676af9b34210a":[3,0,0,8,90,20],
 "classdrake_1_1multibody_1_1_spatial_vector.html#adecee900de2aa10bca5a4e9e36121b25":[3,0,0,8,90,14],
 "classdrake_1_1multibody_1_1_spatial_vector.html#adf764cbdea00d65edcd07bb9953ad2b7a132f1d424bdc477e9a068a3804743afc":[3,0,0,8,90,4],
-"classdrake_1_1multibody_1_1_spatial_vector.html#adf764cbdea00d65edcd07bb9953ad2b7a1e16824cb2e47cdb67d49d3d8fb18adc":[3,0,0,8,90,3],
-"classdrake_1_1multibody_1_1_spatial_vector.html#adf764cbdea00d65edcd07bb9953ad2b7a38ca6e91f04c4a5339893a4461e2985a":[3,0,0,8,90,2],
-"classdrake_1_1multibody_1_1_spatial_vector.html#aefdcb096285e383be3e6a8c2380b616c":[3,0,0,8,90,22],
-"classdrake_1_1multibody_1_1_spatial_vector.html#af9593d4a5ff4274efaf429cb4f9e57cc":[3,0,0,8,90,29],
-"classdrake_1_1multibody_1_1_spatial_vector.html#af9b6d1e0263d3452d1c21934c89e4a5b":[3,0,0,8,90,36],
-"classdrake_1_1multibody_1_1_spatial_vector.html#afb0c32d939e868db06857e7c940083bb":[3,0,0,8,90,19],
-"classdrake_1_1multibody_1_1_spatial_velocity.html":[3,0,0,8,91]
+"classdrake_1_1multibody_1_1_spatial_vector.html#adf764cbdea00d65edcd07bb9953ad2b7a1e16824cb2e47cdb67d49d3d8fb18adc":[3,0,0,8,90,3]
 };
