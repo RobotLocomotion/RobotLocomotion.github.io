@@ -6004,7 +6004,7 @@ reflected_inertia.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.JointActuator.get_actuation_vector">
 <span class="sig-name descname"><span class="pre">get_actuation_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.JointActuator" title="pydrake.multibody.tree.JointActuator"><span class="pre">pydrake.multibody.tree.JointActuator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.JointActuator.get_actuation_vector" title="Permalink to this definition"></a></dt>
 <dd><p>Gets the actuation values for <code class="docutils literal notranslate"><span class="pre">this</span></code> actuator from the actuation
-vector u for the entire model.</p>
+vector u for the entire plant model.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>a reference to a nv-dimensional vector, where nv is the number of
@@ -6089,31 +6089,38 @@ in <code class="docutils literal notranslate"><span class="pre">context</span></
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.JointActuator.set_actuation_vector">
-<span class="sig-name descname"><span class="pre">set_actuation_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.JointActuator" title="pydrake.multibody.tree.JointActuator"><span class="pre">pydrake.multibody.tree.JointActuator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">u_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.writeable</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.JointActuator.set_actuation_vector" title="Permalink to this definition"></a></dt>
-<dd><p>Given the actuation values u_instance for <code class="docutils literal notranslate"><span class="pre">this</span></code> actuator, this
-method sets the actuation vector u for the entire MultibodyTree model
-to which this actuator belongs to.</p>
+<span class="sig-name descname"><span class="pre">set_actuation_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.JointActuator.set_actuation_vector" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>set_actuation_vector(self: pydrake.multibody.tree.JointActuator, u_actuator: numpy.ndarray[numpy.float64[m, 1]], u: Optional[numpy.ndarray[numpy.float64[m, 1], flags.writeable]]) -&gt; None</p></li>
+</ol>
+<p>Given the actuation values <code class="docutils literal notranslate"><span class="pre">u_actuator</span></code> for <code class="docutils literal notranslate"><span class="pre">this</span></code> actuator,
+updates the actuation vector <code class="docutils literal notranslate"><span class="pre">u</span></code> for the entire multibody model to
+which this actuator belongs to.</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">u_instance</span></code>:</dt><dd><p>Actuation values for <code class="docutils literal notranslate"><span class="pre">this</span></code> actuator. It must be of size equal
-to the number of degrees of freedom of the actuated Joint, see
-Joint::num_velocities(). For units and sign conventions refer to
-the specific Joint sub-class documentation.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">u_actuator</span></code>:</dt><dd><p>Actuation values for <code class="docutils literal notranslate"><span class="pre">this</span></code> actuator. It must be of size equal
+to num_inputs(). For units and sign conventions refer to the
+specific Joint sub-class documentation.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">u</span></code>:</dt><dd><p>The vector containing the actuation values for the entire
-MultibodyTree model to which <code class="docutils literal notranslate"><span class="pre">this</span></code> actuator belongs to.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">u</span></code>:</dt><dd><p>Actuation values for the entire plant model to which <code class="docutils literal notranslate"><span class="pre">this</span></code>
+actuator belongs to, indexed by JointActuatorIndex. Only values
+corresponding to this actuator are changed.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if ``u_instance.size</strong><strong>(</strong><strong>) </strong><strong>!=</strong> – </p></li>
-<li><p><strong>this-&gt;joint</strong><strong>(</strong><strong>)</strong><strong>num_velocities</strong><strong>(</strong><strong>)</strong><strong>``.</strong> – </p></li>
+<li><p><strong>RuntimeError if u_actuator.size</strong><strong>(</strong><strong>) </strong><strong>!= this-&gt;num_inputs</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
 <li><p><strong>RuntimeError if u is nullptr.</strong> – </p></li>
 <li><p><strong>RuntimeError if ``u.size</strong><strong>(</strong><strong>) </strong><strong>!=</strong> – </p></li>
-<li><p><strong>this-&gt;get_parent_tree</strong><strong>(</strong><strong>)</strong><strong>num_actuated_dofs</strong><strong>(</strong><strong>)</strong><strong>``.</strong> – </p></li>
+<li><p><strong>this-&gt;GetParentPlant</strong><strong>(</strong><strong>)</strong><strong>num_actuated_dofs</strong><strong>(</strong><strong>)</strong><strong>``.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
+<ol class="arabic simple" start="2">
+<li><p>set_actuation_vector(self: pydrake.multibody.tree.JointActuator, u_instance: numpy.ndarray[numpy.float64[m, 1]], u: Optional[numpy.ndarray[numpy.float64[m, 1], flags.writeable]]) -&gt; None</p></li>
+</ol>
+<p>The kwarg name ‘u_instance’ is deprecated and will be removed on 2024-02-01. Spell the argument name as ‘u_actuator’ instead.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -6236,7 +6243,7 @@ reflected_inertia.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.JointActuator_-AutoDiffXd-.get_actuation_vector">
 <span id="pydrake.multibody.tree.JointActuator_[AutoDiffXd].get_actuation_vector"></span><span class="sig-name descname"><span class="pre">get_actuation_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.JointActuator_" title="pydrake.multibody.tree.JointActuator_"><span class="pre">pydrake.multibody.tree.JointActuator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.JointActuator_-AutoDiffXd-.get_actuation_vector" title="Permalink to this definition"></a></dt>
 <dd><p>Gets the actuation values for <code class="docutils literal notranslate"><span class="pre">this</span></code> actuator from the actuation
-vector u for the entire model.</p>
+vector u for the entire plant model.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>a reference to a nv-dimensional vector, where nv is the number of
@@ -6321,31 +6328,38 @@ in <code class="docutils literal notranslate"><span class="pre">context</span></
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.JointActuator_-AutoDiffXd-.set_actuation_vector">
-<span id="pydrake.multibody.tree.JointActuator_[AutoDiffXd].set_actuation_vector"></span><span class="sig-name descname"><span class="pre">set_actuation_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.JointActuator_" title="pydrake.multibody.tree.JointActuator_"><span class="pre">pydrake.multibody.tree.JointActuator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.writeable</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.JointActuator_-AutoDiffXd-.set_actuation_vector" title="Permalink to this definition"></a></dt>
-<dd><p>Given the actuation values u_instance for <code class="docutils literal notranslate"><span class="pre">this</span></code> actuator, this
-method sets the actuation vector u for the entire MultibodyTree model
-to which this actuator belongs to.</p>
+<span id="pydrake.multibody.tree.JointActuator_[AutoDiffXd].set_actuation_vector"></span><span class="sig-name descname"><span class="pre">set_actuation_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.JointActuator_-AutoDiffXd-.set_actuation_vector" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>set_actuation_vector(self: pydrake.multibody.tree.JointActuator_[AutoDiffXd], u_actuator: numpy.ndarray[object[m, 1]], u: Optional[numpy.ndarray[object[m, 1], flags.writeable]]) -&gt; None</p></li>
+</ol>
+<p>Given the actuation values <code class="docutils literal notranslate"><span class="pre">u_actuator</span></code> for <code class="docutils literal notranslate"><span class="pre">this</span></code> actuator,
+updates the actuation vector <code class="docutils literal notranslate"><span class="pre">u</span></code> for the entire multibody model to
+which this actuator belongs to.</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">u_instance</span></code>:</dt><dd><p>Actuation values for <code class="docutils literal notranslate"><span class="pre">this</span></code> actuator. It must be of size equal
-to the number of degrees of freedom of the actuated Joint, see
-Joint::num_velocities(). For units and sign conventions refer to
-the specific Joint sub-class documentation.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">u_actuator</span></code>:</dt><dd><p>Actuation values for <code class="docutils literal notranslate"><span class="pre">this</span></code> actuator. It must be of size equal
+to num_inputs(). For units and sign conventions refer to the
+specific Joint sub-class documentation.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">u</span></code>:</dt><dd><p>The vector containing the actuation values for the entire
-MultibodyTree model to which <code class="docutils literal notranslate"><span class="pre">this</span></code> actuator belongs to.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">u</span></code>:</dt><dd><p>Actuation values for the entire plant model to which <code class="docutils literal notranslate"><span class="pre">this</span></code>
+actuator belongs to, indexed by JointActuatorIndex. Only values
+corresponding to this actuator are changed.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if ``u_instance.size</strong><strong>(</strong><strong>) </strong><strong>!=</strong> – </p></li>
-<li><p><strong>this-&gt;joint</strong><strong>(</strong><strong>)</strong><strong>num_velocities</strong><strong>(</strong><strong>)</strong><strong>``.</strong> – </p></li>
+<li><p><strong>RuntimeError if u_actuator.size</strong><strong>(</strong><strong>) </strong><strong>!= this-&gt;num_inputs</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
 <li><p><strong>RuntimeError if u is nullptr.</strong> – </p></li>
 <li><p><strong>RuntimeError if ``u.size</strong><strong>(</strong><strong>) </strong><strong>!=</strong> – </p></li>
-<li><p><strong>this-&gt;get_parent_tree</strong><strong>(</strong><strong>)</strong><strong>num_actuated_dofs</strong><strong>(</strong><strong>)</strong><strong>``.</strong> – </p></li>
+<li><p><strong>this-&gt;GetParentPlant</strong><strong>(</strong><strong>)</strong><strong>num_actuated_dofs</strong><strong>(</strong><strong>)</strong><strong>``.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
+<ol class="arabic simple" start="2">
+<li><p>set_actuation_vector(self: pydrake.multibody.tree.JointActuator_[AutoDiffXd], u_instance: numpy.ndarray[object[m, 1]], u: Optional[numpy.ndarray[object[m, 1], flags.writeable]]) -&gt; None</p></li>
+</ol>
+<p>The kwarg name ‘u_instance’ is deprecated and will be removed on 2024-02-01. Spell the argument name as ‘u_actuator’ instead.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -6462,7 +6476,7 @@ reflected_inertia.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.JointActuator_-Expression-.get_actuation_vector">
 <span id="pydrake.multibody.tree.JointActuator_[Expression].get_actuation_vector"></span><span class="sig-name descname"><span class="pre">get_actuation_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.JointActuator_" title="pydrake.multibody.tree.JointActuator_"><span class="pre">pydrake.multibody.tree.JointActuator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.JointActuator_-Expression-.get_actuation_vector" title="Permalink to this definition"></a></dt>
 <dd><p>Gets the actuation values for <code class="docutils literal notranslate"><span class="pre">this</span></code> actuator from the actuation
-vector u for the entire model.</p>
+vector u for the entire plant model.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>a reference to a nv-dimensional vector, where nv is the number of
@@ -6547,31 +6561,38 @@ in <code class="docutils literal notranslate"><span class="pre">context</span></
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.JointActuator_-Expression-.set_actuation_vector">
-<span id="pydrake.multibody.tree.JointActuator_[Expression].set_actuation_vector"></span><span class="sig-name descname"><span class="pre">set_actuation_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.JointActuator_" title="pydrake.multibody.tree.JointActuator_"><span class="pre">pydrake.multibody.tree.JointActuator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.writeable</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.JointActuator_-Expression-.set_actuation_vector" title="Permalink to this definition"></a></dt>
-<dd><p>Given the actuation values u_instance for <code class="docutils literal notranslate"><span class="pre">this</span></code> actuator, this
-method sets the actuation vector u for the entire MultibodyTree model
-to which this actuator belongs to.</p>
+<span id="pydrake.multibody.tree.JointActuator_[Expression].set_actuation_vector"></span><span class="sig-name descname"><span class="pre">set_actuation_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.JointActuator_-Expression-.set_actuation_vector" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>set_actuation_vector(self: pydrake.multibody.tree.JointActuator_[Expression], u_actuator: numpy.ndarray[object[m, 1]], u: Optional[numpy.ndarray[object[m, 1], flags.writeable]]) -&gt; None</p></li>
+</ol>
+<p>Given the actuation values <code class="docutils literal notranslate"><span class="pre">u_actuator</span></code> for <code class="docutils literal notranslate"><span class="pre">this</span></code> actuator,
+updates the actuation vector <code class="docutils literal notranslate"><span class="pre">u</span></code> for the entire multibody model to
+which this actuator belongs to.</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">u_instance</span></code>:</dt><dd><p>Actuation values for <code class="docutils literal notranslate"><span class="pre">this</span></code> actuator. It must be of size equal
-to the number of degrees of freedom of the actuated Joint, see
-Joint::num_velocities(). For units and sign conventions refer to
-the specific Joint sub-class documentation.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">u_actuator</span></code>:</dt><dd><p>Actuation values for <code class="docutils literal notranslate"><span class="pre">this</span></code> actuator. It must be of size equal
+to num_inputs(). For units and sign conventions refer to the
+specific Joint sub-class documentation.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">u</span></code>:</dt><dd><p>The vector containing the actuation values for the entire
-MultibodyTree model to which <code class="docutils literal notranslate"><span class="pre">this</span></code> actuator belongs to.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">u</span></code>:</dt><dd><p>Actuation values for the entire plant model to which <code class="docutils literal notranslate"><span class="pre">this</span></code>
+actuator belongs to, indexed by JointActuatorIndex. Only values
+corresponding to this actuator are changed.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if ``u_instance.size</strong><strong>(</strong><strong>) </strong><strong>!=</strong> – </p></li>
-<li><p><strong>this-&gt;joint</strong><strong>(</strong><strong>)</strong><strong>num_velocities</strong><strong>(</strong><strong>)</strong><strong>``.</strong> – </p></li>
+<li><p><strong>RuntimeError if u_actuator.size</strong><strong>(</strong><strong>) </strong><strong>!= this-&gt;num_inputs</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
 <li><p><strong>RuntimeError if u is nullptr.</strong> – </p></li>
 <li><p><strong>RuntimeError if ``u.size</strong><strong>(</strong><strong>) </strong><strong>!=</strong> – </p></li>
-<li><p><strong>this-&gt;get_parent_tree</strong><strong>(</strong><strong>)</strong><strong>num_actuated_dofs</strong><strong>(</strong><strong>)</strong><strong>``.</strong> – </p></li>
+<li><p><strong>this-&gt;GetParentPlant</strong><strong>(</strong><strong>)</strong><strong>num_actuated_dofs</strong><strong>(</strong><strong>)</strong><strong>``.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
+<ol class="arabic simple" start="2">
+<li><p>set_actuation_vector(self: pydrake.multibody.tree.JointActuator_[Expression], u_instance: numpy.ndarray[object[m, 1]], u: Optional[numpy.ndarray[object[m, 1], flags.writeable]]) -&gt; None</p></li>
+</ol>
+<p>The kwarg name ‘u_instance’ is deprecated and will be removed on 2024-02-01. Spell the argument name as ‘u_actuator’ instead.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -6775,7 +6796,7 @@ demonstrate how to model various joints that have a flexible (e.g.,
 rubber) mount. The damping values below with ? may be set to 0 or a
 reasonable positive number.</p>
 <p>Bushing type | torque constants | force constants
-——————————–<a href="#id49"><span class="problematic" id="id50">|:--------------------|</span></a>:——————
+——————————–<a href="#id43"><span class="problematic" id="id44">|:--------------------|</span></a>:——————
 z-axis revolute joint | k₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[k₀</span> <span class="pre">k₁</span> <span class="pre">0]</span></code> | kxyz = <code class="docutils literal notranslate"><span class="pre">[kx</span> <span class="pre">ky</span> <span class="pre">kz]</span></code> ^
 | d₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[d₀</span> <span class="pre">d₁</span> <span class="pre">?]</span></code> | dxyz = <code class="docutils literal notranslate"><span class="pre">[dx</span> <span class="pre">dy</span> <span class="pre">dz]</span></code> x-axis prismatic joint
 | k₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[k₀</span> <span class="pre">k₁</span> <span class="pre">k₂]</span></code> | kxyz = <code class="docutils literal notranslate"><span class="pre">[0</span> <span class="pre">ky</span> <span class="pre">kz]</span></code> ^ | d₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[d₀</span> <span class="pre">d₁</span>
@@ -6813,7 +6834,7 @@ constant dx is by choosing a “reasonably small” settling time tₛ,
 where settling time tₛ is the interval of time for a system to settle
 to within 1% (0.01) of an equilibrium solution). Is tₛ = 0.01 s
 negligible for a robot arm with a 10 s reach maneuver?</p>
-<p><a href="#id19"><span class="problematic" id="id20">**</span></a>** How to choose a torque stiffness constant k₀ or damping constant
+<p><a href="#id13"><span class="problematic" id="id14">**</span></a>** How to choose a torque stiffness constant k₀ or damping constant
 d₀. The estimate of stiffness k₀ depends on whether you are modeling a
 physical bushing (consider stiffness methods 1 or 2 below) or whether
 you are using a bushing to replace an ideal joint such as a revolute
@@ -6841,7 +6862,7 @@ damping), estimate a characteristic moment of inertia and calculate
 <code class="docutils literal notranslate"><span class="pre">d₀</span> <span class="pre">=</span> <span class="pre">2</span> <span class="pre">ζ</span> <span class="pre">√(I₀</span> <span class="pre">k₀)</span></code>.</p>
 <p>Refer to Advanced_bushing_stiffness_and_damping “Advanced bushing
 stiffness and damping” for more details.</p>
-<p><a href="#id21"><span class="problematic" id="id22">**</span></a>** How to choose a force stiffness constant kx or damping constant
+<p><a href="#id15"><span class="problematic" id="id16">**</span></a>** How to choose a force stiffness constant kx or damping constant
 dx. The estimate of stiffness kx depends on whether you are modeling a
 real bushing (consider stiffness methods 1 or 2 below) or whether you
 are using a bushing to replace an ideal joint such as a revolute or
@@ -6868,7 +6889,7 @@ a characteristic mass m and calculate <code class="docutils literal notranslate"
 N*s/m).</p>
 <p>Refer to Advanced_bushing_stiffness_and_damping “Advanced bushing
 stiffness and damping” for more details.</p>
-<p><a href="#id23"><span class="problematic" id="id24">**</span></a>** Advanced: Relationship of 𝐭 to τ. To understand how “gimbal
+<p><a href="#id17"><span class="problematic" id="id18">**</span></a>** Advanced: Relationship of 𝐭 to τ. To understand how “gimbal
 torques” τ relate to 𝐭, it helps to remember that the RollPitchYaw
 class documentation states that a Space-fixed (extrinsic) X-Y-Z
 rotation with roll-pitch-yaw angles [q₀ q₁ q₂] is equivalent to a
@@ -6889,7 +6910,7 @@ w_AC = τ ⋅ q̇.</p>
 ⌊ tz ⌋      ⌊ τ₂ ⌋            ⌊ cos(q₂)*tan(q₁)   sin(q₂)*tan(q₁)  1 ⌋
 </pre></div>
 </div>
-</details><p><a href="#id25"><span class="problematic" id="id26">**</span></a>** Advanced: More on how to choose bushing stiffness and damping
+</details><p><a href="#id19"><span class="problematic" id="id20">**</span></a>** Advanced: More on how to choose bushing stiffness and damping
 constants. The basics on how to choose bushing stiffness and damping
 constants are at: - Basic_bushing_torque_stiffness_and_damping “How to
 choose torque stiffness and damping constants” -
@@ -6961,7 +6982,7 @@ logarithmic decrement δ = -ln(decay_ratio), calculate damping ratio
 ζ = √(δ² / (4π² + δ²)), then calculate d₀ using d₀ = 2 ζ √(I₀ k₀) or
 d₀ = 2 ζ k₀ / ωₙ. For more information, see
 <a class="reference external" href="https://en.wikipedia.org/wiki/Damping_ratio#Logarithmic_decrement">https://en.wikipedia.org/wiki/Damping_ratio#Logarithmic_decrement</a></p>
-<p><a href="#id27"><span class="problematic" id="id28">**</span></a>** Derivation: Approximate formula for overdamped settling time.
+<p><a href="#id21"><span class="problematic" id="id22">**</span></a>** Derivation: Approximate formula for overdamped settling time.
 Since a literature reference for this formula was not found, the
 derivation below was done at TRI (it has not been peer reviewed). This
 formula results from the “dominant pole” solution in the prototypical
@@ -7337,7 +7358,7 @@ demonstrate how to model various joints that have a flexible (e.g.,
 rubber) mount. The damping values below with ? may be set to 0 or a
 reasonable positive number.</p>
 <p>Bushing type | torque constants | force constants
-——————————–<a href="#id51"><span class="problematic" id="id52">|:--------------------|</span></a>:——————
+——————————–<a href="#id45"><span class="problematic" id="id46">|:--------------------|</span></a>:——————
 z-axis revolute joint | k₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[k₀</span> <span class="pre">k₁</span> <span class="pre">0]</span></code> | kxyz = <code class="docutils literal notranslate"><span class="pre">[kx</span> <span class="pre">ky</span> <span class="pre">kz]</span></code> ^
 | d₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[d₀</span> <span class="pre">d₁</span> <span class="pre">?]</span></code> | dxyz = <code class="docutils literal notranslate"><span class="pre">[dx</span> <span class="pre">dy</span> <span class="pre">dz]</span></code> x-axis prismatic joint
 | k₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[k₀</span> <span class="pre">k₁</span> <span class="pre">k₂]</span></code> | kxyz = <code class="docutils literal notranslate"><span class="pre">[0</span> <span class="pre">ky</span> <span class="pre">kz]</span></code> ^ | d₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[d₀</span> <span class="pre">d₁</span>
@@ -7375,7 +7396,7 @@ constant dx is by choosing a “reasonably small” settling time tₛ,
 where settling time tₛ is the interval of time for a system to settle
 to within 1% (0.01) of an equilibrium solution). Is tₛ = 0.01 s
 negligible for a robot arm with a 10 s reach maneuver?</p>
-<p><a href="#id29"><span class="problematic" id="id30">**</span></a>** How to choose a torque stiffness constant k₀ or damping constant
+<p><a href="#id23"><span class="problematic" id="id24">**</span></a>** How to choose a torque stiffness constant k₀ or damping constant
 d₀. The estimate of stiffness k₀ depends on whether you are modeling a
 physical bushing (consider stiffness methods 1 or 2 below) or whether
 you are using a bushing to replace an ideal joint such as a revolute
@@ -7403,7 +7424,7 @@ damping), estimate a characteristic moment of inertia and calculate
 <code class="docutils literal notranslate"><span class="pre">d₀</span> <span class="pre">=</span> <span class="pre">2</span> <span class="pre">ζ</span> <span class="pre">√(I₀</span> <span class="pre">k₀)</span></code>.</p>
 <p>Refer to Advanced_bushing_stiffness_and_damping “Advanced bushing
 stiffness and damping” for more details.</p>
-<p><a href="#id31"><span class="problematic" id="id32">**</span></a>** How to choose a force stiffness constant kx or damping constant
+<p><a href="#id25"><span class="problematic" id="id26">**</span></a>** How to choose a force stiffness constant kx or damping constant
 dx. The estimate of stiffness kx depends on whether you are modeling a
 real bushing (consider stiffness methods 1 or 2 below) or whether you
 are using a bushing to replace an ideal joint such as a revolute or
@@ -7430,7 +7451,7 @@ a characteristic mass m and calculate <code class="docutils literal notranslate"
 N*s/m).</p>
 <p>Refer to Advanced_bushing_stiffness_and_damping “Advanced bushing
 stiffness and damping” for more details.</p>
-<p><a href="#id33"><span class="problematic" id="id34">**</span></a>** Advanced: Relationship of 𝐭 to τ. To understand how “gimbal
+<p><a href="#id27"><span class="problematic" id="id28">**</span></a>** Advanced: Relationship of 𝐭 to τ. To understand how “gimbal
 torques” τ relate to 𝐭, it helps to remember that the RollPitchYaw
 class documentation states that a Space-fixed (extrinsic) X-Y-Z
 rotation with roll-pitch-yaw angles [q₀ q₁ q₂] is equivalent to a
@@ -7451,7 +7472,7 @@ w_AC = τ ⋅ q̇.</p>
 ⌊ tz ⌋      ⌊ τ₂ ⌋            ⌊ cos(q₂)*tan(q₁)   sin(q₂)*tan(q₁)  1 ⌋
 </pre></div>
 </div>
-</details><p><a href="#id35"><span class="problematic" id="id36">**</span></a>** Advanced: More on how to choose bushing stiffness and damping
+</details><p><a href="#id29"><span class="problematic" id="id30">**</span></a>** Advanced: More on how to choose bushing stiffness and damping
 constants. The basics on how to choose bushing stiffness and damping
 constants are at: - Basic_bushing_torque_stiffness_and_damping “How to
 choose torque stiffness and damping constants” -
@@ -7523,7 +7544,7 @@ logarithmic decrement δ = -ln(decay_ratio), calculate damping ratio
 ζ = √(δ² / (4π² + δ²)), then calculate d₀ using d₀ = 2 ζ √(I₀ k₀) or
 d₀ = 2 ζ k₀ / ωₙ. For more information, see
 <a class="reference external" href="https://en.wikipedia.org/wiki/Damping_ratio#Logarithmic_decrement">https://en.wikipedia.org/wiki/Damping_ratio#Logarithmic_decrement</a></p>
-<p><a href="#id37"><span class="problematic" id="id38">**</span></a>** Derivation: Approximate formula for overdamped settling time.
+<p><a href="#id31"><span class="problematic" id="id32">**</span></a>** Derivation: Approximate formula for overdamped settling time.
 Since a literature reference for this formula was not found, the
 derivation below was done at TRI (it has not been peer reviewed). This
 formula results from the “dominant pole” solution in the prototypical
@@ -7888,7 +7909,7 @@ demonstrate how to model various joints that have a flexible (e.g.,
 rubber) mount. The damping values below with ? may be set to 0 or a
 reasonable positive number.</p>
 <p>Bushing type | torque constants | force constants
-——————————–<a href="#id53"><span class="problematic" id="id54">|:--------------------|</span></a>:——————
+——————————–<a href="#id47"><span class="problematic" id="id48">|:--------------------|</span></a>:——————
 z-axis revolute joint | k₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[k₀</span> <span class="pre">k₁</span> <span class="pre">0]</span></code> | kxyz = <code class="docutils literal notranslate"><span class="pre">[kx</span> <span class="pre">ky</span> <span class="pre">kz]</span></code> ^
 | d₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[d₀</span> <span class="pre">d₁</span> <span class="pre">?]</span></code> | dxyz = <code class="docutils literal notranslate"><span class="pre">[dx</span> <span class="pre">dy</span> <span class="pre">dz]</span></code> x-axis prismatic joint
 | k₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[k₀</span> <span class="pre">k₁</span> <span class="pre">k₂]</span></code> | kxyz = <code class="docutils literal notranslate"><span class="pre">[0</span> <span class="pre">ky</span> <span class="pre">kz]</span></code> ^ | d₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[d₀</span> <span class="pre">d₁</span>
@@ -7926,7 +7947,7 @@ constant dx is by choosing a “reasonably small” settling time tₛ,
 where settling time tₛ is the interval of time for a system to settle
 to within 1% (0.01) of an equilibrium solution). Is tₛ = 0.01 s
 negligible for a robot arm with a 10 s reach maneuver?</p>
-<p><a href="#id39"><span class="problematic" id="id40">**</span></a>** How to choose a torque stiffness constant k₀ or damping constant
+<p><a href="#id33"><span class="problematic" id="id34">**</span></a>** How to choose a torque stiffness constant k₀ or damping constant
 d₀. The estimate of stiffness k₀ depends on whether you are modeling a
 physical bushing (consider stiffness methods 1 or 2 below) or whether
 you are using a bushing to replace an ideal joint such as a revolute
@@ -7954,7 +7975,7 @@ damping), estimate a characteristic moment of inertia and calculate
 <code class="docutils literal notranslate"><span class="pre">d₀</span> <span class="pre">=</span> <span class="pre">2</span> <span class="pre">ζ</span> <span class="pre">√(I₀</span> <span class="pre">k₀)</span></code>.</p>
 <p>Refer to Advanced_bushing_stiffness_and_damping “Advanced bushing
 stiffness and damping” for more details.</p>
-<p><a href="#id41"><span class="problematic" id="id42">**</span></a>** How to choose a force stiffness constant kx or damping constant
+<p><a href="#id35"><span class="problematic" id="id36">**</span></a>** How to choose a force stiffness constant kx or damping constant
 dx. The estimate of stiffness kx depends on whether you are modeling a
 real bushing (consider stiffness methods 1 or 2 below) or whether you
 are using a bushing to replace an ideal joint such as a revolute or
@@ -7981,7 +8002,7 @@ a characteristic mass m and calculate <code class="docutils literal notranslate"
 N*s/m).</p>
 <p>Refer to Advanced_bushing_stiffness_and_damping “Advanced bushing
 stiffness and damping” for more details.</p>
-<p><a href="#id43"><span class="problematic" id="id44">**</span></a>** Advanced: Relationship of 𝐭 to τ. To understand how “gimbal
+<p><a href="#id37"><span class="problematic" id="id38">**</span></a>** Advanced: Relationship of 𝐭 to τ. To understand how “gimbal
 torques” τ relate to 𝐭, it helps to remember that the RollPitchYaw
 class documentation states that a Space-fixed (extrinsic) X-Y-Z
 rotation with roll-pitch-yaw angles [q₀ q₁ q₂] is equivalent to a
@@ -8002,7 +8023,7 @@ w_AC = τ ⋅ q̇.</p>
 ⌊ tz ⌋      ⌊ τ₂ ⌋            ⌊ cos(q₂)*tan(q₁)   sin(q₂)*tan(q₁)  1 ⌋
 </pre></div>
 </div>
-</details><p><a href="#id45"><span class="problematic" id="id46">**</span></a>** Advanced: More on how to choose bushing stiffness and damping
+</details><p><a href="#id39"><span class="problematic" id="id40">**</span></a>** Advanced: More on how to choose bushing stiffness and damping
 constants. The basics on how to choose bushing stiffness and damping
 constants are at: - Basic_bushing_torque_stiffness_and_damping “How to
 choose torque stiffness and damping constants” -
@@ -8074,7 +8095,7 @@ logarithmic decrement δ = -ln(decay_ratio), calculate damping ratio
 ζ = √(δ² / (4π² + δ²)), then calculate d₀ using d₀ = 2 ζ √(I₀ k₀) or
 d₀ = 2 ζ k₀ / ωₙ. For more information, see
 <a class="reference external" href="https://en.wikipedia.org/wiki/Damping_ratio#Logarithmic_decrement">https://en.wikipedia.org/wiki/Damping_ratio#Logarithmic_decrement</a></p>
-<p><a href="#id47"><span class="problematic" id="id48">**</span></a>** Derivation: Approximate formula for overdamped settling time.
+<p><a href="#id41"><span class="problematic" id="id42">**</span></a>** Derivation: Approximate formula for overdamped settling time.
 Since a literature reference for this formula was not found, the
 derivation below was done at TRI (it has not been peer reviewed). This
 formula results from the “dominant pole” solution in the prototypical

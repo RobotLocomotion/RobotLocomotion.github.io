@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"classdrake_1_1examples_1_1allegro__hand_1_1_allegro_hand_motion_state.html#a481500ddf85042540f5b972bef01e473":[3,0,0,3,1,1,0],
 "classdrake_1_1examples_1_1allegro__hand_1_1_allegro_hand_motion_state.html#a495a87bbeaef6bd17805a2c91f1ebc58":[3,0,0,3,1,1,10],
 "classdrake_1_1examples_1_1allegro__hand_1_1_allegro_hand_motion_state.html#a6956806d3373e7da4ff51b7b71dbd91c":[3,0,0,3,1,1,4],
 "classdrake_1_1examples_1_1allegro__hand_1_1_allegro_hand_motion_state.html#a966b54d43c25916380d56e5476eef313":[3,0,0,3,1,1,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "classdrake_1_1examples_1_1planar__gripper_1_1_gripper_status_encoder.html#a55ad6fc3965253673b1a5d85b53295fc":[3,0,0,3,11,5,5],
 "classdrake_1_1examples_1_1planar__gripper_1_1_gripper_status_encoder.html#a71ec23b5b9d1a45e490c54d445c78d94":[3,0,0,3,11,5,4],
 "classdrake_1_1examples_1_1planar__gripper_1_1_gripper_status_encoder.html#a75e91651c3cff6e58b91b5dc5f50d957":[3,0,0,3,11,5,2],
-"classdrake_1_1examples_1_1planar__gripper_1_1_gripper_status_encoder.html#ae1943684f78f1e3787dc45a1153becb8":[3,0,0,3,11,5,6],
-"classdrake_1_1examples_1_1planar__gripper_1_1_planar_manipuland_status_decoder.html":[3,0,0,3,11,6]
+"classdrake_1_1examples_1_1planar__gripper_1_1_gripper_status_encoder.html#ae1943684f78f1e3787dc45a1153becb8":[3,0,0,3,11,5,6]
 };

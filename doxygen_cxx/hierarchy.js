@@ -739,8 +739,8 @@ var hierarchy =
     [ "ScopeExit", "classdrake_1_1_scope_exit.html", null ],
     [ "ScsSolverDetails", "structdrake_1_1solvers_1_1_scs_solver_details.html", null ],
     [ "CspaceFreePolytope::SearchResult", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html", null ],
-    [ "CspaceFreePolytope::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html", null ],
     [ "CspaceFreeBox::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html", null ],
+    [ "CspaceFreePolytope::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html", null ],
     [ "CspaceFreePolytope::SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate.html", null ],
     [ "CspaceFreeBox::SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate.html", null ],
     [ "SeparationCertificateProgramBase", "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_program_base.html", [
@@ -767,6 +767,7 @@ var hierarchy =
     ] ],
     [ "ShapeReifier", "classdrake_1_1geometry_1_1_shape_reifier.html", [
       [ "ConvexSet", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html", [
+        [ "AffineBall", "classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html", null ],
         [ "AffineSubspace", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html", null ],
         [ "CartesianProduct", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html", null ],
         [ "HPolyhedron", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html", null ],

@@ -199,11 +199,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ac1dd511b968cee9545a54a228020546e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds into <code>forces</code> a force along one of the degrees of freedom of the <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> actuated by <code>this</code> actuator.  <a href="#ac1dd511b968cee9545a54a228020546e">More...</a><br /></td></tr>
 <tr class="separator:ac1dd511b968cee9545a54a228020546e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f583cc35433f57b5096490cbc45f55a"><td class="memItemLeft" align="right" valign="top">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#a7f583cc35433f57b5096490cbc45f55a">get_actuation_vector</a> (const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;u) const</td></tr>
-<tr class="memdesc:a7f583cc35433f57b5096490cbc45f55a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the actuation values for <code>this</code> actuator from the actuation vector u for the entire model.  <a href="#a7f583cc35433f57b5096490cbc45f55a">More...</a><br /></td></tr>
+<tr class="memdesc:a7f583cc35433f57b5096490cbc45f55a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the actuation values for <code>this</code> actuator from the actuation vector u for the entire plant model.  <a href="#a7f583cc35433f57b5096490cbc45f55a">More...</a><br /></td></tr>
 <tr class="separator:a7f583cc35433f57b5096490cbc45f55a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0124c80b63b5acc2980e3a57107c43be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#a0124c80b63b5acc2980e3a57107c43be">set_actuation_vector</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;u_instance, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; u) const</td></tr>
-<tr class="memdesc:a0124c80b63b5acc2980e3a57107c43be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the actuation values u_instance for <code>this</code> actuator, this method sets the actuation vector u for the entire MultibodyTree model to which this actuator belongs to.  <a href="#a0124c80b63b5acc2980e3a57107c43be">More...</a><br /></td></tr>
-<tr class="separator:a0124c80b63b5acc2980e3a57107c43be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3aacb9dcbb7b05e78e665b2779ae497"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#ae3aacb9dcbb7b05e78e665b2779ae497">set_actuation_vector</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;u_actuator, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; u) const</td></tr>
+<tr class="memdesc:ae3aacb9dcbb7b05e78e665b2779ae497"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the actuation values <code>u_actuator</code> for <code>this</code> actuator, updates the actuation vector <code>u</code> for the entire multibody model to which this actuator belongs to.  <a href="#ae3aacb9dcbb7b05e78e665b2779ae497">More...</a><br /></td></tr>
+<tr class="separator:ae3aacb9dcbb7b05e78e665b2779ae497"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42d883dde11e65819319f8060b0843b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#a42d883dde11e65819319f8060b0843b4">input_start</a> () const</td></tr>
 <tr class="memdesc:a42d883dde11e65819319f8060b0843b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the index to the first element for this joint actuator / within the vector of actuation inputs for the full multibody / system.  <a href="#a42d883dde11e65819319f8060b0843b4">More...</a><br /></td></tr>
 <tr class="separator:a42d883dde11e65819319f8060b0843b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -480,7 +480,7 @@ Additional Inherited Members</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The context storing the state and parameters for the model to which <code>this</code> joint belongs. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">joint_dof</td><td>Index specifying one of the degrees of freedom for this joint. The index must be in the range <code>0 &lt;= joint_dof &lt; num_velocities()</code> or otherwise this method will throw an exception. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">joint_dof</td><td>Index specifying one of the degrees of freedom for this joint. The index must be in the range <code>0 &lt;= joint_dof &lt; <a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#a198bf2c564777ff4d7d5acd711e5e349" title="Returns the number of inputs associated with this actuator.">num_inputs()</a></code> or otherwise this method will throw an exception. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">joint_tau</td><td>Generalized force corresponding to the degree of freedom indicated by <code>joint_dof</code> to be added into <code>forces</code>. Refer to the specific <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> sub-class documentation for details on the meaning and units for this degree of freedom. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">forces</td><td>On return, this method will add force <code>tau</code> for the degree of freedom <code>joint_dof</code> into the output <code>forces</code>. This method aborts if <code>forces</code> is <code>nullptr</code> or if <code>forces</code> doest not have the right sizes to accommodate a set of forces for the model to which this actuator belongs. </td></tr>
   </table>
@@ -626,7 +626,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Gets the actuation values for <code>this</code> actuator from the actuation vector u for the entire model. </p>
+<p>Gets the actuation values for <code>this</code> actuator from the actuation vector u for the entire plant model. </p>
 <dl class="section return"><dt>Returns</dt><dd>a reference to a nv-dimensional vector, where nv is the number of velocity variables of <a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#a54bc3724965cc59e714c64cbeb147b86" title="Returns a reference to the joint actuated by this JointActuator.">joint()</a>. </dd></dl>
 
 </div>
@@ -850,8 +850,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a0124c80b63b5acc2980e3a57107c43be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0124c80b63b5acc2980e3a57107c43be">&#9670;&nbsp;</a></span>set_actuation_vector()</h2>
+<a id="ae3aacb9dcbb7b05e78e665b2779ae497"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3aacb9dcbb7b05e78e665b2779ae497">&#9670;&nbsp;</a></span>set_actuation_vector()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -860,7 +860,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname">void set_actuation_vector </td>
           <td>(</td>
           <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;&#160;</td>
-          <td class="paramname"><em>u_instance</em>, </td>
+          <td class="paramname"><em>u_actuator</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -876,19 +876,19 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Given the actuation values u_instance for <code>this</code> actuator, this method sets the actuation vector u for the entire MultibodyTree model to which this actuator belongs to. </p>
+<p>Given the actuation values <code>u_actuator</code> for <code>this</code> actuator, updates the actuation vector <code>u</code> for the entire multibody model to which this actuator belongs to. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">u_instance</td><td>Actuation values for <code>this</code> actuator. It must be of size equal to the number of degrees of freedom of the actuated <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a>, see <a class="el" href="classdrake_1_1multibody_1_1_joint.html#ae0163ac0976659d811e3337647ff0313" title="Returns the number of generalized velocities describing this joint.">Joint::num_velocities()</a>. For units and sign conventions refer to the specific <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> sub-class documentation. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">u</td><td>The vector containing the actuation values for the entire MultibodyTree model to which <code>this</code> actuator belongs to. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">u_actuator</td><td>Actuation values for <code>this</code> actuator. It must be of size equal to <a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#a198bf2c564777ff4d7d5acd711e5e349" title="Returns the number of inputs associated with this actuator.">num_inputs()</a>. For units and sign conventions refer to the specific <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> sub-class documentation. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">u</td><td>Actuation values for the entire plant model to which <code>this</code> actuator belongs to, indexed by JointActuatorIndex. Only values corresponding to this actuator are changed. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if <code>u_instance.size() != this-&gt;<a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#a54bc3724965cc59e714c64cbeb147b86" title="Returns a reference to the joint actuated by this JointActuator.">joint()</a>.num_velocities()</code>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>u_actuator.size() != this-&gt;<a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#a198bf2c564777ff4d7d5acd711e5e349" title="Returns the number of inputs associated with this actuator.">num_inputs()</a></code>. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if u is nullptr. </td></tr>
-    <tr><td class="paramname">std::exception</td><td>if <code>u.size() != this-&gt;<a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#acf452ebe0b6b98c3ee73e04b6963feba" title="Returns a constant reference to the parent MultibodyTree that owns this element.">get_parent_tree()</a>.num_actuated_dofs()</code>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>u.size() != this-&gt;<a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a310da1a776ff08627f2f658ff2a6da11" title="Returns the MultibodyPlant that owns this MultibodyElement.">GetParentPlant()</a>.num_actuated_dofs()</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -913,7 +913,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Set controller gains for this joint actuator. </p>
 <p>This enables the modeling of a simple PD controller of the form: ũ = -Kp⋅(q − qd) - Kd⋅(v − vd) + u_ff u = max(−e, min(e, ũ)) where qd and vd are the desired configuration and velocity for <a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#a54bc3724965cc59e714c64cbeb147b86" title="Returns a reference to the joint actuated by this JointActuator.">joint()</a>, Kp and Kd are the proportional and derivative gains specified in <code>gains</code>, u_ff is the feedforward actuation and <code>e</code> corresponds to <a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#a5e00d5f4ea204b3bab3d733b8a64b9eb" title="Returns the actuator effort limit.">effort_limit()</a>.</p>
-<p>For simulation, feedforward actuation can be provided through <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a1cc1d71e6c2e91fcd215105ae4ed01e4" title="Returns a constant reference to the input port for external actuations for all actuated dofs regardle...">MultibodyPlant::get_actuation_input_port()</a>. Desired configuration and velocity are specified through <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a10da7d22fff4db1da5c396eef5780ae2" title="For models with PD controlled joint actuators, returns the port to provide the desired state for the ...">MultibodyPlant::get_desired_state_input_port()</a>.</p>
+<p>For simulation, feedforward actuation can be provided through <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a1cc1d71e6c2e91fcd215105ae4ed01e4" title="Returns a constant reference to the input port for external actuation for all actuated dofs.">MultibodyPlant::get_actuation_input_port()</a>. Desired configuration and velocity are specified through <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a10da7d22fff4db1da5c396eef5780ae2" title="For models with PD controlled joint actuators, returns the port to provide the desired state for the ...">MultibodyPlant::get_desired_state_input_port()</a>.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">iff</td><td>the proportional gain is not strictly positive or if the derivative gain is negative. </td></tr>

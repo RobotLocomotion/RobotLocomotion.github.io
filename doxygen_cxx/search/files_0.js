@@ -12,6 +12,7 @@ var searchData=
   ['acrobot_5fplant_2eh',['acrobot_plant.h',['../acrobot__plant_8h.html',1,'']]],
   ['add_5ffixed_5fobjects_5fto_5fplant_2eh',['add_fixed_objects_to_plant.h',['../add__fixed__objects__to__plant_8h.html',1,'']]],
   ['adder_2eh',['adder.h',['../adder_8h.html',1,'']]],
+  ['affine_5fball_2eh',['affine_ball.h',['../affine__ball_8h.html',1,'']]],
   ['affine_5fsubspace_2eh',['affine_subspace.h',['../affine__subspace_8h.html',1,'']]],
   ['affine_5fsystem_2eh',['affine_system.h',['../affine__system_8h.html',1,'']]],
   ['aggregate_5fcosts_5fconstraints_2eh',['aggregate_costs_constraints.h',['../aggregate__costs__constraints_8h.html',1,'']]],

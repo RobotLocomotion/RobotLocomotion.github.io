@@ -23,6 +23,7 @@ var searchData=
   ['addmultibodyplantscenegraphresult',['AddMultibodyPlantSceneGraphResult',['../structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html',1,'drake::multibody']]],
   ['addrotationmatrixboxsphereintersectionreturn',['AddRotationMatrixBoxSphereIntersectionReturn',['../structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html',1,'drake::solvers']]],
   ['addweld',['AddWeld',['../structdrake_1_1multibody_1_1parsing_1_1_add_weld.html',1,'drake::multibody::parsing']]],
+  ['affineball',['AffineBall',['../classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html',1,'drake::geometry::optimization']]],
   ['affinesubspace',['AffineSubspace',['../classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html',1,'drake::geometry::optimization']]],
   ['affinesystem',['AffineSystem',['../classdrake_1_1systems_1_1_affine_system.html',1,'drake::systems']]],
   ['affinesystem_3c_20double_20_3e',['AffineSystem&lt; double &gt;',['../classdrake_1_1systems_1_1_affine_system.html',1,'drake::systems']]],

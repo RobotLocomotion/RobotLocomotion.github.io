@@ -1,5 +1,6 @@
 var namespacedrake_1_1geometry_1_1optimization =
 [
+    [ "AffineBall", "classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html", "classdrake_1_1geometry_1_1optimization_1_1_affine_ball" ],
     [ "AffineSubspace", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace" ],
     [ "CartesianProduct", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product" ],
     [ "CIrisCollisionGeometry", "classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html", "classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry" ],
