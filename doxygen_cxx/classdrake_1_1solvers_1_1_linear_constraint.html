@@ -196,6 +196,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3649cea4af9866fd5a7b83e10580fe5c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html#a3649cea4af9866fd5a7b83e10580fe5c">RemoveTinyCoefficient</a> (<a class="el" href="classdouble.html">double</a> tol)</td></tr>
 <tr class="memdesc:a3649cea4af9866fd5a7b83e10580fe5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets A(i, j) to zero if abs(A(i, j)) &lt;= tol.  <a href="#a3649cea4af9866fd5a7b83e10580fe5c">More...</a><br /></td></tr>
 <tr class="separator:a3649cea4af9866fd5a7b83e10580fe5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3d69127b721a3922212b42a804ff4b2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html#af3d69127b721a3922212b42a804ff4b2">is_dense_A_constructed</a> () const</td></tr>
+<tr class="memdesc:af3d69127b721a3922212b42a804ff4b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff this constraint already has a dense representation, i.e, if <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html#a38e25e75fd44159789b93a0c7f180c39" title="Get the matrix A as a dense matrix.">GetDenseA()</a> will be cheap.  <a href="#af3d69127b721a3922212b42a804ff4b2">More...</a><br /></td></tr>
+<tr class="separator:af3d69127b721a3922212b42a804ff4b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2414f0b23b4a8d0df4d7beea22ab9111"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html#a2414f0b23b4a8d0df4d7beea22ab9111">set_bounds</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;new_lb, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;new_ub)</td></tr>
 <tr class="memdesc:a2414f0b23b4a8d0df4d7beea22ab9111"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the upper and lower bounds of the constraint.  <a href="#a2414f0b23b4a8d0df4d7beea22ab9111">More...</a><br /></td></tr>
 <tr class="separator:a2414f0b23b4a8d0df4d7beea22ab9111"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -747,6 +750,25 @@ Protected Attributes</h2></td></tr>
 
 <p>Get the matrix A as a dense matrix. </p>
 <dl class="section note"><dt>Note</dt><dd>this might involve memory allocation to convert a sparse matrix to a dense one, for better performance you should call <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html#a1c266571ce951e63d66d582a62854908">get_sparse_A()</a> which returns a sparse matrix. </dd></dl>
+
+</div>
+</div>
+<a id="af3d69127b721a3922212b42a804ff4b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3d69127b721a3922212b42a804ff4b2">&#9670;&nbsp;</a></span>is_dense_A_constructed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool is_dense_A_constructed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true iff this constraint already has a dense representation, i.e, if <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html#a38e25e75fd44159789b93a0c7f180c39" title="Get the matrix A as a dense matrix.">GetDenseA()</a> will be cheap. </p>
 
 </div>
 </div>

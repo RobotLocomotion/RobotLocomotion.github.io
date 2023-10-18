@@ -2535,6 +2535,13 @@ which returns a sparse matrix.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.LinearConstraint.is_dense_A_constructed">
+<span class="sig-name descname"><span class="pre">is_dense_A_constructed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.LinearConstraint" title="pydrake.solvers.LinearConstraint"><span class="pre">pydrake.solvers.LinearConstraint</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.solvers.LinearConstraint.is_dense_A_constructed" title="Permalink to this definition"></a></dt>
+<dd><p>Returns true iff this constraint already has a dense representation,
+i.e, if GetDenseA() will be cheap.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.LinearConstraint.RemoveTinyCoefficient">
 <span class="sig-name descname"><span class="pre">RemoveTinyCoefficient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.LinearConstraint" title="pydrake.solvers.LinearConstraint"><span class="pre">pydrake.solvers.LinearConstraint</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.LinearConstraint.RemoveTinyCoefficient" title="Permalink to this definition"></a></dt>
 <dd><p>Sets A(i, j) to zero if abs(A(i, j)) &lt;= tol. Oftentimes the
@@ -3341,6 +3348,11 @@ the decision variables (defined in the vars parameter). lb &lt;= a*vars
 </dd>
 </dl>
 <ol class="arabic simple" start="3">
+<li><p>AddLinearConstraint(self: pydrake.solvers.MathematicalProgram, A: scipy.sparse.csc_matrix[numpy.float64], lb: numpy.ndarray[numpy.float64[m, 1]], ub: numpy.ndarray[numpy.float64[m, 1]], vars: numpy.ndarray[object[m, 1]]) -&gt; pydrake.solvers.Binding[LinearConstraint]</p></li>
+</ol>
+<p>Adds sparse linear constraints referencing potentially a subset of the
+decision variables (defined in the vars parameter).</p>
+<ol class="arabic simple" start="4">
 <li><p>AddLinearConstraint(self: pydrake.solvers.MathematicalProgram, e: pydrake.symbolic.Expression, lb: float, ub: float) -&gt; pydrake.solvers.Binding[LinearConstraint]</p></li>
 </ol>
 <p>Adds one row of linear constraint lb &lt;= e &lt;= ub where <code class="docutils literal notranslate"><span class="pre">e</span></code> is a
@@ -3363,13 +3375,13 @@ symbolic expression.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">ub</span></code>:</dt><dd><p>A scalar, the upper bound.</p>
 </dd>
 </dl>
-<ol class="arabic simple" start="4">
+<ol class="arabic simple" start="5">
 <li><p>AddLinearConstraint(self: pydrake.solvers.MathematicalProgram, v: numpy.ndarray[object[m, n], flags.f_contiguous], lb: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], ub: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]) -&gt; pydrake.solvers.Binding[LinearConstraint]</p></li>
 </ol>
 <p>Adds linear constraints represented by symbolic expressions to the
 program. It throws if &#64;v includes a non-linear expression or <code class="docutils literal notranslate"><span class="pre">lb</span> <span class="pre">&lt;=</span> <span class="pre">v</span>
 <span class="pre">&lt;=</span> <span class="pre">ub</span></code> includes trivial/unsatisfiable constraints.</p>
-<ol class="arabic simple" start="5">
+<ol class="arabic simple" start="6">
 <li><p>AddLinearConstraint(self: pydrake.solvers.MathematicalProgram, f: pydrake.symbolic.Formula) -&gt; pydrake.solvers.Binding[LinearConstraint]</p></li>
 </ol>
 <p>Add a linear constraint represented by a symbolic formula to the
@@ -3393,7 +3405,7 @@ such as “2 &lt;= 1”. 4. It is not possible to find numerical bounds of
 be infinite but only if there are no other terms. For example, <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&lt;=</span>
 <span class="pre">∞</span></code> is allowed. However, <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">-</span> <span class="pre">∞</span> <span class="pre">&lt;=</span> <span class="pre">0</span></code> is not allowed because <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">↦</span>
 <span class="pre">∞</span></code> introduces <code class="docutils literal notranslate"><span class="pre">nan</span></code> in the evaluation.</p>
-<ol class="arabic simple" start="6">
+<ol class="arabic simple" start="7">
 <li><p>AddLinearConstraint(self: pydrake.solvers.MathematicalProgram, formulas: numpy.ndarray[object[m, n], flags.f_contiguous]) -&gt; pydrake.solvers.Binding[LinearConstraint]</p></li>
 </ol>
 <p>Add a linear constraint represented by an
@@ -3478,6 +3490,27 @@ the elements of x, you could use</p>
 </pre></div>
 </div>
 </details><ol class="arabic simple" start="2">
+<li><p>AddLinearEqualityConstraint(self: pydrake.solvers.MathematicalProgram, a: numpy.ndarray[numpy.float64[1, n]], beq: float, vars: numpy.ndarray[object[m, 1]]) -&gt; pydrake.solvers.Binding[LinearEqualityConstraint]</p></li>
+</ol>
+<p>Adds one row of linear equality constraint referencing potentially a
+subset of decision variables.</p>
+<div class="math notranslate nohighlight">
+\[ax = beq\]</div>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">a</span></code>:</dt><dd><p>A row vector.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">beq</span></code>:</dt><dd><p>A scalar.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">vars</span></code>:</dt><dd><p>The decision variables on which the constraint is imposed.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="3">
+<li><p>AddLinearEqualityConstraint(self: pydrake.solvers.MathematicalProgram, Aeq: scipy.sparse.csc_matrix[numpy.float64], beq: numpy.ndarray[numpy.float64[m, 1]], vars: numpy.ndarray[object[m, 1]]) -&gt; pydrake.solvers.Binding[LinearEqualityConstraint]</p></li>
+</ol>
+<p>AddLinearEqualityConstraint</p>
+<p>Adds linear equality constraints referencing potentially a subset of
+the decision variables using a sparse A matrix.</p>
+<ol class="arabic simple" start="4">
 <li><p>AddLinearEqualityConstraint(self: pydrake.solvers.MathematicalProgram, e: pydrake.symbolic.Expression, b: float) -&gt; pydrake.solvers.Binding[LinearEqualityConstraint]</p></li>
 </ol>
 <p>Adds one row of linear constraint e = b where <code class="docutils literal notranslate"><span class="pre">e</span></code> is a symbolic
@@ -3503,7 +3536,7 @@ expression.</p>
 bound variable.</p>
 </dd>
 </dl>
-<ol class="arabic simple" start="3">
+<ol class="arabic simple" start="5">
 <li><p>AddLinearEqualityConstraint(self: pydrake.solvers.MathematicalProgram, f: pydrake.symbolic.Formula) -&gt; pydrake.solvers.Binding[LinearEqualityConstraint]</p></li>
 </ol>
 <p>Adds a linear equality constraint represented by a symbolic formula to
@@ -3514,7 +3547,7 @@ the program. The input formula <code class="docutils literal notranslate"><span 
 <li><p><code class="docutils literal notranslate"><span class="pre">f</span></code> is neither an equality formula nor a conjunction of equalities.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">f</span></code> includes a non-linear expression.</p></li>
 </ol>
-<ol class="arabic simple" start="4">
+<ol class="arabic simple" start="6">
 <li><p>AddLinearEqualityConstraint(self: pydrake.solvers.MathematicalProgram, v: numpy.ndarray[object[m, 1]], b: numpy.ndarray[numpy.float64[m, 1]]) -&gt; pydrake.solvers.Binding[LinearEqualityConstraint]</p></li>
 </ol>
 <p>Adds linear equality constraints <span class="math notranslate nohighlight">\(v = b\)</span>, where <code class="docutils literal notranslate"><span class="pre">v(i)</span></code> is a

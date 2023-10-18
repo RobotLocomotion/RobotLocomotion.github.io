@@ -1,5 +1,10 @@
 var NAVTREEINDEX44 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a611b9bd79f548904a032ba3992d705e7":[3,0,0,17,7,15],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a6fd5552029547f8e16ebbed98e108bbb":[3,0,0,17,7,3],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a76ec9d05feedef776f4510cfdc3caecd":[3,0,0,17,7,2],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a847303eb7ec2b752d7eee59d3f07ea0e":[3,0,0,17,7,7],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a8743b4bccdaf5d24987b1f76403bbe41":[3,0,0,17,7,13],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a89e113d205dc5ec5eff6d7f331a8c156":[3,0,0,17,7,12],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a97e610bb883f37a631873104d8f6209d":[3,0,0,17,7,0],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a9aa1f1cfff6dcb352d5fbb15a80ee1a9":[3,0,0,17,7,20],
@@ -244,10 +249,5 @@ var NAVTREEINDEX44 =
 "convert__time__derivative_8h.html#a7ad7ab2561d0c05591eb9720adccc7d5":[4,0,0,7,8,0],
 "convex__set_8h.html":[4,0,0,4,1,4],
 "convex__set_8h.html#a3c7f9b75df3ac22becb7bb5cb03bf956":[4,0,0,4,1,4,1],
-"convex__set_8h.html#ac9a3a5006f20615946f5b466fe9446b6":[4,0,0,4,1,4,2],
-"copyable__unique__ptr_8h.html":[4,0,0,1,13],
-"corotated__model_8h.html":[4,0,0,8,3,3],
-"corotated__model__data_8h.html":[4,0,0,8,3,4],
-"cost_8h.html":[4,0,0,11,9],
-"cost_8h.html#ga5f972e77c40a9afab91907620c621e11":[4,0,0,11,9,2]
+"convex__set_8h.html#ac9a3a5006f20615946f5b466fe9446b6":[4,0,0,4,1,4,2]
 };

@@ -1,5 +1,10 @@
 var NAVTREEINDEX45 =
 {
+"copyable__unique__ptr_8h.html":[4,0,0,1,13],
+"corotated__model_8h.html":[4,0,0,8,3,3],
+"corotated__model__data_8h.html":[4,0,0,8,3,4],
+"cost_8h.html":[4,0,0,11,9],
+"cost_8h.html#ga5f972e77c40a9afab91907620c621e11":[4,0,0,11,9,2],
 "cost_8h.html#ga62744a5e355fa26fa97169acfc946128":[4,0,0,11,9,0],
 "cost_8h.html#ga9d268ea8150fb094f1499a958c50defb":[4,0,0,11,9,1],
 "coulomb__friction_8h.html":[4,0,0,8,10,10],
@@ -244,10 +249,5 @@ var NAVTREEINDEX45 =
 "dir_f46c9d8bac432799f621aa951345f12b.html":[4,0,0,6,3],
 "dir_fa973aef359a666fa59c209acc8a7d72.html":[4,0,0,8,0,3],
 "dir_fc0178d6978c9fa2cad6ef3e048a60a7.html":[4,0,0,7],
-"dir_fd5a8b80375bde94b1137be9b3ceb9fd.html":[4,0,0,0,0,6],
-"dir_ffd084df0f71d68f8337a7d6f3dcd2dc.html":[4,0,0,4,2],
-"direct__collocation_8h.html":[4,0,0,10,1,0],
-"direct__collocation_8h.html#adbb6bc996413925c93dca6d2f5e2bb3d":[4,0,0,10,1,0,0],
-"direct__transcription_8h.html":[4,0,0,10,1,1],
-"dirichlet__boundary__condition_8h.html":[4,0,0,8,3,8]
+"dir_fd5a8b80375bde94b1137be9b3ceb9fd.html":[4,0,0,0,0,6]
 };

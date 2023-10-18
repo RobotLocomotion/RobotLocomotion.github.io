@@ -12,6 +12,7 @@ var classdrake_1_1solvers_1_1_linear_constraint =
     [ "DoToLatex", "classdrake_1_1solvers_1_1_linear_constraint.html#aa8e1e9254703f4bfe3d3e4d01807f441", null ],
     [ "get_sparse_A", "classdrake_1_1solvers_1_1_linear_constraint.html#a1c266571ce951e63d66d582a62854908", null ],
     [ "GetDenseA", "classdrake_1_1solvers_1_1_linear_constraint.html#a38e25e75fd44159789b93a0c7f180c39", null ],
+    [ "is_dense_A_constructed", "classdrake_1_1solvers_1_1_linear_constraint.html#af3d69127b721a3922212b42a804ff4b2", null ],
     [ "operator=", "classdrake_1_1solvers_1_1_linear_constraint.html#aa21495d4d797f18f8acd9dad11fdfdfc", null ],
     [ "operator=", "classdrake_1_1solvers_1_1_linear_constraint.html#ac5f497b0878226fd242af88c65f593ba", null ],
     [ "RemoveTinyCoefficient", "classdrake_1_1solvers_1_1_linear_constraint.html#a3649cea4af9866fd5a7b83e10580fe5c", null ],
