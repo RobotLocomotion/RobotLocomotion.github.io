@@ -8,7 +8,7 @@ var searchData=
   ['arclength',['ArcLength',['../classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#a20b7998562419a53e3486c9914232756',1,'drake::examples::bead_on_a_wire::BeadOnAWire']]],
   ['ascalar',['AScalar',['../classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#abbac5b4ffed5d7d2b51598a91d90d097',1,'drake::examples::bead_on_a_wire::BeadOnAWire']]],
   ['autodiffd',['AutoDiffd',['../namespacedrake.html#a5f4077c4918078fb55bfb6b73968cb0a',1,'drake']]],
-  ['autodiffmatrixtype',['AutoDiffMatrixType',['../namespacedrake_1_1math.html#afa470df3b29552da046a24c5707d6d2e',1,'drake::math']]],
+  ['autodiffmatrixtype',['AutoDiffMatrixType',['../namespacedrake_1_1math.html#a6e5cf27ab08ab982d6c3f4429687e9fb',1,'drake::math']]],
   ['autodiffvecd',['AutoDiffVecd',['../namespacedrake.html#a790a072a62129732864a20e7a4743298',1,'drake']]],
   ['autodiffvecxd',['AutoDiffVecXd',['../namespacedrake.html#a7b13142534d668d5d490b829b917fa16',1,'drake']]],
   ['autodiffxd',['AutoDiffXd',['../namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc',1,'drake']]]

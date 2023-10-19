@@ -124,6 +124,7 @@ var searchData=
   ['subvector_2eh',['subvector.h',['../subvector_8h.html',1,'']]],
   ['supernodal_5fsolver_2eh',['supernodal_solver.h',['../supernodal__solver_8h.html',1,'']]],
   ['supervector_2eh',['supervector.h',['../supervector_8h.html',1,'']]],
+  ['symbolic_5fpy_2eh',['symbolic_py.h',['../symbolic__py_8h.html',1,'']]],
   ['symbolic_5fpy_5funapply_2eh',['symbolic_py_unapply.h',['../symbolic__py__unapply_8h.html',1,'']]],
   ['symbolic_5ftest_5futil_2eh',['symbolic_test_util.h',['../symbolic__test__util_8h.html',1,'']]],
   ['symbolic_5ftypes_5fpybind_2eh',['symbolic_types_pybind.h',['../symbolic__types__pybind_8h.html',1,'']]],

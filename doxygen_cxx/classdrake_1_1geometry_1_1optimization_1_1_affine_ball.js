@@ -4,6 +4,7 @@ var classdrake_1_1geometry_1_1optimization_1_1_affine_ball =
     [ "AffineBall", "classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#aebfabf996e5f3fe5bd03f62e243335ce", null ],
     [ "AffineBall", "classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#ac8e509489164bd66809e13fac247ca38", null ],
     [ "AffineBall", "classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#a9b5c051cfd6fd6edeb8253b00020e252", null ],
+    [ "AffineBall", "classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#aebefa16bc45034b4c14d7a38710ca97a", null ],
     [ "~AffineBall", "classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#ae9f9cc83a60f52fc3597f8218d0762a7", null ],
     [ "B", "classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#a72a0d3162014193b1fc26f0f26284a65", null ],
     [ "center", "classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#a0436b14a80630bf60e18fdc56ce3171e", null ],

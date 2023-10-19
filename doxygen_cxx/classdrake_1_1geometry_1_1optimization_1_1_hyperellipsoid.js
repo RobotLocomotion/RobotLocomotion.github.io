@@ -5,6 +5,7 @@ var classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid =
     [ "Hyperellipsoid", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#a6661355330d787f60968b09ec2b697a1", null ],
     [ "Hyperellipsoid", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#af4248cbe4d2a7c0d69730e86ebef5cf5", null ],
     [ "Hyperellipsoid", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#ad2342315d8c93fa6e7f9e0ea6307cdad", null ],
+    [ "Hyperellipsoid", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#a713fe6cc62db0914aa27ded4caa2b7a4", null ],
     [ "~Hyperellipsoid", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#a80aa27d77264976c6203489880a9aafd", null ],
     [ "A", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#ace583a472a3bdc1b67f05d6a6571a903", null ],
     [ "center", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#a0436b14a80630bf60e18fdc56ce3171e", null ],

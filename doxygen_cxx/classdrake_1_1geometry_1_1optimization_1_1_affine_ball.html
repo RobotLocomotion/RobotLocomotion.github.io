@@ -183,6 +183,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9b5c051cfd6fd6edeb8253b00020e252"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#a9b5c051cfd6fd6edeb8253b00020e252">AffineBall</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#a72a0d3162014193b1fc26f0f26284a65">B</a>, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#a0436b14a80630bf60e18fdc56ce3171e">center</a>)</td></tr>
 <tr class="memdesc:a9b5c051cfd6fd6edeb8253b00020e252"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the ellipsoid from a transformation matrix B and translation center.  <a href="#a9b5c051cfd6fd6edeb8253b00020e252">More...</a><br /></td></tr>
 <tr class="separator:a9b5c051cfd6fd6edeb8253b00020e252"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebefa16bc45034b4c14d7a38710ca97a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#aebefa16bc45034b4c14d7a38710ca97a">AffineBall</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html">Hyperellipsoid</a> &amp;ellipsoid)</td></tr>
+<tr class="memdesc:aebefa16bc45034b4c14d7a38710ca97a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html" title="Implements an ellipsoidal convex set represented as an affine scaling of the unit ball {Bu + center |...">AffineBall</a> from a <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html" title="Implements an ellipsoidal convex set represented by the quadratic form {x | (x-center)ᵀAᵀA(x-center) ...">Hyperellipsoid</a>.  <a href="#aebefa16bc45034b4c14d7a38710ca97a">More...</a><br /></td></tr>
+<tr class="separator:aebefa16bc45034b4c14d7a38710ca97a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9f9cc83a60f52fc3597f8218d0762a7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#ae9f9cc83a60f52fc3597f8218d0762a7">~AffineBall</a> () final</td></tr>
 <tr class="separator:ae9f9cc83a60f52fc3597f8218d0762a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72a0d3162014193b1fc26f0f26284a65"><td class="memItemLeft" align="right" valign="top">const Eigen::MatrixXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#a72a0d3162014193b1fc26f0f26284a65">B</a> () const</td></tr>
@@ -327,7 +330,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af32a8c64b87f80e719f3be9c5aa0acdd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af32a8c64b87f80e719f3be9c5aa0acdd">&#9670;&nbsp;</a></span>AffineBall() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af32a8c64b87f80e719f3be9c5aa0acdd">&#9670;&nbsp;</a></span>AffineBall() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -353,7 +356,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="aebfabf996e5f3fe5bd03f62e243335ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aebfabf996e5f3fe5bd03f62e243335ce">&#9670;&nbsp;</a></span>AffineBall() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aebfabf996e5f3fe5bd03f62e243335ce">&#9670;&nbsp;</a></span>AffineBall() <span class="overload">[2/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -379,7 +382,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="ac8e509489164bd66809e13fac247ca38"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac8e509489164bd66809e13fac247ca38">&#9670;&nbsp;</a></span>AffineBall() <span class="overload">[3/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8e509489164bd66809e13fac247ca38">&#9670;&nbsp;</a></span>AffineBall() <span class="overload">[3/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -398,7 +401,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="a9b5c051cfd6fd6edeb8253b00020e252"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9b5c051cfd6fd6edeb8253b00020e252">&#9670;&nbsp;</a></span>AffineBall() <span class="overload">[4/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b5c051cfd6fd6edeb8253b00020e252">&#9670;&nbsp;</a></span>AffineBall() <span class="overload">[4/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -427,6 +430,35 @@ Additional Inherited Members</h2></td></tr>
 <p>B describes the linear transformation that is applied to the unit ball in order to produce the ellipsoid, and center describes the translation of the center of the ellipsoid from the origin. </p><dl class="section pre"><dt>Precondition</dt><dd>B.rows() == B.cols(). </dd>
 <dd>
 B.cols() == center.size(). </dd></dl>
+
+</div>
+</div>
+<a id="aebefa16bc45034b4c14d7a38710ca97a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebefa16bc45034b4c14d7a38710ca97a">&#9670;&nbsp;</a></span>AffineBall() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html">AffineBall</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html">Hyperellipsoid</a> &amp;&#160;</td>
+          <td class="paramname"><em>ellipsoid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs an <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html" title="Implements an ellipsoidal convex set represented as an affine scaling of the unit ball {Bu + center |...">AffineBall</a> from a <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html" title="Implements an ellipsoidal convex set represented by the quadratic form {x | (x-center)ᵀAᵀA(x-center) ...">Hyperellipsoid</a>. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>ellipsoid.IsBounded(). </dd></dl>
 
 </div>
 </div>

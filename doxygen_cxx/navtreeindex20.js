@@ -1,5 +1,10 @@
 var NAVTREEINDEX20 =
 {
+"classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html#ae24bf1ddac317b629f326fba2119d296":[3,0,0,8,5,0,7],
+"classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html#ae640a55448a0602b0fa9b1cbaf09e588":[3,0,0,8,5,0,11],
+"classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html#ae6a0d2834869b63c236b8cf598168f0a":[3,0,0,8,5,0,12],
+"classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html#ae73edc00d493b3f15ba7679cc14830a0":[3,0,0,8,5,0,13],
+"classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html#ae7f7530d71335f60404ee04304ccdb25":[3,0,0,8,5,0,0],
 "classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html":[3,0,0,8,6,0],
 "classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#a0c7880002848dfb4a63e95ecf8b54d40":[3,0,0,8,6,0,6],
 "classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#a169a325cc6868687039f73d62a6bba63":[3,0,0,8,6,0,12],
@@ -244,10 +249,5 @@ var NAVTREEINDEX20 =
 "classdrake_1_1planning_1_1_collision_checker_context.html#acc635b6bf47c45253b513cccda9fae8f":[1,4,2,2,2,11],
 "classdrake_1_1planning_1_1_collision_checker_context.html#add9a7037ff34d00e77b2584bbcba74e1":[1,4,2,2,2,10],
 "classdrake_1_1planning_1_1_collision_checker_context.html#ae49817b49b22e95f0ba859d511eaec64":[1,4,2,2,2,2],
-"classdrake_1_1planning_1_1_collision_checker_context.html#aef1bb755519777cba5c7464bab0c4bbc":[1,4,2,2,2,12],
-"classdrake_1_1planning_1_1_collision_checker_context.html#aff7fe789e4ad40fe3a4cf0ab595d5d36":[1,4,2,2,2,0],
-"classdrake_1_1planning_1_1_distance_and_interpolation_provider.html":[3,0,0,10,6],
-"classdrake_1_1planning_1_1_distance_and_interpolation_provider.html#a17740edbe8630391dc5e5a96bdde2776":[3,0,0,10,6,6],
-"classdrake_1_1planning_1_1_distance_and_interpolation_provider.html#a1d783e049011415c69a3f653f71eed5c":[3,0,0,10,6,3],
-"classdrake_1_1planning_1_1_distance_and_interpolation_provider.html#a36763a4eee64ee0575b8bec05a51d4a4":[3,0,0,10,6,7]
+"classdrake_1_1planning_1_1_collision_checker_context.html#aef1bb755519777cba5c7464bab0c4bbc":[1,4,2,2,2,12]
 };

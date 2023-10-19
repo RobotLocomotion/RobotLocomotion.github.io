@@ -167,6 +167,14 @@ origin.</p>
 <dt>Precondition:</dt><dd><p>B.cols() == center.size().</p>
 </dd>
 </dl>
+<ol class="arabic simple" start="3">
+<li><p>__init__(self: pydrake.geometry.optimization.AffineBall, ellipsoid: pydrake.geometry.optimization.Hyperellipsoid) -&gt; None</p></li>
+</ol>
+<p>Constructs an AffineBall from a Hyperellipsoid.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>ellipsoid.IsBounded().</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -2480,7 +2488,7 @@ length 2.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.HPolyhedron.MaximumVolumeInscribedEllipsoid">
-<span class="sig-name descname"><span class="pre">MaximumVolumeInscribedEllipsoid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.HPolyhedron" title="pydrake.geometry.optimization.HPolyhedron"><span class="pre">pydrake.geometry.optimization.HPolyhedron</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::geometry::optimization::Hyperellipsoid</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.MaximumVolumeInscribedEllipsoid" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">MaximumVolumeInscribedEllipsoid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.HPolyhedron" title="pydrake.geometry.optimization.HPolyhedron"><span class="pre">pydrake.geometry.optimization.HPolyhedron</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.optimization.Hyperellipsoid" title="pydrake.geometry.optimization.Hyperellipsoid"><span class="pre">pydrake.geometry.optimization.Hyperellipsoid</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.MaximumVolumeInscribedEllipsoid" title="Permalink to this definition"></a></dt>
 <dd><p>Solves a semi-definite program to compute the inscribed ellipsoid.
 This is also known as the inner Löwner-John ellipsoid. From Section
 8.4.2 in Boyd and Vandenberghe, 2004, we solve</p>
@@ -2628,6 +2636,14 @@ in the world frame.</p>
 <li><p><strong>RuntimeError if geometry_id does not represent a shape that can be</strong> – </p></li>
 <li><p><strong>described as an Hyperellipsoid.</strong> – </p></li>
 </ul>
+</dd>
+</dl>
+<ol class="arabic simple" start="4">
+<li><p>__init__(self: pydrake.geometry.optimization.Hyperellipsoid, ellipsoid: pydrake.geometry.optimization.AffineBall) -&gt; None</p></li>
+</ol>
+<p>Constructs a Hyperellipsoid from an AffineBall.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>ellipsoid.B() is invertible.</p>
 </dd>
 </dl>
 </dd></dl>

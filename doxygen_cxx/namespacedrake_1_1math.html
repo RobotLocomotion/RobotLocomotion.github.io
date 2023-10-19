@@ -212,10 +212,10 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:afa470df3b29552da046a24c5707d6d2e"><td class="memTemplParams" colspan="2">template&lt;typename Derived , int nq&gt; </td></tr>
-<tr class="memitem:afa470df3b29552da046a24c5707d6d2e"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#afa470df3b29552da046a24c5707d6d2e">AutoDiffMatrixType</a> = <a class="el" href="namespacedrake.html#aaadcdc21cc0c381e5879b1b7f023d82d">MatrixLikewise</a>&lt; Eigen::AutoDiffScalar&lt; <a class="el" href="namespacedrake.html#a01ae662d5635b7c9efe03d15d976f7a8">Vector</a>&lt; typename Derived::Scalar, nq &gt; &gt;, Derived &gt;</td></tr>
-<tr class="memdesc:afa470df3b29552da046a24c5707d6d2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The appropriate AutoDiffScalar matrix type given the value type and the number of derivatives at compile time.  <a href="#afa470df3b29552da046a24c5707d6d2e">More...</a><br /></td></tr>
-<tr class="separator:afa470df3b29552da046a24c5707d6d2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e5cf27ab08ab982d6c3f4429687e9fb"><td class="memTemplParams" colspan="2">template&lt;typename Derived , int nq&gt; </td></tr>
+<tr class="memitem:a6e5cf27ab08ab982d6c3f4429687e9fb"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a6e5cf27ab08ab982d6c3f4429687e9fb">AutoDiffMatrixType</a> = <a class="el" href="namespacedrake.html#aaadcdc21cc0c381e5879b1b7f023d82d">MatrixLikewise</a>&lt; Eigen::AutoDiffScalar&lt; <a class="el" href="namespacedrake.html#a01ae662d5635b7c9efe03d15d976f7a8">Vector</a>&lt; typename Derived::Scalar, nq &gt; &gt;, Derived &gt;</td></tr>
+<tr class="memdesc:a6e5cf27ab08ab982d6c3f4429687e9fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The appropriate AutoDiffScalar matrix type given the value type and the number of derivatives at compile time.  <a href="#a6e5cf27ab08ab982d6c3f4429687e9fb">More...</a><br /></td></tr>
+<tr class="separator:a6e5cf27ab08ab982d6c3f4429687e9fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -249,7 +249,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:a563f68724c579b35cdaf62b72c056e5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alternate signature provides default values for the number of derivatives (dynamic, determined at run time) and the starting index (0).  <a href="#a563f68724c579b35cdaf62b72c056e5e">More...</a><br /></td></tr>
 <tr class="separator:a563f68724c579b35cdaf62b72c056e5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e75abd55fa93ee21998756cf8c6e244"><td class="memTemplParams" colspan="2">template&lt;int nq = Eigen::Dynamic, typename Derived &gt; </td></tr>
-<tr class="memitem:a3e75abd55fa93ee21998756cf8c6e244"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1math.html#afa470df3b29552da046a24c5707d6d2e">AutoDiffMatrixType</a>&lt; Derived, nq &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a3e75abd55fa93ee21998756cf8c6e244">InitializeAutoDiff</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;value, std::optional&lt; <a class="el" href="classint.html">int</a> &gt; num_derivatives={}, std::optional&lt; <a class="el" href="classint.html">int</a> &gt; deriv_num_start={})</td></tr>
+<tr class="memitem:a3e75abd55fa93ee21998756cf8c6e244"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1math.html#a6e5cf27ab08ab982d6c3f4429687e9fb">AutoDiffMatrixType</a>&lt; Derived, nq &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a3e75abd55fa93ee21998756cf8c6e244">InitializeAutoDiff</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;value, std::optional&lt; <a class="el" href="classint.html">int</a> &gt; num_derivatives={}, std::optional&lt; <a class="el" href="classint.html">int</a> &gt; deriv_num_start={})</td></tr>
 <tr class="memdesc:a3e75abd55fa93ee21998756cf8c6e244"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a single AutoDiff matrix given the corresponding value matrix.  <a href="#a3e75abd55fa93ee21998756cf8c6e244">More...</a><br /></td></tr>
 <tr class="separator:a3e75abd55fa93ee21998756cf8c6e244"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a285789fb9b379daf395aeb3b206dae8e"><td class="memTemplParams" colspan="2">template&lt;typename... Deriveds&gt; </td></tr>
@@ -264,7 +264,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:ac01d5aa7f58a485b614ddc46e7be7dd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes an AutoDiff matrix given a matrix of values and a gradient matrix.  <a href="#ac01d5aa7f58a485b614ddc46e7be7dd4">More...</a><br /></td></tr>
 <tr class="separator:ac01d5aa7f58a485b614ddc46e7be7dd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af23c3981782540c98f8a1cb2abc59627"><td class="memTemplParams" colspan="2">template&lt;typename DerivedValue , typename DerivedGradient &gt; </td></tr>
-<tr class="memitem:af23c3981782540c98f8a1cb2abc59627"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1math.html#afa470df3b29552da046a24c5707d6d2e">AutoDiffMatrixType</a>&lt; DerivedValue, DerivedGradient::ColsAtCompileTime &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#af23c3981782540c98f8a1cb2abc59627">InitializeAutoDiff</a> (const Eigen::MatrixBase&lt; DerivedValue &gt; &amp;value, const Eigen::MatrixBase&lt; DerivedGradient &gt; &amp;gradient)</td></tr>
+<tr class="memitem:af23c3981782540c98f8a1cb2abc59627"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1math.html#a6e5cf27ab08ab982d6c3f4429687e9fb">AutoDiffMatrixType</a>&lt; DerivedValue, DerivedGradient::ColsAtCompileTime &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#af23c3981782540c98f8a1cb2abc59627">InitializeAutoDiff</a> (const Eigen::MatrixBase&lt; DerivedValue &gt; &amp;value, const Eigen::MatrixBase&lt; DerivedGradient &gt; &amp;gradient)</td></tr>
 <tr class="memdesc:af23c3981782540c98f8a1cb2abc59627"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an AutoDiff matrix given a matrix of values and a gradient matrix.  <a href="#af23c3981782540c98f8a1cb2abc59627">More...</a><br /></td></tr>
 <tr class="separator:af23c3981782540c98f8a1cb2abc59627"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe3277d7c068b3f82ccb6b025d44ab11"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
@@ -498,14 +498,14 @@ Functions</h2></td></tr>
 <tr class="memitem:abe28f719aff9b89fe73db9e01e32dbb0"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1math_1_1_gradient.html">drake::math::Gradient</a>&lt; Eigen::Matrix&lt; typename Derived::Scalar, 3, 3 &gt;, 4 &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#abe28f719aff9b89fe73db9e01e32dbb0">dquat2rotmat</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;quaternion)</td></tr>
 <tr class="memdesc:abe28f719aff9b89fe73db9e01e32dbb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the gradient of the function that converts a unit length quaternion to a rotation matrix.  <a href="#abe28f719aff9b89fe73db9e01e32dbb0">More...</a><br /></td></tr>
 <tr class="separator:abe28f719aff9b89fe73db9e01e32dbb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d0b3efdc97ef38971ce37ec458bd266"><td class="memTemplParams" colspan="2">template&lt;typename DerivedR , typename DerivedDR &gt; </td></tr>
-<tr class="memitem:a0d0b3efdc97ef38971ce37ec458bd266"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1math_1_1_gradient.html">drake::math::Gradient</a>&lt; Eigen::Matrix&lt; typename DerivedR::Scalar, 3, 1 &gt;, DerivedDR::ColsAtCompileTime &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a0d0b3efdc97ef38971ce37ec458bd266">drotmat2rpy</a> (const Eigen::MatrixBase&lt; DerivedR &gt; &amp;R, const Eigen::MatrixBase&lt; DerivedDR &gt; &amp;dR)</td></tr>
-<tr class="memdesc:a0d0b3efdc97ef38971ce37ec458bd266"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the gradient of the function that converts a rotation matrix to body-fixed z-y'-x'' Euler angles.  <a href="#a0d0b3efdc97ef38971ce37ec458bd266">More...</a><br /></td></tr>
-<tr class="separator:a0d0b3efdc97ef38971ce37ec458bd266"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7256f47710ce695f1410cca9e3c0015"><td class="memTemplParams" colspan="2">template&lt;typename DerivedR , typename DerivedDR &gt; </td></tr>
-<tr class="memitem:af7256f47710ce695f1410cca9e3c0015"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1math_1_1_gradient.html">drake::math::Gradient</a>&lt; Eigen::Matrix&lt; typename DerivedR::Scalar, 4, 1 &gt;, DerivedDR::ColsAtCompileTime &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#af7256f47710ce695f1410cca9e3c0015">drotmat2quat</a> (const Eigen::MatrixBase&lt; DerivedR &gt; &amp;R, const Eigen::MatrixBase&lt; DerivedDR &gt; &amp;dR)</td></tr>
-<tr class="memdesc:af7256f47710ce695f1410cca9e3c0015"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the gradient of the function that converts rotation matrix to quaternion.  <a href="#af7256f47710ce695f1410cca9e3c0015">More...</a><br /></td></tr>
-<tr class="separator:af7256f47710ce695f1410cca9e3c0015"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2483613453a61188f0ff474a6280f41"><td class="memTemplParams" colspan="2">template&lt;typename DerivedR , typename DerivedDR &gt; </td></tr>
+<tr class="memitem:af2483613453a61188f0ff474a6280f41"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1math_1_1_gradient.html">drake::math::Gradient</a>&lt; Eigen::Matrix&lt; typename DerivedR::Scalar, 3, 1 &gt;, DerivedDR::ColsAtCompileTime &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#af2483613453a61188f0ff474a6280f41">drotmat2rpy</a> (const Eigen::MatrixBase&lt; DerivedR &gt; &amp;R, const Eigen::MatrixBase&lt; DerivedDR &gt; &amp;dR)</td></tr>
+<tr class="memdesc:af2483613453a61188f0ff474a6280f41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the gradient of the function that converts a rotation matrix to body-fixed z-y'-x'' Euler angles.  <a href="#af2483613453a61188f0ff474a6280f41">More...</a><br /></td></tr>
+<tr class="separator:af2483613453a61188f0ff474a6280f41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab4da46e9584c24120f902e3fecc51fb"><td class="memTemplParams" colspan="2">template&lt;typename DerivedR , typename DerivedDR &gt; </td></tr>
+<tr class="memitem:aab4da46e9584c24120f902e3fecc51fb"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1math_1_1_gradient.html">drake::math::Gradient</a>&lt; Eigen::Matrix&lt; typename DerivedR::Scalar, 4, 1 &gt;, DerivedDR::ColsAtCompileTime &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#aab4da46e9584c24120f902e3fecc51fb">drotmat2quat</a> (const Eigen::MatrixBase&lt; DerivedR &gt; &amp;R, const Eigen::MatrixBase&lt; DerivedDR &gt; &amp;dR)</td></tr>
+<tr class="memdesc:aab4da46e9584c24120f902e3fecc51fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the gradient of the function that converts rotation matrix to quaternion.  <a href="#aab4da46e9584c24120f902e3fecc51fb">More...</a><br /></td></tr>
+<tr class="separator:aab4da46e9584c24120f902e3fecc51fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab095ea87a1517bb9bae78d221f5d34da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#ab095ea87a1517bb9bae78d221f5d34da">ProjectMatToRotMatWithAxis</a> (const Eigen::Matrix3d &amp;M, const Eigen::Vector3d &amp;axis, <a class="el" href="classdouble.html">double</a> angle_lb, <a class="el" href="classdouble.html">double</a> angle_ub)</td></tr>
 <tr class="memdesc:ab095ea87a1517bb9bae78d221f5d34da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Projects an approximate 3 x 3 rotation matrix M onto an orthonormal matrix R so that R is a rotation matrix associated with a angle-axis rotation by an angle θ about a vector direction <code>axis</code>, with <code>angle_lb &lt;= θ &lt;= angle_ub</code>.  <a href="#ab095ea87a1517bb9bae78d221f5d34da">More...</a><br /></td></tr>
 <tr class="separator:ab095ea87a1517bb9bae78d221f5d34da"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -623,14 +623,14 @@ Functions</h2></td></tr>
 <tr class="separator:a579e00c8ae91d6bcdb32eb4d723eba73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
-<a id="afa470df3b29552da046a24c5707d6d2e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afa470df3b29552da046a24c5707d6d2e">&#9670;&nbsp;</a></span>AutoDiffMatrixType</h2>
+<a id="a6e5cf27ab08ab982d6c3f4429687e9fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e5cf27ab08ab982d6c3f4429687e9fb">&#9670;&nbsp;</a></span>AutoDiffMatrixType</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="namespacedrake_1_1math.html#afa470df3b29552da046a24c5707d6d2e">AutoDiffMatrixType</a> =  <a class="el" href="namespacedrake.html#aaadcdc21cc0c381e5879b1b7f023d82d">MatrixLikewise</a>&lt; Eigen::AutoDiffScalar&lt;<a class="el" href="namespacedrake.html#a01ae662d5635b7c9efe03d15d976f7a8">Vector</a>&lt;typename Derived::Scalar, nq&gt; &gt;, Derived&gt;</td>
+          <td class="memname">using <a class="el" href="namespacedrake_1_1math.html#a6e5cf27ab08ab982d6c3f4429687e9fb">AutoDiffMatrixType</a> =  <a class="el" href="namespacedrake.html#aaadcdc21cc0c381e5879b1b7f023d82d">MatrixLikewise</a>&lt;Eigen::AutoDiffScalar&lt;<a class="el" href="namespacedrake.html#a01ae662d5635b7c9efe03d15d976f7a8">Vector</a>&lt;typename Derived::Scalar, nq&gt; &gt;, Derived&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1644,14 +1644,14 @@ J = Σ [uₖ] [0 R][uₖ] ΔT
 
 </div>
 </div>
-<a id="af7256f47710ce695f1410cca9e3c0015"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af7256f47710ce695f1410cca9e3c0015">&#9670;&nbsp;</a></span>drotmat2quat()</h2>
+<a id="aab4da46e9584c24120f902e3fecc51fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab4da46e9584c24120f902e3fecc51fb">&#9670;&nbsp;</a></span>drotmat2quat()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structdrake_1_1math_1_1_gradient.html">drake::math::Gradient</a>&lt; Eigen::Matrix&lt;typename DerivedR::Scalar, 4, 1&gt;, DerivedDR::ColsAtCompileTime&gt;::type drake::math::drotmat2quat </td>
+          <td class="memname"><a class="el" href="structdrake_1_1math_1_1_gradient.html">drake::math::Gradient</a>&lt;Eigen::Matrix&lt;typename DerivedR::Scalar, 4, 1&gt;, DerivedDR::ColsAtCompileTime&gt;::type drake::math::drotmat2quat </td>
           <td>(</td>
           <td class="paramtype">const Eigen::MatrixBase&lt; DerivedR &gt; &amp;&#160;</td>
           <td class="paramname"><em>R</em>, </td>
@@ -1682,14 +1682,14 @@ J = Σ [uₖ] [0 R][uₖ] ΔT
 
 </div>
 </div>
-<a id="a0d0b3efdc97ef38971ce37ec458bd266"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0d0b3efdc97ef38971ce37ec458bd266">&#9670;&nbsp;</a></span>drotmat2rpy()</h2>
+<a id="af2483613453a61188f0ff474a6280f41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2483613453a61188f0ff474a6280f41">&#9670;&nbsp;</a></span>drotmat2rpy()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structdrake_1_1math_1_1_gradient.html">drake::math::Gradient</a>&lt; Eigen::Matrix&lt;typename DerivedR::Scalar, 3, 1&gt;, DerivedDR::ColsAtCompileTime&gt;::type drake::math::drotmat2rpy </td>
+          <td class="memname"><a class="el" href="structdrake_1_1math_1_1_gradient.html">drake::math::Gradient</a>&lt;Eigen::Matrix&lt;typename DerivedR::Scalar, 3, 1&gt;, DerivedDR::ColsAtCompileTime&gt;::type drake::math::drotmat2rpy </td>
           <td>(</td>
           <td class="paramtype">const Eigen::MatrixBase&lt; DerivedR &gt; &amp;&#160;</td>
           <td class="paramname"><em>R</em>, </td>
@@ -2292,7 +2292,7 @@ J = Σ [uₖ] [0 R][uₖ] ΔT
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacedrake_1_1math.html#afa470df3b29552da046a24c5707d6d2e">AutoDiffMatrixType</a>&lt;DerivedValue, DerivedGradient::ColsAtCompileTime&gt; drake::math::InitializeAutoDiff </td>
+          <td class="memname"><a class="el" href="namespacedrake_1_1math.html#a6e5cf27ab08ab982d6c3f4429687e9fb">AutoDiffMatrixType</a>&lt;DerivedValue, DerivedGradient::ColsAtCompileTime&gt; drake::math::InitializeAutoDiff </td>
           <td>(</td>
           <td class="paramtype">const Eigen::MatrixBase&lt; DerivedValue &gt; &amp;&#160;</td>
           <td class="paramname"><em>value</em>, </td>
@@ -2335,7 +2335,7 @@ J = Σ [uₖ] [0 R][uₖ] ΔT
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacedrake_1_1math.html#afa470df3b29552da046a24c5707d6d2e">AutoDiffMatrixType</a>&lt;Derived, nq&gt; drake::math::InitializeAutoDiff </td>
+          <td class="memname"><a class="el" href="namespacedrake_1_1math.html#a6e5cf27ab08ab982d6c3f4429687e9fb">AutoDiffMatrixType</a>&lt;Derived, nq&gt; drake::math::InitializeAutoDiff </td>
           <td>(</td>
           <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;&#160;</td>
           <td class="paramname"><em>value</em>, </td>
