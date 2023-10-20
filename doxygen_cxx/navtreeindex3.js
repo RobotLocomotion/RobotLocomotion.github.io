@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"classdrake_1_1examples_1_1planar__gripper_1_1_gripper_status_encoder.html#a75e91651c3cff6e58b91b5dc5f50d957":[3,0,0,3,11,5,2],
 "classdrake_1_1examples_1_1planar__gripper_1_1_gripper_status_encoder.html#ae1943684f78f1e3787dc45a1153becb8":[3,0,0,3,11,5,6],
 "classdrake_1_1examples_1_1planar__gripper_1_1_planar_manipuland_status_decoder.html":[3,0,0,3,11,6],
 "classdrake_1_1examples_1_1planar__gripper_1_1_planar_manipuland_status_decoder.html#a100be25e4b7ec7c928ccc77ba80310fb":[3,0,0,3,11,6,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX3 =
 "classdrake_1_1geometry_1_1_cylinder.html#a767ed95fe1f4141b796f975f5a3222ce":[3,0,0,4,9,3],
 "classdrake_1_1geometry_1_1_cylinder.html#a80401d480f15e1418a3274a2b2b51649":[3,0,0,4,9,4],
 "classdrake_1_1geometry_1_1_cylinder.html#ab1683c1d8c02a0c1e6f27bbe2b47c9a7":[3,0,0,4,9,2],
-"classdrake_1_1geometry_1_1_cylinder.html#acf30dff23bda145676c11a0303358e11":[3,0,0,4,9,0],
-"classdrake_1_1geometry_1_1_cylinder.html#afa32301e05c8b887c3ac1d0994c569d3":[3,0,0,4,9,6]
+"classdrake_1_1geometry_1_1_cylinder.html#acf30dff23bda145676c11a0303358e11":[3,0,0,4,9,0]
 };

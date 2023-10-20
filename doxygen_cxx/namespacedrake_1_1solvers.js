@@ -6,6 +6,8 @@ var namespacedrake_1_1solvers =
     [ "Binding", "classdrake_1_1solvers_1_1_binding.html", "classdrake_1_1solvers_1_1_binding" ],
     [ "Bound", "structdrake_1_1solvers_1_1_bound.html", "structdrake_1_1solvers_1_1_bound" ],
     [ "BoundingBoxConstraint", "classdrake_1_1solvers_1_1_bounding_box_constraint.html", "classdrake_1_1solvers_1_1_bounding_box_constraint" ],
+    [ "ClarabelSolver", "classdrake_1_1solvers_1_1_clarabel_solver.html", "classdrake_1_1solvers_1_1_clarabel_solver" ],
+    [ "ClarabelSolverDetails", "structdrake_1_1solvers_1_1_clarabel_solver_details.html", "structdrake_1_1solvers_1_1_clarabel_solver_details" ],
     [ "ClpSolver", "classdrake_1_1solvers_1_1_clp_solver.html", "classdrake_1_1solvers_1_1_clp_solver" ],
     [ "ClpSolverDetails", "structdrake_1_1solvers_1_1_clp_solver_details.html", "structdrake_1_1solvers_1_1_clp_solver_details" ],
     [ "Constraint", "classdrake_1_1solvers_1_1_constraint.html", "classdrake_1_1solvers_1_1_constraint" ],

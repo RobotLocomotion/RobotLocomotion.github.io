@@ -1223,11 +1223,11 @@ To orthonormalize a 3x3 matrix, use <a class="el" href="classdrake_1_1math_1_1_r
 <dl class="section pre"><dt>Precondition</dt><dd>axis_index is 0 or 1 or 2. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>in Debug builds if u_A is not a unit vector, i.e., |u_A| is not within a tolerance of 4ε ≈ 8.88E-16 to 1.0. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if u_A is not a unit vector, i.e., |u_A| is not within a tolerance of 4ε ≈ 8.88E-16 to 1.0. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>This method is designed for maximum performance and does not verify u_A as a unit vector in Release builds. Consider <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#aa1f727008230bd6410b3ff8849fd78e9" title="Creates a 3D right-handed orthonormal basis B from a given vector b_A, returned as a rotation matrix ...">MakeFromOneVector()</a>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This method is designed for speed and does not normalize u_A to ensure it is a unit vector. Alternatively, consider <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#aa1f727008230bd6410b3ff8849fd78e9" title="Creates a 3D right-handed orthonormal basis B from a given vector b_A, returned as a rotation matrix ...">MakeFromOneVector()</a>. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">R_AB</td><td>the rotation matrix whose properties are described in <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#aa1f727008230bd6410b3ff8849fd78e9" title="Creates a 3D right-handed orthonormal basis B from a given vector b_A, returned as a rotation matrix ...">MakeFromOneVector()</a>. </td></tr>

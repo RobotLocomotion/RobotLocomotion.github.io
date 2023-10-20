@@ -12,6 +12,8 @@ var searchData=
   ['chebyshevbasiselement',['ChebyshevBasisElement',['../classdrake_1_1symbolic_1_1_chebyshev_basis_element.html',1,'drake::symbolic']]],
   ['chebyshevpolynomial',['ChebyshevPolynomial',['../classdrake_1_1symbolic_1_1_chebyshev_polynomial.html',1,'drake::symbolic']]],
   ['ciriscollisiongeometry',['CIrisCollisionGeometry',['../classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html',1,'drake::geometry::optimization']]],
+  ['clarabelsolver',['ClarabelSolver',['../classdrake_1_1solvers_1_1_clarabel_solver.html',1,'drake::solvers']]],
+  ['clarabelsolverdetails',['ClarabelSolverDetails',['../structdrake_1_1solvers_1_1_clarabel_solver_details.html',1,'drake::solvers']]],
   ['clippingrange',['ClippingRange',['../classdrake_1_1geometry_1_1render_1_1_clipping_range.html',1,'drake::geometry::render']]],
   ['clothspringmodel',['ClothSpringModel',['../classdrake_1_1examples_1_1mass__spring__cloth_1_1_cloth_spring_model.html',1,'drake::examples::mass_spring_cloth']]],
   ['clothspringmodelgeometry',['ClothSpringModelGeometry',['../classdrake_1_1examples_1_1mass__spring__cloth_1_1_cloth_spring_model_geometry.html',1,'drake::examples::mass_spring_cloth']]],

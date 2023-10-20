@@ -1,0 +1,634 @@
+<!-- HTML header for doxygen 1.8.15-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: ClarabelSolver Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/%2Findex.ipynb">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+ </div>
+</div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classdrake_1_1solvers_1_1_clarabel_solver.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="classdrake_1_1solvers_1_1_clarabel_solver-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">ClarabelSolver Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>An interface to wrap Clarabel <a href="https://github.com/oxfordcontrol/Clarabel.cpp">https://github.com/oxfordcontrol/Clarabel.cpp</a>. </p>
+</div>
+<p><code>#include &lt;drake/solvers/clarabel_solver.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:abc922a429014ea4a1274a55f519ce4a9"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_clarabel_solver.html#abc922a429014ea4a1274a55f519ce4a9">Details</a> = <a class="el" href="structdrake_1_1solvers_1_1_clarabel_solver_details.html">ClarabelSolverDetails</a></td></tr>
+<tr class="memdesc:abc922a429014ea4a1274a55f519ce4a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of details stored in <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html" title="The result returned by MathematicalProgram::Solve().">MathematicalProgramResult</a>.  <a href="#abc922a429014ea4a1274a55f519ce4a9">More...</a><br /></td></tr>
+<tr class="separator:abc922a429014ea4a1274a55f519ce4a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ad04ea738e9f1ebbcb6534fff30b3cd6f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_clarabel_solver.html#ad04ea738e9f1ebbcb6534fff30b3cd6f">ClarabelSolver</a> ()</td></tr>
+<tr class="separator:ad04ea738e9f1ebbcb6534fff30b3cd6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19b7f75e04ee98a7f87e6d08c60ab057"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_clarabel_solver.html#a19b7f75e04ee98a7f87e6d08c60ab057">~ClarabelSolver</a> () final</td></tr>
+<tr class="separator:a19b7f75e04ee98a7f87e6d08c60ab057"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00b55f8b4c1c4f19b45621a84deed66c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">MathematicalProgramResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_clarabel_solver.html#a00b55f8b4c1c4f19b45621a84deed66c">Solve</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;prog, const std::optional&lt; Eigen::VectorXd &gt; &amp;initial_guess=std::nullopt, const std::optional&lt; <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> &gt; &amp;solver_options=std::nullopt) const</td></tr>
+<tr class="memdesc:a00b55f8b4c1c4f19b45621a84deed66c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html#aec933bef2f8c7a702a6fd5c59feac5ec" title="Solves an optimization program with optional initial guess and solver options.">SolverInterface::Solve()</a>, but the result is a return value instead of an output argument.  <a href="#a00b55f8b4c1c4f19b45621a84deed66c">More...</a><br /></td></tr>
+<tr class="separator:a00b55f8b4c1c4f19b45621a84deed66c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2ff6a250a78bb79ef64f7527c51b01c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_clarabel_solver.html#af2ff6a250a78bb79ef64f7527c51b01c">Solve</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;, const std::optional&lt; Eigen::VectorXd &gt; &amp;, const std::optional&lt; <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> &gt; &amp;, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">MathematicalProgramResult</a> *) const override</td></tr>
+<tr class="separator:af2ff6a250a78bb79ef64f7527c51b01c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
+<tr class="memitem:a3f3fbf3ab237647f11a0be506e3cf4b4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_clarabel_solver.html#a3f3fbf3ab237647f11a0be506e3cf4b4">ClarabelSolver</a> (const <a class="el" href="classdrake_1_1solvers_1_1_clarabel_solver.html">ClarabelSolver</a> &amp;)=delete</td></tr>
+<tr class="separator:a3f3fbf3ab237647f11a0be506e3cf4b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89f7064c4062735d983cc9dfa238fec1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_clarabel_solver.html">ClarabelSolver</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_clarabel_solver.html#a89f7064c4062735d983cc9dfa238fec1">operator=</a> (const <a class="el" href="classdrake_1_1solvers_1_1_clarabel_solver.html">ClarabelSolver</a> &amp;)=delete</td></tr>
+<tr class="separator:a89f7064c4062735d983cc9dfa238fec1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc0947a1c74f82df3bbd32327ebff7e8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_clarabel_solver.html#acc0947a1c74f82df3bbd32327ebff7e8">ClarabelSolver</a> (<a class="el" href="classdrake_1_1solvers_1_1_clarabel_solver.html">ClarabelSolver</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:acc0947a1c74f82df3bbd32327ebff7e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af46392f701201c2f9b5a702105d50bd2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_clarabel_solver.html">ClarabelSolver</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_clarabel_solver.html#af46392f701201c2f9b5a702105d50bd2">operator=</a> (<a class="el" href="classdrake_1_1solvers_1_1_clarabel_solver.html">ClarabelSolver</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:af46392f701201c2f9b5a702105d50bd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classdrake_1_1solvers_1_1_solver_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classdrake_1_1solvers_1_1_solver_base')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classdrake_1_1solvers_1_1_solver_base.html">SolverBase</a></td></tr>
+<tr class="memitem:a6d380dcebbd2d8a52d4c44b931fec3a1 inherit pub_methods_classdrake_1_1solvers_1_1_solver_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_base.html#a6d380dcebbd2d8a52d4c44b931fec3a1">~SolverBase</a> () override</td></tr>
+<tr class="separator:a6d380dcebbd2d8a52d4c44b931fec3a1 inherit pub_methods_classdrake_1_1solvers_1_1_solver_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00b55f8b4c1c4f19b45621a84deed66c inherit pub_methods_classdrake_1_1solvers_1_1_solver_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">MathematicalProgramResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_base.html#a00b55f8b4c1c4f19b45621a84deed66c">Solve</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;prog, const std::optional&lt; Eigen::VectorXd &gt; &amp;initial_guess=std::nullopt, const std::optional&lt; <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> &gt; &amp;solver_options=std::nullopt) const</td></tr>
+<tr class="memdesc:a00b55f8b4c1c4f19b45621a84deed66c inherit pub_methods_classdrake_1_1solvers_1_1_solver_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html#aec933bef2f8c7a702a6fd5c59feac5ec" title="Solves an optimization program with optional initial guess and solver options.">SolverInterface::Solve()</a>, but the result is a return value instead of an output argument.  <a href="classdrake_1_1solvers_1_1_solver_base.html#a00b55f8b4c1c4f19b45621a84deed66c">More...</a><br /></td></tr>
+<tr class="separator:a00b55f8b4c1c4f19b45621a84deed66c inherit pub_methods_classdrake_1_1solvers_1_1_solver_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2ff6a250a78bb79ef64f7527c51b01c inherit pub_methods_classdrake_1_1solvers_1_1_solver_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_base.html#af2ff6a250a78bb79ef64f7527c51b01c">Solve</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;, const std::optional&lt; Eigen::VectorXd &gt; &amp;, const std::optional&lt; <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> &gt; &amp;, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">MathematicalProgramResult</a> *) const override</td></tr>
+<tr class="memdesc:af2ff6a250a78bb79ef64f7527c51b01c inherit pub_methods_classdrake_1_1solvers_1_1_solver_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves an optimization program with optional initial guess and solver options.  <a href="classdrake_1_1solvers_1_1_solver_base.html#af2ff6a250a78bb79ef64f7527c51b01c">More...</a><br /></td></tr>
+<tr class="separator:af2ff6a250a78bb79ef64f7527c51b01c inherit pub_methods_classdrake_1_1solvers_1_1_solver_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac910159108658c34a743b0806d81ab10 inherit pub_methods_classdrake_1_1solvers_1_1_solver_base"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_base.html#ac910159108658c34a743b0806d81ab10">available</a> () const override</td></tr>
+<tr class="memdesc:ac910159108658c34a743b0806d81ab10 inherit pub_methods_classdrake_1_1solvers_1_1_solver_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff support for this solver has been compiled into Drake.  <a href="classdrake_1_1solvers_1_1_solver_base.html#ac910159108658c34a743b0806d81ab10">More...</a><br /></td></tr>
+<tr class="separator:ac910159108658c34a743b0806d81ab10 inherit pub_methods_classdrake_1_1solvers_1_1_solver_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4420a962b7baa94708051d493e790797 inherit pub_methods_classdrake_1_1solvers_1_1_solver_base"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_base.html#a4420a962b7baa94708051d493e790797">enabled</a> () const override</td></tr>
+<tr class="memdesc:a4420a962b7baa94708051d493e790797 inherit pub_methods_classdrake_1_1solvers_1_1_solver_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff this solver is properly configured for use at runtime.  <a href="classdrake_1_1solvers_1_1_solver_base.html#a4420a962b7baa94708051d493e790797">More...</a><br /></td></tr>
+<tr class="separator:a4420a962b7baa94708051d493e790797 inherit pub_methods_classdrake_1_1solvers_1_1_solver_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac539874b9f15a8ff31c4081a32469452 inherit pub_methods_classdrake_1_1solvers_1_1_solver_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_base.html#ac539874b9f15a8ff31c4081a32469452">solver_id</a> () const final</td></tr>
+<tr class="memdesc:ac539874b9f15a8ff31c4081a32469452 inherit pub_methods_classdrake_1_1solvers_1_1_solver_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the identifier of this solver.  <a href="classdrake_1_1solvers_1_1_solver_base.html#ac539874b9f15a8ff31c4081a32469452">More...</a><br /></td></tr>
+<tr class="separator:ac539874b9f15a8ff31c4081a32469452 inherit pub_methods_classdrake_1_1solvers_1_1_solver_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ef97dfe948b1e50246018c3cfe8a62e inherit pub_methods_classdrake_1_1solvers_1_1_solver_base"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_base.html#a0ef97dfe948b1e50246018c3cfe8a62e">AreProgramAttributesSatisfied</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;) const override</td></tr>
+<tr class="memdesc:a0ef97dfe948b1e50246018c3cfe8a62e inherit pub_methods_classdrake_1_1solvers_1_1_solver_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff the program's attributes are compatible with this solver's capabilities.  <a href="classdrake_1_1solvers_1_1_solver_base.html#a0ef97dfe948b1e50246018c3cfe8a62e">More...</a><br /></td></tr>
+<tr class="separator:a0ef97dfe948b1e50246018c3cfe8a62e inherit pub_methods_classdrake_1_1solvers_1_1_solver_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9425d90e072bea5285bd14ff9675a2bc inherit pub_methods_classdrake_1_1solvers_1_1_solver_base"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_base.html#a9425d90e072bea5285bd14ff9675a2bc">ExplainUnsatisfiedProgramAttributes</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;) const override</td></tr>
+<tr class="memdesc:a9425d90e072bea5285bd14ff9675a2bc inherit pub_methods_classdrake_1_1solvers_1_1_solver_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Describes the reasons (if any) why the program is incompatible with this solver's capabilities.  <a href="classdrake_1_1solvers_1_1_solver_base.html#a9425d90e072bea5285bd14ff9675a2bc">More...</a><br /></td></tr>
+<tr class="separator:a9425d90e072bea5285bd14ff9675a2bc inherit pub_methods_classdrake_1_1solvers_1_1_solver_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfbd02da50f7b6eeee38cc795e4fd2e5 inherit pub_methods_classdrake_1_1solvers_1_1_solver_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_base.html#acfbd02da50f7b6eeee38cc795e4fd2e5">SolverBase</a> (const <a class="el" href="classdrake_1_1solvers_1_1_solver_base.html">SolverBase</a> &amp;)=delete</td></tr>
+<tr class="separator:acfbd02da50f7b6eeee38cc795e4fd2e5 inherit pub_methods_classdrake_1_1solvers_1_1_solver_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8af6af40ba9b43e572d4b8ece079ff5 inherit pub_methods_classdrake_1_1solvers_1_1_solver_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_solver_base.html">SolverBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_base.html#ae8af6af40ba9b43e572d4b8ece079ff5">operator=</a> (const <a class="el" href="classdrake_1_1solvers_1_1_solver_base.html">SolverBase</a> &amp;)=delete</td></tr>
+<tr class="separator:ae8af6af40ba9b43e572d4b8ece079ff5 inherit pub_methods_classdrake_1_1solvers_1_1_solver_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a049180fe6d71c290a16c62f1b5d97836 inherit pub_methods_classdrake_1_1solvers_1_1_solver_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_base.html#a049180fe6d71c290a16c62f1b5d97836">SolverBase</a> (<a class="el" href="classdrake_1_1solvers_1_1_solver_base.html">SolverBase</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a049180fe6d71c290a16c62f1b5d97836 inherit pub_methods_classdrake_1_1solvers_1_1_solver_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99aef0bbf8c58c1e72542079877188ee inherit pub_methods_classdrake_1_1solvers_1_1_solver_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_solver_base.html">SolverBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_base.html#a99aef0bbf8c58c1e72542079877188ee">operator=</a> (<a class="el" href="classdrake_1_1solvers_1_1_solver_base.html">SolverBase</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a99aef0bbf8c58c1e72542079877188ee inherit pub_methods_classdrake_1_1solvers_1_1_solver_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classdrake_1_1solvers_1_1_solver_interface"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classdrake_1_1solvers_1_1_solver_interface')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html">SolverInterface</a></td></tr>
+<tr class="memitem:abf3f7966f1746f4f30c609c769f8b906 inherit pub_methods_classdrake_1_1solvers_1_1_solver_interface"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html#abf3f7966f1746f4f30c609c769f8b906">~SolverInterface</a> ()</td></tr>
+<tr class="separator:abf3f7966f1746f4f30c609c769f8b906 inherit pub_methods_classdrake_1_1solvers_1_1_solver_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9b1880991b1fc732485c99036790983 inherit pub_methods_classdrake_1_1solvers_1_1_solver_interface"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html#ae9b1880991b1fc732485c99036790983">SolverInterface</a> (const <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html">SolverInterface</a> &amp;)=delete</td></tr>
+<tr class="separator:ae9b1880991b1fc732485c99036790983 inherit pub_methods_classdrake_1_1solvers_1_1_solver_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18aa508724ac803ce5f8ee66e358af99 inherit pub_methods_classdrake_1_1solvers_1_1_solver_interface"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html">SolverInterface</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html#a18aa508724ac803ce5f8ee66e358af99">operator=</a> (const <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html">SolverInterface</a> &amp;)=delete</td></tr>
+<tr class="separator:a18aa508724ac803ce5f8ee66e358af99 inherit pub_methods_classdrake_1_1solvers_1_1_solver_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a417d58de5faf840e5c617c3293695c15 inherit pub_methods_classdrake_1_1solvers_1_1_solver_interface"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html#a417d58de5faf840e5c617c3293695c15">SolverInterface</a> (<a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html">SolverInterface</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a417d58de5faf840e5c617c3293695c15 inherit pub_methods_classdrake_1_1solvers_1_1_solver_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1e8a72fc26766f97bb9a3ab312b0921 inherit pub_methods_classdrake_1_1solvers_1_1_solver_interface"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html">SolverInterface</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html#ad1e8a72fc26766f97bb9a3ab312b0921">operator=</a> (<a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html">SolverInterface</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:ad1e8a72fc26766f97bb9a3ab312b0921 inherit pub_methods_classdrake_1_1solvers_1_1_solver_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Static versions of the instance methods with similar names.</div></td></tr>
+<tr class="memitem:a4dc451b7db72a168d9f0da1746011b45"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_clarabel_solver.html#a4dc451b7db72a168d9f0da1746011b45">id</a> ()</td></tr>
+<tr class="separator:a4dc451b7db72a168d9f0da1746011b45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a277134785588d69bb461a4a402877e7a"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_clarabel_solver.html#a277134785588d69bb461a4a402877e7a">is_available</a> ()</td></tr>
+<tr class="separator:a277134785588d69bb461a4a402877e7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2acbb1fddaffbf52c3eaf70f6dfa41bd"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_clarabel_solver.html#a2acbb1fddaffbf52c3eaf70f6dfa41bd">is_enabled</a> ()</td></tr>
+<tr class="separator:a2acbb1fddaffbf52c3eaf70f6dfa41bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a793b4bef71b184ac87f03d80b21c04d2"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_clarabel_solver.html#a793b4bef71b184ac87f03d80b21c04d2">ProgramAttributesSatisfied</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;)</td></tr>
+<tr class="separator:a793b4bef71b184ac87f03d80b21c04d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a606861b43d96b23fe439c905aaf715a0"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_clarabel_solver.html#a606861b43d96b23fe439c905aaf715a0">UnsatisfiedProgramAttributes</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;)</td></tr>
+<tr class="separator:a606861b43d96b23fe439c905aaf715a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_methods_classdrake_1_1solvers_1_1_solver_base"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classdrake_1_1solvers_1_1_solver_base')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classdrake_1_1solvers_1_1_solver_base.html">SolverBase</a></td></tr>
+<tr class="memitem:a174aede98257e1c1c25dc3d5dafc4568 inherit pro_methods_classdrake_1_1solvers_1_1_solver_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_base.html#a174aede98257e1c1c25dc3d5dafc4568">SolverBase</a> (const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;id, std::function&lt; bool()&gt; <a class="el" href="classdrake_1_1solvers_1_1_solver_base.html#ac910159108658c34a743b0806d81ab10">available</a>, std::function&lt; bool()&gt; <a class="el" href="classdrake_1_1solvers_1_1_solver_base.html#a4420a962b7baa94708051d493e790797">enabled</a>, std::function&lt; bool(const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;)&gt; are_satisfied, std::function&lt; std::string(const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;)&gt; explain_unsatisfied=nullptr)</td></tr>
+<tr class="memdesc:a174aede98257e1c1c25dc3d5dafc4568 inherit pro_methods_classdrake_1_1solvers_1_1_solver_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1solvers_1_1_solver_base.html" title="Abstract base class used by implementations of individual solvers.">SolverBase</a> with the given default implementations of the <a class="el" href="classdrake_1_1solvers_1_1_solver_base.html#ac539874b9f15a8ff31c4081a32469452" title="Returns the identifier of this solver.">solver_id()</a>, <a class="el" href="classdrake_1_1solvers_1_1_solver_base.html#ac910159108658c34a743b0806d81ab10" title="Returns true iff support for this solver has been compiled into Drake.">available()</a>, <a class="el" href="classdrake_1_1solvers_1_1_solver_base.html#a4420a962b7baa94708051d493e790797" title="Returns true iff this solver is properly configured for use at runtime.">enabled()</a>, <a class="el" href="classdrake_1_1solvers_1_1_solver_base.html#a0ef97dfe948b1e50246018c3cfe8a62e" title="Returns true iff the program&#39;s attributes are compatible with this solver&#39;s capabilities.">AreProgramAttributesSatisfied()</a>, and <a class="el" href="classdrake_1_1solvers_1_1_solver_base.html#a9425d90e072bea5285bd14ff9675a2bc" title="Describes the reasons (if any) why the program is incompatible with this solver&#39;s capabilities.">ExplainUnsatisfiedProgramAttributes()</a> methods.  <a href="classdrake_1_1solvers_1_1_solver_base.html#a174aede98257e1c1c25dc3d5dafc4568">More...</a><br /></td></tr>
+<tr class="separator:a174aede98257e1c1c25dc3d5dafc4568 inherit pro_methods_classdrake_1_1solvers_1_1_solver_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classdrake_1_1solvers_1_1_solver_interface"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classdrake_1_1solvers_1_1_solver_interface')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html">SolverInterface</a></td></tr>
+<tr class="memitem:a59a2b968eced6bf266e780015416db83 inherit pro_methods_classdrake_1_1solvers_1_1_solver_interface"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html#a59a2b968eced6bf266e780015416db83">SolverInterface</a> ()</td></tr>
+<tr class="separator:a59a2b968eced6bf266e780015416db83 inherit pro_methods_classdrake_1_1solvers_1_1_solver_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="abc922a429014ea4a1274a55f519ce4a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc922a429014ea4a1274a55f519ce4a9">&#9670;&nbsp;</a></span>Details</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classdrake_1_1solvers_1_1_clarabel_solver.html#abc922a429014ea4a1274a55f519ce4a9">Details</a> =  <a class="el" href="structdrake_1_1solvers_1_1_clarabel_solver_details.html">ClarabelSolverDetails</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Type of details stored in <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html" title="The result returned by MathematicalProgram::Solve().">MathematicalProgramResult</a>. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a3f3fbf3ab237647f11a0be506e3cf4b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f3fbf3ab237647f11a0be506e3cf4b4">&#9670;&nbsp;</a></span>ClarabelSolver() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_clarabel_solver.html">ClarabelSolver</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_clarabel_solver.html">ClarabelSolver</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acc0947a1c74f82df3bbd32327ebff7e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc0947a1c74f82df3bbd32327ebff7e8">&#9670;&nbsp;</a></span>ClarabelSolver() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_clarabel_solver.html">ClarabelSolver</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_clarabel_solver.html">ClarabelSolver</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad04ea738e9f1ebbcb6534fff30b3cd6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad04ea738e9f1ebbcb6534fff30b3cd6f">&#9670;&nbsp;</a></span>ClarabelSolver() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_clarabel_solver.html">ClarabelSolver</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a19b7f75e04ee98a7f87e6d08c60ab057"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19b7f75e04ee98a7f87e6d08c60ab057">&#9670;&nbsp;</a></span>~ClarabelSolver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="classdrake_1_1solvers_1_1_clarabel_solver.html">ClarabelSolver</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a4dc451b7db72a168d9f0da1746011b45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dc451b7db72a168d9f0da1746011b45">&#9670;&nbsp;</a></span>id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> id </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a277134785588d69bb461a4a402877e7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a277134785588d69bb461a4a402877e7a">&#9670;&nbsp;</a></span>is_available()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool is_available </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2acbb1fddaffbf52c3eaf70f6dfa41bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2acbb1fddaffbf52c3eaf70f6dfa41bd">&#9670;&nbsp;</a></span>is_enabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool is_enabled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af46392f701201c2f9b5a702105d50bd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af46392f701201c2f9b5a702105d50bd2">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_clarabel_solver.html">ClarabelSolver</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_clarabel_solver.html">ClarabelSolver</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a89f7064c4062735d983cc9dfa238fec1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89f7064c4062735d983cc9dfa238fec1">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_clarabel_solver.html">ClarabelSolver</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_clarabel_solver.html">ClarabelSolver</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a793b4bef71b184ac87f03d80b21c04d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a793b4bef71b184ac87f03d80b21c04d2">&#9670;&nbsp;</a></span>ProgramAttributesSatisfied()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool ProgramAttributesSatisfied </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a00b55f8b4c1c4f19b45621a84deed66c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00b55f8b4c1c4f19b45621a84deed66c">&#9670;&nbsp;</a></span>Solve() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">MathematicalProgramResult</a> Solve</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Like <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html#aec933bef2f8c7a702a6fd5c59feac5ec" title="Solves an optimization program with optional initial guess and solver options.">SolverInterface::Solve()</a>, but the result is a return value instead of an output argument. </p>
+
+</div>
+</div>
+<a id="af2ff6a250a78bb79ef64f7527c51b01c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2ff6a250a78bb79ef64f7527c51b01c">&#9670;&nbsp;</a></span>Solve() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Solve</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a606861b43d96b23fe439c905aaf715a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a606861b43d96b23fe439c905aaf715a0">&#9670;&nbsp;</a></span>UnsatisfiedProgramAttributes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string UnsatisfiedProgramAttributes </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/solvers/<a class="el" href="clarabel__solver_8h.html">clarabel_solver.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a class="el" href="namespacedrake.html">drake</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1solvers.html">solvers</a></li><li class="navelem"><a class="el" href="classdrake_1_1solvers_1_1_clarabel_solver.html">ClarabelSolver</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>    
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>    
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().value = searchBox.searchLabel;
+</script>
+</body>
+</html>

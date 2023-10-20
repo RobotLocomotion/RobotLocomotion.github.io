@@ -20,5 +20,6 @@ var searchData=
   ['is_5fbool',['is_bool',['../structdrake_1_1scalar__predicate.html#ab6fdcd06e06c892b3492eb6ea8f15be2',1,'drake::scalar_predicate']]],
   ['is_5fvalid',['is_valid',['../structdrake_1_1assert_1_1_condition_traits_3_01symbolic_1_1_formula_01_4.html#ac40e2f6b16673621ee11f794813446bf',1,'drake::assert::ConditionTraits&lt; symbolic::Formula &gt;']]],
   ['iter',['iter',['../structdrake_1_1solvers_1_1_osqp_solver_details.html#aab6f168571c2073e01e240524b8a3da0',1,'drake::solvers::OsqpSolverDetails::iter()'],['../structdrake_1_1solvers_1_1_scs_solver_details.html#aab6f168571c2073e01e240524b8a3da0',1,'drake::solvers::ScsSolverDetails::iter()']]],
-  ['iteration_5flimit',['iteration_limit',['../structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ab9404d7dc104e7eb4e27ed7e38ccff72',1,'drake::geometry::optimization::IrisOptions']]]
+  ['iteration_5flimit',['iteration_limit',['../structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ab9404d7dc104e7eb4e27ed7e38ccff72',1,'drake::geometry::optimization::IrisOptions']]],
+  ['iterations',['iterations',['../structdrake_1_1solvers_1_1_clarabel_solver_details.html#a1d10e252e778731e59f0f71afd7e727e',1,'drake::solvers::ClarabelSolverDetails']]]
 ];

@@ -1380,6 +1380,30 @@ ctor’s identity.</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="pydrake.symbolic.from_sympy">
+<span class="sig-prename descclassname"><span class="pre">pydrake.symbolic.</span></span><span class="sig-name descname"><span class="pre">from_sympy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">sympy.Expr</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memo</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#pydrake.symbolic.Variable" title="pydrake.symbolic.Variable"><span class="pre">pydrake.symbolic.Variable</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#pydrake.symbolic.Formula" title="pydrake.symbolic.Formula"><span class="pre">pydrake.symbolic.Formula</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.symbolic.from_sympy" title="Permalink to this definition"></a></dt>
+<dd><p>Converts a SymPy Expr to the corresponding pydrake object.</p>
+<p>Certain expressions are not supported and will raise NotImplementedError.</p>
+<p>This function aims to support the latest contemporaneous version of SymPy
+as of Drake’s release date.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – The SymPy object to be converted.</p></li>
+<li><p><strong>memo</strong> – (Optional) Mapping between SymPy variables and Drake variables.
+Converting a SymPy variable to a <code class="docutils literal notranslate"><span class="pre">pydrake.symbolic.Variable</span></code> will
+look up the SymPy variable as a key in this dictionary.
+If a value is found, then it will be used as the Drake variable.
+If no value is found, then (for now) raises an exception. In the
+future, we might support automatically creating variables, but
+that is not yet implemented.</p></li>
+</ul>
+</dd>
+</dl>
+<p>See also <a class="reference internal" href="#pydrake.symbolic.to_sympy" title="pydrake.symbolic.to_sympy"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pydrake.symbolic.to_sympy()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="pydrake.symbolic.GetVariableVector">
 <span class="sig-prename descclassname"><span class="pre">pydrake.symbolic.</span></span><span class="sig-name descname"><span class="pre">GetVariableVector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expressions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.symbolic.GetVariableVector" title="Permalink to this definition"></a></dt>
 <dd><p>Constructs a vector of variables from the vector of variable
@@ -2765,6 +2789,31 @@ are treated as symbolic variables (e.g. decision variable).</p>
 resulting polynomial approximating <code class="docutils literal notranslate"><span class="pre">f</span></code> around <code class="docutils literal notranslate"><span class="pre">a</span></code>.</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydrake.symbolic.to_sympy">
+<span class="sig-prename descclassname"><span class="pre">pydrake.symbolic.</span></span><span class="sig-name descname"><span class="pre">to_sympy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#pydrake.symbolic.Variable" title="pydrake.symbolic.Variable"><span class="pre">pydrake.symbolic.Variable</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#pydrake.symbolic.Formula" title="pydrake.symbolic.Formula"><span class="pre">pydrake.symbolic.Formula</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memo</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">sympy.Expr</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.symbolic.to_sympy" title="Permalink to this definition"></a></dt>
+<dd><p>Converts a pydrake object to the corresponding SymPy Expr.</p>
+<p>Certain expressions are not supported and will raise NotImplementedError.
+(Most acutely, note that <cite>int</cite> is not yet supported.)</p>
+<p>This function aims to support the latest contemporaneous version of SymPy
+as of Drake’s release date.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – The pydrake object to be converted.</p></li>
+<li><p><strong>memo</strong> – (Optional) Mapping between Drake variables and SymPy variables.
+Converting a <code class="docutils literal notranslate"><span class="pre">pydrake.symbolic.Variable</span></code> to SymPy will look up
+the Drake variable’s <code class="docutils literal notranslate"><span class="pre">v.get_id()</span></code> as a key in this dictionary.
+If a value is found, it will be used as the SymPy atom for that
+Drake variable.  Otherwise, a new SymPy variable will be created
+and used, and both mappings <code class="docutils literal notranslate"><span class="pre">{drake_var.get_id():</span> <span class="pre">sympy_var}</span></code>
+and <code class="docutils literal notranslate"><span class="pre">{sympy_var:</span> <span class="pre">drake_var}</span></code> will be inserted into <code class="docutils literal notranslate"><span class="pre">memo</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<p>See also <a class="reference internal" href="#pydrake.symbolic.from_sympy" title="pydrake.symbolic.from_sympy"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pydrake.symbolic.from_sympy()</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py function">

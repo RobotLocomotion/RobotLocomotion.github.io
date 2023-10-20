@@ -68,6 +68,7 @@ var hierarchy =
     [ "CameraInfo", "classdrake_1_1systems_1_1sensors_1_1_camera_info.html", null ],
     [ "ChebyshevPolynomial", "classdrake_1_1symbolic_1_1_chebyshev_polynomial.html", null ],
     [ "CIrisCollisionGeometry", "classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html", null ],
+    [ "ClarabelSolverDetails", "structdrake_1_1solvers_1_1_clarabel_solver_details.html", null ],
     [ "ClippingRange", "classdrake_1_1geometry_1_1render_1_1_clipping_range.html", null ],
     [ "ClpSolverDetails", "structdrake_1_1solvers_1_1_clp_solver_details.html", null ],
     [ "CodeGenVisitor", "classdrake_1_1symbolic_1_1_code_gen_visitor.html", null ],
@@ -628,8 +629,8 @@ var hierarchy =
     ] ],
     [ "NumericalGradientOption", "classdrake_1_1math_1_1_numerical_gradient_option.html", null ],
     [ "Object", "classdrake_1_1pydrake_1_1_object.html", null ],
-    [ "CspaceFreePolytopeBase::Options", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html", null ],
     [ "MixedIntegerBranchAndBound::Options", "structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html", null ],
+    [ "CspaceFreePolytopeBase::Options", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html", null ],
     [ "GlobalInverseKinematics::Options", "structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html", null ],
     [ "Meshcat::OrthographicCamera", "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html", null ],
     [ "OsqpSolverDetails", "structdrake_1_1solvers_1_1_osqp_solver_details.html", null ],
@@ -794,6 +795,7 @@ var hierarchy =
     [ "SolverId", "classdrake_1_1solvers_1_1_solver_id.html", null ],
     [ "SolverInterface", "classdrake_1_1solvers_1_1_solver_interface.html", [
       [ "SolverBase", "classdrake_1_1solvers_1_1_solver_base.html", [
+        [ "ClarabelSolver", "classdrake_1_1solvers_1_1_clarabel_solver.html", null ],
         [ "ClpSolver", "classdrake_1_1solvers_1_1_clp_solver.html", null ],
         [ "CsdpSolver", "classdrake_1_1solvers_1_1_csdp_solver.html", null ],
         [ "EqualityConstrainedQPSolver", "classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html", null ],

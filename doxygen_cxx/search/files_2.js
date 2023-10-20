@@ -17,6 +17,7 @@ var searchData=
   ['chebyshev_5fpolynomial_2eh',['chebyshev_polynomial.h',['../chebyshev__polynomial_8h.html',1,'']]],
   ['check_5fconstraint_5feval_5fnonsymbolic_2eh',['check_constraint_eval_nonsymbolic.h',['../check__constraint__eval__nonsymbolic_8h.html',1,'']]],
   ['choose_5fbest_5fsolver_2eh',['choose_best_solver.h',['../choose__best__solver_8h.html',1,'']]],
+  ['clarabel_5fsolver_2eh',['clarabel_solver.h',['../clarabel__solver_8h.html',1,'']]],
   ['cloth_5fspring_5fmodel_2eh',['cloth_spring_model.h',['../cloth__spring__model_8h.html',1,'']]],
   ['cloth_5fspring_5fmodel_5fgeometry_2eh',['cloth_spring_model_geometry.h',['../cloth__spring__model__geometry_8h.html',1,'']]],
   ['clp_5fsolver_2eh',['clp_solver.h',['../clp__solver_8h.html',1,'']]],

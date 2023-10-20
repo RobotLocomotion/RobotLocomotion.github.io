@@ -142,6 +142,7 @@ var NAVTREEINDEX0 =
 "choose__best__solver_8h.html#ac0a32aadfdc1241e4e39f206479b6000":[4,0,0,11,5,4],
 "choose__best__solver_8h.html#add46c9926ac1085abe828a7cc987cad1":[4,0,0,11,5,1],
 "choose__best__solver_8h.html#af2e1d0462e0e3506873f993879d48898":[4,0,0,11,5,0],
+"clarabel__solver_8h.html":[4,0,0,11,6],
 "class_module_init_vtk_rendering_open_g_l2.html":[3,0,3],
 "classdrake_1_1_abstract_value.html":[3,0,0,20],
 "classdrake_1_1_abstract_value.html#a152ec6f223695f5a4f3b3e87ccc32ac4":[3,0,0,20,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "classdrake_1_1_polynomial.html#a3b8ee5b634b35a7c4db1cddc532d177c":[3,0,0,41,57],
 "classdrake_1_1_polynomial.html#a3cb360c5667c073fe8f1b8a1271e56ba":[3,0,0,41,26],
 "classdrake_1_1_polynomial.html#a3d04328e0ea4df22f47e1651c706082d":[3,0,0,41,27],
-"classdrake_1_1_polynomial.html#a3dd692da2aab783313611876753b0b3f":[3,0,0,41,61],
-"classdrake_1_1_polynomial.html#a3e8ad3a8b81ea18e3f8f5faba26495de":[3,0,0,41,17]
+"classdrake_1_1_polynomial.html#a3dd692da2aab783313611876753b0b3f":[3,0,0,41,61]
 };

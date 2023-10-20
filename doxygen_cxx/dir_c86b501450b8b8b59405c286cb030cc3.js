@@ -13,6 +13,10 @@ var dir_c86b501450b8b8b59405c286cb030cc3 =
       [ "Options", "structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html", "structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options" ]
     ] ],
     [ "choose_best_solver.h", "choose__best__solver_8h.html", "choose__best__solver_8h" ],
+    [ "clarabel_solver.h", "clarabel__solver_8h.html", [
+      [ "ClarabelSolverDetails", "structdrake_1_1solvers_1_1_clarabel_solver_details.html", "structdrake_1_1solvers_1_1_clarabel_solver_details" ],
+      [ "ClarabelSolver", "classdrake_1_1solvers_1_1_clarabel_solver.html", "classdrake_1_1solvers_1_1_clarabel_solver" ]
+    ] ],
     [ "clp_solver.h", "clp__solver_8h.html", [
       [ "ClpSolverDetails", "structdrake_1_1solvers_1_1_clp_solver_details.html", "structdrake_1_1solvers_1_1_clp_solver_details" ],
       [ "ClpSolver", "classdrake_1_1solvers_1_1_clp_solver.html", "classdrake_1_1solvers_1_1_clp_solver" ]

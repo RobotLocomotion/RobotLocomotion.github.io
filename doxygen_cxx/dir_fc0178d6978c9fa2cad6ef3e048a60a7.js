@@ -48,5 +48,6 @@ var dir_fc0178d6978c9fa2cad6ef3e048a60a7 =
     [ "rotation_conversion_gradient.h", "rotation__conversion__gradient_8h.html", "rotation__conversion__gradient_8h" ],
     [ "rotation_matrix.h", "rotation__matrix_8h.html", "rotation__matrix_8h" ],
     [ "soft_min_max.h", "soft__min__max_8h.html", "soft__min__max_8h" ],
+    [ "unit_vector.h", "unit__vector_8h.html", null ],
     [ "wrap_to.h", "wrap__to_8h.html", "wrap__to_8h" ]
 ];

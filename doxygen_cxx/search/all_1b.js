@@ -19,6 +19,7 @@ var searchData=
   ['_7ecartesianproduct',['~CartesianProduct',['../classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#af8787c96bea07898c336a5a934e0975e',1,'drake::geometry::optimization::CartesianProduct']]],
   ['_7ecentroidalmomentumconstraint',['~CentroidalMomentumConstraint',['../classdrake_1_1multibody_1_1_centroidal_momentum_constraint.html#a48049f4688cc7bbe9544cf8296d749c4',1,'drake::multibody::CentroidalMomentumConstraint']]],
   ['_7echebyshevbasiselement',['~ChebyshevBasisElement',['../classdrake_1_1symbolic_1_1_chebyshev_basis_element.html#a54c331d37dc1fa2681579b916a93333d',1,'drake::symbolic::ChebyshevBasisElement']]],
+  ['_7eclarabelsolver',['~ClarabelSolver',['../classdrake_1_1solvers_1_1_clarabel_solver.html#a19b7f75e04ee98a7f87e6d08c60ab057',1,'drake::solvers::ClarabelSolver']]],
   ['_7eclpsolver',['~ClpSolver',['../classdrake_1_1solvers_1_1_clp_solver.html#a5e8be6cbcc05ae5b195b15b0ea040039',1,'drake::solvers::ClpSolver']]],
   ['_7ecollisionchecker',['~CollisionChecker',['../classdrake_1_1planning_1_1_collision_checker.html#a9f469a8ba4f8fbd62921ff2f18590ce5',1,'drake::planning::CollisionChecker']]],
   ['_7ecollisioncheckercontext',['~CollisionCheckerContext',['../classdrake_1_1planning_1_1_collision_checker_context.html#ae49817b49b22e95f0ba859d511eaec64',1,'drake::planning::CollisionCheckerContext']]],
