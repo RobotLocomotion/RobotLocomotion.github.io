@@ -1,5 +1,9 @@
 var NAVTREEINDEX44 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_pose.html#a3e8a6ff52ba38aeedc2104d69acb7057":[3,0,0,17,6,2],
+"classdrake_1_1trajectories_1_1_piecewise_pose.html#a4f39af106df0162d8c0029cfa72e5c04":[3,0,0,17,6,15],
+"classdrake_1_1trajectories_1_1_piecewise_pose.html#a5200b41e6c52f4bc8cbc0c0e75cb4d79":[3,0,0,17,6,13],
+"classdrake_1_1trajectories_1_1_piecewise_pose.html#a5e7be149ba17c2caee73b6823184fd2e":[3,0,0,17,6,10],
 "classdrake_1_1trajectories_1_1_piecewise_pose.html#a6002daeeb77b73b37291f8b8ef9d36c5":[3,0,0,17,6,8],
 "classdrake_1_1trajectories_1_1_piecewise_pose.html#a74d1cebdafb3c05487e3c59e2502d3fd":[3,0,0,17,6,0],
 "classdrake_1_1trajectories_1_1_piecewise_pose.html#a8743b4bccdaf5d24987b1f76403bbe41":[3,0,0,17,6,4],
@@ -245,9 +249,5 @@ var NAVTREEINDEX44 =
 "contact__solver__results_8h.html":[4,0,0,8,2,9],
 "contact__solver__utils_8h.html":[4,0,0,8,2,10],
 "contact__solvers_2schur__complement_8h.html":[4,0,0,8,2,17],
-"contact__surface_8h.html":[4,0,0,4,3,0],
-"contact__surface_8h.html#a227f80cb57c9c87f6ecc4e839e364979":[4,0,0,4,3,0,1],
-"contact__surface_8h.html#a227f80cb57c9c87f6ecc4e839e364979a3a53496ffe96227ef579995d332425c1":[4,0,0,4,3,0,1,0],
-"contact__surface_8h.html#a227f80cb57c9c87f6ecc4e839e364979a64edd70c85c6854f380a0cbbc3db3cbb":[4,0,0,4,3,0,1,1],
-"contact__surface__doxygen_8h.html":[4,0,0,4,2,7]
+"contact__surface_8h.html":[4,0,0,4,3,0]
 };

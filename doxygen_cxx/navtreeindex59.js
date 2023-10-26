@@ -1,5 +1,9 @@
 var NAVTREEINDEX59 =
 {
+"structdrake_1_1systems_1_1_periodic_event_data_comparator.html#a427c5f42d5940b0e40fba4abe2b3111a":[3,0,0,15,76,0],
+"structdrake_1_1systems_1_1_simulator_config.html":[3,0,0,15,93],
+"structdrake_1_1systems_1_1_simulator_config.html#a18b1f02b49adcc233f5e23845b8c90fe":[3,0,0,15,93,5],
+"structdrake_1_1systems_1_1_simulator_config.html#a6d19fbfb5574d3ff27ca14c74141824f":[3,0,0,15,93,2],
 "structdrake_1_1systems_1_1_simulator_config.html#a6e55b938786bd86846860397d25c10bd":[3,0,0,15,93,1],
 "structdrake_1_1systems_1_1_simulator_config.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,15,93,0],
 "structdrake_1_1systems_1_1_simulator_config.html#a952be0fb54cfff1d4d56de3caf4b3d31":[3,0,0,15,93,3],
@@ -245,9 +249,5 @@ var NAVTREEINDEX59 =
 "structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_depth_01_4.html":[3,0,0,15,8,33],
 "structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_depth_01_4.html#ab9d071a35c456d7863cadc4f413e8fcf":[3,0,0,15,8,33,0],
 "structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_grey_01_4.html":[3,0,0,15,8,34],
-"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_grey_01_4.html#ab9d071a35c456d7863cadc4f413e8fcf":[3,0,0,15,8,34,0],
-"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_label_01_4.html":[3,0,0,15,8,35],
-"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_label_01_4.html#ab9d071a35c456d7863cadc4f413e8fcf":[3,0,0,15,8,35,0],
-"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_rgb_01_4.html":[3,0,0,15,8,36],
-"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_rgb_01_4.html#ab9d071a35c456d7863cadc4f413e8fcf":[3,0,0,15,8,36,0]
+"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_grey_01_4.html#ab9d071a35c456d7863cadc4f413e8fcf":[3,0,0,15,8,34,0]
 };

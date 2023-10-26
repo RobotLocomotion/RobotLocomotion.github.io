@@ -1,5 +1,9 @@
 var NAVTREEINDEX55 =
 {
+"sliding__friction__complementarity__constraint_8h.html":[4,0,0,8,8,5],
+"sliding__friction__complementarity__constraint_8h.html#gaa1fd44e85ab30519ef7a904a4ebeb82d":[4,0,0,8,8,5,0],
+"sliding__friction__complementarity__constraint_8h.html#gad168321c6009ddda8ee2ca9abbef90b1":[4,0,0,8,8,5,1],
+"snopt__solver_8h.html":[4,0,0,11,46],
 "soft__min__max_8h.html":[4,0,0,7,33],
 "soft__min__max_8h.html#a01c6c47a926e29b798e1901f0b4a1913":[4,0,0,7,33,2],
 "soft__min__max_8h.html#a2fb9f9a7a842e3d0be47d3c7b7f23f11":[4,0,0,7,33,1],
@@ -245,9 +249,5 @@ var NAVTREEINDEX55 =
 "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a3b79efd873843125dabba312ddde65a3":[3,0,0,4,26,1,4],
 "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a4467598fbba812fe1339ab4e83806573":[3,0,0,4,26,1,6],
 "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a5eeeb20fab9ff0f54568882b94d57921":[3,0,0,4,26,1,3],
-"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,26,1,0],
-"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a9c59ed4a7b6bdc2b1207e39fabf379a4":[3,0,0,4,26,1,7],
-"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#ab833bacb3fa8d1a189efcbba74f10fa1":[3,0,0,4,26,1,5],
-"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#add1a608db25e8e3befb6775a16867611":[3,0,0,4,26,1,2],
-"structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html":[3,0,0,4,26,2]
+"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,26,1,0]
 };

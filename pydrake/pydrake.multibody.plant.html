@@ -2883,8 +2883,8 @@ ForceElement objects in the model.</p>
 <span class="sig-name descname"><span class="pre">CalcGeneralizedForces</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">forces</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.MultibodyForces" title="pydrake.multibody.tree.MultibodyForces"><span class="pre">pydrake.multibody.tree.MultibodyForces</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.CalcGeneralizedForces" title="Permalink to this definition"></a></dt>
 <dd><p>Computes the generalized forces result of a set of MultibodyForces
 applied to this model.</p>
-<p>MultibodyForces stores applied forces as both generalized forces τₐₚₚ
-and spatial forces F on each body, refer to documentation in
+<p>MultibodyForces stores applied forces as both generalized forces τ and
+spatial forces F on each body, refer to documentation in
 MultibodyForces for details. Users of MultibodyForces will use
 MultibodyForces::mutable_generalized_forces() to mutate the stored
 generalized forces directly and will use Body::AddInForceInWorld() to
@@ -2893,7 +2893,7 @@ append spatial forces.</p>
 compute the total generalized forces on this model. More precisely, if
 J_WBo is the Jacobian (with respect to velocities) for this model,
 including all bodies, then this method computes:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>τ = τₐₚₚ + J_WBo⋅F
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>τᵣₑₛᵤₗₜ = τ + J_WBo⋅F
 </pre></div>
 </div>
 </details><dl class="simple">
@@ -7805,8 +7805,8 @@ ForceElement objects in the model.</p>
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].CalcGeneralizedForces"></span><span class="sig-name descname"><span class="pre">CalcGeneralizedForces</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forces</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.MultibodyForces_" title="pydrake.multibody.tree.MultibodyForces_"><span class="pre">pydrake.multibody.tree.MultibodyForces_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.CalcGeneralizedForces" title="Permalink to this definition"></a></dt>
 <dd><p>Computes the generalized forces result of a set of MultibodyForces
 applied to this model.</p>
-<p>MultibodyForces stores applied forces as both generalized forces τₐₚₚ
-and spatial forces F on each body, refer to documentation in
+<p>MultibodyForces stores applied forces as both generalized forces τ and
+spatial forces F on each body, refer to documentation in
 MultibodyForces for details. Users of MultibodyForces will use
 MultibodyForces::mutable_generalized_forces() to mutate the stored
 generalized forces directly and will use Body::AddInForceInWorld() to
@@ -7815,7 +7815,7 @@ append spatial forces.</p>
 compute the total generalized forces on this model. More precisely, if
 J_WBo is the Jacobian (with respect to velocities) for this model,
 including all bodies, then this method computes:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>τ = τₐₚₚ + J_WBo⋅F
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>τᵣₑₛᵤₗₜ = τ + J_WBo⋅F
 </pre></div>
 </div>
 </details><dl class="simple">
@@ -12683,8 +12683,8 @@ ForceElement objects in the model.</p>
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].CalcGeneralizedForces"></span><span class="sig-name descname"><span class="pre">CalcGeneralizedForces</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forces</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.MultibodyForces_" title="pydrake.multibody.tree.MultibodyForces_"><span class="pre">pydrake.multibody.tree.MultibodyForces_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.CalcGeneralizedForces" title="Permalink to this definition"></a></dt>
 <dd><p>Computes the generalized forces result of a set of MultibodyForces
 applied to this model.</p>
-<p>MultibodyForces stores applied forces as both generalized forces τₐₚₚ
-and spatial forces F on each body, refer to documentation in
+<p>MultibodyForces stores applied forces as both generalized forces τ and
+spatial forces F on each body, refer to documentation in
 MultibodyForces for details. Users of MultibodyForces will use
 MultibodyForces::mutable_generalized_forces() to mutate the stored
 generalized forces directly and will use Body::AddInForceInWorld() to
@@ -12693,7 +12693,7 @@ append spatial forces.</p>
 compute the total generalized forces on this model. More precisely, if
 J_WBo is the Jacobian (with respect to velocities) for this model,
 including all bodies, then this method computes:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>τ = τₐₚₚ + J_WBo⋅F
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>τᵣₑₛᵤₗₜ = τ + J_WBo⋅F
 </pre></div>
 </div>
 </details><dl class="simple">

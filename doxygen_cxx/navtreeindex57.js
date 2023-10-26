@@ -1,5 +1,9 @@
 var NAVTREEINDEX57 =
 {
+"structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#a9bcd2beab49aa2bbcc29485e8c15774b":[3,0,0,4,1,22,6],
+"structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#ab3f1efd3efefa056724514d6d247de2f":[3,0,0,4,1,22,10],
+"structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#ab44bb940daf4a1747f92bae32d54c67a":[3,0,0,4,1,22,8],
+"structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#ac57821371edcae4eaee405d04a76ae66":[3,0,0,4,1,22,4],
 "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#aeff55dd0e18e3aeb13a86310e6ed35e5":[3,0,0,4,1,22,1],
 "structdrake_1_1geometry_1_1promoted__numerical.html":[3,0,0,4,37],
 "structdrake_1_1geometry_1_1promoted__numerical.html#ac7ff24def79100330b2186638f93afe1":[3,0,0,4,37,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX57 =
 "structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#ad03bc5722287da0acf149346388fa1b0":[3,0,0,8,1,2,14],
 "structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#aecfdc8cfc228ee64e73c891738c3863d":[3,0,0,8,1,2,20],
 "structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html":[3,0,0,8,3,1],
-"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a0d562bb51530219612deccbd4319091f":[3,0,0,8,3,1,8],
-"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a2f34a2f66899dfd008ab76f9fee983de":[3,0,0,8,3,1,4],
-"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a3a415b5e7e1f412ec0002e0251ced626":[3,0,0,8,3,1,10],
-"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a3f67c53b80389c5f53961936edba04c9":[3,0,0,8,3,1,11],
-"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a78fb15511f687fe7fdb8e3ba9613648b":[3,0,0,8,3,1,9]
+"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a0d562bb51530219612deccbd4319091f":[3,0,0,8,3,1,8]
 };

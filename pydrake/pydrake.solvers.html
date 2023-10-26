@@ -5242,6 +5242,56 @@ with arXiv link <a class="reference external" href="https://arxiv.org/abs/1706.0
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.MathematicalProgram.RelaxPsdConstraintToDdDualCone">
+<span class="sig-name descname"><span class="pre">RelaxPsdConstraintToDdDualCone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">constraint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.PositiveSemidefiniteConstraint" title="pydrake.solvers.PositiveSemidefiniteConstraint"><span class="pre">PositiveSemidefiniteConstraint</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.LinearConstraint" title="pydrake.solvers.LinearConstraint"><span class="pre">LinearConstraint</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.solvers.MathematicalProgram.RelaxPsdConstraintToDdDualCone" title="Permalink to this definition"></a></dt>
+<dd><p>1. Relaxes the positive semidefinite <code class="docutils literal notranslate"><span class="pre">constraint</span></code> with a diagonally
+dominant dual cone constraint. 2. Adds the diagonally dominant dual
+cone constraint into this MathematicalProgram. 3. Removes the positive
+semidefinite <code class="docutils literal notranslate"><span class="pre">constraint</span></code>, if it had already been registered in this
+MathematicalProgram.</p>
+<p>This provides a polyhedral (i.e. linear) necessary, but not
+sufficient, condition for the variables in <code class="docutils literal notranslate"><span class="pre">constraint</span></code> to be
+positive semidefinite.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>The decision variables contained in constraint have been
+registered with this MathematicalProgram.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The return of
+AddPositiveDiagonallyDominantDualConeMatrixConstraint applied to
+the variables in <code class="docutils literal notranslate"><span class="pre">constraint</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.MathematicalProgram.RelaxPsdConstraintToSddDualCone">
+<span class="sig-name descname"><span class="pre">RelaxPsdConstraintToSddDualCone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">constraint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.PositiveSemidefiniteConstraint" title="pydrake.solvers.PositiveSemidefiniteConstraint"><span class="pre">PositiveSemidefiniteConstraint</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.RotatedLorentzConeConstraint" title="pydrake.solvers.RotatedLorentzConeConstraint"><span class="pre">RotatedLorentzConeConstraint</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.solvers.MathematicalProgram.RelaxPsdConstraintToSddDualCone" title="Permalink to this definition"></a></dt>
+<dd><p>1. Relaxes the positive semidefinite <code class="docutils literal notranslate"><span class="pre">constraint</span></code> with a scaled
+diagonally dominant dual cone constraint. 2. Adds the scaled
+diagonally dominant dual cone constraint into this
+MathematicalProgram. 3. Removes the positive semidefinite
+<code class="docutils literal notranslate"><span class="pre">constraint</span></code>, if it had already been registered in this
+MathematicalProgram.</p>
+<p>This provides a second-order cone necessary, but not sufficient,
+condition for the variables in <code class="docutils literal notranslate"><span class="pre">constraint</span></code> to be positive
+semidefinite.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>The decision variables contained in constraint have been
+registered with this MathematicalProgram.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The return of AddScaledDiagonallyDominantDualConeMatrixConstraint
+applied to the variables in <code class="docutils literal notranslate"><span class="pre">constraint</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.MathematicalProgram.RemoveConstraint">
 <span class="sig-name descname"><span class="pre">RemoveConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">constraint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><span class="pre">Constraint</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.solvers.MathematicalProgram.RemoveConstraint" title="Permalink to this definition"></a></dt>
 <dd><p>Removes <code class="docutils literal notranslate"><span class="pre">constraint</span></code> from this mathematical program. See
@@ -5408,6 +5458,54 @@ the provided solver options.</p>
 </dd>
 </dl>
 <p>See variable_scaling “Variable scaling” for more information.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.MathematicalProgram.TightenPsdConstraintToDd">
+<span class="sig-name descname"><span class="pre">TightenPsdConstraintToDd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">constraint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.PositiveSemidefiniteConstraint" title="pydrake.solvers.PositiveSemidefiniteConstraint"><span class="pre">PositiveSemidefiniteConstraint</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.solvers.MathematicalProgram.TightenPsdConstraintToDd" title="Permalink to this definition"></a></dt>
+<dd><p>1. Tightens the positive semidefinite <code class="docutils literal notranslate"><span class="pre">constraint</span></code> with a positive
+diagonally dominant constraint. 2. Adds the positive diagonally
+dominant constraint into this MathematicalProgram. 3. Removes the
+positive semidefinite <code class="docutils literal notranslate"><span class="pre">constraint</span></code>, if it had already been
+registered in this MathematicalProgram.</p>
+<p>This provides a polyhedral (i.e. linear) sufficient, but not
+necessary, condition for the variables in <code class="docutils literal notranslate"><span class="pre">constraint</span></code> to be
+positive semidefinite.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>The decision variables contained in constraint have been
+registered with this MathematicalProgram.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The return of AddPositiveDiagonallyDominantMatrixConstraint
+applied to the variables in <code class="docutils literal notranslate"><span class="pre">constraint</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.MathematicalProgram.TightenPsdConstraintToSdd">
+<span class="sig-name descname"><span class="pre">TightenPsdConstraintToSdd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">constraint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.PositiveSemidefiniteConstraint" title="pydrake.solvers.PositiveSemidefiniteConstraint"><span class="pre">PositiveSemidefiniteConstraint</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">2</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.solvers.MathematicalProgram.TightenPsdConstraintToSdd" title="Permalink to this definition"></a></dt>
+<dd><p>1. Tightens the positive semidefinite <code class="docutils literal notranslate"><span class="pre">constraint</span></code> with a scaled
+diagonally dominant constraint. 2. Adds the scaled diagonally dominant
+constraint into this MathematicalProgram. 3. Removes the positive
+semidefinite <code class="docutils literal notranslate"><span class="pre">constraint</span></code>, if it had already been registered in this
+MathematicalProgram.</p>
+<p>This provides a second-order cone sufficient, but not necessary,
+condition for the variables in <code class="docutils literal notranslate"><span class="pre">constraint</span></code> to be positive
+semidefinite.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>The decision variables contained in constraint have been
+registered with this MathematicalProgram.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The return of AddScaledDiagonallyDominantMatrixConstraint applied
+to the variables in <code class="docutils literal notranslate"><span class="pre">constraint</span></code>.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">

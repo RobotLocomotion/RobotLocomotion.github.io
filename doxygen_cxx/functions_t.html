@@ -327,6 +327,12 @@ $(document).ready(function(){initNavTree('functions_t.html','');});
 , <a class="el" href="classdrake_1_1systems_1_1_fixed_input_port_value.html#a65af7fcc4d673554e5fa127b1cf1382b">FixedInputPortValue</a>
 , <a class="el" href="classdrake_1_1systems_1_1_port_base.html#a65af7fcc4d673554e5fa127b1cf1382b">PortBase</a>
 </li>
+<li>TightenPsdConstraintToDd()
+: <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#ad79e9b50113698bdee1aff54ea18e7bc">MathematicalProgram</a>
+</li>
+<li>TightenPsdConstraintToSdd()
+: <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a7ab78d2873e9f28ad75e924cb4fd7dca">MathematicalProgram</a>
+</li>
 <li>time()
 : <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a48f817634e4b7a64663f19d1d635a7d6">MultipleShooting</a>
 , <a class="el" href="classdrake_1_1systems_1_1_system_symbolic_inspector.html#ab3f1db1cf1f647e9223f92429adfb898">SystemSymbolicInspector</a>
@@ -518,7 +524,7 @@ $(document).ready(function(){initNavTree('functions_t.html','');});
 </li>
 <li>ToAutoDiffXd()
 : <a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#aef8bd10a70a30fc4fd3150b9b332696e">GeometryState&lt; T &gt;</a>
-, <a class="el" href="classdrake_1_1systems_1_1_system.html#a12dccd7061415e910fff3a252ece2a88">System&lt; T &gt;</a>
+, <a class="el" href="classdrake_1_1systems_1_1_system.html#aaa81bdf4638506d1ba5ee11e05821651">System&lt; T &gt;</a>
 </li>
 <li>ToAutoDiffXdMaybe()
 : <a class="el" href="classdrake_1_1systems_1_1_system.html#a8661a664b857b7bec879b6f84ca763c7">System&lt; T &gt;</a>
@@ -567,10 +573,10 @@ $(document).ready(function(){initNavTree('functions_t.html','');});
 </li>
 <li>ToQuaternion()
 : <a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html#a978a8b146ac3388416fc5c72b553f91a">RollPitchYaw&lt; T &gt;</a>
-, <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#a456c2f7787024658a08d612eea90c0d4">RotationMatrix&lt; T &gt;</a>
+, <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#a978a8b146ac3388416fc5c72b553f91a">RotationMatrix&lt; T &gt;</a>
 </li>
 <li>ToQuaternionAsVector4()
-: <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#a910cd85b8df9b3955bf70771cf37ec53">RotationMatrix&lt; T &gt;</a>
+: <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#a0b70e5f1c037ab68afdb2551c49ac517">RotationMatrix&lt; T &gt;</a>
 </li>
 <li>ToRollPitchYaw()
 : <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#abf22daf86d67921b19763c3c43a6605e">RotationMatrix&lt; T &gt;</a>
@@ -641,8 +647,8 @@ $(document).ready(function(){initNavTree('functions_t.html','');});
 <li>Trajectory()
 : <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#af752fbd39919690fbbe2110639682be7">Trajectory&lt; T &gt;</a>
 </li>
-<li>TrajectoryAffineSystem
-: <a class="el" href="classdrake_1_1systems_1_1_trajectory_affine_system.html#a765619415f84359e645e673d149d9c72">TrajectoryAffineSystem&lt; T &gt;</a>
+<li>TrajectoryAffineSystem()
+: <a class="el" href="classdrake_1_1systems_1_1_trajectory_affine_system.html#aef9c9f9c119fdd14e8addc3b190b41d2">TrajectoryAffineSystem&lt; T &gt;</a>
 </li>
 <li>TrajectoryCallback
 : <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a5064765fee292f94378bf23096756fc4">MultipleShooting</a>
@@ -654,7 +660,7 @@ $(document).ready(function(){initNavTree('functions_t.html','');});
 : <a class="el" href="classdrake_1_1systems_1_1_trajectory_source.html#a4446b0b23657af43d57c783f553d6547">TrajectorySource&lt; T &gt;</a>
 </li>
 <li>TransferFunction()
-: <a class="el" href="classdrake_1_1systems_1_1_transfer_function.html#afd1562ebebbe28154818abec73df4341">TransferFunction</a>
+: <a class="el" href="classdrake_1_1systems_1_1_transfer_function.html#a3660a40b5ba2284759b9a3f5dd5e6e29">TransferFunction</a>
 </li>
 <li>Transform()
 : <a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#a0cee06be015dcbf43b784b3f4592febf">MeshFieldLinear&lt; T, MeshType &gt;</a>
@@ -685,7 +691,7 @@ $(document).ready(function(){initNavTree('functions_t.html','');});
 : <a class="el" href="classdrake_1_1multibody_1_1_prismatic_joint.html#af6693bdd8cd7c223b8ac7b6015dd2ab4">PrismaticJoint&lt; T &gt;</a>
 </li>
 <li>translational()
-: <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a520e7186918c44e7d3f5971ee87ceee6">SpatialVector&lt; SV, T &gt;</a>
+: <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a9d56e1315fbb0f8a59a83c948fcded20">SpatialVector&lt; SV, T &gt;</a>
 </li>
 <li>translational_acceleration()
 : <a class="el" href="classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#a48c6257e6d4c4d2955b5788872dc9c1c">SpatialKinematicsPVA&lt; T &gt;</a>
@@ -718,7 +724,7 @@ $(document).ready(function(){initNavTree('functions_t.html','');});
 : <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a013fda545d50a041a8494d61e1a0323c">TriangleSurfaceMesh&lt; T &gt;</a>
 </li>
 <li>TriangleSurfaceMesh()
-: <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html#ad7c9094c5a3e33edbdc61e5d72af8fcf">TriangleSurfaceMesh&lt; T &gt;</a>
+: <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a4635cbdcb02988477b2dbaaf5e9f6dbd">TriangleSurfaceMesh&lt; T &gt;</a>
 </li>
 <li>TriangleSurfaceMeshTester&lt; T &gt;
 : <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a421490ed6cab1812d3a8380432739880">TriangleSurfaceMesh&lt; T &gt;</a>
