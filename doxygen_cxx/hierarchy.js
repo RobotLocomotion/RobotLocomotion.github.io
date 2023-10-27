@@ -200,9 +200,11 @@ var hierarchy =
     [ "EigenPtr< const VectorX< T > >", "classdrake_1_1_eigen_ptr.html", null ],
     [ "EncodedData", "classdrake_1_1geometry_1_1_d_r_a_k_e___n_o___e_x_p_o_r_t_1_1_encoded_data.html", null ],
     [ "Environment", "classdrake_1_1symbolic_1_1_environment.html", null ],
+    [ "EnvironmentMap", "structdrake_1_1geometry_1_1_environment_map.html", null ],
     [ "equal_to< drake::symbolic::Expression >", "structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_expression_01_4.html", null ],
     [ "equal_to< drake::symbolic::Formula >", "structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_formula_01_4.html", null ],
     [ "equal_to< drake::symbolic::Variable >", "structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_variable_01_4.html", null ],
+    [ "EquirectangularMap", "structdrake_1_1geometry_1_1_equirectangular_map.html", null ],
     [ "EvaluatorBase", "classdrake_1_1solvers_1_1_evaluator_base.html", [
       [ "ContactWrenchEvaluator", "classdrake_1_1multibody_1_1_contact_wrench_evaluator.html", [
         [ "ContactWrenchFromForceInWorldFrameEvaluator", "classdrake_1_1multibody_1_1_contact_wrench_from_force_in_world_frame_evaluator.html", null ]
@@ -624,6 +626,7 @@ var hierarchy =
       [ "Traits< TrajectoryLinearSystem >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_trajectory_linear_system_01_4.html", null ]
     ] ],
     [ "normal_distribution< drake::symbolic::Expression >", "classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html", null ],
+    [ "NullTexture", "structdrake_1_1geometry_1_1_null_texture.html", null ],
     [ "numeric_limits", null, [
       [ "numeric_limits< drake::symbolic::Expression >", "structstd_1_1numeric__limits_3_01drake_1_1symbolic_1_1_expression_01_4.html", null ]
     ] ],

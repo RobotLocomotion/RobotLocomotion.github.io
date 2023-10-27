@@ -763,12 +763,9 @@ expressed in the body frame B.</p>
 <span class="sig-name descname"><span class="pre">CalcSpatialInertiaInBodyFrame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body" title="pydrake.multibody.tree.Body"><span class="pre">pydrake.multibody.tree.Body</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::multibody::SpatialInertia&lt;double&gt;</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body.CalcSpatialInertiaInBodyFrame" title="Permalink to this definition"></a></dt>
 <dd><p>(Advanced) Computes the SpatialInertia <code class="docutils literal notranslate"><span class="pre">I_BBo_B</span></code> of <code class="docutils literal notranslate"><span class="pre">this</span></code> body
 about its frame origin <code class="docutils literal notranslate"><span class="pre">Bo</span></code> (not necessarily its center of mass) and
-expressed in its body frame <code class="docutils literal notranslate"><span class="pre">B</span></code>. In general, the spatial inertia of
-a body is a function of state. Consider for instance the case of a
-flexible body for which its spatial inertia in the body frame depends
-on the generalized coordinates describing its state of deformation. As
-a particular case, the spatial inertia of a RigidBody in its body
-frame is constant.</p>
+expressed in its body frame <code class="docutils literal notranslate"><span class="pre">B</span></code>. The spatial inertia of a RigidBody
+in its body frame is constant, but may need to be calculated from
+Parameters.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -917,22 +914,6 @@ identify the <code class="docutils literal notranslate"><span class="pre">k`th</
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Body.get_mass">
 <span class="sig-name descname"><span class="pre">get_mass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body" title="pydrake.multibody.tree.Body"><span class="pre">pydrake.multibody.tree.Body</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body.get_mass" title="Permalink to this definition"></a></dt>
 <dd><p>(Advanced) Returns the mass of this body stored in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.tree.Body.get_num_flexible_positions">
-<span class="sig-name descname"><span class="pre">get_num_flexible_positions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body" title="pydrake.multibody.tree.Body"><span class="pre">pydrake.multibody.tree.Body</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body.get_num_flexible_positions" title="Permalink to this definition"></a></dt>
-<dd><p>(Not implemented) Returns the number of generalized positions q
-describing flexible deformations for this body. A rigid body will
-therefore return zero.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.tree.Body.get_num_flexible_velocities">
-<span class="sig-name descname"><span class="pre">get_num_flexible_velocities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body" title="pydrake.multibody.tree.Body"><span class="pre">pydrake.multibody.tree.Body</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body.get_num_flexible_velocities" title="Permalink to this definition"></a></dt>
-<dd><p>(Not implemented) Returns the number of generalized velocities v
-describing flexible deformations for this body. A rigid body will
-therefore return zero.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1129,12 +1110,9 @@ expressed in the body frame B.</p>
 <span id="pydrake.multibody.tree.Body_[AutoDiffXd].CalcSpatialInertiaInBodyFrame"></span><span class="sig-name descname"><span class="pre">CalcSpatialInertiaInBodyFrame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::multibody::SpatialInertia&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double,</span> <span class="pre">-1,</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">-1,</span> <span class="pre">1&gt;</span> <span class="pre">&gt;</span> <span class="pre">&gt;</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body_-AutoDiffXd-.CalcSpatialInertiaInBodyFrame" title="Permalink to this definition"></a></dt>
 <dd><p>(Advanced) Computes the SpatialInertia <code class="docutils literal notranslate"><span class="pre">I_BBo_B</span></code> of <code class="docutils literal notranslate"><span class="pre">this</span></code> body
 about its frame origin <code class="docutils literal notranslate"><span class="pre">Bo</span></code> (not necessarily its center of mass) and
-expressed in its body frame <code class="docutils literal notranslate"><span class="pre">B</span></code>. In general, the spatial inertia of
-a body is a function of state. Consider for instance the case of a
-flexible body for which its spatial inertia in the body frame depends
-on the generalized coordinates describing its state of deformation. As
-a particular case, the spatial inertia of a RigidBody in its body
-frame is constant.</p>
+expressed in its body frame <code class="docutils literal notranslate"><span class="pre">B</span></code>. The spatial inertia of a RigidBody
+in its body frame is constant, but may need to be calculated from
+Parameters.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1283,22 +1261,6 @@ identify the <code class="docutils literal notranslate"><span class="pre">k`th</
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Body_-AutoDiffXd-.get_mass">
 <span id="pydrake.multibody.tree.Body_[AutoDiffXd].get_mass"></span><span class="sig-name descname"><span class="pre">get_mass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body_-AutoDiffXd-.get_mass" title="Permalink to this definition"></a></dt>
 <dd><p>(Advanced) Returns the mass of this body stored in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.tree.Body_-AutoDiffXd-.get_num_flexible_positions">
-<span id="pydrake.multibody.tree.Body_[AutoDiffXd].get_num_flexible_positions"></span><span class="sig-name descname"><span class="pre">get_num_flexible_positions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body_-AutoDiffXd-.get_num_flexible_positions" title="Permalink to this definition"></a></dt>
-<dd><p>(Not implemented) Returns the number of generalized positions q
-describing flexible deformations for this body. A rigid body will
-therefore return zero.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.tree.Body_-AutoDiffXd-.get_num_flexible_velocities">
-<span id="pydrake.multibody.tree.Body_[AutoDiffXd].get_num_flexible_velocities"></span><span class="sig-name descname"><span class="pre">get_num_flexible_velocities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body_-AutoDiffXd-.get_num_flexible_velocities" title="Permalink to this definition"></a></dt>
-<dd><p>(Not implemented) Returns the number of generalized velocities v
-describing flexible deformations for this body. A rigid body will
-therefore return zero.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1489,12 +1451,9 @@ expressed in the body frame B.</p>
 <span id="pydrake.multibody.tree.Body_[Expression].CalcSpatialInertiaInBodyFrame"></span><span class="sig-name descname"><span class="pre">CalcSpatialInertiaInBodyFrame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::multibody::SpatialInertia&lt;drake::symbolic::Expression&gt;</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body_-Expression-.CalcSpatialInertiaInBodyFrame" title="Permalink to this definition"></a></dt>
 <dd><p>(Advanced) Computes the SpatialInertia <code class="docutils literal notranslate"><span class="pre">I_BBo_B</span></code> of <code class="docutils literal notranslate"><span class="pre">this</span></code> body
 about its frame origin <code class="docutils literal notranslate"><span class="pre">Bo</span></code> (not necessarily its center of mass) and
-expressed in its body frame <code class="docutils literal notranslate"><span class="pre">B</span></code>. In general, the spatial inertia of
-a body is a function of state. Consider for instance the case of a
-flexible body for which its spatial inertia in the body frame depends
-on the generalized coordinates describing its state of deformation. As
-a particular case, the spatial inertia of a RigidBody in its body
-frame is constant.</p>
+expressed in its body frame <code class="docutils literal notranslate"><span class="pre">B</span></code>. The spatial inertia of a RigidBody
+in its body frame is constant, but may need to be calculated from
+Parameters.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1646,22 +1605,6 @@ identify the <code class="docutils literal notranslate"><span class="pre">k`th</
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.tree.Body_-Expression-.get_num_flexible_positions">
-<span id="pydrake.multibody.tree.Body_[Expression].get_num_flexible_positions"></span><span class="sig-name descname"><span class="pre">get_num_flexible_positions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body_-Expression-.get_num_flexible_positions" title="Permalink to this definition"></a></dt>
-<dd><p>(Not implemented) Returns the number of generalized positions q
-describing flexible deformations for this body. A rigid body will
-therefore return zero.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.tree.Body_-Expression-.get_num_flexible_velocities">
-<span id="pydrake.multibody.tree.Body_[Expression].get_num_flexible_velocities"></span><span class="sig-name descname"><span class="pre">get_num_flexible_velocities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body_-Expression-.get_num_flexible_velocities" title="Permalink to this definition"></a></dt>
-<dd><p>(Not implemented) Returns the number of generalized velocities v
-describing flexible deformations for this body. A rigid body will
-therefore return zero.</p>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Body_-Expression-.GetForceInWorld">
 <span id="pydrake.multibody.tree.Body_[Expression].GetForceInWorld"></span><span class="sig-name descname"><span class="pre">GetForceInWorld</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.multibody.tree.Body_[Expression],</span> <span class="pre">context:</span> <span class="pre">pydrake.systems.framework.Context_[Expression],</span> <span class="pre">forces:</span> <span class="pre">drake::multibody::MultibodyForces&lt;drake::symbolic::Expression&gt;</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.math.html#pydrake.multibody.math.SpatialForce_" title="pydrake.multibody.math.SpatialForce_"><span class="pre">pydrake.multibody.math.SpatialForce_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body_-Expression-.GetForceInWorld" title="Permalink to this definition"></a></dt>
 <dd><p>Gets the sptatial force on <code class="docutils literal notranslate"><span class="pre">this</span></code> body B from <code class="docutils literal notranslate"><span class="pre">forces</span></code> as F_BBo_W:
@@ -1783,27 +1726,18 @@ name will be empty (the scope name and the element name).</p>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.multibody.tree.Frame" title="pydrake.multibody.tree.Frame"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.multibody.tree.Frame</span></code></a></p>
 <p>A BodyFrame is a material Frame that serves as the unique reference
 frame for a Body.</p>
-<p>Each Body B, regardless of whether it represents a rigid body or a
-flexible body, has a unique body frame for which we use the same
-symbol B (with meaning clear from context). The body frame is also
-referred to as a <em>reference frame</em> in the literature for flexible body
-mechanics modeling using the Finite Element Method. All properties of
-a body are defined with respect to its body frame, including its mass
-properties and attachment locations for joints, constraints,
-actuators, geometry and so on. Run time motion of the body is defined
-with respect to the motion of its body frame. We represent a body
-frame by a BodyFrame object that is created whenever a Body is
-constructed and is owned by the Body.</p>
+<p>Each Body B, has a unique body frame for which we use the same symbol
+B (with meaning clear from context). All properties of a body are
+defined with respect to its body frame, including its mass properties
+and attachment locations for joints, constraints, actuators, geometry
+and so on. Run time motion of the body is defined with respect to the
+motion of its body frame. We represent a body frame by a BodyFrame
+object that is created whenever a Body is constructed and is owned by
+the Body.</p>
 <p>Note that the BodyFrame associated with a body does not necessarily
 need to be located at its center of mass nor does it need to be
 aligned with the body’s principal axes, although, in practice, it
-frequently is. For flexible bodies, BodyFrame provides a
-representation for the body’s reference frame. The flexible degrees of
-freedom associated with a flexible body describe the body’s
-deformation in this frame. Therefore, the motion of a flexible body is
-defined by the motion of its BodyFrame, or reference frame, plus the
-motion of the material points on the body with respect to its
-BodyFrame.</p>
+frequently is.</p>
 <p>A BodyFrame and Body are tightly coupled concepts; neither makes sense
 without the other. Therefore, a BodyFrame instance is constructed in
 conjunction with its Body and cannot be constructed anywhere else.
@@ -1835,27 +1769,18 @@ for the list of instantiations.</p>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.multibody.tree.Frame_-AutoDiffXd" title="pydrake.multibody.tree.Frame_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.multibody.tree.Frame_[AutoDiffXd]</span></code></a></p>
 <p>A BodyFrame is a material Frame that serves as the unique reference
 frame for a Body.</p>
-<p>Each Body B, regardless of whether it represents a rigid body or a
-flexible body, has a unique body frame for which we use the same
-symbol B (with meaning clear from context). The body frame is also
-referred to as a <em>reference frame</em> in the literature for flexible body
-mechanics modeling using the Finite Element Method. All properties of
-a body are defined with respect to its body frame, including its mass
-properties and attachment locations for joints, constraints,
-actuators, geometry and so on. Run time motion of the body is defined
-with respect to the motion of its body frame. We represent a body
-frame by a BodyFrame object that is created whenever a Body is
-constructed and is owned by the Body.</p>
+<p>Each Body B, has a unique body frame for which we use the same symbol
+B (with meaning clear from context). All properties of a body are
+defined with respect to its body frame, including its mass properties
+and attachment locations for joints, constraints, actuators, geometry
+and so on. Run time motion of the body is defined with respect to the
+motion of its body frame. We represent a body frame by a BodyFrame
+object that is created whenever a Body is constructed and is owned by
+the Body.</p>
 <p>Note that the BodyFrame associated with a body does not necessarily
 need to be located at its center of mass nor does it need to be
 aligned with the body’s principal axes, although, in practice, it
-frequently is. For flexible bodies, BodyFrame provides a
-representation for the body’s reference frame. The flexible degrees of
-freedom associated with a flexible body describe the body’s
-deformation in this frame. Therefore, the motion of a flexible body is
-defined by the motion of its BodyFrame, or reference frame, plus the
-motion of the material points on the body with respect to its
-BodyFrame.</p>
+frequently is.</p>
 <p>A BodyFrame and Body are tightly coupled concepts; neither makes sense
 without the other. Therefore, a BodyFrame instance is constructed in
 conjunction with its Body and cannot be constructed anywhere else.
@@ -1876,27 +1801,18 @@ other multibody elements to it.</p>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.multibody.tree.Frame_-Expression" title="pydrake.multibody.tree.Frame_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.multibody.tree.Frame_[Expression]</span></code></a></p>
 <p>A BodyFrame is a material Frame that serves as the unique reference
 frame for a Body.</p>
-<p>Each Body B, regardless of whether it represents a rigid body or a
-flexible body, has a unique body frame for which we use the same
-symbol B (with meaning clear from context). The body frame is also
-referred to as a <em>reference frame</em> in the literature for flexible body
-mechanics modeling using the Finite Element Method. All properties of
-a body are defined with respect to its body frame, including its mass
-properties and attachment locations for joints, constraints,
-actuators, geometry and so on. Run time motion of the body is defined
-with respect to the motion of its body frame. We represent a body
-frame by a BodyFrame object that is created whenever a Body is
-constructed and is owned by the Body.</p>
+<p>Each Body B, has a unique body frame for which we use the same symbol
+B (with meaning clear from context). All properties of a body are
+defined with respect to its body frame, including its mass properties
+and attachment locations for joints, constraints, actuators, geometry
+and so on. Run time motion of the body is defined with respect to the
+motion of its body frame. We represent a body frame by a BodyFrame
+object that is created whenever a Body is constructed and is owned by
+the Body.</p>
 <p>Note that the BodyFrame associated with a body does not necessarily
 need to be located at its center of mass nor does it need to be
 aligned with the body’s principal axes, although, in practice, it
-frequently is. For flexible bodies, BodyFrame provides a
-representation for the body’s reference frame. The flexible degrees of
-freedom associated with a flexible body describe the body’s
-deformation in this frame. Therefore, the motion of a flexible body is
-defined by the motion of its BodyFrame, or reference frame, plus the
-motion of the material points on the body with respect to its
-BodyFrame.</p>
+frequently is.</p>
 <p>A BodyFrame and Body are tightly coupled concepts; neither makes sense
 without the other. Therefore, a BodyFrame instance is constructed in
 conjunction with its Body and cannot be constructed anywhere else.

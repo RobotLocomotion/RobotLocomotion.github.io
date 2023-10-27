@@ -20,6 +20,7 @@ var searchData=
   ['show_5fstats_5fplot',['show_stats_plot',['../structdrake_1_1geometry_1_1_meshcat_params.html#a89a7b03f2e5b34b3ca7fa0b92d282def',1,'drake::geometry::MeshcatParams']]],
   ['simulator_5fconfig',['simulator_config',['../structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a4242c7dc34593f02bccbbd0dd44585f2',1,'drake::systems::controllers::FiniteHorizonLinearQuadraticRegulatorOptions']]],
   ['size',['size',['../structdrake_1_1type__pack.html#a5bedf34ecf2bf4cc8e7a9d7df1f91172',1,'drake::type_pack']]],
+  ['skybox',['skybox',['../structdrake_1_1geometry_1_1_environment_map.html#ae23ac8769253350f41ba92594f9bb0b5',1,'drake::geometry::EnvironmentMap']]],
   ['sliding_5fcontacts',['sliding_contacts',['../structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#ad7420fd6adfed409f3fc8551d0decb96',1,'drake::multibody::constraint::ConstraintAccelProblemData']]],
   ['solution_5fstatus',['solution_status',['../structdrake_1_1solvers_1_1_mosek_solver_details.html#a4036e6e47f77a14497bc9f6c007193a0',1,'drake::solvers::MosekSolverDetails']]],
   ['solve_5finertia',['solve_inertia',['../structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#a16c5614af40edee599284c373fba9c09',1,'drake::multibody::constraint::ConstraintAccelProblemData::solve_inertia()'],['../structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#a16c5614af40edee599284c373fba9c09',1,'drake::multibody::constraint::ConstraintVelProblemData::solve_inertia()']]],

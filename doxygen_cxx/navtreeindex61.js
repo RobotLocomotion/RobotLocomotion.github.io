@@ -1,5 +1,12 @@
 var NAVTREEINDEX61 =
 {
+"text__logging_8h.html#a83987c1d52b74115b933adef64972af7":[4,0,0,1,59,4],
+"text__logging_8h.html#a9cae370466ffb304c10aebea42eca26b":[4,0,0,1,59,0],
+"text__logging_8h.html#abc074aead70b88bf38e18993bf9c28c3":[4,0,0,1,59,6],
+"text__logging_8h.html#ae0fe856459e2ca7ef105677ef381da55":[4,0,0,1,59,3],
+"text__logging_8h.html#ae32fd151ebc2dab30d9546f1dbef0c79":[4,0,0,1,59,2],
+"text__logging_8h.html#ae6e439f4584cc1f0a6dd0990378604a5":[4,0,0,1,59,7],
+"text__logging_8h.html#aed13fee35863fff48d177f80c979bca0":[4,0,0,1,59,1],
 "text__logging__pybind_8h.html":[4,0,0,0,0,1,10],
 "timer_8h.html":[4,0,0,1,60],
 "toppra_8h.html":[4,0,0,8,8,11],

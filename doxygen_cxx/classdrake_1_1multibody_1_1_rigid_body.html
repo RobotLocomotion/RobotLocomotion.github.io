@@ -192,12 +192,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adaae712fe773dbd38f1c06c787ac4207"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#adaae712fe773dbd38f1c06c787ac4207">RigidBody</a> (const std::string &amp;body_name, <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#acd2192bbd60e8c8d2c14763041d66d50">model_instance</a>, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;M_BBo_B)</td></tr>
 <tr class="memdesc:adaae712fe773dbd38f1c06c787ac4207"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a RigidBody named <code>body_name</code> with the given default <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html" title="This class represents the physical concept of a Spatial Inertia.">SpatialInertia</a>.  <a href="#adaae712fe773dbd38f1c06c787ac4207">More...</a><br /></td></tr>
 <tr class="separator:adaae712fe773dbd38f1c06c787ac4207"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c8f665d7455c39a14b370d73a264710"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a2c8f665d7455c39a14b370d73a264710">get_num_flexible_positions</a> () const final</td></tr>
-<tr class="memdesc:a2c8f665d7455c39a14b370d73a264710"><td class="mdescLeft">&#160;</td><td class="mdescRight">There are no flexible degrees of freedom associated with a rigid body and therefore this method returns zero.  <a href="#a2c8f665d7455c39a14b370d73a264710">More...</a><br /></td></tr>
-<tr class="separator:a2c8f665d7455c39a14b370d73a264710"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7df2a068b5e1e1a80728b7a8dd8a20a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a7df2a068b5e1e1a80728b7a8dd8a20a6">get_num_flexible_velocities</a> () const final</td></tr>
-<tr class="memdesc:a7df2a068b5e1e1a80728b7a8dd8a20a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">There are no flexible degrees of freedom associated with a rigid body and therefore this method returns zero.  <a href="#a7df2a068b5e1e1a80728b7a8dd8a20a6">More...</a><br /></td></tr>
-<tr class="separator:a7df2a068b5e1e1a80728b7a8dd8a20a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0dd42d90808ca815e0246da817663be1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a0dd42d90808ca815e0246da817663be1">default_mass</a> () const final</td></tr>
 <tr class="memdesc:a0dd42d90808ca815e0246da817663be1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns this rigid body's default mass, which is initially supplied at construction when specifying this rigid body's <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html" title="This class represents the physical concept of a Spatial Inertia.">SpatialInertia</a>.  <a href="#a0dd42d90808ca815e0246da817663be1">More...</a><br /></td></tr>
 <tr class="separator:a0dd42d90808ca815e0246da817663be1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1076,66 +1070,6 @@ Protected Member Functions</h2></td></tr>
 <dl class="section pre"><dt>Precondition</dt><dd>the context makes sense for use by <code>this</code> <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html" title="The term rigid body implies that the deformations of the body under consideration are so small that t...">RigidBody</a>. </dd></dl>
 
 <p>Implements <a class="el" href="classdrake_1_1multibody_1_1_body.html#aa46153851db12c78debe3460b545a6e1">Body&lt; T &gt;</a>.</p>
-
-</div>
-</div>
-<a id="a2c8f665d7455c39a14b370d73a264710"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c8f665d7455c39a14b370d73a264710">&#9670;&nbsp;</a></span>get_num_flexible_positions()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classint.html">int</a> get_num_flexible_positions </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>There are no flexible degrees of freedom associated with a rigid body and therefore this method returns zero. </p>
-<p>By definition, a rigid body has no state associated with flexible deformations. </p>
-
-<p>Implements <a class="el" href="classdrake_1_1multibody_1_1_body.html#a2333d75f20ed2f5d35a10119ef1ab5d5">Body&lt; T &gt;</a>.</p>
-
-</div>
-</div>
-<a id="a7df2a068b5e1e1a80728b7a8dd8a20a6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7df2a068b5e1e1a80728b7a8dd8a20a6">&#9670;&nbsp;</a></span>get_num_flexible_velocities()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classint.html">int</a> get_num_flexible_velocities </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>There are no flexible degrees of freedom associated with a rigid body and therefore this method returns zero. </p>
-<p>By definition, a rigid body has no state associated with flexible deformations. </p>
-
-<p>Implements <a class="el" href="classdrake_1_1multibody_1_1_body.html#a686c86e06e668050d80c096e1200fe5a">Body&lt; T &gt;</a>.</p>
 
 </div>
 </div>

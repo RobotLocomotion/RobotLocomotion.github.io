@@ -192,6 +192,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a7c649edac2bf38690cac11ff4730c9d5"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structdrake_1_1geometry_1_1render_1_1_light_parameter.html">render::LightParameter</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_vtk_params.html#a7c649edac2bf38690cac11ff4730c9d5">lights</a></td></tr>
 <tr class="memdesc:a7c649edac2bf38690cac11ff4730c9d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lights in the scene.  <a href="#a7c649edac2bf38690cac11ff4730c9d5">More...</a><br /></td></tr>
 <tr class="separator:a7c649edac2bf38690cac11ff4730c9d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad84a8836b437a560f61b53e899a80fc4"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="structdrake_1_1geometry_1_1_environment_map.html">EnvironmentMap</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_vtk_params.html#ad84a8836b437a560f61b53e899a80fc4">environment_map</a></td></tr>
+<tr class="memdesc:ad84a8836b437a560f61b53e899a80fc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">An optional environment map.  <a href="#ad84a8836b437a560f61b53e899a80fc4">More...</a><br /></td></tr>
+<tr class="separator:ad84a8836b437a560f61b53e899a80fc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a8e8824802dedfbc36776227f7482b6bc"></a>
@@ -265,6 +268,24 @@ Public Attributes</h2></td></tr>
 <p>(Deprecated.) The default_label is no longer configurable. </p>
 <p><br />
  This will be removed from Drake on or after 2023-12-01. </p>
+
+</div>
+</div>
+<a id="ad84a8836b437a560f61b53e899a80fc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad84a8836b437a560f61b53e899a80fc4">&#9670;&nbsp;</a></span>environment_map</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;<a class="el" href="structdrake_1_1geometry_1_1_environment_map.html">EnvironmentMap</a>&gt; environment_map</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>An optional environment map. </p>
+<p>When providing the environment map, the render engine will be configured for physically-based rendering (PBR); all materials will be promoted to be a PBR material. This may change the appearance of any geometries introduced as primitives or .obj meshes.</p>
+<p>Furthermore, if an environment map is specified, it <em>replaces</em> the default lighting (the map itself illuminates the scene). The usual camera head lamp will not be present. Lights <em>can</em> be explicitly added to combine with the environment map. </p>
 
 </div>
 </div>

@@ -204,7 +204,6 @@ $(document).ready(function(){initNavTree('group__python__bindings.html','');});
 <li><code>*_py</code>: A Python library (can be pure Python or pybind)<ul>
 <li>File Names: <code>*.py</code>, <code>*_py.cc</code><ul>
 <li>Each <code>*_py.cc</code> file should only define one package (a module; optionally with multiple submodules under it).</li>
-<li><em>Note</em>: If you need to split up a <code>{module}_py.cc</code> file for compilation speed and clarity, use <code>{module}_py_{part}.cc</code> for source and <code>{module}_py_{part}.h</code> for headers, and then include the headers into the original module source file. <code>{part}</code> may not necessarily be a submodule.</li>
 </ul>
 </li>
 </ul>
@@ -228,6 +227,14 @@ $(document).ready(function(){initNavTree('group__python__bindings.html','');});
 <p>If you are developing bindings for a small portion of Drake and would like to avoid rebuilding a large number of components when testing, consider editing <code>//tools/install/libdrake:build_components.bzl</code> to reduce the number of components being built.</p>
 <p><a class="anchor" id="PydrakeModuleDefinitions"></a></p><h2>pybind Module Definitions</h2>
 <ul>
+<li>Module bindings must always be split into parts (to avoid large files that would bloat our compile times). The easiest way to understand this pattern is probably to look at an existing module that follows the convention (e.g., <code>pydrake/geometry/**</code> or <code>pydrake/visualization/**</code>), but here's a summary of the rules:<ul>
+<li>foo_py.h: provides function signatures for the various "Define..." helper functions that comprise the module. In general, splitting into more (smaller) helper functions is better than fewer (larger) helper functions.</li>
+<li>foo_py.cc: uses PYBIND11_MODULE to define the package or module, by importing other dependent modules, calling the "Define..." helper functions, and possibly defining submodules. Must not itself add bindings; it must always call helpers that add them.</li>
+<li>foo_py_bar.cc: the definition for the "DefineBar" helper function.</li>
+<li>foo_py_quux.cc: the definition for the "DefineQuux" helper function.</li>
+<li>... etc.</li>
+</ul>
+</li>
 <li>Modules should be defined within the <a class="el" href="namespacedrake_1_1pydrake.html" title="For more high-level information, see the Python Bindings technical notes.">drake::pydrake</a> namespace. Please review this namespace for available helper methods / classes.</li>
 <li>Any Drake pybind module should include <code><a class="el" href="pydrake__pybind_8h.html">pydrake_pybind.h</a></code>.</li>
 <li><code>PYBIND_MODULE</code> should be used to define modules.</li>

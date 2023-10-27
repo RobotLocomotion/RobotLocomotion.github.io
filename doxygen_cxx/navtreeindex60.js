@@ -1,5 +1,12 @@
 var NAVTREEINDEX60 =
 {
+"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_bgr_01_4.html#ab9d071a35c456d7863cadc4f413e8fcf":[3,0,0,15,8,31,0],
+"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_bgra_01_4.html":[3,0,0,15,8,32],
+"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_bgra_01_4.html#ab9d071a35c456d7863cadc4f413e8fcf":[3,0,0,15,8,32,0],
+"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_depth_01_4.html":[3,0,0,15,8,33],
+"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_depth_01_4.html#ab9d071a35c456d7863cadc4f413e8fcf":[3,0,0,15,8,33,0],
+"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_grey_01_4.html":[3,0,0,15,8,34],
+"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_grey_01_4.html#ab9d071a35c456d7863cadc4f413e8fcf":[3,0,0,15,8,34,0],
 "structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_label_01_4.html":[3,0,0,15,8,35],
 "structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_label_01_4.html#ab9d071a35c456d7863cadc4f413e8fcf":[3,0,0,15,8,35,0],
 "structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_rgb_01_4.html":[3,0,0,15,8,36],
@@ -242,12 +249,5 @@ var NAVTREEINDEX60 =
 "test__utilities_8h.html":[4,0,0,4,1,21],
 "text__logging_8h.html":[4,0,0,1,59],
 "text__logging_8h.html#a43a4a42dcea3143d400de1575cb5758c":[4,0,0,1,59,5],
-"text__logging_8h.html#a60321c9dbf7c1ebe763371ab00262d68":[4,0,0,1,59,8],
-"text__logging_8h.html#a83987c1d52b74115b933adef64972af7":[4,0,0,1,59,4],
-"text__logging_8h.html#a9cae370466ffb304c10aebea42eca26b":[4,0,0,1,59,0],
-"text__logging_8h.html#abc074aead70b88bf38e18993bf9c28c3":[4,0,0,1,59,6],
-"text__logging_8h.html#ae0fe856459e2ca7ef105677ef381da55":[4,0,0,1,59,3],
-"text__logging_8h.html#ae32fd151ebc2dab30d9546f1dbef0c79":[4,0,0,1,59,2],
-"text__logging_8h.html#ae6e439f4584cc1f0a6dd0990378604a5":[4,0,0,1,59,7],
-"text__logging_8h.html#aed13fee35863fff48d177f80c979bca0":[4,0,0,1,59,1]
+"text__logging_8h.html#a60321c9dbf7c1ebe763371ab00262d68":[4,0,0,1,59,8]
 };

@@ -2089,6 +2089,41 @@ z- axes of the canonical frame, respectively.</p>
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="pydrake.geometry.EnvironmentMap">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">EnvironmentMap</span></span><a class="headerlink" href="#pydrake.geometry.EnvironmentMap" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.EnvironmentMap.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.EnvironmentMap" title="pydrake.geometry.EnvironmentMap"><span class="pre">pydrake.geometry.EnvironmentMap</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.EnvironmentMap.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.EnvironmentMap.skybox">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">skybox</span></span><a class="headerlink" href="#pydrake.geometry.EnvironmentMap.skybox" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.EnvironmentMap.texture">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">texture</span></span><a class="headerlink" href="#pydrake.geometry.EnvironmentMap.texture" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.geometry.EquirectangularMap">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">EquirectangularMap</span></span><a class="headerlink" href="#pydrake.geometry.EquirectangularMap" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.EquirectangularMap.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.EquirectangularMap" title="pydrake.geometry.EquirectangularMap"><span class="pre">pydrake.geometry.EquirectangularMap</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.EquirectangularMap.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.EquirectangularMap.path">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">path</span></span><a class="headerlink" href="#pydrake.geometry.EquirectangularMap.path" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="pydrake.geometry.FilterId">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">FilterId</span></span><a class="headerlink" href="#pydrake.geometry.FilterId" title="Permalink to this definition"></a></dt>
 <dd><p>Type used to identify transient collision filter declarations in
@@ -5727,6 +5762,18 @@ visible.</p>
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="pydrake.geometry.NullTexture">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">NullTexture</span></span><a class="headerlink" href="#pydrake.geometry.NullTexture" title="Permalink to this definition"></a></dt>
+<dd><p>(Internal use only) A place holder indicating that no texture has been
+provided for environment map (and, therefore, no environment map).</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.NullTexture.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.NullTexture" title="pydrake.geometry.NullTexture"><span class="pre">pydrake.geometry.NullTexture</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.NullTexture.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="pydrake.geometry.PenetrationAsPointPair">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">PenetrationAsPointPair</span></span><a class="headerlink" href="#pydrake.geometry.PenetrationAsPointPair" title="Permalink to this definition"></a></dt>
 <dd><p>A characterization of the intersection of two penetrating geometries.
@@ -9188,6 +9235,20 @@ unused by RenderEngineVtk.</p>
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">default_label</span></span><a class="headerlink" href="#pydrake.geometry.RenderEngineVtkParams.default_label" title="Permalink to this definition"></a></dt>
 <dd><p>(Deprecated.) The default_label is no longer configurable.</p>
 <p>This will be removed from Drake on or after 2023-12-01.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.RenderEngineVtkParams.environment_map">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">environment_map</span></span><a class="headerlink" href="#pydrake.geometry.RenderEngineVtkParams.environment_map" title="Permalink to this definition"></a></dt>
+<dd><p>An optional environment map. When providing the environment map, the
+render engine will be configured for physically-based rendering (PBR);
+all materials will be promoted to be a PBR material. This may change
+the appearance of any geometries introduced as primitives or .obj
+meshes.</p>
+<p>Furthermore, if an environment map is specified, it <em>replaces</em> the
+default lighting (the map itself illuminates the scene). The usual
+camera head lamp will not be present. Lights <em>can</em> be explicitly added
+to combine with the environment map.</p>
 </dd></dl>
 
 <dl class="py property">

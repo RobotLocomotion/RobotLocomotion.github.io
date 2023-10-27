@@ -194,12 +194,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a06542e4ec7c6a884bfcd61c9b00221b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html">ScopedName</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#a06542e4ec7c6a884bfcd61c9b00221b4">scoped_name</a> () const</td></tr>
 <tr class="memdesc:a06542e4ec7c6a884bfcd61c9b00221b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns scoped name of this frame.  <a href="#a06542e4ec7c6a884bfcd61c9b00221b4">More...</a><br /></td></tr>
 <tr class="separator:a06542e4ec7c6a884bfcd61c9b00221b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2333d75f20ed2f5d35a10119ef1ab5d5"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#a2333d75f20ed2f5d35a10119ef1ab5d5">get_num_flexible_positions</a> () const =0</td></tr>
-<tr class="memdesc:a2333d75f20ed2f5d35a10119ef1ab5d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Not implemented) Returns the number of generalized positions q describing flexible deformations for this body.  <a href="#a2333d75f20ed2f5d35a10119ef1ab5d5">More...</a><br /></td></tr>
-<tr class="separator:a2333d75f20ed2f5d35a10119ef1ab5d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a686c86e06e668050d80c096e1200fe5a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#a686c86e06e668050d80c096e1200fe5a">get_num_flexible_velocities</a> () const =0</td></tr>
-<tr class="memdesc:a686c86e06e668050d80c096e1200fe5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Not implemented) Returns the number of generalized velocities v describing flexible deformations for this body.  <a href="#a686c86e06e668050d80c096e1200fe5a">More...</a><br /></td></tr>
-<tr class="separator:a686c86e06e668050d80c096e1200fe5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae594f732e1f00317aeb8c6cd83591db5"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_body_frame.html">BodyFrame</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#ae594f732e1f00317aeb8c6cd83591db5">body_frame</a> () const</td></tr>
 <tr class="memdesc:ae594f732e1f00317aeb8c6cd83591db5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the associated <a class="el" href="classdrake_1_1multibody_1_1_body_frame.html" title="A BodyFrame is a material Frame that serves as the unique reference frame for a Body.">BodyFrame</a>.  <a href="#ae594f732e1f00317aeb8c6cd83591db5">More...</a><br /></td></tr>
 <tr class="separator:ae594f732e1f00317aeb8c6cd83591db5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -672,7 +666,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Advanced) Computes the <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html" title="This class represents the physical concept of a Spatial Inertia.">SpatialInertia</a> <code>I_BBo_B</code> of <code>this</code> body about its frame origin <code>Bo</code> (not necessarily its center of mass) and expressed in its body frame <code>B</code>. </p>
-<p>In general, the spatial inertia of a body is a function of state. Consider for instance the case of a flexible body for which its spatial inertia in the body frame depends on the generalized coordinates describing its state of deformation. As a particular case, the spatial inertia of a <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html" title="The term rigid body implies that the deformations of the body under consideration are so small that t...">RigidBody</a> in its body frame is constant. </p>
+<p>The spatial inertia of a <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html" title="The term rigid body implies that the deformations of the body under consideration are so small that t...">RigidBody</a> in its body frame is constant, but may need to be calculated from Parameters. </p>
 
 <p>Implemented in <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#ad29bdedee3ec5b32d059216895168e8e">RigidBody&lt; T &gt;</a>.</p>
 
@@ -1141,66 +1135,6 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a2333d75f20ed2f5d35a10119ef1ab5d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2333d75f20ed2f5d35a10119ef1ab5d5">&#9670;&nbsp;</a></span>get_num_flexible_positions()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual <a class="el" href="classint.html">int</a> get_num_flexible_positions </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>(Not implemented) Returns the number of generalized positions q describing flexible deformations for this body. </p>
-<p>A rigid body will therefore return zero. </p>
-
-<p>Implemented in <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a2c8f665d7455c39a14b370d73a264710">RigidBody&lt; T &gt;</a>.</p>
-
-</div>
-</div>
-<a id="a686c86e06e668050d80c096e1200fe5a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a686c86e06e668050d80c096e1200fe5a">&#9670;&nbsp;</a></span>get_num_flexible_velocities()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual <a class="el" href="classint.html">int</a> get_num_flexible_velocities </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>(Not implemented) Returns the number of generalized velocities v describing flexible deformations for this body. </p>
-<p>A rigid body will therefore return zero. </p>
-
-<p>Implemented in <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a7df2a068b5e1e1a80728b7a8dd8a20a6">RigidBody&lt; T &gt;</a>.</p>
-
-</div>
-</div>
 <a id="ace24ab6283a1ad4f7585fa3aabc79f12"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ace24ab6283a1ad4f7585fa3aabc79f12">&#9670;&nbsp;</a></span>GetForceInWorld()</h2>
 
@@ -1388,8 +1322,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a2d29729c246c174fc4dcf96b7d2c5ade"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d29729c246c174fc4dcf96b7d2c5ade">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a20f1ef3c39eacf3b33b85fa8a5cef621"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20f1ef3c39eacf3b33b85fa8a5cef621">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1400,7 +1334,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1414,8 +1348,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a20f1ef3c39eacf3b33b85fa8a5cef621"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a20f1ef3c39eacf3b33b85fa8a5cef621">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a2d29729c246c174fc4dcf96b7d2c5ade"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d29729c246c174fc4dcf96b7d2c5ade">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1426,7 +1360,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

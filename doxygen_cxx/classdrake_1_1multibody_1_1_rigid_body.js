@@ -20,8 +20,6 @@ var classdrake_1_1multibody_1_1_rigid_body =
     [ "get_angular_acceleration_in_world", "classdrake_1_1multibody_1_1_rigid_body.html#ae4e824f4a35b414007edaf3152e27df4", null ],
     [ "get_angular_velocity_in_world", "classdrake_1_1multibody_1_1_rigid_body.html#a858aa75c18197c79689d5d468b621710", null ],
     [ "get_mass", "classdrake_1_1multibody_1_1_rigid_body.html#a4d9df97dddf7534857366e087779a080", null ],
-    [ "get_num_flexible_positions", "classdrake_1_1multibody_1_1_rigid_body.html#a2c8f665d7455c39a14b370d73a264710", null ],
-    [ "get_num_flexible_velocities", "classdrake_1_1multibody_1_1_rigid_body.html#a7df2a068b5e1e1a80728b7a8dd8a20a6", null ],
     [ "get_origin_acceleration_in_world", "classdrake_1_1multibody_1_1_rigid_body.html#a30f5d86d90593c091ca76f01925dd013", null ],
     [ "get_origin_position_in_world", "classdrake_1_1multibody_1_1_rigid_body.html#a5e65d4860c5fa5837eeed69257f0b909", null ],
     [ "get_origin_velocity_in_world", "classdrake_1_1multibody_1_1_rigid_body.html#a5f15759f025d0b70d6adadecc4c9a2c2", null ],

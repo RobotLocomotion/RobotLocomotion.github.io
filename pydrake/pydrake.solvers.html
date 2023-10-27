@@ -3587,6 +3587,32 @@ bound variables.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.MathematicalProgram.AddLogDeterminantLowerBoundConstraint">
+<span class="sig-name descname"><span class="pre">AddLogDeterminantLowerBoundConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">X</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lower</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.LinearConstraint" title="pydrake.solvers.LinearConstraint"><span class="pre">LinearConstraint</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.solvers.MathematicalProgram.AddLogDeterminantLowerBoundConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>Impose the constraint log(det(X)) &gt;= lower. See log_determinant for
+more details.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X</span></code>:</dt><dd><p>A symmetric positive semidefinite matrix X.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lower</span></code>:</dt><dd><p>The lower bound of log(det(X))</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>(constraint, t, Z) constraint is ∑ᵢt(i) &gt;= lower, we also return
+the newly created slack variables t and the lower triangular
+matrix Z. Note that Z is not a matrix of symbolic::Variable but
+symbolic::Expression, because the upper-diagonal entries of Z are
+not variable, but expression 0.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>X is a symmetric matrix.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.MathematicalProgram.AddLorentzConeConstraint">
 <span class="sig-name descname"><span class="pre">AddLorentzConeConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.MathematicalProgram.AddLorentzConeConstraint" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
@@ -3764,13 +3790,7 @@ power(∏ᵢx(i), 1/n).</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.MathematicalProgram.AddMaximizeLogDeterminantCost">
 <span class="sig-name descname"><span class="pre">AddMaximizeLogDeterminantCost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">X</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.LinearCost" title="pydrake.solvers.LinearCost"><span class="pre">LinearCost</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.solvers.MathematicalProgram.AddMaximizeLogDeterminantCost" title="Permalink to this definition"></a></dt>
-<dd><p>Adds the cost to maximize the log determinant of symmetric matrix X.
-log(det(X)) is a concave function of X, so we can maximize it through
-convex optimization. In order to do that, we introduce slack variables
-t, and a lower triangular matrix Z, with the constraints</p>
-<p>⌈X Z⌉ is positive semidifinite. ⌊Zᵀ diag(Z)⌋</p>
-<p>log(Z(i, i)) &gt;= t(i)</p>
-<p>and we will minimize -∑ᵢt(i).</p>
+<dd><p>Maximize the log determinant. See log_determinant for more details.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">X</span></code>:</dt><dd><p>A symmetric positive semidefinite matrix X, whose log(det(X)) will
 be maximized.</p>
@@ -3789,22 +3809,6 @@ expression 0.</p>
 <dt>Precondition:</dt><dd><p>X is a symmetric matrix.</p>
 </dd>
 </dl>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The constraint log(Z(i, i)) &gt;= t(i) is imposed as an exponential
-cone constraint. Please make sure your have a solver that supports
-exponential cone constraint (currently SCS does).</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The constraint that</p>
-</div>
-<p>⌈X Z⌉ is positive semidifinite. ⌊Zᵀ diag(Z)⌋</p>
-<p>already implies that X is positive semidefinite. The user DO NOT need
-to separately impose the constraint that X being psd.</p>
-<p>Refer to
-<a class="reference external" href="https://docs.mosek.com/modeling-cookbook/sdo.html#log-determinant">https://docs.mosek.com/modeling-cookbook/sdo.html#log-determinant</a> for
-more details.</p>
 </dd></dl>
 
 <dl class="py method">
