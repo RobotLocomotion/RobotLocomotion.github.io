@@ -340,7 +340,7 @@ Public Member Functions</h2></td></tr>
     <tr><td class="paramname">p_WC</td><td>Position of the contact point C in the world frame W. </td></tr>
     <tr><td class="paramname">separation_speed</td><td>Separation speed along the normal direction between body A and body B, in meters per second. A positive value indicates bodies are moving apart. A negative value indicates bodies are moving towards each other. </td></tr>
     <tr><td class="paramname">slip_speed</td><td>Slip speed, that is, the magnitude of the relative tangential velocity at the contact point in meters per second. A non-negative value always. </td></tr>
-    <tr><td class="paramname">point_pair</td><td>Additional point pair information for <code>this</code> contact info. Refer to the documentation for PenetrationAsPointPair for further details. </td></tr>
+    <tr><td class="paramname">point_pair</td><td>Additional point pair information for <code>this</code> contact info. Refer to the documentation for PenetrationAsPointPair for further details. It is expected that the body indexed by <code>bodyA_index</code> is the same body that contains the geometry indexed by <code>point_pair.id_A</code>. Likewise for the body indexed by <code>bodyB_index</code> and the body contining geometry with id <code>point_pair.id_B</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -493,6 +493,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns additional information for the geometric contact query for <code>this</code> pair as a PenetrationAsPointPair. </p>
+<p>The body containing <code><a class="el" href="classdrake_1_1multibody_1_1_point_pair_contact_info.html#a3c44111b2a473d8769aa9d945eff6713" title="Returns additional information for the geometric contact query for this pair as a PenetrationAsPointP...">point_pair()</a>.id_A</code> is the same body indexed by <code><a class="el" href="classdrake_1_1multibody_1_1_point_pair_contact_info.html#a733bb4ab881021933bb4ab8c628b2db0" title="Returns the index of body A in the contact pair.">bodyA_index()</a></code>. Likewise, the body containing <code><a class="el" href="classdrake_1_1multibody_1_1_point_pair_contact_info.html#a3c44111b2a473d8769aa9d945eff6713" title="Returns additional information for the geometric contact query for this pair as a PenetrationAsPointP...">point_pair()</a>.id_B</code> is the same body indexed by <code><a class="el" href="classdrake_1_1multibody_1_1_point_pair_contact_info.html#a648db75b0455ffd38dd322771007cc69" title="Returns the index of body B in the contact pair.">bodyB_index()</a></code>. </p>
 
 </div>
 </div>
