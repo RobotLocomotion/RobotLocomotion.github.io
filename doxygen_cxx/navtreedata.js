@@ -116,17 +116,17 @@ var NAVTREEINDEX =
 "formula_8h.html#a9a8a8cf51365e956ea445cf6b77d2577",
 "generic__polynomial_8h.html#afc778273d730c518678796b632e4de8f",
 "hermitian__dense__output_8h.html",
-"linear__bushing__roll__pitch__yaw_8h.html",
-"my__vector_8h.html#abb55fc11f1deac636394a2231637ab47",
-"pack__value_8h.html#a630c2f64d295eef980808464e32dd2af",
-"random__rotation_8h.html",
-"snopt__solver_8h.html",
-"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a3b79efd873843125dabba312ddde65a3",
-"structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html",
-"structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#ab3761062bae0c167009fd92d36f460fc",
-"structdrake_1_1symbolic_1_1_sin_cos.html#a919d5819ace24054ded2f7899e67ff54",
-"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_bgr_01_4.html#ab9d071a35c456d7863cadc4f413e8fcf",
-"text__logging_8h.html#a83987c1d52b74115b933adef64972af7"
+"light__parameter_8h.html#adc3ec8293e6a97ebe43f0196b9a7f638ab34dea3b99121eeade6dc92ac1fff18f",
+"my__vector_8h.html#a12aaf169acd19bb9d296a35a1eb110d1",
+"output__port__base_8h.html",
+"random__polynomial__matrix_8h.html",
+"sliding__friction__complementarity__constraint_8h.html#gaa1fd44e85ab30519ef7a904a4ebeb82d",
+"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html",
+"structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_program_base.html#ad739b4d9d1435ea5951a9c825520ef7f",
+"structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#a83d22b9ce633cccb2b57d1739e59d94d",
+"structdrake_1_1symbolic_1_1_sin_cos.html#a1c615a950f134b68ee764a6b9d765e73",
+"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits.html",
+"text__logging_8h.html#a43a4a42dcea3143d400de1575cb5758c"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

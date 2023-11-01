@@ -1,5 +1,7 @@
 var NAVTREEINDEX61 =
 {
+"text__logging_8h.html#a43a4a42dcea3143d400de1575cb5758c":[4,0,0,1,59,5],
+"text__logging_8h.html#a60321c9dbf7c1ebe763371ab00262d68":[4,0,0,1,59,8],
 "text__logging_8h.html#a83987c1d52b74115b933adef64972af7":[4,0,0,1,59,4],
 "text__logging_8h.html#a9cae370466ffb304c10aebea42eca26b":[4,0,0,1,59,0],
 "text__logging_8h.html#abc074aead70b88bf38e18993bf9c28c3":[4,0,0,1,59,6],
@@ -130,7 +132,8 @@ var NAVTREEINDEX61 =
 "volumetric__model_8h.html":[4,0,0,8,3,30],
 "vpolytope_8h.html":[4,0,0,4,1,22],
 "vpolytope_8h.html#a6616542d5536b0f2522beb473f437a06":[4,0,0,4,1,22,0],
-"vtk__image__reader__writer_8h.html":[4,0,0,12,8,22],
+"vtk__diagnostic__event__observer_8h.html":[4,0,0,12,8,24],
+"vtk__image__reader__writer_8h.html":[4,0,0,12,8,25],
 "vtk__to__volume__mesh_8h.html":[4,0,0,4,2,59],
 "weld__joint_8h.html":[4,0,0,8,14,55],
 "weld__mobilizer_8h.html":[4,0,0,8,14,56],

@@ -18,6 +18,8 @@ var dir_892460009e18f4b08a77d36884a88a01 =
     [ "gyroscope.h", "gyroscope_8h.html", null ],
     [ "image.h", "image_8h.html", "image_8h" ],
     [ "image_file_format.h", "image__file__format_8h.html", "image__file__format_8h" ],
+    [ "image_io.h", "image__io_8h.html", null ],
+    [ "image_io_internal.h", "image__io__internal_8h.html", null ],
     [ "image_to_lcm_image_array_t.h", "image__to__lcm__image__array__t_8h.html", [
       [ "ImageToLcmImageArrayT", "classdrake_1_1systems_1_1sensors_1_1_image_to_lcm_image_array_t.html", "classdrake_1_1systems_1_1sensors_1_1_image_to_lcm_image_array_t" ]
     ] ],
@@ -58,5 +60,6 @@ var dir_892460009e18f4b08a77d36884a88a01 =
     [ "rgbd_sensor_discrete.h", "rgbd__sensor__discrete_8h.html", null ],
     [ "rotary_encoders.h", "rotary__encoders_8h.html", null ],
     [ "sim_rgbd_sensor.h", "sim__rgbd__sensor_8h.html", null ],
+    [ "vtk_diagnostic_event_observer.h", "vtk__diagnostic__event__observer_8h.html", null ],
     [ "vtk_image_reader_writer.h", "vtk__image__reader__writer_8h.html", null ]
 ];

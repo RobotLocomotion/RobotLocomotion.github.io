@@ -1,5 +1,7 @@
 var NAVTREEINDEX60 =
 {
+"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits.html":[3,0,0,15,8,30],
+"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_bgr_01_4.html":[3,0,0,15,8,31],
 "structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_bgr_01_4.html#ab9d071a35c456d7863cadc4f413e8fcf":[3,0,0,15,8,31,0],
 "structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_bgra_01_4.html":[3,0,0,15,8,32],
 "structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_bgra_01_4.html#ab9d071a35c456d7863cadc4f413e8fcf":[3,0,0,15,8,32,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX60 =
 "temp__directory_8h.html#a107ff2f218f356d05f8cdc3b7d254eb2":[4,0,0,1,58,0],
 "tessellation__strategy_8h.html":[4,0,0,4,2,53],
 "test__utilities_8h.html":[4,0,0,4,1,21],
-"text__logging_8h.html":[4,0,0,1,59],
-"text__logging_8h.html#a43a4a42dcea3143d400de1575cb5758c":[4,0,0,1,59,5],
-"text__logging_8h.html#a60321c9dbf7c1ebe763371ab00262d68":[4,0,0,1,59,8]
+"text__logging_8h.html":[4,0,0,1,59]
 };

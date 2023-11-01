@@ -1,5 +1,7 @@
 var NAVTREEINDEX54 =
 {
+"random__polynomial__matrix_8h.html":[4,0,0,1,4,11],
+"random__polynomial__matrix_8h.html#ac4fc5709db8aa88c23fc8f401ee3d2de":[4,0,0,1,4,11,0],
 "random__rotation_8h.html":[4,0,0,7,28],
 "random__rotation_8h.html#a6c92561b046b32c1ebe172bd32dc8276":[4,0,0,7,28,1],
 "random__rotation_8h.html#acc24ae9bbbf0b9d253f3344b97a9f3d4":[4,0,0,7,28,3],
@@ -69,9 +71,9 @@ var NAVTREEINDEX54 =
 "revolute__mobilizer_8h.html":[4,0,0,8,14,39],
 "revolute__spring_8h.html":[4,0,0,8,14,40],
 "rgba_8h.html":[4,0,0,4,39],
-"rgbd__sensor_8h.html":[4,0,0,12,8,17],
-"rgbd__sensor__async_8h.html":[4,0,0,12,8,18],
-"rgbd__sensor__discrete_8h.html":[4,0,0,12,8,19],
+"rgbd__sensor_8h.html":[4,0,0,12,8,19],
+"rgbd__sensor__async_8h.html":[4,0,0,12,8,20],
+"rgbd__sensor__discrete_8h.html":[4,0,0,12,8,21],
 "rigid__body_8h.html":[4,0,0,8,14,41],
 "rigid__body__on__compliant__ground_8h.html":[4,0,0,8,10,0,0],
 "rigid__transform_8h.html":[4,0,0,7,29],
@@ -102,7 +104,7 @@ var NAVTREEINDEX54 =
 "rod2d_8h.html":[4,0,0,3,16,0],
 "rod2d__geometry_8h.html":[4,0,0,3,16,1],
 "roll__pitch__yaw_8h.html":[4,0,0,7,30],
-"rotary__encoders_8h.html":[4,0,0,12,8,20],
+"rotary__encoders_8h.html":[4,0,0,12,8,22],
 "rotation_8h.html":[4,0,0,1,2,0],
 "rotation__constraint_8h.html":[4,0,0,11,42],
 "rotation__constraint_8h.html#a0c7466e7ce1b8db6de94ad0524f8106d":[4,0,0,11,42,2],
@@ -220,7 +222,7 @@ var NAVTREEINDEX54 =
 "signed__distance__pair_8h.html":[4,0,0,4,3,3],
 "signed__distance__to__point_8h.html":[4,0,0,4,3,4],
 "sim__iiwa__driver_8h.html":[4,0,0,6,1,8],
-"sim__rgbd__sensor_8h.html":[4,0,0,12,8,21],
+"sim__rgbd__sensor_8h.html":[4,0,0,12,8,23],
 "simplex__gaussian__quadrature_8h.html":[4,0,0,8,3,27],
 "simplification_8h.html":[4,0,0,1,3,16],
 "simplification_8h.html#a134e54042165751a5e5369b4631c90eb":[4,0,0,1,3,16,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX54 =
 "sine_8h.html":[4,0,0,12,6,22],
 "single__output__vector__source_8h.html":[4,0,0,12,3,35],
 "slicing__and__indexing_8h.html":[4,0,0,8,10,35],
-"sliding__friction__complementarity__constraint_8h.html":[4,0,0,8,8,5],
-"sliding__friction__complementarity__constraint_8h.html#gaa1fd44e85ab30519ef7a904a4ebeb82d":[4,0,0,8,8,5,0],
-"sliding__friction__complementarity__constraint_8h.html#gad168321c6009ddda8ee2ca9abbef90b1":[4,0,0,8,8,5,1]
+"sliding__friction__complementarity__constraint_8h.html":[4,0,0,8,8,5]
 };
