@@ -846,12 +846,13 @@ identify the <code class="docutils literal notranslate"><span class="pre">k`th</
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Body.floating_positions_start">
 <span class="sig-name descname"><span class="pre">floating_positions_start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body" title="pydrake.multibody.tree.Body"><span class="pre">pydrake.multibody.tree.Body</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body.floating_positions_start" title="Permalink to this definition"></a></dt>
 <dd><p>(Advanced) For floating bodies (see is_floating()) this method returns
-the index of the first generalized position in the state vector for a
-MultibodyPlant model. Positions for this body are then contiguous
-starting at this index. When a floating body is modeled with a
-quaternion mobilizer (see has_quaternion_dofs()), the four consecutive
-entries in the state starting at this index correspond to the
-quaternion that parametrizes this body’s orientation.</p>
+the index of this Body’s first generalized position in the vector q of
+generalized position coordinates for a MultibodyPlant model. Positions
+q for this Body are then contiguous starting at this index. When a
+floating Body is modeled with quaternion coordinates (see
+has_quaternion_dofs()), the four consecutive entries in the state
+starting at this index correspond to the quaternion that parametrizes
+this Body’s orientation.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong> – </p>
@@ -870,10 +871,39 @@ quaternion that parametrizes this body’s orientation.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Body.floating_velocities_start">
 <span class="sig-name descname"><span class="pre">floating_velocities_start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body" title="pydrake.multibody.tree.Body"><span class="pre">pydrake.multibody.tree.Body</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body.floating_velocities_start" title="Permalink to this definition"></a></dt>
+<dd><p>(Advanced, Deprecated) For floating bodies (see is_floating()) this
+method returns the index of this Body’s first generalized velocity in
+the <em>full state vector</em> for a MultibodyPlant model, under the dubious
+assumption that the state consists of [q v] concatenated. Velocities
+for this body are then contiguous starting at this index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong> – </p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">this</span></code> is a floating body</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>floating_velocities_start_in_v() (Deprecated.)</p>
+</div>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>Convert to floating_velocities_start_in_v(). In a state with [q v]
+concatenated, offset by num_positions() to get to the start of v.
+This will be removed from Drake on or after 2024-02-01.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.Body.floating_velocities_start_in_v">
+<span class="sig-name descname"><span class="pre">floating_velocities_start_in_v</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body" title="pydrake.multibody.tree.Body"><span class="pre">pydrake.multibody.tree.Body</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body.floating_velocities_start_in_v" title="Permalink to this definition"></a></dt>
 <dd><p>(Advanced) For floating bodies (see is_floating()) this method returns
-the index of the first generalized velocity in the state vector for a
-MultibodyPlant model. Velocities for this body are then contiguous
-starting at this index.</p>
+the index of this Body’s first generalized velocity in the vector v of
+generalized velocities for a MultibodyPlant model. Velocities v for
+this Body are then contiguous starting at this index.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong> – </p>
@@ -1193,12 +1223,13 @@ identify the <code class="docutils literal notranslate"><span class="pre">k`th</
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Body_-AutoDiffXd-.floating_positions_start">
 <span id="pydrake.multibody.tree.Body_[AutoDiffXd].floating_positions_start"></span><span class="sig-name descname"><span class="pre">floating_positions_start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body_-AutoDiffXd-.floating_positions_start" title="Permalink to this definition"></a></dt>
 <dd><p>(Advanced) For floating bodies (see is_floating()) this method returns
-the index of the first generalized position in the state vector for a
-MultibodyPlant model. Positions for this body are then contiguous
-starting at this index. When a floating body is modeled with a
-quaternion mobilizer (see has_quaternion_dofs()), the four consecutive
-entries in the state starting at this index correspond to the
-quaternion that parametrizes this body’s orientation.</p>
+the index of this Body’s first generalized position in the vector q of
+generalized position coordinates for a MultibodyPlant model. Positions
+q for this Body are then contiguous starting at this index. When a
+floating Body is modeled with quaternion coordinates (see
+has_quaternion_dofs()), the four consecutive entries in the state
+starting at this index correspond to the quaternion that parametrizes
+this Body’s orientation.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong> – </p>
@@ -1217,10 +1248,39 @@ quaternion that parametrizes this body’s orientation.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Body_-AutoDiffXd-.floating_velocities_start">
 <span id="pydrake.multibody.tree.Body_[AutoDiffXd].floating_velocities_start"></span><span class="sig-name descname"><span class="pre">floating_velocities_start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body_-AutoDiffXd-.floating_velocities_start" title="Permalink to this definition"></a></dt>
+<dd><p>(Advanced, Deprecated) For floating bodies (see is_floating()) this
+method returns the index of this Body’s first generalized velocity in
+the <em>full state vector</em> for a MultibodyPlant model, under the dubious
+assumption that the state consists of [q v] concatenated. Velocities
+for this body are then contiguous starting at this index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong> – </p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">this</span></code> is a floating body</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>floating_velocities_start_in_v() (Deprecated.)</p>
+</div>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>Convert to floating_velocities_start_in_v(). In a state with [q v]
+concatenated, offset by num_positions() to get to the start of v.
+This will be removed from Drake on or after 2024-02-01.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.Body_-AutoDiffXd-.floating_velocities_start_in_v">
+<span id="pydrake.multibody.tree.Body_[AutoDiffXd].floating_velocities_start_in_v"></span><span class="sig-name descname"><span class="pre">floating_velocities_start_in_v</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body_-AutoDiffXd-.floating_velocities_start_in_v" title="Permalink to this definition"></a></dt>
 <dd><p>(Advanced) For floating bodies (see is_floating()) this method returns
-the index of the first generalized velocity in the state vector for a
-MultibodyPlant model. Velocities for this body are then contiguous
-starting at this index.</p>
+the index of this Body’s first generalized velocity in the vector v of
+generalized velocities for a MultibodyPlant model. Velocities v for
+this Body are then contiguous starting at this index.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong> – </p>
@@ -1534,12 +1594,13 @@ identify the <code class="docutils literal notranslate"><span class="pre">k`th</
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Body_-Expression-.floating_positions_start">
 <span id="pydrake.multibody.tree.Body_[Expression].floating_positions_start"></span><span class="sig-name descname"><span class="pre">floating_positions_start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body_-Expression-.floating_positions_start" title="Permalink to this definition"></a></dt>
 <dd><p>(Advanced) For floating bodies (see is_floating()) this method returns
-the index of the first generalized position in the state vector for a
-MultibodyPlant model. Positions for this body are then contiguous
-starting at this index. When a floating body is modeled with a
-quaternion mobilizer (see has_quaternion_dofs()), the four consecutive
-entries in the state starting at this index correspond to the
-quaternion that parametrizes this body’s orientation.</p>
+the index of this Body’s first generalized position in the vector q of
+generalized position coordinates for a MultibodyPlant model. Positions
+q for this Body are then contiguous starting at this index. When a
+floating Body is modeled with quaternion coordinates (see
+has_quaternion_dofs()), the four consecutive entries in the state
+starting at this index correspond to the quaternion that parametrizes
+this Body’s orientation.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong> – </p>
@@ -1558,10 +1619,39 @@ quaternion that parametrizes this body’s orientation.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Body_-Expression-.floating_velocities_start">
 <span id="pydrake.multibody.tree.Body_[Expression].floating_velocities_start"></span><span class="sig-name descname"><span class="pre">floating_velocities_start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body_-Expression-.floating_velocities_start" title="Permalink to this definition"></a></dt>
+<dd><p>(Advanced, Deprecated) For floating bodies (see is_floating()) this
+method returns the index of this Body’s first generalized velocity in
+the <em>full state vector</em> for a MultibodyPlant model, under the dubious
+assumption that the state consists of [q v] concatenated. Velocities
+for this body are then contiguous starting at this index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong> – </p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">this</span></code> is a floating body</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>floating_velocities_start_in_v() (Deprecated.)</p>
+</div>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>Convert to floating_velocities_start_in_v(). In a state with [q v]
+concatenated, offset by num_positions() to get to the start of v.
+This will be removed from Drake on or after 2024-02-01.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.Body_-Expression-.floating_velocities_start_in_v">
+<span id="pydrake.multibody.tree.Body_[Expression].floating_velocities_start_in_v"></span><span class="sig-name descname"><span class="pre">floating_velocities_start_in_v</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Body_" title="pydrake.multibody.tree.Body_"><span class="pre">pydrake.multibody.tree.Body_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Body_-Expression-.floating_velocities_start_in_v" title="Permalink to this definition"></a></dt>
 <dd><p>(Advanced) For floating bodies (see is_floating()) this method returns
-the index of the first generalized velocity in the state vector for a
-MultibodyPlant model. Velocities for this body are then contiguous
-starting at this index.</p>
+the index of this Body’s first generalized velocity in the vector v of
+generalized velocities for a MultibodyPlant model. Velocities v for
+this Body are then contiguous starting at this index.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong> – </p>

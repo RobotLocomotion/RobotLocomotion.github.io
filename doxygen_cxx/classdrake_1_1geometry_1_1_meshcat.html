@@ -194,6 +194,19 @@ Recommended workflow</h1>
 <li>It's simple to distinguish between user objects and "infrastructure" objects in the visualizer.</li>
 <li>All user objects can easily be cleared by a single, parameter-free call to <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#af4681ade5efb8da0d67f86ecae9b9ac8" title="Deletes the object at the given path as well as all of its children.">Delete()</a>. You are welcome to use absolute paths to organize your data, but the burden on tracking and cleaning them up lie on you.</li>
 </ul>
+<h1><a class="anchor" id="meshcat_url_parameters"></a>
+Parameters for the hosted Meshcat page</h1>
+<p>Meshcat has an <em>experimental</em> AR/VR option (using WebXR). It can be enabled through url parameters. For example, for a meshcat url <code><a href="http://localhost:7000">http://localhost:7000</a></code>, the following will enable the VR mode: </p><pre class="fragment">http://localhost:7000?webxr=vr
+</pre><p>To to use augmented reality (where the meshcat background is replaced with your device's camera image), use: </p><pre class="fragment">http://localhost:7000?webxr=ar
+</pre><p>If augmented reality is not available, it will fallback to VR mode.</p>
+<p>Some notes on using the AR/VR modes:</p>
+<ul>
+<li>Before starting the WebXR session, position the interactive camera to be approximately where you want the origin of the head set's origin to be.</li>
+<li>The meshcat scene controls are disabled while the WebXR session is active.</li>
+<li>WebXR sessions can only be run with <em>perspective</em> cameras.</li>
+<li>The controllers can be <em>visualized</em> but currently can't interact with the Drake simulation physically. To visualize the controllers append the additional url parameter <code>controller=on</code> as in <code><a href="http://localhost:7000?webxr=vr&controller=on">http://localhost:7000?webxr=vr&amp;controller=on</a></code>.</li>
+</ul>
+<p>If you do not have AR/VR hardware, you can use an emulator in your browser to experiment with the mode. Use an browser plugin like WebXR API Emulator (i.e., for <a href="https://chrome.google.com/webstore/detail/webxr-api-emulator/mjddjgeghkdijejnciaefnkjmkafnnje">Chrome</a> or <a href="https://addons.mozilla.org/en-US/firefox/addon/webxr-api-emulator/">Firefox</a>).</p>
 <h1><a class="anchor" id="network_access"></a>
 Network access</h1>
 <p>See <a class="el" href="structdrake_1_1geometry_1_1_meshcat_params.html" title="The set of parameters for configuring Meshcat.">MeshcatParams</a> for options to control the hostname and port to bind to.</p>

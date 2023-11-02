@@ -593,9 +593,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a5999ff5df38e426f3e6c4a69aeec4305"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a5999ff5df38e426f3e6c4a69aeec4305">AggregateDuplicateVariables</a> (const Eigen::SparseMatrix&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;A, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &amp;vars, Eigen::SparseMatrix&lt; <a class="el" href="classdouble.html">double</a> &gt; *A_new, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; *vars_new)</td></tr>
 <tr class="memdesc:a5999ff5df38e426f3e6c4a69aeec4305"><td class="mdescLeft">&#160;</td><td class="mdescRight">For linear expression A * vars where <code>vars</code> might contain duplicated entries, rewrite this linear expression as A_new * vars_new where vars_new doesn't contain duplicated entries.  <a href="#a5999ff5df38e426f3e6c4a69aeec4305">More...</a><br /></td></tr>
 <tr class="separator:a5999ff5df38e426f3e6c4a69aeec4305"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2393a50b2a4547a3a88aa89c9f77e4bb"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html">QuadraticCost</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a2393a50b2a4547a3a88aa89c9f77e4bb">FindNonconvexQuadraticCost</a> (const std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html">QuadraticCost</a> &gt;&gt; &amp;quadratic_costs)</td></tr>
-<tr class="memdesc:a2393a50b2a4547a3a88aa89c9f77e4bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the first non-convex quadratic cost among <code>quadratic_costs</code>.  <a href="#a2393a50b2a4547a3a88aa89c9f77e4bb">More...</a><br /></td></tr>
-<tr class="separator:a2393a50b2a4547a3a88aa89c9f77e4bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab097e2ddc8c73cd83a8ae0e801b9071"><td class="memTemplParams" colspan="2">template&lt;typename C &gt; </td></tr>
 <tr class="memitem:aab097e2ddc8c73cd83a8ae0e801b9071"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#aab097e2ddc8c73cd83a8ae0e801b9071">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; C &gt; &amp;binding)</td></tr>
 <tr class="memdesc:aab097e2ddc8c73cd83a8ae0e801b9071"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print out the <a class="el" href="classdrake_1_1solvers_1_1_binding.html" title="A binding on constraint type C is a mapping of the decision variables onto the inputs of C.">Binding</a>.  <a href="#aab097e2ddc8c73cd83a8ae0e801b9071">More...</a><br /></td></tr>
@@ -2641,28 +2638,6 @@ The particular representation/algorithm here was developed in an attempt:<ul>
        ⎩ -x exp(1/x)  if x &lt; 0.
 </pre><p> [2] "Whole-body Motion Planning with Centroidal Dynamics and Full
 Kinematics" by Hongkai Dai, Andres Valenzuela and Russ Tedrake, IEEE-RAS International Conference on Humanoid Robots, 2014. </p>
-
-</div>
-</div>
-<a id="a2393a50b2a4547a3a88aa89c9f77e4bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2393a50b2a4547a3a88aa89c9f77e4bb">&#9670;&nbsp;</a></span>FindNonconvexQuadraticCost()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html">QuadraticCost</a>&gt;* drake::solvers::FindNonconvexQuadraticCost </td>
-          <td>(</td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html">QuadraticCost</a> &gt;&gt; &amp;&#160;</td>
-          <td class="paramname"><em>quadratic_costs</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the first non-convex quadratic cost among <code>quadratic_costs</code>. </p>
-<p>If all quadratic costs are convex, then return a nullptr.(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000013">Deprecated:</a></b></dt><dd>This function is no longer public. <br />
- This will be removed from Drake on or after 2023-11-01.</dd></dl>
 
 </div>
 </div>

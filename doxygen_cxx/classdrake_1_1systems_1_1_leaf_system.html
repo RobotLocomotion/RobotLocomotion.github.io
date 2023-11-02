@@ -2869,7 +2869,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000027">Deprecated:</a></b></dt><dd>Overriding DoCalcDiscreteVariableUpdates is no longer allowed.  Use DeclarePeriodicDiscreteUpdateEvent() instead. <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000026">Deprecated:</a></b></dt><dd>Overriding DoCalcDiscreteVariableUpdates is no longer allowed.  Use DeclarePeriodicDiscreteUpdateEvent() instead. <br />
  This will be removed from Drake on or after 2024-02-01.</dd></dl>
 
 </div>
@@ -3062,7 +3062,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000026">Deprecated:</a></b></dt><dd>Overriding DoPublish is no longer allowed.  Use DeclarePeriodicPublishEvent() instead. <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000025">Deprecated:</a></b></dt><dd>Overriding DoPublish is no longer allowed.  Use DeclarePeriodicPublishEvent() instead. <br />
  This will be removed from Drake on or after 2024-02-01.</dd></dl>
 
 </div>
@@ -3201,7 +3201,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000028">Deprecated:</a></b></dt><dd>Overriding DoCalcUnrestrictedUpdate is no longer allowed.  Use DeclarePeriodicUnrestrictedUpdateEvent() instead. <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000027">Deprecated:</a></b></dt><dd>Overriding DoCalcUnrestrictedUpdate is no longer allowed.  Use DeclarePeriodicUnrestrictedUpdateEvent() instead. <br />
  This will be removed from Drake on or after 2024-02-01.</dd></dl>
 
 </div>
@@ -3974,7 +3974,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000030">Deprecated:</a></b></dt><dd>Overriding DoCalcDiscreteVariableUpdates is no longer allowed <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000029">Deprecated:</a></b></dt><dd>Overriding DoCalcDiscreteVariableUpdates is no longer allowed <br />
  This will be removed from Drake on or after 2024-02-01.</dd></dl>
 <p>Derived-class event dispatcher for all simultaneous discrete update events. Override this in your derived <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html" title="A superclass template that extends System with some convenience utilities that are not applicable to ...">LeafSystem</a> only if you require behavior other than the default dispatch behavior (not common). The default behavior is to traverse events in the arbitrary order they appear in <code>events</code>, and for each event that has a callback function, to invoke the callback with <code>context</code>, that event, and <code>discrete_state</code>. Note that the same (possibly modified) <code>discrete_state</code> is passed to subsequent callbacks.</p>
 <p>Do not override this just to handle an event &ndash; instead declare the event and a handler callback for it using one of the <code>Declare...DiscreteUpdateEvent()</code> methods.</p>
@@ -4081,7 +4081,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000031">Deprecated:</a></b></dt><dd>Overriding DoCalcUnrestrictedUpdate is no longer allowed <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000030">Deprecated:</a></b></dt><dd>Overriding DoCalcUnrestrictedUpdate is no longer allowed <br />
  This will be removed from Drake on or after 2024-02-01.</dd></dl>
 <p>Derived-class event dispatcher for all simultaneous unrestricted update events. Override this in your derived <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html" title="A superclass template that extends System with some convenience utilities that are not applicable to ...">LeafSystem</a> only if you require behavior other than the default dispatch behavior (not common). The default behavior is to traverse events in the arbitrary order they appear in <code>events</code>, and for each event that has a callback function, to invoke the callback with <code>context</code>, that event, and <code>state</code>. Note that the same (possibly modified) <code>state</code> is passed to subsequent callbacks.</p>
 <p>Do not override this just to handle an event &ndash; instead declare the event and a handler callback for it using one of the <code>Declare...UnrestrictedUpdateEvent()</code> methods.</p>
@@ -4201,7 +4201,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000029">Deprecated:</a></b></dt><dd>Overriding DoPublish is no longer allowed <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000028">Deprecated:</a></b></dt><dd>Overriding DoPublish is no longer allowed <br />
  This will be removed from Drake on or after 2024-02-01.</dd></dl>
 <p>Derived-class event dispatcher for all simultaneous publish events in <code>events</code>. Override this in your derived <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html" title="A superclass template that extends System with some convenience utilities that are not applicable to ...">LeafSystem</a> only if you require behavior other than the default dispatch behavior (not common). The default behavior is to traverse events in the arbitrary order they appear in <code>events</code>, and for each event that has a callback function, to invoke the callback with <code>context</code> and that event.</p>
 <p>Do not override this just to handle an event &ndash; instead declare the event and a handler callback for it using one of the <code>Declare...PublishEvent()</code> methods.</p>
@@ -4323,7 +4323,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000024">Deprecated:</a></b></dt><dd>Instead of calling this function, call GetGraphvizFragment() <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000023">Deprecated:</a></b></dt><dd>Instead of calling this function, call GetGraphvizFragment() <br />
  This will be removed from Drake on or after 2024-01-01.</dd></dl>
 
 <p>Reimplemented from <a class="el" href="classdrake_1_1systems_1_1_system.html#ab8056b92562217c25ff76fac7ad67961">System&lt; T &gt;</a>.</p>
@@ -4371,7 +4371,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000025">Deprecated:</a></b></dt><dd>Instead of calling this function, call GetGraphvizFragment() <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000024">Deprecated:</a></b></dt><dd>Instead of calling this function, call GetGraphvizFragment() <br />
  This will be removed from Drake on or after 2024-01-01.</dd></dl>
 
 <p>Reimplemented from <a class="el" href="classdrake_1_1systems_1_1_system.html#aa75de0b661eaa9b9a45959a9de4eaae0">System&lt; T &gt;</a>.</p>

@@ -178,7 +178,7 @@ SmoothUnderMax( φ((vᵢ - v_influence)/(v_influence - ub)) / φ(-1) ) ≥ 1
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ace12e4c5a5ed81510ce93b17cbc332f7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_minimum_value_constraint.html#ace12e4c5a5ed81510ce93b17cbc332f7">MinimumValueConstraint</a> (<a class="el" href="classint.html">int</a> <a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a224e4c35014e87139f73f9a517866796">num_vars</a>, <a class="el" href="classdouble.html">double</a> <a class="el" href="classdrake_1_1solvers_1_1_minimum_value_constraint.html#ab401d591e846938bc37b33dfa80119f8">minimum_value</a>, <a class="el" href="classdouble.html">double</a> influence_value_offset, <a class="el" href="classint.html">int</a> <a class="el" href="classdrake_1_1solvers_1_1_minimum_value_constraint.html#a93d4b5a510863f73768935ea3a3681ee">max_num_values</a>, std::function&lt; <a class="el" href="namespacedrake.html#a7b13142534d668d5d490b829b917fa16">AutoDiffVecXd</a>(const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a7b13142534d668d5d490b829b917fa16">AutoDiffVecXd</a> &gt; &amp;, <a class="el" href="classdouble.html">double</a>)&gt; value_function, std::function&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;(const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&gt; &amp;, <a class="el" href="classdouble.html">double</a>)&gt; value_function_double={})</td></tr>
+<tr class="memitem:ace12e4c5a5ed81510ce93b17cbc332f7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_minimum_value_constraint.html#ace12e4c5a5ed81510ce93b17cbc332f7">MinimumValueConstraint</a> (<a class="el" href="classint.html">int</a> <a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a224e4c35014e87139f73f9a517866796">num_vars</a>, <a class="el" href="classdouble.html">double</a> minimum_value, <a class="el" href="classdouble.html">double</a> influence_value_offset, <a class="el" href="classint.html">int</a> <a class="el" href="classdrake_1_1solvers_1_1_minimum_value_constraint.html#a93d4b5a510863f73768935ea3a3681ee">max_num_values</a>, std::function&lt; <a class="el" href="namespacedrake.html#a7b13142534d668d5d490b829b917fa16">AutoDiffVecXd</a>(const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a7b13142534d668d5d490b829b917fa16">AutoDiffVecXd</a> &gt; &amp;, <a class="el" href="classdouble.html">double</a>)&gt; value_function, std::function&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;(const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&gt; &amp;, <a class="el" href="classdouble.html">double</a>)&gt; value_function_double={})</td></tr>
 <tr class="memdesc:ace12e4c5a5ed81510ce93b17cbc332f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1solvers_1_1_minimum_value_constraint.html" title="Constrain lb &lt;= min(v) &lt;= ub.">MinimumValueConstraint</a>.  <a href="#ace12e4c5a5ed81510ce93b17cbc332f7">More...</a><br /></td></tr>
 <tr class="separator:ace12e4c5a5ed81510ce93b17cbc332f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aced60c0081fc2eba4cbddd0260f02b26"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_minimum_value_constraint.html#aced60c0081fc2eba4cbddd0260f02b26">MinimumValueConstraint</a> (<a class="el" href="classint.html">int</a> <a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a224e4c35014e87139f73f9a517866796">num_vars</a>, <a class="el" href="classdouble.html">double</a> <a class="el" href="classdrake_1_1solvers_1_1_minimum_value_constraint.html#a9a9b45204eae7c96d746ea7c94812e1f">minimum_value_lower</a>, <a class="el" href="classdouble.html">double</a> <a class="el" href="classdrake_1_1solvers_1_1_minimum_value_constraint.html#a6d8a14c0ab11d6994465704b9450568a">minimum_value_upper</a>, <a class="el" href="classdouble.html">double</a> <a class="el" href="classdrake_1_1solvers_1_1_minimum_value_constraint.html#af608569c22efc4a0c30ab19f3e58e2dc">influence_value</a>, <a class="el" href="classint.html">int</a> <a class="el" href="classdrake_1_1solvers_1_1_minimum_value_constraint.html#a93d4b5a510863f73768935ea3a3681ee">max_num_values</a>, std::function&lt; <a class="el" href="namespacedrake.html#a7b13142534d668d5d490b829b917fa16">AutoDiffVecXd</a>(const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a7b13142534d668d5d490b829b917fa16">AutoDiffVecXd</a> &gt; &amp;, <a class="el" href="classdouble.html">double</a>)&gt; value_function, std::function&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;(const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&gt; &amp;, <a class="el" href="classdouble.html">double</a>)&gt; value_function_double={})</td></tr>
@@ -186,9 +186,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aced60c0081fc2eba4cbddd0260f02b26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a382ce7201d11202f72729b4960871a43"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_minimum_value_constraint.html#a382ce7201d11202f72729b4960871a43">~MinimumValueConstraint</a> () override</td></tr>
 <tr class="separator:a382ce7201d11202f72729b4960871a43"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab401d591e846938bc37b33dfa80119f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_minimum_value_constraint.html#ab401d591e846938bc37b33dfa80119f8">minimum_value</a> () const</td></tr>
-<tr class="memdesc:ab401d591e846938bc37b33dfa80119f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for the minimum value.  <a href="#ab401d591e846938bc37b33dfa80119f8">More...</a><br /></td></tr>
-<tr class="separator:ab401d591e846938bc37b33dfa80119f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a9b45204eae7c96d746ea7c94812e1f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_minimum_value_constraint.html#a9a9b45204eae7c96d746ea7c94812e1f">minimum_value_lower</a> () const</td></tr>
 <tr class="memdesc:a9a9b45204eae7c96d746ea7c94812e1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for the lower bound on the minimum value.  <a href="#a9a9b45204eae7c96d746ea7c94812e1f">More...</a><br /></td></tr>
 <tr class="separator:a9a9b45204eae7c96d746ea7c94812e1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -506,27 +503,6 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Getter for maximum number of values expected from value_function. </p>
-
-</div>
-</div>
-<a id="ab401d591e846938bc37b33dfa80119f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab401d591e846938bc37b33dfa80119f8">&#9670;&nbsp;</a></span>minimum_value()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> minimum_value </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Getter for the minimum value. </p>
-<p>(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000014">Deprecated:</a></b></dt><dd>Use minimum_value_lower() instead. <br />
- This will be removed from Drake on or after 2023-11-01.</dd></dl>
 
 </div>
 </div>

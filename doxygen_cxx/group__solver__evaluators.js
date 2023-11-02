@@ -57,7 +57,6 @@ var group__solver__evaluators =
       [ "MinimumDistanceConstraint", "classdrake_1_1multibody_1_1_minimum_distance_constraint.html#ae3603769808c8398b775939dab6bc8c2", null ],
       [ "~MinimumDistanceConstraint", "classdrake_1_1multibody_1_1_minimum_distance_constraint.html#a9623b17216753d2cc42cf54fc6e2dd79", null ],
       [ "influence_distance", "classdrake_1_1multibody_1_1_minimum_distance_constraint.html#a8f7e944ec487debca7e690ac2496f3f9", null ],
-      [ "minimum_distance", "classdrake_1_1multibody_1_1_minimum_distance_constraint.html#a5f54fe1174b9d9de89ffefb622bb5161", null ],
       [ "minimum_distance_lower", "classdrake_1_1multibody_1_1_minimum_distance_constraint.html#aa67369bd4332e56a746933c14eba7d4b", null ],
       [ "minimum_distance_upper", "classdrake_1_1multibody_1_1_minimum_distance_constraint.html#ace27b68ab7bfea24246954fd68dcdc34", null ],
       [ "operator=", "classdrake_1_1multibody_1_1_minimum_distance_constraint.html#a75b4628294815c391faa7ebdeca088a8", null ],

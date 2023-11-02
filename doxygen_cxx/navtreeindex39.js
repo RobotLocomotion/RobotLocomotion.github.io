@@ -1,15 +1,5 @@
 var NAVTREEINDEX39 =
 {
-"classdrake_1_1systems_1_1_system.html#afed229e14777bd82382dc3ed6e715bd3":[3,0,0,15,105,93],
-"classdrake_1_1systems_1_1_system.html#afed3d915574f9b99ff935af452481f21":[3,0,0,15,105,39],
-"classdrake_1_1systems_1_1_system.html#affcc9107de045c4500b366b947a3796a":[3,0,0,15,105,80],
-"classdrake_1_1systems_1_1_system_base.html":[3,0,0,15,106],
-"classdrake_1_1systems_1_1_system_base.html#a0232523ac7f8337a392b321ffd282187":[3,0,0,15,106,64],
-"classdrake_1_1systems_1_1_system_base.html#a0afc9712c887706c12039e871476f30c":[3,0,0,15,106,82],
-"classdrake_1_1systems_1_1_system_base.html#a0b7f7189714d79a830e909e281324533":[3,0,0,15,106,3],
-"classdrake_1_1systems_1_1_system_base.html#a0e75aaff1fa28d033136d4073c59e097":[3,0,0,15,106,21],
-"classdrake_1_1systems_1_1_system_base.html#a0eb74936487f1ae4658b54979195fa1b":[3,0,0,15,106,56],
-"classdrake_1_1systems_1_1_system_base.html#a1291b5091aa55dbd03c9b5944dbced09":[3,0,0,15,106,59],
 "classdrake_1_1systems_1_1_system_base.html#a140f5e4ae62c9208e368ea15d7612155":[3,0,0,15,106,31],
 "classdrake_1_1systems_1_1_system_base.html#a14e502b9bccb8c93c30f872d3eb00e9b":[3,0,0,15,106,4],
 "classdrake_1_1systems_1_1_system_base.html#a161f7073ea98c0a25ca55f5dd4186dca":[3,0,0,15,106,22],
@@ -249,5 +239,15 @@ var NAVTREEINDEX39 =
 "classdrake_1_1systems_1_1_time_varying_affine_system.html#aeb949cff9a78072d907aab3dc122d7d5":[1,2,1,1,22],
 "classdrake_1_1systems_1_1_time_varying_affine_system.html#aedb3a4bc9859caa7cc548bb6d315892a":[1,2,1,1,27],
 "classdrake_1_1systems_1_1_time_varying_affine_system.html#af41ab7613b45779dd3ac81069f0396c6":[1,2,1,1,5],
-"classdrake_1_1systems_1_1_time_varying_linear_system.html":[1,2,1,13]
+"classdrake_1_1systems_1_1_time_varying_linear_system.html":[1,2,1,13],
+"classdrake_1_1systems_1_1_time_varying_linear_system.html#a0700d256125405a936cdb7e9948e4e7f":[1,2,1,13,2],
+"classdrake_1_1systems_1_1_time_varying_linear_system.html#a4170593a3df880ac56ce1acbc4605401":[1,2,1,13,3],
+"classdrake_1_1systems_1_1_time_varying_linear_system.html#a9897c05efd63b1dd511248dd36031298":[1,2,1,13,1],
+"classdrake_1_1systems_1_1_time_varying_linear_system.html#ab9c33f46353b873a90d78b8a467b05cb":[1,2,1,13,4],
+"classdrake_1_1systems_1_1_time_varying_linear_system.html#ae71a02e204947f866d7a37f931db855a":[1,2,1,13,0],
+"classdrake_1_1systems_1_1_trajectory_affine_system.html":[1,2,1,23],
+"classdrake_1_1systems_1_1_trajectory_affine_system.html#a076147c8e4d6818575b8e504438417b3":[1,2,1,23,5],
+"classdrake_1_1systems_1_1_trajectory_affine_system.html#a07f1c0db1c310730c653ac4c2300f588":[1,2,1,23,4],
+"classdrake_1_1systems_1_1_trajectory_affine_system.html#a390e76eeefc1417c5bdeccddeebbcc00":[1,2,1,23,0],
+"classdrake_1_1systems_1_1_trajectory_affine_system.html#a4f6bca0023ceef2aa04f67a887abc7be":[1,2,1,23,2]
 };

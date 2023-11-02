@@ -171,7 +171,6 @@ $(document).ready(function(){initNavTree('aggregate__costs__constraints_8h.html'
 <code>#include &lt;unordered_map&gt;</code><br />
 <code>#include &lt;utility&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
-<code>#include &quot;<a class="el" href="drake__deprecated_8h.html">drake/common/drake_deprecated.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="binding_8h.html">drake/solvers/binding.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="constraint_8h.html">drake/solvers/constraint.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="cost_8h.html">drake/solvers/cost.h</a>&quot;</code><br />
@@ -213,9 +212,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a5999ff5df38e426f3e6c4a69aeec4305"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a5999ff5df38e426f3e6c4a69aeec4305">AggregateDuplicateVariables</a> (const Eigen::SparseMatrix&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;A, const VectorX&lt; symbolic::Variable &gt; &amp;vars, Eigen::SparseMatrix&lt; <a class="el" href="classdouble.html">double</a> &gt; *A_new, VectorX&lt; symbolic::Variable &gt; *vars_new)</td></tr>
 <tr class="memdesc:a5999ff5df38e426f3e6c4a69aeec4305"><td class="mdescLeft">&#160;</td><td class="mdescRight">For linear expression A * vars where <code>vars</code> might contain duplicated entries, rewrite this linear expression as A_new * vars_new where vars_new doesn't contain duplicated entries.  <a href="namespacedrake_1_1solvers.html#a5999ff5df38e426f3e6c4a69aeec4305">More...</a><br /></td></tr>
 <tr class="separator:a5999ff5df38e426f3e6c4a69aeec4305"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2393a50b2a4547a3a88aa89c9f77e4bb"><td class="memItemLeft" align="right" valign="top">const Binding&lt; QuadraticCost &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a2393a50b2a4547a3a88aa89c9f77e4bb">FindNonconvexQuadraticCost</a> (const std::vector&lt; Binding&lt; QuadraticCost &gt;&gt; &amp;quadratic_costs)</td></tr>
-<tr class="memdesc:a2393a50b2a4547a3a88aa89c9f77e4bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the first non-convex quadratic cost among <code>quadratic_costs</code>.  <a href="namespacedrake_1_1solvers.html#a2393a50b2a4547a3a88aa89c9f77e4bb">More...</a><br /></td></tr>
-<tr class="separator:a2393a50b2a4547a3a88aa89c9f77e4bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
