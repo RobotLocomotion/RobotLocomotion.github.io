@@ -145,23 +145,92 @@ analysis.
 for older operating systems or third-party libraries.
 If you need to use these, you can use an old release of Drake.</p>
 
-<h2 id="ubuntu-1804-bionic">Ubuntu 18.04 (Bionic)</h2>
-
-<p>The last version with support for Ubuntu 18.04 is v1.1.0:</p>
+<h1 id="ubuntu-packages">Ubuntu packages</h1>
 
 <ul>
-  <li><a href="https://github.com/RobotLocomotion/drake/releases/tag/v1.1.0">https://github.com/RobotLocomotion/drake/releases/tag/v1.1.0</a></li>
+  <li>Ubuntu 18.04 (Bionic)
+    <ul>
+      <li>The last version with support for Ubuntu 18.04 was
+<a href="https://github.com/RobotLocomotion/drake/releases/tag/v1.1.0">v1.1.0</a>.</li>
+    </ul>
+  </li>
+  <li>Ubuntu 16.04 (Xenial)
+    <ul>
+      <li>The last version with support for Ubuntu 16.04 was
+<a href="https://github.com/RobotLocomotion/drake/releases/tag/v0.11.0">v0.11.0</a>.</li>
+    </ul>
+  </li>
 </ul>
 
-<h2 id="ubuntu-1604-xenial">Ubuntu 16.04 (Xenial)</h2>
-
-<p>The last version with support for Ubuntu 16.04 is v0.11.0:</p>
+<h1 id="macos-packages">macOS packages</h1>
 
 <ul>
-  <li><a href="https://github.com/RobotLocomotion/drake/releases/tag/v0.11.0">https://github.com/RobotLocomotion/drake/releases/tag/v0.11.0</a></li>
+  <li>macOS 12 (Monterey)
+    <ul>
+      <li>The last version with support for macOS 12 was
+<a href="https://github.com/RobotLocomotion/drake/releases/tag/v1.22.0">v1.22.0</a>.</li>
+    </ul>
+  </li>
+  <li>macOS 11 (Big Sur)
+    <ul>
+      <li>The last version with support for macOS 11 was
+<a href="https://github.com/RobotLocomotion/drake/releases/tag/v1.9.0">v1.9.0</a>.</li>
+    </ul>
+  </li>
+  <li>macOS 10.15 (Catalina)
+    <ul>
+      <li>The last version with support for macOS 10.15 was
+<a href="https://github.com/RobotLocomotion/drake/releases/tag/v0.35.0">v0.35.0</a>.</li>
+    </ul>
+  </li>
+  <li>macOS 10.14 (Mojave)
+    <ul>
+      <li>The last version with support for macOS 10.14 was
+<a href="https://github.com/RobotLocomotion/drake/releases/tag/v0.24.0">v0.24.0</a>.</li>
+    </ul>
+  </li>
+  <li>macOS 10.13 (High Sierra)
+    <ul>
+      <li>The last version with support for macOS 10.13 was
+<a href="https://github.com/RobotLocomotion/drake/releases/tag/v0.11.0">v0.11.0</a>.</li>
+    </ul>
+  </li>
 </ul>
 
-<h2 id="matlab-2015">MATLAB 2015</h2>
+<h1 id="wheel-packages">Wheel packages</h1>
+
+<ul>
+  <li>Python 3.10 (Wheel)
+    <ul>
+      <li>On Linux, Drake still supports Python 3.10 wheels.</li>
+      <li>On macOS, the last version with support for Python 3.10 wheels was
+<a href="https://github.com/RobotLocomotion/drake/releases/tag/v1.12.0">v1.12.0</a>.</li>
+    </ul>
+  </li>
+  <li>Python 3.9 (Wheel)
+    <ul>
+      <li>On Linux, Drake still supports Python 3.9 wheels.</li>
+      <li>On macOS, the last version with support for Python 3.9 wheels was
+<a href="https://github.com/RobotLocomotion/drake/releases/tag/v1.5.0">v1.5.0</a>.</li>
+    </ul>
+  </li>
+  <li>Python 3.7 (Wheel)
+    <ul>
+      <li>On Linux, the last version with support for Python 3.7 wheels was
+<a href="https://github.com/RobotLocomotion/drake/releases/tag/v1.1.0">v1.1.0</a>.</li>
+      <li>On macOS, Drake never supported Python 3.7 wheels.</li>
+    </ul>
+  </li>
+  <li>Python 3.6 (Wheel)
+    <ul>
+      <li>On Linux, the last version with support for Python 3.6 wheels was
+<a href="https://github.com/RobotLocomotion/drake/releases/tag/v1.1.0">v1.1.0</a>.</li>
+      <li>On macOS, Drake never supported Python 3.6 wheels.</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="matlab-2015">MATLAB 2015</h1>
 
 <p>Download the appropriate binary release (v0.9.x) for your platform from
 <a href="https://github.com/RobotLocomotion/drake/releases">https://github.com/RobotLocomotion/drake/releases</a>.
@@ -173,7 +242,7 @@ Note, however, that the dependencies on this branch are out of date and we do
 not expect that you will be able to easily compile/run the code, and do not
 provide support for this.</p>
 
-<h3 id="running-matlab-examples">Running MATLAB examples</h3>
+<h2 id="running-matlab-examples">Running MATLAB examples</h2>
 
 <p>To run the MATLAB examples, change directories (in MATLAB) into the <code class="language-plaintext highlighter-rouge">drake-distro/drake</code> folder and at the MATLAB prompt do:</p>
 
@@ -191,7 +260,7 @@ provide support for this.</p>
 
 <p>Please note that you will have to run <code class="language-plaintext highlighter-rouge">addpath_drake</code> each time you start MATLAB, or <a href="http://www.mathworks.com/help/matlab/ref/startup.html">add it to your startup.m</a>.</p>
 
-<h3 id="linux-specific">Linux Specific</h3>
+<h2 id="linux-specific">Linux Specific</h2>
 
 <p>The version of the standard C++ libraries that are shipped with the Linux distribution of MATLAB is severely outdated and can cause problems when running mex files that are built against a newer version of the standard.  The typical error message in this case reports <code class="language-plaintext highlighter-rouge">Invalid MEX-Files</code>.</p>
 

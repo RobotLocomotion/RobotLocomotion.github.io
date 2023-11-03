@@ -168,7 +168,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1sensors_1_1_i
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A system for periodically writing images to the file system. </p>
-<p>The system does not have a fixed set of input ports; the system can have an arbitrary number of image input ports. Each input port is independently configured with respect to:</p>
+<p>The system also provides direct image writing via a forced publish event. The system does not have a fixed set of input ports; the system can have an arbitrary number of image input ports. Each input port is independently configured with respect to:</p>
 <ul>
 <li>publish frequency,</li>
 <li>write location (directory) and image name,</li>
@@ -199,7 +199,8 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1sensors_1_1_i
 <li>ImageDepth16U - typically a depth image, written to disk as .png images.</li>
 <li>ImageGrey8U - typically a grey scale image, written to disk as .png images.</li>
 </ul>
-<p>Input ports are added to an ImageWriter via <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_writer.html#a41f00733c981de89c3f4c6ceeba6a2aa" title="Declares and configures a new image input port.">DeclareImageInputPort()</a>. See that function's documentation for elaboration on how to configure image output. It is important to note, that every declared image input port <em>must</em> be connected; otherwise, attempting to write an image from that port, will cause an error in the system. </p>
+<p>Input ports are added to an ImageWriter via <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_writer.html#a41f00733c981de89c3f4c6ceeba6a2aa" title="Declares and configures a new image input port.">DeclareImageInputPort()</a>. See that function's documentation for elaboration on how to configure image output. It is important to note, that every declared image input port <em>must</em> be connected; otherwise, attempting to write an image from that port, will cause an error in the system.</p>
+<p>If the user intends to write images directly instead of periodically, e.g., when running this system outside of <a class="el" href="classdrake_1_1systems_1_1_simulator.html#aba4b04299c9b1d41d9dd85563600012d" title="Advances the System&#39;s trajectory until boundary_time is reached in the Context or some other terminat...">Simulator::AdvanceTo</a>, a call to <code>ForcedPublish(system_context)</code> will write all images from each input port simultaneously to disk. Note that one can invoke a forced publish on this system using the same context multiple times, resulting in multiple write operations, with each operation overwriting the same file(s). </p>
 </div>
 <p><code>#include &lt;drake/systems/sensors/image_writer.h&gt;</code></p>
 <table class="memberdecls">
@@ -215,6 +216,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a157e8f358edae6333e0fae01e3150f5e"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">InputPort</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_writer.html#a157e8f358edae6333e0fae01e3150f5e">DeclareImageInputPort</a> (std::string port_name, std::string file_name_format, <a class="el" href="classdouble.html">double</a> publish_period, <a class="el" href="classdouble.html">double</a> start_time)</td></tr>
 <tr class="memdesc:a157e8f358edae6333e0fae01e3150f5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) An overload where PixelType is a template parameter instead of a runtime parameter.  <a href="#a157e8f358edae6333e0fae01e3150f5e">More...</a><br /></td></tr>
 <tr class="separator:a157e8f358edae6333e0fae01e3150f5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1daaaafa5f68f9f355783df22c965208"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_writer.html#a1daaaafa5f68f9f355783df22c965208">ResetAllImageCounts</a> () const</td></tr>
+<tr class="separator:a1daaaafa5f68f9f355783df22c965208"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a6f1f340f60b1623b5f0edd62a43d08b6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_writer.html#a6f1f340f60b1623b5f0edd62a43d08b6">ImageWriter</a> (const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_writer.html">ImageWriter</a> &amp;)=delete</td></tr>
 <tr class="separator:a6f1f340f60b1623b5f0edd62a43d08b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1394,7 +1397,7 @@ time" value <code>tₛ</code>, the frames will be written at: <code>t = tₛ + [
 <li><code>time_double</code> - The time (in seconds) stored in the context at the invocation of <a class="el" href="classdrake_1_1systems_1_1_system.html#aeb0983a770c179f97a4805c6bccb43cc" title="This method is the public entry point for dispatching all publish event handlers.">Publish()</a>, represented as a double.</li>
 <li><code>time_usec</code> - The time (in microseconds) stored in the context at the invocation of <a class="el" href="classdrake_1_1systems_1_1_system.html#aeb0983a770c179f97a4805c6bccb43cc" title="This method is the public entry point for dispatching all publish event handlers.">Publish()</a>, represented as a 64-bit integer.</li>
 <li><code>time_msec</code> - The time (in milliseconds) stored in the context at the invocation of <a class="el" href="classdrake_1_1systems_1_1_system.html#aeb0983a770c179f97a4805c6bccb43cc" title="This method is the public entry point for dispatching all publish event handlers.">Publish()</a>, represented as an integer.</li>
-<li><code>count</code> - The number of images that have been written from this port (the first image would get zero, the Nᵗʰ would get N - 1). This value increments <em>every</em> time an image gets written.</li>
+<li><code>count</code> - The number of write operations that have occurred from this port since system creation or the last invocation of <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_writer.html#a1daaaafa5f68f9f355783df22c965208">ResetAllImageCounts()</a> (the first write operation would get zero, the Nᵗʰ would get N - 1). This value increments <em>every</em> time a write operation occurs.</li>
 </ul>
 <p>File names can then be specified as shown in the following examples (assuming the port was declared as a color image port, with a name of "my_port", a period of 0.02 s (50 Hz), and a start time of 5 s.</p>
 <ul>
@@ -1489,8 +1492,34 @@ time" value <code>tₛ</code>, the frames will be written at: <code>t = tₛ + [
 
 </div>
 </div>
+<a id="ad28c096342b9f114c9e124d08a08568d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad28c096342b9f114c9e124d08a08568d">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_writer.html">ImageWriter</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_writer.html">ImageWriter</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a214742d6bc478d31733e5bf29a719732"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a214742d6bc478d31733e5bf29a719732">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a214742d6bc478d31733e5bf29a719732">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1515,28 +1544,19 @@ time" value <code>tₛ</code>, the frames will be written at: <code>t = tₛ + [
 
 </div>
 </div>
-<a id="ad28c096342b9f114c9e124d08a08568d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad28c096342b9f114c9e124d08a08568d">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a1daaaafa5f68f9f355783df22c965208"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1daaaafa5f68f9f355783df22c965208">&#9670;&nbsp;</a></span>ResetAllImageCounts()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_writer.html">ImageWriter</a>&amp; operator= </td>
+          <td class="memname">void ResetAllImageCounts </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_writer.html">ImageWriter</a> &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>

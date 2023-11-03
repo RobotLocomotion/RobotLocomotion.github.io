@@ -1,5 +1,6 @@
 var NAVTREEINDEX49 =
 {
+"geometry__roles_8h.html#a660dff0520608baf7e7f09861d6fa8f5":[4,0,0,4,20,8],
 "geometry__roles_8h.html#aa70628317c9ed8d19606fee0d13643a5":[4,0,0,4,20,6],
 "geometry__roles_8h.html#acdd79a1a4f81dd6ee5cddcb21149b951":[4,0,0,4,20,4],
 "geometry__roles_8h.html#acdd79a1a4f81dd6ee5cddcb21149b951a41ba12ed492ce20c3ff503a553ae85ea":[4,0,0,4,20,4,0],
@@ -106,8 +107,8 @@ var NAVTREEINDEX49 =
 "group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[1,6,1,4],
 "group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[4,0,0,1,14,2],
 "group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[1,6,1,2],
-"group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[4,0,0,1,14,3],
 "group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[1,6,1,3],
+"group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[4,0,0,1,14,3],
 "group__discrete__systems.html":[1,2,9],
 "group__discretization.html":[1,3,0,5],
 "group__drake__contacts.html":[1,3,3],
@@ -125,10 +126,10 @@ var NAVTREEINDEX49 =
 "group__geometry.html":[1,5],
 "group__geometry__file__formats.html":[1,5,4],
 "group__geometry__infrastructure.html":[1,5,0],
-"group__geometry__optimization.html":[1,1,1],
 "group__geometry__optimization.html":[1,5,5],
-"group__geometry__optimization.html#ga3a51e0fec449a0abcf498f78a2a390a8":[1,5,5,14],
+"group__geometry__optimization.html":[1,1,1],
 "group__geometry__optimization.html#ga3a51e0fec449a0abcf498f78a2a390a8":[1,1,1,14],
+"group__geometry__optimization.html#ga3a51e0fec449a0abcf498f78a2a390a8":[1,5,5,14],
 "group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af":[1,1,1,15],
 "group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af":[1,5,5,15],
 "group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6":[1,5,5,13],
@@ -248,6 +249,5 @@ var NAVTREEINDEX49 =
 "identifier_8h.html#a75fb496e078e67e4dcafd6ae9e624f30":[4,0,0,1,39,3],
 "identifier__pybind_8h.html":[4,0,0,0,0,1,6],
 "identifier__pybind_8h.html#a3791768bef1f65b7d83bcd7767e0b307":[4,0,0,0,0,1,6,0],
-"iiwa__command__receiver_8h.html":[4,0,0,6,1,1],
-"iiwa__command__sender_8h.html":[4,0,0,6,1,2]
+"iiwa__command__receiver_8h.html":[4,0,0,6,1,1]
 };

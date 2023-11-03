@@ -523,7 +523,7 @@ specified <code class="docutils literal notranslate"><span class="pre">type</spa
 <span class="sig-name descname"><span class="pre">ComputeActiveBasisFunctionIndices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.BsplineBasis.ComputeActiveBasisFunctionIndices" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>ComputeActiveBasisFunctionIndices(self: pydrake.math.BsplineBasis, parameter_interval: List[float[2]]) -&gt; List[int]</p></li>
+<li><p>ComputeActiveBasisFunctionIndices(self: pydrake.math.BsplineBasis, parameter_interval: Annotated[List[float], FixedSize(2)]) -&gt; List[int]</p></li>
 </ol>
 <p>Returns the indices of the basis functions which may evaluate to
 non-zero values for some parameter value in <code class="docutils literal notranslate"><span class="pre">parameter_interval</span></code>;
@@ -706,7 +706,7 @@ specified <code class="docutils literal notranslate"><span class="pre">type</spa
 <span id="pydrake.math.BsplineBasis_[AutoDiffXd].ComputeActiveBasisFunctionIndices"></span><span class="sig-name descname"><span class="pre">ComputeActiveBasisFunctionIndices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.BsplineBasis_-AutoDiffXd-.ComputeActiveBasisFunctionIndices" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>ComputeActiveBasisFunctionIndices(self: pydrake.math.BsplineBasis_[AutoDiffXd], parameter_interval: List[pydrake.autodiffutils.AutoDiffXd[2]]) -&gt; List[int]</p></li>
+<li><p>ComputeActiveBasisFunctionIndices(self: pydrake.math.BsplineBasis_[AutoDiffXd], parameter_interval: Annotated[List[pydrake.autodiffutils.AutoDiffXd], FixedSize(2)]) -&gt; List[int]</p></li>
 </ol>
 <p>Returns the indices of the basis functions which may evaluate to
 non-zero values for some parameter value in <code class="docutils literal notranslate"><span class="pre">parameter_interval</span></code>;
@@ -883,7 +883,7 @@ specified <code class="docutils literal notranslate"><span class="pre">type</spa
 <span id="pydrake.math.BsplineBasis_[Expression].ComputeActiveBasisFunctionIndices"></span><span class="sig-name descname"><span class="pre">ComputeActiveBasisFunctionIndices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.BsplineBasis_-Expression-.ComputeActiveBasisFunctionIndices" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>ComputeActiveBasisFunctionIndices(self: pydrake.math.BsplineBasis_[Expression], parameter_interval: List[pydrake.symbolic.Expression[2]]) -&gt; List[int]</p></li>
+<li><p>ComputeActiveBasisFunctionIndices(self: pydrake.math.BsplineBasis_[Expression], parameter_interval: Annotated[List[pydrake.symbolic.Expression], FixedSize(2)]) -&gt; List[int]</p></li>
 </ol>
 <p>Returns the indices of the basis functions which may evaluate to
 non-zero values for some parameter value in <code class="docutils literal notranslate"><span class="pre">parameter_interval</span></code>;

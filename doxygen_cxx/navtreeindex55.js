@@ -37,7 +37,7 @@ var NAVTREEINDEX55 =
 "sorted__pair_8h.html#aaaa975aac6050ca9507bf9761707c383":[4,0,0,1,56,10],
 "sorted__pair_8h.html#abfec653508bbfb544860dbfd0677bfa3":[4,0,0,1,56,6],
 "sorted__pair_8h.html#ae8b6812b1ccb5ba802e724ef1082569c":[4,0,0,1,56,8],
-"sorted__pair__pybind_8h.html":[4,0,0,0,0,1,9],
+"sorted__pair__pybind_8h.html":[4,0,0,0,0,1,8],
 "sorted__triplet_8h.html":[4,0,0,4,2,52],
 "sos__basis__generator_8h.html":[4,0,0,11,55],
 "sos__basis__generator_8h.html#a6703c1f6f99f3e06a86f6a54e7dbd63d":[4,0,0,11,55,0],

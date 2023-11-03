@@ -171,6 +171,7 @@ var searchData=
   ['reset_5fon_5fcopy_3c_20const_20meshtype_20_2a_20_3e',['reset_on_copy&lt; const MeshType * &gt;',['../classdrake_1_1reset__on__copy.html',1,'drake']]],
   ['reset_5fon_5fcopy_3c_20drake_3a_3asystems_3a_3acontextbase_20_2a_20_3e',['reset_on_copy&lt; drake::systems::ContextBase * &gt;',['../classdrake_1_1reset__on__copy.html',1,'drake']]],
   ['reset_5fwire_5fparameter_5ffunctions',['reset_wire_parameter_functions',['../classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#ab30cce870c84dde2c5f08cd4996301c1',1,'drake::examples::bead_on_a_wire::BeadOnAWire']]],
+  ['resetallimagecounts',['ResetAllImageCounts',['../classdrake_1_1systems_1_1sensors_1_1_image_writer.html#a1daaaafa5f68f9f355783df22c965208',1,'drake::systems::sensors::ImageWriter']]],
   ['resetintegratorfromflags',['ResetIntegratorFromFlags',['../group__simulator__configuration.html#gad32461bc90073aac39049d636974a04b',1,'drake::systems']]],
   ['resetrealtimeratecalculator',['ResetRealtimeRateCalculator',['../classdrake_1_1geometry_1_1_meshcat_visualizer.html#ab648811a71fc30082c0e3283f495d9df',1,'drake::geometry::MeshcatVisualizer']]],
   ['resetrendermode',['ResetRenderMode',['../classdrake_1_1geometry_1_1_meshcat.html#adeec831adfeef24453c8c5b8b9d69625',1,'drake::geometry::Meshcat']]],

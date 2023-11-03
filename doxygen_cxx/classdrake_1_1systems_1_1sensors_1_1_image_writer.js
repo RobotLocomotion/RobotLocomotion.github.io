@@ -5,6 +5,7 @@ var classdrake_1_1systems_1_1sensors_1_1_image_writer =
     [ "ImageWriter", "classdrake_1_1systems_1_1sensors_1_1_image_writer.html#adafd3b4eec8c37f6da05c4ceecbd7ef5", null ],
     [ "DeclareImageInputPort", "classdrake_1_1systems_1_1sensors_1_1_image_writer.html#a41f00733c981de89c3f4c6ceeba6a2aa", null ],
     [ "DeclareImageInputPort", "classdrake_1_1systems_1_1sensors_1_1_image_writer.html#a157e8f358edae6333e0fae01e3150f5e", null ],
+    [ "operator=", "classdrake_1_1systems_1_1sensors_1_1_image_writer.html#ad28c096342b9f114c9e124d08a08568d", null ],
     [ "operator=", "classdrake_1_1systems_1_1sensors_1_1_image_writer.html#a214742d6bc478d31733e5bf29a719732", null ],
-    [ "operator=", "classdrake_1_1systems_1_1sensors_1_1_image_writer.html#ad28c096342b9f114c9e124d08a08568d", null ]
+    [ "ResetAllImageCounts", "classdrake_1_1systems_1_1sensors_1_1_image_writer.html#a1daaaafa5f68f9f355783df22c965208", null ]
 ];

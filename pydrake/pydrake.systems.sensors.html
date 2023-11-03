@@ -1543,8 +1543,9 @@ the color/depth/label constructor is used.</p>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.sensors.</span></span><span class="sig-name descname"><span class="pre">ImageWriter</span></span><a class="headerlink" href="#pydrake.systems.sensors.ImageWriter" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
 <p>A system for periodically writing images to the file system. The
-system does not have a fixed set of input ports; the system can have
-an arbitrary number of image input ports. Each input port is
+system also provides direct image writing via a forced publish event.
+The system does not have a fixed set of input ports; the system can
+have an arbitrary number of image input ports. Each input port is
 independently configured with respect to:</p>
 <ul class="simple">
 <li><p>publish frequency,</p></li>
@@ -1569,6 +1570,13 @@ See that function’s documentation for elaboration on how to configure
 image output. It is important to note, that every declared image input
 port <em>must</em> be connected; otherwise, attempting to write an image from
 that port, will cause an error in the system.</p>
+<p>If the user intends to write images directly instead of periodically,
+e.g., when running this system outside of Simulator::AdvanceTo, a call
+to <code class="docutils literal notranslate"><span class="pre">ForcedPublish(system_context)</span></code> will write all images from each
+input port simultaneously to disk. Note that one can invoke a forced
+publish on this system using the same context multiple times,
+resulting in multiple write operations, with each operation
+overwriting the same file(s).</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.ImageWriter.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.ImageWriter" title="pydrake.systems.sensors.ImageWriter"><span class="pre">pydrake.systems.sensors.ImageWriter</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.ImageWriter.__init__" title="Permalink to this definition"></a></dt>
@@ -1577,7 +1585,7 @@ that port, will cause an error in the system.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.ImageWriter.DeclareImageInputPort">
-<span class="sig-name descname"><span class="pre">DeclareImageInputPort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.ImageWriter" title="pydrake.systems.sensors.ImageWriter"><span class="pre">pydrake.systems.sensors.ImageWriter</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">pixel_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.PixelType" title="pydrake.systems.sensors.PixelType"><span class="pre">pydrake.systems.sensors.PixelType</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">port_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_name_format</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">publish_period</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.ImageWriter.DeclareImageInputPort" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">DeclareImageInputPort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.ImageWriter" title="pydrake.systems.sensors.ImageWriter"><span class="pre">pydrake.systems.sensors.ImageWriter</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">pixel_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.PixelType" title="pydrake.systems.sensors.PixelType"><span class="pre">pydrake.systems.sensors.PixelType</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">port_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_name_format</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">publish_period</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.ImageWriter.DeclareImageInputPort" title="Permalink to this definition"></a></dt>
 <dd><p>Declares and configures a new image input port. A port is configured
 by providing:</p>
 <ul class="simple">
@@ -1615,10 +1623,11 @@ invocation of Publish(), represented as a double.
 invocation of Publish(), represented as a 64-bit integer.
 - <code class="docutils literal notranslate"><span class="pre">time_msec</span></code>   - The time (in milliseconds) stored in the context at the
 invocation of Publish(), represented as an integer.
-- <code class="docutils literal notranslate"><span class="pre">count</span></code>       - The number of images that have been written from this
-port (the first image would get zero, the Nᵗʰ would get
-N - 1). This value increments <em>every</em> time an image gets
-written.</p>
+- <code class="docutils literal notranslate"><span class="pre">count</span></code>       - The number of write operations that have occurred from
+this port since system creation or the last invocation of
+ResetAllImageCounts() (the first write operation would
+get zero, the Nᵗʰ would get N - 1). This value increments
+<em>every</em> time a write operation occurs.</p>
 <p>File names can then be specified as shown in the following examples
 (assuming the port was declared as a color image port, with a name of
 “my_port”, a period of 0.02 s (50 Hz), and a start time of 5 s.</p>
@@ -1687,6 +1696,11 @@ PixelType::kGrey8U}.</p>
 </dd>
 </dl>
 </dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageWriter.ResetAllImageCounts">
+<span class="sig-name descname"><span class="pre">ResetAllImageCounts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.ImageWriter" title="pydrake.systems.sensors.ImageWriter"><span class="pre">pydrake.systems.sensors.ImageWriter</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.ImageWriter.ResetAllImageCounts" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 
