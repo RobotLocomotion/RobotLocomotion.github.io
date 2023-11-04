@@ -1,5 +1,6 @@
 var NAVTREEINDEX45 =
 {
+"copyable__unique__ptr_8h.html":[4,0,0,1,13],
 "corotated__model_8h.html":[4,0,0,8,3,3],
 "corotated__model__data_8h.html":[4,0,0,8,3,4],
 "cost_8h.html":[4,0,0,11,10],
@@ -248,6 +249,5 @@ var NAVTREEINDEX45 =
 "dir_e67b9cd7d1b691e5dc83f84c637cb8c7.html":[4,0,0,4,0],
 "dir_ea36fc3ba6e4e5252c7024e61ca2d4a4.html":[4,0,0,4,6],
 "dir_f1666844dc41ec91c14125b680b7be1b.html":[4,0,0],
-"dir_f46c9d8bac432799f621aa951345f12b.html":[4,0,0,6,3],
-"dir_fa973aef359a666fa59c209acc8a7d72.html":[4,0,0,8,0,3]
+"dir_f46c9d8bac432799f621aa951345f12b.html":[4,0,0,6,3]
 };

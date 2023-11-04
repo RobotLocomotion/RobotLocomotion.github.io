@@ -121,6 +121,7 @@ var searchData=
   ['stochastic_2eh',['stochastic.h',['../stochastic_8h.html',1,'']]],
   ['stochastic_5fsystems_2eh',['stochastic_systems.h',['../stochastic__systems_8h.html',1,'']]],
   ['string_5fview_5fmap_5fkey_2eh',['string_view_map_key.h',['../string__view__map__key_8h.html',1,'']]],
+  ['submodules_5fpy_2eh',['submodules_py.h',['../submodules__py_8h.html',1,'']]],
   ['subvector_2eh',['subvector.h',['../subvector_8h.html',1,'']]],
   ['supernodal_5fsolver_2eh',['supernodal_solver.h',['../supernodal__solver_8h.html',1,'']]],
   ['supervector_2eh',['supervector.h',['../supervector_8h.html',1,'']]],

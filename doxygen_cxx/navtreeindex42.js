@@ -1,5 +1,6 @@
 var NAVTREEINDEX42 =
 {
+"classdrake_1_1systems_1_1implicit__integrator__test_1_1_spring_mass_damper_system.html#af5a9e3012f1d074da15ca9a122d8bd91":[3,0,0,15,4,1,6],
 "classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html":[3,0,0,15,5,0],
 "classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html#a08913c7a8969914949fc42c16f7f8567":[3,0,0,15,5,0,0],
 "classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html#a0d170a7cd24d74b63f39a5cb5bdbdd8c":[3,0,0,15,5,0,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX42 =
 "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#aff74e4980084b28c29f132bd18606031":[1,2,4,3,5],
 "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_async.html":[3,0,0,15,8,39],
 "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_async.html#a185817e131da83bce0ebf72345e45bf0":[3,0,0,15,8,39,5],
-"classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_async.html#a1e302e5ca758a4d8e1fb225d4f6cea49":[3,0,0,15,8,39,0],
-"classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_async.html#a33d5986623f99c4adcfabe1291da311c":[3,0,0,15,8,39,6]
+"classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_async.html#a1e302e5ca758a4d8e1fb225d4f6cea49":[3,0,0,15,8,39,0]
 };

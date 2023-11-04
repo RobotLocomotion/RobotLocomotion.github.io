@@ -1,5 +1,6 @@
 var NAVTREEINDEX60 =
 {
+"structdrake_1_1type__pack.html":[3,0,0,54],
 "structdrake_1_1type__pack.html#a0d7ec463ea247ebd6d235632c14544ba":[3,0,0,54,1],
 "structdrake_1_1type__pack.html#a3d3a828636762306b3bf4b16e74236cb":[3,0,0,54,0],
 "structdrake_1_1type__pack.html#a5bedf34ecf2bf4cc8e7a9d7df1f91172":[3,0,0,54,2],
@@ -106,6 +107,7 @@ var NAVTREEINDEX60 =
 "structstd_1_1tuple__element_3_01_index_00_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html":[3,0,2,29],
 "structstd_1_1tuple__element_3_01_index_00_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html#a9b731d88a685b1ec76623274cccf7d33":[3,0,2,29,0],
 "structstd_1_1tuple__size_3_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html":[3,0,2,30],
+"submodules__py_8h.html":[4,0,0,0,0,1,9],
 "subvector_8h.html":[4,0,0,12,3,37],
 "supernodal__solver_8h.html":[4,0,0,8,2,19],
 "supervector_8h.html":[4,0,0,12,3,38],
@@ -233,7 +235,7 @@ var NAVTREEINDEX60 =
 "text__logging_8h.html#ae32fd151ebc2dab30d9546f1dbef0c79":[4,0,0,1,59,2],
 "text__logging_8h.html#ae6e439f4584cc1f0a6dd0990378604a5":[4,0,0,1,59,7],
 "text__logging_8h.html#aed13fee35863fff48d177f80c979bca0":[4,0,0,1,59,1],
-"text__logging__pybind_8h.html":[4,0,0,0,0,1,9],
+"text__logging__pybind_8h.html":[4,0,0,0,0,1,10],
 "timer_8h.html":[4,0,0,1,60],
 "toppra_8h.html":[4,0,0,8,8,11],
 "toppra_8h.html#ad8fa828762d54ed2db5efec5df1b5082":[4,0,0,8,8,11,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX60 =
 "transform_8h.html":[4,0,0,1,2,2],
 "triangle__quadrature_8h.html":[4,0,0,8,15,1],
 "triangle__quadrature__rule_8h.html":[4,0,0,8,15,2],
-"triangle__surface__mesh_8h.html":[4,0,0,4,2,54],
-"triangle__surface__mesh__field_8h.html":[4,0,0,4,2,55],
-"triangle__surface__mesh__field_8h.html#a982d81c894c425051f4cbb03cd3ca4dd":[4,0,0,4,2,55,0]
+"triangle__surface__mesh_8h.html":[4,0,0,4,2,54]
 };

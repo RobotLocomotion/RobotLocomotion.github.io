@@ -2504,7 +2504,7 @@ not need to be in the set.</p>
 <span class="sig-name descname"><span class="pre">UniformSample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.UniformSample" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>UniformSample(self: pydrake.geometry.optimization.HPolyhedron, generator: pydrake.common._module_py.RandomGenerator, previous_sample: numpy.ndarray[numpy.float64[m, 1]]) -&gt; numpy.ndarray[numpy.float64[m, 1]]</p></li>
+<li><p>UniformSample(self: pydrake.geometry.optimization.HPolyhedron, generator: pydrake.common.RandomGenerator, previous_sample: numpy.ndarray[numpy.float64[m, 1]]) -&gt; numpy.ndarray[numpy.float64[m, 1]]</p></li>
 </ol>
 <p>Draw an (approximately) uniform sample from the set using the hit and
 run Markov-chain Monte-Carlo strategy described at
@@ -2520,7 +2520,7 @@ the ChebyshevCenter() will be used to seed the algorithm.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>UniformSample(self: pydrake.geometry.optimization.HPolyhedron, generator: pydrake.common._module_py.RandomGenerator) -&gt; numpy.ndarray[numpy.float64[m, 1]]</p></li>
+<li><p>UniformSample(self: pydrake.geometry.optimization.HPolyhedron, generator: pydrake.common.RandomGenerator) -&gt; numpy.ndarray[numpy.float64[m, 1]]</p></li>
 </ol>
 <p>Variant of UniformSample that uses the ChebyshevCenter() as the
 previous_sample as a feasible point to start the Markov chain

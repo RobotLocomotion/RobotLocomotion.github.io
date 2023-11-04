@@ -1,5 +1,6 @@
 var NAVTREEINDEX51 =
 {
+"linear__solve_8h.html#a579e00c8ae91d6bcdb32eb4d723eba73":[4,0,0,7,23,7],
 "linear__solve_8h.html#a9bfcba20c731dc23e4f48c367e36c9de":[4,0,0,7,23,6],
 "linear__solve_8h.html#ac1ecf90a76392d69deecb8feb29e19a7":[4,0,0,7,23,4],
 "linear__spring__damper_8h.html":[4,0,0,8,14,18],
@@ -241,13 +242,12 @@ var NAVTREEINDEX51 =
 "namespacedrake_1_1common.html":[3,0,0,2],
 "namespacedrake_1_1common.html":[2,0,0,2],
 "namespacedrake_1_1common_1_1test.html":[2,0,0,2,0],
-"namespacedrake_1_1examples.html":[2,0,0,3],
 "namespacedrake_1_1examples.html":[3,0,0,3],
+"namespacedrake_1_1examples.html":[2,0,0,3],
 "namespacedrake_1_1examples_1_1acrobot.html":[2,0,0,3,0],
 "namespacedrake_1_1examples_1_1acrobot.html":[3,0,0,3,0],
-"namespacedrake_1_1examples_1_1allegro__hand.html":[2,0,0,3,1],
 "namespacedrake_1_1examples_1_1allegro__hand.html":[3,0,0,3,1],
+"namespacedrake_1_1examples_1_1allegro__hand.html":[2,0,0,3,1],
 "namespacedrake_1_1examples_1_1ball__plate.html":[2,0,0,3,2],
-"namespacedrake_1_1examples_1_1bead__on__a__wire.html":[2,0,0,3,3],
-"namespacedrake_1_1examples_1_1bead__on__a__wire.html":[3,0,0,3,2]
+"namespacedrake_1_1examples_1_1bead__on__a__wire.html":[2,0,0,3,3]
 };

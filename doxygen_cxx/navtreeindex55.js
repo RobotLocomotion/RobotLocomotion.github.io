@@ -1,5 +1,6 @@
 var NAVTREEINDEX55 =
 {
+"solve_8h.html#a78328b8267370289c8c653bc67efde5e":[4,0,0,11,48,1],
 "solver__base_8h.html":[4,0,0,11,49],
 "solver__id_8h.html":[4,0,0,11,50],
 "solver__id_8h.html#a710dbb02b7a2ce05760b1534cd7b32d9":[4,0,0,11,50,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX55 =
 "structdrake_1_1geometry_1_1_meshcat_params.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,31,0],
 "structdrake_1_1geometry_1_1_meshcat_visualizer_params.html":[3,0,0,4,34],
 "structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a27471eb356d2510ae691de4053d7aef7":[3,0,0,4,34,4],
-"structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a2d836029fd25573125bd231e1ad19ecb":[3,0,0,4,34,7],
-"structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a3a415b5e7e1f412ec0002e0251ced626":[3,0,0,4,34,6]
+"structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a2d836029fd25573125bd231e1ad19ecb":[3,0,0,4,34,7]
 };

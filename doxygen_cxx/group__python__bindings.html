@@ -245,8 +245,8 @@ $(document).ready(function(){initNavTree('group__python__bindings.html','');});
 <li>Ensure that the dependent bindings module is listed in the <code>py_deps</code> attribute for the <code>drake_pybind_library()</code> target.</li>
 <li>Inside the <code>_py.cc</code>, ensure that you tell Python to import dependency bindings. This is important to load the bindings at the right time (for documentation), and ensure the dependent bindings are executed so that users can import that module in isolation and still have it work. This is important when your type signatures use dependency bindings, or a class declares its inheritance, etc.</li>
 <li>As an example: <pre class="fragment"># .../my_component.h
-#include "drake/math/rigid_transform.h"
-RigidTransformd MyMethod();
+#include "drake/geometry/meshcat.h"
+void MyMethod(std::shared_ptr&lt;Meshcat&gt; meshcat);
 
 # bindings/.../BUILD.bazel
 drake_pybind_library(
@@ -254,14 +254,14 @@ drake_pybind_library(
     ...
     py_deps = [
         ...
-        "//bindings/pydrake/math",
+        "//bindings/pydrake/geometry",
     ],
     ...
 )
 
 # bindings/.../my_method_py.cc
 PYBIND_MODULE(my_method, m) {
-  py::module::import("pydrake.math");
+  py::module::import("pydrake.geometry");
   m.def("MyMethod", &amp;MyMethod, ...);
 }
 </pre></li>

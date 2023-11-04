@@ -1664,7 +1664,7 @@ with <code class="docutils literal notranslate"><span class="pre">contact_surfac
 systems::System) for the model of a physical system consisting of a
 collection of interconnected bodies. See multibody for an overview of
 concepts/notation.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_generalized_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_spatial_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">model_instance_name[i]</em>_actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">model_instance_name[i]</em>_desired_state&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:green">geometry_query</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>MultibodyPlant</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_poses</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_velocities</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_accelerations</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; reaction_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; contact_results</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray"> model_instance_name[i]</em>_generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray"> model_instance_name[i]</em>_generalized_contact_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <span style="color:green">geometry_pose</span></td></tr></table></td></tr></table><p>The ports whose names begin with &lt;em style=”color:gray”&gt;
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_generalized_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_spatial_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">model_instance_name[i]</em>_actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">model_instance_name[i]</em>_desired_state&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:green">geometry_query</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>MultibodyPlant</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_poses</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_velocities</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_accelerations</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; net_actuation</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; reaction_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; contact_results</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray"> model_instance_name[i]</em>_generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray"> model_instance_name[i]</em>_generalized_contact_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <span style="color:green">geometry_pose</span></td></tr></table></td></tr></table><p>The ports whose names begin with &lt;em style=”color:gray”&gt;
 model_instance_name[i]&lt;/em&gt; represent groups of ports, one for each of
 the model_instances “model instances”, with i ∈ {0, …, N-1} for the
 N model instances. If a model instance does not contain any data of
@@ -1889,6 +1889,18 @@ actuators. This simplifies the diagram wiring for models that only
 rely on PD controllers.</p>
 <p>² This port is always declared, though it will be zero sized for model
 instances with no PD controllers.</p>
+<p>** Net actuation</p>
+<p>The total joint actuation applied via the actuation input port
+(get_actuation_input_port()) and applied by the PD controllers is
+reported by the net actuation port (get_net_actuation_output_port()).
+That is, the net actuation port reports the total actuation applied by
+a given actuator.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>PD controllers are ignored when a joint is locked (see
+Joint::Lock()), and thus they have no effect on the actuation
+output.</p>
+</div>
 <p><a href="#id7"><span class="problematic" id="id8">**</span></a>** Loading models from SDFormat files</p>
 <p>Drake has the capability to load multibody models from SDFormat and
 URDF files. Consider the example below which loads an acrobot model:</p>
@@ -4176,6 +4188,30 @@ collision geometry registration and connection with a SceneGraph.</p>
 <li><p><strong>RuntimeError if actuator_index does not correspond to a joint</strong> – </p></li>
 <li><p><strong>actuator in this tree.</strong> – </p></li>
 </ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.get_net_actuation_output_port">
+<span class="sig-name descname"><span class="pre">get_net_actuation_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.get_net_actuation_output_port" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a constant reference to the output port that reports actuation
+values applied through joint actuators. This output port is a vector
+valued port indexed by JointActuatorIndex, see JointActuator::index().
+Models that include PD controllers will include their contribution in
+this port, refer to mbp_actuation “Actuation” for further details.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>PD controllers are not considered for actuators on locked joints,
+see Joint::Lock(). Therefore they do not contribute to this port.</p>
+</div>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if called before Finalize</strong><strong>(</strong><strong>)</strong><strong></strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -6608,7 +6644,7 @@ model. The new WeldJoint is named as: frame_on_parent_F.name() +
 systems::System) for the model of a physical system consisting of a
 collection of interconnected bodies. See multibody for an overview of
 concepts/notation.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_generalized_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_spatial_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">model_instance_name[i]</em>_actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">model_instance_name[i]</em>_desired_state&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:green">geometry_query</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>MultibodyPlant</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_poses</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_velocities</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_accelerations</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; reaction_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; contact_results</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray"> model_instance_name[i]</em>_generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray"> model_instance_name[i]</em>_generalized_contact_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <span style="color:green">geometry_pose</span></td></tr></table></td></tr></table><p>The ports whose names begin with &lt;em style=”color:gray”&gt;
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_generalized_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_spatial_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">model_instance_name[i]</em>_actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">model_instance_name[i]</em>_desired_state&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:green">geometry_query</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>MultibodyPlant</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_poses</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_velocities</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_accelerations</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; net_actuation</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; reaction_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; contact_results</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray"> model_instance_name[i]</em>_generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray"> model_instance_name[i]</em>_generalized_contact_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <span style="color:green">geometry_pose</span></td></tr></table></td></tr></table><p>The ports whose names begin with &lt;em style=”color:gray”&gt;
 model_instance_name[i]&lt;/em&gt; represent groups of ports, one for each of
 the model_instances “model instances”, with i ∈ {0, …, N-1} for the
 N model instances. If a model instance does not contain any data of
@@ -6833,6 +6869,18 @@ actuators. This simplifies the diagram wiring for models that only
 rely on PD controllers.</p>
 <p>² This port is always declared, though it will be zero sized for model
 instances with no PD controllers.</p>
+<p>** Net actuation</p>
+<p>The total joint actuation applied via the actuation input port
+(get_actuation_input_port()) and applied by the PD controllers is
+reported by the net actuation port (get_net_actuation_output_port()).
+That is, the net actuation port reports the total actuation applied by
+a given actuator.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>PD controllers are ignored when a joint is locked (see
+Joint::Lock()), and thus they have no effect on the actuation
+output.</p>
+</div>
 <p><a href="#id37"><span class="problematic" id="id38">**</span></a>** Loading models from SDFormat files</p>
 <p>Drake has the capability to load multibody models from SDFormat and
 URDF files. Consider the example below which loads an acrobot model:</p>
@@ -9115,6 +9163,30 @@ collision geometry registration and connection with a SceneGraph.</p>
 <li><p><strong>RuntimeError if actuator_index does not correspond to a joint</strong> – </p></li>
 <li><p><strong>actuator in this tree.</strong> – </p></li>
 </ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_net_actuation_output_port">
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].get_net_actuation_output_port"></span><span class="sig-name descname"><span class="pre">get_net_actuation_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort_" title="pydrake.systems.framework.OutputPort_"><span class="pre">pydrake.systems.framework.OutputPort_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_net_actuation_output_port" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a constant reference to the output port that reports actuation
+values applied through joint actuators. This output port is a vector
+valued port indexed by JointActuatorIndex, see JointActuator::index().
+Models that include PD controllers will include their contribution in
+this port, refer to mbp_actuation “Actuation” for further details.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>PD controllers are not considered for actuators on locked joints,
+see Joint::Lock(). Therefore they do not contribute to this port.</p>
+</div>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if called before Finalize</strong><strong>(</strong><strong>)</strong><strong></strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -11503,7 +11575,7 @@ model. The new WeldJoint is named as: frame_on_parent_F.name() +
 systems::System) for the model of a physical system consisting of a
 collection of interconnected bodies. See multibody for an overview of
 concepts/notation.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_generalized_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_spatial_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">model_instance_name[i]</em>_actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">model_instance_name[i]</em>_desired_state&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:green">geometry_query</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>MultibodyPlant</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_poses</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_velocities</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_accelerations</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; reaction_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; contact_results</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray"> model_instance_name[i]</em>_generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray"> model_instance_name[i]</em>_generalized_contact_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <span style="color:green">geometry_pose</span></td></tr></table></td></tr></table><p>The ports whose names begin with &lt;em style=”color:gray”&gt;
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_generalized_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_spatial_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">model_instance_name[i]</em>_actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">model_instance_name[i]</em>_desired_state&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:green">geometry_query</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>MultibodyPlant</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_poses</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_velocities</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_accelerations</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; net_actuation</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; reaction_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; contact_results</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray"> model_instance_name[i]</em>_generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray"> model_instance_name[i]</em>_generalized_contact_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <span style="color:green">geometry_pose</span></td></tr></table></td></tr></table><p>The ports whose names begin with &lt;em style=”color:gray”&gt;
 model_instance_name[i]&lt;/em&gt; represent groups of ports, one for each of
 the model_instances “model instances”, with i ∈ {0, …, N-1} for the
 N model instances. If a model instance does not contain any data of
@@ -11728,6 +11800,18 @@ actuators. This simplifies the diagram wiring for models that only
 rely on PD controllers.</p>
 <p>² This port is always declared, though it will be zero sized for model
 instances with no PD controllers.</p>
+<p>** Net actuation</p>
+<p>The total joint actuation applied via the actuation input port
+(get_actuation_input_port()) and applied by the PD controllers is
+reported by the net actuation port (get_net_actuation_output_port()).
+That is, the net actuation port reports the total actuation applied by
+a given actuator.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>PD controllers are ignored when a joint is locked (see
+Joint::Lock()), and thus they have no effect on the actuation
+output.</p>
+</div>
 <p><a href="#id67"><span class="problematic" id="id68">**</span></a>** Loading models from SDFormat files</p>
 <p>Drake has the capability to load multibody models from SDFormat and
 URDF files. Consider the example below which loads an acrobot model:</p>
@@ -14010,6 +14094,30 @@ collision geometry registration and connection with a SceneGraph.</p>
 <li><p><strong>RuntimeError if actuator_index does not correspond to a joint</strong> – </p></li>
 <li><p><strong>actuator in this tree.</strong> – </p></li>
 </ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.get_net_actuation_output_port">
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].get_net_actuation_output_port"></span><span class="sig-name descname"><span class="pre">get_net_actuation_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort_" title="pydrake.systems.framework.OutputPort_"><span class="pre">pydrake.systems.framework.OutputPort_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.get_net_actuation_output_port" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a constant reference to the output port that reports actuation
+values applied through joint actuators. This output port is a vector
+valued port indexed by JointActuatorIndex, see JointActuator::index().
+Models that include PD controllers will include their contribution in
+this port, refer to mbp_actuation “Actuation” for further details.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>PD controllers are not considered for actuators on locked joints,
+see Joint::Lock(). Therefore they do not contribute to this port.</p>
+</div>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if called before Finalize</strong><strong>(</strong><strong>)</strong><strong></strong> – </p>
 </dd>
 </dl>
 </dd></dl>

@@ -151,12 +151,13 @@
 <li class="toctree-l1"><a class="reference internal" href="pydrake.common.yaml.html">pydrake.common.yaml</a></li>
 </ul>
 </div>
-<span class="target" id="module-pydrake.common"></span><dl class="py function">
+<span class="target" id="module-pydrake.common"></span><p>Bindings for //common:common</p>
+<dl class="py function">
 <dt class="sig sig-object py" id="pydrake.common.CalcProbabilityDensity">
 <span class="sig-prename descclassname"><span class="pre">pydrake.common.</span></span><span class="sig-name descname"><span class="pre">CalcProbabilityDensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.CalcProbabilityDensity" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>CalcProbabilityDensity(distribution: pydrake.common._module_py.RandomDistribution, x: numpy.ndarray[numpy.float64[m, 1]]) -&gt; float</p></li>
+<li><p>CalcProbabilityDensity(distribution: pydrake.common.RandomDistribution, x: numpy.ndarray[numpy.float64[m, 1]]) -&gt; float</p></li>
 </ol>
 <p>Calculates the density (probability density function) of the
 multivariate distribution.</p>
@@ -170,7 +171,7 @@ multivariate distribution.</p>
 the scalar type, for example CalcProbabilityDensity&lt;double&gt;(…), the
 compiler might have problem to deduce the scalar type automatically.</p>
 <ol class="arabic simple" start="2">
-<li><p>CalcProbabilityDensity(distribution: pydrake.common._module_py.RandomDistribution, x: numpy.ndarray[object[m, 1]]) -&gt; Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt;</p></li>
+<li><p>CalcProbabilityDensity(distribution: pydrake.common.RandomDistribution, x: numpy.ndarray[object[m, 1]]) -&gt; Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt;</p></li>
 </ol>
 <p>Calculates the density (probability density function) of the
 multivariate distribution.</p>
@@ -279,18 +280,18 @@ value.</p>
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.Parallelism.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>__init__(self: pydrake.common._module_py.Parallelism) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.Parallelism) -&gt; None</p></li>
 </ol>
 <p>Default constructs with no parallelism (i.e., num_threads=1).</p>
 <ol class="arabic simple" start="2">
-<li><p>__init__(self: pydrake.common._module_py.Parallelism, parallelize: bool) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.Parallelism, parallelize: bool) -&gt; None</p></li>
 </ol>
 <p>Constructs a Parallelism with either no parallelism (i.e.,
 num_threads=1) or the maximum number of threads (Max()), as selected
 by <code class="docutils literal notranslate"><span class="pre">parallelize</span></code>. This constructor allows for implicit conversion,
 for convenience.</p>
 <ol class="arabic simple" start="3">
-<li><p>__init__(self: pydrake.common._module_py.Parallelism, num_threads: int) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.Parallelism, num_threads: int) -&gt; None</p></li>
 </ol>
 <p>Constructs with the provided number of threads <code class="docutils literal notranslate"><span class="pre">num_threads</span></code>.</p>
 <dl class="simple">
@@ -308,14 +309,14 @@ performance due to CPU contention.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.common.Parallelism.Max">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Max</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.common._module_py.Parallelism</span></span></span><a class="headerlink" href="#pydrake.common.Parallelism.Max" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Max</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.common.Parallelism" title="pydrake.common.Parallelism"><span class="pre">pydrake.common.Parallelism</span></a></span></span><a class="headerlink" href="#pydrake.common.Parallelism.Max" title="Permalink to this definition"></a></dt>
 <dd><p>Constructs a Parallelism with the maximum number of threads. Refer to
 the class overview documentation for how to configure the maximum.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.common.Parallelism.num_threads">
-<span class="sig-name descname"><span class="pre">num_threads</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.common._module_py.Parallelism</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.common.Parallelism.num_threads" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">num_threads</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.common.Parallelism" title="pydrake.common.Parallelism"><span class="pre">pydrake.common.Parallelism</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.common.Parallelism.num_threads" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the degree of parallelism. The result will always be &gt;= 1.</p>
 </dd></dl>
 
@@ -347,7 +348,7 @@ distributions.</p>
 </div></blockquote>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.common.RandomDistribution.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.common._module_py.RandomDistribution</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.common.RandomDistribution.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.common.RandomDistribution" title="pydrake.common.RandomDistribution"><span class="pre">pydrake.common.RandomDistribution</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.common.RandomDistribution.__init__" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -403,13 +404,13 @@ discussion), use e.g.</p>
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.RandomGenerator.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>__init__(self: pydrake.common._module_py.RandomGenerator) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.RandomGenerator) -&gt; None</p></li>
 </ol>
 <p>Creates a generator using the <code class="docutils literal notranslate"><span class="pre">default_seed</span></code>. Actual creation of the
 generator is deferred until first use so this constructor is fast and
 does not allocate any heap memory.</p>
 <ol class="arabic simple" start="2">
-<li><p>__init__(self: pydrake.common._module_py.RandomGenerator, seed: int) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.RandomGenerator, seed: int) -&gt; None</p></li>
 </ol>
 <p>Creates a generator using given <code class="docutils literal notranslate"><span class="pre">seed</span></code>.</p>
 </dd></dl>
@@ -454,7 +455,7 @@ trailing <code class="docutils literal notranslate"><span class="pre">/</span></
 </div></blockquote>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.common.ToleranceType.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.common._module_py.ToleranceType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.common.ToleranceType.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.common.ToleranceType" title="pydrake.common.ToleranceType"><span class="pre">pydrake.common.ToleranceType</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.common.ToleranceType.__init__" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">

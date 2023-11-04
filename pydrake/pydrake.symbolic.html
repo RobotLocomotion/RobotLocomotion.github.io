@@ -393,7 +393,7 @@ symmetric matrix.</p>
 <span class="sig-prename descclassname"><span class="pre">pydrake.symbolic.</span></span><span class="sig-name descname"><span class="pre">Evaluate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.symbolic.Evaluate" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>Evaluate(m: numpy.ndarray[object[m, n]], env: Dict[pydrake.symbolic.Variable, float] = {}, generator: pydrake.common._module_py.RandomGenerator = None) -&gt; numpy.ndarray[numpy.float64[m, n]]</p></li>
+<li><p>Evaluate(m: numpy.ndarray[object[m, n]], env: Dict[pydrake.symbolic.Variable, float] = {}, generator: pydrake.common.RandomGenerator = None) -&gt; numpy.ndarray[numpy.float64[m, n]]</p></li>
 </ol>
 <p>Evaluates a symbolic matrix <code class="docutils literal notranslate"><span class="pre">m</span></code> using <code class="docutils literal notranslate"><span class="pre">env</span></code> and
 <code class="docutils literal notranslate"><span class="pre">random_generator</span></code>.</p>
@@ -660,7 +660,7 @@ so, you check the following:</p>
 <span class="sig-name descname"><span class="pre">Evaluate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.symbolic.Expression.Evaluate" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>Evaluate(self: pydrake.symbolic.Expression, env: Dict[pydrake.symbolic.Variable, float] = {}, generator: pydrake.common._module_py.RandomGenerator = None) -&gt; float</p></li>
+<li><p>Evaluate(self: pydrake.symbolic.Expression, env: Dict[pydrake.symbolic.Variable, float] = {}, generator: pydrake.common.RandomGenerator = None) -&gt; float</p></li>
 </ol>
 <p>Evaluates using a given environment (by default, an empty environment)
 and a random number generator. If there is a random variable in this
@@ -679,7 +679,7 @@ all occurrences of the variable in this expression.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>Evaluate(self: pydrake.symbolic.Expression, generator: pydrake.common._module_py.RandomGenerator) -&gt; float</p></li>
+<li><p>Evaluate(self: pydrake.symbolic.Expression, generator: pydrake.common.RandomGenerator) -&gt; float</p></li>
 </ol>
 <p>Evaluates using an empty environment and a random number generator. It
 uses <code class="docutils literal notranslate"><span class="pre">random_generator</span></code> to sample values for the random variables in
