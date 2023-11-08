@@ -288,6 +288,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a30c80ecf16e7879f121f2df8e3297c5c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html">AffineBall</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#a30c80ecf16e7879f121f2df8e3297c5c">MakeUnitBall</a> (<a class="el" href="classint.html">int</a> dim)</td></tr>
 <tr class="memdesc:a30c80ecf16e7879f121f2df8e3297c5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the L₂-norm unit ball in <code>dim</code> dimensions, {x | |x|₂ &lt;= 1 }.  <a href="#a30c80ecf16e7879f121f2df8e3297c5c">More...</a><br /></td></tr>
 <tr class="separator:a30c80ecf16e7879f121f2df8e3297c5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8acfa1a4dad13eb9b0466d9ed0073fcf"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html">AffineBall</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#a8acfa1a4dad13eb9b0466d9ed0073fcf">MinimumVolumeCircumscribedEllipsoid</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;points, <a class="el" href="classdouble.html">double</a> rank_tol=1e-6)</td></tr>
+<tr class="memdesc:a8acfa1a4dad13eb9b0466d9ed0073fcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the minimum-volume ellipsoid which contains all of the given points.  <a href="#a8acfa1a4dad13eb9b0466d9ed0073fcf">More...</a><br /></td></tr>
+<tr class="separator:a8acfa1a4dad13eb9b0466d9ed0073fcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -635,6 +638,63 @@ radius[i] &gt;= 0, for all i. </dd></dl>
 
 <p>Constructs the L₂-norm unit ball in <code>dim</code> dimensions, {x | |x|₂ &lt;= 1 }. </p>
 <dl class="section pre"><dt>Precondition</dt><dd>dim &gt;= 0. </dd></dl>
+
+</div>
+</div>
+<a id="a8acfa1a4dad13eb9b0466d9ed0073fcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8acfa1a4dad13eb9b0466d9ed0073fcf">&#9670;&nbsp;</a></span>MinimumVolumeCircumscribedEllipsoid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html">AffineBall</a> MinimumVolumeCircumscribedEllipsoid </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>points</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>rank_tol</em> = <code>1e-6</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs the minimum-volume ellipsoid which contains all of the given points. </p>
+<p>This is commonly referred to as the outer Löwner-John ellipsoid.</p>
+<p>If all of the points lie along a proper affine subspace, this method instead computes the minimum-k-volume ellipsoid, where k is the affine dimension of the convex hull of <code>points</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">points</td><td>is a d-by-n matrix, where d is the ambient dimension and each column represents one point. </td></tr>
+    <tr><td class="paramname">rank_tol</td><td>the tolerance used to detect if the data lies in an affine subspace. The affine ball is computed in the subspace spanned by the left singular vectors of the data matrix whose associated singular values are larger than <code>rank_tol</code> * <code>max_singular_value</code>. The default is 1e-6 to be compatible with common solver tolerances. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the MathematicalProgram fails to solve. This can happen due to numerical issues caused by <code>rank_tol</code> being set too low. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if points includes NaNs or infinite values. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>points.rows() &gt;= 1. </dd>
+<dd>
+points.cols() &gt;= 1. </dd></dl>
 
 </div>
 </div>

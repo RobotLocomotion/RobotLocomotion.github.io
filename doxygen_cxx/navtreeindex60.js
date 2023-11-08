@@ -1,5 +1,7 @@
 var NAVTREEINDEX60 =
 {
+"structdrake_1_1type__check__different__from.html":[3,0,0,53],
+"structdrake_1_1type__check__different__from.html#a0860509034ec6a8bc624149afad18d42":[3,0,0,53,0],
 "structdrake_1_1type__pack.html":[3,0,0,54],
 "structdrake_1_1type__pack.html#a0d7ec463ea247ebd6d235632c14544ba":[3,0,0,54,1],
 "structdrake_1_1type__pack.html#a3d3a828636762306b3bf4b16e74236cb":[3,0,0,54,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX60 =
 "trajectory__source_8h.html":[4,0,0,12,6,26],
 "transfer__function_8h.html":[4,0,0,12,6,27],
 "transform_8h.html":[4,0,0,1,2,2],
-"triangle__quadrature_8h.html":[4,0,0,8,15,1],
-"triangle__quadrature__rule_8h.html":[4,0,0,8,15,2],
-"triangle__surface__mesh_8h.html":[4,0,0,4,2,54]
+"triangle__quadrature_8h.html":[4,0,0,8,15,1]
 };

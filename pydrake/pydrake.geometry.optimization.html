@@ -229,6 +229,45 @@ shorthand for <code class="docutils literal notranslate"><span class="pre">cente
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.AffineBall.MinimumVolumeCircumscribedEllipsoid">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MinimumVolumeCircumscribedEllipsoid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">points</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rank_tol</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1e-06</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.optimization.AffineBall" title="pydrake.geometry.optimization.AffineBall"><span class="pre">pydrake.geometry.optimization.AffineBall</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.AffineBall.MinimumVolumeCircumscribedEllipsoid" title="Permalink to this definition"></a></dt>
+<dd><p>Constructs the minimum-volume ellipsoid which contains all of the
+given points. This is commonly referred to as the outer Löwner-John
+ellipsoid.</p>
+<p>If all of the points lie along a proper affine subspace, this method
+instead computes the minimum-k-volume ellipsoid, where k is the affine
+dimension of the convex hull of <code class="docutils literal notranslate"><span class="pre">points</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">points</span></code>:</dt><dd><p>is a d-by-n matrix, where d is the ambient dimension and each
+column represents one point.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">rank_tol</span></code>:</dt><dd><p>the tolerance used to detect if the data lies in an affine
+subspace. The affine ball is computed in the subspace spanned by
+the left singular vectors of the data matrix whose associated
+singular values are larger than <code class="docutils literal notranslate"><span class="pre">rank_tol</span></code> *
+<code class="docutils literal notranslate"><span class="pre">max_singular_value</span></code>. The default is 1e-6 to be compatible with
+common solver tolerances.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the MathematicalProgram fails to solve. This can</strong> – </p></li>
+<li><p><strong>happen due to numerical issues caused by rank_tol being set</strong> – </p></li>
+<li><p><strong>too low.</strong> – </p></li>
+<li><p><strong>RuntimeError if points includes NaNs</strong><strong> or </strong><strong>infinite values.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>points.rows() &gt;= 1.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>points.cols() &gt;= 1.</p>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
@@ -2660,7 +2699,8 @@ if they are strictly greater than <code class="docutils literal notranslate"><sp
 <code class="docutils literal notranslate"><span class="pre">max_singular_value</span></code>. The default is 1e-6 to be compatible with
 common solver tolerances. This is used to detect if the data lies
 on a lower-dimensional affine space than the ambient dimension of
-the ellipsoid.</p>
+the ellipsoid. If this is the case, then use
+AffineBall::MinimumVolumeCircumscribedEllipsoid instead.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -2670,13 +2710,8 @@ the ellipsoid.</p>
 <li><p><strong>were to happen</strong><strong> (</strong><strong>due to numerical issues</strong><strong>)</strong><strong>, </strong><strong>then increasing</strong> – </p></li>
 <li><p><strong>rank_tol` should provide a mitigation</strong> – </p></li>
 <li><p><strong>RuntimeError if points includes NaNs</strong><strong> or </strong><strong>infinite values.</strong> – </p></li>
+<li><p><strong>RuntimeError if the numerical data rank of points is less than d.</strong> – </p></li>
 </ul>
-</dd>
-</dl>
-<dl class="simple">
-<dt>Precondition:</dt><dd><p>The numerical data rank of points is greater than 0 (the largest
-singular value is greater than rank_tol). This requires, for
-instance, that points.cols() &gt; 1.</p>
 </dd>
 </dl>
 </dd></dl>

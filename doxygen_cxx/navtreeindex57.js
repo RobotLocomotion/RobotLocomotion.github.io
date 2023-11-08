@@ -1,5 +1,7 @@
 var NAVTREEINDEX57 =
 {
+"structdrake_1_1geometry_1_1render_1_1_light_parameter.html#abe60a2ebe324a7ec86e5bd0024febf2e":[3,0,0,4,2,4,5],
+"structdrake_1_1geometry_1_1render_1_1_light_parameter.html#aced78e83d6ebcea2c5e1419c05c4719d":[3,0,0,4,2,4,7],
 "structdrake_1_1geometry_1_1render_1_1_light_parameter.html#ae79058e72ae4c657ddc14a966ef045dd":[3,0,0,4,2,4,2],
 "structdrake_1_1is__eigen__nonvector__expression__double__pair.html":[3,0,0,29],
 "structdrake_1_1is__eigen__nonvector__of.html":[3,0,0,30],
@@ -247,7 +249,5 @@ var NAVTREEINDEX57 =
 "structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#ae3c085d0521d5da888d23da447ae4328":[3,0,0,8,3,1,3],
 "structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html":[3,0,0,8,4,0],
 "structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#a1ac4262e3bb2a1be1e29ce90bd7c2377":[3,0,0,8,4,0,2],
-"structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#a37624b00959bd2e6080521c344fcfd1e":[3,0,0,8,4,0,3],
-"structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,8,4,0,1],
-"structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#a9b45b3e13bd9167aab02e17e08916231":[3,0,0,8,4,0,4]
+"structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#a37624b00959bd2e6080521c344fcfd1e":[3,0,0,8,4,0,3]
 };

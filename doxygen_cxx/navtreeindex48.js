@@ -1,5 +1,7 @@
 var NAVTREEINDEX48 =
 {
+"formula_8h.html#ad4bd0f6e944bac326e6e943f26d3d043":[4,0,0,1,3,0,7,25],
+"formula_8h.html#ad81230526e0921e5d17d5e08c2817cc7":[4,0,0,1,3,0,7,70],
 "formula_8h.html#ae2266fd8f32067b29eed7e0345658af9":[4,0,0,1,3,0,7,20],
 "formula_8h.html#aea231d5704136799bf6fa221bdbb69bd":[4,0,0,1,3,0,7,65],
 "formula_8h.html#af6bb943d7aab03288d67ad8f657c2758":[4,0,0,1,3,0,7,60],
@@ -153,8 +155,8 @@ var NAVTREEINDEX48 =
 "functions_type.html":[3,3,3],
 "functions_u.html":[3,3,0,20],
 "functions_v.html":[3,3,0,21],
-"functions_vars.html":[3,3,2,0],
 "functions_vars.html":[3,3,2],
+"functions_vars.html":[3,3,2,0],
 "functions_vars_b.html":[3,3,2,1],
 "functions_vars_c.html":[3,3,2,2],
 "functions_vars_d.html":[3,3,2,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX48 =
 "geometry__py_8h.html#aeeb190e42e2f696d5ed3f8d319db6459":[4,0,0,0,0,3,0,1],
 "geometry__py_8h.html#af1dd02f74528f84556c55239d82ab9b3":[4,0,0,0,0,3,0,5],
 "geometry__roles_8h.html":[4,0,0,4,20],
-"geometry__roles_8h.html#a152c7124632aaba612f6b59e0510957e":[4,0,0,4,20,7],
-"geometry__roles_8h.html#a52f8cb466b0827379bc8815f0d58aac3":[4,0,0,4,20,5],
-"geometry__roles_8h.html#a52f8cb466b0827379bc8815f0d58aac3a8ba1782ca7c04c255b3d69d6d2411d90":[4,0,0,4,20,5,1]
+"geometry__roles_8h.html#a152c7124632aaba612f6b59e0510957e":[4,0,0,4,20,7]
 };

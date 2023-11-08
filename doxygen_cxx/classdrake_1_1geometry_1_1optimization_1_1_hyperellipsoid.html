@@ -755,7 +755,7 @@ Additional Inherited Members</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">points</td><td>is a d-by-n matrix, where d is the ambient dimension and each column represents one point. </td></tr>
-    <tr><td class="paramname">rank_tol</td><td>the singular values of the data matrix will be considered non-zero if they are strictly greater than <code>rank_tol</code> * <code>max_singular_value</code>. The default is 1e-6 to be compatible with common solver tolerances. This is used to detect if the data lies on a lower-dimensional affine space than the ambient dimension of the ellipsoid. </td></tr>
+    <tr><td class="paramname">rank_tol</td><td>the singular values of the data matrix will be considered non-zero if they are strictly greater than <code>rank_tol</code> * <code>max_singular_value</code>. The default is 1e-6 to be compatible with common solver tolerances. This is used to detect if the data lies on a lower-dimensional affine space than the ambient dimension of the ellipsoid. If this is the case, then use <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#a8acfa1a4dad13eb9b0466d9ed0073fcf" title="Constructs the minimum-volume ellipsoid which contains all of the given points.">AffineBall::MinimumVolumeCircumscribedEllipsoid</a> instead. </td></tr>
   </table>
   </dd>
 </dl>
@@ -763,10 +763,10 @@ Additional Inherited Members</h2></td></tr>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if the MathematicalProgram fails to solve. If this were to happen (due to numerical issues), then increasing <code>rank_tol</code> should provide a mitigation. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if points includes NaNs or infinite values. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the numerical data rank of points is less than d. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd>The numerical data rank of points is greater than 0 (the largest singular value is greater than rank_tol). This requires, for instance, that points.cols() &gt; 1. </dd></dl>
 
 </div>
 </div>

@@ -1,5 +1,7 @@
 var NAVTREEINDEX12 =
 {
+"classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html#a98fb2abd442bf1476402c2bc628828af":[1,1,0,0,5],
+"classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html#a9a29c3df53244b679800b206a5949f2b":[1,1,0,0,3],
 "classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html#aaa11fd69bb834bc3695b005832bee7f8":[1,1,0,0,0],
 "classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html#ae0935336292ab087cb230d04dbf329e5":[1,1,0,0,6],
 "classdrake_1_1multibody_1_1_angle_between_vectors_cost.html":[1,1,0,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX12 =
 "classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#a0fc2ac08f6a99f0d08bc48995294b02c":[3,0,0,8,28,18],
 "classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#a1cdd0dd0399049d34796b347b13bf902":[3,0,0,8,28,29],
 "classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#a2a3d0524cca20cb06a142a00b53f0d4e":[3,0,0,8,28,10],
-"classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#a30342f766e5b14049b65f710581f4bd1":[3,0,0,8,28,15],
-"classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#a372731ef06a823324bfeda5c8a8a3ac8":[3,0,0,8,28,16],
-"classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#a4ad40b3bd0167ae5b1f556834bbea200":[3,0,0,8,28,11]
+"classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#a30342f766e5b14049b65f710581f4bd1":[3,0,0,8,28,15]
 };

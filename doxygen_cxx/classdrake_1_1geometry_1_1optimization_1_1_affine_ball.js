@@ -11,6 +11,7 @@ var classdrake_1_1geometry_1_1optimization_1_1_affine_ball =
     [ "MakeAxisAligned", "classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#a17e5c2915b25a2b230e6af8f5812bf2f", null ],
     [ "MakeHypersphere", "classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#a07d8fa8b6d642e20a04f2e89813403be", null ],
     [ "MakeUnitBall", "classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#a30c80ecf16e7879f121f2df8e3297c5c", null ],
+    [ "MinimumVolumeCircumscribedEllipsoid", "classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#a8acfa1a4dad13eb9b0466d9ed0073fcf", null ],
     [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#a0fa3fb2441f8086f28c0d33782ea96a1", null ],
     [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#aa58c2ea4eb2e0c8a696ae076a3b4fd00", null ],
     [ "Serialize", "classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#a8e8824802dedfbc36776227f7482b6bc", null ]

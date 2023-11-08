@@ -1,5 +1,7 @@
 var NAVTREEINDEX44 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a4a93c5b33b420280509114f8a9ac86aa":[3,0,0,17,7,10],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a52ec91bfc0bdaeacdb3be7800ab7d43e":[3,0,0,17,7,17],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a611b9bd79f548904a032ba3992d705e7":[3,0,0,17,7,15],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a6fd5552029547f8e16ebbed98e108bbb":[3,0,0,17,7,3],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a76ec9d05feedef776f4510cfdc3caecd":[3,0,0,17,7,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX44 =
 "controlled__spring__mass__system_8h.html":[4,0,0,12,0,0,0],
 "convert__time__derivative_8h.html":[4,0,0,7,8],
 "convert__time__derivative_8h.html#a7ad7ab2561d0c05591eb9720adccc7d5":[4,0,0,7,8,0],
-"convex__set_8h.html":[4,0,0,4,1,4],
-"convex__set_8h.html#a3c7f9b75df3ac22becb7bb5cb03bf956":[4,0,0,4,1,4,1],
-"convex__set_8h.html#ac9a3a5006f20615946f5b466fe9446b6":[4,0,0,4,1,4,2]
+"convex__set_8h.html":[4,0,0,4,1,4]
 };
