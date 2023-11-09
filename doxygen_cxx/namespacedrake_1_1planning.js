@@ -1,5 +1,6 @@
 var namespacedrake_1_1planning =
 [
+    [ "graph_algorithms", "namespacedrake_1_1planning_1_1graph__algorithms.html", "namespacedrake_1_1planning_1_1graph__algorithms" ],
     [ "test", "namespacedrake_1_1planning_1_1test.html", "namespacedrake_1_1planning_1_1test" ],
     [ "trajectory_optimization", "namespacedrake_1_1planning_1_1trajectory__optimization.html", "namespacedrake_1_1planning_1_1trajectory__optimization" ],
     [ "BodyShapeDescription", "classdrake_1_1planning_1_1_body_shape_description.html", "classdrake_1_1planning_1_1_body_shape_description" ],

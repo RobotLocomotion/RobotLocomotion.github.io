@@ -2848,6 +2848,17 @@ goes for
 <dd></dd></dl>
 
 <dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.IrisOptions.bounding_region">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">bounding_region</span></span><a class="headerlink" href="#pydrake.geometry.optimization.IrisOptions.bounding_region" title="Permalink to this definition"></a></dt>
+<dd><p>Optionally allows the caller to restrict the space within which IRIS
+regions are allowed to grow. By default, IRIS regions are bounded by
+the <code class="docutils literal notranslate"><span class="pre">domain</span></code> argument in the case of <code class="docutils literal notranslate"><span class="pre">Iris</span></code> or the joint limits of
+the input <code class="docutils literal notranslate"><span class="pre">plant</span></code> in the case of <code class="docutils literal notranslate"><span class="pre">IrisInConfigurationSpace</span></code>. If
+this option is specified, IRIS regions will be confined to the
+intersection between the domain and <code class="docutils literal notranslate"><span class="pre">bounding_region</span></code></p>
+</dd></dl>
+
+<dl class="py property">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.IrisOptions.configuration_obstacles">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">configuration_obstacles</span></span><a class="headerlink" href="#pydrake.geometry.optimization.IrisOptions.configuration_obstacles" title="Permalink to this definition"></a></dt>
 <dd><p>For IRIS in configuration space, it can be beneficial to not only

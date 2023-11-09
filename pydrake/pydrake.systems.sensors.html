@@ -950,7 +950,183 @@ must lie in the range 0 &lt; center_y &lt; height.</p>
 <dl class="py template">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.Image">
 <em class="property"><span class="pre">template</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.sensors.</span></span><span class="sig-name descname"><span class="pre">Image</span></span><a class="headerlink" href="#pydrake.systems.sensors.Image" title="Permalink to this definition"></a></dt>
-<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.sensors.Image-PixelType.kRgba8U" title="pydrake.systems.sensors.Image[PixelType.kRgba8U]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image[PixelType.kRgba8U]</span></code></a>, <a class="reference internal" href="#pydrake.systems.sensors.Image-PixelType.kDepth16U" title="pydrake.systems.sensors.Image[PixelType.kDepth16U]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image[PixelType.kDepth16U]</span></code></a>, <a class="reference internal" href="#pydrake.systems.sensors.Image-PixelType.kDepth32F" title="pydrake.systems.sensors.Image[PixelType.kDepth32F]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image[PixelType.kDepth32F]</span></code></a>, <a class="reference internal" href="#pydrake.systems.sensors.Image-PixelType.kLabel16I" title="pydrake.systems.sensors.Image[PixelType.kLabel16I]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image[PixelType.kLabel16I]</span></code></a></p>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.sensors.Image-PixelType.kRgba8U" title="pydrake.systems.sensors.Image[PixelType.kRgba8U]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image[PixelType.kRgba8U]</span></code></a>, <a class="reference internal" href="#pydrake.systems.sensors.Image-PixelType.kRgb8U" title="pydrake.systems.sensors.Image[PixelType.kRgb8U]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image[PixelType.kRgb8U]</span></code></a>, <a class="reference internal" href="#pydrake.systems.sensors.Image-PixelType.kBgra8U" title="pydrake.systems.sensors.Image[PixelType.kBgra8U]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image[PixelType.kBgra8U]</span></code></a>, <a class="reference internal" href="#pydrake.systems.sensors.Image-PixelType.kBgr8U" title="pydrake.systems.sensors.Image[PixelType.kBgr8U]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image[PixelType.kBgr8U]</span></code></a>, <a class="reference internal" href="#pydrake.systems.sensors.Image-PixelType.kDepth16U" title="pydrake.systems.sensors.Image[PixelType.kDepth16U]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image[PixelType.kDepth16U]</span></code></a>, <a class="reference internal" href="#pydrake.systems.sensors.Image-PixelType.kDepth32F" title="pydrake.systems.sensors.Image[PixelType.kDepth32F]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image[PixelType.kDepth32F]</span></code></a>, <a class="reference internal" href="#pydrake.systems.sensors.Image-PixelType.kLabel16I" title="pydrake.systems.sensors.Image[PixelType.kLabel16I]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image[PixelType.kLabel16I]</span></code></a>, <a class="reference internal" href="#pydrake.systems.sensors.Image-PixelType.kGrey8U" title="pydrake.systems.sensors.Image[PixelType.kGrey8U]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image[PixelType.kGrey8U]</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kBgr8U">
+<span id="pydrake.systems.sensors.Image[PixelType.kBgr8U]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.sensors.</span></span><span class="sig-name descname"><span class="pre">Image[PixelType.kBgr8U]</span></span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kBgr8U" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kBgr8U-.__init__">
+<span id="pydrake.systems.sensors.Image[PixelType.kBgr8U].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kBgr8U-.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.systems.sensors.Image[PixelType.kBgr8U]) -&gt; None</p></li>
+</ol>
+<p>Constructs a zero-sized image.</p>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.systems.sensors.Image[PixelType.kBgr8U], width: int, height: int) -&gt; None</p></li>
+</ol>
+<p>Image size only constructor. Specifies a width and height for the
+image. The width and height can be either both zero or both strictly
+positive. All the channel values in all the pixels are initialized
+with zero.</p>
+<ol class="arabic simple" start="3">
+<li><p>__init__(self: pydrake.systems.sensors.Image[PixelType.kBgr8U], width: int, height: int, initial_value: int) -&gt; None</p></li>
+</ol>
+<p>Image size and initial value constructor. Specifies a width, height
+and an initial value for all the channels in all the pixels. The width
+and height can be either both zero or both strictly positive.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kBgr8U-.at">
+<span id="pydrake.systems.sensors.Image[PixelType.kBgr8U].at"></span><span class="sig-name descname"><span class="pre">at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.Image" title="pydrake.systems.sensors.Image"><span class="pre">pydrake.systems.sensors.Image</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.systems.sensors.PixelType.kBgr8U" title="pydrake.systems.sensors.PixelType.kBgr8U"><span class="pre">PixelType.kBgr8U</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.uint8</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.writeable</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kBgr8U-.at" title="Permalink to this definition"></a></dt>
+<dd><p>Access to the pixel located at (x, y) in image coordinate system where
+x is the variable for horizontal direction and y is one for vertical
+direction. To access to the each channel value in the pixel (x, y),
+you can do:</p>
+<p>ImageRgbaU8 image(640, 480, 255); uint8_t red = image.at(x, y)[0];
+uint8_t green = image.at(x, y)[1]; uint8_t blue = image.at(x, y)[2];
+uint8_t alpha = image.at(x, y)[3];</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kBgr8U-.data">
+<span id="pydrake.systems.sensors.Image[PixelType.kBgr8U].data"></span><em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">data</span></span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kBgr8U-.data" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kBgr8U-.height">
+<span id="pydrake.systems.sensors.Image[PixelType.kBgr8U].height"></span><span class="sig-name descname"><span class="pre">height</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.Image" title="pydrake.systems.sensors.Image"><span class="pre">pydrake.systems.sensors.Image</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.systems.sensors.PixelType.kBgr8U" title="pydrake.systems.sensors.PixelType.kBgr8U"><span class="pre">PixelType.kBgr8U</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kBgr8U-.height" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the size of height for the image</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kBgr8U-.mutable_data">
+<span id="pydrake.systems.sensors.Image[PixelType.kBgr8U].mutable_data"></span><em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mutable_data</span></span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kBgr8U-.mutable_data" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kBgr8U-.resize">
+<span id="pydrake.systems.sensors.Image[PixelType.kBgr8U].resize"></span><span class="sig-name descname"><span class="pre">resize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.Image" title="pydrake.systems.sensors.Image"><span class="pre">pydrake.systems.sensors.Image</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.systems.sensors.PixelType.kBgr8U" title="pydrake.systems.sensors.PixelType.kBgr8U"><span class="pre">PixelType.kBgr8U</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kBgr8U-.resize" title="Permalink to this definition"></a></dt>
+<dd><p>Changes the sizes of the width and height for the image. The new width
+and height can be either both zero or both strictly positive. All the
+values in the pixels become zero after resize.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kBgr8U-.shape">
+<span id="pydrake.systems.sensors.Image[PixelType.kBgr8U].shape"></span><em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">shape</span></span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kBgr8U-.shape" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kBgr8U-.size">
+<span id="pydrake.systems.sensors.Image[PixelType.kBgr8U].size"></span><span class="sig-name descname"><span class="pre">size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.Image" title="pydrake.systems.sensors.Image"><span class="pre">pydrake.systems.sensors.Image</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.systems.sensors.PixelType.kBgr8U" title="pydrake.systems.sensors.PixelType.kBgr8U"><span class="pre">PixelType.kBgr8U</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kBgr8U-.size" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the result of the number of pixels in a image by the number of
+channels in a pixel</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kBgr8U-.Traits">
+<span id="pydrake.systems.sensors.Image[PixelType.kBgr8U].Traits"></span><span class="sig-name descname"><span class="pre">Traits</span></span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kBgr8U-.Traits" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#pydrake.systems.sensors.ImageTraits-PixelType.kBgr8U" title="pydrake.systems.sensors.ImageTraits[PixelType.kBgr8U]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.sensors.ImageTraits[PixelType.kBgr8U]</span></code></a></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kBgr8U-.width">
+<span id="pydrake.systems.sensors.Image[PixelType.kBgr8U].width"></span><span class="sig-name descname"><span class="pre">width</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.Image" title="pydrake.systems.sensors.Image"><span class="pre">pydrake.systems.sensors.Image</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.systems.sensors.PixelType.kBgr8U" title="pydrake.systems.sensors.PixelType.kBgr8U"><span class="pre">PixelType.kBgr8U</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kBgr8U-.width" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the size of width for the image</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kBgra8U">
+<span id="pydrake.systems.sensors.Image[PixelType.kBgra8U]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.sensors.</span></span><span class="sig-name descname"><span class="pre">Image[PixelType.kBgra8U]</span></span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kBgra8U" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kBgra8U-.__init__">
+<span id="pydrake.systems.sensors.Image[PixelType.kBgra8U].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kBgra8U-.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.systems.sensors.Image[PixelType.kBgra8U]) -&gt; None</p></li>
+</ol>
+<p>Constructs a zero-sized image.</p>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.systems.sensors.Image[PixelType.kBgra8U], width: int, height: int) -&gt; None</p></li>
+</ol>
+<p>Image size only constructor. Specifies a width and height for the
+image. The width and height can be either both zero or both strictly
+positive. All the channel values in all the pixels are initialized
+with zero.</p>
+<ol class="arabic simple" start="3">
+<li><p>__init__(self: pydrake.systems.sensors.Image[PixelType.kBgra8U], width: int, height: int, initial_value: int) -&gt; None</p></li>
+</ol>
+<p>Image size and initial value constructor. Specifies a width, height
+and an initial value for all the channels in all the pixels. The width
+and height can be either both zero or both strictly positive.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kBgra8U-.at">
+<span id="pydrake.systems.sensors.Image[PixelType.kBgra8U].at"></span><span class="sig-name descname"><span class="pre">at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.Image" title="pydrake.systems.sensors.Image"><span class="pre">pydrake.systems.sensors.Image</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.systems.sensors.PixelType.kBgra8U" title="pydrake.systems.sensors.PixelType.kBgra8U"><span class="pre">PixelType.kBgra8U</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.uint8</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.writeable</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kBgra8U-.at" title="Permalink to this definition"></a></dt>
+<dd><p>Access to the pixel located at (x, y) in image coordinate system where
+x is the variable for horizontal direction and y is one for vertical
+direction. To access to the each channel value in the pixel (x, y),
+you can do:</p>
+<p>ImageRgbaU8 image(640, 480, 255); uint8_t red = image.at(x, y)[0];
+uint8_t green = image.at(x, y)[1]; uint8_t blue = image.at(x, y)[2];
+uint8_t alpha = image.at(x, y)[3];</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kBgra8U-.data">
+<span id="pydrake.systems.sensors.Image[PixelType.kBgra8U].data"></span><em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">data</span></span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kBgra8U-.data" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kBgra8U-.height">
+<span id="pydrake.systems.sensors.Image[PixelType.kBgra8U].height"></span><span class="sig-name descname"><span class="pre">height</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.Image" title="pydrake.systems.sensors.Image"><span class="pre">pydrake.systems.sensors.Image</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.systems.sensors.PixelType.kBgra8U" title="pydrake.systems.sensors.PixelType.kBgra8U"><span class="pre">PixelType.kBgra8U</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kBgra8U-.height" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the size of height for the image</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kBgra8U-.mutable_data">
+<span id="pydrake.systems.sensors.Image[PixelType.kBgra8U].mutable_data"></span><em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mutable_data</span></span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kBgra8U-.mutable_data" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kBgra8U-.resize">
+<span id="pydrake.systems.sensors.Image[PixelType.kBgra8U].resize"></span><span class="sig-name descname"><span class="pre">resize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.Image" title="pydrake.systems.sensors.Image"><span class="pre">pydrake.systems.sensors.Image</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.systems.sensors.PixelType.kBgra8U" title="pydrake.systems.sensors.PixelType.kBgra8U"><span class="pre">PixelType.kBgra8U</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kBgra8U-.resize" title="Permalink to this definition"></a></dt>
+<dd><p>Changes the sizes of the width and height for the image. The new width
+and height can be either both zero or both strictly positive. All the
+values in the pixels become zero after resize.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kBgra8U-.shape">
+<span id="pydrake.systems.sensors.Image[PixelType.kBgra8U].shape"></span><em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">shape</span></span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kBgra8U-.shape" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kBgra8U-.size">
+<span id="pydrake.systems.sensors.Image[PixelType.kBgra8U].size"></span><span class="sig-name descname"><span class="pre">size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.Image" title="pydrake.systems.sensors.Image"><span class="pre">pydrake.systems.sensors.Image</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.systems.sensors.PixelType.kBgra8U" title="pydrake.systems.sensors.PixelType.kBgra8U"><span class="pre">PixelType.kBgra8U</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kBgra8U-.size" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the result of the number of pixels in a image by the number of
+channels in a pixel</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kBgra8U-.Traits">
+<span id="pydrake.systems.sensors.Image[PixelType.kBgra8U].Traits"></span><span class="sig-name descname"><span class="pre">Traits</span></span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kBgra8U-.Traits" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#pydrake.systems.sensors.ImageTraits-PixelType.kBgra8U" title="pydrake.systems.sensors.ImageTraits[PixelType.kBgra8U]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.sensors.ImageTraits[PixelType.kBgra8U]</span></code></a></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kBgra8U-.width">
+<span id="pydrake.systems.sensors.Image[PixelType.kBgra8U].width"></span><span class="sig-name descname"><span class="pre">width</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.Image" title="pydrake.systems.sensors.Image"><span class="pre">pydrake.systems.sensors.Image</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.systems.sensors.PixelType.kBgra8U" title="pydrake.systems.sensors.PixelType.kBgra8U"><span class="pre">PixelType.kBgra8U</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kBgra8U-.width" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the size of width for the image</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
@@ -1130,6 +1306,94 @@ channels in a pixel</p>
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kGrey8U">
+<span id="pydrake.systems.sensors.Image[PixelType.kGrey8U]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.sensors.</span></span><span class="sig-name descname"><span class="pre">Image[PixelType.kGrey8U]</span></span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kGrey8U" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kGrey8U-.__init__">
+<span id="pydrake.systems.sensors.Image[PixelType.kGrey8U].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kGrey8U-.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.systems.sensors.Image[PixelType.kGrey8U]) -&gt; None</p></li>
+</ol>
+<p>Constructs a zero-sized image.</p>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.systems.sensors.Image[PixelType.kGrey8U], width: int, height: int) -&gt; None</p></li>
+</ol>
+<p>Image size only constructor. Specifies a width and height for the
+image. The width and height can be either both zero or both strictly
+positive. All the channel values in all the pixels are initialized
+with zero.</p>
+<ol class="arabic simple" start="3">
+<li><p>__init__(self: pydrake.systems.sensors.Image[PixelType.kGrey8U], width: int, height: int, initial_value: int) -&gt; None</p></li>
+</ol>
+<p>Image size and initial value constructor. Specifies a width, height
+and an initial value for all the channels in all the pixels. The width
+and height can be either both zero or both strictly positive.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kGrey8U-.at">
+<span id="pydrake.systems.sensors.Image[PixelType.kGrey8U].at"></span><span class="sig-name descname"><span class="pre">at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.Image" title="pydrake.systems.sensors.Image"><span class="pre">pydrake.systems.sensors.Image</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.systems.sensors.PixelType.kGrey8U" title="pydrake.systems.sensors.PixelType.kGrey8U"><span class="pre">PixelType.kGrey8U</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.uint8</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.writeable</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kGrey8U-.at" title="Permalink to this definition"></a></dt>
+<dd><p>Access to the pixel located at (x, y) in image coordinate system where
+x is the variable for horizontal direction and y is one for vertical
+direction. To access to the each channel value in the pixel (x, y),
+you can do:</p>
+<p>ImageRgbaU8 image(640, 480, 255); uint8_t red = image.at(x, y)[0];
+uint8_t green = image.at(x, y)[1]; uint8_t blue = image.at(x, y)[2];
+uint8_t alpha = image.at(x, y)[3];</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kGrey8U-.data">
+<span id="pydrake.systems.sensors.Image[PixelType.kGrey8U].data"></span><em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">data</span></span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kGrey8U-.data" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kGrey8U-.height">
+<span id="pydrake.systems.sensors.Image[PixelType.kGrey8U].height"></span><span class="sig-name descname"><span class="pre">height</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.Image" title="pydrake.systems.sensors.Image"><span class="pre">pydrake.systems.sensors.Image</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.systems.sensors.PixelType.kGrey8U" title="pydrake.systems.sensors.PixelType.kGrey8U"><span class="pre">PixelType.kGrey8U</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kGrey8U-.height" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the size of height for the image</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kGrey8U-.mutable_data">
+<span id="pydrake.systems.sensors.Image[PixelType.kGrey8U].mutable_data"></span><em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mutable_data</span></span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kGrey8U-.mutable_data" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kGrey8U-.resize">
+<span id="pydrake.systems.sensors.Image[PixelType.kGrey8U].resize"></span><span class="sig-name descname"><span class="pre">resize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.Image" title="pydrake.systems.sensors.Image"><span class="pre">pydrake.systems.sensors.Image</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.systems.sensors.PixelType.kGrey8U" title="pydrake.systems.sensors.PixelType.kGrey8U"><span class="pre">PixelType.kGrey8U</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kGrey8U-.resize" title="Permalink to this definition"></a></dt>
+<dd><p>Changes the sizes of the width and height for the image. The new width
+and height can be either both zero or both strictly positive. All the
+values in the pixels become zero after resize.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kGrey8U-.shape">
+<span id="pydrake.systems.sensors.Image[PixelType.kGrey8U].shape"></span><em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">shape</span></span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kGrey8U-.shape" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kGrey8U-.size">
+<span id="pydrake.systems.sensors.Image[PixelType.kGrey8U].size"></span><span class="sig-name descname"><span class="pre">size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.Image" title="pydrake.systems.sensors.Image"><span class="pre">pydrake.systems.sensors.Image</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.systems.sensors.PixelType.kGrey8U" title="pydrake.systems.sensors.PixelType.kGrey8U"><span class="pre">PixelType.kGrey8U</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kGrey8U-.size" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the result of the number of pixels in a image by the number of
+channels in a pixel</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kGrey8U-.Traits">
+<span id="pydrake.systems.sensors.Image[PixelType.kGrey8U].Traits"></span><span class="sig-name descname"><span class="pre">Traits</span></span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kGrey8U-.Traits" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#pydrake.systems.sensors.ImageTraits-PixelType.kGrey8U" title="pydrake.systems.sensors.ImageTraits[PixelType.kGrey8U]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.sensors.ImageTraits[PixelType.kGrey8U]</span></code></a></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kGrey8U-.width">
+<span id="pydrake.systems.sensors.Image[PixelType.kGrey8U].width"></span><span class="sig-name descname"><span class="pre">width</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.Image" title="pydrake.systems.sensors.Image"><span class="pre">pydrake.systems.sensors.Image</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.systems.sensors.PixelType.kGrey8U" title="pydrake.systems.sensors.PixelType.kGrey8U"><span class="pre">PixelType.kGrey8U</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kGrey8U-.width" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the size of width for the image</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kLabel16I">
 <span id="pydrake.systems.sensors.Image[PixelType.kLabel16I]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.sensors.</span></span><span class="sig-name descname"><span class="pre">Image[PixelType.kLabel16I]</span></span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kLabel16I" title="Permalink to this definition"></a></dt>
 <dd><dl class="py method">
@@ -1212,6 +1476,94 @@ channels in a pixel</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kLabel16I-.width">
 <span id="pydrake.systems.sensors.Image[PixelType.kLabel16I].width"></span><span class="sig-name descname"><span class="pre">width</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.Image" title="pydrake.systems.sensors.Image"><span class="pre">pydrake.systems.sensors.Image</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.systems.sensors.PixelType.kLabel16I" title="pydrake.systems.sensors.PixelType.kLabel16I"><span class="pre">PixelType.kLabel16I</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kLabel16I-.width" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the size of width for the image</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kRgb8U">
+<span id="pydrake.systems.sensors.Image[PixelType.kRgb8U]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.sensors.</span></span><span class="sig-name descname"><span class="pre">Image[PixelType.kRgb8U]</span></span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kRgb8U" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kRgb8U-.__init__">
+<span id="pydrake.systems.sensors.Image[PixelType.kRgb8U].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kRgb8U-.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.systems.sensors.Image[PixelType.kRgb8U]) -&gt; None</p></li>
+</ol>
+<p>Constructs a zero-sized image.</p>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.systems.sensors.Image[PixelType.kRgb8U], width: int, height: int) -&gt; None</p></li>
+</ol>
+<p>Image size only constructor. Specifies a width and height for the
+image. The width and height can be either both zero or both strictly
+positive. All the channel values in all the pixels are initialized
+with zero.</p>
+<ol class="arabic simple" start="3">
+<li><p>__init__(self: pydrake.systems.sensors.Image[PixelType.kRgb8U], width: int, height: int, initial_value: int) -&gt; None</p></li>
+</ol>
+<p>Image size and initial value constructor. Specifies a width, height
+and an initial value for all the channels in all the pixels. The width
+and height can be either both zero or both strictly positive.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kRgb8U-.at">
+<span id="pydrake.systems.sensors.Image[PixelType.kRgb8U].at"></span><span class="sig-name descname"><span class="pre">at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.Image" title="pydrake.systems.sensors.Image"><span class="pre">pydrake.systems.sensors.Image</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.systems.sensors.PixelType.kRgb8U" title="pydrake.systems.sensors.PixelType.kRgb8U"><span class="pre">PixelType.kRgb8U</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.uint8</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.writeable</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kRgb8U-.at" title="Permalink to this definition"></a></dt>
+<dd><p>Access to the pixel located at (x, y) in image coordinate system where
+x is the variable for horizontal direction and y is one for vertical
+direction. To access to the each channel value in the pixel (x, y),
+you can do:</p>
+<p>ImageRgbaU8 image(640, 480, 255); uint8_t red = image.at(x, y)[0];
+uint8_t green = image.at(x, y)[1]; uint8_t blue = image.at(x, y)[2];
+uint8_t alpha = image.at(x, y)[3];</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kRgb8U-.data">
+<span id="pydrake.systems.sensors.Image[PixelType.kRgb8U].data"></span><em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">data</span></span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kRgb8U-.data" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kRgb8U-.height">
+<span id="pydrake.systems.sensors.Image[PixelType.kRgb8U].height"></span><span class="sig-name descname"><span class="pre">height</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.Image" title="pydrake.systems.sensors.Image"><span class="pre">pydrake.systems.sensors.Image</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.systems.sensors.PixelType.kRgb8U" title="pydrake.systems.sensors.PixelType.kRgb8U"><span class="pre">PixelType.kRgb8U</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kRgb8U-.height" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the size of height for the image</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kRgb8U-.mutable_data">
+<span id="pydrake.systems.sensors.Image[PixelType.kRgb8U].mutable_data"></span><em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mutable_data</span></span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kRgb8U-.mutable_data" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kRgb8U-.resize">
+<span id="pydrake.systems.sensors.Image[PixelType.kRgb8U].resize"></span><span class="sig-name descname"><span class="pre">resize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.Image" title="pydrake.systems.sensors.Image"><span class="pre">pydrake.systems.sensors.Image</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.systems.sensors.PixelType.kRgb8U" title="pydrake.systems.sensors.PixelType.kRgb8U"><span class="pre">PixelType.kRgb8U</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kRgb8U-.resize" title="Permalink to this definition"></a></dt>
+<dd><p>Changes the sizes of the width and height for the image. The new width
+and height can be either both zero or both strictly positive. All the
+values in the pixels become zero after resize.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kRgb8U-.shape">
+<span id="pydrake.systems.sensors.Image[PixelType.kRgb8U].shape"></span><em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">shape</span></span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kRgb8U-.shape" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kRgb8U-.size">
+<span id="pydrake.systems.sensors.Image[PixelType.kRgb8U].size"></span><span class="sig-name descname"><span class="pre">size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.Image" title="pydrake.systems.sensors.Image"><span class="pre">pydrake.systems.sensors.Image</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.systems.sensors.PixelType.kRgb8U" title="pydrake.systems.sensors.PixelType.kRgb8U"><span class="pre">PixelType.kRgb8U</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kRgb8U-.size" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the result of the number of pixels in a image by the number of
+channels in a pixel</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kRgb8U-.Traits">
+<span id="pydrake.systems.sensors.Image[PixelType.kRgb8U].Traits"></span><span class="sig-name descname"><span class="pre">Traits</span></span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kRgb8U-.Traits" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#pydrake.systems.sensors.ImageTraits-PixelType.kRgb8U" title="pydrake.systems.sensors.ImageTraits[PixelType.kRgb8U]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.sensors.ImageTraits[PixelType.kRgb8U]</span></code></a></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.Image-PixelType.kRgb8U-.width">
+<span id="pydrake.systems.sensors.Image[PixelType.kRgb8U].width"></span><span class="sig-name descname"><span class="pre">width</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.Image" title="pydrake.systems.sensors.Image"><span class="pre">pydrake.systems.sensors.Image</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.systems.sensors.PixelType.kRgb8U" title="pydrake.systems.sensors.PixelType.kRgb8U"><span class="pre">PixelType.kRgb8U</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.Image-PixelType.kRgb8U-.width" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the size of width for the image</p>
 </dd></dl>
 
@@ -1306,6 +1658,18 @@ channels in a pixel</p>
 </dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageBgr8U">
+<span class="sig-prename descclassname"><span class="pre">pydrake.systems.sensors.</span></span><span class="sig-name descname"><span class="pre">ImageBgr8U</span></span><a class="headerlink" href="#pydrake.systems.sensors.ImageBgr8U" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#pydrake.systems.sensors.Image-PixelType.kBgr8U" title="pydrake.systems.sensors.Image[PixelType.kBgr8U]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.sensors.Image[PixelType.kBgr8U]</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageBgra8U">
+<span class="sig-prename descclassname"><span class="pre">pydrake.systems.sensors.</span></span><span class="sig-name descname"><span class="pre">ImageBgra8U</span></span><a class="headerlink" href="#pydrake.systems.sensors.ImageBgra8U" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#pydrake.systems.sensors.Image-PixelType.kBgra8U" title="pydrake.systems.sensors.Image[PixelType.kBgra8U]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.sensors.Image[PixelType.kBgra8U]</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.ImageDepth16U">
 <span class="sig-prename descclassname"><span class="pre">pydrake.systems.sensors.</span></span><span class="sig-name descname"><span class="pre">ImageDepth16U</span></span><a class="headerlink" href="#pydrake.systems.sensors.ImageDepth16U" title="Permalink to this definition"></a></dt>
 <dd><p>alias of <a class="reference internal" href="#pydrake.systems.sensors.Image-PixelType.kDepth16U" title="pydrake.systems.sensors.Image[PixelType.kDepth16U]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.sensors.Image[PixelType.kDepth16U]</span></code></a></p>
@@ -1318,9 +1682,21 @@ channels in a pixel</p>
 </dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageGrey8U">
+<span class="sig-prename descclassname"><span class="pre">pydrake.systems.sensors.</span></span><span class="sig-name descname"><span class="pre">ImageGrey8U</span></span><a class="headerlink" href="#pydrake.systems.sensors.ImageGrey8U" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#pydrake.systems.sensors.Image-PixelType.kGrey8U" title="pydrake.systems.sensors.Image[PixelType.kGrey8U]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.sensors.Image[PixelType.kGrey8U]</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.ImageLabel16I">
 <span class="sig-prename descclassname"><span class="pre">pydrake.systems.sensors.</span></span><span class="sig-name descname"><span class="pre">ImageLabel16I</span></span><a class="headerlink" href="#pydrake.systems.sensors.ImageLabel16I" title="Permalink to this definition"></a></dt>
 <dd><p>alias of <a class="reference internal" href="#pydrake.systems.sensors.Image-PixelType.kLabel16I" title="pydrake.systems.sensors.Image[PixelType.kLabel16I]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.sensors.Image[PixelType.kLabel16I]</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageRgb8U">
+<span class="sig-prename descclassname"><span class="pre">pydrake.systems.sensors.</span></span><span class="sig-name descname"><span class="pre">ImageRgb8U</span></span><a class="headerlink" href="#pydrake.systems.sensors.ImageRgb8U" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#pydrake.systems.sensors.Image-PixelType.kRgb8U" title="pydrake.systems.sensors.Image[PixelType.kRgb8U]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.sensors.Image[PixelType.kRgb8U]</span></code></a></p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1382,8 +1758,18 @@ the color/depth/label constructor is used.</p>
 <dl class="py template">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.ImageToLcmImageArrayT.DeclareImageInputPort">
 <em class="property"><span class="pre">template</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DeclareImageInputPort</span></span><a class="headerlink" href="#pydrake.systems.sensors.ImageToLcmImageArrayT.DeclareImageInputPort" title="Permalink to this definition"></a></dt>
-<dd><p>Instantiations: <code class="xref py py-class docutils literal notranslate"><span class="pre">DeclareImageInputPort[PixelType.kRgba8U]</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">DeclareImageInputPort[PixelType.kDepth16U]</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">DeclareImageInputPort[PixelType.kDepth32F]</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">DeclareImageInputPort[PixelType.kLabel16I]</span></code></p>
+<dd><p>Instantiations: <code class="xref py py-class docutils literal notranslate"><span class="pre">DeclareImageInputPort[PixelType.kRgba8U]</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">DeclareImageInputPort[PixelType.kRgb8U]</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">DeclareImageInputPort[PixelType.kBgra8U]</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">DeclareImageInputPort[PixelType.kBgr8U]</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">DeclareImageInputPort[PixelType.kDepth16U]</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">DeclareImageInputPort[PixelType.kDepth32F]</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">DeclareImageInputPort[PixelType.kLabel16I]</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">DeclareImageInputPort[PixelType.kGrey8U]</span></code></p>
 </dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageToLcmImageArrayT.DeclareImageInputPort-PixelType.kBgr8U">
+<span id="pydrake.systems.sensors.ImageToLcmImageArrayT.DeclareImageInputPort[PixelType.kBgr8U]"></span><span class="sig-name descname"><span class="pre">DeclareImageInputPort[PixelType.kBgr8U]</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.ImageToLcmImageArrayT" title="pydrake.systems.sensors.ImageToLcmImageArrayT"><span class="pre">pydrake.systems.sensors.ImageToLcmImageArrayT</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.ImageToLcmImageArrayT.DeclareImageInputPort-PixelType.kBgr8U" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageToLcmImageArrayT.DeclareImageInputPort-PixelType.kBgra8U">
+<span id="pydrake.systems.sensors.ImageToLcmImageArrayT.DeclareImageInputPort[PixelType.kBgra8U]"></span><span class="sig-name descname"><span class="pre">DeclareImageInputPort[PixelType.kBgra8U]</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.ImageToLcmImageArrayT" title="pydrake.systems.sensors.ImageToLcmImageArrayT"><span class="pre">pydrake.systems.sensors.ImageToLcmImageArrayT</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.ImageToLcmImageArrayT.DeclareImageInputPort-PixelType.kBgra8U" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.ImageToLcmImageArrayT.DeclareImageInputPort-PixelType.kDepth16U">
@@ -1396,8 +1782,18 @@ the color/depth/label constructor is used.</p>
 <dd></dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageToLcmImageArrayT.DeclareImageInputPort-PixelType.kGrey8U">
+<span id="pydrake.systems.sensors.ImageToLcmImageArrayT.DeclareImageInputPort[PixelType.kGrey8U]"></span><span class="sig-name descname"><span class="pre">DeclareImageInputPort[PixelType.kGrey8U]</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.ImageToLcmImageArrayT" title="pydrake.systems.sensors.ImageToLcmImageArrayT"><span class="pre">pydrake.systems.sensors.ImageToLcmImageArrayT</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.ImageToLcmImageArrayT.DeclareImageInputPort-PixelType.kGrey8U" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.ImageToLcmImageArrayT.DeclareImageInputPort-PixelType.kLabel16I">
 <span id="pydrake.systems.sensors.ImageToLcmImageArrayT.DeclareImageInputPort[PixelType.kLabel16I]"></span><span class="sig-name descname"><span class="pre">DeclareImageInputPort[PixelType.kLabel16I]</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.ImageToLcmImageArrayT" title="pydrake.systems.sensors.ImageToLcmImageArrayT"><span class="pre">pydrake.systems.sensors.ImageToLcmImageArrayT</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.ImageToLcmImageArrayT.DeclareImageInputPort-PixelType.kLabel16I" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageToLcmImageArrayT.DeclareImageInputPort-PixelType.kRgb8U">
+<span id="pydrake.systems.sensors.ImageToLcmImageArrayT.DeclareImageInputPort[PixelType.kRgb8U]"></span><span class="sig-name descname"><span class="pre">DeclareImageInputPort[PixelType.kRgb8U]</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.ImageToLcmImageArrayT" title="pydrake.systems.sensors.ImageToLcmImageArrayT"><span class="pre">pydrake.systems.sensors.ImageToLcmImageArrayT</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.ImageToLcmImageArrayT.DeclareImageInputPort-PixelType.kRgb8U" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1431,7 +1827,59 @@ the color/depth/label constructor is used.</p>
 <dl class="py template">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.ImageTraits">
 <em class="property"><span class="pre">template</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.sensors.</span></span><span class="sig-name descname"><span class="pre">ImageTraits</span></span><a class="headerlink" href="#pydrake.systems.sensors.ImageTraits" title="Permalink to this definition"></a></dt>
-<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.sensors.ImageTraits-PixelType.kRgba8U" title="pydrake.systems.sensors.ImageTraits[PixelType.kRgba8U]"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImageTraits[PixelType.kRgba8U]</span></code></a>, <a class="reference internal" href="#pydrake.systems.sensors.ImageTraits-PixelType.kDepth16U" title="pydrake.systems.sensors.ImageTraits[PixelType.kDepth16U]"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImageTraits[PixelType.kDepth16U]</span></code></a>, <a class="reference internal" href="#pydrake.systems.sensors.ImageTraits-PixelType.kDepth32F" title="pydrake.systems.sensors.ImageTraits[PixelType.kDepth32F]"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImageTraits[PixelType.kDepth32F]</span></code></a>, <a class="reference internal" href="#pydrake.systems.sensors.ImageTraits-PixelType.kLabel16I" title="pydrake.systems.sensors.ImageTraits[PixelType.kLabel16I]"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImageTraits[PixelType.kLabel16I]</span></code></a></p>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.sensors.ImageTraits-PixelType.kRgba8U" title="pydrake.systems.sensors.ImageTraits[PixelType.kRgba8U]"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImageTraits[PixelType.kRgba8U]</span></code></a>, <a class="reference internal" href="#pydrake.systems.sensors.ImageTraits-PixelType.kRgb8U" title="pydrake.systems.sensors.ImageTraits[PixelType.kRgb8U]"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImageTraits[PixelType.kRgb8U]</span></code></a>, <a class="reference internal" href="#pydrake.systems.sensors.ImageTraits-PixelType.kBgra8U" title="pydrake.systems.sensors.ImageTraits[PixelType.kBgra8U]"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImageTraits[PixelType.kBgra8U]</span></code></a>, <a class="reference internal" href="#pydrake.systems.sensors.ImageTraits-PixelType.kBgr8U" title="pydrake.systems.sensors.ImageTraits[PixelType.kBgr8U]"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImageTraits[PixelType.kBgr8U]</span></code></a>, <a class="reference internal" href="#pydrake.systems.sensors.ImageTraits-PixelType.kDepth16U" title="pydrake.systems.sensors.ImageTraits[PixelType.kDepth16U]"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImageTraits[PixelType.kDepth16U]</span></code></a>, <a class="reference internal" href="#pydrake.systems.sensors.ImageTraits-PixelType.kDepth32F" title="pydrake.systems.sensors.ImageTraits[PixelType.kDepth32F]"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImageTraits[PixelType.kDepth32F]</span></code></a>, <a class="reference internal" href="#pydrake.systems.sensors.ImageTraits-PixelType.kLabel16I" title="pydrake.systems.sensors.ImageTraits[PixelType.kLabel16I]"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImageTraits[PixelType.kLabel16I]</span></code></a>, <a class="reference internal" href="#pydrake.systems.sensors.ImageTraits-PixelType.kGrey8U" title="pydrake.systems.sensors.ImageTraits[PixelType.kGrey8U]"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImageTraits[PixelType.kGrey8U]</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageTraits-PixelType.kBgr8U">
+<span id="pydrake.systems.sensors.ImageTraits[PixelType.kBgr8U]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.sensors.</span></span><span class="sig-name descname"><span class="pre">ImageTraits[PixelType.kBgr8U]</span></span><a class="headerlink" href="#pydrake.systems.sensors.ImageTraits-PixelType.kBgr8U" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageTraits-PixelType.kBgr8U-.__init__">
+<span id="pydrake.systems.sensors.ImageTraits[PixelType.kBgr8U].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.sensors.ImageTraits-PixelType.kBgr8U-.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageTraits-PixelType.kBgr8U-.ChannelType">
+<span id="pydrake.systems.sensors.ImageTraits[PixelType.kBgr8U].ChannelType"></span><span class="sig-name descname"><span class="pre">ChannelType</span></span><a class="headerlink" href="#pydrake.systems.sensors.ImageTraits-PixelType.kBgr8U-.ChannelType" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.uint8</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageTraits-PixelType.kBgr8U-.kNumChannels">
+<span id="pydrake.systems.sensors.ImageTraits[PixelType.kBgr8U].kNumChannels"></span><span class="sig-name descname"><span class="pre">kNumChannels</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#pydrake.systems.sensors.ImageTraits-PixelType.kBgr8U-.kNumChannels" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageTraits-PixelType.kBgr8U-.kPixelFormat">
+<span id="pydrake.systems.sensors.ImageTraits[PixelType.kBgr8U].kPixelFormat"></span><span class="sig-name descname"><span class="pre">kPixelFormat</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;PixelFormat.kBgr:</span> <span class="pre">1&gt;</span></em><a class="headerlink" href="#pydrake.systems.sensors.ImageTraits-PixelType.kBgr8U-.kPixelFormat" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageTraits-PixelType.kBgra8U">
+<span id="pydrake.systems.sensors.ImageTraits[PixelType.kBgra8U]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.sensors.</span></span><span class="sig-name descname"><span class="pre">ImageTraits[PixelType.kBgra8U]</span></span><a class="headerlink" href="#pydrake.systems.sensors.ImageTraits-PixelType.kBgra8U" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageTraits-PixelType.kBgra8U-.__init__">
+<span id="pydrake.systems.sensors.ImageTraits[PixelType.kBgra8U].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.sensors.ImageTraits-PixelType.kBgra8U-.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageTraits-PixelType.kBgra8U-.ChannelType">
+<span id="pydrake.systems.sensors.ImageTraits[PixelType.kBgra8U].ChannelType"></span><span class="sig-name descname"><span class="pre">ChannelType</span></span><a class="headerlink" href="#pydrake.systems.sensors.ImageTraits-PixelType.kBgra8U-.ChannelType" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.uint8</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageTraits-PixelType.kBgra8U-.kNumChannels">
+<span id="pydrake.systems.sensors.ImageTraits[PixelType.kBgra8U].kNumChannels"></span><span class="sig-name descname"><span class="pre">kNumChannels</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#pydrake.systems.sensors.ImageTraits-PixelType.kBgra8U-.kNumChannels" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageTraits-PixelType.kBgra8U-.kPixelFormat">
+<span id="pydrake.systems.sensors.ImageTraits[PixelType.kBgra8U].kPixelFormat"></span><span class="sig-name descname"><span class="pre">kPixelFormat</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;PixelFormat.kBgra:</span> <span class="pre">3&gt;</span></em><a class="headerlink" href="#pydrake.systems.sensors.ImageTraits-PixelType.kBgra8U-.kPixelFormat" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
@@ -1487,6 +1935,32 @@ the color/depth/label constructor is used.</p>
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageTraits-PixelType.kGrey8U">
+<span id="pydrake.systems.sensors.ImageTraits[PixelType.kGrey8U]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.sensors.</span></span><span class="sig-name descname"><span class="pre">ImageTraits[PixelType.kGrey8U]</span></span><a class="headerlink" href="#pydrake.systems.sensors.ImageTraits-PixelType.kGrey8U" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageTraits-PixelType.kGrey8U-.__init__">
+<span id="pydrake.systems.sensors.ImageTraits[PixelType.kGrey8U].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.sensors.ImageTraits-PixelType.kGrey8U-.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageTraits-PixelType.kGrey8U-.ChannelType">
+<span id="pydrake.systems.sensors.ImageTraits[PixelType.kGrey8U].ChannelType"></span><span class="sig-name descname"><span class="pre">ChannelType</span></span><a class="headerlink" href="#pydrake.systems.sensors.ImageTraits-PixelType.kGrey8U-.ChannelType" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.uint8</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageTraits-PixelType.kGrey8U-.kNumChannels">
+<span id="pydrake.systems.sensors.ImageTraits[PixelType.kGrey8U].kNumChannels"></span><span class="sig-name descname"><span class="pre">kNumChannels</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#pydrake.systems.sensors.ImageTraits-PixelType.kGrey8U-.kNumChannels" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageTraits-PixelType.kGrey8U-.kPixelFormat">
+<span id="pydrake.systems.sensors.ImageTraits[PixelType.kGrey8U].kPixelFormat"></span><span class="sig-name descname"><span class="pre">kPixelFormat</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;PixelFormat.kGrey:</span> <span class="pre">4&gt;</span></em><a class="headerlink" href="#pydrake.systems.sensors.ImageTraits-PixelType.kGrey8U-.kPixelFormat" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.ImageTraits-PixelType.kLabel16I">
 <span id="pydrake.systems.sensors.ImageTraits[PixelType.kLabel16I]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.sensors.</span></span><span class="sig-name descname"><span class="pre">ImageTraits[PixelType.kLabel16I]</span></span><a class="headerlink" href="#pydrake.systems.sensors.ImageTraits-PixelType.kLabel16I" title="Permalink to this definition"></a></dt>
 <dd><dl class="py method">
@@ -1508,6 +1982,32 @@ the color/depth/label constructor is used.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.ImageTraits-PixelType.kLabel16I-.kPixelFormat">
 <span id="pydrake.systems.sensors.ImageTraits[PixelType.kLabel16I].kPixelFormat"></span><span class="sig-name descname"><span class="pre">kPixelFormat</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;PixelFormat.kLabel:</span> <span class="pre">6&gt;</span></em><a class="headerlink" href="#pydrake.systems.sensors.ImageTraits-PixelType.kLabel16I-.kPixelFormat" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageTraits-PixelType.kRgb8U">
+<span id="pydrake.systems.sensors.ImageTraits[PixelType.kRgb8U]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.sensors.</span></span><span class="sig-name descname"><span class="pre">ImageTraits[PixelType.kRgb8U]</span></span><a class="headerlink" href="#pydrake.systems.sensors.ImageTraits-PixelType.kRgb8U" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageTraits-PixelType.kRgb8U-.__init__">
+<span id="pydrake.systems.sensors.ImageTraits[PixelType.kRgb8U].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.sensors.ImageTraits-PixelType.kRgb8U-.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageTraits-PixelType.kRgb8U-.ChannelType">
+<span id="pydrake.systems.sensors.ImageTraits[PixelType.kRgb8U].ChannelType"></span><span class="sig-name descname"><span class="pre">ChannelType</span></span><a class="headerlink" href="#pydrake.systems.sensors.ImageTraits-PixelType.kRgb8U-.ChannelType" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.uint8</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageTraits-PixelType.kRgb8U-.kNumChannels">
+<span id="pydrake.systems.sensors.ImageTraits[PixelType.kRgb8U].kNumChannels"></span><span class="sig-name descname"><span class="pre">kNumChannels</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#pydrake.systems.sensors.ImageTraits-PixelType.kRgb8U-.kNumChannels" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageTraits-PixelType.kRgb8U-.kPixelFormat">
+<span id="pydrake.systems.sensors.ImageTraits[PixelType.kRgb8U].kPixelFormat"></span><span class="sig-name descname"><span class="pre">kPixelFormat</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;PixelFormat.kRgb:</span> <span class="pre">0&gt;</span></em><a class="headerlink" href="#pydrake.systems.sensors.ImageTraits-PixelType.kRgb8U-.kPixelFormat" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1750,7 +2250,11 @@ in different messages will not produce useful results).</p>
 <dt class="sig sig-object py" id="pydrake.systems.sensors.PixelFormat">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.sensors.</span></span><span class="sig-name descname"><span class="pre">PixelFormat</span></span><a class="headerlink" href="#pydrake.systems.sensors.PixelFormat" title="Permalink to this definition"></a></dt>
 <dd><p>Members:</p>
+<p>kRgb</p>
+<p>kBgr</p>
 <p>kRgba</p>
+<p>kBgra</p>
+<p>kGrey</p>
 <p>kDepth</p>
 <p>kLabel</p>
 <dl class="py method">
@@ -1759,13 +2263,33 @@ in different messages will not produce useful results).</p>
 <dd></dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.PixelFormat.kBgr">
+<span class="sig-name descname"><span class="pre">kBgr</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;PixelFormat.kBgr:</span> <span class="pre">1&gt;</span></em><a class="headerlink" href="#pydrake.systems.sensors.PixelFormat.kBgr" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.PixelFormat.kBgra">
+<span class="sig-name descname"><span class="pre">kBgra</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;PixelFormat.kBgra:</span> <span class="pre">3&gt;</span></em><a class="headerlink" href="#pydrake.systems.sensors.PixelFormat.kBgra" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.PixelFormat.kDepth">
 <span class="sig-name descname"><span class="pre">kDepth</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;PixelFormat.kDepth:</span> <span class="pre">5&gt;</span></em><a class="headerlink" href="#pydrake.systems.sensors.PixelFormat.kDepth" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.PixelFormat.kGrey">
+<span class="sig-name descname"><span class="pre">kGrey</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;PixelFormat.kGrey:</span> <span class="pre">4&gt;</span></em><a class="headerlink" href="#pydrake.systems.sensors.PixelFormat.kGrey" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.PixelFormat.kLabel">
 <span class="sig-name descname"><span class="pre">kLabel</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;PixelFormat.kLabel:</span> <span class="pre">6&gt;</span></em><a class="headerlink" href="#pydrake.systems.sensors.PixelFormat.kLabel" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.PixelFormat.kRgb">
+<span class="sig-name descname"><span class="pre">kRgb</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;PixelFormat.kRgb:</span> <span class="pre">0&gt;</span></em><a class="headerlink" href="#pydrake.systems.sensors.PixelFormat.kRgb" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -1790,12 +2314,26 @@ in different messages will not produce useful results).</p>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.sensors.</span></span><span class="sig-name descname"><span class="pre">PixelType</span></span><a class="headerlink" href="#pydrake.systems.sensors.PixelType" title="Permalink to this definition"></a></dt>
 <dd><p>Members:</p>
 <p>kRgba8U</p>
+<p>kRgb8U</p>
+<p>kBgra8U</p>
+<p>kBgr8U</p>
 <p>kDepth16U</p>
 <p>kDepth32F</p>
 <p>kLabel16I</p>
+<p>kGrey8U</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.PixelType.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.PixelType" title="pydrake.systems.sensors.PixelType"><span class="pre">pydrake.systems.sensors.PixelType</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.PixelType.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.PixelType.kBgr8U">
+<span class="sig-name descname"><span class="pre">kBgr8U</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;PixelType.kBgr8U:</span> <span class="pre">1&gt;</span></em><a class="headerlink" href="#pydrake.systems.sensors.PixelType.kBgr8U" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.PixelType.kBgra8U">
+<span class="sig-name descname"><span class="pre">kBgra8U</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;PixelType.kBgra8U:</span> <span class="pre">3&gt;</span></em><a class="headerlink" href="#pydrake.systems.sensors.PixelType.kBgra8U" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -1809,8 +2347,18 @@ in different messages will not produce useful results).</p>
 <dd></dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.PixelType.kGrey8U">
+<span class="sig-name descname"><span class="pre">kGrey8U</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;PixelType.kGrey8U:</span> <span class="pre">4&gt;</span></em><a class="headerlink" href="#pydrake.systems.sensors.PixelType.kGrey8U" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.PixelType.kLabel16I">
 <span class="sig-name descname"><span class="pre">kLabel16I</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;PixelType.kLabel16I:</span> <span class="pre">7&gt;</span></em><a class="headerlink" href="#pydrake.systems.sensors.PixelType.kLabel16I" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.PixelType.kRgb8U">
+<span class="sig-name descname"><span class="pre">kRgb8U</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;PixelType.kRgb8U:</span> <span class="pre">0&gt;</span></em><a class="headerlink" href="#pydrake.systems.sensors.PixelType.kRgb8U" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -1928,7 +2476,7 @@ which reports the pose of the body in the world frame (X_WB).</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensor.color_camera_info">
-<span class="sig-name descname"><span class="pre">color_camera_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensor" title="pydrake.systems.sensors.RgbdSensor"><span class="pre">pydrake.systems.sensors.RgbdSensor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::systems::sensors::CameraInfo</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensor.color_camera_info" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">color_camera_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensor" title="pydrake.systems.sensors.RgbdSensor"><span class="pre">pydrake.systems.sensors.RgbdSensor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.sensors.CameraInfo" title="pydrake.systems.sensors.CameraInfo"><span class="pre">pydrake.systems.sensors.CameraInfo</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensor.color_camera_info" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the intrinsics properties of the color camera model.</p>
 </dd></dl>
 
@@ -1940,7 +2488,7 @@ which reports the pose of the body in the world frame (X_WB).</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensor.depth_camera_info">
-<span class="sig-name descname"><span class="pre">depth_camera_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensor" title="pydrake.systems.sensors.RgbdSensor"><span class="pre">pydrake.systems.sensors.RgbdSensor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::systems::sensors::CameraInfo</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensor.depth_camera_info" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">depth_camera_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensor" title="pydrake.systems.sensors.RgbdSensor"><span class="pre">pydrake.systems.sensors.RgbdSensor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.sensors.CameraInfo" title="pydrake.systems.sensors.CameraInfo"><span class="pre">pydrake.systems.sensors.CameraInfo</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensor.depth_camera_info" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the intrinsics properties of the depth camera model.</p>
 </dd></dl>
 

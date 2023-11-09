@@ -35,6 +35,7 @@ var searchData=
   ['matrix_5fgain_2eh',['matrix_gain.h',['../matrix__gain_8h.html',1,'']]],
   ['matrix_5futil_2eh',['matrix_util.h',['../matrix__util_8h.html',1,'']]],
   ['matrix_5futilities_2eh',['matrix_utilities.h',['../matrix__utilities_8h.html',1,'']]],
+  ['max_5fclique_2eh',['max_clique.h',['../max__clique_8h.html',1,'']]],
   ['maybe_5fpause_5ffor_5fuser_2eh',['maybe_pause_for_user.h',['../maybe__pause__for__user_8h.html',1,'']]],
   ['measure_5fexecution_2eh',['measure_execution.h',['../measure__execution_8h.html',1,'']]],
   ['mesh_5fdeformer_2eh',['mesh_deformer.h',['../mesh__deformer_8h.html',1,'']]],

@@ -87,6 +87,7 @@ var searchData=
   ['calcmassmatrixviainversedynamics',['CalcMassMatrixViaInverseDynamics',['../classdrake_1_1multibody_1_1_multibody_plant.html#a574e59c853d14d59bde09b40a88ff019',1,'drake::multibody::MultibodyPlant']]],
   ['calcmatrixrelatingrpydttoangularvelocityinchild',['CalcMatrixRelatingRpyDtToAngularVelocityInChild',['../classdrake_1_1math_1_1_roll_pitch_yaw.html#a459ec135d33ffe8af29e4de8411b038f',1,'drake::math::RollPitchYaw']]],
   ['calcmatrixrelatingrpydttoangularvelocityinparent',['CalcMatrixRelatingRpyDtToAngularVelocityInParent',['../classdrake_1_1math_1_1_roll_pitch_yaw.html#a2aed89bb07dd455aabe953361562507c',1,'drake::math::RollPitchYaw']]],
+  ['calcmaxclique',['CalcMaxClique',['../namespacedrake_1_1planning_1_1graph__algorithms.html#a832d644b5511c20e1eb7c5861d9ffab4',1,'drake::planning::graph_algorithms']]],
   ['calcmaximumpossiblemomentofinertia',['CalcMaximumPossibleMomentOfInertia',['../classdrake_1_1multibody_1_1_rotational_inertia.html#a3751c9eaa974909523b6d8d3fd0833a8',1,'drake::multibody::RotationalInertia']]],
   ['calcmonomialbasisorderuptoone',['CalcMonomialBasisOrderUpToOne',['../namespacedrake_1_1symbolic.html#afe9487e2826e1e3dda3bed0697b25a11',1,'drake::symbolic']]],
   ['calcnextupdatetime',['CalcNextUpdateTime',['../classdrake_1_1systems_1_1_system.html#a164afe3c1db737b93696b8808bb2c942',1,'drake::systems::System']]],

@@ -541,6 +541,10 @@ var hierarchy =
     [ "MatGradMultMat< DerivedA, DerivedB, DerivedDA >", "structdrake_1_1math_1_1_mat_grad_mult_mat.html", null ],
     [ "MathematicalProgram", "classdrake_1_1solvers_1_1_mathematical_program.html", null ],
     [ "MathematicalProgramResult", "classdrake_1_1solvers_1_1_mathematical_program_result.html", null ],
+    [ "MaxCliqueOptions", "structdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_options.html", null ],
+    [ "MaxCliqueSolverBase", "classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html", [
+      [ "MaxCliqueSolverViaMip", "classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html", null ]
+    ] ],
     [ "Meshcat", "classdrake_1_1geometry_1_1_meshcat.html", null ],
     [ "MeshcatAnimation", "classdrake_1_1geometry_1_1_meshcat_animation.html", null ],
     [ "MeshcatParams", "structdrake_1_1geometry_1_1_meshcat_params.html", null ],

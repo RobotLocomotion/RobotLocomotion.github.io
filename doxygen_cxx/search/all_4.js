@@ -583,6 +583,7 @@ var searchData=
   ['fibonacci',['fibonacci',['../namespacedrake_1_1examples_1_1fibonacci.html',1,'drake::examples']]],
   ['free_5fbody',['free_body',['../namespacedrake_1_1multibody_1_1benchmarks_1_1free__body.html',1,'drake::multibody::benchmarks']]],
   ['geometry',['geometry',['../namespacedrake_1_1geometry.html',1,'drake']]],
+  ['graph_5falgorithms',['graph_algorithms',['../namespacedrake_1_1planning_1_1graph__algorithms.html',1,'drake::planning']]],
   ['hydroelastics',['hydroelastics',['../namespacedrake_1_1multibody_1_1hydroelastics.html',1,'drake::multibody']]],
   ['implicit_5fintegrator_5ftest',['implicit_integrator_test',['../namespacedrake_1_1systems_1_1implicit__integrator__test.html',1,'drake::systems']]],
   ['inclined_5fplane',['inclined_plane',['../namespacedrake_1_1multibody_1_1benchmarks_1_1inclined__plane.html',1,'drake::multibody::benchmarks']]],
