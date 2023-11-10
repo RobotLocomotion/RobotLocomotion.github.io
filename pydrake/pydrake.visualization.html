@@ -306,41 +306,46 @@ named “plant” or else the provided <code class="docutils literal notranslate
 <dt class="sig sig-object py" id="pydrake.visualization.ColorizeDepthImage">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.visualization.</span></span><span class="sig-name descname"><span class="pre">ColorizeDepthImage</span></span><a class="headerlink" href="#pydrake.visualization.ColorizeDepthImage" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
-<p>Converts a depth image, either 32F or 16U, to a color image. One input
-port, and only one, must be connected.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">depth_image_32f&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">depth_image_16u&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>ColorizeDepthImage</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; color_image</td></tr></table></td></tr></table><p>Depth measurements are linearly mapped to a grayscale palette, with smaller
-(closer) values brighter and larger (further) values darker.</p>
-<p>The dynamic range of each input image determines the scale. The pixel with
-the smallest depth will be fully white (#FFFFFFFF), and largest depth will
-be fully black (#000000FF). Note that alpha channel is still 100% in both
-cases.</p>
-<p>Because the dynamic range is measured one input image a time, take note
-that a video recording of this System will not have consistent scaling
-across its entirety. The ability to set a fixed palette is future work.</p>
+<p>ColorizeDepthImage converts a depth image, either 32F or 16U, to a
+color image. One input port, and only one, must be connected.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">depth_image_32f&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">depth_image_16u&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>ColorizeDepthImage</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; color_image</td></tr></table></td></tr></table><p>Depth measurements are linearly mapped to a grayscale palette, with
+smaller (closer) values brighter and larger (further) values darker.</p>
+<p>The dynamic range of each input image determines the scale. The pixel
+with the smallest depth will be fully white (#FFFFFFFF), and largest
+depth will be fully black (#000000FF). Note that alpha channel is
+still 100% in both cases.</p>
+<p>Because the dynamic range is measured one input image a time, take
+note that a video recording of this System will not have consistent
+scaling across its entirety. The ability to set a fixed palette is
+future work.</p>
 <p>For the special depth pixel values “too close” or “too far”, the color
 pixel will use the <code class="docutils literal notranslate"><span class="pre">invalid_color</span></code> property (by default, a dim red).</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.visualization.ColorizeDepthImage.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.ColorizeDepthImage.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.visualization.ColorizeDepthImage" title="pydrake.visualization.ColorizeDepthImage"><span class="pre">pydrake.visualization.ColorizeDepthImage</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.visualization.ColorizeDepthImage.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a ColorizeDepthImage system.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.visualization.ColorizeDepthImage.Calc">
+<span class="sig-name descname"><span class="pre">Calc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.ColorizeDepthImage.Calc" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>__init__(self: pydrake.systems.framework.LeafSystem) -&gt; None</p></li>
+<li><p>Calc(self: pydrake.visualization.ColorizeDepthImage, arg0: pydrake.systems.sensors.Image[PixelType.kDepth32F], arg1: pydrake.systems.sensors.Image[PixelType.kRgba8U]) -&gt; None</p></li>
 </ol>
-<p>Default constructor that declares no inputs, outputs, state,
-parameters, events, nor scalar-type conversion support (AutoDiff,
-etc.). To enable AutoDiff support, use the SystemScalarConverter-based
-constructor.</p>
+<p>Colorizes the <code class="docutils literal notranslate"><span class="pre">input</span></code> into <code class="docutils literal notranslate"><span class="pre">output</span></code>, without using any System port
+conections nor any Context.</p>
 <ol class="arabic simple" start="2">
-<li><p>__init__(self: pydrake.systems.framework.LeafSystem, converter: pydrake.systems.framework.SystemScalarConverter) -&gt; None</p></li>
+<li><p>Calc(self: pydrake.visualization.ColorizeDepthImage, arg0: pydrake.systems.sensors.Image[PixelType.kDepth16U], arg1: pydrake.systems.sensors.Image[PixelType.kRgba8U]) -&gt; None</p></li>
 </ol>
-<p>Constructor that declares no inputs, outputs, state, parameters, or
-events, but allows subclasses to declare scalar-type conversion
-support (AutoDiff, etc.).</p>
-<p>The scalar-type conversion support will use <code class="docutils literal notranslate"><span class="pre">converter</span></code>. To enable
-scalar-type conversion support, pass a <code class="docutils literal notranslate"><span class="pre">SystemTypeTag&lt;S&gt;{}</span></code> where
-<code class="docutils literal notranslate"><span class="pre">S</span></code> must be the exact class of <code class="docutils literal notranslate"><span class="pre">this</span></code> being constructed.</p>
-<p>See system_scalar_conversion for detailed background and examples
-related to scalar-type conversion support.</p>
+<p>Colorizes the <code class="docutils literal notranslate"><span class="pre">input</span></code> into <code class="docutils literal notranslate"><span class="pre">output</span></code>, without using any System port
+conections nor any Context.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.visualization.ColorizeDepthImage.invalid_color">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">invalid_color</span></span><a class="headerlink" href="#pydrake.visualization.ColorizeDepthImage.invalid_color" title="Permalink to this definition"></a></dt>
+<dd><p>The color used for pixels with too-near or too-far depth.</p>
 </dd></dl>
 
 </dd></dl>
@@ -349,66 +354,62 @@ related to scalar-type conversion support.</p>
 <dt class="sig sig-object py" id="pydrake.visualization.ColorizeLabelImage">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.visualization.</span></span><span class="sig-name descname"><span class="pre">ColorizeLabelImage</span></span><a class="headerlink" href="#pydrake.visualization.ColorizeLabelImage" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
-<p>Converts a label image to a color image.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">label_image&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>ColorizeLabelImage</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; color_image</td></tr></table></td></tr></table><p>Labels are mapped to colors with a built-in, fixed palette.</p>
-<p>For label pixels that do not represent a label (“don’t care”, “empty”,
-“unspecified”, etc.), the color pixel will use the <code class="docutils literal notranslate"><span class="pre">background_color</span></code>
-property (by default, black with 0% alpha).</p>
+<p>ColorizeLabelImage converts a label image to a color image.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">label_image&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>ColorizeLabelImage</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; color_image</td></tr></table></td></tr></table><p>Labels are mapped to colors with a built-in, fixed palette. The
+palette has fewer elements than all possible labels, so not all labels
+will necessarily be represented by a unique color. For label pixels
+that do not represent a label (“don’t care”, “empty”, “unspecified”,
+etc.), the color pixel will use the <code class="docutils literal notranslate"><span class="pre">background_color</span></code> property (by
+default, black with 0% alpha).</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.visualization.ColorizeLabelImage.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.ColorizeLabelImage.__init__" title="Permalink to this definition"></a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li><p>__init__(self: pydrake.systems.framework.LeafSystem) -&gt; None</p></li>
-</ol>
-<p>Default constructor that declares no inputs, outputs, state,
-parameters, events, nor scalar-type conversion support (AutoDiff,
-etc.). To enable AutoDiff support, use the SystemScalarConverter-based
-constructor.</p>
-<ol class="arabic simple" start="2">
-<li><p>__init__(self: pydrake.systems.framework.LeafSystem, converter: pydrake.systems.framework.SystemScalarConverter) -&gt; None</p></li>
-</ol>
-<p>Constructor that declares no inputs, outputs, state, parameters, or
-events, but allows subclasses to declare scalar-type conversion
-support (AutoDiff, etc.).</p>
-<p>The scalar-type conversion support will use <code class="docutils literal notranslate"><span class="pre">converter</span></code>. To enable
-scalar-type conversion support, pass a <code class="docutils literal notranslate"><span class="pre">SystemTypeTag&lt;S&gt;{}</span></code> where
-<code class="docutils literal notranslate"><span class="pre">S</span></code> must be the exact class of <code class="docutils literal notranslate"><span class="pre">this</span></code> being constructed.</p>
-<p>See system_scalar_conversion for detailed background and examples
-related to scalar-type conversion support.</p>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.visualization.ColorizeLabelImage" title="pydrake.visualization.ColorizeLabelImage"><span class="pre">pydrake.visualization.ColorizeLabelImage</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.visualization.ColorizeLabelImage.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a ColorizeLabelImage system.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.visualization.ColorizeLabelImage.background_color">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">background_color</span></span><a class="headerlink" href="#pydrake.visualization.ColorizeLabelImage.background_color" title="Permalink to this definition"></a></dt>
+<dd><p>The color used for pixels with no label.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.visualization.ColorizeLabelImage.Calc">
+<span class="sig-name descname"><span class="pre">Calc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.visualization.ColorizeLabelImage" title="pydrake.visualization.ColorizeLabelImage"><span class="pre">pydrake.visualization.ColorizeLabelImage</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.sensors.html#pydrake.systems.sensors.Image" title="pydrake.systems.sensors.Image"><span class="pre">pydrake.systems.sensors.Image</span></a><span class="p"><span class="pre">[</span></span><span class="pre">PixelType.kLabel16I</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.sensors.html#pydrake.systems.sensors.Image" title="pydrake.systems.sensors.Image"><span class="pre">pydrake.systems.sensors.Image</span></a><span class="p"><span class="pre">[</span></span><span class="pre">PixelType.kRgba8U</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.visualization.ColorizeLabelImage.Calc" title="Permalink to this definition"></a></dt>
+<dd><p>Colorizes the <code class="docutils literal notranslate"><span class="pre">input</span></code> into <code class="docutils literal notranslate"><span class="pre">output</span></code>, without using any System port
+conections nor any Context.</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.visualization.ConcatenateImages">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.visualization.</span></span><span class="sig-name descname"><span class="pre">ConcatenateImages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rows</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.ConcatenateImages" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.visualization.</span></span><span class="sig-name descname"><span class="pre">ConcatenateImages</span></span><a class="headerlink" href="#pydrake.visualization.ConcatenateImages" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
-<p>Stacks multiple input images into a single output image.</p>
+<p>ConcatenateImages stacks multiple input images into a single output
+image.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">color_image_r0_c0&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">color_image_r0_c1&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">...&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>ConcatenateImages</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; color_image</td></tr></table></td></tr></table><p>As currently implemented, all inputs must be of type ImageRgba8U, must
-have identical width and height, and all ports must be connected (i.e.,
-with no gaps in the grid of rows x cols). Any of those conditions could
-be generalized as future work.</p>
+have identical width and height, and all ports must be connected
+(i.e., with no gaps in the grid of rows x cols). Any of those
+conditions could be generalized as future work.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.visualization.ConcatenateImages.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rows</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.ConcatenateImages.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.visualization.ConcatenateImages" title="pydrake.visualization.ConcatenateImages"><span class="pre">pydrake.visualization.ConcatenateImages</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rows</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cols</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.visualization.ConcatenateImages.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Constructs a ConcatenateImages system.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>rows</strong> – Number of images to stack vertically.</p></li>
-<li><p><strong>cols</strong> – Number of images to stack horizontally.</p></li>
-</ul>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">rows</span></code>:</dt><dd><p>Number of images to stack vertically.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">cols</span></code>:</dt><dd><p>Number of images to stack horizontally.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.visualization.ConcatenateImages.get_input_port">
-<span class="sig-name descname"><span class="pre">get_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">row</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.ConcatenateImages.get_input_port" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the InputPort for the given (row, col) image.</p>
-<p>Rows and columns are 0-indexed, i.e., we have <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">&lt;=</span> <span class="pre">row</span> <span class="pre">&lt;</span> <span class="pre">rows</span></code> and
-<code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">&lt;=</span> <span class="pre">col</span> <span class="pre">&lt;</span> <span class="pre">cols</span></code>.</p>
+<span class="sig-name descname"><span class="pre">get_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.visualization.ConcatenateImages" title="pydrake.visualization.ConcatenateImages"><span class="pre">pydrake.visualization.ConcatenateImages</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">row</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.visualization.ConcatenateImages.get_input_port" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the InputPort for the given (row, col) image. Rows and columns
+are 0-indexed, i.e., we have <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">&lt;=</span> <span class="pre">row</span> <span class="pre">&lt;</span> <span class="pre">rows</span></code> and <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">&lt;=</span> <span class="pre">col</span> <span class="pre">&lt;</span>
+<span class="pre">cols</span></code>.</p>
 </dd></dl>
 
 </dd></dl>

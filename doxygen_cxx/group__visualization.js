@@ -51,6 +51,38 @@ var group__visualization =
       [ "operator=", "classdrake_1_1systems_1_1rendering_1_1_multibody_position_to_geometry_pose.html#a7185a9bb03c2b8faa2067ad2708b5899", null ],
       [ "owns_plant", "classdrake_1_1systems_1_1rendering_1_1_multibody_position_to_geometry_pose.html#ae44005e3185b2dd4aaab4b94e06a5d2e", null ]
     ] ],
+    [ "ColorizeDepthImage", "classdrake_1_1visualization_1_1_colorize_depth_image.html", [
+      [ "ColorizeDepthImage", "classdrake_1_1visualization_1_1_colorize_depth_image.html#a464b23416d0f90503c911b811b45ca8e", null ],
+      [ "ColorizeDepthImage", "classdrake_1_1visualization_1_1_colorize_depth_image.html#aafb8971762a28257598a30f08031b53e", null ],
+      [ "ColorizeDepthImage", "classdrake_1_1visualization_1_1_colorize_depth_image.html#a35453e37bd96fa7047e43de7b001b50d", null ],
+      [ "~ColorizeDepthImage", "classdrake_1_1visualization_1_1_colorize_depth_image.html#ae35d904a52a563fef78643d4e612d2fd", null ],
+      [ "Calc", "classdrake_1_1visualization_1_1_colorize_depth_image.html#accd5e33fc91c644a938d014c26026f78", null ],
+      [ "Calc", "classdrake_1_1visualization_1_1_colorize_depth_image.html#ab182668c7189b0a48787d990b1773aa0", null ],
+      [ "get_invalid_color", "classdrake_1_1visualization_1_1_colorize_depth_image.html#a240a15b8455ae37da1da08127a021e5e", null ],
+      [ "operator=", "classdrake_1_1visualization_1_1_colorize_depth_image.html#a2826b4556c9c5a9d785c0b2635cdf9f5", null ],
+      [ "operator=", "classdrake_1_1visualization_1_1_colorize_depth_image.html#a5e7b31fe2330206fa59826b2e35083ce", null ],
+      [ "set_invalid_color", "classdrake_1_1visualization_1_1_colorize_depth_image.html#a2d90d1217dd06d5701b6bab4ec2089c2", null ]
+    ] ],
+    [ "ColorizeLabelImage", "classdrake_1_1visualization_1_1_colorize_label_image.html", [
+      [ "ColorizeLabelImage", "classdrake_1_1visualization_1_1_colorize_label_image.html#a994bb9c694565c6de7c2ac023aeb8e75", null ],
+      [ "ColorizeLabelImage", "classdrake_1_1visualization_1_1_colorize_label_image.html#a81c20a8853f69655d580bf0af1eec313", null ],
+      [ "ColorizeLabelImage", "classdrake_1_1visualization_1_1_colorize_label_image.html#a7e915b7642a98e2e3a657d531c40e4ed", null ],
+      [ "~ColorizeLabelImage", "classdrake_1_1visualization_1_1_colorize_label_image.html#a4a4d804bb9945b6a98fa44c1fc39ded8", null ],
+      [ "Calc", "classdrake_1_1visualization_1_1_colorize_label_image.html#abd8d604309d403783711fbf9e51cd74d", null ],
+      [ "get_background_color", "classdrake_1_1visualization_1_1_colorize_label_image.html#acecf55696410560fc4eed5db953cceef", null ],
+      [ "operator=", "classdrake_1_1visualization_1_1_colorize_label_image.html#aa9c3795e276d0ab7b36b76c75d5fe5f6", null ],
+      [ "operator=", "classdrake_1_1visualization_1_1_colorize_label_image.html#a94e6d0975f01df3d38ad96466c807304", null ],
+      [ "set_background_color", "classdrake_1_1visualization_1_1_colorize_label_image.html#abfe0764e04080a30f928a361a7c326a7", null ]
+    ] ],
+    [ "ConcatenateImages", "classdrake_1_1visualization_1_1_concatenate_images.html", [
+      [ "ConcatenateImages", "classdrake_1_1visualization_1_1_concatenate_images.html#aa51be17f000d46bed06ece0616b469bb", null ],
+      [ "ConcatenateImages", "classdrake_1_1visualization_1_1_concatenate_images.html#a0f1225f891e1839cdf92c86b7423b8b8", null ],
+      [ "ConcatenateImages", "classdrake_1_1visualization_1_1_concatenate_images.html#aaf8b99a6fe41856154a5af0a731be6ec", null ],
+      [ "~ConcatenateImages", "classdrake_1_1visualization_1_1_concatenate_images.html#ab424db4973cded51901239852b4a3443", null ],
+      [ "get_input_port", "classdrake_1_1visualization_1_1_concatenate_images.html#a8ea656dc79df76cace8b9610b81f8de3", null ],
+      [ "operator=", "classdrake_1_1visualization_1_1_concatenate_images.html#a694ac7926701e834ca36db268753a478", null ],
+      [ "operator=", "classdrake_1_1visualization_1_1_concatenate_images.html#a2cd3db3b8c2ded42ff1bc35f82bd9e22", null ]
+    ] ],
     [ "InertiaVisualizer", "classdrake_1_1visualization_1_1_inertia_visualizer.html", [
       [ "InertiaVisualizer", "classdrake_1_1visualization_1_1_inertia_visualizer.html#a920edba4b207049d7ce573d4ff8b96bf", null ],
       [ "InertiaVisualizer", "classdrake_1_1visualization_1_1_inertia_visualizer.html#a73f8cf9a55941586846beae0ef7f94a8", null ],

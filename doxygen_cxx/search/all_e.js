@@ -77,6 +77,7 @@ var searchData=
   ['normal_5fdistribution_3c_20drake_3a_3asymbolic_3a_3aexpression_20_3e',['normal_distribution&lt; drake::symbolic::Expression &gt;',['../classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html',1,'std']]],
   ['normalize',['Normalize',['../classdrake_1_1systems_1_1sensors_1_1_color_palette.html#adacf846f73624ee81f656d6a2c0044d3',1,'drake::systems::sensors::ColorPalette']]],
   ['normalize_5fvector_2eh',['normalize_vector.h',['../normalize__vector_8h.html',1,'']]],
+  ['normalizesegmenttimes',['NormalizeSegmentTimes',['../classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a0745622466ef1e6253a0de1c1216d804',1,'drake::planning::trajectory_optimization::GcsTrajectoryOptimization']]],
   ['normalizevector',['NormalizeVector',['../namespacedrake_1_1math.html#a48484009086db12d881bea6bcaab2514',1,'drake::math']]],
   ['normals',['normals',['../classdrake_1_1perception_1_1_point_cloud.html#a38274d49d2f9567f9738cfa37e4b2775',1,'drake::perception::PointCloud']]],
   ['not',['Not',['../namespacedrake_1_1symbolic.html#a6869e7044dd90be5d972ee7dd4e821b6aa74c05d080620f087c4e523977230666',1,'drake::symbolic']]],

@@ -1938,19 +1938,17 @@ reports <code class="docutils literal notranslate"><span class="pre">True</span>
 <dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">GcsTrajectoryOptimization</span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization" title="Permalink to this definition"></a></dt>
 <dd><p>GcsTrajectoryOptimization implements a simplified motion planning
-optimization problem introduced in the paper “Motion Planning around
-Obstacles with Convex Optimization.”</p>
-<p>“Motion Planning around Obstacles with Convex Optimization” by Tobia
-Marcucci, Mark Petersen, David von Wrangel, Russ Tedrake.
-<a class="reference external" href="https://arxiv.org/abs/2205.04422">https://arxiv.org/abs/2205.04422</a></p>
+optimization problem introduced in the paper <a class="reference external" href="https://arxiv.org/abs/2205.04422">“Motion Planning around
+Obstacles with Convex Optimization”</a> by Tobia Marcucci, Mark Petersen,
+David von Wrangel, Russ Tedrake.</p>
 <p>Instead of using the full time-scaling curve, this problem uses a
 single time-scaling variable for each region. This formulation yields
 continuous trajectories, which are not differentiable at the
 transition times between the regions since non-convex continuity
 constraints are not supported yet. However, it supports continuity on
-the path for arbitrary degree. The resulting trajectories can be
-post-processed with e.g. Toppra in order to smooth out the timing
-rescaling.</p>
+the path r(s) for arbitrary degree. The path r(s) can be reconstructed
+from the gcs solution q(t) with <code class="docutils literal notranslate"><span class="pre">NormalizeSegmentTimes()</span></code> and
+post-processed with e.g. Toppra to enforce acceleration bounds.</p>
 <p>The ith piece of the composite trajectory is defined as q(t) = r((t -
 tᵢ) / hᵢ). r : [0, 1] → ℝⁿ is a the path, parametrized as a Bézier
 curve with order n. tᵢ and hᵢ are the initial time and duration of the
@@ -1994,6 +1992,29 @@ constraints. Workaround: Create a subgraph of zero order with the
 subspace as the region and connect it between the two subgraphs.
 This works because GraphOfConvexSet::Vertex , supports arbitrary
 instances of ConvexSets.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.AddPathContinuityConstraints">
+<span class="sig-name descname"><span class="pre">AddPathContinuityConstraints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.GcsTrajectoryOptimization" title="pydrake.planning.GcsTrajectoryOptimization"><span class="pre">pydrake.planning.GcsTrajectoryOptimization</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">continuity_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.AddPathContinuityConstraints" title="Permalink to this definition"></a></dt>
+<dd><p>Enforces derivative continuity constraints on the entire graph.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">continuity_order</span></code>:</dt><dd><p>is the order of the continuity constraint.</p>
+</dd>
+</dl>
+<p>Note that the constraints are on the control points of the derivatives
+of r(s) and not q(t). This may result in discontinuities of the
+trajectory return by <code class="docutils literal notranslate"><span class="pre">SolvePath()</span></code> since the r(s) will get rescaled
+by the duration h to yield q(t). <code class="docutils literal notranslate"><span class="pre">NormalizeSegmentTimes()</span></code> will
+return r(s) with valid continuity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the continuity order is less than one since path</strong> – </p></li>
+<li><p><strong>continuity is enforced by default.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -2154,6 +2175,32 @@ GCSTrajetoryOptimization is not supported.</p>
 <dd></dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs.AddPathContinuityConstraints">
+<span class="sig-name descname"><span class="pre">AddPathContinuityConstraints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs" title="pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs"><span class="pre">pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">continuity_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs.AddPathContinuityConstraints" title="Permalink to this definition"></a></dt>
+<dd><p>Enforces derivative continuity constraints on the edges between the
+subgraphs.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">continuity_order</span></code>:</dt><dd><p>is the order of the continuity constraint.</p>
+</dd>
+</dl>
+<p>Note that the constraints are on the control points of the derivatives
+of r(s) and not q(t). This may result in discontinuities of the
+trajectory return by <code class="docutils literal notranslate"><span class="pre">SolvePath()</span></code> since the r(s) will get rescaled
+by the duration h to yield q(t). <code class="docutils literal notranslate"><span class="pre">NormalizeSegmentTimes()</span></code> will
+return r(s) with valid continuity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the continuity order is not equal</strong><strong> or </strong><strong>less than the</strong> – </p></li>
+<li><p><strong>order of both subgraphs.</strong> – </p></li>
+<li><p><strong>RuntimeError if the continuity order is less than one since path</strong> – </p></li>
+<li><p><strong>continuity is enforced by default.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs.AddVelocityBounds">
 <span class="sig-name descname"><span class="pre">AddVelocityBounds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs" title="pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs"><span class="pre">pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">lb</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ub</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs.AddVelocityBounds" title="Permalink to this definition"></a></dt>
 <dd><p>Adds a linear velocity constraint to the control point connecting the
@@ -2202,6 +2249,27 @@ fixed (if false).</p>
 <span class="sig-name descname"><span class="pre">graph_of_convex_sets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.GcsTrajectoryOptimization" title="pydrake.planning.GcsTrajectoryOptimization"><span class="pre">pydrake.planning.GcsTrajectoryOptimization</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.GraphOfConvexSets" title="pydrake.geometry.optimization.GraphOfConvexSets"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets</span></a></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.graph_of_convex_sets" title="Permalink to this definition"></a></dt>
 <dd><p>Getter for the underlying GraphOfConvexSets. This is intended
 primarily for inspecting the resulting programs.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.NormalizeSegmentTimes">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">NormalizeSegmentTimes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trajectory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.trajectories.html#pydrake.trajectories.CompositeTrajectory" title="pydrake.trajectories.CompositeTrajectory"><span class="pre">pydrake.trajectories.CompositeTrajectory</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.trajectories.html#pydrake.trajectories.CompositeTrajectory" title="pydrake.trajectories.CompositeTrajectory"><span class="pre">pydrake.trajectories.CompositeTrajectory</span></a></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.NormalizeSegmentTimes" title="Permalink to this definition"></a></dt>
+<dd><p>Normalizes each trajectory segment to one second in duration.
+Reconstructs the path r(s) from the solution trajectory q(t) of
+<code class="docutils literal notranslate"><span class="pre">SolvePath()</span></code> s.t. each segment of the resulting trajectory will be
+one second long. The start time will match the original start time.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">trajectory</span></code>:</dt><dd><p>The solution trajectory returned by <code class="docutils literal notranslate"><span class="pre">SolvePath()</span></code>.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if not all trajectory segments of the</strong> – </p></li>
+<li><p><strong>CompositeTrajectory are of type BezierCurve&lt;double&gt;</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -2263,6 +2331,31 @@ be mixed with other instances of GcsTrajectoryOptimization.</p>
 <dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.Subgraph.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.Subgraph.__init__" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.Subgraph.AddPathContinuityConstraints">
+<span class="sig-name descname"><span class="pre">AddPathContinuityConstraints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.GcsTrajectoryOptimization.Subgraph" title="pydrake.planning.GcsTrajectoryOptimization.Subgraph"><span class="pre">pydrake.planning.GcsTrajectoryOptimization.Subgraph</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">continuity_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.Subgraph.AddPathContinuityConstraints" title="Permalink to this definition"></a></dt>
+<dd><p>Enforces derivative continuity constraints on the subgraph.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">continuity_order</span></code>:</dt><dd><p>is the order of the continuity constraint.</p>
+</dd>
+</dl>
+<p>Note that the constraints are on the control points of the derivatives
+of r(s) and not q(t). This may result in discontinuities of the
+trajectory return by <code class="docutils literal notranslate"><span class="pre">SolvePath()</span></code> since the r(s) will get rescaled
+by the duration h to yield q(t). <code class="docutils literal notranslate"><span class="pre">NormalizeSegmentTimes()</span></code> will
+return r(s) with valid continuity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the continuity order is not equal</strong><strong> or </strong><strong>less than the</strong> – </p></li>
+<li><p><strong>order the subgraphs.</strong> – </p></li>
+<li><p><strong>RuntimeError if the continuity order is less than one since path</strong> – </p></li>
+<li><p><strong>continuity is enforced by default.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.Subgraph.AddPathLengthCost">

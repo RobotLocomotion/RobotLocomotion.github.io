@@ -270,6 +270,7 @@ Drake Extensions</h1>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_child">drake:child</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_collision_filter_group">drake:collision_filter_group</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_compliant_hydroelastic">drake:compliant_hydroelastic</a></li>
+<li><a class="el" href="group__multibody__parsing.html#tag_drake_controller_gains">drake:controller_gains</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_damping">drake:damping</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_declare_convex">drake:declare_convex</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_diffuse_map">drake:diffuse_map</a></li>
@@ -282,6 +283,7 @@ Drake Extensions</h1>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_linear_bushing_rpy">drake:linear_bushing_rpy</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_member">drake:member</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_mesh_resolution_hint">drake:mesh_resolution_hint</a></li>
+<li><a class="el" href="group__multibody__parsing.html#tag_drake_mimic">drake:mimic</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_mu_dynamic">drake:mu_dynamic</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_mu_static">drake:mu_static</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_parent">drake:parent</a></li>
@@ -486,6 +488,17 @@ drake:compliant_hydroelastic</h2>
 Semantics</h3>
 <p>If present, this element sets the compliance type of the element being defined to be compliant, as opposed to rigid, in hydroelastic contact models.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="group__multibody__parsing.html#tag_drake_proximity_properties">drake:proximity_properties</a>, <a class="el" href="group__hydroelastic__user__guide.html#creating_hydro_reps">Creating hydroelastic representations of collision geometries</a></dd></dl>
+<h2><a class="anchor" id="tag_drake_controller_gains"></a>
+drake:controller_gains</h2>
+<ul>
+<li>SDFormat path: <code>//model/joint/drake:controller_gains</code></li>
+<li>URDF path: <code>/robot/joint/actuator/drake:controller_gains</code></li>
+<li>Syntax: Two attributes <code>p</code> (proportional gain) containing a positive floating point value and <code>d</code> (derivative gain) containing a non-negative floating point value.</li>
+</ul>
+<h2><a class="anchor" id="tag_drake_controller_gains_semantics"></a>
+Semantics</h2>
+<p>If present, this element provides proportional and derivative gains for a low level PD controller for the <a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html" title="The JointActuator class is mostly a simple bookkeeping structure to represent an actuator acting on a...">drake::multibody::JointActuator</a> associated with the <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">drake::multibody::Joint</a> the element is defined under. It is stored in a <a class="el" href="structdrake_1_1multibody_1_1_pd_controller_gains.html" title="PD controller gains.">drake::multibody::PdControllerGains</a> object in the <a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html" title="The JointActuator class is mostly a simple bookkeeping structure to represent an actuator acting on a...">drake::multibody::JointActuator</a> class. Both attributes <code>p</code> and <code>d</code> are required.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#mbp_actuation">mbp_actuation</a>, <a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#pd_controlled_joint_actuator">pd_controlled_joint_actuator</a></dd></dl>
 <h2><a class="anchor" id="tag_drake_damping"></a>
 drake:damping</h2>
 <ul>
@@ -621,6 +634,16 @@ drake:mesh_resolution_hint</h2>
 Semantics</h3>
 <p>The provided value (in units of meters) helps select the resolution of meshes generated from geometric primitives (sphere, cylinder, capsule, etc.). The exact semantics depend on the geometry being generated. Within some practical limits, smaller values will select shorter edge lengths and a finer mesh, larger values will select longer edge lengths and a coarser mesh.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="group__multibody__parsing.html#tag_drake_proximity_properties">drake:proximity_properties</a>, <a class="el" href="group__hydroelastic__user__guide.html#hug_properties">Properties for hydroelastic contact</a></dd></dl>
+<h2><a class="anchor" id="tag_drake_mimic"></a>
+drake:mimic</h2>
+<ul>
+<li>SDFormat path: <code>//model/joint/drake:mimic</code></li>
+<li>URDF path: unsupported</li>
+<li>Syntax: Attributes <code>joint</code> (string), <code>multiplier</code> (double) and <code>offset</code> (double)</li>
+</ul>
+<h3><a class="anchor" id="tag_drake_mimic_semantics"></a>
+Semantics</h3>
+<p>This tag has equivalent semantics to those of the native URDF &lt;mimic&gt; tag. If <code>q0</code> is the position of the <code>&lt;joint&gt;</code> and <code>q1</code> the position of the joint specified by the <code>joint</code> attribute, the two joints are constrained to enforce the relation: <code>q0 = multiplier * q1 + offset</code>. The units of <code>multiplier</code> and <code>offset</code> depend on the type of joints specified. This tag only supports single degree of freedom joints that exist in the same model instance.</p>
 <h2><a class="anchor" id="tag_drake_mu_dynamic"></a>
 drake:mu_dynamic</h2>
 <ul>

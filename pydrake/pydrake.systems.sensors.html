@@ -1681,6 +1681,45 @@ channels in a pixel</p>
 <dd><p>alias of <a class="reference internal" href="#pydrake.systems.sensors.Image-PixelType.kDepth32F" title="pydrake.systems.sensors.Image[PixelType.kDepth32F]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.sensors.Image[PixelType.kDepth32F]</span></code></a></p>
 </dd></dl>
 
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageFileFormat">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.sensors.</span></span><span class="sig-name descname"><span class="pre">ImageFileFormat</span></span><a class="headerlink" href="#pydrake.systems.sensors.ImageFileFormat" title="Permalink to this definition"></a></dt>
+<dd><p>Members:</p>
+<p>kJpeg</p>
+<p>kPng</p>
+<p>kTiff</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageFileFormat.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.ImageFileFormat" title="pydrake.systems.sensors.ImageFileFormat"><span class="pre">pydrake.systems.sensors.ImageFileFormat</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.ImageFileFormat.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageFileFormat.kJpeg">
+<span class="sig-name descname"><span class="pre">kJpeg</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;ImageFileFormat.kJpeg:</span> <span class="pre">0&gt;</span></em><a class="headerlink" href="#pydrake.systems.sensors.ImageFileFormat.kJpeg" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageFileFormat.kPng">
+<span class="sig-name descname"><span class="pre">kPng</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;ImageFileFormat.kPng:</span> <span class="pre">1&gt;</span></em><a class="headerlink" href="#pydrake.systems.sensors.ImageFileFormat.kPng" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageFileFormat.kTiff">
+<span class="sig-name descname"><span class="pre">kTiff</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;ImageFileFormat.kTiff:</span> <span class="pre">2&gt;</span></em><a class="headerlink" href="#pydrake.systems.sensors.ImageFileFormat.kTiff" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageFileFormat.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pydrake.systems.sensors.ImageFileFormat.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageFileFormat.value">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.systems.sensors.ImageFileFormat.value" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.ImageGrey8U">
 <span class="sig-prename descclassname"><span class="pre">pydrake.systems.sensors.</span></span><span class="sig-name descname"><span class="pre">ImageGrey8U</span></span><a class="headerlink" href="#pydrake.systems.sensors.ImageGrey8U" title="Permalink to this definition"></a></dt>
@@ -2305,6 +2344,51 @@ in different messages will not produce useful results).</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.PixelFormat.value">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.systems.sensors.PixelFormat.value" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.PixelScalar">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.sensors.</span></span><span class="sig-name descname"><span class="pre">PixelScalar</span></span><a class="headerlink" href="#pydrake.systems.sensors.PixelScalar" title="Permalink to this definition"></a></dt>
+<dd><p>Members:</p>
+<p>k8U</p>
+<p>k16I</p>
+<p>k16U</p>
+<p>k32F</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.PixelScalar.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.PixelScalar" title="pydrake.systems.sensors.PixelScalar"><span class="pre">pydrake.systems.sensors.PixelScalar</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.PixelScalar.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.PixelScalar.k16I">
+<span class="sig-name descname"><span class="pre">k16I</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;PixelScalar.k16I:</span> <span class="pre">1&gt;</span></em><a class="headerlink" href="#pydrake.systems.sensors.PixelScalar.k16I" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.PixelScalar.k16U">
+<span class="sig-name descname"><span class="pre">k16U</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;PixelScalar.k16U:</span> <span class="pre">2&gt;</span></em><a class="headerlink" href="#pydrake.systems.sensors.PixelScalar.k16U" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.PixelScalar.k32F">
+<span class="sig-name descname"><span class="pre">k32F</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;PixelScalar.k32F:</span> <span class="pre">3&gt;</span></em><a class="headerlink" href="#pydrake.systems.sensors.PixelScalar.k32F" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.PixelScalar.k8U">
+<span class="sig-name descname"><span class="pre">k8U</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;PixelScalar.k8U:</span> <span class="pre">0&gt;</span></em><a class="headerlink" href="#pydrake.systems.sensors.PixelScalar.k8U" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.PixelScalar.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pydrake.systems.sensors.PixelScalar.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.PixelScalar.value">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.systems.sensors.PixelScalar.value" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>

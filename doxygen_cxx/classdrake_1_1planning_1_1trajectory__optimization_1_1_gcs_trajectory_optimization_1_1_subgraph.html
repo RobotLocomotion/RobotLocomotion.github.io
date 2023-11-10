@@ -200,6 +200,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af27492cb5b0dbf8cd8ce10e792486052"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#af27492cb5b0dbf8cd8ce10e792486052">AddVelocityBounds</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;lb, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;ub)</td></tr>
 <tr class="memdesc:af27492cb5b0dbf8cd8ce10e792486052"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a linear velocity constraint to the subgraph <code>lb</code> ≤ q̇(t) ≤ <code>ub</code>.  <a href="#af27492cb5b0dbf8cd8ce10e792486052">More...</a><br /></td></tr>
 <tr class="separator:af27492cb5b0dbf8cd8ce10e792486052"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afce2be43547f60d510c7e46154eac653"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#afce2be43547f60d510c7e46154eac653">AddPathContinuityConstraints</a> (<a class="el" href="classint.html">int</a> continuity_order)</td></tr>
+<tr class="memdesc:afce2be43547f60d510c7e46154eac653"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enforces derivative continuity constraints on the subgraph.  <a href="#afce2be43547f60d510c7e46154eac653">More...</a><br /></td></tr>
+<tr class="separator:afce2be43547f60d510c7e46154eac653"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:af9772f89f467b3eb25e91de87a3d4ee8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#af9772f89f467b3eb25e91de87a3d4ee8">Subgraph</a> (const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;)=delete</td></tr>
 <tr class="separator:af9772f89f467b3eb25e91de87a3d4ee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -286,6 +289,40 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="afce2be43547f60d510c7e46154eac653"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afce2be43547f60d510c7e46154eac653">&#9670;&nbsp;</a></span>AddPathContinuityConstraints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddPathContinuityConstraints </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>continuity_order</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enforces derivative continuity constraints on the subgraph. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">continuity_order</td><td>is the order of the continuity constraint.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Note that the constraints are on the control points of the derivatives of r(s) and not q(t). This may result in discontinuities of the trajectory return by <code><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a8ddb1df26a2324afc83f84c90281c249" title="Formulates and solves the mixed-integer convex formulation of the shortest path problem on the whole ...">SolvePath()</a></code> since the r(s) will get rescaled by the duration h to yield q(t). <code><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a0745622466ef1e6253a0de1c1216d804" title="Normalizes each trajectory segment to one second in duration.">NormalizeSegmentTimes()</a></code> will return r(s) with valid continuity.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the continuity order is not equal or less than the order the subgraphs. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the continuity order is less than one since path continuity is enforced by default. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a5120b456754eef916922cd73d2ec846a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5120b456754eef916922cd73d2ec846a">&#9670;&nbsp;</a></span>AddPathLengthCost() <span class="overload">[1/2]</span></h2>
 
