@@ -206,7 +206,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:a5b399245a1104a5929442541197201cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts URIs into filesystem absolute paths.  <a href="#a5b399245a1104a5929442541197201cd">More...</a><br /></td></tr>
 <tr class="separator:a5b399245a1104a5929442541197201cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc86ac1c2971d0d3ca1e2e98d0aa986c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1parsing.html#abc86ac1c2971d0d3ca1e2e98d0aa986c">FlattenModelDirectives</a> (const <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_directives.html">ModelDirectives</a> &amp;directives, const <a class="el" href="classdrake_1_1multibody_1_1_package_map.html">drake::multibody::PackageMap</a> &amp;package_map, <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_directives.html">ModelDirectives</a> *out)</td></tr>
-<tr class="memdesc:abc86ac1c2971d0d3ca1e2e98d0aa986c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flatten model directives.  <a href="#abc86ac1c2971d0d3ca1e2e98d0aa986c">More...</a><br /></td></tr>
+<tr class="memdesc:abc86ac1c2971d0d3ca1e2e98d0aa986c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flatten model directives into a single object.  <a href="#abc86ac1c2971d0d3ca1e2e98d0aa986c">More...</a><br /></td></tr>
 <tr class="separator:abc86ac1c2971d0d3ca1e2e98d0aa986c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04c0dda97446d100be2bc1c329c0ccb8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html">ModelInstanceInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1parsing.html#a04c0dda97446d100be2bc1c329c0ccb8">ProcessModelDirectives</a> (const <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_directives.html">ModelDirectives</a> &amp;directives, <a class="el" href="classdrake_1_1multibody_1_1_parser.html">drake::multibody::Parser</a> *parser)</td></tr>
 <tr class="memdesc:a04c0dda97446d100be2bc1c329c0ccb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the given model directives using the given parser.  <a href="#a04c0dda97446d100be2bc1c329c0ccb8">More...</a><br /></td></tr>
@@ -254,7 +254,10 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Flatten model directives. </p>
+<p>Flatten model directives into a single object. </p>
+<p>This function removes all <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_add_directives.html" title="Directive to incorporate another model directives file, optionally with its elements prefixed with a ...">AddDirectives</a> directives from the given <code>directives</code>, locating the file via the given <code>package_map</code>, parsing it, and updating the names of its items to add any namespace prefix requested by the <code>model_namespace</code> of the directive. The resulting directives are appended to <code>out</code>.</p>
+<p>The results of FlattenModelDirectives are semantically identical to <code>directives</code>. FlattenModelDirectives is therefore also idempotent.</p>
+<p>This flattening is intended to assist with creating reproducible simulation scenarios and with hashing; it can also be useful in debugging. </p>
 
 </div>
 </div>
