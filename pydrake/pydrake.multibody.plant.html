@@ -2233,6 +2233,11 @@ ball-and-socket joint.</p>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>RuntimeError if bodies A and B are the same body.</strong> – </p></li>
 <li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
+<li><p><strong>RuntimeError if this MultibodyPlant is not a discrete model</strong> – </p></li>
+<li><p><strong>(</strong><strong>is_discrete</strong><strong>(</strong><strong>) </strong><strong>== false</strong><strong>)</strong> – </p></li>
+<li><p><strong>RuntimeError if this MultibodyPlant's underlying contact</strong> – </p></li>
+<li><p><strong>solver is not SAP.</strong><strong> (</strong><strong>i.e. get_discrete_contact_solver</strong><strong>(</strong><strong>) </strong><strong>!=</strong> – </p></li>
+<li><p><strong>DiscreteContactSolver::kSap</strong><strong>)</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -2265,6 +2270,11 @@ combination therein.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>if joint0 and joint1 are not both single-dof joints.</strong> – </p></li>
 <li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
+<li><p><strong>RuntimeError if this MultibodyPlant is not a discrete model</strong> – </p></li>
+<li><p><strong>(</strong><strong>is_discrete</strong><strong>(</strong><strong>) </strong><strong>== false</strong><strong>)</strong> – </p></li>
+<li><p><strong>RuntimeError if this MultibodyPlant's underlying contact</strong> – </p></li>
+<li><p><strong>solver is not SAP.</strong><strong> (</strong><strong>i.e. get_discrete_contact_solver</strong><strong>(</strong><strong>) </strong><strong>!=</strong> – </p></li>
+<li><p><strong>DiscreteContactSolver::kSap</strong><strong>)</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -2329,6 +2339,11 @@ to be strictly positive.</p>
 <li><p><strong>RuntimeError if stiffness is not positive</strong><strong> or </strong><strong>zero.</strong> – </p></li>
 <li><p><strong>RuntimeError if damping is not positive</strong><strong> or </strong><strong>zero.</strong> – </p></li>
 <li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
+<li><p><strong>RuntimeError if this MultibodyPlant is not a discrete model</strong> – </p></li>
+<li><p><strong>(</strong><strong>is_discrete</strong><strong>(</strong><strong>) </strong><strong>== false</strong><strong>)</strong> – </p></li>
+<li><p><strong>RuntimeError if this MultibodyPlant's underlying contact</strong> – </p></li>
+<li><p><strong>solver is not SAP.</strong><strong> (</strong><strong>i.e. get_discrete_contact_solver</strong><strong>(</strong><strong>) </strong><strong>!=</strong> – </p></li>
+<li><p><strong>DiscreteContactSolver::kSap</strong><strong>)</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -2588,6 +2603,11 @@ weld joint.</p>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>RuntimeError if bodies A and B are the same body.</strong> – </p></li>
 <li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
+<li><p><strong>RuntimeError if this MultibodyPlant is not a discrete model</strong> – </p></li>
+<li><p><strong>(</strong><strong>is_discrete</strong><strong>(</strong><strong>) </strong><strong>== false</strong><strong>)</strong> – </p></li>
+<li><p><strong>RuntimeError if this MultibodyPlant's underlying contact</strong> – </p></li>
+<li><p><strong>solver is not SAP.</strong><strong> (</strong><strong>i.e. get_discrete_contact_solver</strong><strong>(</strong><strong>) </strong><strong>!=</strong> – </p></li>
+<li><p><strong>DiscreteContactSolver::kSap</strong><strong>)</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -7208,6 +7228,11 @@ ball-and-socket joint.</p>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>RuntimeError if bodies A and B are the same body.</strong> – </p></li>
 <li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
+<li><p><strong>RuntimeError if this MultibodyPlant is not a discrete model</strong> – </p></li>
+<li><p><strong>(</strong><strong>is_discrete</strong><strong>(</strong><strong>) </strong><strong>== false</strong><strong>)</strong> – </p></li>
+<li><p><strong>RuntimeError if this MultibodyPlant's underlying contact</strong> – </p></li>
+<li><p><strong>solver is not SAP.</strong><strong> (</strong><strong>i.e. get_discrete_contact_solver</strong><strong>(</strong><strong>) </strong><strong>!=</strong> – </p></li>
+<li><p><strong>DiscreteContactSolver::kSap</strong><strong>)</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -7240,6 +7265,11 @@ combination therein.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>if joint0 and joint1 are not both single-dof joints.</strong> – </p></li>
 <li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
+<li><p><strong>RuntimeError if this MultibodyPlant is not a discrete model</strong> – </p></li>
+<li><p><strong>(</strong><strong>is_discrete</strong><strong>(</strong><strong>) </strong><strong>== false</strong><strong>)</strong> – </p></li>
+<li><p><strong>RuntimeError if this MultibodyPlant's underlying contact</strong> – </p></li>
+<li><p><strong>solver is not SAP.</strong><strong> (</strong><strong>i.e. get_discrete_contact_solver</strong><strong>(</strong><strong>) </strong><strong>!=</strong> – </p></li>
+<li><p><strong>DiscreteContactSolver::kSap</strong><strong>)</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -7304,6 +7334,11 @@ to be strictly positive.</p>
 <li><p><strong>RuntimeError if stiffness is not positive</strong><strong> or </strong><strong>zero.</strong> – </p></li>
 <li><p><strong>RuntimeError if damping is not positive</strong><strong> or </strong><strong>zero.</strong> – </p></li>
 <li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
+<li><p><strong>RuntimeError if this MultibodyPlant is not a discrete model</strong> – </p></li>
+<li><p><strong>(</strong><strong>is_discrete</strong><strong>(</strong><strong>) </strong><strong>== false</strong><strong>)</strong> – </p></li>
+<li><p><strong>RuntimeError if this MultibodyPlant's underlying contact</strong> – </p></li>
+<li><p><strong>solver is not SAP.</strong><strong> (</strong><strong>i.e. get_discrete_contact_solver</strong><strong>(</strong><strong>) </strong><strong>!=</strong> – </p></li>
+<li><p><strong>DiscreteContactSolver::kSap</strong><strong>)</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -7563,6 +7598,11 @@ weld joint.</p>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>RuntimeError if bodies A and B are the same body.</strong> – </p></li>
 <li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
+<li><p><strong>RuntimeError if this MultibodyPlant is not a discrete model</strong> – </p></li>
+<li><p><strong>(</strong><strong>is_discrete</strong><strong>(</strong><strong>) </strong><strong>== false</strong><strong>)</strong> – </p></li>
+<li><p><strong>RuntimeError if this MultibodyPlant's underlying contact</strong> – </p></li>
+<li><p><strong>solver is not SAP.</strong><strong> (</strong><strong>i.e. get_discrete_contact_solver</strong><strong>(</strong><strong>) </strong><strong>!=</strong> – </p></li>
+<li><p><strong>DiscreteContactSolver::kSap</strong><strong>)</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -12139,6 +12179,11 @@ ball-and-socket joint.</p>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>RuntimeError if bodies A and B are the same body.</strong> – </p></li>
 <li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
+<li><p><strong>RuntimeError if this MultibodyPlant is not a discrete model</strong> – </p></li>
+<li><p><strong>(</strong><strong>is_discrete</strong><strong>(</strong><strong>) </strong><strong>== false</strong><strong>)</strong> – </p></li>
+<li><p><strong>RuntimeError if this MultibodyPlant's underlying contact</strong> – </p></li>
+<li><p><strong>solver is not SAP.</strong><strong> (</strong><strong>i.e. get_discrete_contact_solver</strong><strong>(</strong><strong>) </strong><strong>!=</strong> – </p></li>
+<li><p><strong>DiscreteContactSolver::kSap</strong><strong>)</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -12171,6 +12216,11 @@ combination therein.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>if joint0 and joint1 are not both single-dof joints.</strong> – </p></li>
 <li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
+<li><p><strong>RuntimeError if this MultibodyPlant is not a discrete model</strong> – </p></li>
+<li><p><strong>(</strong><strong>is_discrete</strong><strong>(</strong><strong>) </strong><strong>== false</strong><strong>)</strong> – </p></li>
+<li><p><strong>RuntimeError if this MultibodyPlant's underlying contact</strong> – </p></li>
+<li><p><strong>solver is not SAP.</strong><strong> (</strong><strong>i.e. get_discrete_contact_solver</strong><strong>(</strong><strong>) </strong><strong>!=</strong> – </p></li>
+<li><p><strong>DiscreteContactSolver::kSap</strong><strong>)</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -12235,6 +12285,11 @@ to be strictly positive.</p>
 <li><p><strong>RuntimeError if stiffness is not positive</strong><strong> or </strong><strong>zero.</strong> – </p></li>
 <li><p><strong>RuntimeError if damping is not positive</strong><strong> or </strong><strong>zero.</strong> – </p></li>
 <li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
+<li><p><strong>RuntimeError if this MultibodyPlant is not a discrete model</strong> – </p></li>
+<li><p><strong>(</strong><strong>is_discrete</strong><strong>(</strong><strong>) </strong><strong>== false</strong><strong>)</strong> – </p></li>
+<li><p><strong>RuntimeError if this MultibodyPlant's underlying contact</strong> – </p></li>
+<li><p><strong>solver is not SAP.</strong><strong> (</strong><strong>i.e. get_discrete_contact_solver</strong><strong>(</strong><strong>) </strong><strong>!=</strong> – </p></li>
+<li><p><strong>DiscreteContactSolver::kSap</strong><strong>)</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -12494,6 +12549,11 @@ weld joint.</p>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>RuntimeError if bodies A and B are the same body.</strong> – </p></li>
 <li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
+<li><p><strong>RuntimeError if this MultibodyPlant is not a discrete model</strong> – </p></li>
+<li><p><strong>(</strong><strong>is_discrete</strong><strong>(</strong><strong>) </strong><strong>== false</strong><strong>)</strong> – </p></li>
+<li><p><strong>RuntimeError if this MultibodyPlant's underlying contact</strong> – </p></li>
+<li><p><strong>solver is not SAP.</strong><strong> (</strong><strong>i.e. get_discrete_contact_solver</strong><strong>(</strong><strong>) </strong><strong>!=</strong> – </p></li>
+<li><p><strong>DiscreteContactSolver::kSap</strong><strong>)</strong> – </p></li>
 </ul>
 </dd>
 </dl>

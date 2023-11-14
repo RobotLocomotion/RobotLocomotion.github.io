@@ -2775,6 +2775,99 @@ names associated with the provided geometry_id.</p>
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="pydrake.planning.MaxCliqueSolverBase">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">MaxCliqueSolverBase</span></span><a class="headerlink" href="#pydrake.planning.MaxCliqueSolverBase" title="Permalink to this definition"></a></dt>
+<dd><p>The problem of finding the maximum clique in a graph is known to be
+NP-complete. This base class provides a unified interface for various
+implementations of a solver for this problem which may be solved
+rigorously or via heuristics.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.MaxCliqueSolverBase.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.MaxCliqueSolverBase" title="pydrake.planning.MaxCliqueSolverBase"><span class="pre">pydrake.planning.MaxCliqueSolverBase</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.MaxCliqueSolverBase.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.MaxCliqueSolverBase.SolveMaxClique">
+<span class="sig-name descname"><span class="pre">SolveMaxClique</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.MaxCliqueSolverBase" title="pydrake.planning.MaxCliqueSolverBase"><span class="pre">pydrake.planning.MaxCliqueSolverBase</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">adjacency_matrix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">scipy.sparse.csc_matrix</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.MaxCliqueSolverBase.SolveMaxClique" title="Permalink to this definition"></a></dt>
+<dd><p>Given the adjacency matrix of an undirected graph, find the maximum
+clique within the graph. A clique is a collection of vertices in a
+graph such that each pair of vertices is connected by an edge (i.e. a
+fully connected subgraph). This problem is known to be NP-complete,
+and so the concrete implementation of the solver determines whether
+the return of this function is the true maximum clique in the graph
+(which may take very long to compute), or only an approximate solution
+found via heuristics.</p>
+<p>This method throws if the adjacency matrix is not symmetric and may
+throw depending on the concrete implmementation of the solver.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">adjacency_matrix</span></code>:</dt><dd><p>a symmetric binary matrix encoding the edge relationship.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A binary vector with the same indexing as the adjacency matrix,
+with true indicating membership in the clique.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.planning.MaxCliqueSolverViaMip">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">MaxCliqueSolverViaMip</span></span><a class="headerlink" href="#pydrake.planning.MaxCliqueSolverViaMip" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.planning.MaxCliqueSolverBase" title="pydrake.planning.MaxCliqueSolverBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.planning.MaxCliqueSolverBase</span></code></a></p>
+<p>Solves the maximum clique problem to global optimality by solving the
+mixed-integer program</p>
+<p>Maximize ∑ᵢ xᵢ subject to xᵢ + xⱼ ≤ 1 if (i,j) is not in the edge xᵢ ∈
+{0,1}.</p>
+<p>Note: This solver requires the availability of a Mixed-Integer Linear
+Programming solver (e.g. Gurobi and/or Mosek). We recommend enabling
+those solvers if possible
+(<a class="reference external" href="https://drake.mit.edu/bazel.html#proprietary_solvers">https://drake.mit.edu/bazel.html#proprietary_solvers</a>).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if no Mixed-Integer Linear Programming solver is</strong> – </p></li>
+<li><p><strong>available.</strong> – </p></li>
+<li><p><strong>RuntimeError if the initial guess has the wrong size for the</strong> – </p></li>
+<li><p><strong>provided adjacency matrix.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.MaxCliqueSolverViaMip.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.planning.MaxCliqueSolverViaMip.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.planning.MaxCliqueSolverViaMip) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.planning.MaxCliqueSolverViaMip, initial_guess: Optional[numpy.ndarray[numpy.float64[m, 1]]], solver_options: pydrake.solvers.SolverOptions) -&gt; None</p></li>
+</ol>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.MaxCliqueSolverViaMip.GetInitialGuess">
+<span class="sig-name descname"><span class="pre">GetInitialGuess</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.MaxCliqueSolverViaMip" title="pydrake.planning.MaxCliqueSolverViaMip"><span class="pre">pydrake.planning.MaxCliqueSolverViaMip</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.MaxCliqueSolverViaMip.GetInitialGuess" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.MaxCliqueSolverViaMip.GetSolverOptions">
+<span class="sig-name descname"><span class="pre">GetSolverOptions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.MaxCliqueSolverViaMip" title="pydrake.planning.MaxCliqueSolverViaMip"><span class="pre">pydrake.planning.MaxCliqueSolverViaMip</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.SolverOptions" title="pydrake.solvers.SolverOptions"><span class="pre">pydrake.solvers.SolverOptions</span></a></span></span><a class="headerlink" href="#pydrake.planning.MaxCliqueSolverViaMip.GetSolverOptions" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.MaxCliqueSolverViaMip.SetInitialGuess">
+<span class="sig-name descname"><span class="pre">SetInitialGuess</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.MaxCliqueSolverViaMip" title="pydrake.planning.MaxCliqueSolverViaMip"><span class="pre">pydrake.planning.MaxCliqueSolverViaMip</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial_guess</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.MaxCliqueSolverViaMip.SetInitialGuess" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.MaxCliqueSolverViaMip.SetSolverOptions">
+<span class="sig-name descname"><span class="pre">SetSolverOptions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.MaxCliqueSolverViaMip" title="pydrake.planning.MaxCliqueSolverViaMip"><span class="pre">pydrake.planning.MaxCliqueSolverViaMip</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">solver_options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.SolverOptions" title="pydrake.solvers.SolverOptions"><span class="pre">pydrake.solvers.SolverOptions</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.MaxCliqueSolverViaMip.SetSolverOptions" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.MultipleShooting">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">MultipleShooting</span></span><a class="headerlink" href="#pydrake.planning.MultipleShooting" title="Permalink to this definition"></a></dt>
 <dd><p>MultipleShooting is an abstract class for trajectory optimization that

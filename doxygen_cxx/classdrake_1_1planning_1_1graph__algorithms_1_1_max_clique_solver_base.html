@@ -160,6 +160,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1planning_1_1graph__algor
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">MaxCliqueSolverBase Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -169,19 +170,20 @@ $(document).ready(function(){initNavTree('classdrake_1_1planning_1_1graph__algor
 <div class="textblock"><p>The problem of finding the maximum clique in a graph is known to be NP-complete. </p>
 <p>This base class provides a unified interface for various implementations of a solver for this problem which may be solved rigorously or via heuristics. </p>
 </div>
-<p><code>#include &lt;drake/planning/graph_algorithms/max_clique.h&gt;</code></p>
+<p><code>#include &lt;drake/planning/graph_algorithms/max_clique_solver_base.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9ce2991d74e455da032e9fdea3e42dca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html#a9ce2991d74e455da032e9fdea3e42dca">MaxCliqueSolverBase</a> ()</td></tr>
-<tr class="separator:a9ce2991d74e455da032e9fdea3e42dca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a280065cf6ac81042895f363c73d44f10"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html#a280065cf6ac81042895f363c73d44f10">~MaxCliqueSolverBase</a> ()</td></tr>
 <tr class="separator:a280065cf6ac81042895f363c73d44f10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afff6111a9f41a64355181e8d7fa5ebdc"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html#afff6111a9f41a64355181e8d7fa5ebdc">SolveMaxClique</a> (const Eigen::SparseMatrix&lt; bool &gt; &amp;adjacency_matrix) const =0</td></tr>
-<tr class="separator:afff6111a9f41a64355181e8d7fa5ebdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a019e058b6da8feacf8c4ffb122de77a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html#a019e058b6da8feacf8c4ffb122de77a3">SolveMaxClique</a> (const Eigen::SparseMatrix&lt; bool &gt; &amp;adjacency_matrix) const</td></tr>
+<tr class="memdesc:a019e058b6da8feacf8c4ffb122de77a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the adjacency matrix of an undirected graph, find the maximum clique within the graph.  <a href="#a019e058b6da8feacf8c4ffb122de77a3">More...</a><br /></td></tr>
+<tr class="separator:a019e058b6da8feacf8c4ffb122de77a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:aa0024871a50a0b1f8055344e6a166d39"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html#aa0024871a50a0b1f8055344e6a166d39">MaxCliqueSolverBase</a> ()=default</td></tr>
+<tr class="separator:aa0024871a50a0b1f8055344e6a166d39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
 <tr class="memitem:abd1dc0d5ee2f51c7c018cb8528f00907"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html#abd1dc0d5ee2f51c7c018cb8528f00907">MaxCliqueSolverBase</a> (const <a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html">MaxCliqueSolverBase</a> &amp;)=default</td></tr>
 <tr class="separator:abd1dc0d5ee2f51c7c018cb8528f00907"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -193,23 +195,6 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a3489a20754f0dfdaa890e42f4f77d237"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a9ce2991d74e455da032e9fdea3e42dca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ce2991d74e455da032e9fdea3e42dca">&#9670;&nbsp;</a></span>MaxCliqueSolverBase() <span class="overload">[1/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html">MaxCliqueSolverBase</a> </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a280065cf6ac81042895f363c73d44f10"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a280065cf6ac81042895f363c73d44f10">&#9670;&nbsp;</a></span>~MaxCliqueSolverBase()</h2>
 
@@ -236,7 +221,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="abd1dc0d5ee2f51c7c018cb8528f00907"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd1dc0d5ee2f51c7c018cb8528f00907">&#9670;&nbsp;</a></span>MaxCliqueSolverBase() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abd1dc0d5ee2f51c7c018cb8528f00907">&#9670;&nbsp;</a></span>MaxCliqueSolverBase() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -262,7 +247,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a460cdd4fda35bd09ebfb3ac1c1386821"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a460cdd4fda35bd09ebfb3ac1c1386821">&#9670;&nbsp;</a></span>MaxCliqueSolverBase() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a460cdd4fda35bd09ebfb3ac1c1386821">&#9670;&nbsp;</a></span>MaxCliqueSolverBase() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -274,6 +259,31 @@ Protected Member Functions</h2></td></tr>
           <td class="memname"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html">MaxCliqueSolverBase</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html">MaxCliqueSolverBase</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa0024871a50a0b1f8055344e6a166d39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0024871a50a0b1f8055344e6a166d39">&#9670;&nbsp;</a></span>MaxCliqueSolverBase() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html">MaxCliqueSolverBase</a> </td>
+          <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -340,36 +350,37 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="afff6111a9f41a64355181e8d7fa5ebdc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afff6111a9f41a64355181e8d7fa5ebdc">&#9670;&nbsp;</a></span>SolveMaxClique()</h2>
+<a id="a019e058b6da8feacf8c4ffb122de77a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a019e058b6da8feacf8c4ffb122de77a3">&#9670;&nbsp;</a></span>SolveMaxClique()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;bool&gt; SolveMaxClique </td>
+          <td class="memname"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;bool&gt; SolveMaxClique </td>
           <td>(</td>
           <td class="paramtype">const Eigen::SparseMatrix&lt; bool &gt; &amp;&#160;</td>
           <td class="paramname"><em>adjacency_matrix</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html#a019e058b6da8feacf8c4ffb122de77a3">MaxCliqueSolverViaMip</a>.</p>
+<p>Given the adjacency matrix of an undirected graph, find the maximum clique within the graph. </p>
+<p>A clique is a collection of vertices in a graph such that each pair of vertices is connected by an edge (i.e. a fully connected subgraph). This problem is known to be NP-complete, and so the concrete implementation of the solver determines whether the return of this function is the true maximum clique in the graph (which may take very long to compute), or only an approximate solution found via heuristics.</p>
+<p>This method throws if the adjacency matrix is not symmetric and may throw depending on the concrete implmementation of the solver.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">adjacency_matrix</td><td>a symmetric binary matrix encoding the edge relationship. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A binary vector with the same indexing as the adjacency matrix, with true indicating membership in the clique. </dd></dl>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>drake/planning/graph_algorithms/<a class="el" href="max__clique_8h.html">max_clique.h</a></li>
+<li>drake/planning/graph_algorithms/<a class="el" href="max__clique__solver__base_8h.html">max_clique_solver_base.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

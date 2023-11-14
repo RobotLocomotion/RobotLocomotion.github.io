@@ -171,29 +171,28 @@ $(document).ready(function(){initNavTree('classdrake_1_1planning_1_1graph__algor
 <p>Note: This solver requires the availability of a Mixed-Integer Linear Programming solver (e.g. Gurobi and/or Mosek). We recommend enabling those solvers if possible (<a href="https://drake.mit.edu/bazel.html#proprietary_solvers">https://drake.mit.edu/bazel.html#proprietary_solvers</a>).</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">This</td><td>solver throws if no Mixed-Integer Linear Programming solver is available. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if no Mixed-Integer Linear Programming solver is available. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the initial guess has the wrong size for the provided adjacency matrix. </td></tr>
   </table>
   </dd>
 </dl>
 </div>
-<p><code>#include &lt;drake/planning/graph_algorithms/max_clique.h&gt;</code></p>
+<p><code>#include &lt;drake/planning/graph_algorithms/max_clique_solver_via_mip.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a661051eebf15f1e260340b4389ca6479"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html#a661051eebf15f1e260340b4389ca6479">MaxCliqueSolverViaMip</a> ()=default</td></tr>
 <tr class="separator:a661051eebf15f1e260340b4389ca6479"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2890f540e3254311b128bfded090e266"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html#a2890f540e3254311b128bfded090e266">MaxCliqueSolverViaMip</a> (const std::optional&lt; Eigen::VectorXd &gt; &amp;initial_guess, const <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">solvers::SolverOptions</a> &amp;<a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html#a7e1f6e31c3f8be1a9040e1880d235085">solver_options</a>)</td></tr>
+<tr class="memitem:a2890f540e3254311b128bfded090e266"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html#a2890f540e3254311b128bfded090e266">MaxCliqueSolverViaMip</a> (const std::optional&lt; Eigen::VectorXd &gt; &amp;initial_guess, const <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">solvers::SolverOptions</a> &amp;solver_options)</td></tr>
 <tr class="separator:a2890f540e3254311b128bfded090e266"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a019e058b6da8feacf8c4ffb122de77a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html#a019e058b6da8feacf8c4ffb122de77a3">SolveMaxClique</a> (const Eigen::SparseMatrix&lt; bool &gt; &amp;adjacency_matrix) const</td></tr>
-<tr class="separator:a019e058b6da8feacf8c4ffb122de77a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e1f6e31c3f8be1a9040e1880d235085"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">solvers::SolverOptions</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html#a7e1f6e31c3f8be1a9040e1880d235085">solver_options</a> () const</td></tr>
-<tr class="separator:a7e1f6e31c3f8be1a9040e1880d235085"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae41afcb7200c5c19e993e856aa6a39ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html#ae41afcb7200c5c19e993e856aa6a39ea">set_initial_guess</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;initial_guess)</td></tr>
-<tr class="separator:ae41afcb7200c5c19e993e856aa6a39ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bfdddcfa51335172fac775490022b97"><td class="memItemLeft" align="right" valign="top">std::optional&lt; Eigen::VectorXd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html#a9bfdddcfa51335172fac775490022b97">get_initial_guess</a> () const</td></tr>
-<tr class="separator:a9bfdddcfa51335172fac775490022b97"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55e32c1bef1e593cf3902899a17ac46a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">solvers::SolverOptions</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html#a55e32c1bef1e593cf3902899a17ac46a">get_solver_options</a> ()</td></tr>
-<tr class="separator:a55e32c1bef1e593cf3902899a17ac46a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a079a11aaa44cef664e48363528082ed4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html#a079a11aaa44cef664e48363528082ed4">SetSolverOptions</a> (const <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">solvers::SolverOptions</a> &amp;solver_options)</td></tr>
+<tr class="separator:a079a11aaa44cef664e48363528082ed4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6e1b5694ac2792782e9f8f8e3b708c2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">solvers::SolverOptions</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html#ac6e1b5694ac2792782e9f8f8e3b708c2">GetSolverOptions</a> () const</td></tr>
+<tr class="separator:ac6e1b5694ac2792782e9f8f8e3b708c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49e164a22ea4f5638802a7fa45e0acd8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html#a49e164a22ea4f5638802a7fa45e0acd8">SetInitialGuess</a> (const std::optional&lt; Eigen::VectorXd &gt; &amp;initial_guess)</td></tr>
+<tr class="separator:a49e164a22ea4f5638802a7fa45e0acd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc639dd5f0b0489663d51a8bb3e7b391"><td class="memItemLeft" align="right" valign="top">std::optional&lt; Eigen::VectorXd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html#adc639dd5f0b0489663d51a8bb3e7b391">GetInitialGuess</a> () const</td></tr>
+<tr class="separator:adc639dd5f0b0489663d51a8bb3e7b391"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
 <tr class="memitem:a41b2dc94cc77c5f3b4c502d5ddf62797"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html#a41b2dc94cc77c5f3b4c502d5ddf62797">MaxCliqueSolverViaMip</a> (const <a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html">MaxCliqueSolverViaMip</a> &amp;)=default</td></tr>
 <tr class="separator:a41b2dc94cc77c5f3b4c502d5ddf62797"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -204,14 +203,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a34b67f273dcb3efe64c356fc49b1626e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html">MaxCliqueSolverViaMip</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html#a34b67f273dcb3efe64c356fc49b1626e">operator=</a> (<a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html">MaxCliqueSolverViaMip</a> &amp;&amp;)=default</td></tr>
 <tr class="separator:a34b67f273dcb3efe64c356fc49b1626e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html">MaxCliqueSolverBase</a></td></tr>
-<tr class="memitem:a9ce2991d74e455da032e9fdea3e42dca inherit pub_methods_classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html#a9ce2991d74e455da032e9fdea3e42dca">MaxCliqueSolverBase</a> ()</td></tr>
-<tr class="separator:a9ce2991d74e455da032e9fdea3e42dca inherit pub_methods_classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a280065cf6ac81042895f363c73d44f10 inherit pub_methods_classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html#a280065cf6ac81042895f363c73d44f10">~MaxCliqueSolverBase</a> ()</td></tr>
 <tr class="separator:a280065cf6ac81042895f363c73d44f10 inherit pub_methods_classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a019e058b6da8feacf8c4ffb122de77a3 inherit pub_methods_classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html#a019e058b6da8feacf8c4ffb122de77a3">SolveMaxClique</a> (const Eigen::SparseMatrix&lt; bool &gt; &amp;adjacency_matrix) const</td></tr>
+<tr class="memdesc:a019e058b6da8feacf8c4ffb122de77a3 inherit pub_methods_classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the adjacency matrix of an undirected graph, find the maximum clique within the graph.  <a href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html#a019e058b6da8feacf8c4ffb122de77a3">More...</a><br /></td></tr>
+<tr class="separator:a019e058b6da8feacf8c4ffb122de77a3 inherit pub_methods_classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html">MaxCliqueSolverBase</a></td></tr>
+<tr class="memitem:aa0024871a50a0b1f8055344e6a166d39 inherit pro_methods_classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html#aa0024871a50a0b1f8055344e6a166d39">MaxCliqueSolverBase</a> ()=default</td></tr>
+<tr class="separator:aa0024871a50a0b1f8055344e6a166d39 inherit pro_methods_classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd1dc0d5ee2f51c7c018cb8528f00907 inherit pro_methods_classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html#abd1dc0d5ee2f51c7c018cb8528f00907">MaxCliqueSolverBase</a> (const <a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html">MaxCliqueSolverBase</a> &amp;)=default</td></tr>
 <tr class="separator:abd1dc0d5ee2f51c7c018cb8528f00907 inherit pro_methods_classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a120e77908ffe6f81c21ab850652e2303 inherit pro_methods_classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html">MaxCliqueSolverBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html#a120e77908ffe6f81c21ab850652e2303">operator=</a> (const <a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html">MaxCliqueSolverBase</a> &amp;)=default</td></tr>
@@ -328,14 +330,14 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a9bfdddcfa51335172fac775490022b97"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9bfdddcfa51335172fac775490022b97">&#9670;&nbsp;</a></span>get_initial_guess()</h2>
+<a id="adc639dd5f0b0489663d51a8bb3e7b391"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc639dd5f0b0489663d51a8bb3e7b391">&#9670;&nbsp;</a></span>GetInitialGuess()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::optional&lt;Eigen::VectorXd&gt; get_initial_guess </td>
+          <td class="memname">std::optional&lt;Eigen::VectorXd&gt; GetInitialGuess </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -345,51 +347,25 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a55e32c1bef1e593cf3902899a17ac46a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a55e32c1bef1e593cf3902899a17ac46a">&#9670;&nbsp;</a></span>get_solver_options()</h2>
+<a id="ac6e1b5694ac2792782e9f8f8e3b708c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6e1b5694ac2792782e9f8f8e3b708c2">&#9670;&nbsp;</a></span>GetSolverOptions()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">solvers::SolverOptions</a>* get_solver_options </td>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">solvers::SolverOptions</a> GetSolverOptions </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a34b67f273dcb3efe64c356fc49b1626e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a34b67f273dcb3efe64c356fc49b1626e">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html">MaxCliqueSolverViaMip</a>&amp; operator= </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html">MaxCliqueSolverViaMip</a> &amp;&amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>
 </div>
 <a id="a7dd82957489033e85f52031d725ab136"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7dd82957489033e85f52031d725ab136">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7dd82957489033e85f52031d725ab136">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -414,26 +390,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ae41afcb7200c5c19e993e856aa6a39ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae41afcb7200c5c19e993e856aa6a39ea">&#9670;&nbsp;</a></span>set_initial_guess()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void set_initial_guess </td>
-          <td>(</td>
-          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
-          <td class="paramname"><em>initial_guess</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a019e058b6da8feacf8c4ffb122de77a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a019e058b6da8feacf8c4ffb122de77a3">&#9670;&nbsp;</a></span>SolveMaxClique()</h2>
+<a id="a34b67f273dcb3efe64c356fc49b1626e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34b67f273dcb3efe64c356fc49b1626e">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -442,35 +400,52 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;bool&gt; SolveMaxClique </td>
+          <td class="memname"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html">MaxCliqueSolverViaMip</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const Eigen::SparseMatrix&lt; bool &gt; &amp;&#160;</td>
-          <td class="paramname"><em>adjacency_matrix</em></td><td>)</td>
-          <td> const</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html">MaxCliqueSolverViaMip</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html#afff6111a9f41a64355181e8d7fa5ebdc">MaxCliqueSolverBase</a>.</p>
-
 </div>
 </div>
-<a id="a7e1f6e31c3f8be1a9040e1880d235085"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e1f6e31c3f8be1a9040e1880d235085">&#9670;&nbsp;</a></span>solver_options()</h2>
+<a id="a49e164a22ea4f5638802a7fa45e0acd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49e164a22ea4f5638802a7fa45e0acd8">&#9670;&nbsp;</a></span>SetInitialGuess()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">solvers::SolverOptions</a> solver_options </td>
+          <td class="memname">void SetInitialGuess </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td class="paramtype">const std::optional&lt; Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>initial_guess</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a079a11aaa44cef664e48363528082ed4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a079a11aaa44cef664e48363528082ed4">&#9670;&nbsp;</a></span>SetSolverOptions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetSolverOptions </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">solvers::SolverOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>solver_options</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -478,7 +453,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>drake/planning/graph_algorithms/<a class="el" href="max__clique_8h.html">max_clique.h</a></li>
+<li>drake/planning/graph_algorithms/<a class="el" href="max__clique__solver__via__mip_8h.html">max_clique_solver_via_mip.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

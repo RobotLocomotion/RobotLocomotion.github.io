@@ -1454,6 +1454,8 @@ Contact modeling</h2></td></tr>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if bodies A and B are the same body. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if the MultibodyPlant has already been finalized. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>this</code> MultibodyPlant is not a discrete model (is_discrete() == false) </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>this</code> MultibodyPlant's underlying contact solver is not SAP. (i.e. <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ad7698366750a09e383106a17bf9009a2" title="Returns the contact solver type used for discrete MultibodyPlant models.">get_discrete_contact_solver()</a> != <a class="el" href="namespacedrake_1_1multibody.html#a902306c5e0120a67c07f80e9219a3e8dad48dc7e3221aee2d9e1af665ebfbeeec" title="SAP solver, see [Castro et al., 2022].">DiscreteContactSolver::kSap</a>) </td></tr>
   </table>
   </dd>
 </dl>
@@ -1507,6 +1509,8 @@ Generally, to couple (q0, q1, q2), the user would define a coupler between (q0, 
   <table class="exception">
     <tr><td class="paramname">if</td><td>joint0 and joint1 are not both single-dof joints. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if the MultibodyPlant has already been finalized. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>this</code> MultibodyPlant is not a discrete model (is_discrete() == false) </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>this</code> MultibodyPlant's underlying contact solver is not SAP. (i.e. <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ad7698366750a09e383106a17bf9009a2" title="Returns the contact solver type used for discrete MultibodyPlant models.">get_discrete_contact_solver()</a> != <a class="el" href="namespacedrake_1_1multibody.html#a902306c5e0120a67c07f80e9219a3e8dad48dc7e3221aee2d9e1af665ebfbeeec" title="SAP solver, see [Castro et al., 2022].">DiscreteContactSolver::kSap</a>) </td></tr>
   </table>
   </dd>
 </dl>
@@ -1595,6 +1599,8 @@ A distance constraint is the wrong modeling choice if the distance needs to go t
     <tr><td class="paramname">std::exception</td><td>if <code>stiffness</code> is not positive or zero. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if <code>damping</code> is not positive or zero. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if the MultibodyPlant has already been finalized. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>this</code> MultibodyPlant is not a discrete model (is_discrete() == false) </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>this</code> MultibodyPlant's underlying contact solver is not SAP. (i.e. <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ad7698366750a09e383106a17bf9009a2" title="Returns the contact solver type used for discrete MultibodyPlant models.">get_discrete_contact_solver()</a> != <a class="el" href="namespacedrake_1_1multibody.html#a902306c5e0120a67c07f80e9219a3e8dad48dc7e3221aee2d9e1af665ebfbeeec" title="SAP solver, see [Castro et al., 2022].">DiscreteContactSolver::kSap</a>) </td></tr>
   </table>
   </dd>
 </dl>
@@ -2036,6 +2042,8 @@ A distance constraint is the wrong modeling choice if the distance needs to go t
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if bodies A and B are the same body. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if the MultibodyPlant has already been finalized. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>this</code> MultibodyPlant is not a discrete model (is_discrete() == false) </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>this</code> MultibodyPlant's underlying contact solver is not SAP. (i.e. <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ad7698366750a09e383106a17bf9009a2" title="Returns the contact solver type used for discrete MultibodyPlant models.">get_discrete_contact_solver()</a> != <a class="el" href="namespacedrake_1_1multibody.html#a902306c5e0120a67c07f80e9219a3e8dad48dc7e3221aee2d9e1af665ebfbeeec" title="SAP solver, see [Castro et al., 2022].">DiscreteContactSolver::kSap</a>) </td></tr>
   </table>
   </dd>
 </dl>

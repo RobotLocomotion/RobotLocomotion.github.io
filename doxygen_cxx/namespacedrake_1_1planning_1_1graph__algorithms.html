@@ -159,8 +159,7 @@ $(document).ready(function(){initNavTree('namespacedrake_1_1planning_1_1graph__a
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle">
 <div class="title">drake::planning::graph_algorithms Namespace Reference</div>  </div>
 </div><!--header-->
@@ -168,74 +167,13 @@ $(document).ready(function(){initNavTree('namespacedrake_1_1planning_1_1graph__a
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_options.html">MaxCliqueOptions</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html">MaxCliqueSolverBase</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The problem of finding the maximum clique in a graph is known to be NP-complete.  <a href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html">MaxCliqueSolverViaMip</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves the maximum clique problem to global optimality by solving the mixed-integer program.  <a href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a832d644b5511c20e1eb7c5861d9ffab4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1planning_1_1graph__algorithms.html#a832d644b5511c20e1eb7c5861d9ffab4">CalcMaxClique</a> (const Eigen::SparseMatrix&lt; bool &gt; &amp;adjacency_matrix, const <a class="el" href="structdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_options.html">MaxCliqueOptions</a> &amp;options)</td></tr>
-<tr class="memdesc:a832d644b5511c20e1eb7c5861d9ffab4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the adjacency matrix of an undirected graph, find the maximum clique within the graph.  <a href="#a832d644b5511c20e1eb7c5861d9ffab4">More...</a><br /></td></tr>
-<tr class="separator:a832d644b5511c20e1eb7c5861d9ffab4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a832d644b5511c20e1eb7c5861d9ffab4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a832d644b5511c20e1eb7c5861d9ffab4">&#9670;&nbsp;</a></span>CalcMaxClique()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;bool&gt; drake::planning::graph_algorithms::CalcMaxClique </td>
-          <td>(</td>
-          <td class="paramtype">const Eigen::SparseMatrix&lt; bool &gt; &amp;&#160;</td>
-          <td class="paramname"><em>adjacency_matrix</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="structdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_options.html">MaxCliqueOptions</a> &amp;&#160;</td>
-          <td class="paramname"><em>options</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Given the adjacency matrix of an undirected graph, find the maximum clique within the graph. </p>
-<p>A clique is a collection of vertices in a graph such that each pair of vertices is connected by an edge (i.e. a fully connected subgraph). This problem is known to be NP-complete, and so the choice of solvers in</p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">options</td><td>determines whether the return of this function is the true maximum clique in the subgraph (which may take very long to compute), or only an approximate solution found via heuristics. </td></tr>
-    <tr><td class="paramname">adjacency_matrix</td><td>a symmetric (0,1)-matrix encoding the edge relationship </td></tr>
-    <tr><td class="paramname">options</td><td>options for solving the max-clique problem. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A binary vector with the same indexing as the adjacency matrix, with 1 indicating membership in the clique. </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">if</td><td>the adjacency matrix is not symmetric. </td></tr>
-    <tr><td class="paramname">based</td><td>on the preconditions of the solver contained in</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">options.</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- footer -->

@@ -1,6 +1,5 @@
 var NAVTREEINDEX50 =
 {
-"group__simulator__configuration.html#ga6875fa2f1e9eb22cee800a29b0ca61b9":[1,4,0,1,0],
 "group__simulator__configuration.html#gad32461bc90073aac39049d636974a04b":[1,4,0,1,3],
 "group__solver__evaluators.html":[1,1,0],
 "group__solver__evaluators.html#ga4508ec670196c3fe45e9b52af8a73d4a":[1,1,0,53],
@@ -249,5 +248,6 @@ var NAVTREEINDEX50 =
 "latex_8h.html#a50f946a2d656be1b946c8f2f6bf00810":[4,0,0,1,3,7,0],
 "latex_8h.html#aa14d755813030ea14c7207a4e0e71f9f":[4,0,0,1,3,7,3],
 "latex_8h.html#accb78ec8e49199eaff087d9637301041":[4,0,0,1,3,7,1],
-"lcm__buses_8h.html":[4,0,0,12,4,0]
+"lcm__buses_8h.html":[4,0,0,12,4,0],
+"lcm__config__functions_8h.html":[4,0,0,12,4,1]
 };

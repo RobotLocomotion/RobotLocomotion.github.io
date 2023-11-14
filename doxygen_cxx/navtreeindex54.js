@@ -1,6 +1,5 @@
 var NAVTREEINDEX54 =
 {
-"quadratic__form_8h.html#a296872692791b1e6d9e27311fc55a694":[4,0,0,7,26,1],
 "quadratic__form_8h.html#a2fccff311f09a5a35afac17388541c7f":[4,0,0,7,26,2],
 "quadratic__form_8h.html#a8c66e16411c4f0d53e005658a49ccf6a":[4,0,0,7,26,0],
 "quadratic__scalar__system_8h.html":[4,0,0,12,0,0,10],
@@ -249,5 +248,6 @@ var NAVTREEINDEX54 =
 "semidefinite__relaxation_8h.html":[4,0,0,11,45],
 "semidefinite__relaxation_8h.html#af6da6d265dcd5e959082b17d3a94258b":[4,0,0,11,45,0],
 "sensors__py_8h.html":[4,0,0,0,0,10,5],
-"sequential__expression__manager_8h.html":[4,0,0,10,2,6]
+"sequential__expression__manager_8h.html":[4,0,0,10,2,6],
+"serialize__pybind_8h.html":[4,0,0,0,0,1,7]
 };

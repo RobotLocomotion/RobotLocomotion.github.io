@@ -190,7 +190,7 @@ correct dimension with bounds at negative and positive
 infinity.</p></li>
 <li><p><strong>reward</strong> – The reward can be specified in one of two
 ways: (1) by passing a callable with the signature
-<code class="docutils literal notranslate"><span class="pre">value</span> <span class="pre">=</span> <span class="pre">reward(context)</span></code> or (2) by passing a scalar
+<code class="docutils literal notranslate"><span class="pre">value</span> <span class="pre">=</span> <span class="pre">reward(system,</span> <span class="pre">context)</span></code> or (2) by passing a scalar
 vector-valued output port of <code class="docutils literal notranslate"><span class="pre">simulator</span></code>’s system.</p></li>
 <li><p><strong>action_port_id</strong> – The ID of an input port of <code class="docutils literal notranslate"><span class="pre">simulator</span></code>’s system
 compatible with the <code class="docutils literal notranslate"><span class="pre">action_space</span></code>.  Each Env <em>must</em> have an

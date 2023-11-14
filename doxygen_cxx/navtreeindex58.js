@@ -1,6 +1,5 @@
 var NAVTREEINDEX58 =
 {
-"structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html":[3,0,0,8,1,0],
 "structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#a09f8d0da960e3eed8859508f7efdb421":[3,0,0,8,1,0,0],
 "structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#a0f29fed6311156aa9a7efefa57dfae06":[3,0,0,8,1,0,7],
 "structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#a148f4adaece02fe36243c84bafd8d467":[3,0,0,8,1,0,2],
@@ -130,14 +129,6 @@ var NAVTREEINDEX58 =
 "structdrake_1_1planning_1_1_collision_checker_params.html#a9e6dd7347da1885477cd5b895b47ce9a":[1,4,2,2,3,6],
 "structdrake_1_1planning_1_1_collision_checker_params.html#aba8ff17381c2ecbb2add791b7c97c226":[1,4,2,2,3,3],
 "structdrake_1_1planning_1_1_collision_checker_params.html#afec931281f813128526846e5ee611e03":[1,4,2,2,3,1],
-"structdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_options.html":[3,0,0,10,0,0],
-"structdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_options.html#a022b52773e0c06584635f2f440bc8984":[3,0,0,10,0,0,3],
-"structdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_options.html#a1558e379468950cb1b5a98cb30b71843":[3,0,0,10,0,0,5],
-"structdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_options.html#a6674f09446ed4eea09f421b6b06df059":[3,0,0,10,0,0,1],
-"structdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_options.html#a734b181faacfa2d770255fdd48b1164e":[3,0,0,10,0,0,4],
-"structdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_options.html#a87b544eb95339930f35b436ad6968755":[3,0,0,10,0,0,2],
-"structdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_options.html#a9b91759efc7e1a2fdd22c37c8da3508e":[3,0,0,10,0,0,0],
-"structdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_options.html#af7e3d8802066bb9bef62281cbeae42a8":[3,0,0,10,0,0,6],
 "structdrake_1_1planning_1_1test_1_1_collision_checker_construction_params.html":[3,0,0,10,1,1],
 "structdrake_1_1planning_1_1test_1_1_collision_checker_construction_params.html#a34a4def1d160fae5fda122ba0a5254ea":[3,0,0,10,1,1,0],
 "structdrake_1_1planning_1_1test_1_1_collision_checker_construction_params.html#a4b33e20bd1e6ff4f9068837d5cfc8837":[3,0,0,10,1,1,2],
@@ -249,5 +240,14 @@ var NAVTREEINDEX58 =
 "structdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator_1_1_return_type.html":[3,0,0,13,44,0],
 "structdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator_1_1_return_type.html#a558e28b2fea6ebcac661358ea97c7f58":[3,0,0,13,44,0,1],
 "structdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator_1_1_return_type.html#a67361c684f5a0c392169e80bb76e9228":[3,0,0,13,44,0,0],
-"structdrake_1_1solvers_1_1_mosek_solver_details.html":[3,0,0,13,48]
+"structdrake_1_1solvers_1_1_mosek_solver_details.html":[3,0,0,13,48],
+"structdrake_1_1solvers_1_1_mosek_solver_details.html#a049167e80a2c377c18ea0185894e0003":[3,0,0,13,48,1],
+"structdrake_1_1solvers_1_1_mosek_solver_details.html#a3bd18d95fc284969ff5703de05b5a9f5":[3,0,0,13,48,0],
+"structdrake_1_1solvers_1_1_mosek_solver_details.html#a4036e6e47f77a14497bc9f6c007193a0":[3,0,0,13,48,2],
+"structdrake_1_1solvers_1_1_new_symmetric_variable_names.html":[3,0,0,13,49],
+"structdrake_1_1solvers_1_1_new_variable_names.html":[3,0,0,13,50],
+"structdrake_1_1solvers_1_1_new_variable_names_3_01_rows_00_01_cols_01_4.html":[3,0,0,13,51],
+"structdrake_1_1solvers_1_1_new_variable_names_3_01_size_01_4.html":[3,0,0,13,52],
+"structdrake_1_1solvers_1_1_new_variable_names_3_01_size_01_4.html#ac921af9184702dd3a3baba941c7361aa":[3,0,0,13,52,0],
+"structdrake_1_1solvers_1_1_nlopt_solver_details.html":[3,0,0,13,54]
 };
