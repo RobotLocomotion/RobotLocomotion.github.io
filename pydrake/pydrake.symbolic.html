@@ -1888,6 +1888,30 @@ ID. For example, for a given variable ordering x &gt; y &gt; z,
 <dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">degree</span></code> is a non-negative integer.</p>
 </dd>
 </dl>
+<ol class="arabic simple" start="3">
+<li><p>MonomialBasis(vars_degree: Dict[pydrake.symbolic.Variables, int]) -&gt; numpy.ndarray[object[m, 1]]</p></li>
+</ol>
+<p>Returns all the monomials (in graded reverse lexicographic order) such
+that the total degree for each set of variables is no larger than a
+specific degree. For example if x_set = {x₀, x₁} and y_set = {y₀, y₁},
+then MonomialBasis({{x_set, 2}, {y_set, 1}}) will include all the
+monomials, whose total degree of x_set is no larger than 2, and the
+total degree of y_set is no larger than 1. Hence it can include
+monomials such as x₀x₁y₀, but not x₀y₀y₁ because the total degree for
+y_set is 2. So it would return the following set of monomials
+(ignoring the ordering) {x₀²y₀, x₀²y₁, x₀x₁y₀, x₀x₁y₁, x₁²y₀, x₁²y₀,
+x₀y₀, x₀y₁, x₁y₀, x₁y₁, x₀², x₀x₁, x₁², x₀, x₁, y₀, y₁, 1}.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">variables_degree</span></code>:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">(vars,</span> <span class="pre">degree)</span></code> maps each set of variables <code class="docutils literal notranslate"><span class="pre">vars</span></code> to the
+maximal degree of these variables in the monomial. Namely the
+summation of the degree of each variable in <code class="docutils literal notranslate"><span class="pre">vars</span></code> is no larger
+than <code class="docutils literal notranslate"><span class="pre">degree</span></code>.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>The variables in <code class="docutils literal notranslate"><span class="pre">variables_degree</span></code> don’t overlap.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>The degree in <code class="docutils literal notranslate"><span class="pre">variables_degree</span></code> are non-negative.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">

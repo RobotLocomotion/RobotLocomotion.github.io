@@ -1,5 +1,6 @@
 var NAVTREEINDEX55 =
 {
+"serialize__pybind_8h.html":[4,0,0,0,0,1,7],
 "serialize__pybind_8h.html#a0b3e8f87bda821cd1fa9a52586e25f1e":[4,0,0,0,0,1,7,0],
 "serialize__pybind_8h.html#a68be3d37cf9d6c6fcc2afb98d04c046f":[4,0,0,0,0,1,7,1],
 "serialize__pybind_8h.html#aa9814a507ba70a62d61b467c3ba06cce":[4,0,0,0,0,1,7,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX55 =
 "structdrake_1_1_polynomial_1_1_product.html#a7a4135c74ceab3342f130fb491ccbe29":[3,0,0,41,1,0],
 "structdrake_1_1_rlocation_or_error.html":[3,0,0,45],
 "structdrake_1_1_rlocation_or_error.html#a73f9ba255d9f67483bea8f29d42f9e13":[3,0,0,45,0],
-"structdrake_1_1_rlocation_or_error.html#a8c94119e5bd6fbde0680ef83f01c9685":[3,0,0,45,1],
-"structdrake_1_1_sorted_pair.html":[3,0,0,48]
+"structdrake_1_1_rlocation_or_error.html#a8c94119e5bd6fbde0680ef83f01c9685":[3,0,0,45,1]
 };

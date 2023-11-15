@@ -1495,6 +1495,9 @@ Functions</h2></td></tr>
 <tr class="memitem:af297794f22c0458592aeea637cce060a"><td class="memTemplItemLeft" align="right" valign="top">Eigen::Matrix&lt; <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a>, <a class="el" href="namespacedrake_1_1symbolic.html#aa40528027cce753aacb377913342f536">NChooseK</a>(n+degree, degree), 1 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#af297794f22c0458592aeea637cce060a">MonomialBasis</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variables.html">Variables</a> &amp;vars)</td></tr>
 <tr class="memdesc:af297794f22c0458592aeea637cce060a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all monomials up to a given degree under the graded reverse lexicographic order.  <a href="#af297794f22c0458592aeea637cce060a">More...</a><br /></td></tr>
 <tr class="separator:af297794f22c0458592aeea637cce060a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30a514c95fcf3b0d8ec0965e59ae9be6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a30a514c95fcf3b0d8ec0965e59ae9be6">MonomialBasis</a> (const std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variables.html">Variables</a>, <a class="el" href="classint.html">int</a> &gt; &amp;variables_degree)</td></tr>
+<tr class="memdesc:a30a514c95fcf3b0d8ec0965e59ae9be6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all the monomials (in graded reverse lexicographic order) such that the total degree for each set of variables is no larger than a specific degree.  <a href="#a30a514c95fcf3b0d8ec0965e59ae9be6">More...</a><br /></td></tr>
+<tr class="separator:a30a514c95fcf3b0d8ec0965e59ae9be6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff00cd9261b602f7ce7708286d2dae05"><td class="memItemLeft" align="right" valign="top">Eigen::Matrix&lt; <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a>, Eigen::Dynamic, 1 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#aff00cd9261b602f7ce7708286d2dae05">EvenDegreeMonomialBasis</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variables.html">Variables</a> &amp;vars, <a class="el" href="classint.html">int</a> degree)</td></tr>
 <tr class="memdesc:aff00cd9261b602f7ce7708286d2dae05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all even degree monomials up to a given degree under the graded reverse lexicographic order.  <a href="#aff00cd9261b602f7ce7708286d2dae05">More...</a><br /></td></tr>
 <tr class="separator:aff00cd9261b602f7ce7708286d2dae05"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -6641,7 +6644,7 @@ More information about the C++'s conditional expression and ternary operator is 
 </div>
 </div>
 <a id="a04c0029b04f957181b0cb2bdae701514"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a04c0029b04f957181b0cb2bdae701514">&#9670;&nbsp;</a></span>MonomialBasis() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a04c0029b04f957181b0cb2bdae701514">&#9670;&nbsp;</a></span>MonomialBasis() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6675,7 +6678,7 @@ More information about the C++'s conditional expression and ternary operator is 
 </div>
 </div>
 <a id="af297794f22c0458592aeea637cce060a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af297794f22c0458592aeea637cce060a">&#9670;&nbsp;</a></span>MonomialBasis() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af297794f22c0458592aeea637cce060a">&#9670;&nbsp;</a></span>MonomialBasis() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6701,6 +6704,35 @@ More information about the C++'s conditional expression and ternary operator is 
 <dl class="section pre"><dt>Precondition</dt><dd><code>vars</code> is a non-empty set. </dd>
 <dd>
 vars.size() == <code>n</code>. </dd></dl>
+
+</div>
+</div>
+<a id="a30a514c95fcf3b0d8ec0965e59ae9be6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30a514c95fcf3b0d8ec0965e59ae9be6">&#9670;&nbsp;</a></span>MonomialBasis() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;<a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a>&gt; drake::symbolic::MonomialBasis </td>
+          <td>(</td>
+          <td class="paramtype">const std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variables.html">Variables</a>, <a class="el" href="classint.html">int</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>variables_degree</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns all the monomials (in graded reverse lexicographic order) such that the total degree for each set of variables is no larger than a specific degree. </p>
+<p>For example if x_set = {x₀, x₁} and y_set = {y₀, y₁}, then MonomialBasis({{x_set, 2}, {y_set, 1}}) will include all the monomials, whose total degree of x_set is no larger than 2, and the total degree of y_set is no larger than 1. Hence it can include monomials such as x₀x₁y₀, but not x₀y₀y₁ because the total degree for y_set is 2. So it would return the following set of monomials (ignoring the ordering) {x₀²y₀, x₀²y₁, x₀x₁y₀, x₀x₁y₁, x₁²y₀, x₁²y₀, x₀y₀, x₀y₁, x₁y₀, x₁y₁, x₀², x₀x₁, x₁², x₀, x₁, y₀, y₁, 1}. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">variables_degree</td><td><code>(vars, degree)</code> maps each set of variables <code>vars</code> to the maximal degree of these variables in the monomial. Namely the summation of the degree of each variable in <code>vars</code> is no larger than <code>degree</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>The variables in <code>variables_degree</code> don't overlap. </dd>
+<dd>
+The degree in <code>variables_degree</code> are non-negative. </dd></dl>
 
 </div>
 </div>
@@ -11618,38 +11650,8 @@ we do not provide operator*= function for this class, since operator*= would ret
 
 </div>
 </div>
-<a id="ad0de903abee4a9e39dbc9148d86c770c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad0de903abee4a9e39dbc9148d86c770c">&#9670;&nbsp;</a></span>operator&lt;=() <span class="overload">[2/5]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::enable_if_t&lt; std::is_same_v&lt;typename Eigen::internal::traits&lt;DerivedA&gt;::XprKind, Eigen::ArrayXpr&gt; &amp;&amp; std::is_same_v&lt;typename Eigen::internal::traits&lt;DerivedB&gt;::XprKind, Eigen::ArrayXpr&gt; &amp;&amp; std::is_same_v&lt;decltype(typename DerivedA::Scalar() &lt;= typename DerivedB::Scalar()), <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a>&gt;, typename internal::RelationalOpTraits&lt;DerivedA, DerivedB&gt;::ReturnType&gt; drake::symbolic::operator&lt;= </td>
-          <td>(</td>
-          <td class="paramtype">const DerivedA &amp;&#160;</td>
-          <td class="paramname"><em>a1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const DerivedB &amp;&#160;</td>
-          <td class="paramname"><em>a2</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns an Eigen array of symbolic formulas where each element includes element-wise comparison of two arrays <code>a1</code> and <code>a2</code> using less-than-or-equal operator (&lt;=). </p>
-
-</div>
-</div>
 <a id="a52479ecb229048e750782273796768c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52479ecb229048e750782273796768c2">&#9670;&nbsp;</a></span>operator&lt;=() <span class="overload">[3/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a52479ecb229048e750782273796768c2">&#9670;&nbsp;</a></span>operator&lt;=() <span class="overload">[2/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -11676,6 +11678,36 @@ we do not provide operator*= function for this class, since operator*= would ret
 
 <p>Returns an Eigen array of symbolic formulas where each element includes element-wise comparison between a scalar <code>v</code> and an array <code>using</code> less-than-or-equal operator (&lt;=). </p>
 <p>That is, for all i and j, the (i, j)-th entry of <code>(v &lt;= a)</code> has a symbolic formula <code>v &lt;= a(i, j)</code>. </p>
+
+</div>
+</div>
+<a id="ad0de903abee4a9e39dbc9148d86c770c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0de903abee4a9e39dbc9148d86c770c">&#9670;&nbsp;</a></span>operator&lt;=() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::enable_if_t&lt; std::is_same_v&lt;typename Eigen::internal::traits&lt;DerivedA&gt;::XprKind, Eigen::ArrayXpr&gt; &amp;&amp; std::is_same_v&lt;typename Eigen::internal::traits&lt;DerivedB&gt;::XprKind, Eigen::ArrayXpr&gt; &amp;&amp; std::is_same_v&lt;decltype(typename DerivedA::Scalar() &lt;= typename DerivedB::Scalar()), <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a>&gt;, typename internal::RelationalOpTraits&lt;DerivedA, DerivedB&gt;::ReturnType&gt; drake::symbolic::operator&lt;= </td>
+          <td>(</td>
+          <td class="paramtype">const DerivedA &amp;&#160;</td>
+          <td class="paramname"><em>a1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const DerivedB &amp;&#160;</td>
+          <td class="paramname"><em>a2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns an Eigen array of symbolic formulas where each element includes element-wise comparison of two arrays <code>a1</code> and <code>a2</code> using less-than-or-equal operator (&lt;=). </p>
 
 </div>
 </div>
