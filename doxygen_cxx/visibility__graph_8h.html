@@ -166,6 +166,7 @@ $(document).ready(function(){initNavTree('visibility__graph_8h.html','');});
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;Eigen/Sparse&gt;</code><br />
+<code>#include &quot;<a class="el" href="parallelism_8h.html">drake/common/parallelism.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="collision__checker_8h.html">drake/planning/collision_checker.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for visibility_graph.h:</div>
@@ -183,9 +184,9 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:adca2fc53de41fd4760fe9825e079456e"><td class="memItemLeft" align="right" valign="top">Eigen::SparseMatrix&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1planning.html#adca2fc53de41fd4760fe9825e079456e">VisibilityGraph</a> (const CollisionChecker &amp;checker, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;points, bool parallelize=true)</td></tr>
-<tr class="memdesc:adca2fc53de41fd4760fe9825e079456e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given some number of sampled points in the configuration space of <code>checker</code>'s plant(), computes the "visibility graph" &ndash; two <code>points</code> have an edge between them if the line segment connecting them is collision free.  <a href="namespacedrake_1_1planning.html#adca2fc53de41fd4760fe9825e079456e">More...</a><br /></td></tr>
-<tr class="separator:adca2fc53de41fd4760fe9825e079456e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8bff5baf7217216340dc19e591cca74"><td class="memItemLeft" align="right" valign="top">Eigen::SparseMatrix&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1planning.html#ac8bff5baf7217216340dc19e591cca74">VisibilityGraph</a> (const CollisionChecker &amp;checker, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;points, Parallelism parallelize=Parallelism::Max())</td></tr>
+<tr class="memdesc:ac8bff5baf7217216340dc19e591cca74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given some number of sampled points in the configuration space of <code>checker</code>'s plant(), computes the "visibility graph" &ndash; two <code>points</code> have an edge between them if the line segment connecting them is collision free.  <a href="namespacedrake_1_1planning.html#ac8bff5baf7217216340dc19e591cca74">More...</a><br /></td></tr>
+<tr class="separator:ac8bff5baf7217216340dc19e591cca74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

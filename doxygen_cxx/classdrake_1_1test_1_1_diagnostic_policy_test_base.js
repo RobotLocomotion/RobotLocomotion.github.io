@@ -8,6 +8,8 @@ var classdrake_1_1test_1_1_diagnostic_policy_test_base =
     [ "FlushDiagnostics", "classdrake_1_1test_1_1_diagnostic_policy_test_base.html#a6d5853322f54a85d66a637e6d9bc32f0", null ],
     [ "FormatFirstError", "classdrake_1_1test_1_1_diagnostic_policy_test_base.html#af938b6ab81cf57d098d164ace2343ed8", null ],
     [ "FormatFirstWarning", "classdrake_1_1test_1_1_diagnostic_policy_test_base.html#ab985e4e0391a39eb5a4e81483ff21a18", null ],
+    [ "NumErrors", "classdrake_1_1test_1_1_diagnostic_policy_test_base.html#a1de7eb64b3c749b3b0543ac076d22d0b", null ],
+    [ "NumWarnings", "classdrake_1_1test_1_1_diagnostic_policy_test_base.html#a332d33bf4ca42c66933d08beb275dd4e", null ],
     [ "RecordErrors", "classdrake_1_1test_1_1_diagnostic_policy_test_base.html#a488822d9aa0aa779fd888ec75d3ecb9c", null ],
     [ "Take", "classdrake_1_1test_1_1_diagnostic_policy_test_base.html#a5123b99c59e30f73d1ba8703f7fc41cd", null ],
     [ "TakeError", "classdrake_1_1test_1_1_diagnostic_policy_test_base.html#a8e0eaf10a27f6f7668315339c9e82c88", null ],

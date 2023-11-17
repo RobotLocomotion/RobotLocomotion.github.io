@@ -213,6 +213,8 @@ class drake::multibody::MultibodyPlant&lt; T &gt;</h3>
 <tr>
 <td align="left" style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray"> model_instance_name[i]</em>_generalized_contact_forces</td></tr>
 <tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_net_actuation</td></tr>
+<tr>
 <td align="left" style="padding:5px 0px 5px 0px">&rarr; <span style="color:green">geometry_pose</span></td></tr>
 </table>
 </td></tr>
@@ -392,12 +394,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1cc1d71e6c2e91fcd215105ae4ed01e4"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">systems::InputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a1cc1d71e6c2e91fcd215105ae4ed01e4">get_actuation_input_port</a> () const</td></tr>
 <tr class="memdesc:a1cc1d71e6c2e91fcd215105ae4ed01e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constant reference to the input port for external actuation for all actuated dofs.  <a href="#a1cc1d71e6c2e91fcd215105ae4ed01e4">More...</a><br /></td></tr>
 <tr class="separator:a1cc1d71e6c2e91fcd215105ae4ed01e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15a820a47612d7ae857df658f387f1cd"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a15a820a47612d7ae857df658f387f1cd">get_net_actuation_output_port</a> () const</td></tr>
-<tr class="memdesc:a15a820a47612d7ae857df658f387f1cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constant reference to the output port that reports actuation values applied through joint actuators.  <a href="#a15a820a47612d7ae857df658f387f1cd">More...</a><br /></td></tr>
-<tr class="separator:a15a820a47612d7ae857df658f387f1cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c9e7974ae1d996a6ca3430893bd5df2"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">systems::InputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8c9e7974ae1d996a6ca3430893bd5df2">get_actuation_input_port</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance) const</td></tr>
 <tr class="memdesc:a8c9e7974ae1d996a6ca3430893bd5df2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constant reference to the input port for external actuation for a specific model instance.  <a href="#a8c9e7974ae1d996a6ca3430893bd5df2">More...</a><br /></td></tr>
 <tr class="separator:a8c9e7974ae1d996a6ca3430893bd5df2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15a820a47612d7ae857df658f387f1cd"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a15a820a47612d7ae857df658f387f1cd">get_net_actuation_output_port</a> () const</td></tr>
+<tr class="memdesc:a15a820a47612d7ae857df658f387f1cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constant reference to the output port that reports actuation values applied through joint actuators.  <a href="#a15a820a47612d7ae857df658f387f1cd">More...</a><br /></td></tr>
+<tr class="separator:a15a820a47612d7ae857df658f387f1cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdac5c52298849206e36df44843a4566"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#abdac5c52298849206e36df44843a4566">get_net_actuation_output_port</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance) const</td></tr>
+<tr class="memdesc:abdac5c52298849206e36df44843a4566"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constant reference to the output port that reports actuation values applied through joint actuators, for a specific model instance.  <a href="#abdac5c52298849206e36df44843a4566">More...</a><br /></td></tr>
+<tr class="separator:abdac5c52298849206e36df44843a4566"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10da7d22fff4db1da5c396eef5780ae2"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">systems::InputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a10da7d22fff4db1da5c396eef5780ae2">get_desired_state_input_port</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance) const</td></tr>
 <tr class="memdesc:a10da7d22fff4db1da5c396eef5780ae2"><td class="mdescLeft">&#160;</td><td class="mdescRight">For models with PD controlled joint actuators, returns the port to provide the desired state for the full <code>model_instance</code>.  <a href="#a10da7d22fff4db1da5c396eef5780ae2">More...</a><br /></td></tr>
 <tr class="separator:a10da7d22fff4db1da5c396eef5780ae2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -4788,7 +4793,7 @@ It is required to connect this port for PD controlled model instances. </dd></dl
 </div>
 </div>
 <a id="a15a820a47612d7ae857df658f387f1cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a15a820a47612d7ae857df658f387f1cd">&#9670;&nbsp;</a></span>get_net_actuation_output_port()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a15a820a47612d7ae857df658f387f1cd">&#9670;&nbsp;</a></span>get_net_actuation_output_port() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4804,6 +4809,36 @@ It is required to connect this port for PD controlled model instances. </dd></dl
 
 <p>Returns a constant reference to the output port that reports actuation values applied through joint actuators. </p>
 <p>This output port is a vector valued port indexed by <a class="el" href="namespacedrake_1_1multibody.html#acc810ff385ed4dede2e011b0b6fd3f2c">JointActuatorIndex</a>, see <a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#a0da0b00b025a7bb19e574feabb91668f" title="Returns this element&#39;s unique index.">JointActuator::index()</a>. Models that include PD controllers will include their contribution in this port, refer to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#mbp_actuation">Actuation</a> for further details. </p><dl class="section note"><dt>Note</dt><dd>PD controllers are not considered for actuators on locked joints, see <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a50c7f850050d4a94641ed72dd2d1968f" title="Lock the joint.">Joint::Lock()</a>. Therefore they do not contribute to this port. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a> was already called on <code>this</code> plant. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if called before <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abdac5c52298849206e36df44843a4566"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdac5c52298849206e36df44843a4566">&#9670;&nbsp;</a></span>get_net_actuation_output_port() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt;T&gt;&amp; get_net_actuation_output_port </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a>&#160;</td>
+          <td class="paramname"><em>model_instance</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a constant reference to the output port that reports actuation values applied through joint actuators, for a specific model instance. </p>
+<p>Models that include PD controllers will include their contribution in this port, refer to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#mbp_actuation">Actuation</a> for further details. This is a vector valued port with entries ordered by monotonically increasing <a class="el" href="namespacedrake_1_1multibody.html#acc810ff385ed4dede2e011b0b6fd3f2c">JointActuatorIndex</a> within <code>model_instance</code>.</p>
+<p>Every model instance in <code>this</code> plant model has a net actuation output port, even if zero sized (for model instance with no actuators).</p>
+<dl class="section note"><dt>Note</dt><dd>PD controllers are not considered for actuators on locked joints, see <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a50c7f850050d4a94641ed72dd2d1968f" title="Lock the joint.">Joint::Lock()</a>. Therefore they do not contribute to this port. </dd></dl>
 <dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a> was already called on <code>this</code> plant. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">

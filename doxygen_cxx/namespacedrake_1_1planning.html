@@ -245,9 +245,9 @@ Functions</h2></td></tr>
 <tr class="separator:ad65f73fdac346846cbc24ebae63c60be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0291e1222f1f88c5e1b5f4bac4abd10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__planning__collision__checker.html#ga6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1planning.html#ad0291e1222f1f88c5e1b5f4bac4abd10">SetInSelfCollision</a> (<a class="el" href="group__planning__collision__checker.html#ga6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a> collision_type, bool in_self_collision)</td></tr>
 <tr class="separator:ad0291e1222f1f88c5e1b5f4bac4abd10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adca2fc53de41fd4760fe9825e079456e"><td class="memItemLeft" align="right" valign="top">Eigen::SparseMatrix&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1planning.html#adca2fc53de41fd4760fe9825e079456e">VisibilityGraph</a> (const <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html">CollisionChecker</a> &amp;checker, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;points, bool parallelize=true)</td></tr>
-<tr class="memdesc:adca2fc53de41fd4760fe9825e079456e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given some number of sampled points in the configuration space of <code>checker</code>'s plant(), computes the "visibility graph" &ndash; two <code>points</code> have an edge between them if the line segment connecting them is collision free.  <a href="#adca2fc53de41fd4760fe9825e079456e">More...</a><br /></td></tr>
-<tr class="separator:adca2fc53de41fd4760fe9825e079456e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8bff5baf7217216340dc19e591cca74"><td class="memItemLeft" align="right" valign="top">Eigen::SparseMatrix&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1planning.html#ac8bff5baf7217216340dc19e591cca74">VisibilityGraph</a> (const <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html">CollisionChecker</a> &amp;checker, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;points, <a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> parallelize=<a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819">Parallelism::Max</a>())</td></tr>
+<tr class="memdesc:ac8bff5baf7217216340dc19e591cca74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given some number of sampled points in the configuration space of <code>checker</code>'s plant(), computes the "visibility graph" &ndash; two <code>points</code> have an edge between them if the line segment connecting them is collision free.  <a href="#ac8bff5baf7217216340dc19e591cca74">More...</a><br /></td></tr>
+<tr class="separator:ac8bff5baf7217216340dc19e591cca74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="a1d0e3bfc71b80ae77e21ca5752dbaca4"></a>
@@ -396,8 +396,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="adca2fc53de41fd4760fe9825e079456e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adca2fc53de41fd4760fe9825e079456e">&#9670;&nbsp;</a></span>VisibilityGraph()</h2>
+<a id="ac8bff5baf7217216340dc19e591cca74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8bff5baf7217216340dc19e591cca74">&#9670;&nbsp;</a></span>VisibilityGraph()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -417,8 +417,8 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>parallelize</em> = <code>true</code>&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a>&#160;</td>
+          <td class="paramname"><em>parallelize</em> = <code><a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819">Parallelism::Max</a>()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -431,7 +431,7 @@ Functions</h2></td></tr>
 <p>Given some number of sampled points in the configuration space of <code>checker</code>'s plant(), computes the "visibility graph" &ndash; two <code>points</code> have an edge between them if the line segment connecting them is collision free. </p>
 <p>See <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html" title="Interface for collision checkers to use.">CollisionChecker</a> documentation for more information on how edge collision checks are performed.</p>
 <p>Note that this method assumes the collision checker has symmetric behavior (i.e. checking edge (q1, q2) is the same as checking edge (q2, q1)). This is true for many collision checkers (e.g. those using <a class="el" href="classdrake_1_1planning_1_1_linear_distance_and_interpolation_provider.html" title="This class represents a basic &quot;linear&quot; implementation of DistanceAndInterpolationProvider.">LinearDistanceAndInterpolationProvider</a>, which is the default), but some more complex spaces with non-linear interpolation (e.g. a Dubin's car) are not symmetric.</p>
-<p>If <code>parallelize=</code>==true, then the <a class="el" href="structdrake_1_1planning_1_1_collision_checker_params.html#afec931281f813128526846e5ee611e03" title="A DistanceAndInterpolationProvider to support configuration distance and interpolation operations.">CollisionCheckerParams::distance_and_interpolation_provider</a> for <code>checker</code> must be implemented in C++, either by providing the C++ implementation directly directly or by using the default provider.</p>
+<p>If <code>parallelize</code> specifies more than one thread, then the <a class="el" href="structdrake_1_1planning_1_1_collision_checker_params.html#afec931281f813128526846e5ee611e03" title="A DistanceAndInterpolationProvider to support configuration distance and interpolation operations.">CollisionCheckerParams::distance_and_interpolation_provider</a> for <code>checker</code> must be implemented in C++, either by providing the C++ implementation directly directly or by using the default provider.</p>
 <dl class="section return"><dt>Returns</dt><dd>the adjacency matrix, A(i,j) == true iff points.col(i) is visible from points.col(j). A is always symmetric.</dd></dl>
 <dl class="section pre"><dt>Precondition</dt><dd>points.rows() == total number of positions in the collision checker plant. </dd></dl>
 

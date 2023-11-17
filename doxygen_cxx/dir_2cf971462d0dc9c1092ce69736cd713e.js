@@ -17,6 +17,9 @@ var dir_2cf971462d0dc9c1092ce69736cd713e =
       [ "Builder", "classdrake_1_1multibody_1_1fem_1_1_fem_model_1_1_builder.html", "classdrake_1_1multibody_1_1fem_1_1_fem_model_1_1_builder" ]
     ] ],
     [ "fem_model_impl.h", "fem__model__impl_8h.html", null ],
+    [ "fem_plant_data.h", "fem__plant__data_8h.html", [
+      [ "FemPlantData", "structdrake_1_1multibody_1_1fem_1_1_fem_plant_data.html", "structdrake_1_1multibody_1_1fem_1_1_fem_plant_data" ]
+    ] ],
     [ "fem_solver.h", "fem__solver_8h.html", null ],
     [ "fem_state.h", "fem__state_8h.html", [
       [ "FemState", "classdrake_1_1multibody_1_1fem_1_1_fem_state.html", "classdrake_1_1multibody_1_1fem_1_1_fem_state" ]

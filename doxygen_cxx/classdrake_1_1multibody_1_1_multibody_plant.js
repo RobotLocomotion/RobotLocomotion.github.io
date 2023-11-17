@@ -88,6 +88,7 @@ var classdrake_1_1multibody_1_1_multibody_plant =
     [ "get_mutable_joint", "classdrake_1_1multibody_1_1_multibody_plant.html#ab56a3621a122cdff1729f71b756a75d0", null ],
     [ "get_mutable_joint_actuator", "classdrake_1_1multibody_1_1_multibody_plant.html#a1bff7f57e96b0587a6ae89e4d191bcf2", null ],
     [ "get_net_actuation_output_port", "classdrake_1_1multibody_1_1_multibody_plant.html#a15a820a47612d7ae857df658f387f1cd", null ],
+    [ "get_net_actuation_output_port", "classdrake_1_1multibody_1_1_multibody_plant.html#abdac5c52298849206e36df44843a4566", null ],
     [ "get_reaction_forces_output_port", "classdrake_1_1multibody_1_1_multibody_plant.html#a5b03afbfe072f83e3681cf9798121eb2", null ],
     [ "get_sap_near_rigid_threshold", "classdrake_1_1multibody_1_1_multibody_plant.html#aa17b98a3d4e8ab45709c6d462f458933", null ],
     [ "get_source_id", "classdrake_1_1multibody_1_1_multibody_plant.html#a0e13ba788ae1f46c3a847b025a5f0347", null ],

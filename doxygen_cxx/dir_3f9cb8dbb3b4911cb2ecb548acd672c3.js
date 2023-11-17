@@ -70,7 +70,8 @@ var dir_3f9cb8dbb3b4911cb2ecb548acd672c3 =
     [ "multibody_tree.h", "multibody__tree_8h.html", "multibody__tree_8h" ],
     [ "multibody_tree_indexes.h", "multibody__tree__indexes_8h.html", "multibody__tree__indexes_8h" ],
     [ "multibody_tree_system.h", "multibody__tree__system_8h.html", [
-      [ "MultibodyElement", "classdrake_1_1multibody_1_1_multibody_element.html", "classdrake_1_1multibody_1_1_multibody_element" ]
+      [ "MultibodyElement", "classdrake_1_1multibody_1_1_multibody_element.html", "classdrake_1_1multibody_1_1_multibody_element" ],
+      [ "ForceDensityField", "classdrake_1_1multibody_1_1_force_density_field.html", "classdrake_1_1multibody_1_1_force_density_field" ]
     ] ],
     [ "multibody_tree_topology.h", "multibody__tree__topology_8h.html", null ],
     [ "parameter_conversion.h", "parameter__conversion_8h.html", null ],
