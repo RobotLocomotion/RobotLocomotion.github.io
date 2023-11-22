@@ -1485,6 +1485,56 @@ program and the availability of the solvers.</p>
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="pydrake.solvers.ClarabelSolver">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">ClarabelSolver</span></span><a class="headerlink" href="#pydrake.solvers.ClarabelSolver" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.SolverInterface" title="pydrake.solvers.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.SolverInterface</span></code></a></p>
+<p>An interface to wrap Clarabel
+<a class="reference external" href="https://github.com/oxfordcontrol/Clarabel.cpp">https://github.com/oxfordcontrol/Clarabel.cpp</a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.ClarabelSolver.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.ClarabelSolver" title="pydrake.solvers.ClarabelSolver"><span class="pre">pydrake.solvers.ClarabelSolver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.ClarabelSolver.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.ClarabelSolver.id">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.solvers.SolverId" title="pydrake.solvers.SolverId"><span class="pre">pydrake.solvers.SolverId</span></a></span></span><a class="headerlink" href="#pydrake.solvers.ClarabelSolver.id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.solvers.ClarabelSolverDetails">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">ClarabelSolverDetails</span></span><a class="headerlink" href="#pydrake.solvers.ClarabelSolverDetails" title="Permalink to this definition"></a></dt>
+<dd><p>The Clarabel solver details after calling the Solve() function. The
+user can call
+MathematicalProgramResult::get_solver_details&lt;ClarabelSolver&gt;() to
+obtain the details.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.ClarabelSolverDetails.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.ClarabelSolverDetails.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.solvers.ClarabelSolverDetails.iterations">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">iterations</span></span><a class="headerlink" href="#pydrake.solvers.ClarabelSolverDetails.iterations" title="Permalink to this definition"></a></dt>
+<dd><p>Number of iterations in Clarabel.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.solvers.ClarabelSolverDetails.solve_time">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">solve_time</span></span><a class="headerlink" href="#pydrake.solvers.ClarabelSolverDetails.solve_time" title="Permalink to this definition"></a></dt>
+<dd><p>The solve time inside Clarabel.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.solvers.ClarabelSolverDetails.status">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">status</span></span><a class="headerlink" href="#pydrake.solvers.ClarabelSolverDetails.status" title="Permalink to this definition"></a></dt>
+<dd><p>The status from Clarabel.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="pydrake.solvers.ClpSolver">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">ClpSolver</span></span><a class="headerlink" href="#pydrake.solvers.ClpSolver" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.SolverInterface" title="pydrake.solvers.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.SolverInterface</span></code></a></p>
