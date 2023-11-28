@@ -212,7 +212,7 @@ s.t Ax = b,
 <p>‡ <a href="https://drake.mit.edu/installation.html">Drake's pre-compiled binary releases</a> incorporate a private build of SNOPT that does not require a license when invoked via Drake's SnoptSolver wrapper class.</p>
 <p>♦ A preferred solver for the given category.</p>
 <p>⟡ The native CSDP solver cannot handle free variables (namely all variables have to be constrained within a cone). In Drake we apply special techniques to handle free variables (refer to RemoveFreeVariableMethod for more details). These heuristics can make the problem expensive to solve or poorly conditioned.</p>
-<p>▣ Drake's support on Clarabel is experimental. Some Clarabel's features (such as positive semidfinite constraints) are not supported by Drake yet.</p>
+<p>▣ Drake's support on Clarabel is experimental. It is not enabled by default.</p>
 <p>△ These solvers are not accurate. They implement ADMM algorithm, which converges quickly to a low-accuracy solution, and requires many iterations to achieve high accuracy.</p>
 <p>▢ These solvers can solve the convex problems, but are not good at it. They treat the convex problems as general nonlinear optimization problems.</p>
 <p>⬘ These gradient-based solvers expect smooth gradients. These problems don't have smooth gradients everywhere, hence even though the problem is convex, these gradient-bases solvers might not converge to the globally optimal solution.</p>

@@ -268,8 +268,11 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a3c3a47e93d564d08b506d18291d5772a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a3c3a47e93d564d08b506d18291d5772a">depth</a> {false}</td></tr>
 <tr class="memdesc:a3c3a47e93d564d08b506d18291d5772a"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, depth images will be produced and published via LCM.  <a href="#a3c3a47e93d564d08b506d18291d5772a">More...</a><br /></td></tr>
 <tr class="separator:a3c3a47e93d564d08b506d18291d5772a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55c0f110c6208ad2fce2eeffb44fe5df"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a55c0f110c6208ad2fce2eeffb44fe5df">label</a> {false}</td></tr>
+<tr class="memdesc:a55c0f110c6208ad2fce2eeffb44fe5df"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, label images will be produced and published via LCM.  <a href="#a55c0f110c6208ad2fce2eeffb44fe5df">More...</a><br /></td></tr>
+<tr class="separator:a55c0f110c6208ad2fce2eeffb44fe5df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9dc0967f9d639aaf80a08151df0e96f3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a9dc0967f9d639aaf80a08151df0e96f3">show_rgb</a> {false}</td></tr>
-<tr class="memdesc:a9dc0967f9d639aaf80a08151df0e96f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls whether the rendered RGB images are displayed (in a separate window controlled by the thread in which the camera images are rendered).  <a href="#a9dc0967f9d639aaf80a08151df0e96f3">More...</a><br /></td></tr>
+<tr class="memdesc:a9dc0967f9d639aaf80a08151df0e96f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls whether the rendered RGB and/or label images are displayed (in separate windows controlled by the thread in which the camera images are rendered).  <a href="#a9dc0967f9d639aaf80a08151df0e96f3">More...</a><br /></td></tr>
 <tr class="separator:a9dc0967f9d639aaf80a08151df0e96f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4489c31400be9adcd1f625f99c48134"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#ad4489c31400be9adcd1f625f99c48134">do_compress</a> {true}</td></tr>
 <tr class="memdesc:ad4489c31400be9adcd1f625f99c48134"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls whether the images are broadcast in a compressed format.  <a href="#ad4489c31400be9adcd1f625f99c48134">More...</a><br /></td></tr>
@@ -623,6 +626,22 @@ Camera intrinsics</h2></td></tr>
 
 </div>
 </div>
+<a id="a55c0f110c6208ad2fce2eeffb44fe5df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55c0f110c6208ad2fce2eeffb44fe5df">&#9670;&nbsp;</a></span>label</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool label {false}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If true, label images will be produced and published via LCM. </p>
+
+</div>
+</div>
 <a id="ad4c6ff118d1301201b7fe48a73a9f0bf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad4c6ff118d1301201b7fe48a73a9f0bf">&#9670;&nbsp;</a></span>lcm_bus</h2>
 
@@ -767,8 +786,8 @@ Camera intrinsics</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Controls whether the rendered RGB images are displayed (in a separate window controlled by the thread in which the camera images are rendered). </p>
-<p>Only applies to color images and depends on whether the RenderEngine instance supports it. </p>
+<p>Controls whether the rendered RGB and/or label images are displayed (in separate windows controlled by the thread in which the camera images are rendered). </p>
+<p>As both image types are rendered from <code>ColorRenderCamera</code>, it applies to both of them and depends on whether the RenderEngine instance supports it. </p>
 
 </div>
 </div>

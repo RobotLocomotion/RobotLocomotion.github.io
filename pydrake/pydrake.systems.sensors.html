@@ -144,8 +144,8 @@
 <dt class="sig sig-object py" id="pydrake.systems.sensors.ApplyCameraConfig">
 <span class="sig-prename descclassname"><span class="pre">pydrake.systems.sensors.</span></span><span class="sig-name descname"><span class="pre">ApplyCameraConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config:</span> <span class="pre">pydrake.systems.sensors.CameraConfig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">builder:</span> <span class="pre">pydrake.systems.framework.DiagramBuilder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lcm_buses:</span> <span class="pre">pydrake.systems.lcm.LcmBuses</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scene_graph:</span> <span class="pre">pydrake.geometry.SceneGraph</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lcm:</span> <span class="pre">pydrake.lcm.DrakeLcmInterface</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.ApplyCameraConfig" title="Permalink to this definition"></a></dt>
 <dd><p>Constructs a simulated camera sensor (rgbd sensor and publishing
-systems) within <code class="docutils literal notranslate"><span class="pre">builder</span></code>. As specified, the RGB and/or depth images
-from the camera are published via <code class="docutils literal notranslate"><span class="pre">lcm</span></code> on the channel
+systems) within <code class="docutils literal notranslate"><span class="pre">builder</span></code>. As specified, the RGB, depth, and/or
+label images from the camera are published via <code class="docutils literal notranslate"><span class="pre">lcm</span></code> on the channel
 <code class="docutils literal notranslate"><span class="pre">DRAKE_RGBD_CAMERA_IMAGES_{camera_config.name}</span></code>.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">config</span></code>:</dt><dd><p>The camera configuration.</p>
@@ -417,6 +417,12 @@ focal length given computation for <code class="docutils literal notranslate"><s
 </dd></dl>
 
 <dl class="py property">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.CameraConfig.label">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">label</span></span><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.label" title="Permalink to this definition"></a></dt>
+<dd><p>If true, label images will be produced and published via LCM.</p>
+</dd></dl>
+
+<dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.CameraConfig.lcm_bus">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lcm_bus</span></span><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.lcm_bus" title="Permalink to this definition"></a></dt>
 <dd><p>Which LCM URL to use.</p>
@@ -611,10 +617,11 @@ renderer_name value.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.CameraConfig.show_rgb">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">show_rgb</span></span><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.show_rgb" title="Permalink to this definition"></a></dt>
-<dd><p>Controls whether the rendered RGB images are displayed (in a separate
-window controlled by the thread in which the camera images are
-rendered). Only applies to color images and depends on whether the
-RenderEngine instance supports it.</p>
+<dd><p>Controls whether the rendered RGB and/or label images are displayed
+(in separate windows controlled by the thread in which the camera
+images are rendered). As both image types are rendered from
+<code class="docutils literal notranslate"><span class="pre">ColorRenderCamera</span></code>, it applies to both of them and depends on
+whether the RenderEngine instance supports it.</p>
 </dd></dl>
 
 <dl class="py property">
