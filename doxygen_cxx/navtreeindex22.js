@@ -1,5 +1,6 @@
 var NAVTREEINDEX22 =
 {
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html":[1,1,0,24],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html#a040b81f85b87c2da89ca72d802975d7b":[1,1,0,24,2],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html#a63969a3ff95f039bca49c87905e30bd1":[1,1,0,24,1],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html#ad3906276b020fabf6c83b599655bb09c":[1,1,0,24,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX22 =
 "classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html#a56e6fe46c8fdccc5a5945f778e80f018":[3,0,0,13,1,5],
 "classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html#a5ce6eb5b762cd581bb03d3a31775d1e1":[3,0,0,13,1,4],
 "classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html#aab9edba21b7a369d72b0334c04bad28e":[3,0,0,13,1,10],
-"classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html#aadc54c9931837db522a3479c0ac0e6ea":[3,0,0,13,1,1],
-"classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html#abaa4fdd81143c893b12349a59a7f5d74":[3,0,0,13,1,8]
+"classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html#aadc54c9931837db522a3479c0ac0e6ea":[3,0,0,13,1,1]
 };

@@ -1959,10 +1959,19 @@ grasping posture, Subgraph B: find a collision-free trajectory for the
 robot with the object in its hand to a placing posture, etc.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.GcsTrajectoryOptimization" title="pydrake.planning.GcsTrajectoryOptimization"><span class="pre">pydrake.planning.GcsTrajectoryOptimization</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_positions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.GcsTrajectoryOptimization" title="pydrake.planning.GcsTrajectoryOptimization"><span class="pre">pydrake.planning.GcsTrajectoryOptimization</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_positions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">continuous_revolute_joints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Constructs the motion planning problem.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">num_positions</span></code>:</dt><dd><p>is the dimension of the configuration space.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">continuous_revolute_joints</span></code>:</dt><dd><p>is a list of indices corresponding to continuous revolute joints,
+i.e., revolute joints which don’t have any joint limits, and hence
+“wrap around” at 2π. Each entry in continuous_revolute_joints must
+be non-negative, less than num_positions, and unique. This feature
+is currently only supported within a single subgraph: continuous
+revolute joints won’t be taken into account when constructing
+edges between subgraphs or checking if sets intersect through a
+subspace.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2069,12 +2078,15 @@ the future.</p>
 <span class="sig-name descname"><span class="pre">AddRegions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.AddRegions" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>AddRegions(self: pydrake.planning.GcsTrajectoryOptimization, regions: List[pydrake.geometry.optimization.ConvexSet], edges_between_regions: List[Tuple[int, int]], order: int, h_min: float = 1e-06, h_max: float = 20, name: str = ‘’) -&gt; pydrake.planning.GcsTrajectoryOptimization.Subgraph</p></li>
+<li><p>AddRegions(self: pydrake.planning.GcsTrajectoryOptimization, regions: List[pydrake.geometry.optimization.ConvexSet], edges_between_regions: List[Tuple[int, int]], order: int, h_min: float = 1e-06, h_max: float = 20, name: str = ‘’, edge_offsets: Optional[List[numpy.ndarray[numpy.float64[m, 1]]]] = None) -&gt; pydrake.planning.GcsTrajectoryOptimization.Subgraph</p></li>
 </ol>
 <p>Creates a Subgraph with the given regions and indices.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">regions</span></code>:</dt><dd><p>represent the valid set a control point can be in. We retain a
-copy of the regions since other functions may access them.</p>
+copy of the regions since other functions may access them. If any
+of the positions represent revolute joints without limits, each
+region has a maximum width of strictly less than π along
+dimensions corresponding to those joints.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">edges_between_regions</span></code>:</dt><dd><p>is a list of pairs of indices into the regions vector. For each
 pair representing an edge between two regions, an edge is added
@@ -2092,7 +2104,22 @@ are only convex for h &gt; 0. For example the perspective quadratic
 cost of the path energy ||ṙ(s)||² / h becomes non-convex for h =
 0. Otherwise h_min can be set to 0.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt><dd><p>is the name of the subgraph. A default name will be provided.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt><dd><p>is the name of the subgraph. If the passed name is an empty
+string, a default name will be provided.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">edge_offsets</span></code>:</dt><dd><p>is an optional list of vectors. If defined, the list must contain
+the same number of entries as edges_between_regions. In other
+words, if defined, there must be one edge offset for each
+specified edge. For each pair of sets listed in
+edges_between_regions, the first set is translated (in
+configuration space) by the corresponding vector in edge_offsets
+before computing the constraints associated to that edge. This is
+used to add edges between sets that “wrap around” 2π along some
+dimension, due to, e.g., a continuous revolute joint. This edge
+offset corresponds to the translation component of the affine map
+τ_uv in equation (11) of “Non-Euclidean Motion Planning with
+Graphs of Geodesically-Convex Sets”, and per the discussion in
+Subsection VI A, τ_uv has no rotation component.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
@@ -2102,7 +2129,10 @@ cost of the path energy ||ṙ(s)||² / h becomes non-convex for h =
 the edges between the regions based on the set intersections.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">regions</span></code>:</dt><dd><p>represent the valid set a control point can be in. We retain a
-copy of the regions since other functions may access them.</p>
+copy of the regions since other functions may access them. If any
+of the positions represent continuous revolute joints, each region
+must have a maximum width of strictly less than π along dimensions
+corresponding to those joints.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">order</span></code>:</dt><dd><p>is the order of the Bézier curve.</p>
 </dd>
@@ -2116,6 +2146,14 @@ cost of the path energy ||ṙ(s)||² / h becomes non-convex for h =
 solvers struggle numerically with large values.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt><dd><p>is the name of the subgraph. A default name will be provided.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if any of the regions has a width of π</strong><strong> or </strong><strong>greater</strong> – </p></li>
+<li><p><strong>along dimensions corresponding to continuous revolute joints.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -2154,6 +2192,12 @@ future.</p>
 <dd class="field-odd"><p><strong>RuntimeError if lb</strong><strong> or </strong><strong>ub are not of size num_positions</strong><strong>(</strong><strong>)</strong><strong></strong> – </p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.continuous_revolute_joints">
+<span class="sig-name descname"><span class="pre">continuous_revolute_joints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.GcsTrajectoryOptimization" title="pydrake.planning.GcsTrajectoryOptimization"><span class="pre">pydrake.planning.GcsTrajectoryOptimization</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.continuous_revolute_joints" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a list of indices corresponding to continuous revolute joints.</p>
 </dd></dl>
 
 <dl class="py class">

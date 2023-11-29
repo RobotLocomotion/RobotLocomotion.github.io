@@ -1,5 +1,6 @@
 var NAVTREEINDEX49 =
 {
+"functions_vars_h.html":[3,3,2,7],
 "functions_vars_i.html":[3,3,2,8],
 "functions_vars_j.html":[3,3,2,9],
 "functions_vars_k.html":[3,3,2,10],
@@ -191,14 +192,14 @@ var NAVTREEINDEX49 =
 "group__default__scalars.html#ga0659aa8320fcb199bb53a153120a4d14":[1,6,1,1],
 "group__default__scalars.html#ga3273477e81e9dcb7d96cfb28382798b6":[4,0,0,1,14,5],
 "group__default__scalars.html#ga3273477e81e9dcb7d96cfb28382798b6":[1,6,1,5],
-"group__default__scalars.html#ga6333534b3097a37c55fbacf434491e2e":[4,0,0,1,14,0],
 "group__default__scalars.html#ga6333534b3097a37c55fbacf434491e2e":[1,6,1,0],
-"group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[1,6,1,4],
+"group__default__scalars.html#ga6333534b3097a37c55fbacf434491e2e":[4,0,0,1,14,0],
 "group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[4,0,0,1,14,4],
+"group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[1,6,1,4],
 "group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[4,0,0,1,14,2],
 "group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[1,6,1,2],
-"group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[1,6,1,3],
 "group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[4,0,0,1,14,3],
+"group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[1,6,1,3],
 "group__discrete__systems.html":[1,2,9],
 "group__discretization.html":[1,3,0,5],
 "group__drake__contacts.html":[1,3,3],
@@ -222,8 +223,8 @@ var NAVTREEINDEX49 =
 "group__geometry__optimization.html#ga3a51e0fec449a0abcf498f78a2a390a8":[1,1,1,14],
 "group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af":[1,5,5,15],
 "group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af":[1,1,1,15],
-"group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6":[1,1,1,13],
 "group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6":[1,5,5,13],
+"group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6":[1,1,1,13],
 "group__geometry__roles.html":[1,5,1],
 "group__hash__append.html":[1,6,2,0],
 "group__hydroelastic__user__guide.html":[1,3,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX49 =
 "group__multibody__spatial__pose.html":[1,0,1,5,0],
 "group__multibody__spatial__vectors.html":[1,0,1,5,1],
 "group__multibody__systems.html":[1,2,7],
-"group__perception__systems.html":[1,2,8],
-"group__planning.html":[1,4,2]
+"group__perception__systems.html":[1,2,8]
 };

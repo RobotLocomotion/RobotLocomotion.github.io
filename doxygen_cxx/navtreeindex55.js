@@ -1,5 +1,6 @@
 var NAVTREEINDEX55 =
 {
+"schunk__wsg__controller_8h.html":[4,0,0,6,2,2],
 "schunk__wsg__driver_8h.html":[4,0,0,6,2,3],
 "schunk__wsg__driver__functions_8h.html":[4,0,0,6,2,4],
 "schunk__wsg__driver__functions_8h.html#a4439da2b643292abc0bbb07129cbd324":[4,0,0,6,2,4,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX55 =
 "static__equilibrium__problem_8h.html":[4,0,0,8,8,8],
 "static__friction__cone__complementarity__constraint_8h.html":[4,0,0,8,8,9],
 "static__friction__cone__complementarity__constraint_8h.html#ga4508ec670196c3fe45e9b52af8a73d4a":[4,0,0,8,8,9,0],
-"static__friction__cone__constraint_8h.html":[4,0,0,8,8,10],
-"stationary__system_8h.html":[4,0,0,12,0,0,17]
+"static__friction__cone__constraint_8h.html":[4,0,0,8,8,10]
 };

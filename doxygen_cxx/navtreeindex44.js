@@ -1,5 +1,6 @@
 var NAVTREEINDEX44 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9145f61319cb888cb71fc58cebc8fe38":[3,0,0,17,5,5],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a923a4ac5ef6f85f444519188d9dbd3e1":[3,0,0,17,5,52],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a97030415f23deb1b1244d33b95c1b0fb":[3,0,0,17,5,45],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9a7863e6bf8a3ccb5335563370305add":[3,0,0,17,5,54],
@@ -248,6 +249,5 @@ var NAVTREEINDEX44 =
 "collision__filter__declaration_8h.html#ad580d9f8e007396af59694d605245253add0cbaa458a6d1a39dfc809377ad2be8":[4,0,0,4,9,1,1],
 "collision__filter__manager_8h.html":[4,0,0,4,10],
 "collisions__exist__callback_8h.html":[4,0,0,4,2,6],
-"color__palette_8h.html":[4,0,0,12,8,6],
-"color__palette_8h.html#a30f975f4523ec7683dd1e04a2291095b":[4,0,0,12,8,6,6]
+"color__palette_8h.html":[4,0,0,12,8,6]
 };

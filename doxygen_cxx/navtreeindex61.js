@@ -1,5 +1,6 @@
 var NAVTREEINDEX61 =
 {
+"symbolic_2polynomial_8h.html#aacc89061cd63bf0e4d0d79c57d3b72e4":[4,0,0,1,3,11,34],
 "symbolic_2polynomial_8h.html#ab04739aabb37142340b869a126cc54a1":[4,0,0,1,3,11,11],
 "symbolic_2polynomial_8h.html#ab66975f1892907d118eb8cb98d6465c7":[4,0,0,1,3,11,16],
 "symbolic_2polynomial_8h.html#ab876f48eb96e82b718df0050b9d57d8b":[4,0,0,1,3,11,29],
@@ -248,6 +249,5 @@ var NAVTREEINDEX61 =
 "yaml__io__options_8h.html":[4,0,0,1,6,2],
 "yaml__node_8h.html":[4,0,0,1,6,3],
 "yaml__read__archive_8h.html":[4,0,0,1,6,4],
-"yaml__write__archive_8h.html":[4,0,0,1,6,5],
-"zero__force__driver_8h.html":[4,0,0,6,3,6]
+"yaml__write__archive_8h.html":[4,0,0,1,6,5]
 };

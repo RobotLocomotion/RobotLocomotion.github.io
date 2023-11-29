@@ -1,5 +1,6 @@
 var NAVTREEINDEX59 =
 {
+"structdrake_1_1solvers_1_1_csdp_solver_details.html#aba4b79949c49a2fcb0e02585d277bd83":[3,0,0,13,13,3],
 "structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html":[3,0,0,13,22,0],
 "structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html#a2ba66ff1f8bcabeda61e465e276e747c":[3,0,0,13,22,0,3],
 "structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html#a70af31c7e36b58a0a371ab585a605ed0":[3,0,0,13,22,0,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX59 =
 "structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html":[3,0,0,15,8,2,0],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html#a5260647c6d73b9af547424968d24da09":[3,0,0,15,8,2,0,0],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,15,8,2,0,2],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html#aa1d16b9fcf585fe75becb5357c74ba72":[3,0,0,15,8,2,0,1],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html#ac5e331dc922e5fcf0083aafe07e3ac0c":[3,0,0,15,8,2,0,3]
+"structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html#aa1d16b9fcf585fe75becb5357c74ba72":[3,0,0,15,8,2,0,1]
 };
