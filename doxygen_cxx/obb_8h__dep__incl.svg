@@ -54,14 +54,14 @@ var sectionId = 'dynsection-1';
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>drake/geometry/proximity/obb.h</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-504 1194.5,-504 1194.5,4 -4,4"/>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-504 1195,-504 1195,4 -4,4"/>
 <!-- Node75 -->
 <g id="node1" class="node">
 <title>Node75</title>
 <g id="a_node1"><a xlink:title=" ">
-<polygon fill="#bfbfbf" stroke="black" points="440,-469.5 440,-499.5 584,-499.5 584,-469.5 440,-469.5"/>
-<text text-anchor="start" x="448" y="-487.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/proximity</text>
-<text text-anchor="middle" x="512" y="-476.5" font-family="Helvetica,sans-Serif" font-size="10.00">/obb.h</text>
+<polygon fill="#bfbfbf" stroke="black" points="255,-469.5 255,-499.5 399,-499.5 399,-469.5 255,-469.5"/>
+<text text-anchor="start" x="263" y="-487.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/proximity</text>
+<text text-anchor="middle" x="327" y="-476.5" font-family="Helvetica,sans-Serif" font-size="10.00">/obb.h</text>
 </a>
 </g>
 </g>
@@ -69,289 +69,295 @@ var sectionId = 'dynsection-1';
 <g id="node2" class="node">
 <title>Node76</title>
 <g id="a_node2"><a xlink:href="bvh_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="440,-402.5 440,-432.5 584,-432.5 584,-402.5 440,-402.5"/>
-<text text-anchor="start" x="448" y="-420.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/proximity</text>
-<text text-anchor="middle" x="512" y="-409.5" font-family="Helvetica,sans-Serif" font-size="10.00">/bvh.h</text>
+<polygon fill="white" stroke="black" points="510,-402.5 510,-432.5 654,-432.5 654,-402.5 510,-402.5"/>
+<text text-anchor="start" x="518" y="-420.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/proximity</text>
+<text text-anchor="middle" x="582" y="-409.5" font-family="Helvetica,sans-Serif" font-size="10.00">/bvh.h</text>
 </a>
 </g>
 </g>
 <!-- Node75&#45;&gt;Node76 -->
 <g id="edge1" class="edge">
 <title>Node75&#45;&gt;Node76</title>
-<path fill="none" stroke="midnightblue" d="M512,-459.11C512,-450.15 512,-440.32 512,-432.58"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="508.5,-459.4 512,-469.4 515.5,-459.4 508.5,-459.4"/>
+<path fill="none" stroke="midnightblue" d="M391.79,-466.98C433.44,-456.37 486.98,-442.72 526.64,-432.61"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="390.84,-463.61 382.02,-469.48 392.57,-470.4 390.84,-463.61"/>
+</g>
+<!-- Node87 -->
+<g id="node13" class="node">
+<title>Node87</title>
+<g id="a_node13"><a xlink:href="field__intersection_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="0,-335.5 0,-365.5 144,-365.5 144,-335.5 0,-335.5"/>
+<text text-anchor="start" x="8" y="-353.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/proximity</text>
+<text text-anchor="middle" x="72" y="-342.5" font-family="Helvetica,sans-Serif" font-size="10.00">/field_intersection.h</text>
+</a>
+</g>
+</g>
+<!-- Node75&#45;&gt;Node87 -->
+<g id="edge24" class="edge">
+<title>Node75&#45;&gt;Node87</title>
+<path fill="none" stroke="midnightblue" d="M290.55,-464.63C238.79,-437.84 145.16,-389.37 99.09,-365.52"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="289.22,-467.88 299.71,-469.37 292.44,-461.67 289.22,-467.88"/>
 </g>
 <!-- Node77 -->
 <g id="node3" class="node">
 <title>Node77</title>
 <g id="a_node3"><a xlink:href="deformable__volume__mesh_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="189.5,-268.5 189.5,-298.5 348.5,-298.5 348.5,-268.5 189.5,-268.5"/>
-<text text-anchor="start" x="197.5" y="-286.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/proximity</text>
-<text text-anchor="middle" x="269" y="-275.5" font-family="Helvetica,sans-Serif" font-size="10.00">/deformable_volume_mesh.h</text>
+<polygon fill="white" stroke="black" points="842.5,-268.5 842.5,-298.5 1001.5,-298.5 1001.5,-268.5 842.5,-268.5"/>
+<text text-anchor="start" x="850.5" y="-286.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/proximity</text>
+<text text-anchor="middle" x="922" y="-275.5" font-family="Helvetica,sans-Serif" font-size="10.00">/deformable_volume_mesh.h</text>
 </a>
 </g>
 </g>
 <!-- Node76&#45;&gt;Node77 -->
 <g id="edge2" class="edge">
 <title>Node76&#45;&gt;Node77</title>
-<path fill="none" stroke="midnightblue" d="M429.56,-415.41C344.01,-412.32 218.51,-401.63 188,-366 166.59,-341 206.43,-314.37 237.46,-298.6"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="429.67,-418.91 439.78,-415.75 429.9,-411.92 429.67,-418.91"/>
+<path fill="none" stroke="midnightblue" d="M664.4,-412.4C780.59,-405.77 980.95,-390.86 1003,-366 1024.91,-341.3 984.64,-314.48 953.43,-298.6"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="663.91,-408.93 654.12,-412.98 664.3,-415.91 663.91,-408.93"/>
 </g>
 <!-- Node83 -->
 <g id="node9" class="node">
 <title>Node83</title>
 <g id="a_node9"><a xlink:href="deformable__mesh__intersection_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="0,-134.5 0,-164.5 180,-164.5 180,-134.5 0,-134.5"/>
-<text text-anchor="start" x="8" y="-152.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/proximity</text>
-<text text-anchor="middle" x="90" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00">/deformable_mesh_intersection.h</text>
+<polygon fill="white" stroke="black" points="1011,-134.5 1011,-164.5 1191,-164.5 1191,-134.5 1011,-134.5"/>
+<text text-anchor="start" x="1019" y="-152.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/proximity</text>
+<text text-anchor="middle" x="1101" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00">/deformable_mesh_intersection.h</text>
 </a>
 </g>
 </g>
 <!-- Node76&#45;&gt;Node83 -->
 <g id="edge15" class="edge">
 <title>Node76&#45;&gt;Node83</title>
-<path fill="none" stroke="midnightblue" d="M429.87,-413.31C343.57,-408.39 215.13,-396.11 177,-366 110.98,-313.87 94.79,-203.71 91.05,-164.62"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="429.74,-416.81 439.91,-413.86 430.12,-409.82 429.74,-416.81"/>
+<path fill="none" stroke="midnightblue" d="M664.57,-417.02C776.14,-416.08 967.28,-408.12 1021,-366 1086.48,-314.66 1098.37,-204 1100.52,-164.7"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="664.33,-413.53 654.36,-417.09 664.38,-420.53 664.33,-413.53"/>
 </g>
 <!-- Node84 -->
 <g id="node10" class="node">
 <title>Node84</title>
 <g id="a_node10"><a xlink:href="bvh__updater_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="197,-335.5 197,-365.5 341,-365.5 341,-335.5 197,-335.5"/>
-<text text-anchor="start" x="205" y="-353.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/proximity</text>
-<text text-anchor="middle" x="269" y="-342.5" font-family="Helvetica,sans-Serif" font-size="10.00">/bvh_updater.h</text>
+<polygon fill="white" stroke="black" points="850,-335.5 850,-365.5 994,-365.5 994,-335.5 850,-335.5"/>
+<text text-anchor="start" x="858" y="-353.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/proximity</text>
+<text text-anchor="middle" x="922" y="-342.5" font-family="Helvetica,sans-Serif" font-size="10.00">/bvh_updater.h</text>
 </a>
 </g>
 </g>
 <!-- Node76&#45;&gt;Node84 -->
 <g id="edge9" class="edge">
 <title>Node76&#45;&gt;Node84</title>
-<path fill="none" stroke="midnightblue" d="M449.75,-399.85C410.14,-389.25 359.39,-375.68 321.75,-365.61"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="449.01,-403.27 459.57,-402.48 450.82,-396.51 449.01,-403.27"/>
+<path fill="none" stroke="midnightblue" d="M664.12,-400.8C720.85,-389.95 795.59,-375.67 850,-365.26"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="663.27,-397.4 654.11,-402.72 664.58,-404.28 663.27,-397.4"/>
 </g>
 <!-- Node85 -->
 <g id="node11" class="node">
 <title>Node85</title>
 <g id="a_node11"><a xlink:href="hydroelastic__internal_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="359,-335.5 359,-365.5 503,-365.5 503,-335.5 359,-335.5"/>
-<text text-anchor="start" x="367" y="-353.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/proximity</text>
-<text text-anchor="middle" x="431" y="-342.5" font-family="Helvetica,sans-Serif" font-size="10.00">/hydroelastic_internal.h</text>
+<polygon fill="white" stroke="black" points="688,-335.5 688,-365.5 832,-365.5 832,-335.5 688,-335.5"/>
+<text text-anchor="start" x="696" y="-353.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/proximity</text>
+<text text-anchor="middle" x="760" y="-342.5" font-family="Helvetica,sans-Serif" font-size="10.00">/hydroelastic_internal.h</text>
 </a>
 </g>
 </g>
 <!-- Node76&#45;&gt;Node85 -->
 <g id="edge11" class="edge">
 <title>Node76&#45;&gt;Node85</title>
-<path fill="none" stroke="midnightblue" d="M486.31,-395.88C474,-386.01 459.57,-374.43 448.54,-365.58"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="484.43,-398.87 494.42,-402.4 488.82,-393.41 484.43,-398.87"/>
-</g>
-<!-- Node87 -->
-<g id="node13" class="node">
-<title>Node87</title>
-<g id="a_node13"><a xlink:href="field__intersection_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="521,-335.5 521,-365.5 665,-365.5 665,-335.5 521,-335.5"/>
-<text text-anchor="start" x="529" y="-353.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/proximity</text>
-<text text-anchor="middle" x="593" y="-342.5" font-family="Helvetica,sans-Serif" font-size="10.00">/field_intersection.h</text>
-</a>
-</g>
+<path fill="none" stroke="midnightblue" d="M630.05,-398.96C658.72,-388.48 694.64,-375.37 721.45,-365.58"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="628.82,-395.68 620.62,-402.4 631.22,-402.25 628.82,-395.68"/>
 </g>
 <!-- Node76&#45;&gt;Node87 -->
 <g id="edge16" class="edge">
 <title>Node76&#45;&gt;Node87</title>
-<path fill="none" stroke="midnightblue" d="M537.69,-395.88C550,-386.01 564.43,-374.43 575.46,-365.58"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="535.18,-393.41 529.58,-402.4 539.57,-398.87 535.18,-393.41"/>
+<path fill="none" stroke="midnightblue" d="M499.7,-408.29C413.19,-399.32 273.24,-383.82 153,-366 150.17,-365.58 147.29,-365.14 144.39,-364.68"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="499.41,-411.78 509.72,-409.33 500.13,-404.82 499.41,-411.78"/>
 </g>
 <!-- Node88 -->
 <g id="node14" class="node">
 <title>Node88</title>
 <g id="a_node14"><a xlink:href="mesh__half__space__intersection_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="683,-335.5 683,-365.5 859,-365.5 859,-335.5 683,-335.5"/>
-<text text-anchor="start" x="691" y="-353.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/proximity</text>
-<text text-anchor="middle" x="771" y="-342.5" font-family="Helvetica,sans-Serif" font-size="10.00">/mesh_half_space_intersection.h</text>
+<polygon fill="white" stroke="black" points="494,-335.5 494,-365.5 670,-365.5 670,-335.5 494,-335.5"/>
+<text text-anchor="start" x="502" y="-353.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/proximity</text>
+<text text-anchor="middle" x="582" y="-342.5" font-family="Helvetica,sans-Serif" font-size="10.00">/mesh_half_space_intersection.h</text>
 </a>
 </g>
 </g>
 <!-- Node76&#45;&gt;Node88 -->
 <g id="edge18" class="edge">
 <title>Node76&#45;&gt;Node88</title>
-<path fill="none" stroke="midnightblue" d="M577.81,-399.98C620.11,-389.37 674.49,-375.72 714.77,-365.61"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="576.73,-396.65 567.88,-402.48 578.43,-403.44 576.73,-396.65"/>
+<path fill="none" stroke="midnightblue" d="M582,-392.11C582,-383.15 582,-373.32 582,-365.58"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="578.5,-392.4 582,-402.4 585.5,-392.4 578.5,-392.4"/>
 </g>
 <!-- Node89 -->
 <g id="node15" class="node">
 <title>Node89</title>
 <g id="a_node15"><a xlink:href="mesh__intersection_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="877,-335.5 877,-365.5 1021,-365.5 1021,-335.5 877,-335.5"/>
-<text text-anchor="start" x="885" y="-353.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/proximity</text>
-<text text-anchor="middle" x="949" y="-342.5" font-family="Helvetica,sans-Serif" font-size="10.00">/mesh_intersection.h</text>
+<polygon fill="white" stroke="black" points="162,-335.5 162,-365.5 306,-365.5 306,-335.5 162,-335.5"/>
+<text text-anchor="start" x="170" y="-353.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/proximity</text>
+<text text-anchor="middle" x="234" y="-342.5" font-family="Helvetica,sans-Serif" font-size="10.00">/mesh_intersection.h</text>
 </a>
 </g>
 </g>
 <!-- Node76&#45;&gt;Node89 -->
 <g id="edge20" class="edge">
 <title>Node76&#45;&gt;Node89</title>
-<path fill="none" stroke="midnightblue" d="M594,-405.73C666.24,-396.03 774.25,-381.04 868,-366 870.82,-365.55 873.7,-365.08 876.6,-364.59"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="593.5,-402.26 584.05,-407.06 594.43,-409.2 593.5,-402.26"/>
+<path fill="none" stroke="midnightblue" d="M499.88,-401.16C441.01,-390.16 362.45,-375.49 306.01,-364.95"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="499.42,-404.64 509.89,-403.03 500.71,-397.76 499.42,-404.64"/>
 </g>
 <!-- Node90 -->
 <g id="node16" class="node">
 <title>Node90</title>
 <g id="a_node16"><a xlink:href="mesh__plane__intersection_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="1039.5,-335.5 1039.5,-365.5 1190.5,-365.5 1190.5,-335.5 1039.5,-335.5"/>
-<text text-anchor="start" x="1047.5" y="-353.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/proximity</text>
-<text text-anchor="middle" x="1115" y="-342.5" font-family="Helvetica,sans-Serif" font-size="10.00">/mesh_plane_intersection.h</text>
+<polygon fill="white" stroke="black" points="324.5,-335.5 324.5,-365.5 475.5,-365.5 475.5,-335.5 324.5,-335.5"/>
+<text text-anchor="start" x="332.5" y="-353.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/proximity</text>
+<text text-anchor="middle" x="400" y="-342.5" font-family="Helvetica,sans-Serif" font-size="10.00">/mesh_plane_intersection.h</text>
 </a>
 </g>
 </g>
 <!-- Node76&#45;&gt;Node90 -->
 <g id="edge22" class="edge">
 <title>Node76&#45;&gt;Node90</title>
-<path fill="none" stroke="midnightblue" d="M594.53,-410.29C696.92,-402.17 876.75,-386.52 1030,-366 1033.12,-365.58 1036.29,-365.14 1039.5,-364.67"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="593.95,-406.83 584.26,-411.1 594.5,-413.81 593.95,-406.83"/>
+<path fill="none" stroke="midnightblue" d="M532.87,-398.96C503.56,-388.48 466.82,-375.37 439.41,-365.58"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="531.91,-402.33 542.51,-402.4 534.27,-395.74 531.91,-402.33"/>
 </g>
 <!-- Node78 -->
 <g id="node4" class="node">
 <title>Node78</title>
 <g id="a_node4"><a xlink:href="deformable__contact__geometries_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="189.5,-201.5 189.5,-231.5 376.5,-231.5 376.5,-201.5 189.5,-201.5"/>
-<text text-anchor="start" x="197.5" y="-219.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/proximity</text>
-<text text-anchor="middle" x="283" y="-208.5" font-family="Helvetica,sans-Serif" font-size="10.00">/deformable_contact_geometries.h</text>
+<polygon fill="white" stroke="black" points="814.5,-201.5 814.5,-231.5 1001.5,-231.5 1001.5,-201.5 814.5,-201.5"/>
+<text text-anchor="start" x="822.5" y="-219.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/proximity</text>
+<text text-anchor="middle" x="908" y="-208.5" font-family="Helvetica,sans-Serif" font-size="10.00">/deformable_contact_geometries.h</text>
 </a>
 </g>
 </g>
 <!-- Node77&#45;&gt;Node78 -->
 <g id="edge3" class="edge">
 <title>Node77&#45;&gt;Node78</title>
-<path fill="none" stroke="midnightblue" d="M274.19,-258.4C276.14,-249.37 278.28,-239.41 279.97,-231.58"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="270.72,-257.88 272.04,-268.4 277.56,-259.36 270.72,-257.88"/>
+<path fill="none" stroke="midnightblue" d="M916.81,-258.4C914.86,-249.37 912.72,-239.41 911.03,-231.58"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="913.44,-259.36 918.96,-268.4 920.28,-257.88 913.44,-259.36"/>
 </g>
 <!-- Node79 -->
 <g id="node5" class="node">
 <title>Node79</title>
 <g id="a_node5"><a xlink:href="deformable__contact__internal_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="198.5,-134.5 198.5,-164.5 367.5,-164.5 367.5,-134.5 198.5,-134.5"/>
-<text text-anchor="start" x="206.5" y="-152.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/proximity</text>
-<text text-anchor="middle" x="283" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00">/deformable_contact_internal.h</text>
+<polygon fill="white" stroke="black" points="823.5,-134.5 823.5,-164.5 992.5,-164.5 992.5,-134.5 823.5,-134.5"/>
+<text text-anchor="start" x="831.5" y="-152.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/proximity</text>
+<text text-anchor="middle" x="908" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00">/deformable_contact_internal.h</text>
 </a>
 </g>
 </g>
 <!-- Node78&#45;&gt;Node79 -->
 <g id="edge4" class="edge">
 <title>Node78&#45;&gt;Node79</title>
-<path fill="none" stroke="midnightblue" d="M283,-191.11C283,-182.15 283,-172.32 283,-164.58"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="279.5,-191.4 283,-201.4 286.5,-191.4 279.5,-191.4"/>
+<path fill="none" stroke="midnightblue" d="M908,-191.11C908,-182.15 908,-172.32 908,-164.58"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="904.5,-191.4 908,-201.4 911.5,-191.4 904.5,-191.4"/>
 </g>
 <!-- Node82 -->
 <g id="node8" class="node">
 <title>Node82</title>
 <g id="a_node8"><a xlink:href="deformable__field__intersection_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="386,-134.5 386,-164.5 560,-164.5 560,-134.5 386,-134.5"/>
-<text text-anchor="start" x="394" y="-152.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/proximity</text>
-<text text-anchor="middle" x="473" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00">/deformable_field_intersection.h</text>
+<polygon fill="white" stroke="black" points="631,-134.5 631,-164.5 805,-164.5 805,-134.5 631,-134.5"/>
+<text text-anchor="start" x="639" y="-152.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/proximity</text>
+<text text-anchor="middle" x="718" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00">/deformable_field_intersection.h</text>
 </a>
 </g>
 </g>
 <!-- Node78&#45;&gt;Node82 -->
 <g id="edge7" class="edge">
 <title>Node78&#45;&gt;Node82</title>
-<path fill="none" stroke="midnightblue" d="M333.89,-198.09C364.56,-187.6 403.11,-174.41 431.85,-164.58"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="332.56,-194.85 324.23,-201.4 334.82,-201.47 332.56,-194.85"/>
+<path fill="none" stroke="midnightblue" d="M857.11,-198.09C826.44,-187.6 787.89,-174.41 759.15,-164.58"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="856.18,-201.47 866.77,-201.4 858.44,-194.85 856.18,-201.47"/>
 </g>
 <!-- Node78&#45;&gt;Node83 -->
 <g id="edge8" class="edge">
 <title>Node78&#45;&gt;Node83</title>
-<path fill="none" stroke="midnightblue" d="M231.31,-198.09C200.16,-187.6 160.99,-174.41 131.8,-164.58"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="230.53,-201.52 241.12,-201.4 232.76,-194.89 230.53,-201.52"/>
+<path fill="none" stroke="midnightblue" d="M959.69,-198.09C990.84,-187.6 1030.01,-174.41 1059.2,-164.58"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="958.24,-194.89 949.88,-201.4 960.47,-201.52 958.24,-194.89"/>
 </g>
 <!-- Node80 -->
 <g id="node6" class="node">
 <title>Node80</title>
 <g id="a_node6"><a xlink:href="proximity__engine_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="363,-67.5 363,-97.5 507,-97.5 507,-67.5 363,-67.5"/>
-<text text-anchor="start" x="371" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/proximity</text>
-<text text-anchor="middle" x="435" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">_engine.h</text>
+<polygon fill="white" stroke="black" points="683,-67.5 683,-97.5 827,-97.5 827,-67.5 683,-67.5"/>
+<text text-anchor="start" x="691" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/proximity</text>
+<text text-anchor="middle" x="755" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">_engine.h</text>
 </a>
 </g>
 </g>
 <!-- Node79&#45;&gt;Node80 -->
 <g id="edge5" class="edge">
 <title>Node79&#45;&gt;Node80</title>
-<path fill="none" stroke="midnightblue" d="M325.31,-130.41C349.58,-120.03 379.59,-107.2 402.08,-97.58"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="323.8,-127.25 315.98,-134.4 326.55,-133.68 323.8,-127.25"/>
+<path fill="none" stroke="midnightblue" d="M865.41,-130.41C840.98,-120.03 810.78,-107.2 788.13,-97.58"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="864.23,-133.71 874.8,-134.4 866.97,-127.26 864.23,-133.71"/>
 </g>
 <!-- Node81 -->
 <g id="node7" class="node">
 <title>Node81</title>
 <g id="a_node7"><a xlink:href="geometry__state_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="363,-0.5 363,-30.5 507,-30.5 507,-0.5 363,-0.5"/>
-<text text-anchor="start" x="371" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/geometry</text>
-<text text-anchor="middle" x="435" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">_state.h</text>
+<polygon fill="white" stroke="black" points="683,-0.5 683,-30.5 827,-30.5 827,-0.5 683,-0.5"/>
+<text text-anchor="start" x="691" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/geometry</text>
+<text text-anchor="middle" x="755" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">_state.h</text>
 </a>
 </g>
 </g>
 <!-- Node80&#45;&gt;Node81 -->
 <g id="edge6" class="edge">
 <title>Node80&#45;&gt;Node81</title>
-<path fill="none" stroke="midnightblue" d="M435,-57.11C435,-48.15 435,-38.32 435,-30.58"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="431.5,-57.4 435,-67.4 438.5,-57.4 431.5,-57.4"/>
+<path fill="none" stroke="midnightblue" d="M755,-57.11C755,-48.15 755,-38.32 755,-30.58"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="751.5,-57.4 755,-67.4 758.5,-57.4 751.5,-57.4"/>
 </g>
 <!-- Node84&#45;&gt;Node77 -->
 <g id="edge10" class="edge">
 <title>Node84&#45;&gt;Node77</title>
-<path fill="none" stroke="midnightblue" d="M269,-325.11C269,-316.15 269,-306.32 269,-298.58"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="265.5,-325.4 269,-335.4 272.5,-325.4 265.5,-325.4"/>
+<path fill="none" stroke="midnightblue" d="M922,-325.11C922,-316.15 922,-306.32 922,-298.58"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="918.5,-325.4 922,-335.4 925.5,-325.4 918.5,-325.4"/>
 </g>
 <!-- Node85&#45;&gt;Node78 -->
 <g id="edge12" class="edge">
 <title>Node85&#45;&gt;Node78</title>
-<path fill="none" stroke="midnightblue" d="M413.76,-327.41C399.74,-310.19 378.93,-286.23 358,-268 342.14,-254.19 322.33,-241 307.06,-231.56"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="411.08,-329.66 420.06,-335.27 416.54,-325.28 411.08,-329.66"/>
+<path fill="none" stroke="midnightblue" d="M777.24,-327.41C791.26,-310.19 812.07,-286.23 833,-268 848.86,-254.19 868.67,-241 883.94,-231.56"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="774.46,-325.28 770.94,-335.27 779.92,-329.66 774.46,-325.28"/>
 </g>
 <!-- Node85&#45;&gt;Node80 -->
 <g id="edge13" class="edge">
 <title>Node85&#45;&gt;Node80</title>
-<path fill="none" stroke="midnightblue" d="M454.48,-328.23C487.54,-296.5 546.33,-233.17 569,-165 573.35,-151.93 576.84,-145.33 569,-134 554.71,-113.35 530.84,-101.13 507.17,-93.91"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="451.92,-325.82 447.05,-335.23 456.73,-330.91 451.92,-325.82"/>
+<path fill="none" stroke="midnightblue" d="M736.52,-328.23C703.46,-296.5 644.67,-233.17 622,-165 617.65,-151.93 614.18,-145.34 622,-134 636.03,-113.67 659.39,-101.52 682.65,-94.26"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="734.27,-330.91 743.95,-335.23 739.08,-325.82 734.27,-330.91"/>
 </g>
 <!-- Node86 -->
 <g id="node12" class="node">
 <title>Node86</title>
 <g id="a_node12"><a xlink:href="hydroelastic__callback_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="699,-268.5 699,-298.5 843,-298.5 843,-268.5 699,-268.5"/>
-<text text-anchor="start" x="707" y="-286.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/proximity</text>
-<text text-anchor="middle" x="771" y="-275.5" font-family="Helvetica,sans-Serif" font-size="10.00">/hydroelastic_callback.h</text>
+<polygon fill="white" stroke="black" points="328,-268.5 328,-298.5 472,-298.5 472,-268.5 328,-268.5"/>
+<text text-anchor="start" x="336" y="-286.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/proximity</text>
+<text text-anchor="middle" x="400" y="-275.5" font-family="Helvetica,sans-Serif" font-size="10.00">/hydroelastic_callback.h</text>
 </a>
 </g>
 </g>
 <!-- Node85&#45;&gt;Node86 -->
 <g id="edge14" class="edge">
 <title>Node85&#45;&gt;Node86</title>
-<path fill="none" stroke="midnightblue" d="M513.12,-333.8C569.85,-322.95 644.59,-308.67 699,-298.26"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="512.27,-330.4 503.11,-335.72 513.58,-337.28 512.27,-330.4"/>
+<path fill="none" stroke="midnightblue" d="M677.45,-334.6C615.54,-323.42 531.59,-308.26 472.3,-297.55"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="677.12,-338.09 687.58,-336.42 678.36,-331.2 677.12,-338.09"/>
 </g>
 <!-- Node87&#45;&gt;Node86 -->
 <g id="edge17" class="edge">
 <title>Node87&#45;&gt;Node86</title>
-<path fill="none" stroke="midnightblue" d="M641.05,-331.96C669.72,-321.48 705.64,-308.37 732.45,-298.58"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="639.82,-328.68 631.62,-335.4 642.22,-335.25 639.82,-328.68"/>
+<path fill="none" stroke="midnightblue" d="M152.66,-333.52C206.7,-322.81 277.18,-308.84 329.08,-298.55"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="151.9,-330.1 142.77,-335.48 153.26,-336.97 151.9,-330.1"/>
 </g>
 <!-- Node88&#45;&gt;Node86 -->
 <g id="edge19" class="edge">
 <title>Node88&#45;&gt;Node86</title>
-<path fill="none" stroke="midnightblue" d="M771,-325.11C771,-316.15 771,-306.32 771,-298.58"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="767.5,-325.4 771,-335.4 774.5,-325.4 767.5,-325.4"/>
+<path fill="none" stroke="midnightblue" d="M532.87,-331.96C503.56,-321.48 466.82,-308.37 439.41,-298.58"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="531.91,-335.33 542.51,-335.4 534.27,-328.74 531.91,-335.33"/>
 </g>
 <!-- Node89&#45;&gt;Node86 -->
 <g id="edge21" class="edge">
 <title>Node89&#45;&gt;Node86</title>
-<path fill="none" stroke="midnightblue" d="M900.95,-331.96C872.28,-321.48 836.36,-308.37 809.55,-298.58"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="899.78,-335.25 910.38,-335.4 902.18,-328.68 899.78,-335.25"/>
+<path fill="none" stroke="midnightblue" d="M279.51,-331.68C306.13,-321.26 339.27,-308.28 364.05,-298.58"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="278.05,-328.49 270.02,-335.4 280.61,-335.01 278.05,-328.49"/>
 </g>
 <!-- Node90&#45;&gt;Node86 -->
 <g id="edge23" class="edge">
 <title>Node90&#45;&gt;Node86</title>
-<path fill="none" stroke="midnightblue" d="M1030.62,-333.56C973.09,-322.69 897.73,-308.45 843.02,-298.11"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1030.3,-337.06 1040.78,-335.48 1031.6,-330.18 1030.3,-337.06"/>
+<path fill="none" stroke="midnightblue" d="M400,-325.11C400,-316.15 400,-306.32 400,-298.58"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="396.5,-325.4 400,-335.4 403.5,-325.4 396.5,-325.4"/>
 </g>
 </g>
 </svg>

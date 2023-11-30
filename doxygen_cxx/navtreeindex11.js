@@ -1,5 +1,6 @@
 var NAVTREEINDEX11 =
 {
+"classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_status_receiver.html#aa76496b85340167f57dc1050db0df711":[1,2,5,4,7],
 "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_status_sender.html":[1,2,5,5],
 "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_status_sender.html#a4f22e7714fd12882a94115e8a61cbceb":[1,2,5,5,1],
 "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_status_sender.html#a71ec23b5b9d1a45e490c54d445c78d94":[1,2,5,5,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX11 =
 "classdrake_1_1math_1_1_rotation_matrix.html#afa3f1ea791e60612a37e57dcf8b4187c":[3,0,0,7,13,32],
 "classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html":[1,1,0,0],
 "classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html#a0b7d46ac767f2268ee98b417dfebe34a":[1,1,0,0,2],
-"classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html#a1efb2de54a80607fd7cac4b6760071bc":[1,1,0,0,1],
-"classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html#a2cf9c73e6f4c40795e1a8bd64ea29e62":[1,1,0,0,4]
+"classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html#a1efb2de54a80607fd7cac4b6760071bc":[1,1,0,0,1]
 };

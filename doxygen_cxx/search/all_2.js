@@ -162,5 +162,6 @@ var searchData=
   ['bushingtester',['BushingTester',['../classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#a636a62839c85c9f4f10aa1cbf5518e4b',1,'drake::multibody::LinearBushingRollPitchYaw']]],
   ['button_5fvalues',['button_values',['../structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html#a28cb55393e1523165dc2b4f624437e29',1,'drake::geometry::Meshcat::Gamepad']]],
   ['bvh_2eh',['bvh.h',['../bvh_8h.html',1,'']]],
-  ['bvh_5fupdater_2eh',['bvh_updater.h',['../bvh__updater_8h.html',1,'']]]
+  ['bvh_5fupdater_2eh',['bvh_updater.h',['../bvh__updater_8h.html',1,'']]],
+  ['bytespan',['ByteSpan',['../structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_byte_span.html',1,'drake::systems::sensors::ImageIo']]]
 ];

@@ -1,0 +1,852 @@
+<!-- HTML header for doxygen 1.8.15-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: ImageIo Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/%2Findex.ipynb">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+ </div>
+</div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classdrake_1_1systems_1_1sensors_1_1_image_io.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="classdrake_1_1systems_1_1sensors_1_1_image_io-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">ImageIo Class Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Utility functions for reading and writing images, from/to either files or memory buffers. </p>
+<p>The only file formats supported are JPEG, PNG, and TIFF.</p>
+<p>The only format that supports floating-point scalars (e.g., ImageDepth32F) is TIFF. Trying to load or save a floating-point image from/to a PNG or JPEG file will throw an exception. </p>
+</div>
+<p><code>#include &lt;drake/systems/sensors/image_io.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_byte_span.html">ByteSpan</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">When loading from memory, this struct denotes a span of raw bytes as input.  <a href="structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_byte_span.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_metadata.html">Metadata</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Some characteristics of an image file.  <a href="structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_metadata.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ab3b70eefb56487eb68dddb7a0e48d436"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_io.html#ab3b70eefb56487eb68dddb7a0e48d436">ImageIo</a> ()=default</td></tr>
+<tr class="memdesc:ab3b70eefb56487eb68dddb7a0e48d436"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="#ab3b70eefb56487eb68dddb7a0e48d436">More...</a><br /></td></tr>
+<tr class="separator:ab3b70eefb56487eb68dddb7a0e48d436"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54efd8806914a88b73d34fc0c22f62e5"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_metadata.html">Metadata</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_io.html#a54efd8806914a88b73d34fc0c22f62e5">LoadMetadata</a> (const std::filesystem::path &amp;path) const</td></tr>
+<tr class="memdesc:a54efd8806914a88b73d34fc0c22f62e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the metadata of the given image file, or nullopt if the metadata cannot be determined or is unsupported.  <a href="#a54efd8806914a88b73d34fc0c22f62e5">More...</a><br /></td></tr>
+<tr class="separator:a54efd8806914a88b73d34fc0c22f62e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69b4ff5a8af5f29aba812aacdc4d9ef2"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_metadata.html">Metadata</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_io.html#a69b4ff5a8af5f29aba812aacdc4d9ef2">LoadMetadata</a> (<a class="el" href="structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_byte_span.html">ByteSpan</a> buffer) const</td></tr>
+<tr class="memdesc:a69b4ff5a8af5f29aba812aacdc4d9ef2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the metadata of the given image buffer, or nullopt if the metadata cannot be determined or is unsupported.  <a href="#a69b4ff5a8af5f29aba812aacdc4d9ef2">More...</a><br /></td></tr>
+<tr class="separator:a69b4ff5a8af5f29aba812aacdc4d9ef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecfa0ef66dac0446bdc8bef8dd3f3bbc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a55abb5b27de2a851f766d8faaa6ee9fe">ImageAny</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_io.html#aecfa0ef66dac0446bdc8bef8dd3f3bbc">Load</a> (const std::filesystem::path &amp;path, std::optional&lt; <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#aec0f265ffb95497b48b9e1989da0f7e3">ImageFileFormat</a> &gt; format=std::nullopt) const</td></tr>
+<tr class="memdesc:aecfa0ef66dac0446bdc8bef8dd3f3bbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads and returns an image from disk.  <a href="#aecfa0ef66dac0446bdc8bef8dd3f3bbc">More...</a><br /></td></tr>
+<tr class="separator:aecfa0ef66dac0446bdc8bef8dd3f3bbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a096d5dcfc84429a709d4b012ed39d325"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a55abb5b27de2a851f766d8faaa6ee9fe">ImageAny</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_io.html#a096d5dcfc84429a709d4b012ed39d325">Load</a> (<a class="el" href="structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_byte_span.html">ByteSpan</a> buffer, std::optional&lt; <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#aec0f265ffb95497b48b9e1989da0f7e3">ImageFileFormat</a> &gt; format=std::nullopt) const</td></tr>
+<tr class="memdesc:a096d5dcfc84429a709d4b012ed39d325"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads and returns an image from a memory buffer.  <a href="#a096d5dcfc84429a709d4b012ed39d325">More...</a><br /></td></tr>
+<tr class="separator:a096d5dcfc84429a709d4b012ed39d325"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f9c6e229e909f2b46e07afa668b0ad7"><td class="memTemplParams" colspan="2">template&lt;PixelType kPixelType&gt; </td></tr>
+<tr class="memitem:a0f9c6e229e909f2b46e07afa668b0ad7"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_io.html#a0f9c6e229e909f2b46e07afa668b0ad7">Load</a> (const std::filesystem::path &amp;path, <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image.html">Image</a>&lt; kPixelType &gt; *image) const</td></tr>
+<tr class="memdesc:a0f9c6e229e909f2b46e07afa668b0ad7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads and outputs an image from disk.  <a href="#a0f9c6e229e909f2b46e07afa668b0ad7">More...</a><br /></td></tr>
+<tr class="separator:a0f9c6e229e909f2b46e07afa668b0ad7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a120b415b19d67ad56d9eeb5517a98e9d"><td class="memTemplParams" colspan="2">template&lt;PixelType kPixelType&gt; </td></tr>
+<tr class="memitem:a120b415b19d67ad56d9eeb5517a98e9d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_io.html#a120b415b19d67ad56d9eeb5517a98e9d">Load</a> (const std::filesystem::path &amp;path, <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#aec0f265ffb95497b48b9e1989da0f7e3">ImageFileFormat</a> format, <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image.html">Image</a>&lt; kPixelType &gt; *image) const</td></tr>
+<tr class="memdesc:a120b415b19d67ad56d9eeb5517a98e9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads and outputs an image from disk.  <a href="#a120b415b19d67ad56d9eeb5517a98e9d">More...</a><br /></td></tr>
+<tr class="separator:a120b415b19d67ad56d9eeb5517a98e9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d07e12dd2fab1d144bf4f3c9882004b"><td class="memTemplParams" colspan="2">template&lt;PixelType kPixelType&gt; </td></tr>
+<tr class="memitem:a2d07e12dd2fab1d144bf4f3c9882004b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_io.html#a2d07e12dd2fab1d144bf4f3c9882004b">Load</a> (<a class="el" href="structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_byte_span.html">ByteSpan</a> buffer, <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image.html">Image</a>&lt; kPixelType &gt; *image) const</td></tr>
+<tr class="memdesc:a2d07e12dd2fab1d144bf4f3c9882004b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads and outputs an image from a memory buffer.  <a href="#a2d07e12dd2fab1d144bf4f3c9882004b">More...</a><br /></td></tr>
+<tr class="separator:a2d07e12dd2fab1d144bf4f3c9882004b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ca5425adb1065169a9fffe914d99f79"><td class="memTemplParams" colspan="2">template&lt;PixelType kPixelType&gt; </td></tr>
+<tr class="memitem:a5ca5425adb1065169a9fffe914d99f79"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_io.html#a5ca5425adb1065169a9fffe914d99f79">Load</a> (<a class="el" href="structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_byte_span.html">ByteSpan</a> buffer, <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#aec0f265ffb95497b48b9e1989da0f7e3">ImageFileFormat</a> format, <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image.html">Image</a>&lt; kPixelType &gt; *image) const</td></tr>
+<tr class="memdesc:a5ca5425adb1065169a9fffe914d99f79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads and outputs an image from a memory buffer.  <a href="#a5ca5425adb1065169a9fffe914d99f79">More...</a><br /></td></tr>
+<tr class="separator:a5ca5425adb1065169a9fffe914d99f79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75158bdb025980d0dc9b91a56ec8f5fd"><td class="memTemplParams" colspan="2">template&lt;PixelType kPixelType&gt; </td></tr>
+<tr class="memitem:a75158bdb025980d0dc9b91a56ec8f5fd"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_io.html#a75158bdb025980d0dc9b91a56ec8f5fd">Save</a> (const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image.html">Image</a>&lt; kPixelType &gt; &amp;image, const std::filesystem::path &amp;path, std::optional&lt; <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#aec0f265ffb95497b48b9e1989da0f7e3">ImageFileFormat</a> &gt; format=std::nullopt) const</td></tr>
+<tr class="memdesc:a75158bdb025980d0dc9b91a56ec8f5fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves an image to disk.  <a href="#a75158bdb025980d0dc9b91a56ec8f5fd">More...</a><br /></td></tr>
+<tr class="separator:a75158bdb025980d0dc9b91a56ec8f5fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a879348624bdbe042c6d78f2bb6eb525b"><td class="memTemplParams" colspan="2">template&lt;PixelType kPixelType&gt; </td></tr>
+<tr class="memitem:a879348624bdbe042c6d78f2bb6eb525b"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; uint8_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_io.html#a879348624bdbe042c6d78f2bb6eb525b">Save</a> (const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image.html">Image</a>&lt; kPixelType &gt; &amp;image, <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#aec0f265ffb95497b48b9e1989da0f7e3">ImageFileFormat</a> format) const</td></tr>
+<tr class="memdesc:a879348624bdbe042c6d78f2bb6eb525b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves an image to a new memory buffer, returning the buffer.  <a href="#a879348624bdbe042c6d78f2bb6eb525b">More...</a><br /></td></tr>
+<tr class="separator:a879348624bdbe042c6d78f2bb6eb525b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21d02063514fa3c5d10c619fb835319c"><td class="memTemplParams" colspan="2">template&lt;PixelType kPixelType&gt; </td></tr>
+<tr class="memitem:a21d02063514fa3c5d10c619fb835319c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_io.html#a21d02063514fa3c5d10c619fb835319c">Save</a> (const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image.html">Image</a>&lt; kPixelType &gt; &amp;image, <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#aec0f265ffb95497b48b9e1989da0f7e3">ImageFileFormat</a> format, std::vector&lt; uint8_t &gt; *buffer) const</td></tr>
+<tr class="memdesc:a21d02063514fa3c5d10c619fb835319c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves an image to an existing memory buffer.  <a href="#a21d02063514fa3c5d10c619fb835319c">More...</a><br /></td></tr>
+<tr class="separator:a21d02063514fa3c5d10c619fb835319c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
+<tr class="memitem:a0d3b574d360af1cd0cae88c46e3dbb3c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_io.html#a0d3b574d360af1cd0cae88c46e3dbb3c">ImageIo</a> (const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_io.html">ImageIo</a> &amp;)=delete</td></tr>
+<tr class="separator:a0d3b574d360af1cd0cae88c46e3dbb3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaaa38f205ae72ecf7933b06be50fffd9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_io.html">ImageIo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_io.html#aaaa38f205ae72ecf7933b06be50fffd9">operator=</a> (const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_io.html">ImageIo</a> &amp;)=delete</td></tr>
+<tr class="separator:aaaa38f205ae72ecf7933b06be50fffd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a1d61e4ac9cb79b7964af2570971549"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_io.html#a4a1d61e4ac9cb79b7964af2570971549">ImageIo</a> (<a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_io.html">ImageIo</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a4a1d61e4ac9cb79b7964af2570971549"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c449f3a3cccc1414dd1a85ad50463c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_io.html">ImageIo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_io.html#a3c449f3a3cccc1414dd1a85ad50463c5">operator=</a> (<a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_io.html">ImageIo</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a3c449f3a3cccc1414dd1a85ad50463c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a0d3b574d360af1cd0cae88c46e3dbb3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d3b574d360af1cd0cae88c46e3dbb3c">&#9670;&nbsp;</a></span>ImageIo() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_io.html">ImageIo</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_io.html">ImageIo</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4a1d61e4ac9cb79b7964af2570971549"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a1d61e4ac9cb79b7964af2570971549">&#9670;&nbsp;</a></span>ImageIo() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_io.html">ImageIo</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_io.html">ImageIo</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab3b70eefb56487eb68dddb7a0e48d436"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3b70eefb56487eb68dddb7a0e48d436">&#9670;&nbsp;</a></span>ImageIo() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_io.html">ImageIo</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Default constructor. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aecfa0ef66dac0446bdc8bef8dd3f3bbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecfa0ef66dac0446bdc8bef8dd3f3bbc">&#9670;&nbsp;</a></span>Load() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a55abb5b27de2a851f766d8faaa6ee9fe">ImageAny</a> Load </td>
+          <td>(</td>
+          <td class="paramtype">const std::filesystem::path &amp;&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#aec0f265ffb95497b48b9e1989da0f7e3">ImageFileFormat</a> &gt;&#160;</td>
+          <td class="paramname"><em>format</em> = <code>std::nullopt</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Loads and returns an image from disk. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td>(Optionally) establishes the required image file format. When set, images that are a different file format will throw an exception. When not set, the filename extension has no bearing on the result; only the actual file contents determine the file format. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>for any kind of error loading the image file. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a096d5dcfc84429a709d4b012ed39d325"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a096d5dcfc84429a709d4b012ed39d325">&#9670;&nbsp;</a></span>Load() <span class="overload">[2/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a55abb5b27de2a851f766d8faaa6ee9fe">ImageAny</a> Load </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_byte_span.html">ByteSpan</a>&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#aec0f265ffb95497b48b9e1989da0f7e3">ImageFileFormat</a> &gt;&#160;</td>
+          <td class="paramname"><em>format</em> = <code>std::nullopt</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Loads and returns an image from a memory buffer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td>(Optionally) establishes the required image file format. When set, images that are a different file format will throw an exception. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>for any kind of error loading the image data. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0f9c6e229e909f2b46e07afa668b0ad7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f9c6e229e909f2b46e07afa668b0ad7">&#9670;&nbsp;</a></span>Load() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Load </td>
+          <td>(</td>
+          <td class="paramtype">const std::filesystem::path &amp;&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image.html">Image</a>&lt; kPixelType &gt; *&#160;</td>
+          <td class="paramname"><em>image</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Loads and outputs an image from disk. </p>
+<p>The filename extension has no bearing on the result; only the actual file contents determine the file format. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">image</td><td>The output image (which will be overwritten). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>for any kind of error loading the image file. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the loaded image does not match the kPixelType. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a120b415b19d67ad56d9eeb5517a98e9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a120b415b19d67ad56d9eeb5517a98e9d">&#9670;&nbsp;</a></span>Load() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Load </td>
+          <td>(</td>
+          <td class="paramtype">const std::filesystem::path &amp;&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#aec0f265ffb95497b48b9e1989da0f7e3">ImageFileFormat</a>&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image.html">Image</a>&lt; kPixelType &gt; *&#160;</td>
+          <td class="paramname"><em>image</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Loads and outputs an image from disk. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">format</td><td>Establishes the required image file format; images that are a different file format will throw an exception. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">image</td><td>The output image (which will be overwritten). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>for any kind of error loading the image file. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the loaded image does not match the kPixelType. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2d07e12dd2fab1d144bf4f3c9882004b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d07e12dd2fab1d144bf4f3c9882004b">&#9670;&nbsp;</a></span>Load() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Load </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_byte_span.html">ByteSpan</a>&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image.html">Image</a>&lt; kPixelType &gt; *&#160;</td>
+          <td class="paramname"><em>image</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Loads and outputs an image from a memory buffer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">image</td><td>The output image (which will be overwritten). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>for any kind of error loading the image data. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the loaded image does not match the kPixelType. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5ca5425adb1065169a9fffe914d99f79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ca5425adb1065169a9fffe914d99f79">&#9670;&nbsp;</a></span>Load() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Load </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_byte_span.html">ByteSpan</a>&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#aec0f265ffb95497b48b9e1989da0f7e3">ImageFileFormat</a>&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image.html">Image</a>&lt; kPixelType &gt; *&#160;</td>
+          <td class="paramname"><em>image</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Loads and outputs an image from a memory buffer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">format</td><td>Establishes the required image file format; images that are a different file format will throw an exception. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">image</td><td>The output image (which will be overwritten). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>for any kind of error loading the image data. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the loaded image does not match the kPixelType. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a54efd8806914a88b73d34fc0c22f62e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54efd8806914a88b73d34fc0c22f62e5">&#9670;&nbsp;</a></span>LoadMetadata() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;<a class="el" href="structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_metadata.html">Metadata</a>&gt; LoadMetadata </td>
+          <td>(</td>
+          <td class="paramtype">const std::filesystem::path &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the metadata of the given image file, or nullopt if the metadata cannot be determined or is unsupported. </p>
+<p>The filename extension has no bearing on the result; only the actual file contents determine the file format. </p>
+
+</div>
+</div>
+<a id="a69b4ff5a8af5f29aba812aacdc4d9ef2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69b4ff5a8af5f29aba812aacdc4d9ef2">&#9670;&nbsp;</a></span>LoadMetadata() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;<a class="el" href="structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_metadata.html">Metadata</a>&gt; LoadMetadata </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_byte_span.html">ByteSpan</a>&#160;</td>
+          <td class="paramname"><em>buffer</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the metadata of the given image buffer, or nullopt if the metadata cannot be determined or is unsupported. </p>
+
+</div>
+</div>
+<a id="a3c449f3a3cccc1414dd1a85ad50463c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c449f3a3cccc1414dd1a85ad50463c5">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_io.html">ImageIo</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_io.html">ImageIo</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaaa38f205ae72ecf7933b06be50fffd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaaa38f205ae72ecf7933b06be50fffd9">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_io.html">ImageIo</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_io.html">ImageIo</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a75158bdb025980d0dc9b91a56ec8f5fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75158bdb025980d0dc9b91a56ec8f5fd">&#9670;&nbsp;</a></span>Save() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Save </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image.html">Image</a>&lt; kPixelType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::filesystem::path &amp;&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#aec0f265ffb95497b48b9e1989da0f7e3">ImageFileFormat</a> &gt;&#160;</td>
+          <td class="paramname"><em>format</em> = <code>std::nullopt</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Saves an image to disk. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td>(Optionally) chooses the image file format. When not set, the filename extension will determine the format and the extension must be a supported choice (i.e., <code>.jpg</code>, <code>.jpeg</code>, <code>.png</code>, <code>.tif</code>, or <code>.tiff</code>). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>for any kind of error saving the image file. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a879348624bdbe042c6d78f2bb6eb525b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a879348624bdbe042c6d78f2bb6eb525b">&#9670;&nbsp;</a></span>Save() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;uint8_t&gt; Save </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image.html">Image</a>&lt; kPixelType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#aec0f265ffb95497b48b9e1989da0f7e3">ImageFileFormat</a>&#160;</td>
+          <td class="paramname"><em>format</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Saves an image to a new memory buffer, returning the buffer. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>for any kind of error saving the image data. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a21d02063514fa3c5d10c619fb835319c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21d02063514fa3c5d10c619fb835319c">&#9670;&nbsp;</a></span>Save() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Save </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image.html">Image</a>&lt; kPixelType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#aec0f265ffb95497b48b9e1989da0f7e3">ImageFileFormat</a>&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; uint8_t &gt; *&#160;</td>
+          <td class="paramname"><em>buffer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Saves an image to an existing memory buffer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">buffer</td><td>The output buffer (which will be overwritten). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>for any kind of error saving the image data. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/systems/sensors/<a class="el" href="image__io_8h.html">image_io.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a class="el" href="namespacedrake.html">drake</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1systems.html">systems</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html">sensors</a></li><li class="navelem"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_io.html">ImageIo</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>    
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>    
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().value = searchBox.searchLabel;
+</script>
+</body>
+</html>

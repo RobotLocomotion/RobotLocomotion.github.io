@@ -31,6 +31,7 @@ var classdrake_1_1geometry_1_1_meshcat =
     [ "GetRealtimeRate", "classdrake_1_1geometry_1_1_meshcat.html#ae5c20c156d9affc723055d0384137c44", null ],
     [ "GetSliderNames", "classdrake_1_1geometry_1_1_meshcat.html#a9467e50cd74bd9b61b47d1b4d329f4df", null ],
     [ "GetSliderValue", "classdrake_1_1geometry_1_1_meshcat.html#ad1fcf0c27e47f09c7e05c1b700988cdd", null ],
+    [ "GetTrackedCameraPose", "classdrake_1_1geometry_1_1_meshcat.html#aa084d1c8823202e80de3453671a7a504", null ],
     [ "HasPath", "classdrake_1_1geometry_1_1_meshcat.html#ae40769135bba976dde79af9499e8d000", null ],
     [ "operator=", "classdrake_1_1geometry_1_1_meshcat.html#a37b1b4538dd47e4dc5fd9c671454b4d2", null ],
     [ "operator=", "classdrake_1_1geometry_1_1_meshcat.html#ac40bc1b2063091ffce4741216b559b53", null ],

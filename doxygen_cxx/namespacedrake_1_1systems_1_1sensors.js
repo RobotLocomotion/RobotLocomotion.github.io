@@ -8,6 +8,7 @@ var namespacedrake_1_1systems_1_1sensors =
     [ "ColorPalette", "classdrake_1_1systems_1_1sensors_1_1_color_palette.html", "classdrake_1_1systems_1_1sensors_1_1_color_palette" ],
     [ "Gyroscope", "classdrake_1_1systems_1_1sensors_1_1_gyroscope.html", "classdrake_1_1systems_1_1sensors_1_1_gyroscope" ],
     [ "Image", "classdrake_1_1systems_1_1sensors_1_1_image.html", "classdrake_1_1systems_1_1sensors_1_1_image" ],
+    [ "ImageIo", "classdrake_1_1systems_1_1sensors_1_1_image_io.html", "classdrake_1_1systems_1_1sensors_1_1_image_io" ],
     [ "ImageToLcmImageArrayT", "classdrake_1_1systems_1_1sensors_1_1_image_to_lcm_image_array_t.html", "classdrake_1_1systems_1_1sensors_1_1_image_to_lcm_image_array_t" ],
     [ "ImageTraits", "structdrake_1_1systems_1_1sensors_1_1_image_traits.html", null ],
     [ "ImageTraits< PixelType::kBgr8U >", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_bgr8_u_01_4.html", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_bgr8_u_01_4" ],

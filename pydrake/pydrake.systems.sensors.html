@@ -1733,6 +1733,150 @@ channels in a pixel</p>
 <dd><p>alias of <a class="reference internal" href="#pydrake.systems.sensors.Image-PixelType.kGrey8U" title="pydrake.systems.sensors.Image[PixelType.kGrey8U]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.sensors.Image[PixelType.kGrey8U]</span></code></a></p>
 </dd></dl>
 
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageIo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.sensors.</span></span><span class="sig-name descname"><span class="pre">ImageIo</span></span><a class="headerlink" href="#pydrake.systems.sensors.ImageIo" title="Permalink to this definition"></a></dt>
+<dd><p>Utility functions for reading and writing images, from/to either files
+or memory buffers.</p>
+<p>The only file formats supported are JPEG, PNG, and TIFF.</p>
+<p>The only format that supports floating-point scalars (e.g.,
+ImageDepth32F) is TIFF. Trying to load or save a floating-point image
+from/to a PNG or JPEG file will throw an exception.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageIo.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.ImageIo" title="pydrake.systems.sensors.ImageIo"><span class="pre">pydrake.systems.sensors.ImageIo</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.ImageIo.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Default constructor.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageIo.Load">
+<span class="sig-name descname"><span class="pre">Load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.sensors.ImageIo.Load" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>Load(self: pydrake.systems.sensors.ImageIo, path: os.PathLike, format: Optional[pydrake.systems.sensors.ImageFileFormat] = None) -&gt; Union[pydrake.systems.sensors.Image[PixelType.kBgr8U], pydrake.systems.sensors.Image[PixelType.kBgra8U], pydrake.systems.sensors.Image[PixelType.kDepth16U], pydrake.systems.sensors.Image[PixelType.kDepth32F], pydrake.systems.sensors.Image[PixelType.kGrey8U], pydrake.systems.sensors.Image[PixelType.kRgb8U], pydrake.systems.sensors.Image[PixelType.kRgba8U], pydrake.systems.sensors.Image[PixelType.kLabel16I]]</p></li>
+</ol>
+<p>Loads and returns an image from disk.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">format</span></code>:</dt><dd><p>(Optionally) establishes the required image file format. When set,
+images that are a different file format will throw an exception.
+When not set, the filename extension has no bearing on the result;
+only the actual file contents determine the file format.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError for any kind of error loading the image file.</strong> – </p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>Load(self: pydrake.systems.sensors.ImageIo, buffer: bytes, format: Optional[pydrake.systems.sensors.ImageFileFormat] = None) -&gt; Union[pydrake.systems.sensors.Image[PixelType.kBgr8U], pydrake.systems.sensors.Image[PixelType.kBgra8U], pydrake.systems.sensors.Image[PixelType.kDepth16U], pydrake.systems.sensors.Image[PixelType.kDepth32F], pydrake.systems.sensors.Image[PixelType.kGrey8U], pydrake.systems.sensors.Image[PixelType.kRgb8U], pydrake.systems.sensors.Image[PixelType.kRgba8U], pydrake.systems.sensors.Image[PixelType.kLabel16I]]</p></li>
+</ol>
+<p>Loads and returns an image from a memory buffer.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">format</span></code>:</dt><dd><p>(Optionally) establishes the required image file format. When set,
+images that are a different file format will throw an exception.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError for any kind of error loading the image data.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageIo.LoadMetadata">
+<span class="sig-name descname"><span class="pre">LoadMetadata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.sensors.ImageIo.LoadMetadata" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>LoadMetadata(self: pydrake.systems.sensors.ImageIo, path: os.PathLike) -&gt; Optional[pydrake.systems.sensors.ImageIo.Metadata]</p></li>
+</ol>
+<p>Returns the metadata of the given image file, or nullopt if the
+metadata cannot be determined or is unsupported. The filename
+extension has no bearing on the result; only the actual file contents
+determine the file format.</p>
+<ol class="arabic simple" start="2">
+<li><p>LoadMetadata(self: pydrake.systems.sensors.ImageIo, buffer: bytes) -&gt; Optional[pydrake.systems.sensors.ImageIo.Metadata]</p></li>
+</ol>
+<p>Returns the metadata of the given image buffer, or nullopt if the
+metadata cannot be determined or is unsupported.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageIo.Metadata">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Metadata</span></span><a class="headerlink" href="#pydrake.systems.sensors.ImageIo.Metadata" title="Permalink to this definition"></a></dt>
+<dd><p>Some characteristics of an image file. Note that Drake’s Image&lt;&gt; class
+can only express <code class="docutils literal notranslate"><span class="pre">depth</span> <span class="pre">==</span> <span class="pre">1</span></code>.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageIo.Metadata.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.ImageIo.Metadata" title="pydrake.systems.sensors.ImageIo.Metadata"><span class="pre">pydrake.systems.sensors.ImageIo.Metadata</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.ImageIo.Metadata.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageIo.Metadata.channels">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">channels</span></span><a class="headerlink" href="#pydrake.systems.sensors.ImageIo.Metadata.channels" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageIo.Metadata.depth">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">depth</span></span><a class="headerlink" href="#pydrake.systems.sensors.ImageIo.Metadata.depth" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageIo.Metadata.format">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">format</span></span><a class="headerlink" href="#pydrake.systems.sensors.ImageIo.Metadata.format" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageIo.Metadata.height">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">height</span></span><a class="headerlink" href="#pydrake.systems.sensors.ImageIo.Metadata.height" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageIo.Metadata.scalar">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">scalar</span></span><a class="headerlink" href="#pydrake.systems.sensors.ImageIo.Metadata.scalar" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageIo.Metadata.width">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">width</span></span><a class="headerlink" href="#pydrake.systems.sensors.ImageIo.Metadata.width" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.ImageIo.Save">
+<span class="sig-name descname"><span class="pre">Save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.sensors.ImageIo.Save" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>Save(self: pydrake.systems.sensors.ImageIo, image: Union[pydrake.systems.sensors.Image[PixelType.kBgr8U], pydrake.systems.sensors.Image[PixelType.kBgra8U], pydrake.systems.sensors.Image[PixelType.kDepth16U], pydrake.systems.sensors.Image[PixelType.kDepth32F], pydrake.systems.sensors.Image[PixelType.kGrey8U], pydrake.systems.sensors.Image[PixelType.kRgb8U], pydrake.systems.sensors.Image[PixelType.kRgba8U], pydrake.systems.sensors.Image[PixelType.kLabel16I]], path: os.PathLike, format: Optional[pydrake.systems.sensors.ImageFileFormat] = None) -&gt; None</p></li>
+</ol>
+<p>Saves an image to disk.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">format</span></code>:</dt><dd><p>(Optionally) chooses the image file format. When not set, the
+filename extension will determine the format and the extension
+must be a supported choice (i.e., <code class="docutils literal notranslate"><span class="pre">.jpg</span></code>, <cite>.jpeg</cite>, <code class="docutils literal notranslate"><span class="pre">.png</span></code>,
+<cite>.tif</cite>, or <code class="docutils literal notranslate"><span class="pre">.tiff</span></code>).</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError for any kind of error saving the image file.</strong> – </p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>Save(self: pydrake.systems.sensors.ImageIo, image: Union[pydrake.systems.sensors.Image[PixelType.kBgr8U], pydrake.systems.sensors.Image[PixelType.kBgra8U], pydrake.systems.sensors.Image[PixelType.kDepth16U], pydrake.systems.sensors.Image[PixelType.kDepth32F], pydrake.systems.sensors.Image[PixelType.kGrey8U], pydrake.systems.sensors.Image[PixelType.kRgb8U], pydrake.systems.sensors.Image[PixelType.kRgba8U], pydrake.systems.sensors.Image[PixelType.kLabel16I]], format: pydrake.systems.sensors.ImageFileFormat) -&gt; bytes</p></li>
+</ol>
+<p>Saves an image to a new memory buffer, returning the buffer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError for any kind of error saving the image data.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.ImageLabel16I">
 <span class="sig-prename descclassname"><span class="pre">pydrake.systems.sensors.</span></span><span class="sig-name descname"><span class="pre">ImageLabel16I</span></span><a class="headerlink" href="#pydrake.systems.sensors.ImageLabel16I" title="Permalink to this definition"></a></dt>

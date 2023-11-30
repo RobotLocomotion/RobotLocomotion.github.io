@@ -301,6 +301,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab54373b0959cc8b3fa4f8cb8c02b742a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#ab54373b0959cc8b3fa4f8cb8c02b742a">SetCameraPose</a> (const Eigen::Vector3d &amp;camera_in_world, const Eigen::Vector3d &amp;target_in_world)</td></tr>
 <tr class="memdesc:ab54373b0959cc8b3fa4f8cb8c02b742a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A convenience function for positioning the camera and its view target in the world frame.  <a href="#ab54373b0959cc8b3fa4f8cb8c02b742a">More...</a><br /></td></tr>
 <tr class="separator:ab54373b0959cc8b3fa4f8cb8c02b742a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa084d1c8823202e80de3453671a7a504"><td class="memItemLeft" align="right" valign="top">std::optional&lt; math::RigidTransformd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#aa084d1c8823202e80de3453671a7a504">GetTrackedCameraPose</a> () const</td></tr>
+<tr class="memdesc:aa084d1c8823202e80de3453671a7a504"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the most recently received camera pose.  <a href="#aa084d1c8823202e80de3453671a7a504">More...</a><br /></td></tr>
+<tr class="separator:aa084d1c8823202e80de3453671a7a504"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46b83a319d679595b5b30a39f448e5c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a46b83a319d679595b5b30a39f448e5c3">SetTransform</a> (std::string_view path, const math::RigidTransformd &amp;X_ParentPath, const std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;time_in_recording=std::nullopt)</td></tr>
 <tr class="memdesc:a46b83a319d679595b5b30a39f448e5c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the RigidTransform for a given path in the scene tree relative to its parent path.  <a href="#a46b83a319d679595b5b30a39f448e5c3">More...</a><br /></td></tr>
 <tr class="separator:a46b83a319d679595b5b30a39f448e5c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1020,6 +1023,34 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="aa084d1c8823202e80de3453671a7a504"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa084d1c8823202e80de3453671a7a504">&#9670;&nbsp;</a></span>GetTrackedCameraPose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;math::RigidTransformd&gt; GetTrackedCameraPose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the most recently received camera pose. </p>
+<p>A meshcat browser session can be configured to transmit its camera pose. It is enabled by appending a url parameter. For example, if the url for the meshcat server is: </p><pre class="fragment">http://localhost:7000
+</pre><p>A particular browser can be configured to transmit its camera pose back to Drake by supplying the following url: </p><pre class="fragment">http://localhost:7000/?tracked_camera=on
+</pre><p>It is possible to use that URL in multiple browsers simultaneously. A particular view will only transmit its camera position when its camera position actually <em>changes</em>. As such, the returned camera pose will reflect the pose of the camera from that most-recently manipulated browser.</p>
+<p>std::nullopt is returned if:</p>
+<ul>
+<li>No meshcat session has transmitted its camera pose.</li>
+<li>The meshcat session that last transmitted its pose is no longer connected.</li>
+<li>The meshcat session transmitting has an orthographic camera. </li>
+</ul>
 
 </div>
 </div>

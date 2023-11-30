@@ -15,6 +15,7 @@ var searchData=
   ['ikcartesianwaypoint',['IkCartesianWaypoint',['../structdrake_1_1multibody_1_1_constraint_relaxing_ik_1_1_ik_cartesian_waypoint.html',1,'drake::multibody::ConstraintRelaxingIk']]],
   ['illustrationproperties',['IllustrationProperties',['../classdrake_1_1geometry_1_1_illustration_properties.html',1,'drake::geometry']]],
   ['image',['Image',['../classdrake_1_1systems_1_1sensors_1_1_image.html',1,'drake::systems::sensors']]],
+  ['imageio',['ImageIo',['../classdrake_1_1systems_1_1sensors_1_1_image_io.html',1,'drake::systems::sensors']]],
   ['imagetolcmimagearrayt',['ImageToLcmImageArrayT',['../classdrake_1_1systems_1_1sensors_1_1_image_to_lcm_image_array_t.html',1,'drake::systems::sensors']]],
   ['imagetraits',['ImageTraits',['../structdrake_1_1systems_1_1sensors_1_1_image_traits.html',1,'drake::systems::sensors']]],
   ['imagetraits_3c_20pixeltype_3a_3akbgr8u_20_3e',['ImageTraits&lt; PixelType::kBgr8U &gt;',['../structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_bgr8_u_01_4.html',1,'drake::systems::sensors']]],

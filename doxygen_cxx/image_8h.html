@@ -169,6 +169,7 @@ $(document).ready(function(){initNavTree('image_8h.html','');});
 <div class="contents">
 <div class="textblock"><code>#include &lt;limits&gt;</code><br />
 <code>#include &lt;utility&gt;</code><br />
+<code>#include &lt;variant&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &quot;<a class="el" href="drake__assert_8h.html">drake/common/drake_assert.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="drake__copyable_8h.html">drake/common/drake_copyable.h</a>&quot;</code><br />
@@ -236,6 +237,9 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a85ab3d34256b5ae6cbee35a8bdbfb4ab"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a85ab3d34256b5ae6cbee35a8bdbfb4ab">ImageExpr</a> = Image&lt; kInternalPixelTypeExpr &gt;</td></tr>
 <tr class="memdesc:a85ab3d34256b5ae6cbee35a8bdbfb4ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type for symbolic image where the channel has the type of <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a>.  <a href="namespacedrake_1_1systems_1_1sensors.html#a85ab3d34256b5ae6cbee35a8bdbfb4ab">More...</a><br /></td></tr>
 <tr class="separator:a85ab3d34256b5ae6cbee35a8bdbfb4ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55abb5b27de2a851f766d8faaa6ee9fe"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a55abb5b27de2a851f766d8faaa6ee9fe">ImageAny</a> = std::variant&lt; ImageBgr8U, ImageBgra8U, ImageDepth16U, ImageDepth32F, ImageGrey8U, ImageRgb8U, ImageRgba8U, ImageLabel16I &gt;</td></tr>
+<tr class="memdesc:a55abb5b27de2a851f766d8faaa6ee9fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">A sum type of all built-in images types.  <a href="namespacedrake_1_1systems_1_1sensors.html#a55abb5b27de2a851f766d8faaa6ee9fe">More...</a><br /></td></tr>
+<tr class="separator:a55abb5b27de2a851f766d8faaa6ee9fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>

@@ -194,6 +194,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image.html">Image</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple data format for <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image.html" title="Simple data format for Image.">Image</a>.  <a href="classdrake_1_1systems_1_1sensors_1_1_image.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_io.html">ImageIo</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utility functions for reading and writing images, from/to either files or memory buffers.  <a href="classdrake_1_1systems_1_1sensors_1_1_image_io.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_to_lcm_image_array_t.html">ImageToLcmImageArrayT</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_to_lcm_image_array_t.html" title="An ImageToLcmImageArrayT takes as input an ImageRgba8U, ImageDepth32F and ImageLabel16I.">ImageToLcmImageArrayT</a> takes as input an ImageRgba8U, ImageDepth32F and ImageLabel16I.  <a href="classdrake_1_1systems_1_1sensors_1_1_image_to_lcm_image_array_t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -306,6 +309,9 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a85ab3d34256b5ae6cbee35a8bdbfb4ab"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a85ab3d34256b5ae6cbee35a8bdbfb4ab">ImageExpr</a> = <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image.html">Image</a>&lt; kInternalPixelTypeExpr &gt;</td></tr>
 <tr class="memdesc:a85ab3d34256b5ae6cbee35a8bdbfb4ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type for symbolic image where the channel has the type of <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a>.  <a href="#a85ab3d34256b5ae6cbee35a8bdbfb4ab">More...</a><br /></td></tr>
 <tr class="separator:a85ab3d34256b5ae6cbee35a8bdbfb4ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55abb5b27de2a851f766d8faaa6ee9fe"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a55abb5b27de2a851f766d8faaa6ee9fe">ImageAny</a> = std::variant&lt; <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#ad6764dabff337ef74ed1871b8a2c2ffd">ImageBgr8U</a>, <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a746567d80e8e7ae22cae20c9dbe78f3b">ImageBgra8U</a>, <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a12ae113c6f13e4c9c37430a988afeef8">ImageDepth16U</a>, <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a0558960d25000bd7cc8607cef2fd223b">ImageDepth32F</a>, <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a1d38997213d63bf974b9ea19fc5abf0d">ImageGrey8U</a>, <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a48e75e9f3da7e6ca9cc886086e177d2a">ImageRgb8U</a>, <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#af5afae0f791341ac7ad11eb6bcb092bd">ImageRgba8U</a>, <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#af9f2ff2c09bd6626d594951724ed1d9a">ImageLabel16I</a> &gt;</td></tr>
+<tr class="memdesc:a55abb5b27de2a851f766d8faaa6ee9fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">A sum type of all built-in images types.  <a href="#a55abb5b27de2a851f766d8faaa6ee9fe">More...</a><br /></td></tr>
+<tr class="separator:a55abb5b27de2a851f766d8faaa6ee9fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -427,6 +433,22 @@ Functions</h2></td></tr>
 
 <p>Defines a color based on its three primary additive colors: red, green, and blue. </p>
 <p>Each of these primary additive colors are in the range of [0, 255]. </p>
+
+</div>
+</div>
+<a id="a55abb5b27de2a851f766d8faaa6ee9fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55abb5b27de2a851f766d8faaa6ee9fe">&#9670;&nbsp;</a></span>ImageAny</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a55abb5b27de2a851f766d8faaa6ee9fe">ImageAny</a> =  std::variant&lt; <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#ad6764dabff337ef74ed1871b8a2c2ffd">ImageBgr8U</a>, <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a746567d80e8e7ae22cae20c9dbe78f3b">ImageBgra8U</a>, <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a12ae113c6f13e4c9c37430a988afeef8">ImageDepth16U</a>, <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a0558960d25000bd7cc8607cef2fd223b">ImageDepth32F</a>, <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a1d38997213d63bf974b9ea19fc5abf0d">ImageGrey8U</a>, <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a48e75e9f3da7e6ca9cc886086e177d2a">ImageRgb8U</a>, <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#af5afae0f791341ac7ad11eb6bcb092bd">ImageRgba8U</a>, <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#af9f2ff2c09bd6626d594951724ed1d9a">ImageLabel16I</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A sum type of all built-in images types. </p>
 
 </div>
 </div>

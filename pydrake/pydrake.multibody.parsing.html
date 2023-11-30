@@ -320,6 +320,22 @@ If unspecified, the Identity transform will be used.</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="pydrake.multibody.parsing.FlattenModelDirectives">
+<span class="sig-prename descclassname"><span class="pre">pydrake.multibody.parsing.</span></span><span class="sig-name descname"><span class="pre">FlattenModelDirectives</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">directives</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.ModelDirectives" title="pydrake.multibody.parsing.ModelDirectives"><span class="pre">pydrake.multibody.parsing.ModelDirectives</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">package_map</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.PackageMap" title="pydrake.multibody.parsing.PackageMap"><span class="pre">pydrake.multibody.parsing.PackageMap</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.parsing.ModelDirectives" title="pydrake.multibody.parsing.ModelDirectives"><span class="pre">pydrake.multibody.parsing.ModelDirectives</span></a></span></span><a class="headerlink" href="#pydrake.multibody.parsing.FlattenModelDirectives" title="Permalink to this definition"></a></dt>
+<dd><p>Flatten model directives into a single object.</p>
+<p>This function removes all AddDirectives directives from the given
+<code class="docutils literal notranslate"><span class="pre">directives</span></code>, locating the file via the given <code class="docutils literal notranslate"><span class="pre">package_map</span></code>,
+parsing it, and updating the names of its items to add any namespace
+prefix requested by the <code class="docutils literal notranslate"><span class="pre">model_namespace</span></code> of the directive. The
+resulting directives are appended to <code class="docutils literal notranslate"><span class="pre">out</span></code>.</p>
+<p>The results of FlattenModelDirectives are semantically identical to
+<code class="docutils literal notranslate"><span class="pre">directives</span></code>. FlattenModelDirectives is therefore also idempotent.</p>
+<p>This flattening is intended to assist with creating reproducible
+simulation scenarios and with hashing; it can also be useful in
+debugging.</p>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="pydrake.multibody.parsing.GetScopedFrameByName">
 <span class="sig-prename descclassname"><span class="pre">pydrake.multibody.parsing.</span></span><span class="sig-name descname"><span class="pre">GetScopedFrameByName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">full_name:</span> <span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::multibody::Frame&lt;double&gt;</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.GetScopedFrameByName" title="Permalink to this definition"></a></dt>
 <dd><p>Equivalent to <code class="docutils literal notranslate"><span class="pre">GetScopedFrameByNameMaybe</span></code>, but throws if the frame
