@@ -176,7 +176,8 @@ $(document).ready(function(){initNavTree('classdrake_1_1solvers_1_1_solver_optio
 <p>"GUROBI" &ndash; Parameter name and values as specified in Gurobi Reference Manual, section 10.2 "Parameter Descriptions" <a href="https://www.gurobi.com/documentation/10.0/refman/parameters.html">https://www.gurobi.com/documentation/10.0/refman/parameters.html</a></p>
 <p>"SCS" &ndash; Parameter name and values as specified in the struct SCS_SETTINGS in SCS header file <a href="https://github.com/cvxgrp/scs/blob/master/include/scs.h">https://github.com/cvxgrp/scs/blob/master/include/scs.h</a> Note that the SCS code on github master might be more up-to-date than the version used in Drake.</p>
 <p>"MOSEK<a href="/tm.html">™</a>" &ndash; Parameter name and values as specified in Mosek Reference <a href="https://docs.mosek.com/9.3/capi/parameters.html">https://docs.mosek.com/9.3/capi/parameters.html</a></p>
-<p>"OSQP" &ndash; Parameter name and values as specified in OSQP Reference <a href="https://osqp.org/docs/interfaces/solver_settings.html#solver-settings">https://osqp.org/docs/interfaces/solver_settings.html#solver-settings</a> </p>
+<p>"OSQP" &ndash; Parameter name and values as specified in OSQP Reference <a href="https://osqp.org/docs/interfaces/solver_settings.html#solver-settings">https://osqp.org/docs/interfaces/solver_settings.html#solver-settings</a></p>
+<p>"Clarabel" &ndash; Parameter name and values as specified in Clarabel <a href="https://oxfordcontrol.github.io/ClarabelDocs/stable/api_settings/">https://oxfordcontrol.github.io/ClarabelDocs/stable/api_settings/</a> Note that <code>direct_solve_method</code> is not supported in Drake yet. Clarabel's boolean options should be passed as integers (0 or 1). </p>
 </div>
 <p><code>#include &lt;drake/solvers/solver_options.h&gt;</code></p>
 <table class="memberdecls">

@@ -474,7 +474,6 @@ var hierarchy =
     [ "ImageTraits< PixelType::kBgra8U >", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_bgra8_u_01_4.html", null ],
     [ "ImageTraits< PixelType::kDepth16U >", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_depth16_u_01_4.html", null ],
     [ "ImageTraits< PixelType::kDepth32F >", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_depth32_f_01_4.html", null ],
-    [ "ImageTraits< PixelType::kExpr >", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_expr_01_4.html", null ],
     [ "ImageTraits< PixelType::kGrey8U >", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_grey8_u_01_4.html", null ],
     [ "ImageTraits< PixelType::kLabel16I >", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_label16_i_01_4.html", null ],
     [ "ImageTraits< PixelType::kRgb8U >", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgb8_u_01_4.html", null ],

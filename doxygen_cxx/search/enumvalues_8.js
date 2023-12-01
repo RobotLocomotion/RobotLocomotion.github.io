@@ -61,7 +61,6 @@ var searchData=
   ['keventhandlerfailed',['kEventHandlerFailed',['../classdrake_1_1systems_1_1_simulator_status.html#afbb189a238d55578f51fb5cd5a3f3879a09ceb25b12fa95fdbbb044ddd3d82e4c',1,'drake::systems::SimulatorStatus']]],
   ['kexponential',['kExponential',['../namespacedrake.html#a72383be4710d27584d0821effc6506a5a601bf5851ffd28f5e6219c0f1945c8d6',1,'drake']]],
   ['kexponentialconeconstraint',['kExponentialConeConstraint',['../namespacedrake_1_1solvers.html#a115b732b5de5502e59437ee38babe95fa6186f6ad8f4222b61ec29ea48a046299',1,'drake::solvers']]],
-  ['kexpr',['kExpr',['../namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3dad87b61f50587e7841b2d192c6e8afe05',1,'drake::systems::sensors::kExpr()'],['../namespacedrake_1_1systems_1_1sensors.html#a60883d4958a60b91661e97027a85072aad87b61f50587e7841b2d192c6e8afe05',1,'drake::systems::sensors::kExpr()']]],
   ['kfailed',['kFailed',['../classdrake_1_1systems_1_1_event_status.html#a11717da96dc4e4a5f79371318448f82ba48ee4661a1d96abae7dda31fbcaec970',1,'drake::systems::EventStatus']]],
   ['kfinger1',['kFinger1',['../namespacedrake_1_1examples_1_1planar__gripper.html#a06cd88b8d529d838dc5184712e08137ca9501bb188e57782d8d18ff0952326acc',1,'drake::examples::planar_gripper']]],
   ['kfinger2',['kFinger2',['../namespacedrake_1_1examples_1_1planar__gripper.html#a06cd88b8d529d838dc5184712e08137cab873b652eaf41d3fa270015b0a046a03',1,'drake::examples::planar_gripper']]],

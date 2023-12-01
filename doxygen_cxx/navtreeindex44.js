@@ -1,14 +1,5 @@
 var NAVTREEINDEX44 =
 {
-"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a54d2cefdc8e6443b9710b195b914b680":[3,0,0,17,5,43],
-"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a59f4f35bd9afa91ca14283e7c865918f":[3,0,0,17,5,57],
-"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a5d7edaa991443e887ca36e0fd20b96c7":[3,0,0,17,5,31],
-"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a5dc4d107b331f4e33f2893826c44be27":[3,0,0,17,5,7],
-"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a603a4e747fb099305c01f8762e8cff23":[3,0,0,17,5,9],
-"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a60ecdbaf41d941ec12c0b6add7cc32d9":[3,0,0,17,5,17],
-"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a644718bb2fb240de962dc3c9a1fdf0dc":[3,0,0,17,5,23],
-"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a6a44781cbe3dd6c55234638a1b63d4ef":[3,0,0,17,5,1],
-"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a6d7f5289922d84e6f35f96bb29ddd09c":[3,0,0,17,5,22],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a6ec39e8128c0da804f03d8fbd17fd843":[3,0,0,17,5,24],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a728995759fa06a8d1a2b967d313b6d6b":[3,0,0,17,5,55],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a75d7ffe2f4e1a808aaeb76a871f772e2":[3,0,0,17,5,13],
@@ -249,5 +240,14 @@ var NAVTREEINDEX44 =
 "cloth__spring__model__geometry_8h.html":[4,0,0,3,10,1],
 "clp__solver_8h.html":[4,0,0,11,7],
 "codegen_8h.html":[4,0,0,1,3,3],
-"codegen_8h.html#ga141de7c1e3ce45784c62e57a034a71ac":[4,0,0,1,3,3,2]
+"codegen_8h.html#ga141de7c1e3ce45784c62e57a034a71ac":[4,0,0,1,3,3,2],
+"codegen_8h.html#ga2d07751d060ddf51dad4702d441f651a":[4,0,0,1,3,3,1],
+"codegen_8h.html#gada538db5c08eaa47546d2df1c6f442cb":[4,0,0,1,3,3,3],
+"collision__avoidance_8h.html":[4,0,0,10,4],
+"collision__checker_8h.html":[4,0,0,10,5],
+"collision__checker__abstract__test__suite_8h.html":[4,0,0,10,1,0],
+"collision__checker__abstract__test__suite_8h.html#a59728e43537c3e540d128389b655d34e":[4,0,0,10,1,0,5],
+"collision__checker__abstract__test__suite_8h.html#a89d20b273f6010f4e2eec8d63cc627f5":[4,0,0,10,1,0,4],
+"collision__checker__context_8h.html":[4,0,0,10,6],
+"collision__checker__params_8h.html":[4,0,0,10,7]
 };

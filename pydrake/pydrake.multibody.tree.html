@@ -19250,12 +19250,8 @@ valid unit inertia.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.UnitInertia.AxiallySymmetric">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AxiallySymmetric</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.UnitInertia.AxiallySymmetric" title="Permalink to this definition"></a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li><p>AxiallySymmetric(moment_parallel: float, moment_perpendicular: float, unit_vector: numpy.ndarray[numpy.float64[3, 1]]) -&gt; pydrake.multibody.tree.UnitInertia</p></li>
-</ol>
-<p>Returns the unit inertia for a body B for which there exists an axis L
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AxiallySymmetric</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">moment_parallel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">moment_perpendicular</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.UnitInertia" title="pydrake.multibody.tree.UnitInertia"><span class="pre">pydrake.multibody.tree.UnitInertia</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.UnitInertia.AxiallySymmetric" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the unit inertia for a body B for which there exists an axis L
 passing through the body’s center of mass Bcm having the property that
 B’s moment of inertia about all lines perpendicular to L are equal.
 Bodies with this “axially symmetric inertia” property include
@@ -19305,31 +19301,6 @@ and is perpendicular to unit_vector.</p>
 </ul>
 </dd>
 </dl>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Previously the <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code> argument was named <code class="docutils literal notranslate"><span class="pre">b_E</span></code> and was
-not required to be a unit vector. The use of a non-unit-vector
-third argument has been deprecated and will become an exception on
-or after 2023-12-01.</p>
-</div>
-<ol class="arabic simple" start="2">
-<li><p>AxiallySymmetric(J: float, K: float, b_E: numpy.ndarray[numpy.float64[3, 1]]) -&gt; pydrake.multibody.tree.UnitInertia</p></li>
-</ol>
-<p>This overload spelling of a UnitInertia factory method is deprecated.</p>
-<dl class="simple">
-<dt>The named arguments for the UnitInertia factory methods have been renamed:</dt><dd><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">r</span></code> → <code class="docutils literal notranslate"><span class="pre">radius</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">L</span></code> → <code class="docutils literal notranslate"><span class="pre">length</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">J</span></code> → <code class="docutils literal notranslate"><span class="pre">moment_parallel</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">K</span></code> → <code class="docutils literal notranslate"><span class="pre">moment_perpendicular</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">b_E</span></code> → <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code></p></li>
-</ul>
-</dd>
-</dl>
-<p>The old argument names will be removed from Drake on or after 2023-12-01.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code> argument no longer has a default value, and must already
-have been normalized by the caller. Passing in a non-normalized unit vector
-will result in a warning for now, but an exception on or after 2023-12-01.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -19459,12 +19430,8 @@ direction.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.UnitInertia.SolidCapsule">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCapsule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.UnitInertia.SolidCapsule" title="Permalink to this definition"></a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li><p>SolidCapsule(radius: float, length: float, unit_vector: numpy.ndarray[numpy.float64[3, 1]]) -&gt; pydrake.multibody.tree.UnitInertia</p></li>
-</ol>
-<p>Creates a unit inertia for a uniform density solid capsule B about its
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCapsule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.UnitInertia" title="pydrake.multibody.tree.UnitInertia"><span class="pre">pydrake.multibody.tree.UnitInertia</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.UnitInertia.SolidCapsule" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a unit inertia for a uniform density solid capsule B about its
 center of mass Bcm (which is coincident with B’s geometric center Bo).</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">radius</span></code>:</dt><dd><p>radius of the cylinder/half-sphere parts of the capsule.</p>
@@ -19492,24 +19459,6 @@ Bcm and is perpendicular to unit_vector.</p>
 </ul>
 </dd>
 </dl>
-<ol class="arabic simple" start="2">
-<li><p>SolidCapsule(r: float, L: float, unit_vector: numpy.ndarray[numpy.float64[3, 1]] = array([0., 0., 1.])) -&gt; pydrake.multibody.tree.UnitInertia</p></li>
-</ol>
-<p>This overload spelling of a UnitInertia factory method is deprecated.</p>
-<dl class="simple">
-<dt>The named arguments for the UnitInertia factory methods have been renamed:</dt><dd><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">r</span></code> → <code class="docutils literal notranslate"><span class="pre">radius</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">L</span></code> → <code class="docutils literal notranslate"><span class="pre">length</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">J</span></code> → <code class="docutils literal notranslate"><span class="pre">moment_parallel</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">K</span></code> → <code class="docutils literal notranslate"><span class="pre">moment_perpendicular</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">b_E</span></code> → <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code></p></li>
-</ul>
-</dd>
-</dl>
-<p>The old argument names will be removed from Drake on or after 2023-12-01.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code> argument no longer has a default value, and must already
-have been normalized by the caller. Passing in a non-normalized unit vector
-will result in a warning for now, but an exception on or after 2023-12-01.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -19526,12 +19475,8 @@ center.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.UnitInertia.SolidCylinder">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCylinder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.UnitInertia.SolidCylinder" title="Permalink to this definition"></a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li><p>SolidCylinder(radius: float, length: float, unit_vector: numpy.ndarray[numpy.float64[3, 1]]) -&gt; pydrake.multibody.tree.UnitInertia</p></li>
-</ol>
-<p>Creates a unit inertia for a uniform density solid cylinder B about
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCylinder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.UnitInertia" title="pydrake.multibody.tree.UnitInertia"><span class="pre">pydrake.multibody.tree.UnitInertia</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.UnitInertia.SolidCylinder" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a unit inertia for a uniform density solid cylinder B about
 its center of mass Bcm (which is coincident with B’s geometric center
 Bo).</p>
 <dl class="simple">
@@ -19566,41 +19511,12 @@ Bcm and is perpendicular to unit_vector.</p>
 about point Bp (Bp is at the center of one of the cylinder’s
 circular ends).</p>
 </div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Previously the <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code> argument was named <code class="docutils literal notranslate"><span class="pre">b_E</span></code> and was
-not required to be a unit vector. The use of a non-unit-vector
-third argument has been deprecated and will become an exception on
-or after 2023-12-01.</p>
-</div>
-<ol class="arabic simple" start="2">
-<li><p>SolidCylinder(r: float, L: float, b_E: numpy.ndarray[numpy.float64[3, 1]] = array([0., 0., 1.])) -&gt; pydrake.multibody.tree.UnitInertia</p></li>
-</ol>
-<p>This overload spelling of a UnitInertia factory method is deprecated.</p>
-<dl class="simple">
-<dt>The named arguments for the UnitInertia factory methods have been renamed:</dt><dd><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">r</span></code> → <code class="docutils literal notranslate"><span class="pre">radius</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">L</span></code> → <code class="docutils literal notranslate"><span class="pre">length</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">J</span></code> → <code class="docutils literal notranslate"><span class="pre">moment_parallel</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">K</span></code> → <code class="docutils literal notranslate"><span class="pre">moment_perpendicular</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">b_E</span></code> → <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code></p></li>
-</ul>
-</dd>
-</dl>
-<p>The old argument names will be removed from Drake on or after 2023-12-01.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code> argument no longer has a default value, and must already
-have been normalized by the caller. Passing in a non-normalized unit vector
-will result in a warning for now, but an exception on or after 2023-12-01.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.UnitInertia.SolidCylinderAboutEnd">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCylinderAboutEnd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.UnitInertia.SolidCylinderAboutEnd" title="Permalink to this definition"></a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li><p>SolidCylinderAboutEnd(radius: float, length: float, unit_vector: numpy.ndarray[numpy.float64[3, 1]]) -&gt; pydrake.multibody.tree.UnitInertia</p></li>
-</ol>
-<p>Creates a unit inertia for a uniform-density solid cylinder B about an
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCylinderAboutEnd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.UnitInertia" title="pydrake.multibody.tree.UnitInertia"><span class="pre">pydrake.multibody.tree.UnitInertia</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.UnitInertia.SolidCylinderAboutEnd" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a unit inertia for a uniform-density solid cylinder B about an
 end-point Bp of the cylinder’s axis (see below for more about Bp).</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">radius</span></code>:</dt><dd><p>radius of cylinder (meters).</p>
@@ -19632,24 +19548,6 @@ and is perpendicular to unit_vector.</p>
 </ul>
 </dd>
 </dl>
-<ol class="arabic simple" start="2">
-<li><p>SolidCylinderAboutEnd(r: float, L: float) -&gt; pydrake.multibody.tree.UnitInertia</p></li>
-</ol>
-<p>This overload spelling of a UnitInertia factory method is deprecated.</p>
-<dl class="simple">
-<dt>The named arguments for the UnitInertia factory methods have been renamed:</dt><dd><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">r</span></code> → <code class="docutils literal notranslate"><span class="pre">radius</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">L</span></code> → <code class="docutils literal notranslate"><span class="pre">length</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">J</span></code> → <code class="docutils literal notranslate"><span class="pre">moment_parallel</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">K</span></code> → <code class="docutils literal notranslate"><span class="pre">moment_perpendicular</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">b_E</span></code> → <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code></p></li>
-</ul>
-</dd>
-</dl>
-<p>The old argument names will be removed from Drake on or after 2023-12-01.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code> argument no longer has a default value, and must already
-have been normalized by the caller. Passing in a non-normalized unit vector
-will result in a warning for now, but an exception on or after 2023-12-01.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -19670,12 +19568,8 @@ density and radius <code class="docutils literal notranslate"><span class="pre">
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.UnitInertia.StraightLine">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">StraightLine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.UnitInertia.StraightLine" title="Permalink to this definition"></a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li><p>StraightLine(moment_perpendicular: float, unit_vector: numpy.ndarray[numpy.float64[3, 1]]) -&gt; pydrake.multibody.tree.UnitInertia</p></li>
-</ol>
-<p>Creates a unit inertia for a straight line segment B about a point Bp
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">StraightLine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">moment_perpendicular</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.UnitInertia" title="pydrake.multibody.tree.UnitInertia"><span class="pre">pydrake.multibody.tree.UnitInertia</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.UnitInertia.StraightLine" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a unit inertia for a straight line segment B about a point Bp
 on the line segment.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">moment_perpendicular</span></code>:</dt><dd><p>Unit moment of inertia about any axis that passes through Bp and
@@ -19712,41 +19606,12 @@ and is perpendicular to unit_vector.</p>
 that has a zero moment of inertia about Bp in the unit_vector
 direction.</p>
 </div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Previously the <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code> argument was named <code class="docutils literal notranslate"><span class="pre">b_E</span></code> and was
-not required to be a unit vector. The use of a non-unit-vector
-second argument has been deprecated and will become an exception
-on or after 2023-12-01.</p>
-</div>
-<ol class="arabic simple" start="2">
-<li><p>StraightLine(K: float, b_E: numpy.ndarray[numpy.float64[3, 1]]) -&gt; pydrake.multibody.tree.UnitInertia</p></li>
-</ol>
-<p>This overload spelling of a UnitInertia factory method is deprecated.</p>
-<dl class="simple">
-<dt>The named arguments for the UnitInertia factory methods have been renamed:</dt><dd><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">r</span></code> → <code class="docutils literal notranslate"><span class="pre">radius</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">L</span></code> → <code class="docutils literal notranslate"><span class="pre">length</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">J</span></code> → <code class="docutils literal notranslate"><span class="pre">moment_parallel</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">K</span></code> → <code class="docutils literal notranslate"><span class="pre">moment_perpendicular</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">b_E</span></code> → <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code></p></li>
-</ul>
-</dd>
-</dl>
-<p>The old argument names will be removed from Drake on or after 2023-12-01.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code> argument no longer has a default value, and must already
-have been normalized by the caller. Passing in a non-normalized unit vector
-will result in a warning for now, but an exception on or after 2023-12-01.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.UnitInertia.ThinRod">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ThinRod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.UnitInertia.ThinRod" title="Permalink to this definition"></a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li><p>ThinRod(length: float, unit_vector: numpy.ndarray[numpy.float64[3, 1]]) -&gt; pydrake.multibody.tree.UnitInertia</p></li>
-</ol>
-<p>Creates a unit inertia for a uniform density thin rod B about its
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ThinRod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.UnitInertia" title="pydrake.multibody.tree.UnitInertia"><span class="pre">pydrake.multibody.tree.UnitInertia</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.UnitInertia.ThinRod" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a unit inertia for a uniform density thin rod B about its
 center of mass Bcm (which is coincident with B’s geometric center Bo).</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">length</span></code>:</dt><dd><p>length of rod in unit_vector direction (meters).</p>
@@ -19776,31 +19641,6 @@ Bcm and is perpendicular to unit_vector.</p>
 <p class="admonition-title">Note</p>
 <p>B’s axial moment of inertia (along the rod) is zero..</p>
 </div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Previously the <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code> argument was named <code class="docutils literal notranslate"><span class="pre">b_E</span></code> and was
-not required to be a unit vector. The use of a non-unit-vector
-second argument has been deprecated and will become an exception
-on or after 2023-12-01.</p>
-</div>
-<ol class="arabic simple" start="2">
-<li><p>ThinRod(L: float, b_E: numpy.ndarray[numpy.float64[3, 1]]) -&gt; pydrake.multibody.tree.UnitInertia</p></li>
-</ol>
-<p>This overload spelling of a UnitInertia factory method is deprecated.</p>
-<dl class="simple">
-<dt>The named arguments for the UnitInertia factory methods have been renamed:</dt><dd><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">r</span></code> → <code class="docutils literal notranslate"><span class="pre">radius</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">L</span></code> → <code class="docutils literal notranslate"><span class="pre">length</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">J</span></code> → <code class="docutils literal notranslate"><span class="pre">moment_parallel</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">K</span></code> → <code class="docutils literal notranslate"><span class="pre">moment_perpendicular</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">b_E</span></code> → <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code></p></li>
-</ul>
-</dd>
-</dl>
-<p>The old argument names will be removed from Drake on or after 2023-12-01.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code> argument no longer has a default value, and must already
-have been normalized by the caller. Passing in a non-normalized unit vector
-will result in a warning for now, but an exception on or after 2023-12-01.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -19897,12 +19737,8 @@ valid unit inertia.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.UnitInertia_-AutoDiffXd-.AxiallySymmetric">
-<span id="pydrake.multibody.tree.UnitInertia_[AutoDiffXd].AxiallySymmetric"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AxiallySymmetric</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.UnitInertia_-AutoDiffXd-.AxiallySymmetric" title="Permalink to this definition"></a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li><p>AxiallySymmetric(moment_parallel: pydrake.autodiffutils.AutoDiffXd, moment_perpendicular: pydrake.autodiffutils.AutoDiffXd, unit_vector: numpy.ndarray[object[3, 1]]) -&gt; pydrake.multibody.tree.UnitInertia_[AutoDiffXd]</p></li>
-</ol>
-<p>Returns the unit inertia for a body B for which there exists an axis L
+<span id="pydrake.multibody.tree.UnitInertia_[AutoDiffXd].AxiallySymmetric"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AxiallySymmetric</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">moment_parallel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">moment_perpendicular</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.UnitInertia_" title="pydrake.multibody.tree.UnitInertia_"><span class="pre">pydrake.multibody.tree.UnitInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.UnitInertia_-AutoDiffXd-.AxiallySymmetric" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the unit inertia for a body B for which there exists an axis L
 passing through the body’s center of mass Bcm having the property that
 B’s moment of inertia about all lines perpendicular to L are equal.
 Bodies with this “axially symmetric inertia” property include
@@ -19952,31 +19788,6 @@ and is perpendicular to unit_vector.</p>
 </ul>
 </dd>
 </dl>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Previously the <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code> argument was named <code class="docutils literal notranslate"><span class="pre">b_E</span></code> and was
-not required to be a unit vector. The use of a non-unit-vector
-third argument has been deprecated and will become an exception on
-or after 2023-12-01.</p>
-</div>
-<ol class="arabic simple" start="2">
-<li><p>AxiallySymmetric(J: pydrake.autodiffutils.AutoDiffXd, K: pydrake.autodiffutils.AutoDiffXd, b_E: numpy.ndarray[object[3, 1]]) -&gt; pydrake.multibody.tree.UnitInertia_[AutoDiffXd]</p></li>
-</ol>
-<p>This overload spelling of a UnitInertia factory method is deprecated.</p>
-<dl class="simple">
-<dt>The named arguments for the UnitInertia factory methods have been renamed:</dt><dd><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">r</span></code> → <code class="docutils literal notranslate"><span class="pre">radius</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">L</span></code> → <code class="docutils literal notranslate"><span class="pre">length</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">J</span></code> → <code class="docutils literal notranslate"><span class="pre">moment_parallel</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">K</span></code> → <code class="docutils literal notranslate"><span class="pre">moment_perpendicular</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">b_E</span></code> → <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code></p></li>
-</ul>
-</dd>
-</dl>
-<p>The old argument names will be removed from Drake on or after 2023-12-01.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code> argument no longer has a default value, and must already
-have been normalized by the caller. Passing in a non-normalized unit vector
-will result in a warning for now, but an exception on or after 2023-12-01.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -20106,12 +19917,8 @@ direction.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.UnitInertia_-AutoDiffXd-.SolidCapsule">
-<span id="pydrake.multibody.tree.UnitInertia_[AutoDiffXd].SolidCapsule"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCapsule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.UnitInertia_-AutoDiffXd-.SolidCapsule" title="Permalink to this definition"></a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li><p>SolidCapsule(radius: pydrake.autodiffutils.AutoDiffXd, length: pydrake.autodiffutils.AutoDiffXd, unit_vector: numpy.ndarray[object[3, 1]]) -&gt; pydrake.multibody.tree.UnitInertia_[AutoDiffXd]</p></li>
-</ol>
-<p>Creates a unit inertia for a uniform density solid capsule B about its
+<span id="pydrake.multibody.tree.UnitInertia_[AutoDiffXd].SolidCapsule"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCapsule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.UnitInertia_" title="pydrake.multibody.tree.UnitInertia_"><span class="pre">pydrake.multibody.tree.UnitInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.UnitInertia_-AutoDiffXd-.SolidCapsule" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a unit inertia for a uniform density solid capsule B about its
 center of mass Bcm (which is coincident with B’s geometric center Bo).</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">radius</span></code>:</dt><dd><p>radius of the cylinder/half-sphere parts of the capsule.</p>
@@ -20139,28 +19946,6 @@ Bcm and is perpendicular to unit_vector.</p>
 </ul>
 </dd>
 </dl>
-<ol class="arabic simple" start="2">
-<li><dl class="simple">
-<dt>SolidCapsule(r: pydrake.autodiffutils.AutoDiffXd, L: pydrake.autodiffutils.AutoDiffXd, unit_vector: numpy.ndarray[object[3, 1]] = array([&lt;AutoDiffXd 0.0 nderiv=0&gt;, &lt;AutoDiffXd 0.0 nderiv=0&gt;,</dt><dd><p>&lt;AutoDiffXd 1.0 nderiv=0&gt;], dtype=object)) -&gt; pydrake.multibody.tree.UnitInertia_[AutoDiffXd]</p>
-</dd>
-</dl>
-</li>
-</ol>
-<p>This overload spelling of a UnitInertia factory method is deprecated.</p>
-<dl class="simple">
-<dt>The named arguments for the UnitInertia factory methods have been renamed:</dt><dd><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">r</span></code> → <code class="docutils literal notranslate"><span class="pre">radius</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">L</span></code> → <code class="docutils literal notranslate"><span class="pre">length</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">J</span></code> → <code class="docutils literal notranslate"><span class="pre">moment_parallel</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">K</span></code> → <code class="docutils literal notranslate"><span class="pre">moment_perpendicular</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">b_E</span></code> → <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code></p></li>
-</ul>
-</dd>
-</dl>
-<p>The old argument names will be removed from Drake on or after 2023-12-01.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code> argument no longer has a default value, and must already
-have been normalized by the caller. Passing in a non-normalized unit vector
-will result in a warning for now, but an exception on or after 2023-12-01.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -20177,12 +19962,8 @@ center.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.UnitInertia_-AutoDiffXd-.SolidCylinder">
-<span id="pydrake.multibody.tree.UnitInertia_[AutoDiffXd].SolidCylinder"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCylinder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.UnitInertia_-AutoDiffXd-.SolidCylinder" title="Permalink to this definition"></a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li><p>SolidCylinder(radius: pydrake.autodiffutils.AutoDiffXd, length: pydrake.autodiffutils.AutoDiffXd, unit_vector: numpy.ndarray[object[3, 1]]) -&gt; pydrake.multibody.tree.UnitInertia_[AutoDiffXd]</p></li>
-</ol>
-<p>Creates a unit inertia for a uniform density solid cylinder B about
+<span id="pydrake.multibody.tree.UnitInertia_[AutoDiffXd].SolidCylinder"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCylinder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.UnitInertia_" title="pydrake.multibody.tree.UnitInertia_"><span class="pre">pydrake.multibody.tree.UnitInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.UnitInertia_-AutoDiffXd-.SolidCylinder" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a unit inertia for a uniform density solid cylinder B about
 its center of mass Bcm (which is coincident with B’s geometric center
 Bo).</p>
 <dl class="simple">
@@ -20217,45 +19998,12 @@ Bcm and is perpendicular to unit_vector.</p>
 about point Bp (Bp is at the center of one of the cylinder’s
 circular ends).</p>
 </div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Previously the <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code> argument was named <code class="docutils literal notranslate"><span class="pre">b_E</span></code> and was
-not required to be a unit vector. The use of a non-unit-vector
-third argument has been deprecated and will become an exception on
-or after 2023-12-01.</p>
-</div>
-<ol class="arabic simple" start="2">
-<li><dl class="simple">
-<dt>SolidCylinder(r: pydrake.autodiffutils.AutoDiffXd, L: pydrake.autodiffutils.AutoDiffXd, b_E: numpy.ndarray[object[3, 1]] = array([&lt;AutoDiffXd 0.0 nderiv=0&gt;, &lt;AutoDiffXd 0.0 nderiv=0&gt;,</dt><dd><p>&lt;AutoDiffXd 1.0 nderiv=0&gt;], dtype=object)) -&gt; pydrake.multibody.tree.UnitInertia_[AutoDiffXd]</p>
-</dd>
-</dl>
-</li>
-</ol>
-<p>This overload spelling of a UnitInertia factory method is deprecated.</p>
-<dl class="simple">
-<dt>The named arguments for the UnitInertia factory methods have been renamed:</dt><dd><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">r</span></code> → <code class="docutils literal notranslate"><span class="pre">radius</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">L</span></code> → <code class="docutils literal notranslate"><span class="pre">length</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">J</span></code> → <code class="docutils literal notranslate"><span class="pre">moment_parallel</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">K</span></code> → <code class="docutils literal notranslate"><span class="pre">moment_perpendicular</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">b_E</span></code> → <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code></p></li>
-</ul>
-</dd>
-</dl>
-<p>The old argument names will be removed from Drake on or after 2023-12-01.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code> argument no longer has a default value, and must already
-have been normalized by the caller. Passing in a non-normalized unit vector
-will result in a warning for now, but an exception on or after 2023-12-01.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.UnitInertia_-AutoDiffXd-.SolidCylinderAboutEnd">
-<span id="pydrake.multibody.tree.UnitInertia_[AutoDiffXd].SolidCylinderAboutEnd"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCylinderAboutEnd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.UnitInertia_-AutoDiffXd-.SolidCylinderAboutEnd" title="Permalink to this definition"></a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li><p>SolidCylinderAboutEnd(radius: pydrake.autodiffutils.AutoDiffXd, length: pydrake.autodiffutils.AutoDiffXd, unit_vector: numpy.ndarray[object[3, 1]]) -&gt; pydrake.multibody.tree.UnitInertia_[AutoDiffXd]</p></li>
-</ol>
-<p>Creates a unit inertia for a uniform-density solid cylinder B about an
+<span id="pydrake.multibody.tree.UnitInertia_[AutoDiffXd].SolidCylinderAboutEnd"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCylinderAboutEnd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.UnitInertia_" title="pydrake.multibody.tree.UnitInertia_"><span class="pre">pydrake.multibody.tree.UnitInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.UnitInertia_-AutoDiffXd-.SolidCylinderAboutEnd" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a unit inertia for a uniform-density solid cylinder B about an
 end-point Bp of the cylinder’s axis (see below for more about Bp).</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">radius</span></code>:</dt><dd><p>radius of cylinder (meters).</p>
@@ -20287,24 +20035,6 @@ and is perpendicular to unit_vector.</p>
 </ul>
 </dd>
 </dl>
-<ol class="arabic simple" start="2">
-<li><p>SolidCylinderAboutEnd(r: pydrake.autodiffutils.AutoDiffXd, L: pydrake.autodiffutils.AutoDiffXd) -&gt; pydrake.multibody.tree.UnitInertia_[AutoDiffXd]</p></li>
-</ol>
-<p>This overload spelling of a UnitInertia factory method is deprecated.</p>
-<dl class="simple">
-<dt>The named arguments for the UnitInertia factory methods have been renamed:</dt><dd><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">r</span></code> → <code class="docutils literal notranslate"><span class="pre">radius</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">L</span></code> → <code class="docutils literal notranslate"><span class="pre">length</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">J</span></code> → <code class="docutils literal notranslate"><span class="pre">moment_parallel</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">K</span></code> → <code class="docutils literal notranslate"><span class="pre">moment_perpendicular</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">b_E</span></code> → <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code></p></li>
-</ul>
-</dd>
-</dl>
-<p>The old argument names will be removed from Drake on or after 2023-12-01.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code> argument no longer has a default value, and must already
-have been normalized by the caller. Passing in a non-normalized unit vector
-will result in a warning for now, but an exception on or after 2023-12-01.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -20325,12 +20055,8 @@ density and radius <code class="docutils literal notranslate"><span class="pre">
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.UnitInertia_-AutoDiffXd-.StraightLine">
-<span id="pydrake.multibody.tree.UnitInertia_[AutoDiffXd].StraightLine"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">StraightLine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.UnitInertia_-AutoDiffXd-.StraightLine" title="Permalink to this definition"></a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li><p>StraightLine(moment_perpendicular: pydrake.autodiffutils.AutoDiffXd, unit_vector: numpy.ndarray[object[3, 1]]) -&gt; pydrake.multibody.tree.UnitInertia_[AutoDiffXd]</p></li>
-</ol>
-<p>Creates a unit inertia for a straight line segment B about a point Bp
+<span id="pydrake.multibody.tree.UnitInertia_[AutoDiffXd].StraightLine"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">StraightLine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">moment_perpendicular</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.UnitInertia_" title="pydrake.multibody.tree.UnitInertia_"><span class="pre">pydrake.multibody.tree.UnitInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.UnitInertia_-AutoDiffXd-.StraightLine" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a unit inertia for a straight line segment B about a point Bp
 on the line segment.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">moment_perpendicular</span></code>:</dt><dd><p>Unit moment of inertia about any axis that passes through Bp and
@@ -20367,41 +20093,12 @@ and is perpendicular to unit_vector.</p>
 that has a zero moment of inertia about Bp in the unit_vector
 direction.</p>
 </div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Previously the <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code> argument was named <code class="docutils literal notranslate"><span class="pre">b_E</span></code> and was
-not required to be a unit vector. The use of a non-unit-vector
-second argument has been deprecated and will become an exception
-on or after 2023-12-01.</p>
-</div>
-<ol class="arabic simple" start="2">
-<li><p>StraightLine(K: pydrake.autodiffutils.AutoDiffXd, b_E: numpy.ndarray[object[3, 1]]) -&gt; pydrake.multibody.tree.UnitInertia_[AutoDiffXd]</p></li>
-</ol>
-<p>This overload spelling of a UnitInertia factory method is deprecated.</p>
-<dl class="simple">
-<dt>The named arguments for the UnitInertia factory methods have been renamed:</dt><dd><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">r</span></code> → <code class="docutils literal notranslate"><span class="pre">radius</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">L</span></code> → <code class="docutils literal notranslate"><span class="pre">length</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">J</span></code> → <code class="docutils literal notranslate"><span class="pre">moment_parallel</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">K</span></code> → <code class="docutils literal notranslate"><span class="pre">moment_perpendicular</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">b_E</span></code> → <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code></p></li>
-</ul>
-</dd>
-</dl>
-<p>The old argument names will be removed from Drake on or after 2023-12-01.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code> argument no longer has a default value, and must already
-have been normalized by the caller. Passing in a non-normalized unit vector
-will result in a warning for now, but an exception on or after 2023-12-01.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.UnitInertia_-AutoDiffXd-.ThinRod">
-<span id="pydrake.multibody.tree.UnitInertia_[AutoDiffXd].ThinRod"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ThinRod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.UnitInertia_-AutoDiffXd-.ThinRod" title="Permalink to this definition"></a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li><p>ThinRod(length: pydrake.autodiffutils.AutoDiffXd, unit_vector: numpy.ndarray[object[3, 1]]) -&gt; pydrake.multibody.tree.UnitInertia_[AutoDiffXd]</p></li>
-</ol>
-<p>Creates a unit inertia for a uniform density thin rod B about its
+<span id="pydrake.multibody.tree.UnitInertia_[AutoDiffXd].ThinRod"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ThinRod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.UnitInertia_" title="pydrake.multibody.tree.UnitInertia_"><span class="pre">pydrake.multibody.tree.UnitInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.UnitInertia_-AutoDiffXd-.ThinRod" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a unit inertia for a uniform density thin rod B about its
 center of mass Bcm (which is coincident with B’s geometric center Bo).</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">length</span></code>:</dt><dd><p>length of rod in unit_vector direction (meters).</p>
@@ -20431,31 +20128,6 @@ Bcm and is perpendicular to unit_vector.</p>
 <p class="admonition-title">Note</p>
 <p>B’s axial moment of inertia (along the rod) is zero..</p>
 </div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Previously the <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code> argument was named <code class="docutils literal notranslate"><span class="pre">b_E</span></code> and was
-not required to be a unit vector. The use of a non-unit-vector
-second argument has been deprecated and will become an exception
-on or after 2023-12-01.</p>
-</div>
-<ol class="arabic simple" start="2">
-<li><p>ThinRod(L: pydrake.autodiffutils.AutoDiffXd, b_E: numpy.ndarray[object[3, 1]]) -&gt; pydrake.multibody.tree.UnitInertia_[AutoDiffXd]</p></li>
-</ol>
-<p>This overload spelling of a UnitInertia factory method is deprecated.</p>
-<dl class="simple">
-<dt>The named arguments for the UnitInertia factory methods have been renamed:</dt><dd><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">r</span></code> → <code class="docutils literal notranslate"><span class="pre">radius</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">L</span></code> → <code class="docutils literal notranslate"><span class="pre">length</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">J</span></code> → <code class="docutils literal notranslate"><span class="pre">moment_parallel</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">K</span></code> → <code class="docutils literal notranslate"><span class="pre">moment_perpendicular</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">b_E</span></code> → <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code></p></li>
-</ul>
-</dd>
-</dl>
-<p>The old argument names will be removed from Drake on or after 2023-12-01.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code> argument no longer has a default value, and must already
-have been normalized by the caller. Passing in a non-normalized unit vector
-will result in a warning for now, but an exception on or after 2023-12-01.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -20546,12 +20218,8 @@ valid unit inertia.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.UnitInertia_-Expression-.AxiallySymmetric">
-<span id="pydrake.multibody.tree.UnitInertia_[Expression].AxiallySymmetric"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AxiallySymmetric</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.UnitInertia_-Expression-.AxiallySymmetric" title="Permalink to this definition"></a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li><p>AxiallySymmetric(moment_parallel: pydrake.symbolic.Expression, moment_perpendicular: pydrake.symbolic.Expression, unit_vector: numpy.ndarray[object[3, 1]]) -&gt; pydrake.multibody.tree.UnitInertia_[Expression]</p></li>
-</ol>
-<p>Returns the unit inertia for a body B for which there exists an axis L
+<span id="pydrake.multibody.tree.UnitInertia_[Expression].AxiallySymmetric"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AxiallySymmetric</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">moment_parallel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">moment_perpendicular</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.UnitInertia_" title="pydrake.multibody.tree.UnitInertia_"><span class="pre">pydrake.multibody.tree.UnitInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.UnitInertia_-Expression-.AxiallySymmetric" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the unit inertia for a body B for which there exists an axis L
 passing through the body’s center of mass Bcm having the property that
 B’s moment of inertia about all lines perpendicular to L are equal.
 Bodies with this “axially symmetric inertia” property include
@@ -20601,31 +20269,6 @@ and is perpendicular to unit_vector.</p>
 </ul>
 </dd>
 </dl>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Previously the <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code> argument was named <code class="docutils literal notranslate"><span class="pre">b_E</span></code> and was
-not required to be a unit vector. The use of a non-unit-vector
-third argument has been deprecated and will become an exception on
-or after 2023-12-01.</p>
-</div>
-<ol class="arabic simple" start="2">
-<li><p>AxiallySymmetric(J: pydrake.symbolic.Expression, K: pydrake.symbolic.Expression, b_E: numpy.ndarray[object[3, 1]]) -&gt; pydrake.multibody.tree.UnitInertia_[Expression]</p></li>
-</ol>
-<p>This overload spelling of a UnitInertia factory method is deprecated.</p>
-<dl class="simple">
-<dt>The named arguments for the UnitInertia factory methods have been renamed:</dt><dd><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">r</span></code> → <code class="docutils literal notranslate"><span class="pre">radius</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">L</span></code> → <code class="docutils literal notranslate"><span class="pre">length</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">J</span></code> → <code class="docutils literal notranslate"><span class="pre">moment_parallel</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">K</span></code> → <code class="docutils literal notranslate"><span class="pre">moment_perpendicular</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">b_E</span></code> → <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code></p></li>
-</ul>
-</dd>
-</dl>
-<p>The old argument names will be removed from Drake on or after 2023-12-01.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code> argument no longer has a default value, and must already
-have been normalized by the caller. Passing in a non-normalized unit vector
-will result in a warning for now, but an exception on or after 2023-12-01.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -20755,12 +20398,8 @@ direction.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.UnitInertia_-Expression-.SolidCapsule">
-<span id="pydrake.multibody.tree.UnitInertia_[Expression].SolidCapsule"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCapsule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.UnitInertia_-Expression-.SolidCapsule" title="Permalink to this definition"></a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li><p>SolidCapsule(radius: pydrake.symbolic.Expression, length: pydrake.symbolic.Expression, unit_vector: numpy.ndarray[object[3, 1]]) -&gt; pydrake.multibody.tree.UnitInertia_[Expression]</p></li>
-</ol>
-<p>Creates a unit inertia for a uniform density solid capsule B about its
+<span id="pydrake.multibody.tree.UnitInertia_[Expression].SolidCapsule"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCapsule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.UnitInertia_" title="pydrake.multibody.tree.UnitInertia_"><span class="pre">pydrake.multibody.tree.UnitInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.UnitInertia_-Expression-.SolidCapsule" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a unit inertia for a uniform density solid capsule B about its
 center of mass Bcm (which is coincident with B’s geometric center Bo).</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">radius</span></code>:</dt><dd><p>radius of the cylinder/half-sphere parts of the capsule.</p>
@@ -20788,24 +20427,6 @@ Bcm and is perpendicular to unit_vector.</p>
 </ul>
 </dd>
 </dl>
-<ol class="arabic simple" start="2">
-<li><p>SolidCapsule(r: pydrake.symbolic.Expression, L: pydrake.symbolic.Expression, unit_vector: numpy.ndarray[object[3, 1]] = array([&lt;Expression “0”&gt;, &lt;Expression “0”&gt;, &lt;Expression “1”&gt;], dtype=object)) -&gt; pydrake.multibody.tree.UnitInertia_[Expression]</p></li>
-</ol>
-<p>This overload spelling of a UnitInertia factory method is deprecated.</p>
-<dl class="simple">
-<dt>The named arguments for the UnitInertia factory methods have been renamed:</dt><dd><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">r</span></code> → <code class="docutils literal notranslate"><span class="pre">radius</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">L</span></code> → <code class="docutils literal notranslate"><span class="pre">length</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">J</span></code> → <code class="docutils literal notranslate"><span class="pre">moment_parallel</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">K</span></code> → <code class="docutils literal notranslate"><span class="pre">moment_perpendicular</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">b_E</span></code> → <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code></p></li>
-</ul>
-</dd>
-</dl>
-<p>The old argument names will be removed from Drake on or after 2023-12-01.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code> argument no longer has a default value, and must already
-have been normalized by the caller. Passing in a non-normalized unit vector
-will result in a warning for now, but an exception on or after 2023-12-01.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -20822,12 +20443,8 @@ center.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.UnitInertia_-Expression-.SolidCylinder">
-<span id="pydrake.multibody.tree.UnitInertia_[Expression].SolidCylinder"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCylinder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.UnitInertia_-Expression-.SolidCylinder" title="Permalink to this definition"></a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li><p>SolidCylinder(radius: pydrake.symbolic.Expression, length: pydrake.symbolic.Expression, unit_vector: numpy.ndarray[object[3, 1]]) -&gt; pydrake.multibody.tree.UnitInertia_[Expression]</p></li>
-</ol>
-<p>Creates a unit inertia for a uniform density solid cylinder B about
+<span id="pydrake.multibody.tree.UnitInertia_[Expression].SolidCylinder"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCylinder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.UnitInertia_" title="pydrake.multibody.tree.UnitInertia_"><span class="pre">pydrake.multibody.tree.UnitInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.UnitInertia_-Expression-.SolidCylinder" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a unit inertia for a uniform density solid cylinder B about
 its center of mass Bcm (which is coincident with B’s geometric center
 Bo).</p>
 <dl class="simple">
@@ -20862,41 +20479,12 @@ Bcm and is perpendicular to unit_vector.</p>
 about point Bp (Bp is at the center of one of the cylinder’s
 circular ends).</p>
 </div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Previously the <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code> argument was named <code class="docutils literal notranslate"><span class="pre">b_E</span></code> and was
-not required to be a unit vector. The use of a non-unit-vector
-third argument has been deprecated and will become an exception on
-or after 2023-12-01.</p>
-</div>
-<ol class="arabic simple" start="2">
-<li><p>SolidCylinder(r: pydrake.symbolic.Expression, L: pydrake.symbolic.Expression, b_E: numpy.ndarray[object[3, 1]] = array([&lt;Expression “0”&gt;, &lt;Expression “0”&gt;, &lt;Expression “1”&gt;], dtype=object)) -&gt; pydrake.multibody.tree.UnitInertia_[Expression]</p></li>
-</ol>
-<p>This overload spelling of a UnitInertia factory method is deprecated.</p>
-<dl class="simple">
-<dt>The named arguments for the UnitInertia factory methods have been renamed:</dt><dd><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">r</span></code> → <code class="docutils literal notranslate"><span class="pre">radius</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">L</span></code> → <code class="docutils literal notranslate"><span class="pre">length</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">J</span></code> → <code class="docutils literal notranslate"><span class="pre">moment_parallel</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">K</span></code> → <code class="docutils literal notranslate"><span class="pre">moment_perpendicular</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">b_E</span></code> → <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code></p></li>
-</ul>
-</dd>
-</dl>
-<p>The old argument names will be removed from Drake on or after 2023-12-01.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code> argument no longer has a default value, and must already
-have been normalized by the caller. Passing in a non-normalized unit vector
-will result in a warning for now, but an exception on or after 2023-12-01.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.UnitInertia_-Expression-.SolidCylinderAboutEnd">
-<span id="pydrake.multibody.tree.UnitInertia_[Expression].SolidCylinderAboutEnd"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCylinderAboutEnd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.UnitInertia_-Expression-.SolidCylinderAboutEnd" title="Permalink to this definition"></a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li><p>SolidCylinderAboutEnd(radius: pydrake.symbolic.Expression, length: pydrake.symbolic.Expression, unit_vector: numpy.ndarray[object[3, 1]]) -&gt; pydrake.multibody.tree.UnitInertia_[Expression]</p></li>
-</ol>
-<p>Creates a unit inertia for a uniform-density solid cylinder B about an
+<span id="pydrake.multibody.tree.UnitInertia_[Expression].SolidCylinderAboutEnd"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SolidCylinderAboutEnd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.UnitInertia_" title="pydrake.multibody.tree.UnitInertia_"><span class="pre">pydrake.multibody.tree.UnitInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.UnitInertia_-Expression-.SolidCylinderAboutEnd" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a unit inertia for a uniform-density solid cylinder B about an
 end-point Bp of the cylinder’s axis (see below for more about Bp).</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">radius</span></code>:</dt><dd><p>radius of cylinder (meters).</p>
@@ -20928,24 +20516,6 @@ and is perpendicular to unit_vector.</p>
 </ul>
 </dd>
 </dl>
-<ol class="arabic simple" start="2">
-<li><p>SolidCylinderAboutEnd(r: pydrake.symbolic.Expression, L: pydrake.symbolic.Expression) -&gt; pydrake.multibody.tree.UnitInertia_[Expression]</p></li>
-</ol>
-<p>This overload spelling of a UnitInertia factory method is deprecated.</p>
-<dl class="simple">
-<dt>The named arguments for the UnitInertia factory methods have been renamed:</dt><dd><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">r</span></code> → <code class="docutils literal notranslate"><span class="pre">radius</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">L</span></code> → <code class="docutils literal notranslate"><span class="pre">length</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">J</span></code> → <code class="docutils literal notranslate"><span class="pre">moment_parallel</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">K</span></code> → <code class="docutils literal notranslate"><span class="pre">moment_perpendicular</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">b_E</span></code> → <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code></p></li>
-</ul>
-</dd>
-</dl>
-<p>The old argument names will be removed from Drake on or after 2023-12-01.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code> argument no longer has a default value, and must already
-have been normalized by the caller. Passing in a non-normalized unit vector
-will result in a warning for now, but an exception on or after 2023-12-01.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -20966,12 +20536,8 @@ density and radius <code class="docutils literal notranslate"><span class="pre">
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.UnitInertia_-Expression-.StraightLine">
-<span id="pydrake.multibody.tree.UnitInertia_[Expression].StraightLine"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">StraightLine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.UnitInertia_-Expression-.StraightLine" title="Permalink to this definition"></a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li><p>StraightLine(moment_perpendicular: pydrake.symbolic.Expression, unit_vector: numpy.ndarray[object[3, 1]]) -&gt; pydrake.multibody.tree.UnitInertia_[Expression]</p></li>
-</ol>
-<p>Creates a unit inertia for a straight line segment B about a point Bp
+<span id="pydrake.multibody.tree.UnitInertia_[Expression].StraightLine"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">StraightLine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">moment_perpendicular</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.UnitInertia_" title="pydrake.multibody.tree.UnitInertia_"><span class="pre">pydrake.multibody.tree.UnitInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.UnitInertia_-Expression-.StraightLine" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a unit inertia for a straight line segment B about a point Bp
 on the line segment.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">moment_perpendicular</span></code>:</dt><dd><p>Unit moment of inertia about any axis that passes through Bp and
@@ -21008,41 +20574,12 @@ and is perpendicular to unit_vector.</p>
 that has a zero moment of inertia about Bp in the unit_vector
 direction.</p>
 </div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Previously the <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code> argument was named <code class="docutils literal notranslate"><span class="pre">b_E</span></code> and was
-not required to be a unit vector. The use of a non-unit-vector
-second argument has been deprecated and will become an exception
-on or after 2023-12-01.</p>
-</div>
-<ol class="arabic simple" start="2">
-<li><p>StraightLine(K: pydrake.symbolic.Expression, b_E: numpy.ndarray[object[3, 1]]) -&gt; pydrake.multibody.tree.UnitInertia_[Expression]</p></li>
-</ol>
-<p>This overload spelling of a UnitInertia factory method is deprecated.</p>
-<dl class="simple">
-<dt>The named arguments for the UnitInertia factory methods have been renamed:</dt><dd><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">r</span></code> → <code class="docutils literal notranslate"><span class="pre">radius</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">L</span></code> → <code class="docutils literal notranslate"><span class="pre">length</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">J</span></code> → <code class="docutils literal notranslate"><span class="pre">moment_parallel</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">K</span></code> → <code class="docutils literal notranslate"><span class="pre">moment_perpendicular</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">b_E</span></code> → <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code></p></li>
-</ul>
-</dd>
-</dl>
-<p>The old argument names will be removed from Drake on or after 2023-12-01.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code> argument no longer has a default value, and must already
-have been normalized by the caller. Passing in a non-normalized unit vector
-will result in a warning for now, but an exception on or after 2023-12-01.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.UnitInertia_-Expression-.ThinRod">
-<span id="pydrake.multibody.tree.UnitInertia_[Expression].ThinRod"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ThinRod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.UnitInertia_-Expression-.ThinRod" title="Permalink to this definition"></a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li><p>ThinRod(length: pydrake.symbolic.Expression, unit_vector: numpy.ndarray[object[3, 1]]) -&gt; pydrake.multibody.tree.UnitInertia_[Expression]</p></li>
-</ol>
-<p>Creates a unit inertia for a uniform density thin rod B about its
+<span id="pydrake.multibody.tree.UnitInertia_[Expression].ThinRod"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ThinRod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit_vector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.UnitInertia_" title="pydrake.multibody.tree.UnitInertia_"><span class="pre">pydrake.multibody.tree.UnitInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.UnitInertia_-Expression-.ThinRod" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a unit inertia for a uniform density thin rod B about its
 center of mass Bcm (which is coincident with B’s geometric center Bo).</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">length</span></code>:</dt><dd><p>length of rod in unit_vector direction (meters).</p>
@@ -21072,31 +20609,6 @@ Bcm and is perpendicular to unit_vector.</p>
 <p class="admonition-title">Note</p>
 <p>B’s axial moment of inertia (along the rod) is zero..</p>
 </div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Previously the <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code> argument was named <code class="docutils literal notranslate"><span class="pre">b_E</span></code> and was
-not required to be a unit vector. The use of a non-unit-vector
-second argument has been deprecated and will become an exception
-on or after 2023-12-01.</p>
-</div>
-<ol class="arabic simple" start="2">
-<li><p>ThinRod(L: pydrake.symbolic.Expression, b_E: numpy.ndarray[object[3, 1]]) -&gt; pydrake.multibody.tree.UnitInertia_[Expression]</p></li>
-</ol>
-<p>This overload spelling of a UnitInertia factory method is deprecated.</p>
-<dl class="simple">
-<dt>The named arguments for the UnitInertia factory methods have been renamed:</dt><dd><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">r</span></code> → <code class="docutils literal notranslate"><span class="pre">radius</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">L</span></code> → <code class="docutils literal notranslate"><span class="pre">length</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">J</span></code> → <code class="docutils literal notranslate"><span class="pre">moment_parallel</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">K</span></code> → <code class="docutils literal notranslate"><span class="pre">moment_perpendicular</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">b_E</span></code> → <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code></p></li>
-</ul>
-</dd>
-</dl>
-<p>The old argument names will be removed from Drake on or after 2023-12-01.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">unit_vector</span></code> argument no longer has a default value, and must already
-have been normalized by the caller. Passing in a non-normalized unit vector
-will result in a warning for now, but an exception on or after 2023-12-01.</p>
 </dd></dl>
 
 <dl class="py method">

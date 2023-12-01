@@ -8,7 +8,6 @@ var searchData=
   ['imagebgra8u',['ImageBgra8U',['../namespacedrake_1_1systems_1_1sensors.html#a746567d80e8e7ae22cae20c9dbe78f3b',1,'drake::systems::sensors']]],
   ['imagedepth16u',['ImageDepth16U',['../namespacedrake_1_1systems_1_1sensors.html#a12ae113c6f13e4c9c37430a988afeef8',1,'drake::systems::sensors']]],
   ['imagedepth32f',['ImageDepth32F',['../namespacedrake_1_1systems_1_1sensors.html#a0558960d25000bd7cc8607cef2fd223b',1,'drake::systems::sensors']]],
-  ['imageexpr',['ImageExpr',['../namespacedrake_1_1systems_1_1sensors.html#a85ab3d34256b5ae6cbee35a8bdbfb4ab',1,'drake::systems::sensors']]],
   ['imagegrey8u',['ImageGrey8U',['../namespacedrake_1_1systems_1_1sensors.html#a1d38997213d63bf974b9ea19fc5abf0d',1,'drake::systems::sensors']]],
   ['imagelabel16i',['ImageLabel16I',['../namespacedrake_1_1systems_1_1sensors.html#af9f2ff2c09bd6626d594951724ed1d9a',1,'drake::systems::sensors']]],
   ['imagergb8u',['ImageRgb8U',['../namespacedrake_1_1systems_1_1sensors.html#a48e75e9f3da7e6ca9cc886086e177d2a',1,'drake::systems::sensors']]],
