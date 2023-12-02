@@ -186,7 +186,9 @@ class drake::visualization::ConcatenateImages&lt; T &gt;</h3>
 </table>
 </td></tr>
 </table>
-<p>As currently implemented, all inputs must be of type ImageRgba8U, must have identical width and height, and all ports must be connected (i.e., with no gaps in the grid of rows x cols). Any of those conditions could be generalized as future work.</p>
+<p>All inputs must be of type ImageRgba8U.</p>
+<p>Any input port may be disconnected, in which case it will be interpreted as zero-sized image.</p>
+<p>In case of non-uniform image sizes, any gaps between images will be filled with all-zero pixels (i.e., with 0% alpha).</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>The scalar type, which must be <code>double</code>. </td></tr>
