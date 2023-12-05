@@ -206,9 +206,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0c0fd3c2e27243de55385f4f9695fc0e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#a0c0fd3c2e27243de55385f4f9695fc0e">is_locked</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
 <tr class="memdesc:a0c0fd3c2e27243de55385f4f9695fc0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether this Body is currently locked to its inboard (parent) Body.  <a href="#a0c0fd3c2e27243de55385f4f9695fc0e">More...</a><br /></td></tr>
 <tr class="separator:a0c0fd3c2e27243de55385f4f9695fc0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57367ee577b21dc678509209435858ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1_type_safe_index.html">internal::BodyNodeIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#a57367ee577b21dc678509209435858ec">node_index</a> () const</td></tr>
-<tr class="memdesc:a57367ee577b21dc678509209435858ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Returns the index of the node in the underlying tree structure of the parent MultibodyTree to which this body belongs.  <a href="#a57367ee577b21dc678509209435858ec">More...</a><br /></td></tr>
-<tr class="separator:a57367ee577b21dc678509209435858ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41b2fbf7771b52e53a28662fec9716f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1_type_safe_index.html">internal::MobodIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#a41b2fbf7771b52e53a28662fec9716f4">mobod_index</a> () const</td></tr>
+<tr class="memdesc:a41b2fbf7771b52e53a28662fec9716f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Returns the index of the mobilized body ("mobod") in the computational directed forest structure of the owning MultibodyTree to which this Body belongs.  <a href="#a41b2fbf7771b52e53a28662fec9716f4">More...</a><br /></td></tr>
+<tr class="separator:a41b2fbf7771b52e53a28662fec9716f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72b4efc4f7ac1a5e86ab8ffa970eaede"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1_type_safe_index.html">internal::MobodIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#a72b4efc4f7ac1a5e86ab8ffa970eaede">node_index</a> () const</td></tr>
+<tr class="memdesc:a72b4efc4f7ac1a5e86ab8ffa970eaede"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a72b4efc4f7ac1a5e86ab8ffa970eaede">More...</a><br /></td></tr>
+<tr class="separator:a72b4efc4f7ac1a5e86ab8ffa970eaede"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7df065349a370f3007ee52c6ede868d0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#a7df065349a370f3007ee52c6ede868d0">is_floating</a> () const</td></tr>
 <tr class="memdesc:a7df065349a370f3007ee52c6ede868d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Returns <code>true</code> if <code>this</code> body is granted 6-dofs by a Mobilizer and the parent body of this body's associated 6-dof joint is <code>world</code>.  <a href="#a7df065349a370f3007ee52c6ede868d0">More...</a><br /></td></tr>
 <tr class="separator:a7df065349a370f3007ee52c6ede868d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1077,7 +1080,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd><code>this</code> is a floating body </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_body.html#a02779a5522ffef8547daf6c386ffb47b" title="(Advanced) For floating bodies (see is_floating()) this method returns the index of this Body&#39;s first...">floating_velocities_start_in_v()</a> (Deprecated.) </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000010">Deprecated:</a></b></dt><dd>Convert to floating_velocities_start_in_v(). In a state  with [q v] concatenated, offset by num_positions() to  get to the start of v. <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000011">Deprecated:</a></b></dt><dd>Convert to floating_velocities_start_in_v(). In a state  with [q v] concatenated, offset by num_positions() to  get to the start of v. <br />
  This will be removed from Drake on or after 2024-02-01.</dd></dl>
 
 </div>
@@ -1316,6 +1319,26 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="a41b2fbf7771b52e53a28662fec9716f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41b2fbf7771b52e53a28662fec9716f4">&#9670;&nbsp;</a></span>mobod_index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1_type_safe_index.html">internal::MobodIndex</a> mobod_index </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Advanced) Returns the index of the mobilized body ("mobod") in the computational directed forest structure of the owning MultibodyTree to which this Body belongs. </p>
+<p>This serves as the BodyNode index and the index into all associated quantities. </p>
+
+</div>
+</div>
 <a id="ad8227ba86a01f26e4f173cd5e219d5d1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad8227ba86a01f26e4f173cd5e219d5d1">&#9670;&nbsp;</a></span>name()</h2>
 
@@ -1335,14 +1358,14 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a57367ee577b21dc678509209435858ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a57367ee577b21dc678509209435858ec">&#9670;&nbsp;</a></span>node_index()</h2>
+<a id="a72b4efc4f7ac1a5e86ab8ffa970eaede"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72b4efc4f7ac1a5e86ab8ffa970eaede">&#9670;&nbsp;</a></span>node_index()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1_type_safe_index.html">internal::BodyNodeIndex</a> node_index </td>
+          <td class="memname"><a class="el" href="classdrake_1_1_type_safe_index.html">internal::MobodIndex</a> node_index </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1350,7 +1373,9 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>(Advanced) Returns the index of the node in the underlying tree structure of the parent MultibodyTree to which this body belongs. </p>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000010">Deprecated:</a></b></dt><dd>Use mobod_index() instead. <br />
+ This will be removed from Drake on or after 2024-03-01.</dd></dl>
 
 </div>
 </div>

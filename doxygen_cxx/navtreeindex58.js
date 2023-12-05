@@ -1,5 +1,6 @@
 var NAVTREEINDEX58 =
 {
+"structdrake_1_1multibody_1_1_propeller_info.html":[3,0,0,8,77],
 "structdrake_1_1multibody_1_1_propeller_info.html#a30a3388e8684851fd367f80bb8a35249":[3,0,0,8,77,6],
 "structdrake_1_1multibody_1_1_propeller_info.html#a5449c9c55e68b1b71610692e6758f31e":[3,0,0,8,77,0],
 "structdrake_1_1multibody_1_1_propeller_info.html#a5f9f30b642d0b522f931501589466b9c":[3,0,0,8,77,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX58 =
 "structdrake_1_1solvers_1_1_bound.html#ae0e265c074f457e193b30ff0d77c750b":[3,0,0,13,4,1],
 "structdrake_1_1solvers_1_1_clarabel_solver_details.html":[3,0,0,13,7],
 "structdrake_1_1solvers_1_1_clarabel_solver_details.html#a1d10e252e778731e59f0f71afd7e727e":[3,0,0,13,7,0],
-"structdrake_1_1solvers_1_1_clarabel_solver_details.html#a45d6740f91111e3a9fb372c234ca2ac7":[3,0,0,13,7,2],
-"structdrake_1_1solvers_1_1_clarabel_solver_details.html#a73e4cc856cf85fecbb324b0280f30d21":[3,0,0,13,7,1]
+"structdrake_1_1solvers_1_1_clarabel_solver_details.html#a45d6740f91111e3a9fb372c234ca2ac7":[3,0,0,13,7,2]
 };

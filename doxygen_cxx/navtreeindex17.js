@@ -1,5 +1,6 @@
 var NAVTREEINDEX17 =
 {
+"classdrake_1_1multibody_1_1_rational_forward_kinematics.html#ae2f64cf4a62743cda2f74fff57f1c224":[3,0,0,8,80,1],
 "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#af561a8c971a66f869986c5e4429352c3":[3,0,0,8,80,9],
 "classdrake_1_1multibody_1_1_revolute_joint.html":[3,0,0,8,81],
 "classdrake_1_1multibody_1_1_revolute_joint.html#a1cf746f6557c48732c1c2898f9ed51c2":[3,0,0,8,81,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX17 =
 "classdrake_1_1multibody_1_1_spatial_inertia.html#ac1c66cd195387d537311d9c6d444ab62":[3,0,0,8,90,33],
 "classdrake_1_1multibody_1_1_spatial_inertia.html#acb702323ac7052994423f00550f2aff3":[3,0,0,8,90,40],
 "classdrake_1_1multibody_1_1_spatial_inertia.html#acc3f6e6102f427a8624f86758eb536fd":[3,0,0,8,90,21],
-"classdrake_1_1multibody_1_1_spatial_inertia.html#acd0afd330ef98eb2418ae915e3a1b024":[3,0,0,8,90,19],
-"classdrake_1_1multibody_1_1_spatial_inertia.html#ad207bb84c25f7ac68dcf64ff5763fbee":[3,0,0,8,90,44]
+"classdrake_1_1multibody_1_1_spatial_inertia.html#acd0afd330ef98eb2418ae915e3a1b024":[3,0,0,8,90,19]
 };
