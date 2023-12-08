@@ -121,13 +121,13 @@ var NAVTREEINDEX =
 "namespacedrake_1_1trajectories.html",
 "program__attribute_8h.html#ab09ca5e1afe9e5a4e8744ecb27839b15a25c2dc47991b3df171ed5192bcf70390",
 "scene__graph__collision__checker_8h.html",
-"standard__operations_8h.html#af581ee768c19ce4a3dfb29e66a786097",
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html#a715aeff19ef86620b94237a5ec2ea7c8",
-"structdrake_1_1multibody_1_1_propeller_info.html",
-"structdrake_1_1solvers_1_1_clarabel_solver_details.html#a73e4cc856cf85fecbb324b0280f30d21",
-"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#ad12fc34ce789bce6c8a05d8a17138534",
-"symbolic_2polynomial_8h.html#a48f8b6bfe08648f4a0dac518e1abb0bd",
-"wrap__pybind_8h.html#a50864a5d92c08bf74cf16b6d004aaa6a"
+"standard__operations_8h.html#af2afb4760e5c5ef40db8af9479db1cee",
+"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html#a64cbe7574a9b87347866d8c51f17ec6e",
+"structdrake_1_1multibody_1_1_pd_controller_gains.html#aace2d484b0e3651abd108f04803d316c",
+"structdrake_1_1solvers_1_1_clarabel_solver_details.html#a45d6740f91111e3a9fb372c234ca2ac7",
+"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a9dc0967f9d639aaf80a08151df0e96f3",
+"symbolic_2polynomial_8h.html#a42522d07a4a9c32a89e8b4eea9a00a60",
+"wrap__pybind_8h.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

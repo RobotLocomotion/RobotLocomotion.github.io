@@ -43,6 +43,7 @@ var searchData=
   ['scoped_5fsingleton_2eh',['scoped_singleton.h',['../scoped__singleton_8h.html',1,'']]],
   ['screw_5fjoint_2eh',['screw_joint.h',['../screw__joint_8h.html',1,'']]],
   ['screw_5fmobilizer_2eh',['screw_mobilizer.h',['../screw__mobilizer_8h.html',1,'']]],
+  ['scs_5fclarabel_5fcommon_2eh',['scs_clarabel_common.h',['../scs__clarabel__common_8h.html',1,'']]],
   ['scs_5fsolver_2eh',['scs_solver.h',['../scs__solver_8h.html',1,'']]],
   ['sdpa_5ffree_5fformat_2eh',['sdpa_free_format.h',['../sdpa__free__format_8h.html',1,'']]],
   ['semi_5fexplicit_5feuler_5fintegrator_2eh',['semi_explicit_euler_integrator.h',['../semi__explicit__euler__integrator_8h.html',1,'']]],

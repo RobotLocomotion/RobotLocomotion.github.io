@@ -4026,7 +4026,7 @@ throw an exception. $*Default:* = 0.</p>
 quadratic constraint is convex, and you intend to solve the problem
 with a convex solver (like Mosek), then it is better to reformulate it
 with a second order cone constraint. See
-<a class="reference external" href="https://docs.mosek.com/10.0/capi/prob-def-quadratic.html#a-recommendation">https://docs.mosek.com/10.0/capi/prob-def-quadratic.html#a-recommendation</a>
+<a class="reference external" href="https://docs.mosek.com/10.1/capi/prob-def-quadratic.html#a-recommendation">https://docs.mosek.com/10.1/capi/prob-def-quadratic.html#a-recommendation</a>
 for an explanation.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">vars</span></code>:</dt><dd><p>x in the documentation above.</p>
@@ -4048,7 +4048,7 @@ a quadratic expression. Notice that if your quadratic constraint is
 convex, and you intend to solve the problem with a convex solver (like
 Mosek), then it is better to reformulate it with a second order cone
 constraint. See
-<a class="reference external" href="https://docs.mosek.com/10.0/capi/prob-def-quadratic.html#a-recommendation">https://docs.mosek.com/10.0/capi/prob-def-quadratic.html#a-recommendation</a>
+<a class="reference external" href="https://docs.mosek.com/10.1/capi/prob-def-quadratic.html#a-recommendation">https://docs.mosek.com/10.1/capi/prob-def-quadratic.html#a-recommendation</a>
 for an explanation.</p>
 </dd></dl>
 
@@ -5695,7 +5695,7 @@ solution.</p>
 <span class="w">   </span><span class="n">GurobiSolver</span><span class="w"> </span><span class="n">solver</span><span class="p">;</span><span class="w"></span>
 <span class="w">   </span><span class="c1">// Explicitly tell the solver to compute the dual solution for Lorentz</span>
 <span class="w">   </span><span class="c1">// cone or rotated Lorentz cone constraint, check</span>
-<span class="w">   </span><span class="c1">// https://www.gurobi.com/documentation/10.0/refman/qcpdual.html for</span>
+<span class="w">   </span><span class="c1">// https://www.gurobi.com/documentation/10.1/refman/qcpdual.html for</span>
 <span class="w">   </span><span class="c1">// more information.</span>
 <span class="w">   </span><span class="n">SolverOptions</span><span class="w"> </span><span class="n">options</span><span class="p">;</span><span class="w"></span>
 <span class="w">   </span><span class="n">options</span><span class="p">.</span><span class="n">SetOption</span><span class="p">(</span><span class="n">GurobiSolver</span><span class="o">::</span><span class="n">id</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;QCPDual&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
@@ -5715,7 +5715,7 @@ solver such as SCS, MOSEK<a href="/tm.html">™</a>, CSDP, etc, the dual solutio
 (rotated) Lorentz cone constraint doesn’t have the “shadow price”
 interpretation, but should lie in the dual cone, and satisfy the KKT
 condition. For more information, refer to
-https://docs.mosek.com/10.0/capi/prob-def-conic.html#duality-for-conic-optimization
+https://docs.mosek.com/10.1/capi/prob-def-conic.html#duality-for-conic-optimization
 as an explanation.</p>
 <p>The interpretation for the dual variable to conic constraint x ∈ K can
 be different. Here K is a convex cone, including exponential cone,
@@ -6754,20 +6754,20 @@ change the values of the integer/binary variables in the
 subsequent iterations.) If the specified integer solution is
 infeasible or incomplete, MOSEK<a href="/tm.html">™</a> will simply ignore it. For more
 details, check
-<a class="reference external" href="https://docs.mosek.com/10.0/capi/tutorial-mio-shared.html?highlight=initial">https://docs.mosek.com/10.0/capi/tutorial-mio-shared.html?highlight=initial</a></p>
+<a class="reference external" href="https://docs.mosek.com/10.1/capi/tutorial-mio-shared.html?highlight=initial">https://docs.mosek.com/10.1/capi/tutorial-mio-shared.html?highlight=initial</a></p>
 </div>
 <p>MOSEK<a href="/tm.html">™</a> supports many solver parameters. You can refer to the full list
 of parameters in
-<a class="reference external" href="https://docs.mosek.com/10.0/capi/param-groups.html#doc-param-groups">https://docs.mosek.com/10.0/capi/param-groups.html#doc-param-groups</a>.
+<a class="reference external" href="https://docs.mosek.com/10.1/capi/param-groups.html#doc-param-groups">https://docs.mosek.com/10.1/capi/param-groups.html#doc-param-groups</a>.
 On top of these parameters, we also provide the following additional
 parameters</p>
 <ul class="simple">
 <li><dl class="simple">
 <dt>“writedata”</dt><dd><p>set to a file name so that MOSEK<a href="/tm.html">™</a> solver will write the
 optimization model to this file. check
-<a class="reference external" href="https://docs.mosek.com/10.0/capi/solver-io.html#saving-a-problem-to-a-file">https://docs.mosek.com/10.0/capi/solver-io.html#saving-a-problem-to-a-file</a>
+<a class="reference external" href="https://docs.mosek.com/10.1/capi/solver-io.html#saving-a-problem-to-a-file">https://docs.mosek.com/10.1/capi/solver-io.html#saving-a-problem-to-a-file</a>
 for more details. The supported file extensions are listed in
-<a class="reference external" href="https://docs.mosek.com/10.0/capi/supported-file-formats.html#doc-shared-file-formats">https://docs.mosek.com/10.0/capi/supported-file-formats.html#doc-shared-file-formats</a>.
+<a class="reference external" href="https://docs.mosek.com/10.1/capi/supported-file-formats.html#doc-shared-file-formats">https://docs.mosek.com/10.1/capi/supported-file-formats.html#doc-shared-file-formats</a>.
 Set this parameter to “” if you don’t want to write to a file. Default is
 not to write to a file.</p>
 </dd>
@@ -6844,14 +6844,14 @@ obtain the details.</p>
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">optimizer_time</span></span><a class="headerlink" href="#pydrake.solvers.MosekSolverDetails.optimizer_time" title="Permalink to this definition"></a></dt>
 <dd><p>The MOSEK<a href="/tm.html">™</a> optimization time. Please refer to MSK_DINF_OPTIMIZER_TIME
 in
-<a class="reference external" href="https://docs.mosek.com/10.0/capi/constants.html?highlight=msk_dinf_optimizer_time">https://docs.mosek.com/10.0/capi/constants.html?highlight=msk_dinf_optimizer_time</a></p>
+<a class="reference external" href="https://docs.mosek.com/10.1/capi/constants.html?highlight=msk_dinf_optimizer_time">https://docs.mosek.com/10.1/capi/constants.html?highlight=msk_dinf_optimizer_time</a></p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.solvers.MosekSolverDetails.rescode">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rescode</span></span><a class="headerlink" href="#pydrake.solvers.MosekSolverDetails.rescode" title="Permalink to this definition"></a></dt>
 <dd><p>The response code returned from MOSEK<a href="/tm.html">™</a> solver. Check
-<a class="reference external" href="https://docs.mosek.com/10.0/capi/response-codes.html">https://docs.mosek.com/10.0/capi/response-codes.html</a> for the meaning
+<a class="reference external" href="https://docs.mosek.com/10.1/capi/response-codes.html">https://docs.mosek.com/10.1/capi/response-codes.html</a> for the meaning
 on the response code.</p>
 </dd></dl>
 
@@ -6859,8 +6859,8 @@ on the response code.</p>
 <dt class="sig sig-object py" id="pydrake.solvers.MosekSolverDetails.solution_status">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">solution_status</span></span><a class="headerlink" href="#pydrake.solvers.MosekSolverDetails.solution_status" title="Permalink to this definition"></a></dt>
 <dd><p>The solution status after solving the problem. Check
-<a class="reference external" href="https://docs.mosek.com/10.0/capi/accessing-solution.html">https://docs.mosek.com/10.0/capi/accessing-solution.html</a> and
-<a class="reference external" href="https://docs.mosek.com/10.0/capi/constants.html#mosek.solsta">https://docs.mosek.com/10.0/capi/constants.html#mosek.solsta</a> for the
+<a class="reference external" href="https://docs.mosek.com/10.1/capi/accessing-solution.html">https://docs.mosek.com/10.1/capi/accessing-solution.html</a> and
+<a class="reference external" href="https://docs.mosek.com/10.1/capi/constants.html#mosek.solsta">https://docs.mosek.com/10.1/capi/constants.html#mosek.solsta</a> for the
 meaning on the solution status.</p>
 </dd></dl>
 
