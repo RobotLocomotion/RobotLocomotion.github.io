@@ -3982,6 +3982,49 @@ The user could call</p>
 </details></dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.MathematicalProgram.AddPrincipalSubmatrixIsPsdConstraint">
+<span class="sig-name descname"><span class="pre">AddPrincipalSubmatrixIsPsdConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.MathematicalProgram.AddPrincipalSubmatrixIsPsdConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>AddPrincipalSubmatrixIsPsdConstraint(self: pydrake.solvers.MathematicalProgram, arg0: numpy.ndarray[object[m, n], flags.f_contiguous], arg1: Set[int]) -&gt; pydrake.solvers.Binding[PositiveSemidefiniteConstraint]</p></li>
+</ol>
+<p>Adds a constraint that the principal submatrix of a symmetric matrix
+composed of the indices in minor_indices is positive semidefinite.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>The passed <code class="docutils literal notranslate"><span class="pre">symmetric_matrix_var</span></code> is a symmetric matrix.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>All values in <code class="docutils literal notranslate"><span class="pre">minor_indices</span></code> lie in the range [0,
+symmetric_matrix_var.rows() - 1].</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">symmetric_matrix_var</span></code>:</dt><dd><p>A symmetric MatrixDecisionVariable object.</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>AddPositiveSemidefiniteConstraint.</p>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>AddPrincipalSubmatrixIsPsdConstraint(self: pydrake.solvers.MathematicalProgram, arg0: numpy.ndarray[object[m, n], flags.f_contiguous], arg1: Set[int]) -&gt; pydrake.solvers.Binding[PositiveSemidefiniteConstraint]</p></li>
+</ol>
+<p>Adds a constraint the that the principal submatrix of a symmetric
+matrix of expressions composed of the indices in minor_indices is
+positive semidefinite.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>The passed <code class="docutils literal notranslate"><span class="pre">symmetric_matrix_var</span></code> is a symmetric matrix.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>All values in <code class="docutils literal notranslate"><span class="pre">minor_indices</span></code> lie in the range [0,
+symmetric_matrix_var.rows() - 1].</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">e</span></code>:</dt><dd><p>Imposes constraint “e is positive semidefinite”.</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>AddPositiveSemidefiniteConstraint.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.MathematicalProgram.AddQuadraticAsRotatedLorentzConeConstraint">
 <span class="sig-name descname"><span class="pre">AddQuadraticAsRotatedLorentzConeConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">Q</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vars</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psd_tol</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.RotatedLorentzConeConstraint" title="pydrake.solvers.RotatedLorentzConeConstraint"><span class="pre">RotatedLorentzConeConstraint</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.solvers.MathematicalProgram.AddQuadraticAsRotatedLorentzConeConstraint" title="Permalink to this definition"></a></dt>
 <dd><p>Add the convex quadratic constraint 0.5xᵀQx + bᵀx + c &lt;= 0 as a
@@ -7769,8 +7812,10 @@ opt-in to build SNOPT per the documentation at
 <p><a class="reference external" href="https://drake.mit.edu/installation.html">Drake’s pre-compiled binary releases</a> do incorporate SNOPT, so
 therefore SolverInterface::available() will return true. Thanks to
 Philip E. Gill and Elizabeth Wong for their kind support.</p>
-<p>There is no license configuration required to use SNOPT, so
-SolverInterface::enabled() will always return true.</p>
+<p>There is no license configuration required to use SNOPT, but you may
+set the environtment variable <code class="docutils literal notranslate"><span class="pre">DRAKE_SNOPT_SOLVER_ENABLED</span></code> to “0” to
+force-disable SNOPT, in which case SolverInterface::enabled() will
+return false.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.SnoptSolver.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.SnoptSolver" title="pydrake.solvers.SnoptSolver"><span class="pre">pydrake.solvers.SnoptSolver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.SnoptSolver.__init__" title="Permalink to this definition"></a></dt>

@@ -1,5 +1,7 @@
 var NAVTREEINDEX58 =
 {
+"structdrake_1_1multibody_1_1_pd_controller_gains.html":[3,0,0,8,65],
+"structdrake_1_1multibody_1_1_pd_controller_gains.html#a873684cefeb665f3d5e6b495de57fc0d":[3,0,0,8,65,0],
 "structdrake_1_1multibody_1_1_pd_controller_gains.html#aace2d484b0e3651abd108f04803d316c":[3,0,0,8,65,1],
 "structdrake_1_1multibody_1_1_propeller_info.html":[3,0,0,8,77],
 "structdrake_1_1multibody_1_1_propeller_info.html#a30a3388e8684851fd367f80bb8a35249":[3,0,0,8,77,6],
@@ -247,7 +249,5 @@ var NAVTREEINDEX58 =
 "structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#aee9e567dff5d8f017d7705118d22d31d":[3,0,0,13,0,0],
 "structdrake_1_1solvers_1_1_bound.html":[3,0,0,13,4],
 "structdrake_1_1solvers_1_1_bound.html#abb82b111deb51f3a5917cf8780fee484":[3,0,0,13,4,0],
-"structdrake_1_1solvers_1_1_bound.html#ae0e265c074f457e193b30ff0d77c750b":[3,0,0,13,4,1],
-"structdrake_1_1solvers_1_1_clarabel_solver_details.html":[3,0,0,13,7],
-"structdrake_1_1solvers_1_1_clarabel_solver_details.html#a1d10e252e778731e59f0f71afd7e727e":[3,0,0,13,7,0]
+"structdrake_1_1solvers_1_1_bound.html#ae0e265c074f457e193b30ff0d77c750b":[3,0,0,13,4,1]
 };

@@ -171,7 +171,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1solvers_1_1_snopt_solver
 <div class="textblock"><p>An implementation of <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html" title="Interface used by implementations of individual solvers.">SolverInterface</a> for the commercially-licensed SNOPT solver (<a href="https://ccom.ucsd.edu/~optimizers/solvers/snopt/">https://ccom.ucsd.edu/~optimizers/solvers/snopt/</a>). </p>
 <p>Builds of Drake from source do not compile SNOPT by default, so therefore <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html#a1e8fcd942e045810b3847510fd0528fa" title="Returns true iff support for this solver has been compiled into Drake.">SolverInterface::available()</a> will return false. You must opt-in to build SNOPT per the documentation at <a href="https://drake.mit.edu/bazel.html#snopt">https://drake.mit.edu/bazel.html#snopt</a>.</p>
 <p><a href="https://drake.mit.edu/installation.html">Drake's pre-compiled binary releases</a> do incorporate SNOPT, so therefore <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html#a1e8fcd942e045810b3847510fd0528fa" title="Returns true iff support for this solver has been compiled into Drake.">SolverInterface::available()</a> will return true. Thanks to Philip E. Gill and Elizabeth Wong for their kind support.</p>
-<p>There is no license configuration required to use SNOPT, so <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html#ac90e60f81a12700b6f94e534d625ba25" title="Returns true iff this solver is properly configured for use at runtime.">SolverInterface::enabled()</a> will always return true. </p>
+<p>There is no license configuration required to use SNOPT, but you may set the environtment variable <code>DRAKE_SNOPT_SOLVER_ENABLED</code> to "0" to force-disable SNOPT, in which case <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html#ac90e60f81a12700b6f94e534d625ba25" title="Returns true iff this solver is properly configured for use at runtime.">SolverInterface::enabled()</a> will return false. </p>
 </div>
 <p><code>#include &lt;drake/solvers/snopt_solver.h&gt;</code></p>
 <table class="memberdecls">
@@ -256,6 +256,7 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a277134785588d69bb461a4a402877e7a"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_snopt_solver.html#a277134785588d69bb461a4a402877e7a">is_available</a> ()</td></tr>
 <tr class="separator:a277134785588d69bb461a4a402877e7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2acbb1fddaffbf52c3eaf70f6dfa41bd"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_snopt_solver.html#a2acbb1fddaffbf52c3eaf70f6dfa41bd">is_enabled</a> ()</td></tr>
+<tr class="memdesc:a2acbb1fddaffbf52c3eaf70f6dfa41bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff the environment variable DRAKE_SNOPT_SOLVER_ENABLED is unset or set to anything other than "0".  <a href="#a2acbb1fddaffbf52c3eaf70f6dfa41bd">More...</a><br /></td></tr>
 <tr class="separator:a2acbb1fddaffbf52c3eaf70f6dfa41bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a793b4bef71b184ac87f03d80b21c04d2"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_snopt_solver.html#a793b4bef71b184ac87f03d80b21c04d2">ProgramAttributesSatisfied</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;)</td></tr>
 <tr class="separator:a793b4bef71b184ac87f03d80b21c04d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -482,6 +483,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns true iff the environment variable DRAKE_SNOPT_SOLVER_ENABLED is unset or set to anything other than "0". </p>
 
 </div>
 </div>
