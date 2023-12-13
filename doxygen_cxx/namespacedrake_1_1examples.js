@@ -5,6 +5,7 @@ var namespacedrake_1_1examples =
     [ "bead_on_a_wire", "namespacedrake_1_1examples_1_1bead__on__a__wire.html", "namespacedrake_1_1examples_1_1bead__on__a__wire" ],
     [ "bouncing_ball", "namespacedrake_1_1examples_1_1bouncing__ball.html", "namespacedrake_1_1examples_1_1bouncing__ball" ],
     [ "compass_gait", "namespacedrake_1_1examples_1_1compass__gait.html", "namespacedrake_1_1examples_1_1compass__gait" ],
+    [ "deformable_torus", "namespacedrake_1_1examples_1_1deformable__torus.html", "namespacedrake_1_1examples_1_1deformable__torus" ],
     [ "fibonacci", "namespacedrake_1_1examples_1_1fibonacci.html", "namespacedrake_1_1examples_1_1fibonacci" ],
     [ "kuka_iiwa_arm", "namespacedrake_1_1examples_1_1kuka__iiwa__arm.html", "namespacedrake_1_1examples_1_1kuka__iiwa__arm" ],
     [ "manipulation_station", "namespacedrake_1_1examples_1_1manipulation__station.html", "namespacedrake_1_1examples_1_1manipulation__station" ],

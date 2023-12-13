@@ -1537,6 +1537,16 @@ k=0
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="pydrake.math.ExtractPrincipalSubmatrix">
+<span class="sig-prename descclassname"><span class="pre">pydrake.math.</span></span><span class="sig-name descname"><span class="pre">ExtractPrincipalSubmatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matrix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indices</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.math.ExtractPrincipalSubmatrix" title="Permalink to this definition"></a></dt>
+<dd><p>Extracts the principal submatrix from the ordered set of indices. The
+indices must be in monotonically increasing order. This method makes
+no assumptions about the symmetry of the matrix, nor that the matrix
+is square. However, all indices must be valid for both rows and
+columns.</p>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="pydrake.math.floor">
 <span class="sig-prename descclassname"><span class="pre">pydrake.math.</span></span><span class="sig-name descname"><span class="pre">floor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.floor" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
@@ -7869,6 +7879,14 @@ and finite.</p>
 <li><p>tanh(arg0: pydrake.autodiffutils.AutoDiffXd) -&gt; pydrake.autodiffutils.AutoDiffXd</p></li>
 <li><p>tanh(arg0: pydrake.symbolic.Expression) -&gt; pydrake.symbolic.Expression</p></li>
 </ol>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydrake.math.ToLowerTriangularColumnsFromMatrix">
+<span class="sig-prename descclassname"><span class="pre">pydrake.math.</span></span><span class="sig-name descname"><span class="pre">ToLowerTriangularColumnsFromMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matrix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.math.ToLowerTriangularColumnsFromMatrix" title="Permalink to this definition"></a></dt>
+<dd><p>Given a square matrix, extract the lower triangular part as a stacked
+column vector. This is a particularly useful operation when
+vectorizing symmetric matrices.</p>
 </dd></dl>
 
 <dl class="py function">

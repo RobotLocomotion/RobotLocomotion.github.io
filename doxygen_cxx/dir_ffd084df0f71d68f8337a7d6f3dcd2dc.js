@@ -17,6 +17,7 @@ var dir_ffd084df0f71d68f8337a7d6f3dcd2dc =
     [ "detect_zero_simplex.h", "detect__zero__simplex_8h.html", null ],
     [ "distance_to_point_callback.h", "distance__to__point__callback_8h.html", null ],
     [ "distance_to_shape_callback.h", "distance__to__shape__callback_8h.html", null ],
+    [ "distance_to_shape_touching.h", "distance__to__shape__touching_8h.html", null ],
     [ "field_intersection.h", "field__intersection_8h.html", null ],
     [ "find_collision_candidates_callback.h", "find__collision__candidates__callback_8h.html", null ],
     [ "hydroelastic_callback.h", "hydroelastic__callback_8h.html", null ],

@@ -196,6 +196,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ab293e1ad65932eebf57568303f28c326"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_multibody_plant_config.html#ab293e1ad65932eebf57568303f28c326">discrete_contact_solver</a> {&quot;tamsi&quot;}</td></tr>
 <tr class="memdesc:ab293e1ad65932eebf57568303f28c326"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configures the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a217d8aa9218c9d981b7bc2e8a983c4be" title="Sets the contact solver type used for discrete MultibodyPlant models.">MultibodyPlant::set_discrete_contact_solver()</a>.  <a href="#ab293e1ad65932eebf57568303f28c326">More...</a><br /></td></tr>
 <tr class="separator:ab293e1ad65932eebf57568303f28c326"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfc94098ab828c8207b52f78ca3a1d51"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_multibody_plant_config.html#acfc94098ab828c8207b52f78ca3a1d51">discrete_contact_approximation</a> {&quot;&quot;}</td></tr>
+<tr class="memdesc:acfc94098ab828c8207b52f78ca3a1d51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configures the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a9b3f429ca991bd1028f4f60d6d5f2e61" title="Sets the discrete contact model approximation.">MultibodyPlant::set_discrete_contact_approximation()</a>.  <a href="#acfc94098ab828c8207b52f78ca3a1d51">More...</a><br /></td></tr>
+<tr class="separator:acfc94098ab828c8207b52f78ca3a1d51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7ad2e65450c6bf4784df0da7dc1ac10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_multibody_plant_config.html#ac7ad2e65450c6bf4784df0da7dc1ac10">sap_near_rigid_threshold</a> {1.0}</td></tr>
 <tr class="memdesc:ac7ad2e65450c6bf4784df0da7dc1ac10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-negative dimensionless number typically in the range [0.0, 1.0], though larger values are allowed even if uncommon.  <a href="#ac7ad2e65450c6bf4784df0da7dc1ac10">More...</a><br /></td></tr>
 <tr class="separator:ac7ad2e65450c6bf4784df0da7dc1ac10"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -287,6 +290,30 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="acfc94098ab828c8207b52f78ca3a1d51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfc94098ab828c8207b52f78ca3a1d51">&#9670;&nbsp;</a></span>discrete_contact_approximation</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string discrete_contact_approximation {&quot;&quot;}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configures the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a9b3f429ca991bd1028f4f60d6d5f2e61" title="Sets the discrete contact model approximation.">MultibodyPlant::set_discrete_contact_approximation()</a>. </p>
+<p>Refer to <a class="el" href="namespacedrake_1_1multibody.html#aa1d02176591187cb83e77e9ff779d679" title="The type of the contact approximation used for a discrete MultibodyPlant model.">drake::multibody::DiscreteContactApproximation</a> for details. Valid strings are:</p><ul>
+<li>"tamsi"</li>
+<li>"sap"</li>
+<li>"similar"</li>
+<li>"lagged"</li>
+</ul>
+<p>Refer to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a9b3f429ca991bd1028f4f60d6d5f2e61" title="Sets the discrete contact model approximation.">MultibodyPlant::set_discrete_contact_approximation()</a> and the references therein for further details.</p>
+<dl class="section note"><dt>Note</dt><dd>For backwards compatibility, an empty string means that the approximation is determined by discrete_contact_solver. </dd></dl>
+
+</div>
+</div>
 <a id="ab293e1ad65932eebf57568303f28c326"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab293e1ad65932eebf57568303f28c326">&#9670;&nbsp;</a></span>discrete_contact_solver</h2>
 
@@ -301,9 +328,11 @@ Public Attributes</h2></td></tr>
 
 <p>Configures the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a217d8aa9218c9d981b7bc2e8a983c4be" title="Sets the contact solver type used for discrete MultibodyPlant models.">MultibodyPlant::set_discrete_contact_solver()</a>. </p>
 <p>Refer to <a class="el" href="namespacedrake_1_1multibody.html#a902306c5e0120a67c07f80e9219a3e8d" title="The type of the contact solver used for a discrete MultibodyPlant model.">drake::multibody::DiscreteContactSolver</a> for details. Valid strings are:</p><ul>
-<li>"tamsi"</li>
-<li>"sap" </li>
+<li>"tamsi", uses the TAMSI model approximation.</li>
+<li>"sap" , uses the SAP model approximation.</li>
 </ul>
+<dl class="section warning"><dt>Warning</dt><dd>This option is ignored if discrete_contact_approximation is not empty. discrete_contact_approximation is the preferred method to choose contact model approximations and thus it has precedence over discrete_contact_solver.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This config option coordinates with discrete_contact_approximation. Using "tamsi" solver has the same effect as setting the "tamsi" approximation. Using the "sap" solver has the same effect as setting the "sap" approximation. </dd></dl>
 
 </div>
 </div>

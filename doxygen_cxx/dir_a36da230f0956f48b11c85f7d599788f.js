@@ -59,6 +59,7 @@ var dir_a36da230f0956f48b11c85f7d599788f =
       [ "NiceTypeName", "classdrake_1_1_nice_type_name.html", "classdrake_1_1_nice_type_name" ]
     ] ],
     [ "nice_type_name_override.h", "nice__type__name__override_8h.html", null ],
+    [ "overloaded.h", "overloaded_8h.html", null ],
     [ "parallelism.h", "parallelism_8h.html", [
       [ "Parallelism", "classdrake_1_1_parallelism.html", "classdrake_1_1_parallelism" ]
     ] ],

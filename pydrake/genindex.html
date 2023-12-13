@@ -1025,6 +1025,8 @@
 </li>
         <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DeformableModel.__init__">(pydrake.multibody.plant.DeformableModel method)</a>
 </li>
+        <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DiscreteContactApproximation.__init__">(pydrake.multibody.plant.DiscreteContactApproximation method)</a>
+</li>
         <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DiscreteContactSolver.__init__">(pydrake.multibody.plant.DiscreteContactSolver method)</a>
 </li>
         <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.ExternallyAppliedSpatialForce.__init__">(pydrake.multibody.plant.ExternallyAppliedSpatialForce method)</a>
@@ -5860,10 +5862,10 @@
 </li>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DeformableBodyId">DeformableBodyId (class in pydrake.multibody.plant)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DeformableModel">DeformableModel (class in pydrake.multibody.plant)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.common.schema.html#pydrake.common.schema.Rotation.Rpy.deg">deg (pydrake.common.schema.Rotation.Rpy property)</a>
 </li>
       <li><a href="pydrake.math.html#pydrake.math.BsplineBasis.degree">degree() (pydrake.math.BsplineBasis method)</a>
@@ -6092,11 +6094,15 @@
 </li>
       <li><a href="pydrake.systems.controllers.html#pydrake.systems.controllers.DynamicProgrammingOptions.discount_factor">discount_factor (pydrake.systems.controllers.DynamicProgrammingOptions property)</a>
 </li>
+      <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlantConfig.discrete_contact_approximation">discrete_contact_approximation (pydrake.multibody.plant.MultibodyPlantConfig property)</a>
+</li>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlantConfig.discrete_contact_solver">discrete_contact_solver (pydrake.multibody.plant.MultibodyPlantConfig property)</a>
 </li>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.SystemBase.discrete_state_ticket">discrete_state_ticket() (pydrake.systems.framework.SystemBase method)</a>
 </li>
       <li><a href="pydrake.math.html#pydrake.math.DiscreteAlgebraicRiccatiEquation">DiscreteAlgebraicRiccatiEquation() (in module pydrake.math)</a>
+</li>
+      <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DiscreteContactApproximation">DiscreteContactApproximation (class in pydrake.multibody.plant)</a>
 </li>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DiscreteContactSolver">DiscreteContactSolver (class in pydrake.multibody.plant)</a>
 </li>
@@ -6594,8 +6600,6 @@
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.Body_-Expression-.EvalSpatialAccelerationInWorld">(pydrake.multibody.tree.Body_[Expression] method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.Body.EvalSpatialVelocityInWorld">EvalSpatialVelocityInWorld() (pydrake.multibody.tree.Body method)</a>
 
       <ul>
@@ -6604,6 +6608,8 @@
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.Body_-Expression-.EvalSpatialVelocityInWorld">(pydrake.multibody.tree.Body_[Expression] method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.System.EvalTimeDerivatives">EvalTimeDerivatives() (pydrake.systems.framework.System method)</a>
 
       <ul>
@@ -6881,6 +6887,8 @@
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.ExternallyAppliedSpatialForceMultiplexer_-Expression">ExternallyAppliedSpatialForceMultiplexer_[Expression] (class in pydrake.multibody.plant)</a>
 </li>
       <li><a href="pydrake.autodiffutils.html#pydrake.autodiffutils.ExtractGradient">ExtractGradient() (in module pydrake.autodiffutils)</a>
+</li>
+      <li><a href="pydrake.math.html#pydrake.math.ExtractPrincipalSubmatrix">ExtractPrincipalSubmatrix() (in module pydrake.math)</a>
 </li>
       <li><a href="pydrake.systems.analysis.html#pydrake.systems.analysis.ExtractSimulatorConfig">ExtractSimulatorConfig() (in module pydrake.systems.analysis)</a>
 </li>
@@ -7962,6 +7970,14 @@
         <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_desired_state_input_port">(pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd] method)</a>
 </li>
         <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_-Expression-.get_desired_state_input_port">(pydrake.multibody.plant.MultibodyPlant_[Expression] method)</a>
+</li>
+      </ul></li>
+      <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant.get_discrete_contact_approximation">get_discrete_contact_approximation() (pydrake.multibody.plant.MultibodyPlant method)</a>
+
+      <ul>
+        <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_discrete_contact_approximation">(pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd] method)</a>
+</li>
+        <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_-Expression-.get_discrete_contact_approximation">(pydrake.multibody.plant.MultibodyPlant_[Expression] method)</a>
 </li>
       </ul></li>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant.get_discrete_contact_solver">get_discrete_contact_solver() (pydrake.multibody.plant.MultibodyPlant method)</a>
@@ -9150,10 +9166,10 @@
         <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_-Expression-.get_sap_near_rigid_threshold">(pydrake.multibody.plant.MultibodyPlant_[Expression] method)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.examples.html#pydrake.examples.ManipulationStation.get_scene_graph">get_scene_graph() (pydrake.examples.ManipulationStation method)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="pydrake.examples.html#pydrake.examples.ManipulationStation.get_scene_graph">get_scene_graph() (pydrake.examples.ManipulationStation method)</a>
+</li>
       <li><a href="pydrake.trajectories.html#pydrake.trajectories.PiecewiseTrajectory.get_segment_index">get_segment_index() (pydrake.trajectories.PiecewiseTrajectory method)</a>
 
       <ul>
@@ -12490,6 +12506,8 @@
 </li>
       <li><a href="pydrake.systems.sensors.html#pydrake.systems.sensors.ImageToLcmImageArrayT.DeclareImageInputPort-PixelType.kLabel16I">kLabel16I]() (pydrake.systems.sensors.ImageToLcmImageArrayT.DeclareImageInputPort[PixelType method)</a>
 </li>
+      <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DiscreteContactApproximation.kLagged">kLagged (pydrake.multibody.plant.DiscreteContactApproximation attribute)</a>
+</li>
       <li><a href="pydrake.systems.lcm.html#pydrake.systems.lcm.LcmBuses.kLcmUrlMemqNull">kLcmUrlMemqNull (pydrake.systems.lcm.LcmBuses attribute)</a>
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.ProgramType.kLCP">kLCP (pydrake.solvers.ProgramType attribute)</a>
@@ -12514,10 +12532,10 @@
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.RemoveFreeVariableMethod.kLorentzConeSlack">kLorentzConeSlack (pydrake.solvers.RemoveFreeVariableMethod attribute)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.solvers.html#pydrake.solvers.ProgramType.kLP">kLP (pydrake.solvers.ProgramType attribute)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.geometry.html#pydrake.geometry.RenderLabel.kMaxUnreserved">kMaxUnreserved (pydrake.geometry.RenderLabel attribute)</a>
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.ProgramType.kMILP">kMILP (pydrake.solvers.ProgramType attribute)</a>
@@ -12680,8 +12698,12 @@
 </li>
       <li><a href="pydrake.perception.html#pydrake.perception.BaseField.kRGBs">kRGBs (pydrake.perception.BaseField attribute)</a>
 </li>
-      <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DiscreteContactSolver.kSap">kSap (pydrake.multibody.plant.DiscreteContactSolver attribute)</a>
+      <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DiscreteContactApproximation.kSap">kSap (pydrake.multibody.plant.DiscreteContactApproximation attribute)</a>
+
+      <ul>
+        <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DiscreteContactSolver.kSap">(pydrake.multibody.plant.DiscreteContactSolver attribute)</a>
 </li>
+      </ul></li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.SolverType.kScs">kScs (pydrake.solvers.SolverType attribute)</a>
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.ProgramType.kSDP">kSDP (pydrake.solvers.ProgramType attribute)</a>
@@ -12689,6 +12711,8 @@
       <li><a href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram.NonnegativePolynomial.kSdsos">kSdsos (pydrake.solvers.MathematicalProgram.NonnegativePolynomial attribute)</a>
 </li>
       <li><a href="pydrake.planning.html#pydrake.planning.RobotCollisionType.kSelfCollision">kSelfCollision (pydrake.planning.RobotCollisionType attribute)</a>
+</li>
+      <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DiscreteContactApproximation.kSimilar">kSimilar (pydrake.multibody.plant.DiscreteContactApproximation attribute)</a>
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.SolverType.kSnopt">kSnopt (pydrake.solvers.SolverType attribute)</a>
 </li>
@@ -12714,8 +12738,12 @@
 </li>
       <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.CspaceFreePolytope.EllipsoidMarginCost.kSum">kSum (pydrake.geometry.optimization.CspaceFreePolytope.EllipsoidMarginCost attribute)</a>
 </li>
-      <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DiscreteContactSolver.kTamsi">kTamsi (pydrake.multibody.plant.DiscreteContactSolver attribute)</a>
+      <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DiscreteContactApproximation.kTamsi">kTamsi (pydrake.multibody.plant.DiscreteContactApproximation attribute)</a>
+
+      <ul>
+        <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DiscreteContactSolver.kTamsi">(pydrake.multibody.plant.DiscreteContactSolver attribute)</a>
 </li>
+      </ul></li>
       <li><a href="pydrake.systems.primitives.html#pydrake.systems.primitives.PerceptronActivationType.kTanh">kTanh (pydrake.systems.primitives.PerceptronActivationType attribute)</a>
 </li>
       <li><a href="pydrake.systems.sensors.html#pydrake.systems.sensors.ImageFileFormat.kTiff">kTiff (pydrake.systems.sensors.ImageFileFormat attribute)</a>
@@ -14025,6 +14053,8 @@
         <li><a href="pydrake.multibody.parsing.html#pydrake.multibody.parsing.AddModelInstance.name">(pydrake.multibody.parsing.AddModelInstance property)</a>
 </li>
         <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.ContactModel.name">(pydrake.multibody.plant.ContactModel property)</a>
+</li>
+        <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DiscreteContactApproximation.name">(pydrake.multibody.plant.DiscreteContactApproximation property)</a>
 </li>
         <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DiscreteContactSolver.name">(pydrake.multibody.plant.DiscreteContactSolver property)</a>
 </li>
@@ -17392,6 +17422,14 @@
       </ul></li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.EvaluatorBase.set_description">set_description() (pydrake.solvers.EvaluatorBase method)</a>
 </li>
+      <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant.set_discrete_contact_approximation">set_discrete_contact_approximation() (pydrake.multibody.plant.MultibodyPlant method)</a>
+
+      <ul>
+        <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.set_discrete_contact_approximation">(pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd] method)</a>
+</li>
+        <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_-Expression-.set_discrete_contact_approximation">(pydrake.multibody.plant.MultibodyPlant_[Expression] method)</a>
+</li>
+      </ul></li>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant.set_discrete_contact_solver">set_discrete_contact_solver() (pydrake.multibody.plant.MultibodyPlant method)</a>
 
       <ul>
@@ -19992,6 +20030,8 @@
 </li>
       <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.AffineSubspace.ToLocalCoordinates">ToLocalCoordinates() (pydrake.geometry.optimization.AffineSubspace method)</a>
 </li>
+      <li><a href="pydrake.math.html#pydrake.math.ToLowerTriangularColumnsFromMatrix">ToLowerTriangularColumnsFromMatrix() (in module pydrake.math)</a>
+</li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.Meshcat.OrthographicCamera.top">top (pydrake.geometry.Meshcat.OrthographicCamera property)</a>
 </li>
       <li><a href="pydrake.multibody.optimization.html#pydrake.multibody.optimization.Toppra">Toppra (class in pydrake.multibody.optimization)</a>
@@ -20591,6 +20631,8 @@
 </li>
         <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.ContactModel.value">(pydrake.multibody.plant.ContactModel property)</a>
 </li>
+        <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DiscreteContactApproximation.value">(pydrake.multibody.plant.DiscreteContactApproximation property)</a>
+</li>
         <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DiscreteContactSolver.value">(pydrake.multibody.plant.DiscreteContactSolver property)</a>
 </li>
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.JacobianWrtVariable.value">(pydrake.multibody.tree.JacobianWrtVariable property)</a>
@@ -20826,10 +20868,10 @@
 </li>
       <li><a href="pydrake.common.value.html#pydrake.common.value.Value-list-SpatialVelocity_-AutoDiffXd">Value[list[SpatialVelocity_[AutoDiffXd]]] (class in pydrake.common.value)</a>
 </li>
-      <li><a href="pydrake.common.value.html#pydrake.common.value.Value-list-SpatialVelocity_-Expression">Value[list[SpatialVelocity_[Expression]]] (class in pydrake.common.value)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="pydrake.common.value.html#pydrake.common.value.Value-list-SpatialVelocity_-Expression">Value[list[SpatialVelocity_[Expression]]] (class in pydrake.common.value)</a>
+</li>
       <li><a href="pydrake.common.value.html#pydrake.common.value.Value-ModelInstanceIndex">Value[ModelInstanceIndex] (class in pydrake.common.value)</a>
 </li>
       <li><a href="pydrake.common.value.html#pydrake.common.value.Value-MosekSolverDetails">Value[MosekSolverDetails] (class in pydrake.common.value)</a>

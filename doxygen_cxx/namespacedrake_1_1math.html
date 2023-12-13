@@ -398,6 +398,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a6d81fb8e0b28f46bad7838ed39bffbce"><td class="memTemplItemLeft" align="right" valign="top">Eigen::Matrix&lt; typename Derived::Scalar, rows, rows &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a6d81fb8e0b28f46bad7838ed39bffbce">ToSymmetricMatrixFromLowerTriangularColumns</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;lower_triangular_columns)</td></tr>
 <tr class="memdesc:a6d81fb8e0b28f46bad7838ed39bffbce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a column vector containing the stacked columns of the lower triangular part of a square matrix, returning a symmetric matrix whose lower triangular part is the same as the original matrix.  <a href="#a6d81fb8e0b28f46bad7838ed39bffbce">More...</a><br /></td></tr>
 <tr class="separator:a6d81fb8e0b28f46bad7838ed39bffbce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad043d4eca27f8743d1ad1f95316b0383"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:ad043d4eca27f8743d1ad1f95316b0383"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">drake::VectorX</a>&lt; typename Derived::Scalar &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#ad043d4eca27f8743d1ad1f95316b0383">ToLowerTriangularColumnsFromMatrix</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;matrix)</td></tr>
+<tr class="memdesc:ad043d4eca27f8743d1ad1f95316b0383"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a square matrix, extract the lower triangular part as a stacked column vector.  <a href="#ad043d4eca27f8743d1ad1f95316b0383">More...</a><br /></td></tr>
+<tr class="separator:ad043d4eca27f8743d1ad1f95316b0383"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a6d10bc0b3dfc5902d0a06f186dba8f"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
 <tr class="memitem:a8a6d10bc0b3dfc5902d0a06f186dba8f"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a8a6d10bc0b3dfc5902d0a06f186dba8f">IsPositiveDefinite</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;matrix, <a class="el" href="classdouble.html">double</a> eigenvalue_tolerance=0.0, <a class="el" href="classdouble.html">double</a> symmetry_tolerance=0.0)</td></tr>
 <tr class="memdesc:a8a6d10bc0b3dfc5902d0a06f186dba8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a matrix is symmetric (with tolerance <code>symmetry_tolerance</code> &ndash;.  <a href="#a8a6d10bc0b3dfc5902d0a06f186dba8f">More...</a><br /></td></tr>
@@ -410,6 +414,10 @@ Functions</h2></td></tr>
 <tr class="memitem:aea43911b265b0798f5023e520c4ee005"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#aea43911b265b0798f5023e520c4ee005">StdVectorToEigen</a> (const std::vector&lt; <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; &amp;vec)</td></tr>
 <tr class="memdesc:aea43911b265b0798f5023e520c4ee005"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a std::vector&lt;MatrixX&lt;T&gt;&gt; into a MatrixX&lt;T&gt;, composing each element of <code>vec</code> into a column of the returned matrix.  <a href="#aea43911b265b0798f5023e520c4ee005">More...</a><br /></td></tr>
 <tr class="separator:aea43911b265b0798f5023e520c4ee005"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace1aea0ef245e52e5bc2f91d553ef096"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:ace1aea0ef245e52e5bc2f91d553ef096"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; typename Derived::Scalar &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#ace1aea0ef245e52e5bc2f91d553ef096">ExtractPrincipalSubmatrix</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;mat, const std::set&lt; <a class="el" href="classint.html">int</a> &gt; &amp;indices)</td></tr>
+<tr class="memdesc:ace1aea0ef245e52e5bc2f91d553ef096"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extracts the principal submatrix from the ordered set of indices.  <a href="#ace1aea0ef245e52e5bc2f91d553ef096">More...</a><br /></td></tr>
+<tr class="separator:ace1aea0ef245e52e5bc2f91d553ef096"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48484009086db12d881bea6bcaab2514"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
 <tr class="memitem:a48484009086db12d881bea6bcaab2514"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a48484009086db12d881bea6bcaab2514">NormalizeVector</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;<a class="el" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>, typename Derived::PlainObject &amp;x_norm, typename <a class="el" href="structdrake_1_1math_1_1_gradient.html">drake::math::Gradient</a>&lt; Derived, Derived::RowsAtCompileTime, 1 &gt;::type *dx_norm=nullptr, typename <a class="el" href="structdrake_1_1math_1_1_gradient.html">drake::math::Gradient</a>&lt; Derived, Derived::RowsAtCompileTime, 2 &gt;::type *ddx_norm=nullptr)</td></tr>
 <tr class="memdesc:a48484009086db12d881bea6bcaab2514"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the normalized vector, optionally with its gradient and second derivative.  <a href="#a48484009086db12d881bea6bcaab2514">More...</a><br /></td></tr>
@@ -1794,6 +1802,37 @@ J = Σ [uₖ] [0 R][uₖ] ΔT
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ace1aea0ef245e52e5bc2f91d553ef096"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace1aea0ef245e52e5bc2f91d553ef096">&#9670;&nbsp;</a></span>ExtractPrincipalSubmatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt;typename Derived::Scalar&gt; drake::math::ExtractPrincipalSubmatrix </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::set&lt; <a class="el" href="classint.html">int</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>indices</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Extracts the principal submatrix from the ordered set of indices. </p>
+<p>The indices must be in monotonically increasing order. This method makes no assumptions about the symmetry of the matrix, nor that the matrix is square. However, all indices must be valid for both rows and columns. </p>
 
 </div>
 </div>
@@ -3923,6 +3962,27 @@ else
 
 <p>Converts a std::vector&lt;MatrixX&lt;T&gt;&gt; into a MatrixX&lt;T&gt;, composing each element of <code>vec</code> into a column of the returned matrix. </p>
 <dl class="section pre"><dt>Precondition</dt><dd>all elements of <code>vec</code> must have one column and the same number of rows. </dd></dl>
+
+</div>
+</div>
+<a id="ad043d4eca27f8743d1ad1f95316b0383"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad043d4eca27f8743d1ad1f95316b0383">&#9670;&nbsp;</a></span>ToLowerTriangularColumnsFromMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">drake::VectorX</a>&lt;typename Derived::Scalar&gt; drake::math::ToLowerTriangularColumnsFromMatrix </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;&#160;</td>
+          <td class="paramname"><em>matrix</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Given a square matrix, extract the lower triangular part as a stacked column vector. </p>
+<p>This is a particularly useful operation when vectorizing symmetric matrices. </p>
 
 </div>
 </div>

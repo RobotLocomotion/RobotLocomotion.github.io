@@ -1307,6 +1307,99 @@ deformable bodies.</p>
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.DiscreteContactApproximation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.plant.</span></span><span class="sig-name descname"><span class="pre">DiscreteContactApproximation</span></span><a class="headerlink" href="#pydrake.multibody.plant.DiscreteContactApproximation" title="Permalink to this definition"></a></dt>
+<dd><p>The type of the contact approximation used for a discrete
+MultibodyPlant model.</p>
+<p>kTamsi, kSimilar and kLagged are all approximations to the same
+contact model – Compliant contact with regularized friction, refer to
+mbp_contact_modeling “Contact Modeling” for further details. The key
+difference however, is that the kSimilar and kLagged approximations
+are convex and therefore our contact solver has both theoretical and
+practical convergence guarantees — the solver will always succeed.
+Conversely, being non-convex, kTamsi can fail to find a solution.</p>
+<p>kSap is also a convex model of compliant contact with regularized
+friction. There are a couple of key differences however: - Dissipation
+is modeled using a linear Kelvin–Voigt model, parameterized by a
+relaxation time constant. See accessing_contact_properties “contact
+parameters”. - Unlike kTamsi, kSimilar and kLagged where
+regularization of friction is parameterized by a stiction tolerance
+(see set_stiction_tolerance()), SAP determines regularization
+automatically solely based on numerics. Users have no control on the
+amount of regularization.</p>
+<p>How to choose an approximation</p>
+<p>The Hunt &amp; Crossley model is based on physics, it is continuous and
+has been experimentally validated. Therefore it is the preferred model
+to capture the physics of contact.</p>
+<p>Being approximations, kSap and kSimilar introduce a spurious effect of
+“gliding” in sliding contact, see [Castro et al., 2023]. This artifact
+is 𝒪(δt) but can be significant at large time steps and/or large slip
+velocities. kLagged does not suffer from this, but introduces a “weak”
+coupling of friction that can introduce non-negligible effects in the
+dynamics during impacts or strong transients.</p>
+<p>Summarizing, kLagged is the preferred approximation when strong
+transients are not expected or don’t need to be accurately resolved.
+If strong transients do need to be accurately resolved (unusual for
+robotics applications), kSimilar is the preferred approximation.</p>
+<p class="rubric">References</p>
+<ul class="simple">
+<li><p>[Castro et al., 2019] Castro A., Qu A., Kuppuswamy N., Alspach A.,
+Sherman M, 2019. A Transition-Aware Method for the Simulation of
+Compliant Contact with Regularized Friction. Available online at
+<a class="reference external" href="https://arxiv.org/abs/1909.05700">https://arxiv.org/abs/1909.05700</a>.</p></li>
+<li><p>[Castro et al., 2022] Castro A., Permenter F. and Han X., 2022. An
+Unconstrained Convex Formulation of Compliant Contact. Available online at
+<a class="reference external" href="https://arxiv.org/abs/2110.10107">https://arxiv.org/abs/2110.10107</a>.</p></li>
+<li><p>[Castro et al., 2023] Castro A., Han X., and Masterjohn J., 2023. A Theory
+of Irrotational Contact Fields. Available online at
+<a class="reference external" href="https://arxiv.org/abs/2312.03908">https://arxiv.org/abs/2312.03908</a></p></li>
+</ul>
+<p>Members:</p>
+<blockquote>
+<div><p>kTamsi : TAMSI solver approximation, see [Castro et al., 2019].</p>
+<p>kSap : SAP solver model approximation, see [Castro et al., 2022].</p>
+<p>kSimilar : Similarity approximation found in [Castro et al., 2023].</p>
+<p>kLagged : Approximation in which the normal force is lagged in Coulomb’s law,</p>
+</div></blockquote>
+<p>such that ‖γₜ‖ ≤ μ γₙ₀, [Castro et al., 2023].</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.DiscreteContactApproximation.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DiscreteContactApproximation" title="pydrake.multibody.plant.DiscreteContactApproximation"><span class="pre">pydrake.multibody.plant.DiscreteContactApproximation</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.DiscreteContactApproximation.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.DiscreteContactApproximation.kLagged">
+<span class="sig-name descname"><span class="pre">kLagged</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;DiscreteContactApproximation.kLagged:</span> <span class="pre">3&gt;</span></em><a class="headerlink" href="#pydrake.multibody.plant.DiscreteContactApproximation.kLagged" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.DiscreteContactApproximation.kSap">
+<span class="sig-name descname"><span class="pre">kSap</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;DiscreteContactApproximation.kSap:</span> <span class="pre">1&gt;</span></em><a class="headerlink" href="#pydrake.multibody.plant.DiscreteContactApproximation.kSap" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.DiscreteContactApproximation.kSimilar">
+<span class="sig-name descname"><span class="pre">kSimilar</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;DiscreteContactApproximation.kSimilar:</span> <span class="pre">2&gt;</span></em><a class="headerlink" href="#pydrake.multibody.plant.DiscreteContactApproximation.kSimilar" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.DiscreteContactApproximation.kTamsi">
+<span class="sig-name descname"><span class="pre">kTamsi</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;DiscreteContactApproximation.kTamsi:</span> <span class="pre">0&gt;</span></em><a class="headerlink" href="#pydrake.multibody.plant.DiscreteContactApproximation.kTamsi" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.DiscreteContactApproximation.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pydrake.multibody.plant.DiscreteContactApproximation.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.DiscreteContactApproximation.value">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.multibody.plant.DiscreteContactApproximation.value" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.DiscreteContactSolver">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.plant.</span></span><span class="sig-name descname"><span class="pre">DiscreteContactSolver</span></span><a class="headerlink" href="#pydrake.multibody.plant.DiscreteContactSolver" title="Permalink to this definition"></a></dt>
 <dd><p>The type of the contact solver used for a discrete MultibodyPlant
@@ -4043,6 +4136,16 @@ instances.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.get_discrete_contact_approximation">
+<span class="sig-name descname"><span class="pre">get_discrete_contact_approximation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.plant.DiscreteContactApproximation" title="pydrake.multibody.plant.DiscreteContactApproximation"><span class="pre">pydrake.multibody.plant.DiscreteContactApproximation</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.get_discrete_contact_approximation" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the discrete contact solver approximation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.get_discrete_contact_solver">
 <span class="sig-name descname"><span class="pre">get_discrete_contact_solver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.plant.DiscreteContactSolver" title="pydrake.multibody.plant.DiscreteContactSolver"><span class="pre">pydrake.multibody.plant.DiscreteContactSolver</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.get_discrete_contact_solver" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the contact solver type used for discrete MultibodyPlant
@@ -6229,9 +6332,44 @@ explanation of default values.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.set_discrete_contact_approximation">
+<span class="sig-name descname"><span class="pre">set_discrete_contact_approximation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">approximation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DiscreteContactApproximation" title="pydrake.multibody.plant.DiscreteContactApproximation"><span class="pre">pydrake.multibody.plant.DiscreteContactApproximation</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.set_discrete_contact_approximation" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the discrete contact model approximation.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Calling this method also sets the contact solver type (see
+set_discrete_contact_solver()) according to: -
+DiscreteContactApproximation::kTamsi sets the solver to
+DiscreteContactSolver::kTamsi. -
+DiscreteContactApproximation::kSap,
+DiscreteContactApproximation::kSimilar and
+DiscreteContactApproximation::kLagged set the solver to
+DiscreteContactSolver::kSap.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>iff this plant is continuous</strong><strong> (</strong><strong>i.e. is_discrete</strong><strong>(</strong><strong>) </strong><strong>is</strong> – </p></li>
+<li><p><strong>False`.</strong> – </p></li>
+<li><p><strong>RuntimeError iff called post-finalize.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.set_discrete_contact_solver">
 <span class="sig-name descname"><span class="pre">set_discrete_contact_solver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">contact_solver</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DiscreteContactSolver" title="pydrake.multibody.plant.DiscreteContactSolver"><span class="pre">pydrake.multibody.plant.DiscreteContactSolver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.set_discrete_contact_solver" title="Permalink to this definition"></a></dt>
 <dd><p>Sets the contact solver type used for discrete MultibodyPlant models.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Calling this method also sets a default discrete approximation of
+contact (see set_discrete_contact_approximation()) according to: -
+DiscreteContactSolver::kTamsi sets the approximation to
+DiscreteContactApproximation::kTamsi. -
+DiscreteContactSolver::kSap sets the approximation to
+DiscreteContactApproximation::kSap.</p>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This function is a no-op for continuous models (when is_discrete()
@@ -9068,6 +9206,16 @@ instances.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_discrete_contact_approximation">
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].get_discrete_contact_approximation"></span><span class="sig-name descname"><span class="pre">get_discrete_contact_approximation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.plant.DiscreteContactApproximation" title="pydrake.multibody.plant.DiscreteContactApproximation"><span class="pre">pydrake.multibody.plant.DiscreteContactApproximation</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_discrete_contact_approximation" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the discrete contact solver approximation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_discrete_contact_solver">
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].get_discrete_contact_solver"></span><span class="sig-name descname"><span class="pre">get_discrete_contact_solver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.plant.DiscreteContactSolver" title="pydrake.multibody.plant.DiscreteContactSolver"><span class="pre">pydrake.multibody.plant.DiscreteContactSolver</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_discrete_contact_solver" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the contact solver type used for discrete MultibodyPlant
@@ -11216,9 +11364,44 @@ explanation of default values.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.set_discrete_contact_approximation">
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].set_discrete_contact_approximation"></span><span class="sig-name descname"><span class="pre">set_discrete_contact_approximation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">approximation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DiscreteContactApproximation" title="pydrake.multibody.plant.DiscreteContactApproximation"><span class="pre">pydrake.multibody.plant.DiscreteContactApproximation</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.set_discrete_contact_approximation" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the discrete contact model approximation.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Calling this method also sets the contact solver type (see
+set_discrete_contact_solver()) according to: -
+DiscreteContactApproximation::kTamsi sets the solver to
+DiscreteContactSolver::kTamsi. -
+DiscreteContactApproximation::kSap,
+DiscreteContactApproximation::kSimilar and
+DiscreteContactApproximation::kLagged set the solver to
+DiscreteContactSolver::kSap.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>iff this plant is continuous</strong><strong> (</strong><strong>i.e. is_discrete</strong><strong>(</strong><strong>) </strong><strong>is</strong> – </p></li>
+<li><p><strong>False`.</strong> – </p></li>
+<li><p><strong>RuntimeError iff called post-finalize.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.set_discrete_contact_solver">
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].set_discrete_contact_solver"></span><span class="sig-name descname"><span class="pre">set_discrete_contact_solver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contact_solver</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DiscreteContactSolver" title="pydrake.multibody.plant.DiscreteContactSolver"><span class="pre">pydrake.multibody.plant.DiscreteContactSolver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.set_discrete_contact_solver" title="Permalink to this definition"></a></dt>
 <dd><p>Sets the contact solver type used for discrete MultibodyPlant models.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Calling this method also sets a default discrete approximation of
+contact (see set_discrete_contact_approximation()) according to: -
+DiscreteContactSolver::kTamsi sets the approximation to
+DiscreteContactApproximation::kTamsi. -
+DiscreteContactSolver::kSap sets the approximation to
+DiscreteContactApproximation::kSap.</p>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This function is a no-op for continuous models (when is_discrete()
@@ -14049,6 +14232,16 @@ instances.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.get_discrete_contact_approximation">
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].get_discrete_contact_approximation"></span><span class="sig-name descname"><span class="pre">get_discrete_contact_approximation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.plant.DiscreteContactApproximation" title="pydrake.multibody.plant.DiscreteContactApproximation"><span class="pre">pydrake.multibody.plant.DiscreteContactApproximation</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.get_discrete_contact_approximation" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the discrete contact solver approximation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.get_discrete_contact_solver">
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].get_discrete_contact_solver"></span><span class="sig-name descname"><span class="pre">get_discrete_contact_solver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.plant.DiscreteContactSolver" title="pydrake.multibody.plant.DiscreteContactSolver"><span class="pre">pydrake.multibody.plant.DiscreteContactSolver</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.get_discrete_contact_solver" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the contact solver type used for discrete MultibodyPlant
@@ -16197,9 +16390,44 @@ explanation of default values.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.set_discrete_contact_approximation">
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].set_discrete_contact_approximation"></span><span class="sig-name descname"><span class="pre">set_discrete_contact_approximation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">approximation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DiscreteContactApproximation" title="pydrake.multibody.plant.DiscreteContactApproximation"><span class="pre">pydrake.multibody.plant.DiscreteContactApproximation</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.set_discrete_contact_approximation" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the discrete contact model approximation.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Calling this method also sets the contact solver type (see
+set_discrete_contact_solver()) according to: -
+DiscreteContactApproximation::kTamsi sets the solver to
+DiscreteContactSolver::kTamsi. -
+DiscreteContactApproximation::kSap,
+DiscreteContactApproximation::kSimilar and
+DiscreteContactApproximation::kLagged set the solver to
+DiscreteContactSolver::kSap.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>iff this plant is continuous</strong><strong> (</strong><strong>i.e. is_discrete</strong><strong>(</strong><strong>) </strong><strong>is</strong> – </p></li>
+<li><p><strong>False`.</strong> – </p></li>
+<li><p><strong>RuntimeError iff called post-finalize.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.set_discrete_contact_solver">
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].set_discrete_contact_solver"></span><span class="sig-name descname"><span class="pre">set_discrete_contact_solver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contact_solver</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DiscreteContactSolver" title="pydrake.multibody.plant.DiscreteContactSolver"><span class="pre">pydrake.multibody.plant.DiscreteContactSolver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.set_discrete_contact_solver" title="Permalink to this definition"></a></dt>
 <dd><p>Sets the contact solver type used for discrete MultibodyPlant models.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Calling this method also sets a default discrete approximation of
+contact (see set_discrete_contact_approximation()) according to: -
+DiscreteContactSolver::kTamsi sets the approximation to
+DiscreteContactApproximation::kTamsi. -
+DiscreteContactSolver::kSap sets the approximation to
+DiscreteContactApproximation::kSap.</p>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This function is a no-op for continuous models (when is_discrete()
@@ -16686,11 +16914,41 @@ MultibodyPlant::GetDefaultContactSurfaceRepresentation().</p>
 </dd></dl>
 
 <dl class="py property">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlantConfig.discrete_contact_approximation">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">discrete_contact_approximation</span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlantConfig.discrete_contact_approximation" title="Permalink to this definition"></a></dt>
+<dd><p>Configures the MultibodyPlant::set_discrete_contact_approximation().
+Refer to drake::multibody::DiscreteContactApproximation for details.
+Valid strings are: - “tamsi” - “sap” - “similar” - “lagged”</p>
+<p>Refer to MultibodyPlant::set_discrete_contact_approximation() and the
+references therein for further details.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For backwards compatibility, an empty string means that the
+approximation is determined by discrete_contact_solver.</p>
+</div>
+</dd></dl>
+
+<dl class="py property">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlantConfig.discrete_contact_solver">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">discrete_contact_solver</span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlantConfig.discrete_contact_solver" title="Permalink to this definition"></a></dt>
 <dd><p>Configures the MultibodyPlant::set_discrete_contact_solver(). Refer to
 drake::multibody::DiscreteContactSolver for details. Valid strings
-are: - “tamsi” - “sap”</p>
+are: - “tamsi”, uses the TAMSI model approximation. - “sap” , uses the
+SAP model approximation.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This option is ignored if discrete_contact_approximation is not
+empty. discrete_contact_approximation is the preferred method to
+choose contact model approximations and thus it has precedence
+over discrete_contact_solver.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This config option coordinates with
+discrete_contact_approximation. Using “tamsi” solver has the same
+effect as setting the “tamsi” approximation. Using the “sap”
+solver has the same effect as setting the “sap” approximation.</p>
+</div>
 </dd></dl>
 
 <dl class="py property">

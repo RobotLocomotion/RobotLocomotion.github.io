@@ -355,6 +355,9 @@ var hierarchy =
     [ "ForceDensityField< T >", "classdrake_1_1multibody_1_1_force_density_field.html", [
       [ "GravityForceField< T >", "classdrake_1_1multibody_1_1_gravity_force_field.html", null ]
     ] ],
+    [ "ForceDensityField< double >", "classdrake_1_1multibody_1_1_force_density_field.html", [
+      [ "PointSourceForceField", "classdrake_1_1examples_1_1deformable__torus_1_1_point_source_force_field.html", null ]
+    ] ],
     [ "formatter", null, [
       [ "ostream_formatter", "structdrake_1_1ostream__formatter.html", [
         [ "formatter< drake::AutoDiffXd >", "structfmt_1_1formatter_3_01drake_1_1_auto_diff_xd_01_4.html", null ],
@@ -752,8 +755,8 @@ var hierarchy =
     [ "ScopeExit", "classdrake_1_1_scope_exit.html", null ],
     [ "ScsSolverDetails", "structdrake_1_1solvers_1_1_scs_solver_details.html", null ],
     [ "CspaceFreePolytope::SearchResult", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html", null ],
-    [ "CspaceFreeBox::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html", null ],
     [ "CspaceFreePolytope::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html", null ],
+    [ "CspaceFreeBox::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html", null ],
     [ "CspaceFreePolytope::SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate.html", null ],
     [ "CspaceFreeBox::SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate.html", null ],
     [ "SeparationCertificateProgramBase", "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_program_base.html", [
@@ -909,8 +912,7 @@ var hierarchy =
               [ "MultibodyPlant< T >", "classdrake_1_1multibody_1_1_multibody_plant.html", [
                 [ "AxiallySymmetricFreeBodyPlant< T >", "classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html", null ]
               ] ],
-              [ "MultibodyPlant< AutoDiffXd >", "classdrake_1_1multibody_1_1_multibody_plant.html", null ],
-              [ "MultibodyPlant< double >", "classdrake_1_1multibody_1_1_multibody_plant.html", null ]
+              [ "MultibodyPlant< AutoDiffXd >", "classdrake_1_1multibody_1_1_multibody_plant.html", null ]
             ] ],
             [ "ContactVisualizer< T >", "classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html", null ],
             [ "JointSliders< T >", "classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html", null ],
@@ -1010,6 +1012,8 @@ var hierarchy =
             [ "AllegroCommandReceiver", "classdrake_1_1examples_1_1allegro__hand_1_1_allegro_command_receiver.html", null ],
             [ "AllegroStatusSender", "classdrake_1_1examples_1_1allegro__hand_1_1_allegro_status_sender.html", null ],
             [ "CompassGaitGeometry", "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_geometry.html", null ],
+            [ "ParallelGripperController", "classdrake_1_1examples_1_1deformable__torus_1_1_parallel_gripper_controller.html", null ],
+            [ "SuctionCupController", "classdrake_1_1examples_1_1deformable__torus_1_1_suction_cup_controller.html", null ],
             [ "FibonacciDifferenceEquation", "classdrake_1_1examples_1_1fibonacci_1_1_fibonacci_difference_equation.html", null ],
             [ "ClothSpringModelGeometry", "classdrake_1_1examples_1_1mass__spring__cloth_1_1_cloth_spring_model_geometry.html", null ],
             [ "PendulumGeometry", "classdrake_1_1examples_1_1pendulum_1_1_pendulum_geometry.html", null ],
@@ -1057,6 +1061,9 @@ var hierarchy =
             [ "LcmImageArrayToImages", "classdrake_1_1systems_1_1sensors_1_1_lcm_image_array_to_images.html", null ],
             [ "RgbdSensor", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html", null ],
             [ "RgbdSensorAsync", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_async.html", null ],
+            [ "MultibodyTreeSystem< double >", null, [
+              [ "MultibodyPlant< double >", "classdrake_1_1multibody_1_1_multibody_plant.html", null ]
+            ] ],
             [ "SceneGraph< double >", "classdrake_1_1geometry_1_1_scene_graph.html", null ],
             [ "SpringMassSystem< double >", "classdrake_1_1systems_1_1_spring_mass_system.html", [
               [ "MySpringMassSystem< double >", "classdrake_1_1systems_1_1analysis__test_1_1_my_spring_mass_system.html", null ],
