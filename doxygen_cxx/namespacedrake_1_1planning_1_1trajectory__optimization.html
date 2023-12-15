@@ -197,6 +197,9 @@ Functions</h2></td></tr>
 <tr class="memitem:adbb6bc996413925c93dca6d2f5e2bb3d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1planning_1_1trajectory__optimization.html#adbb6bc996413925c93dca6d2f5e2bb3d">AddDirectCollocationConstraint</a> (std::shared_ptr&lt; <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html">DirectCollocationConstraint</a> &gt; constraint, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &gt; &amp;time_step, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &gt; &amp;state, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &gt; &amp;next_state, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &gt; &amp;input, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &gt; &amp;next_input, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *prog)</td></tr>
 <tr class="memdesc:adbb6bc996413925c93dca6d2f5e2bb3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper method to add a <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html" title="Implements the direct collocation constraints for a first-order hold on the input and a cubic polynom...">DirectCollocationConstraint</a> to the <code>prog</code>, ensuring that the order of variables in the binding matches the order expected by the constraint.  <a href="#adbb6bc996413925c93dca6d2f5e2bb3d">More...</a><br /></td></tr>
 <tr class="separator:adbb6bc996413925c93dca6d2f5e2bb3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada4cdfe16e886242f5ee05f2cd374a39"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classint.html">int</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1planning_1_1trajectory__optimization.html#ada4cdfe16e886242f5ee05f2cd374a39">GetContinuousRevoluteJointIndices</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant)</td></tr>
+<tr class="memdesc:ada4cdfe16e886242f5ee05f2cd374a39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of indices in the plant's generalized positions which correspond to a continuous revolute joint (a revolute joint with no joint limits).  <a href="#ada4cdfe16e886242f5ee05f2cd374a39">More...</a><br /></td></tr>
+<tr class="separator:ada4cdfe16e886242f5ee05f2cd374a39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="adbb6bc996413925c93dca6d2f5e2bb3d"></a>
@@ -256,6 +259,27 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Helper method to add a <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html" title="Implements the direct collocation constraints for a first-order hold on the input and a cubic polynom...">DirectCollocationConstraint</a> to the <code>prog</code>, ensuring that the order of variables in the binding matches the order expected by the constraint. </p>
+
+</div>
+</div>
+<a id="ada4cdfe16e886242f5ee05f2cd374a39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada4cdfe16e886242f5ee05f2cd374a39">&#9670;&nbsp;</a></span>GetContinuousRevoluteJointIndices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classint.html">int</a>&gt; drake::planning::trajectory_optimization::GetContinuousRevoluteJointIndices </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>plant</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a list of indices in the plant's generalized positions which correspond to a continuous revolute joint (a revolute joint with no joint limits). </p>
+<p>This includes the revolute component of a planar joint </p>
 
 </div>
 </div>

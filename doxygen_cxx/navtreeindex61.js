@@ -1,5 +1,6 @@
 var NAVTREEINDEX61 =
 {
+"structstd_1_1hash_3_01drake_1_1solvers_1_1_binding_3_01_c_01_4_01_4.html":[3,0,2,7],
 "structstd_1_1hash_3_01drake_1_1solvers_1_1_solver_id_01_4.html":[3,0,2,8],
 "structstd_1_1hash_3_01drake_1_1symbolic_1_1_chebyshev_basis_element_01_4.html":[3,0,2,10],
 "structstd_1_1hash_3_01drake_1_1symbolic_1_1_chebyshev_polynomial_01_4.html":[3,0,2,11],
@@ -248,6 +249,5 @@ var NAVTREEINDEX61 =
 "variables_8h.html#a8dc4e8320720218ee84dc1fdc7439d17":[4,0,0,1,3,0,12,2],
 "variables_8h.html#aae117a884f72a1a73cc2863ec026c011":[4,0,0,1,3,0,12,5],
 "variables_8h.html#aba2399f6ee5b4c18bc26dc3fd5b6c07a":[4,0,0,1,3,0,12,3],
-"variables_8h.html#ac861cf2992e3fa03746df6ca291c5020":[4,0,0,1,3,0,12,6],
-"vector__base_8h.html":[4,0,0,12,3,53]
+"variables_8h.html#ac861cf2992e3fa03746df6ca291c5020":[4,0,0,1,3,0,12,6]
 };

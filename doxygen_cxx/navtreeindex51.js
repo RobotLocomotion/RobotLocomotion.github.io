@@ -1,5 +1,6 @@
 var NAVTREEINDEX51 =
 {
+"internal__render__client_8h.html":[4,0,0,4,6,4],
 "internal__render__engine__gl_8h.html":[4,0,0,4,5,5],
 "internal__render__engine__gltf__client_8h.html":[4,0,0,4,6,5],
 "internal__render__engine__vtk_8h.html":[4,0,0,4,7,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX51 =
 "meshcat__visualizer_8h.html":[4,0,0,4,33],
 "meshcat__visualizer_8h.html#acfc5928f9ddabb01ca8a0f2cdabbffa3":[4,0,0,4,33,2],
 "meshcat__visualizer__params_8h.html":[4,0,0,4,34],
-"meshing__utilities_8h.html":[4,0,0,4,2,43],
-"minimum__degree__ordering_8h.html":[4,0,0,8,2,13]
+"meshing__utilities_8h.html":[4,0,0,4,2,43]
 };

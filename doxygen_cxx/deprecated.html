@@ -164,68 +164,71 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 <div class="contents">
 <div class="textblock"><dl class="reflist">
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_body.html#adc1bbbf124d24c628bb23796cfa5c594">Body&lt; T &gt;::floating_velocities_start</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000011"></a>Convert to floating_velocities_start_in_v(). In a state  with [q v] concatenated, offset by num_positions() to  get to the start of v. <br />
+<dd><a class="anchor" id="_deprecated000012"></a>Convert to floating_velocities_start_in_v(). In a state  with [q v] concatenated, offset by num_positions() to  get to the start of v. <br />
  This will be removed from Drake on or after 2024-02-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_body.html#a72b4efc4f7ac1a5e86ab8ffa970eaede">Body&lt; T &gt;::node_index</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000010"></a>Use mobod_index() instead. <br />
+<dd><a class="anchor" id="_deprecated000011"></a>Use mobod_index() instead. <br />
  This will be removed from Drake on or after 2024-03-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_diagram.html#acfd6d412aafdf2814ced8e8fe460fc23">Diagram&lt; T &gt;::GetGraphvizInputPortToken</a>  (const InputPort&lt; T &gt; &amp;port, int max_depth, std::stringstream *dot) const final</dt>
-<dd><a class="anchor" id="_deprecated000013"></a>Instead of calling this function, call GetGraphvizFragment(). <br />
+<dd><a class="anchor" id="_deprecated000014"></a>Instead of calling this function, call GetGraphvizFragment(). <br />
  This will be removed from Drake on or after 2024-01-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a37060c889e34319f11652b5ad21cfbb9">Diagram&lt; T &gt;::GetGraphvizOutputPortToken</a>  (const OutputPort&lt; T &gt; &amp;port, int max_depth, std::stringstream *dot) const final</dt>
-<dd><a class="anchor" id="_deprecated000014"></a>Instead of calling this function, call GetGraphvizFragment() <br />
+<dd><a class="anchor" id="_deprecated000015"></a>Instead of calling this function, call GetGraphvizFragment() <br />
  This will be removed from Drake on or after 2024-01-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1systems.html#a3e4e6a211dd145828511de57c117c5aa">drake::systems::GenerateHtml</a>  (const <a class="el" href="classdrake_1_1systems_1_1_system.html">System&lt; double &gt;</a> &amp;system, int initial_depth=1)</dt>
-<dd><a class="anchor" id="_deprecated000027"></a>This feature has been removed from Drake. <br />
+<dd><a class="anchor" id="_deprecated000028"></a>This feature has been removed from Drake. <br />
  This will be removed from Drake on or after 2024-01-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm.html#a053aa138ef7646bdd2ad76db0657b13b">DrakeLcm::get_lcm_instance</a>  ()</dt>
 <dd><a class="anchor" id="_deprecated000001"></a>Drake will no longer provide access to the underlying lcm::LCM object. <br />
  This will be removed from Drake on or after 2024-01-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html#af0b7b597fdd8385d9aa4c1ceea1d59a3">InverseDynamics&lt; T &gt;::get_output_port_force</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000012"></a>Use get_output_port_generalized_force() instead. <br />
+<dd><a class="anchor" id="_deprecated000013"></a>Use get_output_port_generalized_force() instead. <br />
  This will be removed from Drake on or after 2024-01-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_inverse_kinematics.html#a7d7e39fc0e8059b4894a60982bec5ee6">InverseKinematics::AddMinimumDistanceConstraint</a>  (double minimum_distance, double influence_distance_offset=1)</dt>
 <dd><a class="anchor" id="_deprecated000002"></a>Use AddMinimumDistanceLowerBoundConstraint() instead. The  default value for influence_distance_offset has *changed*.  It changes from 1 m to 0.01 m. If you're relying on the  1 m default value, make sure to pass that value explicitly  when calling AddMinimumDistanceLowerBoundConstraint(). <br />
  This will be removed from Drake on or after 2024-02-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a89892cfb6b521ebd83e811d85e8ffa3d">LeafSystem&lt; T &gt;::DeclarePeriodicDiscreteUpdateNoHandler</a>  (double period_sec, double offset_sec=0)</dt>
-<dd><a class="anchor" id="_deprecated000018"></a>Overriding DoCalcDiscreteVariableUpdates is no longer allowed.  Use DeclarePeriodicDiscreteUpdateEvent() instead. <br />
+<dd><a class="anchor" id="_deprecated000019"></a>Overriding DoCalcDiscreteVariableUpdates is no longer allowed.  Use DeclarePeriodicDiscreteUpdateEvent() instead. <br />
  This will be removed from Drake on or after 2024-02-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#aa1c380295549e6ffe058eed73cd1cab3">LeafSystem&lt; T &gt;::DeclarePeriodicPublishNoHandler</a>  (double period_sec, double offset_sec=0)</dt>
-<dd><a class="anchor" id="_deprecated000017"></a>Overriding DoPublish is no longer allowed.  Use DeclarePeriodicPublishEvent() instead. <br />
+<dd><a class="anchor" id="_deprecated000018"></a>Overriding DoPublish is no longer allowed.  Use DeclarePeriodicPublishEvent() instead. <br />
  This will be removed from Drake on or after 2024-02-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#aa145fd706d4217eb94018be8216535d6">LeafSystem&lt; T &gt;::DeclarePeriodicUnrestrictedUpdateNoHandler</a>  (double period_sec, double offset_sec=0)</dt>
-<dd><a class="anchor" id="_deprecated000019"></a>Overriding DoCalcUnrestrictedUpdate is no longer allowed.  Use DeclarePeriodicUnrestrictedUpdateEvent() instead. <br />
+<dd><a class="anchor" id="_deprecated000020"></a>Overriding DoCalcUnrestrictedUpdate is no longer allowed.  Use DeclarePeriodicUnrestrictedUpdateEvent() instead. <br />
  This will be removed from Drake on or after 2024-02-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#ac2d40c691d5f0335d8dcde434a8fa7b1">LeafSystem&lt; T &gt;::DoCalcDiscreteVariableUpdates</a>  (const Context&lt; T &gt; &amp;context, const std::vector&lt; const DiscreteUpdateEvent&lt; T &gt; * &gt; &amp;events, DiscreteValues&lt; T &gt; *discrete_state) const</dt>
-<dd><a class="anchor" id="_deprecated000021"></a>Overriding DoCalcDiscreteVariableUpdates is no longer allowed <br />
+<dd><a class="anchor" id="_deprecated000022"></a>Overriding DoCalcDiscreteVariableUpdates is no longer allowed <br />
  This will be removed from Drake on or after 2024-02-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#adefdc7d9014d144812aecc5d66490a78">LeafSystem&lt; T &gt;::DoCalcUnrestrictedUpdate</a>  (const Context&lt; T &gt; &amp;context, const std::vector&lt; const UnrestrictedUpdateEvent&lt; T &gt; * &gt; &amp;events, State&lt; T &gt; *state) const</dt>
-<dd><a class="anchor" id="_deprecated000022"></a>Overriding DoCalcUnrestrictedUpdate is no longer allowed <br />
+<dd><a class="anchor" id="_deprecated000023"></a>Overriding DoCalcUnrestrictedUpdate is no longer allowed <br />
  This will be removed from Drake on or after 2024-02-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a119e3a83eeb61b8eb99198348178afd2">LeafSystem&lt; T &gt;::DoPublish</a>  (const Context&lt; T &gt; &amp;context, const std::vector&lt; const PublishEvent&lt; T &gt; * &gt; &amp;events) const</dt>
-<dd><a class="anchor" id="_deprecated000020"></a>Overriding DoPublish is no longer allowed <br />
+<dd><a class="anchor" id="_deprecated000021"></a>Overriding DoPublish is no longer allowed <br />
  This will be removed from Drake on or after 2024-02-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#acfd6d412aafdf2814ced8e8fe460fc23">LeafSystem&lt; T &gt;::GetGraphvizInputPortToken</a>  (const InputPort&lt; T &gt; &amp;port, int max_depth, std::stringstream *dot) const final</dt>
-<dd><a class="anchor" id="_deprecated000015"></a>Instead of calling this function, call GetGraphvizFragment() <br />
- This will be removed from Drake on or after 2024-01-01. </dd>
-<dt>Member <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a37060c889e34319f11652b5ad21cfbb9">LeafSystem&lt; T &gt;::GetGraphvizOutputPortToken</a>  (const OutputPort&lt; T &gt; &amp;port, int max_depth, std::stringstream *dot) const final</dt>
 <dd><a class="anchor" id="_deprecated000016"></a>Instead of calling this function, call GetGraphvizFragment() <br />
  This will be removed from Drake on or after 2024-01-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a37060c889e34319f11652b5ad21cfbb9">LeafSystem&lt; T &gt;::GetGraphvizOutputPortToken</a>  (const OutputPort&lt; T &gt; &amp;port, int max_depth, std::stringstream *dot) const final</dt>
+<dd><a class="anchor" id="_deprecated000017"></a>Instead of calling this function, call GetGraphvizFragment() <br />
+ This will be removed from Drake on or after 2024-01-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ace2984079483027345739f5e1bc8a19c">MultibodyPlant&lt; T &gt;::GetMutablePositions</a>  (systems::Context&lt; T &gt; *context) const</dt>
-<dd><a class="anchor" id="_deprecated000006"></a>Use GetPositions() for constant access and SetPositions()  to set positions. <br />
- This will be removed from Drake on or after 2024-02-01. </dd>
-<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#af91bd90e38673df63e04209d0a43e2f6">MultibodyPlant&lt; T &gt;::GetMutablePositions</a>  (const systems::Context&lt; T &gt; &amp;context, systems::State&lt; T &gt; *state) const</dt>
 <dd><a class="anchor" id="_deprecated000007"></a>Use GetPositions() for constant access and SetPositions()  to set positions. <br />
  This will be removed from Drake on or after 2024-02-01. </dd>
-<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a1036e869271ac77a82f891a5f7187210">MultibodyPlant&lt; T &gt;::GetMutablePositionsAndVelocities</a>  (systems::Context&lt; T &gt; *context) const</dt>
-<dd><a class="anchor" id="_deprecated000005"></a>Use GetPositionsAndVelocities() for constant access and  SetPositionsAndVelocities() to set the positions and velocities. <br />
+<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#af91bd90e38673df63e04209d0a43e2f6">MultibodyPlant&lt; T &gt;::GetMutablePositions</a>  (const systems::Context&lt; T &gt; &amp;context, systems::State&lt; T &gt; *state) const</dt>
+<dd><a class="anchor" id="_deprecated000008"></a>Use GetPositions() for constant access and SetPositions()  to set positions. <br />
  This will be removed from Drake on or after 2024-02-01. </dd>
-<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a25c6efdadb0dd091590e9474d9039f64">MultibodyPlant&lt; T &gt;::GetMutableVelocities</a>  (const systems::Context&lt; T &gt; &amp;context, systems::State&lt; T &gt; *state) const</dt>
-<dd><a class="anchor" id="_deprecated000009"></a>Use GetVelocities() for constant access and  SetVelocities() to set velocities. <br />
+<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a1036e869271ac77a82f891a5f7187210">MultibodyPlant&lt; T &gt;::GetMutablePositionsAndVelocities</a>  (systems::Context&lt; T &gt; *context) const</dt>
+<dd><a class="anchor" id="_deprecated000006"></a>Use GetPositionsAndVelocities() for constant access and  SetPositionsAndVelocities() to set the positions and velocities. <br />
  This will be removed from Drake on or after 2024-02-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a7fe7c6fe93604e71b9d277b76fab5932">MultibodyPlant&lt; T &gt;::GetMutableVelocities</a>  (systems::Context&lt; T &gt; *context) const</dt>
-<dd><a class="anchor" id="_deprecated000008"></a>Use GetVelocities() for constant access and  SetVelocities() to set velocities. <br />
+<dd><a class="anchor" id="_deprecated000009"></a>Use GetVelocities() for constant access and  SetVelocities() to set velocities. <br />
  This will be removed from Drake on or after 2024-02-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a25c6efdadb0dd091590e9474d9039f64">MultibodyPlant&lt; T &gt;::GetMutableVelocities</a>  (const systems::Context&lt; T &gt; &amp;context, systems::State&lt; T &gt; *state) const</dt>
+<dd><a class="anchor" id="_deprecated000010"></a>Use GetVelocities() for constant access and  SetVelocities() to set velocities. <br />
+ This will be removed from Drake on or after 2024-02-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a217d8aa9218c9d981b7bc2e8a983c4be">MultibodyPlant&lt; T &gt;::set_discrete_contact_solver</a>  (DiscreteContactSolver contact_solver)</dt>
+<dd><a class="anchor" id="_deprecated000005"></a>Use set_discrete_contact_approximation() to set the contact model  approximation. The underlying solver will be inferred automatically. <br />
+ This will be removed from Drake on or after 2024-04-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_parser.html#a9b40bb492d33e373b3bfcf5d440a36c2">Parser::AddAllModelsFromFile</a>  (const std::string &amp;file_name)</dt>
 <dd><a class="anchor" id="_deprecated000003"></a>Use AddModels() instead. <br />
  This will be removed from Drake on or after 2023-12-01. </dd>
@@ -233,19 +236,19 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 <dd><a class="anchor" id="_deprecated000004"></a>Use parser.AddModels() instead. To port the  2-argument form, rename models using  parser.SetAutoRenaming() and plant.RenameModelInstance().  See PR #19978 for more details. <br />
  This will be removed from Drake on or after 2023-12-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_system.html#a8946ae289e8ce80d9d03114e6f60bd86">System&lt; T &gt;::GetGraphvizFragment</a>  (int max_depth, std::stringstream *dot) const</dt>
-<dd><a class="anchor" id="_deprecated000023"></a>Instead of calling or overriding this function, either  call GetGraphvizFragment() or override DoGetGraphvizFragment() <br />
- This will be removed from Drake on or after 2024-01-01. </dd>
-<dt>Member <a class="el" href="classdrake_1_1systems_1_1_system.html#aa1fac664a1c120c425bc522d7ecb435c">System&lt; T &gt;::GetGraphvizId</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000026"></a>Call GetGraphvizFragment() instead <br />
- This will be removed from Drake on or after 2024-01-01. </dd>
-<dt>Member <a class="el" href="classdrake_1_1systems_1_1_system.html#ab8056b92562217c25ff76fac7ad67961">System&lt; T &gt;::GetGraphvizInputPortToken</a>  (const InputPort&lt; T &gt; &amp;port, int max_depth, std::stringstream *dot) const</dt>
 <dd><a class="anchor" id="_deprecated000024"></a>Instead of calling or overriding this function, either  call GetGraphvizFragment() or override DoGetGraphvizFragment() <br />
  This will be removed from Drake on or after 2024-01-01. </dd>
-<dt>Member <a class="el" href="classdrake_1_1systems_1_1_system.html#aa75de0b661eaa9b9a45959a9de4eaae0">System&lt; T &gt;::GetGraphvizOutputPortToken</a>  (const OutputPort&lt; T &gt; &amp;port, int max_depth, std::stringstream *dot) const</dt>
+<dt>Member <a class="el" href="classdrake_1_1systems_1_1_system.html#aa1fac664a1c120c425bc522d7ecb435c">System&lt; T &gt;::GetGraphvizId</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000027"></a>Call GetGraphvizFragment() instead <br />
+ This will be removed from Drake on or after 2024-01-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1systems_1_1_system.html#ab8056b92562217c25ff76fac7ad67961">System&lt; T &gt;::GetGraphvizInputPortToken</a>  (const InputPort&lt; T &gt; &amp;port, int max_depth, std::stringstream *dot) const</dt>
 <dd><a class="anchor" id="_deprecated000025"></a>Instead of calling or overriding this function, either  call GetGraphvizFragment() or override DoGetGraphvizFragment() <br />
  This will be removed from Drake on or after 2024-01-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1systems_1_1_system.html#aa75de0b661eaa9b9a45959a9de4eaae0">System&lt; T &gt;::GetGraphvizOutputPortToken</a>  (const OutputPort&lt; T &gt; &amp;port, int max_depth, std::stringstream *dot) const</dt>
+<dd><a class="anchor" id="_deprecated000026"></a>Instead of calling or overriding this function, either  call GetGraphvizFragment() or override DoGetGraphvizFragment() <br />
+ This will be removed from Drake on or after 2024-01-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_vector_system.html#a40d2841b68d432448f21ed6fe920a323">VectorSystem&lt; T &gt;::DeclarePeriodicDiscreteUpdateNoHandler</a>  (double period_sec, double offset_sec=0.0)</dt>
-<dd><a class="anchor" id="_deprecated000028"></a>Use DeclarePeriodicDiscreteUpdate() instead. <br />
+<dd><a class="anchor" id="_deprecated000029"></a>Use DeclarePeriodicDiscreteUpdate() instead. <br />
  This will be removed from Drake on or after 2024-02-01.</dd>
 </dl>
 </div></div><!-- PageDoc -->
