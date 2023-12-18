@@ -2093,17 +2093,18 @@ expects the following properties for point contact modeling:</p>
 <p><a href="#id91"><span class="problematic" id="id92">|Group name|Property Name|Required|Property Type|Property Description|</span></a>
 <a href="#id93"><span class="problematic" id="id94">|:--------:|</span></a>:———–:<a href="#id95"><span class="problematic" id="id96">|:------:|</span></a>:—————-:<a href="#id97"><span class="problematic" id="id98">|:-------------------|</span></a>
 <a href="#id99"><span class="problematic" id="id100">|material|coulomb_friction|yes¹|CoulombFriction&lt;T&gt;|Static and Dynamic
-friction.|</span></a> <a href="#id101"><span class="problematic" id="id102">|material|point_contact_stiffness|no²|T|</span></a> Penalty method
-stiffness.| <a href="#id103"><span class="problematic" id="id104">|material|hunt_crossley_dissipation |no²⁴|T|</span></a> Penalty
-method dissipation.| <a href="#id105"><span class="problematic" id="id106">|material|relaxation_time|yes³⁴|T|Linear
-Kelvin–Voigt model parameter.|</span></a></p>
+friction.|</span></a> <a href="#id101"><span class="problematic" id="id102">|material|point_contact_stiffness|no²|T|</span></a> Compliant point
+contact stiffness.| <a href="#id103"><span class="problematic" id="id104">|material|hunt_crossley_dissipation |no²⁴|T|</span></a>
+Compliant contact dissipation.|
+<a href="#id105"><span class="problematic" id="id106">|material|relaxation_time|yes³⁴|T|Linear Kelvin–Voigt model
+parameter.|</span></a></p>
 <p>¹ Collision geometry is required to be registered with a
 geometry::ProximityProperties object that contains the (“material”,
 “coulomb_friction”) property. If the property is missing,
 MultibodyPlant will throw an exception.</p>
 <p>² If the property is missing, MultibodyPlant will use a heuristic
-value as the default. Refer to the section mbp_penalty_method “Penalty
-method point contact” for further details.</p>
+value as the default. Refer to the section mbp_compliant_point_contact
+“Compliant point contact model” for further details.</p>
 <p>³ When using a linear Kelvin–Voigt model of dissipation (for instance
 when selecting the SAP solver), collision geometry is required to be
 registered with a geometry::ProximityProperties object that contains
@@ -4064,24 +4065,24 @@ ContactModel.</p>
 <span class="sig-name descname"><span class="pre">get_contact_penalty_method_time_scale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.get_contact_penalty_method_time_scale" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a time-scale estimate <code class="docutils literal notranslate"><span class="pre">tc</span></code> based on the requested
 penetration allowance δ set with set_penetration_allowance(). For the
-penalty method in use to enforce non-penetration, this time scale
+compliant contact model to enforce non-penetration, this time scale
 relates to the time it takes the relative normal velocity between two
-bodies to go to zero. This time scale <code class="docutils literal notranslate"><span class="pre">tc</span></code> is artificially
-introduced by the penalty method and goes to zero in the limit to
-ideal rigid contact. Since numerical integration methods for continuum
-systems must be able to resolve a system’s dynamics, the time step
-used by an integrator must in general be much smaller than the time
-scale <code class="docutils literal notranslate"><span class="pre">tc</span></code>. How much smaller will depend on the details of the
-problem and the convergence characteristics of the integrator and
-should be tuned appropriately. Another factor to take into account for
-setting up the simulation’s time step is the speed of the objects in
-your simulation. If <code class="docutils literal notranslate"><span class="pre">vn</span></code> represents a reference velocity scale for
-the normal relative velocity between bodies, the new time scale <code class="docutils literal notranslate"><span class="pre">tn</span> <span class="pre">=</span>
-<span class="pre">δ</span> <span class="pre">/</span> <span class="pre">vn</span></code> represents the time it would take for the distance between
-two bodies approaching with relative normal velocity <code class="docutils literal notranslate"><span class="pre">vn</span></code> to
-decrease by the penetration_allowance δ. In this case a user should
-choose a time step for simulation that can resolve the smallest of the
-two time scales <code class="docutils literal notranslate"><span class="pre">tc</span></code> and <code class="docutils literal notranslate"><span class="pre">tn</span></code>.</p>
+bodies to go to zero. This time scale <code class="docutils literal notranslate"><span class="pre">tc</span></code> is a global estimate of
+the dynamics introduced by the compliant contact model and goes to
+zero in the limit to ideal rigid contact. Since numerical integration
+methods for continuum systems must be able to resolve a system’s
+dynamics, the time step used by an integrator must in general be much
+smaller than the time scale <code class="docutils literal notranslate"><span class="pre">tc</span></code>. How much smaller will depend on
+the details of the problem and the convergence characteristics of the
+integrator and should be tuned appropriately. Another factor to take
+into account for setting up the simulation’s time step is the speed of
+the objects in your simulation. If <code class="docutils literal notranslate"><span class="pre">vn</span></code> represents a reference
+velocity scale for the normal relative velocity between bodies, the
+new time scale <code class="docutils literal notranslate"><span class="pre">tn</span> <span class="pre">=</span> <span class="pre">δ</span> <span class="pre">/</span> <span class="pre">vn</span></code> represents the time it would take for
+the distance between two bodies approaching with relative normal
+velocity <code class="docutils literal notranslate"><span class="pre">vn</span></code> to decrease by the penetration_allowance δ. In this
+case a user should choose a time step for simulation that can resolve
+the smallest of the two time scales <code class="docutils literal notranslate"><span class="pre">tc</span></code> and <code class="docutils literal notranslate"><span class="pre">tn</span></code>.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -6413,8 +6414,8 @@ all model instances.</p>
 <span class="sig-name descname"><span class="pre">set_penetration_allowance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">penetration_allowance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.001</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.set_penetration_allowance" title="Permalink to this definition"></a></dt>
 <dd><p>Sets the penetration allowance used to estimate the coefficients in
 the penalty method used to impose non-penetration among bodies. Refer
-to the section mbp_penalty_method “Contact by penalty method” for
-further details.</p>
+to the section mbp_compliant_point_contact “Compliant point contact
+model” for further details.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if penetration_allowance is not positive.</strong> – </p>
@@ -7176,17 +7177,18 @@ expects the following properties for point contact modeling:</p>
 <p><a href="#id107"><span class="problematic" id="id108">|Group name|Property Name|Required|Property Type|Property Description|</span></a>
 <a href="#id109"><span class="problematic" id="id110">|:--------:|</span></a>:———–:<a href="#id111"><span class="problematic" id="id112">|:------:|</span></a>:—————-:<a href="#id113"><span class="problematic" id="id114">|:-------------------|</span></a>
 <a href="#id115"><span class="problematic" id="id116">|material|coulomb_friction|yes¹|CoulombFriction&lt;T&gt;|Static and Dynamic
-friction.|</span></a> <a href="#id117"><span class="problematic" id="id118">|material|point_contact_stiffness|no²|T|</span></a> Penalty method
-stiffness.| <a href="#id119"><span class="problematic" id="id120">|material|hunt_crossley_dissipation |no²⁴|T|</span></a> Penalty
-method dissipation.| <a href="#id121"><span class="problematic" id="id122">|material|relaxation_time|yes³⁴|T|Linear
-Kelvin–Voigt model parameter.|</span></a></p>
+friction.|</span></a> <a href="#id117"><span class="problematic" id="id118">|material|point_contact_stiffness|no²|T|</span></a> Compliant point
+contact stiffness.| <a href="#id119"><span class="problematic" id="id120">|material|hunt_crossley_dissipation |no²⁴|T|</span></a>
+Compliant contact dissipation.|
+<a href="#id121"><span class="problematic" id="id122">|material|relaxation_time|yes³⁴|T|Linear Kelvin–Voigt model
+parameter.|</span></a></p>
 <p>¹ Collision geometry is required to be registered with a
 geometry::ProximityProperties object that contains the (“material”,
 “coulomb_friction”) property. If the property is missing,
 MultibodyPlant will throw an exception.</p>
 <p>² If the property is missing, MultibodyPlant will use a heuristic
-value as the default. Refer to the section mbp_penalty_method “Penalty
-method point contact” for further details.</p>
+value as the default. Refer to the section mbp_compliant_point_contact
+“Compliant point contact model” for further details.</p>
 <p>³ When using a linear Kelvin–Voigt model of dissipation (for instance
 when selecting the SAP solver), collision geometry is required to be
 registered with a geometry::ProximityProperties object that contains
@@ -9142,24 +9144,24 @@ ContactModel.</p>
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].get_contact_penalty_method_time_scale"></span><span class="sig-name descname"><span class="pre">get_contact_penalty_method_time_scale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_contact_penalty_method_time_scale" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a time-scale estimate <code class="docutils literal notranslate"><span class="pre">tc</span></code> based on the requested
 penetration allowance δ set with set_penetration_allowance(). For the
-penalty method in use to enforce non-penetration, this time scale
+compliant contact model to enforce non-penetration, this time scale
 relates to the time it takes the relative normal velocity between two
-bodies to go to zero. This time scale <code class="docutils literal notranslate"><span class="pre">tc</span></code> is artificially
-introduced by the penalty method and goes to zero in the limit to
-ideal rigid contact. Since numerical integration methods for continuum
-systems must be able to resolve a system’s dynamics, the time step
-used by an integrator must in general be much smaller than the time
-scale <code class="docutils literal notranslate"><span class="pre">tc</span></code>. How much smaller will depend on the details of the
-problem and the convergence characteristics of the integrator and
-should be tuned appropriately. Another factor to take into account for
-setting up the simulation’s time step is the speed of the objects in
-your simulation. If <code class="docutils literal notranslate"><span class="pre">vn</span></code> represents a reference velocity scale for
-the normal relative velocity between bodies, the new time scale <code class="docutils literal notranslate"><span class="pre">tn</span> <span class="pre">=</span>
-<span class="pre">δ</span> <span class="pre">/</span> <span class="pre">vn</span></code> represents the time it would take for the distance between
-two bodies approaching with relative normal velocity <code class="docutils literal notranslate"><span class="pre">vn</span></code> to
-decrease by the penetration_allowance δ. In this case a user should
-choose a time step for simulation that can resolve the smallest of the
-two time scales <code class="docutils literal notranslate"><span class="pre">tc</span></code> and <code class="docutils literal notranslate"><span class="pre">tn</span></code>.</p>
+bodies to go to zero. This time scale <code class="docutils literal notranslate"><span class="pre">tc</span></code> is a global estimate of
+the dynamics introduced by the compliant contact model and goes to
+zero in the limit to ideal rigid contact. Since numerical integration
+methods for continuum systems must be able to resolve a system’s
+dynamics, the time step used by an integrator must in general be much
+smaller than the time scale <code class="docutils literal notranslate"><span class="pre">tc</span></code>. How much smaller will depend on
+the details of the problem and the convergence characteristics of the
+integrator and should be tuned appropriately. Another factor to take
+into account for setting up the simulation’s time step is the speed of
+the objects in your simulation. If <code class="docutils literal notranslate"><span class="pre">vn</span></code> represents a reference
+velocity scale for the normal relative velocity between bodies, the
+new time scale <code class="docutils literal notranslate"><span class="pre">tn</span> <span class="pre">=</span> <span class="pre">δ</span> <span class="pre">/</span> <span class="pre">vn</span></code> represents the time it would take for
+the distance between two bodies approaching with relative normal
+velocity <code class="docutils literal notranslate"><span class="pre">vn</span></code> to decrease by the penetration_allowance δ. In this
+case a user should choose a time step for simulation that can resolve
+the smallest of the two time scales <code class="docutils literal notranslate"><span class="pre">tc</span></code> and <code class="docutils literal notranslate"><span class="pre">tn</span></code>.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -11453,8 +11455,8 @@ all model instances.</p>
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].set_penetration_allowance"></span><span class="sig-name descname"><span class="pre">set_penetration_allowance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">penetration_allowance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.001</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.set_penetration_allowance" title="Permalink to this definition"></a></dt>
 <dd><p>Sets the penetration allowance used to estimate the coefficients in
 the penalty method used to impose non-penetration among bodies. Refer
-to the section mbp_penalty_method “Contact by penalty method” for
-further details.</p>
+to the section mbp_compliant_point_contact “Compliant point contact
+model” for further details.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if penetration_allowance is not positive.</strong> – </p>
@@ -12210,17 +12212,18 @@ expects the following properties for point contact modeling:</p>
 <p><a href="#id123"><span class="problematic" id="id124">|Group name|Property Name|Required|Property Type|Property Description|</span></a>
 <a href="#id125"><span class="problematic" id="id126">|:--------:|</span></a>:———–:<a href="#id127"><span class="problematic" id="id128">|:------:|</span></a>:—————-:<a href="#id129"><span class="problematic" id="id130">|:-------------------|</span></a>
 <a href="#id131"><span class="problematic" id="id132">|material|coulomb_friction|yes¹|CoulombFriction&lt;T&gt;|Static and Dynamic
-friction.|</span></a> <a href="#id133"><span class="problematic" id="id134">|material|point_contact_stiffness|no²|T|</span></a> Penalty method
-stiffness.| <a href="#id135"><span class="problematic" id="id136">|material|hunt_crossley_dissipation |no²⁴|T|</span></a> Penalty
-method dissipation.| <a href="#id137"><span class="problematic" id="id138">|material|relaxation_time|yes³⁴|T|Linear
-Kelvin–Voigt model parameter.|</span></a></p>
+friction.|</span></a> <a href="#id133"><span class="problematic" id="id134">|material|point_contact_stiffness|no²|T|</span></a> Compliant point
+contact stiffness.| <a href="#id135"><span class="problematic" id="id136">|material|hunt_crossley_dissipation |no²⁴|T|</span></a>
+Compliant contact dissipation.|
+<a href="#id137"><span class="problematic" id="id138">|material|relaxation_time|yes³⁴|T|Linear Kelvin–Voigt model
+parameter.|</span></a></p>
 <p>¹ Collision geometry is required to be registered with a
 geometry::ProximityProperties object that contains the (“material”,
 “coulomb_friction”) property. If the property is missing,
 MultibodyPlant will throw an exception.</p>
 <p>² If the property is missing, MultibodyPlant will use a heuristic
-value as the default. Refer to the section mbp_penalty_method “Penalty
-method point contact” for further details.</p>
+value as the default. Refer to the section mbp_compliant_point_contact
+“Compliant point contact model” for further details.</p>
 <p>³ When using a linear Kelvin–Voigt model of dissipation (for instance
 when selecting the SAP solver), collision geometry is required to be
 registered with a geometry::ProximityProperties object that contains
@@ -14176,24 +14179,24 @@ ContactModel.</p>
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].get_contact_penalty_method_time_scale"></span><span class="sig-name descname"><span class="pre">get_contact_penalty_method_time_scale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.get_contact_penalty_method_time_scale" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a time-scale estimate <code class="docutils literal notranslate"><span class="pre">tc</span></code> based on the requested
 penetration allowance δ set with set_penetration_allowance(). For the
-penalty method in use to enforce non-penetration, this time scale
+compliant contact model to enforce non-penetration, this time scale
 relates to the time it takes the relative normal velocity between two
-bodies to go to zero. This time scale <code class="docutils literal notranslate"><span class="pre">tc</span></code> is artificially
-introduced by the penalty method and goes to zero in the limit to
-ideal rigid contact. Since numerical integration methods for continuum
-systems must be able to resolve a system’s dynamics, the time step
-used by an integrator must in general be much smaller than the time
-scale <code class="docutils literal notranslate"><span class="pre">tc</span></code>. How much smaller will depend on the details of the
-problem and the convergence characteristics of the integrator and
-should be tuned appropriately. Another factor to take into account for
-setting up the simulation’s time step is the speed of the objects in
-your simulation. If <code class="docutils literal notranslate"><span class="pre">vn</span></code> represents a reference velocity scale for
-the normal relative velocity between bodies, the new time scale <code class="docutils literal notranslate"><span class="pre">tn</span> <span class="pre">=</span>
-<span class="pre">δ</span> <span class="pre">/</span> <span class="pre">vn</span></code> represents the time it would take for the distance between
-two bodies approaching with relative normal velocity <code class="docutils literal notranslate"><span class="pre">vn</span></code> to
-decrease by the penetration_allowance δ. In this case a user should
-choose a time step for simulation that can resolve the smallest of the
-two time scales <code class="docutils literal notranslate"><span class="pre">tc</span></code> and <code class="docutils literal notranslate"><span class="pre">tn</span></code>.</p>
+bodies to go to zero. This time scale <code class="docutils literal notranslate"><span class="pre">tc</span></code> is a global estimate of
+the dynamics introduced by the compliant contact model and goes to
+zero in the limit to ideal rigid contact. Since numerical integration
+methods for continuum systems must be able to resolve a system’s
+dynamics, the time step used by an integrator must in general be much
+smaller than the time scale <code class="docutils literal notranslate"><span class="pre">tc</span></code>. How much smaller will depend on
+the details of the problem and the convergence characteristics of the
+integrator and should be tuned appropriately. Another factor to take
+into account for setting up the simulation’s time step is the speed of
+the objects in your simulation. If <code class="docutils literal notranslate"><span class="pre">vn</span></code> represents a reference
+velocity scale for the normal relative velocity between bodies, the
+new time scale <code class="docutils literal notranslate"><span class="pre">tn</span> <span class="pre">=</span> <span class="pre">δ</span> <span class="pre">/</span> <span class="pre">vn</span></code> represents the time it would take for
+the distance between two bodies approaching with relative normal
+velocity <code class="docutils literal notranslate"><span class="pre">vn</span></code> to decrease by the penetration_allowance δ. In this
+case a user should choose a time step for simulation that can resolve
+the smallest of the two time scales <code class="docutils literal notranslate"><span class="pre">tc</span></code> and <code class="docutils literal notranslate"><span class="pre">tn</span></code>.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -16487,8 +16490,8 @@ all model instances.</p>
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].set_penetration_allowance"></span><span class="sig-name descname"><span class="pre">set_penetration_allowance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">penetration_allowance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.001</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.set_penetration_allowance" title="Permalink to this definition"></a></dt>
 <dd><p>Sets the penetration allowance used to estimate the coefficients in
 the penalty method used to impose non-penetration among bodies. Refer
-to the section mbp_penalty_method “Contact by penalty method” for
-further details.</p>
+to the section mbp_compliant_point_contact “Compliant point contact
+model” for further details.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if penetration_allowance is not positive.</strong> – </p>

@@ -275,7 +275,9 @@ Properties for hydroelastic contact</h4>
 <li>If no value is provided, <code>MultibodyPlant</code> provides a default value of zero.</li>
 <li>Notes on choosing a value:<ul>
 <li>For objects that are nominally rigid, starting with zero-damping is good.</li>
-<li>If the behavior seems “jittery”, gradually increase the amount of dissipation. Typical values would remain in the range [0, 3] with 1 being a typical damping amount.</li>
+<li>If the behavior seems “jittery”, gradually increase the amount of dissipation. Typical values would remain in the range [0, 100] with 10 to 50 being a typical damping amount.</li>
+<li>The inverse of the Hunt-Crossley dissipation is the maximum bounce velocity between two objects. Therefore, if maximum bounce velocities of 10 cm/s are acceptable, a dissipation of 10 s/m will keep bounce velocities bounded to this range.</li>
+<li>Warning: values larger than about 500 s/m are unphysical and typically lead to numerical problems. Due to time discretization errors, the user will see objects that take a long time to go back to their rest state.</li>
 <li>Remember, as this value increases, your simulation will lose energy at a higher rate.</li>
 </ul>
 </li>
@@ -464,7 +466,9 @@ What can’t you do with hydroelastic contact?</h2>
 <h2><a class="anchor" id="hug_dissipation_and_solver"></a>
 Current dissipation models</h2>
 <ul>
-<li>SAP does not support Hunt-Crossley dissipation at this time for both point and hydroelastic contact (issue <a href="https://github.com/RobotLocomotion/drake/issues/19320">19320</a>). See the documentation for that in the <a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1multibody_1_1_multibody_plant.html#:~:text=%E2%81%B4%20We%20allow%20to,will%20be%20ignored.">MultibodyPlant documentation.</a> We allow the user to specify both hunt_crossley_dissipation (TAMSI and continuous mode parameter) and relaxation_time (SAP specific parameter) on the model, but the parameter may be ignored depending on your plant configuration.</li>
+<li>The TAMSI (DiscreteContactApproximation::kTamsi), Similar (DiscreteContactApproximation::kSimilar), and Lagged (DiscreteContactApproximation::kLagged) model approximations use a Hunt-Crossley model of dissipation, parameterized by <code>hunt_crossley_dissipation</code>, for both point and hydroelastic contact. The SAP approximation parameter <code>relaxation_time</code> is ignored by these approximations.</li>
+<li>The SAP model approximation (DiscreteContactApproximation::kSap) uses a linear Kelvin–Voigt model of dissipation parameterized by <code>relaxation_time</code>, for both point and hydroelastic contact. The Hunt-Crossley dissipation parameter is ignored by this approximation.</li>
+<li>We allow the user to specify both <code>hunt_crossley_dissipation</code> (TAMSI, Similar and Lagged discrete approximations as well as continuous plant model) and <code>relaxation_time</code> (SAP approximation specific parameter) on the model, but the parameter may be ignored depending on your plant configuration. See the documentation for that in the <a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1multibody_1_1_multibody_plant.html#:~:text=%E2%81%B4%20We%20allow%20to,will%20be%20ignored.">MultibodyPlant documentation.</a></li>
 </ul>
 <h1><a class="anchor" id="hydro_appendix_examples_and_tutorials"></a>
 Appendix C: Examples and Tutorials</h1>
