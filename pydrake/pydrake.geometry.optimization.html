@@ -2719,6 +2719,64 @@ AffineBall::MinimumVolumeCircumscribedEllipsoid instead.</p>
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.Hyperrectangle">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.optimization.</span></span><span class="sig-name descname"><span class="pre">Hyperrectangle</span></span><a class="headerlink" href="#pydrake.geometry.optimization.Hyperrectangle" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></code></a></p>
+<p>Axis-aligned hyperrectangle in Rᵈ defined by its lower bounds and
+upper bounds as {x| lb ≤ x ≤ ub}</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.Hyperrectangle.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.Hyperrectangle.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.geometry.optimization.Hyperrectangle) -&gt; None</p></li>
+</ol>
+<p>Constructs a default (zero-dimensional, nonempty) hyperrectangle.</p>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.geometry.optimization.Hyperrectangle, lb: numpy.ndarray[numpy.float64[m, 1]], ub: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</p></li>
+</ol>
+<p>Constructs a hyperrectangle from its lower and upper bounds.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>lb.size() == ub.size()</p>
+</dd>
+<dt>Precondition:</dt><dd><p>lb(i) &lt;= ub(i) for all i</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.Hyperrectangle.Center">
+<span class="sig-name descname"><span class="pre">Center</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.Hyperrectangle" title="pydrake.geometry.optimization.Hyperrectangle"><span class="pre">pydrake.geometry.optimization.Hyperrectangle</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.Hyperrectangle.Center" title="Permalink to this definition"></a></dt>
+<dd><p>Get the center of the hyperrectangle.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.Hyperrectangle.lb">
+<span class="sig-name descname"><span class="pre">lb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.Hyperrectangle" title="pydrake.geometry.optimization.Hyperrectangle"><span class="pre">pydrake.geometry.optimization.Hyperrectangle</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.Hyperrectangle.lb" title="Permalink to this definition"></a></dt>
+<dd><p>Get the lower bounds of the hyperrectangle.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.Hyperrectangle.MakeHPolyhedron">
+<span class="sig-name descname"><span class="pre">MakeHPolyhedron</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.Hyperrectangle" title="pydrake.geometry.optimization.Hyperrectangle"><span class="pre">pydrake.geometry.optimization.Hyperrectangle</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.optimization.HPolyhedron" title="pydrake.geometry.optimization.HPolyhedron"><span class="pre">pydrake.geometry.optimization.HPolyhedron</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.Hyperrectangle.MakeHPolyhedron" title="Permalink to this definition"></a></dt>
+<dd><p>Helper to convert this hyperrectangle to an HPolyhedron.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.Hyperrectangle.ub">
+<span class="sig-name descname"><span class="pre">ub</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.Hyperrectangle" title="pydrake.geometry.optimization.Hyperrectangle"><span class="pre">pydrake.geometry.optimization.Hyperrectangle</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.Hyperrectangle.ub" title="Permalink to this definition"></a></dt>
+<dd><p>Get the upper bounds of the hyperrectangle.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.Hyperrectangle.UniformSample">
+<span class="sig-name descname"><span class="pre">UniformSample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.Hyperrectangle" title="pydrake.geometry.optimization.Hyperrectangle"><span class="pre">pydrake.geometry.optimization.Hyperrectangle</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">generator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.common.html#pydrake.common.RandomGenerator" title="pydrake.common.RandomGenerator"><span class="pre">pydrake.common.RandomGenerator</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.Hyperrectangle.UniformSample" title="Permalink to this definition"></a></dt>
+<dd><p>Draws a uniform sample from the set.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.Intersection">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.optimization.</span></span><span class="sig-name descname"><span class="pre">Intersection</span></span><a class="headerlink" href="#pydrake.geometry.optimization.Intersection" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></code></a></p>
