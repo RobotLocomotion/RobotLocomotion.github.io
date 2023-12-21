@@ -171,18 +171,24 @@ academic license <a href="https://www.jetbrains.com/shop/eform/students">here</a
 
 <p>The most recent versions that we have tested for compatibility are:</p>
 <ul>
-  <li>Ubuntu 20.04 (Focal)</li>
-  <li>Bazel 4.2.1 (2021-08-30)</li>
-  <li>CLion 2021.2.3 (2021-10-14)
+  <li>Ubuntu 22.04 (Jammy)</li>
+  <li>Bazel 6.4.0</li>
+  <li>CLion 2023.3.2
     <ul>
-      <li>Bazel plugin 2021.11.03.1.1 (2021-11-08)</li>
+      <li>Bazel plugin 2023.11.23.0.1-api-version-233</li>
     </ul>
   </li>
 </ul>
 
-<p>Many versions of the above (Bazel / CLion / Bazel plugin) are <em>not</em> compatible
-with each other.  We strongly suggest using only the versions shown above, when
-working with Drake.</p>
+<p>Different CLion versions will normally choose a compatible Bazel plugin.</p>
+
+<h2 id="current-clionbazel-problem">Current CLion/Bazel problem</h2>
+
+<p>We are seeing CLion confused about Drake header files, possibly due to
+Bazel’s “sandboxing” which uses symbolic links to construct a source tree
+containing only files that appear in the current workspace. We do not
+yet have a diagnosis or workaround. CLion is still usable but symbols within
+header files are not properly recognized, .cc files work fine.</p>
 
 <h2 id="upgrading-clion">Upgrading CLion</h2>
 
@@ -200,7 +206,7 @@ See <a href="#installing-the-bazel-plugin">Installing the Bazel Plugin</a>.</li>
   <li>In CLion, select
 <code class="language-plaintext highlighter-rouge">Bazel-&gt;Sync-&gt;Non-incrementally Sync Project with BUILD Files</code></li>
   <li>You may need to delete cached data in <code class="language-plaintext highlighter-rouge">~/.cache/bazel</code> and
-<code class="language-plaintext highlighter-rouge">~/.cache/JetBrains/CLion2021.2/caches</code> if you get error messages
+<code class="language-plaintext highlighter-rouge">~/.cache/JetBrains/CLion2023.2/caches</code> if you get error messages
 complaining about old files in the cache (substitute the right version
 number).</li>
 </ol>

@@ -143,7 +143,10 @@
 writing a complete, updated file.</p>
 <p>Inertia properties for links are inferred from geometry. Only the file
 supplied as an input is updated; any included or referred-to files are left
-untouched.</p>
+untouched. The inferred geometry for each body is determined by the first role
+which has geometry defined. The roles are visited in the order specified by
+–geom_inertia_role_order, whose default order is
+“proximity illustration perception”.</p>
 <p>The output file should differ from the input file only by the contents of
 <cite>&lt;inertial&gt;</cite> tags. It is possible that some comments may be lost within those
 tags.</p>
