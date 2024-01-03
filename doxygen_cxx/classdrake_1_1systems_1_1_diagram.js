@@ -31,8 +31,6 @@ var classdrake_1_1systems_1_1_diagram =
     [ "GetDirectFeedthroughs", "classdrake_1_1systems_1_1_diagram.html#a83479e1867e83638b90266c1aed0b6a3", null ],
     [ "GetDowncastSubsystemByName", "classdrake_1_1systems_1_1_diagram.html#a8733b5799e3a872764125e9c031dae57", null ],
     [ "GetDowncastSubsystemByName", "classdrake_1_1systems_1_1_diagram.html#aa8eee7cb4feec033770aad1c57f75098", null ],
-    [ "GetGraphvizInputPortToken", "classdrake_1_1systems_1_1_diagram.html#acfd6d412aafdf2814ced8e8fe460fc23", null ],
-    [ "GetGraphvizOutputPortToken", "classdrake_1_1systems_1_1_diagram.html#a37060c889e34319f11652b5ad21cfbb9", null ],
     [ "GetInputPortLocators", "classdrake_1_1systems_1_1_diagram.html#ade9a22c7a4a1d252abb6d621ca7ea5ff", null ],
     [ "GetMutableSubsystemCompositeEventCollection", "classdrake_1_1systems_1_1_diagram.html#ad1189e9dd3e5a73cae1ee79ad245c5e4", null ],
     [ "GetMutableSubsystemState", "classdrake_1_1systems_1_1_diagram.html#a6946b24c90353a9a78c3bf89a9f5b55a", null ],

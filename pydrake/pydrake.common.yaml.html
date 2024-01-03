@@ -146,6 +146,34 @@ re-expressing the same tagged data.</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="pydrake.common.yaml.yaml_dump_typed">
+<span class="sig-prename descclassname"><span class="pre">pydrake.common.yaml.</span></span><span class="sig-name descname"><span class="pre">yaml_dump_typed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schema</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">child_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defaults</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.yaml.yaml_dump_typed" title="Permalink to this definition"></a></dt>
+<dd><p>Dumps an object to a YAML string or <code class="docutils literal notranslate"><span class="pre">filename</span></code> (if specified), using
+the <code class="docutils literal notranslate"><span class="pre">schema</span></code> in order to support non-primitive types.</p>
+<p>This mimics the C++ function <code class="docutils literal notranslate"><span class="pre">drake::common::yaml::SaveYamlFile</span></code>.
+This is the complementary operation to <code class="docutils literal notranslate"><span class="pre">yaml_load_typed</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> – The object to be dumped.</p></li>
+<li><p><strong>filename</strong> – If provided, the YAML filename to be written to. When None,
+this function will return a YAML string instead of writing to a
+file.</p></li>
+<li><p><strong>schema</strong> – If provided, the type to dump as. When None, the default is
+<code class="docutils literal notranslate"><span class="pre">type(data)</span></code>. This either must be a <code class="docutils literal notranslate"><span class="pre">dataclass</span></code>, a C++ class
+bound using pybind11 and <code class="docutils literal notranslate"><span class="pre">DefAttributesUsingSerialize</span></code>, or a
+<code class="docutils literal notranslate"><span class="pre">Mapping[str,</span> <span class="pre">...]</span></code> where the mapping’s value type is one of
+those two categories.</p></li>
+<li><p><strong>child_name</strong> – If provided, dumps using given name as the document root,
+with the <code class="docutils literal notranslate"><span class="pre">data</span></code> nested underneath.</p></li>
+<li><p><strong>defaults</strong> – If provided, then only data that differs from the given
+<code class="docutils literal notranslate"><span class="pre">defaults</span></code> will be dumped.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="pydrake.common.yaml.yaml_load">
 <span class="sig-prename descclassname"><span class="pre">pydrake.common.yaml.</span></span><span class="sig-name descname"><span class="pre">yaml_load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">private</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.yaml.yaml_load" title="Permalink to this definition"></a></dt>
 <dd><p>Loads either a <cite>data</cite> str xor a <cite>filename</cite> (exactly one must be
@@ -186,12 +214,15 @@ the yaml data from a file instead of memory.</p>
 <span class="sig-prename descclassname"><span class="pre">pydrake.common.yaml.</span></span><span class="sig-name descname"><span class="pre">yaml_load_typed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schema</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">child_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defaults</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_yaml_with_no_schema</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_schema_with_no_yaml</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">retain_map_defaults</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.yaml.yaml_load_typed" title="Permalink to this definition"></a></dt>
 <dd><p>Loads either a <code class="docutils literal notranslate"><span class="pre">data</span></code> str or a <code class="docutils literal notranslate"><span class="pre">filename</span></code> against the given
 <code class="docutils literal notranslate"><span class="pre">schema</span></code> type and returns an instance of that type.</p>
-<p>This mimics the C++ function <code class="docutils literal notranslate"><span class="pre">drake::common::yaml::LoadYamlFile</span></code>.</p>
+<p>This mimics the C++ function <code class="docutils literal notranslate"><span class="pre">drake::common::yaml::LoadYamlFile</span></code>.
+This is the complementary operation to <code class="docutils literal notranslate"><span class="pre">yaml_dump_typed</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>schema</strong> – The type to load. Must be a <code class="docutils literal notranslate"><span class="pre">dataclass</span></code>. (Adding support for
-more type classes is future work.)</p></li>
+<li><p><strong>schema</strong> – The type to load as. This either must be a <code class="docutils literal notranslate"><span class="pre">dataclass</span></code>, a C++
+class bound using pybind11 and <code class="docutils literal notranslate"><span class="pre">DefAttributesUsingSerialize</span></code>, or
+a <code class="docutils literal notranslate"><span class="pre">Mapping[str,</span> <span class="pre">...]</span></code> where the mapping’s value type is one of
+those two categories.</p></li>
 <li><p><strong>data</strong> – The string of YAML data to be loaded. Exactly one of either
 <code class="docutils literal notranslate"><span class="pre">data</span></code> or <code class="docutils literal notranslate"><span class="pre">filename</span></code> must be provided.</p></li>
 <li><p><strong>filename</strong> – The filename of YAML data to be loaded. Exactly one of either

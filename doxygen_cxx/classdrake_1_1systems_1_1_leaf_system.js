@@ -75,8 +75,6 @@ var classdrake_1_1systems_1_1_leaf_system =
     [ "DoPublish", "classdrake_1_1systems_1_1_leaf_system.html#a119e3a83eeb61b8eb99198348178afd2", null ],
     [ "DoValidateAllocatedLeafContext", "classdrake_1_1systems_1_1_leaf_system.html#a8bd6ca8a128bb2663ebaa27d6851c68d", null ],
     [ "GetDirectFeedthroughs", "classdrake_1_1systems_1_1_leaf_system.html#a83479e1867e83638b90266c1aed0b6a3", null ],
-    [ "GetGraphvizInputPortToken", "classdrake_1_1systems_1_1_leaf_system.html#acfd6d412aafdf2814ced8e8fe460fc23", null ],
-    [ "GetGraphvizOutputPortToken", "classdrake_1_1systems_1_1_leaf_system.html#a37060c889e34319f11652b5ad21cfbb9", null ],
     [ "GetMutableNumericParameter", "classdrake_1_1systems_1_1_leaf_system.html#ab003f82ede0c6e8e6f1f1862ea54b31d", null ],
     [ "GetNumericParameter", "classdrake_1_1systems_1_1_leaf_system.html#a4e4a60af942a6a568694334837d19931", null ],
     [ "MakeWitnessFunction", "classdrake_1_1systems_1_1_leaf_system.html#a8d09351dbeec49917149d6da5b701c12", null ],
@@ -86,8 +84,8 @@ var classdrake_1_1systems_1_1_leaf_system =
     [ "MakeWitnessFunction", "classdrake_1_1systems_1_1_leaf_system.html#a521a1bd4eee88561b0e1a3b06b7fe1b7", null ],
     [ "MakeWitnessFunction", "classdrake_1_1systems_1_1_leaf_system.html#a650d4bdc065de71ea29a608f9e5a1261", null ],
     [ "MakeWitnessFunction", "classdrake_1_1systems_1_1_leaf_system.html#af91c7a0aa53961ed14570771874bae47", null ],
-    [ "operator=", "classdrake_1_1systems_1_1_leaf_system.html#a2a5ff32e4a40707c73a10a0ea24029c0", null ],
     [ "operator=", "classdrake_1_1systems_1_1_leaf_system.html#a28e17a9a1a303fb56956cfe9e989ca2f", null ],
+    [ "operator=", "classdrake_1_1systems_1_1_leaf_system.html#a2a5ff32e4a40707c73a10a0ea24029c0", null ],
     [ "SetDefaultParameters", "classdrake_1_1systems_1_1_leaf_system.html#a48a5a76172d2c18e3ac495b44c866c1b", null ],
     [ "SetDefaultState", "classdrake_1_1systems_1_1_leaf_system.html#ac920e22e905b83dbc0abaaa57d2c0251", null ]
 ];

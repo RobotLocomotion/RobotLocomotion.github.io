@@ -665,7 +665,7 @@ drake:mu_static</h2>
 <h3><a class="anchor" id="tag_drake_mu_static_semantics"></a>
 Semantics</h3>
 <p>The provided (dimensionless) value sets the static friction parameter for CoulombFriction. Refer to <a class="el" href="group__stribeck__approximation.html">Continuous Approximation of Coulomb Friction</a> for details on the friction model.</p>
-<dl class="section warning"><dt>Warning</dt><dd>This value is ignored when modeling the multibody system with discrete dynamics, refer to MultibodyPlant's constructor documentation for details, in particular the parameter <code>time_step</code>.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Both <code>mu_dynamic</code> and <code>mu_static</code> are used by MultibodyPlant when the plant <code>time_step=0</code>, but only <code>mu_dynamic</code> is used when <code>time_step&gt;0</code>. Refer to MultibodyPlant's constructor documentation for details.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="group__multibody__parsing.html#tag_drake_proximity_properties">drake:proximity_properties</a>, <a class="el" href="classdrake_1_1multibody_1_1_coulomb_friction.html" title="Parameters for Coulomb&#39;s Law of Friction, namely:">drake::multibody::CoulombFriction</a>, <a class="el" href="group__stribeck__approximation.html">Continuous Approximation of Coulomb Friction</a></dd></dl>
 <h2><a class="anchor" id="tag_drake_parent"></a>
 drake:parent</h2>
