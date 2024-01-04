@@ -207,12 +207,6 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_ball_rpy_joint.html">BallRpyJoint</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> allows two bodies to rotate freely relative to one another.  <a href="classdrake_1_1multibody_1_1_ball_rpy_joint.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Body provides the general abstraction of a body with an API that makes no assumption about whether a body is rigid or deformable and neither does it make any assumptions about the underlying physical model or approximation.  <a href="classdrake_1_1multibody_1_1_body.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body_frame.html">BodyFrame</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A BodyFrame is a material <a class="el" href="classdrake_1_1multibody_1_1_frame.html" title="Frame is an abstract class representing a material frame (also called a physical frame),...">Frame</a> that serves as the unique reference frame for a <a class="el" href="classdrake_1_1multibody_1_1_body.html" title="Body provides the general abstraction of a body with an API that makes no assumption about whether a ...">Body</a>.  <a href="classdrake_1_1multibody_1_1_body_frame.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_calc_grid_points_options.html">CalcGridPointsOptions</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_centroidal_momentum_constraint.html">CentroidalMomentumConstraint</a></td></tr>
@@ -234,7 +228,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A System that encodes <a class="el" href="classdrake_1_1multibody_1_1_contact_results.html" title="A container class storing the contact results information for each contact pair for a given state of ...">ContactResults</a> into a lcmt_contact_results_for_viz message.  <a href="classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_contact_wrench.html">ContactWrench</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the contact wrench (spatial force) from <a class="el" href="classdrake_1_1multibody_1_1_body.html" title="Body provides the general abstraction of a body with an API that makes no assumption about whether a ...">Body</a> A to <a class="el" href="classdrake_1_1multibody_1_1_body.html" title="Body provides the general abstraction of a body with an API that makes no assumption about whether a ...">Body</a> B applied at point Cb.  <a href="structdrake_1_1multibody_1_1_contact_wrench.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the contact wrench (spatial force) from Body A to Body B applied at point Cb.  <a href="structdrake_1_1multibody_1_1_contact_wrench.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_contact_wrench_evaluator.html">ContactWrenchEvaluator</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -282,7 +276,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A ForceElement allows modeling state and time dependent forces in a MultibodyTree model.  <a href="classdrake_1_1multibody_1_1_force_element.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frame is an abstract class representing a <em>material frame</em> (also called a <em>physical frame</em>), meaning that the Frame's origin is a material point of a <a class="el" href="classdrake_1_1multibody_1_1_body.html" title="Body provides the general abstraction of a body with an API that makes no assumption about whether a ...">Body</a>.  <a href="classdrake_1_1multibody_1_1_frame.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frame is an abstract class representing a <em>material frame</em> (also called a <em>physical frame</em>), meaning that the Frame's origin is a material point of a Body.  <a href="classdrake_1_1multibody_1_1_frame.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame_base.html">FrameBase</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">FrameBase is an abstract representation of the concept of a <em>frame</em> in multibody dynamics.  <a href="classdrake_1_1multibody_1_1_frame_base.html#details">More...</a><br /></td></tr>
@@ -393,7 +387,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This ForceElement models a linear spring attached to a <a class="el" href="classdrake_1_1multibody_1_1_prismatic_joint.html" title="This Joint allows two bodies to translate relative to one another along a common axis.">PrismaticJoint</a> and applies a force to that joint according to.  <a href="classdrake_1_1multibody_1_1_prismatic_spring.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_propeller.html">Propeller</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A System that connects to the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> in order to model the effects of one or more controlled propellers acting on a <a class="el" href="classdrake_1_1multibody_1_1_body.html" title="Body provides the general abstraction of a body with an API that makes no assumption about whether a ...">Body</a>.  <a href="classdrake_1_1multibody_1_1_propeller.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A System that connects to the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> in order to model the effects of one or more controlled propellers acting on a Body.  <a href="classdrake_1_1multibody_1_1_propeller.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_propeller_info.html">PropellerInfo</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parameters that describe the kinematic frame and force-production properties of a single propeller.  <a href="structdrake_1_1multibody_1_1_propeller_info.html#details">More...</a><br /></td></tr>
@@ -415,6 +409,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The term <b>rigid body</b> implies that the deformations of the body under consideration are so small that they have no significant effect on the overall motions of the body and therefore deformations can be neglected.  <a href="classdrake_1_1multibody_1_1_rigid_body.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html">RigidBodyFrame</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A RigidBodyFrame is a material <a class="el" href="classdrake_1_1multibody_1_1_frame.html" title="Frame is an abstract class representing a material frame (also called a physical frame),...">Frame</a> that serves as the unique reference frame for a <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html" title="The term rigid body implies that the deformations of the body under consideration are so small that t...">RigidBody</a>.  <a href="classdrake_1_1multibody_1_1_rigid_body_frame.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class describes the mass distribution (inertia properties) of a body or composite body about a particular point.  <a href="classdrake_1_1multibody_1_1_rotational_inertia.html#details">More...</a><br /></td></tr>
@@ -532,6 +529,13 @@ Typedefs</h2></td></tr>
 <tr class="memitem:af65439a17091283a89eb12f1955c6db0"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> = <a class="el" href="classdrake_1_1_type_safe_index.html">TypeSafeIndex</a>&lt; class ModelInstanceTag &gt;</td></tr>
 <tr class="memdesc:af65439a17091283a89eb12f1955c6db0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type used to identify model instances by index within a multibody tree system.  <a href="#af65439a17091283a89eb12f1955c6db0">More...</a><br /></td></tr>
 <tr class="separator:af65439a17091283a89eb12f1955c6db0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81d7f4ae9c05c5a889f306d454e4d3df"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a81d7f4ae9c05c5a889f306d454e4d3df"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a81d7f4ae9c05c5a889f306d454e4d3df">BodyFrame</a> = <a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html">RigidBodyFrame</a>&lt; T &gt;</td></tr>
+<tr class="separator:a81d7f4ae9c05c5a889f306d454e4d3df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f0a405774254de6133e7aa5d3960150"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a7f0a405774254de6133e7aa5d3960150"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a7f0a405774254de6133e7aa5d3960150">Body</a> = <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt;</td></tr>
+<tr class="memdesc:a7f0a405774254de6133e7aa5d3960150"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Compatibility) Prefer <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html" title="The term rigid body implies that the deformations of the body under consideration are so small that t...">RigidBody</a> to Body, however this dispreferred alias is available to permit older code to continue working.  <a href="#a7f0a405774254de6133e7aa5d3960150">More...</a><br /></td></tr>
+<tr class="separator:a7f0a405774254de6133e7aa5d3960150"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -689,6 +693,36 @@ Functions</h2></td></tr>
 <tr class="separator:ga732349f929601b37e30b15ad557057e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
+<a id="a7f0a405774254de6133e7aa5d3960150"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f0a405774254de6133e7aa5d3960150">&#9670;&nbsp;</a></span>Body</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacedrake_1_1multibody.html#a7f0a405774254de6133e7aa5d3960150">Body</a> =  <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt;T&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Compatibility) Prefer <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html" title="The term rigid body implies that the deformations of the body under consideration are so small that t...">RigidBody</a> to Body, however this dispreferred alias is available to permit older code to continue working. </p>
+
+</div>
+</div>
+<a id="a81d7f4ae9c05c5a889f306d454e4d3df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81d7f4ae9c05c5a889f306d454e4d3df">&#9670;&nbsp;</a></span>BodyFrame</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacedrake_1_1multibody.html#a81d7f4ae9c05c5a889f306d454e4d3df">BodyFrame</a> =  <a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html">RigidBodyFrame</a>&lt;T&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="acbe033def48af7bf4857957f70f4d3e0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acbe033def48af7bf4857957f70f4d3e0">&#9670;&nbsp;</a></span>BodyIndex</h2>
 

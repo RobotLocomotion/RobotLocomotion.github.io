@@ -179,7 +179,7 @@ class drake::multibody::Joint&lt; T &gt;</h3>
 <p>In Drake we define a frame F rigidly attached to the parent body P with pose <code>X_PF</code> and a frame M rigidly attached to the child body B with pose <code>X_BM</code>. A Joint object specifies a kinematic relation between frames F and M, which in turn imposes a kinematic relation between bodies P and B.</p>
 <p>Typical joints include the ball joint, to allow unrestricted rotations about a given point, the revolute joint, that constraints two bodies to rotate about a given common axis, etc.</p>
 <p>Consider the following example to build a simple pendulum system:</p>
-<div class="fragment"><div class="line">MultibodyPlant&lt;double&gt; plant(0.0);</div><div class="line"><span class="comment">// ... Code here to setup quantities below as mass, com, etc. ...</span></div><div class="line"><span class="keyword">const</span> Body&lt;double&gt;&amp; pendulum =</div><div class="line">  plant.AddBody&lt;RigidBody&gt;(SpatialInertia&lt;double&gt;(mass, com, unit_inertia));</div><div class="line"><span class="comment">// We will connect the pendulum body to the world using a RevoluteJoint.</span></div><div class="line"><span class="comment">// In this simple case the parent body P is the model&#39;s world body and frame</span></div><div class="line"><span class="comment">// F IS the world frame.</span></div><div class="line"><span class="comment">// Additionally, we need to specify the pose of frame M on the pendulum&#39;s</span></div><div class="line"><span class="comment">// body frame B.</span></div><div class="line"><span class="comment">// Say we declared and initialized X_BM...</span></div><div class="line"><span class="keyword">const</span> RevoluteJoint&lt;double&gt;&amp; elbow =</div><div class="line">  plant.AddJoint&lt;RevoluteJoint&gt;(</div><div class="line">    <span class="stringliteral">&quot;Elbow&quot;</span>,                <span class="comment">/* joint name */</span></div><div class="line">    plant.world_body(),     <span class="comment">/* parent body */</span></div><div class="line">    {},                     <span class="comment">/* frame F IS the world frame W */</span></div><div class="line">    pendulum,               <span class="comment">/* child body, the pendulum */</span></div><div class="line">    X_BM,                   <span class="comment">/* pose of frame M in the body frame B */</span></div><div class="line">    Vector3d::UnitZ());     <span class="comment">/* revolute axis in this case */</span></div></div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>Do not ever attempt to instantiate and manipulate Joint objects on the stack; it will fail. Add joints to your plant using the provided API <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a437f86026a2268c0fb06936b899ba8d7" title="This method adds a Joint of type JointType between two bodies.">MultibodyPlant::AddJoint()</a> as in the example above.</dd></dl>
+<div class="fragment"><div class="line">MultibodyPlant&lt;double&gt; plant(0.0);</div><div class="line"><span class="comment">// ... Code here to setup quantities below as mass, com, etc. ...</span></div><div class="line"><span class="keyword">const</span> RigidBody&lt;double&gt;&amp; pendulum =</div><div class="line">  plant.AddRigidBody(SpatialInertia&lt;double&gt;(mass, com, unit_inertia));</div><div class="line"><span class="comment">// We will connect the pendulum body to the world using a RevoluteJoint.</span></div><div class="line"><span class="comment">// In this simple case the parent body P is the model&#39;s world body and frame</span></div><div class="line"><span class="comment">// F IS the world frame.</span></div><div class="line"><span class="comment">// Additionally, we need to specify the pose of frame M on the pendulum&#39;s</span></div><div class="line"><span class="comment">// body frame B.</span></div><div class="line"><span class="comment">// Say we declared and initialized X_BM...</span></div><div class="line"><span class="keyword">const</span> RevoluteJoint&lt;double&gt;&amp; elbow =</div><div class="line">  plant.AddJoint&lt;RevoluteJoint&gt;(</div><div class="line">    <span class="stringliteral">&quot;Elbow&quot;</span>,                <span class="comment">/* joint name */</span></div><div class="line">    plant.world_body(),     <span class="comment">/* parent body */</span></div><div class="line">    {},                     <span class="comment">/* frame F IS the world frame W */</span></div><div class="line">    pendulum,               <span class="comment">/* child body, the pendulum */</span></div><div class="line">    X_BM,                   <span class="comment">/* pose of frame M in the body frame B */</span></div><div class="line">    Vector3d::UnitZ());     <span class="comment">/* revolute axis in this case */</span></div></div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>Do not ever attempt to instantiate and manipulate Joint objects on the stack; it will fail. Add joints to your plant using the provided API <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a437f86026a2268c0fb06936b899ba8d7" title="This method adds a Joint of type JointType between two bodies.">MultibodyPlant::AddJoint()</a> as in the example above.</dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>
@@ -214,12 +214,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad8227ba86a01f26e4f173cd5e219d5d1"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#ad8227ba86a01f26e4f173cd5e219d5d1">name</a> () const</td></tr>
 <tr class="memdesc:ad8227ba86a01f26e4f173cd5e219d5d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name of this joint.  <a href="#ad8227ba86a01f26e4f173cd5e219d5d1">More...</a><br /></td></tr>
 <tr class="separator:ad8227ba86a01f26e4f173cd5e219d5d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f55a9cb8083fe32d35917bd9c313437"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a0f55a9cb8083fe32d35917bd9c313437">parent_body</a> () const</td></tr>
-<tr class="memdesc:a0f55a9cb8083fe32d35917bd9c313437"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the parent body P.  <a href="#a0f55a9cb8083fe32d35917bd9c313437">More...</a><br /></td></tr>
-<tr class="separator:a0f55a9cb8083fe32d35917bd9c313437"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b1986cb6e6fa41d4711ae88f7b3fb85"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a9b1986cb6e6fa41d4711ae88f7b3fb85">child_body</a> () const</td></tr>
-<tr class="memdesc:a9b1986cb6e6fa41d4711ae88f7b3fb85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the child body B.  <a href="#a9b1986cb6e6fa41d4711ae88f7b3fb85">More...</a><br /></td></tr>
-<tr class="separator:a9b1986cb6e6fa41d4711ae88f7b3fb85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0854302c6beff568c3228fe860e1c61"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#af0854302c6beff568c3228fe860e1c61">parent_body</a> () const</td></tr>
+<tr class="memdesc:af0854302c6beff568c3228fe860e1c61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the parent body P.  <a href="#af0854302c6beff568c3228fe860e1c61">More...</a><br /></td></tr>
+<tr class="separator:af0854302c6beff568c3228fe860e1c61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fd97e889594550f4b2ef7174a4a3e1e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a0fd97e889594550f4b2ef7174a4a3e1e">child_body</a> () const</td></tr>
+<tr class="memdesc:a0fd97e889594550f4b2ef7174a4a3e1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the child body B.  <a href="#a0fd97e889594550f4b2ef7174a4a3e1e">More...</a><br /></td></tr>
+<tr class="separator:a0fd97e889594550f4b2ef7174a4a3e1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af544171c3e9756dd27830a3b5b4ff781"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#af544171c3e9756dd27830a3b5b4ff781">frame_on_parent</a> () const</td></tr>
 <tr class="memdesc:af544171c3e9756dd27830a3b5b4ff781"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the frame F attached on the parent body P.  <a href="#af544171c3e9756dd27830a3b5b4ff781">More...</a><br /></td></tr>
 <tr class="separator:af544171c3e9756dd27830a3b5b4ff781"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -863,14 +863,14 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a9b1986cb6e6fa41d4711ae88f7b3fb85"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9b1986cb6e6fa41d4711ae88f7b3fb85">&#9670;&nbsp;</a></span>child_body()</h2>
+<a id="a0fd97e889594550f4b2ef7174a4a3e1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fd97e889594550f4b2ef7174a4a3e1e">&#9670;&nbsp;</a></span>child_body()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt;T&gt;&amp; child_body </td>
+          <td class="memname">const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt;T&gt;&amp; child_body </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1724,14 +1724,14 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a0f55a9cb8083fe32d35917bd9c313437"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0f55a9cb8083fe32d35917bd9c313437">&#9670;&nbsp;</a></span>parent_body()</h2>
+<a id="af0854302c6beff568c3228fe860e1c61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0854302c6beff568c3228fe860e1c61">&#9670;&nbsp;</a></span>parent_body()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt;T&gt;&amp; parent_body </td>
+          <td class="memname">const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt;T&gt;&amp; parent_body </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>

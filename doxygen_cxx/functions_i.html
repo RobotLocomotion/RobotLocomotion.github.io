@@ -343,11 +343,11 @@ $(document).ready(function(){initNavTree('functions_i.html','');});
 </li>
 <li>index
 : <a class="el" href="structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html#ae484f63d5fef688b4c3f438455d6eec9">Meshcat::Gamepad</a>
-, <a class="el" href="classdrake_1_1multibody_1_1_body.html#afa64a237a5acb010f896154c45bc5407">Body&lt; T &gt;</a>
 , <a class="el" href="classdrake_1_1multibody_1_1_force_element.html#a835dc93131525dfdb27839207c43ccfa">ForceElement&lt; T &gt;</a>
 , <a class="el" href="classdrake_1_1multibody_1_1_frame_base.html#aacda9c48ea6f77ab847cf27804705b04">FrameBase&lt; T &gt;</a>
 , <a class="el" href="classdrake_1_1multibody_1_1_joint.html#afa899cef34bf7c256f877cc3dc08cb65">Joint&lt; T &gt;</a>
 , <a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#a0da0b00b025a7bb19e574feabb91668f">JointActuator&lt; T &gt;</a>
+, <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#afa64a237a5acb010f896154c45bc5407">RigidBody&lt; T &gt;</a>
 </li>
 <li>index_impl()
 : <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#aded9a9cca94a35fc5ab0eb794ecfb6f9">MultibodyElement&lt; T &gt;</a>
@@ -506,9 +506,6 @@ $(document).ready(function(){initNavTree('functions_i.html','');});
 <li>intensity
 : <a class="el" href="structdrake_1_1geometry_1_1render_1_1_light_parameter.html#a2118076db8e8f8a25c2376e1d4acfb67">LightParameter</a>
 </li>
-<li>internal::BodyAttorney&lt; T &gt;
-: <a class="el" href="classdrake_1_1multibody_1_1_body.html#abd26dede9af88af24e2971996b18a5a4">Body&lt; T &gt;</a>
-</li>
 <li>internal::CollisionFilter
 : <a class="el" href="classdrake_1_1geometry_1_1_collision_filter_declaration.html#a8105f869fc50a2d1768d1f4a6777515a">CollisionFilterDeclaration</a>
 </li>
@@ -555,6 +552,9 @@ $(document).ready(function(){initNavTree('functions_i.html','');});
 </li>
 <li>internal::PortBaseAttorney
 : <a class="el" href="classdrake_1_1systems_1_1_port_base.html#ae66dba6ddcaf93db228ac9b10325c519">PortBase</a>
+</li>
+<li>internal::RigidBodyAttorney&lt; T &gt;
+: <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#ad7f12201b36e084996344f62f6eb2489">RigidBody&lt; T &gt;</a>
 </li>
 <li>internal::SimulatorPythonInternal
 : <a class="el" href="classdrake_1_1systems_1_1_simulator.html#a96e2ab6b348d592cc8252506bb9dc3b5">Simulator&lt; T &gt;</a>
@@ -777,7 +777,7 @@ $(document).ready(function(){initNavTree('functions_i.html','');});
 : <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#acf7bb2a3531c09a97fb3623ac582d840">MultibodyPlant&lt; T &gt;</a>
 </li>
 <li>is_floating()
-: <a class="el" href="classdrake_1_1multibody_1_1_body.html#a7df065349a370f3007ee52c6ede868d0">Body&lt; T &gt;</a>
+: <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a7df065349a370f3007ee52c6ede868d0">RigidBody&lt; T &gt;</a>
 </li>
 <li>is_floor
 : <a class="el" href="classdrake_1_1symbolic_1_1_expression.html#a2fc1f48deb39118a12ed30496c2a0a33">Expression</a>
@@ -813,8 +813,8 @@ $(document).ready(function(){initNavTree('functions_i.html','');});
 : <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a3245959dc148eb85166b0a5f9fd65ec0">FemModel&lt; T &gt;</a>
 </li>
 <li>is_locked()
-: <a class="el" href="classdrake_1_1multibody_1_1_body.html#a0c0fd3c2e27243de55385f4f9695fc0e">Body&lt; T &gt;</a>
-, <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a0c0fd3c2e27243de55385f4f9695fc0e">Joint&lt; T &gt;</a>
+: <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a0c0fd3c2e27243de55385f4f9695fc0e">Joint&lt; T &gt;</a>
+, <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a0c0fd3c2e27243de55385f4f9695fc0e">RigidBody&lt; T &gt;</a>
 </li>
 <li>is_log
 : <a class="el" href="classdrake_1_1symbolic_1_1_expression.html#ab049cfca69564b8713a3fd0a0e3bbba9">Expression</a>
@@ -937,7 +937,7 @@ $(document).ready(function(){initNavTree('functions_i.html','');});
 : <a class="el" href="classdrake_1_1examples_1_1allegro__hand_1_1_allegro_hand_motion_state.html#ac3eabc49f382cf9c9a18aa81703c64df">AllegroHandMotionState</a>
 </li>
 <li>IsAnchored()
-: <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a4f05c3d8f8284a9d9056a4ae47cc0e18">MultibodyPlant&lt; T &gt;</a>
+: <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a9a609a2709f986c17f80438eac93e829">MultibodyPlant&lt; T &gt;</a>
 </li>
 <li>IsAnyHighFingersStuck()
 : <a class="el" href="classdrake_1_1examples_1_1allegro__hand_1_1_allegro_hand_motion_state.html#aab4c9bfe283eaf9156497b3716dacb04">AllegroHandMotionState</a>
@@ -1087,7 +1087,7 @@ $(document).ready(function(){initNavTree('functions_i.html','');});
 </li>
 <li>IsValid()
 : <a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html#a25e97cc71253ec54a478126d98fccca6">RollPitchYaw&lt; T &gt;</a>
-, <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#af6346cc9235f2cedd86a802d0d4a8451">RotationMatrix&lt; T &gt;</a>
+, <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#a1ecdff2808f2ecf66cc0fe97f5173b98">RotationMatrix&lt; T &gt;</a>
 , <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#ac532c4b500b1a85ea22217f2c65a70ed">AddCollisionFilterGroup</a>
 , <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_add_directives.html#ac532c4b500b1a85ea22217f2c65a70ed">AddDirectives</a>
 , <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_add_frame.html#ac532c4b500b1a85ea22217f2c65a70ed">AddFrame</a>

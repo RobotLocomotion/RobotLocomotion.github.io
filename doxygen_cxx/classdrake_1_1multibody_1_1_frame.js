@@ -2,8 +2,8 @@ var classdrake_1_1multibody_1_1_frame =
 [
     [ "Frame", "classdrake_1_1multibody_1_1_frame.html#a921f7998dbc51e8b4298b1fbb2369686", null ],
     [ "Frame", "classdrake_1_1multibody_1_1_frame.html#aced939d5919bf90594d6821ab9bf0fb8", null ],
-    [ "Frame", "classdrake_1_1multibody_1_1_frame.html#a8a0a86b14a720059603e2529def64353", null ],
-    [ "body", "classdrake_1_1multibody_1_1_frame.html#aeb41e2fea35bd8efcbcd67c896bc5766", null ],
+    [ "Frame", "classdrake_1_1multibody_1_1_frame.html#a463192cd66dda4c63fe256e0ad1004d6", null ],
+    [ "body", "classdrake_1_1multibody_1_1_frame.html#a54ef649a3a7676a4a374f537f2f9bbbe", null ],
     [ "CalcAngularVelocity", "classdrake_1_1multibody_1_1_frame.html#a43224c3fb081d06cc200109ea913c9dd", null ],
     [ "CalcOffsetPoseInBody", "classdrake_1_1multibody_1_1_frame.html#a5d48b5a6c31b367eb3fff952fcefe648", null ],
     [ "CalcOffsetRotationMatrixInBody", "classdrake_1_1multibody_1_1_frame.html#a693cd211e3eb5fc7d2ffdaa5af8b3e4a", null ],

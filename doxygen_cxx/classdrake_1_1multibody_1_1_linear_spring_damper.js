@@ -2,9 +2,9 @@ var classdrake_1_1multibody_1_1_linear_spring_damper =
 [
     [ "LinearSpringDamper", "classdrake_1_1multibody_1_1_linear_spring_damper.html#aa86d149c16b942efb4c20ffcc90c91b0", null ],
     [ "LinearSpringDamper", "classdrake_1_1multibody_1_1_linear_spring_damper.html#a2eb10fb2b01b9389bab20bc37bc1bbce", null ],
-    [ "LinearSpringDamper", "classdrake_1_1multibody_1_1_linear_spring_damper.html#ae8c862b3463a701945bb25b1ff57ccde", null ],
-    [ "bodyA", "classdrake_1_1multibody_1_1_linear_spring_damper.html#a4d698a2141693e325d039a7d99a6ae6a", null ],
-    [ "bodyB", "classdrake_1_1multibody_1_1_linear_spring_damper.html#afc8287b4b8b58ad7b7e873d283c8b289", null ],
+    [ "LinearSpringDamper", "classdrake_1_1multibody_1_1_linear_spring_damper.html#a7913c443a9b8d178ec351e5e46957e60", null ],
+    [ "bodyA", "classdrake_1_1multibody_1_1_linear_spring_damper.html#ac75256ab290276221390b61506773ca5", null ],
+    [ "bodyB", "classdrake_1_1multibody_1_1_linear_spring_damper.html#ae0e8c6f95009535d37a67c799d567e6d", null ],
     [ "CalcConservativePower", "classdrake_1_1multibody_1_1_linear_spring_damper.html#a2a3b98d7bf6ebbdb80f69b550edc86ab", null ],
     [ "CalcNonConservativePower", "classdrake_1_1multibody_1_1_linear_spring_damper.html#a138e6e888ff71dc31cdc64b33f056e68", null ],
     [ "CalcPotentialEnergy", "classdrake_1_1multibody_1_1_linear_spring_damper.html#a0fc55c54d954d864281289c0dead6cce", null ],

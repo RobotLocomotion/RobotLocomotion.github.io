@@ -573,10 +573,6 @@ var hierarchy =
     [ "MoveIkDemoBase", "classdrake_1_1manipulation_1_1util_1_1_move_ik_demo_base.html", null ],
     [ "MovingAverageFilter< T >", "classdrake_1_1manipulation_1_1util_1_1_moving_average_filter.html", null ],
     [ "MultibodyElement< T >", "classdrake_1_1multibody_1_1_multibody_element.html", [
-      [ "Body< double >", "classdrake_1_1multibody_1_1_body.html", null ],
-      [ "Body< T >", "classdrake_1_1multibody_1_1_body.html", [
-        [ "RigidBody< T >", "classdrake_1_1multibody_1_1_rigid_body.html", null ]
-      ] ],
       [ "ForceElement< T >", "classdrake_1_1multibody_1_1_force_element.html", [
         [ "DoorHinge< T >", "classdrake_1_1multibody_1_1_door_hinge.html", null ],
         [ "LinearBushingRollPitchYaw< T >", "classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html", null ],
@@ -587,11 +583,11 @@ var hierarchy =
       ] ],
       [ "FrameBase< T >", "classdrake_1_1multibody_1_1_frame_base.html", [
         [ "Frame< T >", "classdrake_1_1multibody_1_1_frame.html", [
-          [ "BodyFrame< T >", "classdrake_1_1multibody_1_1_body_frame.html", null ],
-          [ "FixedOffsetFrame< T >", "classdrake_1_1multibody_1_1_fixed_offset_frame.html", null ]
+          [ "FixedOffsetFrame< T >", "classdrake_1_1multibody_1_1_fixed_offset_frame.html", null ],
+          [ "RigidBodyFrame< T >", "classdrake_1_1multibody_1_1_rigid_body_frame.html", null ]
         ] ],
         [ "Frame< double >", "classdrake_1_1multibody_1_1_frame.html", [
-          [ "BodyFrame< double >", "classdrake_1_1multibody_1_1_body_frame.html", null ]
+          [ "RigidBodyFrame< double >", "classdrake_1_1multibody_1_1_rigid_body_frame.html", null ]
         ] ]
       ] ],
       [ "Joint< T >", "classdrake_1_1multibody_1_1_joint.html", [
@@ -604,7 +600,11 @@ var hierarchy =
         [ "UniversalJoint< T >", "classdrake_1_1multibody_1_1_universal_joint.html", null ],
         [ "WeldJoint< T >", "classdrake_1_1multibody_1_1_weld_joint.html", null ]
       ] ],
-      [ "JointActuator< T >", "classdrake_1_1multibody_1_1_joint_actuator.html", null ]
+      [ "JointActuator< T >", "classdrake_1_1multibody_1_1_joint_actuator.html", null ],
+      [ "RigidBody< T >", "classdrake_1_1multibody_1_1_rigid_body.html", null ]
+    ] ],
+    [ "MultibodyElement< double >", "classdrake_1_1multibody_1_1_multibody_element.html", [
+      [ "RigidBody< double >", "classdrake_1_1multibody_1_1_rigid_body.html", null ]
     ] ],
     [ "MultibodyForces< T >", "classdrake_1_1multibody_1_1_multibody_forces.html", null ],
     [ "MultibodyPlantConfig", "structdrake_1_1multibody_1_1_multibody_plant_config.html", null ],
@@ -644,9 +644,9 @@ var hierarchy =
     ] ],
     [ "NumericalGradientOption", "classdrake_1_1math_1_1_numerical_gradient_option.html", null ],
     [ "Object", "classdrake_1_1pydrake_1_1_object.html", null ],
-    [ "CspaceFreePolytopeBase::Options", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html", null ],
     [ "MixedIntegerBranchAndBound::Options", "structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html", null ],
     [ "GlobalInverseKinematics::Options", "structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html", null ],
+    [ "CspaceFreePolytopeBase::Options", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html", null ],
     [ "Meshcat::OrthographicCamera", "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html", null ],
     [ "OsqpSolverDetails", "structdrake_1_1solvers_1_1_osqp_solver_details.html", null ],
     [ "overload_cast_impl< Return, Args >", "structdrake_1_1pydrake_1_1overload__cast__impl.html", null ],

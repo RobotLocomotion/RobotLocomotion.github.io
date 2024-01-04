@@ -1,7 +1,6 @@
 var multibody__tree_8h =
 [
-    [ "Body", "classdrake_1_1multibody_1_1_body.html", "classdrake_1_1multibody_1_1_body" ],
-    [ "BodyFrame", "classdrake_1_1multibody_1_1_body_frame.html", "classdrake_1_1multibody_1_1_body_frame" ],
+    [ "RigidBodyFrame", "classdrake_1_1multibody_1_1_rigid_body_frame.html", "classdrake_1_1multibody_1_1_rigid_body_frame" ],
     [ "Frame", "classdrake_1_1multibody_1_1_frame.html", "classdrake_1_1multibody_1_1_frame" ],
     [ "RigidBody", "classdrake_1_1multibody_1_1_rigid_body.html", "classdrake_1_1multibody_1_1_rigid_body" ],
     [ "Joint", "classdrake_1_1multibody_1_1_joint.html", "classdrake_1_1multibody_1_1_joint" ],

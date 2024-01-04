@@ -391,7 +391,7 @@ geometries added to that group.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.CollisionChecker.AddCollisionShapeToBody">
-<span class="sig-name descname"><span class="pre">AddCollisionShapeToBody</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.CollisionChecker" title="pydrake.planning.CollisionChecker"><span class="pre">pydrake.planning.CollisionChecker</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">group_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bodyA</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Body" title="pydrake.multibody.tree.Body"><span class="pre">pydrake.multibody.tree.Body</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.Shape" title="pydrake.geometry.Shape"><span class="pre">pydrake.geometry.Shape</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_AG</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.planning.CollisionChecker.AddCollisionShapeToBody" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">AddCollisionShapeToBody</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.CollisionChecker" title="pydrake.planning.CollisionChecker"><span class="pre">pydrake.planning.CollisionChecker</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">group_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bodyA</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.RigidBody" title="pydrake.multibody.tree.RigidBody"><span class="pre">pydrake.multibody.tree.RigidBody</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.Shape" title="pydrake.geometry.Shape"><span class="pre">pydrake.geometry.Shape</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_AG</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.planning.CollisionChecker.AddCollisionShapeToBody" title="Permalink to this definition"></a></dt>
 <dd><p>Requests the addition of <code class="docutils literal notranslate"><span class="pre">shape</span></code> to the body A in the checker’s
 model The added <code class="docutils literal notranslate"><span class="pre">shape</span></code> will belong to the named geometry group.</p>
 <dl class="simple">
@@ -679,7 +679,7 @@ SetConfigurationDistanceFunction().</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.CollisionChecker.get_body">
-<span class="sig-name descname"><span class="pre">get_body</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.CollisionChecker" title="pydrake.planning.CollisionChecker"><span class="pre">pydrake.planning.CollisionChecker</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">body_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.BodyIndex" title="pydrake.multibody.tree.BodyIndex"><span class="pre">pydrake.multibody.tree.BodyIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Body" title="pydrake.multibody.tree.Body"><span class="pre">pydrake.multibody.tree.Body</span></a></span></span><a class="headerlink" href="#pydrake.planning.CollisionChecker.get_body" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">get_body</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.CollisionChecker" title="pydrake.planning.CollisionChecker"><span class="pre">pydrake.planning.CollisionChecker</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">body_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.BodyIndex" title="pydrake.multibody.tree.BodyIndex"><span class="pre">pydrake.multibody.tree.BodyIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.RigidBody" title="pydrake.multibody.tree.RigidBody"><span class="pre">pydrake.multibody.tree.RigidBody</span></a></span></span><a class="headerlink" href="#pydrake.planning.CollisionChecker.get_body" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>a <code class="docutils literal notranslate"><span class="pre">const</span></code> body reference to a body in the full model’s plant for
@@ -752,7 +752,7 @@ indices are the same, zero will always be returned.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>GetPaddingBetween(self: pydrake.planning.CollisionChecker, bodyA: pydrake.multibody.tree.Body, bodyB: pydrake.multibody.tree.Body) -&gt; float</p></li>
+<li><p>GetPaddingBetween(self: pydrake.planning.CollisionChecker, bodyA: pydrake.multibody.tree.RigidBody, bodyB: pydrake.multibody.tree.RigidBody) -&gt; float</p></li>
 </ol>
 <p>Overload that uses body references.</p>
 </dd></dl>
@@ -817,7 +817,7 @@ Note: collision between two environment bodies is <em>always</em> filtered.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>IsCollisionFilteredBetween(self: pydrake.planning.CollisionChecker, bodyA: pydrake.multibody.tree.Body, bodyB: pydrake.multibody.tree.Body) -&gt; bool</p></li>
+<li><p>IsCollisionFilteredBetween(self: pydrake.planning.CollisionChecker, bodyA: pydrake.multibody.tree.RigidBody, bodyB: pydrake.multibody.tree.RigidBody) -&gt; bool</p></li>
 </ol>
 <p>Overload that uses body references.</p>
 </dd></dl>
@@ -827,7 +827,7 @@ Note: collision between two environment bodies is <em>always</em> filtered.</p>
 <span class="sig-name descname"><span class="pre">IsPartOfRobot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.planning.CollisionChecker.IsPartOfRobot" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>IsPartOfRobot(self: pydrake.planning.CollisionChecker, body: pydrake.multibody.tree.Body) -&gt; bool</p></li>
+<li><p>IsPartOfRobot(self: pydrake.planning.CollisionChecker, body: pydrake.multibody.tree.RigidBody) -&gt; bool</p></li>
 </ol>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -1151,7 +1151,7 @@ vector has no duplicates and is in sorted order.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>SetCollisionFilteredBetween(self: pydrake.planning.CollisionChecker, bodyA: pydrake.multibody.tree.Body, bodyB: pydrake.multibody.tree.Body, filter_collision: bool) -&gt; None</p></li>
+<li><p>SetCollisionFilteredBetween(self: pydrake.planning.CollisionChecker, bodyA: pydrake.multibody.tree.RigidBody, bodyB: pydrake.multibody.tree.RigidBody, filter_collision: bool) -&gt; None</p></li>
 </ol>
 <p>Overload that uses body references.</p>
 </dd></dl>
@@ -1174,7 +1174,7 @@ checker’s plant).</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>SetCollisionFilteredWithAllBodies(self: pydrake.planning.CollisionChecker, body: pydrake.multibody.tree.Body) -&gt; None</p></li>
+<li><p>SetCollisionFilteredWithAllBodies(self: pydrake.planning.CollisionChecker, body: pydrake.multibody.tree.RigidBody) -&gt; None</p></li>
 </ol>
 <p>Overload that uses body references.</p>
 </dd></dl>
@@ -1311,7 +1311,7 @@ DistanceAndInterpolationProvider.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>SetPaddingBetween(self: pydrake.planning.CollisionChecker, bodyA: pydrake.multibody.tree.Body, bodyB: pydrake.multibody.tree.Body, padding: float) -&gt; None</p></li>
+<li><p>SetPaddingBetween(self: pydrake.planning.CollisionChecker, bodyA: pydrake.multibody.tree.RigidBody, bodyB: pydrake.multibody.tree.RigidBody, padding: float) -&gt; None</p></li>
 </ol>
 <p>Overload that uses body references.</p>
 </dd></dl>

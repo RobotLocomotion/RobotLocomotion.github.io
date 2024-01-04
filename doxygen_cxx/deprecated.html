@@ -163,12 +163,6 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><dl class="reflist">
-<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_body.html#adc1bbbf124d24c628bb23796cfa5c594">Body&lt; T &gt;::floating_velocities_start</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000009"></a>Convert to floating_velocities_start_in_v(). In a state  with [q v] concatenated, offset by num_positions() to  get to the start of v. <br />
- This will be removed from Drake on or after 2024-02-01. </dd>
-<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_body.html#a72b4efc4f7ac1a5e86ab8ffa970eaede">Body&lt; T &gt;::node_index</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000008"></a>Use mobod_index() instead. <br />
- This will be removed from Drake on or after 2024-03-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_inverse_kinematics.html#a7d7e39fc0e8059b4894a60982bec5ee6">InverseKinematics::AddMinimumDistanceConstraint</a>  (double minimum_distance, double influence_distance_offset=1)</dt>
 <dd><a class="anchor" id="_deprecated000001"></a>Use AddMinimumDistanceLowerBoundConstraint() instead. The  default value for influence_distance_offset has *changed*.  It changes from 1 m to 0.01 m. If you're relying on the  1 m default value, make sure to pass that value explicitly  when calling AddMinimumDistanceLowerBoundConstraint(). <br />
  This will be removed from Drake on or after 2024-02-01. </dd>
@@ -199,15 +193,21 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a1036e869271ac77a82f891a5f7187210">MultibodyPlant&lt; T &gt;::GetMutablePositionsAndVelocities</a>  (systems::Context&lt; T &gt; *context) const</dt>
 <dd><a class="anchor" id="_deprecated000003"></a>Use GetPositionsAndVelocities() for constant access and  SetPositionsAndVelocities() to set the positions and velocities. <br />
  This will be removed from Drake on or after 2024-02-01. </dd>
-<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a7fe7c6fe93604e71b9d277b76fab5932">MultibodyPlant&lt; T &gt;::GetMutableVelocities</a>  (systems::Context&lt; T &gt; *context) const</dt>
-<dd><a class="anchor" id="_deprecated000006"></a>Use GetVelocities() for constant access and  SetVelocities() to set velocities. <br />
- This will be removed from Drake on or after 2024-02-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a25c6efdadb0dd091590e9474d9039f64">MultibodyPlant&lt; T &gt;::GetMutableVelocities</a>  (const systems::Context&lt; T &gt; &amp;context, systems::State&lt; T &gt; *state) const</dt>
 <dd><a class="anchor" id="_deprecated000007"></a>Use GetVelocities() for constant access and  SetVelocities() to set velocities. <br />
+ This will be removed from Drake on or after 2024-02-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a7fe7c6fe93604e71b9d277b76fab5932">MultibodyPlant&lt; T &gt;::GetMutableVelocities</a>  (systems::Context&lt; T &gt; *context) const</dt>
+<dd><a class="anchor" id="_deprecated000006"></a>Use GetVelocities() for constant access and  SetVelocities() to set velocities. <br />
  This will be removed from Drake on or after 2024-02-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a217d8aa9218c9d981b7bc2e8a983c4be">MultibodyPlant&lt; T &gt;::set_discrete_contact_solver</a>  (DiscreteContactSolver contact_solver)</dt>
 <dd><a class="anchor" id="_deprecated000002"></a>Use set_discrete_contact_approximation() to set the contact model  approximation. The underlying solver will be inferred automatically. <br />
  This will be removed from Drake on or after 2024-04-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#adc1bbbf124d24c628bb23796cfa5c594">RigidBody&lt; T &gt;::floating_velocities_start</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000009"></a>Convert to floating_velocities_start_in_v(). In a state  with [q v] concatenated, offset by num_positions() to  get to the start of v. <br />
+ This will be removed from Drake on or after 2024-02-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a72b4efc4f7ac1a5e86ab8ffa970eaede">RigidBody&lt; T &gt;::node_index</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000008"></a>Use mobod_index() instead. <br />
+ This will be removed from Drake on or after 2024-03-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_vector_system.html#a40d2841b68d432448f21ed6fe920a323">VectorSystem&lt; T &gt;::DeclarePeriodicDiscreteUpdateNoHandler</a>  (double period_sec, double offset_sec=0.0)</dt>
 <dd><a class="anchor" id="_deprecated000016"></a>Use DeclarePeriodicDiscreteUpdate() instead. <br />
  This will be removed from Drake on or after 2024-02-01.</dd>

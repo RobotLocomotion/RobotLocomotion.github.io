@@ -9,11 +9,7 @@ var dir_3f9cb8dbb3b4911cb2ecb548acd672c3 =
     [ "ball_rpy_joint.h", "ball__rpy__joint_8h.html", [
       [ "BallRpyJoint", "classdrake_1_1multibody_1_1_ball_rpy_joint.html", "classdrake_1_1multibody_1_1_ball_rpy_joint" ]
     ] ],
-    [ "body.h", "body_8h.html", [
-      [ "Body", "classdrake_1_1multibody_1_1_body.html", "classdrake_1_1multibody_1_1_body" ],
-      [ "BodyFrame", "classdrake_1_1multibody_1_1_body_frame.html", "classdrake_1_1multibody_1_1_body_frame" ],
-      [ "Body", "classdrake_1_1multibody_1_1_body.html", "classdrake_1_1multibody_1_1_body" ]
-    ] ],
+    [ "body.h", "body_8h.html", null ],
     [ "body_node.h", "body__node_8h.html", null ],
     [ "body_node_impl.h", "body__node__impl_8h.html", null ],
     [ "body_node_world.h", "body__node__world_8h.html", null ],
@@ -22,7 +18,7 @@ var dir_3f9cb8dbb3b4911cb2ecb548acd672c3 =
       [ "DoorHinge", "classdrake_1_1multibody_1_1_door_hinge.html", "classdrake_1_1multibody_1_1_door_hinge" ]
     ] ],
     [ "fixed_offset_frame.h", "fixed__offset__frame_8h.html", [
-      [ "BodyFrame", "classdrake_1_1multibody_1_1_body_frame.html", "classdrake_1_1multibody_1_1_body_frame" ],
+      [ "RigidBodyFrame", "classdrake_1_1multibody_1_1_rigid_body_frame.html", "classdrake_1_1multibody_1_1_rigid_body_frame" ],
       [ "RigidBody", "classdrake_1_1multibody_1_1_rigid_body.html", "classdrake_1_1multibody_1_1_rigid_body" ],
       [ "FixedOffsetFrame", "classdrake_1_1multibody_1_1_fixed_offset_frame.html", "classdrake_1_1multibody_1_1_fixed_offset_frame" ]
     ] ],
@@ -30,7 +26,7 @@ var dir_3f9cb8dbb3b4911cb2ecb548acd672c3 =
       [ "ForceElement", "classdrake_1_1multibody_1_1_force_element.html", "classdrake_1_1multibody_1_1_force_element" ]
     ] ],
     [ "frame.h", "frame_8h.html", [
-      [ "Body", "classdrake_1_1multibody_1_1_body.html", "classdrake_1_1multibody_1_1_body" ],
+      [ "RigidBody", "classdrake_1_1multibody_1_1_rigid_body.html", "classdrake_1_1multibody_1_1_rigid_body" ],
       [ "Frame", "classdrake_1_1multibody_1_1_frame.html", "classdrake_1_1multibody_1_1_frame" ]
     ] ],
     [ "frame_base.h", "frame__base_8h.html", [
@@ -48,15 +44,15 @@ var dir_3f9cb8dbb3b4911cb2ecb548acd672c3 =
       [ "JointActuator", "classdrake_1_1multibody_1_1_joint_actuator.html", "classdrake_1_1multibody_1_1_joint_actuator" ]
     ] ],
     [ "linear_bushing_roll_pitch_yaw.h", "linear__bushing__roll__pitch__yaw_8h.html", [
-      [ "Body", "classdrake_1_1multibody_1_1_body.html", "classdrake_1_1multibody_1_1_body" ],
+      [ "RigidBody", "classdrake_1_1multibody_1_1_rigid_body.html", "classdrake_1_1multibody_1_1_rigid_body" ],
       [ "LinearBushingRollPitchYaw", "classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html", "classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw" ]
     ] ],
     [ "linear_spring_damper.h", "linear__spring__damper_8h.html", [
-      [ "Body", "classdrake_1_1multibody_1_1_body.html", "classdrake_1_1multibody_1_1_body" ],
+      [ "RigidBody", "classdrake_1_1multibody_1_1_rigid_body.html", "classdrake_1_1multibody_1_1_rigid_body" ],
       [ "LinearSpringDamper", "classdrake_1_1multibody_1_1_linear_spring_damper.html", "classdrake_1_1multibody_1_1_linear_spring_damper" ]
     ] ],
     [ "mobilizer.h", "mobilizer_8h.html", [
-      [ "Body", "classdrake_1_1multibody_1_1_body.html", "classdrake_1_1multibody_1_1_body" ]
+      [ "RigidBody", "classdrake_1_1multibody_1_1_rigid_body.html", "classdrake_1_1multibody_1_1_rigid_body" ]
     ] ],
     [ "mobilizer_impl.h", "mobilizer__impl_8h.html", null ],
     [ "model_instance.h", "model__instance_8h.html", null ],
@@ -85,7 +81,6 @@ var dir_3f9cb8dbb3b4911cb2ecb548acd672c3 =
     ] ],
     [ "prismatic_mobilizer.h", "prismatic__mobilizer_8h.html", null ],
     [ "prismatic_spring.h", "prismatic__spring_8h.html", [
-      [ "Body", "classdrake_1_1multibody_1_1_body.html", "classdrake_1_1multibody_1_1_body" ],
       [ "PrismaticSpring", "classdrake_1_1multibody_1_1_prismatic_spring.html", "classdrake_1_1multibody_1_1_prismatic_spring" ]
     ] ],
     [ "quaternion_floating_joint.h", "quaternion__floating__joint_8h.html", [
@@ -97,12 +92,9 @@ var dir_3f9cb8dbb3b4911cb2ecb548acd672c3 =
     ] ],
     [ "revolute_mobilizer.h", "revolute__mobilizer_8h.html", null ],
     [ "revolute_spring.h", "revolute__spring_8h.html", [
-      [ "Body", "classdrake_1_1multibody_1_1_body.html", "classdrake_1_1multibody_1_1_body" ],
       [ "RevoluteSpring", "classdrake_1_1multibody_1_1_revolute_spring.html", "classdrake_1_1multibody_1_1_revolute_spring" ]
     ] ],
-    [ "rigid_body.h", "rigid__body_8h.html", [
-      [ "RigidBody", "classdrake_1_1multibody_1_1_rigid_body.html", "classdrake_1_1multibody_1_1_rigid_body" ]
-    ] ],
+    [ "rigid_body.h", "rigid__body_8h.html", "rigid__body_8h" ],
     [ "rotational_inertia.h", "rotational__inertia_8h.html", [
       [ "RotationalInertia", "classdrake_1_1multibody_1_1_rotational_inertia.html", "classdrake_1_1multibody_1_1_rotational_inertia" ],
       [ "formatter< drake::multibody::RotationalInertia< T > >", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_rotational_inertia_3_01_t_01_4_01_4.html", null ]

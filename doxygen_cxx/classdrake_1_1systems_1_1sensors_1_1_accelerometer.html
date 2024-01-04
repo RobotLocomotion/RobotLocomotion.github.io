@@ -178,7 +178,7 @@ class drake::systems::sensors::Accelerometer&lt; T &gt;</h3>
 <li>A vector of spatial accelerations (e.g. plant.get_body_spatial_accelerations_output_port())</li>
 </ol>
 <p>This class is therefore defined by:</p><ol type="1">
-<li>The body to which this sensor is rigidly affixed.</li>
+<li>The rigid body to which this sensor is rigidly affixed.</li>
 <li>A rigid transform from the body frame to the sensor frame.</li>
 </ol>
 <table align="center" cellpadding="0" cellspacing="0">
@@ -202,8 +202,8 @@ class drake::systems::sensors::Accelerometer&lt; T &gt;</h3>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af5f6fd2ec4a6de39d041fd90383a051f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#af5f6fd2ec4a6de39d041fd90383a051f">Accelerometer</a> (const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; T &gt; &amp;body, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_BS, const Eigen::Vector3d &amp;<a class="el" href="classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#a2a175742b79c5106a497a2f943c55da3">gravity_vector</a>=Eigen::Vector3d::Zero())</td></tr>
-<tr class="separator:af5f6fd2ec4a6de39d041fd90383a051f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ce8a8f0157c4c959bfea7710531fc77"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#a0ce8a8f0157c4c959bfea7710531fc77">Accelerometer</a> (const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">multibody::RigidBody</a>&lt; T &gt; &amp;body, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_BS, const Eigen::Vector3d &amp;<a class="el" href="classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#a2a175742b79c5106a497a2f943c55da3">gravity_vector</a>=Eigen::Vector3d::Zero())</td></tr>
+<tr class="separator:a0ce8a8f0157c4c959bfea7710531fc77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e45a59ae3d2c66255454b658fbd4011"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
 <tr class="memitem:a8e45a59ae3d2c66255454b658fbd4011"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#a8e45a59ae3d2c66255454b658fbd4011">Accelerometer</a> (const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_accelerometer.html">Accelerometer</a>&lt; U &gt; &amp;)</td></tr>
 <tr class="memdesc:a8e45a59ae3d2c66255454b658fbd4011"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scalar-converting copy constructor. See <a class="el" href="group__system__scalar__conversion.html">System Scalar Conversion</a>.  <a href="#a8e45a59ae3d2c66255454b658fbd4011">More...</a><br /></td></tr>
@@ -217,7 +217,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5609ecc9abeb6eb02d34938bf4ad7106"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#a5609ecc9abeb6eb02d34938bf4ad7106">get_measurement_output_port</a> () const</td></tr>
 <tr class="separator:a5609ecc9abeb6eb02d34938bf4ad7106"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad43a45a9bfeee26aafe9eef51139485a"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">multibody::BodyIndex</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#ad43a45a9bfeee26aafe9eef51139485a">body_index</a> () const</td></tr>
-<tr class="memdesc:ad43a45a9bfeee26aafe9eef51139485a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the index of the Body that was supplied in the constructor.  <a href="#ad43a45a9bfeee26aafe9eef51139485a">More...</a><br /></td></tr>
+<tr class="memdesc:ad43a45a9bfeee26aafe9eef51139485a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the index of the RigidBody that was supplied in the constructor.  <a href="#ad43a45a9bfeee26aafe9eef51139485a">More...</a><br /></td></tr>
 <tr class="separator:ad43a45a9bfeee26aafe9eef51139485a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a175742b79c5106a497a2f943c55da3"><td class="memItemLeft" align="right" valign="top">const Eigen::Vector3d &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#a2a175742b79c5106a497a2f943c55da3">gravity_vector</a> () const</td></tr>
 <tr class="memdesc:a2a175742b79c5106a497a2f943c55da3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the gravity vector supplied in the constructor, or zero if none.  <a href="#a2a175742b79c5106a497a2f943c55da3">More...</a><br /></td></tr>
@@ -680,9 +680,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a1c447e9db1fb676e2f88b9500f925342"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_accelerometer.html">Accelerometer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#a1c447e9db1fb676e2f88b9500f925342">AddToDiagram</a> (const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; T &gt; &amp;body, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_BS, const Eigen::Vector3d &amp;<a class="el" href="classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#a2a175742b79c5106a497a2f943c55da3">gravity_vector</a>, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; T &gt; &amp;plant, <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&lt; T &gt; *builder)</td></tr>
-<tr class="memdesc:a1c447e9db1fb676e2f88b9500f925342"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static factory method that creates an <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_accelerometer.html" title="Sensor to represent an ideal accelerometer sensor.">Accelerometer</a> object and connects it to the given plant.  <a href="#a1c447e9db1fb676e2f88b9500f925342">More...</a><br /></td></tr>
-<tr class="separator:a1c447e9db1fb676e2f88b9500f925342"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bb8a0deae4a276b739b6d2ad86dce25"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_accelerometer.html">Accelerometer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#a2bb8a0deae4a276b739b6d2ad86dce25">AddToDiagram</a> (const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">multibody::RigidBody</a>&lt; T &gt; &amp;body, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_BS, const Eigen::Vector3d &amp;<a class="el" href="classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#a2a175742b79c5106a497a2f943c55da3">gravity_vector</a>, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; T &gt; &amp;plant, <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&lt; T &gt; *builder)</td></tr>
+<tr class="memdesc:a2bb8a0deae4a276b739b6d2ad86dce25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static factory method that creates an <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_accelerometer.html" title="Sensor to represent an ideal accelerometer sensor.">Accelerometer</a> object and connects it to the given plant.  <a href="#a2bb8a0deae4a276b739b6d2ad86dce25">More...</a><br /></td></tr>
+<tr class="separator:a2bb8a0deae4a276b739b6d2ad86dce25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_classdrake_1_1systems_1_1_system"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classdrake_1_1systems_1_1_system')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classdrake_1_1systems_1_1_system.html">System&lt; T &gt;</a></td></tr>
 <tr class="memitem:a6fe75ddbd79ab1d862df9a50b3c8a624 inherit pub_static_methods_classdrake_1_1systems_1_1_system"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a6fe75ddbd79ab1d862df9a50b3c8a624">nothing_ticket</a> ()</td></tr>
 <tr class="memdesc:a6fe75ddbd79ab1d862df9a50b3c8a624 inherit pub_static_methods_classdrake_1_1systems_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a ticket indicating that a computation does not depend on <em>any</em> source value; that is, it is a constant.  <a href="classdrake_1_1systems_1_1_system.html#a6fe75ddbd79ab1d862df9a50b3c8a624">More...</a><br /></td></tr>
@@ -1351,8 +1351,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="af5f6fd2ec4a6de39d041fd90383a051f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af5f6fd2ec4a6de39d041fd90383a051f">&#9670;&nbsp;</a></span>Accelerometer() <span class="overload">[3/4]</span></h2>
+<a id="a0ce8a8f0157c4c959bfea7710531fc77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ce8a8f0157c4c959bfea7710531fc77">&#9670;&nbsp;</a></span>Accelerometer() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1360,7 +1360,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_accelerometer.html">Accelerometer</a> </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">multibody::RigidBody</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>body</em>, </td>
         </tr>
         <tr>
@@ -1422,8 +1422,8 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a1c447e9db1fb676e2f88b9500f925342"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c447e9db1fb676e2f88b9500f925342">&#9670;&nbsp;</a></span>AddToDiagram()</h2>
+<a id="a2bb8a0deae4a276b739b6d2ad86dce25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bb8a0deae4a276b739b6d2ad86dce25">&#9670;&nbsp;</a></span>AddToDiagram()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1434,7 +1434,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">static const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_accelerometer.html">Accelerometer</a>&amp; AddToDiagram </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">multibody::RigidBody</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>body</em>, </td>
         </tr>
         <tr>
@@ -1481,7 +1481,7 @@ Additional Inherited Members</h2></td></tr>
 <li>plant.get_body_spatial_velocities_output_port() to this.get_body_velocities_input_port()</li>
 <li>plant.get_body_spatial_accelerations_output_port() to this.get_body_spatial_accelerations_output_port() <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">body</td><td>the body B to which the sensor is affixed </td></tr>
+    <tr><td class="paramname">body</td><td>the rigid body B to which the sensor is affixed </td></tr>
     <tr><td class="paramname">X_BS</td><td>the pose of sensor frame S in body B </td></tr>
     <tr><td class="paramname">gravity_vector</td><td>the constant acceleration due to gravity expressed in world coordinates </td></tr>
     <tr><td class="paramname">plant</td><td>the plant to which the sensor will be connected </td></tr>
@@ -1509,7 +1509,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the index of the Body that was supplied in the constructor. </p>
+<p>Returns the index of the RigidBody that was supplied in the constructor. </p>
 
 </div>
 </div>

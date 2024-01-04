@@ -238,13 +238,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a15d0936571662d4a306fb0a1153ccae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7426149695dc6d09303cb351b3d84201"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a7426149695dc6d09303cb351b3d84201">plant</a> () const</td></tr>
 <tr class="separator:a7426149695dc6d09303cb351b3d84201"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ebf64a0503672b17907178242458218"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a0ebf64a0503672b17907178242458218">get_body</a> (<a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">multibody::BodyIndex</a> body_index) const</td></tr>
-<tr class="separator:a0ebf64a0503672b17907178242458218"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c2e0300bb278924489b16b7ed824642"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">multibody::RigidBody</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a2c2e0300bb278924489b16b7ed824642">get_body</a> (<a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">multibody::BodyIndex</a> body_index) const</td></tr>
+<tr class="separator:a2c2e0300bb278924489b16b7ed824642"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9938c30a0a5d9a51996a163b111c883a"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">multibody::ModelInstanceIndex</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a9938c30a0a5d9a51996a163b111c883a">robot_model_instances</a> () const</td></tr>
 <tr class="memdesc:a9938c30a0a5d9a51996a163b111c883a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the set of model instances belonging to the robot.  <a href="#a9938c30a0a5d9a51996a163b111c883a">More...</a><br /></td></tr>
 <tr class="separator:a9938c30a0a5d9a51996a163b111c883a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87a9ea993d0d5dee17d7d26f610fff32"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a87a9ea993d0d5dee17d7d26f610fff32">IsPartOfRobot</a> (const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;body) const</td></tr>
-<tr class="separator:a87a9ea993d0d5dee17d7d26f610fff32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cf0f9ebe090ff87c21ebbe3c7bd0539"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a7cf0f9ebe090ff87c21ebbe3c7bd0539">IsPartOfRobot</a> (const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">multibody::RigidBody</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;body) const</td></tr>
+<tr class="separator:a7cf0f9ebe090ff87c21ebbe3c7bd0539"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0dcd7c9ea7d36219c6790fe017d41578"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a0dcd7c9ea7d36219c6790fe017d41578">IsPartOfRobot</a> (<a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">multibody::BodyIndex</a> body_index) const</td></tr>
 <tr class="separator:a0dcd7c9ea7d36219c6790fe017d41578"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32f67c9b2ea339cc9f20902bed41428f"><td class="memItemLeft" align="right" valign="top">const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a32f67c9b2ea339cc9f20902bed41428f">GetZeroConfiguration</a> () const</td></tr>
@@ -289,9 +289,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5d11d679e9525d2a51454c2c1fffad72"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a5d11d679e9525d2a51454c2c1fffad72">AddCollisionShapeToFrame</a> (const std::string &amp;group_name, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">multibody::Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;frameA, const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">geometry::Shape</a> &amp;shape, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_AG)</td></tr>
 <tr class="memdesc:a5d11d679e9525d2a51454c2c1fffad72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requests the addition of <code>shape</code> to the frame A in the checker's model.  <a href="#a5d11d679e9525d2a51454c2c1fffad72">More...</a><br /></td></tr>
 <tr class="separator:a5d11d679e9525d2a51454c2c1fffad72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4fa9b0966d6d70d4f84418f04a1f2c39"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a4fa9b0966d6d70d4f84418f04a1f2c39">AddCollisionShapeToBody</a> (const std::string &amp;group_name, const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;bodyA, const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">geometry::Shape</a> &amp;shape, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_AG)</td></tr>
-<tr class="memdesc:a4fa9b0966d6d70d4f84418f04a1f2c39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requests the addition of <code>shape</code> to the body A in the checker's model The added <code>shape</code> will belong to the named geometry group.  <a href="#a4fa9b0966d6d70d4f84418f04a1f2c39">More...</a><br /></td></tr>
-<tr class="separator:a4fa9b0966d6d70d4f84418f04a1f2c39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b8ea6e05b3b70f876e44eab1f340806"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a6b8ea6e05b3b70f876e44eab1f340806">AddCollisionShapeToBody</a> (const std::string &amp;group_name, const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">multibody::RigidBody</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;bodyA, const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">geometry::Shape</a> &amp;shape, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_AG)</td></tr>
+<tr class="memdesc:a6b8ea6e05b3b70f876e44eab1f340806"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requests the addition of <code>shape</code> to the body A in the checker's model The added <code>shape</code> will belong to the named geometry group.  <a href="#a6b8ea6e05b3b70f876e44eab1f340806">More...</a><br /></td></tr>
+<tr class="separator:a6b8ea6e05b3b70f876e44eab1f340806"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad30d147b58ed54165a9a11dac4e8f0c0"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, std::vector&lt; <a class="el" href="classdrake_1_1planning_1_1_body_shape_description.html">BodyShapeDescription</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ad30d147b58ed54165a9a11dac4e8f0c0">GetAllAddedCollisionShapes</a> () const</td></tr>
 <tr class="memdesc:ad30d147b58ed54165a9a11dac4e8f0c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets all checker geometries currently added across the whole checker.  <a href="#ad30d147b58ed54165a9a11dac4e8f0c0">More...</a><br /></td></tr>
 <tr class="separator:ad30d147b58ed54165a9a11dac4e8f0c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -344,15 +344,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a642639c3ef89987db37c8ba232f0f494"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a642639c3ef89987db37c8ba232f0f494">GetPaddingBetween</a> (<a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">multibody::BodyIndex</a> bodyA_index, <a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">multibody::BodyIndex</a> bodyB_index) const</td></tr>
 <tr class="memdesc:a642639c3ef89987db37c8ba232f0f494"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the padding value for the pair of bodies specified.  <a href="#a642639c3ef89987db37c8ba232f0f494">More...</a><br /></td></tr>
 <tr class="separator:a642639c3ef89987db37c8ba232f0f494"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c03d02cc94803a222f42da8032fb8e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a7c03d02cc94803a222f42da8032fb8e8">GetPaddingBetween</a> (const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;bodyA, const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;bodyB) const</td></tr>
-<tr class="memdesc:a7c03d02cc94803a222f42da8032fb8e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload that uses body references.  <a href="#a7c03d02cc94803a222f42da8032fb8e8">More...</a><br /></td></tr>
-<tr class="separator:a7c03d02cc94803a222f42da8032fb8e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fd56eac31d01ff184f7f796f3f18760"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a3fd56eac31d01ff184f7f796f3f18760">GetPaddingBetween</a> (const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">multibody::RigidBody</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;bodyA, const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">multibody::RigidBody</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;bodyB) const</td></tr>
+<tr class="memdesc:a3fd56eac31d01ff184f7f796f3f18760"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload that uses body references.  <a href="#a3fd56eac31d01ff184f7f796f3f18760">More...</a><br /></td></tr>
+<tr class="separator:a3fd56eac31d01ff184f7f796f3f18760"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2abd1ef467638caa52681db77bd8ea18"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a2abd1ef467638caa52681db77bd8ea18">SetPaddingBetween</a> (<a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">multibody::BodyIndex</a> bodyA_index, <a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">multibody::BodyIndex</a> bodyB_index, <a class="el" href="classdouble.html">double</a> padding)</td></tr>
 <tr class="memdesc:a2abd1ef467638caa52681db77bd8ea18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the padding value for the pair of bodies specified.  <a href="#a2abd1ef467638caa52681db77bd8ea18">More...</a><br /></td></tr>
 <tr class="separator:a2abd1ef467638caa52681db77bd8ea18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b98205b8c73532fa5db66f6d10b3b1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a2b98205b8c73532fa5db66f6d10b3b1d">SetPaddingBetween</a> (const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;bodyA, const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;bodyB, <a class="el" href="classdouble.html">double</a> padding)</td></tr>
-<tr class="memdesc:a2b98205b8c73532fa5db66f6d10b3b1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload that uses body references.  <a href="#a2b98205b8c73532fa5db66f6d10b3b1d">More...</a><br /></td></tr>
-<tr class="separator:a2b98205b8c73532fa5db66f6d10b3b1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a216553d6f53318bace05961e5010ab97"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a216553d6f53318bace05961e5010ab97">SetPaddingBetween</a> (const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">multibody::RigidBody</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;bodyA, const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">multibody::RigidBody</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;bodyB, <a class="el" href="classdouble.html">double</a> padding)</td></tr>
+<tr class="memdesc:a216553d6f53318bace05961e5010ab97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload that uses body references.  <a href="#a216553d6f53318bace05961e5010ab97">More...</a><br /></td></tr>
+<tr class="separator:a216553d6f53318bace05961e5010ab97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf8617f3f3e43613b77a61b303035b7a"><td class="memItemLeft" align="right" valign="top">const Eigen::MatrixXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#aaf8617f3f3e43613b77a61b303035b7a">GetPaddingMatrix</a> () const</td></tr>
 <tr class="memdesc:aaf8617f3f3e43613b77a61b303035b7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the collision padding matrix.  <a href="#aaf8617f3f3e43613b77a61b303035b7a">More...</a><br /></td></tr>
 <tr class="separator:aaf8617f3f3e43613b77a61b303035b7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -393,21 +393,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4c482d9dc344b97944de8b61dc41911f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a4c482d9dc344b97944de8b61dc41911f">IsCollisionFilteredBetween</a> (<a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">multibody::BodyIndex</a> bodyA_index, <a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">multibody::BodyIndex</a> bodyB_index) const</td></tr>
 <tr class="memdesc:a4c482d9dc344b97944de8b61dc41911f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if collision is filtered between the two bodies specified.  <a href="#a4c482d9dc344b97944de8b61dc41911f">More...</a><br /></td></tr>
 <tr class="separator:a4c482d9dc344b97944de8b61dc41911f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92b02078235ad1f00d2991a5cbbfdc6f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a92b02078235ad1f00d2991a5cbbfdc6f">IsCollisionFilteredBetween</a> (const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;bodyA, const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;bodyB) const</td></tr>
-<tr class="memdesc:a92b02078235ad1f00d2991a5cbbfdc6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload that uses body references.  <a href="#a92b02078235ad1f00d2991a5cbbfdc6f">More...</a><br /></td></tr>
-<tr class="separator:a92b02078235ad1f00d2991a5cbbfdc6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89638e2733d1b29dc1c66307d49edfc6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a89638e2733d1b29dc1c66307d49edfc6">IsCollisionFilteredBetween</a> (const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">multibody::RigidBody</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;bodyA, const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">multibody::RigidBody</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;bodyB) const</td></tr>
+<tr class="memdesc:a89638e2733d1b29dc1c66307d49edfc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload that uses body references.  <a href="#a89638e2733d1b29dc1c66307d49edfc6">More...</a><br /></td></tr>
+<tr class="separator:a89638e2733d1b29dc1c66307d49edfc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87a9e6f72e628e92db913a5f9aa64d3c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a87a9e6f72e628e92db913a5f9aa64d3c">SetCollisionFilteredBetween</a> (<a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">multibody::BodyIndex</a> bodyA_index, <a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">multibody::BodyIndex</a> bodyB_index, bool filter_collision)</td></tr>
 <tr class="memdesc:a87a9e6f72e628e92db913a5f9aa64d3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares the body pair (bodyA, bodyB) to be filtered (or not) based on <code>filter_collision</code>.  <a href="#a87a9e6f72e628e92db913a5f9aa64d3c">More...</a><br /></td></tr>
 <tr class="separator:a87a9e6f72e628e92db913a5f9aa64d3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21f74df49477ffe7943e9dab284d1bb0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a21f74df49477ffe7943e9dab284d1bb0">SetCollisionFilteredBetween</a> (const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;bodyA, const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;bodyB, bool filter_collision)</td></tr>
-<tr class="memdesc:a21f74df49477ffe7943e9dab284d1bb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload that uses body references.  <a href="#a21f74df49477ffe7943e9dab284d1bb0">More...</a><br /></td></tr>
-<tr class="separator:a21f74df49477ffe7943e9dab284d1bb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd19e60df81a218dc6b60bd661e3a917"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#acd19e60df81a218dc6b60bd661e3a917">SetCollisionFilteredBetween</a> (const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">multibody::RigidBody</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;bodyA, const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">multibody::RigidBody</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;bodyB, bool filter_collision)</td></tr>
+<tr class="memdesc:acd19e60df81a218dc6b60bd661e3a917"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload that uses body references.  <a href="#acd19e60df81a218dc6b60bd661e3a917">More...</a><br /></td></tr>
+<tr class="separator:acd19e60df81a218dc6b60bd661e3a917"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbc935f824f1b4601d04346c0cebac63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#adbc935f824f1b4601d04346c0cebac63">SetCollisionFilteredWithAllBodies</a> (<a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">multibody::BodyIndex</a> body_index)</td></tr>
 <tr class="memdesc:adbc935f824f1b4601d04346c0cebac63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares that body pair (B, O) is filtered (for all bodies O in this checker's plant).  <a href="#adbc935f824f1b4601d04346c0cebac63">More...</a><br /></td></tr>
 <tr class="separator:adbc935f824f1b4601d04346c0cebac63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ab877a9a54d4f939d19ac93ec496d3f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a2ab877a9a54d4f939d19ac93ec496d3f">SetCollisionFilteredWithAllBodies</a> (const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;body)</td></tr>
-<tr class="memdesc:a2ab877a9a54d4f939d19ac93ec496d3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload that uses body references.  <a href="#a2ab877a9a54d4f939d19ac93ec496d3f">More...</a><br /></td></tr>
-<tr class="separator:a2ab877a9a54d4f939d19ac93ec496d3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fa7881e827b615483f2ec16d66fac82"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a9fa7881e827b615483f2ec16d66fac82">SetCollisionFilteredWithAllBodies</a> (const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">multibody::RigidBody</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;body)</td></tr>
+<tr class="memdesc:a9fa7881e827b615483f2ec16d66fac82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload that uses body references.  <a href="#a9fa7881e827b615483f2ec16d66fac82">More...</a><br /></td></tr>
+<tr class="separator:a9fa7881e827b615483f2ec16d66fac82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Configuration collision checking</div></td></tr>
 <tr class="memitem:adb33fbe45f267be402e5e2a750428044"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#adb33fbe45f267be402e5e2a750428044">CheckConfigCollisionFree</a> (const Eigen::VectorXd &amp;q, std::optional&lt; <a class="el" href="classint.html">int</a> &gt; context_number=std::nullopt) const</td></tr>
 <tr class="memdesc:adb33fbe45f267be402e5e2a750428044"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks a single configuration for collision using the current thread's associated context.  <a href="#adb33fbe45f267be402e5e2a750428044">More...</a><br /></td></tr>
@@ -550,9 +550,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a751ed5a04cd06853f43ab40f1ac5dde6"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a751ed5a04cd06853f43ab40f1ac5dde6">DoCheckContextConfigCollisionFree</a> (const <a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> &amp;<a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ab207bdd2b5cd80d49c022f8924c0cc94">model_context</a>) const =0</td></tr>
 <tr class="memdesc:a751ed5a04cd06853f43ab40f1ac5dde6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derived collision checkers are responsible for reporting the collision status of the configuration.  <a href="#a751ed5a04cd06853f43ab40f1ac5dde6">More...</a><br /></td></tr>
 <tr class="separator:a751ed5a04cd06853f43ab40f1ac5dde6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5e58c1024da16deb5af098bb798bbd9"><td class="memItemLeft" align="right" valign="top">virtual std::optional&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">geometry::GeometryId</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ac5e58c1024da16deb5af098bb798bbd9">DoAddCollisionShapeToBody</a> (const std::string &amp;group_name, const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;bodyA, const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">geometry::Shape</a> &amp;shape, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_AG)=0</td></tr>
-<tr class="memdesc:ac5e58c1024da16deb5af098bb798bbd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does the work of adding a shape to be rigidly affixed to the body.  <a href="#ac5e58c1024da16deb5af098bb798bbd9">More...</a><br /></td></tr>
-<tr class="separator:ac5e58c1024da16deb5af098bb798bbd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab51eae6ae3d2fbbf56672246e3ed96c0"><td class="memItemLeft" align="right" valign="top">virtual std::optional&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">geometry::GeometryId</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ab51eae6ae3d2fbbf56672246e3ed96c0">DoAddCollisionShapeToBody</a> (const std::string &amp;group_name, const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">multibody::RigidBody</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;bodyA, const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">geometry::Shape</a> &amp;shape, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_AG)=0</td></tr>
+<tr class="memdesc:ab51eae6ae3d2fbbf56672246e3ed96c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does the work of adding a shape to be rigidly affixed to the body.  <a href="#ab51eae6ae3d2fbbf56672246e3ed96c0">More...</a><br /></td></tr>
+<tr class="separator:ab51eae6ae3d2fbbf56672246e3ed96c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9de25681f79223e3157ee5835ff85da"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ad9de25681f79223e3157ee5835ff85da">RemoveAddedGeometries</a> (const std::vector&lt; <a class="el" href="structdrake_1_1planning_1_1_collision_checker_1_1_added_shape.html">AddedShape</a> &gt; &amp;shapes)=0</td></tr>
 <tr class="memdesc:ad9de25681f79223e3157ee5835ff85da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all of the given added shapes (if they exist) from the checker.  <a href="#ad9de25681f79223e3157ee5835ff85da">More...</a><br /></td></tr>
 <tr class="separator:ad9de25681f79223e3157ee5835ff85da"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -801,8 +801,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a4fa9b0966d6d70d4f84418f04a1f2c39"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4fa9b0966d6d70d4f84418f04a1f2c39">&#9670;&nbsp;</a></span>AddCollisionShapeToBody()</h2>
+<a id="a6b8ea6e05b3b70f876e44eab1f340806"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b8ea6e05b3b70f876e44eab1f340806">&#9670;&nbsp;</a></span>AddCollisionShapeToBody()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -816,7 +816,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">multibody::RigidBody</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>bodyA</em>, </td>
         </tr>
         <tr>
@@ -1529,8 +1529,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac5e58c1024da16deb5af098bb798bbd9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5e58c1024da16deb5af098bb798bbd9">&#9670;&nbsp;</a></span>DoAddCollisionShapeToBody()</h2>
+<a id="ab51eae6ae3d2fbbf56672246e3ed96c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab51eae6ae3d2fbbf56672246e3ed96c0">&#9670;&nbsp;</a></span>DoAddCollisionShapeToBody()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1547,7 +1547,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">multibody::RigidBody</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>bodyA</em>, </td>
         </tr>
         <tr>
@@ -1578,7 +1578,7 @@ Protected Member Functions</h2></td></tr>
 <p>Does the work of adding a shape to be rigidly affixed to the body. </p>
 <p>Derived checkers can choose to ignore the request, but must return <code>nullopt</code> if they do so. </p>
 
-<p>Implemented in <a class="el" href="classdrake_1_1planning_1_1_unimplemented_collision_checker.html#a901932565723e65013ddeaa939320979">UnimplementedCollisionChecker</a>.</p>
+<p>Implemented in <a class="el" href="classdrake_1_1planning_1_1_unimplemented_collision_checker.html#a25f583695793bfafb6cb968f59add404">UnimplementedCollisionChecker</a>.</p>
 
 </div>
 </div>
@@ -1795,14 +1795,14 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a0ebf64a0503672b17907178242458218"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ebf64a0503672b17907178242458218">&#9670;&nbsp;</a></span>get_body()</h2>
+<a id="a2c2e0300bb278924489b16b7ed824642"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c2e0300bb278924489b16b7ed824642">&#9670;&nbsp;</a></span>get_body()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;&amp; get_body </td>
+          <td class="memname">const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">multibody::RigidBody</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;&amp; get_body </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">multibody::BodyIndex</a>&#160;</td>
           <td class="paramname"><em>body_index</em></td><td>)</td>
@@ -1967,8 +1967,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a7c03d02cc94803a222f42da8032fb8e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7c03d02cc94803a222f42da8032fb8e8">&#9670;&nbsp;</a></span>GetPaddingBetween() <span class="overload">[2/2]</span></h2>
+<a id="a3fd56eac31d01ff184f7f796f3f18760"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fd56eac31d01ff184f7f796f3f18760">&#9670;&nbsp;</a></span>GetPaddingBetween() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1976,13 +1976,13 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdouble.html">double</a> GetPaddingBetween </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">multibody::RigidBody</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>bodyA</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">multibody::RigidBody</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>bodyB</em>&#160;</td>
         </tr>
         <tr>
@@ -2121,8 +2121,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a92b02078235ad1f00d2991a5cbbfdc6f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a92b02078235ad1f00d2991a5cbbfdc6f">&#9670;&nbsp;</a></span>IsCollisionFilteredBetween() <span class="overload">[2/2]</span></h2>
+<a id="a89638e2733d1b29dc1c66307d49edfc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89638e2733d1b29dc1c66307d49edfc6">&#9670;&nbsp;</a></span>IsCollisionFilteredBetween() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2130,13 +2130,13 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">bool IsCollisionFilteredBetween </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">multibody::RigidBody</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>bodyA</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">multibody::RigidBody</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>bodyB</em>&#160;</td>
         </tr>
         <tr>
@@ -2177,8 +2177,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a87a9ea993d0d5dee17d7d26f610fff32"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a87a9ea993d0d5dee17d7d26f610fff32">&#9670;&nbsp;</a></span>IsPartOfRobot() <span class="overload">[1/2]</span></h2>
+<a id="a7cf0f9ebe090ff87c21ebbe3c7bd0539"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cf0f9ebe090ff87c21ebbe3c7bd0539">&#9670;&nbsp;</a></span>IsPartOfRobot() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2186,7 +2186,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">bool IsPartOfRobot </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">multibody::RigidBody</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>body</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -2881,8 +2881,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a21f74df49477ffe7943e9dab284d1bb0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a21f74df49477ffe7943e9dab284d1bb0">&#9670;&nbsp;</a></span>SetCollisionFilteredBetween() <span class="overload">[2/2]</span></h2>
+<a id="acd19e60df81a218dc6b60bd661e3a917"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd19e60df81a218dc6b60bd661e3a917">&#9670;&nbsp;</a></span>SetCollisionFilteredBetween() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2890,13 +2890,13 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void SetCollisionFilteredBetween </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">multibody::RigidBody</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>bodyA</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">multibody::RigidBody</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>bodyB</em>, </td>
         </tr>
         <tr>
@@ -2944,8 +2944,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a2ab877a9a54d4f939d19ac93ec496d3f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2ab877a9a54d4f939d19ac93ec496d3f">&#9670;&nbsp;</a></span>SetCollisionFilteredWithAllBodies() <span class="overload">[2/2]</span></h2>
+<a id="a9fa7881e827b615483f2ec16d66fac82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fa7881e827b615483f2ec16d66fac82">&#9670;&nbsp;</a></span>SetCollisionFilteredWithAllBodies() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2953,7 +2953,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void SetCollisionFilteredWithAllBodies </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">multibody::RigidBody</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>body</em></td><td>)</td>
           <td></td>
         </tr>
@@ -3167,8 +3167,8 @@ the default function uses linear interpolation for most variables, and uses sler
 
 </div>
 </div>
-<a id="a2b98205b8c73532fa5db66f6d10b3b1d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2b98205b8c73532fa5db66f6d10b3b1d">&#9670;&nbsp;</a></span>SetPaddingBetween() <span class="overload">[2/2]</span></h2>
+<a id="a216553d6f53318bace05961e5010ab97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a216553d6f53318bace05961e5010ab97">&#9670;&nbsp;</a></span>SetPaddingBetween() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3176,13 +3176,13 @@ the default function uses linear interpolation for most variables, and uses sler
         <tr>
           <td class="memname">void SetPaddingBetween </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">multibody::RigidBody</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>bodyA</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_body.html">multibody::Body</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">multibody::RigidBody</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>bodyB</em>, </td>
         </tr>
         <tr>

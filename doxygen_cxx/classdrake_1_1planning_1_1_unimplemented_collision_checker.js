@@ -4,7 +4,7 @@ var classdrake_1_1planning_1_1_unimplemented_collision_checker =
     [ "UnimplementedCollisionChecker", "classdrake_1_1planning_1_1_unimplemented_collision_checker.html#acb9fbab01708ff8ee9728c36cc01f3f6", null ],
     [ "~UnimplementedCollisionChecker", "classdrake_1_1planning_1_1_unimplemented_collision_checker.html#aba4e83b127c08c04186340de335284c9", null ],
     [ "UnimplementedCollisionChecker", "classdrake_1_1planning_1_1_unimplemented_collision_checker.html#a29028c3dc973289f85e358b6f12879ea", null ],
-    [ "DoAddCollisionShapeToBody", "classdrake_1_1planning_1_1_unimplemented_collision_checker.html#a901932565723e65013ddeaa939320979", null ],
+    [ "DoAddCollisionShapeToBody", "classdrake_1_1planning_1_1_unimplemented_collision_checker.html#a25f583695793bfafb6cb968f59add404", null ],
     [ "DoCalcContextRobotClearance", "classdrake_1_1planning_1_1_unimplemented_collision_checker.html#a749f14f28d5f317e2bbcf99590ae78d4", null ],
     [ "DoCheckContextConfigCollisionFree", "classdrake_1_1planning_1_1_unimplemented_collision_checker.html#ad2bc3e678132547a0fb97d486067c0e5", null ],
     [ "DoClassifyContextBodyCollisions", "classdrake_1_1planning_1_1_unimplemented_collision_checker.html#ab8d9753491d6c358074117984a7a01b3", null ],

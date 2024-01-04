@@ -167,7 +167,7 @@ $(document).ready(function(){initNavTree('structdrake_1_1multibody_1_1_contact_w
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Stores the contact wrench (spatial force) from <a class="el" href="classdrake_1_1multibody_1_1_body.html" title="Body provides the general abstraction of a body with an API that makes no assumption about whether a ...">Body</a> A to <a class="el" href="classdrake_1_1multibody_1_1_body.html" title="Body provides the general abstraction of a body with an API that makes no assumption about whether a ...">Body</a> B applied at point Cb. </p>
+<div class="textblock"><p>Stores the contact wrench (spatial force) from Body A to Body B applied at point Cb. </p>
 </div>
 <p><code>#include &lt;drake/multibody/optimization/contact_wrench.h&gt;</code></p>
 <table class="memberdecls">
@@ -180,16 +180,16 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a8bddb42a04b7847df2ab1e08cde5b0b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">BodyIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_contact_wrench.html#a8bddb42a04b7847df2ab1e08cde5b0b8">bodyA_index</a></td></tr>
-<tr class="memdesc:a8bddb42a04b7847df2ab1e08cde5b0b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The index of <a class="el" href="classdrake_1_1multibody_1_1_body.html" title="Body provides the general abstraction of a body with an API that makes no assumption about whether a ...">Body</a> A.  <a href="#a8bddb42a04b7847df2ab1e08cde5b0b8">More...</a><br /></td></tr>
+<tr class="memdesc:a8bddb42a04b7847df2ab1e08cde5b0b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The index of Body A.  <a href="#a8bddb42a04b7847df2ab1e08cde5b0b8">More...</a><br /></td></tr>
 <tr class="separator:a8bddb42a04b7847df2ab1e08cde5b0b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30a12e215eabee7e1bdf08f0eb358fe0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">BodyIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_contact_wrench.html#a30a12e215eabee7e1bdf08f0eb358fe0">bodyB_index</a></td></tr>
-<tr class="memdesc:a30a12e215eabee7e1bdf08f0eb358fe0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The index of <a class="el" href="classdrake_1_1multibody_1_1_body.html" title="Body provides the general abstraction of a body with an API that makes no assumption about whether a ...">Body</a> B.  <a href="#a30a12e215eabee7e1bdf08f0eb358fe0">More...</a><br /></td></tr>
+<tr class="memdesc:a30a12e215eabee7e1bdf08f0eb358fe0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The index of Body B.  <a href="#a30a12e215eabee7e1bdf08f0eb358fe0">More...</a><br /></td></tr>
 <tr class="separator:a30a12e215eabee7e1bdf08f0eb358fe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a982d01ffb51aa88a41a2ae238ef4b608"><td class="memItemLeft" align="right" valign="top">Eigen::Vector3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_contact_wrench.html#a982d01ffb51aa88a41a2ae238ef4b608">p_WCb_W</a></td></tr>
 <tr class="memdesc:a982d01ffb51aa88a41a2ae238ef4b608"><td class="mdescLeft">&#160;</td><td class="mdescRight">The position of the point Cb (where the wrench is applied) expressed in the world frame W.  <a href="#a982d01ffb51aa88a41a2ae238ef4b608">More...</a><br /></td></tr>
 <tr class="separator:a982d01ffb51aa88a41a2ae238ef4b608"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab92d7171db372f50e129fe44211e6db1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_contact_wrench.html#ab92d7171db372f50e129fe44211e6db1">F_Cb_W</a></td></tr>
-<tr class="memdesc:ab92d7171db372f50e129fe44211e6db1"><td class="mdescLeft">&#160;</td><td class="mdescRight">F_Cb_W_in The wrench (spatial force) applied at point Cb from <a class="el" href="classdrake_1_1multibody_1_1_body.html" title="Body provides the general abstraction of a body with an API that makes no assumption about whether a ...">Body</a> A to <a class="el" href="classdrake_1_1multibody_1_1_body.html" title="Body provides the general abstraction of a body with an API that makes no assumption about whether a ...">Body</a> B, measured in the world frame.  <a href="#ab92d7171db372f50e129fe44211e6db1">More...</a><br /></td></tr>
+<tr class="memdesc:ab92d7171db372f50e129fe44211e6db1"><td class="mdescLeft">&#160;</td><td class="mdescRight">F_Cb_W_in The wrench (spatial force) applied at point Cb from Body A to Body B, measured in the world frame.  <a href="#ab92d7171db372f50e129fe44211e6db1">More...</a><br /></td></tr>
 <tr class="separator:ab92d7171db372f50e129fe44211e6db1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -248,7 +248,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>The index of <a class="el" href="classdrake_1_1multibody_1_1_body.html" title="Body provides the general abstraction of a body with an API that makes no assumption about whether a ...">Body</a> A. </p>
+<p>The index of Body A. </p>
 
 </div>
 </div>
@@ -264,7 +264,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>The index of <a class="el" href="classdrake_1_1multibody_1_1_body.html" title="Body provides the general abstraction of a body with an API that makes no assumption about whether a ...">Body</a> B. </p>
+<p>The index of Body B. </p>
 
 </div>
 </div>
@@ -280,7 +280,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>F_Cb_W_in The wrench (spatial force) applied at point Cb from <a class="el" href="classdrake_1_1multibody_1_1_body.html" title="Body provides the general abstraction of a body with an API that makes no assumption about whether a ...">Body</a> A to <a class="el" href="classdrake_1_1multibody_1_1_body.html" title="Body provides the general abstraction of a body with an API that makes no assumption about whether a ...">Body</a> B, measured in the world frame. </p>
+<p>F_Cb_W_in The wrench (spatial force) applied at point Cb from Body A to Body B, measured in the world frame. </p>
 
 </div>
 </div>

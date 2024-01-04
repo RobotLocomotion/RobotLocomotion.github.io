@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['bodyattorney_3c_20t_20_3e',['BodyAttorney&lt; T &gt;',['../classdrake_1_1multibody_1_1_body.html#abd26dede9af88af24e2971996b18a5a4',1,'drake::multibody::Body']]],
   ['collisionfilter',['CollisionFilter',['../classdrake_1_1geometry_1_1_collision_filter_declaration.html#a8105f869fc50a2d1768d1f4a6777515a',1,'drake::geometry::CollisionFilterDeclaration']]],
   ['compositeparse',['CompositeParse',['../classdrake_1_1multibody_1_1_parser.html#adfb86885998c02cab386d0df367719e3',1,'drake::multibody::Parser']]],
   ['contextbasefixedinputattorney',['ContextBaseFixedInputAttorney',['../classdrake_1_1systems_1_1_fixed_input_port_value.html#a43d8b7d58d06cb358d96154be2b7d624',1,'drake::systems::FixedInputPortValue']]],
@@ -62,6 +61,7 @@ var searchData=
   ['multibodytree_3c_20t_20_3e',['MultibodyTree&lt; T &gt;',['../classdrake_1_1multibody_1_1_multibody_element.html#a49109966f9505633199c07ad06b0632d',1,'drake::multibody::MultibodyElement']]],
   ['onhandlesubscriptionserror',['OnHandleSubscriptionsError',['../classdrake_1_1lcm_1_1_drake_lcm_interface.html#ada4cdd96fd686bb8c6158d8012ed4245',1,'drake::lcm::DrakeLcmInterface']]],
   ['portbaseattorney',['PortBaseAttorney',['../classdrake_1_1systems_1_1_port_base.html#ae66dba6ddcaf93db228ac9b10325c519',1,'drake::systems::PortBase']]],
+  ['rigidbodyattorney_3c_20t_20_3e',['RigidBodyAttorney&lt; T &gt;',['../classdrake_1_1multibody_1_1_rigid_body.html#ad7f12201b36e084996344f62f6eb2489',1,'drake::multibody::RigidBody']]],
   ['simulatorpythoninternal',['SimulatorPythonInternal',['../classdrake_1_1systems_1_1_simulator.html#a96e2ab6b348d592cc8252506bb9dc3b5',1,'drake::systems::Simulator']]],
   ['systembasecontextbaseattorney',['SystemBaseContextBaseAttorney',['../classdrake_1_1systems_1_1_context_base.html#afbf57f9a9ba557220adf6f9c6436c548',1,'drake::systems::ContextBase']]]
 ];

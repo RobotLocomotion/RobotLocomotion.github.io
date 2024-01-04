@@ -194,9 +194,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8e4f2d02a025433b059374ae0023881c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a8e4f2d02a025433b059374ae0023881c">SetWallBoundaryCondition</a> (<a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a> id, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_WQ, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;n_W)</td></tr>
 <tr class="memdesc:a8e4f2d02a025433b059374ae0023881c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets wall boundary conditions for the body with the given <code>id</code>.  <a href="#a8e4f2d02a025433b059374ae0023881c">More...</a><br /></td></tr>
 <tr class="separator:a8e4f2d02a025433b059374ae0023881c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86fcd57b6e4d6ffffb703a174a254d77"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a86fcd57b6e4d6ffffb703a174a254d77">AddFixedConstraint</a> (<a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a> body_A_id, const <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; &amp;body_B, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_BA, const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">geometry::Shape</a> &amp;shape, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_BG)</td></tr>
-<tr class="memdesc:a86fcd57b6e4d6ffffb703a174a254d77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a fixed constraint between a deformable body A and a rigid body B.  <a href="#a86fcd57b6e4d6ffffb703a174a254d77">More...</a><br /></td></tr>
-<tr class="separator:a86fcd57b6e4d6ffffb703a174a254d77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c18b0c8d67975d2ee7ca2b8bb01c28d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a0c18b0c8d67975d2ee7ca2b8bb01c28d">AddFixedConstraint</a> (<a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a> body_A_id, const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;body_B, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_BA, const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">geometry::Shape</a> &amp;shape, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_BG)</td></tr>
+<tr class="memdesc:a0c18b0c8d67975d2ee7ca2b8bb01c28d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a fixed constraint between a deformable body A and a rigid body B.  <a href="#a0c18b0c8d67975d2ee7ca2b8bb01c28d">More...</a><br /></td></tr>
+<tr class="separator:a0c18b0c8d67975d2ee7ca2b8bb01c28d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4938896f6f6f3967f754e3941aa4b445"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#acf2a50397e9fa764d32553cf98460ba7">systems::DiscreteStateIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a4938896f6f6f3967f754e3941aa4b445">GetDiscreteStateIndex</a> (<a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a> id) const</td></tr>
 <tr class="memdesc:a4938896f6f6f3967f754e3941aa4b445"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the discrete state index of the deformable body identified by the given <code>id</code>.  <a href="#a4938896f6f6f3967f754e3941aa4b445">More...</a><br /></td></tr>
 <tr class="separator:a4938896f6f6f3967f754e3941aa4b445"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -412,8 +412,8 @@ Finalize() has not been called on <code>plant</code>. </dd></dl>
 
 </div>
 </div>
-<a id="a86fcd57b6e4d6ffffb703a174a254d77"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a86fcd57b6e4d6ffffb703a174a254d77">&#9670;&nbsp;</a></span>AddFixedConstraint()</h2>
+<a id="a0c18b0c8d67975d2ee7ca2b8bb01c28d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c18b0c8d67975d2ee7ca2b8bb01c28d">&#9670;&nbsp;</a></span>AddFixedConstraint()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -427,7 +427,7 @@ Finalize() has not been called on <code>plant</code>. </dd></dl>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>body_B</em>, </td>
         </tr>
         <tr>

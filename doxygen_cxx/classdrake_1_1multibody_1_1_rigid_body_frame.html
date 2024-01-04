@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Drake: BodyFrame&lt; T &gt; Class Template Reference</title>
+<title>Drake: RigidBodyFrame&lt; T &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -139,7 +139,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_body_frame.html','');});
+$(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_rigid_body_frame.html','');});
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -162,19 +162,19 @@ $(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_body_frame
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#friends">Friends</a> &#124;
-<a href="classdrake_1_1multibody_1_1_body_frame-members.html">List of all members</a>  </div>
+<a href="classdrake_1_1multibody_1_1_rigid_body_frame-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">BodyFrame&lt; T &gt; Class Template Reference<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
+<div class="title">RigidBodyFrame&lt; T &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
-class drake::multibody::BodyFrame&lt; T &gt;</h3>
+class drake::multibody::RigidBodyFrame&lt; T &gt;</h3>
 
-<p>A BodyFrame is a material <a class="el" href="classdrake_1_1multibody_1_1_frame.html" title="Frame is an abstract class representing a material frame (also called a physical frame),...">Frame</a> that serves as the unique reference frame for a <a class="el" href="classdrake_1_1multibody_1_1_body.html" title="Body provides the general abstraction of a body with an API that makes no assumption about whether a ...">Body</a>. </p>
-<p>Each <a class="el" href="classdrake_1_1multibody_1_1_body.html" title="Body provides the general abstraction of a body with an API that makes no assumption about whether a ...">Body</a> B, has a unique body frame for which we use the same symbol B (with meaning clear from context). All properties of a body are defined with respect to its body frame, including its mass properties and attachment locations for joints, constraints, actuators, geometry and so on. Run time motion of the body is defined with respect to the motion of its body frame. We represent a body frame by a BodyFrame object that is created whenever a <a class="el" href="classdrake_1_1multibody_1_1_body.html" title="Body provides the general abstraction of a body with an API that makes no assumption about whether a ...">Body</a> is constructed and is owned by the <a class="el" href="classdrake_1_1multibody_1_1_body.html" title="Body provides the general abstraction of a body with an API that makes no assumption about whether a ...">Body</a>.</p>
-<p>Note that the BodyFrame associated with a body does not necessarily need to be located at its center of mass nor does it need to be aligned with the body's principal axes, although, in practice, it frequently is.</p>
-<p>A BodyFrame and <a class="el" href="classdrake_1_1multibody_1_1_body.html" title="Body provides the general abstraction of a body with an API that makes no assumption about whether a ...">Body</a> are tightly coupled concepts; neither makes sense without the other. Therefore, a BodyFrame instance is constructed in conjunction with its <a class="el" href="classdrake_1_1multibody_1_1_body.html" title="Body provides the general abstraction of a body with an API that makes no assumption about whether a ...">Body</a> and cannot be constructed anywhere else. However, you can still access the frame associated with a body, see <a class="el" href="classdrake_1_1multibody_1_1_body.html#ae594f732e1f00317aeb8c6cd83591db5" title="Returns a const reference to the associated BodyFrame.">Body::body_frame()</a>. This access is more than a convenience; you can use the BodyFrame to define other frames on the body and to attach other multibody elements to it.</p>
+<p>A RigidBodyFrame is a material <a class="el" href="classdrake_1_1multibody_1_1_frame.html" title="Frame is an abstract class representing a material frame (also called a physical frame),...">Frame</a> that serves as the unique reference frame for a <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html" title="The term rigid body implies that the deformations of the body under consideration are so small that t...">RigidBody</a>. </p>
+<p>Each RigidBody B has a unique body frame for which we use the same symbol B (with meaning clear from context). We represent a body frame by a RigidBodyFrame object that is created whenever a RigidBody is constructed and is owned by the RigidBody. All properties of a RigidBody are defined with respect to its RigidBodyFrame, including its mass properties and attachment locations for joints, constraints, actuators, geometry and so on. Run time motion of the body is defined with respect to the motion of its body frame.</p>
+<p>Note that the body frame associated with a rigid body does not necessarily need to be located at its center of mass nor does it need to be aligned with the body's principal axes, although, in practice, it frequently is.</p>
+<p>A RigidBodyFrame and RigidBody are tightly coupled concepts; neither makes sense without the other. Therefore, a RigidBodyFrame instance is constructed in conjunction with its RigidBody and cannot be constructed anywhere else. However, you can still access the frame associated with a body, see <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a7548bfd7fb38358e82ab0977f918e364" title="Returns a const reference to the associated BodyFrame.">RigidBody::body_frame()</a>. This access is more than a convenience; you can use the RigidBodyFrame to define other frames on the body and to attach other multibody elements to it.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>
@@ -182,47 +182,47 @@ class drake::multibody::BodyFrame&lt; T &gt;</h3>
   </dd>
 </dl>
 </div>
-<p><code>#include &lt;drake/multibody/tree/multibody_tree.h&gt;</code></p>
+<p><code>#include &lt;drake/multibody/tree/rigid_body.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af545520bafbd67a7e6c8b3c0bf4aae6f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body_frame.html#af545520bafbd67a7e6c8b3c0bf4aae6f">CalcPoseInBodyFrame</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;) const override</td></tr>
+<tr class="memitem:af545520bafbd67a7e6c8b3c0bf4aae6f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html#af545520bafbd67a7e6c8b3c0bf4aae6f">CalcPoseInBodyFrame</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;) const override</td></tr>
 <tr class="memdesc:af545520bafbd67a7e6c8b3c0bf4aae6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the pose <code>X_BF</code> of <code>this</code> frame F in the body frame B associated with this frame.  <a href="#af545520bafbd67a7e6c8b3c0bf4aae6f">More...</a><br /></td></tr>
 <tr class="separator:af545520bafbd67a7e6c8b3c0bf4aae6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f1f8d35fd236710bc6fde286f4c7946"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body_frame.html#a5f1f8d35fd236710bc6fde286f4c7946">CalcRotationMatrixInBodyFrame</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;) const override</td></tr>
+<tr class="memitem:a5f1f8d35fd236710bc6fde286f4c7946"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html#a5f1f8d35fd236710bc6fde286f4c7946">CalcRotationMatrixInBodyFrame</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;) const override</td></tr>
 <tr class="memdesc:a5f1f8d35fd236710bc6fde286f4c7946"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the rotation matrix <code>R_BF</code> that relates body frame B to <code>this</code> frame F (B is the body frame to which <code>this</code> frame F is attached).  <a href="#a5f1f8d35fd236710bc6fde286f4c7946">More...</a><br /></td></tr>
 <tr class="separator:a5f1f8d35fd236710bc6fde286f4c7946"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a359a32149ff74ea25f4f381533bf67de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body_frame.html#a359a32149ff74ea25f4f381533bf67de">CalcOffsetPoseInBody</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt; &amp;X_FQ) const override</td></tr>
+<tr class="memitem:a359a32149ff74ea25f4f381533bf67de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html#a359a32149ff74ea25f4f381533bf67de">CalcOffsetPoseInBody</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt; &amp;X_FQ) const override</td></tr>
 <tr class="memdesc:a359a32149ff74ea25f4f381533bf67de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the offset pose <code>X_FQ</code> of a frame Q in <code>this</code> frame F, this method computes the pose <code>X_BQ</code> of frame Q in the body frame B to which this frame is attached.  <a href="#a359a32149ff74ea25f4f381533bf67de">More...</a><br /></td></tr>
 <tr class="separator:a359a32149ff74ea25f4f381533bf67de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a435e455a5023bdbaef4f38d4c6ed1c76"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body_frame.html#a435e455a5023bdbaef4f38d4c6ed1c76">CalcOffsetRotationMatrixInBody</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;, const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; T &gt; &amp;R_FQ) const override</td></tr>
+<tr class="memitem:a435e455a5023bdbaef4f38d4c6ed1c76"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html#a435e455a5023bdbaef4f38d4c6ed1c76">CalcOffsetRotationMatrixInBody</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;, const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; T &gt; &amp;R_FQ) const override</td></tr>
 <tr class="memdesc:a435e455a5023bdbaef4f38d4c6ed1c76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates and returns the rotation matrix <code>R_BQ</code> that relates body frame B to frame Q via <code>this</code> intermediate frame F, i.e., <code>R_BQ = R_BF * R_FQ</code> (B is the body frame to which <code>this</code> frame F is attached).  <a href="#a435e455a5023bdbaef4f38d4c6ed1c76">More...</a><br /></td></tr>
 <tr class="separator:a435e455a5023bdbaef4f38d4c6ed1c76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85ed93e3f60b6b39558dfcc087442495"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body_frame.html#a85ed93e3f60b6b39558dfcc087442495">GetFixedPoseInBodyFrame</a> () const override</td></tr>
-<tr class="memdesc:a85ed93e3f60b6b39558dfcc087442495"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variant of <a class="el" href="classdrake_1_1multibody_1_1_body_frame.html#af545520bafbd67a7e6c8b3c0bf4aae6f" title="Returns the pose X_BF of this frame F in the body frame B associated with this frame.">CalcPoseInBodyFrame()</a> that returns the fixed pose <code>X_BF</code> of <code>this</code> frame F in the body frame B associated with this frame.  <a href="#a85ed93e3f60b6b39558dfcc087442495">More...</a><br /></td></tr>
+<tr class="memitem:a85ed93e3f60b6b39558dfcc087442495"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html#a85ed93e3f60b6b39558dfcc087442495">GetFixedPoseInBodyFrame</a> () const override</td></tr>
+<tr class="memdesc:a85ed93e3f60b6b39558dfcc087442495"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variant of <a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html#af545520bafbd67a7e6c8b3c0bf4aae6f" title="Returns the pose X_BF of this frame F in the body frame B associated with this frame.">CalcPoseInBodyFrame()</a> that returns the fixed pose <code>X_BF</code> of <code>this</code> frame F in the body frame B associated with this frame.  <a href="#a85ed93e3f60b6b39558dfcc087442495">More...</a><br /></td></tr>
 <tr class="separator:a85ed93e3f60b6b39558dfcc087442495"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab37c950311b422d44019ea551ae5b1e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body_frame.html#aab37c950311b422d44019ea551ae5b1e">GetFixedRotationMatrixInBodyFrame</a> () const override</td></tr>
+<tr class="memitem:aab37c950311b422d44019ea551ae5b1e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html#aab37c950311b422d44019ea551ae5b1e">GetFixedRotationMatrixInBodyFrame</a> () const override</td></tr>
 <tr class="memdesc:aab37c950311b422d44019ea551ae5b1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the rotation matrix <code>R_BF</code> that relates body frame B to <code>this</code> frame F (B is the body frame to which <code>this</code> frame F is attached).  <a href="#aab37c950311b422d44019ea551ae5b1e">More...</a><br /></td></tr>
 <tr class="separator:aab37c950311b422d44019ea551ae5b1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a210c46de44edae60f004ed525d2d018f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body_frame.html#a210c46de44edae60f004ed525d2d018f">GetFixedOffsetPoseInBody</a> (const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt; &amp;X_FQ) const override</td></tr>
-<tr class="memdesc:a210c46de44edae60f004ed525d2d018f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variant of <a class="el" href="classdrake_1_1multibody_1_1_body_frame.html#a359a32149ff74ea25f4f381533bf67de" title="Given the offset pose X_FQ of a frame Q in this frame F, this method computes the pose X_BQ of frame ...">CalcOffsetPoseInBody()</a> that given the offset pose <code>X_FQ</code> of a frame Q in <code>this</code> frame F, returns the pose <code>X_BQ</code> of frame Q in the body frame B to which this frame is attached.  <a href="#a210c46de44edae60f004ed525d2d018f">More...</a><br /></td></tr>
+<tr class="memitem:a210c46de44edae60f004ed525d2d018f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html#a210c46de44edae60f004ed525d2d018f">GetFixedOffsetPoseInBody</a> (const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt; &amp;X_FQ) const override</td></tr>
+<tr class="memdesc:a210c46de44edae60f004ed525d2d018f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variant of <a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html#a359a32149ff74ea25f4f381533bf67de" title="Given the offset pose X_FQ of a frame Q in this frame F, this method computes the pose X_BQ of frame ...">CalcOffsetPoseInBody()</a> that given the offset pose <code>X_FQ</code> of a frame Q in <code>this</code> frame F, returns the pose <code>X_BQ</code> of frame Q in the body frame B to which this frame is attached.  <a href="#a210c46de44edae60f004ed525d2d018f">More...</a><br /></td></tr>
 <tr class="separator:a210c46de44edae60f004ed525d2d018f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb66ebf40df1ef9fb2d4347e84a9ab2f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body_frame.html#abb66ebf40df1ef9fb2d4347e84a9ab2f">GetFixedRotationMatrixInBody</a> (const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; T &gt; &amp;R_FQ) const override</td></tr>
+<tr class="memitem:abb66ebf40df1ef9fb2d4347e84a9ab2f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html#abb66ebf40df1ef9fb2d4347e84a9ab2f">GetFixedRotationMatrixInBody</a> (const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; T &gt; &amp;R_FQ) const override</td></tr>
 <tr class="memdesc:abb66ebf40df1ef9fb2d4347e84a9ab2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates and returns the rotation matrix <code>R_BQ</code> that relates body frame B to frame Q via <code>this</code> intermediate frame F, i.e., <code>R_BQ = R_BF * R_FQ</code> (B is the body frame to which <code>this</code> frame F is attached).  <a href="#abb66ebf40df1ef9fb2d4347e84a9ab2f">More...</a><br /></td></tr>
 <tr class="separator:abb66ebf40df1ef9fb2d4347e84a9ab2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
-<tr class="memitem:ad0fe08fa46f1c029e9b860946bc13340"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body_frame.html#ad0fe08fa46f1c029e9b860946bc13340">BodyFrame</a> (const <a class="el" href="classdrake_1_1multibody_1_1_body_frame.html">BodyFrame</a> &amp;)=delete</td></tr>
-<tr class="separator:ad0fe08fa46f1c029e9b860946bc13340"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ee4447f81b556bf9dda31a1035a0452"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_body_frame.html">BodyFrame</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body_frame.html#a2ee4447f81b556bf9dda31a1035a0452">operator=</a> (const <a class="el" href="classdrake_1_1multibody_1_1_body_frame.html">BodyFrame</a> &amp;)=delete</td></tr>
-<tr class="separator:a2ee4447f81b556bf9dda31a1035a0452"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b36ad94c219bfd6dda8aca9d484b408"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body_frame.html#a8b36ad94c219bfd6dda8aca9d484b408">BodyFrame</a> (<a class="el" href="classdrake_1_1multibody_1_1_body_frame.html">BodyFrame</a> &amp;&amp;)=delete</td></tr>
-<tr class="separator:a8b36ad94c219bfd6dda8aca9d484b408"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c348e1e8c5f1592b04741515a356f54"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_body_frame.html">BodyFrame</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body_frame.html#a1c348e1e8c5f1592b04741515a356f54">operator=</a> (<a class="el" href="classdrake_1_1multibody_1_1_body_frame.html">BodyFrame</a> &amp;&amp;)=delete</td></tr>
-<tr class="separator:a1c348e1e8c5f1592b04741515a356f54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad61d2c71c1094b3fd326bf7cf6606bf2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html#ad61d2c71c1094b3fd326bf7cf6606bf2">RigidBodyFrame</a> (const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html">RigidBodyFrame</a> &amp;)=delete</td></tr>
+<tr class="separator:ad61d2c71c1094b3fd326bf7cf6606bf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a46a19cb09b50f58beeaff0e8045820"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html">RigidBodyFrame</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html#a1a46a19cb09b50f58beeaff0e8045820">operator=</a> (const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html">RigidBodyFrame</a> &amp;)=delete</td></tr>
+<tr class="separator:a1a46a19cb09b50f58beeaff0e8045820"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c26a37d9eed691bfb0f29b3c481c4ff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html#a0c26a37d9eed691bfb0f29b3c481c4ff">RigidBodyFrame</a> (<a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html">RigidBodyFrame</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a0c26a37d9eed691bfb0f29b3c481c4ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a510c607ef8b7d2655d6ca8ccefa03bb1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html">RigidBodyFrame</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html#a510c607ef8b7d2655d6ca8ccefa03bb1">operator=</a> (<a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html">RigidBodyFrame</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a510c607ef8b7d2655d6ca8ccefa03bb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classdrake_1_1multibody_1_1_frame"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classdrake_1_1multibody_1_1_frame')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame&lt; T &gt;</a></td></tr>
-<tr class="memitem:aeb41e2fea35bd8efcbcd67c896bc5766 inherit pub_methods_classdrake_1_1multibody_1_1_frame"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#aeb41e2fea35bd8efcbcd67c896bc5766">body</a> () const</td></tr>
-<tr class="memdesc:aeb41e2fea35bd8efcbcd67c896bc5766 inherit pub_methods_classdrake_1_1multibody_1_1_frame"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the body associated to this Frame.  <a href="classdrake_1_1multibody_1_1_frame.html#aeb41e2fea35bd8efcbcd67c896bc5766">More...</a><br /></td></tr>
-<tr class="separator:aeb41e2fea35bd8efcbcd67c896bc5766 inherit pub_methods_classdrake_1_1multibody_1_1_frame"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54ef649a3a7676a4a374f537f2f9bbbe inherit pub_methods_classdrake_1_1multibody_1_1_frame"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a54ef649a3a7676a4a374f537f2f9bbbe">body</a> () const</td></tr>
+<tr class="memdesc:a54ef649a3a7676a4a374f537f2f9bbbe inherit pub_methods_classdrake_1_1multibody_1_1_frame"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the body associated to this Frame.  <a href="classdrake_1_1multibody_1_1_frame.html#a54ef649a3a7676a4a374f537f2f9bbbe">More...</a><br /></td></tr>
+<tr class="separator:a54ef649a3a7676a4a374f537f2f9bbbe inherit pub_methods_classdrake_1_1multibody_1_1_frame"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64d83126860c9766c12c88786177cf22 inherit pub_methods_classdrake_1_1multibody_1_1_frame"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a64d83126860c9766c12c88786177cf22">is_world_frame</a> () const</td></tr>
 <tr class="memdesc:a64d83126860c9766c12c88786177cf22 inherit pub_methods_classdrake_1_1multibody_1_1_frame"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if <code>this</code> is the world frame.  <a href="classdrake_1_1multibody_1_1_frame.html#a64d83126860c9766c12c88786177cf22">More...</a><br /></td></tr>
 <tr class="separator:a64d83126860c9766c12c88786177cf22 inherit pub_methods_classdrake_1_1multibody_1_1_frame"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -320,18 +320,18 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a5bbfff93bcd19af35f85733af71224f7"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body_frame.html#a5bbfff93bcd19af35f85733af71224f7">DoCloneToScalar</a> (const internal::MultibodyTree&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;tree_clone) const override</td></tr>
+<tr class="memitem:a5bbfff93bcd19af35f85733af71224f7"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html#a5bbfff93bcd19af35f85733af71224f7">DoCloneToScalar</a> (const internal::MultibodyTree&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;tree_clone) const override</td></tr>
 <tr class="memdesc:a5bbfff93bcd19af35f85733af71224f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clones this Frame (templated on T) to a frame templated on <code>double</code>.  <a href="#a5bbfff93bcd19af35f85733af71224f7">More...</a><br /></td></tr>
 <tr class="separator:a5bbfff93bcd19af35f85733af71224f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd3092c461ef2339ba51209fcf41bdbe"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body_frame.html#acd3092c461ef2339ba51209fcf41bdbe">DoCloneToScalar</a> (const internal::MultibodyTree&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &amp;tree_clone) const override</td></tr>
+<tr class="memitem:acd3092c461ef2339ba51209fcf41bdbe"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html#acd3092c461ef2339ba51209fcf41bdbe">DoCloneToScalar</a> (const internal::MultibodyTree&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &amp;tree_clone) const override</td></tr>
 <tr class="memdesc:acd3092c461ef2339ba51209fcf41bdbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clones this Frame (templated on T) to a frame templated on AutoDiffXd.  <a href="#acd3092c461ef2339ba51209fcf41bdbe">More...</a><br /></td></tr>
 <tr class="separator:acd3092c461ef2339ba51209fcf41bdbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed0eeb663f377076dab1ae0ab44be5aa"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body_frame.html#aed0eeb663f377076dab1ae0ab44be5aa">DoCloneToScalar</a> (const internal::MultibodyTree&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &amp;) const override</td></tr>
+<tr class="memitem:aed0eeb663f377076dab1ae0ab44be5aa"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html#aed0eeb663f377076dab1ae0ab44be5aa">DoCloneToScalar</a> (const internal::MultibodyTree&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &amp;) const override</td></tr>
 <tr class="separator:aed0eeb663f377076dab1ae0ab44be5aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classdrake_1_1multibody_1_1_frame"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classdrake_1_1multibody_1_1_frame')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame&lt; T &gt;</a></td></tr>
-<tr class="memitem:a8a0a86b14a720059603e2529def64353 inherit pro_methods_classdrake_1_1multibody_1_1_frame"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a8a0a86b14a720059603e2529def64353">Frame</a> (const std::string &amp;<a class="el" href="classdrake_1_1multibody_1_1_frame.html#ad8227ba86a01f26e4f173cd5e219d5d1">name</a>, const <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; &amp;<a class="el" href="classdrake_1_1multibody_1_1_frame.html#aeb41e2fea35bd8efcbcd67c896bc5766">body</a>, std::optional&lt; <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> &gt; <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#acd2192bbd60e8c8d2c14763041d66d50">model_instance</a>={})</td></tr>
-<tr class="memdesc:a8a0a86b14a720059603e2529def64353 inherit pro_methods_classdrake_1_1multibody_1_1_frame"><td class="mdescLeft">&#160;</td><td class="mdescRight">Only derived classes can use this constructor.  <a href="classdrake_1_1multibody_1_1_frame.html#a8a0a86b14a720059603e2529def64353">More...</a><br /></td></tr>
-<tr class="separator:a8a0a86b14a720059603e2529def64353 inherit pro_methods_classdrake_1_1multibody_1_1_frame"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a463192cd66dda4c63fe256e0ad1004d6 inherit pro_methods_classdrake_1_1multibody_1_1_frame"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a463192cd66dda4c63fe256e0ad1004d6">Frame</a> (const std::string &amp;<a class="el" href="classdrake_1_1multibody_1_1_frame.html#ad8227ba86a01f26e4f173cd5e219d5d1">name</a>, const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;<a class="el" href="classdrake_1_1multibody_1_1_frame.html#a54ef649a3a7676a4a374f537f2f9bbbe">body</a>, std::optional&lt; <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> &gt; <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#acd2192bbd60e8c8d2c14763041d66d50">model_instance</a>={})</td></tr>
+<tr class="memdesc:a463192cd66dda4c63fe256e0ad1004d6 inherit pro_methods_classdrake_1_1multibody_1_1_frame"><td class="mdescLeft">&#160;</td><td class="mdescRight">Only derived classes can use this constructor.  <a href="classdrake_1_1multibody_1_1_frame.html#a463192cd66dda4c63fe256e0ad1004d6">More...</a><br /></td></tr>
+<tr class="separator:a463192cd66dda4c63fe256e0ad1004d6 inherit pro_methods_classdrake_1_1multibody_1_1_frame"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f059110215fa08c1fe519e29737f452 inherit pro_methods_classdrake_1_1multibody_1_1_frame"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a1f059110215fa08c1fe519e29737f452">DoDeclareFrameParameters</a> (internal::MultibodyTreeSystem&lt; T &gt; *)</td></tr>
 <tr class="memdesc:a1f059110215fa08c1fe519e29737f452 inherit pro_methods_classdrake_1_1multibody_1_1_frame"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called by DoDeclareParameters().  <a href="classdrake_1_1multibody_1_1_frame.html#a1f059110215fa08c1fe519e29737f452">More...</a><br /></td></tr>
 <tr class="separator:a1f059110215fa08c1fe519e29737f452 inherit pro_methods_classdrake_1_1multibody_1_1_frame"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -370,15 +370,15 @@ Protected Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:a4bf4e96b91ca95f90e4dae84204b1913"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body_frame.html#a4bf4e96b91ca95f90e4dae84204b1913">Body&lt; T &gt;</a></td></tr>
-<tr class="separator:a4bf4e96b91ca95f90e4dae84204b1913"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c005ea7741995b13b8171bdae043956"><td class="memTemplParams" colspan="2">template&lt;typename &gt; </td></tr>
-<tr class="memitem:a9c005ea7741995b13b8171bdae043956"><td class="memTemplItemLeft" align="right" valign="top">class&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body_frame.html#a9c005ea7741995b13b8171bdae043956">BodyFrame</a></td></tr>
-<tr class="separator:a9c005ea7741995b13b8171bdae043956"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01d54bfde331b72f00d55592c80d2e92"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html#a01d54bfde331b72f00d55592c80d2e92">RigidBody&lt; T &gt;</a></td></tr>
+<tr class="separator:a01d54bfde331b72f00d55592c80d2e92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7e5030f9a138a2914398524f36e162c"><td class="memTemplParams" colspan="2">template&lt;typename &gt; </td></tr>
+<tr class="memitem:ae7e5030f9a138a2914398524f36e162c"><td class="memTemplItemLeft" align="right" valign="top">class&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html#ae7e5030f9a138a2914398524f36e162c">RigidBodyFrame</a></td></tr>
+<tr class="separator:ae7e5030f9a138a2914398524f36e162c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ad0fe08fa46f1c029e9b860946bc13340"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad0fe08fa46f1c029e9b860946bc13340">&#9670;&nbsp;</a></span>BodyFrame() <span class="overload">[1/2]</span></h2>
+<a id="ad61d2c71c1094b3fd326bf7cf6606bf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad61d2c71c1094b3fd326bf7cf6606bf2">&#9670;&nbsp;</a></span>RigidBodyFrame() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -387,9 +387,9 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_body_frame.html">BodyFrame</a> </td>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html">RigidBodyFrame</a> </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_body_frame.html">BodyFrame</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html">RigidBodyFrame</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -403,8 +403,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a8b36ad94c219bfd6dda8aca9d484b408"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b36ad94c219bfd6dda8aca9d484b408">&#9670;&nbsp;</a></span>BodyFrame() <span class="overload">[2/2]</span></h2>
+<a id="a0c26a37d9eed691bfb0f29b3c481c4ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c26a37d9eed691bfb0f29b3c481c4ff">&#9670;&nbsp;</a></span>RigidBodyFrame() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -413,9 +413,9 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_body_frame.html">BodyFrame</a> </td>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html">RigidBodyFrame</a> </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_body_frame.html">BodyFrame</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html">RigidBodyFrame</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -691,7 +691,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Variant of <a class="el" href="classdrake_1_1multibody_1_1_body_frame.html#a359a32149ff74ea25f4f381533bf67de" title="Given the offset pose X_FQ of a frame Q in this frame F, this method computes the pose X_BQ of frame ...">CalcOffsetPoseInBody()</a> that given the offset pose <code>X_FQ</code> of a frame Q in <code>this</code> frame F, returns the pose <code>X_BQ</code> of frame Q in the body frame B to which this frame is attached. </p>
+<p>Variant of <a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html#a359a32149ff74ea25f4f381533bf67de" title="Given the offset pose X_FQ of a frame Q in this frame F, this method computes the pose X_BQ of frame ...">CalcOffsetPoseInBody()</a> that given the offset pose <code>X_FQ</code> of a frame Q in <code>this</code> frame F, returns the pose <code>X_BQ</code> of frame Q in the body frame B to which this frame is attached. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if called on a Frame that does not have a fixed offset in the body frame. </td></tr>
@@ -726,7 +726,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Variant of <a class="el" href="classdrake_1_1multibody_1_1_body_frame.html#af545520bafbd67a7e6c8b3c0bf4aae6f" title="Returns the pose X_BF of this frame F in the body frame B associated with this frame.">CalcPoseInBodyFrame()</a> that returns the fixed pose <code>X_BF</code> of <code>this</code> frame F in the body frame B associated with this frame. </p>
+<p>Variant of <a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html#af545520bafbd67a7e6c8b3c0bf4aae6f" title="Returns the pose X_BF of this frame F in the body frame B associated with this frame.">CalcPoseInBodyFrame()</a> that returns the fixed pose <code>X_BF</code> of <code>this</code> frame F in the body frame B associated with this frame. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if called on a Frame that does not have a fixed offset in the body frame. </td></tr>
@@ -815,8 +815,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a2ee4447f81b556bf9dda31a1035a0452"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2ee4447f81b556bf9dda31a1035a0452">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a1a46a19cb09b50f58beeaff0e8045820"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a46a19cb09b50f58beeaff0e8045820">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -825,9 +825,9 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_body_frame.html">BodyFrame</a>&amp; operator= </td>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html">RigidBodyFrame</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_body_frame.html">BodyFrame</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html">RigidBodyFrame</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -841,8 +841,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a1c348e1e8c5f1592b04741515a356f54"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c348e1e8c5f1592b04741515a356f54">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a510c607ef8b7d2655d6ca8ccefa03bb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a510c607ef8b7d2655d6ca8ccefa03bb1">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -851,9 +851,9 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_body_frame.html">BodyFrame</a>&amp; operator= </td>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html">RigidBodyFrame</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_body_frame.html">BodyFrame</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html">RigidBodyFrame</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -868,8 +868,8 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Friends And Related Function Documentation</h2>
-<a id="a4bf4e96b91ca95f90e4dae84204b1913"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4bf4e96b91ca95f90e4dae84204b1913">&#9670;&nbsp;</a></span>Body&lt; T &gt;</h2>
+<a id="a01d54bfde331b72f00d55592c80d2e92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01d54bfde331b72f00d55592c80d2e92">&#9670;&nbsp;</a></span>RigidBody&lt; T &gt;</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -878,7 +878,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">friend class <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt;</td>
+          <td class="memname">friend class <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt;</td>
         </tr>
       </table>
   </td>
@@ -890,8 +890,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a9c005ea7741995b13b8171bdae043956"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9c005ea7741995b13b8171bdae043956">&#9670;&nbsp;</a></span>BodyFrame</h2>
+<a id="ae7e5030f9a138a2914398524f36e162c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7e5030f9a138a2914398524f36e162c">&#9670;&nbsp;</a></span>RigidBodyFrame</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -900,7 +900,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">friend class <a class="el" href="classdrake_1_1multibody_1_1_body_frame.html">BodyFrame</a></td>
+          <td class="memname">friend class <a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html">RigidBodyFrame</a></td>
         </tr>
       </table>
   </td>
@@ -912,15 +912,16 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>drake/multibody/tree/<a class="el" href="body_8h.html">body.h</a></li>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>drake/multibody/tree/<a class="el" href="fixed__offset__frame_8h.html">fixed_offset_frame.h</a></li>
+<li>drake/multibody/tree/<a class="el" href="rigid__body_8h.html">rigid_body.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- footer -->
 <div class="navpath">
   <ul>
-    <li class="navelem"><a class="el" href="namespacedrake.html">drake</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1multibody.html">multibody</a></li><li class="navelem"><a class="el" href="classdrake_1_1multibody_1_1_body_frame.html">BodyFrame</a></li>
+    <li class="navelem"><a class="el" href="namespacedrake.html">drake</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1multibody.html">multibody</a></li><li class="navelem"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html">RigidBodyFrame</a></li>
   </ul>
 </div>
 <footer id="nav-path", class="site-footer padding">

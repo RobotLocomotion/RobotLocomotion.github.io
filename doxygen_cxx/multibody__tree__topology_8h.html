@@ -166,10 +166,10 @@ $(document).ready(function(){initNavTree('multibody__tree__topology_8h.html','')
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This file defines the topological structures which represent the logical connectivities between multibody tree elements. </p>
-<p>For instance, the BodyTopology for a Body will contain the topological information specifying its inboard (or parent) body in the parent tree, and its outboard (or children) bodies, and the level or depth in the MultibodyTree. All of this information is independent of the particular scalar type T the MultibodyTree and its components are specialized with. All of the data structures defined in this file are meant to be the most minimalist representation that can store this information. These data structures are used in the following ways:</p>
+<p>For instance, the RigidBodyTopology for a RigidBody will contain the topological information specifying its inboard (or parent) RigidBody in the forest model, and its outboard (or children) rigid bodies, and the level or depth in the forest. All of this information is independent of the particular scalar type T the MultibodyTree and its components are specialized with. All of the data structures defined in this file are meant to be the most minimalist representation that can store this information. These data structures are used in the following ways:</p>
 <ul>
 <li>To aid the process of cloning or transmogrifying multibody tree components without having to create maps between the "original" and "cloned" objects. That process is tedious and error prone.</li>
-<li>Each Multibody tree element has a copy (acquired at MultibodyTree::Finalize() stage) of its topology which serves as a key into the Context for that element's state.</li>
+<li>Each Multibody element has a copy (acquired at MultibodyTree::Finalize() stage) of its topology which serves as a key into the Context for that element's state.</li>
 <li>The topology is also stored in the Context so that the Multibody tree's topology can be validated against the stored topology in debug builds. </li>
 </ul>
 </div><div class="textblock"><code>#include &lt;algorithm&gt;</code><br />
