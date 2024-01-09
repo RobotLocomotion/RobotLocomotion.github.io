@@ -5461,37 +5461,25 @@ this should be called on initialization.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.MeshcatVisualizer.DeleteRecording">
 <span class="sig-name descname"><span class="pre">DeleteRecording</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.MeshcatVisualizer" title="pydrake.geometry.MeshcatVisualizer"><span class="pre">pydrake.geometry.MeshcatVisualizer</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizer.DeleteRecording" title="Permalink to this definition"></a></dt>
-<dd><p>Deletes the current animation holding the recorded frames. Animation
-options (autoplay, repetitions, etc) will also be reset, and any
-pointers obtained from get_mutable_recording() will be rendered
-invalid. This does not* currently remove the animation from Meshcat.</p>
+<dd><p>Convenience function that calls Meshcat::DeleteRecording on the
+underlying Meshcat object; refer to Meshcat::DeleteRecording for full
+documentation.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.MeshcatVisualizer.get_mutable_recording">
 <span class="sig-name descname"><span class="pre">get_mutable_recording</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.MeshcatVisualizer" title="pydrake.geometry.MeshcatVisualizer"><span class="pre">pydrake.geometry.MeshcatVisualizer</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.MeshcatAnimation" title="pydrake.geometry.MeshcatAnimation"><span class="pre">pydrake.geometry.MeshcatAnimation</span></a></span></span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizer.get_mutable_recording" title="Permalink to this definition"></a></dt>
-<dd><p>Returns a mutable pointer to this MeshcatVisualizer’s unique
-MeshcatAnimation object in which the frames will be recorded. This
-pointer can be used to set animation properties (like autoplay, the
-loop mode, number of repetitions, etc), and can be passed to
-supporting visualizers (e.g. MeshcatPointCloudVisualizer and
-MeshcatContactVisualizer) so that they record into the same animation.</p>
-<p>The MeshcatAnimation object will only remain valid for the lifetime of
-<code class="docutils literal notranslate"><span class="pre">this</span></code> or until DeleteRecording() is called.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if meshcat does not have a recording.</strong> – </p>
-</dd>
-</dl>
+<dd><p>Convenience function that calls Meshcat::get_mutable_recording on the
+underlying Meshcat object; refer to Meshcat::get_mutable_recording for
+full documentation.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.MeshcatVisualizer.PublishRecording">
 <span class="sig-name descname"><span class="pre">PublishRecording</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.MeshcatVisualizer" title="pydrake.geometry.MeshcatVisualizer"><span class="pre">pydrake.geometry.MeshcatVisualizer</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizer.PublishRecording" title="Permalink to this definition"></a></dt>
-<dd><p>Sends the recording to Meshcat as an animation. The published
-animation only includes transforms and properties; the objects that
-they modify must be sent to the visualizer separately (e.g. by calling
-Publish()).</p>
+<dd><p>Convenience function that calls Meshcat::PublishRecording on the
+underlying Meshcat object; refer to Meshcat::PublishRecording for full
+documentation.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -5513,33 +5501,18 @@ realtime rate after simulation is resumed from a paused state, etc.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.MeshcatVisualizer.StartRecording">
 <span class="sig-name descname"><span class="pre">StartRecording</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.MeshcatVisualizer" title="pydrake.geometry.MeshcatVisualizer"><span class="pre">pydrake.geometry.MeshcatVisualizer</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">set_transforms_while_recording</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.MeshcatAnimation" title="pydrake.geometry.MeshcatAnimation"><span class="pre">pydrake.geometry.MeshcatAnimation</span></a></span></span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizer.StartRecording" title="Permalink to this definition"></a></dt>
-<dd><p>Sets a flag indicating that subsequent publish events should also be
-“recorded” into a MeshcatAnimation. The data in these events will be
-combined with any frames previously added to the animation; if the
-same transform/property is set at the same time, then it will
-overwrite the existing frame in the animation. Frames are added at the
-index MeshcatAnimation::frame(context.get_time()).</p>
-<dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">set_transforms_while_recording</span></code>:</dt><dd><p>if true, then each Publish will set the transform in Meshcat <em>and</em>
-record the transform in the animation. Set to false to avoid
-updating the visualization during recording. Note that animations
-do not support SetObject, so the objects must still be sent to the
-visualizer during the recording.</p>
-</dd>
-</dl>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>a mutable pointer to the current recording. See
-get_mutable_recording().</p>
-</dd>
-</dl>
+<dd><p>Convenience function that calls Meshcat::StartRecording on the
+underlying Meshcat object, with <code class="docutils literal notranslate"><span class="pre">frames_per_second</span> <span class="pre">=</span> <span class="pre">1</span> <span class="pre">/</span>
+<span class="pre">publish_period</span></code>; refer to Meshcat::StartRecording for full
+documentation.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.MeshcatVisualizer.StopRecording">
 <span class="sig-name descname"><span class="pre">StopRecording</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.MeshcatVisualizer" title="pydrake.geometry.MeshcatVisualizer"><span class="pre">pydrake.geometry.MeshcatVisualizer</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizer.StopRecording" title="Permalink to this definition"></a></dt>
-<dd><p>Sets a flag to pause/stop recording. When stopped, publish events will
-not add frames to the animation.</p>
+<dd><p>Convenience function that calls Meshcat::StopRecording on the
+underlying Meshcat object; refer to Meshcat::StopRecording for full
+documentation.</p>
 </dd></dl>
 
 </dd></dl>
@@ -5637,37 +5610,25 @@ this should be called on initialization.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.MeshcatVisualizer_-AutoDiffXd-.DeleteRecording">
 <span id="pydrake.geometry.MeshcatVisualizer_[AutoDiffXd].DeleteRecording"></span><span class="sig-name descname"><span class="pre">DeleteRecording</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.MeshcatVisualizer_" title="pydrake.geometry.MeshcatVisualizer_"><span class="pre">pydrake.geometry.MeshcatVisualizer_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizer_-AutoDiffXd-.DeleteRecording" title="Permalink to this definition"></a></dt>
-<dd><p>Deletes the current animation holding the recorded frames. Animation
-options (autoplay, repetitions, etc) will also be reset, and any
-pointers obtained from get_mutable_recording() will be rendered
-invalid. This does not* currently remove the animation from Meshcat.</p>
+<dd><p>Convenience function that calls Meshcat::DeleteRecording on the
+underlying Meshcat object; refer to Meshcat::DeleteRecording for full
+documentation.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.MeshcatVisualizer_-AutoDiffXd-.get_mutable_recording">
 <span id="pydrake.geometry.MeshcatVisualizer_[AutoDiffXd].get_mutable_recording"></span><span class="sig-name descname"><span class="pre">get_mutable_recording</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.MeshcatVisualizer_" title="pydrake.geometry.MeshcatVisualizer_"><span class="pre">pydrake.geometry.MeshcatVisualizer_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.MeshcatAnimation" title="pydrake.geometry.MeshcatAnimation"><span class="pre">pydrake.geometry.MeshcatAnimation</span></a></span></span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizer_-AutoDiffXd-.get_mutable_recording" title="Permalink to this definition"></a></dt>
-<dd><p>Returns a mutable pointer to this MeshcatVisualizer’s unique
-MeshcatAnimation object in which the frames will be recorded. This
-pointer can be used to set animation properties (like autoplay, the
-loop mode, number of repetitions, etc), and can be passed to
-supporting visualizers (e.g. MeshcatPointCloudVisualizer and
-MeshcatContactVisualizer) so that they record into the same animation.</p>
-<p>The MeshcatAnimation object will only remain valid for the lifetime of
-<code class="docutils literal notranslate"><span class="pre">this</span></code> or until DeleteRecording() is called.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if meshcat does not have a recording.</strong> – </p>
-</dd>
-</dl>
+<dd><p>Convenience function that calls Meshcat::get_mutable_recording on the
+underlying Meshcat object; refer to Meshcat::get_mutable_recording for
+full documentation.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.MeshcatVisualizer_-AutoDiffXd-.PublishRecording">
 <span id="pydrake.geometry.MeshcatVisualizer_[AutoDiffXd].PublishRecording"></span><span class="sig-name descname"><span class="pre">PublishRecording</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.MeshcatVisualizer_" title="pydrake.geometry.MeshcatVisualizer_"><span class="pre">pydrake.geometry.MeshcatVisualizer_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizer_-AutoDiffXd-.PublishRecording" title="Permalink to this definition"></a></dt>
-<dd><p>Sends the recording to Meshcat as an animation. The published
-animation only includes transforms and properties; the objects that
-they modify must be sent to the visualizer separately (e.g. by calling
-Publish()).</p>
+<dd><p>Convenience function that calls Meshcat::PublishRecording on the
+underlying Meshcat object; refer to Meshcat::PublishRecording for full
+documentation.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -5689,33 +5650,18 @@ realtime rate after simulation is resumed from a paused state, etc.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.MeshcatVisualizer_-AutoDiffXd-.StartRecording">
 <span id="pydrake.geometry.MeshcatVisualizer_[AutoDiffXd].StartRecording"></span><span class="sig-name descname"><span class="pre">StartRecording</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.MeshcatVisualizer_" title="pydrake.geometry.MeshcatVisualizer_"><span class="pre">pydrake.geometry.MeshcatVisualizer_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">set_transforms_while_recording</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.MeshcatAnimation" title="pydrake.geometry.MeshcatAnimation"><span class="pre">pydrake.geometry.MeshcatAnimation</span></a></span></span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizer_-AutoDiffXd-.StartRecording" title="Permalink to this definition"></a></dt>
-<dd><p>Sets a flag indicating that subsequent publish events should also be
-“recorded” into a MeshcatAnimation. The data in these events will be
-combined with any frames previously added to the animation; if the
-same transform/property is set at the same time, then it will
-overwrite the existing frame in the animation. Frames are added at the
-index MeshcatAnimation::frame(context.get_time()).</p>
-<dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">set_transforms_while_recording</span></code>:</dt><dd><p>if true, then each Publish will set the transform in Meshcat <em>and</em>
-record the transform in the animation. Set to false to avoid
-updating the visualization during recording. Note that animations
-do not support SetObject, so the objects must still be sent to the
-visualizer during the recording.</p>
-</dd>
-</dl>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>a mutable pointer to the current recording. See
-get_mutable_recording().</p>
-</dd>
-</dl>
+<dd><p>Convenience function that calls Meshcat::StartRecording on the
+underlying Meshcat object, with <code class="docutils literal notranslate"><span class="pre">frames_per_second</span> <span class="pre">=</span> <span class="pre">1</span> <span class="pre">/</span>
+<span class="pre">publish_period</span></code>; refer to Meshcat::StartRecording for full
+documentation.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.MeshcatVisualizer_-AutoDiffXd-.StopRecording">
 <span id="pydrake.geometry.MeshcatVisualizer_[AutoDiffXd].StopRecording"></span><span class="sig-name descname"><span class="pre">StopRecording</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.MeshcatVisualizer_" title="pydrake.geometry.MeshcatVisualizer_"><span class="pre">pydrake.geometry.MeshcatVisualizer_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizer_-AutoDiffXd-.StopRecording" title="Permalink to this definition"></a></dt>
-<dd><p>Sets a flag to pause/stop recording. When stopped, publish events will
-not add frames to the animation.</p>
+<dd><p>Convenience function that calls Meshcat::StopRecording on the
+underlying Meshcat object; refer to Meshcat::StopRecording for full
+documentation.</p>
 </dd></dl>
 
 </dd></dl>

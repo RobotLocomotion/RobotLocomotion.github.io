@@ -150,6 +150,10 @@
 <p>Add unit length constraints to all the variables representing
 quaternion in <code class="docutils literal notranslate"><span class="pre">q_vars</span></code>. Namely the quaternions for floating base
 joints in <code class="docutils literal notranslate"><span class="pre">plant</span></code> will be enforced to have a unit length.</p>
+<p>Additionally, if the initial guess for the quaternion variables has
+not been set (it is nan), then this method calls
+MathematicalProgram::SetInitialGuess() with [1, 0, 0, 0], to help the
+solver avoid singularities.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt><dd><p>The plant on which we impose the unit quaternion constraints.</p>
 </dd>
@@ -164,6 +168,10 @@ joints in <code class="docutils literal notranslate"><span class="pre">plant</sp
 <p>Add unit length constraints to all the variables representing
 quaternion in <code class="docutils literal notranslate"><span class="pre">q_vars</span></code>. Namely the quaternions for floating base
 joints in <code class="docutils literal notranslate"><span class="pre">plant</span></code> will be enforced to have a unit length.</p>
+<p>Additionally, if the initial guess for the quaternion variables has
+not been set (it is nan), then this method calls
+MathematicalProgram::SetInitialGuess() with [1, 0, 0, 0], to help the
+solver avoid singularities.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt><dd><p>The plant on which we impose the unit quaternion constraints.</p>
 </dd>
@@ -2772,7 +2780,18 @@ gradient of the cost is computed from autodiff.</p>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">UnitQuaternionConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.UnitQuaternionConstraint" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
 <p>Constrains the quaternion to have a unit length.</p>
-<dl class="py method">
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>: It is highly recommended that in addition to adding this
+constraint, you also call MathematicalProgram::SetInitialGuess(),
+e.g.</p>
+</div>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Set a non-zero initial guess to help avoid singularities.</span>
+<span class="n">prog_</span><span class="o">-&gt;</span><span class="n">SetInitialGuess</span><span class="p">(</span><span class="n">q_</span><span class="p">.</span><span class="n">segment</span><span class="o">&lt;</span><span class="mi">4</span><span class="o">&gt;</span><span class="p">(</span><span class="n">quaternion_start</span><span class="p">),</span><span class="w"></span>
+<span class="n">Eigen</span><span class="o">::</span><span class="n">Vector4d</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">});</span><span class="w"></span>
+</pre></div>
+</div>
+</details><dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.UnitQuaternionConstraint.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.UnitQuaternionConstraint" title="pydrake.multibody.inverse_kinematics.UnitQuaternionConstraint"><span class="pre">pydrake.multibody.inverse_kinematics.UnitQuaternionConstraint</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.UnitQuaternionConstraint.__init__" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>

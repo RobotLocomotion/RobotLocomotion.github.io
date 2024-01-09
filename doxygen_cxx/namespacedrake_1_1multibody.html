@@ -1262,7 +1262,9 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Add unit length constraints to all the variables representing quaternion in <code>q_vars</code>. </p>
-<p>Namely the quaternions for floating base joints in <code>plant</code> will be enforced to have a unit length. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Namely the quaternions for floating base joints in <code>plant</code> will be enforced to have a unit length.</p>
+<p>Additionally, if the initial guess for the quaternion variables has not been set (it is nan), then this method calls MathematicalProgram::SetInitialGuess() with [1, 0, 0, 0], to help the solver avoid singularities.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">plant</td><td>The plant on which we impose the unit quaternion constraints. </td></tr>
     <tr><td class="paramname">q_vars</td><td>The decision variables for the generalized position of the plant. </td></tr>

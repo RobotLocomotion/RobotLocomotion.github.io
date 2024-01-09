@@ -5639,6 +5639,47 @@ in <code class="docutils literal notranslate"><span class="pre">model_instance</
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.HasFrameNamed">
+<span class="sig-name descname"><span class="pre">HasFrameNamed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.HasFrameNamed" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>HasFrameNamed(self: pydrake.multibody.plant.MultibodyPlant, name: str) -&gt; bool</p></li>
+</ol>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if a frame named <code class="docutils literal notranslate"><span class="pre">name</span></code> was added to the model.</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>AddFrame().</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if the frame name occurs in multiple model instances.</strong> – </p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>HasFrameNamed(self: pydrake.multibody.plant.MultibodyPlant, name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; bool</p></li>
+</ol>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if a frame named <code class="docutils literal notranslate"><span class="pre">name</span></code> was added to
+<code class="docutils literal notranslate"><span class="pre">model_instance</span></code>.</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>AddFrame().</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if model_instance is not valid for this model.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.HasJointActuatorNamed">
 <span class="sig-name descname"><span class="pre">HasJointActuatorNamed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.HasJointActuatorNamed" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
@@ -6274,6 +6315,22 @@ property of type CoulombFriction&lt;double&gt;.</p>
 <code class="docutils literal notranslate"><span class="pre">diffuse_color</span></code> (RGBA with values in the range [0, 1]) into a
 geometry::DrakeVisualizer-compatible set of
 geometry::IllustrationProperties.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.RemoveConstraint">
+<span class="sig-name descname"><span class="pre">RemoveConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.MultibodyConstraintId" title="pydrake.multibody.tree.MultibodyConstraintId"><span class="pre">pydrake.multibody.tree.MultibodyConstraintId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.RemoveConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>Removes the constraint <code class="docutils literal notranslate"><span class="pre">id</span></code> from the plant. Note that this will
+<em>not</em> remove constraints registered directly with DeformableModel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
+<li><p><strong>RuntimeError if id does not identify any multibody constraint</strong> – </p></li>
+<li><p><strong>in this plant.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -10719,6 +10776,47 @@ in <code class="docutils literal notranslate"><span class="pre">model_instance</
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.HasFrameNamed">
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].HasFrameNamed"></span><span class="sig-name descname"><span class="pre">HasFrameNamed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.HasFrameNamed" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>HasFrameNamed(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], name: str) -&gt; bool</p></li>
+</ol>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if a frame named <code class="docutils literal notranslate"><span class="pre">name</span></code> was added to the model.</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>AddFrame().</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if the frame name occurs in multiple model instances.</strong> – </p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>HasFrameNamed(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; bool</p></li>
+</ol>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if a frame named <code class="docutils literal notranslate"><span class="pre">name</span></code> was added to
+<code class="docutils literal notranslate"><span class="pre">model_instance</span></code>.</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>AddFrame().</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if model_instance is not valid for this model.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.HasJointActuatorNamed">
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].HasJointActuatorNamed"></span><span class="sig-name descname"><span class="pre">HasJointActuatorNamed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.HasJointActuatorNamed" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
@@ -11316,6 +11414,22 @@ property of type CoulombFriction&lt;double&gt;.</p>
 <code class="docutils literal notranslate"><span class="pre">diffuse_color</span></code> (RGBA with values in the range [0, 1]) into a
 geometry::DrakeVisualizer-compatible set of
 geometry::IllustrationProperties.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.RemoveConstraint">
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].RemoveConstraint"></span><span class="sig-name descname"><span class="pre">RemoveConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.MultibodyConstraintId" title="pydrake.multibody.tree.MultibodyConstraintId"><span class="pre">pydrake.multibody.tree.MultibodyConstraintId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.RemoveConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>Removes the constraint <code class="docutils literal notranslate"><span class="pre">id</span></code> from the plant. Note that this will
+<em>not</em> remove constraints registered directly with DeformableModel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
+<li><p><strong>RuntimeError if id does not identify any multibody constraint</strong> – </p></li>
+<li><p><strong>in this plant.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -15755,6 +15869,47 @@ in <code class="docutils literal notranslate"><span class="pre">model_instance</
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.HasFrameNamed">
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].HasFrameNamed"></span><span class="sig-name descname"><span class="pre">HasFrameNamed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.HasFrameNamed" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>HasFrameNamed(self: pydrake.multibody.plant.MultibodyPlant_[Expression], name: str) -&gt; bool</p></li>
+</ol>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if a frame named <code class="docutils literal notranslate"><span class="pre">name</span></code> was added to the model.</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>AddFrame().</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if the frame name occurs in multiple model instances.</strong> – </p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>HasFrameNamed(self: pydrake.multibody.plant.MultibodyPlant_[Expression], name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; bool</p></li>
+</ol>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if a frame named <code class="docutils literal notranslate"><span class="pre">name</span></code> was added to
+<code class="docutils literal notranslate"><span class="pre">model_instance</span></code>.</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>AddFrame().</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if model_instance is not valid for this model.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.HasJointActuatorNamed">
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].HasJointActuatorNamed"></span><span class="sig-name descname"><span class="pre">HasJointActuatorNamed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.HasJointActuatorNamed" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
@@ -16352,6 +16507,22 @@ property of type CoulombFriction&lt;double&gt;.</p>
 <code class="docutils literal notranslate"><span class="pre">diffuse_color</span></code> (RGBA with values in the range [0, 1]) into a
 geometry::DrakeVisualizer-compatible set of
 geometry::IllustrationProperties.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.RemoveConstraint">
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].RemoveConstraint"></span><span class="sig-name descname"><span class="pre">RemoveConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.MultibodyConstraintId" title="pydrake.multibody.tree.MultibodyConstraintId"><span class="pre">pydrake.multibody.tree.MultibodyConstraintId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.RemoveConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>Removes the constraint <code class="docutils literal notranslate"><span class="pre">id</span></code> from the plant. Note that this will
+<em>not</em> remove constraints registered directly with DeformableModel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
+<li><p><strong>RuntimeError if id does not identify any multibody constraint</strong> – </p></li>
+<li><p><strong>in this plant.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">

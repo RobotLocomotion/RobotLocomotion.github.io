@@ -549,6 +549,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aec4f15db42bddd6789b0732762046ce6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aec4f15db42bddd6789b0732762046ce6">AddWeldConstraint</a> (const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;body_A, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_AP, const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;body_B, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_BQ)</td></tr>
 <tr class="memdesc:aec4f15db42bddd6789b0732762046ce6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a constraint such that frame P affixed to body A is coincident at all times with frame Q affixed to body B, effectively modeling a weld joint.  <a href="#aec4f15db42bddd6789b0732762046ce6">More...</a><br /></td></tr>
 <tr class="separator:aec4f15db42bddd6789b0732762046ce6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab868821d19fbf79f94b50147c4d90b9b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ab868821d19fbf79f94b50147c4d90b9b">RemoveConstraint</a> (<a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a> id)</td></tr>
+<tr class="memdesc:ab868821d19fbf79f94b50147c4d90b9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the constraint <code>id</code> from the plant.  <a href="#ab868821d19fbf79f94b50147c4d90b9b">More...</a><br /></td></tr>
+<tr class="separator:ab868821d19fbf79f94b50147c4d90b9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Geometry</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="mbp_geometry"></a></p>
 <p>The following geometry methods provide a convenient means for associating geometries with bodies. Ultimately, the geometries are owned by <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>. These methods do the work of registering the requested geometries with SceneGraph and maintaining a mapping between the body and the registered data. Particularly, SceneGraph knows nothing about the concepts inherent in the MultibodyPlant. These methods account for those differences as documented below.</p>
@@ -8381,8 +8384,8 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 
 </div>
 </div>
-<a id="af4f43a6f72128af8e926d32c37ed7580"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4f43a6f72128af8e926d32c37ed7580">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="aecc2576d314d5baf56ad6ad593b26f9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecc2576d314d5baf56ad6ad593b26f9f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -8393,7 +8396,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -8407,8 +8410,8 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 
 </div>
 </div>
-<a id="aecc2576d314d5baf56ad6ad593b26f9f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aecc2576d314d5baf56ad6ad593b26f9f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="af4f43a6f72128af8e926d32c37ed7580"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4f43a6f72128af8e926d32c37ed7580">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -8419,7 +8422,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -8755,6 +8758,34 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 </div><div class="memdoc">
 
 <p>Overload for visual geometry registration; it relies on the downstream <a class="el" href="classdrake_1_1geometry_1_1_illustration_properties.html" title="The set of properties for geometry used in an &quot;illustration&quot; role.">geometry::IllustrationProperties</a> <em>consumer</em> to provide default parameter values (see <a class="el" href="group__geometry__roles.html">Geometry Queries and Roles</a> for details). </p>
+
+</div>
+</div>
+<a id="ab868821d19fbf79f94b50147c4d90b9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab868821d19fbf79f94b50147c4d90b9b">&#9670;&nbsp;</a></span>RemoveConstraint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RemoveConstraint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a>&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes the constraint <code>id</code> from the plant. </p>
+<p>Note that this will <em>not</em> remove constraints registered directly with <a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html" title="DeformableModel implements the interface in PhysicalModel and provides the functionalities to specify...">DeformableModel</a>.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the MultibodyPlant has already been finalized. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>id</code> does not identify any multibody constraint in this plant. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

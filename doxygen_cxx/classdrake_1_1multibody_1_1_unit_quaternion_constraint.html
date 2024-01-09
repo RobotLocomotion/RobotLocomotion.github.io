@@ -167,6 +167,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_unit_quate
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Constrains the quaternion to have a unit length. </p>
+<dl class="section note"><dt>Note</dt><dd>: It is highly recommended that in addition to adding this constraint, you also call MathematicalProgram::SetInitialGuess(), e.g. <div class="fragment"><div class="line"><span class="comment">// Set a non-zero initial guess to help avoid singularities.</span></div><div class="line">prog_-&gt;SetInitialGuess(q_.segment&lt;4&gt;(quaternion_start),</div><div class="line">                       Eigen::Vector4d{1, 0, 0, 0});</div></div><!-- fragment --> </dd></dl>
 </div>
 <p><code>#include &lt;drake/multibody/inverse_kinematics/unit_quaternion_constraint.h&gt;</code></p>
 <table class="memberdecls">

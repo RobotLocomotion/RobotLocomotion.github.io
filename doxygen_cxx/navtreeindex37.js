@@ -1,5 +1,6 @@
 var NAVTREEINDEX37 =
 {
+"classdrake_1_1systems_1_1_port_base.html":[3,0,0,15,78],
 "classdrake_1_1systems_1_1_port_base.html#a003a4b4bcdaced8fdeb4b3af78fbb828":[3,0,0,15,78,0],
 "classdrake_1_1systems_1_1_port_base.html#a00ef4ed887cdf7f89bd4d0eb345e4f3c":[3,0,0,15,78,6],
 "classdrake_1_1systems_1_1_port_base.html#a06cc3b285f945ec351eef2f7a34cc5fb":[3,0,0,15,78,13],
@@ -248,6 +249,5 @@ var NAVTREEINDEX37 =
 "classdrake_1_1systems_1_1_single_output_vector_source.html#a6e576c064b27b966834ded493ce67673":[3,0,0,15,96,10],
 "classdrake_1_1systems_1_1_single_output_vector_source.html#a7ca1d4d76cbb79e7e8ab25e2a9a2925f":[3,0,0,15,96,6],
 "classdrake_1_1systems_1_1_single_output_vector_source.html#a857207dc39cc56ec8b90071e502eed39":[3,0,0,15,96,0],
-"classdrake_1_1systems_1_1_single_output_vector_source.html#ab5a33a4cd63782b9e518b3f49444678d":[3,0,0,15,96,3],
-"classdrake_1_1systems_1_1_spring_mass_state_vector.html":[3,0,0,15,97]
+"classdrake_1_1systems_1_1_single_output_vector_source.html#ab5a33a4cd63782b9e518b3f49444678d":[3,0,0,15,96,3]
 };
