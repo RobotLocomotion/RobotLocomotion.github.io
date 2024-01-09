@@ -764,6 +764,33 @@ Friends</h2></td></tr>
 <li>ᶜ Meshes are represented by the <em>convex</em> hull of the mesh, therefore the results for <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) triangular surface mesh.">Mesh</a> are the same as for <a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">Convex</a>.</li>
 <li>ᵈ These results are simply not supported for <code>T</code> = <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">drake::symbolic::Expression</a> at this time.</li>
 </ul>
+<p><a class="anchor" id="query_object_compute_pairwise_distance_gradient_table"></a> </p><h3>Characterizing the returned gradients</h3>
+<p>In most cases, the returned gradient vectors are the normalized displacement vectors between two witness points. However, when two geometries touch at zero distance, their witness points have a zero displacement vector that we cannot normalize.</p>
+<p>When two geometries touch at zero distance, we have special implementation to choose reasonable gradients for some cases shown as "Ok" in the table below. Otherwise, they are "NaN" in the table. In general, we try to choose the gradient, when two geometries touch, in the most consistent way, but the problem sometimes doesn't have a unique solution. For example, any direction is qualified to be the gradient for two concentric spheres. Or two boxes touching at their vertices can pick a gradient from a continuous family of directions.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadRight"></th><th class="markdownTableHeadCenter">Box  </th><th class="markdownTableHeadCenter">Capsule  </th><th class="markdownTableHeadCenter">Convex  </th><th class="markdownTableHeadCenter">Cylinder  </th><th class="markdownTableHeadCenter">Ellipsoid  </th><th class="markdownTableHeadCenter">HalfSpace  </th><th class="markdownTableHeadCenter">Mesh  </th><th class="markdownTableHeadCenter">Sphere   </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyRight"><a class="el" href="classdrake_1_1geometry_1_1_box.html" title="Definition of a box.">Box</a>  </td><td class="markdownTableBodyCenter">Ok  </td><td class="markdownTableBodyCenter">░░░░░░  </td><td class="markdownTableBodyCenter">░░░░░  </td><td class="markdownTableBodyCenter">░░░░░░░  </td><td class="markdownTableBodyCenter">░░░░░░  </td><td class="markdownTableBodyCenter">░░░░░░  </td><td class="markdownTableBodyCenter">░░░░░  </td><td class="markdownTableBodyCenter">░░░░░   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyRight"><a class="el" href="classdrake_1_1geometry_1_1_capsule.html" title="Definition of a capsule.">Capsule</a>  </td><td class="markdownTableBodyCenter">NaN  </td><td class="markdownTableBodyCenter">NaN  </td><td class="markdownTableBodyCenter">░░░░░  </td><td class="markdownTableBodyCenter">░░░░░░░  </td><td class="markdownTableBodyCenter">░░░░░░  </td><td class="markdownTableBodyCenter">░░░░░░  </td><td class="markdownTableBodyCenter">░░░░░  </td><td class="markdownTableBodyCenter">░░░░░   </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyRight"><a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">Convex</a>  </td><td class="markdownTableBodyCenter">NaN  </td><td class="markdownTableBodyCenter">NaN  </td><td class="markdownTableBodyCenter">NaN  </td><td class="markdownTableBodyCenter">░░░░░░░  </td><td class="markdownTableBodyCenter">░░░░░░  </td><td class="markdownTableBodyCenter">░░░░░░  </td><td class="markdownTableBodyCenter">░░░░░  </td><td class="markdownTableBodyCenter">░░░░░   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyRight"><a class="el" href="classdrake_1_1geometry_1_1_cylinder.html" title="Definition of a cylinder.">Cylinder</a>  </td><td class="markdownTableBodyCenter">NaN  </td><td class="markdownTableBodyCenter">NaN  </td><td class="markdownTableBodyCenter">NaN  </td><td class="markdownTableBodyCenter">NaN  </td><td class="markdownTableBodyCenter">░░░░░░  </td><td class="markdownTableBodyCenter">░░░░░░  </td><td class="markdownTableBodyCenter">░░░░░  </td><td class="markdownTableBodyCenter">░░░░░   </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyRight"><a class="el" href="classdrake_1_1geometry_1_1_ellipsoid.html" title="Definition of an ellipsoid.">Ellipsoid</a>  </td><td class="markdownTableBodyCenter">NaN  </td><td class="markdownTableBodyCenter">NaN  </td><td class="markdownTableBodyCenter">NaN  </td><td class="markdownTableBodyCenter">NaN  </td><td class="markdownTableBodyCenter">NaN  </td><td class="markdownTableBodyCenter">░░░░░░  </td><td class="markdownTableBodyCenter">░░░░░  </td><td class="markdownTableBodyCenter">░░░░░   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyRight"><a class="el" href="classdrake_1_1geometry_1_1_half_space.html" title="Definition of a half space.">HalfSpace</a>  </td><td class="markdownTableBodyCenter">NaN  </td><td class="markdownTableBodyCenter">NaN  </td><td class="markdownTableBodyCenter">NaN  </td><td class="markdownTableBodyCenter">NaN  </td><td class="markdownTableBodyCenter">NaN  </td><td class="markdownTableBodyCenter">NaN  </td><td class="markdownTableBodyCenter">░░░░░  </td><td class="markdownTableBodyCenter">░░░░░   </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyRight"><a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) triangular surface mesh.">Mesh</a>  </td><td class="markdownTableBodyCenter">NaN  </td><td class="markdownTableBodyCenter">NaN  </td><td class="markdownTableBodyCenter">NaN  </td><td class="markdownTableBodyCenter">NaN  </td><td class="markdownTableBodyCenter">NaN  </td><td class="markdownTableBodyCenter">NaN  </td><td class="markdownTableBodyCenter">NaN  </td><td class="markdownTableBodyCenter">░░░░░   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyRight"><a class="el" href="classdrake_1_1geometry_1_1_sphere.html" title="Definition of sphere.">Sphere</a>  </td><td class="markdownTableBodyCenter">Ok  </td><td class="markdownTableBodyCenter">Ok  </td><td class="markdownTableBodyCenter">Okᵃ  </td><td class="markdownTableBodyCenter">Ok  </td><td class="markdownTableBodyCenter">Okᵃ  </td><td class="markdownTableBodyCenter">Ok  </td><td class="markdownTableBodyCenter">Okᵃ  </td><td class="markdownTableBodyCenter">Ok   </td></tr>
+</table>
+<p><b><em>Table 7</em></b>: Support for signed-distance gradients when two geometries touch at zero distance.</p>
+<ul>
+<li>ᵃ Return the gradient as a Vector3d of NaN if the sphere has zero radius.</li>
+</ul>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">max_distance</td><td>The maximum distance at which distance data is reported.</td></tr>
@@ -826,7 +853,7 @@ Friends</h2></td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyCenter">Expression  </td><td class="markdownTableBodyCenter">ᵃ  </td><td class="markdownTableBodyCenter">ᵃ  </td><td class="markdownTableBodyCenter">ᵃ  </td><td class="markdownTableBodyCenter">ᵃ  </td><td class="markdownTableBodyCenter">ᵃ  </td><td class="markdownTableBodyCenter">ᵃ  </td><td class="markdownTableBodyCenter">ᵃ  </td><td class="markdownTableBodyCenter">ᵃ   </td></tr>
 </table>
-<p><b><em>Table 7</em></b>: Worst observed error (in m) for 2mm penetration/separation between geometry approximately 20cm in size and a point.</p>
+<p><b><em>Table 8</em></b>: Worst observed error (in m) for 2mm penetration/separation between geometry approximately 20cm in size and a point.</p>
 <ul>
 <li>ᵃ Unsupported geometry/scalar combinations are simply ignored; no results are reported for that geometry.</li>
 <li>ᵇ This uses an <em>iterative</em> algorithm which introduces a relatively large and variable error. For example, as the eccentricity of the ellipsoid increases, this error may get worse. It also depends on the location of the projection of the query point on the ellipsoid; the closer that point is to the high curvature area, the bigger the effect. It is not immediately clear how much worse the answer will get.</li>

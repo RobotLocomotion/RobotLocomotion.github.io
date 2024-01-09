@@ -7141,6 +7141,36 @@ drake::symbolic::Expression.</p>
 results for Mesh are the same as for Convex.
 - ᵈ These results are simply not supported for
 <code class="docutils literal notranslate"><span class="pre">T</span></code> = drake::symbolic::Expression at this time.</p>
+<p><strong>Characterizing the returned gradients</strong></p>
+<p>In most cases, the returned gradient vectors are the normalized
+displacement vectors between two witness points. However, when two
+geometries touch at zero distance, their witness points have a zero
+displacement vector that we cannot normalize.</p>
+<p>When two geometries touch at zero distance, we have special
+implementation to choose reasonable gradients for some cases shown as
+“Ok” in the table below. Otherwise, they are “NaN” in the table. In
+general, we try to choose the gradient, when two geometries touch, in
+the most consistent way, but the problem sometimes doesn’t have a
+unique solution. For example, any direction is qualified to be the
+gradient for two concentric spheres. Or two boxes touching at their
+vertices can pick a gradient from a continuous family of directions.</p>
+<div class="line-block">
+<div class="line">| Box | Capsule | Convex | Cylinder | Ellipsoid | HalfSpace | Mesh |</div>
+</div>
+<p>Sphere | | ——–: | :–: | :——: | :—–: | :——-: |
+:——–: | :——–: | :—–: | :—–: | | Box | Ok | ░░░░░░ |
+░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Capsule | NaN |
+NaN | ░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Convex |
+NaN | NaN | NaN | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | |
+Cylinder | NaN | NaN | NaN | NaN | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | |
+Ellipsoid | NaN | NaN | NaN | NaN | NaN | ░░░░░░ | ░░░░░ | ░░░░░ | |
+HalfSpace | NaN | NaN | NaN | NaN | NaN | NaN | ░░░░░ | ░░░░░ | | Mesh
+| NaN | NaN | NaN | NaN | NaN | NaN | NaN | ░░░░░ | | Sphere | Ok | Ok
+| Okᵃ | Ok | Okᵃ | Ok | Okᵃ | Ok | <strong>*Table 7*</strong>: Support for
+signed-distance gradients when two geometries touch at zero distance.</p>
+<ul class="simple">
+<li><p>ᵃ Return the gradient as a Vector3d of NaN if the sphere has zero radius.</p></li>
+</ul>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">max_distance</span></code>:</dt><dd><p>The maximum distance at which distance data is reported.</p>
 </dd>
@@ -7198,7 +7228,7 @@ as a zero-radius sphere.</p>
 :——–: | :——–: | :—–: | :—–: | | double | 2e-15 | 4e-15
 | ᵃ | 3e-15 | 3e-5ᵇ | 5e-15 | ᵃ | 4e-15 | | AutoDiffXd | 1e-15 | 4e-15
 | ᵃ | ᵃ | ᵃ | 5e-15 | ᵃ | 3e-15 | | Expression | ᵃ | ᵃ | ᵃ | ᵃ | ᵃ | ᵃ
-| ᵃ | ᵃ | <strong>*Table 7*</strong>: Worst observed error (in m) for 2mm
+| ᵃ | ᵃ | <strong>*Table 8*</strong>: Worst observed error (in m) for 2mm
 penetration/separation between geometry approximately 20cm in size and
 a point.</p>
 <ul class="simple">
@@ -7887,6 +7917,36 @@ drake::symbolic::Expression.</p>
 results for Mesh are the same as for Convex.
 - ᵈ These results are simply not supported for
 <code class="docutils literal notranslate"><span class="pre">T</span></code> = drake::symbolic::Expression at this time.</p>
+<p><strong>Characterizing the returned gradients</strong></p>
+<p>In most cases, the returned gradient vectors are the normalized
+displacement vectors between two witness points. However, when two
+geometries touch at zero distance, their witness points have a zero
+displacement vector that we cannot normalize.</p>
+<p>When two geometries touch at zero distance, we have special
+implementation to choose reasonable gradients for some cases shown as
+“Ok” in the table below. Otherwise, they are “NaN” in the table. In
+general, we try to choose the gradient, when two geometries touch, in
+the most consistent way, but the problem sometimes doesn’t have a
+unique solution. For example, any direction is qualified to be the
+gradient for two concentric spheres. Or two boxes touching at their
+vertices can pick a gradient from a continuous family of directions.</p>
+<div class="line-block">
+<div class="line">| Box | Capsule | Convex | Cylinder | Ellipsoid | HalfSpace | Mesh |</div>
+</div>
+<p>Sphere | | ——–: | :–: | :——: | :—–: | :——-: |
+:——–: | :——–: | :—–: | :—–: | | Box | Ok | ░░░░░░ |
+░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Capsule | NaN |
+NaN | ░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Convex |
+NaN | NaN | NaN | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | |
+Cylinder | NaN | NaN | NaN | NaN | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | |
+Ellipsoid | NaN | NaN | NaN | NaN | NaN | ░░░░░░ | ░░░░░ | ░░░░░ | |
+HalfSpace | NaN | NaN | NaN | NaN | NaN | NaN | ░░░░░ | ░░░░░ | | Mesh
+| NaN | NaN | NaN | NaN | NaN | NaN | NaN | ░░░░░ | | Sphere | Ok | Ok
+| Okᵃ | Ok | Okᵃ | Ok | Okᵃ | Ok | <strong>*Table 7*</strong>: Support for
+signed-distance gradients when two geometries touch at zero distance.</p>
+<ul class="simple">
+<li><p>ᵃ Return the gradient as a Vector3d of NaN if the sphere has zero radius.</p></li>
+</ul>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">max_distance</span></code>:</dt><dd><p>The maximum distance at which distance data is reported.</p>
 </dd>
@@ -7944,7 +8004,7 @@ as a zero-radius sphere.</p>
 :——–: | :——–: | :—–: | :—–: | | double | 2e-15 | 4e-15
 | ᵃ | 3e-15 | 3e-5ᵇ | 5e-15 | ᵃ | 4e-15 | | AutoDiffXd | 1e-15 | 4e-15
 | ᵃ | ᵃ | ᵃ | 5e-15 | ᵃ | 3e-15 | | Expression | ᵃ | ᵃ | ᵃ | ᵃ | ᵃ | ᵃ
-| ᵃ | ᵃ | <strong>*Table 7*</strong>: Worst observed error (in m) for 2mm
+| ᵃ | ᵃ | <strong>*Table 8*</strong>: Worst observed error (in m) for 2mm
 penetration/separation between geometry approximately 20cm in size and
 a point.</p>
 <ul class="simple">
@@ -8507,6 +8567,36 @@ drake::symbolic::Expression.</p>
 results for Mesh are the same as for Convex.
 - ᵈ These results are simply not supported for
 <code class="docutils literal notranslate"><span class="pre">T</span></code> = drake::symbolic::Expression at this time.</p>
+<p><strong>Characterizing the returned gradients</strong></p>
+<p>In most cases, the returned gradient vectors are the normalized
+displacement vectors between two witness points. However, when two
+geometries touch at zero distance, their witness points have a zero
+displacement vector that we cannot normalize.</p>
+<p>When two geometries touch at zero distance, we have special
+implementation to choose reasonable gradients for some cases shown as
+“Ok” in the table below. Otherwise, they are “NaN” in the table. In
+general, we try to choose the gradient, when two geometries touch, in
+the most consistent way, but the problem sometimes doesn’t have a
+unique solution. For example, any direction is qualified to be the
+gradient for two concentric spheres. Or two boxes touching at their
+vertices can pick a gradient from a continuous family of directions.</p>
+<div class="line-block">
+<div class="line">| Box | Capsule | Convex | Cylinder | Ellipsoid | HalfSpace | Mesh |</div>
+</div>
+<p>Sphere | | ——–: | :–: | :——: | :—–: | :——-: |
+:——–: | :——–: | :—–: | :—–: | | Box | Ok | ░░░░░░ |
+░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Capsule | NaN |
+NaN | ░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Convex |
+NaN | NaN | NaN | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | |
+Cylinder | NaN | NaN | NaN | NaN | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | |
+Ellipsoid | NaN | NaN | NaN | NaN | NaN | ░░░░░░ | ░░░░░ | ░░░░░ | |
+HalfSpace | NaN | NaN | NaN | NaN | NaN | NaN | ░░░░░ | ░░░░░ | | Mesh
+| NaN | NaN | NaN | NaN | NaN | NaN | NaN | ░░░░░ | | Sphere | Ok | Ok
+| Okᵃ | Ok | Okᵃ | Ok | Okᵃ | Ok | <strong>*Table 7*</strong>: Support for
+signed-distance gradients when two geometries touch at zero distance.</p>
+<ul class="simple">
+<li><p>ᵃ Return the gradient as a Vector3d of NaN if the sphere has zero radius.</p></li>
+</ul>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">max_distance</span></code>:</dt><dd><p>The maximum distance at which distance data is reported.</p>
 </dd>
@@ -8564,7 +8654,7 @@ as a zero-radius sphere.</p>
 :——–: | :——–: | :—–: | :—–: | | double | 2e-15 | 4e-15
 | ᵃ | 3e-15 | 3e-5ᵇ | 5e-15 | ᵃ | 4e-15 | | AutoDiffXd | 1e-15 | 4e-15
 | ᵃ | ᵃ | ᵃ | 5e-15 | ᵃ | 3e-15 | | Expression | ᵃ | ᵃ | ᵃ | ᵃ | ᵃ | ᵃ
-| ᵃ | ᵃ | <strong>*Table 7*</strong>: Worst observed error (in m) for 2mm
+| ᵃ | ᵃ | <strong>*Table 8*</strong>: Worst observed error (in m) for 2mm
 penetration/separation between geometry approximately 20cm in size and
 a point.</p>
 <ul class="simple">
