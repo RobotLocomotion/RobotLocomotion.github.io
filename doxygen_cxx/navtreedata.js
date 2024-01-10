@@ -127,7 +127,7 @@ var NAVTREEINDEX =
 "structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html",
 "structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a5260647c6d73b9af547424968d24da09",
 "symbolic_2polynomial_8h.html#a03731fe9a001a20e071a7a9e106061bd",
-"witness__function_8h.html"
+"wing_8h.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
