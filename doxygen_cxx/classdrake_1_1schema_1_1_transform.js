@@ -10,6 +10,7 @@ var classdrake_1_1schema_1_1_transform =
     [ "operator=", "classdrake_1_1schema_1_1_transform.html#aaf5bf76801b488bc96a943cd329f75f3", null ],
     [ "operator=", "classdrake_1_1schema_1_1_transform.html#ad1d6819c47fe05f7712592f02c95ca00", null ],
     [ "Sample", "classdrake_1_1schema_1_1_transform.html#ab7e400a7a7b3fdf733f9861285f14742", null ],
+    [ "SampleAsTransform", "classdrake_1_1schema_1_1_transform.html#a988b036ddd6afb07fe5f9d97373beae2", null ],
     [ "Serialize", "classdrake_1_1schema_1_1_transform.html#a8e8824802dedfbc36776227f7482b6bc", null ],
     [ "set_rotation_rpy_deg", "classdrake_1_1schema_1_1_transform.html#a8de17f462e73effae9187b4bacdd5eed", null ],
     [ "ToSymbolic", "classdrake_1_1schema_1_1_transform.html#a5b8885370a3224166feb6a2a14cfbf82", null ],

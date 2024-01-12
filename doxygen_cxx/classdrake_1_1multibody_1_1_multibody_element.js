@@ -5,6 +5,7 @@ var classdrake_1_1multibody_1_1_multibody_element =
     [ "~MultibodyElement", "classdrake_1_1multibody_1_1_multibody_element.html#a1703fe23765583a9ceb91bfba1adc896", null ],
     [ "MultibodyElement", "classdrake_1_1multibody_1_1_multibody_element.html#a7b561934ea4adacae196c9f85cfa6f13", null ],
     [ "MultibodyElement", "classdrake_1_1multibody_1_1_multibody_element.html#a5a912f1fd024549f45d6197eadc30e48", null ],
+    [ "MultibodyElement", "classdrake_1_1multibody_1_1_multibody_element.html#a35978a256b0f4488ebc9026116b3c364", null ],
     [ "DeclareAbstractParameter", "classdrake_1_1multibody_1_1_multibody_element.html#a57aa9aaaab0516dbcbaf970347c76611", null ],
     [ "DeclareNumericParameter", "classdrake_1_1multibody_1_1_multibody_element.html#a7a976e6fccd8686189b1fdbf1d2cc722", null ],
     [ "DeclareParameters", "classdrake_1_1multibody_1_1_multibody_element.html#a78bee989062e1b311dbd90831ac9959f", null ],

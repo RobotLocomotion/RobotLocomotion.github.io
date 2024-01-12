@@ -1,5 +1,8 @@
 var NAVTREEINDEX49 =
 {
+"functions_u.html":[3,3,0,20],
+"functions_v.html":[3,3,0,21],
+"functions_vars.html":[3,3,2,0],
 "functions_vars.html":[3,3,2],
 "functions_vars_b.html":[3,3,2,1],
 "functions_vars_c.html":[3,3,2,2],
@@ -107,9 +110,9 @@ var NAVTREEINDEX49 =
 "geometry__roles_8h.html#acdd79a1a4f81dd6ee5cddcb21149b951ad909c44a5dea6ebbdb3a95e4cb701521":[4,0,0,4,20,4,1],
 "geometry__set_8h.html":[4,0,0,4,21],
 "geometry__set__tester_8h.html":[4,0,0,4,8,1],
-"geometry__spatial__inertia_8h.html":[4,0,0,8,14,14],
-"geometry__spatial__inertia_8h.html#a23055924c0c775334973d978ac3c1f54":[4,0,0,8,14,14,0],
-"geometry__spatial__inertia_8h.html#a986ab8f45373e38b18f7ac2a03491b76":[4,0,0,8,14,14,1],
+"geometry__spatial__inertia_8h.html":[4,0,0,8,14,15],
+"geometry__spatial__inertia_8h.html#a23055924c0c775334973d978ac3c1f54":[4,0,0,8,14,15,0],
+"geometry__spatial__inertia_8h.html#a986ab8f45373e38b18f7ac2a03491b76":[4,0,0,8,14,15,1],
 "geometry__state_8h.html":[4,0,0,4,22],
 "geometry__state_8h.html#a3a71d18e80aa6fba962ddd8a33aecb05":[4,0,0,4,22,1],
 "geometry__state_8h.html#ae17f078345eeccd086fdb02c198d5b7d":[4,0,0,4,22,2],
@@ -200,12 +203,12 @@ var NAVTREEINDEX49 =
 "group__default__scalars.html#ga0659aa8320fcb199bb53a153120a4d14":[4,0,0,1,14,1],
 "group__default__scalars.html#ga3273477e81e9dcb7d96cfb28382798b6":[1,6,1,5],
 "group__default__scalars.html#ga3273477e81e9dcb7d96cfb28382798b6":[4,0,0,1,14,5],
-"group__default__scalars.html#ga6333534b3097a37c55fbacf434491e2e":[4,0,0,1,14,0],
 "group__default__scalars.html#ga6333534b3097a37c55fbacf434491e2e":[1,6,1,0],
-"group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[4,0,0,1,14,4],
+"group__default__scalars.html#ga6333534b3097a37c55fbacf434491e2e":[4,0,0,1,14,0],
 "group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[1,6,1,4],
-"group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[4,0,0,1,14,2],
+"group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[4,0,0,1,14,4],
 "group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[1,6,1,2],
+"group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[4,0,0,1,14,2],
 "group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[4,0,0,1,14,3],
 "group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[1,6,1,3],
 "group__discrete__systems.html":[1,2,9],
@@ -246,8 +249,5 @@ var NAVTREEINDEX49 =
 "group__module__contact__surface.html":[1,5,2,0,0],
 "group__module__penetration__queries.html":[1,5,2,0],
 "group__multibody.html":[1,3],
-"group__multibody__frames__and__bodies.html":[1,0,1,1],
-"group__multibody__notation.html":[1,0,1],
-"group__multibody__notation__basics.html":[1,0,1,0],
-"group__multibody__parsing.html":[1,3,2]
+"group__multibody__frames__and__bodies.html":[1,0,1,1]
 };

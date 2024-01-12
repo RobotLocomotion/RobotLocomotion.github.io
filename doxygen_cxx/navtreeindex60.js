@@ -1,5 +1,8 @@
 var NAVTREEINDEX60 =
 {
+"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a447b42f56ec0921186385e6863a6548d":[3,0,0,15,8,2,24],
+"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a516e6b1994145bd1efc9ccb21bc15fdc":[3,0,0,15,8,2,22],
+"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a51a5f94eea0e5ea757caaddb41c3eb79":[3,0,0,15,8,2,25],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a5260647c6d73b9af547424968d24da09":[3,0,0,15,8,2,2],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a55c0f110c6208ad2fce2eeffb44fe5df":[3,0,0,15,8,2,19],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a5e46bbec487979696012b53699ab3e17":[3,0,0,15,8,2,11],
@@ -246,8 +249,5 @@ var NAVTREEINDEX60 =
 "structstd_1_1tuple__size_3_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html":[3,0,2,30],
 "submodules__py_8h.html":[4,0,0,0,0,1,9],
 "subvector_8h.html":[4,0,0,12,3,37],
-"suction__cup__controller_8h.html":[4,0,0,3,11,1,2],
-"supernodal__solver_8h.html":[4,0,0,8,2,19],
-"supervector_8h.html":[4,0,0,12,3,38],
-"symbolic_2polynomial_8h.html":[4,0,0,1,3,11]
+"suction__cup__controller_8h.html":[4,0,0,3,11,1,2]
 };

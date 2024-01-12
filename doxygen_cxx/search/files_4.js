@@ -9,6 +9,7 @@ var searchData=
   ['eigen_5fsparse_5ftriplet_2eh',['eigen_sparse_triplet.h',['../eigen__sparse__triplet_8h.html',1,'']]],
   ['eigen_5fspecializations_2eh',['eigen_specializations.h',['../eigen__specializations_8h.html',1,'']]],
   ['eigen_5ftypes_2eh',['eigen_types.h',['../eigen__types_8h.html',1,'']]],
+  ['element_5fcollection_2eh',['element_collection.h',['../element__collection_8h.html',1,'']]],
   ['environment_2eh',['environment.h',['../environment_8h.html',1,'']]],
   ['equality_5fconstrained_5fqp_5fsolver_2eh',['equality_constrained_qp_solver.h',['../equality__constrained__qp__solver_8h.html',1,'']]],
   ['evaluator_5fbase_2eh',['evaluator_base.h',['../evaluator__base_8h.html',1,'']]],

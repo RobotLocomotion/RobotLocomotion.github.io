@@ -17,6 +17,7 @@ var dir_3f9cb8dbb3b4911cb2ecb548acd672c3 =
       [ "DoorHingeConfig", "structdrake_1_1multibody_1_1_door_hinge_config.html", "structdrake_1_1multibody_1_1_door_hinge_config" ],
       [ "DoorHinge", "classdrake_1_1multibody_1_1_door_hinge.html", "classdrake_1_1multibody_1_1_door_hinge" ]
     ] ],
+    [ "element_collection.h", "element__collection_8h.html", null ],
     [ "fixed_offset_frame.h", "fixed__offset__frame_8h.html", [
       [ "RigidBodyFrame", "classdrake_1_1multibody_1_1_rigid_body_frame.html", "classdrake_1_1multibody_1_1_rigid_body_frame" ],
       [ "RigidBody", "classdrake_1_1multibody_1_1_rigid_body.html", "classdrake_1_1multibody_1_1_rigid_body" ],

@@ -199,6 +199,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab7e400a7a7b3fdf733f9861285f14742"><td class="memItemLeft" align="right" valign="top">math::RigidTransformd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1schema_1_1_transform.html#ab7e400a7a7b3fdf733f9861285f14742">Sample</a> (<a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a> *generator) const</td></tr>
 <tr class="memdesc:ab7e400a7a7b3fdf733f9861285f14742"><td class="mdescLeft">&#160;</td><td class="mdescRight">Samples this <a class="el" href="classdrake_1_1schema_1_1_transform.html" title="A specification for a 3d rotation and translation, optionally with respect to a base frame.">Transform</a>.  <a href="#ab7e400a7a7b3fdf733f9861285f14742">More...</a><br /></td></tr>
 <tr class="separator:ab7e400a7a7b3fdf733f9861285f14742"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a988b036ddd6afb07fe5f9d97373beae2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1schema_1_1_transform.html">Transform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1schema_1_1_transform.html#a988b036ddd6afb07fe5f9d97373beae2">SampleAsTransform</a> (<a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a> *generator) const</td></tr>
+<tr class="memdesc:a988b036ddd6afb07fe5f9d97373beae2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Samples this <a class="el" href="classdrake_1_1schema_1_1_transform.html" title="A specification for a 3d rotation and translation, optionally with respect to a base frame.">Transform</a>; the returned value is deterministic and has the same base frame.  <a href="#a988b036ddd6afb07fe5f9d97373beae2">More...</a><br /></td></tr>
+<tr class="separator:a988b036ddd6afb07fe5f9d97373beae2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e8824802dedfbc36776227f7482b6bc"><td class="memTemplParams" colspan="2">template&lt;typename Archive &gt; </td></tr>
 <tr class="memitem:a8e8824802dedfbc36776227f7482b6bc"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1schema_1_1_transform.html#a8e8824802dedfbc36776227f7482b6bc">Serialize</a> (Archive *a)</td></tr>
 <tr class="separator:a8e8824802dedfbc36776227f7482b6bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -466,7 +469,33 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Samples this <a class="el" href="classdrake_1_1schema_1_1_transform.html" title="A specification for a 3d rotation and translation, optionally with respect to a base frame.">Transform</a>. </p>
-<p>If this is deterministic, the result is the same as GetDeterministicValue. </p>
+<p>If this is deterministic, the result is the same as GetDeterministicValue.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if this has a non-world base frame (because the return type has no base frame, so the returned value would be misleading). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a988b036ddd6afb07fe5f9d97373beae2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a988b036ddd6afb07fe5f9d97373beae2">&#9670;&nbsp;</a></span>SampleAsTransform()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1schema_1_1_transform.html">Transform</a> SampleAsTransform </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a> *&#160;</td>
+          <td class="paramname"><em>generator</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Samples this <a class="el" href="classdrake_1_1schema_1_1_transform.html" title="A specification for a 3d rotation and translation, optionally with respect to a base frame.">Transform</a>; the returned value is deterministic and has the same base frame. </p>
 
 </div>
 </div>
