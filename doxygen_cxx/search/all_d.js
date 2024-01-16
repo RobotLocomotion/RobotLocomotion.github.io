@@ -252,7 +252,7 @@ var searchData=
   ['meshcat_5fgraphviz_2eh',['meshcat_graphviz.h',['../meshcat__graphviz_8h.html',1,'']]],
   ['meshcat_5fpoint_5fcloud_5fvisualizer_2eh',['meshcat_point_cloud_visualizer.h',['../meshcat__point__cloud__visualizer_8h.html',1,'']]],
   ['meshcat_5fpose_5fsliders_2eh',['meshcat_pose_sliders.h',['../meshcat__pose__sliders_8h.html',1,'']]],
-  ['meshcat_5ftypes_2eh',['meshcat_types.h',['../meshcat__types_8h.html',1,'']]],
+  ['meshcat_5ftypes_5finternal_2eh',['meshcat_types_internal.h',['../meshcat__types__internal_8h.html',1,'']]],
   ['meshcat_5fvisualizer_2eh',['meshcat_visualizer.h',['../meshcat__visualizer_8h.html',1,'']]],
   ['meshcat_5fvisualizer_5fparams_2eh',['meshcat_visualizer_params.h',['../meshcat__visualizer__params_8h.html',1,'']]],
   ['meshcatanimation',['MeshcatAnimation',['../classdrake_1_1geometry_1_1_meshcat_animation.html',1,'MeshcatAnimation'],['../classdrake_1_1geometry_1_1_meshcat_animation.html#a490566f6bbc210873ec46f4a6f905067',1,'drake::geometry::MeshcatAnimation::MeshcatAnimation(const MeshcatAnimation &amp;)=delete'],['../classdrake_1_1geometry_1_1_meshcat_animation.html#af8b14130b7d82c5c8dc3a154b9d9f469',1,'drake::geometry::MeshcatAnimation::MeshcatAnimation(MeshcatAnimation &amp;&amp;)=delete'],['../classdrake_1_1geometry_1_1_meshcat_animation.html#a24b9de9dccac36c4040425727b568544',1,'drake::geometry::MeshcatAnimation::MeshcatAnimation(double frames_per_second=32.0)']]],
