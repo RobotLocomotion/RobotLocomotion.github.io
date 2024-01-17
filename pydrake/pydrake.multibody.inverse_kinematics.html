@@ -913,14 +913,44 @@ be set to v, otherwise it will be nullopt.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="3">
+<li><p>DoDifferentialInverseKinematics(robot: pydrake.multibody.plant.MultibodyPlant, context: pydrake.systems.framework.Context, V_AE_desired: numpy.ndarray[numpy.float64[6, 1]], frame_A: pydrake.multibody.tree.Frame, frame_E: pydrake.multibody.tree.Frame, parameters: pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters) -&gt; pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsResult</p></li>
+</ol>
+<p>A wrapper over DoDifferentialInverseKinematics(q_current, v_current,
+V, J, params) that tracks frame E’s spatial velocity in frame A.
+q_current and v_current are taken from <code class="docutils literal notranslate"><span class="pre">context</span></code>. V and J are
+expressed in E, and only the elements with non-zero gains in
+<code class="docutils literal notranslate"><span class="pre">parameters</span></code> get_end_effector_velocity_gains() are used in the
+program.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">robot</span></code>:</dt><dd><p>A MultibodyPlant model.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>Must be the Context of the MultibodyPlant. Contains the current
+generalized position and velocity.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">V_AE_desired</span></code>:</dt><dd><p>Desired spatial velocity of <code class="docutils literal notranslate"><span class="pre">frame_E</span></code> in <code class="docutils literal notranslate"><span class="pre">frame</span></code> A.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>Reference frame (inertial or non-inertial).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>End effector frame.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">parameters</span></code>:</dt><dd><p>Collection of various problem specific constraints and constants.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>If the solver successfully finds a solution, joint_velocities will
+be set to v, otherwise it will be nullopt.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="4">
 <li><p>DoDifferentialInverseKinematics(robot: pydrake.multibody.plant.MultibodyPlant, context: pydrake.systems.framework.Context, X_WE_desired: pydrake.math.RigidTransform, frame_E: pydrake.multibody.tree.Frame, parameters: pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters) -&gt; pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsResult</p></li>
 </ol>
 <p>A wrapper over DoDifferentialInverseKinematics(robot, context,
 V_WE_desired, frame_E, params) that tracks frame E’s pose in the world
-frame. q_current and v_current are taken from <code class="docutils literal notranslate"><span class="pre">cache</span></code>. V_WE is
-computed by ComputePoseDiffInCommonFrame(X_WE, X_WE_desired) / dt,
-where X_WE is computed from <code class="docutils literal notranslate"><span class="pre">context</span></code>, and dt is taken from
-<code class="docutils literal notranslate"><span class="pre">parameters</span></code>.</p>
+frame. q_current and v_current are taken from <code class="docutils literal notranslate"><span class="pre">context</span></code>.
+V_WE_desired is computed by ComputePoseDiffInCommonFrame(X_WE,
+X_WE_desired) / dt, where X_WE is computed from <code class="docutils literal notranslate"><span class="pre">context</span></code>, and dt is
+taken from <code class="docutils literal notranslate"><span class="pre">parameters</span></code>.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">robot</span></code>:</dt><dd><p>A MultibodyPlant model.</p>
 </dd>
@@ -928,6 +958,36 @@ where X_WE is computed from <code class="docutils literal notranslate"><span cla
 generalized position and velocity.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_WE_desired</span></code>:</dt><dd><p>Desired pose of <code class="docutils literal notranslate"><span class="pre">frame_E</span></code> in the world frame.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>End effector frame.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">parameters</span></code>:</dt><dd><p>Collection of various problem specific constraints and constants.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>If the solver successfully finds a solution, joint_velocities will
+be set to v, otherwise it will be nullopt.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="5">
+<li><p>DoDifferentialInverseKinematics(robot: pydrake.multibody.plant.MultibodyPlant, context: pydrake.systems.framework.Context, X_AE_desired: pydrake.math.RigidTransform, frame_A: pydrake.multibody.tree.Frame, frame_E: pydrake.multibody.tree.Frame, parameters: pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters) -&gt; pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsResult</p></li>
+</ol>
+<p>A wrapper over DoDifferentialInverseKinematics(robot, context,
+V_AE_desired, frame_A, frame_E, params) that tracks frame E’s pose in
+frame A. q_current and v_current are taken from <code class="docutils literal notranslate"><span class="pre">context</span></code>.
+V_AE_desired is computed by ComputePoseDiffInCommonFrame(X_AE,
+X_AE_desired) / dt, where X_WE is computed from <code class="docutils literal notranslate"><span class="pre">context</span></code>, and dt is
+taken from <code class="docutils literal notranslate"><span class="pre">parameters</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">robot</span></code>:</dt><dd><p>A MultibodyPlant model.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>Must be the Context of the MultibodyPlant. Contains the current
+generalized position and velocity.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_AE_desired</span></code>:</dt><dd><p>Desired pose of <code class="docutils literal notranslate"><span class="pre">frame_E</span></code> in <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>Reference frame (inertial or non-inertial).</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>End effector frame.</p>
 </dd>

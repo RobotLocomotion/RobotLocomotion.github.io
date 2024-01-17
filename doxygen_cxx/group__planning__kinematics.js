@@ -79,5 +79,7 @@ var group__planning__kinematics =
     ] ],
     [ "DoDifferentialInverseKinematics", "group__planning__kinematics.html#ga2f16257d707e2329789beaf507b75b2d", null ],
     [ "DoDifferentialInverseKinematics", "group__planning__kinematics.html#ga6e3a66e37411b9d8358efc00ec510a33", null ],
-    [ "DoDifferentialInverseKinematics", "group__planning__kinematics.html#gafd57fd1045276e8221f6f0a4fac36c82", null ]
+    [ "DoDifferentialInverseKinematics", "group__planning__kinematics.html#gac15a6d2dc75b3cdcf0d54550894a97b3", null ],
+    [ "DoDifferentialInverseKinematics", "group__planning__kinematics.html#gafd57fd1045276e8221f6f0a4fac36c82", null ],
+    [ "DoDifferentialInverseKinematics", "group__planning__kinematics.html#ga7ab1374802ca61f12cd1447cc77a695f", null ]
 ];
