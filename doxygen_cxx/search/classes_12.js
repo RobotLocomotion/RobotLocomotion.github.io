@@ -38,6 +38,7 @@ var searchData=
   ['separationcertificateresultbase',['SeparationCertificateResultBase',['../structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html',1,'drake::geometry::optimization']]],
   ['serializer',['Serializer',['../classdrake_1_1systems_1_1lcm_1_1_serializer.html',1,'drake::systems::lcm']]],
   ['serializerinterface',['SerializerInterface',['../classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html',1,'drake::systems::lcm']]],
+  ['sha256',['Sha256',['../classdrake_1_1_sha256.html',1,'drake']]],
   ['shape',['Shape',['../classdrake_1_1geometry_1_1_shape.html',1,'drake::geometry']]],
   ['shapename',['ShapeName',['../classdrake_1_1geometry_1_1_shape_name.html',1,'drake::geometry']]],
   ['shapereifier',['ShapeReifier',['../classdrake_1_1geometry_1_1_shape_reifier.html',1,'drake::geometry']]],

@@ -1044,7 +1044,28 @@ inscribed ellipsoid.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.FindSeparationCertificateGivenPolytope">
 <span class="sig-name descname"><span class="pre">FindSeparationCertificateGivenPolytope</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.geometry.optimization.CspaceFreePolytope,</span> <span class="pre">C:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">n],</span> <span class="pre">flags.f_contiguous],</span> <span class="pre">d:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]],</span> <span class="pre">ignored_collision_pairs:</span> <span class="pre">Set[Tuple[pydrake.geometry.GeometryId]],</span> <span class="pre">options:</span> <span class="pre">drake::geometry::optimization::CspaceFreePolytope::FindSeparationCertificateGivenPolytopeOptions</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple[bool,</span> <span class="pre">Dict[Tuple[pydrake.geometry.GeometryId],</span> <span class="pre">drake::geometry::optimization::CspaceFreePolytope::SeparationCertificateResult]]</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CspaceFreePolytope.FindSeparationCertificateGivenPolytope" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Finds the certificates that the C-space polytope {s | C*s&lt;=d, s_lower
+&lt;= s &lt;= s_upper} is collision free.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">C</span></code>:</dt><dd><p>The C-space polytope is {s | C*s&lt;=d, s_lower&lt;=s&lt;=s_upper}</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">d</span></code>:</dt><dd><p>The C-space polytope is {s | C*s&lt;=d, s_lower&lt;=s&lt;=s_upper}</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">ignored_collision_pairs</span></code>:</dt><dd><p>We will ignore the pair of geometries in
+<code class="docutils literal notranslate"><span class="pre">ignored_collision_pairs</span></code>.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">certificates</span></code>:</dt><dd><p>Contains the certificate we successfully found for each pair of
+geometries. Notice that depending on <code class="docutils literal notranslate"><span class="pre">options</span></code>, the program
+could search for the certificate for each geometry pair in
+parallel, and will terminate the search once it fails to find the
+certificate for any pair.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">success</span></code>:</dt><dd><p>If true, then we have certified that the C-space polytope {s |
+C*s&lt;=d, s_lower&lt;=s&lt;=s_upper} is collision free. Otherwise
+success=false.</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.CspaceFreePolytope.FindSeparationCertificateGivenPolytopeOptions">
@@ -1516,6 +1537,11 @@ plane, namely {x|aᵀx+b ≤ −δ}.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.FindSeparationCertificateOptions.num_threads">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_threads</span></span><a class="headerlink" href="#pydrake.geometry.optimization.FindSeparationCertificateOptions.num_threads" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.FindSeparationCertificateOptions.parallelism">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parallelism</span></span><a class="headerlink" href="#pydrake.geometry.optimization.FindSeparationCertificateOptions.parallelism" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">

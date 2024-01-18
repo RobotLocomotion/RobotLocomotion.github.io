@@ -297,6 +297,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_scope_exit.html">ScopeExit</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper class to create a scope exit guard &ndash; an object that when destroyed runs <code>func</code>.  <a href="classdrake_1_1_scope_exit.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_sha256.html">Sha256</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a SHA-256 cryptographic checksum.  <a href="classdrake_1_1_sha256.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is similar to the std::pair class.  <a href="structdrake_1_1_sorted_pair.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -606,6 +609,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ac72eb43ba982b5a4d188c85aa14e0cc6"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ac72eb43ba982b5a4d188c85aa14e0cc6">FindResourceOrThrow</a> (const std::string &amp;resource_path)</td></tr>
 <tr class="memdesc:ac72eb43ba982b5a4d188c85aa14e0cc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Convenient wrapper for querying FindResource(resource_path) followed by <a class="el" href="classdrake_1_1_find_resource_result.html#a85ae127f2c62d94a37ba9190bb9ed0cf" title="Either returns the get_absolute_path() iff the resource was found, or else throws std::exception.">FindResourceResult::get_absolute_path_or_throw()</a>.  <a href="#ac72eb43ba982b5a4d188c85aa14e0cc6">More...</a><br /></td></tr>
 <tr class="separator:ac72eb43ba982b5a4d188c85aa14e0cc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba46bdc3b7fb82b91593618e5f07f3ef"><td class="memItemLeft" align="right" valign="top">std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#aba46bdc3b7fb82b91593618e5f07f3ef">ReadFile</a> (const std::filesystem::path &amp;path)</td></tr>
+<tr class="memdesc:aba46bdc3b7fb82b91593618e5f07f3ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the content of the file at the given path, or nullopt if it cannot be read.  <a href="#aba46bdc3b7fb82b91593618e5f07f3ef">More...</a><br /></td></tr>
+<tr class="separator:aba46bdc3b7fb82b91593618e5f07f3ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58e6a26a245fb8e4ea4fcf6c21f67f96"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a58e6a26a245fb8e4ea4fcf6c21f67f96">ReadFileOrThrow</a> (const std::filesystem::path &amp;path)</td></tr>
+<tr class="memdesc:a58e6a26a245fb8e4ea4fcf6c21f67f96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the content of the file at the given path, or throws if it cannot be read.  <a href="#a58e6a26a245fb8e4ea4fcf6c21f67f96">More...</a><br /></td></tr>
+<tr class="separator:a58e6a26a245fb8e4ea4fcf6c21f67f96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9bdf00a0f32970352a90afbae0f4114a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a9bdf00a0f32970352a90afbae0f4114a">HasRunfiles</a> ()</td></tr>
 <tr class="memdesc:a9bdf00a0f32970352a90afbae0f4114a"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced.) Returns true iff this process has Bazel runfiles available.  <a href="#a9bdf00a0f32970352a90afbae0f4114a">More...</a><br /></td></tr>
 <tr class="separator:a9bdf00a0f32970352a90afbae0f4114a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3595,6 +3604,48 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Provides power function for <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial</a>. </p>
+
+</div>
+</div>
+<a id="aba46bdc3b7fb82b91593618e5f07f3ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba46bdc3b7fb82b91593618e5f07f3ef">&#9670;&nbsp;</a></span>ReadFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;std::string&gt; drake::ReadFile </td>
+          <td>(</td>
+          <td class="paramtype">const std::filesystem::path &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the content of the file at the given path, or nullopt if it cannot be read. </p>
+<p>Note that the path is a filesystem path, not a <code>resource_path</code>. </p>
+
+</div>
+</div>
+<a id="a58e6a26a245fb8e4ea4fcf6c21f67f96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58e6a26a245fb8e4ea4fcf6c21f67f96">&#9670;&nbsp;</a></span>ReadFileOrThrow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string drake::ReadFileOrThrow </td>
+          <td>(</td>
+          <td class="paramtype">const std::filesystem::path &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the content of the file at the given path, or throws if it cannot be read. </p>
+<p>Note that the path is a filesystem path, not a <code>resource_path</code>. </p>
 
 </div>
 </div>

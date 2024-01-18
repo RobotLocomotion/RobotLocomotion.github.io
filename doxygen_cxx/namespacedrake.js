@@ -48,6 +48,7 @@ var namespacedrake =
     [ "RlocationOrError", "structdrake_1_1_rlocation_or_error.html", "structdrake_1_1_rlocation_or_error" ],
     [ "scalar_predicate", "structdrake_1_1scalar__predicate.html", "structdrake_1_1scalar__predicate" ],
     [ "ScopeExit", "classdrake_1_1_scope_exit.html", "classdrake_1_1_scope_exit" ],
+    [ "Sha256", "classdrake_1_1_sha256.html", "classdrake_1_1_sha256" ],
     [ "SortedPair", "structdrake_1_1_sorted_pair.html", "structdrake_1_1_sorted_pair" ],
     [ "SteadyTimer", "classdrake_1_1_steady_timer.html", "classdrake_1_1_steady_timer" ],
     [ "template_single_tag", "structdrake_1_1template__single__tag.html", "structdrake_1_1template__single__tag" ],

@@ -457,6 +457,7 @@ var hierarchy =
     [ "GripperBrickHelper< double >", "classdrake_1_1examples_1_1planar__gripper_1_1_gripper_brick_helper.html", null ],
     [ "GurobiSolverDetails", "structdrake_1_1solvers_1_1_gurobi_solver_details.html", null ],
     [ "hash< drake::geometry::GeometryId >", "structstd_1_1hash_3_01drake_1_1geometry_1_1_geometry_id_01_4.html", null ],
+    [ "hash< drake::Sha256 >", "structstd_1_1hash_3_01drake_1_1_sha256_01_4.html", null ],
     [ "HydroelasticContactInfo< T >", "classdrake_1_1multibody_1_1_hydroelastic_contact_info.html", null ],
     [ "HydroelasticQuadraturePointData< T >", "structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html", null ],
     [ "Identifier< Tag >", "classdrake_1_1_identifier.html", null ],
@@ -770,6 +771,7 @@ var hierarchy =
     [ "SerializerInterface", "classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html", [
       [ "Serializer< LcmMessage >", "classdrake_1_1systems_1_1lcm_1_1_serializer.html", null ]
     ] ],
+    [ "Sha256", "classdrake_1_1_sha256.html", null ],
     [ "Shape", "classdrake_1_1geometry_1_1_shape.html", [
       [ "Box", "classdrake_1_1geometry_1_1_box.html", null ],
       [ "Capsule", "classdrake_1_1geometry_1_1_capsule.html", null ],

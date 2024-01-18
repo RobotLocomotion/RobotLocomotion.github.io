@@ -163,26 +163,35 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><dl class="reflist">
+<dt>Member <a class="el" href="namespacedrake_1_1systems_1_1analysis.html#acbf0cc4b5c52b3cb6a6c113450610e3b">drake::systems::analysis::kNoConcurrency</a>  </dt>
+<dd><a class="anchor" id="_deprecated000010"></a>Use either `drake::Parallelism::None()` or `false` instead. <br />
+ This will be removed from Drake on or after 2024-05-01. </dd>
+<dt>Member <a class="el" href="namespacedrake_1_1systems_1_1analysis.html#a2df45efdced327ad20c26403412fb37f">drake::systems::analysis::kUseHardwareConcurrency</a>  </dt>
+<dd><a class="anchor" id="_deprecated000011"></a>Use either `drake::Parallelism::Max()` or `true` instead. <br />
+ This will be removed from Drake on or after 2024-05-01. </dd>
+<dt>Member <a class="el" href="namespacedrake_1_1systems_1_1analysis.html#a91ebf18b028db3b1b760d6cb422ac193">drake::systems::analysis::MonteCarloSimulation</a>  (const SimulatorFactory &amp;make_simulator, const ScalarSystemFunction &amp;output, double final_time, int num_samples, <a class="el" href="classdrake_1_1_random_generator.html" title="Defines Drake&#39;s canonical implementation of the UniformRandomBitGenerator C++ concept (as well as a f...">RandomGenerator</a> *generator=nullptr, int num_parallel_executions=1)</dt>
+<dd><a class="anchor" id="_deprecated000012"></a>The `num_parallel_executions` argument is deprecated.  Use the `parallelism` argument, instead. <br />
+ This will be removed from Drake on or after 2024-05-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_inverse_kinematics.html#a7d7e39fc0e8059b4894a60982bec5ee6">InverseKinematics::AddMinimumDistanceConstraint</a>  (double minimum_distance, double influence_distance_offset=1)</dt>
 <dd><a class="anchor" id="_deprecated000001"></a>Use AddMinimumDistanceLowerBoundConstraint() instead. The  default value for influence_distance_offset has *changed*.  It changes from 1 m to 0.01 m. If you're relying on the  1 m default value, make sure to pass that value explicitly  when calling AddMinimumDistanceLowerBoundConstraint(). <br />
  This will be removed from Drake on or after 2024-02-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a89892cfb6b521ebd83e811d85e8ffa3d">LeafSystem&lt; T &gt;::DeclarePeriodicDiscreteUpdateNoHandler</a>  (double period_sec, double offset_sec=0)</dt>
-<dd><a class="anchor" id="_deprecated000011"></a>Overriding DoCalcDiscreteVariableUpdates is no longer allowed.  Use DeclarePeriodicDiscreteUpdateEvent() instead. <br />
+<dd><a class="anchor" id="_deprecated000014"></a>Overriding DoCalcDiscreteVariableUpdates is no longer allowed.  Use DeclarePeriodicDiscreteUpdateEvent() instead. <br />
  This will be removed from Drake on or after 2024-02-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#aa1c380295549e6ffe058eed73cd1cab3">LeafSystem&lt; T &gt;::DeclarePeriodicPublishNoHandler</a>  (double period_sec, double offset_sec=0)</dt>
-<dd><a class="anchor" id="_deprecated000010"></a>Overriding DoPublish is no longer allowed.  Use DeclarePeriodicPublishEvent() instead. <br />
+<dd><a class="anchor" id="_deprecated000013"></a>Overriding DoPublish is no longer allowed.  Use DeclarePeriodicPublishEvent() instead. <br />
  This will be removed from Drake on or after 2024-02-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#aa145fd706d4217eb94018be8216535d6">LeafSystem&lt; T &gt;::DeclarePeriodicUnrestrictedUpdateNoHandler</a>  (double period_sec, double offset_sec=0)</dt>
-<dd><a class="anchor" id="_deprecated000012"></a>Overriding DoCalcUnrestrictedUpdate is no longer allowed.  Use DeclarePeriodicUnrestrictedUpdateEvent() instead. <br />
+<dd><a class="anchor" id="_deprecated000015"></a>Overriding DoCalcUnrestrictedUpdate is no longer allowed.  Use DeclarePeriodicUnrestrictedUpdateEvent() instead. <br />
  This will be removed from Drake on or after 2024-02-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#ac2d40c691d5f0335d8dcde434a8fa7b1">LeafSystem&lt; T &gt;::DoCalcDiscreteVariableUpdates</a>  (const Context&lt; T &gt; &amp;context, const std::vector&lt; const DiscreteUpdateEvent&lt; T &gt; * &gt; &amp;events, DiscreteValues&lt; T &gt; *discrete_state) const</dt>
-<dd><a class="anchor" id="_deprecated000014"></a>Overriding DoCalcDiscreteVariableUpdates is no longer allowed <br />
+<dd><a class="anchor" id="_deprecated000017"></a>Overriding DoCalcDiscreteVariableUpdates is no longer allowed <br />
  This will be removed from Drake on or after 2024-02-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#adefdc7d9014d144812aecc5d66490a78">LeafSystem&lt; T &gt;::DoCalcUnrestrictedUpdate</a>  (const Context&lt; T &gt; &amp;context, const std::vector&lt; const UnrestrictedUpdateEvent&lt; T &gt; * &gt; &amp;events, State&lt; T &gt; *state) const</dt>
-<dd><a class="anchor" id="_deprecated000015"></a>Overriding DoCalcUnrestrictedUpdate is no longer allowed <br />
+<dd><a class="anchor" id="_deprecated000018"></a>Overriding DoCalcUnrestrictedUpdate is no longer allowed <br />
  This will be removed from Drake on or after 2024-02-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a119e3a83eeb61b8eb99198348178afd2">LeafSystem&lt; T &gt;::DoPublish</a>  (const Context&lt; T &gt; &amp;context, const std::vector&lt; const PublishEvent&lt; T &gt; * &gt; &amp;events) const</dt>
-<dd><a class="anchor" id="_deprecated000013"></a>Overriding DoPublish is no longer allowed <br />
+<dd><a class="anchor" id="_deprecated000016"></a>Overriding DoPublish is no longer allowed <br />
  This will be removed from Drake on or after 2024-02-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#af91bd90e38673df63e04209d0a43e2f6">MultibodyPlant&lt; T &gt;::GetMutablePositions</a>  (const systems::Context&lt; T &gt; &amp;context, systems::State&lt; T &gt; *state) const</dt>
 <dd><a class="anchor" id="_deprecated000005"></a>Use GetPositions() for constant access and SetPositions()  to set positions. <br />
@@ -209,7 +218,7 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 <dd><a class="anchor" id="_deprecated000008"></a>Use mobod_index() instead. <br />
  This will be removed from Drake on or after 2024-03-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_vector_system.html#a40d2841b68d432448f21ed6fe920a323">VectorSystem&lt; T &gt;::DeclarePeriodicDiscreteUpdateNoHandler</a>  (double period_sec, double offset_sec=0.0)</dt>
-<dd><a class="anchor" id="_deprecated000016"></a>Use DeclarePeriodicDiscreteUpdate() instead. <br />
+<dd><a class="anchor" id="_deprecated000019"></a>Use DeclarePeriodicDiscreteUpdate() instead. <br />
  This will be removed from Drake on or after 2024-02-01.</dd>
 </dl>
 </div></div><!-- PageDoc -->

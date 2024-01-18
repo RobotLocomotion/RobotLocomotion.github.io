@@ -26,6 +26,5 @@ var searchData=
   ['num_5fiterations',['num_iterations',['../structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html#ab702e2f7530d6172eea3780d8923bd71',1,'drake::multibody::TamsiSolverIterationStats']]],
   ['num_5fmisc_5fcontinuous_5fstates',['num_misc_continuous_states',['../structdrake_1_1systems_1_1_system_base_1_1_context_sizes.html#a24d2b7b9127e9eb52958e80f9c5792a6',1,'drake::systems::SystemBase::ContextSizes']]],
   ['num_5fnumeric_5fparameter_5fgroups',['num_numeric_parameter_groups',['../structdrake_1_1systems_1_1_system_base_1_1_context_sizes.html#af8f29412a52a66576d0ea85108e4d4f9',1,'drake::systems::SystemBase::ContextSizes']]],
-  ['num_5fsamples',['num_samples',['../structdrake_1_1geometry_1_1optimization_1_1_sampled_volume.html#a32bff09a616cee12a2c61815a990152d',1,'drake::geometry::optimization::SampledVolume']]],
-  ['num_5fthreads',['num_threads',['../structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html#a08963f7335eef295237ab460863bc3d5',1,'drake::geometry::optimization::FindSeparationCertificateOptions']]]
+  ['num_5fsamples',['num_samples',['../structdrake_1_1geometry_1_1optimization_1_1_sampled_volume.html#a32bff09a616cee12a2c61815a990152d',1,'drake::geometry::optimization::SampledVolume']]]
 ];

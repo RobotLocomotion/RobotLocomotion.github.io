@@ -167,7 +167,8 @@ $(document).ready(function(){initNavTree('find__resource_8h.html','');});
 <div class="title">find_resource.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;optional&gt;</code><br />
+<div class="textblock"><code>#include &lt;filesystem&gt;</code><br />
+<code>#include &lt;optional&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &quot;<a class="el" href="drake__assert_8h.html">drake/common/drake_assert.h</a>&quot;</code><br />
@@ -175,7 +176,7 @@ $(document).ready(function(){initNavTree('find__resource_8h.html','');});
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for find_resource.h:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="find__resource_8h__incl.svg" width="622" height="202"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="find__resource_8h__incl.svg" width="100%" height="451"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -204,6 +205,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ac72eb43ba982b5a4d188c85aa14e0cc6"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ac72eb43ba982b5a4d188c85aa14e0cc6">FindResourceOrThrow</a> (const std::string &amp;resource_path)</td></tr>
 <tr class="memdesc:ac72eb43ba982b5a4d188c85aa14e0cc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Convenient wrapper for querying FindResource(resource_path) followed by <a class="el" href="classdrake_1_1_find_resource_result.html#a85ae127f2c62d94a37ba9190bb9ed0cf" title="Either returns the get_absolute_path() iff the resource was found, or else throws std::exception.">FindResourceResult::get_absolute_path_or_throw()</a>.  <a href="namespacedrake.html#ac72eb43ba982b5a4d188c85aa14e0cc6">More...</a><br /></td></tr>
 <tr class="separator:ac72eb43ba982b5a4d188c85aa14e0cc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba46bdc3b7fb82b91593618e5f07f3ef"><td class="memItemLeft" align="right" valign="top">std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#aba46bdc3b7fb82b91593618e5f07f3ef">ReadFile</a> (const std::filesystem::path &amp;path)</td></tr>
+<tr class="memdesc:aba46bdc3b7fb82b91593618e5f07f3ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the content of the file at the given path, or nullopt if it cannot be read.  <a href="namespacedrake.html#aba46bdc3b7fb82b91593618e5f07f3ef">More...</a><br /></td></tr>
+<tr class="separator:aba46bdc3b7fb82b91593618e5f07f3ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58e6a26a245fb8e4ea4fcf6c21f67f96"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a58e6a26a245fb8e4ea4fcf6c21f67f96">ReadFileOrThrow</a> (const std::filesystem::path &amp;path)</td></tr>
+<tr class="memdesc:a58e6a26a245fb8e4ea4fcf6c21f67f96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the content of the file at the given path, or throws if it cannot be read.  <a href="namespacedrake.html#a58e6a26a245fb8e4ea4fcf6c21f67f96">More...</a><br /></td></tr>
+<tr class="separator:a58e6a26a245fb8e4ea4fcf6c21f67f96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>

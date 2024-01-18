@@ -253,9 +253,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a5c5286e186ccdca6b57fd0e14c16c0e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#a5c5286e186ccdca6b57fd0e14c16c0e1">GetSForPlane</a> (const <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt; <a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">multibody::BodyIndex</a> &gt; &amp;body_pair, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#af37d7074a4efcc3e865a92b801c01249">SForPlane</a> s_for_plane_enum) const</td></tr>
 <tr class="memdesc:a5c5286e186ccdca6b57fd0e14c16c0e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a vector of s variable used in a(s), b(s), which parameterize the separating plane {x | a(s)ᵀx+b(s) = 0}.  <a href="#a5c5286e186ccdca6b57fd0e14c16c0e1">More...</a><br /></td></tr>
 <tr class="separator:a5c5286e186ccdca6b57fd0e14c16c0e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac20a3d6936aad7280ed04bb3d734f723"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#ac20a3d6936aad7280ed04bb3d734f723">SolveCertificationForEachPlaneInParallel</a> (const std::vector&lt; <a class="el" href="classint.html">int</a> &gt; &amp;active_plane_indices, const std::function&lt; std::pair&lt; bool, <a class="el" href="classint.html">int</a> &gt;(<a class="el" href="classint.html">int</a>)&gt; &amp;solve_plane_sos, <a class="el" href="classint.html">int</a> num_threads, bool verbose, bool terminate_at_failure) const</td></tr>
-<tr class="memdesc:ac20a3d6936aad7280ed04bb3d734f723"><td class="mdescLeft">&#160;</td><td class="mdescRight">For each pair of geometries, solve the certification problem to find their separation plane in parallel.  <a href="#ac20a3d6936aad7280ed04bb3d734f723">More...</a><br /></td></tr>
-<tr class="separator:ac20a3d6936aad7280ed04bb3d734f723"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0a1c03e54d16419924b7203f3a40853"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#ab0a1c03e54d16419924b7203f3a40853">SolveCertificationForEachPlaneInParallel</a> (const std::vector&lt; <a class="el" href="classint.html">int</a> &gt; &amp;active_plane_indices, const std::function&lt; std::pair&lt; bool, <a class="el" href="classint.html">int</a> &gt;(<a class="el" href="classint.html">int</a>)&gt; &amp;solve_plane_sos, <a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> parallelism, bool verbose, bool terminate_at_failure) const</td></tr>
+<tr class="memdesc:ab0a1c03e54d16419924b7203f3a40853"><td class="mdescLeft">&#160;</td><td class="mdescRight">For each pair of geometries, solve the certification problem to find their separation plane in parallel.  <a href="#ab0a1c03e54d16419924b7203f3a40853">More...</a><br /></td></tr>
+<tr class="separator:ab0a1c03e54d16419924b7203f3a40853"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a636a8d50bbcec61739fe0e7380f1a511"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#a636a8d50bbcec61739fe0e7380f1a511">GetGramVarSizeForPolytopeSearchProgram</a> (const std::vector&lt; <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_plane_separates_geometries.html">PlaneSeparatesGeometries</a> &gt; &amp;plane_geometries_vec, const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#a409fd33166e0e4d6bf8967bac91676df">IgnoredCollisionPairs</a> &amp;ignored_collision_pairs, const std::function&lt; <a class="el" href="classint.html">int</a>(const <a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">symbolic::RationalFunction</a> &amp;rational, const std::array&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">symbolic::Monomial</a> &gt;, 4 &gt; &amp;monomial_basis_array)&gt; &amp;count_gram_per_rational) const</td></tr>
 <tr class="memdesc:a636a8d50bbcec61739fe0e7380f1a511"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the total size of all the decision variables for the Gram matrices, so as to search for the polytope with given Lagrangian multipliers.  <a href="#a636a8d50bbcec61739fe0e7380f1a511">More...</a><br /></td></tr>
 <tr class="separator:a636a8d50bbcec61739fe0e7380f1a511"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -881,8 +881,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="ac20a3d6936aad7280ed04bb3d734f723"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac20a3d6936aad7280ed04bb3d734f723">&#9670;&nbsp;</a></span>SolveCertificationForEachPlaneInParallel()</h2>
+<a id="ab0a1c03e54d16419924b7203f3a40853"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0a1c03e54d16419924b7203f3a40853">&#9670;&nbsp;</a></span>SolveCertificationForEachPlaneInParallel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -905,8 +905,8 @@ Friends</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
-          <td class="paramname"><em>num_threads</em>, </td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a>&#160;</td>
+          <td class="paramname"><em>parallelism</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -938,7 +938,7 @@ Friends</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">active_plane_indices</td><td>We will search for the plane in this-&gt;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#a65a9ab7b6839ad43314835c1e799e553" title="All the separating planes between each pair of geometries.">separating_planes()</a>[active_plane_indices[i]]. </td></tr>
     <tr><td class="paramname">solve_plane_sos</td><td>The solve_plane_sos(plane_count) returns the pair (is_success, plane_count), where is_success indicates whether the solve for this-&gt;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#a65a9ab7b6839ad43314835c1e799e553" title="All the separating planes between each pair of geometries.">separating_planes()</a>[active_plane_indices[plane_count]] is successful or not. This function returns the input plane_count as one of the output. This is because when we access the return value of solve_small_sos, we need to know the plane_count, and the return value and the input <code>plane_count</code> live in different part of the code due to multi-threading. </td></tr>
-    <tr><td class="paramname">num_threads</td><td>The number of threads in the parallel solve. </td></tr>
+    <tr><td class="paramname">parallelism</td><td>The number of threads in the parallel solve. </td></tr>
     <tr><td class="paramname">verbose</td><td>Whether to print out some messages during the parallel solve. </td></tr>
     <tr><td class="paramname">terminate_at_failure</td><td>If set to true, then terminate this function when we failed to find a separating plane. </td></tr>
   </table>

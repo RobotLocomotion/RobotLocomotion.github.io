@@ -2854,7 +2854,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000011">Deprecated:</a></b></dt><dd>Overriding DoCalcDiscreteVariableUpdates is no longer allowed.  Use DeclarePeriodicDiscreteUpdateEvent() instead. <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000014">Deprecated:</a></b></dt><dd>Overriding DoCalcDiscreteVariableUpdates is no longer allowed.  Use DeclarePeriodicDiscreteUpdateEvent() instead. <br />
  This will be removed from Drake on or after 2024-02-01.</dd></dl>
 
 </div>
@@ -3047,7 +3047,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000010">Deprecated:</a></b></dt><dd>Overriding DoPublish is no longer allowed.  Use DeclarePeriodicPublishEvent() instead. <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000013">Deprecated:</a></b></dt><dd>Overriding DoPublish is no longer allowed.  Use DeclarePeriodicPublishEvent() instead. <br />
  This will be removed from Drake on or after 2024-02-01.</dd></dl>
 
 </div>
@@ -3186,7 +3186,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000012">Deprecated:</a></b></dt><dd>Overriding DoCalcUnrestrictedUpdate is no longer allowed.  Use DeclarePeriodicUnrestrictedUpdateEvent() instead. <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000015">Deprecated:</a></b></dt><dd>Overriding DoCalcUnrestrictedUpdate is no longer allowed.  Use DeclarePeriodicUnrestrictedUpdateEvent() instead. <br />
  This will be removed from Drake on or after 2024-02-01.</dd></dl>
 
 </div>
@@ -3959,7 +3959,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000014">Deprecated:</a></b></dt><dd>Overriding DoCalcDiscreteVariableUpdates is no longer allowed <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000017">Deprecated:</a></b></dt><dd>Overriding DoCalcDiscreteVariableUpdates is no longer allowed <br />
  This will be removed from Drake on or after 2024-02-01.</dd></dl>
 <p>Derived-class event dispatcher for all simultaneous discrete update events. Override this in your derived <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html" title="A superclass template that extends System with some convenience utilities that are not applicable to ...">LeafSystem</a> only if you require behavior other than the default dispatch behavior (not common). The default behavior is to traverse events in the arbitrary order they appear in <code>events</code>, and for each event that has a callback function, to invoke the callback with <code>context</code>, that event, and <code>discrete_state</code>. Note that the same (possibly modified) <code>discrete_state</code> is passed to subsequent callbacks.</p>
 <p>Do not override this just to handle an event &ndash; instead declare the event and a handler callback for it using one of the <code>Declare...DiscreteUpdateEvent()</code> methods.</p>
@@ -4066,7 +4066,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000015">Deprecated:</a></b></dt><dd>Overriding DoCalcUnrestrictedUpdate is no longer allowed <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000018">Deprecated:</a></b></dt><dd>Overriding DoCalcUnrestrictedUpdate is no longer allowed <br />
  This will be removed from Drake on or after 2024-02-01.</dd></dl>
 <p>Derived-class event dispatcher for all simultaneous unrestricted update events. Override this in your derived <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html" title="A superclass template that extends System with some convenience utilities that are not applicable to ...">LeafSystem</a> only if you require behavior other than the default dispatch behavior (not common). The default behavior is to traverse events in the arbitrary order they appear in <code>events</code>, and for each event that has a callback function, to invoke the callback with <code>context</code>, that event, and <code>state</code>. Note that the same (possibly modified) <code>state</code> is passed to subsequent callbacks.</p>
 <p>Do not override this just to handle an event &ndash; instead declare the event and a handler callback for it using one of the <code>Declare...UnrestrictedUpdateEvent()</code> methods.</p>
@@ -4186,7 +4186,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000013">Deprecated:</a></b></dt><dd>Overriding DoPublish is no longer allowed <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000016">Deprecated:</a></b></dt><dd>Overriding DoPublish is no longer allowed <br />
  This will be removed from Drake on or after 2024-02-01.</dd></dl>
 <p>Derived-class event dispatcher for all simultaneous publish events in <code>events</code>. Override this in your derived <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html" title="A superclass template that extends System with some convenience utilities that are not applicable to ...">LeafSystem</a> only if you require behavior other than the default dispatch behavior (not common). The default behavior is to traverse events in the arbitrary order they appear in <code>events</code>, and for each event that has a callback function, to invoke the callback with <code>context</code> and that event.</p>
 <p>Do not override this just to handle an event &ndash; instead declare the event and a handler callback for it using one of the <code>Declare...PublishEvent()</code> methods.</p>

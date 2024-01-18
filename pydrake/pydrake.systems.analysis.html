@@ -1606,13 +1606,11 @@ identical results). To produce statistically “independent” samples
 on a future call to MonteCarloSimulation, you should make repeated
 uses of the same RandomGenerator object.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">num_parallel_executions</span></code>:</dt><dd><p>Specify number of parallel executions to use while performing
-<code class="docutils literal notranslate"><span class="pre">num_samples</span></code> simulations. The default value, kNoConcurrency,
-specifies that simulations should be executed in serial. To use
-the default concurrency available on your hardware (equivalent to
-num_parallel_executions=std::thread::hardware_concurrency()), use
-value kUseHardwareConcurrency. Otherwise, num_parallel_executions
-must be &gt;= 1.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">parallelism</span></code>:</dt><dd><p>Specify number of parallel executions to use while performing
+<code class="docutils literal notranslate"><span class="pre">num_samples</span></code> simulations. The default value (false) specifies
+that simulations should be executed in serial. To use the
+concurrency available on your hardware, specify either
+<code class="docutils literal notranslate"><span class="pre">Parallellism::Max()</span></code> or its terse abbreviation <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
 </dd>
 </dl>
 <dl class="field-list simple">

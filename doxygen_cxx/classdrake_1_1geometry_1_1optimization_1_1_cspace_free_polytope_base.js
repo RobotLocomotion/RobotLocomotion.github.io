@@ -25,7 +25,7 @@ var classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base =
     [ "rational_forward_kin", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#a90a592a57af01ee9f05196851d60b6c1", null ],
     [ "scene_graph", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#a73ee6610b18791fddf6176c0fb38f2d7", null ],
     [ "separating_planes", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#a65a9ab7b6839ad43314835c1e799e553", null ],
-    [ "SolveCertificationForEachPlaneInParallel", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#ac20a3d6936aad7280ed04bb3d734f723", null ],
+    [ "SolveCertificationForEachPlaneInParallel", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#ab0a1c03e54d16419924b7203f3a40853", null ],
     [ "with_cross_y", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#adcd90e7d999e9ef77d64074f1c2c6ae9", null ],
     [ "y_slack", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#a231d4e56e57991390799b780d31e06c8", null ],
     [ "CspaceFreePolytopeBaseTester", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#af4e1918cec99d405674aa4e1524ceee9", null ]
