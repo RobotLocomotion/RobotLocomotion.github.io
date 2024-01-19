@@ -3844,6 +3844,8 @@ API Emulator (i.e., for
 [Chrome](<a class="reference external" href="https://chrome.google.com/webstore/detail/webxr-api-emulator/mjddjgeghkdijejnciaefnkjmkafnnje">https://chrome.google.com/webstore/detail/webxr-api-emulator/mjddjgeghkdijejnciaefnkjmkafnnje</a>)
 or
 [Firefox](<a class="reference external" href="https://addons.mozilla.org/en-US/firefox/addon/webxr-api-emulator/">https://addons.mozilla.org/en-US/firefox/addon/webxr-api-emulator/</a>)).</p>
+<p>The AR/VR mode is not currently supported in offline mode (i.e., when
+saving as StaticHtml()).</p>
 <p>See MeshcatParams for options to control the hostname and port to bind
 to.</p>
 <p>See allow_network “DRAKE_ALLOW_NETWORK” for an environment variable
@@ -9027,15 +9029,8 @@ corresponding RenderLabel.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.RenderEngine.RegisterVisual">
 <span class="sig-name descname"><span class="pre">RegisterVisual</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.RenderEngine" title="pydrake.geometry.RenderEngine"><span class="pre">pydrake.geometry.RenderEngine</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Shape" title="pydrake.geometry.Shape"><span class="pre">pydrake.geometry.Shape</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">properties</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.PerceptionProperties" title="pydrake.geometry.PerceptionProperties"><span class="pre">pydrake.geometry.PerceptionProperties</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_WG</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">needs_updates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.geometry.RenderEngine.RegisterVisual" title="Permalink to this definition"></a></dt>
-<dd><p>Requests registration of the given shape with this render engine. The
-geometry is uniquely identified by the given <code class="docutils literal notranslate"><span class="pre">id</span></code>. The renderer is
-allowed to examine the given <code class="docutils literal notranslate"><span class="pre">properties</span></code> and choose to <em>not</em>
-register the geometry.</p>
-<p>Typically, derived classes will attempt to validate the RenderLabel
-value stored in the <code class="docutils literal notranslate"><span class="pre">(label,</span> <span class="pre">id)</span></code> property (or its configured
-default value if no such property exists). In that case, attempting to
-assign RenderLabel::kEmpty or RenderLabel::kUnspecified will cause an
-exception to be thrown (as reserved_render_label “documented”).</p>
+<dd><p>Requests registration of the given shape as a rigid geometry with this
+render engine.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">id</span></code>:</dt><dd><p>The geometry id of the shape to register.</p>
 </dd>

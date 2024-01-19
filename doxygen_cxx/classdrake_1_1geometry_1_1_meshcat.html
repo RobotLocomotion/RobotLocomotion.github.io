@@ -207,6 +207,7 @@ Parameters for the hosted Meshcat page</h1>
 <li>The controllers can be <em>visualized</em> but currently can't interact with the Drake simulation physically. To visualize the controllers append the additional url parameter <code>controller=on</code> as in <code><a href="http://localhost:7000?webxr=vr&controller=on">http://localhost:7000?webxr=vr&amp;controller=on</a></code>.</li>
 </ul>
 <p>If you do not have AR/VR hardware, you can use an emulator in your browser to experiment with the mode. Use an browser plugin like WebXR API Emulator (i.e., for <a href="https://chrome.google.com/webstore/detail/webxr-api-emulator/mjddjgeghkdijejnciaefnkjmkafnnje">Chrome</a> or <a href="https://addons.mozilla.org/en-US/firefox/addon/webxr-api-emulator/">Firefox</a>).</p>
+<p>The AR/VR mode is not currently supported in offline mode (i.e., when saving as <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a8597aabcf1a98187a23fa1db634c9308" title="Returns an HTML string that can be saved to a file for a snapshot of the visualizer and its contents.">StaticHtml()</a>).</p>
 <h1><a class="anchor" id="network_access"></a>
 Network access</h1>
 <p>See <a class="el" href="structdrake_1_1geometry_1_1_meshcat_params.html" title="The set of parameters for configuring Meshcat.">MeshcatParams</a> for options to control the hostname and port to bind to.</p>

@@ -1,5 +1,9 @@
 var NAVTREEINDEX21 =
 {
+"classdrake_1_1planning_1_1_collision_checker.html#ad9de25681f79223e3157ee5835ff85da":[1,4,2,2,1,71],
+"classdrake_1_1planning_1_1_collision_checker.html#ada50f47e85f4e372c1e75873731a4c7d":[1,4,2,2,1,40],
+"classdrake_1_1planning_1_1_collision_checker.html#adaa8d8cac0c3193bc48a6fb8229b85e8":[1,4,2,2,1,35],
+"classdrake_1_1planning_1_1_collision_checker.html#adb33fbe45f267be402e5e2a750428044":[1,4,2,2,1,14],
 "classdrake_1_1planning_1_1_collision_checker.html#adbc935f824f1b4601d04346c0cebac63":[1,4,2,2,1,78],
 "classdrake_1_1planning_1_1_collision_checker.html#add86c374f69f86b7ac9feafb127b0738":[1,4,2,2,1,41],
 "classdrake_1_1planning_1_1_collision_checker.html#ae06d7f2e61a9d56deb761d03a216f01b":[1,4,2,2,1,61],
@@ -245,9 +249,5 @@ var NAVTREEINDEX21 =
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a572b1c13ee61f1f9f2231d29f58f59fd":[1,4,2,1,3,9],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a65363bc4338584a02f119b225ae1cc98":[1,4,2,1,3,3],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a762563a2efd7d83a85bae4df50c66fa8":[1,4,2,1,3,16],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a7bf41e0881035d3f5e879b99ff8fc4c5":[1,4,2,1,3,20],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a80f43c22ed876757cb51205ebf8a7641":[1,4,2,1,3,4],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a8375ea48a9fad7145ae1d2e97d851f76":[1,4,2,1,3,26],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a84164d4abbdec280932b2677ab56a210":[1,4,2,1,3,11],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a9a8474ae1e7ce1dab9a404fd6e6f6054":[1,4,2,1,3,0]
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a7bf41e0881035d3f5e879b99ff8fc4c5":[1,4,2,1,3,20]
 };

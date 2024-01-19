@@ -1,5 +1,9 @@
 var NAVTREEINDEX60 =
 {
+"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_linear_transform_density_01_4.html":[3,0,0,15,7,8],
+"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_random_source_01_4.html":[3,0,0,15,7,9],
+"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_trajectory_affine_system_01_4.html":[3,0,0,15,7,11],
+"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_trajectory_linear_system_01_4.html":[3,0,0,15,7,12],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_trajectory_source_01_4.html":[3,0,0,15,7,13],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_trajectory_source_01_4.html#a53fd56f948ec8fa9e2aaf9640f2fff44":[3,0,0,15,7,13,0],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01drake_1_1multibody_1_1meshcat_1_1_contact_visualizer_01_4.html":[3,0,0,15,7,3],
@@ -245,9 +249,5 @@ var NAVTREEINDEX60 =
 "structstd_1_1hash_3_01drake_1_1_type_safe_index_3_01_tag_01_4_01_4.html":[3,0,2,23],
 "structstd_1_1hash_3_01drake_1_1geometry_1_1_geometry_id_01_4.html":[3,0,2,4],
 "structstd_1_1hash_3_01drake_1_1geometry_1_1_geometry_id_01_4.html#a8b7b545509f23efa1833182cf286125d":[3,0,2,4,0],
-"structstd_1_1hash_3_01drake_1_1geometry_1_1render_1_1_render_label_01_4.html":[3,0,2,5],
-"structstd_1_1hash_3_01drake_1_1solvers_1_1_binding_3_01_c_01_4_01_4.html":[3,0,2,8],
-"structstd_1_1hash_3_01drake_1_1solvers_1_1_solver_id_01_4.html":[3,0,2,9],
-"structstd_1_1hash_3_01drake_1_1symbolic_1_1_chebyshev_basis_element_01_4.html":[3,0,2,11],
-"structstd_1_1hash_3_01drake_1_1symbolic_1_1_chebyshev_polynomial_01_4.html":[3,0,2,12]
+"structstd_1_1hash_3_01drake_1_1geometry_1_1render_1_1_render_label_01_4.html":[3,0,2,5]
 };

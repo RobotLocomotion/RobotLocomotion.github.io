@@ -1,5 +1,9 @@
 var NAVTREEINDEX20 =
 {
+"classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#a02a874939f6aa43e29fc929d223dfb76":[1,2,11,0,9],
+"classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#a0f88790be4048256c7114ea749bc001f":[1,2,11,0,7],
+"classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#a466314c408fa5362f2f1cedcb81365eb":[1,2,11,0,4],
+"classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#a4dff073e68a37c49c5a9ca802b2a9eb4":[1,2,11,0,11],
 "classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#a8fc721bcba31c5cf4c738b8f7ddc18eb":[1,2,11,0,12],
 "classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#a9560757160ae5aeaaacfd6ef5f4f99c6":[1,2,11,0,3],
 "classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#a9d3709b3681d9f50698dbd9080c827f1":[1,2,11,0,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX20 =
 "classdrake_1_1planning_1_1_collision_checker.html#acd7c5dd9a903bedc2d984fe12aa5c409":[1,4,2,2,1,18],
 "classdrake_1_1planning_1_1_collision_checker.html#ad30d147b58ed54165a9a11dac4e8f0c0":[1,4,2,2,1,37],
 "classdrake_1_1planning_1_1_collision_checker.html#ad399081b57b1becb847d9a6f77928903":[1,4,2,2,1,81],
-"classdrake_1_1planning_1_1_collision_checker.html#ad9406112c93e430d27b84744b6f5fa77":[1,4,2,2,1,26],
-"classdrake_1_1planning_1_1_collision_checker.html#ad9de25681f79223e3157ee5835ff85da":[1,4,2,2,1,71],
-"classdrake_1_1planning_1_1_collision_checker.html#ada50f47e85f4e372c1e75873731a4c7d":[1,4,2,2,1,40],
-"classdrake_1_1planning_1_1_collision_checker.html#adaa8d8cac0c3193bc48a6fb8229b85e8":[1,4,2,2,1,35],
-"classdrake_1_1planning_1_1_collision_checker.html#adb33fbe45f267be402e5e2a750428044":[1,4,2,2,1,14]
+"classdrake_1_1planning_1_1_collision_checker.html#ad9406112c93e430d27b84744b6f5fa77":[1,4,2,2,1,26]
 };
