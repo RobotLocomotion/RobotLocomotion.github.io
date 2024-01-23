@@ -36,6 +36,7 @@ var dir_3d84dd5e420c33a089db2aba1794a356 =
       [ "SeparationCertificateProgramBase", "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_program_base.html", "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_program_base" ]
     ] ],
     [ "cspace_separating_plane.h", "cspace__separating__plane_8h.html", "cspace__separating__plane_8h" ],
+    [ "geodesic_convexity.h", "geodesic__convexity_8h.html", "geodesic__convexity_8h" ],
     [ "graph_of_convex_sets.h", "graph__of__convex__sets_8h.html", [
       [ "GraphOfConvexSetsOptions", "structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html", "structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options" ],
       [ "Vertex", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex" ],

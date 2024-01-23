@@ -290,6 +290,14 @@ Functions</h2></td></tr>
 <tr class="memitem:a0a6bfeb13bf4fc1924f61f81051d7561"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a0a6bfeb13bf4fc1924f61f81051d7561">CalcPlane</a> (const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; D &gt; &amp;decision_variables, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; S &gt; &amp;s_for_plane, <a class="el" href="classint.html">int</a> plane_degree, <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; V &gt; *a_val, V *b_val)</td></tr>
 <tr class="memdesc:a0a6bfeb13bf4fc1924f61f81051d7561"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the parameters a, b in the plane { x | aᵀx+b=0 }.  <a href="#a0a6bfeb13bf4fc1924f61f81051d7561">More...</a><br /></td></tr>
 <tr class="separator:a0a6bfeb13bf4fc1924f61f81051d7561"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05bd75c8b08787c334065792f8532797"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a05bd75c8b08787c334065792f8532797">CheckIfSatisfiesConvexityRadius</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">geometry::optimization::ConvexSet</a> &amp;convex_set, const std::vector&lt; <a class="el" href="classint.html">int</a> &gt; &amp;continuous_revolute_joints)</td></tr>
+<tr class="memdesc:a05bd75c8b08787c334065792f8532797"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a convex set, and a list of indices corresponding to continuous revolute joints, checks whether or not the set satisfies the convexity radius.  <a href="#a05bd75c8b08787c334065792f8532797">More...</a><br /></td></tr>
+<tr class="separator:a05bd75c8b08787c334065792f8532797"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f945f0d43e169b238695da629d93ff7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">geometry::optimization::ConvexSets</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a0f945f0d43e169b238695da629d93ff7">PartitionConvexSet</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">geometry::optimization::ConvexSet</a> &amp;convex_set, const std::vector&lt; <a class="el" href="classint.html">int</a> &gt; &amp;continuous_revolute_joints, const <a class="el" href="classdouble.html">double</a> epsilon=1e-5)</td></tr>
+<tr class="memdesc:a0f945f0d43e169b238695da629d93ff7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partitions a convex set into (smaller) convex sets whose union is the original set and that each respect the convexity radius as in CheckIfSatisfiesConvexityRadius.  <a href="#a0f945f0d43e169b238695da629d93ff7">More...</a><br /></td></tr>
+<tr class="separator:a0f945f0d43e169b238695da629d93ff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeab8ca89c6e95c43cf9ec8c6284f395f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">geometry::optimization::ConvexSets</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#aeab8ca89c6e95c43cf9ec8c6284f395f">PartitionConvexSet</a> (const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">geometry::optimization::ConvexSets</a> &amp;convex_sets, const std::vector&lt; <a class="el" href="classint.html">int</a> &gt; &amp;continuous_revolute_joints, const <a class="el" href="classdouble.html">double</a> epsilon=1e-5)</td></tr>
+<tr class="separator:aeab8ca89c6e95c43cf9ec8c6284f395f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gafd8111a93cb3461e05bec3477ee736f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6">Iris</a> (const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">ConvexSets</a> &amp;obstacles, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;sample, const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> &amp;domain, const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a> &amp;options=<a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a>())</td></tr>
 <tr class="memdesc:gafd8111a93cb3461e05bec3477ee736f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The IRIS (Iterative Region Inflation by Semidefinite programming) algorithm, as described in.  <a href="group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6">More...</a><br /></td></tr>
 <tr class="separator:gafd8111a93cb3461e05bec3477ee736f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -483,6 +491,42 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a05bd75c8b08787c334065792f8532797"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05bd75c8b08787c334065792f8532797">&#9670;&nbsp;</a></span>CheckIfSatisfiesConvexityRadius()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool drake::geometry::optimization::CheckIfSatisfiesConvexityRadius </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">geometry::optimization::ConvexSet</a> &amp;&#160;</td>
+          <td class="paramname"><em>convex_set</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classint.html">int</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>continuous_revolute_joints</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Given a convex set, and a list of indices corresponding to continuous revolute joints, checks whether or not the set satisfies the convexity radius. </p>
+<p>See §6.5.3 of "A Panoramic View of Riemannian Geometry", Marcel Berger for a general definition of convexity radius. When dealing with continuous revolute joints, respecting the convexity radius entails that each convex set has a width of stricty less than π along each dimension corresponding to a continuous revolute joint. </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if continuous_revolute_joints has repeated entries, or if any entry is outside the interval [0, convex_set.ambient_dimension()). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="acb19d1d31dfa7158b5270096dac977a7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acb19d1d31dfa7158b5270096dac977a7">&#9670;&nbsp;</a></span>DistanceToHalfspace()</h2>
 
@@ -587,6 +631,91 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Helper function that allows the ConvexSets to be initialized from arguments containing <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html" title="Abstract base class for defining a convex set.">ConvexSet</a> references, or unique_ptr&lt;ConvexSet&gt; instances, or any object that can be assigned to ConvexSets::value_type. </p>
+
+</div>
+</div>
+<a id="a0f945f0d43e169b238695da629d93ff7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f945f0d43e169b238695da629d93ff7">&#9670;&nbsp;</a></span>PartitionConvexSet() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">geometry::optimization::ConvexSets</a> drake::geometry::optimization::PartitionConvexSet </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">geometry::optimization::ConvexSet</a> &amp;&#160;</td>
+          <td class="paramname"><em>convex_set</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classint.html">int</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>continuous_revolute_joints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>epsilon</em> = <code>1e-5</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Partitions a convex set into (smaller) convex sets whose union is the original set and that each respect the convexity radius as in CheckIfSatisfiesConvexityRadius. </p>
+<p>In practice, this is implemented as partitioning sets into pieces whose width is less than or equal to π-ϵ. Each entry in continuous_revolute_joints must be non-negative, less than num_positions, and unique. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">epsilon</td><td>is the ϵ value used for the convexity radius inequality. The partitioned sets are made by intersecting convex_set with axis-aligned bounding boxes that respect the convexity radius. These boxes are made to overlap by ϵ radians along each dimension, for numerical purposes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the vector of convex sets that each respect convexity radius. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if ϵ &lt;= 0 or ϵ &gt;= π. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the input convex set is unbounded along dimensions corresponding to continuous revolute joints. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if continuous_revolute_joints has repeated entries, or if any entry is outside the interval [0, convex_set.ambient_dimension()). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aeab8ca89c6e95c43cf9ec8c6284f395f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeab8ca89c6e95c43cf9ec8c6284f395f">&#9670;&nbsp;</a></span>PartitionConvexSet() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">geometry::optimization::ConvexSets</a> drake::geometry::optimization::PartitionConvexSet </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">geometry::optimization::ConvexSets</a> &amp;&#160;</td>
+          <td class="paramname"><em>convex_sets</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classint.html">int</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>continuous_revolute_joints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>epsilon</em> = <code>1e-5</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

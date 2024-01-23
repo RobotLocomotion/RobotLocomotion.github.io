@@ -6,6 +6,7 @@ var searchData=
   ['gcs_5ftrajectory_5foptimization_2eh',['gcs_trajectory_optimization.h',['../gcs__trajectory__optimization_8h.html',1,'']]],
   ['generic_5fintegrator_5ftest_2eh',['generic_integrator_test.h',['../generic__integrator__test_8h.html',1,'']]],
   ['generic_5fpolynomial_2eh',['generic_polynomial.h',['../generic__polynomial_8h.html',1,'']]],
+  ['geodesic_5fconvexity_2eh',['geodesic_convexity.h',['../geodesic__convexity_8h.html',1,'']]],
   ['geometry_5fdoxygen_2eh',['geometry_doxygen.h',['../geometry__doxygen_8h.html',1,'']]],
   ['geometry_5ffile_5fformats_5fdoxygen_2eh',['geometry_file_formats_doxygen.h',['../geometry__file__formats__doxygen_8h.html',1,'']]],
   ['geometry_5fframe_2eh',['geometry_frame.h',['../geometry__frame_8h.html',1,'']]],
