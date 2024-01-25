@@ -2179,31 +2179,39 @@ candidate pair of geometries.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">penalty_function</span></code>:</dt><dd><p>The penalty function formulation.</p>
 </dd>
+<dt><em>Default:</em> QuadraticallySmoothedHinge</dt><dd><p>$Parameter <code class="docutils literal notranslate"><span class="pre">plant_context</span></code>:</p>
+</dd>
 </dl>
-<p><em>Default:</em> QuadraticallySmoothedHinge &#64;plant_context The context of
-<code class="docutils literal notranslate"><span class="pre">plant</span></code>. The context is obtained as a subsystem context from the
-diagram context, where the diagram (that contains both the
-MultibodyPlant and SceneGraph) creates the diagram context.
-<code class="docutils literal notranslate"><span class="pre">plant_context</span></code> cannot be a nullptr. <code class="docutils literal notranslate"><span class="pre">plant_context</span></code> must outlive
-this constraint.</p>
-<blockquote>
-<div><p>$Parameter <code class="docutils literal notranslate"><span class="pre">influence_distance_offset</span></code>:</p>
-</div></blockquote>
-<p>The difference (in meters) between the influence distance,
-d_influence, and the minimum distance, lb (see class documentation),
-namely influence_distance = bound + influence_distance_offset. This
-value must be finite and strictly positive, as it is used to scale the
-signed distances between pairs of geometries. Smaller values may
-improve performance, as fewer pairs of geometries need to be
-considered in each constraint evaluation. $*Default:* 0.01 meter. The
-chosen influence_distance_offset can significantly affect the runtime
-and optimization performance of using this constraint. Larger values
+<p>The context of <code class="docutils literal notranslate"><span class="pre">plant</span></code>. The context should be obtained as a
+subsystem context from the diagram context, where the diagram (that
+contains both the MultibodyPlant and SceneGraph) creates the diagram
+context. <code class="docutils literal notranslate"><span class="pre">plant_context</span></code> cannot be a nullptr. <code class="docutils literal notranslate"><span class="pre">plant_context</span></code> must
+outlive this constraint. An example code of getting the plant context
+is</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">cc</span><span class="p">}</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">diagram_context</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">diagram</span><span class="p">.</span><span class="n">CreateDefaultContext</span><span class="p">();</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">plant_context</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">GetMyMutableContextFromRoot</span><span class="p">(</span><span class="n">diagram_context</span><span class="p">.</span><span class="n">get</span><span class="p">());</span><span class="w"></span>
+</pre></div>
+</div>
+</details><dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">influence_distance_offset</span></code>:</dt><dd><p>The difference (in meters) between the influence distance,
+d_influence, and the minimum distance, lb (see class
+documentation), namely influence_distance = bound +
+influence_distance_offset. This value must be finite and strictly
+positive, as it is used to scale the signed distances between
+pairs of geometries. Smaller values may improve performance, as
+fewer pairs of geometries need to be considered in each constraint
+evaluation. $*Default:* 0.01 meter. The chosen
+influence_distance_offset can significantly affect the runtime and
+optimization performance of using this constraint. Larger values
 result in more expensive collision checks (since more potential
 collision candidates must be considered) and may result in worse
 optimization performance (the optimizer may not be able to find a
-configuration that satisfies the constraint). In work at TRI, we have
-used much lower values (e.g. 1e-6) for influence_distance_offset with
-good results.</p>
+configuration that satisfies the constraint). In work at TRI, we
+have used much lower values (e.g. 1e-6) for
+influence_distance_offset with good results.</p>
+</dd>
+</dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2284,6 +2292,20 @@ feasible set (when dᵢ(q) == ub), we evaluate the penalty function at
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">bound</span></code>:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">ub</span></code> in the class documentation. The upper bound minimum signed
 distance between any candidate pair of geometries.</p>
 </dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant_context</span></code>:</dt><dd><p>The context of <code class="docutils literal notranslate"><span class="pre">plant</span></code>. The context should be obtained as a
+subsystem context from the diagram context, where the diagram
+(that contains both the MultibodyPlant and SceneGraph) creates the
+diagram context. <code class="docutils literal notranslate"><span class="pre">plant_context</span></code> cannot be a nullptr.
+<code class="docutils literal notranslate"><span class="pre">plant_context</span></code> must outlive this constraint. An example code of
+getting the plant context is</p>
+</dd>
+</dl>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">cc</span><span class="p">}</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">diagram_context</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">diagram</span><span class="p">.</span><span class="n">CreateDefaultContext</span><span class="p">();</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">plant_context</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">GetMyMutableContextFromRoot</span><span class="p">(</span><span class="n">diagram_context</span><span class="p">.</span><span class="n">get</span><span class="p">());</span><span class="w"></span>
+</pre></div>
+</div>
+</details><dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">penalty_function</span></code>:</dt><dd><p>The penalty function formulation.</p>
 </dd>
 <dt><em>Default:</em> QuadraticallySmoothedHinge</dt><dd><p>$Parameter <code class="docutils literal notranslate"><span class="pre">influence_distance_offset</span></code>:</p>
