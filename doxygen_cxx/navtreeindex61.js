@@ -1,5 +1,6 @@
 var NAVTREEINDEX61 =
 {
+"structstd_1_1hash_3_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html":[3,0,2,10],
 "structstd_1_1hash_3_01drake_1_1_type_safe_index_3_01_tag_01_4_01_4.html":[3,0,2,23],
 "structstd_1_1hash_3_01drake_1_1geometry_1_1_geometry_id_01_4.html":[3,0,2,4],
 "structstd_1_1hash_3_01drake_1_1geometry_1_1_geometry_id_01_4.html#a8b7b545509f23efa1833182cf286125d":[3,0,2,4,0],
@@ -209,7 +210,7 @@ var NAVTREEINDEX61 =
 "unrevised__lemke__solver_8h.html":[4,0,0,11,58],
 "unused_8h.html":[4,0,0,1,64],
 "unused_8h.html#ade20b7bf635eecb13adbaac4df980af0":[4,0,0,1,64,0],
-"utilities_8h.html":[4,0,0,4,45],
+"utilities_8h.html":[4,0,0,4,46],
 "validate__constraint__gradients_8h.html":[4,0,0,8,2,0,19],
 "value_8h.html":[4,0,0,1,65],
 "value__checker_8h.html":[4,0,0,12,3,49],
@@ -248,6 +249,5 @@ var NAVTREEINDEX61 =
 "variables_8h.html#a497331a32f5911a18cef34b07df6c04a":[4,0,0,1,3,0,12,4],
 "variables_8h.html#a50ee50ee4e70ef4393128598d143a2a6":[4,0,0,1,3,0,12,11],
 "variables_8h.html#a668d0a0cca975453784c6cd77d638c56":[4,0,0,1,3,0,12,10],
-"variables_8h.html#a8dc4e8320720218ee84dc1fdc7439d17":[4,0,0,1,3,0,12,2],
-"variables_8h.html#aae117a884f72a1a73cc2863ec026c011":[4,0,0,1,3,0,12,5]
+"variables_8h.html#a8dc4e8320720218ee84dc1fdc7439d17":[4,0,0,1,3,0,12,2]
 };

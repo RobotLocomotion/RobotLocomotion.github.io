@@ -55,6 +55,7 @@ var dir_d739e095b49d8b72164589d00310017d =
     [ "meshcat_animation.h", "meshcat__animation_8h.html", [
       [ "MeshcatAnimation", "classdrake_1_1geometry_1_1_meshcat_animation.html", "classdrake_1_1geometry_1_1_meshcat_animation" ]
     ] ],
+    [ "meshcat_file_storage_internal.h", "meshcat__file__storage__internal_8h.html", null ],
     [ "meshcat_graphviz.h", "meshcat__graphviz_8h.html", null ],
     [ "meshcat_internal.h", "meshcat__internal_8h.html", null ],
     [ "meshcat_point_cloud_visualizer.h", "meshcat__point__cloud__visualizer_8h.html", "meshcat__point__cloud__visualizer_8h" ],
