@@ -100,6 +100,8 @@ var dir_3f9cb8dbb3b4911cb2ecb548acd672c3 =
       [ "RotationalInertia", "classdrake_1_1multibody_1_1_rotational_inertia.html", "classdrake_1_1multibody_1_1_rotational_inertia" ],
       [ "formatter< drake::multibody::RotationalInertia< T > >", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_rotational_inertia_3_01_t_01_4_01_4.html", null ]
     ] ],
+    [ "rpy_ball_mobilizer.h", "rpy__ball__mobilizer_8h.html", null ],
+    [ "rpy_floating_mobilizer.h", "rpy__floating__mobilizer_8h.html", null ],
     [ "scoped_name.h", "scoped__name_8h.html", [
       [ "ScopedName", "classdrake_1_1multibody_1_1_scoped_name.html", "classdrake_1_1multibody_1_1_scoped_name" ]
     ] ],
@@ -107,8 +109,6 @@ var dir_3f9cb8dbb3b4911cb2ecb548acd672c3 =
       [ "ScrewJoint", "classdrake_1_1multibody_1_1_screw_joint.html", "classdrake_1_1multibody_1_1_screw_joint" ]
     ] ],
     [ "screw_mobilizer.h", "screw__mobilizer_8h.html", null ],
-    [ "space_xyz_floating_mobilizer.h", "space__xyz__floating__mobilizer_8h.html", null ],
-    [ "space_xyz_mobilizer.h", "space__xyz__mobilizer_8h.html", null ],
     [ "spatial_inertia.h", "spatial__inertia_8h.html", [
       [ "SpatialInertia", "classdrake_1_1multibody_1_1_spatial_inertia.html", "classdrake_1_1multibody_1_1_spatial_inertia" ],
       [ "formatter< drake::multibody::SpatialInertia< T > >", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_spatial_inertia_3_01_t_01_4_01_4.html", null ]

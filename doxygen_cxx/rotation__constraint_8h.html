@@ -167,7 +167,15 @@ $(document).ready(function(){initNavTree('rotation__constraint_8h.html','');});
 <div class="title">rotation_constraint.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;string&gt;</code><br />
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Functions for reasoning about 3D rotations in a @MathematicalProgram. </p>
+<p>There are a number of choices for representing 3D rotations in a mathematical program &ndash; many of these choices involve using more than the minimal three parameters and therefore require additional constraints For example:</p>
+<ul>
+<li>the 4 parameters of a quaternion should form a vector with unit length.</li>
+<li>the 9 parameters of a rotation matrix should form a matrix which is orthonormal (R.transpose() = R.inverse()) and det(R)=1.</li>
+</ul>
+<p>Unfortunately, in the context of mathematical programming, most of these constraints are non-convex. The methods below include convex relaxations of these non-convex constraints. </p>
+</div><div class="textblock"><code>#include &lt;string&gt;</code><br />
 <code>#include &lt;tuple&gt;</code><br />
 <code>#include &lt;utility&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />

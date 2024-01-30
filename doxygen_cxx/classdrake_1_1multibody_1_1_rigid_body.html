@@ -1526,7 +1526,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Advanced) Returns <code>true</code> if this body is granted 6-dofs by a Mobilizer and the parent body of this body's associated 6-dof joint is <code>world</code>. </p>
-<dl class="section note"><dt>Note</dt><dd>A floating body is not necessarily modeled with a quaternion mobilizer, see <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#ad6cb65d33b350a9ae5f21211c48a9b31" title="(Advanced) If true, this body&#39;s generalized position coordinates q include a quaternion,...">has_quaternion_dofs()</a>. Alternative options include a space XYZ parametrization of rotations, see SpaceXYZMobilizer. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>A floating body is not necessarily modeled with a quaternion mobilizer, see <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#ad6cb65d33b350a9ae5f21211c48a9b31" title="(Advanced) If true, this body&#39;s generalized position coordinates q include a quaternion,...">has_quaternion_dofs()</a>. Alternative options include a roll-pitch-yaw (rpy) parametrization of rotations, see RpyFloatingMobilizer. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if called pre-finalize, </td></tr>

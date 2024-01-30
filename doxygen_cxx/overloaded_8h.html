@@ -162,7 +162,12 @@ $(document).ready(function(){initNavTree('overloaded_8h.html','');});
 <div class="title">overloaded.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The "overloaded" variant-visit pattern. </p>
+<p>The C++ std::visit (typeswitch dispatch) is very useful for std::variant but doesn't support it natively. There is a commonly used two-line boilerplate that bridges this gap; see <a href="https://en.cppreference.com/w/cpp/utility/variant/visit">https://en.cppreference.com/w/cpp/utility/variant/visit</a></p>
+<p>This file should be included by classes that wish to use the variant visit pattern, i.e.</p>
+<div class="fragment"><div class="line"><span class="keyword">using</span> MyVariant = std::variant&lt;int, std::string&gt;;</div><div class="line">MyVariant v = 5;</div><div class="line">std::string result = std::visit(overloaded{</div><div class="line">  [](<span class="keyword">const</span> <span class="keywordtype">int</span> arg) { <span class="keywordflow">return</span> <span class="stringliteral">&quot;found an int&quot;</span>; },</div><div class="line">  [](<span class="keyword">const</span> std::string&amp; arg) { <span class="keywordflow">return</span> <span class="stringliteral">&quot;found a string&quot;</span>; }</div><div class="line">}, v);</div><div class="line">EXPECT_EQ(result, <span class="stringliteral">&quot;found an int&quot;</span>);</div></div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>This file must never be included by a header, only by a cc file. This is enforced by a lint rule in <code>tools/lint/drakelint.py</code>. </dd></dl>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- footer -->
 <div class="navpath">

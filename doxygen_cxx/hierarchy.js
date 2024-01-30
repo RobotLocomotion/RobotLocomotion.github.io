@@ -128,6 +128,19 @@ var hierarchy =
     [ "ContinuousState< AutoDiffXd >", "classdrake_1_1systems_1_1_continuous_state.html", null ],
     [ "ContinuousState< double >", "classdrake_1_1systems_1_1_continuous_state.html", null ],
     [ "ContinuousState< drake::symbolic::Expression >", "classdrake_1_1systems_1_1_continuous_state.html", null ],
+    [ "ConvexSet", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html", [
+      [ "AffineBall", "classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html", null ],
+      [ "AffineSubspace", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html", null ],
+      [ "CartesianProduct", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html", null ],
+      [ "HPolyhedron", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html", null ],
+      [ "Hyperellipsoid", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html", null ],
+      [ "Hyperrectangle", "classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html", null ],
+      [ "Intersection", "classdrake_1_1geometry_1_1optimization_1_1_intersection.html", null ],
+      [ "MinkowskiSum", "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html", null ],
+      [ "Point", "classdrake_1_1geometry_1_1optimization_1_1_point.html", null ],
+      [ "Spectrahedron", "classdrake_1_1geometry_1_1optimization_1_1_spectrahedron.html", null ],
+      [ "VPolytope", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html", null ]
+    ] ],
     [ "CoulombFriction< T >", "classdrake_1_1multibody_1_1_coulomb_friction.html", null ],
     [ "CsdpSolverDetails", "structdrake_1_1solvers_1_1_csdp_solver_details.html", null ],
     [ "CspaceFreePolytopeBase", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html", [
@@ -784,19 +797,12 @@ var hierarchy =
       [ "Sphere", "classdrake_1_1geometry_1_1_sphere.html", null ]
     ] ],
     [ "ShapeReifier", "classdrake_1_1geometry_1_1_shape_reifier.html", [
-      [ "ConvexSet", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html", [
-        [ "AffineBall", "classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html", null ],
-        [ "AffineSubspace", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html", null ],
-        [ "CartesianProduct", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html", null ],
-        [ "HPolyhedron", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html", null ],
-        [ "Hyperellipsoid", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html", null ],
-        [ "Hyperrectangle", "classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html", null ],
-        [ "Intersection", "classdrake_1_1geometry_1_1optimization_1_1_intersection.html", null ],
-        [ "MinkowskiSum", "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html", null ],
-        [ "Point", "classdrake_1_1geometry_1_1optimization_1_1_point.html", null ],
-        [ "Spectrahedron", "classdrake_1_1geometry_1_1optimization_1_1_spectrahedron.html", null ],
-        [ "VPolytope", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html", null ]
-      ] ],
+      [ "CartesianProduct", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html", null ],
+      [ "HPolyhedron", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html", null ],
+      [ "Hyperellipsoid", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html", null ],
+      [ "MinkowskiSum", "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html", null ],
+      [ "Point", "classdrake_1_1geometry_1_1optimization_1_1_point.html", null ],
+      [ "VPolytope", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html", null ],
       [ "RenderEngine", "classdrake_1_1geometry_1_1render_1_1_render_engine.html", null ],
       [ "ShapeName", "classdrake_1_1geometry_1_1_shape_name.html", null ]
     ] ],

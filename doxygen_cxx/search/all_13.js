@@ -657,8 +657,6 @@ var searchData=
   ['source_5fid',['source_id',['../classdrake_1_1examples_1_1solar__system_1_1_solar_system.html#a8b091eb5e79051e855367de4106c9739',1,'drake::examples::solar_system::SolarSystem::source_id()'],['../classdrake_1_1visualization_1_1_inertia_visualizer.html#a8b091eb5e79051e855367de4106c9739',1,'drake::visualization::InertiaVisualizer::source_id()']]],
   ['sourceid',['SourceId',['../namespacedrake_1_1geometry.html#ac53cb597123131fb23a7af26e8d350bf',1,'drake::geometry']]],
   ['sourceisregistered',['SourceIsRegistered',['../classdrake_1_1geometry_1_1_geometry_state.html#ab7bb60e8005dd347c7df107f334b166b',1,'drake::geometry::GeometryState::SourceIsRegistered()'],['../classdrake_1_1geometry_1_1_scene_graph.html#ab6d81ede71e6d2a60012e7a6decdbee1',1,'drake::geometry::SceneGraph::SourceIsRegistered()'],['../classdrake_1_1geometry_1_1_scene_graph_inspector.html#ab7bb60e8005dd347c7df107f334b166b',1,'drake::geometry::SceneGraphInspector::SourceIsRegistered()']]],
-  ['space_5fxyz_5ffloating_5fmobilizer_2eh',['space_xyz_floating_mobilizer.h',['../space__xyz__floating__mobilizer_8h.html',1,'']]],
-  ['space_5fxyz_5fmobilizer_2eh',['space_xyz_mobilizer.h',['../space__xyz__mobilizer_8h.html',1,'']]],
   ['sparse_5fand_5fdense_5fmatrix_2eh',['sparse_and_dense_matrix.h',['../sparse__and__dense__matrix_8h.html',1,'']]],
   ['sparse_5flinear_5foperator_2eh',['sparse_linear_operator.h',['../sparse__linear__operator_8h.html',1,'']]],
   ['sparsematrixtorowcolumnvaluevectors',['SparseMatrixToRowColumnValueVectors',['../namespacedrake_1_1math.html#a9681555f84d48a48d09601d913246934',1,'drake::math']]],
