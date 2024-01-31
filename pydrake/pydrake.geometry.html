@@ -12418,9 +12418,13 @@ frame’s id.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraphInspector.GetAllGeometryIds">
-<span class="sig-name descname"><span class="pre">GetAllGeometryIds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector" title="pydrake.geometry.SceneGraphInspector"><span class="pre">pydrake.geometry.SceneGraphInspector</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector.GetAllGeometryIds" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">GetAllGeometryIds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector" title="pydrake.geometry.SceneGraphInspector"><span class="pre">pydrake.geometry.SceneGraphInspector</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">role</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.geometry.Role" title="pydrake.geometry.Role"><span class="pre">pydrake.geometry.Role</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector.GetAllGeometryIds" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the set of all ids for registered geometries. The order is
 guaranteed to be stable and consistent.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">role</span></code>:</dt><dd><p>The requested role; if omitted, all geometries are returned.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -12554,6 +12558,11 @@ frame are returned.</p>
 <dd class="field-odd"><p>The requested unique geometry ids.</p>
 </dd>
 </dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>For C++ users: this returns an <em>unordered</em> set, which means
+iteration order will be non-deterministic.</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -13043,9 +13052,13 @@ frame’s id.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraphInspector_-AutoDiffXd-.GetAllGeometryIds">
-<span id="pydrake.geometry.SceneGraphInspector_[AutoDiffXd].GetAllGeometryIds"></span><span class="sig-name descname"><span class="pre">GetAllGeometryIds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector_" title="pydrake.geometry.SceneGraphInspector_"><span class="pre">pydrake.geometry.SceneGraphInspector_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_-AutoDiffXd-.GetAllGeometryIds" title="Permalink to this definition"></a></dt>
+<span id="pydrake.geometry.SceneGraphInspector_[AutoDiffXd].GetAllGeometryIds"></span><span class="sig-name descname"><span class="pre">GetAllGeometryIds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector_" title="pydrake.geometry.SceneGraphInspector_"><span class="pre">pydrake.geometry.SceneGraphInspector_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">role</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.geometry.Role" title="pydrake.geometry.Role"><span class="pre">pydrake.geometry.Role</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_-AutoDiffXd-.GetAllGeometryIds" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the set of all ids for registered geometries. The order is
 guaranteed to be stable and consistent.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">role</span></code>:</dt><dd><p>The requested role; if omitted, all geometries are returned.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -13179,6 +13192,11 @@ frame are returned.</p>
 <dd class="field-odd"><p>The requested unique geometry ids.</p>
 </dd>
 </dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>For C++ users: this returns an <em>unordered</em> set, which means
+iteration order will be non-deterministic.</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -13662,9 +13680,13 @@ frame’s id.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraphInspector_-Expression-.GetAllGeometryIds">
-<span id="pydrake.geometry.SceneGraphInspector_[Expression].GetAllGeometryIds"></span><span class="sig-name descname"><span class="pre">GetAllGeometryIds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector_" title="pydrake.geometry.SceneGraphInspector_"><span class="pre">pydrake.geometry.SceneGraphInspector_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_-Expression-.GetAllGeometryIds" title="Permalink to this definition"></a></dt>
+<span id="pydrake.geometry.SceneGraphInspector_[Expression].GetAllGeometryIds"></span><span class="sig-name descname"><span class="pre">GetAllGeometryIds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector_" title="pydrake.geometry.SceneGraphInspector_"><span class="pre">pydrake.geometry.SceneGraphInspector_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">role</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.geometry.Role" title="pydrake.geometry.Role"><span class="pre">pydrake.geometry.Role</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_-Expression-.GetAllGeometryIds" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the set of all ids for registered geometries. The order is
 guaranteed to be stable and consistent.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">role</span></code>:</dt><dd><p>The requested role; if omitted, all geometries are returned.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -13798,6 +13820,11 @@ frame are returned.</p>
 <dd class="field-odd"><p>The requested unique geometry ids.</p>
 </dd>
 </dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>For C++ users: this returns an <em>unordered</em> set, which means
+iteration order will be non-deterministic.</p>
+</div>
 </dd></dl>
 
 <dl class="py method">

@@ -1,6 +1,5 @@
 var structdrake_1_1geometry_1_1optimization_1_1_iris_options =
 [
-    [ "IrisOptions", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#acb0bda48ae293b2b8a06f159001280ac", null ],
     [ "Serialize", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a8e8824802dedfbc36776227f7482b6bc", null ],
     [ "bounding_region", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a0e0bd9a6fa7b0b7a30e8330f44812655", null ],
     [ "configuration_obstacles", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a2213eafbc5c4f73c4af52ecd163494c6", null ],

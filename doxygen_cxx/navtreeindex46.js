@@ -1,5 +1,6 @@
 var NAVTREEINDEX46 =
 {
+"differential__inverse__kinematics__integrator_8h.html":[4,0,0,8,5,6],
 "dir_00053a8e2d70a5fc9df4327f58d5eae4.html":[4,0,0,3,6],
 "dir_0200b18f7e83ea48cc715228d7cee9aa.html":[4,0,0,12,1,0],
 "dir_05142ce2278c744298ef3f06d9e628a4.html":[4,0,0,4,4],
@@ -140,9 +141,9 @@ var NAVTREEINDEX46 =
 "distance__and__interpolation__provider_8h.html":[4,0,0,10,8],
 "distance__constraint_8h.html":[4,0,0,8,5,7],
 "distance__constraint__utilities_8h.html":[4,0,0,8,5,8],
-"distance__to__point__callback_8h.html":[4,0,0,4,2,15],
-"distance__to__shape__callback_8h.html":[4,0,0,4,2,16],
-"distance__to__shape__touching_8h.html":[4,0,0,4,2,17],
+"distance__to__point__callback_8h.html":[4,0,0,4,2,14],
+"distance__to__shape__callback_8h.html":[4,0,0,4,2,15],
+"distance__to__shape__touching_8h.html":[4,0,0,4,2,16],
 "door__hinge_8h.html":[4,0,0,8,14,9],
 "double__overloads_8h.html":[4,0,0,1,16],
 "double__overloads_8h.html#ad14dd00683f82b89dc0f08f9adec904e":[4,0,0,1,16,0],
@@ -184,9 +185,9 @@ var NAVTREEINDEX46 =
 "drake__path_8h.html#a3d3b9fa09763df2a9013eec2cf87df7b":[4,0,0,1,25,0],
 "drake__throw_8h.html":[4,0,0,1,26],
 "drake__throw_8h.html#a4d9c29b101212c8a886c7f4f1a8b71ca":[4,0,0,1,26,0],
-"drake__visualizer_8h.html":[4,0,0,4,11],
-"drake__visualizer_8h.html#acbab8995daa433cebfc335ffe8ae8fd0":[4,0,0,4,11,3],
-"drake__visualizer__params_8h.html":[4,0,0,4,12],
+"drake__visualizer_8h.html":[4,0,0,4,13],
+"drake__visualizer_8h.html#acbab8995daa433cebfc335ffe8ae8fd0":[4,0,0,4,13,3],
+"drake__visualizer__params_8h.html":[4,0,0,4,14],
 "dummy__render__engine_8h.html":[4,0,0,4,8,0],
 "dummy__value_8h.html":[4,0,0,1,27],
 "dynamic__programming_8h.html":[4,0,0,12,1,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX46 =
 "eigen__types_8h.html#af359dfdb84d6c13b606bb3ed7b821e23":[4,0,0,1,29,30],
 "eigen__types_8h.html#af7e96394aef85f13f3fc84d3c3c238b3":[4,0,0,1,29,34],
 "eigen__types_8h.html#afc54e1f7aa3341a5f6b305705452d9bd":[4,0,0,1,29,22],
-"element__collection_8h.html":[4,0,0,8,14,10],
-"environment_8h.html":[4,0,0,1,3,0,2]
+"element__collection_8h.html":[4,0,0,8,14,10]
 };

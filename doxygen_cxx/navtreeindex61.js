@@ -1,6 +1,5 @@
 var NAVTREEINDEX61 =
 {
-"structstd_1_1hash_3_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html":[3,0,2,10],
 "structstd_1_1hash_3_01drake_1_1_type_safe_index_3_01_tag_01_4_01_4.html":[3,0,2,23],
 "structstd_1_1hash_3_01drake_1_1geometry_1_1_geometry_id_01_4.html":[3,0,2,4],
 "structstd_1_1hash_3_01drake_1_1geometry_1_1_geometry_id_01_4.html#a8b7b545509f23efa1833182cf286125d":[3,0,2,4,0],
@@ -146,7 +145,7 @@ var NAVTREEINDEX61 =
 "tamsi__solver_8h.html#a6144c2c8d4494bcb283f3f9e5841bfd2a8c632159fa131f09d04f94e3cbcd8782":[4,0,0,8,10,38,3,0],
 "temp__directory_8h.html":[4,0,0,1,60],
 "temp__directory_8h.html#a107ff2f218f356d05f8cdc3b7d254eb2":[4,0,0,1,60,0],
-"tessellation__strategy_8h.html":[4,0,0,4,2,55],
+"tessellation__strategy_8h.html":[4,0,0,4,2,54],
 "test__utilities_8h.html":[4,0,0,4,1,22],
 "text__logging_8h.html":[4,0,0,1,61],
 "text__logging_8h.html#a43a4a42dcea3143d400de1575cb5758c":[4,0,0,1,61,5],
@@ -172,9 +171,9 @@ var NAVTREEINDEX61 =
 "transform_8h.html":[4,0,0,1,2,2],
 "triangle__quadrature_8h.html":[4,0,0,8,15,1],
 "triangle__quadrature__rule_8h.html":[4,0,0,8,15,2],
-"triangle__surface__mesh_8h.html":[4,0,0,4,2,56],
-"triangle__surface__mesh__field_8h.html":[4,0,0,4,2,57],
-"triangle__surface__mesh__field_8h.html#a982d81c894c425051f4cbb03cd3ca4dd":[4,0,0,4,2,57,0],
+"triangle__surface__mesh_8h.html":[4,0,0,4,2,55],
+"triangle__surface__mesh__field_8h.html":[4,0,0,4,2,56],
+"triangle__surface__mesh__field_8h.html#a982d81c894c425051f4cbb03cd3ca4dd":[4,0,0,4,2,56,0],
 "trigonometric__polynomial_8h.html":[4,0,0,1,3,17],
 "trigonometric__polynomial_8h.html#a0f7729e9ae50c2b5ca1d86021ad1ae44":[4,0,0,1,3,17,2],
 "trigonometric__polynomial_8h.html#a0f7729e9ae50c2b5ca1d86021ad1ae44acdf5f9e766a4e04d5ac3bf38e82da0f0":[4,0,0,1,3,17,2,2],
@@ -210,7 +209,7 @@ var NAVTREEINDEX61 =
 "unrevised__lemke__solver_8h.html":[4,0,0,11,58],
 "unused_8h.html":[4,0,0,1,64],
 "unused_8h.html#ade20b7bf635eecb13adbaac4df980af0":[4,0,0,1,64,0],
-"utilities_8h.html":[4,0,0,4,46],
+"utilities_8h.html":[4,0,0,4,48],
 "validate__constraint__gradients_8h.html":[4,0,0,8,2,0,19],
 "value_8h.html":[4,0,0,1,65],
 "value__checker_8h.html":[4,0,0,12,3,49],
@@ -249,5 +248,6 @@ var NAVTREEINDEX61 =
 "variables_8h.html#a497331a32f5911a18cef34b07df6c04a":[4,0,0,1,3,0,12,4],
 "variables_8h.html#a50ee50ee4e70ef4393128598d143a2a6":[4,0,0,1,3,0,12,11],
 "variables_8h.html#a668d0a0cca975453784c6cd77d638c56":[4,0,0,1,3,0,12,10],
-"variables_8h.html#a8dc4e8320720218ee84dc1fdc7439d17":[4,0,0,1,3,0,12,2]
+"variables_8h.html#a8dc4e8320720218ee84dc1fdc7439d17":[4,0,0,1,3,0,12,2],
+"variables_8h.html#aae117a884f72a1a73cc2863ec026c011":[4,0,0,1,3,0,12,5]
 };

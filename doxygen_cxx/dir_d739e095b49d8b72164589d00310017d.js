@@ -14,6 +14,8 @@ var dir_d739e095b49d8b72164589d00310017d =
       [ "GeometryState", "classdrake_1_1geometry_1_1_geometry_state.html", "classdrake_1_1geometry_1_1_geometry_state" ],
       [ "CollisionFilterManager", "classdrake_1_1geometry_1_1_collision_filter_manager.html", "classdrake_1_1geometry_1_1_collision_filter_manager" ]
     ] ],
+    [ "deformable_mesh.h", "deformable__mesh_8h.html", null ],
+    [ "deformable_mesh_with_bvh.h", "deformable__mesh__with__bvh_8h.html", null ],
     [ "drake_visualizer.h", "drake__visualizer_8h.html", "drake__visualizer_8h" ],
     [ "drake_visualizer_params.h", "drake__visualizer__params_8h.html", [
       [ "DrakeVisualizerParams", "structdrake_1_1geometry_1_1_drake_visualizer_params.html", "structdrake_1_1geometry_1_1_drake_visualizer_params" ]

@@ -2590,23 +2590,26 @@ not need to be in the set.</p>
 <span class="sig-name descname"><span class="pre">UniformSample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.UniformSample" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>UniformSample(self: pydrake.geometry.optimization.HPolyhedron, generator: pydrake.common.RandomGenerator, previous_sample: numpy.ndarray[numpy.float64[m, 1]]) -&gt; numpy.ndarray[numpy.float64[m, 1]]</p></li>
+<li><p>UniformSample(self: pydrake.geometry.optimization.HPolyhedron, generator: pydrake.common.RandomGenerator, previous_sample: numpy.ndarray[numpy.float64[m, 1]], mixing_steps: int = 10) -&gt; numpy.ndarray[numpy.float64[m, 1]]</p></li>
 </ol>
 <p>Draw an (approximately) uniform sample from the set using the hit and
-run Markov-chain Monte-Carlo strategy described at
-<a class="reference external" href="https://mathoverflow.net/a/162327">https://mathoverflow.net/a/162327</a> and the cited paper. To generate
-many samples, pass the output of one iteration in as the
-<code class="docutils literal notranslate"><span class="pre">previous_sample</span></code> to the next; in this case the distribution of
-samples will converge to the true uniform distribution in total
-variation at a geometric rate. If <code class="docutils literal notranslate"><span class="pre">previous_sample</span></code> is not set, then
-the ChebyshevCenter() will be used to seed the algorithm.</p>
+run Markov-chain Monte-Carlo strategy described in
+<a class="reference external" href="https://link.springer.com/article/10.1007/s101070050099">https://link.springer.com/article/10.1007/s101070050099</a>. To draw many
+samples from the uniform distribution, pass the output of one
+iteration in as the <code class="docutils literal notranslate"><span class="pre">previous_sample</span></code> to the next, with
+<code class="docutils literal notranslate"><span class="pre">mixing_steps</span></code> set to a relatively low number. When drawing a single
+sample, <code class="docutils literal notranslate"><span class="pre">mixing_steps</span></code> should be set relatively high in order to
+obtain an approximately uniformly random point. The distribution of
+samples will converge to the true uniform distribution at a geometric
+rate in the total number of hit-and-run steps which is
+<code class="docutils literal notranslate"><span class="pre">mixing_steps</span></code> * the number of times this function is called.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if previous_sample is not in the set.</strong> – </p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>UniformSample(self: pydrake.geometry.optimization.HPolyhedron, generator: pydrake.common.RandomGenerator) -&gt; numpy.ndarray[numpy.float64[m, 1]]</p></li>
+<li><p>UniformSample(self: pydrake.geometry.optimization.HPolyhedron, generator: pydrake.common.RandomGenerator, mixing_steps: int = 10) -&gt; numpy.ndarray[numpy.float64[m, 1]]</p></li>
 </ol>
 <p>Variant of UniformSample that uses the ChebyshevCenter() as the
 previous_sample as a feasible point to start the Markov chain
@@ -2956,7 +2959,7 @@ goes for
 <dd><p>Configuration options for the IRIS algorithm.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.IrisOptions.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.IrisOptions" title="pydrake.geometry.optimization.IrisOptions"><span class="pre">pydrake.geometry.optimization.IrisOptions</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.IrisOptions.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.IrisOptions" title="pydrake.geometry.optimization.IrisOptions"><span class="pre">pydrake.geometry.optimization.IrisOptions</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.IrisOptions.__init__" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
