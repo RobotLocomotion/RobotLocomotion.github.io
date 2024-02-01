@@ -219,6 +219,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a5394db50dd4c2741c4d3f7dacf50f51d"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">Meshcat</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a5394db50dd4c2741c4d3f7dacf50f51d">meshcat</a> {}</td></tr>
 <tr class="memdesc:a5394db50dd4c2741c4d3f7dacf50f51d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passing a meshcat instance may enable debugging visualizations; this currently only happens in IrisInConfigurationSpace and when the configuration space is &lt;= 3 dimensional.  <a href="#a5394db50dd4c2741c4d3f7dacf50f51d">More...</a><br /></td></tr>
 <tr class="separator:a5394db50dd4c2741c4d3f7dacf50f51d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a087724eb9045117415e4d5a93db67ab1"><td class="memItemLeft" align="right" valign="top">std::function&lt; bool(const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a087724eb9045117415e4d5a93db67ab1">termination_func</a> {}</td></tr>
+<tr class="memdesc:a087724eb9045117415e4d5a93db67ab1"><td class="mdescLeft">&#160;</td><td class="mdescRight">A user-defined termination function to determine whether the iterations should stop.  <a href="#a087724eb9045117415e4d5a93db67ab1">More...</a><br /></td></tr>
+<tr class="separator:a087724eb9045117415e4d5a93db67ab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a8e8824802dedfbc36776227f7482b6bc"></a>
@@ -444,6 +447,23 @@ Public Attributes</h2></td></tr>
 
 <p>The initial hyperepllipsoid that IRIS will use for calculating hyperplanes in the first iteration. </p>
 <p>If no hyperellipsoid is provided, a small hypershpere centered at the given sample will be used. </p>
+
+</div>
+</div>
+<a id="a087724eb9045117415e4d5a93db67ab1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a087724eb9045117415e4d5a93db67ab1">&#9670;&nbsp;</a></span>termination_func</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::function&lt;bool(const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&amp;)&gt; termination_func {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A user-defined termination function to determine whether the iterations should stop. </p>
+<p>This function is called after computing each hyperplane at every IRIS iteration. If the function returns true, then the computations will stop and the last step region will be returned. Therefore, it is highly recommended that the termination function possesses a monotonic property such that for any two HPolyhedrons A and B such that B ⊆ A, we have if termination(A) -&gt; termination(B). For example, a valid termination function is to check whether if the region does not contain any of a set of desired points. </p><div class="fragment"><div class="line"><span class="keyword">auto</span> <a class="code" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a087724eb9045117415e4d5a93db67ab1">termination_func</a> = [](<span class="keyword">const</span> HPolyhedron&amp; set) {</div><div class="line">  <span class="keywordflow">for</span> (<span class="keyword">const</span> VectorXd&amp; point : desired_points) {</div><div class="line">    <span class="keywordflow">if</span> (!set.PointInSet(point)) {</div><div class="line">      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line">    }</div><div class="line">  }</div><div class="line">  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line">};</div></div><!-- fragment --><p> The algorithm will stop when as soon as the region leaves one of the desired points, in a similar way to how <code>require_sample_point_is_contained</code> is enforced. </p>
 
 </div>
 </div>

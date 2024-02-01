@@ -1,5 +1,10 @@
 var NAVTREEINDEX56 =
 {
+"standard__operations_8h.html#a6fe3629863ab0bd4025541189d15e809":[4,0,0,1,0,0,2,12],
+"standard__operations_8h.html#a7272b7754954f906fa0dd83e8b4cc5a5":[4,0,0,1,0,0,2,67],
+"standard__operations_8h.html#a72ad9a819f04c405db5c46af865bc922":[4,0,0,1,0,0,2,37],
+"standard__operations_8h.html#a75b6b479755021d36308792d100b03ca":[4,0,0,1,0,0,2,71],
+"standard__operations_8h.html#a7632df8e55319e7b981090fb426dcbed":[4,0,0,1,0,0,2,1],
 "standard__operations_8h.html#a792771a6da56e0b5531b542430883d34":[4,0,0,1,0,0,2,32],
 "standard__operations_8h.html#a7c4a6b846b5ab34ddd934132ba0f3d0f":[4,0,0,1,0,0,2,34],
 "standard__operations_8h.html#a7e70d47e31742653879a0a6895e5a0b7":[4,0,0,1,0,0,2,52],
@@ -244,10 +249,5 @@ var NAVTREEINDEX56 =
 "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_program.html#ab7bffa65ec11e79bbf74fc513d4407c6":[3,0,0,4,1,5,2,6],
 "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_program.html#abc181d64361484d0aaa73ac7541b5c87":[3,0,0,4,1,5,2,1],
 "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_program.html#adee98cdb6fa31a1d84099c44ce7c52bc":[3,0,0,4,1,5,2,2],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_program.html#ae8d129992006cb8e6a4ae11679d00376":[3,0,0,4,1,5,2,3],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result.html":[3,0,0,4,1,5,3],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result.html#a4380dd4d6c777bb260d823e0f776c238":[3,0,0,4,1,5,3,0],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result.html#a4f163d1eb4ff9d0900a8f3a7bdcc5232":[3,0,0,4,1,5,3,4],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result.html#a64cbe7574a9b87347866d8c51f17ec6e":[3,0,0,4,1,5,3,6],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result.html#a715aeff19ef86620b94237a5ec2ea7c8":[3,0,0,4,1,5,3,3]
+"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_program.html#ae8d129992006cb8e6a4ae11679d00376":[3,0,0,4,1,5,2,3]
 };

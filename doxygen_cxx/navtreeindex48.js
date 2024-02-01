@@ -1,5 +1,7 @@
 var NAVTREEINDEX48 =
 {
+"files.html":[4,0],
+"find__cache_8h.html":[4,0,0,1,31],
 "find__collision__candidates__callback_8h.html":[4,0,0,4,2,18],
 "find__loaded__library_8h.html":[4,0,0,1,32],
 "find__loaded__library_8h.html#adba0205c520f270cd638f7fb39fb5576":[4,0,0,1,32,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX48 =
 "functions_p.html":[3,3,0,15],
 "functions_q.html":[3,3,0,16],
 "functions_r.html":[3,3,0,17],
-"functions_rela.html":[3,3,6,0],
-"functions_rela.html":[3,3,6],
-"functions_rela_b.html":[3,3,6,1]
+"functions_rela.html":[3,3,6]
 };

@@ -9,6 +9,7 @@ var group__geometry__optimization =
       [ "~AffineBall", "classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#ae9f9cc83a60f52fc3597f8218d0762a7", null ],
       [ "B", "classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#a72a0d3162014193b1fc26f0f26284a65", null ],
       [ "center", "classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#a0436b14a80630bf60e18fdc56ce3171e", null ],
+      [ "MakeAffineBallFromLineSegment", "classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#ab2294b2077bce913a4c10a31c2f19d00", null ],
       [ "MakeAxisAligned", "classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#a17e5c2915b25a2b230e6af8f5812bf2f", null ],
       [ "MakeHypersphere", "classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#a07d8fa8b6d642e20a04f2e89813403be", null ],
       [ "MakeUnitBall", "classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#a30c80ecf16e7879f121f2df8e3297c5c", null ],
@@ -243,6 +244,7 @@ var group__geometry__optimization =
       [ "relative_termination_threshold", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a49f1367efbb0c0efddaec6ed273e8bb7", null ],
       [ "require_sample_point_is_contained", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a20906a34b629e819d5d8a8df41638c2d", null ],
       [ "starting_ellipse", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ae65f515b41261e98fb16dd1e810cba48", null ],
+      [ "termination_func", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a087724eb9045117415e4d5a93db67ab1", null ],
       [ "termination_threshold", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a11a479517bfa7e6c3d669c72380924ca", null ]
     ] ],
     [ "MinkowskiSum", "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html", [
@@ -303,5 +305,6 @@ var group__geometry__optimization =
     ] ],
     [ "Iris", "group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6", null ],
     [ "IrisInConfigurationSpace", "group__geometry__optimization.html#ga3a51e0fec449a0abcf498f78a2a390a8", null ],
-    [ "MakeIrisObstacles", "group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af", null ]
+    [ "MakeIrisObstacles", "group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af", null ],
+    [ "SetEdgeContainmentTerminationCondition", "group__geometry__optimization.html#ga5f3ad49bfffd1b9a968ed7f1bf4d4c80", null ]
 ];

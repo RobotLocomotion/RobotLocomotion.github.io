@@ -13,5 +13,6 @@ var structdrake_1_1geometry_1_1optimization_1_1_iris_options =
     [ "relative_termination_threshold", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a49f1367efbb0c0efddaec6ed273e8bb7", null ],
     [ "require_sample_point_is_contained", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a20906a34b629e819d5d8a8df41638c2d", null ],
     [ "starting_ellipse", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ae65f515b41261e98fb16dd1e810cba48", null ],
+    [ "termination_func", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a087724eb9045117415e4d5a93db67ab1", null ],
     [ "termination_threshold", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a11a479517bfa7e6c3d669c72380924ca", null ]
 ];

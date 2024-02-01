@@ -1,5 +1,12 @@
 var NAVTREEINDEX60 =
 {
+"structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html#a1f3150ccf61b245d0363a198068ebf3d":[3,0,0,15,2,8,1],
+"structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html#a8f78ef113f89e86b283522fb7e59b308":[3,0,0,15,2,8,0],
+"structdrake_1_1systems_1_1controllers_1_1_pid_controlled_system_1_1_connect_result.html":[1,2,2,5,0],
+"structdrake_1_1systems_1_1controllers_1_1_pid_controlled_system_1_1_connect_result.html#a08e211873bd62f93a57ad06fdc27b3b2":[1,2,2,5,0,1],
+"structdrake_1_1systems_1_1controllers_1_1_pid_controlled_system_1_1_connect_result.html#a52ff55f212eefdef42762a59fd067f31":[1,2,2,5,0,0],
+"structdrake_1_1systems_1_1scalar__conversion_1_1_from_double_traits.html":[3,0,0,15,7,0],
+"structdrake_1_1systems_1_1scalar__conversion_1_1_from_double_traits.html#ada71661baddc01a12a0ca7a6a70d9c4f":[3,0,0,15,7,0,0],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_non_symbolic_traits.html":[3,0,0,15,7,1],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_non_symbolic_traits.html#a585e598ef14189082cf26030c07b2db4":[3,0,0,15,7,1,0],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html":[3,0,0,15,7,2],
@@ -242,12 +249,5 @@ var NAVTREEINDEX60 =
 "structfmt_1_1formatter_3_01drake_1_1yaml_1_1_load_yaml_options_01_4.html":[3,0,1,36],
 "structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_expression_01_4.html":[3,0,2,0],
 "structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_expression_01_4.html#a538d122bb822306915eed589daae8627":[3,0,2,0,0],
-"structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_formula_01_4.html":[3,0,2,1],
-"structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_formula_01_4.html#ad8fefac14435343adfcc69f7348f0961":[3,0,2,1,0],
-"structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_variable_01_4.html":[3,0,2,2],
-"structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_variable_01_4.html#a69e9ace88f698342e05dcf0cc1899818":[3,0,2,2,0],
-"structstd_1_1hash_3_01drake_1_1_identifier_3_01_tag_01_4_01_4.html":[3,0,2,6],
-"structstd_1_1hash_3_01drake_1_1_sha256_01_4.html":[3,0,2,7],
-"structstd_1_1hash_3_01drake_1_1_sha256_01_4.html#a8090b5272b556f1a7a236663e1de13fa":[3,0,2,7,0],
-"structstd_1_1hash_3_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html":[3,0,2,10]
+"structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_formula_01_4.html":[3,0,2,1]
 };

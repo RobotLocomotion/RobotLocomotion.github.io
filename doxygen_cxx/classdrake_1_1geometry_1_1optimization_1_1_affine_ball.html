@@ -270,6 +270,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a8acfa1a4dad13eb9b0466d9ed0073fcf"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html">AffineBall</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#a8acfa1a4dad13eb9b0466d9ed0073fcf">MinimumVolumeCircumscribedEllipsoid</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;points, <a class="el" href="classdouble.html">double</a> rank_tol=1e-6)</td></tr>
 <tr class="memdesc:a8acfa1a4dad13eb9b0466d9ed0073fcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the minimum-volume ellipsoid which contains all of the given points.  <a href="#a8acfa1a4dad13eb9b0466d9ed0073fcf">More...</a><br /></td></tr>
 <tr class="separator:a8acfa1a4dad13eb9b0466d9ed0073fcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2294b2077bce913a4c10a31c2f19d00"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html">AffineBall</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#ab2294b2077bce913a4c10a31c2f19d00">MakeAffineBallFromLineSegment</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;x_1, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;x_2, const <a class="el" href="classdouble.html">double</a> epsilon=1e-3)</td></tr>
+<tr class="memdesc:ab2294b2077bce913a4c10a31c2f19d00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an affine ball such that its main diameter is the line segment from <code>x_1</code> to <code>x_2</code>, and the length of all other diameters are 2 * <code>epsilon</code>.  <a href="#ab2294b2077bce913a4c10a31c2f19d00">More...</a><br /></td></tr>
+<tr class="separator:ab2294b2077bce913a4c10a31c2f19d00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -488,6 +491,59 @@ B.cols() == center.size(). </dd></dl>
 </div><div class="memdoc">
 
 <p>Returns the center of the ellipsoid. </p>
+
+</div>
+</div>
+<a id="ab2294b2077bce913a4c10a31c2f19d00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2294b2077bce913a4c10a31c2f19d00">&#9670;&nbsp;</a></span>MakeAffineBallFromLineSegment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html">AffineBall</a> MakeAffineBallFromLineSegment </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>x_1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>x_2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>epsilon</em> = <code>1e-3</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs an affine ball such that its main diameter is the line segment from <code>x_1</code> to <code>x_2</code>, and the length of all other diameters are 2 * <code>epsilon</code>. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>x_1.size() == x_2.size(). </dd>
+<dd>
+epsilon &gt;= 0. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>if ‖x_1 - x_2‖₂ is less than 1e-9. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

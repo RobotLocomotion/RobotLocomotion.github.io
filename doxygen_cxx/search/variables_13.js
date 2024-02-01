@@ -3,6 +3,7 @@ var searchData=
   ['target_5frealtime_5frate',['target_realtime_rate',['../structdrake_1_1systems_1_1_simulator_config.html#a18b1f02b49adcc233f5e23845b8c90fe',1,'drake::systems::SimulatorConfig']]],
   ['tau',['tau',['../structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#a35881bb6864939d024dcffcef32de848',1,'drake::multibody::constraint::ConstraintAccelProblemData']]],
   ['terminate_5fat_5ffailure',['terminate_at_failure',['../structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html#ae874605a314dc8713c29ddf061d80eb3',1,'drake::geometry::optimization::FindSeparationCertificateOptions']]],
+  ['termination_5ffunc',['termination_func',['../structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a087724eb9045117415e4d5a93db67ab1',1,'drake::geometry::optimization::IrisOptions']]],
   ['termination_5fthreshold',['termination_threshold',['../structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a11a479517bfa7e6c3d669c72380924ca',1,'drake::geometry::optimization::IrisOptions']]],
   ['terms',['terms',['../classdrake_1_1_polynomial_1_1_monomial.html#a50db1dbc4ba83abeeaa830f4c8442bf1',1,'drake::Polynomial::Monomial']]],
   ['texture',['texture',['../structdrake_1_1geometry_1_1_environment_map.html#a2219ced5556859c62efc2d1f2fff2f26',1,'drake::geometry::EnvironmentMap']]],

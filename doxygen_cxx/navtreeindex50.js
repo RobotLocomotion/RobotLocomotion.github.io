@@ -1,5 +1,7 @@
 var NAVTREEINDEX50 =
 {
+"group__estimator__systems.html#gafef1c264968026046996e35551b7155e":[1,2,3,1],
+"group__estimator__systems.html#gaffc5a5eabe473ebd57f96b0310d70ed8":[1,2,3,6],
 "group__events__description.html":[1,2,0],
 "group__example__systems.html":[1,2,12],
 "group__geometry.html":[1,5],
@@ -9,10 +11,12 @@ var NAVTREEINDEX50 =
 "group__geometry__optimization.html":[1,1,1],
 "group__geometry__optimization.html#ga3a51e0fec449a0abcf498f78a2a390a8":[1,5,5,14],
 "group__geometry__optimization.html#ga3a51e0fec449a0abcf498f78a2a390a8":[1,1,1,14],
+"group__geometry__optimization.html#ga5f3ad49bfffd1b9a968ed7f1bf4d4c80":[1,1,1,16],
+"group__geometry__optimization.html#ga5f3ad49bfffd1b9a968ed7f1bf4d4c80":[1,5,5,16],
 "group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af":[1,5,5,15],
 "group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af":[1,1,1,15],
-"group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6":[1,1,1,13],
 "group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6":[1,5,5,13],
+"group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6":[1,1,1,13],
 "group__geometry__roles.html":[1,5,1],
 "group__hash__append.html":[1,6,2,0],
 "group__hydroelastic__user__guide.html":[1,3,1],
@@ -245,9 +249,5 @@ var NAVTREEINDEX50 =
 "internal__http__service__curl_8h.html":[4,0,0,4,6,2],
 "internal__merge__gltf_8h.html":[4,0,0,4,6,3],
 "internal__opengl__context_8h.html":[4,0,0,4,5,2],
-"internal__opengl__geometry_8h.html":[4,0,0,4,5,3],
-"internal__opengl__includes_8h.html":[4,0,0,4,5,4],
-"internal__opengl__includes_8h.html#a120fb070bddb21f0bd899f50252c4cb5":[4,0,0,4,5,4,0],
-"internal__render__client_8h.html":[4,0,0,4,6,4],
-"internal__render__engine__gl_8h.html":[4,0,0,4,5,5]
+"internal__opengl__geometry_8h.html":[4,0,0,4,5,3]
 };

@@ -235,6 +235,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga3a51e0fec449a0abcf498f78a2a390a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geometry__optimization.html#ga3a51e0fec449a0abcf498f78a2a390a8">IrisInConfigurationSpace</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant, const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;context, const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a> &amp;options=<a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a>())</td></tr>
 <tr class="memdesc:ga3a51e0fec449a0abcf498f78a2a390a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">A variation of the Iris (Iterative Region Inflation by Semidefinite programming) algorithm which finds collision-free regions in the <em>configuration space</em> of <code>plant</code>.  <a href="group__geometry__optimization.html#ga3a51e0fec449a0abcf498f78a2a390a8">More...</a><br /></td></tr>
 <tr class="separator:ga3a51e0fec449a0abcf498f78a2a390a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5f3ad49bfffd1b9a968ed7f1bf4d4c80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geometry__optimization.html#ga5f3ad49bfffd1b9a968ed7f1bf4d4c80">SetEdgeContainmentTerminationCondition</a> (<a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a> *iris_options, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;x_1, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;x_2, const <a class="el" href="classdouble.html">double</a> epsilon=1e-3, const double tol=1e-6)</td></tr>
+<tr class="memdesc:ga5f3ad49bfffd1b9a968ed7f1bf4d4c80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifies the <code>iris_options</code> to facilitate finding a region that contains the edge between x_1 and x_2.  <a href="group__geometry__optimization.html#ga5f3ad49bfffd1b9a968ed7f1bf4d4c80">More...</a><br /></td></tr>
+<tr class="separator:ga5f3ad49bfffd1b9a968ed7f1bf4d4c80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="gafd8111a93cb3461e05bec3477ee736f6"></a>
@@ -335,6 +338,7 @@ Functions</h2></td></tr>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if the sample configuration in <code>context</code> is infeasible. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if termination_func is invalid on the domain. See <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a087724eb9045117415e4d5a93db67ab1" title="A user-defined termination function to determine whether the iterations should stop.">IrisOptions.termination_func</a> for more details. </td></tr>
   </table>
   </dd>
 </dl>
@@ -370,6 +374,62 @@ Functions</h2></td></tr>
 <p>Constructs <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html" title="Abstract base class for defining a convex set.">ConvexSet</a> representations of obstacles for IRIS in 3D using the geometry from a <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> <a class="el" href="classdrake_1_1geometry_1_1_query_object.html" title="The QueryObject serves as a mechanism to perform geometry queries on the world&#39;s geometry.">QueryObject</a>. </p>
 <p>All geometry in the scene with a proximity role, both anchored and dynamic, are consider to be <em>fixed</em> obstacles frozen in the poses captured in the context used to create the <a class="el" href="classdrake_1_1geometry_1_1_query_object.html" title="The QueryObject serves as a mechanism to perform geometry queries on the world&#39;s geometry.">QueryObject</a>.</p>
 <p>When multiple representations are available for a particular geometry (e.g. a <a class="el" href="classdrake_1_1geometry_1_1_box.html" title="Definition of a box.">Box</a> can be represented as either an <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html" title="Implements a polyhedral convex set using the half-space representation: {x| A x ≤ b}.">HPolyhedron</a> or a <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html" title="A polytope described using the vertex representation.">VPolytope</a>), then this method will prioritize the representation that we expect is most performant for the current implementation of the IRIS algorithm. </p>
+
+</div>
+</div>
+<a id="ga5f3ad49bfffd1b9a968ed7f1bf4d4c80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5f3ad49bfffd1b9a968ed7f1bf4d4c80">&#9670;&nbsp;</a></span>SetEdgeContainmentTerminationCondition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drake::geometry::optimization::SetEdgeContainmentTerminationCondition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a> *&#160;</td>
+          <td class="paramname"><em>iris_options</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>x_1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>x_2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>epsilon</em> = <code>1e-3</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>tol</em> = <code>1e-6</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Modifies the <code>iris_options</code> to facilitate finding a region that contains the edge between x_1 and x_2. </p>
+<p>It sets <code>iris_options.starting_ellipse</code> to be a hyperellipsoid that contains the edge, is centered at the midpoint of the edge and extends in other directions by epsilon. It also sets <code>iris_options.termination_func</code> such that IRIS iterations terminate when the edge is no longer contained in the IRIS region with tolerance tol.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if x_1.size() != x_2.size(). </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if epsilon &lt;= 0. This is due to the fact that the hyperellipsoid for <code>iris_options.starting_ellipse</code> must have non-zero volume. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

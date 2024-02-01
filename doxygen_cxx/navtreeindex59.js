@@ -1,5 +1,12 @@
 var NAVTREEINDEX59 =
 {
+"structdrake_1_1pydrake_1_1overload__cast__impl.html#a4eeedf83a7bce37a16d96085dcdc46f4":[3,0,0,11,2,0],
+"structdrake_1_1pydrake_1_1overload__cast__impl.html#a74f8574b2d358293cf04c7f27df47bb2":[3,0,0,11,2,1],
+"structdrake_1_1pydrake_1_1overload__cast__impl.html#ad8669f38296275ae761b8ea5ca557cd6":[3,0,0,11,2,2],
+"structdrake_1_1pydrake_1_1wrap__arg__default.html":[3,0,0,11,3],
+"structdrake_1_1pydrake_1_1wrap__arg__default.html#a48a259ef8336ef23e66f632b0ddad145":[3,0,0,11,3,2],
+"structdrake_1_1pydrake_1_1wrap__arg__default.html#ac0d8dfca95588efef734b244410fa031":[3,0,0,11,3,1],
+"structdrake_1_1pydrake_1_1wrap__arg__default.html#af86f89529a81600b291217b3f9b1a067":[3,0,0,11,3,0],
 "structdrake_1_1scalar__predicate.html":[3,0,0,46],
 "structdrake_1_1scalar__predicate.html#a945d5b96b85fa30cf7587ef08b38f3d2":[3,0,0,46,0],
 "structdrake_1_1scalar__predicate.html#ab6fdcd06e06c892b3492eb6ea8f15be2":[3,0,0,46,1],
@@ -242,12 +249,5 @@ var NAVTREEINDEX59 =
 "structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html#ad4b8dfe12a35db518214e3cb4d76ae8a":[3,0,0,15,2,2,5],
 "structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html#ae491527110c4ca50bb4fe345d2ef467a":[3,0,0,15,2,2,1],
 "structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html#afac4934484438e44b34be1f0cc79d995":[3,0,0,15,2,2,2],
-"structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html":[3,0,0,15,2,8],
-"structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html#a1f3150ccf61b245d0363a198068ebf3d":[3,0,0,15,2,8,1],
-"structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html#a8f78ef113f89e86b283522fb7e59b308":[3,0,0,15,2,8,0],
-"structdrake_1_1systems_1_1controllers_1_1_pid_controlled_system_1_1_connect_result.html":[1,2,2,5,0],
-"structdrake_1_1systems_1_1controllers_1_1_pid_controlled_system_1_1_connect_result.html#a08e211873bd62f93a57ad06fdc27b3b2":[1,2,2,5,0,1],
-"structdrake_1_1systems_1_1controllers_1_1_pid_controlled_system_1_1_connect_result.html#a52ff55f212eefdef42762a59fd067f31":[1,2,2,5,0,0],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_from_double_traits.html":[3,0,0,15,7,0],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_from_double_traits.html#ada71661baddc01a12a0ca7a6a70d9c4f":[3,0,0,15,7,0,0]
+"structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html":[3,0,0,15,2,8]
 };
