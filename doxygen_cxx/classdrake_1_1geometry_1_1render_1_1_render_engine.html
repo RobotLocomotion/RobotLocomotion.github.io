@@ -334,18 +334,23 @@ Static Protected Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">RenderLabel-Color Utilities</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Some rasterization pipelines don't support channels of <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html#ab552a96bb39383157f123f0c25dfe54a">RenderLabel::ValueType</a>; typically, they operate in RGB color space.</p>
 <p>The following utilities support those pipelines by providing conversions between labels and colors. The mapping does <em>not</em> produce colors that are useful to humans &ndash; two labels with "near by" values will produces colors that most humans cannot distinguish, but the computer can. Do not use these utilities to produce the prototypical "colored label" images.</p>
-<p>The label-to-color conversion can produce one of two different color encodings. These encodings are not exhaustive but they are typical of the encodings that have proven useful. The supported color encodings consist of three RGB channels where each channel is either <em>byte-valued</em> in that they are encoded with unsigned bytes in the range [0, 255] per channel or <em>double-valued</em> such that each channel is encoded with a double in the range [0, 1]. Conversion to <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html" title="Class representing object &quot;labels&quot; for rendering.">RenderLabel</a> is only supported from byte-valued color values.</p>
 <p>These utilities are provided as a <em>convenience</em> to derived classes. Derived classes are not required to encode labels as colors in the same way. They are only obliged to return label images with proper label values according to the documented semantics. </p>
 </div></td></tr>
-<tr class="memitem:adc87829fd5d7c0d78e41f47f8225e6f6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html">RenderLabel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html#adc87829fd5d7c0d78e41f47f8225e6f6">LabelFromColor</a> (const <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a5e531a9bcdca4559d154a05e2d6fbe58">systems::sensors::ColorI</a> &amp;color)</td></tr>
-<tr class="memdesc:adc87829fd5d7c0d78e41f47f8225e6f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms the given byte-valued RGB color value into its corresponding <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html" title="Class representing object &quot;labels&quot; for rendering.">RenderLabel</a>.  <a href="#adc87829fd5d7c0d78e41f47f8225e6f6">More...</a><br /></td></tr>
-<tr class="separator:adc87829fd5d7c0d78e41f47f8225e6f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b0cc456e7beb967979d325283656039"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a5e531a9bcdca4559d154a05e2d6fbe58">systems::sensors::ColorI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html#a6b0cc456e7beb967979d325283656039">GetColorIFromLabel</a> (const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html">RenderLabel</a> &amp;label)</td></tr>
-<tr class="memdesc:a6b0cc456e7beb967979d325283656039"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms <code>this</code> render label into a byte-valued RGB color.  <a href="#a6b0cc456e7beb967979d325283656039">More...</a><br /></td></tr>
-<tr class="separator:a6b0cc456e7beb967979d325283656039"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa06319c11fbba76d4ebaa142bd37df99"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a87fc6f26714bf65536e2945638c52c87">systems::sensors::ColorD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html#aa06319c11fbba76d4ebaa142bd37df99">GetColorDFromLabel</a> (const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html">RenderLabel</a> &amp;label)</td></tr>
-<tr class="memdesc:aa06319c11fbba76d4ebaa142bd37df99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms <code>this</code> render label into a double-valued RGB color.  <a href="#aa06319c11fbba76d4ebaa142bd37df99">More...</a><br /></td></tr>
-<tr class="separator:aa06319c11fbba76d4ebaa142bd37df99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace39a62380e0088d8a8ab09f5417a29f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html">RenderLabel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html#ace39a62380e0088d8a8ab09f5417a29f">MakeLabelFromRgb</a> (uint8_t r, uint8_t g, uint8_t)</td></tr>
+<tr class="memdesc:ace39a62380e0088d8a8ab09f5417a29f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms the given RGB color into its corresponding <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html" title="Class representing object &quot;labels&quot; for rendering.">RenderLabel</a>.  <a href="#ace39a62380e0088d8a8ab09f5417a29f">More...</a><br /></td></tr>
+<tr class="separator:ace39a62380e0088d8a8ab09f5417a29f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9305eccf80deaa0fd5d5345bd5b0b811"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html#a9305eccf80deaa0fd5d5345bd5b0b811">MakeRgbFromLabel</a> (const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html">RenderLabel</a> &amp;label)</td></tr>
+<tr class="memdesc:a9305eccf80deaa0fd5d5345bd5b0b811"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms the given render label into an RGB color.  <a href="#a9305eccf80deaa0fd5d5345bd5b0b811">More...</a><br /></td></tr>
+<tr class="separator:a9305eccf80deaa0fd5d5345bd5b0b811"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9e4c0fd4b4261c37a4972c2cc9a9e19"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html">RenderLabel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html#ad9e4c0fd4b4261c37a4972c2cc9a9e19">LabelFromColor</a> (const deprecated::internal::Color&lt; <a class="el" href="classint.html">int</a> &gt; &amp;color)</td></tr>
+<tr class="memdesc:ad9e4c0fd4b4261c37a4972c2cc9a9e19"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#ad9e4c0fd4b4261c37a4972c2cc9a9e19">More...</a><br /></td></tr>
+<tr class="separator:ad9e4c0fd4b4261c37a4972c2cc9a9e19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cc85e926e2e16f8a4d3a8a2b45306a1"><td class="memItemLeft" align="right" valign="top">static deprecated::internal::Color&lt; <a class="el" href="classint.html">int</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html#a8cc85e926e2e16f8a4d3a8a2b45306a1">GetColorIFromLabel</a> (const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html">RenderLabel</a> &amp;label)</td></tr>
+<tr class="memdesc:a8cc85e926e2e16f8a4d3a8a2b45306a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a8cc85e926e2e16f8a4d3a8a2b45306a1">More...</a><br /></td></tr>
+<tr class="separator:a8cc85e926e2e16f8a4d3a8a2b45306a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf33d0f239d80c8685c3d53c35546ce2"><td class="memItemLeft" align="right" valign="top">static deprecated::internal::Color&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html#aaf33d0f239d80c8685c3d53c35546ce2">GetColorDFromLabel</a> (const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html">RenderLabel</a> &amp;label)</td></tr>
+<tr class="memdesc:aaf33d0f239d80c8685c3d53c35546ce2"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#aaf33d0f239d80c8685c3d53c35546ce2">More...</a><br /></td></tr>
+<tr class="separator:aaf33d0f239d80c8685c3d53c35546ce2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -898,8 +903,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="aa06319c11fbba76d4ebaa142bd37df99"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa06319c11fbba76d4ebaa142bd37df99">&#9670;&nbsp;</a></span>GetColorDFromLabel()</h2>
+<a id="aaf33d0f239d80c8685c3d53c35546ce2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf33d0f239d80c8685c3d53c35546ce2">&#9670;&nbsp;</a></span>GetColorDFromLabel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -908,7 +913,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a87fc6f26714bf65536e2945638c52c87">systems::sensors::ColorD</a> GetColorDFromLabel </td>
+          <td class="memname">static deprecated::internal::Color&lt;<a class="el" href="classdouble.html">double</a>&gt; GetColorDFromLabel </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html">RenderLabel</a> &amp;&#160;</td>
           <td class="paramname"><em>label</em></td><td>)</td>
@@ -922,12 +927,14 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Transforms <code>this</code> render label into a double-valued RGB color. </p>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000003">Deprecated:</a></b></dt><dd>Use MakeRgbFromLabel instead <br />
+ This will be removed from Drake on or after 2024-05-01.</dd></dl>
 
 </div>
 </div>
-<a id="a6b0cc456e7beb967979d325283656039"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6b0cc456e7beb967979d325283656039">&#9670;&nbsp;</a></span>GetColorIFromLabel()</h2>
+<a id="a8cc85e926e2e16f8a4d3a8a2b45306a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cc85e926e2e16f8a4d3a8a2b45306a1">&#9670;&nbsp;</a></span>GetColorIFromLabel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -936,7 +943,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a5e531a9bcdca4559d154a05e2d6fbe58">systems::sensors::ColorI</a> GetColorIFromLabel </td>
+          <td class="memname">static deprecated::internal::Color&lt;<a class="el" href="classint.html">int</a>&gt; GetColorIFromLabel </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html">RenderLabel</a> &amp;&#160;</td>
           <td class="paramname"><em>label</em></td><td>)</td>
@@ -950,7 +957,9 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Transforms <code>this</code> render label into a byte-valued RGB color. </p>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">Deprecated:</a></b></dt><dd>Use MakeLabelFromRgb instead <br />
+ This will be removed from Drake on or after 2024-05-01.</dd></dl>
 
 </div>
 </div>
@@ -1008,8 +1017,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="adc87829fd5d7c0d78e41f47f8225e6f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc87829fd5d7c0d78e41f47f8225e6f6">&#9670;&nbsp;</a></span>LabelFromColor()</h2>
+<a id="ad9e4c0fd4b4261c37a4972c2cc9a9e19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9e4c0fd4b4261c37a4972c2cc9a9e19">&#9670;&nbsp;</a></span>LabelFromColor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1020,7 +1029,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">static <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html">RenderLabel</a> LabelFromColor </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a5e531a9bcdca4559d154a05e2d6fbe58">systems::sensors::ColorI</a> &amp;&#160;</td>
+          <td class="paramtype">const deprecated::internal::Color&lt; <a class="el" href="classint.html">int</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>color</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1032,7 +1041,82 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Transforms the given byte-valued RGB color value into its corresponding <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html" title="Class representing object &quot;labels&quot; for rendering.">RenderLabel</a>. </p>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">Deprecated:</a></b></dt><dd>Use MakeLabelFromRgb instead <br />
+ This will be removed from Drake on or after 2024-05-01.</dd></dl>
+
+</div>
+</div>
+<a id="ace39a62380e0088d8a8ab09f5417a29f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace39a62380e0088d8a8ab09f5417a29f">&#9670;&nbsp;</a></span>MakeLabelFromRgb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html">RenderLabel</a> MakeLabelFromRgb </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Transforms the given RGB color into its corresponding <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html" title="Class representing object &quot;labels&quot; for rendering.">RenderLabel</a>. </p>
+
+</div>
+</div>
+<a id="a9305eccf80deaa0fd5d5345bd5b0b811"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9305eccf80deaa0fd5d5345bd5b0b811">&#9670;&nbsp;</a></span>MakeRgbFromLabel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> MakeRgbFromLabel </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html">RenderLabel</a> &amp;&#160;</td>
+          <td class="paramname"><em>label</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Transforms the given render label into an RGB color. </p>
+<p>The alpha channel will always be 1.0. </p>
 
 </div>
 </div>

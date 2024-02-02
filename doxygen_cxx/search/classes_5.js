@@ -52,7 +52,6 @@ var searchData=
   ['formatter_3c_20drake_3a_3asymbolic_3a_3arationalfunction_20_3e',['formatter&lt; drake::symbolic::RationalFunction &gt;',['../structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_rational_function_01_4.html',1,'fmt']]],
   ['formatter_3c_20drake_3a_3asymbolic_3a_3avariable_20_3e',['formatter&lt; drake::symbolic::Variable &gt;',['../structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_variable_01_4.html',1,'fmt']]],
   ['formatter_3c_20drake_3a_3asymbolic_3a_3avariable_3a_3atype_20_3e',['formatter&lt; drake::symbolic::Variable::Type &gt;',['../structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_variable_1_1_type_01_4.html',1,'fmt']]],
-  ['formatter_3c_20drake_3a_3asystems_3a_3asensors_3a_3acolor_3c_20t_20_3e_20_3e',['formatter&lt; drake::systems::sensors::Color&lt; T &gt; &gt;',['../structfmt_1_1formatter_3_01drake_1_1systems_1_1sensors_1_1_color_3_01_t_01_4_01_4.html',1,'fmt']]],
   ['formatter_3c_20drake_3a_3asystems_3a_3avectorbase_3c_20t_20_3e_20_3e',['formatter&lt; drake::systems::VectorBase&lt; T &gt; &gt;',['../structfmt_1_1formatter_3_01drake_1_1systems_1_1_vector_base_3_01_t_01_4_01_4.html',1,'fmt']]],
   ['formatter_3c_20drake_3a_3atypesafeindex_3c_20tag_20_3e_20_3e',['formatter&lt; drake::TypeSafeIndex&lt; Tag &gt; &gt;',['../structfmt_1_1formatter_3_01drake_1_1_type_safe_index_3_01_tag_01_4_01_4.html',1,'fmt']]],
   ['formatter_3c_20drake_3a_3ayaml_3a_3aloadyamloptions_20_3e',['formatter&lt; drake::yaml::LoadYamlOptions &gt;',['../structfmt_1_1formatter_3_01drake_1_1yaml_1_1_load_yaml_options_01_4.html',1,'fmt']]],

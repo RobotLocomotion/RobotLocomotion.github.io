@@ -1,5 +1,7 @@
 var classdrake_1_1systems_1_1sensors_1_1_color_palette =
 [
+    [ "ColorD", "classdrake_1_1systems_1_1sensors_1_1_color_palette.html#adca0483f4bb2b42c9b2deb8176bcd8cd", null ],
+    [ "ColorI", "classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a20e642907b9d97b64e75007d934abb9b", null ],
     [ "ColorPalette", "classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a4eaba3244f893af6b6cf6863832a9041", null ],
     [ "ColorPalette", "classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a1737d43eea136c062b45f5011cbaf4e3", null ],
     [ "ColorPalette", "classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a410f02cf1142eae8eb8101aa24389b35", null ],

@@ -159,6 +159,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1sensors_1_1_c
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classdrake_1_1systems_1_1sensors_1_1_color_palette-members.html">List of all members</a>  </div>
@@ -181,24 +182,31 @@ class drake::systems::sensors::ColorPalette&lt; IdType &gt;</h3>
 </div>
 <p><code>#include &lt;drake/systems/sensors/color_palette.h&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:adca0483f4bb2b42c9b2deb8176bcd8cd"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_color_palette.html#adca0483f4bb2b42c9b2deb8176bcd8cd">ColorD</a> = drake::deprecated::internal::Color&lt; <a class="el" href="classdouble.html">double</a> &gt;</td></tr>
+<tr class="separator:adca0483f4bb2b42c9b2deb8176bcd8cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20e642907b9d97b64e75007d934abb9b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a20e642907b9d97b64e75007d934abb9b">ColorI</a> = drake::deprecated::internal::Color&lt; <a class="el" href="classint.html">int</a> &gt;</td></tr>
+<tr class="separator:a20e642907b9d97b64e75007d934abb9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a410f02cf1142eae8eb8101aa24389b35"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a410f02cf1142eae8eb8101aa24389b35">ColorPalette</a> (<a class="el" href="classint.html">int</a> num_colors, IdType terrain_id, IdType no_body_id)</td></tr>
 <tr class="memdesc:a410f02cf1142eae8eb8101aa24389b35"><td class="mdescLeft">&#160;</td><td class="mdescRight">A constructor for ColorPalette.  <a href="#a410f02cf1142eae8eb8101aa24389b35">More...</a><br /></td></tr>
 <tr class="separator:a410f02cf1142eae8eb8101aa24389b35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34e05e16a9d48f75b5ec30d10befd800"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a5e531a9bcdca4559d154a05e2d6fbe58">ColorI</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a34e05e16a9d48f75b5ec30d10befd800">get_color</a> (IdType index) const</td></tr>
+<tr class="memitem:a34e05e16a9d48f75b5ec30d10befd800"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a20e642907b9d97b64e75007d934abb9b">ColorI</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a34e05e16a9d48f75b5ec30d10befd800">get_color</a> (IdType index) const</td></tr>
 <tr class="memdesc:a34e05e16a9d48f75b5ec30d10befd800"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a color of type ColorI which corresponds to given index.  <a href="#a34e05e16a9d48f75b5ec30d10befd800">More...</a><br /></td></tr>
 <tr class="separator:a34e05e16a9d48f75b5ec30d10befd800"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08b99a946df9e7c6adf92fb670168f99"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a87fc6f26714bf65536e2945638c52c87">ColorD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a08b99a946df9e7c6adf92fb670168f99">get_normalized_color</a> (IdType index) const</td></tr>
+<tr class="memitem:a08b99a946df9e7c6adf92fb670168f99"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_color_palette.html#adca0483f4bb2b42c9b2deb8176bcd8cd">ColorD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a08b99a946df9e7c6adf92fb670168f99">get_normalized_color</a> (IdType index) const</td></tr>
 <tr class="memdesc:a08b99a946df9e7c6adf92fb670168f99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a color of type ColorD which corresponds to given index.  <a href="#a08b99a946df9e7c6adf92fb670168f99">More...</a><br /></td></tr>
 <tr class="separator:a08b99a946df9e7c6adf92fb670168f99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30b949f7ebb9c29f2c4aa6bfed03111a"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a5e531a9bcdca4559d154a05e2d6fbe58">ColorI</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a30b949f7ebb9c29f2c4aa6bfed03111a">get_sky_color</a> () const</td></tr>
+<tr class="memitem:a30b949f7ebb9c29f2c4aa6bfed03111a"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a20e642907b9d97b64e75007d934abb9b">ColorI</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a30b949f7ebb9c29f2c4aa6bfed03111a">get_sky_color</a> () const</td></tr>
 <tr class="memdesc:a30b949f7ebb9c29f2c4aa6bfed03111a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the color of type ColorI which corresponds to sky.  <a href="#a30b949f7ebb9c29f2c4aa6bfed03111a">More...</a><br /></td></tr>
 <tr class="separator:a30b949f7ebb9c29f2c4aa6bfed03111a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f7f1b899a73a10ee66389c12ea84f3e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a5e531a9bcdca4559d154a05e2d6fbe58">ColorI</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a7f7f1b899a73a10ee66389c12ea84f3e">get_terrain_color</a> () const</td></tr>
+<tr class="memitem:a7f7f1b899a73a10ee66389c12ea84f3e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a20e642907b9d97b64e75007d934abb9b">ColorI</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a7f7f1b899a73a10ee66389c12ea84f3e">get_terrain_color</a> () const</td></tr>
 <tr class="memdesc:a7f7f1b899a73a10ee66389c12ea84f3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the color of type ColorI which corresponds to flat terrain.  <a href="#a7f7f1b899a73a10ee66389c12ea84f3e">More...</a><br /></td></tr>
 <tr class="separator:a7f7f1b899a73a10ee66389c12ea84f3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53509ac0b40f94e8384c1de22d2c949b"><td class="memItemLeft" align="right" valign="top">IdType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a53509ac0b40f94e8384c1de22d2c949b">LookUpId</a> (const <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a5e531a9bcdca4559d154a05e2d6fbe58">ColorI</a> &amp;color) const</td></tr>
+<tr class="memitem:a53509ac0b40f94e8384c1de22d2c949b"><td class="memItemLeft" align="right" valign="top">IdType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a53509ac0b40f94e8384c1de22d2c949b">LookUpId</a> (const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a20e642907b9d97b64e75007d934abb9b">ColorI</a> &amp;color) const</td></tr>
 <tr class="memdesc:a53509ac0b40f94e8384c1de22d2c949b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Looks up the ID which corresponds to the given color.  <a href="#a53509ac0b40f94e8384c1de22d2c949b">More...</a><br /></td></tr>
 <tr class="separator:a53509ac0b40f94e8384c1de22d2c949b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
@@ -213,10 +221,39 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:adacf846f73624ee81f656d6a2c0044d3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a87fc6f26714bf65536e2945638c52c87">ColorD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_color_palette.html#adacf846f73624ee81f656d6a2c0044d3">Normalize</a> (const <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a5e531a9bcdca4559d154a05e2d6fbe58">ColorI</a> &amp;color)</td></tr>
+<tr class="memitem:adacf846f73624ee81f656d6a2c0044d3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_color_palette.html#adca0483f4bb2b42c9b2deb8176bcd8cd">ColorD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_color_palette.html#adacf846f73624ee81f656d6a2c0044d3">Normalize</a> (const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a20e642907b9d97b64e75007d934abb9b">ColorI</a> &amp;color)</td></tr>
 <tr class="memdesc:adacf846f73624ee81f656d6a2c0044d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Takes ColorI whose pixel range is [0, 255] and returns ColorD whose pixel range is [0, 1].  <a href="#adacf846f73624ee81f656d6a2c0044d3">More...</a><br /></td></tr>
 <tr class="separator:adacf846f73624ee81f656d6a2c0044d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="adca0483f4bb2b42c9b2deb8176bcd8cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adca0483f4bb2b42c9b2deb8176bcd8cd">&#9670;&nbsp;</a></span>ColorD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_color_palette.html#adca0483f4bb2b42c9b2deb8176bcd8cd">ColorD</a> =  drake::deprecated::internal::Color&lt;<a class="el" href="classdouble.html">double</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a20e642907b9d97b64e75007d934abb9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20e642907b9d97b64e75007d934abb9b">&#9670;&nbsp;</a></span>ColorI</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a20e642907b9d97b64e75007d934abb9b">ColorI</a> =  drake::deprecated::internal::Color&lt;<a class="el" href="classint.html">int</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a4eaba3244f893af6b6cf6863832a9041"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4eaba3244f893af6b6cf6863832a9041">&#9670;&nbsp;</a></span>ColorPalette() <span class="overload">[1/3]</span></h2>
@@ -328,7 +365,7 @@ Static Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a5e531a9bcdca4559d154a05e2d6fbe58">ColorI</a>&amp; get_color </td>
+          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a20e642907b9d97b64e75007d934abb9b">ColorI</a>&amp; get_color </td>
           <td>(</td>
           <td class="paramtype">IdType&#160;</td>
           <td class="paramname"><em>index</em></td><td>)</td>
@@ -355,7 +392,7 @@ Static Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a87fc6f26714bf65536e2945638c52c87">ColorD</a> get_normalized_color </td>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_color_palette.html#adca0483f4bb2b42c9b2deb8176bcd8cd">ColorD</a> get_normalized_color </td>
           <td>(</td>
           <td class="paramtype">IdType&#160;</td>
           <td class="paramname"><em>index</em></td><td>)</td>
@@ -382,7 +419,7 @@ Static Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a5e531a9bcdca4559d154a05e2d6fbe58">ColorI</a>&amp; get_sky_color </td>
+          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a20e642907b9d97b64e75007d934abb9b">ColorI</a>&amp; get_sky_color </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -402,7 +439,7 @@ Static Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a5e531a9bcdca4559d154a05e2d6fbe58">ColorI</a>&amp; get_terrain_color </td>
+          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a20e642907b9d97b64e75007d934abb9b">ColorI</a>&amp; get_terrain_color </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -424,7 +461,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">IdType LookUpId </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a5e531a9bcdca4559d154a05e2d6fbe58">ColorI</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a20e642907b9d97b64e75007d934abb9b">ColorI</a> &amp;&#160;</td>
           <td class="paramname"><em>color</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -451,9 +488,9 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a87fc6f26714bf65536e2945638c52c87">ColorD</a> Normalize </td>
+          <td class="memname">static <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_color_palette.html#adca0483f4bb2b42c9b2deb8176bcd8cd">ColorD</a> Normalize </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a5e531a9bcdca4559d154a05e2d6fbe58">ColorI</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a20e642907b9d97b64e75007d934abb9b">ColorI</a> &amp;&#160;</td>
           <td class="paramname"><em>color</em></td><td>)</td>
           <td></td>
         </tr>

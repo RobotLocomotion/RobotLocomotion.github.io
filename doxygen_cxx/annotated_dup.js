@@ -24,7 +24,6 @@ var annotated_dup =
       [ "hash< drake::symbolic::Polynomial >", "structstd_1_1hash_3_01drake_1_1symbolic_1_1_polynomial_01_4.html", null ],
       [ "hash< drake::symbolic::Variable >", "structstd_1_1hash_3_01drake_1_1symbolic_1_1_variable_01_4.html", null ],
       [ "hash< drake::symbolic::Variables >", "structstd_1_1hash_3_01drake_1_1symbolic_1_1_variables_01_4.html", null ],
-      [ "hash< drake::systems::sensors::Color< T > >", "structstd_1_1hash_3_01drake_1_1systems_1_1sensors_1_1_color_3_01_t_01_4_01_4.html", null ],
       [ "hash< drake::systems::sensors::PixelType >", "structstd_1_1hash_3_01drake_1_1systems_1_1sensors_1_1_pixel_type_01_4.html", null ],
       [ "hash< drake::TypeSafeIndex< Tag > >", "structstd_1_1hash_3_01drake_1_1_type_safe_index_3_01_tag_01_4_01_4.html", null ],
       [ "less< drake::solvers::SolverId >", "structstd_1_1less_3_01drake_1_1solvers_1_1_solver_id_01_4.html", "structstd_1_1less_3_01drake_1_1solvers_1_1_solver_id_01_4" ],

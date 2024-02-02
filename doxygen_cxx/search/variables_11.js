@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['r',['r',['../structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#aecfdc8cfc228ee64e73c891738c3863d',1,'drake::multibody::constraint::ConstraintAccelProblemData::r()'],['../structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#aecfdc8cfc228ee64e73c891738c3863d',1,'drake::multibody::constraint::ConstraintVelProblemData::r()'],['../structdrake_1_1systems_1_1sensors_1_1_color.html#a3ff0123200292ec4b7e3e6319d048fa0',1,'drake::systems::sensors::Color::r()']]],
+  ['r',['r',['../structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#aecfdc8cfc228ee64e73c891738c3863d',1,'drake::multibody::constraint::ConstraintAccelProblemData::r()'],['../structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#aecfdc8cfc228ee64e73c891738c3863d',1,'drake::multibody::constraint::ConstraintVelProblemData::r()']]],
   ['radius',['radius',['../structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a3f67c53b80389c5f53961936edba04c9',1,'drake::multibody::meshcat::ContactVisualizerParams']]],
   ['random_5fseed',['random_seed',['../structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ad9059bc845096b2f05414a66c836b4ee',1,'drake::geometry::optimization::IrisOptions']]],
   ['reference_5fdirection',['reference_direction',['../structdrake_1_1multibody_1_1_spatial_velocity_constraint_1_1_angular_velocity_bounds.html#a5515d4ab78b4b7db0f63e1a38959451f',1,'drake::multibody::SpatialVelocityConstraint::AngularVelocityBounds']]],

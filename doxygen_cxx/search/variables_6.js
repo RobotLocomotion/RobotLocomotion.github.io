@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['g',['g',['../structdrake_1_1solvers_1_1_ipopt_solver_details.html#aa4ec74048b458de140ea7c2e2dd8e3f4',1,'drake::solvers::IpoptSolverDetails::g()'],['../structdrake_1_1systems_1_1sensors_1_1_color.html#a70aa3ccb6edfa3c0c478e50922c4a428',1,'drake::systems::sensors::Color::g()']]],
+  ['g',['g',['../structdrake_1_1solvers_1_1_ipopt_solver_details.html#aa4ec74048b458de140ea7c2e2dd8e3f4',1,'drake::solvers::IpoptSolverDetails']]],
   ['g_5fmult',['G_mult',['../structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#aa24636f116f235120b6b9c48c083a7e2',1,'drake::multibody::constraint::ConstraintAccelProblemData::G_mult()'],['../structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#aa24636f116f235120b6b9c48c083a7e2',1,'drake::multibody::constraint::ConstraintVelProblemData::G_mult()']]],
   ['g_5ftranspose_5fmult',['G_transpose_mult',['../structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#ac3d38d1b83f93e18d5a4633beef4639f',1,'drake::multibody::constraint::ConstraintAccelProblemData::G_transpose_mult()'],['../structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#ac3d38d1b83f93e18d5a4633beef4639f',1,'drake::multibody::constraint::ConstraintVelProblemData::G_transpose_mult()']]],
   ['gammae',['gammaE',['../structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#ac6cd0704f982975fb9d4ab32e55750f2',1,'drake::multibody::constraint::ConstraintVelProblemData']]],

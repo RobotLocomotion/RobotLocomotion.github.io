@@ -182,9 +182,6 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_camera_info.html">CameraInfo</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple class for characterizing the Drake camera model.  <a href="classdrake_1_1systems_1_1sensors_1_1_camera_info.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1sensors_1_1_color.html">Color</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds r, g, b values to represent a color pixel.  <a href="structdrake_1_1systems_1_1sensors_1_1_color.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_color_palette.html">ColorPalette</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and holds a palette of colors for visualizing different objects in a scene (the intent is for a different color to be applied to each identified object).  <a href="classdrake_1_1systems_1_1sensors_1_1_color_palette.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -274,12 +271,13 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a5e531a9bcdca4559d154a05e2d6fbe58"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a5e531a9bcdca4559d154a05e2d6fbe58">ColorI</a> = <a class="el" href="structdrake_1_1systems_1_1sensors_1_1_color.html">Color</a>&lt; <a class="el" href="classint.html">int</a> &gt;</td></tr>
-<tr class="memdesc:a5e531a9bcdca4559d154a05e2d6fbe58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a color based on its three primary additive colors: red, green, and blue.  <a href="#a5e531a9bcdca4559d154a05e2d6fbe58">More...</a><br /></td></tr>
-<tr class="separator:a5e531a9bcdca4559d154a05e2d6fbe58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87fc6f26714bf65536e2945638c52c87"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a87fc6f26714bf65536e2945638c52c87">ColorD</a> = <a class="el" href="structdrake_1_1systems_1_1sensors_1_1_color.html">Color</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;</td></tr>
-<tr class="memdesc:a87fc6f26714bf65536e2945638c52c87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a color based on its three primary additive colors: red, green, and blue.  <a href="#a87fc6f26714bf65536e2945638c52c87">More...</a><br /></td></tr>
-<tr class="separator:a87fc6f26714bf65536e2945638c52c87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6725fd5d84f888598a49438dc2a3169"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:af6725fd5d84f888598a49438dc2a3169"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#af6725fd5d84f888598a49438dc2a3169">Color</a> = drake::deprecated::internal::Color&lt; T &gt;</td></tr>
+<tr class="separator:af6725fd5d84f888598a49438dc2a3169"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20e642907b9d97b64e75007d934abb9b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a20e642907b9d97b64e75007d934abb9b">ColorI</a> = drake::deprecated::internal::Color&lt; <a class="el" href="classint.html">int</a> &gt;</td></tr>
+<tr class="separator:a20e642907b9d97b64e75007d934abb9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adca0483f4bb2b42c9b2deb8176bcd8cd"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#adca0483f4bb2b42c9b2deb8176bcd8cd">ColorD</a> = drake::deprecated::internal::Color&lt; <a class="el" href="classdouble.html">double</a> &gt;</td></tr>
+<tr class="separator:adca0483f4bb2b42c9b2deb8176bcd8cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48e75e9f3da7e6ca9cc886086e177d2a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a48e75e9f3da7e6ca9cc886086e177d2a">ImageRgb8U</a> = <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image.html">Image</a>&lt; <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3daeee66110e8b7e5d4ffd4f739ba15f5f6">PixelType::kRgb8U</a> &gt;</td></tr>
 <tr class="memdesc:a48e75e9f3da7e6ca9cc886086e177d2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type for RGB image where the each channel has the type of uint8_t.  <a href="#a48e75e9f3da7e6ca9cc886086e177d2a">More...</a><br /></td></tr>
 <tr class="separator:a48e75e9f3da7e6ca9cc886086e177d2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -356,9 +354,6 @@ Functions</h2></td></tr>
 <tr class="memitem:aa3ab5841aed63bd66db330dc9486be95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#aa3ab5841aed63bd66db330dc9486be95">ApplyCameraConfig</a> (const <a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html">CameraConfig</a> &amp;config, <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *builder, const <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html">systems::lcm::LcmBuses</a> *lcm_buses=nullptr, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *plant=nullptr, <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *scene_graph=nullptr, <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html">drake::lcm::DrakeLcmInterface</a> *lcm=nullptr)</td></tr>
 <tr class="memdesc:aa3ab5841aed63bd66db330dc9486be95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a simulated camera sensor (rgbd sensor and publishing systems) within <code>builder</code>.  <a href="#aa3ab5841aed63bd66db330dc9486be95">More...</a><br /></td></tr>
 <tr class="separator:aa3ab5841aed63bd66db330dc9486be95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30f975f4523ec7683dd1e04a2291095b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a30f975f4523ec7683dd1e04a2291095b"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a30f975f4523ec7683dd1e04a2291095b">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="structdrake_1_1systems_1_1sensors_1_1_color.html">Color</a>&lt; T &gt; &amp;color)</td></tr>
-<tr class="separator:a30f975f4523ec7683dd1e04a2291095b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71c33fb4c6262be6e517c58e19eb7abb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a71c33fb4c6262be6e517c58e19eb7abb">ConvertDepth32FTo16U</a> (const <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a0558960d25000bd7cc8607cef2fd223b">ImageDepth32F</a> &amp;input, <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a12ae113c6f13e4c9c37430a988afeef8">ImageDepth16U</a> *output)</td></tr>
 <tr class="memdesc:a71c33fb4c6262be6e517c58e19eb7abb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a single channel 32-bit float depth image with depths in meters to a single channel 16-bit unsigned int depth image with depths in millimeters.  <a href="#a71c33fb4c6262be6e517c58e19eb7abb">More...</a><br /></td></tr>
 <tr class="separator:a71c33fb4c6262be6e517c58e19eb7abb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -394,37 +389,45 @@ Functions</h2></td></tr>
 <tr class="separator:a3e0c104f714e135f38dbab683f2c24bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
-<a id="a87fc6f26714bf65536e2945638c52c87"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a87fc6f26714bf65536e2945638c52c87">&#9670;&nbsp;</a></span>ColorD</h2>
+<a id="af6725fd5d84f888598a49438dc2a3169"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6725fd5d84f888598a49438dc2a3169">&#9670;&nbsp;</a></span>Color</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a87fc6f26714bf65536e2945638c52c87">ColorD</a> =  <a class="el" href="structdrake_1_1systems_1_1sensors_1_1_color.html">Color</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;</td>
+          <td class="memname">using <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#af6725fd5d84f888598a49438dc2a3169">Color</a> =  drake::deprecated::internal::Color&lt;T&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Defines a color based on its three primary additive colors: red, green, and blue. </p>
-<p>Each of these primary additive colors are in the range of [0, 1]. </p>
-
 </div>
 </div>
-<a id="a5e531a9bcdca4559d154a05e2d6fbe58"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e531a9bcdca4559d154a05e2d6fbe58">&#9670;&nbsp;</a></span>ColorI</h2>
+<a id="adca0483f4bb2b42c9b2deb8176bcd8cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adca0483f4bb2b42c9b2deb8176bcd8cd">&#9670;&nbsp;</a></span>ColorD</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a5e531a9bcdca4559d154a05e2d6fbe58">ColorI</a> =  <a class="el" href="structdrake_1_1systems_1_1sensors_1_1_color.html">Color</a>&lt;<a class="el" href="classint.html">int</a>&gt;</td>
+          <td class="memname">using <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#adca0483f4bb2b42c9b2deb8176bcd8cd">ColorD</a> =  drake::deprecated::internal::Color&lt;<a class="el" href="classdouble.html">double</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Defines a color based on its three primary additive colors: red, green, and blue. </p>
-<p>Each of these primary additive colors are in the range of [0, 255]. </p>
+</div>
+</div>
+<a id="a20e642907b9d97b64e75007d934abb9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20e642907b9d97b64e75007d934abb9b">&#9670;&nbsp;</a></span>ColorI</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a20e642907b9d97b64e75007d934abb9b">ColorI</a> =  drake::deprecated::internal::Color&lt;<a class="el" href="classint.html">int</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -899,34 +902,6 @@ Either the given <code>builder</code> contains a SceneGraph system named "scene_
 </div><div class="memdoc">
 
 <p>Loads the PNG or TIFF image from <code>filename</code> into the <code>image</code> output. </p>
-
-</div>
-</div>
-<a id="a30f975f4523ec7683dd1e04a2291095b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30f975f4523ec7683dd1e04a2291095b">&#9670;&nbsp;</a></span>operator&lt;&lt;()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ostream&amp; drake::systems::sensors::operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>out</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="structdrake_1_1systems_1_1sensors_1_1_color.html">Color</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>color</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>

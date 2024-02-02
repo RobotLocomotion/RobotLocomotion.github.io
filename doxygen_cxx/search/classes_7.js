@@ -18,7 +18,6 @@ var searchData=
   ['hash_3c_20drake_3a_3asymbolic_3a_3apolynomial_20_3e',['hash&lt; drake::symbolic::Polynomial &gt;',['../structstd_1_1hash_3_01drake_1_1symbolic_1_1_polynomial_01_4.html',1,'std']]],
   ['hash_3c_20drake_3a_3asymbolic_3a_3avariable_20_3e',['hash&lt; drake::symbolic::Variable &gt;',['../structstd_1_1hash_3_01drake_1_1symbolic_1_1_variable_01_4.html',1,'std']]],
   ['hash_3c_20drake_3a_3asymbolic_3a_3avariables_20_3e',['hash&lt; drake::symbolic::Variables &gt;',['../structstd_1_1hash_3_01drake_1_1symbolic_1_1_variables_01_4.html',1,'std']]],
-  ['hash_3c_20drake_3a_3asystems_3a_3asensors_3a_3acolor_3c_20t_20_3e_20_3e',['hash&lt; drake::systems::sensors::Color&lt; T &gt; &gt;',['../structstd_1_1hash_3_01drake_1_1systems_1_1sensors_1_1_color_3_01_t_01_4_01_4.html',1,'std']]],
   ['hash_3c_20drake_3a_3asystems_3a_3asensors_3a_3apixeltype_20_3e',['hash&lt; drake::systems::sensors::PixelType &gt;',['../structstd_1_1hash_3_01drake_1_1systems_1_1sensors_1_1_pixel_type_01_4.html',1,'std']]],
   ['hash_3c_20drake_3a_3atypesafeindex_3c_20tag_20_3e_20_3e',['hash&lt; drake::TypeSafeIndex&lt; Tag &gt; &gt;',['../structstd_1_1hash_3_01drake_1_1_type_safe_index_3_01_tag_01_4_01_4.html',1,'std']]],
   ['hermitiandenseoutput',['HermitianDenseOutput',['../classdrake_1_1systems_1_1_hermitian_dense_output.html',1,'drake::systems']]],

@@ -29,7 +29,6 @@ var searchData=
   ['collisioncheckertestparams',['CollisionCheckerTestParams',['../structdrake_1_1planning_1_1test_1_1_collision_checker_test_params.html',1,'drake::planning::test']]],
   ['collisionfilterdeclaration',['CollisionFilterDeclaration',['../classdrake_1_1geometry_1_1_collision_filter_declaration.html',1,'drake::geometry']]],
   ['collisionfiltermanager',['CollisionFilterManager',['../classdrake_1_1geometry_1_1_collision_filter_manager.html',1,'drake::geometry']]],
-  ['color',['Color',['../structdrake_1_1systems_1_1sensors_1_1_color.html',1,'drake::systems::sensors']]],
   ['colorizedepthimage',['ColorizeDepthImage',['../classdrake_1_1visualization_1_1_colorize_depth_image.html',1,'drake::visualization']]],
   ['colorizelabelimage',['ColorizeLabelImage',['../classdrake_1_1visualization_1_1_colorize_label_image.html',1,'drake::visualization']]],
   ['colorpalette',['ColorPalette',['../classdrake_1_1systems_1_1sensors_1_1_color_palette.html',1,'drake::systems::sensors']]],
