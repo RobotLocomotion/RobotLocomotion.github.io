@@ -618,9 +618,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a88f6962ac18a44af116a57249fd0b8d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a88f6962ac18a44af116a57249fd0b8d4">GetPositionsAndVelocities</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; qv_out) const</td></tr>
 <tr class="memdesc:a88f6962ac18a44af116a57249fd0b8d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Populates output vector qv_out representing the generalized positions q and generalized velocities v of a specified model instance in a given Context.  <a href="#a88f6962ac18a44af116a57249fd0b8d4">More...</a><br /></td></tr>
 <tr class="separator:a88f6962ac18a44af116a57249fd0b8d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1036e869271ac77a82f891a5f7187210"><td class="memItemLeft" align="right" valign="top">Eigen::VectorBlock&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a1036e869271ac77a82f891a5f7187210">GetMutablePositionsAndVelocities</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context) const</td></tr>
-<tr class="memdesc:a1036e869271ac77a82f891a5f7187210"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced &ndash; <b>see warning</b>) Returns a mutable vector reference <code>[q; v]</code> to the generalized positions q and generalized velocities v in a given Context.  <a href="#a1036e869271ac77a82f891a5f7187210">More...</a><br /></td></tr>
-<tr class="separator:a1036e869271ac77a82f891a5f7187210"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59632f8b0fea85f03831920ef4bf7f58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a59632f8b0fea85f03831920ef4bf7f58">SetPositionsAndVelocities</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;q_v) const</td></tr>
 <tr class="memdesc:a59632f8b0fea85f03831920ef4bf7f58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets generalized positions q and generalized velocities v in a given Context from a given vector [q; v].  <a href="#a59632f8b0fea85f03831920ef4bf7f58">More...</a><br /></td></tr>
 <tr class="separator:a59632f8b0fea85f03831920ef4bf7f58"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -636,12 +633,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a89e6e2bebbf492386bdfabafd7c883cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a89e6e2bebbf492386bdfabafd7c883cb">GetPositions</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; q_out) const</td></tr>
 <tr class="memdesc:a89e6e2bebbf492386bdfabafd7c883cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Populates output vector q_out with the generalized positions q of a specified model instance in a given Context.  <a href="#a89e6e2bebbf492386bdfabafd7c883cb">More...</a><br /></td></tr>
 <tr class="separator:a89e6e2bebbf492386bdfabafd7c883cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace2984079483027345739f5e1bc8a19c"><td class="memItemLeft" align="right" valign="top">Eigen::VectorBlock&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ace2984079483027345739f5e1bc8a19c">GetMutablePositions</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context) const</td></tr>
-<tr class="memdesc:ace2984079483027345739f5e1bc8a19c"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced &ndash; <b>see warning</b>) Returns a mutable vector reference to the generalized positions q in a given Context.  <a href="#ace2984079483027345739f5e1bc8a19c">More...</a><br /></td></tr>
-<tr class="separator:ace2984079483027345739f5e1bc8a19c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af91bd90e38673df63e04209d0a43e2f6"><td class="memItemLeft" align="right" valign="top">Eigen::VectorBlock&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#af91bd90e38673df63e04209d0a43e2f6">GetMutablePositions</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1systems_1_1_state.html">systems::State</a>&lt; T &gt; *state) const</td></tr>
-<tr class="memdesc:af91bd90e38673df63e04209d0a43e2f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Returns a mutable vector reference to the generalized positions q in a given State.  <a href="#af91bd90e38673df63e04209d0a43e2f6">More...</a><br /></td></tr>
-<tr class="separator:af91bd90e38673df63e04209d0a43e2f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22bbb4e44e611ba49f34a3fe9f46c794"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a22bbb4e44e611ba49f34a3fe9f46c794">SetPositions</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;q) const</td></tr>
 <tr class="memdesc:a22bbb4e44e611ba49f34a3fe9f46c794"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the generalized positions q in a given Context from a given vector.  <a href="#a22bbb4e44e611ba49f34a3fe9f46c794">More...</a><br /></td></tr>
 <tr class="separator:a22bbb4e44e611ba49f34a3fe9f46c794"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -672,12 +663,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aac982b98171e628abdf7a95b578d02aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aac982b98171e628abdf7a95b578d02aa">GetVelocities</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; v_out) const</td></tr>
 <tr class="memdesc:aac982b98171e628abdf7a95b578d02aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Populates output vector v_out with the generalized velocities v of a specified model instance in a given Context.  <a href="#aac982b98171e628abdf7a95b578d02aa">More...</a><br /></td></tr>
 <tr class="separator:aac982b98171e628abdf7a95b578d02aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fe7c6fe93604e71b9d277b76fab5932"><td class="memItemLeft" align="right" valign="top">Eigen::VectorBlock&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a7fe7c6fe93604e71b9d277b76fab5932">GetMutableVelocities</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context) const</td></tr>
-<tr class="memdesc:a7fe7c6fe93604e71b9d277b76fab5932"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced &ndash; <b>see warning</b>) Returns a mutable vector reference to the generalized velocities v in a given Context.  <a href="#a7fe7c6fe93604e71b9d277b76fab5932">More...</a><br /></td></tr>
-<tr class="separator:a7fe7c6fe93604e71b9d277b76fab5932"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25c6efdadb0dd091590e9474d9039f64"><td class="memItemLeft" align="right" valign="top">Eigen::VectorBlock&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a25c6efdadb0dd091590e9474d9039f64">GetMutableVelocities</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1systems_1_1_state.html">systems::State</a>&lt; T &gt; *state) const</td></tr>
-<tr class="memdesc:a25c6efdadb0dd091590e9474d9039f64"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Returns a mutable vector reference to the generalized velocities v in a given State.  <a href="#a25c6efdadb0dd091590e9474d9039f64">More...</a><br /></td></tr>
-<tr class="separator:a25c6efdadb0dd091590e9474d9039f64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3738c9f371d7c4104dfdbd89ee5c280c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a3738c9f371d7c4104dfdbd89ee5c280c">SetVelocities</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;v) const</td></tr>
 <tr class="memdesc:a3738c9f371d7c4104dfdbd89ee5c280c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the generalized velocities v in a given Context from a given vector.  <a href="#a3738c9f371d7c4104dfdbd89ee5c280c">More...</a><br /></td></tr>
 <tr class="separator:a3738c9f371d7c4104dfdbd89ee5c280c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -6070,104 +6055,6 @@ It is required to connect this port for PD controlled model instances. </dd></dl
 
 </div>
 </div>
-<a id="ace2984079483027345739f5e1bc8a19c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace2984079483027345739f5e1bc8a19c">&#9670;&nbsp;</a></span>GetMutablePositions() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Eigen::VectorBlock&lt;<a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt; &gt; GetMutablePositions </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *&#160;</td>
-          <td class="paramname"><em>context</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Advanced &ndash; <b>see warning</b>) Returns a mutable vector reference to the generalized positions q in a given Context. </p>
-<dl class="section warning"><dt>Warning</dt><dd>Cache invalidation will occur when this is called but not if you subsequently write through the returned object. You should use <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a22bbb4e44e611ba49f34a3fe9f46c794" title="Sets the generalized positions q in a given Context from a given vector.">SetPositions()</a> instead unless you are fully aware of the possible interactions with the caching mechanism (see <a class="el" href="classdrake_1_1systems_1_1_context.html#dangerous_get_mutable">dangerous_get_mutable</a>). </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if the <code>context</code> is nullptr or if it does not correspond to the Context for a multibody model. (Deprecated.) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000007">Deprecated:</a></b></dt><dd>Use GetPositions() for constant access and SetPositions()  to set positions. <br />
- This will be removed from Drake on or after 2024-02-01.</dd></dl>
-
-</div>
-</div>
-<a id="af91bd90e38673df63e04209d0a43e2f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af91bd90e38673df63e04209d0a43e2f6">&#9670;&nbsp;</a></span>GetMutablePositions() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Eigen::VectorBlock&lt;<a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt; &gt; GetMutablePositions </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>context</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_state.html">systems::State</a>&lt; T &gt; *&#160;</td>
-          <td class="paramname"><em>state</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Advanced) Returns a mutable vector reference to the generalized positions q in a given State. </p>
-<dl class="section note"><dt>Note</dt><dd>This method returns a reference to existing data, exhibits constant i.e., O(1) time complexity, and runs very quickly. No cache invalidation occurs. </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if the <code>state</code> is nullptr or if <code>context</code> does not correspond to the Context for a multibody model. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section pre"><dt>Precondition</dt><dd><code>state</code> comes from this multibody model. (Deprecated.) </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000008">Deprecated:</a></b></dt><dd>Use GetPositions() for constant access and SetPositions()  to set positions. <br />
- This will be removed from Drake on or after 2024-02-01.</dd></dl>
-
-</div>
-</div>
-<a id="a1036e869271ac77a82f891a5f7187210"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1036e869271ac77a82f891a5f7187210">&#9670;&nbsp;</a></span>GetMutablePositionsAndVelocities()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Eigen::VectorBlock&lt;<a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt; &gt; GetMutablePositionsAndVelocities </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *&#160;</td>
-          <td class="paramname"><em>context</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Advanced &ndash; <b>see warning</b>) Returns a mutable vector reference <code>[q; v]</code> to the generalized positions q and generalized velocities v in a given Context. </p>
-<dl class="section warning"><dt>Warning</dt><dd>Cache invalidation will occur when this is called but not if you subsequently write through the returned object. You should use <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a59632f8b0fea85f03831920ef4bf7f58" title="Sets generalized positions q and generalized velocities v in a given Context from a given vector [q; ...">SetPositionsAndVelocities()</a> instead unless you are fully aware of the interactions with the caching mechanism (see <a class="el" href="classdrake_1_1systems_1_1_context.html#dangerous_get_mutable">dangerous_get_mutable</a>). </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if <code>context</code> is nullptr or if it does not correspond to the context for a multibody model. (Deprecated.) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000006">Deprecated:</a></b></dt><dd>Use GetPositionsAndVelocities() for constant access and  SetPositionsAndVelocities() to set the positions and velocities. <br />
- This will be removed from Drake on or after 2024-02-01.</dd></dl>
-
-</div>
-</div>
 <a id="a39f68ce7fc652377b941459c8ec55897"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a39f68ce7fc652377b941459c8ec55897">&#9670;&nbsp;</a></span>GetMutableSceneGraphPreFinalize()</h2>
 
@@ -6191,75 +6078,6 @@ It is required to connect this port for PD controlled model instances. </dd></dl
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="a7fe7c6fe93604e71b9d277b76fab5932"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7fe7c6fe93604e71b9d277b76fab5932">&#9670;&nbsp;</a></span>GetMutableVelocities() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Eigen::VectorBlock&lt;<a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt; &gt; GetMutableVelocities </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *&#160;</td>
-          <td class="paramname"><em>context</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Advanced &ndash; <b>see warning</b>) Returns a mutable vector reference to the generalized velocities v in a given Context. </p>
-<dl class="section warning"><dt>Warning</dt><dd>Cache invalidation will occur when this is called but not if you subsequently write through the returned object. You should use <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a3738c9f371d7c4104dfdbd89ee5c280c" title="Sets the generalized velocities v in a given Context from a given vector.">SetVelocities()</a> instead unless you are fully aware of the possible interactions with the caching mechanism (see <a class="el" href="classdrake_1_1systems_1_1_context.html#dangerous_get_mutable">dangerous_get_mutable</a>). </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if the <code>context</code> is nullptr or if it does not correspond to the Context for a multibody model. (Deprecated.) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000009">Deprecated:</a></b></dt><dd>Use GetVelocities() for constant access and  SetVelocities() to set velocities. <br />
- This will be removed from Drake on or after 2024-02-01.</dd></dl>
-
-</div>
-</div>
-<a id="a25c6efdadb0dd091590e9474d9039f64"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25c6efdadb0dd091590e9474d9039f64">&#9670;&nbsp;</a></span>GetMutableVelocities() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Eigen::VectorBlock&lt;<a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt; &gt; GetMutableVelocities </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>context</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_state.html">systems::State</a>&lt; T &gt; *&#160;</td>
-          <td class="paramname"><em>state</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Advanced) Returns a mutable vector reference to the generalized velocities v in a given State. </p>
-<dl class="section note"><dt>Note</dt><dd>This method returns a reference to existing data, exhibits constant i.e., O(1) time complexity, and runs very quickly. No cache invalidation occurs. </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if the <code>state</code> is nullptr or if <code>context</code> does not correspond to the Context for a multibody model. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section pre"><dt>Precondition</dt><dd><code>state</code> comes from this multibody model. (Deprecated.) </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000010">Deprecated:</a></b></dt><dd>Use GetVelocities() for constant access and  SetVelocities() to set velocities. <br />
- This will be removed from Drake on or after 2024-02-01.</dd></dl>
 
 </div>
 </div>
@@ -8384,8 +8202,8 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 
 </div>
 </div>
-<a id="aecc2576d314d5baf56ad6ad593b26f9f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aecc2576d314d5baf56ad6ad593b26f9f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="af4f43a6f72128af8e926d32c37ed7580"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4f43a6f72128af8e926d32c37ed7580">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -8396,7 +8214,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -8410,8 +8228,8 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 
 </div>
 </div>
-<a id="af4f43a6f72128af8e926d32c37ed7580"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4f43a6f72128af8e926d32c37ed7580">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="aecc2576d314d5baf56ad6ad593b26f9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecc2576d314d5baf56ad6ad593b26f9f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -8422,7 +8240,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -8968,7 +8786,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
   </table>
   </dd>
 </dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000005">Deprecated:</a></b></dt><dd>Use set_discrete_contact_approximation() to set the contact model  approximation. The underlying solver will be inferred automatically. <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000004">Deprecated:</a></b></dt><dd>Use set_discrete_contact_approximation() to set the contact model  approximation. The underlying solver will be inferred automatically. <br />
  This will be removed from Drake on or after 2024-04-01.</dd></dl>
 
 </div>
@@ -9790,7 +9608,7 @@ manager != nullptr. </dd></dl>
 </div><div class="memdoc">
 
 <p>Sets the generalized positions q in a given Context from a given vector. </p>
-<p>Prefer this method over <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ace2984079483027345739f5e1bc8a19c" title="(Advanced – see warning) Returns a mutable vector reference to the generalized positions q in a given...">GetMutablePositions()</a>. </p><dl class="exception"><dt>Exceptions</dt><dd>
+<p>Prefer this method over GetMutablePositions(). </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if <code>context</code> is nullptr, if <code>context</code> does not correspond to the Context for a multibody model, or if the length of <code>q</code> is not equal to <code><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aba2887f0ca1fbbdfb49cf6b0ee21e553" title="Returns the size of the generalized position vector q for this model.">num_positions()</a></code>. </td></tr>
   </table>
@@ -9918,7 +9736,7 @@ manager != nullptr. </dd></dl>
 </div><div class="memdoc">
 
 <p>Sets generalized positions q and generalized velocities v in a given Context from a given vector [q; v]. </p>
-<p>Prefer this method over <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a1036e869271ac77a82f891a5f7187210" title="(Advanced – see warning) Returns a mutable vector reference [q; v] to the generalized positions q and...">GetMutablePositionsAndVelocities()</a>. </p><dl class="exception"><dt>Exceptions</dt><dd>
+<p>Prefer this method over GetMutablePositionsAndVelocities(). </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if <code>context</code> is nullptr, if <code>context</code> does not correspond to the context for a multibody model, or if the length of <code>q_v</code> is not equal to <code><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aba2887f0ca1fbbdfb49cf6b0ee21e553" title="Returns the size of the generalized position vector q for this model.">num_positions()</a> + <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae0163ac0976659d811e3337647ff0313" title="Returns the size of the generalized velocity vector v for this model.">num_velocities()</a></code>. </td></tr>
   </table>
@@ -10079,7 +9897,7 @@ manager != nullptr. </dd></dl>
 </div><div class="memdoc">
 
 <p>Sets the generalized velocities v in a given Context from a given vector. </p>
-<p>Prefer this method over <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a7fe7c6fe93604e71b9d277b76fab5932" title="(Advanced – see warning) Returns a mutable vector reference to the generalized velocities v in a give...">GetMutableVelocities()</a>. </p><dl class="exception"><dt>Exceptions</dt><dd>
+<p>Prefer this method over GetMutableVelocities(). </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if the <code>context</code> is nullptr, if the context does not correspond to the context for a multibody model, or if the length of <code>v</code> is not equal to <code><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae0163ac0976659d811e3337647ff0313" title="Returns the size of the generalized velocity vector v for this model.">num_velocities()</a></code>. </td></tr>
   </table>

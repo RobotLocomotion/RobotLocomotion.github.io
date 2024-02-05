@@ -4888,12 +4888,8 @@ in <code class="docutils literal notranslate"><span class="pre">context</span></
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.JointActuator.set_actuation_vector">
-<span class="sig-name descname"><span class="pre">set_actuation_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.JointActuator.set_actuation_vector" title="Permalink to this definition"></a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li><p>set_actuation_vector(self: pydrake.multibody.tree.JointActuator, u_actuator: numpy.ndarray[numpy.float64[m, 1]], u: Optional[numpy.ndarray[numpy.float64[m, 1], flags.writeable]]) -&gt; None</p></li>
-</ol>
-<p>Given the actuation values <code class="docutils literal notranslate"><span class="pre">u_actuator</span></code> for <code class="docutils literal notranslate"><span class="pre">this</span></code> actuator,
+<span class="sig-name descname"><span class="pre">set_actuation_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.JointActuator" title="pydrake.multibody.tree.JointActuator"><span class="pre">pydrake.multibody.tree.JointActuator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">u_actuator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.writeable</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.JointActuator.set_actuation_vector" title="Permalink to this definition"></a></dt>
+<dd><p>Given the actuation values <code class="docutils literal notranslate"><span class="pre">u_actuator</span></code> for <code class="docutils literal notranslate"><span class="pre">this</span></code> actuator,
 updates the actuation vector <code class="docutils literal notranslate"><span class="pre">u</span></code> for the entire multibody model to
 which this actuator belongs to.</p>
 <dl class="simple">
@@ -4916,10 +4912,6 @@ corresponding to this actuator are changed.</p>
 </ul>
 </dd>
 </dl>
-<ol class="arabic simple" start="2">
-<li><p>set_actuation_vector(self: pydrake.multibody.tree.JointActuator, u_instance: numpy.ndarray[numpy.float64[m, 1]], u: Optional[numpy.ndarray[numpy.float64[m, 1], flags.writeable]]) -&gt; None</p></li>
-</ol>
-<p>The kwarg name ‘u_instance’ is deprecated and will be removed on 2024-02-01. Spell the argument name as ‘u_actuator’ instead.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -5127,12 +5119,8 @@ in <code class="docutils literal notranslate"><span class="pre">context</span></
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.JointActuator_-AutoDiffXd-.set_actuation_vector">
-<span id="pydrake.multibody.tree.JointActuator_[AutoDiffXd].set_actuation_vector"></span><span class="sig-name descname"><span class="pre">set_actuation_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.JointActuator_-AutoDiffXd-.set_actuation_vector" title="Permalink to this definition"></a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li><p>set_actuation_vector(self: pydrake.multibody.tree.JointActuator_[AutoDiffXd], u_actuator: numpy.ndarray[object[m, 1]], u: Optional[numpy.ndarray[object[m, 1], flags.writeable]]) -&gt; None</p></li>
-</ol>
-<p>Given the actuation values <code class="docutils literal notranslate"><span class="pre">u_actuator</span></code> for <code class="docutils literal notranslate"><span class="pre">this</span></code> actuator,
+<span id="pydrake.multibody.tree.JointActuator_[AutoDiffXd].set_actuation_vector"></span><span class="sig-name descname"><span class="pre">set_actuation_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.JointActuator_" title="pydrake.multibody.tree.JointActuator_"><span class="pre">pydrake.multibody.tree.JointActuator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u_actuator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.writeable</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.JointActuator_-AutoDiffXd-.set_actuation_vector" title="Permalink to this definition"></a></dt>
+<dd><p>Given the actuation values <code class="docutils literal notranslate"><span class="pre">u_actuator</span></code> for <code class="docutils literal notranslate"><span class="pre">this</span></code> actuator,
 updates the actuation vector <code class="docutils literal notranslate"><span class="pre">u</span></code> for the entire multibody model to
 which this actuator belongs to.</p>
 <dl class="simple">
@@ -5155,10 +5143,6 @@ corresponding to this actuator are changed.</p>
 </ul>
 </dd>
 </dl>
-<ol class="arabic simple" start="2">
-<li><p>set_actuation_vector(self: pydrake.multibody.tree.JointActuator_[AutoDiffXd], u_instance: numpy.ndarray[object[m, 1]], u: Optional[numpy.ndarray[object[m, 1], flags.writeable]]) -&gt; None</p></li>
-</ol>
-<p>The kwarg name ‘u_instance’ is deprecated and will be removed on 2024-02-01. Spell the argument name as ‘u_actuator’ instead.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -5360,12 +5344,8 @@ in <code class="docutils literal notranslate"><span class="pre">context</span></
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.JointActuator_-Expression-.set_actuation_vector">
-<span id="pydrake.multibody.tree.JointActuator_[Expression].set_actuation_vector"></span><span class="sig-name descname"><span class="pre">set_actuation_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.JointActuator_-Expression-.set_actuation_vector" title="Permalink to this definition"></a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li><p>set_actuation_vector(self: pydrake.multibody.tree.JointActuator_[Expression], u_actuator: numpy.ndarray[object[m, 1]], u: Optional[numpy.ndarray[object[m, 1], flags.writeable]]) -&gt; None</p></li>
-</ol>
-<p>Given the actuation values <code class="docutils literal notranslate"><span class="pre">u_actuator</span></code> for <code class="docutils literal notranslate"><span class="pre">this</span></code> actuator,
+<span id="pydrake.multibody.tree.JointActuator_[Expression].set_actuation_vector"></span><span class="sig-name descname"><span class="pre">set_actuation_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.JointActuator_" title="pydrake.multibody.tree.JointActuator_"><span class="pre">pydrake.multibody.tree.JointActuator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u_actuator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.writeable</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.JointActuator_-Expression-.set_actuation_vector" title="Permalink to this definition"></a></dt>
+<dd><p>Given the actuation values <code class="docutils literal notranslate"><span class="pre">u_actuator</span></code> for <code class="docutils literal notranslate"><span class="pre">this</span></code> actuator,
 updates the actuation vector <code class="docutils literal notranslate"><span class="pre">u</span></code> for the entire multibody model to
 which this actuator belongs to.</p>
 <dl class="simple">
@@ -5388,10 +5368,6 @@ corresponding to this actuator are changed.</p>
 </ul>
 </dd>
 </dl>
-<ol class="arabic simple" start="2">
-<li><p>set_actuation_vector(self: pydrake.multibody.tree.JointActuator_[Expression], u_instance: numpy.ndarray[object[m, 1]], u: Optional[numpy.ndarray[object[m, 1], flags.writeable]]) -&gt; None</p></li>
-</ol>
-<p>The kwarg name ‘u_instance’ is deprecated and will be removed on 2024-02-01. Spell the argument name as ‘u_actuator’ instead.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -11865,35 +11841,6 @@ parametrizes this RigidBody’s orientation.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.tree.RigidBody.floating_velocities_start">
-<span class="sig-name descname"><span class="pre">floating_velocities_start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RigidBody" title="pydrake.multibody.tree.RigidBody"><span class="pre">pydrake.multibody.tree.RigidBody</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody.floating_velocities_start" title="Permalink to this definition"></a></dt>
-<dd><p>(Advanced, Deprecated) For floating bodies (see is_floating()) this
-method returns the index of this RigidBody’s first generalized
-velocity in the <em>full state vector</em> for a MultibodyPlant model, under
-the dubious assumption that the state consists of [q v] concatenated.
-Velocities for this body are then contiguous starting at this index.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong> – </p>
-</dd>
-</dl>
-<dl class="simple">
-<dt>Precondition:</dt><dd><p>this is a floating body</p>
-</dd>
-</dl>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>floating_velocities_start_in_v() (Deprecated.)</p>
-</div>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Convert to floating_velocities_start_in_v(). In a state with [q v]
-concatenated, offset by num_positions() to get to the start of v.
-This will be removed from Drake on or after 2024-02-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.RigidBody.floating_velocities_start_in_v">
 <span class="sig-name descname"><span class="pre">floating_velocities_start_in_v</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RigidBody" title="pydrake.multibody.tree.RigidBody"><span class="pre">pydrake.multibody.tree.RigidBody</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody.floating_velocities_start_in_v" title="Permalink to this definition"></a></dt>
 <dd><p>(Advanced) For floating bodies (see is_floating()) this method returns
@@ -12482,35 +12429,6 @@ parametrizes this RigidBody’s orientation.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.tree.RigidBody_-AutoDiffXd-.floating_velocities_start">
-<span id="pydrake.multibody.tree.RigidBody_[AutoDiffXd].floating_velocities_start"></span><span class="sig-name descname"><span class="pre">floating_velocities_start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RigidBody_" title="pydrake.multibody.tree.RigidBody_"><span class="pre">pydrake.multibody.tree.RigidBody_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody_-AutoDiffXd-.floating_velocities_start" title="Permalink to this definition"></a></dt>
-<dd><p>(Advanced, Deprecated) For floating bodies (see is_floating()) this
-method returns the index of this RigidBody’s first generalized
-velocity in the <em>full state vector</em> for a MultibodyPlant model, under
-the dubious assumption that the state consists of [q v] concatenated.
-Velocities for this body are then contiguous starting at this index.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong> – </p>
-</dd>
-</dl>
-<dl class="simple">
-<dt>Precondition:</dt><dd><p>this is a floating body</p>
-</dd>
-</dl>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>floating_velocities_start_in_v() (Deprecated.)</p>
-</div>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Convert to floating_velocities_start_in_v(). In a state with [q v]
-concatenated, offset by num_positions() to get to the start of v.
-This will be removed from Drake on or after 2024-02-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.RigidBody_-AutoDiffXd-.floating_velocities_start_in_v">
 <span id="pydrake.multibody.tree.RigidBody_[AutoDiffXd].floating_velocities_start_in_v"></span><span class="sig-name descname"><span class="pre">floating_velocities_start_in_v</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RigidBody_" title="pydrake.multibody.tree.RigidBody_"><span class="pre">pydrake.multibody.tree.RigidBody_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody_-AutoDiffXd-.floating_velocities_start_in_v" title="Permalink to this definition"></a></dt>
 <dd><p>(Advanced) For floating bodies (see is_floating()) this method returns
@@ -13090,35 +13008,6 @@ parametrizes this RigidBody’s orientation.</p>
 <p class="admonition-title">See also</p>
 <p>is_floating(), has_quaternion_dofs(), MultibodyPlant::Finalize()</p>
 </div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.tree.RigidBody_-Expression-.floating_velocities_start">
-<span id="pydrake.multibody.tree.RigidBody_[Expression].floating_velocities_start"></span><span class="sig-name descname"><span class="pre">floating_velocities_start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RigidBody_" title="pydrake.multibody.tree.RigidBody_"><span class="pre">pydrake.multibody.tree.RigidBody_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody_-Expression-.floating_velocities_start" title="Permalink to this definition"></a></dt>
-<dd><p>(Advanced, Deprecated) For floating bodies (see is_floating()) this
-method returns the index of this RigidBody’s first generalized
-velocity in the <em>full state vector</em> for a MultibodyPlant model, under
-the dubious assumption that the state consists of [q v] concatenated.
-Velocities for this body are then contiguous starting at this index.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong> – </p>
-</dd>
-</dl>
-<dl class="simple">
-<dt>Precondition:</dt><dd><p>this is a floating body</p>
-</dd>
-</dl>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>floating_velocities_start_in_v() (Deprecated.)</p>
-</div>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Convert to floating_velocities_start_in_v(). In a state with [q v]
-concatenated, offset by num_positions() to get to the start of v.
-This will be removed from Drake on or after 2024-02-01.</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">

@@ -228,9 +228,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8e98e34e5da5ecfc7e03086b70cf5489"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a8e98e34e5da5ecfc7e03086b70cf5489">floating_positions_start</a> () const</td></tr>
 <tr class="memdesc:a8e98e34e5da5ecfc7e03086b70cf5489"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) For floating bodies (see <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a7df065349a370f3007ee52c6ede868d0" title="(Advanced) Returns true if this body is granted 6-dofs by a Mobilizer and the parent body of this bod...">is_floating()</a>) this method returns the index of this RigidBody's first generalized position in the vector q of generalized position coordinates for a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> model.  <a href="#a8e98e34e5da5ecfc7e03086b70cf5489">More...</a><br /></td></tr>
 <tr class="separator:a8e98e34e5da5ecfc7e03086b70cf5489"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc1bbbf124d24c628bb23796cfa5c594"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#adc1bbbf124d24c628bb23796cfa5c594">floating_velocities_start</a> () const</td></tr>
-<tr class="memdesc:adc1bbbf124d24c628bb23796cfa5c594"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced, Deprecated) For floating bodies (see <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a7df065349a370f3007ee52c6ede868d0" title="(Advanced) Returns true if this body is granted 6-dofs by a Mobilizer and the parent body of this bod...">is_floating()</a>) this method returns the index of this RigidBody's first generalized velocity in the <em>full state vector</em> for a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> model, under the dubious assumption that the state consists of [q v] concatenated.  <a href="#adc1bbbf124d24c628bb23796cfa5c594">More...</a><br /></td></tr>
-<tr class="separator:adc1bbbf124d24c628bb23796cfa5c594"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02779a5522ffef8547daf6c386ffb47b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a02779a5522ffef8547daf6c386ffb47b">floating_velocities_start_in_v</a> () const</td></tr>
 <tr class="memdesc:a02779a5522ffef8547daf6c386ffb47b"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) For floating bodies (see <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a7df065349a370f3007ee52c6ede868d0" title="(Advanced) Returns true if this body is granted 6-dofs by a Mobilizer and the parent body of this bod...">is_floating()</a>) this method returns the index of this RigidBody's first generalized velocity in the vector v of generalized velocities for a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> model.  <a href="#a02779a5522ffef8547daf6c386ffb47b">More...</a><br /></td></tr>
 <tr class="separator:a02779a5522ffef8547daf6c386ffb47b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1036,35 +1033,6 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="adc1bbbf124d24c628bb23796cfa5c594"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc1bbbf124d24c628bb23796cfa5c594">&#9670;&nbsp;</a></span>floating_velocities_start()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classint.html">int</a> floating_velocities_start </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Advanced, Deprecated) For floating bodies (see <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a7df065349a370f3007ee52c6ede868d0" title="(Advanced) Returns true if this body is granted 6-dofs by a Mobilizer and the parent body of this bod...">is_floating()</a>) this method returns the index of this RigidBody's first generalized velocity in the <em>full state vector</em> for a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> model, under the dubious assumption that the state consists of [q v] concatenated. </p>
-<p>Velocities for this body are then contiguous starting at this index. </p><dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if called pre-finalize </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section pre"><dt>Precondition</dt><dd>this is a floating body </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a02779a5522ffef8547daf6c386ffb47b" title="(Advanced) For floating bodies (see is_floating()) this method returns the index of this RigidBody&#39;s ...">floating_velocities_start_in_v()</a> (Deprecated.) </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000012">Deprecated:</a></b></dt><dd>Convert to floating_velocities_start_in_v(). In a state  with [q v] concatenated, offset by num_positions() to  get to the start of v. <br />
- This will be removed from Drake on or after 2024-02-01.</dd></dl>
-
-</div>
-</div>
 <a id="a02779a5522ffef8547daf6c386ffb47b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a02779a5522ffef8547daf6c386ffb47b">&#9670;&nbsp;</a></span>floating_velocities_start_in_v()</h2>
 
@@ -1640,7 +1608,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000011">Deprecated:</a></b></dt><dd>Use mobod_index() instead. <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000005">Deprecated:</a></b></dt><dd>Use mobod_index() instead. <br />
  This will be removed from Drake on or after 2024-03-01.</dd></dl>
 
 </div>

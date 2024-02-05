@@ -7,7 +7,6 @@ var classdrake_1_1systems_1_1_vector_system =
     [ "VectorSystem", "classdrake_1_1systems_1_1_vector_system.html#a051acae295b1d44d4ca95eb2cc79a1e1", null ],
     [ "CalcVectorOutput", "classdrake_1_1systems_1_1_vector_system.html#abdcf055421e02a1bb92b463f4383ff57", null ],
     [ "DeclarePeriodicDiscreteUpdate", "classdrake_1_1systems_1_1_vector_system.html#a461dfc1e50a0637c615c5771bbd84137", null ],
-    [ "DeclarePeriodicDiscreteUpdateNoHandler", "classdrake_1_1systems_1_1_vector_system.html#a40d2841b68d432448f21ed6fe920a323", null ],
     [ "DoCalcTimeDerivatives", "classdrake_1_1systems_1_1_vector_system.html#a021b8135deba8c945c9deea3cb4ce7a0", null ],
     [ "DoCalcVectorDiscreteVariableUpdates", "classdrake_1_1systems_1_1_vector_system.html#a83f65743d03c576df8bd30d5d3d8e482", null ],
     [ "DoCalcVectorOutput", "classdrake_1_1systems_1_1_vector_system.html#aef5d5729502ec9a436205f55de33db81", null ],

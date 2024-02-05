@@ -21,7 +21,6 @@ var classdrake_1_1multibody_1_1_rigid_body =
     [ "EvalSpatialVelocityInWorld", "classdrake_1_1multibody_1_1_rigid_body.html#a9c07832f25dde3f8403e98c73dd24d1b", null ],
     [ "floating_position_suffix", "classdrake_1_1multibody_1_1_rigid_body.html#a160c046a3ba58d0ba931096b6bd38b2a", null ],
     [ "floating_positions_start", "classdrake_1_1multibody_1_1_rigid_body.html#a8e98e34e5da5ecfc7e03086b70cf5489", null ],
-    [ "floating_velocities_start", "classdrake_1_1multibody_1_1_rigid_body.html#adc1bbbf124d24c628bb23796cfa5c594", null ],
     [ "floating_velocities_start_in_v", "classdrake_1_1multibody_1_1_rigid_body.html#a02779a5522ffef8547daf6c386ffb47b", null ],
     [ "floating_velocity_suffix", "classdrake_1_1multibody_1_1_rigid_body.html#a4bf67c08cb5fb34309c4c220d9872d29", null ],
     [ "get_angular_acceleration_in_world", "classdrake_1_1multibody_1_1_rigid_body.html#ae4e824f4a35b414007edaf3152e27df4", null ],

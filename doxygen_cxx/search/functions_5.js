@@ -70,7 +70,6 @@ var searchData=
   ['flipnormalstowardpoint',['FlipNormalsTowardPoint',['../classdrake_1_1perception_1_1_point_cloud.html#ac88cb4e1172a056b6529b6f5a8b084ed',1,'drake::perception::PointCloud']]],
   ['floating_5fposition_5fsuffix',['floating_position_suffix',['../classdrake_1_1multibody_1_1_rigid_body.html#a160c046a3ba58d0ba931096b6bd38b2a',1,'drake::multibody::RigidBody']]],
   ['floating_5fpositions_5fstart',['floating_positions_start',['../classdrake_1_1multibody_1_1_rigid_body.html#a8e98e34e5da5ecfc7e03086b70cf5489',1,'drake::multibody::RigidBody']]],
-  ['floating_5fvelocities_5fstart',['floating_velocities_start',['../classdrake_1_1multibody_1_1_rigid_body.html#adc1bbbf124d24c628bb23796cfa5c594',1,'drake::multibody::RigidBody']]],
   ['floating_5fvelocities_5fstart_5fin_5fv',['floating_velocities_start_in_v',['../classdrake_1_1multibody_1_1_rigid_body.html#a02779a5522ffef8547daf6c386ffb47b',1,'drake::multibody::RigidBody']]],
   ['floating_5fvelocity_5fsuffix',['floating_velocity_suffix',['../classdrake_1_1multibody_1_1_rigid_body.html#a4bf67c08cb5fb34309c4c220d9872d29',1,'drake::multibody::RigidBody']]],
   ['floor',['floor',['../namespacedrake_1_1ad.html#a6fe3629863ab0bd4025541189d15e809',1,'drake::ad::floor()'],['../namespacedrake_1_1symbolic.html#a56b28c66fdf5d2b582a677660936abca',1,'drake::symbolic::floor()']]],

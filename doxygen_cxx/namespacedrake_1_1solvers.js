@@ -39,7 +39,6 @@ var namespacedrake_1_1solvers =
     [ "LorentzConeConstraint", "classdrake_1_1solvers_1_1_lorentz_cone_constraint.html", "classdrake_1_1solvers_1_1_lorentz_cone_constraint" ],
     [ "MathematicalProgram", "classdrake_1_1solvers_1_1_mathematical_program.html", "classdrake_1_1solvers_1_1_mathematical_program" ],
     [ "MathematicalProgramResult", "classdrake_1_1solvers_1_1_mathematical_program_result.html", "classdrake_1_1solvers_1_1_mathematical_program_result" ],
-    [ "MinimumValueConstraint", "classdrake_1_1solvers_1_1_minimum_value_constraint.html", "classdrake_1_1solvers_1_1_minimum_value_constraint" ],
     [ "MinimumValueLowerBoundConstraint", "classdrake_1_1solvers_1_1_minimum_value_lower_bound_constraint.html", "classdrake_1_1solvers_1_1_minimum_value_lower_bound_constraint" ],
     [ "MinimumValueUpperBoundConstraint", "classdrake_1_1solvers_1_1_minimum_value_upper_bound_constraint.html", "classdrake_1_1solvers_1_1_minimum_value_upper_bound_constraint" ],
     [ "MixedIntegerBranchAndBound", "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html", "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound" ],

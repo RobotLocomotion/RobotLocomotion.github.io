@@ -46,7 +46,7 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 743;
+var viewWidth = 589;
 var viewHeight = 229;
 var sectionId = 'dynsection-0';
 </script>
@@ -54,14 +54,14 @@ var sectionId = 'dynsection-0';
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>drake/common/proto/call_python.h</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-225 738.5,-225 738.5,4 -4,4"/>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-225 585,-225 585,4 -4,4"/>
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
 <g id="a_node1"><a xlink:title="Utilities for calling Python from C++ over an RPC.">
-<polygon fill="#bfbfbf" stroke="black" points="123,-190.5 123,-220.5 241,-220.5 241,-190.5 123,-190.5"/>
-<text text-anchor="start" x="131" y="-208.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/common/proto</text>
-<text text-anchor="middle" x="182" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00">/call_python.h</text>
+<polygon fill="#bfbfbf" stroke="black" points="173.5,-190.5 173.5,-220.5 291.5,-220.5 291.5,-190.5 173.5,-190.5"/>
+<text text-anchor="start" x="181.5" y="-208.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/common/proto</text>
+<text text-anchor="middle" x="232.5" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00">/call_python.h</text>
 </a>
 </g>
 </g>
@@ -69,176 +69,139 @@ var sectionId = 'dynsection-0';
 <g id="node2" class="node">
 <title>Node1</title>
 <g id="a_node2"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="0,-62 0,-81 44,-81 44,-62 0,-62"/>
-<text text-anchor="middle" x="22" y="-69" font-family="Helvetica,sans-Serif" font-size="10.00">string</text>
+<polygon fill="white" stroke="#bfbfbf" points="110.5,-129 110.5,-148 154.5,-148 154.5,-129 110.5,-129"/>
+<text text-anchor="middle" x="132.5" y="-136" font-family="Helvetica,sans-Serif" font-size="10.00">string</text>
 </a>
 </g>
 </g>
 <!-- Node0&#45;&gt;Node1 -->
 <g id="edge1" class="edge">
 <title>Node0&#45;&gt;Node1</title>
-<path fill="none" stroke="midnightblue" d="M122.83,-196.69C94.31,-189.95 61.85,-177.39 41,-154 25.7,-136.84 22.06,-109.75 21.5,-91.57"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="25,-91.32 21.49,-81.33 18,-91.33 25,-91.32"/>
+<path fill="none" stroke="midnightblue" d="M210.8,-190.4C194.03,-179.5 170.93,-164.48 154.17,-153.58"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="155.88,-150.52 145.59,-148.01 152.06,-156.39 155.88,-150.52"/>
 </g>
 <!-- Node2 -->
 <g id="node3" class="node">
 <title>Node2</title>
-<g id="a_node3"><a xlink:href="drake__deprecated_8h.html" target="_top" xlink:title="Provides a portable macro for use in generating compile&#45;time warnings for use of code that is permitt...">
-<polygon fill="white" stroke="black" points="50.5,-123.5 50.5,-153.5 169.5,-153.5 169.5,-123.5 50.5,-123.5"/>
-<text text-anchor="start" x="58.5" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/common/drake</text>
-<text text-anchor="middle" x="110" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00">_deprecated.h</text>
+<g id="a_node3"><a xlink:href="eigen__types_8h.html" target="_top" xlink:title="This file contains abbreviated definitions for certain specializations of Eigen::Matrix that are comm...">
+<polygon fill="white" stroke="black" points="173,-123.5 173,-153.5 292,-153.5 292,-123.5 173,-123.5"/>
+<text text-anchor="start" x="181" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/common/eigen</text>
+<text text-anchor="middle" x="232.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00">_types.h</text>
 </a>
 </g>
 </g>
 <!-- Node0&#45;&gt;Node2 -->
 <g id="edge2" class="edge">
 <title>Node0&#45;&gt;Node2</title>
-<path fill="none" stroke="midnightblue" d="M166.38,-190.4C156.66,-181.62 143.99,-170.18 133.12,-160.37"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="135.36,-157.68 125.59,-153.58 130.67,-162.88 135.36,-157.68"/>
-</g>
-<!-- Node4 -->
-<g id="node5" class="node">
-<title>Node4</title>
-<g id="a_node5"><a xlink:href="eigen__types_8h.html" target="_top" xlink:title="This file contains abbreviated definitions for certain specializations of Eigen::Matrix that are comm...">
-<polygon fill="white" stroke="black" points="195.5,-123.5 195.5,-153.5 314.5,-153.5 314.5,-123.5 195.5,-123.5"/>
-<text text-anchor="start" x="203.5" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/common/eigen</text>
-<text text-anchor="middle" x="255" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00">_types.h</text>
-</a>
-</g>
-</g>
-<!-- Node0&#45;&gt;Node4 -->
-<g id="edge5" class="edge">
-<title>Node0&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M197.84,-190.4C207.69,-181.62 220.54,-170.18 231.56,-160.37"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="234.05,-162.84 239.19,-153.58 229.4,-157.61 234.05,-162.84"/>
-</g>
-<!-- Node11 -->
-<g id="node12" class="node">
-<title>Node11</title>
-<g id="a_node12"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="332.5,-129 332.5,-148 483.5,-148 483.5,-129 332.5,-129"/>
-<text text-anchor="middle" x="408" y="-136" font-family="Helvetica,sans-Serif" font-size="10.00">drake/lcmt_call_python.hpp</text>
-</a>
-</g>
-</g>
-<!-- Node0&#45;&gt;Node11 -->
-<g id="edge12" class="edge">
-<title>Node0&#45;&gt;Node11</title>
-<path fill="none" stroke="midnightblue" d="M230.76,-190.48C271.97,-178.62 330.26,-161.86 368.58,-150.84"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="369.7,-154.16 378.35,-148.03 367.77,-147.43 369.7,-154.16"/>
-</g>
-<!-- Node2&#45;&gt;Node1 -->
-<g id="edge3" class="edge">
-<title>Node2&#45;&gt;Node1</title>
-<path fill="none" stroke="midnightblue" d="M90.91,-123.4C76.42,-112.7 56.57,-98.03 41.89,-87.19"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="43.64,-84.13 33.52,-81.01 39.48,-89.76 43.64,-84.13"/>
-</g>
-<!-- Node3 -->
-<g id="node4" class="node">
-<title>Node3</title>
-<g id="a_node4"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="62.5,-62 62.5,-81 135.5,-81 135.5,-62 62.5,-62"/>
-<text text-anchor="middle" x="99" y="-69" font-family="Helvetica,sans-Serif" font-size="10.00">string_view</text>
-</a>
-</g>
-</g>
-<!-- Node2&#45;&gt;Node3 -->
-<g id="edge4" class="edge">
-<title>Node2&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M107.61,-123.4C106.02,-113.96 103.9,-101.45 102.16,-91.19"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="105.59,-90.47 100.47,-81.19 98.69,-91.64 105.59,-90.47"/>
-</g>
-<!-- Node5 -->
-<g id="node6" class="node">
-<title>Node5</title>
-<g id="a_node6"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="153.5,-62 153.5,-81 198.5,-81 198.5,-62 153.5,-62"/>
-<text text-anchor="middle" x="176" y="-69" font-family="Helvetica,sans-Serif" font-size="10.00">utility</text>
-</a>
-</g>
-</g>
-<!-- Node4&#45;&gt;Node5 -->
-<g id="edge6" class="edge">
-<title>Node4&#45;&gt;Node5</title>
-<path fill="none" stroke="midnightblue" d="M237.86,-123.4C225.05,-112.86 207.57,-98.48 194.46,-87.69"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="196.51,-84.85 186.57,-81.19 192.07,-90.25 196.51,-84.85"/>
-</g>
-<!-- Node6 -->
-<g id="node7" class="node">
-<title>Node6</title>
-<g id="a_node7"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="216.5,-62 216.5,-81 293.5,-81 293.5,-62 216.5,-62"/>
-<text text-anchor="middle" x="255" y="-69" font-family="Helvetica,sans-Serif" font-size="10.00">Eigen/Dense</text>
-</a>
-</g>
-</g>
-<!-- Node4&#45;&gt;Node6 -->
-<g id="edge7" class="edge">
-<title>Node4&#45;&gt;Node6</title>
-<path fill="none" stroke="midnightblue" d="M255,-123.4C255,-114.06 255,-101.71 255,-91.52"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="258.5,-91.19 255,-81.19 251.5,-91.19 258.5,-91.19"/>
-</g>
-<!-- Node7 -->
-<g id="node8" class="node">
-<title>Node7</title>
-<g id="a_node8"><a xlink:href="constants_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="311.5,-62 311.5,-81 460.5,-81 460.5,-62 311.5,-62"/>
-<text text-anchor="middle" x="386" y="-69" font-family="Helvetica,sans-Serif" font-size="10.00">drake/common/constants.h</text>
-</a>
-</g>
-</g>
-<!-- Node4&#45;&gt;Node7 -->
-<g id="edge8" class="edge">
-<title>Node4&#45;&gt;Node7</title>
-<path fill="none" stroke="midnightblue" d="M283.43,-123.4C306.11,-112.14 337.63,-96.5 359.72,-85.54"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="361.45,-88.59 368.86,-81.01 358.34,-82.32 361.45,-88.59"/>
-</g>
-<!-- Node8 -->
-<g id="node9" class="node">
-<title>Node8</title>
-<g id="a_node9"><a xlink:href="drake__assert_8h.html" target="_top" xlink:title="Provides Drake&#39;s assertion implementation.">
-<polygon fill="white" stroke="black" points="478.5,-56.5 478.5,-86.5 597.5,-86.5 597.5,-56.5 478.5,-56.5"/>
-<text text-anchor="start" x="486.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/common/drake</text>
-<text text-anchor="middle" x="538" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">_assert.h</text>
-</a>
-</g>
-</g>
-<!-- Node4&#45;&gt;Node8 -->
-<g id="edge9" class="edge">
-<title>Node4&#45;&gt;Node8</title>
-<path fill="none" stroke="midnightblue" d="M314.67,-123.79C359.64,-113.47 421.4,-99.28 468.58,-88.45"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="469.45,-91.84 478.41,-86.19 467.88,-85.01 469.45,-91.84"/>
-</g>
-<!-- Node10 -->
-<g id="node11" class="node">
-<title>Node10</title>
-<g id="a_node11"><a xlink:href="drake__copyable_8h.html" target="_top" xlink:title="Provides careful macros to selectively enable or disable the special member functions for copy&#45;constr...">
-<polygon fill="white" stroke="black" points="615.5,-56.5 615.5,-86.5 734.5,-86.5 734.5,-56.5 615.5,-56.5"/>
-<text text-anchor="start" x="623.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/common/drake</text>
-<text text-anchor="middle" x="675" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">_copyable.h</text>
-</a>
-</g>
-</g>
-<!-- Node4&#45;&gt;Node10 -->
-<g id="edge11" class="edge">
-<title>Node4&#45;&gt;Node10</title>
-<path fill="none" stroke="midnightblue" d="M314.78,-124.63C317.9,-124.06 320.98,-123.51 324,-123 445.86,-102.48 480.27,-107.94 605.38,-87.19"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="606.07,-90.62 615.35,-85.51 604.91,-83.72 606.07,-90.62"/>
+<path fill="none" stroke="midnightblue" d="M232.5,-190.4C232.5,-182.64 232.5,-172.81 232.5,-163.86"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="236,-163.58 232.5,-153.58 229,-163.58 236,-163.58"/>
 </g>
 <!-- Node9 -->
 <g id="node10" class="node">
 <title>Node9</title>
 <g id="a_node10"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="503.5,-0.5 503.5,-19.5 572.5,-19.5 572.5,-0.5 503.5,-0.5"/>
-<text text-anchor="middle" x="538" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">type_traits</text>
+<polygon fill="white" stroke="#bfbfbf" points="310,-129 310,-148 461,-148 461,-129 310,-129"/>
+<text text-anchor="middle" x="385.5" y="-136" font-family="Helvetica,sans-Serif" font-size="10.00">drake/lcmt_call_python.hpp</text>
 </a>
 </g>
 </g>
-<!-- Node8&#45;&gt;Node9 -->
-<g id="edge10" class="edge">
-<title>Node8&#45;&gt;Node9</title>
-<path fill="none" stroke="midnightblue" d="M538,-56.4C538,-48.47 538,-38.46 538,-29.86"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="541.5,-29.66 538,-19.66 534.5,-29.66 541.5,-29.66"/>
+<!-- Node0&#45;&gt;Node9 -->
+<g id="edge9" class="edge">
+<title>Node0&#45;&gt;Node9</title>
+<path fill="none" stroke="midnightblue" d="M265.7,-190.4C292.66,-178.94 330.33,-162.94 356.19,-151.95"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="357.64,-155.14 365.48,-148.01 354.9,-148.7 357.64,-155.14"/>
+</g>
+<!-- Node3 -->
+<g id="node4" class="node">
+<title>Node3</title>
+<g id="a_node4"><a xlink:title=" ">
+<polygon fill="white" stroke="#bfbfbf" points="0,-62 0,-81 45,-81 45,-62 0,-62"/>
+<text text-anchor="middle" x="22.5" y="-69" font-family="Helvetica,sans-Serif" font-size="10.00">utility</text>
+</a>
+</g>
+</g>
+<!-- Node2&#45;&gt;Node3 -->
+<g id="edge3" class="edge">
+<title>Node2&#45;&gt;Node3</title>
+<path fill="none" stroke="midnightblue" d="M174.89,-123.48C139.7,-114.35 94.02,-101.47 54.5,-87 52.89,-86.41 51.24,-85.77 49.59,-85.11"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="50.82,-81.83 40.24,-81.11 48.06,-88.26 50.82,-81.83"/>
+</g>
+<!-- Node4 -->
+<g id="node5" class="node">
+<title>Node4</title>
+<g id="a_node5"><a xlink:title=" ">
+<polygon fill="white" stroke="#bfbfbf" points="63,-62 63,-81 140,-81 140,-62 63,-62"/>
+<text text-anchor="middle" x="101.5" y="-69" font-family="Helvetica,sans-Serif" font-size="10.00">Eigen/Dense</text>
+</a>
+</g>
+</g>
+<!-- Node2&#45;&gt;Node4 -->
+<g id="edge4" class="edge">
+<title>Node2&#45;&gt;Node4</title>
+<path fill="none" stroke="midnightblue" d="M204.07,-123.4C181.39,-112.14 149.87,-96.5 127.78,-85.54"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="129.16,-82.32 118.64,-81.01 126.05,-88.59 129.16,-82.32"/>
+</g>
+<!-- Node5 -->
+<g id="node6" class="node">
+<title>Node5</title>
+<g id="a_node6"><a xlink:href="constants_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="158,-62 158,-81 307,-81 307,-62 158,-62"/>
+<text text-anchor="middle" x="232.5" y="-69" font-family="Helvetica,sans-Serif" font-size="10.00">drake/common/constants.h</text>
+</a>
+</g>
+</g>
+<!-- Node2&#45;&gt;Node5 -->
+<g id="edge5" class="edge">
+<title>Node2&#45;&gt;Node5</title>
+<path fill="none" stroke="midnightblue" d="M232.5,-123.4C232.5,-114.06 232.5,-101.71 232.5,-91.52"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="236,-91.19 232.5,-81.19 229,-91.19 236,-91.19"/>
+</g>
+<!-- Node6 -->
+<g id="node7" class="node">
+<title>Node6</title>
+<g id="a_node7"><a xlink:href="drake__assert_8h.html" target="_top" xlink:title="Provides Drake&#39;s assertion implementation.">
+<polygon fill="white" stroke="black" points="325,-56.5 325,-86.5 444,-86.5 444,-56.5 325,-56.5"/>
+<text text-anchor="start" x="333" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/common/drake</text>
+<text text-anchor="middle" x="384.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">_assert.h</text>
+</a>
+</g>
+</g>
+<!-- Node2&#45;&gt;Node6 -->
+<g id="edge6" class="edge">
+<title>Node2&#45;&gt;Node6</title>
+<path fill="none" stroke="midnightblue" d="M265.48,-123.4C287.99,-113.77 318,-100.94 342.26,-90.56"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="343.76,-93.73 351.58,-86.58 341.01,-87.29 343.76,-93.73"/>
+</g>
+<!-- Node8 -->
+<g id="node9" class="node">
+<title>Node8</title>
+<g id="a_node9"><a xlink:href="drake__copyable_8h.html" target="_top" xlink:title="Provides careful macros to selectively enable or disable the special member functions for copy&#45;constr...">
+<polygon fill="white" stroke="black" points="462,-56.5 462,-86.5 581,-86.5 581,-56.5 462,-56.5"/>
+<text text-anchor="start" x="470" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/common/drake</text>
+<text text-anchor="middle" x="521.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">_copyable.h</text>
+</a>
+</g>
+</g>
+<!-- Node2&#45;&gt;Node8 -->
+<g id="edge8" class="edge">
+<title>Node2&#45;&gt;Node8</title>
+<path fill="none" stroke="midnightblue" d="M292.03,-124.11C338.41,-113.68 402.89,-99.18 451.7,-88.2"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="452.56,-91.59 461.55,-85.98 451.03,-84.76 452.56,-91.59"/>
+</g>
+<!-- Node7 -->
+<g id="node8" class="node">
+<title>Node7</title>
+<g id="a_node8"><a xlink:title=" ">
+<polygon fill="white" stroke="#bfbfbf" points="350,-0.5 350,-19.5 419,-19.5 419,-0.5 350,-0.5"/>
+<text text-anchor="middle" x="384.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">type_traits</text>
+</a>
+</g>
+</g>
+<!-- Node6&#45;&gt;Node7 -->
+<g id="edge7" class="edge">
+<title>Node6&#45;&gt;Node7</title>
+<path fill="none" stroke="midnightblue" d="M384.5,-56.4C384.5,-48.47 384.5,-38.46 384.5,-29.86"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="388,-29.66 384.5,-19.66 381,-29.66 388,-29.66"/>
 </g>
 </g>
 </svg>

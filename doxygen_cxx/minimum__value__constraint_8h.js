@@ -1,6 +1,5 @@
 var minimum__value__constraint_8h =
 [
-    [ "MinimumValueConstraint", "classdrake_1_1solvers_1_1_minimum_value_constraint.html", "classdrake_1_1solvers_1_1_minimum_value_constraint" ],
     [ "MinimumValueLowerBoundConstraint", "classdrake_1_1solvers_1_1_minimum_value_lower_bound_constraint.html", "classdrake_1_1solvers_1_1_minimum_value_lower_bound_constraint" ],
     [ "MinimumValueUpperBoundConstraint", "classdrake_1_1solvers_1_1_minimum_value_upper_bound_constraint.html", "classdrake_1_1solvers_1_1_minimum_value_upper_bound_constraint" ],
     [ "MinimumValuePenaltyFunction", "minimum__value__constraint_8h.html#adc2a57e87ae4e4088e12967a25a7c229", null ],

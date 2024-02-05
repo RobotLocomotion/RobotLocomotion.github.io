@@ -51,7 +51,6 @@ var namespacedrake_1_1multibody =
     [ "LinearBushingRollPitchYaw", "classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html", "classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw" ],
     [ "LinearSpringDamper", "classdrake_1_1multibody_1_1_linear_spring_damper.html", "classdrake_1_1multibody_1_1_linear_spring_damper" ],
     [ "ManipulatorEquationConstraint", "classdrake_1_1multibody_1_1_manipulator_equation_constraint.html", "classdrake_1_1multibody_1_1_manipulator_equation_constraint" ],
-    [ "MinimumDistanceConstraint", "classdrake_1_1multibody_1_1_minimum_distance_constraint.html", "classdrake_1_1multibody_1_1_minimum_distance_constraint" ],
     [ "MinimumDistanceLowerBoundConstraint", "classdrake_1_1multibody_1_1_minimum_distance_lower_bound_constraint.html", "classdrake_1_1multibody_1_1_minimum_distance_lower_bound_constraint" ],
     [ "MinimumDistanceUpperBoundConstraint", "classdrake_1_1multibody_1_1_minimum_distance_upper_bound_constraint.html", "classdrake_1_1multibody_1_1_minimum_distance_upper_bound_constraint" ],
     [ "MultibodyElement", "classdrake_1_1multibody_1_1_multibody_element.html", "classdrake_1_1multibody_1_1_multibody_element" ],

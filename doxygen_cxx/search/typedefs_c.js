@@ -22,7 +22,6 @@ var searchData=
   ['meshcatpointcloudvisualizerd',['MeshcatPointCloudVisualizerd',['../namespacedrake_1_1geometry.html#a13b4d36d0491327603af75e4f6d0c52a',1,'drake::geometry']]],
   ['meshcatvisualizerd',['MeshcatVisualizerd',['../namespacedrake_1_1geometry.html#acfc5928f9ddabb01ca8a0f2cdabbffa3',1,'drake::geometry']]],
   ['meshgrid',['MeshGrid',['../classdrake_1_1math_1_1_barycentric_mesh.html#acf440376bd2dbb2eb54dade972c10942',1,'drake::math::BarycentricMesh']]],
-  ['minimumdistancepenaltyfunction',['MinimumDistancePenaltyFunction',['../namespacedrake_1_1multibody.html#a9b7dce3eb33772802af322ca25ef4864',1,'drake::multibody']]],
   ['minimumvaluepenaltyfunction',['MinimumValuePenaltyFunction',['../namespacedrake_1_1solvers.html#adc2a57e87ae4e4088e12967a25a7c229',1,'drake::solvers']]],
   ['mipnodecallbackfunction',['MipNodeCallbackFunction',['../classdrake_1_1solvers_1_1_gurobi_solver.html#a060a36d3c72cd6fd5caceff23ea0e3a7',1,'drake::solvers::GurobiSolver']]],
   ['mipsolcallbackfunction',['MipSolCallbackFunction',['../classdrake_1_1solvers_1_1_gurobi_solver.html#a8829ecdc721932e0108b16bec36094c5',1,'drake::solvers::GurobiSolver']]],

@@ -6877,18 +6877,6 @@ information.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.framework.LeafSystem.DeclarePeriodicDiscreteUpdateNoHandler">
-<span class="sig-name descname"><span class="pre">DeclarePeriodicDiscreteUpdateNoHandler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><span class="pre">pydrake.systems.framework.LeafSystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">period_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem.DeclarePeriodicDiscreteUpdateNoHandler" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Overriding DoCalcDiscreteVariableUpdates is no longer allowed. Use
-DeclarePeriodicDiscreteUpdateEvent() instead. This will be removed
-from Drake on or after 2024-02-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.LeafSystem.DeclarePeriodicEvent">
 <span class="sig-name descname"><span class="pre">DeclarePeriodicEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><span class="pre">pydrake.systems.framework.LeafSystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">period_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Event" title="pydrake.systems.framework.Event"><span class="pre">pydrake.systems.framework.Event</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem.DeclarePeriodicEvent" title="Permalink to this definition"></a></dt>
 <dd><p>(Advanced) Declares that a particular Event object should be
@@ -6958,18 +6946,6 @@ information.</p>
 <p class="admonition-title">See also</p>
 <p>DeclarePeriodicEvent()</p>
 </div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.framework.LeafSystem.DeclarePeriodicPublishNoHandler">
-<span class="sig-name descname"><span class="pre">DeclarePeriodicPublishNoHandler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><span class="pre">pydrake.systems.framework.LeafSystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">period_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem.DeclarePeriodicPublishNoHandler" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Overriding DoPublish is no longer allowed. Use
-DeclarePeriodicPublishEvent() instead. This will be removed from
-Drake on or after 2024-02-01.</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -7257,82 +7233,9 @@ function available use one of the other signatures.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.framework.LeafSystem.DoCalcDiscreteVariableUpdates">
-<span class="sig-name descname"><span class="pre">DoCalcDiscreteVariableUpdates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><span class="pre">pydrake.systems.framework.LeafSystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.systems.framework.DiscreteUpdateEvent" title="pydrake.systems.framework.DiscreteUpdateEvent"><span class="pre">pydrake.systems.framework.DiscreteUpdateEvent</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.DiscreteValues" title="pydrake.systems.framework.DiscreteValues"><span class="pre">pydrake.systems.framework.DiscreteValues</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem.DoCalcDiscreteVariableUpdates" title="Permalink to this definition"></a></dt>
-<dd><p>Derived-class event dispatcher for all simultaneous discrete update
-events. Override this in your derived LeafSystem only if you require
-behavior other than the default dispatch behavior (not common). The
-default behavior is to traverse events in the arbitrary order they
-appear in <code class="docutils literal notranslate"><span class="pre">events</span></code>, and for each event that has a callback function,
-to invoke the callback with <code class="docutils literal notranslate"><span class="pre">context</span></code>, that event, and
-<code class="docutils literal notranslate"><span class="pre">discrete_state</span></code>. Note that the same (possibly modified)
-<code class="docutils literal notranslate"><span class="pre">discrete_state</span></code> is passed to subsequent callbacks.</p>
-<p>Do not override this just to handle an event – instead declare the
-event and a handler callback for it using one of the
-<code class="docutils literal notranslate"><span class="pre">Declare...DiscreteUpdateEvent()</span></code> methods.</p>
-<p>This method is called only from the virtual
-DispatchDiscreteVariableUpdateHandler(), which is only called from the
-public non-virtual CalcDiscreteVariableUpdate(), which will already
-have error-checked the parameters so you don’t have to. In particular,
-implementations may assume that <code class="docutils literal notranslate"><span class="pre">context</span></code> is valid; that
-<code class="docutils literal notranslate"><span class="pre">discrete_state</span></code> is non-null, and that the referenced object has the
-same constituent structure as was produced by
-AllocateDiscreteVariables().</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>There is no provision for returning EventStatus from
-DoCalcDiscreteVariableUpdates() as there is if you use the default
-dispatcher. Instead, your DoCalcDiscreteVariableUpdates() will be
-assumed to return EventStatus::Succeeded() regardless of what
-happened.</p>
-</div>
-<dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The “before” state.</p>
-</dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">events</span></code>:</dt><dd><p>All the discrete update events that need handling.</p>
-</dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">discrete_state</span></code>:</dt><dd><p>The current state of the system on input; the desired state of the
-system on return.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.LeafSystem.DoCalcTimeDerivatives">
 <span class="sig-name descname"><span class="pre">DoCalcTimeDerivatives</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><span class="pre">pydrake.systems.framework.LeafSystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.ContinuousState" title="pydrake.systems.framework.ContinuousState"><span class="pre">pydrake.systems.framework.ContinuousState</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem.DoCalcTimeDerivatives" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.framework.LeafSystem.DoPublish">
-<span class="sig-name descname"><span class="pre">DoPublish</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><span class="pre">pydrake.systems.framework.LeafSystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.systems.framework.PublishEvent" title="pydrake.systems.framework.PublishEvent"><span class="pre">pydrake.systems.framework.PublishEvent</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem.DoPublish" title="Permalink to this definition"></a></dt>
-<dd><p>Derived-class event dispatcher for all simultaneous publish events in
-<code class="docutils literal notranslate"><span class="pre">events</span></code>. Override this in your derived LeafSystem only if you
-require behavior other than the default dispatch behavior (not
-common). The default behavior is to traverse events in the arbitrary
-order they appear in <code class="docutils literal notranslate"><span class="pre">events</span></code>, and for each event that has a
-callback function, to invoke the callback with <code class="docutils literal notranslate"><span class="pre">context</span></code> and that
-event.</p>
-<p>Do not override this just to handle an event – instead declare the
-event and a handler callback for it using one of the
-<code class="docutils literal notranslate"><span class="pre">Declare...PublishEvent()</span></code> methods.</p>
-<p>This method is called only from the virtual DispatchPublishHandler,
-which is only called from the public non-virtual Publish(), which will
-have already error-checked <code class="docutils literal notranslate"><span class="pre">context</span></code> so you may assume that it is
-valid.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>There is no provision for returning EventStatus from DoPublish()
-as there is if you use the default dispatcher. Instead, your
-DoPublish() will be assumed to return EventStatus::Succeeded()
-regardless of what happened.</p>
-</div>
-<dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>Const current context.</p>
-</dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">events</span></code>:</dt><dd><p>All the publish events that need handling.</p>
-</dd>
-</dl>
-</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.LeafSystem.MakeWitnessFunction">
@@ -7807,18 +7710,6 @@ information.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.framework.LeafSystem_-AutoDiffXd-.DeclarePeriodicDiscreteUpdateNoHandler">
-<span id="pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclarePeriodicDiscreteUpdateNoHandler"></span><span class="sig-name descname"><span class="pre">DeclarePeriodicDiscreteUpdateNoHandler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.LeafSystem_" title="pydrake.systems.framework.LeafSystem_"><span class="pre">pydrake.systems.framework.LeafSystem_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">period_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_-AutoDiffXd-.DeclarePeriodicDiscreteUpdateNoHandler" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Overriding DoCalcDiscreteVariableUpdates is no longer allowed. Use
-DeclarePeriodicDiscreteUpdateEvent() instead. This will be removed
-from Drake on or after 2024-02-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.LeafSystem_-AutoDiffXd-.DeclarePeriodicEvent">
 <span id="pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclarePeriodicEvent"></span><span class="sig-name descname"><span class="pre">DeclarePeriodicEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.LeafSystem_" title="pydrake.systems.framework.LeafSystem_"><span class="pre">pydrake.systems.framework.LeafSystem_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">period_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Event_" title="pydrake.systems.framework.Event_"><span class="pre">pydrake.systems.framework.Event_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_-AutoDiffXd-.DeclarePeriodicEvent" title="Permalink to this definition"></a></dt>
 <dd><p>(Advanced) Declares that a particular Event object should be
@@ -7888,18 +7779,6 @@ information.</p>
 <p class="admonition-title">See also</p>
 <p>DeclarePeriodicEvent()</p>
 </div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.framework.LeafSystem_-AutoDiffXd-.DeclarePeriodicPublishNoHandler">
-<span id="pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclarePeriodicPublishNoHandler"></span><span class="sig-name descname"><span class="pre">DeclarePeriodicPublishNoHandler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.LeafSystem_" title="pydrake.systems.framework.LeafSystem_"><span class="pre">pydrake.systems.framework.LeafSystem_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">period_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_-AutoDiffXd-.DeclarePeriodicPublishNoHandler" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Overriding DoPublish is no longer allowed. Use
-DeclarePeriodicPublishEvent() instead. This will be removed from
-Drake on or after 2024-02-01.</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -8187,82 +8066,9 @@ function available use one of the other signatures.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.framework.LeafSystem_-AutoDiffXd-.DoCalcDiscreteVariableUpdates">
-<span id="pydrake.systems.framework.LeafSystem_[AutoDiffXd].DoCalcDiscreteVariableUpdates"></span><span class="sig-name descname"><span class="pre">DoCalcDiscreteVariableUpdates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.LeafSystem_" title="pydrake.systems.framework.LeafSystem_"><span class="pre">pydrake.systems.framework.LeafSystem_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.systems.framework.DiscreteUpdateEvent_" title="pydrake.systems.framework.DiscreteUpdateEvent_"><span class="pre">pydrake.systems.framework.DiscreteUpdateEvent_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.DiscreteValues_" title="pydrake.systems.framework.DiscreteValues_"><span class="pre">pydrake.systems.framework.DiscreteValues_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_-AutoDiffXd-.DoCalcDiscreteVariableUpdates" title="Permalink to this definition"></a></dt>
-<dd><p>Derived-class event dispatcher for all simultaneous discrete update
-events. Override this in your derived LeafSystem only if you require
-behavior other than the default dispatch behavior (not common). The
-default behavior is to traverse events in the arbitrary order they
-appear in <code class="docutils literal notranslate"><span class="pre">events</span></code>, and for each event that has a callback function,
-to invoke the callback with <code class="docutils literal notranslate"><span class="pre">context</span></code>, that event, and
-<code class="docutils literal notranslate"><span class="pre">discrete_state</span></code>. Note that the same (possibly modified)
-<code class="docutils literal notranslate"><span class="pre">discrete_state</span></code> is passed to subsequent callbacks.</p>
-<p>Do not override this just to handle an event – instead declare the
-event and a handler callback for it using one of the
-<code class="docutils literal notranslate"><span class="pre">Declare...DiscreteUpdateEvent()</span></code> methods.</p>
-<p>This method is called only from the virtual
-DispatchDiscreteVariableUpdateHandler(), which is only called from the
-public non-virtual CalcDiscreteVariableUpdate(), which will already
-have error-checked the parameters so you don’t have to. In particular,
-implementations may assume that <code class="docutils literal notranslate"><span class="pre">context</span></code> is valid; that
-<code class="docutils literal notranslate"><span class="pre">discrete_state</span></code> is non-null, and that the referenced object has the
-same constituent structure as was produced by
-AllocateDiscreteVariables().</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>There is no provision for returning EventStatus from
-DoCalcDiscreteVariableUpdates() as there is if you use the default
-dispatcher. Instead, your DoCalcDiscreteVariableUpdates() will be
-assumed to return EventStatus::Succeeded() regardless of what
-happened.</p>
-</div>
-<dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The “before” state.</p>
-</dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">events</span></code>:</dt><dd><p>All the discrete update events that need handling.</p>
-</dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">discrete_state</span></code>:</dt><dd><p>The current state of the system on input; the desired state of the
-system on return.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.LeafSystem_-AutoDiffXd-.DoCalcTimeDerivatives">
 <span id="pydrake.systems.framework.LeafSystem_[AutoDiffXd].DoCalcTimeDerivatives"></span><span class="sig-name descname"><span class="pre">DoCalcTimeDerivatives</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.LeafSystem_" title="pydrake.systems.framework.LeafSystem_"><span class="pre">pydrake.systems.framework.LeafSystem_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.ContinuousState_" title="pydrake.systems.framework.ContinuousState_"><span class="pre">pydrake.systems.framework.ContinuousState_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_-AutoDiffXd-.DoCalcTimeDerivatives" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.framework.LeafSystem_-AutoDiffXd-.DoPublish">
-<span id="pydrake.systems.framework.LeafSystem_[AutoDiffXd].DoPublish"></span><span class="sig-name descname"><span class="pre">DoPublish</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.LeafSystem_" title="pydrake.systems.framework.LeafSystem_"><span class="pre">pydrake.systems.framework.LeafSystem_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.systems.framework.PublishEvent_" title="pydrake.systems.framework.PublishEvent_"><span class="pre">pydrake.systems.framework.PublishEvent_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_-AutoDiffXd-.DoPublish" title="Permalink to this definition"></a></dt>
-<dd><p>Derived-class event dispatcher for all simultaneous publish events in
-<code class="docutils literal notranslate"><span class="pre">events</span></code>. Override this in your derived LeafSystem only if you
-require behavior other than the default dispatch behavior (not
-common). The default behavior is to traverse events in the arbitrary
-order they appear in <code class="docutils literal notranslate"><span class="pre">events</span></code>, and for each event that has a
-callback function, to invoke the callback with <code class="docutils literal notranslate"><span class="pre">context</span></code> and that
-event.</p>
-<p>Do not override this just to handle an event – instead declare the
-event and a handler callback for it using one of the
-<code class="docutils literal notranslate"><span class="pre">Declare...PublishEvent()</span></code> methods.</p>
-<p>This method is called only from the virtual DispatchPublishHandler,
-which is only called from the public non-virtual Publish(), which will
-have already error-checked <code class="docutils literal notranslate"><span class="pre">context</span></code> so you may assume that it is
-valid.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>There is no provision for returning EventStatus from DoPublish()
-as there is if you use the default dispatcher. Instead, your
-DoPublish() will be assumed to return EventStatus::Succeeded()
-regardless of what happened.</p>
-</div>
-<dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>Const current context.</p>
-</dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">events</span></code>:</dt><dd><p>All the publish events that need handling.</p>
-</dd>
-</dl>
-</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.LeafSystem_-AutoDiffXd-.MakeWitnessFunction">
@@ -8731,18 +8537,6 @@ information.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.framework.LeafSystem_-Expression-.DeclarePeriodicDiscreteUpdateNoHandler">
-<span id="pydrake.systems.framework.LeafSystem_[Expression].DeclarePeriodicDiscreteUpdateNoHandler"></span><span class="sig-name descname"><span class="pre">DeclarePeriodicDiscreteUpdateNoHandler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.LeafSystem_" title="pydrake.systems.framework.LeafSystem_"><span class="pre">pydrake.systems.framework.LeafSystem_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">period_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_-Expression-.DeclarePeriodicDiscreteUpdateNoHandler" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Overriding DoCalcDiscreteVariableUpdates is no longer allowed. Use
-DeclarePeriodicDiscreteUpdateEvent() instead. This will be removed
-from Drake on or after 2024-02-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.LeafSystem_-Expression-.DeclarePeriodicEvent">
 <span id="pydrake.systems.framework.LeafSystem_[Expression].DeclarePeriodicEvent"></span><span class="sig-name descname"><span class="pre">DeclarePeriodicEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.LeafSystem_" title="pydrake.systems.framework.LeafSystem_"><span class="pre">pydrake.systems.framework.LeafSystem_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">period_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Event_" title="pydrake.systems.framework.Event_"><span class="pre">pydrake.systems.framework.Event_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_-Expression-.DeclarePeriodicEvent" title="Permalink to this definition"></a></dt>
 <dd><p>(Advanced) Declares that a particular Event object should be
@@ -8812,18 +8606,6 @@ information.</p>
 <p class="admonition-title">See also</p>
 <p>DeclarePeriodicEvent()</p>
 </div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.framework.LeafSystem_-Expression-.DeclarePeriodicPublishNoHandler">
-<span id="pydrake.systems.framework.LeafSystem_[Expression].DeclarePeriodicPublishNoHandler"></span><span class="sig-name descname"><span class="pre">DeclarePeriodicPublishNoHandler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.LeafSystem_" title="pydrake.systems.framework.LeafSystem_"><span class="pre">pydrake.systems.framework.LeafSystem_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">period_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_-Expression-.DeclarePeriodicPublishNoHandler" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Overriding DoPublish is no longer allowed. Use
-DeclarePeriodicPublishEvent() instead. This will be removed from
-Drake on or after 2024-02-01.</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -9111,82 +8893,9 @@ function available use one of the other signatures.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.framework.LeafSystem_-Expression-.DoCalcDiscreteVariableUpdates">
-<span id="pydrake.systems.framework.LeafSystem_[Expression].DoCalcDiscreteVariableUpdates"></span><span class="sig-name descname"><span class="pre">DoCalcDiscreteVariableUpdates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.LeafSystem_" title="pydrake.systems.framework.LeafSystem_"><span class="pre">pydrake.systems.framework.LeafSystem_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.systems.framework.DiscreteUpdateEvent_" title="pydrake.systems.framework.DiscreteUpdateEvent_"><span class="pre">pydrake.systems.framework.DiscreteUpdateEvent_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.DiscreteValues_" title="pydrake.systems.framework.DiscreteValues_"><span class="pre">pydrake.systems.framework.DiscreteValues_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_-Expression-.DoCalcDiscreteVariableUpdates" title="Permalink to this definition"></a></dt>
-<dd><p>Derived-class event dispatcher for all simultaneous discrete update
-events. Override this in your derived LeafSystem only if you require
-behavior other than the default dispatch behavior (not common). The
-default behavior is to traverse events in the arbitrary order they
-appear in <code class="docutils literal notranslate"><span class="pre">events</span></code>, and for each event that has a callback function,
-to invoke the callback with <code class="docutils literal notranslate"><span class="pre">context</span></code>, that event, and
-<code class="docutils literal notranslate"><span class="pre">discrete_state</span></code>. Note that the same (possibly modified)
-<code class="docutils literal notranslate"><span class="pre">discrete_state</span></code> is passed to subsequent callbacks.</p>
-<p>Do not override this just to handle an event – instead declare the
-event and a handler callback for it using one of the
-<code class="docutils literal notranslate"><span class="pre">Declare...DiscreteUpdateEvent()</span></code> methods.</p>
-<p>This method is called only from the virtual
-DispatchDiscreteVariableUpdateHandler(), which is only called from the
-public non-virtual CalcDiscreteVariableUpdate(), which will already
-have error-checked the parameters so you don’t have to. In particular,
-implementations may assume that <code class="docutils literal notranslate"><span class="pre">context</span></code> is valid; that
-<code class="docutils literal notranslate"><span class="pre">discrete_state</span></code> is non-null, and that the referenced object has the
-same constituent structure as was produced by
-AllocateDiscreteVariables().</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>There is no provision for returning EventStatus from
-DoCalcDiscreteVariableUpdates() as there is if you use the default
-dispatcher. Instead, your DoCalcDiscreteVariableUpdates() will be
-assumed to return EventStatus::Succeeded() regardless of what
-happened.</p>
-</div>
-<dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The “before” state.</p>
-</dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">events</span></code>:</dt><dd><p>All the discrete update events that need handling.</p>
-</dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">discrete_state</span></code>:</dt><dd><p>The current state of the system on input; the desired state of the
-system on return.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.LeafSystem_-Expression-.DoCalcTimeDerivatives">
 <span id="pydrake.systems.framework.LeafSystem_[Expression].DoCalcTimeDerivatives"></span><span class="sig-name descname"><span class="pre">DoCalcTimeDerivatives</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.LeafSystem_" title="pydrake.systems.framework.LeafSystem_"><span class="pre">pydrake.systems.framework.LeafSystem_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.ContinuousState_" title="pydrake.systems.framework.ContinuousState_"><span class="pre">pydrake.systems.framework.ContinuousState_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_-Expression-.DoCalcTimeDerivatives" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.framework.LeafSystem_-Expression-.DoPublish">
-<span id="pydrake.systems.framework.LeafSystem_[Expression].DoPublish"></span><span class="sig-name descname"><span class="pre">DoPublish</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.LeafSystem_" title="pydrake.systems.framework.LeafSystem_"><span class="pre">pydrake.systems.framework.LeafSystem_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.systems.framework.PublishEvent_" title="pydrake.systems.framework.PublishEvent_"><span class="pre">pydrake.systems.framework.PublishEvent_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_-Expression-.DoPublish" title="Permalink to this definition"></a></dt>
-<dd><p>Derived-class event dispatcher for all simultaneous publish events in
-<code class="docutils literal notranslate"><span class="pre">events</span></code>. Override this in your derived LeafSystem only if you
-require behavior other than the default dispatch behavior (not
-common). The default behavior is to traverse events in the arbitrary
-order they appear in <code class="docutils literal notranslate"><span class="pre">events</span></code>, and for each event that has a
-callback function, to invoke the callback with <code class="docutils literal notranslate"><span class="pre">context</span></code> and that
-event.</p>
-<p>Do not override this just to handle an event – instead declare the
-event and a handler callback for it using one of the
-<code class="docutils literal notranslate"><span class="pre">Declare...PublishEvent()</span></code> methods.</p>
-<p>This method is called only from the virtual DispatchPublishHandler,
-which is only called from the public non-virtual Publish(), which will
-have already error-checked <code class="docutils literal notranslate"><span class="pre">context</span></code> so you may assume that it is
-valid.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>There is no provision for returning EventStatus from DoPublish()
-as there is if you use the default dispatcher. Instead, your
-DoPublish() will be assumed to return EventStatus::Succeeded()
-regardless of what happened.</p>
-</div>
-<dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>Const current context.</p>
-</dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">events</span></code>:</dt><dd><p>All the publish events that need handling.</p>
-</dd>
-</dl>
-</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.LeafSystem_-Expression-.MakeWitnessFunction">
@@ -11250,9 +10959,7 @@ with each force-triggered event.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>There will always be at least one force-triggered event, though
-with no associated handler. By default that will do nothing when
-triggered, but that behavior can be changed by overriding the
-dispatcher DoPublish() (not recommended).</p>
+with no associated handler (so will do nothing when triggered).</p>
 </div>
 <p>The Simulator can be configured to call this in
 Simulator::Initialize() and at the start of each continuous
@@ -12369,9 +12076,7 @@ with each force-triggered event.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>There will always be at least one force-triggered event, though
-with no associated handler. By default that will do nothing when
-triggered, but that behavior can be changed by overriding the
-dispatcher DoPublish() (not recommended).</p>
+with no associated handler (so will do nothing when triggered).</p>
 </div>
 <p>The Simulator can be configured to call this in
 Simulator::Initialize() and at the start of each continuous
@@ -13482,9 +13187,7 @@ with each force-triggered event.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>There will always be at least one force-triggered event, though
-with no associated handler. By default that will do nothing when
-triggered, but that behavior can be changed by overriding the
-dispatcher DoPublish() (not recommended).</p>
+with no associated handler (so will do nothing when triggered).</p>
 </div>
 <p>The Simulator can be configured to call this in
 Simulator::Initialize() and at the start of each continuous

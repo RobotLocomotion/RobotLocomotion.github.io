@@ -318,9 +318,6 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_manipulator_equation_constraint.html">ManipulatorEquationConstraint</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A Constraint to impose the manipulator equation: 0 = (Buₙ₊₁ + ∑ᵢ (Jᵢ_WBᵀ(qₙ₊₁)ᵀ * Fᵢ_AB_W(λᵢ,ₙ₊₁))  <a href="classdrake_1_1multibody_1_1_manipulator_equation_constraint.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_minimum_distance_constraint.html">MinimumDistanceConstraint</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constrain lb &lt;= min(d) &lt;= ub, namely the signed distance between all candidate pairs of geometries (according to the logic of SceneGraphInspector::GetCollisionCandidates()) to be no smaller than a specified minimum distance lb, and the minimal distance is no larger than a specified ub.  <a href="classdrake_1_1multibody_1_1_minimum_distance_constraint.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_minimum_distance_lower_bound_constraint.html">MinimumDistanceLowerBoundConstraint</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constrain min(d) &gt;= lb, namely the signed distance between all candidate pairs of geometries (according to the logic of SceneGraphInspector::GetCollisionCandidates()) to be no smaller than a specified minimum distance lb.  <a href="classdrake_1_1multibody_1_1_minimum_distance_lower_bound_constraint.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -493,9 +490,6 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a9b7dce3eb33772802af322ca25ef4864"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a9b7dce3eb33772802af322ca25ef4864">MinimumDistancePenaltyFunction</a> = <a class="el" href="namespacedrake_1_1solvers.html#adc2a57e87ae4e4088e12967a25a7c229">solvers::MinimumValuePenaltyFunction</a></td></tr>
-<tr class="memdesc:a9b7dce3eb33772802af322ca25ef4864"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the penalty function φ(x) and its derivatives dφ(x)/dx.  <a href="#a9b7dce3eb33772802af322ca25ef4864">More...</a><br /></td></tr>
-<tr class="separator:a9b7dce3eb33772802af322ca25ef4864"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae810ad4b839c5925c285d08b4d269a56"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a> = <a class="el" href="classdrake_1_1_identifier.html">Identifier</a>&lt; class DeformableBodyTag &gt;</td></tr>
 <tr class="memdesc:ae810ad4b839c5925c285d08b4d269a56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uniquely identifies a deformable body.  <a href="#ae810ad4b839c5925c285d08b4d269a56">More...</a><br /></td></tr>
 <tr class="separator:ae810ad4b839c5925c285d08b4d269a56"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -853,29 +847,6 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Type used to identify joints by index within a multibody tree system. </p>
-
-</div>
-</div>
-<a id="a9b7dce3eb33772802af322ca25ef4864"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9b7dce3eb33772802af322ca25ef4864">&#9670;&nbsp;</a></span>MinimumDistancePenaltyFunction</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="namespacedrake_1_1multibody.html#a9b7dce3eb33772802af322ca25ef4864">MinimumDistancePenaltyFunction</a> =  <a class="el" href="namespacedrake_1_1solvers.html#adc2a57e87ae4e4088e12967a25a7c229">solvers::MinimumValuePenaltyFunction</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Computes the penalty function φ(x) and its derivatives dφ(x)/dx. </p>
-<p>Valid penalty functions must meet the following criteria:</p>
-<ol type="1">
-<li>φ(x) ≥ 0 ∀ x ∈ ℝ.</li>
-<li>dφ(x)/dx ≤ 0 ∀ x ∈ ℝ.</li>
-<li>φ(x) = 0 ∀ x ≥ 0.</li>
-<li>dφ(x)/dx &lt; 0 ∀ x &lt; 0. </li>
-</ol>
 
 </div>
 </div>
