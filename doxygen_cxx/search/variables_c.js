@@ -25,7 +25,7 @@ var searchData=
   ['model',['model',['../structdrake_1_1planning_1_1_collision_checker_params.html#a2c29aca77709a64d537303e01282e71f',1,'drake::planning::CollisionCheckerParams']]],
   ['model_5finstance',['model_instance',['../structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html#a0f773326ce535b58f3616669dcfa68c1',1,'drake::multibody::parsing::ModelInstanceInfo']]],
   ['model_5fname',['model_name',['../structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html#a8f5117f344d6eab6eb9a789f5ef03622',1,'drake::multibody::parsing::ModelInstanceInfo']]],
-  ['model_5fnamespace',['model_namespace',['../structdrake_1_1multibody_1_1parsing_1_1_add_directives.html#a7928432abfdcccb409e49b309ebf3026',1,'drake::multibody::parsing::AddDirectives']]],
+  ['model_5fnamespace',['model_namespace',['../structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#a7928432abfdcccb409e49b309ebf3026',1,'drake::multibody::parsing::AddCollisionFilterGroup::model_namespace()'],['../structdrake_1_1multibody_1_1parsing_1_1_add_directives.html#a7928432abfdcccb409e49b309ebf3026',1,'drake::multibody::parsing::AddDirectives::model_namespace()']]],
   ['model_5fpath',['model_path',['../structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html#a4f479489d1860644526a4ecfc8889575',1,'drake::multibody::parsing::ModelInstanceInfo']]],
   ['moment_5fratio',['moment_ratio',['../structdrake_1_1multibody_1_1_propeller_info.html#a30a3388e8684851fd367f80bb8a35249',1,'drake::multibody::PropellerInfo']]],
   ['moment_5fthreshold',['moment_threshold',['../structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a7efd266a84dc02bc8bb42bb8d73273e5',1,'drake::multibody::meshcat::ContactVisualizerParams']]],

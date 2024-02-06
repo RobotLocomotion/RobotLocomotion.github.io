@@ -42,7 +42,7 @@ var searchData=
   ['shape',['Shape',['../classdrake_1_1geometry_1_1_shape.html',1,'drake::geometry']]],
   ['shapename',['ShapeName',['../classdrake_1_1geometry_1_1_shape_name.html',1,'drake::geometry']]],
   ['shapereifier',['ShapeReifier',['../classdrake_1_1geometry_1_1_shape_reifier.html',1,'drake::geometry']]],
-  ['shapetag',['ShapeTag',['../structdrake_1_1geometry_1_1_shape_tag.html',1,'drake::geometry']]],
+  ['shapetostring',['ShapeToString',['../classdrake_1_1geometry_1_1_shape_to_string.html',1,'drake::geometry']]],
   ['sharedpointersystem',['SharedPointerSystem',['../classdrake_1_1systems_1_1_shared_pointer_system.html',1,'drake::systems']]],
   ['signeddistancepair',['SignedDistancePair',['../structdrake_1_1geometry_1_1_signed_distance_pair.html',1,'drake::geometry']]],
   ['signeddistancetopoint',['SignedDistanceToPoint',['../structdrake_1_1geometry_1_1_signed_distance_to_point.html',1,'drake::geometry']]],

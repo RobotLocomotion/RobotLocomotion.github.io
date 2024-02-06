@@ -1,7 +1,5 @@
 var NAVTREEINDEX58 =
 {
-"structdrake_1_1multibody_1_1_multibody_plant_config.html#a80e753afd58d6c37211d1e1caed32b24":[3,0,0,8,56,1],
-"structdrake_1_1multibody_1_1_multibody_plant_config.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,8,56,0],
 "structdrake_1_1multibody_1_1_multibody_plant_config.html#aa0f273688f2f9252eca8098377a5ea10":[3,0,0,8,56,2],
 "structdrake_1_1multibody_1_1_multibody_plant_config.html#aa216048ea5d8bbcef641752b6d744ba8":[3,0,0,8,56,9],
 "structdrake_1_1multibody_1_1_multibody_plant_config.html#ab293e1ad65932eebf57568303f28c326":[3,0,0,8,56,5],
@@ -131,8 +129,9 @@ var NAVTREEINDEX58 =
 "structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html":[3,0,0,8,4,0],
 "structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#a1ac4262e3bb2a1be1e29ce90bd7c2377":[3,0,0,8,4,0,2],
 "structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#a37624b00959bd2e6080521c344fcfd1e":[3,0,0,8,4,0,3],
+"structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#a7928432abfdcccb409e49b309ebf3026":[3,0,0,8,4,0,4],
 "structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,8,4,0,1],
-"structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#a9b45b3e13bd9167aab02e17e08916231":[3,0,0,8,4,0,4],
+"structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#a9b45b3e13bd9167aab02e17e08916231":[3,0,0,8,4,0,5],
 "structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#ac532c4b500b1a85ea22217f2c65a70ed":[3,0,0,8,4,0,0],
 "structdrake_1_1multibody_1_1parsing_1_1_add_directives.html":[3,0,0,8,4,1],
 "structdrake_1_1multibody_1_1parsing_1_1_add_directives.html#a7928432abfdcccb409e49b309ebf3026":[3,0,0,8,4,1,3],
@@ -249,5 +248,6 @@ var NAVTREEINDEX58 =
 "structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a6513041bec80f06f80601420be193a69":[3,0,0,12,6,2,0],
 "structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a81fc1edc9be7f6ca52a5c9f2d1f284a6":[3,0,0,12,6,2,4],
 "structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,12,6,2,5],
-"structdrake_1_1schema_1_1_rotation_1_1_rpy.html#ad5c7ce055d37fc3f1ae1dbd5af47e3a5":[3,0,0,12,6,2,6]
+"structdrake_1_1schema_1_1_rotation_1_1_rpy.html#ad5c7ce055d37fc3f1ae1dbd5af47e3a5":[3,0,0,12,6,2,6],
+"structdrake_1_1schema_1_1_rotation_1_1_uniform.html":[3,0,0,12,6,3]
 };

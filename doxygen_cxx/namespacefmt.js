@@ -5,7 +5,6 @@ var namespacefmt =
     [ "formatter< drake::geometry::GeometryProperties >", "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_geometry_properties_01_4.html", null ],
     [ "formatter< drake::geometry::render::RenderLabel >", "structfmt_1_1formatter_3_01drake_1_1geometry_1_1render_1_1_render_label_01_4.html", null ],
     [ "formatter< drake::geometry::Role >", "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_role_01_4.html", null ],
-    [ "formatter< drake::geometry::ShapeName >", "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_shape_name_01_4.html", null ],
     [ "formatter< drake::Identifier< Tag > >", "structfmt_1_1formatter_3_01drake_1_1_identifier_3_01_tag_01_4_01_4.html", null ],
     [ "formatter< drake::math::RigidTransform< T > >", "structfmt_1_1formatter_3_01drake_1_1math_1_1_rigid_transform_3_01_t_01_4_01_4.html", null ],
     [ "formatter< drake::math::RollPitchYaw< T > >", "structfmt_1_1formatter_3_01drake_1_1math_1_1_roll_pitch_yaw_3_01_t_01_4_01_4.html", null ],

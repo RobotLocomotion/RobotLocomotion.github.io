@@ -1,6 +1,5 @@
 var shape__specification_8h =
 [
-    [ "ShapeTag", "structdrake_1_1geometry_1_1_shape_tag.html", null ],
     [ "Shape", "classdrake_1_1geometry_1_1_shape.html", "classdrake_1_1geometry_1_1_shape" ],
     [ "Box", "classdrake_1_1geometry_1_1_box.html", "classdrake_1_1geometry_1_1_box" ],
     [ "Capsule", "classdrake_1_1geometry_1_1_capsule.html", "classdrake_1_1geometry_1_1_capsule" ],
@@ -13,6 +12,5 @@ var shape__specification_8h =
     [ "Sphere", "classdrake_1_1geometry_1_1_sphere.html", "classdrake_1_1geometry_1_1_sphere" ],
     [ "ShapeReifier", "classdrake_1_1geometry_1_1_shape_reifier.html", "classdrake_1_1geometry_1_1_shape_reifier" ],
     [ "ShapeName", "classdrake_1_1geometry_1_1_shape_name.html", "classdrake_1_1geometry_1_1_shape_name" ],
-    [ "formatter< drake::geometry::ShapeName >", "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_shape_name_01_4.html", null ],
     [ "CalcVolume", "shape__specification_8h.html#ae129ecc1484c1fab6e4d4b3e04d25198", null ]
 ];

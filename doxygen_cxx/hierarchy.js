@@ -374,7 +374,6 @@ var hierarchy =
         [ "formatter< drake::geometry::GeometryProperties >", "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_geometry_properties_01_4.html", null ],
         [ "formatter< drake::geometry::render::RenderLabel >", "structfmt_1_1formatter_3_01drake_1_1geometry_1_1render_1_1_render_label_01_4.html", null ],
         [ "formatter< drake::geometry::Role >", "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_role_01_4.html", null ],
-        [ "formatter< drake::geometry::ShapeName >", "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_shape_name_01_4.html", null ],
         [ "formatter< drake::Identifier< Tag > >", "structfmt_1_1formatter_3_01drake_1_1_identifier_3_01_tag_01_4_01_4.html", null ],
         [ "formatter< drake::math::RigidTransform< T > >", "structfmt_1_1formatter_3_01drake_1_1math_1_1_rigid_transform_3_01_t_01_4_01_4.html", null ],
         [ "formatter< drake::math::RollPitchYaw< T > >", "structfmt_1_1formatter_3_01drake_1_1math_1_1_roll_pitch_yaw_3_01_t_01_4_01_4.html", null ],
@@ -800,9 +799,9 @@ var hierarchy =
       [ "Point", "classdrake_1_1geometry_1_1optimization_1_1_point.html", null ],
       [ "VPolytope", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html", null ],
       [ "RenderEngine", "classdrake_1_1geometry_1_1render_1_1_render_engine.html", null ],
-      [ "ShapeName", "classdrake_1_1geometry_1_1_shape_name.html", null ]
+      [ "ShapeName", "classdrake_1_1geometry_1_1_shape_name.html", null ],
+      [ "ShapeToString", "classdrake_1_1geometry_1_1_shape_to_string.html", null ]
     ] ],
-    [ "ShapeTag< ShapeType >", "structdrake_1_1geometry_1_1_shape_tag.html", null ],
     [ "SignedDistancePair< T >", "structdrake_1_1geometry_1_1_signed_distance_pair.html", null ],
     [ "SignedDistanceToPoint< T >", "structdrake_1_1geometry_1_1_signed_distance_to_point.html", null ],
     [ "SignedDistanceWithTimeDerivative", "structdrake_1_1multibody_1_1_signed_distance_with_time_derivative.html", null ],

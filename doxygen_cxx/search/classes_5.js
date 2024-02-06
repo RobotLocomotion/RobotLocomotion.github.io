@@ -24,7 +24,6 @@ var searchData=
   ['formatter_3c_20drake_3a_3ageometry_3a_3ageometryproperties_20_3e',['formatter&lt; drake::geometry::GeometryProperties &gt;',['../structfmt_1_1formatter_3_01drake_1_1geometry_1_1_geometry_properties_01_4.html',1,'fmt']]],
   ['formatter_3c_20drake_3a_3ageometry_3a_3arender_3a_3arenderlabel_20_3e',['formatter&lt; drake::geometry::render::RenderLabel &gt;',['../structfmt_1_1formatter_3_01drake_1_1geometry_1_1render_1_1_render_label_01_4.html',1,'fmt']]],
   ['formatter_3c_20drake_3a_3ageometry_3a_3arole_20_3e',['formatter&lt; drake::geometry::Role &gt;',['../structfmt_1_1formatter_3_01drake_1_1geometry_1_1_role_01_4.html',1,'fmt']]],
-  ['formatter_3c_20drake_3a_3ageometry_3a_3ashapename_20_3e',['formatter&lt; drake::geometry::ShapeName &gt;',['../structfmt_1_1formatter_3_01drake_1_1geometry_1_1_shape_name_01_4.html',1,'fmt']]],
   ['formatter_3c_20drake_3a_3aidentifier_3c_20tag_20_3e_20_3e',['formatter&lt; drake::Identifier&lt; Tag &gt; &gt;',['../structfmt_1_1formatter_3_01drake_1_1_identifier_3_01_tag_01_4_01_4.html',1,'fmt']]],
   ['formatter_3c_20drake_3a_3amath_3a_3arigidtransform_3c_20t_20_3e_20_3e',['formatter&lt; drake::math::RigidTransform&lt; T &gt; &gt;',['../structfmt_1_1formatter_3_01drake_1_1math_1_1_rigid_transform_3_01_t_01_4_01_4.html',1,'fmt']]],
   ['formatter_3c_20drake_3a_3amath_3a_3arollpitchyaw_3c_20t_20_3e_20_3e',['formatter&lt; drake::math::RollPitchYaw&lt; T &gt; &gt;',['../structfmt_1_1formatter_3_01drake_1_1math_1_1_roll_pitch_yaw_3_01_t_01_4_01_4.html',1,'fmt']]],

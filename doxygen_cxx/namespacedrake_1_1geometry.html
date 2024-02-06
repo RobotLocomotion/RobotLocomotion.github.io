@@ -324,16 +324,14 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The SceneGraphInspector serves as a mechanism to query the topological structure of a <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> instance.  <a href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The base interface for all shape specifications.  <a href="classdrake_1_1geometry_1_1_shape.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The abstract base class for all shape specifications.  <a href="classdrake_1_1geometry_1_1_shape.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_shape_name.html">ShapeName</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class that reports the name of the type of shape being reified (e.g., <a class="el" href="classdrake_1_1geometry_1_1_sphere.html" title="Definition of sphere.">Sphere</a>, <a class="el" href="classdrake_1_1geometry_1_1_box.html" title="Definition of a box.">Box</a>, etc.)  <a href="classdrake_1_1geometry_1_1_shape_name.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_shape_reifier.html">ShapeReifier</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The interface for converting shape descriptions to real shapes.  <a href="classdrake_1_1geometry_1_1_shape_reifier.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_shape_tag.html">ShapeTag</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple struct for instantiating the type-specific <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The base interface for all shape specifications.">Shape</a> functionality.  <a href="structdrake_1_1geometry_1_1_shape_tag.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_shape_to_string.html">ShapeToString</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html">SignedDistancePair</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The data for reporting the signed distance between two geometries, A and B.  <a href="structdrake_1_1geometry_1_1_signed_distance_pair.html#details">More...</a><br /></td></tr>
@@ -481,7 +479,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:a18b9a919046a97500f422a85a4a8ce30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a RenderEngine implementation which uses a VTK-based OpenGL renderer.  <a href="#a18b9a919046a97500f422a85a4a8ce30">More...</a><br /></td></tr>
 <tr class="separator:a18b9a919046a97500f422a85a4a8ce30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae129ecc1484c1fab6e4d4b3e04d25198"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#ae129ecc1484c1fab6e4d4b3e04d25198">CalcVolume</a> (const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &amp;shape)</td></tr>
-<tr class="memdesc:ae129ecc1484c1fab6e4d4b3e04d25198"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the volume (in meters^3) for the <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The base interface for all shape specifications.">Shape</a>.  <a href="#ae129ecc1484c1fab6e4d4b3e04d25198">More...</a><br /></td></tr>
+<tr class="memdesc:ae129ecc1484c1fab6e4d4b3e04d25198"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the volume (in meters^3) for the <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The abstract base class for all shape specifications.">Shape</a>.  <a href="#ae129ecc1484c1fab6e4d4b3e04d25198">More...</a><br /></td></tr>
 <tr class="separator:ae129ecc1484c1fab6e4d4b3e04d25198"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45ad74b0a867a6876fe2a44b3d2b4cb2"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">Meshcat</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a45ad74b0a867a6876fe2a44b3d2b4cb2">GetTestEnvironmentMeshcat</a> ()</td></tr>
 <tr class="memdesc:a45ad74b0a867a6876fe2a44b3d2b4cb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a singleton <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> object to be used during unit tests.  <a href="#a45ad74b0a867a6876fe2a44b3d2b4cb2">More...</a><br /></td></tr>
@@ -1119,7 +1117,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Calculates the volume (in meters^3) for the <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The base interface for all shape specifications.">Shape</a>. </p>
+<p>Calculates the volume (in meters^3) for the <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The abstract base class for all shape specifications.">Shape</a>. </p>
 <p>For convex and mesh geometries, the algorithm only supports ".obj" files and only produces meaningful results for "closed" shapes.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">

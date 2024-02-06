@@ -14145,24 +14145,13 @@ source.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.geometry.Shape">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">Shape</span></span><a class="headerlink" href="#pydrake.geometry.Shape" title="Permalink to this definition"></a></dt>
-<dd><p>The base interface for all shape specifications. It has no public
-constructor and cannot be instantiated directly. The Shape class has
-two key properties:</p>
+<dd><p>The abstract base class for all shape specifications. Concrete
+subclasses exist for specific shapes (e.g., Box, Mesh, etc.).</p>
+<p>The Shape class has two key properties:</p>
 <ul class="simple">
 <li><p>it is cloneable, and</p></li>
 <li><p>it can be “reified” (see ShapeReifier).</p></li>
 </ul>
-<p>When you add a new subclass of Shape to Drake, you must:</p>
-<p>1. add a virtual function ImplementGeometry() for the new shape in
-ShapeReifier that invokes the ThrowUnsupportedGeometry method, and add to
-the test for it in shape_specification_test.cc.
-2. implement ImplementGeometry in derived ShapeReifiers to continue support
-if desired, otherwise ensure unimplemented functions are not hidden in new
-derivations of ShapeReifier with <code class="docutils literal notranslate"><span class="pre">using</span></code>, for example, <code class="docutils literal notranslate"><span class="pre">using</span>
-<span class="pre">ShapeReifier::ImplementGeometry</span></code>. Existing subclasses should already have
-this.</p>
-<p>Otherwise, you might get a runtime error. We do not have an automatic
-way to enforce them at compile time.</p>
 <p>Note that the Shape class hierarchy is closed to third-party
 extensions. All Shape classes must be defined within Drake directly
 (and in this h/cc file pair in particular).</p>

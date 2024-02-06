@@ -1,6 +1,5 @@
 var NAVTREEINDEX41 =
 {
-"classdrake_1_1systems_1_1analysis_1_1test_1_1_pleides_system.html#a2b4fb1f8d6ea2e998a74ee096c0b840e":[3,0,0,15,0,0,0,6],
 "classdrake_1_1systems_1_1analysis_1_1test_1_1_pleides_system.html#a66f3fda28bb518ad7bd7754aaeb4c792":[3,0,0,15,0,0,0,4],
 "classdrake_1_1systems_1_1analysis_1_1test_1_1_pleides_system.html#a695af6d46e0bc0a519f158c42c90717f":[3,0,0,15,0,0,0,1],
 "classdrake_1_1systems_1_1analysis_1_1test_1_1_pleides_system.html#abc9adc65ab2d34a653b5ed6a9d6b915c":[3,0,0,15,0,0,0,10],
@@ -249,5 +248,6 @@ var NAVTREEINDEX41 =
 "classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#a93700584c5d48070d9704f4ad7f83f8a":[1,2,3,0,3],
 "classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#aad627f771b16f15ab12904fde13e5f86":[1,2,3,0,1],
 "classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#ad99fec330effea7b0b0952ec31cd5f82":[1,2,3,0,4],
-"classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#ae52a989887be360ba54d28e89362caad":[1,2,3,0,7]
+"classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#ae52a989887be360ba54d28e89362caad":[1,2,3,0,7],
+"classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#aebe74a87d7957f9ab354177ba42f5a78":[1,2,3,0,6]
 };

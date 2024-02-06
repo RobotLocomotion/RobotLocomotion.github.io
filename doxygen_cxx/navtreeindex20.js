@@ -1,6 +1,5 @@
 var NAVTREEINDEX20 =
 {
-"classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#a86ebb1951c6fc9e753c7452c13f6dade":[1,2,11,1,2],
 "classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#a9fc78a729b6fdd395e1cb7b6b2db3047":[1,2,11,1,0],
 "classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#ab4cae2915765bb20ab1fec015246ab59":[1,2,11,1,1],
 "classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#abf0ba4dc73d12957c13ae22e2a2ef939":[1,2,11,1,8],
@@ -249,5 +248,6 @@ var NAVTREEINDEX20 =
 "classdrake_1_1planning_1_1_collision_checker.html#af4a3f7ae74cf3f31e5f3a3b840d111a5":[1,4,2,2,1,34],
 "classdrake_1_1planning_1_1_collision_checker.html#af8423473a4d7b2c2b37c7f9c8108c7a3":[1,4,2,2,1,85],
 "classdrake_1_1planning_1_1_collision_checker.html#af9df46cf7a999edaee7b5461a38a8e0d":[1,4,2,2,1,84],
-"classdrake_1_1planning_1_1_collision_checker.html#afa782a122b868c688b6c7bce870a7c93":[1,4,2,2,1,54]
+"classdrake_1_1planning_1_1_collision_checker.html#afa782a122b868c688b6c7bce870a7c93":[1,4,2,2,1,54],
+"classdrake_1_1planning_1_1_collision_checker.html#afef8ab83612978d5deeb7cd6fc413b80":[1,4,2,2,1,83]
 };

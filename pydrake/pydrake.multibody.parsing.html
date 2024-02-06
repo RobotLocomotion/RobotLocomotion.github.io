@@ -171,9 +171,18 @@ tag_drake_member in XML model formats.</p>
 </dd></dl>
 
 <dl class="py property">
+<dt class="sig sig-object py" id="pydrake.multibody.parsing.AddCollisionFilterGroup.model_namespace">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">model_namespace</span></span><a class="headerlink" href="#pydrake.multibody.parsing.AddCollisionFilterGroup.model_namespace" title="Permalink to this definition"></a></dt>
+<dd><p>Optional model namespace. Allows <code class="docutils literal notranslate"><span class="pre">name</span></code> to be reused between models
+and lets you use the scoped name in
+<code class="docutils literal notranslate"><span class="pre">ignored_collision_filter_groups</span></code>.</p>
+</dd></dl>
+
+<dl class="py property">
 <dt class="sig sig-object py" id="pydrake.multibody.parsing.AddCollisionFilterGroup.name">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pydrake.multibody.parsing.AddCollisionFilterGroup.name" title="Permalink to this definition"></a></dt>
-<dd><p>Name of group to be added. Must not be a scoped name.</p>
+<dd><p>Name of group to be added. This is an unscoped name, and must be
+unique either globally or within its specified model namespace.</p>
 </dd></dl>
 
 </dd></dl>

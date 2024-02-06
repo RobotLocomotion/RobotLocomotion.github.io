@@ -1,21 +1,20 @@
 var NAVTREEINDEX53 =
 {
-"namespacedrake_1_1systems_1_1rendering.html":[3,0,0,15,6],
 "namespacedrake_1_1systems_1_1scalar__conversion.html":[2,0,0,17,8],
 "namespacedrake_1_1systems_1_1scalar__conversion.html":[3,0,0,15,7],
-"namespacedrake_1_1systems_1_1sensors.html":[2,0,0,17,9],
 "namespacedrake_1_1systems_1_1sensors.html":[3,0,0,15,8],
+"namespacedrake_1_1systems_1_1sensors.html":[2,0,0,17,9],
 "namespacedrake_1_1systems_1_1test.html":[2,0,0,17,10],
 "namespacedrake_1_1test.html":[2,0,0,18],
 "namespacedrake_1_1test.html":[3,0,0,16],
-"namespacedrake_1_1trajectories.html":[2,0,0,19],
 "namespacedrake_1_1trajectories.html":[3,0,0,17],
+"namespacedrake_1_1trajectories.html":[2,0,0,19],
 "namespacedrake_1_1visualization.html":[3,0,0,18],
 "namespacedrake_1_1visualization.html":[2,0,0,20],
 "namespacedrake_1_1yaml.html":[2,0,0,21],
 "namespacedrake_1_1yaml.html":[3,0,0,19],
-"namespacefmt.html":[2,0,1],
 "namespacefmt.html":[3,0,1],
+"namespacefmt.html":[2,0,1],
 "namespacemembers.html":[2,1,0],
 "namespacemembers.html":[2,1,0,0],
 "namespacemembers_b.html":[2,1,0,1],
@@ -150,8 +149,8 @@ var NAVTREEINDEX53 =
 "pixel__types_8h.html#a60883d4958a60b91661e97027a85072aaf34c9bbc14fec59d55cb4a75ec163294":[4,0,0,12,8,16,10,3],
 "pixel__types_8h.html#a71e237783020d662652f8ab4fed9bd63":[4,0,0,12,8,16,13],
 "pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1":[4,0,0,12,8,16,19],
-"pixel__types_8h.html#aa27964439659a0be90e567d865ffb792":[4,0,0,12,8,16,11],
 "pixel__types_8h.html#aa27964439659a0be90e567d865ffb792":[4,0,0,12,8,16,18],
+"pixel__types_8h.html#aa27964439659a0be90e567d865ffb792":[4,0,0,12,8,16,11],
 "pixel__types_8h.html#aa27964439659a0be90e567d865ffb792a00582391087709af581a9e896ef882ef":[4,0,0,12,8,16,11,1],
 "pixel__types_8h.html#aa27964439659a0be90e567d865ffb792a01f5fa4aac9e911952ef4bfac3d864ab":[4,0,0,12,8,16,11,0],
 "pixel__types_8h.html#aa27964439659a0be90e567d865ffb792a0e8d8cf2ebb8164d8a669d983eca5276":[4,0,0,12,8,16,11,3],
@@ -249,5 +248,6 @@ var NAVTREEINDEX53 =
 "program__attribute_8h.html#a115b732b5de5502e59437ee38babe95fa48d237e8d01c95129ecc34be15f4b789":[4,0,0,11,41,4,6],
 "program__attribute_8h.html#a115b732b5de5502e59437ee38babe95fa597a3cf4953daab8ab5e6ffebeff44d0":[4,0,0,11,41,4,0],
 "program__attribute_8h.html#a115b732b5de5502e59437ee38babe95fa59e241294144c7cdf7ea7c8e64b361aa":[4,0,0,11,41,4,10],
-"program__attribute_8h.html#a115b732b5de5502e59437ee38babe95fa6186f6ad8f4222b61ec29ea48a046299":[4,0,0,11,41,4,11]
+"program__attribute_8h.html#a115b732b5de5502e59437ee38babe95fa6186f6ad8f4222b61ec29ea48a046299":[4,0,0,11,41,4,11],
+"program__attribute_8h.html#a115b732b5de5502e59437ee38babe95fa8c8fa060b46a40b2fd97509493514f33":[4,0,0,11,41,4,7]
 };

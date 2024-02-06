@@ -1,6 +1,5 @@
 var NAVTREEINDEX21 =
 {
-"classdrake_1_1planning_1_1_collision_checker.html#afef8ab83612978d5deeb7cd6fc413b80":[1,4,2,2,1,83],
 "classdrake_1_1planning_1_1_collision_checker_context.html":[1,4,2,2,2],
 "classdrake_1_1planning_1_1_collision_checker_context.html#a130213e985622308e422772f75461973":[1,4,2,2,2,7],
 "classdrake_1_1planning_1_1_collision_checker_context.html#a1e7d2a81568c26350b120a592e55e174":[1,4,2,2,2,13],
@@ -249,5 +248,6 @@ var NAVTREEINDEX21 =
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#aeb432a55ef7765459155c69a539d8658":[1,4,2,1,3,25],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#af27492cb5b0dbf8cd8ce10e792486052":[1,4,2,1,3,14],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#af3392559929281e1d5db4f104ed4b8f1":[1,4,2,1,3,19],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#afcc8c6b2091ff4447ee2951bb7907de8":[1,4,2,1,3,24]
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#afcc8c6b2091ff4447ee2951bb7907de8":[1,4,2,1,3,24],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html":[1,1,0,23]
 };

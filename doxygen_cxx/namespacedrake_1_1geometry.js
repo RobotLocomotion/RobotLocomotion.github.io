@@ -52,7 +52,7 @@ var namespacedrake_1_1geometry =
     [ "Shape", "classdrake_1_1geometry_1_1_shape.html", "classdrake_1_1geometry_1_1_shape" ],
     [ "ShapeName", "classdrake_1_1geometry_1_1_shape_name.html", "classdrake_1_1geometry_1_1_shape_name" ],
     [ "ShapeReifier", "classdrake_1_1geometry_1_1_shape_reifier.html", "classdrake_1_1geometry_1_1_shape_reifier" ],
-    [ "ShapeTag", "structdrake_1_1geometry_1_1_shape_tag.html", null ],
+    [ "ShapeToString", "classdrake_1_1geometry_1_1_shape_to_string.html", "classdrake_1_1geometry_1_1_shape_to_string" ],
     [ "SignedDistancePair", "structdrake_1_1geometry_1_1_signed_distance_pair.html", "structdrake_1_1geometry_1_1_signed_distance_pair" ],
     [ "SignedDistanceToPoint", "structdrake_1_1geometry_1_1_signed_distance_to_point.html", "structdrake_1_1geometry_1_1_signed_distance_to_point" ],
     [ "Sphere", "classdrake_1_1geometry_1_1_sphere.html", "classdrake_1_1geometry_1_1_sphere" ],

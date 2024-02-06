@@ -1,6 +1,5 @@
 var NAVTREEINDEX44 =
 {
-"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#aa77d19bf3de0a1c93d54679d0ba86bef":[3,0,0,17,5,15],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ac3fb3016c2ae2b3bc37459710539e1fa":[3,0,0,17,5,41],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ac5d300d23d5911b73ccdf36ef9168e5b":[3,0,0,17,5,26],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ac93013774f250920857c17c083350b57":[3,0,0,17,5,8],
@@ -249,5 +248,6 @@ var NAVTREEINDEX44 =
 "com__in__polyhedron__constraint_8h.html":[4,0,0,8,5,2],
 "com__position__constraint_8h.html":[4,0,0,8,5,3],
 "common_2autodiff_8h.html":[4,0,0,1,7],
-"common_2autodiff_8h.html#ab65ef0f1286b6a44416fd0424a3da982":[4,0,0,1,7,0]
+"common_2autodiff_8h.html#ab65ef0f1286b6a44416fd0424a3da982":[4,0,0,1,7,0],
+"common__solver__option_8h.html":[4,0,0,11,8]
 };

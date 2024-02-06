@@ -337,7 +337,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a852fbed1b4f83ddf4c9b3913a772f4bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports true if the two geometries with given ids <code>geometry_id1</code> and <code>geometry_id2</code>, define a collision pair that has been filtered out.  <a href="#a852fbed1b4f83ddf4c9b3913a772f4bd">More...</a><br /></td></tr>
 <tr class="separator:a852fbed1b4f83ddf4c9b3913a772f4bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acea936a2d449be8d43bb1037568cc81b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#acea936a2d449be8d43bb1037568cc81b">Reify</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id, <a class="el" href="classdrake_1_1geometry_1_1_shape_reifier.html">ShapeReifier</a> *reifier) const</td></tr>
-<tr class="memdesc:acea936a2d449be8d43bb1037568cc81b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Introspects the geometry indicated by the given <code>geometry_id</code>.  <a href="#acea936a2d449be8d43bb1037568cc81b">More...</a><br /></td></tr>
+<tr class="memdesc:acea936a2d449be8d43bb1037568cc81b"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#acea936a2d449be8d43bb1037568cc81b">More...</a><br /></td></tr>
 <tr class="separator:acea936a2d449be8d43bb1037568cc81b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23ddceb0d0bb58106ffe335407692a73"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html">GeometryInstance</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a23ddceb0d0bb58106ffe335407692a73">CloneGeometryInstance</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id) const</td></tr>
 <tr class="memdesc:a23ddceb0d0bb58106ffe335407692a73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtains a new <a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html" title="A geometry instance combines a geometry definition (i.e., a shape of some sort), a pose (relative to ...">GeometryInstance</a> that copies the geometry indicated by the given <code>geometry_id</code>.  <a href="#a23ddceb0d0bb58106ffe335407692a73">More...</a><br /></td></tr>
@@ -1625,13 +1625,9 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Introspects the geometry indicated by the given <code>geometry_id</code>. </p>
-<p>The geometry will be passed into the provided <code>reifier</code>. This is the mechanism by which external code can discover and respond to the different types of geometries stored in <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a>. See ShapeToString as an example. </p><dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if the <code>geometry_id</code> does not refer to a valid geometry. </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000004">Deprecated:</a></b></dt><dd>This shortcut function is being removed.  Instead, call inspector.GetShape(geometry_id).Reify(reifier) <br />
+ This will be removed from Drake on or after 2024-06-01.</dd></dl>
 
 </div>
 </div>

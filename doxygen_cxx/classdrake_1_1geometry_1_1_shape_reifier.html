@@ -169,10 +169,10 @@ $(document).ready(function(){initNavTree('classdrake_1_1geometry_1_1_shape_reifi
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The interface for converting shape descriptions to real shapes. </p>
 <p>Any entity that consumes shape descriptions <em>must</em> implement this interface.</p>
-<p>This class explicitly enumerates all concrete shapes in its methods. The addition of a new concrete shape class requires the addition of a new corresponding method. There should <em>never</em> be an ImplementGeometry method that accepts the <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The base interface for all shape specifications.">Shape</a> base class as an argument; it should <em>only</em> operate on concrete derived classes.</p>
+<p>This class explicitly enumerates all concrete shapes in its methods. The addition of a new concrete shape class requires the addition of a new corresponding method. There should <em>never</em> be an ImplementGeometry method that accepts the <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The abstract base class for all shape specifications.">Shape</a> base class as an argument; it should <em>only</em> operate on concrete derived classes.</p>
 <p>The expected workflow is for a class that needs to turn shape specifications into concrete geometry instances to implement the ShapeReifier interface <em>and</em> invoke the <a class="el" href="classdrake_1_1geometry_1_1_shape.html#a8240386883c437a5a8015ef4a4e2c47b" title="Causes this description to be reified in the given reifier.">Shape::Reify()</a> method. For example, a simple reifier that requires no user data would look like:</p>
 <div class="fragment"><div class="line"><span class="keyword">class </span>SimpleReifier : <span class="keyword">public</span> <a class="code" href="classdrake_1_1geometry_1_1_shape_reifier.html#a5a269783f4a67872c5a867dbad70ea01">ShapeReifier</a> {</div><div class="line">  <span class="keywordtype">void</span> ProcessShape(<span class="keyword">const</span> Shape&amp; shape) {</div><div class="line">    <span class="comment">// Requires no user data.</span></div><div class="line">    shape.Reify(<span class="keyword">this</span>);</div><div class="line">  }</div><div class="line">  ...</div><div class="line">  <span class="keywordtype">void</span> <a class="code" href="classdrake_1_1geometry_1_1_shape_reifier.html#a0415a6de465125ed6e4166f5b6e4b4d4">ImplementGeometry</a>(<span class="keyword">const</span> Sphere&amp; sphere, <span class="keywordtype">void</span>*)<span class="keyword"> override </span>{</div><div class="line">    <span class="comment">// Do work to create a sphere.</span></div><div class="line">  }</div><div class="line">};</div></div><!-- fragment --><p>Or a complex reifier that requires user data would look like:</p>
-<div class="fragment"><div class="line"><span class="keyword">class </span>ComplexReifier : <span class="keyword">public</span> <a class="code" href="classdrake_1_1geometry_1_1_shape_reifier.html#a5a269783f4a67872c5a867dbad70ea01">ShapeReifier</a> {</div><div class="line">  <span class="keywordtype">void</span> ProcessShape(<span class="keyword">const</span> Shape&amp; shape) {</div><div class="line">    ImportantData data{...};</div><div class="line">    shape.Reify(<span class="keyword">this</span>, &amp;data);</div><div class="line">  }</div><div class="line">  ...</div><div class="line">  <span class="keywordtype">void</span> <a class="code" href="classdrake_1_1geometry_1_1_shape_reifier.html#a0415a6de465125ed6e4166f5b6e4b4d4">ImplementGeometry</a>(<span class="keyword">const</span> Sphere&amp; sphere, <span class="keywordtype">void</span>* data)<span class="keyword"> override </span>{</div><div class="line">    <a class="code" href="drake__assert_8h.html#a0d126d5c79d6e74d5f03f8c81e4b3a63">DRAKE_ASSERT</a>(data != <span class="keyword">nullptr</span>);</div><div class="line">    ImportantData&amp; data = *static_cast&lt;ImportantData*&gt;(data);</div><div class="line">    <span class="comment">// Do work to create a sphere using the provided user data.</span></div><div class="line">  }</div><div class="line">};</div></div><!-- fragment --><p>Implementing a particular shape may require more data than is strictly encapsulated in the <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The base interface for all shape specifications.">Shape</a>. The Implement* interface supports passing user data through a type-erased <code>void*</code>. Because a single class invoked <a class="el" href="classdrake_1_1geometry_1_1_shape.html#a8240386883c437a5a8015ef4a4e2c47b" title="Causes this description to be reified in the given reifier.">Shape::Reify()</a> it is in a position to provide exactly the data the shape implementations require. </p>
+<div class="fragment"><div class="line"><span class="keyword">class </span>ComplexReifier : <span class="keyword">public</span> <a class="code" href="classdrake_1_1geometry_1_1_shape_reifier.html#a5a269783f4a67872c5a867dbad70ea01">ShapeReifier</a> {</div><div class="line">  <span class="keywordtype">void</span> ProcessShape(<span class="keyword">const</span> Shape&amp; shape) {</div><div class="line">    ImportantData data{...};</div><div class="line">    shape.Reify(<span class="keyword">this</span>, &amp;data);</div><div class="line">  }</div><div class="line">  ...</div><div class="line">  <span class="keywordtype">void</span> <a class="code" href="classdrake_1_1geometry_1_1_shape_reifier.html#a0415a6de465125ed6e4166f5b6e4b4d4">ImplementGeometry</a>(<span class="keyword">const</span> Sphere&amp; sphere, <span class="keywordtype">void</span>* data)<span class="keyword"> override </span>{</div><div class="line">    <a class="code" href="drake__assert_8h.html#a0d126d5c79d6e74d5f03f8c81e4b3a63">DRAKE_ASSERT</a>(data != <span class="keyword">nullptr</span>);</div><div class="line">    ImportantData&amp; data = *static_cast&lt;ImportantData*&gt;(data);</div><div class="line">    <span class="comment">// Do work to create a sphere using the provided user data.</span></div><div class="line">  }</div><div class="line">};</div></div><!-- fragment --><p>Implementing a particular shape may require more data than is strictly encapsulated in the <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The abstract base class for all shape specifications.">Shape</a>. The Implement* interface supports passing user data through a type-erased <code>void*</code>. Because a single class invoked <a class="el" href="classdrake_1_1geometry_1_1_shape.html#a8240386883c437a5a8015ef4a4e2c47b" title="Causes this description to be reified in the given reifier.">Shape::Reify()</a> it is in a position to provide exactly the data the shape implementations require. </p>
 </div>
 <p><code>#include &lt;drake/geometry/shape_specification.h&gt;</code></p>
 <table class="memberdecls">
@@ -348,7 +348,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The default implementation of <a class="el" href="classdrake_1_1geometry_1_1_shape_reifier.html#a0415a6de465125ed6e4166f5b6e4b4d4">ImplementGeometry()</a>: it throws an exception using <a class="el" href="classdrake_1_1geometry_1_1_shape_reifier.html#ae4337e25fda81a32e1f4145f71d3f628" title="Derived ShapeReifiers can replace the default message for unsupported geometries by overriding this m...">ThrowUnsupportedGeometry()</a>. </p>
-<p>The purpose of this function is to facilitate reifiers that would call the same API on all shapes (e.g., call an API with a <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The base interface for all shape specifications.">Shape</a>&amp; parameter). This reduces the implementation boilerplate. </p>
+<p>The purpose of this function is to facilitate reifiers that would call the same API on all shapes (e.g., call an API with a <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The abstract base class for all shape specifications.">Shape</a>&amp; parameter). This reduces the implementation boilerplate. </p>
 
 </div>
 </div>
@@ -386,8 +386,6 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classdrake_1_1geometry_1_1_shape_name.html#af5ee6c45493dcf32b19de2ba9b93b1a2">ShapeName</a>.</p>
-
 </div>
 </div>
 <a id="a55821ccfb027151e1e5b8aba5e89d876"></a>
@@ -423,8 +421,6 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Reimplemented in <a class="el" href="classdrake_1_1geometry_1_1_shape_name.html#acc313f2d4f0a775e715dab97e308b278">ShapeName</a>.</p>
 
 </div>
 </div>
@@ -462,8 +458,6 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classdrake_1_1geometry_1_1_shape_name.html#ab6e8d6538d02b7fcc1ae6d50ddd8e0ad">ShapeName</a>.</p>
-
 </div>
 </div>
 <a id="a6a23d9ae5ebc2f14337b5c36ad7ec44a"></a>
@@ -499,8 +493,6 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Reimplemented in <a class="el" href="classdrake_1_1geometry_1_1_shape_name.html#a0f75b52f7e6cb66688b402656238ce7e">ShapeName</a>.</p>
 
 </div>
 </div>
@@ -538,8 +530,6 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classdrake_1_1geometry_1_1_shape_name.html#a9b6e2e5a887db70340573c565f6355e8">ShapeName</a>.</p>
-
 </div>
 </div>
 <a id="a47de7fe4f14cfa8a7a5f5f6fe30d64c9"></a>
@@ -575,8 +565,6 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Reimplemented in <a class="el" href="classdrake_1_1geometry_1_1_shape_name.html#a7a56c4d180771ce38636ecead72386a5">ShapeName</a>.</p>
 
 </div>
 </div>
@@ -614,8 +602,6 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classdrake_1_1geometry_1_1_shape_name.html#a7aa3dbd4074b61aa857ae7527aaaab76">ShapeName</a>.</p>
-
 </div>
 </div>
 <a id="af104aa17b651dfc2491a960eace62b0b"></a>
@@ -652,8 +638,6 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classdrake_1_1geometry_1_1_shape_name.html#a1c0d3ee8b72f274f7270fb8f1b40e298">ShapeName</a>.</p>
-
 </div>
 </div>
 <a id="a01146cd97faae87f9a56d857f75d535f"></a>
@@ -689,8 +673,6 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Reimplemented in <a class="el" href="classdrake_1_1geometry_1_1_shape_name.html#acfcfc5b679c5e1ba2300b60839c9b6fa">ShapeName</a>.</p>
 
 </div>
 </div>

@@ -177,6 +177,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab7cd6a852d0208f008381395f4a7dd9d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_mesh.html#ab7cd6a852d0208f008381395f4a7dd9d">Mesh</a> (const std::string &amp;<a class="el" href="classdrake_1_1geometry_1_1_mesh.html#a64b4c300fe95c104df48d1328b1d381e">filename</a>, <a class="el" href="classdouble.html">double</a> <a class="el" href="classdrake_1_1geometry_1_1_mesh.html#a5109cb042f782c4a77fcb072e4d4bf10">scale</a>=1.0)</td></tr>
 <tr class="memdesc:ab7cd6a852d0208f008381395f4a7dd9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a mesh specification from the mesh file located at the given file path; if the path is not absolute, it will be interpreted relative to the current working directory.  <a href="#ab7cd6a852d0208f008381395f4a7dd9d">More...</a><br /></td></tr>
 <tr class="separator:ab7cd6a852d0208f008381395f4a7dd9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a400cb114fa04653b48ea257e5dd397e4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_mesh.html#a400cb114fa04653b48ea257e5dd397e4">~Mesh</a> () final</td></tr>
+<tr class="separator:a400cb114fa04653b48ea257e5dd397e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64b4c300fe95c104df48d1328b1d381e"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_mesh.html#a64b4c300fe95c104df48d1328b1d381e">filename</a> () const</td></tr>
 <tr class="separator:a64b4c300fe95c104df48d1328b1d381e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a2ba33fb44bb4a5f4e273a5d9d440ea"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_mesh.html#a5a2ba33fb44bb4a5f4e273a5d9d440ea">extension</a> () const</td></tr>
@@ -202,21 +204,30 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a13e3624d773c45a0f79e3fe4d6404c27 inherit pub_methods_classdrake_1_1geometry_1_1_shape"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_shape.html#a13e3624d773c45a0f79e3fe4d6404c27">Clone</a> () const</td></tr>
 <tr class="memdesc:a13e3624d773c45a0f79e3fe4d6404c27 inherit pub_methods_classdrake_1_1geometry_1_1_shape"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a unique copy of this shape.  <a href="classdrake_1_1geometry_1_1_shape.html#a13e3624d773c45a0f79e3fe4d6404c27">More...</a><br /></td></tr>
 <tr class="separator:a13e3624d773c45a0f79e3fe4d6404c27 inherit pub_methods_classdrake_1_1geometry_1_1_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacba1a4acedc24ab801a3bb35e779e8b inherit pub_methods_classdrake_1_1geometry_1_1_shape"><td class="memItemLeft" align="right" valign="top">std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_shape.html#aacba1a4acedc24ab801a3bb35e779e8b">type_name</a> () const</td></tr>
+<tr class="memdesc:aacba1a4acedc24ab801a3bb35e779e8b inherit pub_methods_classdrake_1_1geometry_1_1_shape"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the (unqualified) type name of this <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The abstract base class for all shape specifications.">Shape</a>, e.g., "Box".  <a href="classdrake_1_1geometry_1_1_shape.html#aacba1a4acedc24ab801a3bb35e779e8b">More...</a><br /></td></tr>
+<tr class="separator:aacba1a4acedc24ab801a3bb35e779e8b inherit pub_methods_classdrake_1_1geometry_1_1_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac993ecccd3d88aafefb6b8e3caa1dee inherit pub_methods_classdrake_1_1geometry_1_1_shape"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_shape.html#aac993ecccd3d88aafefb6b8e3caa1dee">to_string</a> () const</td></tr>
+<tr class="memdesc:aac993ecccd3d88aafefb6b8e3caa1dee inherit pub_methods_classdrake_1_1geometry_1_1_shape"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string representation of this shape.  <a href="classdrake_1_1geometry_1_1_shape.html#aac993ecccd3d88aafefb6b8e3caa1dee">More...</a><br /></td></tr>
+<tr class="separator:aac993ecccd3d88aafefb6b8e3caa1dee inherit pub_methods_classdrake_1_1geometry_1_1_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_classdrake_1_1geometry_1_1_shape"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classdrake_1_1geometry_1_1_shape')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a></td></tr>
-<tr class="memitem:a081514aa7db42c15e0c6bc0edbeb2b5f inherit pro_methods_classdrake_1_1geometry_1_1_shape"><td class="memTemplParams" colspan="2">template&lt;typename S &gt; </td></tr>
-<tr class="memitem:a081514aa7db42c15e0c6bc0edbeb2b5f inherit pro_methods_classdrake_1_1geometry_1_1_shape"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_shape.html#a081514aa7db42c15e0c6bc0edbeb2b5f">Shape</a> (<a class="el" href="structdrake_1_1geometry_1_1_shape_tag.html">ShapeTag</a>&lt; S &gt; tag)</td></tr>
-<tr class="memdesc:a081514aa7db42c15e0c6bc0edbeb2b5f inherit pro_methods_classdrake_1_1geometry_1_1_shape"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor available for derived class construction.  <a href="classdrake_1_1geometry_1_1_shape.html#a081514aa7db42c15e0c6bc0edbeb2b5f">More...</a><br /></td></tr>
-<tr class="separator:a081514aa7db42c15e0c6bc0edbeb2b5f inherit pro_methods_classdrake_1_1geometry_1_1_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5e067cf5693982029ff5931bd7d2a98 inherit pro_methods_classdrake_1_1geometry_1_1_shape"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_shape.html#ab5e067cf5693982029ff5931bd7d2a98">Shape</a> ()</td></tr>
+<tr class="memdesc:ab5e067cf5693982029ff5931bd7d2a98 inherit pro_methods_classdrake_1_1geometry_1_1_shape"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Constructor for use by derived classes.  <a href="classdrake_1_1geometry_1_1_shape.html#ab5e067cf5693982029ff5931bd7d2a98">More...</a><br /></td></tr>
+<tr class="separator:ab5e067cf5693982029ff5931bd7d2a98 inherit pro_methods_classdrake_1_1geometry_1_1_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a116dcb0586b9dbcbafd1dc33a2de10b1 inherit pro_methods_classdrake_1_1geometry_1_1_shape"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_shape.html#a116dcb0586b9dbcbafd1dc33a2de10b1">Shape</a> (const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &amp;)=default</td></tr>
+<tr class="memdesc:a116dcb0586b9dbcbafd1dc33a2de10b1 inherit pro_methods_classdrake_1_1geometry_1_1_shape"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) For derived classes.  <a href="classdrake_1_1geometry_1_1_shape.html#a116dcb0586b9dbcbafd1dc33a2de10b1">More...</a><br /></td></tr>
 <tr class="separator:a116dcb0586b9dbcbafd1dc33a2de10b1 inherit pro_methods_classdrake_1_1geometry_1_1_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9606f802f51cf313698b724cd8becfee inherit pro_methods_classdrake_1_1geometry_1_1_shape"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_shape.html#a9606f802f51cf313698b724cd8becfee">operator=</a> (const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &amp;)=default</td></tr>
+<tr class="memdesc:a9606f802f51cf313698b724cd8becfee inherit pro_methods_classdrake_1_1geometry_1_1_shape"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) For derived classes.  <a href="classdrake_1_1geometry_1_1_shape.html#a9606f802f51cf313698b724cd8becfee">More...</a><br /></td></tr>
 <tr class="separator:a9606f802f51cf313698b724cd8becfee inherit pro_methods_classdrake_1_1geometry_1_1_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0275b64bb659963dcf297519fcefdfe inherit pro_methods_classdrake_1_1geometry_1_1_shape"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_shape.html#ad0275b64bb659963dcf297519fcefdfe">Shape</a> (<a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &amp;&amp;)=default</td></tr>
+<tr class="memdesc:ad0275b64bb659963dcf297519fcefdfe inherit pro_methods_classdrake_1_1geometry_1_1_shape"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) For derived classes.  <a href="classdrake_1_1geometry_1_1_shape.html#ad0275b64bb659963dcf297519fcefdfe">More...</a><br /></td></tr>
 <tr class="separator:ad0275b64bb659963dcf297519fcefdfe inherit pro_methods_classdrake_1_1geometry_1_1_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad803af90ac2074f4c54e7217971a45ef inherit pro_methods_classdrake_1_1geometry_1_1_shape"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_shape.html#ad803af90ac2074f4c54e7217971a45ef">operator=</a> (<a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &amp;&amp;)=default</td></tr>
+<tr class="memdesc:ad803af90ac2074f4c54e7217971a45ef inherit pro_methods_classdrake_1_1geometry_1_1_shape"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) For derived classes.  <a href="classdrake_1_1geometry_1_1_shape.html#ad803af90ac2074f4c54e7217971a45ef">More...</a><br /></td></tr>
 <tr class="separator:ad803af90ac2074f4c54e7217971a45ef inherit pro_methods_classdrake_1_1geometry_1_1_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -313,6 +324,31 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a400cb114fa04653b48ea257e5dd397e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a400cb114fa04653b48ea257e5dd397e4">&#9670;&nbsp;</a></span>~Mesh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="classdrake_1_1geometry_1_1_mesh.html">Mesh</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
