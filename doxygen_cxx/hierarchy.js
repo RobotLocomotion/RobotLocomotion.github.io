@@ -710,6 +710,7 @@ var hierarchy =
     [ "RegionOfAttractionOptions", "structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html", null ],
     [ "PackageMap::RemoteParams", "structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html", null ],
     [ "RenderCameraCore", "classdrake_1_1geometry_1_1render_1_1_render_camera_core.html", null ],
+    [ "RenderEngine", "classdrake_1_1geometry_1_1render_1_1_render_engine.html", null ],
     [ "RenderEngineGlParams", "structdrake_1_1geometry_1_1_render_engine_gl_params.html", null ],
     [ "RenderEngineGltfClientParams", "structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html", null ],
     [ "RenderEngineVtkParams", "structdrake_1_1geometry_1_1_render_engine_vtk_params.html", null ],
@@ -798,7 +799,6 @@ var hierarchy =
       [ "MinkowskiSum", "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html", null ],
       [ "Point", "classdrake_1_1geometry_1_1optimization_1_1_point.html", null ],
       [ "VPolytope", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html", null ],
-      [ "RenderEngine", "classdrake_1_1geometry_1_1render_1_1_render_engine.html", null ],
       [ "ShapeName", "classdrake_1_1geometry_1_1_shape_name.html", null ],
       [ "ShapeToString", "classdrake_1_1geometry_1_1_shape_to_string.html", null ]
     ] ],
