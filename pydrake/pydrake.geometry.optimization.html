@@ -751,6 +751,50 @@ CalcVolumeViaSampling() instead.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.ConvexSet.CalcVolumeViaSampling">
+<span class="sig-name descname"><span class="pre">CalcVolumeViaSampling</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">generator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.common.html#pydrake.common.RandomGenerator" title="pydrake.common.RandomGenerator"><span class="pre">pydrake.common.RandomGenerator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">desired_rel_accuracy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_num_samples</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10000.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.optimization.SampledVolume" title="pydrake.geometry.optimization.SampledVolume"><span class="pre">pydrake.geometry.optimization.SampledVolume</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.ConvexSet.CalcVolumeViaSampling" title="Permalink to this definition"></a></dt>
+<dd><p>Calculates an estimate of the volume of the convex set using sampling
+and performing Monte Carlo integration.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>this method is intended to be used for low to moderate dimensions
+(d&lt;15). For larger dimensions, a telescopic product approach has
+yet to be implemented. See, e.g.,
+<a class="reference external" href="https://proceedings.mlr.press/v151/chevallier22a/chevallier22a.pdf">https://proceedings.mlr.press/v151/chevallier22a/chevallier22a.pdf</a></p>
+</div>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">generator</span></code>:</dt><dd><p>a random number generator.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">desired_rel_accuracy</span></code>:</dt><dd><p>the desired relative accuracy of the volume estimate in the sense
+that the estimated volume is likely to be within the interval
+defined by (1±2*desired_rel_accuracy)*true_volume with probability
+of at least* 0.95 according to the Law of Large Numbers.
+<a class="reference external" href="https://people.math.umass.edu/~lr7q/ps_files/teaching/math456/Chapter6.pdf">https://people.math.umass.edu/~lr7q/ps_files/teaching/math456/Chapter6.pdf</a>
+The computation will terminate when the relative error is less
+than rel_accuracy or when the maximum number of samples is
+reached.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">max_num_samples</span></code>:</dt><dd><p>the maximum number of samples to use.</p>
+</dd>
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">desired_rel_accuracy</span></code> is in the range [0,1].</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a pair the estimated volume of the set and an upper bound for the
+relative accuracy</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>if ambient_dimension</strong><strong>(</strong><strong>) </strong><strong>== 0.</strong> – </p></li>
+<li><p><strong>if the minimum axis-aligned bounding box of the set cannot be</strong> – </p></li>
+<li><p><strong>computed.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.ConvexSet.Clone">
 <span class="sig-name descname"><span class="pre">Clone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.ConvexSet.Clone" title="Permalink to this definition"></a></dt>
 <dd><p>Creates a unique deep copy of this set.</p>
@@ -3322,6 +3366,36 @@ in the world frame.</p>
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.Point.x">
 <span class="sig-name descname"><span class="pre">x</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.Point" title="pydrake.geometry.optimization.Point"><span class="pre">pydrake.geometry.optimization.Point</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.Point.x" title="Permalink to this definition"></a></dt>
 <dd><p>Retrieves the point.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.SampledVolume">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.optimization.</span></span><span class="sig-name descname"><span class="pre">SampledVolume</span></span><a class="headerlink" href="#pydrake.geometry.optimization.SampledVolume" title="Permalink to this definition"></a></dt>
+<dd><p>The result of a volume calculation from CalcVolumeViaSampling().</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.SampledVolume.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.SampledVolume.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.SampledVolume.num_samples">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_samples</span></span><a class="headerlink" href="#pydrake.geometry.optimization.SampledVolume.num_samples" title="Permalink to this definition"></a></dt>
+<dd><p>The number of samples used to compute the volume estimate.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.SampledVolume.rel_accuracy">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rel_accuracy</span></span><a class="headerlink" href="#pydrake.geometry.optimization.SampledVolume.rel_accuracy" title="Permalink to this definition"></a></dt>
+<dd><p>An upper bound for the relative accuracy of the volume estimate. When
+not evaluated, this value is NaN.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.SampledVolume.volume">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">volume</span></span><a class="headerlink" href="#pydrake.geometry.optimization.SampledVolume.volume" title="Permalink to this definition"></a></dt>
+<dd><p>The estimated volume of the set.</p>
 </dd></dl>
 
 </dd></dl>
