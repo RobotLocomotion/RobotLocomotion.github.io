@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Drake: drake/geometry/meshcat.h File Reference</title>
+<title>Drake: drake/geometry/meshcat_params.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -139,7 +139,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('meshcat_8h.html','');});
+$(document).ready(function(){initNavTree('meshcat__params_8h.html','');});
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -162,50 +162,29 @@ $(document).ready(function(){initNavTree('meshcat_8h.html','');});
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
-<div class="title">meshcat.h File Reference</div>  </div>
+<div class="title">meshcat_params.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;filesystem&gt;</code><br />
-<code>#include &lt;memory&gt;</code><br />
-<code>#include &lt;optional&gt;</code><br />
+<div class="textblock"><code>#include &lt;optional&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
-<code>#include &lt;vector&gt;</code><br />
-<code>#include &lt;Eigen/Core&gt;</code><br />
-<code>#include &quot;<a class="el" href="drake__copyable_8h.html">drake/common/drake_copyable.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="name__value_8h.html">drake/common/name_value.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="meshcat__animation_8h.html">drake/geometry/meshcat_animation.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="meshcat__params_8h.html">drake/geometry/meshcat_params.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="triangle__surface__mesh_8h.html">drake/geometry/proximity/triangle_surface_mesh.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="rgba_8h.html">drake/geometry/rgba.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="shape__specification_8h.html">drake/geometry/shape_specification.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="rigid__transform_8h.html">drake/math/rigid_transform.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="point__cloud_8h.html">drake/perception/point_cloud.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for meshcat.h:</div>
+Include dependency graph for meshcat_params.h:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="meshcat_8h__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="meshcat__params_8h__incl.svg" width="471" height="291"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="meshcat_8h__dep__incl.svg" width="100%" height="406"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="meshcat__params_8h__dep__incl.svg" width="100%" height="473"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">Meshcat</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides an interface to Meshcat (<a href="https://github.com/meshcat-dev/meshcat">https://github.com/meshcat-dev/meshcat</a>).  <a href="classdrake_1_1geometry_1_1_meshcat.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html">Meshcat::PerspectiveCamera</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Properties for a perspective camera in three.js: <a href="https://threejs.org/docs/#api/en/cameras/PerspectiveCamera">https://threejs.org/docs/#api/en/cameras/PerspectiveCamera</a>.  <a href="structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html">Meshcat::OrthographicCamera</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Properties for an orthographic camera in three.js: <a href="https://threejs.org/docs/#api/en/cameras/OrthographicCamera">https://threejs.org/docs/#api/en/cameras/OrthographicCamera</a>.  <a href="structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html">Meshcat::Gamepad</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status of a gamepad obtained from the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> javascript client.  <a href="structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_meshcat_params.html">MeshcatParams</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The set of parameters for configuring <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a>.  <a href="structdrake_1_1geometry_1_1_meshcat_params.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -220,7 +199,7 @@ Namespaces</h2></td></tr>
 <!-- footer -->
 <div class="navpath">
   <ul>
-    <li class="navelem"><a class="el" href="dir_f1666844dc41ec91c14125b680b7be1b.html">drake</a></li><li class="navelem"><a class="el" href="dir_d739e095b49d8b72164589d00310017d.html">geometry</a></li><li class="navelem"><a class="el" href="meshcat_8h.html">meshcat.h</a></li>
+    <li class="navelem"><a class="el" href="dir_f1666844dc41ec91c14125b680b7be1b.html">drake</a></li><li class="navelem"><a class="el" href="dir_d739e095b49d8b72164589d00310017d.html">geometry</a></li><li class="navelem"><a class="el" href="meshcat__params_8h.html">meshcat_params.h</a></li>
   </ul>
 </div>
 <footer id="nav-path", class="site-footer padding">

@@ -1,5 +1,6 @@
 var NAVTREEINDEX60 =
 {
+"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a341dc613bcd25a969c8f8a285e3affcd":[3,0,0,15,8,2,32],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a356749be16e1e3f6d437f215ff3c44e6":[3,0,0,15,8,2,12],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a3c3a47e93d564d08b506d18291d5772a":[3,0,0,15,8,2,14],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a43acbf71f174bb214744379ae39d6ec5":[3,0,0,15,8,2,10],
@@ -248,6 +249,5 @@ var NAVTREEINDEX60 =
 "suction__cup__controller_8h.html":[4,0,0,3,11,1,2],
 "supernodal__solver_8h.html":[4,0,0,8,2,19],
 "supervector_8h.html":[4,0,0,12,3,38],
-"symbolic_2polynomial_8h.html":[4,0,0,1,3,11],
-"symbolic_2polynomial_8h.html#a03731fe9a001a20e071a7a9e106061bd":[4,0,0,1,3,11,41]
+"symbolic_2polynomial_8h.html":[4,0,0,1,3,11]
 };
