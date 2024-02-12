@@ -893,13 +893,13 @@ the SceneGraph geometry ecosystem.</p>
 <p>This class tries to find large convex polytopes in the
 tangential-configuration space, such that all configurations in the
 convex polytopes is collision free. By tangential-configuration space,
-we mean the revolute joint angle θ is replaced by t = tan(θ/2). For
-more details, refer to the paper</p>
-<p>Certified Polyhedral Decomposition of Collisoin-Free Configuration
+we mean the revolute joint angle θ is replaced by t = tan(θ/2). We
+refer to the algorithm as C-IRIS. For more details, refer to the paper</p>
+<p>Certified Polyhedral Decomposition of Collision-Free Configuration
 Space by Hongkai Dai*, Alexandre Amice*, Peter Werner, Annan Zhang and
 Russ Tedrake.</p>
 <p>A conference version is published at</p>
-<p>Finding and Optimizing Certified, Colision-Free Regions in
+<p>Finding and Optimizing Certified, Collision-Free Regions in
 Configuration Space for Robot Manipulators by Alexandre Amice*,
 Hongkai Dai*, Peter Werner, Annan Zhang and Russ Tedrake.</p>
 <dl class="py method">
@@ -3115,7 +3115,7 @@ contain the point.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.IrisOptions.starting_ellipse">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">starting_ellipse</span></span><a class="headerlink" href="#pydrake.geometry.optimization.IrisOptions.starting_ellipse" title="Permalink to this definition"></a></dt>
-<dd><p>The initial hyperepllipsoid that IRIS will use for calculating
+<dd><p>The initial hyperellipsoid that IRIS will use for calculating
 hyperplanes in the first iteration. If no hyperellipsoid is provided,
 a small hypershpere centered at the given sample will be used.</p>
 </dd></dl>
