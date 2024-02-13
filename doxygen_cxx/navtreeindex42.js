@@ -1,5 +1,8 @@
 var NAVTREEINDEX42 =
 {
+"classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#ad99fec330effea7b0b0952ec31cd5f82":[1,2,3,0,4],
+"classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#ae52a989887be360ba54d28e89362caad":[1,2,3,0,7],
+"classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#aebe74a87d7957f9ab354177ba42f5a78":[1,2,3,0,6],
 "classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#aec8654f6fef2f02fae53910ff4319980":[1,2,3,0,2],
 "classdrake_1_1systems_1_1implicit__integrator__test_1_1_discontinuous_spring_mass_damper_system.html":[3,0,0,15,4,0],
 "classdrake_1_1systems_1_1implicit__integrator__test_1_1_discontinuous_spring_mass_damper_system.html#a18737529bba0537a9fa06a649378b1a8":[3,0,0,15,4,0,4],
@@ -246,8 +249,5 @@ var NAVTREEINDEX42 =
 "classdrake_1_1systems_1_1sensors_1_1_image_to_lcm_image_array_t.html#adfdca81c22ecd5d150e152e5ee5b6800":[3,0,0,15,8,8,6],
 "classdrake_1_1systems_1_1sensors_1_1_image_to_lcm_image_array_t.html#af32d1cc256cb4585661d88355431156e":[3,0,0,15,8,8,2],
 "classdrake_1_1systems_1_1sensors_1_1_image_to_lcm_image_array_t.html#af5492c500c683813e9286c68f036c57f":[3,0,0,15,8,8,7],
-"classdrake_1_1systems_1_1sensors_1_1_image_writer.html":[3,0,0,15,8,18],
-"classdrake_1_1systems_1_1sensors_1_1_image_writer.html#a157e8f358edae6333e0fae01e3150f5e":[3,0,0,15,8,18,4],
-"classdrake_1_1systems_1_1sensors_1_1_image_writer.html#a1daaaafa5f68f9f355783df22c965208":[3,0,0,15,8,18,7],
-"classdrake_1_1systems_1_1sensors_1_1_image_writer.html#a214742d6bc478d31733e5bf29a719732":[3,0,0,15,8,18,6]
+"classdrake_1_1systems_1_1sensors_1_1_image_writer.html":[3,0,0,15,8,18]
 };

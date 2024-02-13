@@ -21,12 +21,12 @@ var classdrake_1_1geometry_1_1_triangle_surface_mesh =
     [ "operator=", "classdrake_1_1geometry_1_1_triangle_surface_mesh.html#acfb7092ebedc0d9cc7e4bdebf33abf19", null ],
     [ "operator=", "classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a707de699804658105833a5b97c6e604b", null ],
     [ "ReverseFaceWinding", "classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a3c9e33a8f7704980ea0a0f3a4455eaf7", null ],
+    [ "SetAllPositions", "classdrake_1_1geometry_1_1_triangle_surface_mesh.html#ab4abe6216f76b9221e741cc99755defc", null ],
     [ "total_area", "classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a5d8645defeea4264d39cf1bdf5a66f79", null ],
     [ "TransformVertices", "classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a505ea28f0f6274285a379c870c44bb37", null ],
     [ "triangles", "classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a013fda545d50a041a8494d61e1a0323c", null ],
     [ "vertex", "classdrake_1_1geometry_1_1_triangle_surface_mesh.html#aa8388a3f4417bdec45042a7fd2166a6a", null ],
     [ "vertices", "classdrake_1_1geometry_1_1_triangle_surface_mesh.html#ae7f810a1d8f914db3d27e1fb817e7341", null ],
-    [ "internal::MeshDeformer< TriangleSurfaceMesh< T > >", "classdrake_1_1geometry_1_1_triangle_surface_mesh.html#aad441ad96700d44f7244989e363a22ab", null ],
     [ "TriangleSurfaceMeshTester< T >", "classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a421490ed6cab1812d3a8380432739880", null ],
     [ "kVertexPerElement", "classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a39b0509ce7179535d6b30f11fb305dc6", null ]
 ];

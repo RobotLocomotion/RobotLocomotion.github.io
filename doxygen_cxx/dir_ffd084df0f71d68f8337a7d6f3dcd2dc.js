@@ -35,7 +35,6 @@ var dir_ffd084df0f71d68f8337a7d6f3dcd2dc =
     [ "make_mesh_from_vtk.h", "make__mesh__from__vtk_8h.html", null ],
     [ "make_sphere_field.h", "make__sphere__field_8h.html", null ],
     [ "make_sphere_mesh.h", "make__sphere__mesh_8h.html", null ],
-    [ "mesh_deformer.h", "mesh__deformer_8h.html", null ],
     [ "mesh_field_linear.h", "mesh__field__linear_8h.html", [
       [ "MeshFieldLinear", "classdrake_1_1geometry_1_1_mesh_field_linear.html", "classdrake_1_1geometry_1_1_mesh_field_linear" ]
     ] ],
@@ -52,6 +51,7 @@ var dir_ffd084df0f71d68f8337a7d6f3dcd2dc =
     [ "plane.h", "plane_8h.html", null ],
     [ "polygon_surface_mesh.h", "polygon__surface__mesh_8h.html", [
       [ "PolygonSurfaceMesh", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html", "classdrake_1_1geometry_1_1_polygon_surface_mesh" ],
+      [ "PolygonSurfaceMeshTest", "classdrake_1_1geometry_1_1_polygon_surface_mesh_test.html", null ],
       [ "SurfacePolygon", "classdrake_1_1geometry_1_1_surface_polygon.html", "classdrake_1_1geometry_1_1_surface_polygon" ],
       [ "PolygonSurfaceMesh", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html", "classdrake_1_1geometry_1_1_polygon_surface_mesh" ]
     ] ],

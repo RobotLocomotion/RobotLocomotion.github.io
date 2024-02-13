@@ -18,6 +18,7 @@ var searchData=
   ['eigen_5fsparse_5ftriplet_2eh',['eigen_sparse_triplet.h',['../eigen__sparse__triplet_8h.html',1,'']]],
   ['eigen_5fspecializations_2eh',['eigen_specializations.h',['../eigen__specializations_8h.html',1,'']]],
   ['eigen_5ftypes_2eh',['eigen_types.h',['../eigen__types_8h.html',1,'']]],
+  ['eigenmapview',['EigenMapView',['../namespacedrake.html#aeb7f8e1a86b4c2744af4add35ac27a4e',1,'drake']]],
   ['eigenptr',['EigenPtr',['../classdrake_1_1_eigen_ptr.html',1,'EigenPtr&lt; PlainObjectType &gt;'],['../classdrake_1_1_eigen_ptr.html#a5a2e3a3873d77de2554337fefa985de0',1,'drake::EigenPtr::EigenPtr()'],['../classdrake_1_1_eigen_ptr.html#ace90471ce65fb11c428ba1f54c86a51b',1,'drake::EigenPtr::EigenPtr(std::nullptr_t)'],['../classdrake_1_1_eigen_ptr.html#a94f5f238ad74238545ca292805f32ead',1,'drake::EigenPtr::EigenPtr(const EigenPtr &amp;other)'],['../classdrake_1_1_eigen_ptr.html#a3aeb6c82674ca6d58eb6ed4c47b01239',1,'drake::EigenPtr::EigenPtr(PlainObjectTypeIn *m)'],['../classdrake_1_1_eigen_ptr.html#a1e65944ec46136456348b4fab569c749',1,'drake::EigenPtr::EigenPtr(const EigenPtr&lt; PlainObjectTypeIn &gt; &amp;other)']]],
   ['eigenptr_3c_20const_20matrixx_3c_20t_20_3e_20_3e',['EigenPtr&lt; const MatrixX&lt; T &gt; &gt;',['../classdrake_1_1_eigen_ptr.html',1,'drake']]],
   ['eigenptr_3c_20const_20vectorx_3c_20t_20_3e_20_3e',['EigenPtr&lt; const VectorX&lt; T &gt; &gt;',['../classdrake_1_1_eigen_ptr.html',1,'drake']]],

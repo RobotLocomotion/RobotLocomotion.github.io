@@ -220,6 +220,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac685055b3b2cea1095025dd4c05465cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html#ac685055b3b2cea1095025dd4c05465cd">TransformVertices</a> (const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt; &amp;transform)</td></tr>
 <tr class="memdesc:ac685055b3b2cea1095025dd4c05465cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms the vertices of this mesh from its initial frame M to the new frame N.  <a href="#ac685055b3b2cea1095025dd4c05465cd">More...</a><br /></td></tr>
 <tr class="separator:ac685055b3b2cea1095025dd4c05465cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4abe6216f76b9221e741cc99755defc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html#ab4abe6216f76b9221e741cc99755defc">SetAllPositions</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;p_MVs)</td></tr>
+<tr class="memdesc:ab4abe6216f76b9221e741cc99755defc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the position of all vertices in the mesh.  <a href="#ab4abe6216f76b9221e741cc99755defc">More...</a><br /></td></tr>
+<tr class="separator:ab4abe6216f76b9221e741cc99755defc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
 <tr class="memitem:ae1f54ec7a16209f802cc46f406f5764b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html#ae1f54ec7a16209f802cc46f406f5764b">VolumeMesh</a> (const <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html">VolumeMesh</a> &amp;)=default</td></tr>
 <tr class="separator:ae1f54ec7a16209f802cc46f406f5764b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -232,8 +235,6 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:ad5fa7e42f3d3992a89ade0cf5846fc21"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html#ad5fa7e42f3d3992a89ade0cf5846fc21">internal::MeshDeformer&lt; VolumeMesh&lt; T &gt; &gt;</a></td></tr>
-<tr class="separator:ad5fa7e42f3d3992a89ade0cf5846fc21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ef9213b7d36a15416383fbd2e68fb2f"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html#a1ef9213b7d36a15416383fbd2e68fb2f">VolumeMeshTester&lt; T &gt;</a></td></tr>
 <tr class="separator:a1ef9213b7d36a15416383fbd2e68fb2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -627,6 +628,39 @@ Mesh type traits</h2></td></tr>
 
 </div>
 </div>
+<a id="ab4abe6216f76b9221e741cc99755defc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4abe6216f76b9221e741cc99755defc">&#9670;&nbsp;</a></span>SetAllPositions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetAllPositions </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>p_MVs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Updates the position of all vertices in the mesh. </p>
+<p>Each sequential triple in p_MVs (e.g., 3i, 3i + 1, 3i + 2), i ∈ ℤ, is interpreted as a position vector associated with the iᵗʰ vertex. The position values are interpreted to be measured and expressed in the same frame as the mesh to be deformed.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_MVs</td><td>Vertex positions for the mesh's N vertices flattened into a vector (where each position vector is measured and expressed in the mesh's original frame). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if p_MVs.size() != 3 * <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html#a319e621fc359dd8daad48247f95b12fa" title="Returns the number of vertices in the mesh.">num_vertices()</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a895d67540aff2cb88a555048a1fa7e90"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a895d67540aff2cb88a555048a1fa7e90">&#9670;&nbsp;</a></span>tetrahedra()</h2>
 
@@ -715,28 +749,6 @@ Mesh type traits</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Friends And Related Function Documentation</h2>
-<a id="ad5fa7e42f3d3992a89ade0cf5846fc21"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad5fa7e42f3d3992a89ade0cf5846fc21">&#9670;&nbsp;</a></span>internal::MeshDeformer&lt; VolumeMesh&lt; T &gt; &gt;</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">friend class internal::MeshDeformer&lt; <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html">VolumeMesh</a>&lt; T &gt; &gt;</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a1ef9213b7d36a15416383fbd2e68fb2f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1ef9213b7d36a15416383fbd2e68fb2f">&#9670;&nbsp;</a></span>VolumeMeshTester&lt; T &gt;</h2>
 

@@ -22,8 +22,10 @@ var classdrake_1_1geometry_1_1_polygon_surface_mesh =
     [ "operator=", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html#a22da11d92003ac4ad72bbd6331287dbe", null ],
     [ "operator=", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html#a13b0cf1ca7ffa5d2e6f7745d7988d37c", null ],
     [ "ReverseFaceWinding", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html#a3c9e33a8f7704980ea0a0f3a4455eaf7", null ],
+    [ "SetAllPositions", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html#ab4abe6216f76b9221e741cc99755defc", null ],
     [ "total_area", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html#a5d8645defeea4264d39cf1bdf5a66f79", null ],
     [ "TransformVertices", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html#a505ea28f0f6274285a379c870c44bb37", null ],
     [ "vertex", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html#aa8388a3f4417bdec45042a7fd2166a6a", null ],
+    [ "PolygonSurfaceMeshTest< T >", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html#ade68f034b5e1bf4d14f0821fb144a22a", null ],
     [ "kVertexPerElement", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html#a39b0509ce7179535d6b30f11fb305dc6", null ]
 ];

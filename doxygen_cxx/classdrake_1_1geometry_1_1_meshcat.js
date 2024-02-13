@@ -60,7 +60,7 @@ var classdrake_1_1geometry_1_1_meshcat =
     [ "SetTransform", "classdrake_1_1geometry_1_1_meshcat.html#a48d1b2e65ac43693b86ca290ff84d38a", null ],
     [ "SetTriangleColorMesh", "classdrake_1_1geometry_1_1_meshcat.html#aca91c85fa237a8653b1bfaa6a3b16f94", null ],
     [ "SetTriangleMesh", "classdrake_1_1geometry_1_1_meshcat.html#a2ff251c5eedec2e25756c50a7cff1e64", null ],
-    [ "StartRecording", "classdrake_1_1geometry_1_1_meshcat.html#af90068fe4f578b23dc79f61c48a69491", null ],
+    [ "StartRecording", "classdrake_1_1geometry_1_1_meshcat.html#ab2df060e0ab2e3e6d54ad4c4a847b829", null ],
     [ "StaticHtml", "classdrake_1_1geometry_1_1_meshcat.html#a8597aabcf1a98187a23fa1db634c9308", null ],
     [ "StopRecording", "classdrake_1_1geometry_1_1_meshcat.html#ab4e410341b1ca35649cafd7b099a1819", null ],
     [ "web_url", "classdrake_1_1geometry_1_1_meshcat.html#a3dfb466d67a1d1d068c1b8017b2d14c5", null ],

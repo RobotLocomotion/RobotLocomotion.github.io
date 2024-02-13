@@ -225,6 +225,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af8d6f51a8d19980055a4e47c973390f5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; FieldValue &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html#af8d6f51a8d19980055a4e47c973390f5">CalcGradientVectorOfLinearField</a> (const std::array&lt; FieldValue, 3 &gt; &amp;field_value, <a class="el" href="classint.html">int</a> t) const</td></tr>
 <tr class="memdesc:af8d6f51a8d19980055a4e47c973390f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the gradient ∇u of a linear field u on the triangle <code>t</code>.  <a href="#af8d6f51a8d19980055a4e47c973390f5">More...</a><br /></td></tr>
 <tr class="separator:af8d6f51a8d19980055a4e47c973390f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4abe6216f76b9221e741cc99755defc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html#ab4abe6216f76b9221e741cc99755defc">SetAllPositions</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;p_MVs)</td></tr>
+<tr class="memdesc:ab4abe6216f76b9221e741cc99755defc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the position of all vertices in the mesh.  <a href="#ab4abe6216f76b9221e741cc99755defc">More...</a><br /></td></tr>
+<tr class="separator:ab4abe6216f76b9221e741cc99755defc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
 <tr class="memitem:a4635cbdcb02988477b2dbaaf5e9f6dbd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a4635cbdcb02988477b2dbaaf5e9f6dbd">TriangleSurfaceMesh</a> (const <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html">TriangleSurfaceMesh</a> &amp;)=default</td></tr>
 <tr class="separator:a4635cbdcb02988477b2dbaaf5e9f6dbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -237,8 +240,6 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:aad441ad96700d44f7244989e363a22ab"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html#aad441ad96700d44f7244989e363a22ab">internal::MeshDeformer&lt; TriangleSurfaceMesh&lt; T &gt; &gt;</a></td></tr>
-<tr class="separator:aad441ad96700d44f7244989e363a22ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a421490ed6cab1812d3a8380432739880"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a421490ed6cab1812d3a8380432739880">TriangleSurfaceMeshTester&lt; T &gt;</a></td></tr>
 <tr class="separator:a421490ed6cab1812d3a8380432739880"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -797,6 +798,39 @@ Mesh type traits</h2></td></tr>
 
 </div>
 </div>
+<a id="ab4abe6216f76b9221e741cc99755defc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4abe6216f76b9221e741cc99755defc">&#9670;&nbsp;</a></span>SetAllPositions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetAllPositions </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>p_MVs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Updates the position of all vertices in the mesh. </p>
+<p>Each sequential triple in p_MVs (e.g., 3i, 3i + 1, 3i + 2), i ∈ ℤ, is interpreted as a position vector associated with the iᵗʰ vertex. The position values are interpreted to be measured and expressed in the same frame as the mesh to be deformed.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_MVs</td><td>Vertex positions for the mesh's N vertices flattened into a vector (where each position vector is measured and expressed in the mesh's original frame). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if p_MVs.size() != 3 * <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a319e621fc359dd8daad48247f95b12fa" title="Returns the number of vertices in the mesh.">num_vertices()</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a5d8645defeea4264d39cf1bdf5a66f79"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5d8645defeea4264d39cf1bdf5a66f79">&#9670;&nbsp;</a></span>total_area()</h2>
 
@@ -902,28 +936,6 @@ Mesh type traits</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Friends And Related Function Documentation</h2>
-<a id="aad441ad96700d44f7244989e363a22ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad441ad96700d44f7244989e363a22ab">&#9670;&nbsp;</a></span>internal::MeshDeformer&lt; TriangleSurfaceMesh&lt; T &gt; &gt;</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">friend class internal::MeshDeformer&lt; <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html">TriangleSurfaceMesh</a>&lt; T &gt; &gt;</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a421490ed6cab1812d3a8380432739880"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a421490ed6cab1812d3a8380432739880">&#9670;&nbsp;</a></span>TriangleSurfaceMeshTester&lt; T &gt;</h2>
 

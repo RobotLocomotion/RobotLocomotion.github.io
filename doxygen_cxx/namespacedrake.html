@@ -595,6 +595,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a3d3b9fa09763df2a9013eec2cf87df7b"><td class="memItemLeft" align="right" valign="top">std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a3d3b9fa09763df2a9013eec2cf87df7b">MaybeGetDrakePath</a> ()</td></tr>
 <tr class="memdesc:a3d3b9fa09763df2a9013eec2cf87df7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Returns the fully-qualified path to the first folder containing Drake resources as located by FindResource, or nullopt if none is found.  <a href="#a3d3b9fa09763df2a9013eec2cf87df7b">More...</a><br /></td></tr>
 <tr class="separator:a3d3b9fa09763df2a9013eec2cf87df7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb7f8e1a86b4c2744af4add35ac27a4e"><td class="memTemplParams" colspan="2">template&lt;typename Container &gt; </td></tr>
+<tr class="memitem:aeb7f8e1a86b4c2744af4add35ac27a4e"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#aeb7f8e1a86b4c2744af4add35ac27a4e">EigenMapView</a> (Container &amp;&amp;c)</td></tr>
+<tr class="memdesc:aeb7f8e1a86b4c2744af4add35ac27a4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a random access container (like std::vector, std::array, or C array), returns an Eigen::Map view into that container.  <a href="#aeb7f8e1a86b4c2744af4add35ac27a4e">More...</a><br /></td></tr>
+<tr class="separator:aeb7f8e1a86b4c2744af4add35ac27a4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acffe42a683dd67544fb4d499d082b16d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#acffe42a683dd67544fb4d499d082b16d">ExtractDoubleOrThrow</a> (<a class="el" href="classdouble.html">double</a> scalar)</td></tr>
 <tr class="memdesc:acffe42a683dd67544fb4d499d082b16d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>scalar</code> as a double. Never throws.  <a href="#acffe42a683dd67544fb4d499d082b16d">More...</a><br /></td></tr>
 <tr class="separator:acffe42a683dd67544fb4d499d082b16d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2065,6 +2069,27 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="aeb7f8e1a86b4c2744af4add35ac27a4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb7f8e1a86b4c2744af4add35ac27a4e">&#9670;&nbsp;</a></span>EigenMapView()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto drake::EigenMapView </td>
+          <td>(</td>
+          <td class="paramtype">Container &amp;&amp;&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Given a random access container (like std::vector, std::array, or C array), returns an Eigen::Map view into that container. </p>
+<p>Because this effectively forms a reference to borrowed memory, you must be be careful using the return value as anything other than a temporary. The Map return value currently uses Eigen::Dynamic size at compile time even when the container is fixed-size (e.g., std::array); if that ever turns into a performance bottleneck in practice, it would be plausible to interrogate the size and return a fixed-size Map, instead. </p>
 
 </div>
 </div>

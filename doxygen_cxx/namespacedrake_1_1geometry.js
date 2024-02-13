@@ -40,6 +40,7 @@ var namespacedrake_1_1geometry =
     [ "PenetrationAsPointPair", "structdrake_1_1geometry_1_1_penetration_as_point_pair.html", "structdrake_1_1geometry_1_1_penetration_as_point_pair" ],
     [ "PerceptionProperties", "classdrake_1_1geometry_1_1_perception_properties.html", "classdrake_1_1geometry_1_1_perception_properties" ],
     [ "PolygonSurfaceMesh", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html", "classdrake_1_1geometry_1_1_polygon_surface_mesh" ],
+    [ "PolygonSurfaceMeshTest", "classdrake_1_1geometry_1_1_polygon_surface_mesh_test.html", null ],
     [ "promoted_numerical", "structdrake_1_1geometry_1_1promoted__numerical.html", "structdrake_1_1geometry_1_1promoted__numerical" ],
     [ "ProximityProperties", "classdrake_1_1geometry_1_1_proximity_properties.html", "classdrake_1_1geometry_1_1_proximity_properties" ],
     [ "QueryObject", "classdrake_1_1geometry_1_1_query_object.html", "classdrake_1_1geometry_1_1_query_object" ],

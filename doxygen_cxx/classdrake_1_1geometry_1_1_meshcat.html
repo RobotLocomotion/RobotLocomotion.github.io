@@ -338,9 +338,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8597aabcf1a98187a23fa1db634c9308"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a8597aabcf1a98187a23fa1db634c9308">StaticHtml</a> ()</td></tr>
 <tr class="memdesc:a8597aabcf1a98187a23fa1db634c9308"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an HTML string that can be saved to a file for a snapshot of the visualizer and its contents.  <a href="#a8597aabcf1a98187a23fa1db634c9308">More...</a><br /></td></tr>
 <tr class="separator:a8597aabcf1a98187a23fa1db634c9308"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af90068fe4f578b23dc79f61c48a69491"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#af90068fe4f578b23dc79f61c48a69491">StartRecording</a> (<a class="el" href="classdouble.html">double</a> frames_per_second=32.0, bool set_visualizations_while_recording=true)</td></tr>
-<tr class="memdesc:af90068fe4f578b23dc79f61c48a69491"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a flag indicating that subsequent calls to SetTransform and SetProperty should also be "recorded" into a <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html" title="An interface for recording/playback animations in Meshcat.">MeshcatAnimation</a> when their optional time_in_recording argument is supplied.  <a href="#af90068fe4f578b23dc79f61c48a69491">More...</a><br /></td></tr>
-<tr class="separator:af90068fe4f578b23dc79f61c48a69491"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2df060e0ab2e3e6d54ad4c4a847b829"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#ab2df060e0ab2e3e6d54ad4c4a847b829">StartRecording</a> (<a class="el" href="classdouble.html">double</a> frames_per_second=64.0, bool set_visualizations_while_recording=true)</td></tr>
+<tr class="memdesc:ab2df060e0ab2e3e6d54ad4c4a847b829"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a flag indicating that subsequent calls to SetTransform and SetProperty should also be "recorded" into a <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html" title="An interface for recording/playback animations in Meshcat.">MeshcatAnimation</a> when their optional time_in_recording argument is supplied.  <a href="#ab2df060e0ab2e3e6d54ad4c4a847b829">More...</a><br /></td></tr>
+<tr class="separator:ab2df060e0ab2e3e6d54ad4c4a847b829"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4e410341b1ca35649cafd7b099a1819"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#ab4e410341b1ca35649cafd7b099a1819">StopRecording</a> ()</td></tr>
 <tr class="memdesc:ab4e410341b1ca35649cafd7b099a1819"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a flag to pause/stop recording.  <a href="#ab4e410341b1ca35649cafd7b099a1819">More...</a><br /></td></tr>
 <tr class="separator:ab4e410341b1ca35649cafd7b099a1819"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1323,7 +1323,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Sets the <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html" title="An interface for recording/playback animations in Meshcat.">MeshcatAnimation</a>, which creates a slider interface element to play/pause/rewind through a series of animation frames in the visualizer. </p>
-<p>See also <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#af90068fe4f578b23dc79f61c48a69491" title="Sets a flag indicating that subsequent calls to SetTransform and SetProperty should also be &quot;recorded...">StartRecording()</a>, which records supported calls to <code>this</code> into a <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html" title="An interface for recording/playback animations in Meshcat.">MeshcatAnimation</a>, and <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a455ab0b35fdab06f2cc5e0cb9b1b2845" title="Sends the recording to Meshcat as an animation.">PublishRecording()</a>, which calls <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a385b6142ccc841b5b51a14825b7cebdf" title="Sets the MeshcatAnimation, which creates a slider interface element to play/pause/rewind through a se...">SetAnimation()</a> with the recording. </p>
+<p>See also <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#ab2df060e0ab2e3e6d54ad4c4a847b829" title="Sets a flag indicating that subsequent calls to SetTransform and SetProperty should also be &quot;recorded...">StartRecording()</a>, which records supported calls to <code>this</code> into a <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html" title="An interface for recording/playback animations in Meshcat.">MeshcatAnimation</a>, and <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a455ab0b35fdab06f2cc5e0cb9b1b2845" title="Sends the recording to Meshcat as an animation.">PublishRecording()</a>, which calls <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a385b6142ccc841b5b51a14825b7cebdf" title="Sets the MeshcatAnimation, which creates a slider interface element to play/pause/rewind through a se...">SetAnimation()</a> with the recording. </p>
 
 </div>
 </div>
@@ -1809,7 +1809,7 @@ Public Member Functions</h2></td></tr>
     <tr><td class="paramname">path</td><td>a "/"-delimited string indicating the path in the scene tree. See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#meshcat_path">Meshcat paths and the scene tree</a> for the semantics. </td></tr>
     <tr><td class="paramname">property</td><td>the string name of the property to set </td></tr>
     <tr><td class="paramname">value</td><td>the new value. </td></tr>
-    <tr><td class="paramname">time_in_recording</td><td>(optional). If recording (see <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#af90068fe4f578b23dc79f61c48a69491" title="Sets a flag indicating that subsequent calls to SetTransform and SetProperty should also be &quot;recorded...">StartRecording()</a>), then in addition to publishing the property to any meshcat browsers immediately, this transform is saved to the current animation at <code>time_in_recording</code>. </td></tr>
+    <tr><td class="paramname">time_in_recording</td><td>(optional). If recording (see <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#ab2df060e0ab2e3e6d54ad4c4a847b829" title="Sets a flag indicating that subsequent calls to SetTransform and SetProperty should also be &quot;recorded...">StartRecording()</a>), then in addition to publishing the property to any meshcat browsers immediately, this transform is saved to the current animation at <code>time_in_recording</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1862,7 +1862,7 @@ Public Member Functions</h2></td></tr>
     <tr><td class="paramname">path</td><td>a "/"-delimited string indicating the path in the scene tree. See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#meshcat_path">Meshcat paths and the scene tree</a> for the semantics. </td></tr>
     <tr><td class="paramname">property</td><td>the string name of the property to set </td></tr>
     <tr><td class="paramname">value</td><td>the new value. </td></tr>
-    <tr><td class="paramname">time_in_recording</td><td>(optional) the time at which this property should be applied, if <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> is current recording (see <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#af90068fe4f578b23dc79f61c48a69491" title="Sets a flag indicating that subsequent calls to SetTransform and SetProperty should also be &quot;recorded...">StartRecording()</a>). If <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> is not currently recording, then this value is simply ignored. </td></tr>
+    <tr><td class="paramname">time_in_recording</td><td>(optional) the time at which this property should be applied, if <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> is current recording (see <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#ab2df060e0ab2e3e6d54ad4c4a847b829" title="Sets a flag indicating that subsequent calls to SetTransform and SetProperty should also be &quot;recorded...">StartRecording()</a>). If <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> is not currently recording, then this value is simply ignored. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1915,7 +1915,7 @@ Public Member Functions</h2></td></tr>
     <tr><td class="paramname">path</td><td>a "/"-delimited string indicating the path in the scene tree. See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#meshcat_path">Meshcat paths and the scene tree</a> for the semantics. </td></tr>
     <tr><td class="paramname">property</td><td>the string name of the property to set </td></tr>
     <tr><td class="paramname">value</td><td>the new value. </td></tr>
-    <tr><td class="paramname">time_in_recording</td><td>(optional) the time at which this property should be applied, if <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> is current recording (see <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#af90068fe4f578b23dc79f61c48a69491" title="Sets a flag indicating that subsequent calls to SetTransform and SetProperty should also be &quot;recorded...">StartRecording()</a>). If <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> is not currently recording, then this value is simply ignored. </td></tr>
+    <tr><td class="paramname">time_in_recording</td><td>(optional) the time at which this property should be applied, if <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> is current recording (see <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#ab2df060e0ab2e3e6d54ad4c4a847b829" title="Sets a flag indicating that subsequent calls to SetTransform and SetProperty should also be &quot;recorded...">StartRecording()</a>). If <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> is not currently recording, then this value is simply ignored. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2022,7 +2022,7 @@ Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">path</td><td>a "/"-delimited string indicating the path in the scene tree. See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#meshcat_path">Meshcat paths</a> for the semantics. </td></tr>
     <tr><td class="paramname">X_ParentPath</td><td>the relative transform from the path to its immediate parent. </td></tr>
-    <tr><td class="paramname">time_in_recording</td><td>(optional). If recording (see <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#af90068fe4f578b23dc79f61c48a69491" title="Sets a flag indicating that subsequent calls to SetTransform and SetProperty should also be &quot;recorded...">StartRecording()</a>), then in addition to publishing the transform to any meshcat browsers immediately, this transform is saved to the current animation at <code>time_in_recording</code>. </td></tr>
+    <tr><td class="paramname">time_in_recording</td><td>(optional). If recording (see <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#ab2df060e0ab2e3e6d54ad4c4a847b829" title="Sets a flag indicating that subsequent calls to SetTransform and SetProperty should also be &quot;recorded...">StartRecording()</a>), then in addition to publishing the transform to any meshcat browsers immediately, this transform is saved to the current animation at <code>time_in_recording</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2210,8 +2210,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="af90068fe4f578b23dc79f61c48a69491"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af90068fe4f578b23dc79f61c48a69491">&#9670;&nbsp;</a></span>StartRecording()</h2>
+<a id="ab2df060e0ab2e3e6d54ad4c4a847b829"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2df060e0ab2e3e6d54ad4c4a847b829">&#9670;&nbsp;</a></span>StartRecording()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2220,7 +2220,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname">void StartRecording </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
-          <td class="paramname"><em>frames_per_second</em> = <code>32.0</code>, </td>
+          <td class="paramname"><em>frames_per_second</em> = <code>64.0</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
