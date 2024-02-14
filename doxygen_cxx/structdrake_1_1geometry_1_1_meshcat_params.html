@@ -159,6 +159,7 @@ $(document).ready(function(){initNavTree('structdrake_1_1geometry_1_1_meshcat_pa
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="structdrake_1_1geometry_1_1_meshcat_params-members.html">List of all members</a>  </div>
@@ -171,6 +172,12 @@ $(document).ready(function(){initNavTree('structdrake_1_1geometry_1_1_meshcat_pa
 </div>
 <p><code>#include &lt;drake/geometry/meshcat_params.h&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_meshcat_params_1_1_property_tuple.html">PropertyTuple</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A helper struct for the <code>initial_properties</code> params.  <a href="structdrake_1_1geometry_1_1_meshcat_params_1_1_property_tuple.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8e8824802dedfbc36776227f7482b6bc"><td class="memTemplParams" colspan="2">template&lt;typename Archive &gt; </td></tr>
@@ -189,6 +196,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a13d2ccebff386877ee5fa1fbe2351a0f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_meshcat_params.html#a13d2ccebff386877ee5fa1fbe2351a0f">web_url_pattern</a> {&quot;http://{<a class="el" href="structdrake_1_1geometry_1_1_meshcat_params.html#a696b1086704b0858059129b61eaa4a9f">host</a>}:{<a class="el" href="structdrake_1_1geometry_1_1_meshcat_params.html#a37117f2a3803b9cfd665be53b850fee7">port</a>}&quot;}</td></tr>
 <tr class="memdesc:a13d2ccebff386877ee5fa1fbe2351a0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <code>web_url_pattern</code> may be used to change the web_url() (and therefore the ws_url()) reported by <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a>.  <a href="#a13d2ccebff386877ee5fa1fbe2351a0f">More...</a><br /></td></tr>
 <tr class="separator:a13d2ccebff386877ee5fa1fbe2351a0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a241bd85a9962ef15126bad0ea330c0b1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structdrake_1_1geometry_1_1_meshcat_params_1_1_property_tuple.html">PropertyTuple</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_meshcat_params.html#a241bd85a9962ef15126bad0ea330c0b1">initial_properties</a></td></tr>
+<tr class="memdesc:a241bd85a9962ef15126bad0ea330c0b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configures the initial conditions for <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a>.  <a href="#a241bd85a9962ef15126bad0ea330c0b1">More...</a><br /></td></tr>
+<tr class="separator:a241bd85a9962ef15126bad0ea330c0b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89a7b03f2e5b34b3ca7fa0b92d282def"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_meshcat_params.html#a89a7b03f2e5b34b3ca7fa0b92d282def">show_stats_plot</a> {true}</td></tr>
 <tr class="memdesc:a89a7b03f2e5b34b3ca7fa0b92d282def"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether or not to display the stats plot widget in the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> user interface.  <a href="#a89a7b03f2e5b34b3ca7fa0b92d282def">More...</a><br /></td></tr>
 <tr class="separator:a89a7b03f2e5b34b3ca7fa0b92d282def"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -230,6 +240,24 @@ Public Attributes</h2></td></tr>
 
 <p><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> will listen only on the given hostname (e.g., "localhost"). </p>
 <p>If "*" is specified, then it will listen on all interfaces. If empty, an appropriate default value will be chosen (currently "*"). </p>
+
+</div>
+</div>
+<a id="a241bd85a9962ef15126bad0ea330c0b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a241bd85a9962ef15126bad0ea330c0b1">&#9670;&nbsp;</a></span>initial_properties</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structdrake_1_1geometry_1_1_meshcat_params_1_1_property_tuple.html">PropertyTuple</a>&gt; initial_properties</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configures the initial conditions for <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a>. </p>
+<p>These properties will be applied immediately during construction. This can be used to change defaults such as background, lighting, etc.</p>
+<p>In other words, instead calling the Meshcat() constructor and then immediately making a bunch of SetProperty(path, property, value) calls to configure the newly-created object, instead you can append those (path, property, value) to to this list, and the Meshcat() constructor will take care of it. </p>
 
 </div>
 </div>

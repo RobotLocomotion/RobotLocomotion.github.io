@@ -5196,6 +5196,19 @@ appropriate default value will be chosen (currently “*”).</p>
 </dd></dl>
 
 <dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.MeshcatParams.initial_properties">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">initial_properties</span></span><a class="headerlink" href="#pydrake.geometry.MeshcatParams.initial_properties" title="Permalink to this definition"></a></dt>
+<dd><p>Configures the initial conditions for Meshcat. These properties will
+be applied immediately during construction. This can be used to change
+defaults such as background, lighting, etc.</p>
+<p>In other words, instead calling the Meshcat() constructor and then
+immediately making a bunch of SetProperty(path, property, value) calls
+to configure the newly-created object, instead you can append those
+(path, property, value) to to this list, and the Meshcat() constructor
+will take care of it.</p>
+</dd></dl>
+
+<dl class="py property">
 <dt class="sig sig-object py" id="pydrake.geometry.MeshcatParams.port">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">port</span></span><a class="headerlink" href="#pydrake.geometry.MeshcatParams.port" title="Permalink to this definition"></a></dt>
 <dd><p>Meshcat will listen on the given http <code class="docutils literal notranslate"><span class="pre">port</span></code>. If no port is
@@ -5206,6 +5219,34 @@ arbitrary “ephemeral” port.</p>
 <dt>Precondition:</dt><dd><p>We require <code class="docutils literal notranslate"><span class="pre">port</span></code> == 0 || <code class="docutils literal notranslate"><span class="pre">port</span></code> &gt;= 1024.</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.geometry.MeshcatParams.PropertyTuple">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PropertyTuple</span></span><a class="headerlink" href="#pydrake.geometry.MeshcatParams.PropertyTuple" title="Permalink to this definition"></a></dt>
+<dd><p>A helper struct for the <code class="docutils literal notranslate"><span class="pre">initial_properties</span></code> params. The members
+follow the same semantics as calls to Meshcat::SetProperty(path,
+property, value).</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.MeshcatParams.PropertyTuple.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.MeshcatParams.PropertyTuple" title="pydrake.geometry.MeshcatParams.PropertyTuple"><span class="pre">pydrake.geometry.MeshcatParams.PropertyTuple</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.MeshcatParams.PropertyTuple.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.MeshcatParams.PropertyTuple.path">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">path</span></span><a class="headerlink" href="#pydrake.geometry.MeshcatParams.PropertyTuple.path" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.MeshcatParams.PropertyTuple.property">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">property</span></span><a class="headerlink" href="#pydrake.geometry.MeshcatParams.PropertyTuple.property" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.MeshcatParams.PropertyTuple.value">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.geometry.MeshcatParams.PropertyTuple.value" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 <dl class="py property">

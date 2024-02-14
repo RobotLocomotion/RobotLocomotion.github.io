@@ -123,6 +123,7 @@ var searchData=
   ['init_5fparameters',['init_parameters',['../classdrake_1_1systems_1_1_context.html#a571d9b7fa01ad6db23cb6585ebbbffcd',1,'drake::systems::Context']]],
   ['initial_5fguess',['initial_guess',['../classdrake_1_1solvers_1_1_mathematical_program.html#a8d203a1789d8fe03eeaaacdb49a267d4',1,'drake::solvers::MathematicalProgram']]],
   ['initial_5fparameter_5fvalue',['initial_parameter_value',['../classdrake_1_1math_1_1_bspline_basis.html#a5f8345c2600018f0ff0af5d541feaa51',1,'drake::math::BsplineBasis']]],
+  ['initial_5fproperties',['initial_properties',['../structdrake_1_1geometry_1_1_meshcat_params.html#a241bd85a9962ef15126bad0ea330c0b1',1,'drake::geometry::MeshcatParams']]],
   ['initial_5fstate',['initial_state',['../classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ab49f6e9326df207d977c7ac16b1b9ef5',1,'drake::planning::trajectory_optimization::MultipleShooting']]],
   ['initial_5fvalue_5fproblem_2eh',['initial_value_problem.h',['../initial__value__problem_8h.html',1,'']]],
   ['initialization_5ftest_5fsystem_2eh',['initialization_test_system.h',['../initialization__test__system_8h.html',1,'']]],

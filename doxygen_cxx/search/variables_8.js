@@ -10,6 +10,7 @@ var searchData=
   ['include_5funspecified_5faccepting',['include_unspecified_accepting',['../structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a27471eb356d2510ae691de4053d7aef7',1,'drake::geometry::MeshcatVisualizerParams']]],
   ['index',['index',['../structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html#ae484f63d5fef688b4c3f438455d6eec9',1,'drake::geometry::Meshcat::Gamepad']]],
   ['info',['info',['../structdrake_1_1solvers_1_1_snopt_solver_details.html#a29045c997670516117cd2d1cac1069ed',1,'drake::solvers::SnoptSolverDetails']]],
+  ['initial_5fproperties',['initial_properties',['../structdrake_1_1geometry_1_1_meshcat_params.html#a241bd85a9962ef15126bad0ea330c0b1',1,'drake::geometry::MeshcatParams']]],
   ['input_5fport_5findex',['input_port_index',['../structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a0e3cbe33d19f96def02ebd180f9267a0',1,'drake::systems::controllers::DynamicProgrammingOptions::input_port_index()'],['../structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a0e3cbe33d19f96def02ebd180f9267a0',1,'drake::systems::controllers::FiniteHorizonLinearQuadraticRegulatorOptions::input_port_index()']]],
   ['input_5fports',['input_ports',['../structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment.html#a9667554e73dbcbf55ef7e0833d9bc7bc',1,'drake::systems::SystemBase::GraphvizFragment']]],
   ['integration_5fscheme',['integration_scheme',['../structdrake_1_1systems_1_1_simulator_config.html#a6d19fbfb5574d3ff27ca14c74141824f',1,'drake::systems::SimulatorConfig']]],

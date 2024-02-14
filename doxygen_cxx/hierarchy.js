@@ -703,6 +703,7 @@ var hierarchy =
     [ "Polynomial< T >::Product< Rhs, Lhs >", "structdrake_1_1_polynomial_1_1_product.html", null ],
     [ "promoted_numerical< T, U >", "structdrake_1_1geometry_1_1promoted__numerical.html", null ],
     [ "PropellerInfo", "structdrake_1_1multibody_1_1_propeller_info.html", null ],
+    [ "MeshcatParams::PropertyTuple", "structdrake_1_1geometry_1_1_meshcat_params_1_1_property_tuple.html", null ],
     [ "QueryObject< T >", "classdrake_1_1geometry_1_1_query_object.html", null ],
     [ "RandomGenerator", "classdrake_1_1_random_generator.html", null ],
     [ "RandomSimulationResult", "structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html", null ],
@@ -766,8 +767,8 @@ var hierarchy =
     [ "ScopeExit", "classdrake_1_1_scope_exit.html", null ],
     [ "ScsSolverDetails", "structdrake_1_1solvers_1_1_scs_solver_details.html", null ],
     [ "CspaceFreePolytope::SearchResult", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html", null ],
-    [ "CspaceFreePolytope::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html", null ],
     [ "CspaceFreeBox::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html", null ],
+    [ "CspaceFreePolytope::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html", null ],
     [ "CspaceFreeBox::SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate.html", null ],
     [ "CspaceFreePolytope::SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate.html", null ],
     [ "SeparationCertificateProgramBase", "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_program_base.html", [
