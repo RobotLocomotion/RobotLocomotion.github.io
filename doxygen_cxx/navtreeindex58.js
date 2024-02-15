@@ -1,6 +1,5 @@
 var NAVTREEINDEX58 =
 {
-"structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html#a31729076a3bb78d786ce5573e0f39144":[3,0,0,8,46,1,1],
 "structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html#a497ba947ec5f475c2de347175fb488a5":[3,0,0,8,46,1,3],
 "structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html#a8a2e7198dc47a29051d2896858f0f721":[3,0,0,8,46,1,2],
 "structdrake_1_1multibody_1_1_multibody_plant_config.html":[3,0,0,8,56],
@@ -249,5 +248,6 @@ var NAVTREEINDEX58 =
 "structdrake_1_1schema_1_1_rotation_1_1_identity.html#aa3b4b0360b49f499d1d0996b08940f1c":[3,0,0,12,6,1,5],
 "structdrake_1_1schema_1_1_rotation_1_1_identity.html#ac245e156ef53146477344bf9965c3d8c":[3,0,0,12,6,1,1],
 "structdrake_1_1schema_1_1_rotation_1_1_identity.html#af4fb026178fdf3ce0a371f9f21f7ab9c":[3,0,0,12,6,1,3],
-"structdrake_1_1schema_1_1_rotation_1_1_identity.html#af7bbb7bd985ee9193d77994218614e17":[3,0,0,12,6,1,0]
+"structdrake_1_1schema_1_1_rotation_1_1_identity.html#af7bbb7bd985ee9193d77994218614e17":[3,0,0,12,6,1,0],
+"structdrake_1_1schema_1_1_rotation_1_1_rpy.html":[3,0,0,12,6,2]
 };

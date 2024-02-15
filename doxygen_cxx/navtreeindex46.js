@@ -1,6 +1,5 @@
 var NAVTREEINDEX46 =
 {
-"dir_3f9cb8dbb3b4911cb2ecb548acd672c3.html":[4,0,0,8,14],
 "dir_3ff34c62de56b2df4097a6c50ce2d7ff.html":[4,0,0,4,3],
 "dir_40f172a69a21894a0a79b0f55721c1bd.html":[4,0,0,3,11,1],
 "dir_41feb80e12a36dca7cd3992ad22e20a8.html":[4,0,0,3,0],
@@ -96,8 +95,8 @@ var NAVTREEINDEX46 =
 "discrete__algebraic__riccati__equation_8h.html":[4,0,0,7,11],
 "discrete__algebraic__riccati__equation_8h.html#a8cd8a0787e886faf633f2c1f5be2365e":[4,0,0,7,11,0],
 "discrete__algebraic__riccati__equation_8h.html#aa957c0c1b13e62f96ae84dd8abe45dd9":[4,0,0,7,11,1],
-"discrete__contact__data_8h.html":[4,0,0,8,10,15],
-"discrete__contact__pair_8h.html":[4,0,0,8,10,16],
+"discrete__contact__data_8h.html":[4,0,0,8,10,14],
+"discrete__contact__pair_8h.html":[4,0,0,8,10,15],
 "discrete__derivative_8h.html":[4,0,0,12,6,6],
 "discrete__lyapunov__equation_8h.html":[4,0,0,7,12],
 "discrete__lyapunov__equation_8h.html#a41733a5b284046800224cd293e055ff7":[4,0,0,7,12,0],
@@ -105,8 +104,8 @@ var NAVTREEINDEX46 =
 "discrete__time__delay_8h.html":[4,0,0,12,6,7],
 "discrete__time__integrator_8h.html":[4,0,0,8,3,9],
 "discrete__time__trajectory_8h.html":[4,0,0,1,5,3],
-"discrete__update__manager_8h.html":[4,0,0,8,10,17],
-"discrete__update__manager_8h.html#a873b31894c71d649596f62315eff5bb4":[4,0,0,8,10,17,0],
+"discrete__update__manager_8h.html":[4,0,0,8,10,16],
+"discrete__update__manager_8h.html#a873b31894c71d649596f62315eff5bb4":[4,0,0,8,10,16,0],
 "discrete__values_8h.html":[4,0,0,12,3,18],
 "distance__and__interpolation__provider_8h.html":[4,0,0,10,8],
 "distance__constraint_8h.html":[4,0,0,8,5,7],
@@ -249,5 +248,6 @@ var NAVTREEINDEX46 =
 "expect__throws__message_8h.html#a3032825862f840191f81ddc8ca53072e":[4,0,0,1,4,4,2],
 "expect__throws__message_8h.html#abe6fd77a193e735aab16e277f20ab7d1":[4,0,0,1,4,4,3],
 "expect__throws__message_8h.html#addaacd0e2cef16ba6d550d85f6e16463":[4,0,0,1,4,4,0],
-"expect__throws__message_8h.html#ae08ae1ac4462dded781ee93a493b0cca":[4,0,0,1,4,4,1]
+"expect__throws__message_8h.html#ae08ae1ac4462dded781ee93a493b0cca":[4,0,0,1,4,4,1],
+"explicit__error__controlled__integrator__test_8h.html":[4,0,0,12,0,0,3]
 };

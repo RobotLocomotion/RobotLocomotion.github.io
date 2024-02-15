@@ -1,6 +1,5 @@
 var NAVTREEINDEX49 =
 {
-"functions_vars_d.html":[3,3,2,3],
 "functions_vars_e.html":[3,3,2,4],
 "functions_vars_f.html":[3,3,2,5],
 "functions_vars_g.html":[3,3,2,6],
@@ -228,8 +227,8 @@ var NAVTREEINDEX49 =
 "group__geometry__infrastructure.html":[1,5,0],
 "group__geometry__optimization.html":[1,1,1],
 "group__geometry__optimization.html":[1,5,5],
-"group__geometry__optimization.html#ga3a51e0fec449a0abcf498f78a2a390a8":[1,1,1,14],
 "group__geometry__optimization.html#ga3a51e0fec449a0abcf498f78a2a390a8":[1,5,5,14],
+"group__geometry__optimization.html#ga3a51e0fec449a0abcf498f78a2a390a8":[1,1,1,14],
 "group__geometry__optimization.html#ga5f3ad49bfffd1b9a968ed7f1bf4d4c80":[1,1,1,16],
 "group__geometry__optimization.html#ga5f3ad49bfffd1b9a968ed7f1bf4d4c80":[1,5,5,16],
 "group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af":[1,5,5,15],
@@ -249,5 +248,6 @@ var NAVTREEINDEX49 =
 "group__module__contact__surface.html":[1,5,2,0,0],
 "group__module__penetration__queries.html":[1,5,2,0],
 "group__multibody.html":[1,3],
-"group__multibody__frames__and__bodies.html":[1,0,1,1]
+"group__multibody__frames__and__bodies.html":[1,0,1,1],
+"group__multibody__notation.html":[1,0,1]
 };
