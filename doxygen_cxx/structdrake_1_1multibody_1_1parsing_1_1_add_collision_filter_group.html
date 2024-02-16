@@ -191,6 +191,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a37624b00959bd2e6080521c344fcfd1e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#a37624b00959bd2e6080521c344fcfd1e">members</a></td></tr>
 <tr class="memdesc:a37624b00959bd2e6080521c344fcfd1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Names of members of the group.  <a href="#a37624b00959bd2e6080521c344fcfd1e">More...</a><br /></td></tr>
 <tr class="separator:a37624b00959bd2e6080521c344fcfd1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c749691be5578a38f745d722a31646e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#a5c749691be5578a38f745d722a31646e">member_groups</a></td></tr>
+<tr class="memdesc:a5c749691be5578a38f745d722a31646e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Names of groups to add en masse as members of the group.  <a href="#a5c749691be5578a38f745d722a31646e">More...</a><br /></td></tr>
+<tr class="separator:a5c749691be5578a38f745d722a31646e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ac4262e3bb2a1be1e29ce90bd7c2377"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#a1ac4262e3bb2a1be1e29ce90bd7c2377">ignored_collision_filter_groups</a></td></tr>
 <tr class="memdesc:a1ac4262e3bb2a1be1e29ce90bd7c2377"><td class="mdescLeft">&#160;</td><td class="mdescRight">Names of groups against which to ignore collisions.  <a href="#a1ac4262e3bb2a1be1e29ce90bd7c2377">More...</a><br /></td></tr>
 <tr class="separator:a1ac4262e3bb2a1be1e29ce90bd7c2377"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -246,6 +249,23 @@ Public Attributes</h2></td></tr>
 
 <p>Names of groups against which to ignore collisions. </p>
 <p>If another group is named, collisions between this group and that group will be ignored. If this group is named, collisions within this group will be ignored. Names may be scoped and refer to other groups defined elsewhere in this file or transitively included directives or model files. This data is analogous to a sequence of <a class="el" href="group__multibody__parsing.html#tag_drake_ignored_collision_filter_group">drake:ignored_collision_filter_group</a> in XML model formats. </p>
+
+</div>
+</div>
+<a id="a5c749691be5578a38f745d722a31646e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c749691be5578a38f745d722a31646e">&#9670;&nbsp;</a></span>member_groups</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::string&gt; member_groups</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Names of groups to add en masse as members of the group. </p>
+<p>May be scoped and refer to bodies of already added models. This data is analogous to a sequence of <a class="el" href="group__multibody__parsing.html#tag_drake_member_group">drake:member_group</a> in XML model formats. </p>
 
 </div>
 </div>

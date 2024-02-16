@@ -179,7 +179,7 @@ SDFormat Support</h1>
 <p>Drake's parser does not implement all of the features of SDFormat. In the future, we intend to update this documentation to itemize what isn't supported.</p>
 <h2><a class="anchor" id="model_composition"></a>
 SDFormat model composition</h2>
-<p>Drake's SDFormat parsing supports composing multiple models into a single model, via lexical nesting and file inclusion. The file inclusion feature supports both SDFormat files and URDF files. Note that included URDF files pass through the Drake URDF parser, with all of it's extensions and limitations.</p>
+<p>Drake's SDFormat parsing supports composing multiple models into a single model, via lexical nesting and file inclusion. The file inclusion feature supports both SDFormat files and URDF files. Note that included URDF files pass through the Drake URDF parser, with all of its extensions and limitations.</p>
 <p>For full details, see the <a href="http://sdformat.org/tutorials?tut=composition_proposal#model-composition-proposed-behavior">SDFormat documentation of model composition.</a></p>
 <p>An important feature of SDFormat model composition is the ability to cross-reference features of other models. Cross-references are denoted by using scoped names.</p>
 <h3><a class="anchor" id="scoped_names"></a>
@@ -208,9 +208,9 @@ Scoped names</h3>
 URDF Support</h1>
 <p>Drake supports URDF files as described here: <a href="http://wiki.ros.org/urdf/XML">http://wiki.ros.org/urdf/XML</a>.</p>
 <p>For Drake extensions to URDF format files, see <a class="el" href="group__multibody__parsing.html#multibody_parsing_drake_extensions">Drake Extensions</a>.</p>
-<h2><a class="anchor" id="multbody_parsing_urdf_unsupported"></a>
+<h2><a class="anchor" id="multibody_parsing_urdf_unsupported"></a>
 URDF not supported by Drake</h2>
-<p>Drake's parser does not implement all of the features of URDF. Here is a list of known URDF features that Drake does not use. For each, the parser applies one of several treaments:</p>
+<p>Drake's parser does not implement all of the features of URDF. Here is a list of known URDF features that Drake does not use. For each, the parser applies one of several treatments:</p>
 <ul>
 <li>Issue a warning that the tag is unused.</li>
 <li>Ignore silently, as documented below.</li>
@@ -282,6 +282,7 @@ Drake Extensions</h1>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_joint">drake:joint</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_linear_bushing_rpy">drake:linear_bushing_rpy</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_member">drake:member</a></li>
+<li><a class="el" href="group__multibody__parsing.html#tag_drake_member_group">drake:member_group</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_mesh_resolution_hint">drake:mesh_resolution_hint</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_mimic">drake:mimic</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_mu_dynamic">drake:mu_dynamic</a></li>
@@ -469,14 +470,14 @@ drake:collision_filter_group</h2>
 <ul>
 <li>SDFormat path: <code>//model/drake:collision_filter_group</code></li>
 <li>URDF path: <code>/robot/drake:collision_filter_group</code></li>
-<li>Syntax: Attributes <code>name</code> (string) and <code>ignore</code> (boolean); nested elements <code>drake:member</code> and <code>drake:ignored_collision_filter_group</code>.</li>
+<li>Syntax: Attributes <code>name</code> (string) and <code>ignore</code> (boolean); nested elements <code>drake:member</code>, <code>drake:member_group</code>, and <code>drake:ignored_collision_filter_group</code>.</li>
 </ul>
 <h3><a class="anchor" id="tag_drake_collision_filter_group_semantics"></a>
 Semantics</h3>
-<p>This element names a group of bodies to participate in collision filtering rules. If the <code>ignore</code> attribute is present and true-valued, the entire element is skipped during parsing. The nested elements must included one or more <code>drake:member</code> elements, and zero or more <code>drake:ignored_collision_filter_group</code> elements.</p>
+<p>This element names a group of bodies to participate in collision filtering rules. If the <code>ignore</code> attribute is present and true-valued, the entire element is skipped during parsing. The nested elements must included one or more <code>drake:member</code> or <code>drake:member_group</code> elements, and zero or more <code>drake:ignored_collision_filter_group</code> elements.</p>
 <p>This element defines a new group name that is only available during parsing. It must not be a scoped name.</p>
 <p>Collision filtering rules are only constructed with <b>pairs</b> of groups, where both sides of the pair may name the same group. The <code>drake:ignored_collision_filter_group</code> element establishes a pairing between the group it names and the group within which it is nested. A pair containing different collision groups excludes collisions between members of those groups (see <a class="el" href="classdrake_1_1geometry_1_1_collision_filter_declaration.html#af92e4fb2501d576d2e598196b7902167" title="Excludes geometry pairs from proximity evaluation by updating the candidate pair set C ← C - P,...">drake::geometry::CollisionFilterDeclaration::ExcludeBetween()</a>). A pair naming the same group twice excludes collisions within the group (see <a class="el" href="classdrake_1_1geometry_1_1_collision_filter_declaration.html#a850f7245a9d1c8227ed4e04a0e5018f1" title="Excludes geometry pairs from proximity evaluation by updating the candidate pair set C ← C - P,...">drake::geometry::CollisionFilterDeclaration::ExcludeWithin()</a>).</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__multibody__parsing.html#tag_drake_member">drake:member</a>, <a class="el" href="group__multibody__parsing.html#tag_drake_ignored_collision_filter_group">drake:ignored_collision_filter_group</a>, <a class="el" href="group__multibody__parsing.html#scoped_names">Scoped names</a></dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__multibody__parsing.html#tag_drake_member">drake:member</a>, <a class="el" href="group__multibody__parsing.html#tag_drake_member_group">drake:member_group</a>, <a class="el" href="group__multibody__parsing.html#tag_drake_ignored_collision_filter_group">drake:ignored_collision_filter_group</a>, <a class="el" href="group__multibody__parsing.html#scoped_names">Scoped names</a></dd></dl>
 <h2><a class="anchor" id="tag_drake_compliant_hydroelastic"></a>
 drake:compliant_hydroelastic</h2>
 <ul>
@@ -621,6 +622,18 @@ drake:member</h2>
 <h3><a class="anchor" id="tag_drake_member_semantics"></a>
 Semantics</h3>
 <p>This element names a link (defined elsewhere in the model) to be a member of the parent collision filter group.</p>
+<p>In SDFormat files only, the name may refer to a link within a nested model (either URDF or SDFormat) by using a scoped name.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__multibody__parsing.html#tag_drake_collision_filter_group">drake:collision_filter_group</a>, <a class="el" href="group__multibody__parsing.html#scoped_names">Scoped names</a></dd></dl>
+<h2><a class="anchor" id="tag_drake_member_group"></a>
+drake:member_group</h2>
+<ul>
+<li>SDFormat path: <code>//model/drake:collision_filter_group/drake:member_group</code></li>
+<li>URDF path: <code>/robot/drake:collision_filter_group/drake:member_group/@name</code></li>
+<li>Syntax: String.</li>
+</ul>
+<h3><a class="anchor" id="tag_drake_member_group_semantics"></a>
+Semantics</h3>
+<p>This element names a collision filter group (defined elsewhere in the model), all of whose members become members of the parent collision filter group.</p>
 <p>In SDFormat files only, the name may refer to a link within a nested model (either URDF or SDFormat) by using a scoped name.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="group__multibody__parsing.html#tag_drake_collision_filter_group">drake:collision_filter_group</a>, <a class="el" href="group__multibody__parsing.html#scoped_names">Scoped names</a></dd></dl>
 <h2><a class="anchor" id="tag_drake_mesh_resolution_hint"></a>

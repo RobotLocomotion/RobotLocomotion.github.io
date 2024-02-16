@@ -299,7 +299,7 @@ Public Attributes</h2></td></tr>
 
 <p>The direction the light points in the frame indicated by <code>frame</code>. </p>
 <p>For example, in the world frame, a spotlight with direction [0, 0, -1]ᵀ points straight down. In the camera frame, the direction [0, 0, 1]ᵀ points forward in the camera's view direction. This field only applies to spotlight and directional lights.</p>
-<dl class="section pre"><dt>Precondition</dt><dd>the vector has length 1. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>the vector has sufficient precision to be meaningfully normalized. </dd></dl>
 
 </div>
 </div>
