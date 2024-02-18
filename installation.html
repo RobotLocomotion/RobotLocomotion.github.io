@@ -160,16 +160,16 @@ officially supports:</p>
   </thead>
   <tbody>
     <tr>
-      <td>Ubuntu 20.04 LTS (Focal Fossa)</td>
-      <td>x86_64</td>
-      <td>3.8 ⁽³⁾</td>
-      <td>March 2024</td>
-    </tr>
-    <tr>
       <td>Ubuntu 22.04 LTS (Jammy Jellyfish)</td>
       <td>x86_64</td>
       <td>3.10 ⁽³⁾</td>
       <td>March 2026</td>
+    </tr>
+    <tr>
+      <td>Ubuntu 24.04 LTS (Noble Numbat)</td>
+      <td>TBD ⁽⁵⁾</td>
+      <td>TBD ⁽⁵⁾</td>
+      <td>March 2028</td>
     </tr>
     <tr>
       <td>macOS Monterey (12)</td>
@@ -211,13 +211,16 @@ may experience compatibility hiccups; when asking for help, be sure to mention
 that Conda is involved.</p>
 
 <p>⁽³⁾ The Python version shown in the table is supported for all installation
-channels. Additionally, on Ubuntu when installing via <code class="language-plaintext highlighter-rouge">pip</code> Python versions
-3.8 through 3.12 (inclusive) are supported.
+channels. Additionally, when installing via <code class="language-plaintext highlighter-rouge">pip</code>
+on Ubuntu Python versions 3.10 through 3.12 (inclusive) are supported and
+on macOS Python versions 3.11 through 3.12 (inclusive) are supported.
 Refer to <a href="/stable.html#os-support">OS Support</a> for details on our “end of life”
 timeline for changing which Python versions are supported.</p>
 
 <p>⁽⁴⁾ These end-of-life dates are estimates.
 Refer to <a href="/stable.html#os-support">OS Support</a> for details.</p>
+
+<p>⁽⁵⁾ We aim to support Ubuntu 24.04 within two months of its release.</p>
 
 <p>Additionally, if you are compiling your own C++ code against Drake’s C++ code
 and are using Drake’s pre-compiled binaries, then you must use the same
@@ -232,11 +235,6 @@ compiler as our releases:</p>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>Ubuntu 20.04 LTS (Focal Fossa)</td>
-      <td>GCC 9</td>
-      <td>C++17</td>
-    </tr>
     <tr>
       <td>Ubuntu 22.04 LTS (Jammy Jellyfish)</td>
       <td>GCC 11</td>

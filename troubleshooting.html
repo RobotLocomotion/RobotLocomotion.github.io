@@ -319,15 +319,23 @@ The solution is to use either <code class="language-plaintext highlighter-rouge"
 
   <h2 id="pip-no-candidate">No candidate version for this platform</h2>
 
-  <p>When installing Drake from PyPI on older platforms such as Ubuntu Focal,
-you may receive the error “no candidate version for this platform”.
-This is caused by older versions of <code class="language-plaintext highlighter-rouge">pip</code> which do not recognize the
-<code class="language-plaintext highlighter-rouge">manylinux</code> platform used by Drake.
-This is remedied by installing a newer version of <code class="language-plaintext highlighter-rouge">pip</code>.</p>
+  <!-- Even though this is only relevant to past versions of Drake that are no
+ longer supported, we'll keep this text around to help users of those older
+ versions. -->
 
-  <p>Use of a Python virtual environment may be required
-in order to get a newer version of <code class="language-plaintext highlighter-rouge">pip</code>;
-see the instructions for <a href="/pip.html#stable-releases">installing from pip</a>.</p>
+  <p>When installing Drake from PyPI on older platforms such as Ubuntu Focal, you may
+receive the error “no candidate version for this platform”. This is caused by
+older versions of <code class="language-plaintext highlighter-rouge">pip</code> which do not recognize the <code class="language-plaintext highlighter-rouge">manylinux</code> platform used by
+Drake. This is remedied by installing a newer version of <code class="language-plaintext highlighter-rouge">pip</code>.</p>
+
+  <p>Use of a Python virtual environment may be required in order to get a newer
+version of <code class="language-plaintext highlighter-rouge">pip</code>, e.g.:</p>
+
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 <span class="nt">-m</span> venv <span class="nb">env
+env</span>/bin/pip <span class="nb">install</span> <span class="nt">--upgrade</span> pip
+<span class="nb">env</span>/bin/pip <span class="nb">install </span>drake
+<span class="nb">source env</span>/bin/activate
+</code></pre></div>  </div>
 
   <h1 id="build-problems">Build problems</h1>
 

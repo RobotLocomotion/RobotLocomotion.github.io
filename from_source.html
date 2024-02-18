@@ -161,15 +161,6 @@ officially supports:</p>
   </thead>
   <tbody>
     <tr>
-      <td>Ubuntu 20.04 LTS (Focal Fossa)</td>
-      <td>x86_64</td>
-      <td>3.8</td>
-      <td>6.4</td>
-      <td>3.16</td>
-      <td>GCC 9 (default) or Clang 12</td>
-      <td>OpenJDK 11</td>
-    </tr>
-    <tr>
       <td>Ubuntu 22.04 LTS (Jammy Jellyfish)</td>
       <td>x86_64</td>
       <td>3.10</td>
@@ -212,7 +203,7 @@ officially supports:</p>
 notice regressions, so if it doesn’t work for you then please file a bug report.</p>
 
 <p>Unofficially, Drake is also likely to be compatible with newer versions of
-Ubuntu or macOS than what are listed, or with Ubuntu 22.04 running on arm64, or
+Ubuntu or macOS than what are listed, or with Ubuntu running on arm64, or
 with other versions of Python or Java. However, these are not supported so if it
 doesn’t work for you then please file a pull request with the fix, not a bug
 report.</p>
@@ -333,12 +324,6 @@ MOSEK<a href="/tm.html">™</a>, without building tests:</p>
 </code></pre></div></div>
 
 <p>You will also need to have your <code class="language-plaintext highlighter-rouge">PYTHONPATH</code> configured correctly.</p>
-
-<p><em>Ubuntu 20.04 (Focal):</em></p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>drake-build
-<span class="nb">export </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="k">${</span><span class="nv">PWD</span><span class="k">}</span>/install/lib/python3.8/site-packages:<span class="k">${</span><span class="nv">PYTHONPATH</span><span class="k">}</span>
-</code></pre></div></div>
 
 <p><em>Ubuntu 22.04 (Jammy):</em></p>
 

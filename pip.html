@@ -178,8 +178,7 @@ can choose any name.</p>
 <p>Create a virtual environment, install Drake, and activate the environment:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 <span class="nt">-m</span> venv <span class="nb">env
-env</span>/bin/pip <span class="nb">install</span> <span class="nt">--upgrade</span> pip
-<span class="nb">env</span>/bin/pip <span class="nb">install </span>drake
+env</span>/bin/pip <span class="nb">install </span>drake
 <span class="nb">source env</span>/bin/activate
 </code></pre></div></div>
 
@@ -187,7 +186,7 @@ env</span>/bin/pip <span class="nb">install</span> <span class="nt">--upgrade</s
 
 <h2 id="nightly-releases">Nightly Releases</h2>
 
-<p>Wheel packages for Ubuntu 20.04 (Focal), Ubuntu 22.04 (Jammy), and macOS are
+<p>Wheel packages for Ubuntu 22.04 (Jammy) and macOS are
 published nightly at a <a href="https://peps.python.org/pep-0503/">PEP 503</a> index url
 <a href="https://drake-packages.csail.mit.edu/whl/nightly/">https://drake-packages.csail.mit.edu/whl/nightly/</a>.</p>
 
@@ -202,8 +201,7 @@ and drop out of the index after 48 days.</li>
 desired date:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 <span class="nt">-m</span> venv <span class="nb">env
-env</span>/bin/pip <span class="nb">install</span> <span class="nt">--upgrade</span> pip
-<span class="nb">env</span>/bin/pip <span class="nb">install</span> <span class="se">\</span>
+env</span>/bin/pip <span class="nb">install</span> <span class="se">\</span>
     <span class="nt">--extra-index-url</span> https://drake-packages.csail.mit.edu/whl/nightly/ <span class="se">\</span>
     <span class="s1">'drake==0.0.YYYYMMDD'</span>
 <span class="nb">source env</span>/bin/activate
@@ -213,8 +211,7 @@ env</span>/bin/pip <span class="nb">install</span> <span class="nt">--upgrade</s
 instead of <code class="language-plaintext highlighter-rouge">==0.0.YYYYMMDD</code> as shown below:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 <span class="nt">-m</span> venv <span class="nb">env
-env</span>/bin/pip <span class="nb">install</span> <span class="nt">--upgrade</span> pip
-<span class="nb">env</span>/bin/pip <span class="nb">install</span> <span class="se">\</span>
+env</span>/bin/pip <span class="nb">install</span> <span class="se">\</span>
     <span class="nt">--extra-index-url</span> https://drake-packages.csail.mit.edu/whl/nightly/ <span class="se">\</span>
     <span class="s1">'drake&lt;0.1'</span>
 <span class="nb">source env</span>/bin/activate
