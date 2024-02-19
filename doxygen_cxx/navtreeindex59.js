@@ -1,5 +1,8 @@
 var NAVTREEINDEX59 =
 {
+"structdrake_1_1schema_1_1_rotation_1_1_identity.html#aa3b4b0360b49f499d1d0996b08940f1c":[3,0,0,12,6,1,5],
+"structdrake_1_1schema_1_1_rotation_1_1_identity.html#ac245e156ef53146477344bf9965c3d8c":[3,0,0,12,6,1,1],
+"structdrake_1_1schema_1_1_rotation_1_1_identity.html#af4fb026178fdf3ce0a371f9f21f7ab9c":[3,0,0,12,6,1,3],
 "structdrake_1_1schema_1_1_rotation_1_1_identity.html#af7bbb7bd985ee9193d77994218614e17":[3,0,0,12,6,1,0],
 "structdrake_1_1schema_1_1_rotation_1_1_rpy.html":[3,0,0,12,6,2],
 "structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a1c90bdc946c78848a793eb4fc2e9b7e5":[3,0,0,12,6,2,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX59 =
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01examples_1_1rimless__wheel_1_1_rimless_wheel_01_4.html":[3,0,0,15,7,4],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_drake_visualizer_01_4.html":[3,0,0,15,7,5],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_meshcat_point_cloud_visualizer_01_4.html":[3,0,0,15,7,6],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_meshcat_visualizer_01_4.html":[3,0,0,15,7,7],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01sensors_1_1_beam_model_01_4.html":[3,0,0,15,7,10],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter.html":[3,0,0,15,7,14],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter.html#a8a63ad999f7b515a27e608907704a113":[3,0,0,15,7,14,0]
+"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_meshcat_visualizer_01_4.html":[3,0,0,15,7,7]
 };

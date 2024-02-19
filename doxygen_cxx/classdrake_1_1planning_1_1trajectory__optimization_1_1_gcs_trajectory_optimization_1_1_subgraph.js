@@ -14,5 +14,7 @@ var classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimi
     [ "order", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#abcc41a4e499b9ebcdc71c5e213c7c22f", null ],
     [ "regions", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a4db23fd6f462324bf53109c1522f59ca", null ],
     [ "size", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#af9593d4a5ff4274efaf429cb4f9e57cc", null ],
+    [ "Vertices", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#acc5ebea144a65388f02657d876822353", null ],
+    [ "Vertices", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a0a5ff7e680c26a18651ba36760b9b951", null ],
     [ "GcsTrajectoryOptimization", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#aa69be52668ec461d59f91ad7eaca3a89", null ]
 ];

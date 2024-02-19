@@ -2322,6 +2322,41 @@ one second long. The start time will match the original start time.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.SolveConvexRestriction">
+<span class="sig-name descname"><span class="pre">SolveConvexRestriction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.planning.GcsTrajectoryOptimization,</span> <span class="pre">active_vertices:</span> <span class="pre">List[pydrake.geometry.optimization.GraphOfConvexSets.Vertex],</span> <span class="pre">options:</span> <span class="pre">pydrake.geometry.optimization.GraphOfConvexSetsOptions</span> <span class="pre">=</span> <span class="pre">GraphOfConvexSetsOptions(convex_relaxation=None,</span> <span class="pre">preprocessing=None,</span> <span class="pre">max_rounded_paths=None,</span> <span class="pre">max_rounding_trials=100,</span> <span class="pre">flow_tolerance=1e-05,</span> <span class="pre">rounding_seed=0,</span> <span class="pre">solver=None,</span> <span class="pre">solver_options=&lt;SolverOptions&gt;,</span> <span class="pre">rounding_solver_options=None,</span> <span class="pre">)</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.trajectories.html#pydrake.trajectories.CompositeTrajectory" title="pydrake.trajectories.CompositeTrajectory"><span class="pre">pydrake.trajectories.CompositeTrajectory</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.MathematicalProgramResult" title="pydrake.solvers.MathematicalProgramResult"><span class="pre">pydrake.solvers.MathematicalProgramResult</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.SolveConvexRestriction" title="Permalink to this definition"></a></dt>
+<dd><p>Solves a trajectory optimization problem through specific vertices.</p>
+<p>This method allows for targeted optimization by considering only
+selected active vertices, reducing the problem’s complexity. See
+geometry::optimization::GraphOfConvexSets::SolveConvexRestriction().
+This API prefers a sequence of vertices over edges, as a user may know
+which regions the solution should pass through.
+GcsTrajectoryOptimization::AddRegions() automatically manages edge
+creation and intersection checks, which makes passing a sequence of
+edges less convenient.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">active_vertices</span></code>:</dt><dd><p>A sequence of ordered vertices of subgraphs to be included in the
+problem.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">options</span></code>:</dt><dd><p>include all settings for solving the shortest path problem.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>There must be at least two vertices in active_vertices.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the vertices are not connected.</strong> – </p></li>
+<li><p><strong>RuntimeError if two vertices are connected by multiple edges. This</strong> – </p></li>
+<li><p><strong>may happen if one connects two graphs through multiple subspaces</strong><strong>,</strong> – </p></li>
+<li><p><strong>which is currently not supported with this method.</strong> – </p></li>
+<li><p><strong>RuntimeError if the program cannot be written as a convex</strong> – </p></li>
+<li><p><strong>optimization consumable by one of the standard solvers.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.SolvePath">
 <span class="sig-name descname"><span class="pre">SolvePath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">pydrake.planning.GcsTrajectoryOptimization</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source:</span> <span class="pre">pydrake.planning.GcsTrajectoryOptimization.Subgraph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target:</span> <span class="pre">pydrake.planning.GcsTrajectoryOptimization.Subgraph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options:</span> <span class="pre">pydrake.geometry.optimization.GraphOfConvexSetsOptions</span> <span class="pre">=</span> <span class="pre">GraphOfConvexSetsOptions(convex_relaxation=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preprocessing=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_rounded_paths=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_rounding_trials=100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flow_tolerance=1e-05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rounding_seed=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solver=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solver_options=&lt;SolverOptions&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rounding_solver_options=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">)</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.trajectories.html#pydrake.trajectories.CompositeTrajectory" title="pydrake.trajectories.CompositeTrajectory"><span class="pre">pydrake.trajectories.CompositeTrajectory</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.MathematicalProgramResult" title="pydrake.solvers.MathematicalProgramResult"><span class="pre">pydrake.solvers.MathematicalProgramResult</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.SolvePath" title="Permalink to this definition"></a></dt>
 <dd><p>Formulates and solves the mixed-integer convex formulation of the
@@ -2492,6 +2527,14 @@ CartesianProduct.</p>
 <dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.Subgraph.size">
 <span class="sig-name descname"><span class="pre">size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.GcsTrajectoryOptimization.Subgraph" title="pydrake.planning.GcsTrajectoryOptimization.Subgraph"><span class="pre">pydrake.planning.GcsTrajectoryOptimization.Subgraph</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.Subgraph.size" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the number of vertices in the subgraph.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.Subgraph.Vertices">
+<span class="sig-name descname"><span class="pre">Vertices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.GcsTrajectoryOptimization.Subgraph" title="pydrake.planning.GcsTrajectoryOptimization.Subgraph"><span class="pre">pydrake.planning.GcsTrajectoryOptimization.Subgraph</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.GraphOfConvexSets.Vertex" title="pydrake.geometry.optimization.GraphOfConvexSets.Vertex"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Vertex</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.Subgraph.Vertices" title="Permalink to this definition"></a></dt>
+<dd><p>Returns constant reference to a vector of mutable pointers to the
+vertices stored in the subgraph. The order of the vertices is the same
+as the order the regions were added.</p>
 </dd></dl>
 
 </dd></dl>

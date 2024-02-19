@@ -22,5 +22,6 @@ var classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimi
     [ "num_positions", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#aba2887f0ca1fbbdfb49cf6b0ee21e553", null ],
     [ "operator=", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a0e0056534457223e2eb27065147b9232", null ],
     [ "operator=", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#af6cfa802822c84540b5145bec87c49e5", null ],
+    [ "SolveConvexRestriction", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a9e725d3d3b1c11c6760e99faeaa0aa35", null ],
     [ "SolvePath", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a8ddb1df26a2324afc83f84c90281c249", null ]
 ];

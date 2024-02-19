@@ -1,6 +1,6 @@
 var structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options =
 [
-    [ "GraphOfConvexSetsOptions", "structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#a65e0db722c8e6c4cc2fdd74c7f423af5", null ],
+    [ "Serialize", "structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#a8e8824802dedfbc36776227f7482b6bc", null ],
     [ "convex_relaxation", "structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#a6787cfcca13150e38baf6ec079b36cc6", null ],
     [ "flow_tolerance", "structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#aa3fa9cf3c24726cbf70d03c92300b70c", null ],
     [ "max_rounded_paths", "structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#a6a1701a8da6d555793295539e9d4fda4", null ],

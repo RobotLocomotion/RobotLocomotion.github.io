@@ -1,5 +1,8 @@
 var NAVTREEINDEX58 =
 {
+"structdrake_1_1multibody_1_1_joint_1_1_blue_print.html#a6bb329f9fc7b9d9ffaead0766384aa05":[3,0,0,8,46,0,0],
+"structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html":[3,0,0,8,46,1],
+"structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html#a003ffd6a91f75e2a858b2fefaa2a061c":[3,0,0,8,46,1,0],
 "structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html#a31729076a3bb78d786ce5573e0f39144":[3,0,0,8,46,1,1],
 "structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html#a497ba947ec5f475c2de347175fb488a5":[3,0,0,8,46,1,3],
 "structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html#a8a2e7198dc47a29051d2896858f0f721":[3,0,0,8,46,1,2],
@@ -246,8 +249,5 @@ var NAVTREEINDEX58 =
 "structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,12,6,0,5],
 "structdrake_1_1schema_1_1_rotation_1_1_identity.html":[3,0,0,12,6,1],
 "structdrake_1_1schema_1_1_rotation_1_1_identity.html#a9336cad52b9b1498eaa3a95c00dca7c4":[3,0,0,12,6,1,2],
-"structdrake_1_1schema_1_1_rotation_1_1_identity.html#a9bdc54ac252b10b78e98378b4b2f5082":[3,0,0,12,6,1,4],
-"structdrake_1_1schema_1_1_rotation_1_1_identity.html#aa3b4b0360b49f499d1d0996b08940f1c":[3,0,0,12,6,1,5],
-"structdrake_1_1schema_1_1_rotation_1_1_identity.html#ac245e156ef53146477344bf9965c3d8c":[3,0,0,12,6,1,1],
-"structdrake_1_1schema_1_1_rotation_1_1_identity.html#af4fb026178fdf3ce0a371f9f21f7ab9c":[3,0,0,12,6,1,3]
+"structdrake_1_1schema_1_1_rotation_1_1_identity.html#a9bdc54ac252b10b78e98378b4b2f5082":[3,0,0,12,6,1,4]
 };

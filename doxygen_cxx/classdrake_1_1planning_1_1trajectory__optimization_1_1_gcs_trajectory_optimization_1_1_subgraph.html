@@ -185,6 +185,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af9593d4a5ff4274efaf429cb4f9e57cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#af9593d4a5ff4274efaf429cb4f9e57cc">size</a> () const</td></tr>
 <tr class="memdesc:af9593d4a5ff4274efaf429cb4f9e57cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of vertices in the subgraph.  <a href="#af9593d4a5ff4274efaf429cb4f9e57cc">More...</a><br /></td></tr>
 <tr class="separator:af9593d4a5ff4274efaf429cb4f9e57cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc5ebea144a65388f02657d876822353"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">geometry::optimization::GraphOfConvexSets::Vertex</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#acc5ebea144a65388f02657d876822353">Vertices</a> ()</td></tr>
+<tr class="memdesc:acc5ebea144a65388f02657d876822353"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns constant reference to a vector of mutable pointers to the vertices stored in the subgraph.  <a href="#acc5ebea144a65388f02657d876822353">More...</a><br /></td></tr>
+<tr class="separator:acc5ebea144a65388f02657d876822353"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a5ff7e680c26a18651ba36760b9b951"><td class="memItemLeft" align="right" valign="top">std::vector&lt; const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">geometry::optimization::GraphOfConvexSets::Vertex</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a0a5ff7e680c26a18651ba36760b9b951">Vertices</a> () const</td></tr>
+<tr class="memdesc:a0a5ff7e680c26a18651ba36760b9b951"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns pointers to the vertices stored in the subgraph.  <a href="#a0a5ff7e680c26a18651ba36760b9b951">More...</a><br /></td></tr>
+<tr class="separator:a0a5ff7e680c26a18651ba36760b9b951"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4db23fd6f462324bf53109c1522f59ca"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">geometry::optimization::ConvexSets</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a4db23fd6f462324bf53109c1522f59ca">regions</a> () const</td></tr>
 <tr class="memdesc:a4db23fd6f462324bf53109c1522f59ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the regions associated with this subgraph before the CartesianProduct.  <a href="#a4db23fd6f462324bf53109c1522f59ca">More...</a><br /></td></tr>
 <tr class="separator:a4db23fd6f462324bf53109c1522f59ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -573,6 +579,46 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the number of vertices in the subgraph. </p>
+
+</div>
+</div>
+<a id="acc5ebea144a65388f02657d876822353"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc5ebea144a65388f02657d876822353">&#9670;&nbsp;</a></span>Vertices() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">geometry::optimization::GraphOfConvexSets::Vertex</a>*&gt;&amp; Vertices </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns constant reference to a vector of mutable pointers to the vertices stored in the subgraph. </p>
+<p>The order of the vertices is the same as the order the regions were added. </p>
+
+</div>
+</div>
+<a id="a0a5ff7e680c26a18651ba36760b9b951"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a5ff7e680c26a18651ba36760b9b951">&#9670;&nbsp;</a></span>Vertices() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">geometry::optimization::GraphOfConvexSets::Vertex</a>*&gt; Vertices </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns pointers to the vertices stored in the subgraph. </p>
+<p>The order of the vertices is the same as the order the regions were added. </p>
 
 </div>
 </div>

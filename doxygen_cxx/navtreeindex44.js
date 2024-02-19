@@ -1,5 +1,8 @@
 var NAVTREEINDEX44 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9bd57b84091cef3694aee370fa189735":[3,0,0,17,5,42],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9c5cbf1ba95055937fdb8283769df797":[3,0,0,17,5,0],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9fc93abbb14c2b7d6702fadcc72baff6":[3,0,0,17,5,44],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#aa360cbd2285db12eb014dc6e34868814":[3,0,0,17,5,16],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#aa5a111a1944f16bb21873433d4b7b31d":[3,0,0,17,5,28],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#aa77d19bf3de0a1c93d54679d0ba86bef":[3,0,0,17,5,15],
@@ -246,8 +249,5 @@ var NAVTREEINDEX44 =
 "color__deprecated_8h.html#adca0483f4bb2b42c9b2deb8176bcd8cd":[4,0,0,4,4,1,1],
 "color__deprecated_8h.html#af6725fd5d84f888598a49438dc2a3169":[4,0,0,4,4,1,0],
 "color__palette_8h.html":[4,0,0,12,8,6],
-"colorize__depth__image_8h.html":[4,0,0,13,0],
-"colorize__label__image_8h.html":[4,0,0,13,1],
-"com__in__polyhedron__constraint_8h.html":[4,0,0,8,5,2],
-"com__position__constraint_8h.html":[4,0,0,8,5,3]
+"colorize__depth__image_8h.html":[4,0,0,13,0]
 };

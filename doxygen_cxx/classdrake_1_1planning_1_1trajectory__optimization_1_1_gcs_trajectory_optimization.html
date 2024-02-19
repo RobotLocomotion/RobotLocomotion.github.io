@@ -227,6 +227,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8ddb1df26a2324afc83f84c90281c249"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="classdrake_1_1trajectories_1_1_composite_trajectory.html">trajectories::CompositeTrajectory</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a8ddb1df26a2324afc83f84c90281c249">SolvePath</a> (const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;source, const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;target, const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html">geometry::optimization::GraphOfConvexSetsOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:a8ddb1df26a2324afc83f84c90281c249"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formulates and solves the mixed-integer convex formulation of the shortest path problem on the whole graph.  <a href="#a8ddb1df26a2324afc83f84c90281c249">More...</a><br /></td></tr>
 <tr class="separator:a8ddb1df26a2324afc83f84c90281c249"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e725d3d3b1c11c6760e99faeaa0aa35"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="classdrake_1_1trajectories_1_1_composite_trajectory.html">trajectories::CompositeTrajectory</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a9e725d3d3b1c11c6760e99faeaa0aa35">SolveConvexRestriction</a> (const std::vector&lt; const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">geometry::optimization::GraphOfConvexSets::Vertex</a> * &gt; &amp;active_vertices, const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html">geometry::optimization::GraphOfConvexSetsOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:a9e725d3d3b1c11c6760e99faeaa0aa35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves a trajectory optimization problem through specific vertices.  <a href="#a9e725d3d3b1c11c6760e99faeaa0aa35">More...</a><br /></td></tr>
+<tr class="separator:a9e725d3d3b1c11c6760e99faeaa0aa35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3026f3dacc50a81434a05e8c9348eebf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a3026f3dacc50a81434a05e8c9348eebf">EstimateComplexity</a> () const</td></tr>
 <tr class="memdesc:a3026f3dacc50a81434a05e8c9348eebf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide a heuristic estimate of the complexity of the underlying GCS mathematical program, for regression testing purposes.  <a href="#a3026f3dacc50a81434a05e8c9348eebf">More...</a><br /></td></tr>
 <tr class="separator:a3026f3dacc50a81434a05e8c9348eebf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -925,6 +928,53 @@ Planning with Graphs of Geodesically-Convex Sets", and per the discussion in Sub
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9e725d3d3b1c11c6760e99faeaa0aa35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e725d3d3b1c11c6760e99faeaa0aa35">&#9670;&nbsp;</a></span>SolveConvexRestriction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt;<a class="el" href="classdrake_1_1trajectories_1_1_composite_trajectory.html">trajectories::CompositeTrajectory</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a>&gt; SolveConvexRestriction </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">geometry::optimization::GraphOfConvexSets::Vertex</a> * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>active_vertices</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html">geometry::optimization::GraphOfConvexSetsOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Solves a trajectory optimization problem through specific vertices. </p>
+<p>This method allows for targeted optimization by considering only selected active vertices, reducing the problem's complexity. See <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#ab25b5b85ea26d22e0702ca76e695c659" title="The non-convexity in a GCS problem comes from the binary variables (phi) associated with the edges be...">geometry::optimization::GraphOfConvexSets::SolveConvexRestriction()</a>. This API prefers a sequence of vertices over edges, as a user may know which regions the solution should pass through. <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#aff9544b6375a592b1b9bda5eb1149a6f" title="Creates a Subgraph with the given regions and indices.">GcsTrajectoryOptimization::AddRegions()</a> automatically manages edge creation and intersection checks, which makes passing a sequence of edges less convenient.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">active_vertices</td><td>A sequence of ordered vertices of subgraphs to be included in the problem. </td></tr>
+    <tr><td class="paramname">options</td><td>include all settings for solving the shortest path problem.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>There must be at least two vertices in active_vertices. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the vertices are not connected. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if two vertices are connected by multiple edges. This may happen if one connects two graphs through multiple subspaces, which is currently not supported with this method. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the program cannot be written as a convex optimization consumable by one of the standard solvers. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
