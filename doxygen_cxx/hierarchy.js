@@ -575,7 +575,6 @@ var hierarchy =
     [ "ModelDirective", "structdrake_1_1multibody_1_1parsing_1_1_model_directive.html", null ],
     [ "ModelDirectives", "structdrake_1_1multibody_1_1parsing_1_1_model_directives.html", null ],
     [ "ModelInstanceInfo", "structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html", null ],
-    [ "ModuleInitVtkRenderingOpenGL2", "class_module_init_vtk_rendering_open_g_l2.html", null ],
     [ "Monomial", "classdrake_1_1symbolic_1_1_monomial.html", null ],
     [ "Polynomial< T >::Monomial", "classdrake_1_1_polynomial_1_1_monomial.html", null ],
     [ "MosekSolverDetails", "structdrake_1_1solvers_1_1_mosek_solver_details.html", null ],
@@ -605,6 +604,7 @@ var hierarchy =
         [ "PrismaticJoint< T >", "classdrake_1_1multibody_1_1_prismatic_joint.html", null ],
         [ "QuaternionFloatingJoint< T >", "classdrake_1_1multibody_1_1_quaternion_floating_joint.html", null ],
         [ "RevoluteJoint< T >", "classdrake_1_1multibody_1_1_revolute_joint.html", null ],
+        [ "RpyFloatingJoint< T >", "classdrake_1_1multibody_1_1_rpy_floating_joint.html", null ],
         [ "ScrewJoint< T >", "classdrake_1_1multibody_1_1_screw_joint.html", null ],
         [ "UniversalJoint< T >", "classdrake_1_1multibody_1_1_universal_joint.html", null ],
         [ "WeldJoint< T >", "classdrake_1_1multibody_1_1_weld_joint.html", null ]
@@ -653,8 +653,8 @@ var hierarchy =
     ] ],
     [ "NumericalGradientOption", "classdrake_1_1math_1_1_numerical_gradient_option.html", null ],
     [ "Object", "classdrake_1_1pydrake_1_1_object.html", null ],
-    [ "MixedIntegerBranchAndBound::Options", "structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html", null ],
     [ "CspaceFreePolytopeBase::Options", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html", null ],
+    [ "MixedIntegerBranchAndBound::Options", "structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html", null ],
     [ "GlobalInverseKinematics::Options", "structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html", null ],
     [ "Meshcat::OrthographicCamera", "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html", null ],
     [ "OsqpSolverDetails", "structdrake_1_1solvers_1_1_osqp_solver_details.html", null ],
@@ -767,10 +767,10 @@ var hierarchy =
     [ "ScopeExit", "classdrake_1_1_scope_exit.html", null ],
     [ "ScsSolverDetails", "structdrake_1_1solvers_1_1_scs_solver_details.html", null ],
     [ "CspaceFreePolytope::SearchResult", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html", null ],
-    [ "CspaceFreePolytope::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html", null ],
     [ "CspaceFreeBox::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html", null ],
-    [ "CspaceFreeBox::SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate.html", null ],
+    [ "CspaceFreePolytope::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html", null ],
     [ "CspaceFreePolytope::SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate.html", null ],
+    [ "CspaceFreeBox::SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate.html", null ],
     [ "SeparationCertificateProgramBase", "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_program_base.html", [
       [ "CspaceFreeBox::SeparationCertificateProgram", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_program.html", null ],
       [ "CspaceFreePolytope::SeparationCertificateProgram", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_program.html", null ]

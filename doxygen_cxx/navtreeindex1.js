@@ -1,6 +1,5 @@
 var NAVTREEINDEX1 =
 {
-"classdrake_1_1_polynomial.html#a48c24f8f3b4b14f7e4bb9fbde3748fe8":[3,0,0,41,4],
 "classdrake_1_1_polynomial.html#a50429ee79a9044de390501c26d0f0e23":[3,0,0,41,32],
 "classdrake_1_1_polynomial.html#a5590d23d37495f26e4e0226674af2436":[3,0,0,41,52],
 "classdrake_1_1_polynomial.html#a56dea1c182be53c20a023d0491bd232c":[3,0,0,41,43],
@@ -249,5 +248,6 @@ var NAVTREEINDEX1 =
 "classdrake_1_1examples_1_1acrobot_1_1_acrobot_state_receiver.html#aa4666beaafd49a7ceea50f4503e6554e":[1,2,12,0,1,0],
 "classdrake_1_1examples_1_1acrobot_1_1_acrobot_state_sender.html":[1,2,12,0,4],
 "classdrake_1_1examples_1_1acrobot_1_1_acrobot_state_sender.html#afa052a2c08364f30e4c0560d02469527":[1,2,12,0,4,0],
-"classdrake_1_1examples_1_1acrobot_1_1_acrobot_w_encoder.html":[1,2,12,0,6]
+"classdrake_1_1examples_1_1acrobot_1_1_acrobot_w_encoder.html":[1,2,12,0,6],
+"classdrake_1_1examples_1_1acrobot_1_1_acrobot_w_encoder.html#a0aebd610c2d28607e24c03859182d05f":[1,2,12,0,6,0]
 };

@@ -83,6 +83,7 @@ var namespacedrake_1_1multibody =
     [ "RigidBody", "classdrake_1_1multibody_1_1_rigid_body.html", "classdrake_1_1multibody_1_1_rigid_body" ],
     [ "RigidBodyFrame", "classdrake_1_1multibody_1_1_rigid_body_frame.html", "classdrake_1_1multibody_1_1_rigid_body_frame" ],
     [ "RotationalInertia", "classdrake_1_1multibody_1_1_rotational_inertia.html", "classdrake_1_1multibody_1_1_rotational_inertia" ],
+    [ "RpyFloatingJoint", "classdrake_1_1multibody_1_1_rpy_floating_joint.html", "classdrake_1_1multibody_1_1_rpy_floating_joint" ],
     [ "ScopedName", "classdrake_1_1multibody_1_1_scoped_name.html", "classdrake_1_1multibody_1_1_scoped_name" ],
     [ "ScrewJoint", "classdrake_1_1multibody_1_1_screw_joint.html", "classdrake_1_1multibody_1_1_screw_joint" ],
     [ "SignedDistanceWithTimeDerivative", "structdrake_1_1multibody_1_1_signed_distance_with_time_derivative.html", "structdrake_1_1multibody_1_1_signed_distance_with_time_derivative" ],

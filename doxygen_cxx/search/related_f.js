@@ -13,5 +13,6 @@ var searchData=
   ['rod2ddaetest_5frigidcontactproblemdataballistic_5ftest',['Rod2DDAETest_RigidContactProblemDataBallistic_Test',['../classdrake_1_1examples_1_1rod2d_1_1_rod2_d.html#a8c5b501e64480721a1acfbe1204fb5de',1,'drake::examples::rod2d::Rod2D']]],
   ['rotaryencoders',['RotaryEncoders',['../classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#af176a3cbce08b1273cadb85c547666e0',1,'drake::systems::sensors::RotaryEncoders']]],
   ['rotationalinertia',['RotationalInertia',['../classdrake_1_1multibody_1_1_rotational_inertia.html#a82936d10a31afe3ae91f3025a39d3224',1,'drake::multibody::RotationalInertia']]],
-  ['rotationmatrix',['RotationMatrix',['../classdrake_1_1math_1_1_rotation_matrix.html#a876971dbbbcca2807eccb07b068df383',1,'drake::math::RotationMatrix']]]
+  ['rotationmatrix',['RotationMatrix',['../classdrake_1_1math_1_1_rotation_matrix.html#a876971dbbbcca2807eccb07b068df383',1,'drake::math::RotationMatrix']]],
+  ['rpyfloatingjoint',['RpyFloatingJoint',['../classdrake_1_1multibody_1_1_rpy_floating_joint.html#a17bb23661e06c5e79b69d7ea93974b12',1,'drake::multibody::RpyFloatingJoint']]]
 ];

@@ -184,16 +184,16 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">MeshcatPoseSliders adds slider bars to the MeshCat control panel for the roll, pitch, yaw, x, y, z control of a pose.  <a href="classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1visualization_1_1_visualization_config.html">VisualizationConfig</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Settings for what MultibodyPlant and SceneGraph should send to Meshcat, Meldis, and/or the legacy <code>drake_visualizer</code> application of days past.  <a href="structdrake_1_1visualization_1_1_visualization_config.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Settings for what MultibodyPlant and SceneGraph should send to Meshcat and/or Meldis.  <a href="structdrake_1_1visualization_1_1_visualization_config.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:acfe50d1cfd6c229aab5986a0a3c97494"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1visualization.html#acfe50d1cfd6c229aab5986a0a3c97494">ApplyVisualizationConfig</a> (const <a class="el" href="structdrake_1_1visualization_1_1_visualization_config.html">VisualizationConfig</a> &amp;config, <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *builder, const <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html">systems::lcm::LcmBuses</a> *lcm_buses=nullptr, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *plant=nullptr, <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *scene_graph=nullptr, std::shared_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">geometry::Meshcat</a> &gt; meshcat=nullptr, <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html">lcm::DrakeLcmInterface</a> *lcm=nullptr)</td></tr>
-<tr class="memdesc:acfe50d1cfd6c229aab5986a0a3c97494"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds LCM visualization publishers to communicate to Meshcat, Meldis, and/or the legacy <code>drake_visualizer</code> application of days past.  <a href="#acfe50d1cfd6c229aab5986a0a3c97494">More...</a><br /></td></tr>
+<tr class="memdesc:acfe50d1cfd6c229aab5986a0a3c97494"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds LCM visualization publishers to communicate to Meshcat and/or Meldis.  <a href="#acfe50d1cfd6c229aab5986a0a3c97494">More...</a><br /></td></tr>
 <tr class="separator:acfe50d1cfd6c229aab5986a0a3c97494"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02befd8c90155c339a042f2af39d4c12"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1visualization.html#a02befd8c90155c339a042f2af39d4c12">AddDefaultVisualization</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *builder, std::shared_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">geometry::Meshcat</a> &gt; meshcat=nullptr)</td></tr>
-<tr class="memdesc:a02befd8c90155c339a042f2af39d4c12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds LCM visualization publishers to communicate to Meshcat, Meldis, and/or the legacy <code>drake_visualizer</code> application of days past, using all of the default configuration settings.  <a href="#a02befd8c90155c339a042f2af39d4c12">More...</a><br /></td></tr>
+<tr class="memdesc:a02befd8c90155c339a042f2af39d4c12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds LCM visualization publishers to communicate to Meshcat and/or Meldis, using all of the default configuration settings.  <a href="#a02befd8c90155c339a042f2af39d4c12">More...</a><br /></td></tr>
 <tr class="separator:a02befd8c90155c339a042f2af39d4c12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -223,7 +223,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Adds LCM visualization publishers to communicate to Meshcat, Meldis, and/or the legacy <code>drake_visualizer</code> application of days past, using all of the default configuration settings. </p>
+<p>Adds LCM visualization publishers to communicate to Meshcat and/or Meldis, using all of the default configuration settings. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">meshcat</td><td>An optional existing Meshcat instance. (If nullptr, then a meshcat instance will be created.)</td></tr>
@@ -237,7 +237,7 @@ Functions</h2></td></tr>
 <dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="namespacedrake_1_1multibody.html#a7e468aa35ef6a84196ac20a13065ca0c" title="Adds a new MultibodyPlant and SceneGraph to the given builder.">AddMultibodyPlant()</a> or <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aac66563a5f3eb9e2041bd4fa8d438827" title="Makes a new MultibodyPlant with discrete update period time_step and adds it to a diagram builder tog...">AddMultibodyPlantSceneGraph()</a> has already been called on the given <code>builder</code>.</dd>
 <dd>
 The MultibodyPlant in the given <code>builder</code> is already finalized, as in <code>plant.Finalize()</code>.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacedrake_1_1visualization.html#acfe50d1cfd6c229aab5986a0a3c97494" title="Adds LCM visualization publishers to communicate to Meshcat, Meldis, and/or the legacy drake_visualiz...">drake::visualization::ApplyVisualizationConfig()</a> </dd>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacedrake_1_1visualization.html#acfe50d1cfd6c229aab5986a0a3c97494" title="Adds LCM visualization publishers to communicate to Meshcat and/or Meldis.">drake::visualization::ApplyVisualizationConfig()</a> </dd>
 <dd>
 <a class="el" href="namespacedrake_1_1multibody.html#a7e468aa35ef6a84196ac20a13065ca0c" title="Adds a new MultibodyPlant and SceneGraph to the given builder.">drake::multibody::AddMultibodyPlant()</a> </dd></dl>
 
@@ -299,7 +299,7 @@ The MultibodyPlant in the given <code>builder</code> is already finalized, as in
       </table>
 </div><div class="memdoc">
 
-<p>Adds LCM visualization publishers to communicate to Meshcat, Meldis, and/or the legacy <code>drake_visualizer</code> application of days past. </p>
+<p>Adds LCM visualization publishers to communicate to Meshcat and/or Meldis. </p>
 <dl>
 <dt>Example</dt>
 <dd><div class="fragment"><div class="line"><span class="comment">// Create a builder.</span></div><div class="line">DiagramBuilder&lt;double&gt; builder;</div><div class="line"></div><div class="line"><span class="comment">// Add the MultibodyPlant and SceneGraph.</span></div><div class="line"><span class="keyword">const</span> MultibodyPlantConfig plant_config = ...;</div><div class="line">MultibodyPlant&lt;double&gt;&amp; plant = <a class="code" href="namespacedrake_1_1multibody.html#a7e468aa35ef6a84196ac20a13065ca0c">AddMultibodyPlant</a>(plant_config, &amp;builder);</div><div class="line"><span class="comment">// ... populate the plant, e.g., with a Parser, ...</span></div><div class="line">plant.Finalize();</div><div class="line"></div><div class="line"><span class="comment">// Add the visualization.</span></div><div class="line"><span class="keyword">const</span> VisualizationConfig vis_config = ...;</div><div class="line"><a class="code" href="namespacedrake_1_1visualization.html#acfe50d1cfd6c229aab5986a0a3c97494">ApplyVisualizationConfig</a>(vis_config, &amp;builder);</div><div class="line"></div><div class="line"><span class="comment">// Simulate.</span></div><div class="line">Simulator&lt;double&gt; simulator(builder.Build());</div><div class="line"><span class="comment">// ... etc ...</span></div></div><!-- fragment --> </dd>
@@ -325,7 +325,7 @@ Either the given <code>builder</code> contains a MultibodyPlant system named "pl
 Either the given <code>builder</code> contains a SceneGraph system named "scene_graph" or else the provided <code>scene_graph</code> is non-null.</dd>
 <dd>
 The MultibodyPlant is already finalized, as in <code>plant.Finalize()</code>.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacedrake_1_1visualization.html#a02befd8c90155c339a042f2af39d4c12" title="Adds LCM visualization publishers to communicate to Meshcat, Meldis, and/or the legacy drake_visualiz...">drake::visualization::AddDefaultVisualization()</a> </dd>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacedrake_1_1visualization.html#a02befd8c90155c339a042f2af39d4c12" title="Adds LCM visualization publishers to communicate to Meshcat and/or Meldis, using all of the default c...">drake::visualization::AddDefaultVisualization()</a> </dd>
 <dd>
 <a class="el" href="namespacedrake_1_1multibody.html#a7e468aa35ef6a84196ac20a13065ca0c" title="Adds a new MultibodyPlant and SceneGraph to the given builder.">drake::multibody::AddMultibodyPlant()</a> </dd>
 <dd>

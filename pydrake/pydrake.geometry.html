@@ -1650,8 +1650,7 @@ getter methods for documentation of parameters.</p>
 <p>A system that publishes LCM messages representing the current state of
 a SceneGraph instance (whose QueryObject-valued output port is
 connected to this system’s input port).</p>
-<p>The messages are compatible with the legacy <code class="docutils literal notranslate"><span class="pre">drake_visualizer</span></code>
-application of days past, or its modern re-implementation <a class="reference external" href="/pydrake/pydrake.visualization.meldis.html">Meldis</a>.</p>
+<p>The messages are compatible with <a class="reference external" href="/pydrake/pydrake.visualization.meldis.html">Meldis</a>.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">query_object&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>DrakeVisualizer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><p>The DrakeVisualizer system broadcasts three kinds of LCM messages:</p>
 <ul class="simple">
 <li><p>a message that defines the non-deformable geometries in the world on the</p></li>
@@ -1821,8 +1820,7 @@ cause a runtime error when attempting to broadcast messages.</p>
 <p>A system that publishes LCM messages representing the current state of
 a SceneGraph instance (whose QueryObject-valued output port is
 connected to this system’s input port).</p>
-<p>The messages are compatible with the legacy <code class="docutils literal notranslate"><span class="pre">drake_visualizer</span></code>
-application of days past, or its modern re-implementation <a class="reference external" href="/pydrake/pydrake.visualization.meldis.html">Meldis</a>.</p>
+<p>The messages are compatible with <a class="reference external" href="/pydrake/pydrake.visualization.meldis.html">Meldis</a>.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">query_object&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>DrakeVisualizer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><p>The DrakeVisualizer system broadcasts three kinds of LCM messages:</p>
 <ul class="simple">
 <li><p>a message that defines the non-deformable geometries in the world on the</p></li>
@@ -9322,6 +9320,27 @@ application will need to logging::set_log_level() to <code class="docutils liter
 <dd></dd></dl>
 
 <dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.RenderEngineVtkParams.cast_shadows">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cast_shadows</span></span><a class="headerlink" href="#pydrake.geometry.RenderEngineVtkParams.cast_shadows" title="Permalink to this definition"></a></dt>
+<dd><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, <em>all</em> lights that are <em>able</em> to cast shadows will do so.</p>
+<p>Several important notes when designing your lighting:</p>
+<ul class="simple">
+<li><p>Point lights do not cast shadows.</p></li>
+<li><p>Directional lights will create a shadow map that spans the whole scene.</p></li>
+</ul>
+<p>If your scene includes a geometry that is significantly larger than
+the locale you’re rendering, this will significantly reduce the
+efficacy of the directional light’s shadows. Consider truncating that
+larger geometry. A common case would be to use a HalfSpace to define
+a ground. A half space has infinite extent, so any reasonable
+approximation would be quite large. Better to use a box targeted to
+where you need it.
+- Transparent objects cast no shadows at all, but they do receive them.</p>
+<p>Currently, there is no way to enable/disable shadows on a per-light
+basis.</p>
+</dd></dl>
+
+<dl class="py property">
 <dt class="sig sig-object py" id="pydrake.geometry.RenderEngineVtkParams.default_clear_color">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">default_clear_color</span></span><a class="headerlink" href="#pydrake.geometry.RenderEngineVtkParams.default_clear_color" title="Permalink to this definition"></a></dt>
 <dd><p>The rgb color to which the color buffer is cleared (each channel in
@@ -9352,6 +9371,42 @@ to combine with the environment map.</p>
 </dd></dl>
 
 <dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.RenderEngineVtkParams.exposure">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">exposure</span></span><a class="headerlink" href="#pydrake.geometry.RenderEngineVtkParams.exposure" title="Permalink to this definition"></a></dt>
+<dd><p>Exposure is an aspect of “tone mapping” (as described in <a class="reference external" href="https://www.kitware.com/pbrj1/">VTK’s
+description of its PBR capabilities</a>). Drake uses the GenericFilmic tone
+mapper and this value maps to its <code class="docutils literal notranslate"><span class="pre">exposure</span></code> property.</p>
+<p>By default, exposure is undefined and <em>no</em> tone mapping is applied to
+the image. Providing any value at all will enable tone mapping and can
+be done so whether your scene uses default Phong illumination model or
+physically-based rendering (e.g., such as when an environment map is
+present or a glTF model has been added).</p>
+<p>This property is analogous to the concept of “exposure” in traditional
+photography. Exposure controls how much the film material is exposed
+to the light in the scene. Too little exposure and the scene is dark
+and muddy. Too much exposure, and the image becomes over saturated. As
+the amount of radiant energy in the scene increases, reducing the
+exposure may be necessary. In essence, exposure serves as a scale
+factor on the radiant energy. When thinking about it as a scale
+factor, it may <em>seem</em> that setting exposure to one would leave the
+image unchanged (with respect to the images that RenderEngineVtk has
+historically produced). This is not the case. As noted above, setting
+any value, including one, enables tone mapping. Without tone mapping
+enabled, there is a direct correlation between radiant energy on the
+surface and the final pixel colors. Tone mapping defines a non-linear
+relationship between illumination levels and pixel color.</p>
+<p>The most common use for the <code class="docutils literal notranslate"><span class="pre">exposure</span></code> parameter is to combine an
+environment map with shadow-casting lights. If the environment map
+contains a great deal of light energy, it may overpower the strength
+of your lights. By reducing the exposure (below one), the shadows
+caused by the lights will become more distinct.</p>
+<p>If you plan on working with shadows and environment maps, best
+practice will be to set exposure to one and enable tone mapping. You
+can increase the value if your image seems too dark, or reduce the
+value if it seems “washed out”.</p>
+</dd></dl>
+
+<dl class="py property">
 <dt class="sig sig-object py" id="pydrake.geometry.RenderEngineVtkParams.lights">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lights</span></span><a class="headerlink" href="#pydrake.geometry.RenderEngineVtkParams.lights" title="Permalink to this definition"></a></dt>
 <dd><p>Lights in the scene. If no lights are defined, a single directional
@@ -9359,6 +9414,22 @@ light, fixed to the camera frame, is used.</p>
 <p>Note: RenderEngineVtk does not have a hard-coded limit on the number
 of lights; but more lights increases rendering cost. Note: the
 attenuation values have no effect on VTK <em>directional</em> lights.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.RenderEngineVtkParams.shadow_map_size">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">shadow_map_size</span></span><a class="headerlink" href="#pydrake.geometry.RenderEngineVtkParams.shadow_map_size" title="Permalink to this definition"></a></dt>
+<dd><p>this
+is a <em>global</em> setting. All shadow casting lights will use a map of the
+same size. Larger map sizes increase GPU memory usage and rendering
+times but improve shadow fidelity (less obvious pixelation).</p>
+<p>See the note on <code class="docutils literal notranslate"><span class="pre">cast_shadows</span></code> for the warning on directional lights
+and shadow maps.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The size of texture map (in pixels) to use for shadow maps. Note</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -10010,10 +10081,9 @@ retrigger its initialization action.</p>
 <p class="admonition-title">Warning</p>
 <p>Due to a bug (see issue <a class="reference external" href="https://github.com/RobotLocomotion/drake/issues/13597">#13597</a>),
 changing the illustration roles or properties in a
-systems::Context will not have any apparent effect in, at least,
-the legacy <code class="docutils literal notranslate"><span class="pre">drake_visualizer</span></code> application of days past. Please
-change the illustration role in the model prior to allocating the
-context.</p>
+systems::Context will not have any apparent effect in certain
+viewers. Please change the illustration role in the model prior to
+allocating the context.</p>
 </div>
 </dd></dl>
 
@@ -10891,10 +10961,9 @@ retrigger its initialization action.</p>
 <p class="admonition-title">Warning</p>
 <p>Due to a bug (see issue <a class="reference external" href="https://github.com/RobotLocomotion/drake/issues/13597">#13597</a>),
 changing the illustration roles or properties in a
-systems::Context will not have any apparent effect in, at least,
-the legacy <code class="docutils literal notranslate"><span class="pre">drake_visualizer</span></code> application of days past. Please
-change the illustration role in the model prior to allocating the
-context.</p>
+systems::Context will not have any apparent effect in certain
+viewers. Please change the illustration role in the model prior to
+allocating the context.</p>
 </div>
 </dd></dl>
 
@@ -11766,10 +11835,9 @@ retrigger its initialization action.</p>
 <p class="admonition-title">Warning</p>
 <p>Due to a bug (see issue <a class="reference external" href="https://github.com/RobotLocomotion/drake/issues/13597">#13597</a>),
 changing the illustration roles or properties in a
-systems::Context will not have any apparent effect in, at least,
-the legacy <code class="docutils literal notranslate"><span class="pre">drake_visualizer</span></code> application of days past. Please
-change the illustration role in the model prior to allocating the
-context.</p>
+systems::Context will not have any apparent effect in certain
+viewers. Please change the illustration role in the model prior to
+allocating the context.</p>
 </div>
 </dd></dl>
 

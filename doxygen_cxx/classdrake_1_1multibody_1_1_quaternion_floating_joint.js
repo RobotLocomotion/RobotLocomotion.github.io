@@ -26,7 +26,6 @@ var classdrake_1_1multibody_1_1_quaternion_floating_joint =
     [ "set_random_quaternion_distribution", "classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a53f16e81e8785500c6ce73e92803237a", null ],
     [ "set_random_quaternion_distribution_to_uniform", "classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a28376decbea1f79f4bf51b0edb30a203", null ],
     [ "set_translational_velocity", "classdrake_1_1multibody_1_1_quaternion_floating_joint.html#aff371642af0c8e5d3502c3bda6e2c02a", null ],
-    [ "SetDefaultPose", "classdrake_1_1multibody_1_1_quaternion_floating_joint.html#ae155f82972080dcf9791c63cb7dcfe1a", null ],
     [ "SetFromRotationMatrix", "classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a2bb3ce50974c9f369e8401d55c035820", null ],
     [ "translational_damping", "classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a5d447b184aa0d500cefbc725641bd10a", null ],
     [ "type_name", "classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a952a908b4c1b68ac11b2e31ef31e9524", null ],

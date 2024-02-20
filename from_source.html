@@ -291,7 +291,7 @@ As an example:</p>
 <span class="nb">mkdir </span>drake-build
 <span class="nb">cd </span>drake-build
 cmake ../drake
-make <span class="nt">-j</span>
+make <span class="nb">install</span>
 </code></pre></div></div>
 
 <p>Note that a concurrency limit passed to <code class="language-plaintext highlighter-rouge">make</code> (e.g., <code class="language-plaintext highlighter-rouge">make -j 2</code>) has almost no
@@ -299,13 +299,13 @@ effect on the Drake build. You might need to add a bazel configuration dotfile
 to your home directory if your build is running out of memory. See the
 <a href="/troubleshooting.html#build-oom">troubleshooting</a> page for details.</p>
 
-<p>Be aware that repeatedly running <code class="language-plaintext highlighter-rouge">make</code> will install the recompiled version of
-Drake <em>on top of</em> the prior version. This will lead to disaster unless the set
-of installed filenames is exactly the same (because old files will be hanging
-around polluting your PYTHONPATH). It is safe if you are merely tweaking a
-source code file and repeatedly installing, without any changes to the build
-system. For any kind of larger change (e.g., upgrading to a newer Drake), we
-strongly advise that you delete the prior tree (within the <code class="language-plaintext highlighter-rouge">install</code>
+<p>Be aware that repeatedly running <code class="language-plaintext highlighter-rouge">make install</code> will install the recompiled
+version of Drake <em>on top of</em> the prior version. This will lead to disaster
+unless the set of installed filenames is exactly the same (because old files
+will be hanging around polluting your PYTHONPATH). It is safe if you are merely
+tweaking a source code file and repeatedly installing, without any changes to
+the build system. For any kind of larger change (e.g., upgrading to a newer
+Drake), we strongly advise that you delete the prior tree (within the <code class="language-plaintext highlighter-rouge">install</code>
 sub-directory) before running <code class="language-plaintext highlighter-rouge">make</code>.</p>
 
 <p>Please note the additional CMake options which affect the Python bindings:</p>
@@ -334,7 +334,7 @@ MOSEK<a href="/tm.html">™</a>, without building tests:</p>
 <p><em>macOS:</em></p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>drake-build
-<span class="nb">export </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="k">${</span><span class="nv">PWD</span><span class="k">}</span>/install/lib/python3.9/site-packages:<span class="k">${</span><span class="nv">PYTHONPATH</span><span class="k">}</span>
+<span class="nb">export </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="k">${</span><span class="nv">PWD</span><span class="k">}</span>/install/lib/python3.11/site-packages:<span class="k">${</span><span class="nv">PYTHONPATH</span><span class="k">}</span>
 </code></pre></div></div>
 
       </article>

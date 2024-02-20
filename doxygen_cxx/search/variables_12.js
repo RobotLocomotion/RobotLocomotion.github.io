@@ -16,6 +16,7 @@ var searchData=
   ['self_5fpadding',['self_padding',['../structdrake_1_1planning_1_1test_1_1_collision_checker_construction_params.html#a4b33e20bd1e6ff4f9068837d5cfc8837',1,'drake::planning::test::CollisionCheckerConstructionParams']]],
   ['setup_5ftime',['setup_time',['../structdrake_1_1solvers_1_1_osqp_solver_details.html#ab5c39c91d4d833dd5319e70ee4c697bb',1,'drake::solvers::OsqpSolverDetails']]],
   ['sha256',['sha256',['../structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html#adc6a20e07dcdd4a181acf7bfac2697df',1,'drake::multibody::PackageMap::RemoteParams']]],
+  ['shadow_5fmap_5fsize',['shadow_map_size',['../structdrake_1_1geometry_1_1_render_engine_vtk_params.html#a0ed870ed1bf654d8bdce7f9a6e3af3a4',1,'drake::geometry::RenderEngineVtkParams']]],
   ['show_5fhydroelastic',['show_hydroelastic',['../structdrake_1_1geometry_1_1_drake_visualizer_params.html#ae7f364184aa2780e090858d0b3cfda14',1,'drake::geometry::DrakeVisualizerParams::show_hydroelastic()'],['../structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#ae7f364184aa2780e090858d0b3cfda14',1,'drake::geometry::MeshcatVisualizerParams::show_hydroelastic()']]],
   ['show_5frgb',['show_rgb',['../structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a9dc0967f9d639aaf80a08151df0e96f3',1,'drake::systems::sensors::CameraConfig']]],
   ['show_5fstats_5fplot',['show_stats_plot',['../structdrake_1_1geometry_1_1_meshcat_params.html#a89a7b03f2e5b34b3ca7fa0b92d282def',1,'drake::geometry::MeshcatParams']]],

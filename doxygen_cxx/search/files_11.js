@@ -54,6 +54,7 @@ var searchData=
   ['rotational_5finertia_2eh',['rotational_inertia.h',['../rotational__inertia_8h.html',1,'']]],
   ['rpc_5fpipe_5ftemp_5fdirectory_2eh',['rpc_pipe_temp_directory.h',['../rpc__pipe__temp__directory_8h.html',1,'']]],
   ['rpy_5fball_5fmobilizer_2eh',['rpy_ball_mobilizer.h',['../rpy__ball__mobilizer_8h.html',1,'']]],
+  ['rpy_5ffloating_5fjoint_2eh',['rpy_floating_joint.h',['../rpy__floating__joint_8h.html',1,'']]],
   ['rpy_5ffloating_5fmobilizer_2eh',['rpy_floating_mobilizer.h',['../rpy__floating__mobilizer_8h.html',1,'']]],
   ['runge_5fkutta2_5fintegrator_2eh',['runge_kutta2_integrator.h',['../runge__kutta2__integrator_8h.html',1,'']]],
   ['runge_5fkutta3_5fintegrator_2eh',['runge_kutta3_integrator.h',['../runge__kutta3__integrator_8h.html',1,'']]],

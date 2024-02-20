@@ -58,6 +58,7 @@ var searchData=
   ['rotationmatrix',['RotationMatrix',['../classdrake_1_1math_1_1_rotation_matrix.html',1,'drake::math']]],
   ['rotationmatrix_3c_20double_20_3e',['RotationMatrix&lt; double &gt;',['../classdrake_1_1math_1_1_rotation_matrix.html',1,'drake::math']]],
   ['rpy',['Rpy',['../structdrake_1_1schema_1_1_rotation_1_1_rpy.html',1,'drake::schema::Rotation']]],
+  ['rpyfloatingjoint',['RpyFloatingJoint',['../classdrake_1_1multibody_1_1_rpy_floating_joint.html',1,'drake::multibody']]],
   ['rungekutta2integrator',['RungeKutta2Integrator',['../classdrake_1_1systems_1_1_runge_kutta2_integrator.html',1,'drake::systems']]],
   ['rungekutta3integrator',['RungeKutta3Integrator',['../classdrake_1_1systems_1_1_runge_kutta3_integrator.html',1,'drake::systems']]],
   ['rungekutta5integrator',['RungeKutta5Integrator',['../classdrake_1_1systems_1_1_runge_kutta5_integrator.html',1,'drake::systems']]]

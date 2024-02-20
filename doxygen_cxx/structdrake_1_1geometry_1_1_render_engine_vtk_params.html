@@ -192,6 +192,15 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ad84a8836b437a560f61b53e899a80fc4"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="structdrake_1_1geometry_1_1_environment_map.html">EnvironmentMap</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_vtk_params.html#ad84a8836b437a560f61b53e899a80fc4">environment_map</a></td></tr>
 <tr class="memdesc:ad84a8836b437a560f61b53e899a80fc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">An optional environment map.  <a href="#ad84a8836b437a560f61b53e899a80fc4">More...</a><br /></td></tr>
 <tr class="separator:ad84a8836b437a560f61b53e899a80fc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f46a3f6bca32d6f3fea72c1ab7f9c65"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_vtk_params.html#a8f46a3f6bca32d6f3fea72c1ab7f9c65">exposure</a> {}</td></tr>
+<tr class="memdesc:a8f46a3f6bca32d6f3fea72c1ab7f9c65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exposure is an aspect of "tone mapping" (as described in <a href="https://www.kitware.com/pbrj1/">VTK's description of its PBR capabilities</a>).  <a href="#a8f46a3f6bca32d6f3fea72c1ab7f9c65">More...</a><br /></td></tr>
+<tr class="separator:a8f46a3f6bca32d6f3fea72c1ab7f9c65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a606a9df3866a52308dad9851d88e2488"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_vtk_params.html#a606a9df3866a52308dad9851d88e2488">cast_shadows</a> {false}</td></tr>
+<tr class="memdesc:a606a9df3866a52308dad9851d88e2488"><td class="mdescLeft">&#160;</td><td class="mdescRight">If <code>true</code>, <em>all</em> lights that are <em>able</em> to cast shadows will do so.  <a href="#a606a9df3866a52308dad9851d88e2488">More...</a><br /></td></tr>
+<tr class="separator:a606a9df3866a52308dad9851d88e2488"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ed870ed1bf654d8bdce7f9a6e3af3a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_vtk_params.html#a0ed870ed1bf654d8bdce7f9a6e3af3a4">shadow_map_size</a> {256}</td></tr>
+<tr class="memdesc:a0ed870ed1bf654d8bdce7f9a6e3af3a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The size of texture map (in pixels) to use for shadow maps.  <a href="#a0ed870ed1bf654d8bdce7f9a6e3af3a4">More...</a><br /></td></tr>
+<tr class="separator:a0ed870ed1bf654d8bdce7f9a6e3af3a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a8e8824802dedfbc36776227f7482b6bc"></a>
@@ -216,6 +225,33 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a606a9df3866a52308dad9851d88e2488"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a606a9df3866a52308dad9851d88e2488">&#9670;&nbsp;</a></span>cast_shadows</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cast_shadows {false}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If <code>true</code>, <em>all</em> lights that are <em>able</em> to cast shadows will do so. </p>
+<p>Several important notes when designing your lighting: </p><pre class="fragment">- Point lights do not cast shadows.
+- Directional lights will create a shadow map that spans the whole scene.
+  If your scene includes a geometry that is significantly larger than
+  the locale you're rendering, this will significantly reduce the
+  efficacy of the directional light's shadows. Consider truncating that
+  larger geometry. A common case would be to use a HalfSpace to define
+  a ground. A half space has infinite extent, so any reasonable
+  approximation would be quite large. Better to use a box targeted to
+  where you need it.
+- Transparent objects cast no shadows at all, but they do receive them.
+</pre><p>Currently, there is no way to enable/disable shadows on a per-light basis. </p>
+
+</div>
+</div>
 <a id="a21e03ddd563337ed39c36bc8f4463d8a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a21e03ddd563337ed39c36bc8f4463d8a">&#9670;&nbsp;</a></span>default_clear_color</h2>
 
@@ -268,6 +304,27 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a8f46a3f6bca32d6f3fea72c1ab7f9c65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f46a3f6bca32d6f3fea72c1ab7f9c65">&#9670;&nbsp;</a></span>exposure</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;<a class="el" href="classdouble.html">double</a>&gt; exposure {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Exposure is an aspect of "tone mapping" (as described in <a href="https://www.kitware.com/pbrj1/">VTK's description of its PBR capabilities</a>). </p>
+<p>Drake uses the GenericFilmic tone mapper and this value maps to its <code>exposure</code> property.</p>
+<p>By default, exposure is undefined and <em>no</em> tone mapping is applied to the image. Providing any value at all will enable tone mapping and can be done so whether your scene uses default Phong illumination model or physically-based rendering (e.g., such as when an environment map is present or a glTF model has been added).</p>
+<p>This property is analogous to the concept of "exposure" in traditional photography. Exposure controls how much the film material is exposed to the light in the scene. Too little exposure and the scene is dark and muddy. Too much exposure, and the image becomes over saturated. As the amount of radiant energy in the scene increases, reducing the exposure may be necessary. In essence, exposure serves as a scale factor on the radiant energy. When thinking about it as a scale factor, it may <em>seem</em> that setting exposure to one would leave the image unchanged (with respect to the images that RenderEngineVtk has historically produced). This is not the case. As noted above, setting any value, including one, enables tone mapping. Without tone mapping enabled, there is a direct correlation between radiant energy on the surface and the final pixel colors. Tone mapping defines a non-linear relationship between illumination levels and pixel color.</p>
+<p>The most common use for the <code>exposure</code> parameter is to combine an environment map with shadow-casting lights. If the environment map contains a great deal of light energy, it may overpower the strength of your lights. By reducing the exposure (below one), the shadows caused by the lights will become more distinct.</p>
+<p>If you plan on working with shadows and environment maps, best practice will be to set exposure to one and enable tone mapping. You can increase the value if your image seems too dark, or reduce the value if it seems "washed out". </p>
+
+</div>
+</div>
 <a id="a7c649edac2bf38690cac11ff4730c9d5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7c649edac2bf38690cac11ff4730c9d5">&#9670;&nbsp;</a></span>lights</h2>
 
@@ -283,6 +340,24 @@ Public Attributes</h2></td></tr>
 <p>Lights in the scene. </p>
 <p>If no lights are defined, a single directional light, fixed to the camera frame, is used.</p>
 <p>Note: RenderEngineVtk does not have a hard-coded limit on the number of lights; but more lights increases rendering cost. Note: the attenuation values have no effect on VTK <em>directional</em> lights. </p>
+
+</div>
+</div>
+<a id="a0ed870ed1bf654d8bdce7f9a6e3af3a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ed870ed1bf654d8bdce7f9a6e3af3a4">&#9670;&nbsp;</a></span>shadow_map_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> shadow_map_size {256}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The size of texture map (in pixels) to use for shadow maps. </p>
+<p>Note: this is a <em>global</em> setting. All shadow casting lights will use a map of the same size. Larger map sizes increase GPU memory usage and rendering times but improve shadow fidelity (less obvious pixelation).</p>
+<p>See the note on <code>cast_shadows</code> for the warning on directional lights and shadow maps. </p>
 
 </div>
 </div>
