@@ -1,5 +1,16 @@
 var NAVTREEINDEX56 =
 {
+"standard__operations_8h.html#a24b8ca4f2a850dfa8eea7f408cf6a9de":[4,0,0,1,0,0,2,68],
+"standard__operations_8h.html#a253ea74fad9476e4de67b656b97ef1cb":[4,0,0,1,0,0,2,35],
+"standard__operations_8h.html#a2646ff62a13c4b182f4523ade302cddb":[4,0,0,1,0,0,2,39],
+"standard__operations_8h.html#a31d584bed99ab67ec074687a94eb7c00":[4,0,0,1,0,0,2,77],
+"standard__operations_8h.html#a3b2e82538ea517c32aaafb58eccafba2":[4,0,0,1,0,0,2,3],
+"standard__operations_8h.html#a3e188bc8317b8d45912f1d59438edb91":[4,0,0,1,0,0,2,22],
+"standard__operations_8h.html#a432d88eed310c6be7478cdfa9d4b8eec":[4,0,0,1,0,0,2,65],
+"standard__operations_8h.html#a45d35259b01712e9c24f6f04c1f00408":[4,0,0,1,0,0,2,76],
+"standard__operations_8h.html#a4c3215480bf93e3e7304d1b5696083c6":[4,0,0,1,0,0,2,62],
+"standard__operations_8h.html#a4fac4d6f819713b6657e192c769ed1e8":[4,0,0,1,0,0,2,26],
+"standard__operations_8h.html#a552384f558ae479545e941ea5615c4bc":[4,0,0,1,0,0,2,56],
 "standard__operations_8h.html#a5ebd6e97a3fc4a17025ca2ebbc0905dc":[4,0,0,1,0,0,2,8],
 "standard__operations_8h.html#a5ff620cf691faad6e5f0d1848e037587":[4,0,0,1,0,0,2,28],
 "standard__operations_8h.html#a6162387fd41f2668fe684c43d4a3dd36":[4,0,0,1,0,0,2,7],
@@ -238,16 +249,5 @@ var NAVTREEINDEX56 =
 "structdrake_1_1geometry_1_1_signed_distance_to_point.html#aeb3c413ef5458b371a43891454665d9d":[3,0,0,4,55,3],
 "structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html":[3,0,0,4,1,8],
 "structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a03924fec23a67a542cf129700a52949a":[3,0,0,4,1,8,6],
-"structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a0d3adebc3343af4468bf27a14bba93ae":[3,0,0,4,1,8,13],
-"structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a1762c600d095ebf4fc9c1dc730d2f186":[3,0,0,4,1,8,11],
-"structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a17e04d21a0a53ce5c7047c2c4bd796e9":[3,0,0,4,1,8,8],
-"structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a2027b3136775228e993fb7e57ee68c5d":[3,0,0,4,1,8,12],
-"structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a6963913f739b2038ab3906727e36da71":[3,0,0,4,1,8,5],
-"structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a7e2b518ae9bdf51607ac6f17ceac7394":[3,0,0,4,1,8,1],
-"structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a829d61f108407c1c5546e170f2c9d48b":[3,0,0,4,1,8,4],
-"structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a89102b2fc6494a6f69641bc94e8f8a85":[3,0,0,4,1,8,0],
-"structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a9871c5b4de89d2980eecc87ceb65e858":[3,0,0,4,1,8,2],
-"structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a9bae89849c60ffcef775b55b000bd872":[3,0,0,4,1,8,3],
-"structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a9bcd2beab49aa2bbcc29485e8c15774b":[3,0,0,4,1,8,7],
-"structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#ad2ac218243c411d0d1eaa6d52a91a52d":[3,0,0,4,1,8,9]
+"structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a0d3adebc3343af4468bf27a14bba93ae":[3,0,0,4,1,8,13]
 };

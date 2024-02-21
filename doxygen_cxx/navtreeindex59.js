@@ -1,5 +1,16 @@
 var NAVTREEINDEX59 =
 {
+"structdrake_1_1planning_1_1_collision_checker_params.html#a2c29aca77709a64d537303e01282e71f":[1,4,2,2,3,5],
+"structdrake_1_1planning_1_1_collision_checker_params.html#a35dcc56f9ad09e0a13d0bbb111554f32":[1,4,2,2,3,0],
+"structdrake_1_1planning_1_1_collision_checker_params.html#a3a158076de3363e9927786d4732f3197":[1,4,2,2,3,7],
+"structdrake_1_1planning_1_1_collision_checker_params.html#a669492214e210900f93b70a27be26884":[1,4,2,2,3,2],
+"structdrake_1_1planning_1_1_collision_checker_params.html#a97e6971c2938a484343028417a4614c9":[1,4,2,2,3,4],
+"structdrake_1_1planning_1_1_collision_checker_params.html#a9e6dd7347da1885477cd5b895b47ce9a":[1,4,2,2,3,6],
+"structdrake_1_1planning_1_1_collision_checker_params.html#aba8ff17381c2ecbb2add791b7c97c226":[1,4,2,2,3,3],
+"structdrake_1_1planning_1_1_collision_checker_params.html#afec931281f813128526846e5ee611e03":[1,4,2,2,3,1],
+"structdrake_1_1planning_1_1test_1_1_collision_checker_construction_params.html":[3,0,0,10,1,1],
+"structdrake_1_1planning_1_1test_1_1_collision_checker_construction_params.html#a34a4def1d160fae5fda122ba0a5254ea":[3,0,0,10,1,1,0],
+"structdrake_1_1planning_1_1test_1_1_collision_checker_construction_params.html#a4b33e20bd1e6ff4f9068837d5cfc8837":[3,0,0,10,1,1,2],
 "structdrake_1_1planning_1_1test_1_1_collision_checker_construction_params.html#ad97eac1aabdf303df62851accf84d131":[3,0,0,10,1,1,1],
 "structdrake_1_1planning_1_1test_1_1_collision_checker_test_configuration_data.html":[3,0,0,10,1,2],
 "structdrake_1_1planning_1_1test_1_1_collision_checker_test_configuration_data.html#a34d9f563a87f3b1bed1fabd4cae935ed":[3,0,0,10,1,2,6],
@@ -238,16 +249,5 @@ var NAVTREEINDEX59 =
 "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a07223f916e770d3b62d2a1d1ca40ba23":[3,0,0,15,2,0,7],
 "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a0e3cbe33d19f96def02ebd180f9267a0":[3,0,0,15,2,0,5],
 "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a2f676e6424410f6f9742e3f7177cb90c":[3,0,0,15,2,0,2],
-"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a346a6402fcd260661880427be3759741":[3,0,0,15,2,0,1],
-"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#ab05ba1c548fa1a71138dcdac91ddeaf6":[3,0,0,15,2,0,3],
-"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#ab63f7cdb7cd14bc9cc48c4b9d4a629a5":[3,0,0,15,2,0,6],
-"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#ad7e0abe77b84e16a4224c12492730d30":[3,0,0,15,2,0,4],
-"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html":[3,0,0,15,2,0,0],
-"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html#a1fbdf8974a433578feee716bd2074060":[3,0,0,15,2,0,0,1],
-"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html#a2fdb1c59d7e0362407f9784fff99c6ef":[3,0,0,15,2,0,0,0],
-"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html#a868930cd95abeb4a0a903df323444fd9":[3,0,0,15,2,0,0,2],
-"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html#ae2bfa68803b302dc2c985a150d7f9205":[3,0,0,15,2,0,0,3],
-"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html":[3,0,0,15,2,1],
-"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a0e3cbe33d19f96def02ebd180f9267a0":[3,0,0,15,2,1,1],
-"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a10106668012c2b809949d73d6e72f88f":[3,0,0,15,2,1,3]
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a346a6402fcd260661880427be3759741":[3,0,0,15,2,0,1]
 };
