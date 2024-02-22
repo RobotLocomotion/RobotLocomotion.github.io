@@ -2035,7 +2035,7 @@ GetSubsystemByName(“scene_graph”).)</p>
 <span class="n">items</span><span class="p">.</span><span class="n">scene_graph</span><span class="p">.</span><span class="n">DoBar</span><span class="p">(...);</span><span class="w"></span>
 </pre></div>
 </div>
-</details><p>or taking advantage of C++17’s structured binding</p>
+</details><p>or taking advantage of C++’s structured binding:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="p">[</span><span class="n">plant</span><span class="p">,</span><span class="w"> </span><span class="n">scene_graph</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AddMultibodyPlantSceneGraph</span><span class="p">(</span><span class="o">&amp;</span><span class="n">builder</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">);</span><span class="w"></span>
 <span class="p">...</span><span class="w"></span>
 <span class="n">plant</span><span class="p">.</span><span class="n">DoFoo</span><span class="p">(...);</span><span class="w"></span>
@@ -5769,6 +5769,15 @@ significant for very large systems.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.MakeActuationMatrixPseudoinverse">
+<span class="sig-name descname"><span class="pre">MakeActuationMatrixPseudoinverse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">scipy.sparse.csc_matrix</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.MakeActuationMatrixPseudoinverse" title="Permalink to this definition"></a></dt>
+<dd><p>Creates the pseudoinverse of the actuation matrix B directly (without
+requiring an explicit inverse calculation). See MakeActuationMatrix().</p>
+<p>Notably, when B is full row rank (the system is fully actuated), then
+the pseudoinverse is a true inverse.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.MakeActuatorSelectorMatrix">
 <span class="sig-name descname"><span class="pre">MakeActuatorSelectorMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.MakeActuatorSelectorMatrix" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
@@ -7090,7 +7099,7 @@ GetSubsystemByName(“scene_graph”).)</p>
 <span class="n">items</span><span class="p">.</span><span class="n">scene_graph</span><span class="p">.</span><span class="n">DoBar</span><span class="p">(...);</span><span class="w"></span>
 </pre></div>
 </div>
-</details><p>or taking advantage of C++17’s structured binding</p>
+</details><p>or taking advantage of C++’s structured binding:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="p">[</span><span class="n">plant</span><span class="p">,</span><span class="w"> </span><span class="n">scene_graph</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AddMultibodyPlantSceneGraph</span><span class="p">(</span><span class="o">&amp;</span><span class="n">builder</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">);</span><span class="w"></span>
 <span class="p">...</span><span class="w"></span>
 <span class="n">plant</span><span class="p">.</span><span class="n">DoFoo</span><span class="p">(...);</span><span class="w"></span>
@@ -10819,6 +10828,15 @@ significant for very large systems.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.MakeActuationMatrixPseudoinverse">
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].MakeActuationMatrixPseudoinverse"></span><span class="sig-name descname"><span class="pre">MakeActuationMatrixPseudoinverse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">scipy.sparse.csc_matrix</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.MakeActuationMatrixPseudoinverse" title="Permalink to this definition"></a></dt>
+<dd><p>Creates the pseudoinverse of the actuation matrix B directly (without
+requiring an explicit inverse calculation). See MakeActuationMatrix().</p>
+<p>Notably, when B is full row rank (the system is fully actuated), then
+the pseudoinverse is a true inverse.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.MakeActuatorSelectorMatrix">
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].MakeActuatorSelectorMatrix"></span><span class="sig-name descname"><span class="pre">MakeActuatorSelectorMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.MakeActuatorSelectorMatrix" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
@@ -12096,7 +12114,7 @@ GetSubsystemByName(“scene_graph”).)</p>
 <span class="n">items</span><span class="p">.</span><span class="n">scene_graph</span><span class="p">.</span><span class="n">DoBar</span><span class="p">(...);</span><span class="w"></span>
 </pre></div>
 </div>
-</details><p>or taking advantage of C++17’s structured binding</p>
+</details><p>or taking advantage of C++’s structured binding:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="p">[</span><span class="n">plant</span><span class="p">,</span><span class="w"> </span><span class="n">scene_graph</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AddMultibodyPlantSceneGraph</span><span class="p">(</span><span class="o">&amp;</span><span class="n">builder</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">);</span><span class="w"></span>
 <span class="p">...</span><span class="w"></span>
 <span class="n">plant</span><span class="p">.</span><span class="n">DoFoo</span><span class="p">(...);</span><span class="w"></span>
@@ -15822,6 +15840,15 @@ complexity, making a full B matrix has <code class="docutils literal notranslate
 most applications this cost can be neglected but it could become
 significant for very large systems.</p>
 </div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.MakeActuationMatrixPseudoinverse">
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].MakeActuationMatrixPseudoinverse"></span><span class="sig-name descname"><span class="pre">MakeActuationMatrixPseudoinverse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">scipy.sparse.csc_matrix</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.MakeActuationMatrixPseudoinverse" title="Permalink to this definition"></a></dt>
+<dd><p>Creates the pseudoinverse of the actuation matrix B directly (without
+requiring an explicit inverse calculation). See MakeActuationMatrix().</p>
+<p>Notably, when B is full row rank (the system is fully actuated), then
+the pseudoinverse is a true inverse.</p>
 </dd></dl>
 
 <dl class="py method">

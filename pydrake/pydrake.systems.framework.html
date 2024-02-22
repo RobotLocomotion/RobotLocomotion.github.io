@@ -10820,7 +10820,7 @@ variables would have if these periodic events were triggered.</p>
 <p>Note that this function <em>does not</em> change the value of the discrete
 variables in the supplied Context. However, you can apply the result
 to the Context like this:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="n">DiscreteValue</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">updated</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="n">DiscreteValues</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">updated</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
 <span class="n">system</span><span class="p">.</span><span class="n">EvalUniquePeriodicDiscreteUpdate</span><span class="p">(</span><span class="n">context</span><span class="p">);</span><span class="w"></span>
 <span class="n">context</span><span class="p">.</span><span class="n">SetDiscreteState</span><span class="p">(</span><span class="n">updated</span><span class="p">);</span><span class="w"></span>
 </pre></div>
@@ -11183,15 +11183,17 @@ to the given <code class="docutils literal notranslate"><span class="pre">output
 exclusively by a difference equation on a single discrete state group
 and with a unique periodic update (having zero offset). E.g., it is
 amenable to analysis of the form:</p>
-<p>x[n+1] = f(x[n], u[n])</p>
-<p>Note that we do NOT consider the number of input ports here, because
-in practice many systems of interest (e.g. MultibodyPlant) have input
-ports that are safely treated as constant during the analysis.
-Consider using get_input_port_selection() to choose one.</p>
+<p>x[n+1] = f(n, x[n], u[n], w[n]; p)</p>
+<p>where t is time, x is (discrete) state, u is a vector input, w is
+random (disturbance) input, and p are parameters. Note that we do NOT
+consider the number of input ports here, because in practice many
+systems of interest (e.g. MultibodyPlant) have input ports that are
+safely treated as constant during the analysis. Consider using
+get_input_port_selection() to choose one.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>In determining whether this system is governed as above, we do not
-consider unrestricted updates or any update events that have
+consider unrestricted updates nor any update events that have
 trigger types other than periodic. See
 GetUniquePeriodicDiscreteUpdateAttribute() for more information.</p>
 </div>
@@ -11213,6 +11215,24 @@ system), then <code class="docutils literal notranslate"><span class="pre">time_
 </div>
 <p>Note: The above is for the C++ documentation. For Python, use
 <cite>is_diff_eq, period = IsDifferenceEquationSystem()</cite></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.System.IsDifferentialEquationSystem">
+<span class="sig-name descname"><span class="pre">IsDifferentialEquationSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System" title="pydrake.systems.framework.System"><span class="pre">pydrake.systems.framework.System</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.systems.framework.System.IsDifferentialEquationSystem" title="Permalink to this definition"></a></dt>
+<dd><p>Returns true iff the state dynamics of this system are governed
+exclusively by a differential equation. E.g., it is amenable to
+analysis of the form:</p>
+<p>ẋ = f(t, x(t), u(t), w(t); p),</p>
+<p>where t is time, x is (continuous) state, u is a vector input, w is
+random (disturbance) input, and p are parameters. This requires that
+it has no discrete nor abstract states, and no abstract input ports.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>In determining whether this system is governed as above, we do not
+consider unrestricted updates which could potentially update the
+state.</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -11937,7 +11957,7 @@ variables would have if these periodic events were triggered.</p>
 <p>Note that this function <em>does not</em> change the value of the discrete
 variables in the supplied Context. However, you can apply the result
 to the Context like this:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="n">DiscreteValue</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">updated</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="n">DiscreteValues</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">updated</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
 <span class="n">system</span><span class="p">.</span><span class="n">EvalUniquePeriodicDiscreteUpdate</span><span class="p">(</span><span class="n">context</span><span class="p">);</span><span class="w"></span>
 <span class="n">context</span><span class="p">.</span><span class="n">SetDiscreteState</span><span class="p">(</span><span class="n">updated</span><span class="p">);</span><span class="w"></span>
 </pre></div>
@@ -12300,15 +12320,17 @@ to the given <code class="docutils literal notranslate"><span class="pre">output
 exclusively by a difference equation on a single discrete state group
 and with a unique periodic update (having zero offset). E.g., it is
 amenable to analysis of the form:</p>
-<p>x[n+1] = f(x[n], u[n])</p>
-<p>Note that we do NOT consider the number of input ports here, because
-in practice many systems of interest (e.g. MultibodyPlant) have input
-ports that are safely treated as constant during the analysis.
-Consider using get_input_port_selection() to choose one.</p>
+<p>x[n+1] = f(n, x[n], u[n], w[n]; p)</p>
+<p>where t is time, x is (discrete) state, u is a vector input, w is
+random (disturbance) input, and p are parameters. Note that we do NOT
+consider the number of input ports here, because in practice many
+systems of interest (e.g. MultibodyPlant) have input ports that are
+safely treated as constant during the analysis. Consider using
+get_input_port_selection() to choose one.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>In determining whether this system is governed as above, we do not
-consider unrestricted updates or any update events that have
+consider unrestricted updates nor any update events that have
 trigger types other than periodic. See
 GetUniquePeriodicDiscreteUpdateAttribute() for more information.</p>
 </div>
@@ -12330,6 +12352,24 @@ system), then <code class="docutils literal notranslate"><span class="pre">time_
 </div>
 <p>Note: The above is for the C++ documentation. For Python, use
 <cite>is_diff_eq, period = IsDifferenceEquationSystem()</cite></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.System_-AutoDiffXd-.IsDifferentialEquationSystem">
+<span id="pydrake.systems.framework.System_[AutoDiffXd].IsDifferentialEquationSystem"></span><span class="sig-name descname"><span class="pre">IsDifferentialEquationSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.systems.framework.System_-AutoDiffXd-.IsDifferentialEquationSystem" title="Permalink to this definition"></a></dt>
+<dd><p>Returns true iff the state dynamics of this system are governed
+exclusively by a differential equation. E.g., it is amenable to
+analysis of the form:</p>
+<p>ẋ = f(t, x(t), u(t), w(t); p),</p>
+<p>where t is time, x is (continuous) state, u is a vector input, w is
+random (disturbance) input, and p are parameters. This requires that
+it has no discrete nor abstract states, and no abstract input ports.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>In determining whether this system is governed as above, we do not
+consider unrestricted updates which could potentially update the
+state.</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -13048,7 +13088,7 @@ variables would have if these periodic events were triggered.</p>
 <p>Note that this function <em>does not</em> change the value of the discrete
 variables in the supplied Context. However, you can apply the result
 to the Context like this:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="n">DiscreteValue</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">updated</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="n">DiscreteValues</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">updated</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
 <span class="n">system</span><span class="p">.</span><span class="n">EvalUniquePeriodicDiscreteUpdate</span><span class="p">(</span><span class="n">context</span><span class="p">);</span><span class="w"></span>
 <span class="n">context</span><span class="p">.</span><span class="n">SetDiscreteState</span><span class="p">(</span><span class="n">updated</span><span class="p">);</span><span class="w"></span>
 </pre></div>
@@ -13411,15 +13451,17 @@ to the given <code class="docutils literal notranslate"><span class="pre">output
 exclusively by a difference equation on a single discrete state group
 and with a unique periodic update (having zero offset). E.g., it is
 amenable to analysis of the form:</p>
-<p>x[n+1] = f(x[n], u[n])</p>
-<p>Note that we do NOT consider the number of input ports here, because
-in practice many systems of interest (e.g. MultibodyPlant) have input
-ports that are safely treated as constant during the analysis.
-Consider using get_input_port_selection() to choose one.</p>
+<p>x[n+1] = f(n, x[n], u[n], w[n]; p)</p>
+<p>where t is time, x is (discrete) state, u is a vector input, w is
+random (disturbance) input, and p are parameters. Note that we do NOT
+consider the number of input ports here, because in practice many
+systems of interest (e.g. MultibodyPlant) have input ports that are
+safely treated as constant during the analysis. Consider using
+get_input_port_selection() to choose one.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>In determining whether this system is governed as above, we do not
-consider unrestricted updates or any update events that have
+consider unrestricted updates nor any update events that have
 trigger types other than periodic. See
 GetUniquePeriodicDiscreteUpdateAttribute() for more information.</p>
 </div>
@@ -13441,6 +13483,24 @@ system), then <code class="docutils literal notranslate"><span class="pre">time_
 </div>
 <p>Note: The above is for the C++ documentation. For Python, use
 <cite>is_diff_eq, period = IsDifferenceEquationSystem()</cite></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.System_-Expression-.IsDifferentialEquationSystem">
+<span id="pydrake.systems.framework.System_[Expression].IsDifferentialEquationSystem"></span><span class="sig-name descname"><span class="pre">IsDifferentialEquationSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.systems.framework.System_-Expression-.IsDifferentialEquationSystem" title="Permalink to this definition"></a></dt>
+<dd><p>Returns true iff the state dynamics of this system are governed
+exclusively by a differential equation. E.g., it is amenable to
+analysis of the form:</p>
+<p>ẋ = f(t, x(t), u(t), w(t); p),</p>
+<p>where t is time, x is (continuous) state, u is a vector input, w is
+random (disturbance) input, and p are parameters. This requires that
+it has no discrete nor abstract states, and no abstract input ports.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>In determining whether this system is governed as above, we do not
+consider unrestricted updates which could potentially update the
+state.</p>
+</div>
 </dd></dl>
 
 <dl class="py method">

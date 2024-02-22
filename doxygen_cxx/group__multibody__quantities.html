@@ -171,9 +171,13 @@ $(document).ready(function(){initNavTree('group__multibody__quantities.html','')
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Quantity  </th><th class="markdownTableHeadCenter">Symbol  </th><th class="markdownTableHeadCenter">Typeset  </th><th class="markdownTableHeadCenter">Monogram  </th><th class="markdownTableHeadNone">Meaningᵃ   </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Rotation matrix  </td><td class="markdownTableBodyCenter">R  </td><td class="markdownTableBodyCenter">\(^BR^C\)  </td><td class="markdownTableBodyCenter"><code>R_BC</code>  </td><td class="markdownTableBodyNone">Frame C's orientation in frame B   </td></tr>
+<td class="markdownTableBodyNone">Generic vector v  </td><td class="markdownTableBodyCenter">v  </td><td class="markdownTableBodyCenter">\([v]_E\)  </td><td class="markdownTableBodyCenter"><code>v_E</code>  </td><td class="markdownTableBodyNone">Vector v expressed in frame E.   </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Position vector  </td><td class="markdownTableBodyCenter">p  </td><td class="markdownTableBodyCenter">\(^Pp^Q\)  </td><td class="markdownTableBodyCenter"><code>p_PQ</code>  </td><td class="markdownTableBodyNone">Position vector from point P to point Q   </td></tr>
+<td class="markdownTableBodyNone">Rotation matrix  </td><td class="markdownTableBodyCenter">R  </td><td class="markdownTableBodyCenter">\(^BR^C\)  </td><td class="markdownTableBodyCenter"><code>R_BC</code>  </td><td class="markdownTableBodyNone">Frame C's orientation in frame B   </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Position vector  </td><td class="markdownTableBodyCenter">p  </td><td class="markdownTableBodyCenter">\(^Bp^C\)  </td><td class="markdownTableBodyCenter"><code>p_BC</code>  </td><td class="markdownTableBodyNone">Position vector from Bo (frame B's origin) to Co (frame C's origin), expressed in frame B (implied).   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Position vector  </td><td class="markdownTableBodyCenter">p  </td><td class="markdownTableBodyCenter">\([^Pp^Q]_E\)  </td><td class="markdownTableBodyCenter"><code>p_PQ_E</code>  </td><td class="markdownTableBodyNone">Position vector from point P to point Q, expressed in frame E.   </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Transform/pose  </td><td class="markdownTableBodyCenter">X  </td><td class="markdownTableBodyCenter">\(^BX^C\)  </td><td class="markdownTableBodyCenter"><code>X_BC</code>  </td><td class="markdownTableBodyNone">Frame C's <em>rigid</em> transform (pose) in frame B   </td></tr>
 <tr class="markdownTableRowEven">
@@ -222,6 +226,8 @@ $(document).ready(function(){initNavTree('group__multibody__quantities.html','')
 <td class="markdownTableBodyNone">Jacobian wrt v  </td><td class="markdownTableBodyCenter">Jv  </td><td class="markdownTableBodyCenter">\(J_{v}^{{}^Bv^Q}\)  </td><td class="markdownTableBodyCenter"><code>Jv_v_BQ</code>  </td><td class="markdownTableBodyNone">Point Q's translational velocity Jacobian in frame B wrt v   </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">Jacobian wrt v  </td><td class="markdownTableBodyCenter">Jv  </td><td class="markdownTableBodyCenter">\(J_{v}^{{}^B\omega^C}\)  </td><td class="markdownTableBodyCenter"><code>Jv_w_BC</code>  </td><td class="markdownTableBodyNone">Frame C's angular velocity Jacobian in frame B wrt v   </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Ez measure of vector v  </td><td class="markdownTableBodyCenter">v  </td><td class="markdownTableBodyCenter">\([v]_{Ez}\)  </td><td class="markdownTableBodyCenter"><code>v_Ez</code>  </td><td class="markdownTableBodyNone">Ez scalar component of vector v, i.e., v • Ez, where Ez is frame E's z-direction unit vector.   </td></tr>
 </table>
 <p>ᵃ In code, a vector has an expressed-in-frame which appears after the quantity. <br />
 Example: <code>w_BC_E</code> is C's angular velocity in B, expressed in frame E, typeset as \([^B\omega^C]_E \). If not explicitly present, the expressed-in-frame defaults to the measured-in-frame. Hence, <code>w_BC</code> is C's angular velocity <b>in</b> (measured-in) frame B, expressed in frame B (implied). <br />

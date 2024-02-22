@@ -196,6 +196,9 @@ $(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_differenti
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a2927cc83009fff3554bfda8934e4aa52"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_integrator.html#a2927cc83009fff3554bfda8934e4aa52">DifferentialInverseKinematicsIntegrator</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;robot, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;frame_A, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;frame_E, <a class="el" href="classdouble.html">double</a> time_step, const <a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> &amp;parameters, const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *robot_context=nullptr, bool log_only_when_result_state_changes=true)</td></tr>
+<tr class="memdesc:a2927cc83009fff3554bfda8934e4aa52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the system.  <a href="#a2927cc83009fff3554bfda8934e4aa52">More...</a><br /></td></tr>
+<tr class="separator:a2927cc83009fff3554bfda8934e4aa52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab66dc0d76abdb6ec9cda835734399dc9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_integrator.html#ab66dc0d76abdb6ec9cda835734399dc9">DifferentialInverseKinematicsIntegrator</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;robot, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;frame_E, <a class="el" href="classdouble.html">double</a> time_step, const <a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> &amp;parameters, const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *robot_context=nullptr, bool log_only_when_result_state_changes=true)</td></tr>
 <tr class="memdesc:ab66dc0d76abdb6ec9cda835734399dc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the system.  <a href="#ab66dc0d76abdb6ec9cda835734399dc9">More...</a><br /></td></tr>
 <tr class="separator:ab66dc0d76abdb6ec9cda835734399dc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -203,7 +206,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a7e19cbe0d0e26536ec4e025d06e7337a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the joint positions, which are stored as state in the context.  <a href="#a7e19cbe0d0e26536ec4e025d06e7337a">More...</a><br /></td></tr>
 <tr class="separator:a7e19cbe0d0e26536ec4e025d06e7337a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb9c056fd315645e92def45ae627b797"><td class="memItemLeft" align="right" valign="top">math::RigidTransformd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_integrator.html#adb9c056fd315645e92def45ae627b797">ForwardKinematics</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;context) const</td></tr>
-<tr class="memdesc:adb9c056fd315645e92def45ae627b797"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides X_WE as a function of the joint position set in <code>context</code>.  <a href="#adb9c056fd315645e92def45ae627b797">More...</a><br /></td></tr>
+<tr class="memdesc:adb9c056fd315645e92def45ae627b797"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides X_AE as a function of the joint position set in <code>context</code>.  <a href="#adb9c056fd315645e92def45ae627b797">More...</a><br /></td></tr>
 <tr class="separator:adb9c056fd315645e92def45ae627b797"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84ba40d686f61340829ffab0302c60d2"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_integrator.html#a84ba40d686f61340829ffab0302c60d2">get_parameters</a> () const</td></tr>
 <tr class="memdesc:a84ba40d686f61340829ffab0302c60d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the differential IK parameters owned by this system.  <a href="#a84ba40d686f61340829ffab0302c60d2">More...</a><br /></td></tr>
@@ -416,6 +419,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aeb5016cfee3ccd384e0a0ba62b4da5bc inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#aeb5016cfee3ccd384e0a0ba62b4da5bc">IsDifferenceEquationSystem</a> (<a class="el" href="classdouble.html">double</a> *time_period=nullptr) const</td></tr>
 <tr class="memdesc:aeb5016cfee3ccd384e0a0ba62b4da5bc inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff the state dynamics of this system are governed exclusively by a difference equation on a single discrete state group and with a unique periodic update (having zero offset).  <a href="classdrake_1_1systems_1_1_system.html#aeb5016cfee3ccd384e0a0ba62b4da5bc">More...</a><br /></td></tr>
 <tr class="separator:aeb5016cfee3ccd384e0a0ba62b4da5bc inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c3ec92003f2a50d5d2b0c49aa296b86 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a6c3ec92003f2a50d5d2b0c49aa296b86">IsDifferentialEquationSystem</a> () const</td></tr>
+<tr class="memdesc:a6c3ec92003f2a50d5d2b0c49aa296b86 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff the state dynamics of this system are governed exclusively by a differential equation.  <a href="classdrake_1_1systems_1_1_system.html#a6c3ec92003f2a50d5d2b0c49aa296b86">More...</a><br /></td></tr>
+<tr class="separator:a6c3ec92003f2a50d5d2b0c49aa296b86 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acfe09b96124f37f4df06d393d14af352 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memItemLeft" align="right" valign="top">std::map&lt; <a class="el" href="classdrake_1_1systems_1_1_periodic_event_data.html">PeriodicEventData</a>, std::vector&lt; const <a class="el" href="classdrake_1_1systems_1_1_event.html">Event</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; * &gt;, <a class="el" href="structdrake_1_1systems_1_1_periodic_event_data_comparator.html">PeriodicEventDataComparator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#acfe09b96124f37f4df06d393d14af352">MapPeriodicEventsByTiming</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *context=nullptr) const</td></tr>
 <tr class="memdesc:acfe09b96124f37f4df06d393d14af352 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maps all periodic triggered events for a System, organized by timing.  <a href="classdrake_1_1systems_1_1_system.html#acfe09b96124f37f4df06d393d14af352">More...</a><br /></td></tr>
 <tr class="separator:acfe09b96124f37f4df06d393d14af352 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1221,7 +1227,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a6329f7d7632378d3468c21998625d154"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6329f7d7632378d3468c21998625d154">&#9670;&nbsp;</a></span>DifferentialInverseKinematicsIntegrator() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6329f7d7632378d3468c21998625d154">&#9670;&nbsp;</a></span>DifferentialInverseKinematicsIntegrator() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1247,7 +1253,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="a40f26f7d3890b9dd6f90aae8b8e7ec6f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a40f26f7d3890b9dd6f90aae8b8e7ec6f">&#9670;&nbsp;</a></span>DifferentialInverseKinematicsIntegrator() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a40f26f7d3890b9dd6f90aae8b8e7ec6f">&#9670;&nbsp;</a></span>DifferentialInverseKinematicsIntegrator() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1272,8 +1278,82 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a2927cc83009fff3554bfda8934e4aa52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2927cc83009fff3554bfda8934e4aa52">&#9670;&nbsp;</a></span>DifferentialInverseKinematicsIntegrator() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_integrator.html">DifferentialInverseKinematicsIntegrator</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>robot</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>frame_A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>frame_E</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>time_step</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> &amp;&#160;</td>
+          <td class="paramname"><em>parameters</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td>
+          <td class="paramname"><em>robot_context</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>log_only_when_result_state_changes</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs the system. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">robot</td><td>A <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> describing the robot. </td></tr>
+    <tr><td class="paramname">frame_A</td><td>Reference frame (inertial or non-inertial). </td></tr>
+    <tr><td class="paramname">frame_E</td><td>End-effector frame. </td></tr>
+    <tr><td class="paramname">time_step</td><td>the discrete time step of the (Euler) integration. </td></tr>
+    <tr><td class="paramname">parameters</td><td>Collection of various problem specific constraints and constants. The <code>time_step</code> parameter will be set to <code>time_step</code>. </td></tr>
+    <tr><td class="paramname">robot_context</td><td>Optional Context of the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>. The position values of this context will be overwritten during integration; you only need to pass this in if the robot has any non-default parameters. <br />
+ <em>Default:</em> <code>robot.CreateDefaultContext()</code>. </td></tr>
+    <tr><td class="paramname">log_only_when_result_state_changes</td><td>is a boolean that determines whether the system will log on every differential IK failure, or only when the failure state changes. When the value is <code>true</code>, it will cause the system to have an additional discrete state variable to store the most recent DifferentialInverseKinematicsStatus. Set this to <code>false</code> if you want <a class="el" href="classdrake_1_1systems_1_1_system.html#aeb5016cfee3ccd384e0a0ba62b4da5bc" title="Returns true iff the state dynamics of this system are governed exclusively by a difference equation ...">IsDifferenceEquationSystem()</a> to return <code>true</code>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Note: All references must remain valid for the lifetime of this system. </p><dl class="section pre"><dt>Precondition</dt><dd>frame_E != frame_A. </dd></dl>
+
+</div>
+</div>
 <a id="ab66dc0d76abdb6ec9cda835734399dc9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab66dc0d76abdb6ec9cda835734399dc9">&#9670;&nbsp;</a></span>DifferentialInverseKinematicsIntegrator() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab66dc0d76abdb6ec9cda835734399dc9">&#9670;&nbsp;</a></span>DifferentialInverseKinematicsIntegrator() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1335,7 +1415,8 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>Note: All references must remain valid for the lifetime of this system. </p>
+<p>In this overload, the reference frame, A, is taken to be the world frame.</p>
+<p>Note: All references must remain valid for the lifetime of this system. </p><dl class="section pre"><dt>Precondition</dt><dd>frame_E != robot.world_frame(). </dd></dl>
 
 </div>
 </div>
@@ -1356,7 +1437,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Provides X_WE as a function of the joint position set in <code>context</code>. </p>
+<p>Provides X_AE as a function of the joint position set in <code>context</code>. </p>
 
 </div>
 </div>

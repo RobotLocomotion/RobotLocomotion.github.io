@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Drake: drake/multibody/tree/string_view_map_key.h File Reference</title>
+<title>Drake: drake/common/string_unordered_map.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -139,7 +139,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('string__view__map__key_8h.html','');});
+$(document).ready(function(){initNavTree('string__unordered__map_8h.html','');});
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -159,25 +159,26 @@ $(document).ready(function(){initNavTree('string__view__map__key_8h.html','');})
 
 <div class="header">
   <div class="summary">
-<a href="#namespaces">Namespaces</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle">
-<div class="title">string_view_map_key.h File Reference</div>  </div>
+<div class="title">string_unordered_map.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;optional&gt;</code><br />
+<div class="textblock"><code>#include &lt;functional&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
-<code>#include &lt;string_view&gt;</code><br />
-<code>#include &lt;utility&gt;</code><br />
+<code>#include &lt;unordered_map&gt;</code><br />
+<code>#include &quot;<a class="el" href="string__hash_8h.html">drake/common/string_hash.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for string_view_map_key.h:</div>
+Include dependency graph for string_unordered_map.h:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="string__view__map__key_8h__incl.svg" width="375" height="127"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="string__unordered__map_8h__incl.svg" width="483" height="216"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="string__view__map__key_8h__dep__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="string__unordered__map_8h__dep__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </div><table class="memberdecls">
@@ -185,15 +186,24 @@ This graph shows which files directly or indirectly include this file:</div>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacedrake"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html">drake</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacedrake_1_1multibody"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html">drake::multibody</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a3d336683e20c4bce752ae362db010b32"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a3d336683e20c4bce752ae362db010b32"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a3d336683e20c4bce752ae362db010b32">string_unordered_map</a> = std::unordered_map&lt; std::string, T, internal::StringHash, std::equal_to&lt; void &gt; &gt;</td></tr>
+<tr class="memdesc:a3d336683e20c4bce752ae362db010b32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like <code>std::unordered_map&lt;std::string, T&gt;</code>, but with better defaults than the plain <code>std::unordered_map&lt;std::string, T&gt;</code> spelling.  <a href="namespacedrake.html#a3d336683e20c4bce752ae362db010b32">More...</a><br /></td></tr>
+<tr class="separator:a3d336683e20c4bce752ae362db010b32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80e037907928422f6e81d15f9cc79c75"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a80e037907928422f6e81d15f9cc79c75"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a80e037907928422f6e81d15f9cc79c75">string_unordered_multimap</a> = std::unordered_multimap&lt; std::string, T, internal::StringHash, std::equal_to&lt; void &gt; &gt;</td></tr>
+<tr class="memdesc:a80e037907928422f6e81d15f9cc79c75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like <code>std::unordered_multimap&lt;std::string, T&gt;</code>, but with better defaults than the plain <code>std::unordered_multimap&lt;std::string, T&gt;</code> spelling.  <a href="namespacedrake.html#a80e037907928422f6e81d15f9cc79c75">More...</a><br /></td></tr>
+<tr class="separator:a80e037907928422f6e81d15f9cc79c75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- footer -->
 <div class="navpath">
   <ul>
-    <li class="navelem"><a class="el" href="dir_f1666844dc41ec91c14125b680b7be1b.html">drake</a></li><li class="navelem"><a class="el" href="dir_39b8b3c6654246a9c12332c930bc7d3f.html">multibody</a></li><li class="navelem"><a class="el" href="dir_3f9cb8dbb3b4911cb2ecb548acd672c3.html">tree</a></li><li class="navelem"><a class="el" href="string__view__map__key_8h.html">string_view_map_key.h</a></li>
+    <li class="navelem"><a class="el" href="dir_f1666844dc41ec91c14125b680b7be1b.html">drake</a></li><li class="navelem"><a class="el" href="dir_a36da230f0956f48b11c85f7d599788f.html">common</a></li><li class="navelem"><a class="el" href="string__unordered__map_8h.html">string_unordered_map.h</a></li>
   </ul>
 </div>
 <footer id="nav-path", class="site-footer padding">

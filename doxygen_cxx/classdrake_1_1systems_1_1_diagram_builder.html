@@ -269,9 +269,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1db762bc34903d5e5eb8f1c26ec2f255"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#aa53feaf560f7ff6cfa4add8dc6ff0db0">InputPortIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a1db762bc34903d5e5eb8f1c26ec2f255">ExportInput</a> (const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">InputPort</a>&lt; T &gt; &amp;input, std::variant&lt; std::string, <a class="el" href="structdrake_1_1systems_1_1_use_default_name.html">UseDefaultName</a> &gt; name=<a class="el" href="namespacedrake_1_1systems.html#a399dec16d9f072ee3a256c35ba3379fa">kUseDefaultName</a>)</td></tr>
 <tr class="memdesc:a1db762bc34903d5e5eb8f1c26ec2f255"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares that the given <code>input</code> port of a constituent system is connected to a new input to the entire <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a>.  <a href="#a1db762bc34903d5e5eb8f1c26ec2f255">More...</a><br /></td></tr>
 <tr class="separator:a1db762bc34903d5e5eb8f1c26ec2f255"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a012c3506eca742cfc49748788fc65f0c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a012c3506eca742cfc49748788fc65f0c">ConnectInput</a> (const std::string &amp;diagram_port_name, const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">InputPort</a>&lt; T &gt; &amp;input)</td></tr>
-<tr class="memdesc:a012c3506eca742cfc49748788fc65f0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connects an input to the entire <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a>, indicated by <code>diagram_port_name</code>, to the given <code>input</code> port of a constituent system.  <a href="#a012c3506eca742cfc49748788fc65f0c">More...</a><br /></td></tr>
-<tr class="separator:a012c3506eca742cfc49748788fc65f0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae03700850237ae41eab70362cd10c61"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#aae03700850237ae41eab70362cd10c61">ConnectInput</a> (std::string_view diagram_port_name, const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">InputPort</a>&lt; T &gt; &amp;input)</td></tr>
+<tr class="memdesc:aae03700850237ae41eab70362cd10c61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connects an input to the entire <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a>, indicated by <code>diagram_port_name</code>, to the given <code>input</code> port of a constituent system.  <a href="#aae03700850237ae41eab70362cd10c61">More...</a><br /></td></tr>
+<tr class="separator:aae03700850237ae41eab70362cd10c61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0dfc0f09507bae90b63752a1eb4f28b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a0dfc0f09507bae90b63752a1eb4f28b8">ConnectInput</a> (<a class="el" href="namespacedrake_1_1systems.html#aa53feaf560f7ff6cfa4add8dc6ff0db0">InputPortIndex</a> diagram_port_index, const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">InputPort</a>&lt; T &gt; &amp;input)</td></tr>
 <tr class="memdesc:a0dfc0f09507bae90b63752a1eb4f28b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connects an input to the entire <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a>, indicated by <code>diagram_port_index</code>, to the given <code>input</code> port of a constituent system.  <a href="#a0dfc0f09507bae90b63752a1eb4f28b8">More...</a><br /></td></tr>
 <tr class="separator:a0dfc0f09507bae90b63752a1eb4f28b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -815,8 +815,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a012c3506eca742cfc49748788fc65f0c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a012c3506eca742cfc49748788fc65f0c">&#9670;&nbsp;</a></span>ConnectInput() <span class="overload">[1/2]</span></h2>
+<a id="aae03700850237ae41eab70362cd10c61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae03700850237ae41eab70362cd10c61">&#9670;&nbsp;</a></span>ConnectInput() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -824,7 +824,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void ConnectInput </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">std::string_view&#160;</td>
           <td class="paramname"><em>diagram_port_name</em>, </td>
         </tr>
         <tr>

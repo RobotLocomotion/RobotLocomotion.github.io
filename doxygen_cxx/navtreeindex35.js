@@ -1,5 +1,7 @@
 var NAVTREEINDEX35 =
 {
+"classdrake_1_1systems_1_1_hermitian_dense_output_1_1_integration_step.html#af9593d4a5ff4274efaf429cb4f9e57cc":[3,0,0,15,50,0,11],
+"classdrake_1_1systems_1_1_hermitian_dense_output_1_1_integration_step.html#afe1e006a0e64d51de9749f7b25fc54ec":[3,0,0,15,50,0,2],
 "classdrake_1_1systems_1_1_implicit_euler_integrator.html":[1,4,0,0,2],
 "classdrake_1_1systems_1_1_implicit_euler_integrator.html#a153cfb621ca6c474b942a63762a82ec5":[1,4,0,0,2,0],
 "classdrake_1_1systems_1_1_implicit_euler_integrator.html#a447328b1aaa3ed12450855b792983d24":[1,4,0,0,2,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX35 =
 "classdrake_1_1systems_1_1_leaf_event_collection.html#a58887f2b21360620141e115c71cc168b":[3,0,0,15,62,7],
 "classdrake_1_1systems_1_1_leaf_event_collection.html#a820850d2bd7f3debf944dd3325c91802":[3,0,0,15,62,10],
 "classdrake_1_1systems_1_1_leaf_event_collection.html#a9078b05da90e14cf53ad375377ac4834":[3,0,0,15,62,5],
-"classdrake_1_1systems_1_1_leaf_event_collection.html#a9fb8d145e32e1ba537ceac1db213a154":[3,0,0,15,62,0],
-"classdrake_1_1systems_1_1_leaf_event_collection.html#aa0d2b6ddea7cb960b90423ac48f555bf":[3,0,0,15,62,4],
-"classdrake_1_1systems_1_1_leaf_event_collection.html#aa822779bf6c4098cf0c1494f8770a91d":[3,0,0,15,62,8]
+"classdrake_1_1systems_1_1_leaf_event_collection.html#a9fb8d145e32e1ba537ceac1db213a154":[3,0,0,15,62,0]
 };

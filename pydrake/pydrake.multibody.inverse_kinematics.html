@@ -440,10 +440,16 @@ it is highly recommended that the user call SetPositions() to
 initialize the integrator state.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">X_WE_desired&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">robot_state (optional)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">use_robot_state (optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>DifferentialInverseKinematicsIntegrator</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; joint_positions</td></tr></table></td></tr></table><dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">robot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_E</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame" title="pydrake.multibody.tree.Frame"><span class="pre">pydrake.multibody.tree.Frame</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_step</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">robot_context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_only_when_result_state_changes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator.__init__" title="Permalink to this definition"></a></dt>
-<dd><p>Constructs the system.</p>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator, robot: pydrake.multibody.plant.MultibodyPlant, frame_A: pydrake.multibody.tree.Frame, frame_E: pydrake.multibody.tree.Frame, time_step: float, parameters: pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters, robot_context: pydrake.systems.framework.Context = None, log_only_when_result_state_changes: bool = True) -&gt; None</p></li>
+</ol>
+<p>Constructs the system.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">robot</span></code>:</dt><dd><p>A MultibodyPlant describing the robot.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>Reference frame (inertial or non-inertial).</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>End-effector frame.</p>
 </dd>
@@ -467,12 +473,51 @@ want IsDifferenceEquationSystem() to return <code class="docutils literal notran
 </dl>
 <p>Note: All references must remain valid for the lifetime of this
 system.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>frame_E != frame_A.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator, robot: pydrake.multibody.plant.MultibodyPlant, frame_E: pydrake.multibody.tree.Frame, time_step: float, parameters: pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters, robot_context: pydrake.systems.framework.Context = None, log_only_when_result_state_changes: bool = True) -&gt; None</p></li>
+</ol>
+<p>Constructs the system.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">robot</span></code>:</dt><dd><p>A MultibodyPlant describing the robot.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>End-effector frame.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">time_step</span></code>:</dt><dd><p>the discrete time step of the (Euler) integration.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">parameters</span></code>:</dt><dd><p>Collection of various problem specific constraints and constants.
+The <code class="docutils literal notranslate"><span class="pre">time_step</span></code> parameter will be set to <code class="docutils literal notranslate"><span class="pre">time_step</span></code>.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">robot_context</span></code>:</dt><dd><p>Optional Context of the MultibodyPlant. The position values of
+this context will be overwritten during integration; you only need
+to pass this in if the robot has any non-default parameters.
+$*Default:* <code class="docutils literal notranslate"><span class="pre">robot.CreateDefaultContext()</span></code>.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">log_only_when_result_state_changes</span></code>:</dt><dd><p>is a boolean that determines whether the system will log on every
+differential IK failure, or only when the failure state changes.
+When the value is <code class="docutils literal notranslate"><span class="pre">True</span></code>, it will cause the system to have an
+additional discrete state variable to store the most recent
+DifferentialInverseKinematicsStatus. Set this to <code class="docutils literal notranslate"><span class="pre">False</span></code> if you
+want IsDifferenceEquationSystem() to return <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+</dd>
+</dl>
+<p>In this overload, the reference frame, A, is taken to be the world
+frame.</p>
+<p>Note: All references must remain valid for the lifetime of this
+system.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>frame_E != robot.world_frame().</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator.ForwardKinematics">
 <span class="sig-name descname"><span class="pre">ForwardKinematics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator.ForwardKinematics" title="Permalink to this definition"></a></dt>
-<dd><p>Provides X_WE as a function of the joint position set in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+<dd><p>Provides X_AE as a function of the joint position set in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
 </dd></dl>
 
 <dl class="py method">

@@ -82,6 +82,11 @@ var dir_a36da230f0956f48b11c85f7d599788f =
     ] ],
     [ "sorted_pair.h", "sorted__pair_8h.html", "sorted__pair_8h" ],
     [ "ssize.h", "ssize_8h.html", "ssize_8h" ],
+    [ "string_hash.h", "string__hash_8h.html", null ],
+    [ "string_map.h", "string__map_8h.html", "string__map_8h" ],
+    [ "string_set.h", "string__set_8h.html", "string__set_8h" ],
+    [ "string_unordered_map.h", "string__unordered__map_8h.html", "string__unordered__map_8h" ],
+    [ "string_unordered_set.h", "string__unordered__set_8h.html", "string__unordered__set_8h" ],
     [ "temp_directory.h", "temp__directory_8h.html", "temp__directory_8h" ],
     [ "text_logging.h", "text__logging_8h.html", "text__logging_8h" ],
     [ "timer.h", "timer_8h.html", [

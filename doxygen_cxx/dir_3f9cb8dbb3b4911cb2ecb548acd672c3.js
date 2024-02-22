@@ -116,7 +116,6 @@ var dir_3f9cb8dbb3b4911cb2ecb548acd672c3 =
       [ "SpatialInertia", "classdrake_1_1multibody_1_1_spatial_inertia.html", "classdrake_1_1multibody_1_1_spatial_inertia" ],
       [ "formatter< drake::multibody::SpatialInertia< T > >", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_spatial_inertia_3_01_t_01_4_01_4.html", null ]
     ] ],
-    [ "string_view_map_key.h", "string__view__map__key_8h.html", null ],
     [ "uniform_gravity_field_element.h", "uniform__gravity__field__element_8h.html", [
       [ "UniformGravityFieldElement", "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html", "classdrake_1_1multibody_1_1_uniform_gravity_field_element" ]
     ] ],

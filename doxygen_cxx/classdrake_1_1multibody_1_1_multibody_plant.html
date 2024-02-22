@@ -287,7 +287,7 @@ To inter-operate between the whole plant actuation vector and sets of per-model 
 <p>Probably the simplest way to add and wire up a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> with a SceneGraph in your Diagram is using <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aac66563a5f3eb9e2041bd4fa8d438827" title="Makes a new MultibodyPlant with discrete update period time_step and adds it to a diagram builder tog...">AddMultibodyPlantSceneGraph()</a>.</p>
 <p>Recommended usages:</p>
 <p>Assign to a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> reference (ignoring the SceneGraph): </p><div class="fragment"><div class="line">MultibodyPlant&lt;double&gt;&amp; plant =</div><div class="line">    <a class="code" href="classdrake_1_1multibody_1_1_multibody_plant.html#aac66563a5f3eb9e2041bd4fa8d438827">AddMultibodyPlantSceneGraph</a>(&amp;builder, 0.0 /+ <a class="code" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8daceb7a3c384d6ad9f305e42b5fc1c6">time_step</a> +/);</div><div class="line">plant.DoFoo(...);</div></div><!-- fragment --><p> This flavor is the simplest, when the SceneGraph is not explicitly needed. (It can always be retrieved later via GetSubsystemByName("scene_graph").)</p>
-<p>Assign to auto, and use the named public fields: </p><div class="fragment"><div class="line"><span class="keyword">auto</span> items = <a class="code" href="classdrake_1_1multibody_1_1_multibody_plant.html#aac66563a5f3eb9e2041bd4fa8d438827">AddMultibodyPlantSceneGraph</a>(&amp;builder, 0.0 /+ <a class="code" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8daceb7a3c384d6ad9f305e42b5fc1c6">time_step</a> +/);</div><div class="line">items.plant.DoFoo(...);</div><div class="line">items.scene_graph.DoBar(...);</div></div><!-- fragment --><p> or taking advantage of C++17's structured binding </p><div class="fragment"><div class="line"><span class="keyword">auto</span> [plant, scene_graph] = <a class="code" href="classdrake_1_1multibody_1_1_multibody_plant.html#aac66563a5f3eb9e2041bd4fa8d438827">AddMultibodyPlantSceneGraph</a>(&amp;builder, 0.0);</div><div class="line">...</div><div class="line">plant.DoFoo(...);</div><div class="line">scene_graph.DoBar(...);</div></div><!-- fragment --><p> This is the easiest way to use both the plant and scene_graph.</p>
+<p>Assign to auto, and use the named public fields: </p><div class="fragment"><div class="line"><span class="keyword">auto</span> items = <a class="code" href="classdrake_1_1multibody_1_1_multibody_plant.html#aac66563a5f3eb9e2041bd4fa8d438827">AddMultibodyPlantSceneGraph</a>(&amp;builder, 0.0 /+ <a class="code" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8daceb7a3c384d6ad9f305e42b5fc1c6">time_step</a> +/);</div><div class="line">items.plant.DoFoo(...);</div><div class="line">items.scene_graph.DoBar(...);</div></div><!-- fragment --><p> or taking advantage of C++'s structured binding: </p><div class="fragment"><div class="line"><span class="keyword">auto</span> [plant, scene_graph] = <a class="code" href="classdrake_1_1multibody_1_1_multibody_plant.html#aac66563a5f3eb9e2041bd4fa8d438827">AddMultibodyPlantSceneGraph</a>(&amp;builder, 0.0);</div><div class="line">...</div><div class="line">plant.DoFoo(...);</div><div class="line">scene_graph.DoBar(...);</div></div><!-- fragment --><p> This is the easiest way to use both the plant and scene_graph.</p>
 <p>Assign to already-declared pointer variables: </p><div class="fragment"><div class="line">MultibodyPlant&lt;double&gt;* plant{};</div><div class="line">SceneGraph&lt;double&gt;* scene_graph{};</div><div class="line">std::tie(plant, scene_graph) =</div><div class="line">    <a class="code" href="classdrake_1_1multibody_1_1_multibody_plant.html#aac66563a5f3eb9e2041bd4fa8d438827">AddMultibodyPlantSceneGraph</a>(&amp;builder, 0.0 /+ <a class="code" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8daceb7a3c384d6ad9f305e42b5fc1c6">time_step</a> +/);</div><div class="line">plant-&gt;DoFoo(...);</div><div class="line">scene_graph-&gt;DoBar(...);</div></div><!-- fragment --><p> This flavor is most useful when the pointers are class member fields (and so perhaps cannot be references).</p>
 <p><a class="anchor" id="mbp_geometry_registration"></a></p><h4>Registering geometry with a SceneGraph</h4>
 <p>MultibodyPlant users can register geometry with a SceneGraph for essentially two purposes; a) visualization and, b) contact modeling.</p>
@@ -908,6 +908,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a78463f908367335926f461a19978d89b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a78463f908367335926f461a19978d89b">MakeActuationMatrix</a> () const</td></tr>
 <tr class="memdesc:a78463f908367335926f461a19978d89b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method creates an actuation matrix B mapping a vector of actuation values u into generalized forces <code>tau_u = B * u</code>, where B is a matrix of size <code>nv x nu</code> with <code>nu</code> equal to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8601c026e9807127b4dd41e7585d2cfc" title="Returns the number of joint actuators in the model.">num_actuators()</a> and <code>nv</code> equal to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae0163ac0976659d811e3337647ff0313" title="Returns the size of the generalized velocity vector v for this model.">num_velocities()</a>.  <a href="#a78463f908367335926f461a19978d89b">More...</a><br /></td></tr>
 <tr class="separator:a78463f908367335926f461a19978d89b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46d75f530d3a4affed6a20fd26b9fd8f"><td class="memItemLeft" align="right" valign="top">Eigen::SparseMatrix&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a46d75f530d3a4affed6a20fd26b9fd8f">MakeActuationMatrixPseudoinverse</a> () const</td></tr>
+<tr class="memdesc:a46d75f530d3a4affed6a20fd26b9fd8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the pseudoinverse of the actuation matrix B directly (without requiring an explicit inverse calculation).  <a href="#a46d75f530d3a4affed6a20fd26b9fd8f">More...</a><br /></td></tr>
+<tr class="separator:a46d75f530d3a4affed6a20fd26b9fd8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a029244fdbe2f10a7bfaf5c21175d834c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a029244fdbe2f10a7bfaf5c21175d834c">MakeActuatorSelectorMatrix</a> (const std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#a27485be8a33f5ed2ee7f3f8de9dd40c0">JointIndex</a> &gt; &amp;user_to_joint_index_map) const</td></tr>
 <tr class="memdesc:a029244fdbe2f10a7bfaf5c21175d834c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alternative signature to build an actuation selector matrix <code>Su</code> such that <code>u = Su⋅uₛ</code>, where u is the vector of actuation values for the full model (ordered by JointActuatorIndex) and uₛ is a vector of actuation values for the actuators acting on the joints listed by <code>user_to_joint_index_map</code>.  <a href="#a029244fdbe2f10a7bfaf5c21175d834c">More...</a><br /></td></tr>
 <tr class="separator:a029244fdbe2f10a7bfaf5c21175d834c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -7454,6 +7457,27 @@ This function is guaranteed to allocate no heap. </dd></dl>
 
 </div>
 </div>
+<a id="a46d75f530d3a4affed6a20fd26b9fd8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46d75f530d3a4affed6a20fd26b9fd8f">&#9670;&nbsp;</a></span>MakeActuationMatrixPseudoinverse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::SparseMatrix&lt;<a class="el" href="classdouble.html">double</a>&gt; MakeActuationMatrixPseudoinverse </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates the pseudoinverse of the actuation matrix B directly (without requiring an explicit inverse calculation). </p>
+<p>See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a78463f908367335926f461a19978d89b" title="This method creates an actuation matrix B mapping a vector of actuation values u into generalized for...">MakeActuationMatrix()</a>.</p>
+<p>Notably, when B is full row rank (the system is fully actuated), then the pseudoinverse is a true inverse. </p>
+
+</div>
+</div>
 <a id="a0d7f5496735d233ea0b984c5a290671f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0d7f5496735d233ea0b984c5a290671f">&#9670;&nbsp;</a></span>MakeActuatorSelectorMatrix() <span class="overload">[1/2]</span></h2>
 
@@ -8202,8 +8226,8 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 
 </div>
 </div>
-<a id="af4f43a6f72128af8e926d32c37ed7580"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4f43a6f72128af8e926d32c37ed7580">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="aecc2576d314d5baf56ad6ad593b26f9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecc2576d314d5baf56ad6ad593b26f9f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -8214,7 +8238,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -8228,8 +8252,8 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 
 </div>
 </div>
-<a id="aecc2576d314d5baf56ad6ad593b26f9f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aecc2576d314d5baf56ad6ad593b26f9f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="af4f43a6f72128af8e926d32c37ed7580"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4f43a6f72128af8e926d32c37ed7580">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -8240,7 +8264,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
