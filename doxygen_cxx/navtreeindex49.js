@@ -1,5 +1,6 @@
 var NAVTREEINDEX49 =
 {
+"functions_g.html":[3,3,0,6],
 "functions_h.html":[3,3,0,7],
 "functions_i.html":[3,3,0,8],
 "functions_j.html":[3,3,0,9],
@@ -11,8 +12,8 @@ var NAVTREEINDEX49 =
 "functions_p.html":[3,3,0,15],
 "functions_q.html":[3,3,0,16],
 "functions_r.html":[3,3,0,17],
-"functions_rela.html":[3,3,6],
 "functions_rela.html":[3,3,6,0],
+"functions_rela.html":[3,3,6],
 "functions_rela_b.html":[3,3,6,1],
 "functions_rela_c.html":[3,3,6,2],
 "functions_rela_d.html":[3,3,6,3],
@@ -74,8 +75,8 @@ var NAVTREEINDEX49 =
 "gain_8h.html":[4,0,0,12,6,9],
 "gaussian__triangle__quadrature__rule_8h.html":[4,0,0,8,15,0],
 "gaze__target__constraint_8h.html":[4,0,0,8,5,9],
-"gcs__trajectory__optimization_8h.html":[4,0,0,10,2,2],
-"gcs__trajectory__optimization_8h.html#ada4cdfe16e886242f5ee05f2cd374a39":[4,0,0,10,2,2,3],
+"gcs__trajectory__optimization_8h.html":[4,0,0,10,3,2],
+"gcs__trajectory__optimization_8h.html#ada4cdfe16e886242f5ee05f2cd374a39":[4,0,0,10,3,2,3],
 "generic__integrator__test_8h.html":[4,0,0,12,0,0,4],
 "generic__integrator__test_8h.html#a5b7c28880497d16cf9b51ff2bfabe5fc":[4,0,0,12,0,0,4,3],
 "generic__integrator__test_8h.html#aa63fa4c79ae758d30dafae852a1b08dd":[4,0,0,12,0,0,4,1],
@@ -242,12 +243,11 @@ var NAVTREEINDEX49 =
 "group__control__systems.html#gaedff9f0a8ddce5d29888ed611ce8bee2":[1,2,2,7],
 "group__cxx.html":[1,6,2],
 "group__default__scalars.html":[1,6,1],
-"group__default__scalars.html#ga0659aa8320fcb199bb53a153120a4d14":[4,0,0,1,14,1],
 "group__default__scalars.html#ga0659aa8320fcb199bb53a153120a4d14":[1,6,1,1],
+"group__default__scalars.html#ga0659aa8320fcb199bb53a153120a4d14":[4,0,0,1,14,1],
 "group__default__scalars.html#ga3273477e81e9dcb7d96cfb28382798b6":[1,6,1,5],
 "group__default__scalars.html#ga3273477e81e9dcb7d96cfb28382798b6":[4,0,0,1,14,5],
 "group__default__scalars.html#ga6333534b3097a37c55fbacf434491e2e":[1,6,1,0],
 "group__default__scalars.html#ga6333534b3097a37c55fbacf434491e2e":[4,0,0,1,14,0],
-"group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[1,6,1,4],
 "group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[4,0,0,1,14,4]
 };

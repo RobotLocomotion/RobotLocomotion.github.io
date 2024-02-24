@@ -198,6 +198,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_edge_measure.html">EdgeMeasure</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The measure of the distance of the edge from q1 to q2 and the portion of that is collision free.  <a href="classdrake_1_1planning_1_1_edge_measure.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1planning_1_1_iris_from_clique_cover_options.html">IrisFromCliqueCoverOptions</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_linear_distance_and_interpolation_provider.html">LinearDistanceAndInterpolationProvider</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class represents a basic "linear" implementation of <a class="el" href="classdrake_1_1planning_1_1_distance_and_interpolation_provider.html" title="This class represents the base interface for performing configuration distance and interpolation oper...">DistanceAndInterpolationProvider</a>.  <a href="classdrake_1_1planning_1_1_linear_distance_and_interpolation_provider.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -241,6 +243,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a85bb1b7b473700a759d1eb836fb6e536"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1_body_shape_description.html">BodyShapeDescription</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1planning.html#a85bb1b7b473700a759d1eb836fb6e536">MakeBodyShapeDescription</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant, const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant_context, const <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">geometry::GeometryId</a> &amp;geometry_id)</td></tr>
 <tr class="memdesc:a85bb1b7b473700a759d1eb836fb6e536"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1planning_1_1_body_shape_description.html" title="BodyShapeDescription captures all the information necessary to describe a SceneGraph collision shape ...">BodyShapeDescription</a> by extracting the shape, pose, and names associated with the provided geometry_id.  <a href="#a85bb1b7b473700a759d1eb836fb6e536">More...</a><br /></td></tr>
 <tr class="separator:a85bb1b7b473700a759d1eb836fb6e536"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace53f3f8045d8eb96867bcd6eda63ed0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1planning.html#ace53f3f8045d8eb96867bcd6eda63ed0">IrisInConfigurationSpaceFromCliqueCover</a> (const <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html">CollisionChecker</a> &amp;checker, const <a class="el" href="structdrake_1_1planning_1_1_iris_from_clique_cover_options.html">IrisFromCliqueCoverOptions</a> &amp;options, <a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a> *generator, std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">geometry::optimization::HPolyhedron</a> &gt; *sets, const <a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html">planning::graph_algorithms::MaxCliqueSolverBase</a> *max_clique_solver=nullptr)</td></tr>
+<tr class="memdesc:ace53f3f8045d8eb96867bcd6eda63ed0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cover the configuration space in Iris regions using the Visibility Clique Cover Algorithm as described in.  <a href="#ace53f3f8045d8eb96867bcd6eda63ed0">More...</a><br /></td></tr>
+<tr class="separator:ace53f3f8045d8eb96867bcd6eda63ed0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad65f73fdac346846cbc24ebae63c60be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__planning__collision__checker.html#ga6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1planning.html#ad65f73fdac346846cbc24ebae63c60be">SetInEnvironmentCollision</a> (<a class="el" href="group__planning__collision__checker.html#ga6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a> collision_type, bool in_environment_collision)</td></tr>
 <tr class="separator:ad65f73fdac346846cbc24ebae63c60be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0291e1222f1f88c5e1b5f4bac4abd10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__planning__collision__checker.html#ga6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1planning.html#ad0291e1222f1f88c5e1b5f4bac4abd10">SetInSelfCollision</a> (<a class="el" href="group__planning__collision__checker.html#ga6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a> collision_type, bool in_self_collision)</td></tr>
@@ -297,6 +302,65 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="ace53f3f8045d8eb96867bcd6eda63ed0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace53f3f8045d8eb96867bcd6eda63ed0">&#9670;&nbsp;</a></span>IrisInConfigurationSpaceFromCliqueCover()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drake::planning::IrisInConfigurationSpaceFromCliqueCover </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html">CollisionChecker</a> &amp;&#160;</td>
+          <td class="paramname"><em>checker</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1planning_1_1_iris_from_clique_cover_options.html">IrisFromCliqueCoverOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a> *&#160;</td>
+          <td class="paramname"><em>generator</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">geometry::optimization::HPolyhedron</a> &gt; *&#160;</td>
+          <td class="paramname"><em>sets</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html">planning::graph_algorithms::MaxCliqueSolverBase</a> *&#160;</td>
+          <td class="paramname"><em>max_clique_solver</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cover the configuration space in Iris regions using the Visibility Clique Cover Algorithm as described in. </p>
+<p>P. Werner, A. Amice, T. Marcucci, D. Rus, R. Tedrake "Approximating Robot Configuration Spaces with few Convex Sets using Clique Covers of Visibility Graphs" In 2024 IEEE Internation Conference on Robotics and Automation. <a href="https://arxiv.org/abs/2310.02875">https://arxiv.org/abs/2310.02875</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">checker</td><td>The collision checker containing the plant and its associated scene_graph. </td></tr>
+    <tr><td class="paramname">generator</td><td>There are points in the algorithm requiring randomness. The generator controls this source of randomness. </td></tr>
+    <tr><td class="paramname">sets</td><td>[in/out] initial sets covering the space (potentially empty). The cover is written into this vector. </td></tr>
+    <tr><td class="paramname">max_clique_solver</td><td>The max clique solver used. If parallelism is set to allow more than 1 thread, then this class <b>must</b> be implemented in C++. If nullptr is passed as the <code>max_clique_solver</code>, then max clique will be solved using an instance of MaxCliqueSolverViaMip with a conservative limit set on the number of branch and bound nodes explored. This default solver will in general use suboptimal cliques when constructing the greedy clique cover, but is faster than solving the max clique problem to global optimality.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Note that this method requires an implementation of a MaxCliqueSolverBase which must be implemented in C++. The only solver of this kind implemented by Drake is MaxCliqueSolverViaMip which requires the availability of a Mixed-Integer Linear Programming solver (e.g. Gurobi and/or Mosek). We recommend enabling those solvers if possible (<a href="https://drake.mit.edu/bazel.html#proprietary_solvers">https://drake.mit.edu/bazel.html#proprietary_solvers</a>). The method will throw if MaxCliqueSolverViaMip cannot solve the max clique problem. </p><dl class="section see"><dt>See also</dt><dd>MaxCliqueSolverViaMip. </dd></dl>
+
+</div>
+</div>
 <a id="a85bb1b7b473700a759d1eb836fb6e536"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a85bb1b7b473700a759d1eb836fb6e536">&#9670;&nbsp;</a></span>MakeBodyShapeDescription()</h2>
 

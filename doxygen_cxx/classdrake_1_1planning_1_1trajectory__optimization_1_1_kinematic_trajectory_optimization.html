@@ -213,42 +213,42 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aeb432a55ef7765459155c69a539d8658"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1trajectories_1_1_bspline_trajectory.html">trajectories::BsplineTrajectory</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#aeb432a55ef7765459155c69a539d8658">ReconstructTrajectory</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &amp;result) const</td></tr>
 <tr class="memdesc:aeb432a55ef7765459155c69a539d8658"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the trajectory q(t) from the <code>result</code> of solving <code><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#afcc8c6b2091ff4447ee2951bb7907de8" title="Getter for the optimization program.">prog()</a></code>.  <a href="#aeb432a55ef7765459155c69a539d8658">More...</a><br /></td></tr>
 <tr class="separator:aeb432a55ef7765459155c69a539d8658"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acfc5214a690370e5a4f2906f038fed1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#acfc5214a690370e5a4f2906f038fed1c">AddPathPositionConstraint</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;lb, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;ub, <a class="el" href="classdouble.html">double</a> s)</td></tr>
-<tr class="memdesc:acfc5214a690370e5a4f2906f038fed1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a linear constraint on the value of the path, <code>lb</code> ≤ r(s) ≤ <code>ub</code>.  <a href="#acfc5214a690370e5a4f2906f038fed1c">More...</a><br /></td></tr>
-<tr class="separator:acfc5214a690370e5a4f2906f038fed1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84164d4abbdec280932b2677ab56a210"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a84164d4abbdec280932b2677ab56a210">AddPathPositionConstraint</a> (const std::shared_ptr&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt; &amp;constraint, <a class="el" href="classdouble.html">double</a> s)</td></tr>
-<tr class="memdesc:a84164d4abbdec280932b2677ab56a210"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a (generic) constraint on path.  <a href="#a84164d4abbdec280932b2677ab56a210">More...</a><br /></td></tr>
-<tr class="separator:a84164d4abbdec280932b2677ab56a210"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae36974e43ab46ab33b24010ec4099c05"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#ae36974e43ab46ab33b24010ec4099c05">AddPathVelocityConstraint</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;lb, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;ub, <a class="el" href="classdouble.html">double</a> s)</td></tr>
-<tr class="memdesc:ae36974e43ab46ab33b24010ec4099c05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a linear constraint on the derivative of the path, <code>lb</code> ≤ ṙ(s) ≤ <code>ub</code>.  <a href="#ae36974e43ab46ab33b24010ec4099c05">More...</a><br /></td></tr>
-<tr class="separator:ae36974e43ab46ab33b24010ec4099c05"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae8d62c3f05599f559144116edb450fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#aae8d62c3f05599f559144116edb450fc">AddVelocityConstraintAtNormalizedTime</a> (const std::shared_ptr&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt; &amp;constraint, <a class="el" href="classdouble.html">double</a> s)</td></tr>
-<tr class="memdesc:aae8d62c3f05599f559144116edb450fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a (generic) constraint on trajectory velocity <code>q̇(t)</code>, evaluated at <code>s</code>.  <a href="#aae8d62c3f05599f559144116edb450fc">More...</a><br /></td></tr>
-<tr class="separator:aae8d62c3f05599f559144116edb450fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52a66f722f28cf5671c9b9e7479fc56b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a52a66f722f28cf5671c9b9e7479fc56b">AddPathAccelerationConstraint</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;lb, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;ub, <a class="el" href="classdouble.html">double</a> s)</td></tr>
-<tr class="memdesc:a52a66f722f28cf5671c9b9e7479fc56b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a linear constraint on the second derivative of the path, <code>lb</code> ≤ r̈(s) ≤ <code>ub</code>.  <a href="#a52a66f722f28cf5671c9b9e7479fc56b">More...</a><br /></td></tr>
-<tr class="separator:a52a66f722f28cf5671c9b9e7479fc56b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac483aaab159f1f529e6dae99ab3405d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#ac483aaab159f1f529e6dae99ab3405d8">AddDurationConstraint</a> (std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt; lb, std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt; ub)</td></tr>
-<tr class="memdesc:ac483aaab159f1f529e6dae99ab3405d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds upper and lower bounds on the duration of the trajectory.  <a href="#ac483aaab159f1f529e6dae99ab3405d8">More...</a><br /></td></tr>
-<tr class="separator:ac483aaab159f1f529e6dae99ab3405d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adca55d80c38bff3a312419c47ff112d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#adca55d80c38bff3a312419c47ff112d9">AddPositionBounds</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;lb, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;ub)</td></tr>
-<tr class="memdesc:adca55d80c38bff3a312419c47ff112d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds bounding box constraints to enforce upper and lower bounds on the positions trajectory, q(t).  <a href="#adca55d80c38bff3a312419c47ff112d9">More...</a><br /></td></tr>
-<tr class="separator:adca55d80c38bff3a312419c47ff112d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af27492cb5b0dbf8cd8ce10e792486052"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#af27492cb5b0dbf8cd8ce10e792486052">AddVelocityBounds</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;lb, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;ub)</td></tr>
-<tr class="memdesc:af27492cb5b0dbf8cd8ce10e792486052"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds linear constraints to enforce upper and lower bounds on the velocity trajectory, q̇(t).  <a href="#af27492cb5b0dbf8cd8ce10e792486052">More...</a><br /></td></tr>
-<tr class="separator:af27492cb5b0dbf8cd8ce10e792486052"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80f43c22ed876757cb51205ebf8a7641"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a80f43c22ed876757cb51205ebf8a7641">AddAccelerationBounds</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;lb, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;ub)</td></tr>
-<tr class="memdesc:a80f43c22ed876757cb51205ebf8a7641"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds generic (nonlinear) constraints to enforce the upper and lower bounds to the acceleration trajectory, q̈(t).  <a href="#a80f43c22ed876757cb51205ebf8a7641">More...</a><br /></td></tr>
-<tr class="separator:a80f43c22ed876757cb51205ebf8a7641"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad828f04c286cdd9520306845b5644acb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#ad828f04c286cdd9520306845b5644acb">AddJerkBounds</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;lb, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;ub)</td></tr>
-<tr class="memdesc:ad828f04c286cdd9520306845b5644acb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds generic (nonlinear) constraints to enforce the upper and lower bounds to the jerk trajectory, d³qdt³(t).  <a href="#ad828f04c286cdd9520306845b5644acb">More...</a><br /></td></tr>
-<tr class="separator:ad828f04c286cdd9520306845b5644acb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2dc3464ced4836664ab6f75d389081db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a2dc3464ced4836664ab6f75d389081db">AddDurationCost</a> (<a class="el" href="classdouble.html">double</a> weight=1.0)</td></tr>
-<tr class="memdesc:a2dc3464ced4836664ab6f75d389081db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a linear cost on the duration of the trajectory.  <a href="#a2dc3464ced4836664ab6f75d389081db">More...</a><br /></td></tr>
-<tr class="separator:a2dc3464ced4836664ab6f75d389081db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a572b1c13ee61f1f9f2231d29f58f59fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a572b1c13ee61f1f9f2231d29f58f59fd">AddPathLengthCost</a> (<a class="el" href="classdouble.html">double</a> weight=1.0, bool use_conic_constraint=false)</td></tr>
-<tr class="memdesc:a572b1c13ee61f1f9f2231d29f58f59fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a cost on an upper bound on length of the path, ∫₀ᵀ |q̇(t)|₂ dt, by summing the distance between the path control points.  <a href="#a572b1c13ee61f1f9f2231d29f58f59fd">More...</a><br /></td></tr>
-<tr class="separator:a572b1c13ee61f1f9f2231d29f58f59fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a030ffdb9bb87db95f7ab4b4271f3f7db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">solvers::LinearConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a030ffdb9bb87db95f7ab4b4271f3f7db">AddPathPositionConstraint</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;lb, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;ub, <a class="el" href="classdouble.html">double</a> s)</td></tr>
+<tr class="memdesc:a030ffdb9bb87db95f7ab4b4271f3f7db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a linear constraint on the value of the path, <code>lb</code> ≤ r(s) ≤ <code>ub</code>.  <a href="#a030ffdb9bb87db95f7ab4b4271f3f7db">More...</a><br /></td></tr>
+<tr class="separator:a030ffdb9bb87db95f7ab4b4271f3f7db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21f8c3c709d1033af97e84221e2cf33b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a21f8c3c709d1033af97e84221e2cf33b">AddPathPositionConstraint</a> (const std::shared_ptr&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt; &amp;constraint, <a class="el" href="classdouble.html">double</a> s)</td></tr>
+<tr class="memdesc:a21f8c3c709d1033af97e84221e2cf33b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a (generic) constraint on path.  <a href="#a21f8c3c709d1033af97e84221e2cf33b">More...</a><br /></td></tr>
+<tr class="separator:a21f8c3c709d1033af97e84221e2cf33b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cdddfa87a81c1bb16e7c543fbc2c1e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">solvers::LinearConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a5cdddfa87a81c1bb16e7c543fbc2c1e6">AddPathVelocityConstraint</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;lb, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;ub, <a class="el" href="classdouble.html">double</a> s)</td></tr>
+<tr class="memdesc:a5cdddfa87a81c1bb16e7c543fbc2c1e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a linear constraint on the derivative of the path, <code>lb</code> ≤ ṙ(s) ≤ <code>ub</code>.  <a href="#a5cdddfa87a81c1bb16e7c543fbc2c1e6">More...</a><br /></td></tr>
+<tr class="separator:a5cdddfa87a81c1bb16e7c543fbc2c1e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9130da22735a186f32196b00f7fc80ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a9130da22735a186f32196b00f7fc80ae">AddVelocityConstraintAtNormalizedTime</a> (const std::shared_ptr&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt; &amp;constraint, <a class="el" href="classdouble.html">double</a> s)</td></tr>
+<tr class="memdesc:a9130da22735a186f32196b00f7fc80ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a (generic) constraint on trajectory velocity <code>q̇(t)</code>, evaluated at <code>s</code>.  <a href="#a9130da22735a186f32196b00f7fc80ae">More...</a><br /></td></tr>
+<tr class="separator:a9130da22735a186f32196b00f7fc80ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67ebb878e71a66ac8d6ea1e739766d3b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">solvers::LinearConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a67ebb878e71a66ac8d6ea1e739766d3b">AddPathAccelerationConstraint</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;lb, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;ub, <a class="el" href="classdouble.html">double</a> s)</td></tr>
+<tr class="memdesc:a67ebb878e71a66ac8d6ea1e739766d3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a linear constraint on the second derivative of the path, <code>lb</code> ≤ r̈(s) ≤ <code>ub</code>.  <a href="#a67ebb878e71a66ac8d6ea1e739766d3b">More...</a><br /></td></tr>
+<tr class="separator:a67ebb878e71a66ac8d6ea1e739766d3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe1106b68562afbcfec8556500df5f90"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_bounding_box_constraint.html">solvers::BoundingBoxConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#afe1106b68562afbcfec8556500df5f90">AddDurationConstraint</a> (std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt; lb, std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt; ub)</td></tr>
+<tr class="memdesc:afe1106b68562afbcfec8556500df5f90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds bounding box constraints for upper and lower bounds on the duration of the trajectory.  <a href="#afe1106b68562afbcfec8556500df5f90">More...</a><br /></td></tr>
+<tr class="separator:afe1106b68562afbcfec8556500df5f90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81d27229471360feee82aac9ea2be7e7"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_bounding_box_constraint.html">solvers::BoundingBoxConstraint</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a81d27229471360feee82aac9ea2be7e7">AddPositionBounds</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;lb, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;ub)</td></tr>
+<tr class="memdesc:a81d27229471360feee82aac9ea2be7e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds bounding box constraints to enforce upper and lower bounds on the positions trajectory, q(t).  <a href="#a81d27229471360feee82aac9ea2be7e7">More...</a><br /></td></tr>
+<tr class="separator:a81d27229471360feee82aac9ea2be7e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8529eb42d4e8ce382c0a53ee9b26e236"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">solvers::LinearConstraint</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a8529eb42d4e8ce382c0a53ee9b26e236">AddVelocityBounds</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;lb, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;ub)</td></tr>
+<tr class="memdesc:a8529eb42d4e8ce382c0a53ee9b26e236"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds linear constraints to enforce upper and lower bounds on the velocity trajectory, q̇(t).  <a href="#a8529eb42d4e8ce382c0a53ee9b26e236">More...</a><br /></td></tr>
+<tr class="separator:a8529eb42d4e8ce382c0a53ee9b26e236"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a712d19c4728dc4e70244c8c192377032"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a712d19c4728dc4e70244c8c192377032">AddAccelerationBounds</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;lb, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;ub)</td></tr>
+<tr class="memdesc:a712d19c4728dc4e70244c8c192377032"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds generic (nonlinear) constraints to enforce the upper and lower bounds to the acceleration trajectory, q̈(t).  <a href="#a712d19c4728dc4e70244c8c192377032">More...</a><br /></td></tr>
+<tr class="separator:a712d19c4728dc4e70244c8c192377032"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab13f393292d6592dc959f55625fe0f5d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#ab13f393292d6592dc959f55625fe0f5d">AddJerkBounds</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;lb, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;ub)</td></tr>
+<tr class="memdesc:ab13f393292d6592dc959f55625fe0f5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds generic (nonlinear) constraints to enforce the upper and lower bounds to the jerk trajectory, d³qdt³(t).  <a href="#ab13f393292d6592dc959f55625fe0f5d">More...</a><br /></td></tr>
+<tr class="separator:ab13f393292d6592dc959f55625fe0f5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3f60fe9552c90c9a3986f023ba18a56"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_cost.html">solvers::LinearCost</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#ae3f60fe9552c90c9a3986f023ba18a56">AddDurationCost</a> (<a class="el" href="classdouble.html">double</a> weight=1.0)</td></tr>
+<tr class="memdesc:ae3f60fe9552c90c9a3986f023ba18a56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a linear cost on the duration of the trajectory.  <a href="#ae3f60fe9552c90c9a3986f023ba18a56">More...</a><br /></td></tr>
+<tr class="separator:ae3f60fe9552c90c9a3986f023ba18a56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6da88e725b9e65eb10ffe19f25742ad4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a6da88e725b9e65eb10ffe19f25742ad4">AddPathLengthCost</a> (<a class="el" href="classdouble.html">double</a> weight=1.0, bool use_conic_constraint=false)</td></tr>
+<tr class="memdesc:a6da88e725b9e65eb10ffe19f25742ad4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a cost on an upper bound on length of the path, ∫₀ᵀ |q̇(t)|₂ dt, by summing the distance between the path control points.  <a href="#a6da88e725b9e65eb10ffe19f25742ad4">More...</a><br /></td></tr>
+<tr class="separator:a6da88e725b9e65eb10ffe19f25742ad4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a9a8474ae1e7ce1dab9a404fd6e6f6054"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a9a8474ae1e7ce1dab9a404fd6e6f6054">KinematicTrajectoryOptimization</a> (const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html">KinematicTrajectoryOptimization</a> &amp;)=delete</td></tr>
 <tr class="separator:a9a8474ae1e7ce1dab9a404fd6e6f6054"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -393,14 +393,14 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a80f43c22ed876757cb51205ebf8a7641"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80f43c22ed876757cb51205ebf8a7641">&#9670;&nbsp;</a></span>AddAccelerationBounds()</h2>
+<a id="a712d19c4728dc4e70244c8c192377032"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a712d19c4728dc4e70244c8c192377032">&#9670;&nbsp;</a></span>AddAccelerationBounds()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void AddAccelerationBounds </td>
+          <td class="memname">std::vector&lt;std::vector&lt;<a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a>&gt; &gt; &gt; AddAccelerationBounds </td>
           <td>(</td>
           <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
           <td class="paramname"><em>lb</em>, </td>
@@ -420,18 +420,19 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Adds generic (nonlinear) constraints to enforce the upper and lower bounds to the acceleration trajectory, q̈(t). </p>
-<p>These constraints will be respected at all times. Note that this does NOT directly constrain r̈(s). </p>
+<p>These constraints will be respected at all times. Note that this does NOT directly constrain r̈(s).</p>
+<dl class="section return"><dt>Returns</dt><dd>A vector of bindings with the ith element is itself a vector of constraints (one per dof) adding a constraint to the ith control point of the acceleration trajectory. </dd></dl>
 
 </div>
 </div>
-<a id="ac483aaab159f1f529e6dae99ab3405d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac483aaab159f1f529e6dae99ab3405d8">&#9670;&nbsp;</a></span>AddDurationConstraint()</h2>
+<a id="afe1106b68562afbcfec8556500df5f90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe1106b68562afbcfec8556500df5f90">&#9670;&nbsp;</a></span>AddDurationConstraint()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void AddDurationConstraint </td>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_bounding_box_constraint.html">solvers::BoundingBoxConstraint</a>&gt; AddDurationConstraint </td>
           <td>(</td>
           <td class="paramtype">std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td>
           <td class="paramname"><em>lb</em>, </td>
@@ -450,18 +451,18 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Adds upper and lower bounds on the duration of the trajectory. </p>
+<p>Adds bounding box constraints for upper and lower bounds on the duration of the trajectory. </p>
 
 </div>
 </div>
-<a id="a2dc3464ced4836664ab6f75d389081db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2dc3464ced4836664ab6f75d389081db">&#9670;&nbsp;</a></span>AddDurationCost()</h2>
+<a id="ae3f60fe9552c90c9a3986f023ba18a56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3f60fe9552c90c9a3986f023ba18a56">&#9670;&nbsp;</a></span>AddDurationCost()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void AddDurationCost </td>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_linear_cost.html">solvers::LinearCost</a>&gt; AddDurationCost </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>weight</em> = <code>1.0</code></td><td>)</td>
@@ -474,14 +475,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ad828f04c286cdd9520306845b5644acb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad828f04c286cdd9520306845b5644acb">&#9670;&nbsp;</a></span>AddJerkBounds()</h2>
+<a id="ab13f393292d6592dc959f55625fe0f5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab13f393292d6592dc959f55625fe0f5d">&#9670;&nbsp;</a></span>AddJerkBounds()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void AddJerkBounds </td>
+          <td class="memname">std::vector&lt;std::vector&lt;<a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a>&gt; &gt; &gt; AddJerkBounds </td>
           <td>(</td>
           <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
           <td class="paramname"><em>lb</em>, </td>
@@ -501,18 +502,19 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Adds generic (nonlinear) constraints to enforce the upper and lower bounds to the jerk trajectory, d³qdt³(t). </p>
-<p>These constraints will be respected at all times. Note that this does NOT directly constrain d³rds³(s). </p>
+<p>These constraints will be respected at all times. Note that this does NOT directly constrain d³rds³(s).</p>
+<dl class="section return"><dt>Returns</dt><dd>A vector of bindings with the ith element is itself a vector of constraints (one per dof) adding a constraint to the ith control point of the jerk trajectory. </dd></dl>
 
 </div>
 </div>
-<a id="a52a66f722f28cf5671c9b9e7479fc56b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52a66f722f28cf5671c9b9e7479fc56b">&#9670;&nbsp;</a></span>AddPathAccelerationConstraint()</h2>
+<a id="a67ebb878e71a66ac8d6ea1e739766d3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67ebb878e71a66ac8d6ea1e739766d3b">&#9670;&nbsp;</a></span>AddPathAccelerationConstraint()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void AddPathAccelerationConstraint </td>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">solvers::LinearConstraint</a>&gt; AddPathAccelerationConstraint </td>
           <td>(</td>
           <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
           <td class="paramname"><em>lb</em>, </td>
@@ -542,14 +544,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a572b1c13ee61f1f9f2231d29f58f59fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a572b1c13ee61f1f9f2231d29f58f59fd">&#9670;&nbsp;</a></span>AddPathLengthCost()</h2>
+<a id="a6da88e725b9e65eb10ffe19f25742ad4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6da88e725b9e65eb10ffe19f25742ad4">&#9670;&nbsp;</a></span>AddPathLengthCost()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void AddPathLengthCost </td>
+          <td class="memname">std::vector&lt;<a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a>&gt; &gt; AddPathLengthCost </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
           <td class="paramname"><em>weight</em> = <code>1.0</code>, </td>
@@ -569,18 +571,19 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Adds a cost on an upper bound on length of the path, ∫₀ᵀ |q̇(t)|₂ dt, by summing the distance between the path control points. </p>
-<p>If <code>use_conic_constraint = false</code>, then costs are added via MathematicalProgram::AddL2NormCost; otherwise they are added via MathematicalProgram::AddL2NormCostUsingConicConstraint. </p>
+<p>If <code>use_conic_constraint = false</code>, then costs are added via MathematicalProgram::AddL2NormCost; otherwise they are added via MathematicalProgram::AddL2NormCostUsingConicConstraint.</p>
+<dl class="section return"><dt>Returns</dt><dd>A vector of bindings with the ith element adding a cost to the ith control point of the velocity trajectory. </dd></dl>
 
 </div>
 </div>
-<a id="acfc5214a690370e5a4f2906f038fed1c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acfc5214a690370e5a4f2906f038fed1c">&#9670;&nbsp;</a></span>AddPathPositionConstraint() <span class="overload">[1/2]</span></h2>
+<a id="a030ffdb9bb87db95f7ab4b4271f3f7db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a030ffdb9bb87db95f7ab4b4271f3f7db">&#9670;&nbsp;</a></span>AddPathPositionConstraint() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void AddPathPositionConstraint </td>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">solvers::LinearConstraint</a>&gt; AddPathPositionConstraint </td>
           <td>(</td>
           <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
           <td class="paramname"><em>lb</em>, </td>
@@ -610,14 +613,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a84164d4abbdec280932b2677ab56a210"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a84164d4abbdec280932b2677ab56a210">&#9670;&nbsp;</a></span>AddPathPositionConstraint() <span class="overload">[2/2]</span></h2>
+<a id="a21f8c3c709d1033af97e84221e2cf33b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21f8c3c709d1033af97e84221e2cf33b">&#9670;&nbsp;</a></span>AddPathPositionConstraint() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void AddPathPositionConstraint </td>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a>&gt; AddPathPositionConstraint </td>
           <td>(</td>
           <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>constraint</em>, </td>
@@ -643,14 +646,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ae36974e43ab46ab33b24010ec4099c05"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae36974e43ab46ab33b24010ec4099c05">&#9670;&nbsp;</a></span>AddPathVelocityConstraint()</h2>
+<a id="a5cdddfa87a81c1bb16e7c543fbc2c1e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cdddfa87a81c1bb16e7c543fbc2c1e6">&#9670;&nbsp;</a></span>AddPathVelocityConstraint()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void AddPathVelocityConstraint </td>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">solvers::LinearConstraint</a>&gt; AddPathVelocityConstraint </td>
           <td>(</td>
           <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
           <td class="paramname"><em>lb</em>, </td>
@@ -680,14 +683,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="adca55d80c38bff3a312419c47ff112d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adca55d80c38bff3a312419c47ff112d9">&#9670;&nbsp;</a></span>AddPositionBounds()</h2>
+<a id="a81d27229471360feee82aac9ea2be7e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81d27229471360feee82aac9ea2be7e7">&#9670;&nbsp;</a></span>AddPositionBounds()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void AddPositionBounds </td>
+          <td class="memname">std::vector&lt;<a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_bounding_box_constraint.html">solvers::BoundingBoxConstraint</a>&gt; &gt; AddPositionBounds </td>
           <td>(</td>
           <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
           <td class="paramname"><em>lb</em>, </td>
@@ -707,18 +710,19 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Adds bounding box constraints to enforce upper and lower bounds on the positions trajectory, q(t). </p>
-<p>These bounds will be respected at all times, t∈[0,T]. This also implies the constraints are satisfied for r(s), for all s∈[0,1]. </p>
+<p>These bounds will be respected at all times, t∈[0,T]. This also implies the constraints are satisfied for r(s), for all s∈[0,1].</p>
+<dl class="section return"><dt>Returns</dt><dd>A vector of bindings with the ith element adding a constraint to the ith control point. </dd></dl>
 
 </div>
 </div>
-<a id="af27492cb5b0dbf8cd8ce10e792486052"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af27492cb5b0dbf8cd8ce10e792486052">&#9670;&nbsp;</a></span>AddVelocityBounds()</h2>
+<a id="a8529eb42d4e8ce382c0a53ee9b26e236"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8529eb42d4e8ce382c0a53ee9b26e236">&#9670;&nbsp;</a></span>AddVelocityBounds()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void AddVelocityBounds </td>
+          <td class="memname">std::vector&lt;<a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">solvers::LinearConstraint</a>&gt; &gt; AddVelocityBounds </td>
           <td>(</td>
           <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
           <td class="paramname"><em>lb</em>, </td>
@@ -738,18 +742,19 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Adds linear constraints to enforce upper and lower bounds on the velocity trajectory, q̇(t). </p>
-<p>These bounds will be respected at all times. Note this does NOT directly constrain ṙ(s). </p>
+<p>These bounds will be respected at all times. Note this does NOT directly constrain ṙ(s).</p>
+<dl class="section return"><dt>Returns</dt><dd>A vector of bindings with the ith element adding a constraint to the ith control point of the derivative trajectory. </dd></dl>
 
 </div>
 </div>
-<a id="aae8d62c3f05599f559144116edb450fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aae8d62c3f05599f559144116edb450fc">&#9670;&nbsp;</a></span>AddVelocityConstraintAtNormalizedTime()</h2>
+<a id="a9130da22735a186f32196b00f7fc80ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9130da22735a186f32196b00f7fc80ae">&#9670;&nbsp;</a></span>AddVelocityConstraintAtNormalizedTime()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void AddVelocityConstraintAtNormalizedTime </td>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a>&gt; AddVelocityConstraintAtNormalizedTime </td>
           <td>(</td>
           <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>constraint</em>, </td>

@@ -26,5 +26,7 @@ var searchData=
   ['num_5fiterations',['num_iterations',['../structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html#ab702e2f7530d6172eea3780d8923bd71',1,'drake::multibody::TamsiSolverIterationStats']]],
   ['num_5fmisc_5fcontinuous_5fstates',['num_misc_continuous_states',['../structdrake_1_1systems_1_1_system_base_1_1_context_sizes.html#a24d2b7b9127e9eb52958e80f9c5792a6',1,'drake::systems::SystemBase::ContextSizes']]],
   ['num_5fnumeric_5fparameter_5fgroups',['num_numeric_parameter_groups',['../structdrake_1_1systems_1_1_system_base_1_1_context_sizes.html#af8f29412a52a66576d0ea85108e4d4f9',1,'drake::systems::SystemBase::ContextSizes']]],
+  ['num_5fpoints_5fper_5fcoverage_5fcheck',['num_points_per_coverage_check',['../structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#a3754739dd44505520db4cea655b8fe48',1,'drake::planning::IrisFromCliqueCoverOptions']]],
+  ['num_5fpoints_5fper_5fvisibility_5fround',['num_points_per_visibility_round',['../structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#a03126f4334d01ba5ea7523abb9ce334d',1,'drake::planning::IrisFromCliqueCoverOptions']]],
   ['num_5fsamples',['num_samples',['../structdrake_1_1geometry_1_1optimization_1_1_sampled_volume.html#a32bff09a616cee12a2c61815a990152d',1,'drake::geometry::optimization::SampledVolume']]]
 ];

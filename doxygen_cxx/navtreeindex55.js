@@ -1,5 +1,8 @@
 var NAVTREEINDEX55 =
 {
+"robot__plan__utils_8h.html#a03defeaacd8e6e4a43260eb910c1913c":[4,0,0,6,3,5,0],
+"robot__plan__utils_8h.html#a34dd83b8c99f86f80129b54cf879beda":[4,0,0,6,3,5,1],
+"robot__plan__utils_8h.html#a8cac2550a9a52551ff82e51b3d5b29e3":[4,0,0,6,3,5,2],
 "rod2d_8h.html":[4,0,0,3,16,0],
 "rod2d__geometry_8h.html":[4,0,0,3,16,1],
 "roll__pitch__yaw_8h.html":[4,0,0,7,30],
@@ -71,7 +74,7 @@ var NAVTREEINDEX55 =
 "scalar__view__dense__output_8h.html":[4,0,0,12,0,20],
 "scenario_8h.html":[4,0,0,3,6,0],
 "scene__graph_8h.html":[4,0,0,4,45],
-"scene__graph__collision__checker_8h.html":[4,0,0,10,16],
+"scene__graph__collision__checker_8h.html":[4,0,0,10,17],
 "scene__graph__inspector_8h.html":[4,0,0,4,46],
 "schunk__wsg__constants_8h.html":[4,0,0,6,2,1],
 "schunk__wsg__constants_8h.html#a2d50206e40178bb516bf578b4418af0a":[4,0,0,6,2,1,6],
@@ -114,7 +117,7 @@ var NAVTREEINDEX55 =
 "semidefinite__relaxation_8h.html":[4,0,0,11,46],
 "semidefinite__relaxation_8h.html#af6da6d265dcd5e959082b17d3a94258b":[4,0,0,11,46,0],
 "sensors__py_8h.html":[4,0,0,0,0,10,5],
-"sequential__expression__manager_8h.html":[4,0,0,10,2,6],
+"sequential__expression__manager_8h.html":[4,0,0,10,3,6],
 "serialize__pybind_8h.html":[4,0,0,0,0,1,7],
 "serialize__pybind_8h.html#a0b3e8f87bda821cd1fa9a52586e25f1e":[4,0,0,0,0,1,7,0],
 "serialize__pybind_8h.html#a68be3d37cf9d6c6fcc2afb98d04c046f":[4,0,0,0,0,1,7,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX55 =
 "ssize_8h.html":[4,0,0,1,59],
 "ssize_8h.html#a65f207e2f4d5cda4d2bc9da7b8a54256":[4,0,0,1,59,0],
 "ssize_8h.html#a7a5f6f92343ffa2502b5f2345c3d595f":[4,0,0,1,59,1],
-"stacked__trajectory_8h.html":[4,0,0,1,5,10],
-"standard__operations_8h.html":[4,0,0,1,0,0,2],
-"standard__operations_8h.html#a084075faa823e678b6c30ae1f26659fe":[4,0,0,1,0,0,2,25],
-"standard__operations_8h.html#a0c59f27be226c91eb1f9474be3cd9933":[4,0,0,1,0,0,2,61]
+"stacked__trajectory_8h.html":[4,0,0,1,5,10]
 };

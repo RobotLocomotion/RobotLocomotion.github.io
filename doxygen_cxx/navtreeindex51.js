@@ -1,8 +1,9 @@
 var NAVTREEINDEX51 =
 {
+"integer__optimization__util_8h.html#aa7a863c255da14a1441e3ac58d082472":[4,0,0,11,25,3],
 "integer__optimization__util_8h.html#ab3ba521ece6e61a25713f11610b01d97":[4,0,0,11,25,1],
 "integer__optimization__util_8h.html#ada3cfbf9597820039fe2d6c3f175731b":[4,0,0,11,25,2],
-"integration__constraint_8h.html":[4,0,0,10,2,3],
+"integration__constraint_8h.html":[4,0,0,10,3,3],
 "integrator_8h.html":[4,0,0,12,6,10],
 "integrator__base_8h.html":[4,0,0,12,0,10],
 "internal__buffer__dim_8h.html":[4,0,0,4,5,1],
@@ -38,6 +39,8 @@ var NAVTREEINDEX51 =
 "iris_8h.html#ga5f3ad49bfffd1b9a968ed7f1bf4d4c80":[4,0,0,4,1,17,4],
 "iris_8h.html#gad54a224f37c1a0dc86eaec300ef874af":[4,0,0,4,1,17,3],
 "iris_8h.html#gafd8111a93cb3461e05bec3477ee736f6":[4,0,0,4,1,17,1],
+"iris__from__clique__cover_8h.html":[4,0,0,10,1,0],
+"iris__from__clique__cover_8h.html#ace53f3f8045d8eb96867bcd6eda63ed0":[4,0,0,10,1,0,1],
 "iris__internal_8h.html":[4,0,0,4,1,18],
 "is__approx__equal__abstol_8h.html":[4,0,0,1,40],
 "is__approx__equal__abstol_8h.html#a3cd8151cc95b5b95de9a9b882e27ed84":[4,0,0,1,40,0],
@@ -74,7 +77,7 @@ var NAVTREEINDEX51 =
 "kalman__filter_8h.html#ga483f8a39c210ad058dfc19ae26d93e16":[4,0,0,12,2,0,0],
 "kalman__filter_8h.html#gaffc5a5eabe473ebd57f96b0310d70ed8":[4,0,0,12,2,0,2],
 "kinematic__evaluator__utilities_8h.html":[4,0,0,8,5,12],
-"kinematic__trajectory__optimization_8h.html":[4,0,0,10,2,4],
+"kinematic__trajectory__optimization_8h.html":[4,0,0,10,3,4],
 "kinematics__vector_8h.html":[4,0,0,4,27],
 "kinematics__vector_8h.html#aa4d02909b70fea4c7cb0d0e62fa220a4":[4,0,0,4,27,1],
 "kinematics__vector_8h.html#ae94262ef74be53331dd7db2d6ffb246a":[4,0,0,4,27,2],
@@ -134,7 +137,7 @@ var NAVTREEINDEX51 =
 "linear__constitutive__model__data_8h.html":[4,0,0,8,3,20],
 "linear__corotated__model_8h.html":[4,0,0,8,3,21],
 "linear__corotated__model__data_8h.html":[4,0,0,8,3,22],
-"linear__distance__and__interpolation__provider_8h.html":[4,0,0,10,10],
+"linear__distance__and__interpolation__provider_8h.html":[4,0,0,10,11],
 "linear__model__predictive__controller_8h.html":[4,0,0,12,1,6],
 "linear__operator_8h.html":[4,0,0,8,2,11],
 "linear__quadratic__regulator_8h.html":[4,0,0,12,1,7],
@@ -246,8 +249,5 @@ var NAVTREEINDEX51 =
 "matrix__utilities_8h.html":[4,0,0,8,3,24],
 "max__clique__solver__base_8h.html":[4,0,0,10,0,1],
 "max__clique__solver__via__mip_8h.html":[4,0,0,10,0,2],
-"maybe__pause__for__user_8h.html":[4,0,0,1,4,9],
-"maybe__pause__for__user_8h.html#a77a58e168347f5ab66ed038bb9e29a74":[4,0,0,1,4,9,0],
-"measure__execution_8h.html":[4,0,0,1,4,10],
-"measure__execution_8h.html#a0c425c29517853116d2119b122e400a5":[4,0,0,1,4,10,0]
+"maybe__pause__for__user_8h.html":[4,0,0,1,4,9]
 };

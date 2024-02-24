@@ -2972,6 +2972,14 @@ optimization from random initial seeds inside the candidate IRIS
 region until it fails to find a collision in
 <code class="docutils literal notranslate"><span class="pre">options.num_collision_infeasible_samples</span></code> consecutive attempts.</p>
 </div>
+<p>This method constructs a single Iris region in the configuration space
+of <code class="docutils literal notranslate"><span class="pre">plant</span></code>.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>planning::IrisInConfigurationSpaceFromCliqueCover for a method to
+automatically cover the configuration space with multiple Iris
+regions.</p>
+</div>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt><dd><p>describes the kinematics of configuration space. It must be
 connected to a SceneGraph in a systems::Diagram.</p>

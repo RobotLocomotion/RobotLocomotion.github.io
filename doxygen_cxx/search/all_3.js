@@ -585,6 +585,7 @@ var searchData=
   ['count',['count',['../classdrake_1_1lcm_1_1_subscriber.html#ab375e6d238626437a2c5398b2dd0aeca',1,'drake::lcm::Subscriber::count() const'],['../classdrake_1_1lcm_1_1_subscriber.html#a361b1c7f6ecf8c70a8d867b96583b1c3',1,'drake::lcm::Subscriber::count()']]],
   ['countedges',['CountEdges',['../namespacedrake_1_1geometry_1_1_d_r_a_k_e___n_o___e_x_p_o_r_t.html#a9181fb586ba454606318ae13d07b6517',1,'drake::geometry::DRAKE_NO_EXPORT']]],
   ['countfaces',['CountFaces',['../namespacedrake_1_1geometry_1_1_d_r_a_k_e___n_o___e_x_p_o_r_t.html#a80a8ed53b2aebbfe932e097efa7d4da3',1,'drake::geometry::DRAKE_NO_EXPORT']]],
+  ['coverage_5ftermination_5fthreshold',['coverage_termination_threshold',['../structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#ac98a640b01d5b96481a3999a25506e0e',1,'drake::planning::IrisFromCliqueCoverOptions']]],
   ['cpp_5fparam_5fpybind_2eh',['cpp_param_pybind.h',['../cpp__param__pybind_8h.html',1,'']]],
   ['cpp_5ftemplate_5fpybind_2eh',['cpp_template_pybind.h',['../cpp__template__pybind_8h.html',1,'']]],
   ['crbegin',['crbegin',['../classdrake_1_1symbolic_1_1_variables.html#a81f80a31923e85af56a7b1ae0712a33b',1,'drake::symbolic::Variables']]],
