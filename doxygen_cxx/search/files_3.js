@@ -23,6 +23,7 @@ var searchData=
   ['deprecation_5fpybind_2eh',['deprecation_pybind.h',['../deprecation__pybind_8h.html',1,'']]],
   ['depth_5fimage_5fto_5fpoint_5fcloud_2eh',['depth_image_to_point_cloud.h',['../depth__image__to__point__cloud_8h.html',1,'']]],
   ['depth_5fshaders_2eh',['depth_shaders.h',['../depth__shaders_8h.html',1,'']]],
+  ['derivative_5ftrajectory_2eh',['derivative_trajectory.h',['../derivative__trajectory_8h.html',1,'']]],
   ['detail_5fcollision_5ffilter_5fgroup_5fresolver_2eh',['detail_collision_filter_group_resolver.h',['../detail__collision__filter__group__resolver_8h.html',1,'']]],
   ['detail_5fcommon_2eh',['detail_common.h',['../detail__common_8h.html',1,'']]],
   ['detail_5fcomposite_5fparse_2eh',['detail_composite_parse.h',['../detail__composite__parse_8h.html',1,'']]],

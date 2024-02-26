@@ -12,6 +12,7 @@ var searchData=
   ['depthimagetopointcloud',['DepthImageToPointCloud',['../classdrake_1_1perception_1_1_depth_image_to_point_cloud.html',1,'drake::perception']]],
   ['depthrange',['DepthRange',['../classdrake_1_1geometry_1_1render_1_1_depth_range.html',1,'drake::geometry::render']]],
   ['depthrendercamera',['DepthRenderCamera',['../classdrake_1_1geometry_1_1render_1_1_depth_render_camera.html',1,'drake::geometry::render']]],
+  ['derivativetrajectory',['DerivativeTrajectory',['../classdrake_1_1trajectories_1_1_derivative_trajectory.html',1,'drake::trajectories']]],
   ['descriptortype',['DescriptorType',['../classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html',1,'drake::perception::pc_flags']]],
   ['deterministic',['Deterministic',['../classdrake_1_1schema_1_1_deterministic.html',1,'drake::schema']]],
   ['deterministicvector',['DeterministicVector',['../classdrake_1_1schema_1_1_deterministic_vector.html',1,'drake::schema']]],

@@ -46,6 +46,7 @@ var searchData=
   ['_7ecylinder',['~Cylinder',['../classdrake_1_1geometry_1_1_cylinder.html#a8c6205a5a634260cf6ea48b964671816',1,'drake::geometry::Cylinder']]],
   ['_7edenseoutput',['~DenseOutput',['../classdrake_1_1systems_1_1_dense_output.html#a69988224169c4e04a80054e5c666b166',1,'drake::systems::DenseOutput']]],
   ['_7edependencygraph',['~DependencyGraph',['../classdrake_1_1systems_1_1_dependency_graph.html#a2b164c18b865665d99c54c78cbe67274',1,'drake::systems::DependencyGraph']]],
+  ['_7ederivativetrajectory',['~DerivativeTrajectory',['../classdrake_1_1trajectories_1_1_derivative_trajectory.html#a44dfb5b341956f09dd1c10e63b3c0d68',1,'drake::trajectories::DerivativeTrajectory']]],
   ['_7edeterministic',['~Deterministic',['../classdrake_1_1schema_1_1_deterministic.html#a34a88e4193bdc9d5c43a609f685e1237',1,'drake::schema::Deterministic']]],
   ['_7edeterministicvector',['~DeterministicVector',['../classdrake_1_1schema_1_1_deterministic_vector.html#a0a6c2511eabe93951ecba0bd0e887d48',1,'drake::schema::DeterministicVector']]],
   ['_7ediagnosticpolicytestbase',['~DiagnosticPolicyTestBase',['../classdrake_1_1test_1_1_diagnostic_policy_test_base.html#ad9be87e8c19668d196357e94f7391541',1,'drake::test::DiagnosticPolicyTestBase']]],

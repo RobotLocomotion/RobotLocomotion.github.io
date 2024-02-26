@@ -934,6 +934,134 @@ segments[i].cols() == segments[0].cols()`.</p>
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="pydrake.trajectories.DerivativeTrajectory">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.trajectories.</span></span><span class="sig-name descname"><span class="pre">DerivativeTrajectory</span></span><a class="headerlink" href="#pydrake.trajectories.DerivativeTrajectory" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.trajectories.Trajectory" title="pydrake.trajectories.Trajectory"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.trajectories.Trajectory</span></code></a></p>
+<p>Trajectory objects provide derivatives by implementing
+<code class="docutils literal notranslate"><span class="pre">DoEvalDerivative</span></code> <em>and</em> <code class="docutils literal notranslate"><span class="pre">DoMakeDerivative</span></code>. <cite>DoEvalDerivative</cite>
+evaluates the derivative value at a point in time.
+<code class="docutils literal notranslate"><span class="pre">DoMakeDerivative</span></code> returns a new Trajectory object which represents
+the derivative.</p>
+<p>In some cases, it is easy to implement <code class="docutils literal notranslate"><span class="pre">DoEvalDerivative</span></code>, but
+difficult or inefficient to implement <code class="docutils literal notranslate"><span class="pre">DoMakeDerivative</span></code> natively.
+And it may be just as efficient to use <code class="docutils literal notranslate"><span class="pre">DoEvalDerivative</span></code> even in
+repeated evaluations of the derivative. The DerivativeTrajectory class
+helps with this case – given a <code class="docutils literal notranslate"><span class="pre">nominal</span></code> Trajectory, it provides a
+Trajectory interface that calls <code class="docutils literal notranslate"><span class="pre">nominal.EvalDerivative()</span></code> to
+implement <code class="docutils literal notranslate"><span class="pre">Trajectory::value()</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This class is templated; see <a class="reference internal" href="#pydrake.trajectories.DerivativeTrajectory_" title="pydrake.trajectories.DerivativeTrajectory_"><code class="xref py py-class docutils literal notranslate"><span class="pre">DerivativeTrajectory_</span></code></a>
+for the list of instantiations.</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.trajectories.DerivativeTrajectory.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.DerivativeTrajectory" title="pydrake.trajectories.DerivativeTrajectory"><span class="pre">pydrake.trajectories.DerivativeTrajectory</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">nominal</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.Trajectory" title="pydrake.trajectories.Trajectory"><span class="pre">pydrake.trajectories.Trajectory</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">derivative_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.trajectories.DerivativeTrajectory.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a DerivativeTrajectory representing the <code class="docutils literal notranslate"><span class="pre">derivative_order</span></code>
+derivatives of <code class="docutils literal notranslate"><span class="pre">nominal</span></code>. This constructor makes a Clone() of
+<code class="docutils literal notranslate"><span class="pre">nominal</span></code> and does not hold on to the reference.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if !nominal.has_derivative</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>RuntimeError if derivative_order &lt; 0.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.trajectories.DerivativeTrajectory.Clone">
+<span class="sig-name descname"><span class="pre">Clone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.DerivativeTrajectory" title="pydrake.trajectories.DerivativeTrajectory"><span class="pre">pydrake.trajectories.DerivativeTrajectory</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.trajectories.Trajectory" title="pydrake.trajectories.Trajectory"><span class="pre">pydrake.trajectories.Trajectory</span></a></span></span><a class="headerlink" href="#pydrake.trajectories.DerivativeTrajectory.Clone" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py template">
+<dt class="sig sig-object py" id="pydrake.trajectories.DerivativeTrajectory_">
+<em class="property"><span class="pre">template</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.trajectories.</span></span><span class="sig-name descname"><span class="pre">DerivativeTrajectory_</span></span><a class="headerlink" href="#pydrake.trajectories.DerivativeTrajectory_" title="Permalink to this definition"></a></dt>
+<dd><p>Instantiations: <code class="xref py py-class docutils literal notranslate"><span class="pre">DerivativeTrajectory_[float]</span></code>, <a class="reference internal" href="#pydrake.trajectories.DerivativeTrajectory_-AutoDiffXd" title="pydrake.trajectories.DerivativeTrajectory_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">DerivativeTrajectory_[AutoDiffXd]</span></code></a>, <a class="reference internal" href="#pydrake.trajectories.DerivativeTrajectory_-Expression" title="pydrake.trajectories.DerivativeTrajectory_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">DerivativeTrajectory_[Expression]</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.trajectories.DerivativeTrajectory_-AutoDiffXd">
+<span id="pydrake.trajectories.DerivativeTrajectory_[AutoDiffXd]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.trajectories.</span></span><span class="sig-name descname"><span class="pre">DerivativeTrajectory_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.trajectories.DerivativeTrajectory_-AutoDiffXd" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.trajectories.Trajectory_-AutoDiffXd" title="pydrake.trajectories.Trajectory_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.trajectories.Trajectory_[AutoDiffXd]</span></code></a></p>
+<p>Trajectory objects provide derivatives by implementing
+<code class="docutils literal notranslate"><span class="pre">DoEvalDerivative</span></code> <em>and</em> <code class="docutils literal notranslate"><span class="pre">DoMakeDerivative</span></code>. <cite>DoEvalDerivative</cite>
+evaluates the derivative value at a point in time.
+<code class="docutils literal notranslate"><span class="pre">DoMakeDerivative</span></code> returns a new Trajectory object which represents
+the derivative.</p>
+<p>In some cases, it is easy to implement <code class="docutils literal notranslate"><span class="pre">DoEvalDerivative</span></code>, but
+difficult or inefficient to implement <code class="docutils literal notranslate"><span class="pre">DoMakeDerivative</span></code> natively.
+And it may be just as efficient to use <code class="docutils literal notranslate"><span class="pre">DoEvalDerivative</span></code> even in
+repeated evaluations of the derivative. The DerivativeTrajectory class
+helps with this case – given a <code class="docutils literal notranslate"><span class="pre">nominal</span></code> Trajectory, it provides a
+Trajectory interface that calls <code class="docutils literal notranslate"><span class="pre">nominal.EvalDerivative()</span></code> to
+implement <code class="docutils literal notranslate"><span class="pre">Trajectory::value()</span></code>.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.trajectories.DerivativeTrajectory_-AutoDiffXd-.__init__">
+<span id="pydrake.trajectories.DerivativeTrajectory_[AutoDiffXd].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.DerivativeTrajectory_" title="pydrake.trajectories.DerivativeTrajectory_"><span class="pre">pydrake.trajectories.DerivativeTrajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nominal</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.Trajectory_" title="pydrake.trajectories.Trajectory_"><span class="pre">pydrake.trajectories.Trajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">derivative_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.trajectories.DerivativeTrajectory_-AutoDiffXd-.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a DerivativeTrajectory representing the <code class="docutils literal notranslate"><span class="pre">derivative_order</span></code>
+derivatives of <code class="docutils literal notranslate"><span class="pre">nominal</span></code>. This constructor makes a Clone() of
+<code class="docutils literal notranslate"><span class="pre">nominal</span></code> and does not hold on to the reference.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if !nominal.has_derivative</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>RuntimeError if derivative_order &lt; 0.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.trajectories.DerivativeTrajectory_-AutoDiffXd-.Clone">
+<span id="pydrake.trajectories.DerivativeTrajectory_[AutoDiffXd].Clone"></span><span class="sig-name descname"><span class="pre">Clone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.DerivativeTrajectory_" title="pydrake.trajectories.DerivativeTrajectory_"><span class="pre">pydrake.trajectories.DerivativeTrajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.trajectories.Trajectory_" title="pydrake.trajectories.Trajectory_"><span class="pre">pydrake.trajectories.Trajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.DerivativeTrajectory_-AutoDiffXd-.Clone" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.trajectories.DerivativeTrajectory_-Expression">
+<span id="pydrake.trajectories.DerivativeTrajectory_[Expression]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.trajectories.</span></span><span class="sig-name descname"><span class="pre">DerivativeTrajectory_[Expression]</span></span><a class="headerlink" href="#pydrake.trajectories.DerivativeTrajectory_-Expression" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.trajectories.Trajectory_-Expression" title="pydrake.trajectories.Trajectory_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.trajectories.Trajectory_[Expression]</span></code></a></p>
+<p>Trajectory objects provide derivatives by implementing
+<code class="docutils literal notranslate"><span class="pre">DoEvalDerivative</span></code> <em>and</em> <code class="docutils literal notranslate"><span class="pre">DoMakeDerivative</span></code>. <cite>DoEvalDerivative</cite>
+evaluates the derivative value at a point in time.
+<code class="docutils literal notranslate"><span class="pre">DoMakeDerivative</span></code> returns a new Trajectory object which represents
+the derivative.</p>
+<p>In some cases, it is easy to implement <code class="docutils literal notranslate"><span class="pre">DoEvalDerivative</span></code>, but
+difficult or inefficient to implement <code class="docutils literal notranslate"><span class="pre">DoMakeDerivative</span></code> natively.
+And it may be just as efficient to use <code class="docutils literal notranslate"><span class="pre">DoEvalDerivative</span></code> even in
+repeated evaluations of the derivative. The DerivativeTrajectory class
+helps with this case – given a <code class="docutils literal notranslate"><span class="pre">nominal</span></code> Trajectory, it provides a
+Trajectory interface that calls <code class="docutils literal notranslate"><span class="pre">nominal.EvalDerivative()</span></code> to
+implement <code class="docutils literal notranslate"><span class="pre">Trajectory::value()</span></code>.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.trajectories.DerivativeTrajectory_-Expression-.__init__">
+<span id="pydrake.trajectories.DerivativeTrajectory_[Expression].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.DerivativeTrajectory_" title="pydrake.trajectories.DerivativeTrajectory_"><span class="pre">pydrake.trajectories.DerivativeTrajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nominal</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.Trajectory_" title="pydrake.trajectories.Trajectory_"><span class="pre">pydrake.trajectories.Trajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">derivative_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.trajectories.DerivativeTrajectory_-Expression-.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a DerivativeTrajectory representing the <code class="docutils literal notranslate"><span class="pre">derivative_order</span></code>
+derivatives of <code class="docutils literal notranslate"><span class="pre">nominal</span></code>. This constructor makes a Clone() of
+<code class="docutils literal notranslate"><span class="pre">nominal</span></code> and does not hold on to the reference.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if !nominal.has_derivative</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>RuntimeError if derivative_order &lt; 0.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.trajectories.DerivativeTrajectory_-Expression-.Clone">
+<span id="pydrake.trajectories.DerivativeTrajectory_[Expression].Clone"></span><span class="sig-name descname"><span class="pre">Clone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.DerivativeTrajectory_" title="pydrake.trajectories.DerivativeTrajectory_"><span class="pre">pydrake.trajectories.DerivativeTrajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.trajectories.Trajectory_" title="pydrake.trajectories.Trajectory_"><span class="pre">pydrake.trajectories.Trajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.DerivativeTrajectory_-Expression-.Clone" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="pydrake.trajectories.PathParameterizedTrajectory">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.trajectories.</span></span><span class="sig-name descname"><span class="pre">PathParameterizedTrajectory</span></span><a class="headerlink" href="#pydrake.trajectories.PathParameterizedTrajectory" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.trajectories.Trajectory" title="pydrake.trajectories.Trajectory"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.trajectories.Trajectory</span></code></a></p>
@@ -4027,8 +4155,9 @@ for the list of instantiations.</p>
 <span class="sig-name descname"><span class="pre">EvalDerivative</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.Trajectory" title="pydrake.trajectories.Trajectory"><span class="pre">pydrake.trajectories.Trajectory</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">derivative_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.Trajectory.EvalDerivative" title="Permalink to this definition"></a></dt>
 <dd><p>Evaluates the derivative of <code class="docutils literal notranslate"><span class="pre">this</span></code> at the given time <code class="docutils literal notranslate"><span class="pre">t</span></code>. Returns
 the nth derivative, where <code class="docutils literal notranslate"><span class="pre">n</span></code> is the value of <code class="docutils literal notranslate"><span class="pre">derivative_order</span></code>.</p>
-<dl class="simple">
-<dt>Precondition:</dt><dd><p>derivative_order must be non-negative.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if derivative_order is negative.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -4053,6 +4182,9 @@ returns a result.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The nth derivative of this object.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>RuntimeError if derivative_order is negative.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -4140,8 +4272,9 @@ scalar time.</p>
 <span id="pydrake.trajectories.Trajectory_[AutoDiffXd].EvalDerivative"></span><span class="sig-name descname"><span class="pre">EvalDerivative</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.Trajectory_" title="pydrake.trajectories.Trajectory_"><span class="pre">pydrake.trajectories.Trajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">derivative_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.Trajectory_-AutoDiffXd-.EvalDerivative" title="Permalink to this definition"></a></dt>
 <dd><p>Evaluates the derivative of <code class="docutils literal notranslate"><span class="pre">this</span></code> at the given time <code class="docutils literal notranslate"><span class="pre">t</span></code>. Returns
 the nth derivative, where <code class="docutils literal notranslate"><span class="pre">n</span></code> is the value of <code class="docutils literal notranslate"><span class="pre">derivative_order</span></code>.</p>
-<dl class="simple">
-<dt>Precondition:</dt><dd><p>derivative_order must be non-negative.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if derivative_order is negative.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -4166,6 +4299,9 @@ returns a result.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The nth derivative of this object.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>RuntimeError if derivative_order is negative.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -4247,8 +4383,9 @@ scalar time.</p>
 <span id="pydrake.trajectories.Trajectory_[Expression].EvalDerivative"></span><span class="sig-name descname"><span class="pre">EvalDerivative</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.Trajectory_" title="pydrake.trajectories.Trajectory_"><span class="pre">pydrake.trajectories.Trajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">derivative_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.Trajectory_-Expression-.EvalDerivative" title="Permalink to this definition"></a></dt>
 <dd><p>Evaluates the derivative of <code class="docutils literal notranslate"><span class="pre">this</span></code> at the given time <code class="docutils literal notranslate"><span class="pre">t</span></code>. Returns
 the nth derivative, where <code class="docutils literal notranslate"><span class="pre">n</span></code> is the value of <code class="docutils literal notranslate"><span class="pre">derivative_order</span></code>.</p>
-<dl class="simple">
-<dt>Precondition:</dt><dd><p>derivative_order must be non-negative.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if derivative_order is negative.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -4273,6 +4410,9 @@ returns a result.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The nth derivative of this object.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>RuntimeError if derivative_order is negative.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>

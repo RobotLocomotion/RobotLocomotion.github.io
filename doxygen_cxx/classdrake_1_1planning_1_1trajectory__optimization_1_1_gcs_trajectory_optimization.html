@@ -208,6 +208,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad6ea61fbab2a0ff7fed67b5109e5ff05"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#ad6ea61fbab2a0ff7fed67b5109e5ff05">AddRegions</a> (const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">geometry::optimization::ConvexSets</a> &amp;regions, <a class="el" href="classint.html">int</a> order, <a class="el" href="classdouble.html">double</a> h_min=0, <a class="el" href="classdouble.html">double</a> h_max=20, std::string name=&quot;&quot;)</td></tr>
 <tr class="memdesc:ad6ea61fbab2a0ff7fed67b5109e5ff05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html" title="A Subgraph is a subset of the larger graph.">Subgraph</a> with the given regions.  <a href="#ad6ea61fbab2a0ff7fed67b5109e5ff05">More...</a><br /></td></tr>
 <tr class="separator:ad6ea61fbab2a0ff7fed67b5109e5ff05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88df1e80fc5caca3da4c817fc3e23338"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a88df1e80fc5caca3da4c817fc3e23338">RemoveSubgraph</a> (const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;subgraph)</td></tr>
+<tr class="memdesc:a88df1e80fc5caca3da4c817fc3e23338"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a subgraph and all associated edges found in the subgraph and to and from other subgraphs.  <a href="#a88df1e80fc5caca3da4c817fc3e23338">More...</a><br /></td></tr>
+<tr class="separator:a88df1e80fc5caca3da4c817fc3e23338"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8bebbda88b8d0ae4fadc88777404491e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html">EdgesBetweenSubgraphs</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a8bebbda88b8d0ae4fadc88777404491e">AddEdges</a> (const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;from_subgraph, const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;to_subgraph, const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">geometry::optimization::ConvexSet</a> *subspace=nullptr)</td></tr>
 <tr class="memdesc:a8bebbda88b8d0ae4fadc88777404491e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connects two subgraphs with directed edges.  <a href="#a8bebbda88b8d0ae4fadc88777404491e">More...</a><br /></td></tr>
 <tr class="separator:a8bebbda88b8d0ae4fadc88777404491e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -235,6 +238,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3026f3dacc50a81434a05e8c9348eebf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a3026f3dacc50a81434a05e8c9348eebf">EstimateComplexity</a> () const</td></tr>
 <tr class="memdesc:a3026f3dacc50a81434a05e8c9348eebf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide a heuristic estimate of the complexity of the underlying GCS mathematical program, for regression testing purposes.  <a href="#a3026f3dacc50a81434a05e8c9348eebf">More...</a><br /></td></tr>
 <tr class="separator:a3026f3dacc50a81434a05e8c9348eebf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4471b7b36088e3f9a445818011a88b20"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a4471b7b36088e3f9a445818011a88b20">GetSubgraphs</a> () const</td></tr>
+<tr class="memdesc:a4471b7b36088e3f9a445818011a88b20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a vector of all subgraphs.  <a href="#a4471b7b36088e3f9a445818011a88b20">More...</a><br /></td></tr>
+<tr class="separator:a4471b7b36088e3f9a445818011a88b20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a371ed21c43d6eb12f5f4c55b0d6da8b8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html">EdgesBetweenSubgraphs</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a371ed21c43d6eb12f5f4c55b0d6da8b8">GetEdgesBetweenSubgraphs</a> () const</td></tr>
+<tr class="memdesc:a371ed21c43d6eb12f5f4c55b0d6da8b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a vector of all edges between subgraphs.  <a href="#a371ed21c43d6eb12f5f4c55b0d6da8b8">More...</a><br /></td></tr>
+<tr class="separator:a371ed21c43d6eb12f5f4c55b0d6da8b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69241ad5a6d2fafc3af8987e63bf49be"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html">geometry::optimization::GraphOfConvexSets</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a69241ad5a6d2fafc3af8987e63bf49be">graph_of_convex_sets</a> () const</td></tr>
 <tr class="memdesc:a69241ad5a6d2fafc3af8987e63bf49be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for the underlying GraphOfConvexSets.  <a href="#a69241ad5a6d2fafc3af8987e63bf49be">More...</a><br /></td></tr>
 <tr class="separator:a69241ad5a6d2fafc3af8987e63bf49be"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -752,6 +761,25 @@ Planning with Graphs of Geodesically-Convex Sets", and per the discussion in Sub
 
 </div>
 </div>
+<a id="a371ed21c43d6eb12f5f4c55b0d6da8b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a371ed21c43d6eb12f5f4c55b0d6da8b8">&#9670;&nbsp;</a></span>GetEdgesBetweenSubgraphs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html">EdgesBetweenSubgraphs</a>*&gt; GetEdgesBetweenSubgraphs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a vector of all edges between subgraphs. </p>
+
+</div>
+</div>
 <a id="ae696ea90dcbf1b197d5a4a30f895421d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae696ea90dcbf1b197d5a4a30f895421d">&#9670;&nbsp;</a></span>GetGraphvizString()</h2>
 
@@ -799,6 +827,25 @@ Planning with Graphs of Geodesically-Convex Sets", and per the discussion in Sub
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a4471b7b36088e3f9a445818011a88b20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4471b7b36088e3f9a445818011a88b20">&#9670;&nbsp;</a></span>GetSubgraphs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a>*&gt; GetSubgraphs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a vector of all subgraphs. </p>
 
 </div>
 </div>
@@ -930,6 +977,27 @@ Planning with Graphs of Geodesically-Convex Sets", and per the discussion in Sub
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a88df1e80fc5caca3da4c817fc3e23338"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88df1e80fc5caca3da4c817fc3e23338">&#9670;&nbsp;</a></span>RemoveSubgraph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RemoveSubgraph </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;&#160;</td>
+          <td class="paramname"><em>subgraph</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove a subgraph and all associated edges found in the subgraph and to and from other subgraphs. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>The subgraph must have been created from a call to <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#aff9544b6375a592b1b9bda5eb1149a6f" title="Creates a Subgraph with the given regions and indices.">AddRegions()</a> on this object. </dd></dl>
 
 </div>
 </div>

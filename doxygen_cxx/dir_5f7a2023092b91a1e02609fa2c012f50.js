@@ -9,6 +9,9 @@ var dir_5f7a2023092b91a1e02609fa2c012f50 =
     [ "composite_trajectory.h", "composite__trajectory_8h.html", [
       [ "CompositeTrajectory", "classdrake_1_1trajectories_1_1_composite_trajectory.html", "classdrake_1_1trajectories_1_1_composite_trajectory" ]
     ] ],
+    [ "derivative_trajectory.h", "derivative__trajectory_8h.html", [
+      [ "DerivativeTrajectory", "classdrake_1_1trajectories_1_1_derivative_trajectory.html", "classdrake_1_1trajectories_1_1_derivative_trajectory" ]
+    ] ],
     [ "discrete_time_trajectory.h", "discrete__time__trajectory_8h.html", null ],
     [ "exponential_plus_piecewise_polynomial.h", "exponential__plus__piecewise__polynomial_8h.html", [
       [ "ExponentialPlusPiecewisePolynomial", "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html", "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial" ]
