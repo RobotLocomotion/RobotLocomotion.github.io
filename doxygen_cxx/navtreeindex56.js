@@ -1,5 +1,8 @@
 var NAVTREEINDEX56 =
 {
+"spatial__algebra_8h.html":[4,0,0,8,6,1],
+"spatial__algebra_8h.html#a20c5b057eb2bb3c32004a09588193538":[4,0,0,8,6,1,0],
+"spatial__derivative_8h.html":[4,0,0,8,12,2],
 "spatial__derivative_8h.html#ace570bf1fadd64470c0fda6c73981cc9":[4,0,0,8,12,2,1],
 "spatial__derivative_8h.html#afebf465d77636f970101b962f87460af":[4,0,0,8,12,2,0],
 "spatial__force_8h.html":[4,0,0,8,6,2],
@@ -246,8 +249,5 @@ var NAVTREEINDEX56 =
 "structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a58c8c4d09a9e537115c0b941b297e311":[3,0,0,4,45,4],
 "structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a6120129a500ee5f5fb32836c1ad5bbc0":[3,0,0,4,45,2],
 "structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a6d9b7b7aeb7996e8469a93c3dd4ee5ef":[3,0,0,4,45,3],
-"structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,45,1],
-"structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#ab3f078684998b83967d507d0f453f454":[3,0,0,4,45,5],
-"structdrake_1_1geometry_1_1_render_engine_vtk_params.html":[3,0,0,4,46],
-"structdrake_1_1geometry_1_1_render_engine_vtk_params.html#a0ed870ed1bf654d8bdce7f9a6e3af3a4":[3,0,0,4,46,7]
+"structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,45,1]
 };

@@ -357,6 +357,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<p>Currently, the padding in the collision checker is not forwarded to the algorithm, and therefore the final regions do not necessarily respect this padding. Effectively, this means that the regions are generated as if the padding is set to 0. This behavior may be adjusted in the future at the resolution of #18830.</p>
 <p>Note that this method requires an implementation of a MaxCliqueSolverBase which must be implemented in C++. The only solver of this kind implemented by Drake is MaxCliqueSolverViaMip which requires the availability of a Mixed-Integer Linear Programming solver (e.g. Gurobi and/or Mosek). We recommend enabling those solvers if possible (<a href="https://drake.mit.edu/bazel.html#proprietary_solvers">https://drake.mit.edu/bazel.html#proprietary_solvers</a>). The method will throw if MaxCliqueSolverViaMip cannot solve the max clique problem. </p><dl class="section see"><dt>See also</dt><dd>MaxCliqueSolverViaMip. </dd></dl>
 
 </div>

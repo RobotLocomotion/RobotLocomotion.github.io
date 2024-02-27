@@ -211,6 +211,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a92aba2d00ca04be3c0d858b2c4d862b5"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_package_map.html#a92aba2d00ca04be3c0d858b2c4d862b5">GetPath</a> (const std::string &amp;package_name, std::optional&lt; std::string &gt; *deprecated_message=nullptr) const</td></tr>
 <tr class="memdesc:a92aba2d00ca04be3c0d858b2c4d862b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtains the path associated with package <code>package_name</code>.  <a href="#a92aba2d00ca04be3c0d858b2c4d862b5">More...</a><br /></td></tr>
 <tr class="separator:a92aba2d00ca04be3c0d858b2c4d862b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a857039e3b686ddb6baaef2bfc381800b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_package_map.html#a857039e3b686ddb6baaef2bfc381800b">ResolveUrl</a> (const std::string &amp;url) const</td></tr>
+<tr class="memdesc:a857039e3b686ddb6baaef2bfc381800b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a resolved path for <code>url</code>.  <a href="#a857039e3b686ddb6baaef2bfc381800b">More...</a><br /></td></tr>
+<tr class="separator:a857039e3b686ddb6baaef2bfc381800b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Functions for adding packages to the map</div></td></tr>
 <tr class="memitem:ac51ed3119aaced1a4d66bc104c7a8241"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_package_map.html#ac51ed3119aaced1a4d66bc104c7a8241">Add</a> (const std::string &amp;package_name, const std::string &amp;package_path)</td></tr>
 <tr class="memdesc:ac51ed3119aaced1a4d66bc104c7a8241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds package <code>package_name</code> and its path, <code>package_path</code>.  <a href="#ac51ed3119aaced1a4d66bc104c7a8241">More...</a><br /></td></tr>
@@ -682,6 +685,33 @@ Friends</h2></td></tr>
 
 <p>Removes package <code>package_name</code> and its previously added path. </p>
 <p>Throws if <code>package_name</code> is not present in this <a class="el" href="classdrake_1_1multibody_1_1_package_map.html" title="Maps ROS package names to their full path on the local file system.">PackageMap</a>. </p>
+
+</div>
+</div>
+<a id="a857039e3b686ddb6baaef2bfc381800b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a857039e3b686ddb6baaef2bfc381800b">&#9670;&nbsp;</a></span>ResolveUrl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ResolveUrl </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>url</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a resolved path for <code>url</code>. </p>
+<p>URL schemes are either <code><a href="file://">file://</a></code> for local files or <code>package://</code> (or <code>model://</code>).</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the url cannot be resolved. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

@@ -1,5 +1,8 @@
 var NAVTREEINDEX44 =
 {
+"classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#a0d37069b2edc37d7662aa809b6070e4e":[3,0,0,17,5,4],
+"classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#a19b632df0f98f9aaf224e534fac69ec8":[3,0,0,17,5,13],
+"classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#a1d2630303963dbd6257823c89b4164ce":[3,0,0,17,5,7],
 "classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#a1ffe41e9d9d04dc5cd0b0dd097435ebc":[3,0,0,17,5,2],
 "classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#a58fd4c3b54d164206645161e187bac25":[3,0,0,17,5,0],
 "classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#a641bfb18296d6976a000cf31c213dfdf":[3,0,0,17,5,6],
@@ -246,8 +249,5 @@ var NAVTREEINDEX44 =
 "classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a225e2ed3f17775ce1451a71cc508510a":[3,0,2,27,14],
 "classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a22653ca7a051add2d056e116fffeb744":[3,0,2,27,3],
 "classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a26709732b110585adcbcc580e1e1d0e9":[3,0,2,27,10],
-"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a2f4a903b4dccbfa52fa4a2db82073b45":[3,0,2,27,8],
-"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a4c7cb2cda263a8eaace8b17ec56f7f29":[3,0,2,27,15],
-"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a654ad3ffbfa836060c9b33e158b825b9":[3,0,2,27,7],
-"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a712a1f7906452472e1632ce23eb9b0fc":[3,0,2,27,11]
+"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a2f4a903b4dccbfa52fa4a2db82073b45":[3,0,2,27,8]
 };

@@ -5,6 +5,8 @@ var classdrake_1_1multibody_1_1_spatial_inertia =
     [ "SpatialInertia", "classdrake_1_1multibody_1_1_spatial_inertia.html#a4a70f239bc8c7a515ee38b9e26aad808", null ],
     [ "SpatialInertia", "classdrake_1_1multibody_1_1_spatial_inertia.html#a6d7aa4145ca54c5ab8e45728648f7c5b", null ],
     [ "CalcComMoment", "classdrake_1_1multibody_1_1_spatial_inertia.html#a3a1c2e2b7b334839c460e022d4686f54", null ],
+    [ "CalcMinimumPhysicalLength", "classdrake_1_1multibody_1_1_spatial_inertia.html#ac8e8046a1dd852107b5f6a213b0cf2c5", null ],
+    [ "CalcPrincipalHalfLengthsAndPoseForMinimumBoundingBox", "classdrake_1_1multibody_1_1_spatial_inertia.html#a2828bb1494dc7329312ad72ee5360b13", null ],
     [ "CalcPrincipalHalfLengthsAndPoseForSolidBox", "classdrake_1_1multibody_1_1_spatial_inertia.html#aefe13c3fa1bec5373af28bc723de8bd6", null ],
     [ "CalcPrincipalSemiDiametersAndPoseForSolidEllipsoid", "classdrake_1_1multibody_1_1_spatial_inertia.html#aba6d2ff81ae140bb2c4249933a51597c", null ],
     [ "CalcRotationalInertia", "classdrake_1_1multibody_1_1_spatial_inertia.html#a025a1eb3a6fcfd673edc15b7ba85de9e", null ],

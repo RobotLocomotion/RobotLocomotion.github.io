@@ -688,6 +688,18 @@ if <code class="docutils literal notranslate"><span class="pre">package_name</sp
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.parsing.PackageMap.ResolveUrl">
+<span class="sig-name descname"><span class="pre">ResolveUrl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.PackageMap" title="pydrake.multibody.parsing.PackageMap"><span class="pre">pydrake.multibody.parsing.PackageMap</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.PackageMap.ResolveUrl" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a resolved path for <code class="docutils literal notranslate"><span class="pre">url</span></code>. URL schemes are either
+<code class="docutils literal notranslate"><span class="pre">file://</span></code> for local files or <code class="docutils literal notranslate"><span class="pre">package://</span></code> (or <code class="docutils literal notranslate"><span class="pre">model://</span></code>).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if the url cannot be resolved.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.parsing.PackageMap.size">
 <span class="sig-name descname"><span class="pre">size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.PackageMap" title="pydrake.multibody.parsing.PackageMap"><span class="pre">pydrake.multibody.parsing.PackageMap</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.PackageMap.size" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the number of entries in this PackageMap.</p>

@@ -294,11 +294,17 @@ Public Member Functions</h2></td></tr>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a0e13800a4b7f21903141dbe4c0102720" title="Forms the 3 principal moments of inertia and their 3 associated principal directions for this rotatio...">RotationalInertia::CalcPrincipalMomentsAndAxesOfInertia()</a> to form principal moments of inertia and their associated principal directions. </dd></dl>
 </div></td></tr>
 <tr class="memitem:aba6d2ff81ae140bb2c4249933a51597c"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;, <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">drake::math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#aba6d2ff81ae140bb2c4249933a51597c">CalcPrincipalSemiDiametersAndPoseForSolidEllipsoid</a> () const</td></tr>
-<tr class="memdesc:aba6d2ff81ae140bb2c4249933a51597c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns semi-diameters, orientation, and position of a solid ellipsoid whose spatial inertia is equal to <code>this</code> spatial inertia.  <a href="#aba6d2ff81ae140bb2c4249933a51597c">More...</a><br /></td></tr>
+<tr class="memdesc:aba6d2ff81ae140bb2c4249933a51597c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns 3 principal semi-diameters [lmax lmed lmin] sorted in descending order (lmax ≥ lmed ≥ lmin), orientation, and position of a solid ellipsoid whose spatial inertia is equal to <code>this</code> spatial inertia.  <a href="#aba6d2ff81ae140bb2c4249933a51597c">More...</a><br /></td></tr>
 <tr class="separator:aba6d2ff81ae140bb2c4249933a51597c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefe13c3fa1bec5373af28bc723de8bd6"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;, <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">drake::math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#aefe13c3fa1bec5373af28bc723de8bd6">CalcPrincipalHalfLengthsAndPoseForSolidBox</a> () const</td></tr>
-<tr class="memdesc:aefe13c3fa1bec5373af28bc723de8bd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns half-lengths, orientation, and position of a solid box whose spatial inertia is equal to <code>this</code> spatial inertia.  <a href="#aefe13c3fa1bec5373af28bc723de8bd6">More...</a><br /></td></tr>
+<tr class="memdesc:aefe13c3fa1bec5373af28bc723de8bd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns three ½-lengths [lmax lmed lmin] sorted in descending order (lmax ≥ lmed ≥ lmin), orientation, and position of a solid box whose spatial inertia is equal to <code>this</code> spatial inertia.  <a href="#aefe13c3fa1bec5373af28bc723de8bd6">More...</a><br /></td></tr>
 <tr class="separator:aefe13c3fa1bec5373af28bc723de8bd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2828bb1494dc7329312ad72ee5360b13"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;, <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">drake::math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a2828bb1494dc7329312ad72ee5360b13">CalcPrincipalHalfLengthsAndPoseForMinimumBoundingBox</a> () const</td></tr>
+<tr class="memdesc:a2828bb1494dc7329312ad72ee5360b13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns three ½-lengths [lmax lmed lmin] sorted in descending order (lmax ≥ lmed ≥ lmin), orientation, and position of a box whose mass is concentrated in 8 particles at the box's corners and whose spatial inertia is equal to <code>this</code> spatial inertia.  <a href="#a2828bb1494dc7329312ad72ee5360b13">More...</a><br /></td></tr>
+<tr class="separator:a2828bb1494dc7329312ad72ee5360b13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8e8046a1dd852107b5f6a213b0cf2c5"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#ac8e8046a1dd852107b5f6a213b0cf2c5">CalcMinimumPhysicalLength</a> () const</td></tr>
+<tr class="memdesc:ac8e8046a1dd852107b5f6a213b0cf2c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the minimum possible length for the physical extent of the massive object that underlies this spatial inertia.  <a href="#ac8e8046a1dd852107b5f6a213b0cf2c5">More...</a><br /></td></tr>
+<tr class="separator:ac8e8046a1dd852107b5f6a213b0cf2c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -529,6 +535,53 @@ Related Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ac8e8046a1dd852107b5f6a213b0cf2c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8e8046a1dd852107b5f6a213b0cf2c5">&#9670;&nbsp;</a></span>CalcMinimumPhysicalLength()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">T CalcMinimumPhysicalLength </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the minimum possible length for the physical extent of the massive object that underlies this spatial inertia. </p>
+<p>In other words, the underlying physical object must have at least two particles whose distance between each other is greater than or equal to the minimum possible length. </p><dl class="section note"><dt>Note</dt><dd>The minimum possible length is equal to the space-diagonal of the minimum bounding box for <code>this</code> spatial inertia, which happens to be equal to √(2 * trace of the central unit inertia associated with <code>this</code>). </dd>
+<dd>
+Minimum possible length can be used to detect erroneous inertias associated with absurdly large objects or to detect errors when the minimum possible length is larger than the real physical geometry that underlies <code>this</code> spatial inertia (maybe due to inertia conversion errors, e.g., factor of 10⁷ from kg m² to g cm² or 10⁹ from kg m² to g mm²). To assess whether the minimum possible length is reasonable, it helps to have comparable sizes, e.g., the world's largest aircraft carrier has a space-diagonal ≈ 355 m (length ≈ 337 m, width ≈ 78 m, height ≈ 76 m), the largest land vehicle (Bagger bucket-wheel excavator) is ≈ 224 m long, the largest human object in space (International Space Station) is 109 m long and 75 m wide, the USA space shuttle is ≈ 37 m long and can carry a 15.2 m Canadarm, the world's largest humanoid robot (Mononofu) is ≈ 8.5 m tall. Also, minimum possible length can be compared to known physical geometry (e.g., realistic collision geometry, visual geometry, or physical extents associated with body connectivity data and topology), and this comparison can be used to warn that a spatial inertia may be physically impossible (e.g., underlying geometry is smaller than the minimum possible length). </dd></dl>
+
+</div>
+</div>
+<a id="a2828bb1494dc7329312ad72ee5360b13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2828bb1494dc7329312ad72ee5360b13">&#9670;&nbsp;</a></span>CalcPrincipalHalfLengthsAndPoseForMinimumBoundingBox()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt;<a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;, <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">drake::math::RigidTransform</a>&lt;<a class="el" href="classdouble.html">double</a>&gt; &gt; CalcPrincipalHalfLengthsAndPoseForMinimumBoundingBox </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns three ½-lengths [lmax lmed lmin] sorted in descending order (lmax ≥ lmed ≥ lmin), orientation, and position of a box whose mass is concentrated in 8 particles at the box's corners and whose spatial inertia is equal to <code>this</code> spatial inertia. </p>
+<p>The physical geometry of the actual underlying object must be larger than this box, as this box is the minimum bounding box for the actual geometry. See <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#spatial_inertia_equivalent_shapes">Spatial inertia equivalent shapes</a> for more details. </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the elements of <code>this</code> spatial inertia cannot be converted to a real finite double. For example, an exception is thrown if <code>this</code> contains an erroneous NaN or if scalar type T is symbolic. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="aefe13c3fa1bec5373af28bc723de8bd6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aefe13c3fa1bec5373af28bc723de8bd6">&#9670;&nbsp;</a></span>CalcPrincipalHalfLengthsAndPoseForSolidBox()</h2>
 
@@ -544,8 +597,13 @@ Related Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns half-lengths, orientation, and position of a solid box whose spatial inertia is equal to <code>this</code> spatial inertia. </p>
-<p>See <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#spatial_inertia_equivalent_shapes">Spatial inertia equivalent shapes</a> for more details. </p>
+<p>Returns three ½-lengths [lmax lmed lmin] sorted in descending order (lmax ≥ lmed ≥ lmin), orientation, and position of a solid box whose spatial inertia is equal to <code>this</code> spatial inertia. </p>
+<p>See <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#spatial_inertia_equivalent_shapes">Spatial inertia equivalent shapes</a> for more details. </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the elements of <code>this</code> spatial inertia cannot be converted to a real finite double. For example, an exception is thrown if <code>this</code> contains an erroneous NaN or if scalar type T is symbolic. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -564,8 +622,13 @@ Related Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns semi-diameters, orientation, and position of a solid ellipsoid whose spatial inertia is equal to <code>this</code> spatial inertia. </p>
-<p>See <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#spatial_inertia_equivalent_shapes">Spatial inertia equivalent shapes</a> for more details. </p>
+<p>Returns 3 principal semi-diameters [lmax lmed lmin] sorted in descending order (lmax ≥ lmed ≥ lmin), orientation, and position of a solid ellipsoid whose spatial inertia is equal to <code>this</code> spatial inertia. </p>
+<p>See <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#spatial_inertia_equivalent_shapes">Spatial inertia equivalent shapes</a> for more details. </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the elements of <code>this</code> spatial inertia cannot be converted to a real finite double. For example, an exception is thrown if <code>this</code> contains an erroneous NaN or if scalar type T is symbolic. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

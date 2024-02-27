@@ -20,6 +20,7 @@ var classdrake_1_1multibody_1_1_package_map =
     [ "PopulateFromFolder", "classdrake_1_1multibody_1_1_package_map.html#a510d35f38c93d44fa6a70d727f55cb8c", null ],
     [ "PopulateFromRosPackagePath", "classdrake_1_1multibody_1_1_package_map.html#a82b086143ce943e2318a7b2added1313", null ],
     [ "Remove", "classdrake_1_1multibody_1_1_package_map.html#ae80251a33cd5622dc2a12b8193ea79e1", null ],
+    [ "ResolveUrl", "classdrake_1_1multibody_1_1_package_map.html#a857039e3b686ddb6baaef2bfc381800b", null ],
     [ "SetDeprecated", "classdrake_1_1multibody_1_1_package_map.html#a36fa8e81eb4b5a8719afa1452c5951ed", null ],
     [ "size", "classdrake_1_1multibody_1_1_package_map.html#af9593d4a5ff4274efaf429cb4f9e57cc", null ],
     [ "operator<<", "classdrake_1_1multibody_1_1_package_map.html#a56d456159a3495e76b55c66802b07b04", null ]
