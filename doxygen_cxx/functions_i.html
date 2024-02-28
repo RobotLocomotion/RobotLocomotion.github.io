@@ -380,6 +380,9 @@ $(document).ready(function(){initNavTree('functions_i.html','');});
 <li>init_parameters()
 : <a class="el" href="classdrake_1_1systems_1_1_context.html#a571d9b7fa01ad6db23cb6585ebbbffcd">Context&lt; T &gt;</a>
 </li>
+<li>initial_alpha_slider_value
+: <a class="el" href="structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a6dbc96d0c47bae755771279d3ecb3452">MeshcatVisualizerParams</a>
+</li>
 <li>initial_guess()
 : <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a8d203a1789d8fe03eeaaacdb49a267d4">MathematicalProgram</a>
 </li>
@@ -388,6 +391,9 @@ $(document).ready(function(){initNavTree('functions_i.html','');});
 </li>
 <li>initial_properties
 : <a class="el" href="structdrake_1_1geometry_1_1_meshcat_params.html#a241bd85a9962ef15126bad0ea330c0b1">MeshcatParams</a>
+</li>
+<li>initial_proximity_alpha
+: <a class="el" href="structdrake_1_1visualization_1_1_visualization_config.html#a324b46940b15edda09af1d2d82f5125e">VisualizationConfig</a>
 </li>
 <li>initial_state()
 : <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ab49f6e9326df207d977c7ac16b1b9ef5">MultipleShooting</a>
@@ -587,11 +593,11 @@ $(document).ready(function(){initNavTree('functions_i.html','');});
 <li>inverse_helix_function()
 : <a class="el" href="classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#a9fb006217719c657a3852d15f276a813">BeadOnAWire&lt; T &gt;</a>
 </li>
-<li>InverseDynamics
-: <a class="el" href="classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html#a8a90c5e3ef0bcec77643392f99e44824">InverseDynamics&lt; T &gt;</a>
+<li>InverseDynamics()
+: <a class="el" href="classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html#aca7bf79ff231a053ac9976e7ca39ba23">InverseDynamics&lt; T &gt;</a>
 </li>
 <li>InverseDynamicsController()
-: <a class="el" href="classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#ae10ee2e8047baecf8bce8236dd9ff428">InverseDynamicsController&lt; T &gt;</a>
+: <a class="el" href="classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#abc69f9afaeed2d513cea0d18c778c3f6">InverseDynamicsController&lt; T &gt;</a>
 </li>
 <li>InverseDynamicsMode
 : <a class="el" href="classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html#a39bd80e96eb6f2fe4aeee4e62c04dd8a">InverseDynamics&lt; T &gt;</a>
@@ -952,7 +958,7 @@ $(document).ready(function(){initNavTree('functions_i.html','');});
 : <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a2f010e733bd63adb8352995624362b65">ConvexSet</a>
 </li>
 <li>IsCollisionFilteredBetween()
-: <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a89638e2733d1b29dc1c66307d49edfc6">CollisionChecker</a>
+: <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a4c482d9dc344b97944de8b61dc41911f">CollisionChecker</a>
 </li>
 <li>IsConnectedInputToOutput()
 : <a class="el" href="classdrake_1_1systems_1_1_system_symbolic_inspector.html#acad2dad7fd037cb2977b4866a589e93e">SystemSymbolicInspector</a>
@@ -1046,10 +1052,10 @@ $(document).ready(function(){initNavTree('functions_i.html','');});
 : <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#a7a5e8235ea5f9bb34bfa71b745546864">RotationMatrix&lt; T &gt;</a>
 </li>
 <li>IsPartOfRobot()
-: <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a0dcd7c9ea7d36219c6790fe017d41578">CollisionChecker</a>
+: <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a7cf0f9ebe090ff87c21ebbe3c7bd0539">CollisionChecker</a>
 </li>
 <li>IsPhysicallyValid()
-: <a class="el" href="classdrake_1_1multibody_1_1_articulated_body_inertia.html#a7d1bd7b221e380e1bac184d3792abf5f">ArticulatedBodyInertia&lt; T &gt;</a>
+: <a class="el" href="classdrake_1_1multibody_1_1_articulated_body_inertia.html#aa4218b7c32aa0b01cb0b9a6c2dc44a16">ArticulatedBodyInertia&lt; T &gt;</a>
 , <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a679852e6738fbcf5751ca37c51d2f084">SpatialInertia&lt; T &gt;</a>
 </li>
 <li>IsRollPitchYawInCanonicalRange()
@@ -1084,7 +1090,7 @@ $(document).ready(function(){initNavTree('functions_i.html','');});
 </li>
 <li>IsValid()
 : <a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html#a25e97cc71253ec54a478126d98fccca6">RollPitchYaw&lt; T &gt;</a>
-, <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#a0397fe475999596a9edb1797a418432a">RotationMatrix&lt; T &gt;</a>
+, <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#a1ecdff2808f2ecf66cc0fe97f5173b98">RotationMatrix&lt; T &gt;</a>
 , <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#ac532c4b500b1a85ea22217f2c65a70ed">AddCollisionFilterGroup</a>
 , <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_add_directives.html#ac532c4b500b1a85ea22217f2c65a70ed">AddDirectives</a>
 , <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_add_frame.html#ac532c4b500b1a85ea22217f2c65a70ed">AddFrame</a>

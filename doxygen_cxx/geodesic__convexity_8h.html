@@ -168,7 +168,8 @@ $(document).ready(function(){initNavTree('geodesic__convexity_8h.html','');});
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A robot that has revolute joints without any limits has an inherently non-Euclidean configuration space, but one can still consider "geodesically-convex" sets, akin to convex sets in Euclidean space. </p>
 <p>In practice, this only requires that the width of the set along each dimension corresponding to an unbounded revolute joint be strictly less than π. These functions are primarily used by GcsTrajectoryOptimization to make motion plans for these types of robots. </p>
-</div><div class="textblock"><code>#include &lt;utility&gt;</code><br />
+</div><div class="textblock"><code>#include &lt;tuple&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &quot;<a class="el" href="convex__set_8h.html">drake/geometry/optimization/convex_set.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="intersection_8h.html">drake/geometry/optimization/intersection.h</a>&quot;</code><br />
@@ -198,7 +199,14 @@ Functions</h2></td></tr>
 <tr class="memdesc:a0f945f0d43e169b238695da629d93ff7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partitions a convex set into (smaller) convex sets whose union is the original set and that each respect the convexity radius as in CheckIfSatisfiesConvexityRadius.  <a href="namespacedrake_1_1geometry_1_1optimization.html#a0f945f0d43e169b238695da629d93ff7">More...</a><br /></td></tr>
 <tr class="separator:a0f945f0d43e169b238695da629d93ff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeab8ca89c6e95c43cf9ec8c6284f395f"><td class="memItemLeft" align="right" valign="top">geometry::optimization::ConvexSets&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#aeab8ca89c6e95c43cf9ec8c6284f395f">PartitionConvexSet</a> (const geometry::optimization::ConvexSets &amp;convex_sets, const std::vector&lt; <a class="el" href="classint.html">int</a> &gt; &amp;continuous_revolute_joints, const <a class="el" href="classdouble.html">double</a> epsilon=1e-5)</td></tr>
+<tr class="memdesc:aeab8ca89c6e95c43cf9ec8c6284f395f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function overload to take in a list of convex sets, and partition all so as to respect the convexity radius.  <a href="namespacedrake_1_1geometry_1_1optimization.html#aeab8ca89c6e95c43cf9ec8c6284f395f">More...</a><br /></td></tr>
 <tr class="separator:aeab8ca89c6e95c43cf9ec8c6284f395f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dfedbcb8cfab6091ea2d7ac4353cee1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::tuple&lt; <a class="el" href="classint.html">int</a>, <a class="el" href="classint.html">int</a>, Eigen::VectorXd &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a9dfedbcb8cfab6091ea2d7ac4353cee1">CalcPairwiseIntersections</a> (const ConvexSets &amp;convex_sets_A, const ConvexSets &amp;convex_sets_B, const std::vector&lt; <a class="el" href="classint.html">int</a> &gt; &amp;continuous_revolute_joints)</td></tr>
+<tr class="memdesc:a9dfedbcb8cfab6091ea2d7ac4353cee1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the pairwise intersections edges between two lists of convex sets.  <a href="namespacedrake_1_1geometry_1_1optimization.html#a9dfedbcb8cfab6091ea2d7ac4353cee1">More...</a><br /></td></tr>
+<tr class="separator:a9dfedbcb8cfab6091ea2d7ac4353cee1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c11e361e030be5ef7e6aa3cdbe785bd"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::tuple&lt; <a class="el" href="classint.html">int</a>, <a class="el" href="classint.html">int</a>, Eigen::VectorXd &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a2c11e361e030be5ef7e6aa3cdbe785bd">CalcPairwiseIntersections</a> (const ConvexSets &amp;convex_sets, const std::vector&lt; <a class="el" href="classint.html">int</a> &gt; &amp;continuous_revolute_joints)</td></tr>
+<tr class="memdesc:a2c11e361e030be5ef7e6aa3cdbe785bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience overload to compute pairwise intersections within a list of convex sets.  <a href="namespacedrake_1_1geometry_1_1optimization.html#a2c11e361e030be5ef7e6aa3cdbe785bd">More...</a><br /></td></tr>
+<tr class="separator:a2c11e361e030be5ef7e6aa3cdbe785bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

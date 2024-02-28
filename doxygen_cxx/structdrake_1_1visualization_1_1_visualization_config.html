@@ -195,9 +195,12 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a2c434dc8a30fc66fa14527eca76f38b5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1visualization_1_1_visualization_config.html#a2c434dc8a30fc66fa14527eca76f38b5">publish_proximity</a> {true}</td></tr>
 <tr class="memdesc:a2c434dc8a30fc66fa14527eca76f38b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to show proximity geometry.  <a href="#a2c434dc8a30fc66fa14527eca76f38b5">More...</a><br /></td></tr>
 <tr class="separator:a2c434dc8a30fc66fa14527eca76f38b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adfdda5f3f8c943cb23d22e9bf52afbe7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_rgba.html">geometry::Rgba</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1visualization_1_1_visualization_config.html#adfdda5f3f8c943cb23d22e9bf52afbe7">default_proximity_color</a> {1, 0, 0, 0.5}</td></tr>
+<tr class="memitem:adfdda5f3f8c943cb23d22e9bf52afbe7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_rgba.html">geometry::Rgba</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1visualization_1_1_visualization_config.html#adfdda5f3f8c943cb23d22e9bf52afbe7">default_proximity_color</a> {0.8, 0, 0, 1.0}</td></tr>
 <tr class="memdesc:adfdda5f3f8c943cb23d22e9bf52afbe7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The color to apply to any proximity geometry that hasn't defined one.  <a href="#adfdda5f3f8c943cb23d22e9bf52afbe7">More...</a><br /></td></tr>
 <tr class="separator:adfdda5f3f8c943cb23d22e9bf52afbe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a324b46940b15edda09af1d2d82f5125e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1visualization_1_1_visualization_config.html#a324b46940b15edda09af1d2d82f5125e">initial_proximity_alpha</a> {0.5}</td></tr>
+<tr class="memdesc:a324b46940b15edda09af1d2d82f5125e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The initial value of the proximity alpha slider.  <a href="#a324b46940b15edda09af1d2d82f5125e">More...</a><br /></td></tr>
+<tr class="separator:a324b46940b15edda09af1d2d82f5125e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeafcd0d4f3194281faba6686f1589b00"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1visualization_1_1_visualization_config.html#aeafcd0d4f3194281faba6686f1589b00">publish_inertia</a> {true}</td></tr>
 <tr class="memdesc:aeafcd0d4f3194281faba6686f1589b00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to show body inertia.  <a href="#aeafcd0d4f3194281faba6686f1589b00">More...</a><br /></td></tr>
 <tr class="separator:aeafcd0d4f3194281faba6686f1589b00"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -258,7 +261,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_rgba.html">geometry::Rgba</a> default_proximity_color {1, 0, 0, 0.5}</td>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_rgba.html">geometry::Rgba</a> default_proximity_color {0.8, 0, 0, 1.0}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -313,6 +316,23 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Whether to create a Meshcat object if needed. </p>
+
+</div>
+</div>
+<a id="a324b46940b15edda09af1d2d82f5125e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a324b46940b15edda09af1d2d82f5125e">&#9670;&nbsp;</a></span>initial_proximity_alpha</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> initial_proximity_alpha {0.5}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The initial value of the proximity alpha slider. </p>
+<p>Note: the effective transparency of the proximity geometry is the slider value multiplied by the alpha value of <code>default_proximity_color</code>. To have access to the full range of opacity, the color's alpha value should be one and the slider should be used to change it. </p>
 
 </div>
 </div>

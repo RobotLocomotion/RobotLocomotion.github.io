@@ -198,6 +198,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:aafe5692abc5edf40d59b37edb67c4571"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#aafe5692abc5edf40d59b37edb67c4571">enable_alpha_slider</a> {false}</td></tr>
 <tr class="memdesc:aafe5692abc5edf40d59b37edb67c4571"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether to enable the alpha slider for geometry display.  <a href="#aafe5692abc5edf40d59b37edb67c4571">More...</a><br /></td></tr>
 <tr class="separator:aafe5692abc5edf40d59b37edb67c4571"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dbc96d0c47bae755771279d3ecb3452"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a6dbc96d0c47bae755771279d3ecb3452">initial_alpha_slider_value</a> {1.0}</td></tr>
+<tr class="memdesc:a6dbc96d0c47bae755771279d3ecb3452"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initial alpha slider value.  <a href="#a6dbc96d0c47bae755771279d3ecb3452">More...</a><br /></td></tr>
+<tr class="separator:a6dbc96d0c47bae755771279d3ecb3452"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a773906248693626d9c3ca17bca32a6e2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a773906248693626d9c3ca17bca32a6e2">visible_by_default</a> {true}</td></tr>
 <tr class="memdesc:a773906248693626d9c3ca17bca32a6e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether our meshcat path should be default to being visible.  <a href="#a773906248693626d9c3ca17bca32a6e2">More...</a><br /></td></tr>
 <tr class="separator:a773906248693626d9c3ca17bca32a6e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -294,6 +297,23 @@ Public Attributes</h2></td></tr>
 
 <p>(Advanced) For a given geometry, if the <a class="el" href="classdrake_1_1geometry_1_1_geometry_properties.html" title="The base class for defining a set of geometry properties.">GeometryProperties</a> for our <code>role</code> has the property <code>(meshcat, accepting)</code> then the visualizer will show the geometry only if the property's value matches our <code>prefix</code>. </p>
 <p>If that property is absent then the geometry will be shown only if <code>include_unspecified_accepting</code> is true. </p>
+
+</div>
+</div>
+<a id="a6dbc96d0c47bae755771279d3ecb3452"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dbc96d0c47bae755771279d3ecb3452">&#9670;&nbsp;</a></span>initial_alpha_slider_value</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> initial_alpha_slider_value {1.0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initial alpha slider value. </p>
+<p>This value should lie in the range [0, 1]. Furthermore, the slider value is <em>quantized</em> which means the value used here will be replaced with the nearest quantized value supported by the slider implementation. </p>
 
 </div>
 </div>

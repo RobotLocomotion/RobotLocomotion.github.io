@@ -227,7 +227,7 @@ glTFᵀᴹ (.gltf)</h2>
 <p>It's worth noting that glTF is designed, from the start, to support <a href="https://en.wikipedia.org/wiki/Physically_based_rendering">Physically Based Rendering (PBR)</a>. While the Wavefront .obj specification has informal extensions to achieve the same (replacing Phong with PBR), glTF uses it as its native shading model. This can produce images with higher fidelity, in both rasterization and path-tracing rendering algorithms.</p>
 <p>Generally, Drake provides broad support of glTF features. But there are some notable exceptions:</p>
 <ul>
-<li>.glb files and .gltf files with external references (to image or .bin files) are not supported. Currently, Drake only supports .glTF files with all binary assets embedded (as buffers of base64-encoded data blobs).</li>
+<li>.glb "container" files are not supported.</li>
 <li>Support for glTF extensions depends on the ultimate consumer of the glTF file (see below).</li>
 <li>Animation and skinning. If such data is present, it is ignored.</li>
 </ul>
@@ -247,7 +247,7 @@ glTFᵀᴹ (.gltf)</h2>
 </ul>
 </li>
 <li>RenderEngineGltfClient does support .gltf files (as the name suggests).<ul>
-<li>Geometries defined by a .gltf file are based almost verbatim to the render server (animation and morphing data is excluded).</li>
+<li>Geometries defined by a .gltf file are passed almost verbatim to the render server (animation and morphing data is excluded).</li>
 <li>The extensions are passed along, but whether or not they are supported depends on the server's implementation.</li>
 </ul>
 </li>
@@ -258,6 +258,7 @@ glTFᵀᴹ (.gltf)</h2>
 </ul>
 </li>
 </ul>
+<p>As a rule of thumb, for Drake's purposes .gltf files with external assets (i.e., separate .bin and .png files) will load faster than .gltf files with assets embedded as base64-encoded <code>data:</code> URIs.</p>
 <h2><a class="anchor" id="vtk_support"></a>
 VTK file (.vtk)</h2>
 <p>Drake uses tetrahedral meshes a couple of different ways: as compliant hydroelastic geometries (see <a class="el" href="group__hydroelastic__user__guide.html#hug_title">here</a> for more details) and deformable bodies (see, e.g., <a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html" title="DeformableModel implements the interface in PhysicalModel and provides the functionalities to specify...">multibody::DeformableModel</a>). For some of the <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The abstract base class for all shape specifications.">Shape</a> types, Drake will provide a tetrahedralization of the shape at run time. However, Drake cannot yet do so for arbitrary surface meshes. Drake allows you to create your own tetrahedral mesh offline and request that Drake use it. We use the <a href="https://examples.vtk.org/site/VTKFileFormats/">.vtk</a> file format.</p>

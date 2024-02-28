@@ -174,7 +174,7 @@ $(document).ready(function(){initNavTree('group__render__engines.html','');});
 <li>RenderEngineGl - A GPU-based rasterization renderer using direct calls to the OpenGL API.</li>
 <li>RenderEngineGltfClient - An implementation of a client-server RPC renderer that broadcasts Drake's visual state in a glTF file.</li>
 </ul>
-<p>These implementations differ in many ways largely differ in performance and flexibility potential. RenderEngineVtk is slower but has the possibility of leveraging the full VTK API to provide <em>post hoc</em> customizations. RenderEngineGl is faster, but gains that performance boost by implementing a barebones rendering pipeline. RenderEngineGltfClient can connect to a server backed by arbitrary rendering technology with the potential of producing the highest fidelity images possible, but with a much higher latency on producing individual images.</p>
+<p>These implementations differ mostly in performance and flexibility. RenderEngineVtk is slower but has the possibility of leveraging the full VTK API to provide <em>post hoc</em> customizations. RenderEngineGl is faster, but gains that performance boost by implementing a barebones rendering pipeline. RenderEngineGltfClient can connect to a server backed by arbitrary rendering technology with the potential of producing the highest fidelity images possible, but with a much higher latency on producing individual images.</p>
 <p>Picking the right renderer for your simulated sensors will be based on considering those differences and picking the trade-off that best suits your application.</p>
 <p>The current API is simple and precludes sophisticated definitions of lights and materials. As the API matures, these additional features will be added.</p>
 <h2>Instantiation</h2>

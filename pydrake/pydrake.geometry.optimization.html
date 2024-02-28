@@ -439,6 +439,74 @@ its representation in the local coordinates of the affine subspace.</p>
 
 </dd></dl>
 
+<dl class="py function">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CalcPairwiseIntersections">
+<span class="sig-prename descclassname"><span class="pre">pydrake.geometry.optimization.</span></span><span class="sig-name descname"><span class="pre">CalcPairwiseIntersections</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.CalcPairwiseIntersections" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>CalcPairwiseIntersections(convex_sets_A: List[pydrake.geometry.optimization.ConvexSet], convex_sets_B: List[pydrake.geometry.optimization.ConvexSet], continuous_revolute_joints: List[int]) -&gt; List[Tuple[int, int, numpy.ndarray[numpy.float64[m, 1]]]]</p></li>
+</ol>
+<p>Computes the pairwise intersections edges between two lists of convex
+sets. Each edge is a tuple in the form [index_A, index_B,
+offset_A_to_B], where Each is a tuple in the form [index_A, index_B,
+offset_A_to_B], where index_A is the index of the list in
+<code class="docutils literal notranslate"><span class="pre">convex_sets_A</span></code>, index_B is the index of the list in
+<code class="docutils literal notranslate"><span class="pre">convex_sets_B</span></code>, and offset_A_to_B is is the translation to applied
+to all the points in the index_A’th set in <code class="docutils literal notranslate"><span class="pre">convex_sets_A</span></code> to align
+them with the index_B’th set in <code class="docutils literal notranslate"><span class="pre">convex_sets_B</span></code>. This translation
+may only have non-zero entries along the dimensions corresponding to
+<code class="docutils literal notranslate"><span class="pre">continuous_revolute_joints</span></code>. All non-zero entries are integer
+multiples of 2π as the translation of the sets still represents the
+same configurations for the indices in <code class="docutils literal notranslate"><span class="pre">continuous_revolute_joints</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">convex_sets_A</span></code>:</dt><dd><p>is a vector of convex sets. Pairwise intersections will be
+computed between <code class="docutils literal notranslate"><span class="pre">convex_sets_A</span></code> and <code class="docutils literal notranslate"><span class="pre">convex_sets_B</span></code>.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">convex_sets_B</span></code>:</dt><dd><p>is the other vector of convex sets.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">continuous_revolute_joints</span></code>:</dt><dd><p>is a list of joint indices corresponding to continuous revolute
+joints.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>if continuous_revolute_joints has repeated entries</strong><strong>, or </strong><strong>if any</strong> – </p></li>
+<li><p><strong>entry is outside the interval</strong><strong> [</strong><strong>0</strong><strong>, </strong><strong>ambient_dimension</strong><strong>)</strong><strong>, </strong><strong>where</strong> – </p></li>
+<li><p><strong>ambient_dimension is the ambient dimension of the convex sets in</strong> – </p></li>
+<li><p><strong>convex_sets_A` and convex_sets_B</strong> – </p></li>
+<li><p><strong>if convex_sets_A</strong><strong> or </strong><strong>convex_sets_B are empty.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>CalcPairwiseIntersections(convex_sets: List[pydrake.geometry.optimization.ConvexSet], continuous_revolute_joints: List[int]) -&gt; List[Tuple[int, int, numpy.ndarray[numpy.float64[m, 1]]]]</p></li>
+</ol>
+<p>Convenience overload to compute pairwise intersections within a list
+of convex sets. Equivalent to calling
+CalcPairwiseIntersections(convex_sets, convex_sets,
+continuous_revolute_joints).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">convex_sets_A</span></code>:</dt><dd><p>is a vector of convex sets. Pairwise intersections will be
+computed within <code class="docutils literal notranslate"><span class="pre">convex_sets_A</span></code>.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">continuous_revolute_joints</span></code>:</dt><dd><p>is a list of joint indices corresponding to continuous revolute
+joints.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>if continuous_revolute_joints has repeated entries</strong><strong>, or </strong><strong>if any</strong> – </p></li>
+<li><p><strong>entry is outside the interval</strong><strong> [</strong><strong>0</strong><strong>, </strong><strong>ambient_dimension</strong><strong>)</strong><strong>, </strong><strong>where</strong> – </p></li>
+<li><p><strong>ambient_dimension is the ambient dimension of the convex sets in</strong> – </p></li>
+<li><p><strong>convex_sets_A` and convex_sets_B</strong> – </p></li>
+<li><p><strong>if convex_sets_A is empty.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.CartesianProduct">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.optimization.</span></span><span class="sig-name descname"><span class="pre">CartesianProduct</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CartesianProduct" title="Permalink to this definition"></a></dt>
@@ -3263,32 +3331,21 @@ for numerical purposes.</p>
 <ol class="arabic simple" start="2">
 <li><p>PartitionConvexSet(convex_sets: List[pydrake.geometry.optimization.ConvexSet], continuous_revolute_joints: List[int], epsilon: float = 1e-05) -&gt; List[pydrake.geometry.optimization.ConvexSet]</p></li>
 </ol>
-<p>Partitions a convex set into (smaller) convex sets whose union is the
-original set and that each respect the convexity radius as in
-CheckIfSatisfiesConvexityRadius. In practice, this is implemented as
-partitioning sets into pieces whose width is less than or equal to
-π-ϵ. Each entry in continuous_revolute_joints must be non-negative,
-less than num_positions, and unique.</p>
-<dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">epsilon</span></code>:</dt><dd><p>is the ϵ value used for the convexity radius inequality. The
-partitioned sets are made by intersecting convex_set with
-axis-aligned bounding boxes that respect the convexity radius.
-These boxes are made to overlap by ϵ radians along each dimension,
-for numerical purposes.</p>
-</dd>
-</dl>
+<p>Function overload to take in a list of convex sets, and partition all
+so as to respect the convexity radius. Every set must be bounded and
+have the same ambient dimension. Each entry in
+continuous_revolute_joints must be non-negative, less than
+num_positions, and unique.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>the vector of convex sets that each respect convexity radius.</p>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><ul class="simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError unless every ConvexSet in convex_sets has the same</strong> – </p></li>
+<li><p><strong>ambient_dimension.</strong> – </p></li>
 <li><p><strong>RuntimeError if ϵ &lt;= 0</strong><strong> or </strong><strong>ϵ &gt;= π.</strong> – </p></li>
-<li><p><strong>RuntimeError if the input convex set is unbounded along dimensions</strong> – </p></li>
+<li><p><strong>RuntimeError if any input convex set is unbounded along dimensions</strong> – </p></li>
 <li><p><strong>corresponding to continuous revolute joints.</strong> – </p></li>
 <li><p><strong>RuntimeError if continuous_revolute_joints has repeated entries</strong><strong>,</strong> – </p></li>
-<li><p><strong>or if any entry is outside the interval</strong><strong> [</strong><strong>0</strong><strong>,</strong> – </p></li>
-<li><p><strong>convex_set.ambient_dimension</strong><strong>(</strong><strong>)</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>or if any entry is outside the interval</strong><strong> [</strong><strong>0</strong><strong>, </strong><strong>ambient_dimension</strong><strong>)</strong><strong></strong> – </p></li>
 </ul>
 </dd>
 </dl>

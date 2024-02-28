@@ -1,5 +1,6 @@
 var NAVTREEINDEX49 =
 {
+"functions_func_g.html":[3,3,1,6],
 "functions_func_h.html":[3,3,1,7],
 "functions_func_i.html":[3,3,1,8],
 "functions_func_j.html":[3,3,1,9],
@@ -138,9 +139,11 @@ var NAVTREEINDEX49 =
 "generic__polynomial_8h.html#aed13274bad687cfe8b3a1effa40d3117":[4,0,0,1,3,6,24],
 "generic__polynomial_8h.html#afc778273d730c518678796b632e4de8f":[4,0,0,1,3,6,31],
 "geodesic__convexity_8h.html":[4,0,0,4,1,11],
-"geodesic__convexity_8h.html#a05bd75c8b08787c334065792f8532797":[4,0,0,4,1,11,0],
-"geodesic__convexity_8h.html#a0f945f0d43e169b238695da629d93ff7":[4,0,0,4,1,11,1],
-"geodesic__convexity_8h.html#aeab8ca89c6e95c43cf9ec8c6284f395f":[4,0,0,4,1,11,2],
+"geodesic__convexity_8h.html#a05bd75c8b08787c334065792f8532797":[4,0,0,4,1,11,2],
+"geodesic__convexity_8h.html#a0f945f0d43e169b238695da629d93ff7":[4,0,0,4,1,11,3],
+"geodesic__convexity_8h.html#a2c11e361e030be5ef7e6aa3cdbe785bd":[4,0,0,4,1,11,1],
+"geodesic__convexity_8h.html#a9dfedbcb8cfab6091ea2d7ac4353cee1":[4,0,0,4,1,11,0],
+"geodesic__convexity_8h.html#aeab8ca89c6e95c43cf9ec8c6284f395f":[4,0,0,4,1,11,4],
 "geometry__doxygen_8h.html":[4,0,0,4,14],
 "geometry__file__formats__doxygen_8h.html":[4,0,0,4,15],
 "geometry__frame_8h.html":[4,0,0,4,16],
@@ -246,8 +249,5 @@ var NAVTREEINDEX49 =
 "group__constraint__types.html":[1,3,0,1],
 "group__constraint__variable__defs.html":[1,3,0,0],
 "group__contact__engineering.html":[1,3,3,1],
-"group__contact__geometry.html":[1,3,3,0],
-"group__contact__surface__constraints.html":[1,3,0,4],
-"group__control.html":[1,4,3],
-"group__control.html#ga32d5768cb664f6d07fc58b4af536c45a":[1,4,3,2]
+"group__contact__geometry.html":[1,3,3,0]
 };
