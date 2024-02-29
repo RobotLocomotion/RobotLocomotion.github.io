@@ -184,9 +184,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5008da472eebd4caf252f33f394bb131"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a5008da472eebd4caf252f33f394bb131">HPolyhedron</a> (const <a class="el" href="classdrake_1_1geometry_1_1_query_object.html">QueryObject</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;query_object, <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id, std::optional&lt; <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a> &gt; reference_frame=std::nullopt)</td></tr>
 <tr class="memdesc:a5008da472eebd4caf252f33f394bb131"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html" title="Implements a polyhedral convex set using the half-space representation: {x| A x ≤ b}.">HPolyhedron</a> from a <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> geometry and pose in the <code>reference_frame</code> frame, obtained via the <a class="el" href="classdrake_1_1geometry_1_1_query_object.html" title="The QueryObject serves as a mechanism to perform geometry queries on the world&#39;s geometry.">QueryObject</a>.  <a href="#a5008da472eebd4caf252f33f394bb131">More...</a><br /></td></tr>
 <tr class="separator:a5008da472eebd4caf252f33f394bb131"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a142640e17e10a68f9c2ffcd3df6b67a8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a142640e17e10a68f9c2ffcd3df6b67a8">HPolyhedron</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html">VPolytope</a> &amp;vpoly)</td></tr>
-<tr class="memdesc:a142640e17e10a68f9c2ffcd3df6b67a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new HPolyedron from a <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html" title="A polytope described using the vertex representation.">VPolytope</a> object.  <a href="#a142640e17e10a68f9c2ffcd3df6b67a8">More...</a><br /></td></tr>
-<tr class="separator:a142640e17e10a68f9c2ffcd3df6b67a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65fdf30eb395f3b472ba9b253b017860"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a65fdf30eb395f3b472ba9b253b017860">HPolyhedron</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html">VPolytope</a> &amp;vpoly, <a class="el" href="classdouble.html">double</a> tol=1e-9)</td></tr>
+<tr class="memdesc:a65fdf30eb395f3b472ba9b253b017860"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new HPolyedron from a <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html" title="A polytope described using the vertex representation.">VPolytope</a> object.  <a href="#a65fdf30eb395f3b472ba9b253b017860">More...</a><br /></td></tr>
+<tr class="separator:a65fdf30eb395f3b472ba9b253b017860"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15f9b02bca9548dd4497de6693fa3a51"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a15f9b02bca9548dd4497de6693fa3a51">~HPolyhedron</a> () final</td></tr>
 <tr class="separator:a15f9b02bca9548dd4497de6693fa3a51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace583a472a3bdc1b67f05d6a6571a903"><td class="memItemLeft" align="right" valign="top">const Eigen::MatrixXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#ace583a472a3bdc1b67f05d6a6571a903">A</a> () const</td></tr>
@@ -486,8 +486,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a142640e17e10a68f9c2ffcd3df6b67a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a142640e17e10a68f9c2ffcd3df6b67a8">&#9670;&nbsp;</a></span>HPolyhedron() <span class="overload">[6/6]</span></h2>
+<a id="a65fdf30eb395f3b472ba9b253b017860"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65fdf30eb395f3b472ba9b253b017860">&#9670;&nbsp;</a></span>HPolyhedron() <span class="overload">[6/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -499,8 +499,18 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html">VPolytope</a> &amp;&#160;</td>
-          <td class="paramname"><em>vpoly</em></td><td>)</td>
+          <td class="paramname"><em>vpoly</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>tol</em> = <code>1e-9</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -511,7 +521,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructs a new HPolyedron from a <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html" title="A polytope described using the vertex representation.">VPolytope</a> object. </p>
-<p>This function will use qhull. If the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html" title="A polytope described using the vertex representation.">VPolytope</a> is empty, then the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html" title="Implements a polyhedral convex set using the half-space representation: {x| A x ≤ b}.">HPolyhedron</a> will also be empty. </p><dl class="exception"><dt>Exceptions</dt><dd>
+<p>This function will use qhull. If the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html" title="A polytope described using the vertex representation.">VPolytope</a> is empty, then the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html" title="Implements a polyhedral convex set using the half-space representation: {x| A x ≤ b}.">HPolyhedron</a> will also be empty. If the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html" title="Implements a polyhedral convex set using the half-space representation: {x| A x ≤ b}.">HPolyhedron</a> is not full-dimensional, we perform computations in a coordinate system of its affine hull. <code>tol</code> specifies the numerical tolerance used in the computation of the affine hull. (See the documentation of <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html" title="An affine subspace (also known as a &quot;flat&quot;, a &quot;linear variety&quot;, or a &quot;linear manifold&quot;) is a vector s...">AffineSubspace</a>.) A tighter tolerance can be used with commercial solvers (e.g. Gurobi and Mosek). </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if vpoly is empty and zero dimensional. </td></tr>
   </table>

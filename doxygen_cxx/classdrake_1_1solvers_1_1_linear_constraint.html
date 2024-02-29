@@ -425,6 +425,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Construct the linear constraint lb &lt;= A*x &lt;= ub. </p>
+<p>Throws if A has any entry which is not finite. </p>
 
 </div>
 </div>
@@ -461,6 +462,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Overloads constructor with a sparse A matrix. </p>
+<p>Throws if A has any entry which is not finite. </p>
 
 </div>
 </div>
@@ -908,7 +910,9 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Updates the linear term, upper and lower bounds in the linear constraint. </p>
-<p>The updated constraint is: new_lb &lt;= new_A * x &lt;= new_ub Note that the size of constraints (number of rows) can change, but the number of variables (number of cols) cannot. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>The updated constraint is: new_lb &lt;= new_A * x &lt;= new_ub Note that the size of constraints (number of rows) can change, but the number of variables (number of cols) cannot.</p>
+<p>Throws if new_A has any entry which is not finite or if new_A, new_lb, and new_ub don't all have the same number of rows.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">new_A</td><td>new linear term </td></tr>
     <tr><td class="paramname">new_lb</td><td>new lower bound </td></tr>
@@ -952,6 +956,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Overloads UpdateCoefficients but with a sparse A matrix. </p>
+<p>Throws if new_A has any entry which is not finite or if new_A, new_lb, and new_ub don't all have the same number of rows. </p>
 
 </div>
 </div>

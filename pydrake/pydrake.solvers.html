@@ -2530,10 +2530,12 @@ slack values at a given solution x, use Eval(x).</p>
 <li><p>__init__(self: pydrake.solvers.LinearConstraint, A: numpy.ndarray[numpy.float64[m, n]], lb: numpy.ndarray[numpy.float64[m, 1]], ub: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</p></li>
 </ol>
 <p>Construct the linear constraint lb &lt;= A*x &lt;= ub</p>
+<p>Throws if A has any entry which is not finite.</p>
 <ol class="arabic simple" start="2">
 <li><p>__init__(self: pydrake.solvers.LinearConstraint, A: scipy.sparse.csc_matrix[numpy.float64], lb: numpy.ndarray[numpy.float64[m, 1]], ub: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</p></li>
 </ol>
-<p>Overloads constructor with a sparse A matrix.</p>
+<p>Overloads constructor with a sparse A matrix. Throws if A has any
+entry which is not finite.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2606,6 +2608,8 @@ Constraint::set_bounds, as in LinearConstraint.</p>
 constraint. The updated constraint is: new_lb &lt;= new_A * x &lt;= new_ub
 Note that the size of constraints (number of rows) can change, but the
 number of variables (number of cols) cannot.</p>
+<p>Throws if new_A has any entry which is not finite or if new_A, new_lb,
+and new_ub don’t all have the same number of rows.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">new_A</span></code>:</dt><dd><p>new linear term</p>
 </dd>
@@ -2618,6 +2622,8 @@ number of variables (number of cols) cannot.</p>
 <li><p>UpdateCoefficients(self: pydrake.solvers.LinearConstraint, new_A: scipy.sparse.csc_matrix[numpy.float64], new_lb: numpy.ndarray[numpy.float64[m, 1]], new_ub: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</p></li>
 </ol>
 <p>Overloads UpdateCoefficients but with a sparse A matrix.</p>
+<p>Throws if new_A has any entry which is not finite or if new_A, new_lb,
+and new_ub don’t all have the same number of rows.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2704,7 +2710,8 @@ variables (size of a) cannot change.</p>
 <ol class="arabic simple">
 <li><p>__init__(self: pydrake.solvers.LinearEqualityConstraint, Aeq: numpy.ndarray[numpy.float64[m, n]], beq: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</p></li>
 </ol>
-<p>Constructs the linear equality constraint Aeq * x = beq</p>
+<p>Constructs the linear equality constraint Aeq * x = beq.</p>
+<p>Throws is any entry in Aeq or beq is not finite.</p>
 <ol class="arabic simple" start="2">
 <li><p>__init__(self: pydrake.solvers.LinearEqualityConstraint, Aeq: scipy.sparse.csc_matrix[numpy.float64], beq: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</p></li>
 </ol>
@@ -2719,6 +2726,7 @@ variables (size of a) cannot change.</p>
 <dt class="sig sig-object py" id="pydrake.solvers.LinearEqualityConstraint.UpdateCoefficients">
 <span class="sig-name descname"><span class="pre">UpdateCoefficients</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.LinearEqualityConstraint" title="pydrake.solvers.LinearEqualityConstraint"><span class="pre">pydrake.solvers.LinearEqualityConstraint</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">Aeq</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beq</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.LinearEqualityConstraint.UpdateCoefficients" title="Permalink to this definition"></a></dt>
 <dd><p>Overloads UpdateCoefficients but with a sparse A matrix.</p>
+<p>Throws if any entry of beq or Aeq is not finite.</p>
 </dd></dl>
 
 </dd></dl>

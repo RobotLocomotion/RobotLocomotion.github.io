@@ -308,7 +308,7 @@ linearly independent.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="3">
-<li><p>__init__(self: pydrake.geometry.optimization.AffineSubspace, set: pydrake.geometry.optimization.ConvexSet, tol: float = 0) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.geometry.optimization.AffineSubspace, set: pydrake.geometry.optimization.ConvexSet, tol: float = 1e-12) -&gt; None</p></li>
 </ol>
 <p>Constructs an affine subspace as the affine hull of another convex
 set. This is done by finding a feasible point in the set, and then
@@ -377,7 +377,7 @@ your space and the scale of your basis vectors.)</p>
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.AffineSubspace.OrthogonalComplementBasis">
 <span class="sig-name descname"><span class="pre">OrthogonalComplementBasis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.AffineSubspace" title="pydrake.geometry.optimization.AffineSubspace"><span class="pre">pydrake.geometry.optimization.AffineSubspace</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.AffineSubspace.OrthogonalComplementBasis" title="Permalink to this definition"></a></dt>
 <dd><p>Returns an orthonormal basis of the vector subspace which is
-perpendicular to this AffineSubspace.</p>
+orthogonal to this AffineSubspace.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2492,11 +2492,15 @@ in the world frame.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="4">
-<li><p>__init__(self: pydrake.geometry.optimization.HPolyhedron, vpoly: drake::geometry::optimization::VPolytope) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.geometry.optimization.HPolyhedron, vpoly: drake::geometry::optimization::VPolytope, tol: float = 1e-09) -&gt; None</p></li>
 </ol>
 <p>Constructs a new HPolyedron from a VPolytope object. This function
 will use qhull. If the VPolytope is empty, then the HPolyhedron will
-also be empty.</p>
+also be empty. If the HPolyhedron is not full-dimensional, we perform
+computations in a coordinate system of its affine hull. <code class="docutils literal notranslate"><span class="pre">tol</span></code>
+specifies the numerical tolerance used in the computation of the
+affine hull. (See the documentation of AffineSubspace.) A tighter
+tolerance can be used with commercial solvers (e.g. Gurobi and Mosek).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if vpoly is empty and zero dimensional.</strong> – </p>
