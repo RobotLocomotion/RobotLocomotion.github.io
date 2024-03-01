@@ -163,18 +163,36 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><dl class="reflist">
+<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_ball_rpy_joint.html#aad91b55e6b714db4ba96190e6fab07ac">BallRpyJoint&lt; T &gt;::damping</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000006"></a>Use default_damping() instead. <br />
+ This will be removed from Drake on or after 2024-06-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1systems_1_1analysis.html#acbf0cc4b5c52b3cb6a6c113450610e3b">drake::systems::analysis::kNoConcurrency</a>  </dt>
-<dd><a class="anchor" id="_deprecated000007"></a>Use either `drake::Parallelism::None()` or `false` instead. <br />
+<dd><a class="anchor" id="_deprecated000017"></a>Use either `drake::Parallelism::None()` or `false` instead. <br />
  This will be removed from Drake on or after 2024-05-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1systems_1_1analysis.html#a2df45efdced327ad20c26403412fb37f">drake::systems::analysis::kUseHardwareConcurrency</a>  </dt>
-<dd><a class="anchor" id="_deprecated000008"></a>Use either `drake::Parallelism::Max()` or `true` instead. <br />
+<dd><a class="anchor" id="_deprecated000018"></a>Use either `drake::Parallelism::Max()` or `true` instead. <br />
  This will be removed from Drake on or after 2024-05-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1systems_1_1analysis.html#a91ebf18b028db3b1b760d6cb422ac193">drake::systems::analysis::MonteCarloSimulation</a>  (const SimulatorFactory &amp;make_simulator, const ScalarSystemFunction &amp;output, double final_time, int num_samples, <a class="el" href="classdrake_1_1_random_generator.html" title="Defines Drake&#39;s canonical implementation of the UniformRandomBitGenerator C++ concept (as well as a f...">RandomGenerator</a> *generator=nullptr, int num_parallel_executions=1)</dt>
-<dd><a class="anchor" id="_deprecated000009"></a>The `num_parallel_executions` argument is deprecated.  Use the `parallelism` argument, instead. <br />
+<dd><a class="anchor" id="_deprecated000019"></a>The `num_parallel_executions` argument is deprecated.  Use the `parallelism` argument, instead. <br />
  This will be removed from Drake on or after 2024-05-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a404e1937742b0f345d746f2b2043e9e3">Joint&lt; T &gt;::damping_vector</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000007"></a>Use default_damping_vector() instead. <br />
+ This will be removed from Drake on or after 2024-06-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a217d8aa9218c9d981b7bc2e8a983c4be">MultibodyPlant&lt; T &gt;::set_discrete_contact_solver</a>  (DiscreteContactSolver contact_solver)</dt>
 <dd><a class="anchor" id="_deprecated000005"></a>Use set_discrete_contact_approximation() to set the contact model  approximation. The underlying solver will be inferred automatically. <br />
  This will be removed from Drake on or after 2024-04-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_planar_joint.html#ab5b708cf8c49f2b731dd3fa988bebecb">PlanarJoint&lt; T &gt;::damping</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000008"></a>Use default_damping() instead. <br />
+ This will be removed from Drake on or after 2024-06-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_prismatic_joint.html#aad91b55e6b714db4ba96190e6fab07ac">PrismaticJoint&lt; T &gt;::damping</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000009"></a>Use default_damping() instead. <br />
+ This will be removed from Drake on or after 2024-06-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a33a39dbcfe8db8e29092329d7794fce6">QuaternionFloatingJoint&lt; T &gt;::angular_damping</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000010"></a>Use default_angular_damping() instead. <br />
+ This will be removed from Drake on or after 2024-06-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a5d447b184aa0d500cefbc725641bd10a">QuaternionFloatingJoint&lt; T &gt;::translational_damping</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000011"></a>Use default_translational_damping() instead. <br />
+ This will be removed from Drake on or after 2024-06-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html#aaf33d0f239d80c8685c3d53c35546ce2">RenderEngine::GetColorDFromLabel</a>  (const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html" title="Class representing object &quot;labels&quot; for rendering.">RenderLabel</a> &amp;label)</dt>
 <dd><a class="anchor" id="_deprecated000003"></a>Use MakeRgbFromLabel instead <br />
  This will be removed from Drake on or after 2024-05-01. </dd>
@@ -184,11 +202,23 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 <dt>Member <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html#ad9e4c0fd4b4261c37a4972c2cc9a9e19">RenderEngine::LabelFromColor</a>  (const deprecated::internal::Color&lt; int &gt; &amp;color)</dt>
 <dd><a class="anchor" id="_deprecated000001"></a>Use MakeLabelFromRgb instead <br />
  This will be removed from Drake on or after 2024-05-01. </dd>
-<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a72b4efc4f7ac1a5e86ab8ffa970eaede">RigidBody&lt; T &gt;::node_index</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000006"></a>Use mobod_index() instead. <br />
- This will be removed from Drake on or after 2024-03-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_revolute_joint.html#aad91b55e6b714db4ba96190e6fab07ac">RevoluteJoint&lt; T &gt;::damping</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000012"></a>Use default_damping() instead. <br />
+ This will be removed from Drake on or after 2024-06-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_rpy_floating_joint.html#a33a39dbcfe8db8e29092329d7794fce6">RpyFloatingJoint&lt; T &gt;::angular_damping</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000013"></a>Use default_angular_damping() instead. <br />
+ This will be removed from Drake on or after 2024-06-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_rpy_floating_joint.html#a5d447b184aa0d500cefbc725641bd10a">RpyFloatingJoint&lt; T &gt;::translational_damping</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000014"></a>Use default_translational_damping() instead. <br />
+ This will be removed from Drake on or after 2024-06-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#acea936a2d449be8d43bb1037568cc81b">SceneGraphInspector&lt; T &gt;::Reify</a>  (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html" title="Type used to identify geometry instances in SceneGraph.">GeometryId</a> geometry_id, <a class="el" href="classdrake_1_1geometry_1_1_shape_reifier.html" title="The interface for converting shape descriptions to real shapes.">ShapeReifier</a> *reifier) const</dt>
 <dd><a class="anchor" id="_deprecated000004"></a>This shortcut function is being removed.  Instead, call inspector.GetShape(geometry_id).Reify(reifier) <br />
+ This will be removed from Drake on or after 2024-06-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_screw_joint.html#aad91b55e6b714db4ba96190e6fab07ac">ScrewJoint&lt; T &gt;::damping</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000015"></a>Use default_damping() instead. <br />
+ This will be removed from Drake on or after 2024-06-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_universal_joint.html#aad91b55e6b714db4ba96190e6fab07ac">UniversalJoint&lt; T &gt;::damping</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000016"></a>Use `default_damping()` instead. <br />
  This will be removed from Drake on or after 2024-06-01.</dd>
 </dl>
 </div></div><!-- PageDoc -->

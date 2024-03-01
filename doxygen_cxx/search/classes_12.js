@@ -47,6 +47,7 @@ var searchData=
   ['signeddistancepair',['SignedDistancePair',['../structdrake_1_1geometry_1_1_signed_distance_pair.html',1,'drake::geometry']]],
   ['signeddistancetopoint',['SignedDistanceToPoint',['../structdrake_1_1geometry_1_1_signed_distance_to_point.html',1,'drake::geometry']]],
   ['signeddistancewithtimederivative',['SignedDistanceWithTimeDerivative',['../structdrake_1_1multibody_1_1_signed_distance_with_time_derivative.html',1,'drake::multibody']]],
+  ['simiiwadriver',['SimIiwaDriver',['../classdrake_1_1manipulation_1_1kuka__iiwa_1_1_sim_iiwa_driver.html',1,'drake::manipulation::kuka_iiwa']]],
   ['simulator',['Simulator',['../classdrake_1_1systems_1_1_simulator.html',1,'drake::systems']]],
   ['simulatorconfig',['SimulatorConfig',['../structdrake_1_1systems_1_1_simulator_config.html',1,'drake::systems']]],
   ['simulatorstatus',['SimulatorStatus',['../classdrake_1_1systems_1_1_simulator_status.html',1,'drake::systems']]],

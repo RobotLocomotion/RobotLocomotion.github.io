@@ -41,7 +41,6 @@ var classdrake_1_1multibody_1_1_rigid_body =
     [ "Lock", "classdrake_1_1multibody_1_1_rigid_body.html#a50c7f850050d4a94641ed72dd2d1968f", null ],
     [ "mobod_index", "classdrake_1_1multibody_1_1_rigid_body.html#a41b2fbf7771b52e53a28662fec9716f4", null ],
     [ "name", "classdrake_1_1multibody_1_1_rigid_body.html#ad8227ba86a01f26e4f173cd5e219d5d1", null ],
-    [ "node_index", "classdrake_1_1multibody_1_1_rigid_body.html#a72b4efc4f7ac1a5e86ab8ffa970eaede", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_rigid_body.html#a8e89cbac803b2c194fdf2df13d53804f", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_rigid_body.html#abaa244e80c13ef3c744373f3bcaec801", null ],
     [ "scoped_name", "classdrake_1_1multibody_1_1_rigid_body.html#a06542e4ec7c6a884bfcd61c9b00221b4", null ],

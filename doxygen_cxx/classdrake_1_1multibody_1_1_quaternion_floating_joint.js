@@ -4,6 +4,8 @@ var classdrake_1_1multibody_1_1_quaternion_floating_joint =
     [ "QuaternionFloatingJoint", "classdrake_1_1multibody_1_1_quaternion_floating_joint.html#acbe025471edf1a97493cb093467b659d", null ],
     [ "QuaternionFloatingJoint", "classdrake_1_1multibody_1_1_quaternion_floating_joint.html#aee2fe7aa0851c239e3194454e8a2ea1b", null ],
     [ "angular_damping", "classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a33a39dbcfe8db8e29092329d7794fce6", null ],
+    [ "default_angular_damping", "classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a2f0a9cd2ddeb8ce9976e95fe59dcc843", null ],
+    [ "default_translational_damping", "classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a7b17c035e227e8fee348373149aed08b", null ],
     [ "DoAddInDamping", "classdrake_1_1multibody_1_1_quaternion_floating_joint.html#ae58dc70f3e0535c09582b85ecbc612a7", null ],
     [ "DoAddInOneForce", "classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a83a06d8a7b5e79c67b09f98583b0d807", null ],
     [ "get_angular_velocity", "classdrake_1_1multibody_1_1_quaternion_floating_joint.html#ae24bf1ddac317b629f326fba2119d296", null ],

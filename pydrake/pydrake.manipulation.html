@@ -834,6 +834,47 @@ fingers (positive implies non-penetration).</p>
 
 </dd></dl>
 
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.manipulation.SimIiwaDriver">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">SimIiwaDriver</span></span><a class="headerlink" href="#pydrake.manipulation.SimIiwaDriver" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram" title="pydrake.systems.framework.Diagram"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Diagram</span></code></a></p>
+<p>SimIiwaDriver simulates the IIWA control and status interface using a
+MultibodyPlant.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This feature is considered to be <strong>experimental</strong> and may change
+or be removed at any time, without any deprecation notice ahead of
+time.</p>
+</div>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px"><b style="color:orange">state</b>&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><b style="color:orange">generalized_contact_forces</b>&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">position (in kPositionOnly or kPositionAndTorque mode)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">torque (in kTorqueOnly or kPositionAndTorque mode)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>SimIiwaDriver</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <b style="color:orange">actuation</b></td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; position_commanded</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; position_measured</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; velocity_estimated</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; state_estimated</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; torque_commanded</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; torque_measured</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; torque_external</td></tr></table></td></tr></table><p>Ports shown in &lt;b style=”color:orange”&gt;orange&lt;/b&gt; are intended to
+connect to the MultibodyPlant’s per-model-instance ports of the same
+name. All other ports are intended to mimic the LCM command and status
+message fields.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.manipulation.SimIiwaDriver.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.manipulation.SimIiwaDriver,</span> <span class="pre">control_mode:</span> <span class="pre">pydrake.manipulation.IiwaControlMode,</span> <span class="pre">controller_plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;,</span> <span class="pre">ext_joint_filter_tau:</span> <span class="pre">float,</span> <span class="pre">kp_gains:</span> <span class="pre">Optional[numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]]]</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.manipulation.SimIiwaDriver.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Constructs a diagram with the given parameters. A reference to the
+<code class="docutils literal notranslate"><span class="pre">controller_plant</span></code> is retained by this system, so the
+<code class="docutils literal notranslate"><span class="pre">controller_plant</span></code> must outlive <code class="docutils literal notranslate"><span class="pre">this</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.manipulation.SimIiwaDriver.AddToBuilder">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AddToBuilder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">builder:</span> <span class="pre">pydrake.systems.framework.DiagramBuilder,</span> <span class="pre">plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;,</span> <span class="pre">iiwa_instance:</span> <span class="pre">drake::TypeSafeIndex&lt;drake::multibody::ModelInstanceTag&gt;,</span> <span class="pre">controller_plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;,</span> <span class="pre">ext_joint_filter_tau:</span> <span class="pre">float,</span> <span class="pre">desired_iiwa_kp_gains:</span> <span class="pre">Optional[numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]]],</span> <span class="pre">control_mode:</span> <span class="pre">pydrake.manipulation.IiwaControlMode</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.System" title="pydrake.systems.framework.System"><span class="pre">pydrake.systems.framework.System</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.SimIiwaDriver.AddToBuilder" title="Permalink to this definition"></a></dt>
+<dd><p>Given a <code class="docutils literal notranslate"><span class="pre">plant</span></code> (and associated <code class="docutils literal notranslate"><span class="pre">iiwa_instance</span></code>) and a
+<code class="docutils literal notranslate"><span class="pre">builder</span></code>, installs in that builder the <code class="docutils literal notranslate"><span class="pre">SimIiwaDriver</span></code> system to
+control and monitor an iiwa described by <code class="docutils literal notranslate"><span class="pre">controller_plant</span></code>.</p>
+<p>The added <code class="docutils literal notranslate"><span class="pre">SimIiwaDriver</span></code> system is connected to the actuation input
+port, state and generalized contact forces output ports in <code class="docutils literal notranslate"><span class="pre">plant</span></code>
+corresponding to the iiwa model.</p>
+<p>Returns the newly-added <code class="docutils literal notranslate"><span class="pre">SimIiwaDriver</span></code> System.</p>
+<p>Note: The Diagram will maintain an internal reference to
+<code class="docutils literal notranslate"><span class="pre">controller_plant</span></code>, so you must ensure that <code class="docutils literal notranslate"><span class="pre">controller_plant</span></code> has
+a longer lifetime than the Diagram.</p>
+</dd></dl>
+
+</dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="pydrake.manipulation.torque_enabled">
 <span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">torque_enabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">control_mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.IiwaControlMode" title="pydrake.manipulation.IiwaControlMode"><span class="pre">pydrake.manipulation.IiwaControlMode</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.manipulation.torque_enabled" title="Permalink to this definition"></a></dt>

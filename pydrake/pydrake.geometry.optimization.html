@@ -2506,6 +2506,22 @@ tolerance can be used with commercial solvers (e.g. Gurobi and Mosek).</p>
 <dd class="field-odd"><p><strong>RuntimeError if vpoly is empty and zero dimensional.</strong> – </p>
 </dd>
 </dl>
+<ol class="arabic simple" start="5">
+<li><p>__init__(self: pydrake.geometry.optimization.HPolyhedron, prog: pydrake.solvers.MathematicalProgram) -&gt; None</p></li>
+</ol>
+<p>Constructs a new HPolyhedron describing the feasible set of a linear
+program <code class="docutils literal notranslate"><span class="pre">prog</span></code>. The <code class="docutils literal notranslate"><span class="pre">i`th</span> <span class="pre">dimension</span> <span class="pre">in</span> <span class="pre">this</span> <span class="pre">representation</span>
+<span class="pre">corresponds</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">`i`th</span> <span class="pre">decision</span> <span class="pre">variable</span> <span class="pre">of</span> <span class="pre">`prog</span></code>. Note that if
+<code class="docutils literal notranslate"><span class="pre">prog</span></code> is infeasible, then the constructed HPolyhedron will be
+empty.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if prog has constraints which are not of type linear</strong> – </p></li>
+<li><p><strong>inequality</strong><strong>, </strong><strong>linear equality</strong><strong>, or </strong><strong>bounding box.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">

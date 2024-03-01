@@ -888,6 +888,7 @@ var hierarchy =
             [ "AcrobotWEncoder< T >", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_w_encoder.html", null ],
             [ "KukaTorqueController< T >", "classdrake_1_1examples_1_1kuka__iiwa__arm_1_1_kuka_torque_controller.html", null ],
             [ "ManipulationStation< T >", "classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html", null ],
+            [ "SimIiwaDriver< T >", "classdrake_1_1manipulation_1_1kuka__iiwa_1_1_sim_iiwa_driver.html", null ],
             [ "RobotDiagram< T >", "classdrake_1_1planning_1_1_robot_diagram.html", null ],
             [ "InverseDynamicsController< T >", "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html", null ],
             [ "PidControlledSystem< T >", "classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html", null ],

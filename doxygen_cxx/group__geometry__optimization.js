@@ -172,6 +172,7 @@ var group__geometry__optimization =
       [ "HPolyhedron", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#addeb00deb2fcdb452b7c6f7c416fec36", null ],
       [ "HPolyhedron", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a5008da472eebd4caf252f33f394bb131", null ],
       [ "HPolyhedron", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a65fdf30eb395f3b472ba9b253b017860", null ],
+      [ "HPolyhedron", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a516d4644a8a7ac99d904c6135641f4d2", null ],
       [ "~HPolyhedron", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a15f9b02bca9548dd4497de6693fa3a51", null ],
       [ "A", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#ace583a472a3bdc1b67f05d6a6571a903", null ],
       [ "b", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#aae45694d3595659922653fd027d15cb6", null ],
