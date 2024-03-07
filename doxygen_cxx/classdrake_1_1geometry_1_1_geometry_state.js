@@ -35,6 +35,7 @@ var classdrake_1_1geometry_1_1_geometry_state =
     [ "GetAllGeometryIds", "classdrake_1_1geometry_1_1_geometry_state.html#af9d9563ed7652cd8498429ad8132c596", null ],
     [ "GetAllSourceIds", "classdrake_1_1geometry_1_1_geometry_state.html#aecdd5562bb8a24d5b0faa9523a0fa201", null ],
     [ "GetCollisionCandidates", "classdrake_1_1geometry_1_1_geometry_state.html#a79b84ada25718e2a38fd2d13adb4d839", null ],
+    [ "GetConvexHull", "classdrake_1_1geometry_1_1_geometry_state.html#aec2f2e2842b8d64fbabe13b75574d316", null ],
     [ "GetFrameGroup", "classdrake_1_1geometry_1_1_geometry_state.html#ae8d8b283a6b3658b20db27e88d407f19", null ],
     [ "GetFrameId", "classdrake_1_1geometry_1_1_geometry_state.html#a1599d1c0d6a7a7d78491b5b1df7513f3", null ],
     [ "GetGeometries", "classdrake_1_1geometry_1_1_geometry_state.html#aeffd08da44086854532f975522c6264b", null ],

@@ -333,6 +333,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a79c271209096449409598e1da69c1413"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a79c271209096449409598e1da69c1413">GetAllDeformableGeometryIds</a> () const</td></tr>
 <tr class="memdesc:a79c271209096449409598e1da69c1413"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all geometry ids that correspond to deformable geometries.  <a href="#a79c271209096449409598e1da69c1413">More...</a><br /></td></tr>
 <tr class="separator:a79c271209096449409598e1da69c1413"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc1f51afc52b8dfd27aafbc8649cc278"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1_polygon_surface_mesh.html">PolygonSurfaceMesh</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#adc1f51afc52b8dfd27aafbc8649cc278">GetConvexHull</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id) const</td></tr>
+<tr class="memdesc:adc1f51afc52b8dfd27aafbc8649cc278"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the convex hull associated with the given <code>geometry_id</code>, if it exists.  <a href="#adc1f51afc52b8dfd27aafbc8649cc278">More...</a><br /></td></tr>
+<tr class="separator:adc1f51afc52b8dfd27aafbc8649cc278"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a852fbed1b4f83ddf4c9b3913a772f4bd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a852fbed1b4f83ddf4c9b3913a772f4bd">CollisionFiltered</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id1, <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id2) const</td></tr>
 <tr class="memdesc:a852fbed1b4f83ddf4c9b3913a772f4bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports true if the two geometries with given ids <code>geometry_id1</code> and <code>geometry_id2</code>, define a collision pair that has been filtered out.  <a href="#a852fbed1b4f83ddf4c9b3913a772f4bd">More...</a><br /></td></tr>
 <tr class="separator:a852fbed1b4f83ddf4c9b3913a772f4bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -707,6 +710,27 @@ Friends</h2></td></tr>
 <p>Returns all pairs of geometries that are candidates for collision (in no particular order). </p>
 <p>See <a class="el" href="classdrake_1_1geometry_1_1_collision_filter_declaration.html" title="Class for articulating changes to the configuration of SceneGraph&#39;s &quot;collision filters&quot;; collision fi...">CollisionFilterDeclaration</a> and <a class="el" href="classdrake_1_1geometry_1_1_collision_filter_manager.html#a67386b6917b1243e34c6f092d4956386" title="Applies the given declaration to the geometry state managed by this instance.">CollisionFilterManager::Apply()</a> for information on why a particular pair may <em>not</em> be a candidate.</p>
 <p>For candidate pair (A, B), the candidate is always guaranteed to be reported in a fixed order (i.e., always (A, B) and <em>never</em> (B, A)). This is the same ordering as would be returned by, e.g., <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#af3b16adde799eb804619dc86f3703f4f" title="Computes the penetrations across all pairs of geometries in the world with the penetrations character...">QueryObject::ComputePointPairPenetration()</a>. </p>
+
+</div>
+</div>
+<a id="adc1f51afc52b8dfd27aafbc8649cc278"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc1f51afc52b8dfd27aafbc8649cc278">&#9670;&nbsp;</a></span>GetConvexHull()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1geometry_1_1_polygon_surface_mesh.html">PolygonSurfaceMesh</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;* GetConvexHull </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&#160;</td>
+          <td class="paramname"><em>geometry_id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the convex hull associated with the given <code>geometry_id</code>, if it exists. </p>
+<p>The return value is guaranteed to be non-null if the geometry has proximity properties and a convex representation in the ProximityEngine. No other guarantees are provided. </p>
 
 </div>
 </div>
@@ -1547,8 +1571,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a7b176f170af189d4f31f33371e7d732c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b176f170af189d4f31f33371e7d732c">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a9174b38bac2fe383418fa6fa711ee153"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9174b38bac2fe383418fa6fa711ee153">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1559,7 +1583,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html">SceneGraphInspector</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html">SceneGraphInspector</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html">SceneGraphInspector</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1573,8 +1597,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a9174b38bac2fe383418fa6fa711ee153"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9174b38bac2fe383418fa6fa711ee153">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a7b176f170af189d4f31f33371e7d732c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b176f170af189d4f31f33371e7d732c">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1585,7 +1609,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html">SceneGraphInspector</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html">SceneGraphInspector</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html">SceneGraphInspector</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

@@ -1,5 +1,11 @@
 var NAVTREEINDEX58 =
 {
+"structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#ac57821371edcae4eaee405d04a76ae66":[3,0,0,4,1,22,4],
+"structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#aeff55dd0e18e3aeb13a86310e6ed35e5":[3,0,0,4,1,22,1],
+"structdrake_1_1geometry_1_1promoted__numerical.html":[3,0,0,4,41],
+"structdrake_1_1geometry_1_1promoted__numerical.html#ac7ff24def79100330b2186638f93afe1":[3,0,0,4,41,0],
+"structdrake_1_1geometry_1_1render_1_1_light_parameter.html":[3,0,0,4,2,4],
+"structdrake_1_1geometry_1_1render_1_1_light_parameter.html#a0dc037cf2bcfb547da23636bd58f37dd":[3,0,0,4,2,4,3],
 "structdrake_1_1geometry_1_1render_1_1_light_parameter.html#a2118076db8e8f8a25c2376e1d4acfb67":[3,0,0,4,2,4,6],
 "structdrake_1_1geometry_1_1render_1_1_light_parameter.html#a239e12f97e33fa0b06091b668289681c":[3,0,0,4,2,4,4],
 "structdrake_1_1geometry_1_1render_1_1_light_parameter.html#a50be65dc8aca77a64ba06b615506e2be":[3,0,0,4,2,4,1],
@@ -243,11 +249,5 @@ var NAVTREEINDEX58 =
 "structdrake_1_1multibody_1_1fem_1_1_fem_plant_data.html":[3,0,0,8,2,3],
 "structdrake_1_1multibody_1_1fem_1_1_fem_plant_data.html#a2c42fbe2eb80b0ce3eaa31b0c9fa1bfc":[3,0,0,8,2,3,5],
 "structdrake_1_1multibody_1_1fem_1_1_fem_plant_data.html#a3a4036051357a62230a21664bd53b03e":[3,0,0,8,2,3,4],
-"structdrake_1_1multibody_1_1fem_1_1_fem_plant_data.html#a63a63e5c6d4e79fb8dc1223d36cfa422":[3,0,0,8,2,3,3],
-"structdrake_1_1multibody_1_1fem_1_1_fem_plant_data.html#a6566954e5346b9edae63e9a63fa68f20":[3,0,0,8,2,3,6],
-"structdrake_1_1multibody_1_1fem_1_1_fem_plant_data.html#aa168ee0fff2aeac257846b6da669e84e":[3,0,0,8,2,3,1],
-"structdrake_1_1multibody_1_1fem_1_1_fem_plant_data.html#ab2d293c38b0ec53b8ec55e669497aaf9":[3,0,0,8,2,3,2],
-"structdrake_1_1multibody_1_1fem_1_1_fem_plant_data.html#af011eceae0e4754b8958932f80523918":[3,0,0,8,2,3,0],
-"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html":[3,0,0,8,3,1],
-"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a0d562bb51530219612deccbd4319091f":[3,0,0,8,3,1,8]
+"structdrake_1_1multibody_1_1fem_1_1_fem_plant_data.html#a63a63e5c6d4e79fb8dc1223d36cfa422":[3,0,0,8,2,3,3]
 };

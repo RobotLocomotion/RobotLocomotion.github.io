@@ -1,5 +1,8 @@
 var NAVTREEINDEX2 =
 {
+"classdrake_1_1examples_1_1acrobot_1_1_acrobot_state_sender.html#afa052a2c08364f30e4c0560d02469527":[1,2,12,0,4,0],
+"classdrake_1_1examples_1_1acrobot_1_1_acrobot_w_encoder.html":[1,2,12,0,6],
+"classdrake_1_1examples_1_1acrobot_1_1_acrobot_w_encoder.html#a0aebd610c2d28607e24c03859182d05f":[1,2,12,0,6,0],
 "classdrake_1_1examples_1_1acrobot_1_1_acrobot_w_encoder.html#a131c0d5ba6c0befdcc21b05a46a573a9":[1,2,12,0,6,1],
 "classdrake_1_1examples_1_1acrobot_1_1_acrobot_w_encoder.html#af60118b74847c05ded74e619c5870ab4":[1,2,12,0,6,2],
 "classdrake_1_1examples_1_1allegro__hand_1_1_allegro_command_receiver.html":[3,0,0,3,1,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX2 =
 "classdrake_1_1examples_1_1planar__gripper_1_1_gripper_brick_helper.html#ab02086bde4a30eab256d16842bf8d56e":[3,0,0,3,12,1,0],
 "classdrake_1_1examples_1_1planar__gripper_1_1_gripper_brick_helper.html#ab0d3aa1f12e8e03f23dfd2bca7f35abd":[3,0,0,3,12,1,17],
 "classdrake_1_1examples_1_1planar__gripper_1_1_gripper_brick_helper.html#aca25a244485799151f75d32f9b8ee324":[3,0,0,3,12,1,18],
-"classdrake_1_1examples_1_1planar__gripper_1_1_gripper_brick_helper.html#ad66f904b351ef1a6d1ca85744773ee5e":[3,0,0,3,12,1,4],
-"classdrake_1_1examples_1_1planar__gripper_1_1_gripper_brick_helper.html#ad7d18471338aeb466dd91b3bdddd0b9d":[3,0,0,3,12,1,9],
-"classdrake_1_1examples_1_1planar__gripper_1_1_gripper_brick_helper.html#aea0352d20bf9cc88dfc4dbe69f0604ec":[3,0,0,3,12,1,3],
-"classdrake_1_1examples_1_1planar__gripper_1_1_gripper_brick_helper.html#aedde604f1032984573bfa5fb37df1bbd":[3,0,0,3,12,1,13]
+"classdrake_1_1examples_1_1planar__gripper_1_1_gripper_brick_helper.html#ad66f904b351ef1a6d1ca85744773ee5e":[3,0,0,3,12,1,4]
 };

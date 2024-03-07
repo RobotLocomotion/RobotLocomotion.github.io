@@ -690,6 +690,14 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a35a9f9ace5905a07e1bec166ef0b13f6"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a35a9f9ace5905a07e1bec166ef0b13f6"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems.html#a35a9f9ace5905a07e1bec166ef0b13f6">BatchEvalUniquePeriodicDiscreteUpdate</a> (const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &amp;system, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a218f39990d2d9090c7a25c9c18cbf832">RowVectorX</a>&lt; T &gt;&gt; &amp;times, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; &amp;states, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; &amp;inputs, <a class="el" href="classint.html">int</a> num_time_steps=1, std::variant&lt; <a class="el" href="namespacedrake_1_1systems.html#a5484375bdbfb17f525cd2ed396d747f9">InputPortSelection</a>, <a class="el" href="namespacedrake_1_1systems.html#aa53feaf560f7ff6cfa4add8dc6ff0db0">InputPortIndex</a> &gt; input_port_index=<a class="el" href="namespacedrake_1_1systems.html#a5484375bdbfb17f525cd2ed396d747f9ae969b88961b5a19a96fee66796e8d713">InputPortSelection::kUseFirstInputIfItExists</a>, <a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> parallelize=<a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819">Parallelism::Max</a>())</td></tr>
+<tr class="memdesc:a35a9f9ace5905a07e1bec166ef0b13f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the dynamics of a difference equation <code>system</code> at many times, states, and inputs.  <a href="#a35a9f9ace5905a07e1bec166ef0b13f6">More...</a><br /></td></tr>
+<tr class="separator:a35a9f9ace5905a07e1bec166ef0b13f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21966f31af4a13c4b60cadf46e5779c3"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a21966f31af4a13c4b60cadf46e5779c3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems.html#a21966f31af4a13c4b60cadf46e5779c3">BatchEvalTimeDerivatives</a> (const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &amp;system, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a218f39990d2d9090c7a25c9c18cbf832">RowVectorX</a>&lt; T &gt;&gt; &amp;times, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; &amp;states, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; &amp;inputs, std::variant&lt; <a class="el" href="namespacedrake_1_1systems.html#a5484375bdbfb17f525cd2ed396d747f9">InputPortSelection</a>, <a class="el" href="namespacedrake_1_1systems.html#aa53feaf560f7ff6cfa4add8dc6ff0db0">InputPortIndex</a> &gt; input_port_index=<a class="el" href="namespacedrake_1_1systems.html#a5484375bdbfb17f525cd2ed396d747f9ae969b88961b5a19a96fee66796e8d713">InputPortSelection::kUseFirstInputIfItExists</a>, <a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> parallelize=<a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819">Parallelism::Max</a>())</td></tr>
+<tr class="memdesc:a21966f31af4a13c4b60cadf46e5779c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the time derivatives of a <code>system</code> at many times, states, and inputs.  <a href="#a21966f31af4a13c4b60cadf46e5779c3">More...</a><br /></td></tr>
+<tr class="separator:a21966f31af4a13c4b60cadf46e5779c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad32461bc90073aac39049d636974a04b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:gad32461bc90073aac39049d636974a04b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_integrator_base.html">IntegratorBase</a>&lt; T &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__simulator__configuration.html#gad32461bc90073aac39049d636974a04b">ResetIntegratorFromFlags</a> (<a class="el" href="classdrake_1_1systems_1_1_simulator.html">Simulator</a>&lt; T &gt; *simulator, const std::string &amp;scheme, const T &amp;max_step_size)</td></tr>
 <tr class="memdesc:gad32461bc90073aac39049d636974a04b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the integrator used to advanced the continuous time dynamics of the system associated with <code>simulator</code> according to the given arguments.  <a href="group__simulator__configuration.html#gad32461bc90073aac39049d636974a04b">More...</a><br /></td></tr>
@@ -1396,6 +1404,187 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the total number of <a class="el" href="classdrake_1_1systems_1_1_random_source.html" title="A source block which generates random numbers at a fixed sampling interval, with a zero-order hold be...">RandomSource</a> systems added.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="group__stochastic__systems.html">Stochastic Systems</a> </dd></dl>
+
+</div>
+</div>
+<a id="a21966f31af4a13c4b60cadf46e5779c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21966f31af4a13c4b60cadf46e5779c3">&#9670;&nbsp;</a></span>BatchEvalTimeDerivatives()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt;T&gt; drake::systems::BatchEvalTimeDerivatives </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>system</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a218f39990d2d9090c7a25c9c18cbf832">RowVectorX</a>&lt; T &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>times</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>states</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>inputs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::variant&lt; <a class="el" href="namespacedrake_1_1systems.html#a5484375bdbfb17f525cd2ed396d747f9">InputPortSelection</a>, <a class="el" href="namespacedrake_1_1systems.html#aa53feaf560f7ff6cfa4add8dc6ff0db0">InputPortIndex</a> &gt;&#160;</td>
+          <td class="paramname"><em>input_port_index</em> = <code><a class="el" href="namespacedrake_1_1systems.html#a5484375bdbfb17f525cd2ed396d747f9ae969b88961b5a19a96fee66796e8d713">InputPortSelection::kUseFirstInputIfItExists</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a>&#160;</td>
+          <td class="paramname"><em>parallelize</em> = <code><a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819">Parallelism::Max</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Evaluates the time derivatives of a <code>system</code> at many times, states, and inputs. </p>
+<p>Each column of <code>times</code>, <code>states</code>, and <code>inputs</code> will be associated with a single evaluation of the dynamics. The return value will a matrix with the corresponding time derivatives in each column. Any discrete variables in <code>context</code> will be held constant across all evaluations.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The scalar type of the system. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">system</td><td>The system to evaluate. </td></tr>
+    <tr><td class="paramname">context</td><td>A context associated with <code>system</code>, which can be used to pass system parameters and discrete/abstract state. </td></tr>
+    <tr><td class="paramname">times</td><td>A 1 x N vector of times at which to evaluate the dynamics. </td></tr>
+    <tr><td class="paramname">states</td><td>A system.num_continuous_states() x N matrix of continuous states at which to evaluate the dynamics. </td></tr>
+    <tr><td class="paramname">inputs</td><td>A num_inputs x N matrix of inputs at which to evaluate the dynamics, where num_inputs must match the size of the input port selected. If input_port_index is set to <a class="el" href="namespacedrake_1_1systems.html#a5484375bdbfb17f525cd2ed396d747f9a757e9aed460a5351e83462b6ac3e8627">InputPortSelection::kNoInput</a>, then the inputs argument will be ignored. </td></tr>
+    <tr><td class="paramname">input_port_index</td><td>The input port index to use for evaluating the dynamics. The default is to use the first input if there is one. A specific port index or kNoInput can be specified instead. The input port must be vector-valued and have the same size as the number of rows in <code>inputs</code>. </td></tr>
+    <tr><td class="paramname">parallelize</td><td>The parallelism to use for evaluating the dynamics.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A matrix with each column corresponding to the time derivatives.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if matrix shapes are inconsistent, with inputs required only if an input port is provided. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a35a9f9ace5905a07e1bec166ef0b13f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35a9f9ace5905a07e1bec166ef0b13f6">&#9670;&nbsp;</a></span>BatchEvalUniquePeriodicDiscreteUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt;T&gt; drake::systems::BatchEvalUniquePeriodicDiscreteUpdate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>system</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a218f39990d2d9090c7a25c9c18cbf832">RowVectorX</a>&lt; T &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>times</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>states</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>inputs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>num_time_steps</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::variant&lt; <a class="el" href="namespacedrake_1_1systems.html#a5484375bdbfb17f525cd2ed396d747f9">InputPortSelection</a>, <a class="el" href="namespacedrake_1_1systems.html#aa53feaf560f7ff6cfa4add8dc6ff0db0">InputPortIndex</a> &gt;&#160;</td>
+          <td class="paramname"><em>input_port_index</em> = <code><a class="el" href="namespacedrake_1_1systems.html#a5484375bdbfb17f525cd2ed396d747f9ae969b88961b5a19a96fee66796e8d713">InputPortSelection::kUseFirstInputIfItExists</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a>&#160;</td>
+          <td class="paramname"><em>parallelize</em> = <code><a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819">Parallelism::Max</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Evaluates the dynamics of a difference equation <code>system</code> at many times, states, and inputs. </p>
+<p>See <a class="el" href="classdrake_1_1systems_1_1_system.html#ab5466811f0b20ef0f23518948c1a1e4a" title="If this System contains a unique periodic timing for discrete update events, this function executes t...">System&lt;T&gt;::EvalUniquePeriodicDiscreteUpdate()</a>.</p>
+<p>Each column of <code>times</code>, <code>states</code>, and <code>inputs</code> will be associated with a single evaluation of the dynamics. The return value will be a matrix with each column corresponding to the next state of the system evaluated <code>num_time_steps * time_step</code> seconds after the provided time, using the <code>time_step</code> that is reported by <a class="el" href="classdrake_1_1systems_1_1_system.html#aeb5016cfee3ccd384e0a0ba62b4da5bc" title="Returns true iff the state dynamics of this system are governed exclusively by a difference equation ...">System&lt;T&gt;::IsDifferenceEquationSystem()</a>.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The scalar type of the system. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">system</td><td>The system to evaluate. </td></tr>
+    <tr><td class="paramname">context</td><td>A context associated with <code>system</code>, which can be used to pass system parameters. </td></tr>
+    <tr><td class="paramname">times</td><td>A 1 x N vector of times at which to evaluate the dynamics. </td></tr>
+    <tr><td class="paramname">states</td><td>A num_states x N matrix of states at which to evaluate the dynamics. </td></tr>
+    <tr><td class="paramname">inputs</td><td>A num_inputs x N matrix of inputs at which to evaluate the dynamics, where num_inputs must match the size of the input port selected. If input_port_index is set to <a class="el" href="namespacedrake_1_1systems.html#a5484375bdbfb17f525cd2ed396d747f9a757e9aed460a5351e83462b6ac3e8627">InputPortSelection::kNoInput</a>, then the inputs argument will be ignored. </td></tr>
+    <tr><td class="paramname">num_time_steps</td><td>The returned value will be the state at <code>time + time_step*num_time_steps</code>. </td></tr>
+    <tr><td class="paramname">input_port_index</td><td>The input port index to use for evaluating the dynamics. The default is to use the first input if there is one. A specific port index or kNoInput can be specified instead. The input port must be vector-valued and have the same size as the number of rows in <code>inputs</code>. </td></tr>
+    <tr><td class="paramname">parallelize</td><td>The parallelism to use for evaluating the dynamics.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A matrix with each column corresponding to the next state at <code>time + num_time_steps * time_step</code>.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>system.IsDifferenceEquationSystem()</code> is not true. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if matrix shapes are inconsistent, with inputs required only if an input port is provided. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

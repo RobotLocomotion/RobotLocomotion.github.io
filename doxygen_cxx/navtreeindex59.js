@@ -1,5 +1,11 @@
 var NAVTREEINDEX59 =
 {
+"structdrake_1_1multibody_1_1fem_1_1_fem_plant_data.html#a6566954e5346b9edae63e9a63fa68f20":[3,0,0,8,2,3,6],
+"structdrake_1_1multibody_1_1fem_1_1_fem_plant_data.html#aa168ee0fff2aeac257846b6da669e84e":[3,0,0,8,2,3,1],
+"structdrake_1_1multibody_1_1fem_1_1_fem_plant_data.html#ab2d293c38b0ec53b8ec55e669497aaf9":[3,0,0,8,2,3,2],
+"structdrake_1_1multibody_1_1fem_1_1_fem_plant_data.html#af011eceae0e4754b8958932f80523918":[3,0,0,8,2,3,0],
+"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html":[3,0,0,8,3,1],
+"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a0d562bb51530219612deccbd4319091f":[3,0,0,8,3,1,8],
 "structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a2f34a2f66899dfd008ab76f9fee983de":[3,0,0,8,3,1,4],
 "structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a3a415b5e7e1f412ec0002e0251ced626":[3,0,0,8,3,1,10],
 "structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a3f67c53b80389c5f53961936edba04c9":[3,0,0,8,3,1,11],
@@ -243,11 +249,5 @@ var NAVTREEINDEX59 =
 "structdrake_1_1solvers_1_1_snopt_solver_details.html#a7263cb2847210d145fcb11838abe81b5":[3,0,0,13,67,1],
 "structdrake_1_1solvers_1_1_snopt_solver_details.html#aada45ddf3bf7b63a6feeb32c3b136cab":[3,0,0,13,67,3],
 "structdrake_1_1symbolic_1_1_basis_element_graded_reverse_lex_order.html":[3,0,0,14,0],
-"structdrake_1_1symbolic_1_1_basis_element_graded_reverse_lex_order.html#a27f28cb60a97c16b3dd9b30cb72b2a8f":[3,0,0,14,0,0],
-"structdrake_1_1symbolic_1_1_graded_reverse_lex_order.html":[3,0,0,14,54],
-"structdrake_1_1symbolic_1_1_graded_reverse_lex_order.html#af1b666b4bbbf1ba4ad66a257f92e73a4":[3,0,0,14,54,0],
-"structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data.html":[3,0,0,14,58,0],
-"structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data.html#af29303862b440941e562a6b6a11de551":[3,0,0,14,58,0,0],
-"structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data.html#af3841474533d8bd1db7c131548d0bc27":[3,0,0,14,58,0,1],
-"structdrake_1_1symbolic_1_1_sin_cos.html":[3,0,0,14,63]
+"structdrake_1_1symbolic_1_1_basis_element_graded_reverse_lex_order.html#a27f28cb60a97c16b3dd9b30cb72b2a8f":[3,0,0,14,0,0]
 };

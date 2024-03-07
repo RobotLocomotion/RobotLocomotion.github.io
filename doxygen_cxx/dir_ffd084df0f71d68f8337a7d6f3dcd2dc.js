@@ -57,6 +57,7 @@ var dir_ffd084df0f71d68f8337a7d6f3dcd2dc =
       [ "PolygonSurfaceMesh", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html", "classdrake_1_1geometry_1_1_polygon_surface_mesh" ]
     ] ],
     [ "polygon_surface_mesh_field.h", "polygon__surface__mesh__field_8h.html", "polygon__surface__mesh__field_8h" ],
+    [ "polygon_to_triangle_mesh.h", "polygon__to__triangle__mesh_8h.html", null ],
     [ "posed_half_space.h", "posed__half__space_8h.html", null ],
     [ "proximity_doxygen.h", "proximity__doxygen_8h.html", null ],
     [ "proximity_utilities.h", "proximity__utilities_8h.html", "proximity__utilities_8h" ],

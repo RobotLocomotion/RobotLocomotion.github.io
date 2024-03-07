@@ -1,5 +1,10 @@
 var NAVTREEINDEX22 =
 {
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html":[3,0,0,10,2,3],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a0745622466ef1e6253a0de1c1216d804":[3,0,0,10,2,3,20],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a0e0056534457223e2eb27065147b9232":[3,0,0,10,2,3,22],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a168105bb5c3b8e774024bc13eeef01de":[3,0,0,10,2,3,2],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a3026f3dacc50a81434a05e8c9348eebf":[3,0,0,10,2,3,15],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a34f92ff4feccc5aa2e289b9a514486ac":[3,0,0,10,2,3,9],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a371ed21c43d6eb12f5f4c55b0d6da8b8":[3,0,0,10,2,3,16],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a4471b7b36088e3f9a445818011a88b20":[3,0,0,10,2,3,18],
@@ -244,10 +249,5 @@ var NAVTREEINDEX22 =
 "classdrake_1_1schema_1_1_gaussian_vector.html#ab8f4a0a862347c0c2fac23e5b74c5636":[3,0,0,12,5,7],
 "classdrake_1_1schema_1_1_gaussian_vector.html#ad80934fe58016c8c45ace203e14bdc43":[3,0,0,12,5,10],
 "classdrake_1_1schema_1_1_gaussian_vector.html#ae95cf7a39aa08458214a983fac456fbf":[3,0,0,12,5,0],
-"classdrake_1_1schema_1_1_gaussian_vector.html#af487612def275073e40c03b5271a6fa7":[3,0,0,12,5,1],
-"classdrake_1_1schema_1_1_rotation.html":[3,0,0,12,6],
-"classdrake_1_1schema_1_1_rotation.html#a0af6024b49102086643f32d1f175a273":[3,0,0,12,6,15],
-"classdrake_1_1schema_1_1_rotation.html#a1e3f7c33806a7b0f289b6fdaf58110bc":[3,0,0,12,6,17],
-"classdrake_1_1schema_1_1_rotation.html#a2420ac9dadffdc94f504a1ac146def9c":[3,0,0,12,6,13],
-"classdrake_1_1schema_1_1_rotation.html#a2efdc7d120a60532613625edf2b20ea1":[3,0,0,12,6,10]
+"classdrake_1_1schema_1_1_gaussian_vector.html#af487612def275073e40c03b5271a6fa7":[3,0,0,12,5,1]
 };

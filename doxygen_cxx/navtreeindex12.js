@@ -1,5 +1,10 @@
 var NAVTREEINDEX12 =
 {
+"classdrake_1_1math_1_1_roll_pitch_yaw.html#af87e57e81f6e0674b00ba2b81a71afa0":[3,0,0,7,12,22],
+"classdrake_1_1math_1_1_roll_pitch_yaw.html#afe797018b3807c0431c41057d9073e24":[3,0,0,7,12,36],
+"classdrake_1_1math_1_1_rotation_matrix.html":[3,0,0,7,13],
+"classdrake_1_1math_1_1_rotation_matrix.html#a02349fa508ba55fd7df957169498e824":[3,0,0,7,13,3],
+"classdrake_1_1math_1_1_rotation_matrix.html#a0397fe475999596a9edb1797a418432a":[3,0,0,7,13,23],
 "classdrake_1_1math_1_1_rotation_matrix.html#a0441681fa380dda6c70fe5b5a001bb90":[3,0,0,7,13,13],
 "classdrake_1_1math_1_1_rotation_matrix.html#a05183386f55111df27e380877a9f11b2":[3,0,0,7,13,6],
 "classdrake_1_1math_1_1_rotation_matrix.html#a0b70e5f1c037ab68afdb2551c49ac517":[3,0,0,7,13,46],
@@ -244,10 +249,5 @@ var NAVTREEINDEX12 =
 "classdrake_1_1multibody_1_1_differential_inverse_kinematics_integrator.html#aeb6a061fd038bef7ddf9ebb7883da7e3":[1,2,5,11,8],
 "classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html":[3,0,0,8,26],
 "classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#a086654241b97459747ca9210616e4682":[3,0,0,8,26,13],
-"classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#a0deb2a67ac5f296e9ab5db25c309edc3":[3,0,0,8,26,5],
-"classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#a0fa5c89596926e41d3e5a1fbe98e0df9":[3,0,0,8,26,22],
-"classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#a0fc2ac08f6a99f0d08bc48995294b02c":[3,0,0,8,26,18],
-"classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#a1cdd0dd0399049d34796b347b13bf902":[3,0,0,8,26,29],
-"classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#a2a3d0524cca20cb06a142a00b53f0d4e":[3,0,0,8,26,10],
-"classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#a30342f766e5b14049b65f710581f4bd1":[3,0,0,8,26,15]
+"classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#a0deb2a67ac5f296e9ab5db25c309edc3":[3,0,0,8,26,5]
 };

@@ -1,5 +1,10 @@
 var NAVTREEINDEX9 =
 {
+"classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a95efbfc978d1926652dff936c8931e03":[1,5,5,5,26],
+"classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a9fe5996b5d76685d63e077a95f7a8a94":[1,1,1,5,11],
+"classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a9fe5996b5d76685d63e077a95f7a8a94":[1,5,5,5,11],
+"classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#aacc2366f3e031a58db12d6b57d911e37":[1,1,1,5,14],
+"classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#aacc2366f3e031a58db12d6b57d911e37":[1,5,5,5,14],
 "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#aae45694d3595659922653fd027d15cb6":[1,1,1,5,9],
 "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#aae45694d3595659922653fd027d15cb6":[1,5,5,5,9],
 "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#aba50cc657a0a2c943a9657cb820e8289":[1,1,1,5,24],
@@ -244,10 +249,5 @@ var NAVTREEINDEX9 =
 "classdrake_1_1geometry_1_1render_1_1_render_engine.html#a2df94afa6f50029dc60fefe29fa6c0a9":[3,0,0,4,2,6,26],
 "classdrake_1_1geometry_1_1render_1_1_render_engine.html#a34a75062166192279240203b606b9bcc":[3,0,0,4,2,6,1],
 "classdrake_1_1geometry_1_1render_1_1_render_engine.html#a37016bd327ce6e07ba719d9b1bf5e1e6":[3,0,0,4,2,6,12],
-"classdrake_1_1geometry_1_1render_1_1_render_engine.html#a3a05e57a0c1352d5b7bf21ec5b040848":[3,0,0,4,2,6,10],
-"classdrake_1_1geometry_1_1render_1_1_render_engine.html#a3dab418ee39075dd18acab2e85f5cf47":[3,0,0,4,2,6,22],
-"classdrake_1_1geometry_1_1render_1_1_render_engine.html#a4cb486ce4bf7773a6f1413415b378645":[3,0,0,4,2,6,28],
-"classdrake_1_1geometry_1_1render_1_1_render_engine.html#a5021a551918ae0a1f8dc3d380360eaba":[3,0,0,4,2,6,7],
-"classdrake_1_1geometry_1_1render_1_1_render_engine.html#a56bb78085c04069b30230ff26cb9f97c":[3,0,0,4,2,6,3],
-"classdrake_1_1geometry_1_1render_1_1_render_engine.html#a67a18c48f0a56be40e169b4ab2c3511a":[3,0,0,4,2,6,13]
+"classdrake_1_1geometry_1_1render_1_1_render_engine.html#a3a05e57a0c1352d5b7bf21ec5b040848":[3,0,0,4,2,6,10]
 };

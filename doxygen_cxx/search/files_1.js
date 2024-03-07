@@ -4,6 +4,7 @@ var searchData=
   ['barycentric_2eh',['barycentric.h',['../barycentric_8h.html',1,'']]],
   ['barycentric_5fsystem_2eh',['barycentric_system.h',['../barycentric__system_8h.html',1,'']]],
   ['basic_5fvector_2eh',['basic_vector.h',['../basic__vector_8h.html',1,'']]],
+  ['batch_5feval_2eh',['batch_eval.h',['../batch__eval_8h.html',1,'']]],
   ['bead_5fon_5fa_5fwire_2eh',['bead_on_a_wire.h',['../bead__on__a__wire_8h.html',1,'']]],
   ['beam_5fmodel_2eh',['beam_model.h',['../beam__model_8h.html',1,'']]],
   ['bezier_5fcurve_2eh',['bezier_curve.h',['../bezier__curve_8h.html',1,'']]],

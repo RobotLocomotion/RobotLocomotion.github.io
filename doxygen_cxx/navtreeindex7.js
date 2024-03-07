@@ -1,5 +1,10 @@
 var NAVTREEINDEX7 =
 {
+"classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a98f8a4ac27c2c8008728ae504e8e68bc":[3,0,0,4,59,15],
+"classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a9e0df4b7bc0bed489d11f3d79ab31cbf":[3,0,0,4,59,5],
+"classdrake_1_1geometry_1_1_triangle_surface_mesh.html#aa8388a3f4417bdec45042a7fd2166a6a":[3,0,0,4,59,25],
+"classdrake_1_1geometry_1_1_triangle_surface_mesh.html#ab4abe6216f76b9221e741cc99755defc":[3,0,0,4,59,21],
+"classdrake_1_1geometry_1_1_triangle_surface_mesh.html#ac405114292ae14c0105bfd82aafb15ca":[3,0,0,4,59,6],
 "classdrake_1_1geometry_1_1_triangle_surface_mesh.html#acfb7092ebedc0d9cc7e4bdebf33abf19":[3,0,0,4,59,18],
 "classdrake_1_1geometry_1_1_triangle_surface_mesh.html#ad09929d4b2d9f92c554b9688be2f6b7b":[3,0,0,4,59,3],
 "classdrake_1_1geometry_1_1_triangle_surface_mesh.html#ad7c9094c5a3e33edbdc61e5d72af8fcf":[3,0,0,4,59,4],
@@ -244,10 +249,5 @@ var NAVTREEINDEX7 =
 "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html#a6c7fc9a2359a86bd410d2eb132b3458c":[3,0,0,4,1,5,0,1],
 "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html#aa9b18898e034ce83d3570eade18412c4":[3,0,0,4,1,5,0,4],
 "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html":[3,0,0,4,1,6],
-"classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#a19da3edfe4a7542ce54e7ff1d44468f0":[3,0,0,4,1,6,16],
-"classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#a227c4df9b2bb2b3793de69a032de20a7":[3,0,0,4,1,6,12],
-"classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#a2b784126cf7c688a069445fb7663b2fe":[3,0,0,4,1,6,10],
-"classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#a2b784126cf7c688a069445fb7663b2fea4c891b645e16772c94b9ac57032c6e61":[3,0,0,4,1,6,10,0],
-"classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#a2b784126cf7c688a069445fb7663b2fea73514c28b87c972ede3822ca61d2171a":[3,0,0,4,1,6,10,1],
-"classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#a409fd33166e0e4d6bf8967bac91676df":[3,0,0,4,1,6,9]
+"classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#a19da3edfe4a7542ce54e7ff1d44468f0":[3,0,0,4,1,6,16]
 };

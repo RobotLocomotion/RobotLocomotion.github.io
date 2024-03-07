@@ -175,6 +175,336 @@ for <code class="docutils literal notranslate"><span class="pre">simulator</span
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="pydrake.systems.analysis.BatchEvalTimeDerivatives">
+<span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">BatchEvalTimeDerivatives</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.analysis.BatchEvalTimeDerivatives" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>BatchEvalTimeDerivatives(system: pydrake.systems.framework.System, context: pydrake.systems.framework.Context, times: numpy.ndarray[numpy.float64[1, n]], states: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], inputs: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], input_port_index: Union[pydrake.systems.framework.InputPortSelection, pydrake.systems.framework.InputPortIndex] = &lt;InputPortSelection.kUseFirstInputIfItExists: -2&gt;, parallelize: pydrake.common.Parallelism = &lt;pydrake.common.Parallelism object at 0x7f47f07ba5f0&gt;) -&gt; numpy.ndarray[numpy.float64[m, n]]</p></li>
+</ol>
+<p>Evaluates the time derivatives of a <code class="docutils literal notranslate"><span class="pre">system</span></code> at many times, states,
+and inputs.</p>
+<p>Each column of <code class="docutils literal notranslate"><span class="pre">times</span></code>, <cite>states</cite>, and <code class="docutils literal notranslate"><span class="pre">inputs</span></code> will be associated
+with a single evaluation of the dynamics. The return value will a
+matrix with the corresponding time derivatives in each column. Any
+discrete variables in <code class="docutils literal notranslate"><span class="pre">context</span></code> will be held constant across all
+evaluations.</p>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">T</span></code>:</dt><dd><p>The scalar type of the system.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">system</span></code>:</dt><dd><p>The system to evaluate.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>A context associated with <code class="docutils literal notranslate"><span class="pre">system</span></code>, which can be used to pass
+system parameters and discrete/abstract state.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">times</span></code>:</dt><dd><p>A 1 x N vector of times at which to evaluate the dynamics.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">states</span></code>:</dt><dd><p>A system.num_continuous_states() x N matrix of continuous states
+at which to evaluate the dynamics.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">inputs</span></code>:</dt><dd><p>A num_inputs x N matrix of inputs at which to evaluate the
+dynamics, where num_inputs must match the size of the input port
+selected. If input_port_index is set to
+InputPortSelection::kNoInput, then the inputs argument will be
+ignored.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">input_port_index</span></code>:</dt><dd><p>The input port index to use for evaluating the dynamics. The
+default is to use the first input if there is one. A specific port
+index or kNoInput can be specified instead. The input port must be
+vector-valued and have the same size as the number of rows in
+<code class="docutils literal notranslate"><span class="pre">inputs</span></code>.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">parallelize</span></code>:</dt><dd><p>The parallelism to use for evaluating the dynamics.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A matrix with each column corresponding to the time derivatives.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>RuntimeError if matrix shapes are inconsistent</strong><strong>, </strong><strong>with inputs</strong> – </p></li>
+<li><p><strong>required only if an input port is provided.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>BatchEvalTimeDerivatives(system: pydrake.systems.framework.System_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], times: numpy.ndarray[object[1, n]], states: numpy.ndarray[object[m, n], flags.f_contiguous], inputs: numpy.ndarray[object[m, n], flags.f_contiguous], input_port_index: Union[pydrake.systems.framework.InputPortSelection, pydrake.systems.framework.InputPortIndex] = &lt;InputPortSelection.kUseFirstInputIfItExists: -2&gt;, parallelize: pydrake.common.Parallelism = &lt;pydrake.common.Parallelism object at 0x7f47ef63bcb0&gt;) -&gt; numpy.ndarray[object[m, n]]</p></li>
+</ol>
+<p>Evaluates the time derivatives of a <code class="docutils literal notranslate"><span class="pre">system</span></code> at many times, states,
+and inputs.</p>
+<p>Each column of <code class="docutils literal notranslate"><span class="pre">times</span></code>, <cite>states</cite>, and <code class="docutils literal notranslate"><span class="pre">inputs</span></code> will be associated
+with a single evaluation of the dynamics. The return value will a
+matrix with the corresponding time derivatives in each column. Any
+discrete variables in <code class="docutils literal notranslate"><span class="pre">context</span></code> will be held constant across all
+evaluations.</p>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">T</span></code>:</dt><dd><p>The scalar type of the system.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">system</span></code>:</dt><dd><p>The system to evaluate.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>A context associated with <code class="docutils literal notranslate"><span class="pre">system</span></code>, which can be used to pass
+system parameters and discrete/abstract state.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">times</span></code>:</dt><dd><p>A 1 x N vector of times at which to evaluate the dynamics.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">states</span></code>:</dt><dd><p>A system.num_continuous_states() x N matrix of continuous states
+at which to evaluate the dynamics.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">inputs</span></code>:</dt><dd><p>A num_inputs x N matrix of inputs at which to evaluate the
+dynamics, where num_inputs must match the size of the input port
+selected. If input_port_index is set to
+InputPortSelection::kNoInput, then the inputs argument will be
+ignored.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">input_port_index</span></code>:</dt><dd><p>The input port index to use for evaluating the dynamics. The
+default is to use the first input if there is one. A specific port
+index or kNoInput can be specified instead. The input port must be
+vector-valued and have the same size as the number of rows in
+<code class="docutils literal notranslate"><span class="pre">inputs</span></code>.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">parallelize</span></code>:</dt><dd><p>The parallelism to use for evaluating the dynamics.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A matrix with each column corresponding to the time derivatives.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>RuntimeError if matrix shapes are inconsistent</strong><strong>, </strong><strong>with inputs</strong> – </p></li>
+<li><p><strong>required only if an input port is provided.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic simple" start="3">
+<li><p>BatchEvalTimeDerivatives(system: pydrake.systems.framework.System_[Expression], context: pydrake.systems.framework.Context_[Expression], times: numpy.ndarray[object[1, n]], states: numpy.ndarray[object[m, n], flags.f_contiguous], inputs: numpy.ndarray[object[m, n], flags.f_contiguous], input_port_index: Union[pydrake.systems.framework.InputPortSelection, pydrake.systems.framework.InputPortIndex] = &lt;InputPortSelection.kUseFirstInputIfItExists: -2&gt;, parallelize: pydrake.common.Parallelism = &lt;pydrake.common.Parallelism object at 0x7f47ef625370&gt;) -&gt; numpy.ndarray[object[m, n]]</p></li>
+</ol>
+<p>Evaluates the time derivatives of a <code class="docutils literal notranslate"><span class="pre">system</span></code> at many times, states,
+and inputs.</p>
+<p>Each column of <code class="docutils literal notranslate"><span class="pre">times</span></code>, <cite>states</cite>, and <code class="docutils literal notranslate"><span class="pre">inputs</span></code> will be associated
+with a single evaluation of the dynamics. The return value will a
+matrix with the corresponding time derivatives in each column. Any
+discrete variables in <code class="docutils literal notranslate"><span class="pre">context</span></code> will be held constant across all
+evaluations.</p>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">T</span></code>:</dt><dd><p>The scalar type of the system.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">system</span></code>:</dt><dd><p>The system to evaluate.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>A context associated with <code class="docutils literal notranslate"><span class="pre">system</span></code>, which can be used to pass
+system parameters and discrete/abstract state.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">times</span></code>:</dt><dd><p>A 1 x N vector of times at which to evaluate the dynamics.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">states</span></code>:</dt><dd><p>A system.num_continuous_states() x N matrix of continuous states
+at which to evaluate the dynamics.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">inputs</span></code>:</dt><dd><p>A num_inputs x N matrix of inputs at which to evaluate the
+dynamics, where num_inputs must match the size of the input port
+selected. If input_port_index is set to
+InputPortSelection::kNoInput, then the inputs argument will be
+ignored.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">input_port_index</span></code>:</dt><dd><p>The input port index to use for evaluating the dynamics. The
+default is to use the first input if there is one. A specific port
+index or kNoInput can be specified instead. The input port must be
+vector-valued and have the same size as the number of rows in
+<code class="docutils literal notranslate"><span class="pre">inputs</span></code>.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">parallelize</span></code>:</dt><dd><p>The parallelism to use for evaluating the dynamics.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A matrix with each column corresponding to the time derivatives.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>RuntimeError if matrix shapes are inconsistent</strong><strong>, </strong><strong>with inputs</strong> – </p></li>
+<li><p><strong>required only if an input port is provided.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydrake.systems.analysis.BatchEvalUniquePeriodicDiscreteUpdate">
+<span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">BatchEvalUniquePeriodicDiscreteUpdate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.analysis.BatchEvalUniquePeriodicDiscreteUpdate" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>BatchEvalUniquePeriodicDiscreteUpdate(system: pydrake.systems.framework.System, context: pydrake.systems.framework.Context, times: numpy.ndarray[numpy.float64[1, n]], states: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], inputs: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], num_time_steps: int = 1, input_port_index: Union[pydrake.systems.framework.InputPortSelection, pydrake.systems.framework.InputPortIndex] = &lt;InputPortSelection.kUseFirstInputIfItExists: -2&gt;, parallelize: pydrake.common.Parallelism = &lt;pydrake.common.Parallelism object at 0x7f47f0bf7cf0&gt;) -&gt; numpy.ndarray[numpy.float64[m, n]]</p></li>
+</ol>
+<p>Evaluates the dynamics of a difference equation <code class="docutils literal notranslate"><span class="pre">system</span></code> at many
+times, states, and inputs. See
+System&lt;T&gt;::EvalUniquePeriodicDiscreteUpdate().</p>
+<p>Each column of <code class="docutils literal notranslate"><span class="pre">times</span></code>, <cite>states</cite>, and <code class="docutils literal notranslate"><span class="pre">inputs</span></code> will be associated
+with a single evaluation of the dynamics. The return value will be a
+matrix with each column corresponding to the next state of the system
+evaluated <code class="docutils literal notranslate"><span class="pre">num_time_steps</span> <span class="pre">*</span> <span class="pre">time_step</span></code> seconds after the provided
+time, using the <code class="docutils literal notranslate"><span class="pre">time_step</span></code> that is reported by
+System&lt;T&gt;::IsDifferenceEquationSystem().</p>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">T</span></code>:</dt><dd><p>The scalar type of the system.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">system</span></code>:</dt><dd><p>The system to evaluate.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>A context associated with <code class="docutils literal notranslate"><span class="pre">system</span></code>, which can be used to pass
+system parameters.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">times</span></code>:</dt><dd><p>A 1 x N vector of times at which to evaluate the dynamics.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">states</span></code>:</dt><dd><p>A num_states x N matrix of states at which to evaluate the
+dynamics.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">inputs</span></code>:</dt><dd><p>A num_inputs x N matrix of inputs at which to evaluate the
+dynamics, where num_inputs must match the size of the input port
+selected. If input_port_index is set to
+InputPortSelection::kNoInput, then the inputs argument will be
+ignored.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">num_time_steps</span></code>:</dt><dd><p>The returned value will be the state at <code class="docutils literal notranslate"><span class="pre">time</span> <span class="pre">+</span>
+<span class="pre">time_step*num_time_steps</span></code>.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">input_port_index</span></code>:</dt><dd><p>The input port index to use for evaluating the dynamics. The
+default is to use the first input if there is one. A specific port
+index or kNoInput can be specified instead. The input port must be
+vector-valued and have the same size as the number of rows in
+<code class="docutils literal notranslate"><span class="pre">inputs</span></code>.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">parallelize</span></code>:</dt><dd><p>The parallelism to use for evaluating the dynamics.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A matrix with each column corresponding to the next state at
+<code class="docutils literal notranslate"><span class="pre">time</span> <span class="pre">+</span> <span class="pre">num_time_steps</span> <span class="pre">*</span> <span class="pre">time_step</span></code>.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>RuntimeError if system.IsDifferenceEquationSystem</strong><strong>(</strong><strong>) </strong><strong>is not</strong> – </p></li>
+<li><p><strong>true.</strong> – </p></li>
+<li><p><strong>RuntimeError if matrix shapes are inconsistent</strong><strong>, </strong><strong>with inputs</strong> – </p></li>
+<li><p><strong>required only if an input port is provided.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>BatchEvalUniquePeriodicDiscreteUpdate(system: pydrake.systems.framework.System_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], times: numpy.ndarray[object[1, n]], states: numpy.ndarray[object[m, n], flags.f_contiguous], inputs: numpy.ndarray[object[m, n], flags.f_contiguous], num_time_steps: int = 1, input_port_index: Union[pydrake.systems.framework.InputPortSelection, pydrake.systems.framework.InputPortIndex] = &lt;InputPortSelection.kUseFirstInputIfItExists: -2&gt;, parallelize: pydrake.common.Parallelism = &lt;pydrake.common.Parallelism object at 0x7f47ef638530&gt;) -&gt; numpy.ndarray[object[m, n]]</p></li>
+</ol>
+<p>Evaluates the dynamics of a difference equation <code class="docutils literal notranslate"><span class="pre">system</span></code> at many
+times, states, and inputs. See
+System&lt;T&gt;::EvalUniquePeriodicDiscreteUpdate().</p>
+<p>Each column of <code class="docutils literal notranslate"><span class="pre">times</span></code>, <cite>states</cite>, and <code class="docutils literal notranslate"><span class="pre">inputs</span></code> will be associated
+with a single evaluation of the dynamics. The return value will be a
+matrix with each column corresponding to the next state of the system
+evaluated <code class="docutils literal notranslate"><span class="pre">num_time_steps</span> <span class="pre">*</span> <span class="pre">time_step</span></code> seconds after the provided
+time, using the <code class="docutils literal notranslate"><span class="pre">time_step</span></code> that is reported by
+System&lt;T&gt;::IsDifferenceEquationSystem().</p>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">T</span></code>:</dt><dd><p>The scalar type of the system.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">system</span></code>:</dt><dd><p>The system to evaluate.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>A context associated with <code class="docutils literal notranslate"><span class="pre">system</span></code>, which can be used to pass
+system parameters.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">times</span></code>:</dt><dd><p>A 1 x N vector of times at which to evaluate the dynamics.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">states</span></code>:</dt><dd><p>A num_states x N matrix of states at which to evaluate the
+dynamics.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">inputs</span></code>:</dt><dd><p>A num_inputs x N matrix of inputs at which to evaluate the
+dynamics, where num_inputs must match the size of the input port
+selected. If input_port_index is set to
+InputPortSelection::kNoInput, then the inputs argument will be
+ignored.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">num_time_steps</span></code>:</dt><dd><p>The returned value will be the state at <code class="docutils literal notranslate"><span class="pre">time</span> <span class="pre">+</span>
+<span class="pre">time_step*num_time_steps</span></code>.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">input_port_index</span></code>:</dt><dd><p>The input port index to use for evaluating the dynamics. The
+default is to use the first input if there is one. A specific port
+index or kNoInput can be specified instead. The input port must be
+vector-valued and have the same size as the number of rows in
+<code class="docutils literal notranslate"><span class="pre">inputs</span></code>.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">parallelize</span></code>:</dt><dd><p>The parallelism to use for evaluating the dynamics.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A matrix with each column corresponding to the next state at
+<code class="docutils literal notranslate"><span class="pre">time</span> <span class="pre">+</span> <span class="pre">num_time_steps</span> <span class="pre">*</span> <span class="pre">time_step</span></code>.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>RuntimeError if system.IsDifferenceEquationSystem</strong><strong>(</strong><strong>) </strong><strong>is not</strong> – </p></li>
+<li><p><strong>true.</strong> – </p></li>
+<li><p><strong>RuntimeError if matrix shapes are inconsistent</strong><strong>, </strong><strong>with inputs</strong> – </p></li>
+<li><p><strong>required only if an input port is provided.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic simple" start="3">
+<li><p>BatchEvalUniquePeriodicDiscreteUpdate(system: pydrake.systems.framework.System_[Expression], context: pydrake.systems.framework.Context_[Expression], times: numpy.ndarray[object[1, n]], states: numpy.ndarray[object[m, n], flags.f_contiguous], inputs: numpy.ndarray[object[m, n], flags.f_contiguous], num_time_steps: int = 1, input_port_index: Union[pydrake.systems.framework.InputPortSelection, pydrake.systems.framework.InputPortIndex] = &lt;InputPortSelection.kUseFirstInputIfItExists: -2&gt;, parallelize: pydrake.common.Parallelism = &lt;pydrake.common.Parallelism object at 0x7f47f07d03b0&gt;) -&gt; numpy.ndarray[object[m, n]]</p></li>
+</ol>
+<p>Evaluates the dynamics of a difference equation <code class="docutils literal notranslate"><span class="pre">system</span></code> at many
+times, states, and inputs. See
+System&lt;T&gt;::EvalUniquePeriodicDiscreteUpdate().</p>
+<p>Each column of <code class="docutils literal notranslate"><span class="pre">times</span></code>, <cite>states</cite>, and <code class="docutils literal notranslate"><span class="pre">inputs</span></code> will be associated
+with a single evaluation of the dynamics. The return value will be a
+matrix with each column corresponding to the next state of the system
+evaluated <code class="docutils literal notranslate"><span class="pre">num_time_steps</span> <span class="pre">*</span> <span class="pre">time_step</span></code> seconds after the provided
+time, using the <code class="docutils literal notranslate"><span class="pre">time_step</span></code> that is reported by
+System&lt;T&gt;::IsDifferenceEquationSystem().</p>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">T</span></code>:</dt><dd><p>The scalar type of the system.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">system</span></code>:</dt><dd><p>The system to evaluate.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>A context associated with <code class="docutils literal notranslate"><span class="pre">system</span></code>, which can be used to pass
+system parameters.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">times</span></code>:</dt><dd><p>A 1 x N vector of times at which to evaluate the dynamics.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">states</span></code>:</dt><dd><p>A num_states x N matrix of states at which to evaluate the
+dynamics.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">inputs</span></code>:</dt><dd><p>A num_inputs x N matrix of inputs at which to evaluate the
+dynamics, where num_inputs must match the size of the input port
+selected. If input_port_index is set to
+InputPortSelection::kNoInput, then the inputs argument will be
+ignored.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">num_time_steps</span></code>:</dt><dd><p>The returned value will be the state at <code class="docutils literal notranslate"><span class="pre">time</span> <span class="pre">+</span>
+<span class="pre">time_step*num_time_steps</span></code>.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">input_port_index</span></code>:</dt><dd><p>The input port index to use for evaluating the dynamics. The
+default is to use the first input if there is one. A specific port
+index or kNoInput can be specified instead. The input port must be
+vector-valued and have the same size as the number of rows in
+<code class="docutils literal notranslate"><span class="pre">inputs</span></code>.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">parallelize</span></code>:</dt><dd><p>The parallelism to use for evaluating the dynamics.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A matrix with each column corresponding to the next state at
+<code class="docutils literal notranslate"><span class="pre">time</span> <span class="pre">+</span> <span class="pre">num_time_steps</span> <span class="pre">*</span> <span class="pre">time_step</span></code>.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>RuntimeError if system.IsDifferenceEquationSystem</strong><strong>(</strong><strong>) </strong><strong>is not</strong> – </p></li>
+<li><p><strong>true.</strong> – </p></li>
+<li><p><strong>RuntimeError if matrix shapes are inconsistent</strong><strong>, </strong><strong>with inputs</strong> – </p></li>
+<li><p><strong>required only if an input port is provided.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.ExtractSimulatorConfig">
 <span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">ExtractSimulatorConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.analysis.ExtractSimulatorConfig" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>

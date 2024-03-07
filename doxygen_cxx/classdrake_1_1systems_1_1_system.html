@@ -3600,11 +3600,13 @@ variable group".) </p><dl class="section see"><dt>See also</dt><dd><a class="el"
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">xcdot</td><td>Time derivatives ẋ꜀ of x꜀ returned as a reference to an object of the same type and size as <code>context</code>'s continuous state. </td></tr>
+    <tr><td class="paramname">xcdot</td><td>Time derivatives ẋ꜀ of x꜀ returned as a reference to an object of the same type and size as <code>context</code>'s continuous state.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_system.html#af2677f8773e90a538483eedd80a81a9f" title="Calculates the time derivatives ẋ꜀ of the continuous state x꜀ into a given output argument.">CalcTimeDerivatives()</a>, <a class="el" href="classdrake_1_1systems_1_1_system.html#a2bb4c1e3572a8009863b5a342fcb5c49" title="Evaluates the implicit form of the System equations and returns the residual.">CalcImplicitTimeDerivativesResidual()</a>, <a class="el" href="classdrake_1_1systems_1_1_system.html#a028e42d4ecb1d2902ed839a8a9d2afaa" title="(Advanced) Returns the CacheEntry used to cache time derivatives for EvalTimeDerivatives().">get_time_derivatives_cache_entry()</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacedrake_1_1systems.html#a21966f31af4a13c4b60cadf46e5779c3" title="Evaluates the time derivatives of a system at many times, states, and inputs.">BatchEvalTimeDerivatives()</a> for a batch version of this method. </dd>
+<dd>
+<a class="el" href="classdrake_1_1systems_1_1_system.html#af2677f8773e90a538483eedd80a81a9f" title="Calculates the time derivatives ẋ꜀ of the continuous state x꜀ into a given output argument.">CalcTimeDerivatives()</a>, <a class="el" href="classdrake_1_1systems_1_1_system.html#a2bb4c1e3572a8009863b5a342fcb5c49" title="Evaluates the implicit form of the System equations and returns the residual.">CalcImplicitTimeDerivativesResidual()</a>, <a class="el" href="classdrake_1_1systems_1_1_system.html#a028e42d4ecb1d2902ed839a8a9d2afaa" title="(Advanced) Returns the CacheEntry used to cache time derivatives for EvalTimeDerivatives().">get_time_derivatives_cache_entry()</a> </dd></dl>
 
 </div>
 </div>
@@ -3644,8 +3646,10 @@ variable group".) </p><dl class="section see"><dt>See also</dt><dd><a class="el"
   </table>
   </dd>
 </dl>
-<dl class="section user"><dt>Implementation</dt><dd>If recalculation is needed, copies the current discrete state values into preallocated <code>context</code> cache space. Applies the discrete update event handlers (in an unspecified order) to the cache copy, possibly updating it. Returns a reference to the possibly-updated cache space.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_system.html#a63e5a7b117d53a54d79d44a63b2cffb7" title="Determines whether there exists a unique periodic timing (offset and period) that triggers one or mor...">GetUniquePeriodicDiscreteUpdateAttribute()</a>, <a class="el" href="classdrake_1_1systems_1_1_system.html#adf1f428d7eb6e62bcdd26e9d5a770cba" title="Returns all periodic events in this System.">GetPeriodicEvents()</a> </dd></dl>
+<dl class="section user"><dt>Implementation If recalculation is needed, copies the current discrete</dt><dd>state values into preallocated <code>context</code> cache space. Applies the discrete update event handlers (in an unspecified order) to the cache copy, possibly updating it. Returns a reference to the possibly-updated cache space.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacedrake_1_1systems.html#a35a9f9ace5905a07e1bec166ef0b13f6" title="Evaluates the dynamics of a difference equation system at many times, states, and inputs.">BatchEvalUniquePeriodicDiscreteUpdate()</a> for a batch version of this method. </dd>
+<dd>
+<a class="el" href="classdrake_1_1systems_1_1_system.html#a63e5a7b117d53a54d79d44a63b2cffb7" title="Determines whether there exists a unique periodic timing (offset and period) that triggers one or mor...">GetUniquePeriodicDiscreteUpdateAttribute()</a>, <a class="el" href="classdrake_1_1systems_1_1_system.html#adf1f428d7eb6e62bcdd26e9d5a770cba" title="Returns all periodic events in this System.">GetPeriodicEvents()</a> </dd></dl>
 
 </div>
 </div>

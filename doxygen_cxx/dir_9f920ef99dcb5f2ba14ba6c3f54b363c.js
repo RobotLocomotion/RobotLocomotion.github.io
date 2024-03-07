@@ -4,6 +4,7 @@ var dir_9f920ef99dcb5f2ba14ba6c3f54b363c =
     [ "antiderivative_function.h", "antiderivative__function_8h.html", [
       [ "AntiderivativeFunction", "classdrake_1_1systems_1_1_antiderivative_function.html", "classdrake_1_1systems_1_1_antiderivative_function" ]
     ] ],
+    [ "batch_eval.h", "batch__eval_8h.html", "batch__eval_8h" ],
     [ "bogacki_shampine3_integrator.h", "bogacki__shampine3__integrator_8h.html", null ],
     [ "dense_output.h", "dense__output_8h.html", [
       [ "DenseOutput", "classdrake_1_1systems_1_1_dense_output.html", "classdrake_1_1systems_1_1_dense_output" ]
