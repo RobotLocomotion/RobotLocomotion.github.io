@@ -89,6 +89,7 @@ var dir_c86b501450b8b8b59405c286cb030cc3 =
     ] ],
     [ "sdpa_free_format.h", "sdpa__free__format_8h.html", "sdpa__free__format_8h" ],
     [ "semidefinite_relaxation.h", "semidefinite__relaxation_8h.html", "semidefinite__relaxation_8h" ],
+    [ "semidefinite_relaxation_internal.h", "semidefinite__relaxation__internal_8h.html", null ],
     [ "snopt_solver.h", "snopt__solver_8h.html", [
       [ "SnoptSolverDetails", "structdrake_1_1solvers_1_1_snopt_solver_details.html", "structdrake_1_1solvers_1_1_snopt_solver_details" ],
       [ "SnoptSolver", "classdrake_1_1solvers_1_1_snopt_solver.html", "classdrake_1_1solvers_1_1_snopt_solver" ]

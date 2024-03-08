@@ -1,5 +1,6 @@
 var NAVTREEINDEX61 =
 {
+"structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_bgr8_u_01_4.html#ae99b366a9a1126b3fc6014ceb7eca8d5":[3,0,0,15,8,21,0],
 "structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_bgra8_u_01_4.html":[3,0,0,15,8,22],
 "structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_bgra8_u_01_4.html#ae99b366a9a1126b3fc6014ceb7eca8d5":[3,0,0,15,8,22,0],
 "structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_depth16_u_01_4.html":[3,0,0,15,8,23],
@@ -248,6 +249,5 @@ var NAVTREEINDEX61 =
 "system__scalar__conversion__doxygen_8h.html":[4,0,0,12,3,44],
 "system__scalar__converter_8h.html":[4,0,0,12,3,45],
 "system__symbolic__inspector_8h.html":[4,0,0,12,3,46],
-"system__type__tag_8h.html":[4,0,0,12,3,47],
-"system__visitor_8h.html":[4,0,0,12,3,48]
+"system__type__tag_8h.html":[4,0,0,12,3,47]
 };
