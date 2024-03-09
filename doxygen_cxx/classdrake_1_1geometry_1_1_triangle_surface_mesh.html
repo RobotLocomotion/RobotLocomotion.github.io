@@ -225,6 +225,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af8d6f51a8d19980055a4e47c973390f5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; FieldValue &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html#af8d6f51a8d19980055a4e47c973390f5">CalcGradientVectorOfLinearField</a> (const std::array&lt; FieldValue, 3 &gt; &amp;field_value, <a class="el" href="classint.html">int</a> t) const</td></tr>
 <tr class="memdesc:af8d6f51a8d19980055a4e47c973390f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the gradient ∇u of a linear field u on the triangle <code>t</code>.  <a href="#af8d6f51a8d19980055a4e47c973390f5">More...</a><br /></td></tr>
 <tr class="separator:af8d6f51a8d19980055a4e47c973390f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f2a7b92352e45589023e4e545227f88"><td class="memTemplParams" colspan="2">template&lt;typename FieldValue &gt; </td></tr>
+<tr class="memitem:a6f2a7b92352e45589023e4e545227f88"><td class="memTemplItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; FieldValue &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a6f2a7b92352e45589023e4e545227f88">MaybeCalcGradientVectorOfLinearField</a> (const std::array&lt; FieldValue, 3 &gt; &amp;field_value, <a class="el" href="classint.html">int</a> t) const</td></tr>
+<tr class="memdesc:a6f2a7b92352e45589023e4e545227f88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the gradient ∇u of a linear field u on the triangle <code>t</code>.  <a href="#a6f2a7b92352e45589023e4e545227f88">More...</a><br /></td></tr>
+<tr class="separator:a6f2a7b92352e45589023e4e545227f88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4abe6216f76b9221e741cc99755defc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html#ab4abe6216f76b9221e741cc99755defc">SetAllPositions</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;p_MVs)</td></tr>
 <tr class="memdesc:ab4abe6216f76b9221e741cc99755defc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the position of all vertices in the mesh.  <a href="#ab4abe6216f76b9221e741cc99755defc">More...</a><br /></td></tr>
 <tr class="separator:ab4abe6216f76b9221e741cc99755defc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -666,6 +670,37 @@ Mesh type traits</h2></td></tr>
 
 <p>Returns the unit face normal vector of a triangle. </p>
 <p>It respects the right-handed normal rule. A near-zero-area triangle may get an unreliable normal vector. A zero-area triangle will get a zero vector. </p><dl class="section pre"><dt>Precondition</dt><dd>t ∈ {0, 1, 2,..., <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html#ae6766e91c9d53192a3ed51298a193827" title="Returns the number of triangles in the mesh.">num_triangles()</a>-1}. </dd></dl>
+
+</div>
+</div>
+<a id="a6f2a7b92352e45589023e4e545227f88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f2a7b92352e45589023e4e545227f88">&#9670;&nbsp;</a></span>MaybeCalcGradientVectorOfLinearField()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;<a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt;FieldValue&gt; &gt; MaybeCalcGradientVectorOfLinearField </td>
+          <td>(</td>
+          <td class="paramtype">const std::array&lt; FieldValue, 3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>field_value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>t</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the gradient ∇u of a linear field u on the triangle <code>t</code>. </p>
+<p>Field u is defined by the three field values <code>field_value[i]</code> at the i-th vertex of the triangle. The gradient ∇u is expressed in the coordinates frame of this mesh M. </p>
 
 </div>
 </div>

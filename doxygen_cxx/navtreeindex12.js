@@ -1,5 +1,10 @@
 var NAVTREEINDEX12 =
 {
+"classdrake_1_1math_1_1_roll_pitch_yaw.html#ad0d6757e0538d9bba7c570b500a3ef31":[3,0,0,7,12,35],
+"classdrake_1_1math_1_1_roll_pitch_yaw.html#ada99f198af5ee5153aabe7402c2d242c":[3,0,0,7,12,5],
+"classdrake_1_1math_1_1_roll_pitch_yaw.html#ae59e8d13a565594420e30791082a3f08":[3,0,0,7,12,3],
+"classdrake_1_1math_1_1_roll_pitch_yaw.html#aedd2644adecfa1a330cd7b0815861f90":[3,0,0,7,12,28],
+"classdrake_1_1math_1_1_roll_pitch_yaw.html#aef7e7769e786ae82299ca4daf327952d":[3,0,0,7,12,15],
 "classdrake_1_1math_1_1_roll_pitch_yaw.html#af87e57e81f6e0674b00ba2b81a71afa0":[3,0,0,7,12,22],
 "classdrake_1_1math_1_1_roll_pitch_yaw.html#afe797018b3807c0431c41057d9073e24":[3,0,0,7,12,36],
 "classdrake_1_1math_1_1_rotation_matrix.html":[3,0,0,7,13],
@@ -244,10 +249,5 @@ var NAVTREEINDEX12 =
 "classdrake_1_1multibody_1_1_differential_inverse_kinematics_integrator.html#a84ba40d686f61340829ffab0302c60d2":[1,2,5,11,6],
 "classdrake_1_1multibody_1_1_differential_inverse_kinematics_integrator.html#a91ec04b8090fb67a27ba4fd3599bcd2e":[1,2,5,11,5],
 "classdrake_1_1multibody_1_1_differential_inverse_kinematics_integrator.html#ab66dc0d76abdb6ec9cda835734399dc9":[1,2,5,11,3],
-"classdrake_1_1multibody_1_1_differential_inverse_kinematics_integrator.html#acd4ab9a551b8b7a9fc891ec7aa9c6324":[1,2,5,11,7],
-"classdrake_1_1multibody_1_1_differential_inverse_kinematics_integrator.html#adb9c056fd315645e92def45ae627b797":[1,2,5,11,4],
-"classdrake_1_1multibody_1_1_differential_inverse_kinematics_integrator.html#aeb6a061fd038bef7ddf9ebb7883da7e3":[1,2,5,11,8],
-"classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html":[3,0,0,8,26],
-"classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#a086654241b97459747ca9210616e4682":[3,0,0,8,26,13],
-"classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#a0deb2a67ac5f296e9ab5db25c309edc3":[3,0,0,8,26,5]
+"classdrake_1_1multibody_1_1_differential_inverse_kinematics_integrator.html#acd4ab9a551b8b7a9fc891ec7aa9c6324":[1,2,5,11,7]
 };

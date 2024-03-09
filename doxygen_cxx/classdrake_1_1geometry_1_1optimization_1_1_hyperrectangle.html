@@ -194,6 +194,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a81d2c6f97c9bf2239759c056d36a7251"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html#a81d2c6f97c9bf2239759c056d36a7251">MakeHPolyhedron</a> () const</td></tr>
 <tr class="memdesc:a81d2c6f97c9bf2239759c056d36a7251"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper to convert this hyperrectangle to an <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html" title="Implements a polyhedral convex set using the half-space representation: {x| A x ≤ b}.">HPolyhedron</a>.  <a href="#a81d2c6f97c9bf2239759c056d36a7251">More...</a><br /></td></tr>
 <tr class="separator:a81d2c6f97c9bf2239759c056d36a7251"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67d251c01ea5f9c0add9099193393f14"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html">Hyperrectangle</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html#a67d251c01ea5f9c0add9099193393f14">MaybeGetIntersection</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html">Hyperrectangle</a> &amp;other) const</td></tr>
+<tr class="memdesc:a67d251c01ea5f9c0add9099193393f14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the intersection of two <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html" title="Axis-aligned hyperrectangle in Rᵈ defined by its lower bounds and upper bounds as {x| lb ≤ x ≤ ub}.">Hyperrectangle</a> by taking the pointwise maximum of the lower bounds and the pointwise minimums of the upper bounds.  <a href="#a67d251c01ea5f9c0add9099193393f14">More...</a><br /></td></tr>
+<tr class="separator:a67d251c01ea5f9c0add9099193393f14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e8824802dedfbc36776227f7482b6bc"><td class="memTemplParams" colspan="2">template&lt;typename Archive &gt; </td></tr>
 <tr class="memitem:a8e8824802dedfbc36776227f7482b6bc"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html#a8e8824802dedfbc36776227f7482b6bc">Serialize</a> (Archive *a)</td></tr>
 <tr class="memdesc:a8e8824802dedfbc36776227f7482b6bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passes this object to an Archive.  <a href="#a8e8824802dedfbc36776227f7482b6bc">More...</a><br /></td></tr>
@@ -272,9 +275,6 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a8e8824802dedfbc36776227f7482b6bc inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a8e8824802dedfbc36776227f7482b6bc">Serialize</a> (Archive *a)</td></tr>
 <tr class="memdesc:a8e8824802dedfbc36776227f7482b6bc inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements non-virtual base class serialization.  <a href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a8e8824802dedfbc36776227f7482b6bc">More...</a><br /></td></tr>
 <tr class="separator:a8e8824802dedfbc36776227f7482b6bc inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2cac663c667a539d3fa44c3f5c933d6b inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="memItemLeft" align="right" valign="top">virtual std::optional&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a2cac663c667a539d3fa44c3f5c933d6b">DoIsBoundedShortcut</a> () const</td></tr>
-<tr class="memdesc:a2cac663c667a539d3fa44c3f5c933d6b inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a2cac663c667a539d3fa44c3f5c933d6b" title="Non-virtual interface implementation for DoIsBoundedShortcut().">DoIsBoundedShortcut()</a>.  <a href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a2cac663c667a539d3fa44c3f5c933d6b">More...</a><br /></td></tr>
-<tr class="separator:a2cac663c667a539d3fa44c3f5c933d6b inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7da589d9fc72f5064b7bbc48a97d0845 inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a7da589d9fc72f5064b7bbc48a97d0845">HandleZeroAmbientDimensionConstraints</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *prog, const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;set, std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt;&gt; *constraints) const</td></tr>
 <tr class="memdesc:a7da589d9fc72f5064b7bbc48a97d0845 inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instances of subclasses such as <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html" title="The Cartesian product of convex sets is a convex set: S = X₁ × X₂ × ⋯ × Xₙ = {(x₁,...">CartesianProduct</a> and <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html" title="A convex set that represents the Minkowski sum of multiple sets: S = X₁ ⨁ X₂ ⨁ ...">MinkowskiSum</a> can have constituent sets with zero ambient dimension, which much be handled in a special manner when calling methods such as DoAddPointInSetConstraints.  <a href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a7da589d9fc72f5064b7bbc48a97d0845">More...</a><br /></td></tr>
 <tr class="separator:a7da589d9fc72f5064b7bbc48a97d0845 inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -388,6 +388,8 @@ Additional Inherited Members</h2></td></tr>
 <p>Constructs a hyperrectangle from its lower and upper bounds. </p>
 <dl class="section pre"><dt>Precondition</dt><dd>lb.size() == ub.size() </dd>
 <dd>
+lb and ub are finite. </dd>
+<dd>
 lb(i) &lt;= ub(i) for all i </dd></dl>
 
 </div>
@@ -479,8 +481,29 @@ lb(i) &lt;= ub(i) for all i </dd></dl>
 
 </div>
 </div>
-<a id="ae859bfb72f4b3cfb74cd5745b5fa1c39"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae859bfb72f4b3cfb74cd5745b5fa1c39">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a67d251c01ea5f9c0add9099193393f14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67d251c01ea5f9c0add9099193393f14">&#9670;&nbsp;</a></span>MaybeGetIntersection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html">Hyperrectangle</a>&gt; MaybeGetIntersection </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html">Hyperrectangle</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs the intersection of two <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html" title="Axis-aligned hyperrectangle in Rᵈ defined by its lower bounds and upper bounds as {x| lb ≤ x ≤ ub}.">Hyperrectangle</a> by taking the pointwise maximum of the lower bounds and the pointwise minimums of the upper bounds. </p>
+<p>Returns std::nullopt if the intersection is empty. </p><dl class="section pre"><dt>Precondition</dt><dd>this and other need to have the same ambient dimension. </dd></dl>
+
+</div>
+</div>
+<a id="adca2a945597082fc62567148c00ca299"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adca2a945597082fc62567148c00ca299">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -491,7 +514,7 @@ lb(i) &lt;= ub(i) for all i </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html">Hyperrectangle</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html">Hyperrectangle</a> &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html">Hyperrectangle</a> &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -505,8 +528,8 @@ lb(i) &lt;= ub(i) for all i </dd></dl>
 
 </div>
 </div>
-<a id="adca2a945597082fc62567148c00ca299"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adca2a945597082fc62567148c00ca299">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="ae859bfb72f4b3cfb74cd5745b5fa1c39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae859bfb72f4b3cfb74cd5745b5fa1c39">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -517,7 +540,7 @@ lb(i) &lt;= ub(i) for all i </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html">Hyperrectangle</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html">Hyperrectangle</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html">Hyperrectangle</a> &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

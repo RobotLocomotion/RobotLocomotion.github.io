@@ -15,6 +15,7 @@ var classdrake_1_1geometry_1_1_triangle_surface_mesh =
     [ "element_centroid", "classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a827442245155b7cf36541a979891527c", null ],
     [ "Equal", "classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a4bd970f0f7b8983764e827d11802605f", null ],
     [ "face_normal", "classdrake_1_1geometry_1_1_triangle_surface_mesh.html#ad889a290cfdd967274799dc05bce9695", null ],
+    [ "MaybeCalcGradientVectorOfLinearField", "classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a6f2a7b92352e45589023e4e545227f88", null ],
     [ "num_elements", "classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a98f8a4ac27c2c8008728ae504e8e68bc", null ],
     [ "num_triangles", "classdrake_1_1geometry_1_1_triangle_surface_mesh.html#ae6766e91c9d53192a3ed51298a193827", null ],
     [ "num_vertices", "classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a319e621fc359dd8daad48247f95b12fa", null ],

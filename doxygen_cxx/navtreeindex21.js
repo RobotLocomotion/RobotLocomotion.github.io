@@ -1,5 +1,10 @@
 var NAVTREEINDEX21 =
 {
+"classdrake_1_1planning_1_1_collision_checker.html#a216553d6f53318bace05961e5010ab97":[1,4,2,2,1,87],
+"classdrake_1_1planning_1_1_collision_checker.html#a236e58ced4f42c22e7395000ecaaeb7b":[1,4,2,2,1,1],
+"classdrake_1_1planning_1_1_collision_checker.html#a23bcd057122f2a90fd8e673a51e9bcd3":[1,4,2,2,1,55],
+"classdrake_1_1planning_1_1_collision_checker.html#a285e992424a4197669a43d70f1208474":[1,4,2,2,1,75],
+"classdrake_1_1planning_1_1_collision_checker.html#a2ab530c2f1db69b7fcb503447c63ef8f":[1,4,2,2,1,17],
 "classdrake_1_1planning_1_1_collision_checker.html#a2abd1ef467638caa52681db77bd8ea18":[1,4,2,2,1,86],
 "classdrake_1_1planning_1_1_collision_checker.html#a2b9fc782d20ef71bf845c913e3f9b7c8":[1,4,2,2,1,12],
 "classdrake_1_1planning_1_1_collision_checker.html#a2c2e0300bb278924489b16b7ed824642":[1,4,2,2,1,36],
@@ -244,10 +249,5 @@ var NAVTREEINDEX21 =
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_transcription.html#a2257e99613e8e2241db334b2a3a4c6ad":[1,4,2,1,2,1],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_transcription.html#a22a7433c13b1c3710731b688e73d6e66":[1,4,2,1,2,7],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_transcription.html#a431b9ed6d606d4db1f080f15d4fec5d8":[1,4,2,1,2,2],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_transcription.html#a4e0d5526b3c774c0c2d0b743e896078e":[1,4,2,1,2,8],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_transcription.html#a55db580aa18d76a452aea550515cc8ed":[1,4,2,1,2,4],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_transcription.html#a6a25bf3d1414193bdb730ed15125fe67":[1,4,2,1,2,0],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_transcription.html#a6c4f7a4cf911fd88036fd474faf8a089":[1,4,2,1,2,6],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_transcription.html#aae7a39fc88c07d0083ea1a3cccf3e6a9":[1,4,2,1,2,5],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_transcription.html#acedcae6424fa55146d8dda1036b04ffc":[1,4,2,1,2,3]
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_transcription.html#a4e0d5526b3c774c0c2d0b743e896078e":[1,4,2,1,2,8]
 };

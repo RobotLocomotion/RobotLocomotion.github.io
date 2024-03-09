@@ -213,9 +213,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a106843ecf8c1cd5203dfacb5817bc41d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html#a106843ecf8c1cd5203dfacb5817bc41d">Equal</a> (const <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html">VolumeMesh</a>&lt; T &gt; &amp;mesh, <a class="el" href="classdouble.html">double</a> vertex_tolerance=0) const</td></tr>
 <tr class="memdesc:a106843ecf8c1cd5203dfacb5817bc41d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks to see whether the given <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html" title="VolumeMesh represents a tetrahedral volume mesh.">VolumeMesh</a> object is equal via deep comparison (up to a tolerance).  <a href="#a106843ecf8c1cd5203dfacb5817bc41d">More...</a><br /></td></tr>
 <tr class="separator:a106843ecf8c1cd5203dfacb5817bc41d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac21d9a11c5532884dc4eacbda67d7ab7"><td class="memTemplParams" colspan="2">template&lt;typename FieldValue &gt; </td></tr>
+<tr class="memitem:ac21d9a11c5532884dc4eacbda67d7ab7"><td class="memTemplItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="namespacedrake_1_1geometry.html#a74b8d905842571b365085fdd17378772">promoted_numerical_t</a>&lt; T, FieldValue &gt; &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html#ac21d9a11c5532884dc4eacbda67d7ab7">MaybeCalcGradientVectorOfLinearField</a> (const std::array&lt; FieldValue, 4 &gt; &amp;field_value, <a class="el" href="classint.html">int</a> e) const</td></tr>
+<tr class="memdesc:ac21d9a11c5532884dc4eacbda67d7ab7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the gradient ∇u of a linear field u on the tetrahedron <code>e</code>.  <a href="#ac21d9a11c5532884dc4eacbda67d7ab7">More...</a><br /></td></tr>
+<tr class="separator:ac21d9a11c5532884dc4eacbda67d7ab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a402c8710c3a71fffbbc2223e0a8eb4"><td class="memTemplParams" colspan="2">template&lt;typename FieldValue &gt; </td></tr>
 <tr class="memitem:a6a402c8710c3a71fffbbc2223e0a8eb4"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="namespacedrake_1_1geometry.html#a74b8d905842571b365085fdd17378772">promoted_numerical_t</a>&lt; T, FieldValue &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html#a6a402c8710c3a71fffbbc2223e0a8eb4">CalcGradientVectorOfLinearField</a> (const std::array&lt; FieldValue, 4 &gt; &amp;field_value, <a class="el" href="classint.html">int</a> e) const</td></tr>
-<tr class="memdesc:a6a402c8710c3a71fffbbc2223e0a8eb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the gradient ∇u of a linear field u on the tetrahedron <code>e</code>.  <a href="#a6a402c8710c3a71fffbbc2223e0a8eb4">More...</a><br /></td></tr>
+<tr class="memdesc:a6a402c8710c3a71fffbbc2223e0a8eb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like MaybeCalcGradientVectorOfLinearField, but throws if the geometry is degenerate.  <a href="#a6a402c8710c3a71fffbbc2223e0a8eb4">More...</a><br /></td></tr>
 <tr class="separator:a6a402c8710c3a71fffbbc2223e0a8eb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac685055b3b2cea1095025dd4c05465cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html#ac685055b3b2cea1095025dd4c05465cd">TransformVertices</a> (const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt; &amp;transform)</td></tr>
 <tr class="memdesc:ac685055b3b2cea1095025dd4c05465cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms the vertices of this mesh from its initial frame M to the new frame N.  <a href="#ac685055b3b2cea1095025dd4c05465cd">More...</a><br /></td></tr>
@@ -436,9 +440,13 @@ Mesh type traits</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Calculates the gradient ∇u of a linear field u on the tetrahedron <code>e</code>. </p>
-<p>Field u is defined by the four field values <code>field_value[i]</code> at the i-th vertex of the tetrahedron. The gradient ∇u is expressed in the coordinates frame of this mesh M.</p>
-<p>The return type depends on both the mesh's vertex position scalar type <code>T</code> and the given field's scalar type <code>FieldValue</code>. See <a class="el" href="structdrake_1_1geometry_1_1promoted__numerical.html">promoted_numerical_t</a> for details. </p>
+<p>Like MaybeCalcGradientVectorOfLinearField, but throws if the geometry is degenerate. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the gradient could not be computed. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -535,6 +543,39 @@ Mesh type traits</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the given mesh is equal. </dd></dl>
+
+</div>
+</div>
+<a id="ac21d9a11c5532884dc4eacbda67d7ab7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac21d9a11c5532884dc4eacbda67d7ab7">&#9670;&nbsp;</a></span>MaybeCalcGradientVectorOfLinearField()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;<a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt;<a class="el" href="namespacedrake_1_1geometry.html#a74b8d905842571b365085fdd17378772">promoted_numerical_t</a>&lt;T, FieldValue&gt; &gt; &gt; MaybeCalcGradientVectorOfLinearField </td>
+          <td>(</td>
+          <td class="paramtype">const std::array&lt; FieldValue, 4 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>field_value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the gradient ∇u of a linear field u on the tetrahedron <code>e</code>. </p>
+<p>Field u is defined by the four field values <code>field_value[i]</code> at the i-th vertex of the tetrahedron. The gradient ∇u is expressed in the coordinates frame of this mesh M.</p>
+<p>If the return value is std::nullopt, the tetrahedron is degenerate, and no reliable gradient could be computed.</p>
+<p>The return type depends on both the mesh's vertex position scalar type <code>T</code> and the given field's scalar type <code>FieldValue</code>. See <a class="el" href="structdrake_1_1geometry_1_1promoted__numerical.html">promoted_numerical_t</a> for details. </p>
 
 </div>
 </div>

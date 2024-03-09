@@ -1,5 +1,10 @@
 var NAVTREEINDEX45 =
 {
+"classdrake_1_1visualization_1_1_inertia_visualizer.html#aae4a07b05d13e93beed877b8119042f5":[1,2,11,7,5],
+"classdrake_1_1visualization_1_1_inertia_visualizer.html#ac589bc8397bf7d9c4d695830cb1b9c2f":[1,2,11,7,6],
+"classdrake_1_1visualization_1_1_inertia_visualizer.html#ae24510285abfa6815e8db8fb3d63784f":[1,2,11,7,9],
+"classdrake_1_1visualization_1_1_inertia_visualizer.html#af5171ca2885a603eb6092e154560a067":[1,2,11,7,2],
+"classdrake_1_1visualization_1_1_meshcat_pose_sliders.html":[1,2,11,8],
 "classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#a09d6684491bca73b075869d7301e0f72":[1,2,11,8,0],
 "classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#a1bd6cd37495850b786d7ac9896bb86a2":[1,2,11,8,1],
 "classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#a3d5c4d9377dcefb361fa59a36038f161":[1,2,11,8,8],
@@ -244,10 +249,5 @@ var NAVTREEINDEX45 =
 "deformable__body__config_8h.html#ad0fc09b4ba51af3abea545b9c6220b7aab46bfc626f096c85ab83f7763ecfeaee":[4,0,0,8,3,6,1,0],
 "deformable__contact_8h.html":[4,0,0,4,3,1],
 "deformable__contact__geometries_8h.html":[4,0,0,4,2,9],
-"deformable__contact__info_8h.html":[4,0,0,8,10,10],
-"deformable__contact__internal_8h.html":[4,0,0,4,2,10],
-"deformable__driver_8h.html":[4,0,0,8,10,11],
-"deformable__field__intersection_8h.html":[4,0,0,4,2,11],
-"deformable__ids_8h.html":[4,0,0,8,10,12],
-"deformable__ids_8h.html#ad6f28f9f3c7b71cc803442f421b26352":[4,0,0,8,10,12,1]
+"deformable__contact__info_8h.html":[4,0,0,8,10,10]
 };

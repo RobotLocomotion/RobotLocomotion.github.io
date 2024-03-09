@@ -11,6 +11,7 @@ var classdrake_1_1geometry_1_1_volume_mesh =
     [ "CalcVolume", "classdrake_1_1geometry_1_1_volume_mesh.html#a54e9b34e14078d808320820e0369c210", null ],
     [ "element", "classdrake_1_1geometry_1_1_volume_mesh.html#a291d80a9d3403d4bea3aa38a5dae9005", null ],
     [ "Equal", "classdrake_1_1geometry_1_1_volume_mesh.html#a106843ecf8c1cd5203dfacb5817bc41d", null ],
+    [ "MaybeCalcGradientVectorOfLinearField", "classdrake_1_1geometry_1_1_volume_mesh.html#ac21d9a11c5532884dc4eacbda67d7ab7", null ],
     [ "num_elements", "classdrake_1_1geometry_1_1_volume_mesh.html#a98f8a4ac27c2c8008728ae504e8e68bc", null ],
     [ "num_vertices", "classdrake_1_1geometry_1_1_volume_mesh.html#a319e621fc359dd8daad48247f95b12fa", null ],
     [ "operator=", "classdrake_1_1geometry_1_1_volume_mesh.html#a6e573ccac8cb33547bebe17dce6f44da", null ],

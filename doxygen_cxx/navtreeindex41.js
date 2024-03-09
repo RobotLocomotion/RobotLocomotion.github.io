@@ -1,5 +1,10 @@
 var NAVTREEINDEX41 =
 {
+"classdrake_1_1systems_1_1_vector_log_sink.html#a75fdac8e950bc94f385eb038c7766308":[1,2,1,26,11],
+"classdrake_1_1systems_1_1_vector_log_sink.html#a9de981eb2a9808a55fda656f1504eee2":[1,2,1,26,3],
+"classdrake_1_1systems_1_1_vector_log_sink.html#ab1109c98ab95c577808ffb5ca9b958aa":[1,2,1,26,9],
+"classdrake_1_1systems_1_1_vector_log_sink.html#abbb32001c248cadaf541a05f661fa7fb":[1,2,1,26,8],
+"classdrake_1_1systems_1_1_vector_log_sink.html#ac79c48120767475fddd63c8eb4f96caf":[1,2,1,26,4],
 "classdrake_1_1systems_1_1_vector_log_sink.html#adbebf78a6b8619cee90d5bffc463dfe5":[1,2,1,26,1],
 "classdrake_1_1systems_1_1_vector_log_sink.html#ae63d08ab7e3c669eec276019e4f2dbcb":[1,2,1,26,7],
 "classdrake_1_1systems_1_1_vector_log_sink.html#afc2871c939bcabe7583c01099d00747c":[1,2,1,26,6],
@@ -244,10 +249,5 @@ var NAVTREEINDEX41 =
 "classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html#a5c008dea690853955447d85df934fa82":[1,2,2,4,1],
 "classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html#acdebbe41c8d9735aeee1920ac69b07e1":[1,2,2,4,6],
 "classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html#ae549539f28012cd0081d886d117aed5a":[1,2,2,4,0],
-"classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html#aefeee400d114825d8db97204a6999101":[1,2,2,4,2],
-"classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html":[1,2,2,5],
-"classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#a146f7ab66f76d0b5ca62e305cc070436":[1,2,2,5,17],
-"classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#a2684fb1c9068b9503a1cfd12f7b09256":[1,2,2,5,4],
-"classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#a31d6809bd4837dbc26ad2ff734737a21":[1,2,2,5,5],
-"classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#a32fdf6494a6c073762c1866cf8f4fcc9":[1,2,2,5,1]
+"classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html#aefeee400d114825d8db97204a6999101":[1,2,2,4,2]
 };

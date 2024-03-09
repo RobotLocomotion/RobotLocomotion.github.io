@@ -1,5 +1,10 @@
 var NAVTREEINDEX17 =
 {
+"classdrake_1_1multibody_1_1_rational_forward_kinematics.html#aadeb582d17d1b40237b7f889b2d5047d":[3,0,0,8,77,6],
+"classdrake_1_1multibody_1_1_rational_forward_kinematics.html#ac73a5a06e9d73c1e5c761e7accee6265":[3,0,0,8,77,10],
+"classdrake_1_1multibody_1_1_rational_forward_kinematics.html#adda199f0e8784ca13c32d2525af89019":[3,0,0,8,77,3],
+"classdrake_1_1multibody_1_1_rational_forward_kinematics.html#ae2f64cf4a62743cda2f74fff57f1c224":[3,0,0,8,77,1],
+"classdrake_1_1multibody_1_1_rational_forward_kinematics.html#af561a8c971a66f869986c5e4429352c3":[3,0,0,8,77,9],
 "classdrake_1_1multibody_1_1_revolute_joint.html":[3,0,0,8,78],
 "classdrake_1_1multibody_1_1_revolute_joint.html#a1cf746f6557c48732c1c2898f9ed51c2":[3,0,0,8,78,3],
 "classdrake_1_1multibody_1_1_revolute_joint.html#a27e174cbce9d8926ec3eefc7d04e6e7c":[3,0,0,8,78,12],
@@ -244,10 +249,5 @@ var NAVTREEINDEX17 =
 "classdrake_1_1multibody_1_1_screw_joint.html#ad92dad6df59ace2a85b68cb6b43d960c":[3,0,0,8,85,4],
 "classdrake_1_1multibody_1_1_screw_joint.html#adf699bc1f257211c009c305fe764aa69":[3,0,0,8,85,24],
 "classdrake_1_1multibody_1_1_screw_joint.html#ae3f860afaf9a53dd4e822e1bd293306f":[3,0,0,8,85,18],
-"classdrake_1_1multibody_1_1_screw_joint.html#ae4fa9c904accccf5900c63c3e65ca277":[3,0,0,8,85,26],
-"classdrake_1_1multibody_1_1_screw_joint.html#ae671f2537983e7868cbd9eeb651bebda":[3,0,0,8,85,14],
-"classdrake_1_1multibody_1_1_screw_joint.html#aea9614ad4bc22801505a7399550293ce":[3,0,0,8,85,6],
-"classdrake_1_1multibody_1_1_screw_joint.html#aec29410a16fa5bc2bc100b96df2b87fd":[3,0,0,8,85,10],
-"classdrake_1_1multibody_1_1_screw_joint.html#af39612657328ea5e88a3ba3563e0614e":[3,0,0,8,85,15],
-"classdrake_1_1multibody_1_1_spatial_acceleration.html":[3,0,0,8,87]
+"classdrake_1_1multibody_1_1_screw_joint.html#ae4fa9c904accccf5900c63c3e65ca277":[3,0,0,8,85,26]
 };

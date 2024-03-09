@@ -209,12 +209,14 @@ class drake::geometry::MeshFieldLinear&lt; T, MeshType &gt;</h3>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad00f41cac21e92cbde7f49db268eb5b3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#ad00f41cac21e92cbde7f49db268eb5b3">MeshFieldLinear</a> (std::vector&lt; T &gt; &amp;&amp;<a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#ab061f844471bd39fe7260db6700079aa">values</a>, const MeshType *<a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#ac41d1bc48208a47ffceb25d417eea442">mesh</a>, bool calculate_gradient=true)</td></tr>
-<tr class="memdesc:ad00f41cac21e92cbde7f49db268eb5b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html" title="MeshFieldLinear represents a continuous piecewise-linear scalar field f defined on a (triangular or t...">MeshFieldLinear</a>.  <a href="#ad00f41cac21e92cbde7f49db268eb5b3">More...</a><br /></td></tr>
-<tr class="separator:ad00f41cac21e92cbde7f49db268eb5b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac869e91c609966cf07dbbcfb516d31e0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#ac869e91c609966cf07dbbcfb516d31e0">MeshFieldLinear</a> (std::vector&lt; T &gt; &amp;&amp;<a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#ab061f844471bd39fe7260db6700079aa">values</a>, const MeshType *<a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#ac41d1bc48208a47ffceb25d417eea442">mesh</a>, <a class="el" href="namespacedrake_1_1geometry.html#aa480f7d5d485f556225ed73538dd4eca">MeshGradientMode</a> gradient_mode=<a class="el" href="namespacedrake_1_1geometry.html#aa480f7d5d485f556225ed73538dd4ecaa26940490086ffcdf0616b678df54e7f8">MeshGradientMode::kOkOrThrow</a>)</td></tr>
+<tr class="memdesc:ac869e91c609966cf07dbbcfb516d31e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html" title="MeshFieldLinear represents a continuous piecewise-linear scalar field f defined on a (triangular or t...">MeshFieldLinear</a>.  <a href="#ac869e91c609966cf07dbbcfb516d31e0">More...</a><br /></td></tr>
+<tr class="separator:ac869e91c609966cf07dbbcfb516d31e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e1b684c7b9475b8546413042616e348"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#a3e1b684c7b9475b8546413042616e348">MeshFieldLinear</a> (std::vector&lt; T &gt; &amp;&amp;<a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#ab061f844471bd39fe7260db6700079aa">values</a>, const MeshType *<a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#ac41d1bc48208a47ffceb25d417eea442">mesh</a>, std::vector&lt; <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&gt; &amp;&amp;gradients)</td></tr>
 <tr class="memdesc:a3e1b684c7b9475b8546413042616e348"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Constructor variant which receives the pre-computed, per-element gradients of the field.  <a href="#a3e1b684c7b9475b8546413042616e348">More...</a><br /></td></tr>
 <tr class="separator:a3e1b684c7b9475b8546413042616e348"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f68cddb7189743795032263fdfa4509"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#a3f68cddb7189743795032263fdfa4509">is_gradient_field_degenerate</a> () const</td></tr>
+<tr class="separator:a3f68cddb7189743795032263fdfa4509"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af09a2f7929d7594846bd53881d3017d4"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#af09a2f7929d7594846bd53881d3017d4">EvaluateAtVertex</a> (<a class="el" href="classint.html">int</a> v) const</td></tr>
 <tr class="memdesc:af09a2f7929d7594846bd53881d3017d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the field value at a vertex.  <a href="#af09a2f7929d7594846bd53881d3017d4">More...</a><br /></td></tr>
 <tr class="separator:af09a2f7929d7594846bd53881d3017d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -277,8 +279,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ad00f41cac21e92cbde7f49db268eb5b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad00f41cac21e92cbde7f49db268eb5b3">&#9670;&nbsp;</a></span>MeshFieldLinear() <span class="overload">[2/3]</span></h2>
+<a id="ac869e91c609966cf07dbbcfb516d31e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac869e91c609966cf07dbbcfb516d31e0">&#9670;&nbsp;</a></span>MeshFieldLinear() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -298,8 +300,8 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>calculate_gradient</em> = <code>true</code>&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1geometry.html#aa480f7d5d485f556225ed73538dd4eca">MeshGradientMode</a>&#160;</td>
+          <td class="paramname"><em>gradient_mode</em> = <code><a class="el" href="namespacedrake_1_1geometry.html#aa480f7d5d485f556225ed73538dd4ecaa26940490086ffcdf0616b678df54e7f8">MeshGradientMode::kOkOrThrow</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -314,18 +316,18 @@ Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">values</td><td>The field value at each vertex of the mesh. </td></tr>
     <tr><td class="paramname">mesh</td><td>The mesh M to which this field refers. </td></tr>
-    <tr><td class="paramname">calculate_gradient</td><td>Calculate gradient field when true, default is true. Calculating gradient allows <a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#aba6f06b2eb6bbea90b2ec69318b4e7d8" title="Evaluates the field at a point Qp on an element.">EvaluateCartesian()</a> to evaluate the field directly instead of converting Cartesian coordinates to barycentric coordinates first. If calculate_gradient is false, <a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#aba6f06b2eb6bbea90b2ec69318b4e7d8" title="Evaluates the field at a point Qp on an element.">EvaluateCartesian()</a> will be slower. On the other hand, calculating gradient requires certain quality from mesh elements. If the mesh quality is very poor, calculating gradient may throw.</td></tr>
+    <tr><td class="paramname">gradient_mode</td><td>Whether to calculate gradient field, and how to report failures. Calculating gradient allows <a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#aba6f06b2eb6bbea90b2ec69318b4e7d8" title="Evaluates the field at a point Qp on an element.">EvaluateCartesian()</a> to evaluate the field directly instead of converting Cartesian coordinates to barycentric coordinates first. If no gradient is calculated, <a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#aba6f06b2eb6bbea90b2ec69318b4e7d8" title="Evaluates the field at a point Qp on an element.">EvaluateCartesian()</a> will be slower. On the other hand, calculating gradient requires certain quality from mesh elements. If the mesh quality is very poor, calculating gradient may either throw or mark the gradient field as degenerate. See <a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#a3f68cddb7189743795032263fdfa4509">is_gradient_field_degenerate()</a>. The default is to succeed or throw.</td></tr>
   </table>
   </dd>
 </dl>
-<p>You can use the parameter <code>calculate_gradient</code> to trade time and space of this constructor for speed of <a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#aba6f06b2eb6bbea90b2ec69318b4e7d8" title="Evaluates the field at a point Qp on an element.">EvaluateCartesian()</a>. For <code>calculate_gradient</code> = true (by default), this constructor will take longer time to compute and will store one field-gradient vector for each element in the mesh, but the interpolation by <a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#aba6f06b2eb6bbea90b2ec69318b4e7d8" title="Evaluates the field at a point Qp on an element.">EvaluateCartesian()</a> will be faster because we will use a dot product with the Cartesian coordinates directly, instead of solving a linear system to convert Cartesian coordinates to barycentric coordinates first. For <code>calculate_gradient</code> = false, this constructor will be faster and use less memory, but <a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#aba6f06b2eb6bbea90b2ec69318b4e7d8" title="Evaluates the field at a point Qp on an element.">EvaluateCartesian()</a> will be slower.</p>
-<p>When <code>calculate_gradient</code> = true, <a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#abcf38af934a0eb7631d282f09838e62e" title="Evaluates the gradient in the domain of the element indicated by e.">EvaluateGradient()</a> on a mesh element will be available. Otherwise, <a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#abcf38af934a0eb7631d282f09838e62e" title="Evaluates the gradient in the domain of the element indicated by e.">EvaluateGradient()</a> will <code>throw</code>.</p>
-<p>The following features are independent of the choice of <code>calculate_gradient</code>.</p>
+<p>You can use the parameter <code>gradient_mode</code> to trade time and space of this constructor for speed of <a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#aba6f06b2eb6bbea90b2ec69318b4e7d8" title="Evaluates the field at a point Qp on an element.">EvaluateCartesian()</a>. For <code>gradient_mode</code> != <code>kNone</code> (<code>kOkOrThrow</code> by default, or <code>kOkOrMarkDegenerate</code> similarly) and good mesh quality, this constructor will take longer time to compute and will store one field-gradient vector for each element in the mesh, but the interpolation by <a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#aba6f06b2eb6bbea90b2ec69318b4e7d8" title="Evaluates the field at a point Qp on an element.">EvaluateCartesian()</a> will be faster because we will use a dot product with the Cartesian coordinates directly, instead of solving a linear system to convert Cartesian coordinates to barycentric coordinates first.</p>
+<p>When <code>gradient_mode</code> != <code>kNone</code> and gradient calculation succeeds, <a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#abcf38af934a0eb7631d282f09838e62e" title="Evaluates the gradient in the domain of the element indicated by e.">EvaluateGradient()</a> on a mesh element will be available. Otherwise, <a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#abcf38af934a0eb7631d282f09838e62e" title="Evaluates the gradient in the domain of the element indicated by e.">EvaluateGradient()</a> will <code>throw</code>.</p>
+<p>The following features are independent of the choice of <code>gradient_mode</code>.</p>
 <ul>
 <li>Evaluating the field at a vertex.</li>
 <li>Evaluating the field at a user-given barycentric coordinate.</li>
 </ul>
-<dl class="section note"><dt>Note</dt><dd>When <code>calculate_gradient</code> = true, a poor quality element can cause <code>throw</code> due to numerical errors in calculating field gradients. A poor quality element is defined as having an extremely large aspect ratio R=E/h, where E is the longest edge length and h is the shortest height. A height of a triangular element is the distance between a vertex and its opposite edge. A height of a tetrahedral element is the distance between a vertex and its opposite triangular face. For example, an extremely skinny triangle has poor quality, and a tetrahedron with four vertices almost co-planar also has poor quality. The exact threshold of the acceptable aspect ratio depends on many factors including the underlying scalar type and the exact shape and size of the element; however, a rough conservative estimation is 1e12.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>When <code>gradient_mode</code> != <code>kNone</code>, a poor quality element can cause numerical errors in calculating field gradients. A poor quality element is defined as having an extremely large aspect ratio R=E/h, where E is the longest edge length and h is the shortest height. A height of a triangular element is the distance between a vertex and its opposite edge. A height of a tetrahedral element is the distance between a vertex and its opposite triangular face. For example, an extremely skinny triangle has poor quality, and a tetrahedron with four vertices almost co-planar also has poor quality. The exact threshold of the acceptable aspect ratio depends on many factors including the underlying scalar type and the exact shape and size of the element; however, a rough conservative estimation is 1e12.</dd></dl>
 <dl class="section pre"><dt>Precondition</dt><dd>The <code>mesh</code> is non-null, and the number of entries in <code>values</code> is the same as the number of vertices of the mesh. </dd></dl>
 
 </div>
@@ -563,9 +565,28 @@ Public Member Functions</h2></td></tr>
 <p>The gradient is a vector in R³ expressed in frame M. For surface meshes, it will particularly lie parallel to the plane of the corresponding triangle. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if the gradient vector was not calculated. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the gradient field is marked degenerate. </td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a3f68cddb7189743795032263fdfa4509"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f68cddb7189743795032263fdfa4509">&#9670;&nbsp;</a></span>is_gradient_field_degenerate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool is_gradient_field_degenerate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>true iff the gradient field could not be computed, and the mesh was constructed with <a class="el" href="namespacedrake_1_1geometry.html#aa480f7d5d485f556225ed73538dd4ecaa5543e81cb3b8f1409b593cc1ebce1752" title="If gradient computation fails, mark it degenerate.">MeshGradientMode::kOkOrMarkDegenerate</a>. </dd></dl>
 
 </div>
 </div>

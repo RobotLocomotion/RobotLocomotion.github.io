@@ -434,6 +434,12 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a52f8cb466b0827379bc8815f0d58aac3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The operations that can be performed on the given properties when assigning roles to geometry.  <a href="namespacedrake_1_1geometry.html#a52f8cb466b0827379bc8815f0d58aac3">More...</a><br /></td></tr>
 <tr class="separator:a52f8cb466b0827379bc8815f0d58aac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa480f7d5d485f556225ed73538dd4eca"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#aa480f7d5d485f556225ed73538dd4eca">MeshGradientMode</a> { <a class="el" href="namespacedrake_1_1geometry.html#aa480f7d5d485f556225ed73538dd4ecaa35c3ace1970663a16e5c65baa5941b13">kNone</a>, 
+<a class="el" href="namespacedrake_1_1geometry.html#aa480f7d5d485f556225ed73538dd4ecaa5543e81cb3b8f1409b593cc1ebce1752">kOkOrMarkDegenerate</a>, 
+<a class="el" href="namespacedrake_1_1geometry.html#aa480f7d5d485f556225ed73538dd4ecaa26940490086ffcdf0616b678df54e7f8">kOkOrThrow</a>
+ }</td></tr>
+<tr class="memdesc:aa480f7d5d485f556225ed73538dd4eca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify whether to generate gradients, and how to handle numerical failures.  <a href="namespacedrake_1_1geometry.html#aa480f7d5d485f556225ed73538dd4eca">More...</a><br /></td></tr>
+<tr class="separator:aa480f7d5d485f556225ed73538dd4eca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a227f80cb57c9c87f6ecc4e839e364979"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a227f80cb57c9c87f6ecc4e839e364979">HydroelasticContactRepresentation</a> { <a class="el" href="namespacedrake_1_1geometry.html#a227f80cb57c9c87f6ecc4e839e364979a3a53496ffe96227ef579995d332425c1">kTriangle</a>, 
 <a class="el" href="namespacedrake_1_1geometry.html#a227f80cb57c9c87f6ecc4e839e364979a64edd70c85c6854f380a0cbbc3db3cbb">kPolygon</a>
  }</td></tr>
@@ -819,6 +825,39 @@ Variables</h2></td></tr>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a227f80cb57c9c87f6ecc4e839e364979a3a53496ffe96227ef579995d332425c1"></a>kTriangle&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a227f80cb57c9c87f6ecc4e839e364979a64edd70c85c6854f380a0cbbc3db3cbb"></a>kPolygon&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="aa480f7d5d485f556225ed73538dd4eca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa480f7d5d485f556225ed73538dd4eca">&#9670;&nbsp;</a></span>MeshGradientMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="namespacedrake_1_1geometry.html#aa480f7d5d485f556225ed73538dd4eca">MeshGradientMode</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Specify whether to generate gradients, and how to handle numerical failures. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aa480f7d5d485f556225ed73538dd4ecaa35c3ace1970663a16e5c65baa5941b13"></a>kNone&#160;</td><td class="fielddoc"><p>Don't compute gradients at all. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa480f7d5d485f556225ed73538dd4ecaa5543e81cb3b8f1409b593cc1ebce1752"></a>kOkOrMarkDegenerate&#160;</td><td class="fielddoc"><p>If gradient computation fails, mark it degenerate. </p>
+<p>See <a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#a3f68cddb7189743795032263fdfa4509">MeshFieldLinear::is_gradient_field_degenerate()</a>. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa480f7d5d485f556225ed73538dd4ecaa26940490086ffcdf0616b678df54e7f8"></a>kOkOrThrow&#160;</td><td class="fielddoc"><p>If gradient computation fails, throw an exception. </p>
+</td></tr>
 </table>
 
 </div>

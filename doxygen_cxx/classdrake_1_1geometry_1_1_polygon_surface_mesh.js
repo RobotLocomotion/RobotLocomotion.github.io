@@ -16,6 +16,7 @@ var classdrake_1_1geometry_1_1_polygon_surface_mesh =
     [ "Equal", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html#a73802b68cb8f52b2161fe1915928341f", null ],
     [ "face_data", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html#a88623e38c6b1b2d533a8a480067fee21", null ],
     [ "face_normal", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html#a7744f912c3286ddc8f2a755e527c2e23", null ],
+    [ "MaybeCalcGradientVectorOfLinearField", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html#a686975d005af046708c93d5ca3fb9089", null ],
     [ "num_elements", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html#a98f8a4ac27c2c8008728ae504e8e68bc", null ],
     [ "num_faces", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html#a132d1bbcbcc1ac76319da744805bd865", null ],
     [ "num_vertices", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html#a319e621fc359dd8daad48247f95b12fa", null ],

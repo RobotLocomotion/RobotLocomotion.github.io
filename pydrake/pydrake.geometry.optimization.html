@@ -2921,6 +2921,8 @@ upper bounds as {x| lb ≤ x ≤ ub}</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>lb.size() == ub.size()</p>
 </dd>
+<dt>Precondition:</dt><dd><p>lb and ub are finite.</p>
+</dd>
 <dt>Precondition:</dt><dd><p>lb(i) &lt;= ub(i) for all i</p>
 </dd>
 </dl>
@@ -2949,6 +2951,18 @@ upper bounds as {x| lb ≤ x ≤ ub}</p>
 <em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MaybeCalcAxisAlignedBoundingBox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">set</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.geometry.optimization.Hyperrectangle" title="pydrake.geometry.optimization.Hyperrectangle"><span class="pre">pydrake.geometry.optimization.Hyperrectangle</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.Hyperrectangle.MaybeCalcAxisAlignedBoundingBox" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the minimum axis-aligned bounding box of a convex set, for
 sets with finite volume. (std::nullopt otherwise).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.Hyperrectangle.MaybeGetIntersection">
+<span class="sig-name descname"><span class="pre">MaybeGetIntersection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.Hyperrectangle" title="pydrake.geometry.optimization.Hyperrectangle"><span class="pre">pydrake.geometry.optimization.Hyperrectangle</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.Hyperrectangle" title="pydrake.geometry.optimization.Hyperrectangle"><span class="pre">pydrake.geometry.optimization.Hyperrectangle</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.geometry.optimization.Hyperrectangle" title="pydrake.geometry.optimization.Hyperrectangle"><span class="pre">pydrake.geometry.optimization.Hyperrectangle</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.Hyperrectangle.MaybeGetIntersection" title="Permalink to this definition"></a></dt>
+<dd><p>Constructs the intersection of two Hyperrectangle by taking the
+pointwise maximum of the lower bounds and the pointwise minimums of
+the upper bounds. Returns std::nullopt if the intersection is empty.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>this and other need to have the same ambient dimension.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
