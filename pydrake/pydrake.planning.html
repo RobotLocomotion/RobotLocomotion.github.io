@@ -2694,33 +2694,29 @@ generator controls this source of randomness.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">sets</span></code>:</dt><dd><p>[in/out] initial sets covering the space (potentially empty). The
 cover is written into this vector.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">max_clique_solver</span></code>:</dt><dd><p>The max clique solver used. If parallelism is set to allow more
-than 1 thread, then this class <strong>must</strong> be implemented in C++. If
-nullptr is passed as the <code class="docutils literal notranslate"><span class="pre">max_clique_solver</span></code>, then max clique
-will be solved using an instance of MaxCliqueSolverViaMip with a
-conservative limit set on the number of branch and bound nodes
-explored. This default solver will in general use suboptimal
-cliques when constructing the greedy clique cover, but is faster
-than solving the max clique problem to global optimality.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">max_clique_solver</span></code>:</dt><dd><p>The min clique cover problem is approximatley solved by repeatedly
+solving max clique on the uncovered graph and adding this largest
+clique to the cover. The max clique problem is solved by this
+solver. If parallelism is set to allow more than 1 thread, then
+the solver <strong>must</strong> be implemented in C++.</p>
 </dd>
 </dl>
-<p>Currently, the padding in the collision checker is not forwarded to
+<p>If nullptr is passed as the <code class="docutils literal notranslate"><span class="pre">max_clique_solver</span></code>, then max clique
+will be solved using an instance of MaxCliqueSolverViaGreedy, which is
+a fast heuristic. If higher quality cliques are desired, consider
+changing the solver to an instance of MaxCliqueSolverViaMip.
+Currently, the padding in the collision checker is not forwarded to
 the algorithm, and therefore the final regions do not necessarily
 respect this padding. Effectively, this means that the regions are
 generated as if the padding is set to 0. This behavior may be adjusted
 in the future at the resolution of #18830.</p>
-<p>Note that this method requires an implementation of a
-MaxCliqueSolverBase which must be implemented in C++. The only solver
-of this kind implemented by Drake is MaxCliqueSolverViaMip which
-requires the availability of a Mixed-Integer Linear Programming solver
-(e.g. Gurobi and/or Mosek). We recommend enabling those solvers if
-possible (<a class="reference external" href="https://drake.mit.edu/bazel.html#proprietary_solvers">https://drake.mit.edu/bazel.html#proprietary_solvers</a>). The
-method will throw if MaxCliqueSolverViaMip cannot solve the max clique
+<p>Note that MaxCliqueSolverViaMip requires the availability of a
+Mixed-Integer Linear Programming solver (e.g. Gurobi and/or Mosek). We
+recommend enabling those solvers if possible because they produce
+higher quality cliques
+(<a class="reference external" href="https://drake.mit.edu/bazel.html#proprietary_solvers">https://drake.mit.edu/bazel.html#proprietary_solvers</a>). The method
+will throw if <code class="docutils literal notranslate"><span class="pre">max_clique_solver</span></code> cannot solve the max clique
 problem.</p>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>MaxCliqueSolverViaMip.</p>
-</div>
 </dd></dl>
 
 <dl class="py class">
@@ -3111,6 +3107,24 @@ with true indicating membership in the clique.</p>
 </dd>
 </dl>
 </dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.planning.MaxCliqueSolverViaGreedy">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">MaxCliqueSolverViaGreedy</span></span><a class="headerlink" href="#pydrake.planning.MaxCliqueSolverViaGreedy" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.planning.MaxCliqueSolverBase" title="pydrake.planning.MaxCliqueSolverBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.planning.MaxCliqueSolverBase</span></code></a></p>
+<p>Approximately solves the maximum clique problem via a greedy
+heuristic. Vertices are greedily added to the clique based on their
+degree of connectivity. The algorithm initializes the clique with an
+empty set and makes every vertex a candidate, then the degree of every
+vertex is computed and the candidate vertex with the highest degree is
+added to the clique. Afterwards, new candidate list is updated and the
+previous two steps are repeated until no candidates are left.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.MaxCliqueSolverViaGreedy.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.MaxCliqueSolverViaGreedy" title="pydrake.planning.MaxCliqueSolverViaGreedy"><span class="pre">pydrake.planning.MaxCliqueSolverViaGreedy</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.MaxCliqueSolverViaGreedy.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 

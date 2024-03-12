@@ -1,5 +1,12 @@
 var NAVTREEINDEX55 =
 {
+"rational__function_8h.html#a44a9560b5bbc179968621e3df178742c":[4,0,0,1,3,14,22],
+"rational__function_8h.html#a4a8d6fb5671a17bf0c89c1c5aef9efaf":[4,0,0,1,3,14,25],
+"rational__function_8h.html#a579d06e36f094bf2eebf127dcbb46a1c":[4,0,0,1,3,14,23],
+"rational__function_8h.html#a687c99f46e854d9237083b2f34e6665c":[4,0,0,1,3,14,27],
+"rational__function_8h.html#a6d99af1951c74ac5377ce5e7ec953eb6":[4,0,0,1,3,14,14],
+"rational__function_8h.html#a8327415ae13cae1b0d450c384079a49e":[4,0,0,1,3,14,10],
+"rational__function_8h.html#a9120c262586410f015a00fcdd6fed2a7":[4,0,0,1,3,14,19],
 "rational__function_8h.html#a97671d479c281451e703b58530b17082":[4,0,0,1,3,14,2],
 "rational__function_8h.html#abb47877c3cad48fe6a8e25edb0620495":[4,0,0,1,3,14,28],
 "rational__function_8h.html#ac3c94dcccf4c09c83515332980d6a8eb":[4,0,0,1,3,14,8],
@@ -242,12 +249,5 @@ var NAVTREEINDEX55 =
 "solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fa15e1c4845b9467d880999c78de6afe45":[4,0,0,11,49,0,0],
 "solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fa2bfbc12cb546f78bd0080b8df5b26520":[4,0,0,11,49,0,5],
 "solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fa4b9de95ee3087851acd98262e09f0be8":[4,0,0,11,49,0,3],
-"solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fa4f17cb26e989bf3f8c2990cd51fcede9":[4,0,0,11,49,0,2],
-"solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fa78cb430cc349315a2ba0f3602ef64b6d":[4,0,0,11,49,0,1],
-"solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fa84d10e8dce3328bfb1f6761d194857f2":[4,0,0,11,49,0,4],
-"solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fa97600ae7efdb5c8fecf91e99463ef4ef":[4,0,0,11,49,0,6],
-"solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fab42685181d035fb42e3da3462b4c0b55":[4,0,0,11,49,0,8],
-"solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fae1f645d6b81b09a506f807a18d5e1d4b":[4,0,0,11,49,0,7],
-"solution__result_8h.html#acb1201a087105dc635e2bd748486171c":[4,0,0,11,49,2],
-"solve_8h.html":[4,0,0,11,50]
+"solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fa4f17cb26e989bf3f8c2990cd51fcede9":[4,0,0,11,49,0,2]
 };

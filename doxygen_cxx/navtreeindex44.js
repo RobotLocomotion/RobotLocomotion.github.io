@@ -1,5 +1,11 @@
 var NAVTREEINDEX44 =
 {
+"classdrake_1_1trajectories_1_1_bspline_trajectory.html#ae09cf8e8ad481f69f3cc1969ef491d60":[3,0,0,17,1,23],
+"classdrake_1_1trajectories_1_1_bspline_trajectory.html#afb31b9e4198667d6209f223d4da81d6e":[3,0,0,17,1,12],
+"classdrake_1_1trajectories_1_1_bspline_trajectory.html#aff77c2afe03fcd56388b20d75726e9fe":[3,0,0,17,1,16],
+"classdrake_1_1trajectories_1_1_composite_trajectory.html":[3,0,0,17,2],
+"classdrake_1_1trajectories_1_1_composite_trajectory.html#a0dc08db0d808412df4550b5da0025831":[3,0,0,17,2,4],
+"classdrake_1_1trajectories_1_1_composite_trajectory.html#a173c46945d90f6749a81f04d1f5f317c":[3,0,0,17,2,3],
 "classdrake_1_1trajectories_1_1_composite_trajectory.html#a1a108064e80d83d1c0b70b4c10c798aa":[3,0,0,17,2,10],
 "classdrake_1_1trajectories_1_1_composite_trajectory.html#a20e1b00dc63d86a7d2d1b4e9e2c4dec4":[3,0,0,17,2,0],
 "classdrake_1_1trajectories_1_1_composite_trajectory.html#a565b401214fc119baca5476097474ebf":[3,0,0,17,2,6],
@@ -243,11 +249,5 @@ var NAVTREEINDEX44 =
 "classdrake_1_1visualization_1_1_concatenate_images.html#aa51be17f000d46bed06ece0616b469bb":[1,2,11,6,0],
 "classdrake_1_1visualization_1_1_concatenate_images.html#aaf8b99a6fe41856154a5af0a731be6ec":[1,2,11,6,2],
 "classdrake_1_1visualization_1_1_concatenate_images.html#ab424db4973cded51901239852b4a3443":[1,2,11,6,3],
-"classdrake_1_1visualization_1_1_inertia_visualizer.html":[1,2,11,7],
-"classdrake_1_1visualization_1_1_inertia_visualizer.html#a35e4757607fba787b9450627f6112166":[1,2,11,7,3],
-"classdrake_1_1visualization_1_1_inertia_visualizer.html#a6b25925ec5f7044f7ed092ee3180f38d":[1,2,11,7,7],
-"classdrake_1_1visualization_1_1_inertia_visualizer.html#a73f8cf9a55941586846beae0ef7f94a8":[1,2,11,7,1],
-"classdrake_1_1visualization_1_1_inertia_visualizer.html#a8b091eb5e79051e855367de4106c9739":[1,2,11,7,8],
-"classdrake_1_1visualization_1_1_inertia_visualizer.html#a920edba4b207049d7ce573d4ff8b96bf":[1,2,11,7,0],
-"classdrake_1_1visualization_1_1_inertia_visualizer.html#a9a2e0e4083590b0ce302bc8dd23d985b":[1,2,11,7,4]
+"classdrake_1_1visualization_1_1_inertia_visualizer.html":[1,2,11,7]
 };

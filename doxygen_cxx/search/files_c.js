@@ -37,6 +37,7 @@ var searchData=
   ['matrix_5futil_2eh',['matrix_util.h',['../matrix__util_8h.html',1,'']]],
   ['matrix_5futilities_2eh',['matrix_utilities.h',['../matrix__utilities_8h.html',1,'']]],
   ['max_5fclique_5fsolver_5fbase_2eh',['max_clique_solver_base.h',['../max__clique__solver__base_8h.html',1,'']]],
+  ['max_5fclique_5fsolver_5fvia_5fgreedy_2eh',['max_clique_solver_via_greedy.h',['../max__clique__solver__via__greedy_8h.html',1,'']]],
   ['max_5fclique_5fsolver_5fvia_5fmip_2eh',['max_clique_solver_via_mip.h',['../max__clique__solver__via__mip_8h.html',1,'']]],
   ['maybe_5fpause_5ffor_5fuser_2eh',['maybe_pause_for_user.h',['../maybe__pause__for__user_8h.html',1,'']]],
   ['measure_5fexecution_2eh',['measure_execution.h',['../measure__execution_8h.html',1,'']]],

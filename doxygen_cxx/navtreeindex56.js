@@ -1,5 +1,12 @@
 var NAVTREEINDEX56 =
 {
+"solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fa78cb430cc349315a2ba0f3602ef64b6d":[4,0,0,11,49,0,1],
+"solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fa84d10e8dce3328bfb1f6761d194857f2":[4,0,0,11,49,0,4],
+"solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fa97600ae7efdb5c8fecf91e99463ef4ef":[4,0,0,11,49,0,6],
+"solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fab42685181d035fb42e3da3462b4c0b55":[4,0,0,11,49,0,8],
+"solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fae1f645d6b81b09a506f807a18d5e1d4b":[4,0,0,11,49,0,7],
+"solution__result_8h.html#acb1201a087105dc635e2bd748486171c":[4,0,0,11,49,2],
+"solve_8h.html":[4,0,0,11,50],
 "solve_8h.html#a07bf1722e3e347d7878ae44be98b4b92":[4,0,0,11,50,0],
 "solve_8h.html#a6f8160cf69cc8a3cd41dfec1fb08a8fa":[4,0,0,11,50,2],
 "solve_8h.html#a78328b8267370289c8c653bc67efde5e":[4,0,0,11,50,1],
@@ -242,12 +249,5 @@ var NAVTREEINDEX56 =
 "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a24c109489bdfad4b0937c2d19d9c0e20":[3,0,0,4,28,1,1],
 "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a3b79efd873843125dabba312ddde65a3":[3,0,0,4,28,1,4],
 "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a4467598fbba812fe1339ab4e83806573":[3,0,0,4,28,1,6],
-"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a5eeeb20fab9ff0f54568882b94d57921":[3,0,0,4,28,1,3],
-"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,28,1,0],
-"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a9c59ed4a7b6bdc2b1207e39fabf379a4":[3,0,0,4,28,1,7],
-"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#ab833bacb3fa8d1a189efcbba74f10fa1":[3,0,0,4,28,1,5],
-"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#add1a608db25e8e3befb6775a16867611":[3,0,0,4,28,1,2],
-"structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html":[3,0,0,4,28,2],
-"structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#a11926af9280d70fd96e47b07c90cf0ed":[3,0,0,4,28,2,1],
-"structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#a3b79efd873843125dabba312ddde65a3":[3,0,0,4,28,2,4]
+"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a5eeeb20fab9ff0f54568882b94d57921":[3,0,0,4,28,1,3]
 };

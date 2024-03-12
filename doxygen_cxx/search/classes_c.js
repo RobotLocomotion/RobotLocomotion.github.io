@@ -10,6 +10,7 @@ var searchData=
   ['mathematicalprogramresult',['MathematicalProgramResult',['../classdrake_1_1solvers_1_1_mathematical_program_result.html',1,'drake::solvers']]],
   ['matrixgain',['MatrixGain',['../classdrake_1_1systems_1_1_matrix_gain.html',1,'drake::systems']]],
   ['maxcliquesolverbase',['MaxCliqueSolverBase',['../classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html',1,'drake::planning::graph_algorithms']]],
+  ['maxcliquesolverviagreedy',['MaxCliqueSolverViaGreedy',['../classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_greedy.html',1,'drake::planning::graph_algorithms']]],
   ['maxcliquesolverviamip',['MaxCliqueSolverViaMip',['../classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html',1,'drake::planning::graph_algorithms']]],
   ['mesh',['Mesh',['../classdrake_1_1geometry_1_1_mesh.html',1,'drake::geometry']]],
   ['meshcat',['Meshcat',['../classdrake_1_1geometry_1_1_meshcat.html',1,'drake::geometry']]],

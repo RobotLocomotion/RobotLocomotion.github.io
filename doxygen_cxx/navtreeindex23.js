@@ -1,5 +1,11 @@
 var NAVTREEINDEX23 =
 {
+"classdrake_1_1schema_1_1_gaussian_vector.html#a1d969737bf8d1e959fd7c19c4c57bf46":[3,0,0,12,5,5],
+"classdrake_1_1schema_1_1_gaussian_vector.html#a2943c446cc2494144ce983f229c38919":[3,0,0,12,5,3],
+"classdrake_1_1schema_1_1_gaussian_vector.html#a4505d59d4b827b167f46b7fe144e69e9":[3,0,0,12,5,11],
+"classdrake_1_1schema_1_1_gaussian_vector.html#a467df93d1bb0bf8e938b3e922897aef1":[3,0,0,12,5,8],
+"classdrake_1_1schema_1_1_gaussian_vector.html#a79c73b68222e2ce8d00ed23a43724c88":[3,0,0,12,5,2],
+"classdrake_1_1schema_1_1_gaussian_vector.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,12,5,9],
 "classdrake_1_1schema_1_1_gaussian_vector.html#aad76eefa2c3b5000ba443edb351e4ed7":[3,0,0,12,5,12],
 "classdrake_1_1schema_1_1_gaussian_vector.html#ab8f4a0a862347c0c2fac23e5b74c5636":[3,0,0,12,5,7],
 "classdrake_1_1schema_1_1_gaussian_vector.html#ad80934fe58016c8c45ace203e14bdc43":[3,0,0,12,5,10],
@@ -243,11 +249,5 @@ var NAVTREEINDEX23 =
 "classdrake_1_1solvers_1_1_evaluator_constraint.html#a260a1715b48134fad92a8221882a1076":[1,1,0,28,1],
 "classdrake_1_1solvers_1_1_evaluator_constraint.html#a4f01849f46f82b2f890dd1264125d52f":[1,1,0,28,7],
 "classdrake_1_1solvers_1_1_evaluator_constraint.html#a830c3f81aac647c351d0a3f170c00f6b":[1,1,0,28,4],
-"classdrake_1_1solvers_1_1_evaluator_constraint.html#a9e976c1f2572bab91cb2e4caa9b3e0e5":[1,1,0,28,5],
-"classdrake_1_1solvers_1_1_evaluator_constraint.html#aa02a7941f0a2cb1fd510c6e7774421bd":[1,1,0,28,3],
-"classdrake_1_1solvers_1_1_evaluator_constraint.html#abfb09ce6a7fdc8b8cc04e990290a773a":[1,1,0,28,2],
-"classdrake_1_1solvers_1_1_evaluator_constraint.html#ad84d7b3c1202bc9e275ee8c48606e23f":[1,1,0,28,0],
-"classdrake_1_1solvers_1_1_evaluator_constraint.html#af4a741d62e930b18c9250e5c65a854be":[1,1,0,28,8],
-"classdrake_1_1solvers_1_1_evaluator_cost.html":[1,1,0,45],
-"classdrake_1_1solvers_1_1_evaluator_cost.html#a1e1710b612efa3cf0e80052203983249":[1,1,0,45,1]
+"classdrake_1_1solvers_1_1_evaluator_constraint.html#a9e976c1f2572bab91cb2e4caa9b3e0e5":[1,1,0,28,5]
 };
