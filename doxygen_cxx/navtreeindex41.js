@@ -1,5 +1,7 @@
 var NAVTREEINDEX41 =
 {
+"classdrake_1_1systems_1_1_vector_log.html#accd54be181b898dbf19a7bc0936aa008":[3,0,0,15,126,9],
+"classdrake_1_1systems_1_1_vector_log.html#acdadc49a4268788a717235fae26ffb6a":[3,0,0,15,126,10],
 "classdrake_1_1systems_1_1_vector_log.html#aef6b0e4985813bcc07126ff8d818fa8a":[3,0,0,15,126,6],
 "classdrake_1_1systems_1_1_vector_log_sink.html":[1,2,1,26],
 "classdrake_1_1systems_1_1_vector_log_sink.html#a01791f7cae0729bd71cdbe701b132427":[1,2,1,26,10],
@@ -247,7 +249,5 @@ var NAVTREEINDEX41 =
 "classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html#ab4aeebb77f3c69d10583e4e99bc24e17":[1,2,2,2,0],
 "classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html#adaf897afb1fc6ad957e0f2a7776e5254":[1,2,2,2,3],
 "classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html#ae1296b665521a703cc08e6d98f5b6f64":[1,2,2,2,9],
-"classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html#aeb85792421c5767841dae629795701ab":[1,2,2,2,2],
-"classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html":[1,2,2,4],
-"classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html#a3229f07b7f9c224cc442fe7921cfb44a":[1,2,2,4,5]
+"classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html#aeb85792421c5767841dae629795701ab":[1,2,2,2,2]
 };

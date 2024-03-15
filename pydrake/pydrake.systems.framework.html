@@ -931,6 +931,11 @@ computations dependent on this parameter.</p>
 <p>Returns a mutable reference to the abstract component of the state,
 which may be of size zero. Sends out of date notifications for all
 abstract-state-dependent computations.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You <em>must not</em> use the returned reference to modify the size,
+number, or types of abstract state variables.</p>
+</div>
 <ol class="arabic simple" start="2">
 <li><p>get_mutable_abstract_state(self: pydrake.systems.framework.Context, index: int) -&gt; pydrake.common.value.AbstractValue</p></li>
 </ol>
@@ -975,6 +980,11 @@ date notifications for all continuous-state-dependent computations.</p>
 <p>Returns a mutable reference to the discrete component of the state,
 which may be of size zero. Sends out of date notifications for all
 discrete-state-dependent computations.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You <em>must not</em> use the returned reference to modify the size or
+number of discrete state variables.</p>
+</div>
 <ol class="arabic simple" start="2">
 <li><p>get_mutable_discrete_state(self: pydrake.systems.framework.Context, arg0: int) -&gt; pydrake.systems.framework.BasicVector</p></li>
 </ol>
@@ -1031,6 +1041,11 @@ date notifications for all parameter-dependent computations. If you
 don’t mean to change all the parameters, use the indexed methods to
 modify only some of the parameters so that fewer computations are
 invalidated and fewer notifications need be sent.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You <em>must not</em> use the returned reference to modify the size,
+number, or types of parameters.</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -1042,6 +1057,11 @@ date notifications to be made for all such computations. If you don’t
 mean to change the whole state, use more focused methods to modify
 only a portion of the state. See class documentation for more
 information.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You <em>must not</em> use the returned reference to modify the size,
+number, or types of state variables.</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -1573,6 +1593,11 @@ computations dependent on this parameter.</p>
 <p>Returns a mutable reference to the abstract component of the state,
 which may be of size zero. Sends out of date notifications for all
 abstract-state-dependent computations.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You <em>must not</em> use the returned reference to modify the size,
+number, or types of abstract state variables.</p>
+</div>
 <ol class="arabic simple" start="2">
 <li><p>get_mutable_abstract_state(self: pydrake.systems.framework.Context_[AutoDiffXd], index: int) -&gt; pydrake.common.value.AbstractValue</p></li>
 </ol>
@@ -1617,6 +1642,11 @@ date notifications for all continuous-state-dependent computations.</p>
 <p>Returns a mutable reference to the discrete component of the state,
 which may be of size zero. Sends out of date notifications for all
 discrete-state-dependent computations.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You <em>must not</em> use the returned reference to modify the size or
+number of discrete state variables.</p>
+</div>
 <ol class="arabic simple" start="2">
 <li><p>get_mutable_discrete_state(self: pydrake.systems.framework.Context_[AutoDiffXd], arg0: int) -&gt; pydrake.systems.framework.BasicVector_[AutoDiffXd]</p></li>
 </ol>
@@ -1673,6 +1703,11 @@ date notifications for all parameter-dependent computations. If you
 don’t mean to change all the parameters, use the indexed methods to
 modify only some of the parameters so that fewer computations are
 invalidated and fewer notifications need be sent.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You <em>must not</em> use the returned reference to modify the size,
+number, or types of parameters.</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -1684,6 +1719,11 @@ date notifications to be made for all such computations. If you don’t
 mean to change the whole state, use more focused methods to modify
 only a portion of the state. See class documentation for more
 information.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You <em>must not</em> use the returned reference to modify the size,
+number, or types of state variables.</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -2209,6 +2249,11 @@ computations dependent on this parameter.</p>
 <p>Returns a mutable reference to the abstract component of the state,
 which may be of size zero. Sends out of date notifications for all
 abstract-state-dependent computations.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You <em>must not</em> use the returned reference to modify the size,
+number, or types of abstract state variables.</p>
+</div>
 <ol class="arabic simple" start="2">
 <li><p>get_mutable_abstract_state(self: pydrake.systems.framework.Context_[Expression], index: int) -&gt; pydrake.common.value.AbstractValue</p></li>
 </ol>
@@ -2253,6 +2298,11 @@ date notifications for all continuous-state-dependent computations.</p>
 <p>Returns a mutable reference to the discrete component of the state,
 which may be of size zero. Sends out of date notifications for all
 discrete-state-dependent computations.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You <em>must not</em> use the returned reference to modify the size or
+number of discrete state variables.</p>
+</div>
 <ol class="arabic simple" start="2">
 <li><p>get_mutable_discrete_state(self: pydrake.systems.framework.Context_[Expression], arg0: int) -&gt; pydrake.systems.framework.BasicVector_[Expression]</p></li>
 </ol>
@@ -2309,6 +2359,11 @@ date notifications for all parameter-dependent computations. If you
 don’t mean to change all the parameters, use the indexed methods to
 modify only some of the parameters so that fewer computations are
 invalidated and fewer notifications need be sent.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You <em>must not</em> use the returned reference to modify the size,
+number, or types of parameters.</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -2320,6 +2375,11 @@ date notifications to be made for all such computations. If you don’t
 mean to change the whole state, use more focused methods to modify
 only a portion of the state. See class documentation for more
 information.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You <em>must not</em> use the returned reference to modify the size,
+number, or types of state variables.</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -9905,9 +9965,9 @@ be empty if it is not applicable to the System in question. A System
 may not maintain state in any place other than a State object.</p>
 <p>A State <code class="docutils literal notranslate"><span class="pre">x</span></code> contains three types of state variables:</p>
 <ul class="simple">
-<li><p>ContinuousState <code class="docutils literal notranslate"><span class="pre">xc</span></code></p></li>
-<li><p>DiscreteState   <code class="docutils literal notranslate"><span class="pre">xd</span></code></p></li>
-<li><p>AbstractState   <code class="docutils literal notranslate"><span class="pre">xa</span></code></p></li>
+<li><p>Continuous state <code class="docutils literal notranslate"><span class="pre">xc</span></code></p></li>
+<li><p>Discrete state   <code class="docutils literal notranslate"><span class="pre">xd</span></code></p></li>
+<li><p>Abstract state   <code class="docutils literal notranslate"><span class="pre">xa</span></code></p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -9993,9 +10053,9 @@ be empty if it is not applicable to the System in question. A System
 may not maintain state in any place other than a State object.</p>
 <p>A State <code class="docutils literal notranslate"><span class="pre">x</span></code> contains three types of state variables:</p>
 <ul class="simple">
-<li><p>ContinuousState <code class="docutils literal notranslate"><span class="pre">xc</span></code></p></li>
-<li><p>DiscreteState   <code class="docutils literal notranslate"><span class="pre">xd</span></code></p></li>
-<li><p>AbstractState   <code class="docutils literal notranslate"><span class="pre">xa</span></code></p></li>
+<li><p>Continuous state <code class="docutils literal notranslate"><span class="pre">xc</span></code></p></li>
+<li><p>Discrete state   <code class="docutils literal notranslate"><span class="pre">xd</span></code></p></li>
+<li><p>Abstract state   <code class="docutils literal notranslate"><span class="pre">xa</span></code></p></li>
 </ul>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.State_-AutoDiffXd-.__init__">
@@ -10070,9 +10130,9 @@ be empty if it is not applicable to the System in question. A System
 may not maintain state in any place other than a State object.</p>
 <p>A State <code class="docutils literal notranslate"><span class="pre">x</span></code> contains three types of state variables:</p>
 <ul class="simple">
-<li><p>ContinuousState <code class="docutils literal notranslate"><span class="pre">xc</span></code></p></li>
-<li><p>DiscreteState   <code class="docutils literal notranslate"><span class="pre">xd</span></code></p></li>
-<li><p>AbstractState   <code class="docutils literal notranslate"><span class="pre">xa</span></code></p></li>
+<li><p>Continuous state <code class="docutils literal notranslate"><span class="pre">xc</span></code></p></li>
+<li><p>Discrete state   <code class="docutils literal notranslate"><span class="pre">xd</span></code></p></li>
+<li><p>Abstract state   <code class="docutils literal notranslate"><span class="pre">xa</span></code></p></li>
 </ul>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.State_-Expression-.__init__">

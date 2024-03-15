@@ -1,5 +1,7 @@
 var NAVTREEINDEX44 =
 {
+"classdrake_1_1trajectories_1_1_bspline_trajectory.html#acc1fbdce99e21637c6739f65cdb081c7":[3,0,0,17,1,19],
+"classdrake_1_1trajectories_1_1_bspline_trajectory.html#adca8eca2ee324f57170dedfb4b06160b":[3,0,0,17,1,8],
 "classdrake_1_1trajectories_1_1_bspline_trajectory.html#ae09cf8e8ad481f69f3cc1969ef491d60":[3,0,0,17,1,23],
 "classdrake_1_1trajectories_1_1_bspline_trajectory.html#afb31b9e4198667d6209f223d4da81d6e":[3,0,0,17,1,12],
 "classdrake_1_1trajectories_1_1_bspline_trajectory.html#aff77c2afe03fcd56388b20d75726e9fe":[3,0,0,17,1,16],
@@ -247,7 +249,5 @@ var NAVTREEINDEX44 =
 "classdrake_1_1visualization_1_1_concatenate_images.html#a694ac7926701e834ca36db268753a478":[1,2,11,6,5],
 "classdrake_1_1visualization_1_1_concatenate_images.html#a8ea656dc79df76cace8b9610b81f8de3":[1,2,11,6,4],
 "classdrake_1_1visualization_1_1_concatenate_images.html#aa51be17f000d46bed06ece0616b469bb":[1,2,11,6,0],
-"classdrake_1_1visualization_1_1_concatenate_images.html#aaf8b99a6fe41856154a5af0a731be6ec":[1,2,11,6,2],
-"classdrake_1_1visualization_1_1_concatenate_images.html#ab424db4973cded51901239852b4a3443":[1,2,11,6,3],
-"classdrake_1_1visualization_1_1_inertia_visualizer.html":[1,2,11,7]
+"classdrake_1_1visualization_1_1_concatenate_images.html#aaf8b99a6fe41856154a5af0a731be6ec":[1,2,11,6,2]
 };

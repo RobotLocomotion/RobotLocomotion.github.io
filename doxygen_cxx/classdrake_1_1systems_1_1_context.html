@@ -1305,7 +1305,7 @@ the abstract state's type must match the template argument. </dd></dl>
 </div><div class="memdoc">
 
 <p>Returns a mutable reference to the abstract component of the state, which may be of size zero. </p>
-<p>Sends out of date notifications for all abstract-state-dependent computations. </p>
+<p>Sends out of date notifications for all abstract-state-dependent computations. </p><dl class="section warning"><dt>Warning</dt><dd>You <em>must not</em> use the returned reference to modify the size, number, or types of abstract state variables. </dd></dl>
 
 </div>
 </div>
@@ -1389,7 +1389,7 @@ the abstract state's type must match the template argument. </dd></dl>
 </div><div class="memdoc">
 
 <p>Returns a mutable reference to the discrete component of the state, which may be of size zero. </p>
-<p>Sends out of date notifications for all discrete-state-dependent computations. </p>
+<p>Sends out of date notifications for all discrete-state-dependent computations. </p><dl class="section warning"><dt>Warning</dt><dd>You <em>must not</em> use the returned reference to modify the size or number of discrete state variables. </dd></dl>
 
 </div>
 </div>
@@ -1474,7 +1474,7 @@ the abstract state's type must match the template argument. </dd></dl>
 </div><div class="memdoc">
 
 <p>Returns a mutable reference to this Context's parameters. </p>
-<p>Sends out of date notifications for all parameter-dependent computations. If you don't mean to change all the parameters, use the indexed methods to modify only some of the parameters so that fewer computations are invalidated and fewer notifications need be sent. </p>
+<p>Sends out of date notifications for all parameter-dependent computations. If you don't mean to change all the parameters, use the indexed methods to modify only some of the parameters so that fewer computations are invalidated and fewer notifications need be sent. </p><dl class="section warning"><dt>Warning</dt><dd>You <em>must not</em> use the returned reference to modify the size, number, or types of parameters. </dd></dl>
 
 </div>
 </div>
@@ -1494,7 +1494,7 @@ the abstract state's type must match the template argument. </dd></dl>
 </div><div class="memdoc">
 
 <p>Returns a mutable reference to the whole <a class="el" href="classdrake_1_1systems_1_1_state.html" title="State is a container for all the data comprising the complete state of a particular System at a parti...">State</a>, potentially invalidating <em>all</em> state-dependent computations so requiring out of date notifications to be made for all such computations. </p>
-<p>If you don't mean to change the whole state, use more focused methods to modify only a portion of the state. See class documentation for more information. </p>
+<p>If you don't mean to change the whole state, use more focused methods to modify only a portion of the state. See class documentation for more information. </p><dl class="section warning"><dt>Warning</dt><dd>You <em>must not</em> use the returned reference to modify the size, number, or types of state variables. </dd></dl>
 
 </div>
 </div>

@@ -213,6 +213,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6a056b4674f77186d954f73f98bc25ef"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_cache_entry_value.html">CacheEntryValue</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_dependency_tracker.html#a6a056b4674f77186d954f73f98bc25ef">cache_entry_value</a> () const</td></tr>
 <tr class="memdesc:a6a056b4674f77186d954f73f98bc25ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns a pointer to the <a class="el" href="classdrake_1_1systems_1_1_cache_entry_value.html" title="(Advanced) This is the representation in the Context for the value of one of a System&#39;s CacheEntry ob...">CacheEntryValue</a> if this tracker is a cache entry tracker, otherwise nullptr.  <a href="#a6a056b4674f77186d954f73f98bc25ef">More...</a><br /></td></tr>
 <tr class="separator:a6a056b4674f77186d954f73f98bc25ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a547c8047f489dc91625bc4cc0aa8dc4a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_dependency_tracker.html#a547c8047f489dc91625bc4cc0aa8dc4a">suppress_notifications</a> ()</td></tr>
+<tr class="memdesc:a547c8047f489dc91625bc4cc0aa8dc4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Instructs this tracker to suppress notifications to downstream subscribers.  <a href="#a547c8047f489dc91625bc4cc0aa8dc4a">More...</a><br /></td></tr>
+<tr class="separator:a547c8047f489dc91625bc4cc0aa8dc4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09ccfb33c24ff11f95efdf213185fa12"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_dependency_tracker.html#a09ccfb33c24ff11f95efdf213185fa12">notifications_are_suppressed</a> () const</td></tr>
+<tr class="memdesc:a09ccfb33c24ff11f95efdf213185fa12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if <a class="el" href="classdrake_1_1systems_1_1_dependency_tracker.html#a547c8047f489dc91625bc4cc0aa8dc4a" title="(Internal use only) Instructs this tracker to suppress notifications to downstream subscribers.">suppress_notifications()</a> has been called on this tracker.  <a href="#a09ccfb33c24ff11f95efdf213185fa12">More...</a><br /></td></tr>
+<tr class="separator:a09ccfb33c24ff11f95efdf213185fa12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c4305cca4912dea875265e56134f468"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_dependency_tracker.html#a4c4305cca4912dea875265e56134f468">NoteValueChange</a> (<a class="el" href="classint64__t.html">int64_t</a> change_event) const</td></tr>
 <tr class="memdesc:a4c4305cca4912dea875265e56134f468"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies <code>this</code> DependencyTracker that its managed value was directly modified or made available for mutable access.  <a href="#a4c4305cca4912dea875265e56134f468">More...</a><br /></td></tr>
 <tr class="separator:a4c4305cca4912dea875265e56134f468"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -501,6 +507,25 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="a09ccfb33c24ff11f95efdf213185fa12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09ccfb33c24ff11f95efdf213185fa12">&#9670;&nbsp;</a></span>notifications_are_suppressed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool notifications_are_suppressed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if <a class="el" href="classdrake_1_1systems_1_1_dependency_tracker.html#a547c8047f489dc91625bc4cc0aa8dc4a" title="(Internal use only) Instructs this tracker to suppress notifications to downstream subscribers.">suppress_notifications()</a> has been called on this tracker. </p>
+
+</div>
+</div>
 <a id="a1e700a713ce2e3ec475e28f474a42d81"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1e700a713ce2e3ec475e28f474a42d81">&#9670;&nbsp;</a></span>num_ignored_notifications()</h2>
 
@@ -786,6 +811,26 @@ No cache entry value has previously been assigned. </dd></dl>
 
 <p>Subscribes <code>this</code> tracker to an upstream prerequisite's tracker. </p>
 <p>The upstream tracker will keep a const pointer back to <code>this</code> tracker in its subscriber list, and <code>this</code> tracker will keep a pointer to the prerequisite tracker in its prerequisites list. </p>
+
+</div>
+</div>
+<a id="a547c8047f489dc91625bc4cc0aa8dc4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a547c8047f489dc91625bc4cc0aa8dc4a">&#9670;&nbsp;</a></span>suppress_notifications()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void suppress_notifications </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Instructs this tracker to suppress notifications to downstream subscribers. </p>
+<p>This can be used by the framework during <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> allocation to disable built-in trackers that have nothing to track. For example, if there are no q's we can improve performance and avoid spurious notifications to q-subscribers like configuration_tracker by disabling q's tracker. </p>
 
 </div>
 </div>
