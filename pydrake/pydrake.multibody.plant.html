@@ -5505,6 +5505,23 @@ or unspecified limits will be +infinity.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.GetVisualGeometriesForBody">
+<span class="sig-name descname"><span class="pre">GetVisualGeometriesForBody</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.RigidBody" title="pydrake.multibody.tree.RigidBody"><span class="pre">pydrake.multibody.tree.RigidBody</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.GetVisualGeometriesForBody" title="Permalink to this definition"></a></dt>
+<dd><p>Returns an array of GeometryId’s identifying the different visual
+geometries for <code class="docutils literal notranslate"><span class="pre">body</span></code> previously registered with a SceneGraph.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This method can be called at any time during the lifetime of
+<code class="docutils literal notranslate"><span class="pre">this</span></code> plant, either pre- or post-finalize, see Finalize().
+Post-finalize calls will always return the same value.</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>RegisterVisualGeometry(), Finalize()</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.gravity_field">
 <span class="sig-name descname"><span class="pre">gravity_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.UniformGravityFieldElement" title="pydrake.multibody.tree.UniformGravityFieldElement"><span class="pre">pydrake.multibody.tree.UniformGravityFieldElement</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.gravity_field" title="Permalink to this definition"></a></dt>
 <dd><p>An accessor to the current gravity field.</p>
@@ -10564,6 +10581,23 @@ or unspecified limits will be +infinity.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetVisualGeometriesForBody">
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].GetVisualGeometriesForBody"></span><span class="sig-name descname"><span class="pre">GetVisualGeometriesForBody</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.RigidBody_" title="pydrake.multibody.tree.RigidBody_"><span class="pre">pydrake.multibody.tree.RigidBody_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetVisualGeometriesForBody" title="Permalink to this definition"></a></dt>
+<dd><p>Returns an array of GeometryId’s identifying the different visual
+geometries for <code class="docutils literal notranslate"><span class="pre">body</span></code> previously registered with a SceneGraph.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This method can be called at any time during the lifetime of
+<code class="docutils literal notranslate"><span class="pre">this</span></code> plant, either pre- or post-finalize, see Finalize().
+Post-finalize calls will always return the same value.</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>RegisterVisualGeometry(), Finalize()</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.gravity_field">
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].gravity_field"></span><span class="sig-name descname"><span class="pre">gravity_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.UniformGravityFieldElement_" title="pydrake.multibody.tree.UniformGravityFieldElement_"><span class="pre">pydrake.multibody.tree.UniformGravityFieldElement_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.gravity_field" title="Permalink to this definition"></a></dt>
 <dd><p>An accessor to the current gravity field.</p>
@@ -15575,6 +15609,23 @@ or unspecified limits will be +infinity.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>GetVelocityLowerLimits() for more information.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.GetVisualGeometriesForBody">
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].GetVisualGeometriesForBody"></span><span class="sig-name descname"><span class="pre">GetVisualGeometriesForBody</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.RigidBody_" title="pydrake.multibody.tree.RigidBody_"><span class="pre">pydrake.multibody.tree.RigidBody_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetVisualGeometriesForBody" title="Permalink to this definition"></a></dt>
+<dd><p>Returns an array of GeometryId’s identifying the different visual
+geometries for <code class="docutils literal notranslate"><span class="pre">body</span></code> previously registered with a SceneGraph.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This method can be called at any time during the lifetime of
+<code class="docutils literal notranslate"><span class="pre">this</span></code> plant, either pre- or post-finalize, see Finalize().
+Post-finalize calls will always return the same value.</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>RegisterVisualGeometry(), Finalize()</p>
 </div>
 </dd></dl>
 

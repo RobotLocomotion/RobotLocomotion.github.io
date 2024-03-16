@@ -18714,6 +18714,26 @@ frame E. See the documentation of this class for details.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia.CalcPrincipalSemiDiametersAndPoseForSolidEllipsoid">
+<span class="sig-name descname"><span class="pre">CalcPrincipalSemiDiametersAndPoseForSolidEllipsoid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia" title="pydrake.multibody.tree.SpatialInertia"><span class="pre">pydrake.multibody.tree.SpatialInertia</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia.CalcPrincipalSemiDiametersAndPoseForSolidEllipsoid" title="Permalink to this definition"></a></dt>
+<dd><p>Returns 3 principal semi-diameters [lmax lmed lmin] sorted in
+descending order (lmax ≥ lmed ≥ lmin), orientation, and position of a
+solid ellipsoid whose spatial inertia is equal to <code class="docutils literal notranslate"><span class="pre">this</span></code> spatial
+inertia. See spatial_inertia_equivalent_shapes “Spatial inertia
+equivalent shapes” for more details.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the elements of this spatial inertia cannot be</strong> – </p></li>
+<li><p><strong>converted to a real finite double. For example</strong><strong>, </strong><strong>an exception is</strong> – </p></li>
+<li><p><strong>thrown if this contains an erroneous NaN</strong><strong> or </strong><strong>if scalar type T</strong> – </p></li>
+<li><p><strong>is symbolic.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia.CalcRotationalInertia">
 <span class="sig-name descname"><span class="pre">CalcRotationalInertia</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia" title="pydrake.multibody.tree.SpatialInertia"><span class="pre">pydrake.multibody.tree.SpatialInertia</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.RotationalInertia" title="pydrake.multibody.tree.RotationalInertia"><span class="pre">pydrake.multibody.tree.RotationalInertia</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia.CalcRotationalInertia" title="Permalink to this definition"></a></dt>
 <dd><p>Computes the rotational inertia <code class="docutils literal notranslate"><span class="pre">I_SP_E</span> <span class="pre">=</span> <span class="pre">mass</span> <span class="pre">*</span> <span class="pre">G_SP_E</span></code> of this
@@ -19594,6 +19614,26 @@ frame E. See the documentation of this class for details.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.CalcPrincipalSemiDiametersAndPoseForSolidEllipsoid">
+<span id="pydrake.multibody.tree.SpatialInertia_[AutoDiffXd].CalcPrincipalSemiDiametersAndPoseForSolidEllipsoid"></span><span class="sig-name descname"><span class="pre">CalcPrincipalSemiDiametersAndPoseForSolidEllipsoid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.CalcPrincipalSemiDiametersAndPoseForSolidEllipsoid" title="Permalink to this definition"></a></dt>
+<dd><p>Returns 3 principal semi-diameters [lmax lmed lmin] sorted in
+descending order (lmax ≥ lmed ≥ lmin), orientation, and position of a
+solid ellipsoid whose spatial inertia is equal to <code class="docutils literal notranslate"><span class="pre">this</span></code> spatial
+inertia. See spatial_inertia_equivalent_shapes “Spatial inertia
+equivalent shapes” for more details.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the elements of this spatial inertia cannot be</strong> – </p></li>
+<li><p><strong>converted to a real finite double. For example</strong><strong>, </strong><strong>an exception is</strong> – </p></li>
+<li><p><strong>thrown if this contains an erroneous NaN</strong><strong> or </strong><strong>if scalar type T</strong> – </p></li>
+<li><p><strong>is symbolic.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.CalcRotationalInertia">
 <span id="pydrake.multibody.tree.SpatialInertia_[AutoDiffXd].CalcRotationalInertia"></span><span class="sig-name descname"><span class="pre">CalcRotationalInertia</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.RotationalInertia_" title="pydrake.multibody.tree.RotationalInertia_"><span class="pre">pydrake.multibody.tree.RotationalInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.CalcRotationalInertia" title="Permalink to this definition"></a></dt>
 <dd><p>Computes the rotational inertia <code class="docutils literal notranslate"><span class="pre">I_SP_E</span> <span class="pre">=</span> <span class="pre">mass</span> <span class="pre">*</span> <span class="pre">G_SP_E</span></code> of this
@@ -20465,6 +20505,26 @@ false.</p>
 the position vector <code class="docutils literal notranslate"><span class="pre">p_PScm_E</span></code> from the <em>about point</em> P to the
 center of mass <code class="docutils literal notranslate"><span class="pre">Scm</span></code> of the body or composite body S, expressed in
 frame E. See the documentation of this class for details.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-Expression-.CalcPrincipalSemiDiametersAndPoseForSolidEllipsoid">
+<span id="pydrake.multibody.tree.SpatialInertia_[Expression].CalcPrincipalSemiDiametersAndPoseForSolidEllipsoid"></span><span class="sig-name descname"><span class="pre">CalcPrincipalSemiDiametersAndPoseForSolidEllipsoid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-Expression-.CalcPrincipalSemiDiametersAndPoseForSolidEllipsoid" title="Permalink to this definition"></a></dt>
+<dd><p>Returns 3 principal semi-diameters [lmax lmed lmin] sorted in
+descending order (lmax ≥ lmed ≥ lmin), orientation, and position of a
+solid ellipsoid whose spatial inertia is equal to <code class="docutils literal notranslate"><span class="pre">this</span></code> spatial
+inertia. See spatial_inertia_equivalent_shapes “Spatial inertia
+equivalent shapes” for more details.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the elements of this spatial inertia cannot be</strong> – </p></li>
+<li><p><strong>converted to a real finite double. For example</strong><strong>, </strong><strong>an exception is</strong> – </p></li>
+<li><p><strong>thrown if this contains an erroneous NaN</strong><strong> or </strong><strong>if scalar type T</strong> – </p></li>
+<li><p><strong>is symbolic.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
