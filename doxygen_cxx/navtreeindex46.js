@@ -1,5 +1,6 @@
 var NAVTREEINDEX46 =
 {
+"default__scalars__pybind_8h.html#ad65f25e300d8d606958b3df57c29f5fe":[4,0,0,0,0,1,2,4],
 "deformable__body__config_8h.html":[4,0,0,8,3,6],
 "deformable__body__config_8h.html#ad0fc09b4ba51af3abea545b9c6220b7a":[4,0,0,8,3,6,1],
 "deformable__body__config_8h.html#ad0fc09b4ba51af3abea545b9c6220b7aaaa5a0694f9dfb7331467eedc57b9040f":[4,0,0,8,3,6,1,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX46 =
 "drake__copyable_8h.html#ae6322b9e40935343a422cbdfb41e310e":[4,0,0,1,21,0],
 "drake__deprecated_8h.html":[4,0,0,1,22],
 "drake__deprecated_8h.html#a847d827d084f28e4ae1788a0ae75be96":[4,0,0,1,22,0],
-"drake__export_8h.html":[4,0,0,1,23],
-"drake__export_8h.html#a4ee2bff9f11e1bfd6a05cc85d4bc31dc":[4,0,0,1,23,0]
+"drake__export_8h.html":[4,0,0,1,23]
 };

@@ -262,6 +262,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a0745622466ef1e6253a0de1c1216d804"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1trajectories_1_1_composite_trajectory.html">trajectories::CompositeTrajectory</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a0745622466ef1e6253a0de1c1216d804">NormalizeSegmentTimes</a> (const <a class="el" href="classdrake_1_1trajectories_1_1_composite_trajectory.html">trajectories::CompositeTrajectory</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;trajectory)</td></tr>
 <tr class="memdesc:a0745622466ef1e6253a0de1c1216d804"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalizes each trajectory segment to one second in duration.  <a href="#a0745622466ef1e6253a0de1c1216d804">More...</a><br /></td></tr>
 <tr class="separator:a0745622466ef1e6253a0de1c1216d804"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a350f75f8f76e13987b85cae47c2bf6d1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1trajectories_1_1_composite_trajectory.html">trajectories::CompositeTrajectory</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a350f75f8f76e13987b85cae47c2bf6d1">UnwrapToContinousTrajectory</a> (const <a class="el" href="classdrake_1_1trajectories_1_1_composite_trajectory.html">trajectories::CompositeTrajectory</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;gcs_trajectory, std::vector&lt; <a class="el" href="classint.html">int</a> &gt; <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a5e794da51482f4bf72e358b073b7e30e">continuous_revolute_joints</a>, std::optional&lt; std::vector&lt; <a class="el" href="classint.html">int</a> &gt;&gt; starting_rounds=std::nullopt)</td></tr>
+<tr class="memdesc:a350f75f8f76e13987b85cae47c2bf6d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unwraps a trajectory with continuous revolute joints into a continuous trajectory in the Euclidean space.  <a href="#a350f75f8f76e13987b85cae47c2bf6d1">More...</a><br /></td></tr>
+<tr class="separator:a350f75f8f76e13987b85cae47c2bf6d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a168105bb5c3b8e774024bc13eeef01de"></a>
@@ -1096,6 +1099,68 @@ Planning with Graphs of Geodesically-Convex Sets", and per the discussion in Sub
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><code><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html">geometry::optimization::GraphOfConvexSetsOptions</a></code> for further details. </dd></dl>
+
+</div>
+</div>
+<a id="a350f75f8f76e13987b85cae47c2bf6d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a350f75f8f76e13987b85cae47c2bf6d1">&#9670;&nbsp;</a></span>UnwrapToContinousTrajectory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classdrake_1_1trajectories_1_1_composite_trajectory.html">trajectories::CompositeTrajectory</a>&lt;<a class="el" href="classdouble.html">double</a>&gt; UnwrapToContinousTrajectory </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1trajectories_1_1_composite_trajectory.html">trajectories::CompositeTrajectory</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>gcs_trajectory</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classint.html">int</a> &gt;&#160;</td>
+          <td class="paramname"><em>continuous_revolute_joints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; std::vector&lt; <a class="el" href="classint.html">int</a> &gt;&gt;&#160;</td>
+          <td class="paramname"><em>starting_rounds</em> = <code>std::nullopt</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Unwraps a trajectory with continuous revolute joints into a continuous trajectory in the Euclidean space. </p>
+<p>Trajectories produced by <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html" title="GcsTrajectoryOptimization implements a simplified motion planning optimization problem introduced in ...">GcsTrajectoryOptimization</a> for robotic systems with continuous revolute joints may include apparent discontinuities, where a multiple of 2π is instantaneously added to a joint value at the boundary between two adjacent segments of the trajectory. This function removes such discontinuities by adding or subtracting the appropriate multiple of 2π, "unwrapping" the trajectory into a continuous representation suitable for downstream tasks that do not take the joint wraparound into account. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gcs_trajectory</td><td>The trajectory to unwrap. </td></tr>
+    <tr><td class="paramname">continuous_revolute_joints</td><td>The indices of the continuous revolute joints. </td></tr>
+    <tr><td class="paramname">starting_rounds</td><td>A vector of integers that sets the starting rounds for each continuous revolute joint. Given integer k for the starting_round of a joint, its initial position will be wrapped into [2πk , 2π(k+1)). If the starting rounds are not provided, the initial position of <code>trajectory</code> will be unchanged.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>an unwrapped (continous in Euclidean space) CompositeTrajectory.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if starting_rounds.size()!=continuous_revolute_joints.size(). </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if continuous_revolute_joints contain repeated indices and/or indices outside the range [0, gcs_trajectory.rows()). </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the gcs_trajectory is not continuous on the manifold defined by the continuous_revolute_joints, i.e., the shift between two consecutive segments is not an integer multiple of 2π (within a tolerance of 1e-10 radians). </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if all the segments are not of type BezierCurve. Other types are not supported yet. Note that currently the output of <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a8ddb1df26a2324afc83f84c90281c249" title="Formulates and solves the mixed-integer convex formulation of the shortest path problem on the whole ...">GcsTrajectoryOptimization::SolvePath()</a> is a CompositeTrajectory of BezierCurves. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

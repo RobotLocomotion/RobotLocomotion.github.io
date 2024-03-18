@@ -1,5 +1,6 @@
 var NAVTREEINDEX45 =
 {
+"classdrake_1_1visualization_1_1_concatenate_images.html#aaf8b99a6fe41856154a5af0a731be6ec":[1,2,11,6,2],
 "classdrake_1_1visualization_1_1_concatenate_images.html#ab424db4973cded51901239852b4a3443":[1,2,11,6,3],
 "classdrake_1_1visualization_1_1_inertia_visualizer.html":[1,2,11,7],
 "classdrake_1_1visualization_1_1_inertia_visualizer.html#a35e4757607fba787b9450627f6112166":[1,2,11,7,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX45 =
 "default__scalars__pybind_8h.html#a52292ed585da63084b8914356a744d04":[4,0,0,0,0,1,2,0],
 "default__scalars__pybind_8h.html#a6294e82ee237c93a7e6cbc2fb4d924b2":[4,0,0,0,0,1,2,3],
 "default__scalars__pybind_8h.html#a8a3b7387557e1dd66533247e34770031":[4,0,0,0,0,1,2,2],
-"default__scalars__pybind_8h.html#aa69fa97ca5615e75170ca0274e32cba2":[4,0,0,0,0,1,2,1],
-"default__scalars__pybind_8h.html#ad65f25e300d8d606958b3df57c29f5fe":[4,0,0,0,0,1,2,4]
+"default__scalars__pybind_8h.html#aa69fa97ca5615e75170ca0274e32cba2":[4,0,0,0,0,1,2,1]
 };

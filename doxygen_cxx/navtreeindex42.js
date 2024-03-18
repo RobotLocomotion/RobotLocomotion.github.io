@@ -1,5 +1,6 @@
 var NAVTREEINDEX42 =
 {
+"classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html#aeb85792421c5767841dae629795701ab":[1,2,2,2,2],
 "classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html":[1,2,2,4],
 "classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html#a3229f07b7f9c224cc442fe7921cfb44a":[1,2,2,4,5],
 "classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html#a3ed94567c4365ecb7253a9f4b0df5cc6":[1,2,2,4,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX42 =
 "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a6ff95253bd4a47e6ed4d349ff3290b16":[1,2,4,1,2],
 "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#ad5dd463d80e310948143e675e71197de":[1,2,4,1,10],
 "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#afab4d0f4a234cdb8f46a1ba19cc3fec3":[1,2,4,1,12],
-"classdrake_1_1systems_1_1sensors_1_1_camera_info.html":[3,0,0,15,8,3],
-"classdrake_1_1systems_1_1sensors_1_1_camera_info.html#a123b2aa06c4f7c906822c2bb81c5803a":[3,0,0,15,8,3,4]
+"classdrake_1_1systems_1_1sensors_1_1_camera_info.html":[3,0,0,15,8,3]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX61 =
 {
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_grey8_u_01_4.html#af38c722527b26de4a7e90ea5d6b21915":[3,0,0,15,8,14,3],
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_grey8_u_01_4.html#afe6901f952a36afe20ac9b9e21e1a22a":[3,0,0,15,8,14,2],
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_label16_i_01_4.html":[3,0,0,15,8,15],
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_label16_i_01_4.html#a770fd0c30a2b985c180ebffb9747a07a":[3,0,0,15,8,15,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX61 =
 "symbolic__test__util_8h.html#af936eee6e6ccab95c3d4597af366c73e":[4,0,0,1,4,12,25],
 "symbolic__test__util_8h.html#afdad08477a5777cd81c0d08dbd2009e6":[4,0,0,1,4,12,23],
 "symbolic__types__pybind_8h.html":[4,0,0,0,0,17],
-"symbolic__vector__system_8h.html":[4,0,0,12,6,23],
-"symbolic__vector__system_8h.html#aab7d5774e6ddd8a01ac4ee761a5b1e0f":[4,0,0,12,6,23,1]
+"symbolic__vector__system_8h.html":[4,0,0,12,6,23]
 };
