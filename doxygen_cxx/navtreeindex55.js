@@ -1,6 +1,5 @@
 var NAVTREEINDEX55 =
 {
-"rational__function_8h.html#a347249d56768661c610bf3bafb5ff167":[4,0,0,1,3,14,6],
 "rational__function_8h.html#a3c8b6db1763f8f7a5d98de636b9cd7c9":[4,0,0,1,3,14,24],
 "rational__function_8h.html#a43d86ae3f21714ef199febddf60550fe":[4,0,0,1,3,14,31],
 "rational__function_8h.html#a44a9560b5bbc179968621e3df178742c":[4,0,0,1,3,14,22],
@@ -196,10 +195,10 @@ var NAVTREEINDEX55 =
 "semidefinite__relaxation__internal_8h.html":[4,0,0,11,47],
 "sensors__py_8h.html":[4,0,0,0,0,10,5],
 "sequential__expression__manager_8h.html":[4,0,0,10,3,6],
-"serialize__pybind_8h.html":[4,0,0,0,0,1,7],
-"serialize__pybind_8h.html#a0b3e8f87bda821cd1fa9a52586e25f1e":[4,0,0,0,0,1,7,0],
-"serialize__pybind_8h.html#a68be3d37cf9d6c6fcc2afb98d04c046f":[4,0,0,0,0,1,7,1],
-"serialize__pybind_8h.html#aa9814a507ba70a62d61b467c3ba06cce":[4,0,0,0,0,1,7,2],
+"serialize__pybind_8h.html":[4,0,0,0,0,1,6],
+"serialize__pybind_8h.html#a0b3e8f87bda821cd1fa9a52586e25f1e":[4,0,0,0,0,1,6,0],
+"serialize__pybind_8h.html#a68be3d37cf9d6c6fcc2afb98d04c046f":[4,0,0,0,0,1,6,1],
+"serialize__pybind_8h.html#aa9814a507ba70a62d61b467c3ba06cce":[4,0,0,0,0,1,6,2],
 "serializer_8h.html":[4,0,0,12,4,8],
 "sha256_8h.html":[4,0,0,1,57],
 "shape__specification_8h.html":[4,0,0,4,47],
@@ -249,5 +248,6 @@ var NAVTREEINDEX55 =
 "solution__result_8h.html":[4,0,0,11,49],
 "solution__result_8h.html#a269b7066a168f80390ed6c496829ffcd":[4,0,0,11,49,1],
 "solution__result_8h.html#a331f41a3139a87d16e1422bc818c136f":[4,0,0,11,49,0],
-"solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fa15e1c4845b9467d880999c78de6afe45":[4,0,0,11,49,0,0]
+"solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fa15e1c4845b9467d880999c78de6afe45":[4,0,0,11,49,0,0],
+"solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fa2bfbc12cb546f78bd0080b8df5b26520":[4,0,0,11,49,0,5]
 };

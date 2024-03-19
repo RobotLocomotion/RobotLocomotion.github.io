@@ -4,7 +4,6 @@ var dir_747259117fa90714ed7dadfdb71f4370 =
     [ "cpp_template_pybind.h", "cpp__template__pybind_8h.html", "cpp__template__pybind_8h" ],
     [ "default_scalars_pybind.h", "default__scalars__pybind_8h.html", "default__scalars__pybind_8h" ],
     [ "deprecation_pybind.h", "deprecation__pybind_8h.html", "deprecation__pybind_8h" ],
-    [ "eigen_geometry_pybind.h", "eigen__geometry__pybind_8h.html", null ],
     [ "eigen_pybind.h", "eigen__pybind_8h.html", "eigen__pybind_8h" ],
     [ "identifier_pybind.h", "identifier__pybind_8h.html", "identifier__pybind_8h" ],
     [ "serialize_pybind.h", "serialize__pybind_8h.html", "serialize__pybind_8h" ],

@@ -1,6 +1,5 @@
 var NAVTREEINDEX51 =
 {
-"image_8h.html#aee1067f28975226f673193243893def2":[4,0,0,12,8,8,11],
 "image_8h.html#af5afae0f791341ac7ad11eb6bcb092bd":[4,0,0,12,8,8,10],
 "image_8h.html#af9f2ff2c09bd6626d594951724ed1d9a":[4,0,0,12,8,8,8],
 "image__compare_8h.html":[4,0,0,12,8,0,0],
@@ -249,5 +248,6 @@ var NAVTREEINDEX51 =
 "lyapunov_8h.html#ga2ccd9a43fd950b9e3490dd8c98534c3e":[4,0,0,12,0,12,0],
 "make__acrobot__plant_8h.html":[4,0,0,8,0,0,1],
 "make__acrobot__plant_8h.html#a71f510705bd91a2b7a0440a62dc4df47":[4,0,0,8,0,0,1,1],
-"make__arm__controller__model_8h.html":[4,0,0,6,3,1]
+"make__arm__controller__model_8h.html":[4,0,0,6,3,1],
+"make__ball__plate__plant_8h.html":[4,0,0,3,7,0,0]
 };

@@ -1,6 +1,5 @@
 var NAVTREEINDEX52 =
 {
-"make__ball__plate__plant_8h.html":[4,0,0,3,7,0,0],
 "make__ball__plate__plant_8h.html#a0061409fa0e55bf3724f4267240ef6ec":[4,0,0,3,7,0,0,0],
 "make__box__field_8h.html":[4,0,0,4,2,21],
 "make__box__mesh_8h.html":[4,0,0,4,2,22],
@@ -228,20 +227,20 @@ var NAVTREEINDEX52 =
 "name__value_8h.html":[4,0,0,1,43],
 "name__value_8h.html#a1e095c8e1bdc141709c1bb22aca6d944":[4,0,0,1,43,1],
 "name__value_8h.html#a4f1f5c73dacf99966ffa810a1fd23cd3":[4,0,0,1,43,2],
-"namespacedrake.html":[2,0,0],
 "namespacedrake.html":[3,0,0],
-"namespacedrake_1_1ad.html":[3,0,0,0],
+"namespacedrake.html":[2,0,0],
 "namespacedrake_1_1ad.html":[2,0,0,0],
+"namespacedrake_1_1ad.html":[3,0,0,0],
 "namespacedrake_1_1assert.html":[3,0,0,1],
 "namespacedrake_1_1assert.html":[2,0,0,1],
 "namespacedrake_1_1common.html":[3,0,0,2],
 "namespacedrake_1_1common.html":[2,0,0,2],
 "namespacedrake_1_1common_1_1test.html":[2,0,0,2,0],
 "namespacedrake_1_1deprecated.html":[2,0,0,3],
-"namespacedrake_1_1examples.html":[3,0,0,3],
 "namespacedrake_1_1examples.html":[2,0,0,4],
-"namespacedrake_1_1examples_1_1acrobot.html":[2,0,0,4,0],
+"namespacedrake_1_1examples.html":[3,0,0,3],
 "namespacedrake_1_1examples_1_1acrobot.html":[3,0,0,3,0],
+"namespacedrake_1_1examples_1_1acrobot.html":[2,0,0,4,0],
 "namespacedrake_1_1examples_1_1allegro__hand.html":[2,0,0,4,1],
 "namespacedrake_1_1examples_1_1allegro__hand.html":[3,0,0,3,1],
 "namespacedrake_1_1examples_1_1ball__plate.html":[2,0,0,4,2],
@@ -249,5 +248,6 @@ var NAVTREEINDEX52 =
 "namespacedrake_1_1examples_1_1bead__on__a__wire.html":[3,0,0,3,2],
 "namespacedrake_1_1examples_1_1bouncing__ball.html":[2,0,0,4,4],
 "namespacedrake_1_1examples_1_1bouncing__ball.html":[3,0,0,3,3],
-"namespacedrake_1_1examples_1_1compass__gait.html":[3,0,0,3,4]
+"namespacedrake_1_1examples_1_1compass__gait.html":[3,0,0,3,4],
+"namespacedrake_1_1examples_1_1compass__gait.html":[2,0,0,4,5]
 };

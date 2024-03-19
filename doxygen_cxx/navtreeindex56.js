@@ -1,6 +1,5 @@
 var NAVTREEINDEX56 =
 {
-"solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fa2bfbc12cb546f78bd0080b8df5b26520":[4,0,0,11,49,0,5],
 "solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fa4b9de95ee3087851acd98262e09f0be8":[4,0,0,11,49,0,3],
 "solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fa4f17cb26e989bf3f8c2990cd51fcede9":[4,0,0,11,49,0,2],
 "solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fa78cb430cc349315a2ba0f3602ef64b6d":[4,0,0,11,49,0,1],
@@ -50,7 +49,7 @@ var NAVTREEINDEX56 =
 "sorted__pair_8h.html#aaaa975aac6050ca9507bf9761707c383":[4,0,0,1,58,10],
 "sorted__pair_8h.html#abfec653508bbfb544860dbfd0677bfa3":[4,0,0,1,58,6],
 "sorted__pair_8h.html#ae8b6812b1ccb5ba802e724ef1082569c":[4,0,0,1,58,8],
-"sorted__pair__pybind_8h.html":[4,0,0,0,0,1,8],
+"sorted__pair__pybind_8h.html":[4,0,0,0,0,1,7],
 "sorted__triplet_8h.html":[4,0,0,4,2,54],
 "sos__basis__generator_8h.html":[4,0,0,11,57],
 "sos__basis__generator_8h.html#a6703c1f6f99f3e06a86f6a54e7dbd63d":[4,0,0,11,57,0],
@@ -249,5 +248,6 @@ var NAVTREEINDEX56 =
 "structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html#aa0de0a897162ef2c7d4a43529b8f25f7":[3,0,0,4,28,0,1],
 "structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html#ae484f63d5fef688b4c3f438455d6eec9":[3,0,0,4,28,0,3],
 "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html":[3,0,0,4,28,1],
-"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a24c109489bdfad4b0937c2d19d9c0e20":[3,0,0,4,28,1,1]
+"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a24c109489bdfad4b0937c2d19d9c0e20":[3,0,0,4,28,1,1],
+"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a3b79efd873843125dabba312ddde65a3":[3,0,0,4,28,1,4]
 };
