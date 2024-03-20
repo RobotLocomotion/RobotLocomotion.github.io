@@ -1,5 +1,6 @@
 var dir_e56f4370c0abfd94d0eb867c3946e12e =
 [
+    [ "collision_filter_groups.h", "collision__filter__groups_8h.html", "collision__filter__groups_8h" ],
     [ "detail_collision_filter_group_resolver.h", "detail__collision__filter__group__resolver_8h.html", null ],
     [ "detail_common.h", "detail__common_8h.html", null ],
     [ "detail_composite_parse.h", "detail__composite__parse_8h.html", null ],

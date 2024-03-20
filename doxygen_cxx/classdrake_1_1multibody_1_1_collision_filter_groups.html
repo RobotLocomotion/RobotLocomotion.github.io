@@ -1,0 +1,508 @@
+<!-- HTML header for doxygen 1.8.15-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: CollisionFilterGroups Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/%2Findex.ipynb">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+ </div>
+</div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_collision_filter_groups.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="classdrake_1_1multibody_1_1_collision_filter_groups-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">CollisionFilterGroups Class Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This is storage for parsed collision filter groups and group pairs. </p>
+<p>This data may be useful to users needing to compose further collision filters in code, without having to restate the data already captured in model files.</p>
+<p>The contents of this object will be made up of fully-qualified scoped names of collision filter groups and bodies.</p>
+<p>Note that this object enforces few invariants on the data. In the expected workflow, the parser will add groups and exclusion pairs found during parsing. The only condition checked here is that a group with a given fully-qualified name is only added once. </p>
+</div>
+<p><code>#include &lt;drake/multibody/parsing/collision_filter_groups.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a14be8388798df2074ee281f339b89ee4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_collision_filter_groups.html#a14be8388798df2074ee281f339b89ee4">CollisionFilterGroups</a> ()=default</td></tr>
+<tr class="separator:a14be8388798df2074ee281f339b89ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2539662cae7d4093a8ffa4ecf04fe76c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_collision_filter_groups.html#a2539662cae7d4093a8ffa4ecf04fe76c">operator==</a> (const <a class="el" href="classdrake_1_1multibody_1_1_collision_filter_groups.html">CollisionFilterGroups</a> &amp;) const</td></tr>
+<tr class="separator:a2539662cae7d4093a8ffa4ecf04fe76c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fc78a5aa0c5a443cbe632dab71c5763"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_collision_filter_groups.html#a5fc78a5aa0c5a443cbe632dab71c5763">AddGroup</a> (std::string_view name, const std::set&lt; std::string &gt; members)</td></tr>
+<tr class="memdesc:a5fc78a5aa0c5a443cbe632dab71c5763"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a new collision filter group.  <a href="#a5fc78a5aa0c5a443cbe632dab71c5763">More...</a><br /></td></tr>
+<tr class="separator:a5fc78a5aa0c5a443cbe632dab71c5763"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac07ef20a6f68694d375bffda83d10895"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_collision_filter_groups.html#ac07ef20a6f68694d375bffda83d10895">AddExclusionPair</a> (const <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt; std::string &gt; pair)</td></tr>
+<tr class="memdesc:ac07ef20a6f68694d375bffda83d10895"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an exclusion pair between two collision filter groups.  <a href="#ac07ef20a6f68694d375bffda83d10895">More...</a><br /></td></tr>
+<tr class="separator:ac07ef20a6f68694d375bffda83d10895"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a644718bb2fb240de962dc3c9a1fdf0dc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_collision_filter_groups.html#a644718bb2fb240de962dc3c9a1fdf0dc">empty</a> () const</td></tr>
+<tr class="separator:a644718bb2fb240de962dc3c9a1fdf0dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dfbab2929866bf6d236e95f7444c93e"><td class="memItemLeft" align="right" valign="top">const std::map&lt; std::string, std::set&lt; std::string &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_collision_filter_groups.html#a4dfbab2929866bf6d236e95f7444c93e">groups</a> () const</td></tr>
+<tr class="separator:a4dfbab2929866bf6d236e95f7444c93e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08fa6ce5f579060c4a5556e9c8df9925"><td class="memItemLeft" align="right" valign="top">const std::set&lt; <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt; std::string &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_collision_filter_groups.html#a08fa6ce5f579060c4a5556e9c8df9925">exclusion_pairs</a> () const</td></tr>
+<tr class="separator:a08fa6ce5f579060c4a5556e9c8df9925"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
+<tr class="memitem:a6285c11feeca830af8a3802509ee303a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_collision_filter_groups.html#a6285c11feeca830af8a3802509ee303a">CollisionFilterGroups</a> (const <a class="el" href="classdrake_1_1multibody_1_1_collision_filter_groups.html">CollisionFilterGroups</a> &amp;)=default</td></tr>
+<tr class="separator:a6285c11feeca830af8a3802509ee303a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a669ffcb80a716b65fb846bf91f16f7b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_collision_filter_groups.html">CollisionFilterGroups</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_collision_filter_groups.html#a669ffcb80a716b65fb846bf91f16f7b8">operator=</a> (const <a class="el" href="classdrake_1_1multibody_1_1_collision_filter_groups.html">CollisionFilterGroups</a> &amp;)=default</td></tr>
+<tr class="separator:a669ffcb80a716b65fb846bf91f16f7b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2e9110e12900ee8c9464f48f745fe6f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_collision_filter_groups.html#aa2e9110e12900ee8c9464f48f745fe6f">CollisionFilterGroups</a> (<a class="el" href="classdrake_1_1multibody_1_1_collision_filter_groups.html">CollisionFilterGroups</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:aa2e9110e12900ee8c9464f48f745fe6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef320440e3fa3ea62ceb247e985993dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_collision_filter_groups.html">CollisionFilterGroups</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_collision_filter_groups.html#aef320440e3fa3ea62ceb247e985993dc">operator=</a> (<a class="el" href="classdrake_1_1multibody_1_1_collision_filter_groups.html">CollisionFilterGroups</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:aef320440e3fa3ea62ceb247e985993dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a6285c11feeca830af8a3802509ee303a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6285c11feeca830af8a3802509ee303a">&#9670;&nbsp;</a></span>CollisionFilterGroups() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_collision_filter_groups.html">CollisionFilterGroups</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_collision_filter_groups.html">CollisionFilterGroups</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa2e9110e12900ee8c9464f48f745fe6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2e9110e12900ee8c9464f48f745fe6f">&#9670;&nbsp;</a></span>CollisionFilterGroups() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_collision_filter_groups.html">CollisionFilterGroups</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_collision_filter_groups.html">CollisionFilterGroups</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a14be8388798df2074ee281f339b89ee4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14be8388798df2074ee281f339b89ee4">&#9670;&nbsp;</a></span>CollisionFilterGroups() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_collision_filter_groups.html">CollisionFilterGroups</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac07ef20a6f68694d375bffda83d10895"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac07ef20a6f68694d375bffda83d10895">&#9670;&nbsp;</a></span>AddExclusionPair()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddExclusionPair </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt; std::string &gt;&#160;</td>
+          <td class="paramname"><em>pair</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds an exclusion pair between two collision filter groups. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pair</td><td>a pair of fully-qualified scoped names of groups. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>A pair can consist of the same name twice, which means the pair defines a rule where all members of the group exclude each other. Adding an already defined pair does nothing. </dd></dl>
+
+</div>
+</div>
+<a id="a5fc78a5aa0c5a443cbe632dab71c5763"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fc78a5aa0c5a443cbe632dab71c5763">&#9670;&nbsp;</a></span>AddGroup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddGroup </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::set&lt; std::string &gt;&#160;</td>
+          <td class="paramname"><em>members</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a new collision filter group. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>the fully-qualified scoped name of the group being defined. </td></tr>
+    <tr><td class="paramname">members</td><td>the fully-qualified scoped names of the member bodies. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>name is not already a defined group in this object. </dd></dl>
+
+</div>
+</div>
+<a id="a644718bb2fb240de962dc3c9a1fdf0dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a644718bb2fb240de962dc3c9a1fdf0dc">&#9670;&nbsp;</a></span>empty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool empty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>true iff both <a class="el" href="classdrake_1_1multibody_1_1_collision_filter_groups.html#a4dfbab2929866bf6d236e95f7444c93e">groups()</a> and <a class="el" href="classdrake_1_1multibody_1_1_collision_filter_groups.html#a08fa6ce5f579060c4a5556e9c8df9925">exclusion_pairs()</a> are empty. </dd></dl>
+
+</div>
+</div>
+<a id="a08fa6ce5f579060c4a5556e9c8df9925"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08fa6ce5f579060c4a5556e9c8df9925">&#9670;&nbsp;</a></span>exclusion_pairs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::set&lt;<a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt;std::string&gt; &gt;&amp; exclusion_pairs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>the pairs stored by prior calls to <a class="el" href="classdrake_1_1multibody_1_1_collision_filter_groups.html#ac07ef20a6f68694d375bffda83d10895" title="Adds an exclusion pair between two collision filter groups.">AddExclusionPair()</a>. </dd></dl>
+
+</div>
+</div>
+<a id="a4dfbab2929866bf6d236e95f7444c93e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dfbab2929866bf6d236e95f7444c93e">&#9670;&nbsp;</a></span>groups()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::map&lt;std::string, std::set&lt;std::string&gt; &gt;&amp; groups </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>the groups stored by prior calls to <a class="el" href="classdrake_1_1multibody_1_1_collision_filter_groups.html#a5fc78a5aa0c5a443cbe632dab71c5763" title="Adds a new collision filter group.">AddGroup()</a>. </dd></dl>
+
+</div>
+</div>
+<a id="aef320440e3fa3ea62ceb247e985993dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef320440e3fa3ea62ceb247e985993dc">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_collision_filter_groups.html">CollisionFilterGroups</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_collision_filter_groups.html">CollisionFilterGroups</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a669ffcb80a716b65fb846bf91f16f7b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a669ffcb80a716b65fb846bf91f16f7b8">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_collision_filter_groups.html">CollisionFilterGroups</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_collision_filter_groups.html">CollisionFilterGroups</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2539662cae7d4093a8ffa4ecf04fe76c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2539662cae7d4093a8ffa4ecf04fe76c">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_collision_filter_groups.html">CollisionFilterGroups</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/multibody/parsing/<a class="el" href="collision__filter__groups_8h.html">collision_filter_groups.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a class="el" href="namespacedrake.html">drake</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1multibody.html">multibody</a></li><li class="navelem"><a class="el" href="classdrake_1_1multibody_1_1_collision_filter_groups.html">CollisionFilterGroups</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>    
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>    
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().value = searchBox.searchLabel;
+</script>
+</body>
+</html>

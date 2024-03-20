@@ -14,6 +14,7 @@ var namespacedrake_1_1multibody =
     [ "BallRpyJoint", "classdrake_1_1multibody_1_1_ball_rpy_joint.html", "classdrake_1_1multibody_1_1_ball_rpy_joint" ],
     [ "CalcGridPointsOptions", "structdrake_1_1multibody_1_1_calc_grid_points_options.html", "structdrake_1_1multibody_1_1_calc_grid_points_options" ],
     [ "CentroidalMomentumConstraint", "classdrake_1_1multibody_1_1_centroidal_momentum_constraint.html", "classdrake_1_1multibody_1_1_centroidal_momentum_constraint" ],
+    [ "CollisionFilterGroups", "classdrake_1_1multibody_1_1_collision_filter_groups.html", "classdrake_1_1multibody_1_1_collision_filter_groups" ],
     [ "ComInPolyhedronConstraint", "classdrake_1_1multibody_1_1_com_in_polyhedron_constraint.html", "classdrake_1_1multibody_1_1_com_in_polyhedron_constraint" ],
     [ "ComPositionConstraint", "classdrake_1_1multibody_1_1_com_position_constraint.html", "classdrake_1_1multibody_1_1_com_position_constraint" ],
     [ "ConstraintRelaxingIk", "classdrake_1_1multibody_1_1_constraint_relaxing_ik.html", "classdrake_1_1multibody_1_1_constraint_relaxing_ik" ],

@@ -212,6 +212,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_centroidal_momentum_constraint.html">CentroidalMomentumConstraint</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Impose the constraint CentroidalMomentum(q, v) - h_WC = 0 with decision variables [q;v;h_WC] or CentroidalAngularMomentum(q, v) - k_WC = 0 with decision variables [q; v; k_WC] h_WC is the 6D spatial momentum (linear and angular momentum about the center of mass C) expressed in the world frame (W).  <a href="classdrake_1_1multibody_1_1_centroidal_momentum_constraint.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_collision_filter_groups.html">CollisionFilterGroups</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is storage for parsed collision filter groups and group pairs.  <a href="classdrake_1_1multibody_1_1_collision_filter_groups.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_com_in_polyhedron_constraint.html">ComInPolyhedronConstraint</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constrains the center of mass to lie within a polyhedron lb &lt;= A * p_EC &lt;= ub where p_EC is the position of the center-of-mass (C) expressed in a frame E.  <a href="classdrake_1_1multibody_1_1_com_in_polyhedron_constraint.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -622,6 +625,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga4508ec670196c3fe45e9b52af8a73d4a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; internal::StaticFrictionConeComplementarityNonlinearConstraint &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__solver__evaluators.html#ga4508ec670196c3fe45e9b52af8a73d4a">AddStaticFrictionConeComplementarityConstraint</a> (const <a class="el" href="classdrake_1_1multibody_1_1_contact_wrench_evaluator.html">ContactWrenchEvaluator</a> *contact_wrench_evaluator, <a class="el" href="classdouble.html">double</a> complementarity_tolerance, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;&gt; &amp;q_vars, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;&gt; &amp;lambda_vars, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *prog)</td></tr>
 <tr class="memdesc:ga4508ec670196c3fe45e9b52af8a73d4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the complementarity constraint on the static friction force between a pair of contacts |ft_W| &lt;= μ * n_Wᵀ * f_W (static friction force in the friction cone).  <a href="group__solver__evaluators.html#ga4508ec670196c3fe45e9b52af8a73d4a">More...</a><br /></td></tr>
 <tr class="separator:ga4508ec670196c3fe45e9b52af8a73d4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a022c65b88beaffc3211bb5c06ea69125"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a022c65b88beaffc3211bb5c06ea69125">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classdrake_1_1multibody_1_1_collision_filter_groups.html">CollisionFilterGroups</a> &amp;g)</td></tr>
+<tr class="memdesc:a022c65b88beaffc3211bb5c06ea69125"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emits a multi-line, human-readable report of <a class="el" href="classdrake_1_1multibody_1_1_collision_filter_groups.html" title="This is storage for parsed collision filter groups and group pairs.">CollisionFilterGroups</a> content.  <a href="#a022c65b88beaffc3211bb5c06ea69125">More...</a><br /></td></tr>
+<tr class="separator:a022c65b88beaffc3211bb5c06ea69125"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57577cfb87838e5b949fd703e227acfc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1multibody_1_1_signed_distance_with_time_derivative.html">SignedDistanceWithTimeDerivative</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a57577cfb87838e5b949fd703e227acfc">CalcDistanceAndTimeDerivative</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant, const <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">geometry::GeometryId</a> &gt; &amp;geometry_pair, const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;context)</td></tr>
 <tr class="memdesc:a57577cfb87838e5b949fd703e227acfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a pair of geometries and the generalized position/velocity of the plant, compute the signed distance between the pair of geometries and the time derivative of the signed distance.  <a href="#a57577cfb87838e5b949fd703e227acfc">More...</a><br /></td></tr>
 <tr class="separator:a57577cfb87838e5b949fd703e227acfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1518,7 +1524,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="a090e11af1b52e90710e1b651d489311e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a090e11af1b52e90710e1b651d489311e">&#9670;&nbsp;</a></span>operator&lt;&lt;()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a090e11af1b52e90710e1b651d489311e">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1542,6 +1548,36 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a022c65b88beaffc3211bb5c06ea69125"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a022c65b88beaffc3211bb5c06ea69125">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; drake::multibody::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_collision_filter_groups.html">CollisionFilterGroups</a> &amp;&#160;</td>
+          <td class="paramname"><em>g</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Emits a multi-line, human-readable report of <a class="el" href="classdrake_1_1multibody_1_1_collision_filter_groups.html" title="This is storage for parsed collision filter groups and group pairs.">CollisionFilterGroups</a> content. </p>
 
 </div>
 </div>
