@@ -273,7 +273,6 @@ ignore)</li>
       <li>Open the latest builds from the following builds:
         <ol>
           <li><a href="https://drake-jenkins.csail.mit.edu/view/Packaging/job/linux-jammy-unprovisioned-gcc-bazel-nightly-packaging/">https://drake-jenkins.csail.mit.edu/view/Packaging/job/linux-jammy-unprovisioned-gcc-bazel-nightly-packaging/</a></li>
-          <li><a href="https://drake-jenkins.csail.mit.edu/view/Packaging/job/mac-x86-monterey-unprovisioned-clang-bazel-nightly-packaging/">https://drake-jenkins.csail.mit.edu/view/Packaging/job/mac-x86-monterey-unprovisioned-clang-bazel-nightly-packaging/</a></li>
           <li><a href="https://drake-jenkins.csail.mit.edu/view/Packaging/job/mac-arm-ventura-unprovisioned-clang-bazel-nightly-packaging/">https://drake-jenkins.csail.mit.edu/view/Packaging/job/mac-arm-ventura-unprovisioned-clang-bazel-nightly-packaging/</a></li>
         </ol>
       </li>
@@ -292,14 +291,13 @@ source code:
   </li>
   <li>Launch the staging builds for that git commit sha:
     <ol>
-      <li>Open the following seven Jenkins jobs (e.g., each in its own
+      <li>Open the following Jenkins jobs (e.g., each in its own
 new browser tab):
         <ul>
           <li><a href="https://drake-jenkins.csail.mit.edu/view/Staging/job/linux-jammy-unprovisioned-gcc-wheel-staging-release/">Linux Wheel Staging</a></li>
           <li><a href="https://drake-jenkins.csail.mit.edu/view/Staging/job/mac-x86-monterey-unprovisioned-clang-wheel-staging-release/">macOS x86 Wheel Staging</a></li>
           <li><a href="https://drake-jenkins.csail.mit.edu/view/Staging/job/mac-arm-ventura-unprovisioned-clang-wheel-staging-release/">macOS arm Wheel Staging</a></li>
           <li><a href="https://drake-jenkins.csail.mit.edu/view/Staging/job/linux-jammy-unprovisioned-gcc-bazel-staging-packaging/">Jammy Packaging Staging</a></li>
-          <li><a href="https://drake-jenkins.csail.mit.edu/view/Staging/job/mac-x86-monterey-unprovisioned-clang-bazel-staging-packaging/">macOS x86 Packaging Staging</a></li>
           <li><a href="https://drake-jenkins.csail.mit.edu/view/Staging/job/mac-arm-ventura-unprovisioned-clang-bazel-staging-packaging/">macOS arm Packaging Staging</a></li>
         </ul>
       </li>
@@ -368,11 +366,11 @@ appropriate edits as follows:
         </ul>
       </li>
       <li>Click the box labeled “Attach binaries by dropping them here or selecting
-them.” and then choose for upload the 39 release files from
+them.” and then choose for upload the <strong>30</strong> release files from
 <code class="language-plaintext highlighter-rouge">/tmp/drake-release/v1.N.0/...</code>:
         <ul>
-          <li>12: 4 <code class="language-plaintext highlighter-rouge">.tar.gz</code> + 8 checksums</li>
-          <li>6: 2 <code class="language-plaintext highlighter-rouge">.deb</code> + 4 checksums</li>
+          <li>6: 2 <code class="language-plaintext highlighter-rouge">.tar.gz</code> + 4 checksums</li>
+          <li>3: 1 <code class="language-plaintext highlighter-rouge">.deb</code> + 2 checksums</li>
           <li>9: 3 linux <code class="language-plaintext highlighter-rouge">.whl</code> + 6 checksums</li>
           <li>6: 2 macOS x86 <code class="language-plaintext highlighter-rouge">.whl</code> + 4 checksums</li>
           <li>6: 2 macOS arm <code class="language-plaintext highlighter-rouge">.whl</code> + 4 checksums</li>
