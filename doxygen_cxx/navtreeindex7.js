@@ -1,5 +1,7 @@
 var NAVTREEINDEX7 =
 {
+"classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a6f2a7b92352e45589023e4e545227f88":[3,0,0,4,59,15],
+"classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a707de699804658105833a5b97c6e604b":[3,0,0,4,59,20],
 "classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a819bca2023eaa88015e3e51f6e9f557e":[3,0,0,4,59,10],
 "classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a827442245155b7cf36541a979891527c":[3,0,0,4,59,12],
 "classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a972cf7cd80fb7a8357c8202a6c163612":[3,0,0,4,59,7],
@@ -247,7 +249,5 @@ var NAVTREEINDEX7 =
 "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box.html#adfbe9a0f2e79d07d3424cdab71184985":[3,0,0,4,1,5,7],
 "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html":[3,0,0,4,1,5,0],
 "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html#a1c08c7ebb1c1958a09f1c444ee5dbef2":[3,0,0,4,1,5,0,5],
-"classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html#a5c13a0a2c2f59d40ee81746e82ac087e":[3,0,0,4,1,5,0,0],
-"classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html#a69f6cf2a4b931d5c949179c798eb39b6":[3,0,0,4,1,5,0,3],
-"classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html#a6ba4181f08cd0d2070dffb1a6ad51c24":[3,0,0,4,1,5,0,2]
+"classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html#a5c13a0a2c2f59d40ee81746e82ac087e":[3,0,0,4,1,5,0,0]
 };

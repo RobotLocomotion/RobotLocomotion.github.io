@@ -166,8 +166,16 @@ $(document).ready(function(){initNavTree('classdrake_1_1geometry_1_1_mesh.html',
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Definition of a general (possibly non-convex) triangular surface mesh. </p>
-<p>Meshes can be used for illustration and perception roles, but have limited proximity support. See the documentation of <a class="el" href="classdrake_1_1geometry_1_1_query_object.html" title="The QueryObject serves as a mechanism to perform geometry queries on the world&#39;s geometry.">QueryObject</a>'s proximity queries to see how meshes are used in each type of proximity query.</p>
+<div class="textblock"><p>Definition of a general (possibly non-convex) mesh. </p>
+<p>The mesh may be a triangular surface mesh or a tetrahedral volume mesh, depending on how it used.</p>
+<p>Meshes can be used with all three roles but, currently, the support for the proximity role is limited. Where a general mesh is not supported, the mesh is replaced by its convex hull. See the documentation of <a class="el" href="classdrake_1_1geometry_1_1_query_object.html" title="The QueryObject serves as a mechanism to perform geometry queries on the world&#39;s geometry.">QueryObject</a>'s proximity queries for more details. The notable cases where the actual mesh topology is used includes:</p>
+<ul>
+<li>Specifying the Mesh as rigid hydroelastic.</li>
+<li>Specifying the Mesh as compliant hydroelastic (when it references a tetrahedral .vtk file).</li>
+<li>Specifying the Mesh as deformable (when it references a tetrahedral .vtk file).</li>
+</ul>
+<p>This convex-hull substitution is a regrettable stop-gap solution until we fully support general, non-convex meshes throughout proximity queries.</p>
+<p>For visual roles (illustration and perception), the specified mesh file is used as directly as possible.</p>
 <p>The mesh is defined in a canonical frame C, implicit in the file parsed. Upon loading it in <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> it can be scaled around the origin of C by a given <code>scale</code> amount. </p>
 </div>
 <p><code>#include &lt;drake/geometry/shape_specification.h&gt;</code></p>
@@ -175,7 +183,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1geometry_1_1_mesh.html',
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab7cd6a852d0208f008381395f4a7dd9d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_mesh.html#ab7cd6a852d0208f008381395f4a7dd9d">Mesh</a> (const std::string &amp;<a class="el" href="classdrake_1_1geometry_1_1_mesh.html#a64b4c300fe95c104df48d1328b1d381e">filename</a>, <a class="el" href="classdouble.html">double</a> <a class="el" href="classdrake_1_1geometry_1_1_mesh.html#a5109cb042f782c4a77fcb072e4d4bf10">scale</a>=1.0)</td></tr>
-<tr class="memdesc:ab7cd6a852d0208f008381395f4a7dd9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a mesh specification from the mesh file located at the given file path; if the path is not absolute, it will be interpreted relative to the current working directory.  <a href="#ab7cd6a852d0208f008381395f4a7dd9d">More...</a><br /></td></tr>
+<tr class="memdesc:ab7cd6a852d0208f008381395f4a7dd9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a mesh shape specification from the mesh file located at the given file path.  <a href="#ab7cd6a852d0208f008381395f4a7dd9d">More...</a><br /></td></tr>
 <tr class="separator:ab7cd6a852d0208f008381395f4a7dd9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a400cb114fa04653b48ea257e5dd397e4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_mesh.html#a400cb114fa04653b48ea257e5dd397e4">~Mesh</a> () final</td></tr>
 <tr class="separator:a400cb114fa04653b48ea257e5dd397e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -186,6 +194,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5a2ba33fb44bb4a5f4e273a5d9d440ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5109cb042f782c4a77fcb072e4d4bf10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_mesh.html#a5109cb042f782c4a77fcb072e4d4bf10">scale</a> () const</td></tr>
 <tr class="separator:a5109cb042f782c4a77fcb072e4d4bf10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d96b16cce43676ccf7e0614703c9fc8"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1_polygon_surface_mesh.html">PolygonSurfaceMesh</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_mesh.html#a9d96b16cce43676ccf7e0614703c9fc8">convex_hull</a> () const</td></tr>
+<tr class="memdesc:a9d96b16cce43676ccf7e0614703c9fc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the convex hull of the named mesh.  <a href="#a9d96b16cce43676ccf7e0614703c9fc8">More...</a><br /></td></tr>
+<tr class="separator:a9d96b16cce43676ccf7e0614703c9fc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
 <tr class="memitem:a96122aaf34cd5b127634335aad0160e8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_mesh.html#a96122aaf34cd5b127634335aad0160e8">Mesh</a> (const <a class="el" href="classdrake_1_1geometry_1_1_mesh.html">Mesh</a> &amp;)=default</td></tr>
 <tr class="separator:a96122aaf34cd5b127634335aad0160e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -317,8 +328,17 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Constructs a mesh specification from the mesh file located at the given file path; if the path is not absolute, it will be interpreted relative to the current working directory. </p>
-<p>Optionally uniformly scaled by the given scale factor. </p><dl class="exception"><dt>Exceptions</dt><dd>
+<p>Constructs a mesh shape specification from the mesh file located at the given file path. </p>
+<p>Optionally uniformly scaled by the given scale factor.</p>
+<p>The mesh file referenced can be an .obj, a volume mesh in a .vtk, or a .gltf file. However, not all file formats are appropriate for all roles. (E.g., a tetrahedral .vtk file should not be assigned a perception role.)</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>The file name; if it is not absolute, it will be interpreted relative to the current working directory. </td></tr>
+    <tr><td class="paramname">scale</td><td>An optional scale to coordinates.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if |scale| &lt; 1e-8. Note that a negative scale is considered valid. We want to preclude scales near zero but recognise that scale is a convenience tool for "tweaking" models. 8 orders of magnitude should be plenty without considering revisiting the model itself. </td></tr>
   </table>
@@ -353,6 +373,32 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a9d96b16cce43676ccf7e0614703c9fc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d96b16cce43676ccf7e0614703c9fc8">&#9670;&nbsp;</a></span>convex_hull()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1geometry_1_1_polygon_surface_mesh.html">PolygonSurfaceMesh</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;&amp; convex_hull </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reports the convex hull of the named mesh. </p>
+<p>Note: the convex hull is computed on demand on the first invocation. All subsequent invocations should have an O(1) cost.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td>the referenced mesh data cannot be read or is degenerate (insufficient number of vertices, co-linear or coincident vertices, etc.) All of the vertices lying on a plane is <em>not</em> considered degenerate. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a5a2ba33fb44bb4a5f4e273a5d9d440ea"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5a2ba33fb44bb4a5f4e273a5d9d440ea">&#9670;&nbsp;</a></span>extension()</h2>
 

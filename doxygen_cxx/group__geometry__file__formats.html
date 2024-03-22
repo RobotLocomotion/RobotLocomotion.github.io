@@ -175,11 +175,31 @@ $(document).ready(function(){initNavTree('group__geometry__file__formats.html','
 <p>The primitives are good for coarse representations of real world shapes and, in some cases, may be preferred over more accurate representations for performance reasons (e.g., for <a class="el" href="group__proximity__queries.html">proximity queries</a>). However, there are cases where a higher fidelity representation is preferred. To this end, Drake also provides two more shapes:</p>
 <ul>
 <li><a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">Convex</a> <a class="el" href="group__geometry__file__formats.html#file_footnote_1">¹</a></li>
-<li><a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) triangular surface mesh.">Mesh</a> <a class="el" href="group__geometry__file__formats.html#file_footnote_1">¹</a></li>
+<li><a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) mesh.">Mesh</a> <a class="el" href="group__geometry__file__formats.html#file_footnote_1">¹</a></li>
 </ul>
-<p>Both of those <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The abstract base class for all shape specifications.">Shape</a> types reference on-disk geometry files. When a role is assigned to a geometry with the <a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">Convex</a> or <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) triangular surface mesh.">Mesh</a> shape, the file will be parsed and some portion of the data in the file will be used. To make good representation choices, it is important to understand what kind of files are supported, in what roles, and to what degree. This page aims to make the answers to those questions clear and provide best practices. As geometry file format support is in flux the contents of this page will change frequently.</p>
+<h1><a class="anchor" id="mesh_vs_convex"></a>
+Mesh vs Convex</h1>
+<p>Both of those <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The abstract base class for all shape specifications.">Shape</a> types reference on-disk geometry files. When a role is assigned to a geometry with the <a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">Convex</a> or <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) mesh.">Mesh</a> shape, the file will be parsed and some portion of the data in the file will be used.</p>
+<p>The <a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">Convex</a> shape is a declaration that the on-disk geometry file should only be used to compute a convex polytope (the convex hull of the vertices defined in the geometry file). The <a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">Convex</a> shape is fully supported across all roles (illustration, perception, and proximity). For visual roles, whatever materials, normals, textures, etc. which may be specified in the referenced geometry file will not affect the visualized convex hull. It will always be a faceted, single-color polytope. The color is defined by assigning the ("phong", "diffuse") geometry property to the geometry. When it comes to file formats' compatibility with the <a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">Convex</a> shape, the only question is if Drake has implemented the convex hull computation for the given file format. In the discussion below, each file format indicates whether Drake can compute its convex hull and, by implication, whether the file format can be referenced by <a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">Convex</a>.</p>
+<p>The <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) mesh.">Mesh</a> shape is a declaration that the on-disk geometry file should be used to the fullest extent that the role and geometry consumer can. For visual roles, that includes materials, textures, normals, etc. The degree to which the possible mesh data is used is outlined below.</p>
+<p>Things are slightly more complex with the proximity role. Performing contact and signed distance queries on general non-convex meshes is complicated. As such, Drake's implementation of <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) mesh.">Mesh</a> support is incomplete. Where full support does not exist, the <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) mesh.">Mesh</a> object is represented by its convex hull. Generally, full support is limited to a few cases:</p>
+<ul>
+<li><a class="el" href="classdrake_1_1geometry_1_1_query_object.html#ab15e2fff4faa847eb6a7ba82e1d4f035">Hydroelastic contact</a> where the mesh has been declared "rigid".</li>
+<li><a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a0e8749d9307aa501666ca431ab626ff0">Deformable contact</a> (the mesh serves as a rigid object which deformable objects can collide with).</li>
+<li><a class="el" href="classdrake_1_1geometry_1_1_query_object.html#ab15e2fff4faa847eb6a7ba82e1d4f035">Hydroelastic contact</a> where the mesh has been declared "compliant", if and only if the referenced mesh file is a tetrahedral .vtk file. For all other mesh file types, see below.</li>
+</ul>
+<p>In these remaining cases, the <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) mesh.">Mesh</a>'s convex hull is used:</p>
+<ul>
+<li><a class="el" href="classdrake_1_1geometry_1_1_query_object.html#af3b16adde799eb804619dc86f3703f4f">Point contact</a></li>
+<li><a class="el" href="classdrake_1_1geometry_1_1_query_object.html#ab15e2fff4faa847eb6a7ba82e1d4f035">Hydroelastic contact</a> where the mesh has been declared "compliant". Unless the <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) mesh.">Mesh</a> references a tetrahedral .vtk file (see note above).</li>
+<li><a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a3f702eb73e7464c00b82974d0c5ff6c9">Determining if collisions exist</a> at all.</li>
+<li><a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a48676624208ba13c78edbc098203f1ea">Finding collision candidates</a></li>
+<li>Signed distance queries <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a0918d61334404a7680145cb882a18d52">between all geometry pairs</a>, <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a7a66a8b3fc43f34d11a9cd475fb77ee1">between an explicit geometry pair</a>, or <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#aa4c7754ca66a8593b182ae990643875c">between a geometry and a point</a>.</li>
+</ul>
+<p>It is our <em>intent</em> that with time, more queries will move from the lower list to the fully-supported list.</p>
 <h1><a class="anchor" id="supported_file_types"></a>
 Supported file types</h1>
+<p>To make good representation choices, it is important to understand what kind of files are supported, in what roles, and to what degree. This page aims to make the answers to those questions clear and provide best practices. As geometry file format support is in flux the contents of this page will change frequently.</p>
 <p>Drake is working towards a robust and consistent treatment of supported mesh types. During the transitional period, support will not be consistent. For each supported mesh type, we'll enumerate the nature of Drake's support for it, generally and with respect to each <a class="el" href="group__geometry__roles.html">geometry role</a>.</p>
 <p>You should assume that if a file format is not listed, it is not supported.</p>
 <p>Drake doesn't care about the capitalization of the geometry file extensions.</p>
@@ -188,31 +208,31 @@ Supported file types</h1>
 Wavefront (obj) file</h2>
 <p><a href="https://en.wikipedia.org/wiki/Wavefront_.obj_file">Wavefront obj</a> is a decades-old geometry format. The file is encoded in ASCII text with a simple syntax; simple objects can be created in a text editor. Most modern modeling packages can import and export .obj files. Its age has made it a universal format.</p>
 <p>The .obj specification includes an additional material library file (.mtl). The .mtl file defines materials that are applied to zero or more faces in the .obj file. The standard practice is for an .obj file to reference one or more .mtl files.</p>
-<p>Both <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) triangular surface mesh.">Mesh</a> and <a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">Convex</a> shapes can accept an .obj file for any role (with limitations).</p>
+<p>Drake can compute the convex hull for a .obj file, so it is fully compatible with <a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">Convex</a>.</p>
+<p>A <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) mesh.">Mesh</a> file which references an .obj file can be used with any role (with limitations).</p>
 <ul>
 <li>Illustration role<ul>
-<li>Both <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) triangular surface mesh.">Mesh</a> and <a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">Convex</a> can be used with this role.</li>
+<li>Most, if not all, .obj features are supported.</li>
 <li>If the .obj file references an .mtl file (and that file is available) it will be used to define the materials.</li>
 <li>Lack of surface normals may lead to unexpected rendering artifacts.</li>
 <li>Lack of texture coordinates combined with a material with texture maps can likewise lead to unexpected rendering artifacts.</li>
 </ul>
 </li>
 <li>Perception role<ul>
+<li>Most, if not all, .obj features are supported.</li>
 <li>The following notes apply to all Drake RenderEngine implementations.</li>
 <li>The mesh must have surface normals (Drake throws if they are missing).</li>
-<li>Texture coordinates are not required, but texture maps are only applied if an entire mesh "piece" has texture coordinates.</li>
+<li>Texture coordinates are not required, but texture maps are only applied if an entire mesh "piece" (collection of triangles with a single material) has texture coordinates.</li>
 <li>The material associated with the mesh is that defined by the <a class="el" href="group__geometry__file__formats.html#geometry_materials">material heuristic</a>.</li>
 <li>In contrast to the Proximity role, the mesh <em>can</em> have multiple objects and multiple materials. The obj's mesh data is partitioned into disjoint parts based on the applied material. The material heuristic is applied to each part individually.</li>
 </ul>
 </li>
 <li>Proximity role<ul>
 <li>The material file is ignored.</li>
-<li>Drake currently requires the faces in the mesh to comprise a single object.</li>
-<li>A <a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">Convex</a> shape can be used to create a point-contact collision geometry or a hydroelastic collision geometry (either rigid or compliant).<ul>
-<li>Note: using a <a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">Convex</a> shape implies that the .obj contains a single convex shape. This is currently not verified.</li>
+<li>As mentioned above, the <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) mesh.">Mesh</a>'s .obj will file will generally be replaced by its convex hull except for the two cases list above (rigid hydroelastic and deformable contact).<ul>
+<li>In these cases, the mesh need not be a closed manifold &ndash; it could model an infinitely thin sheet.</li>
 </ul>
 </li>
-<li>A <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) triangular surface mesh.">Mesh</a> shape can only be used to create a rigid hydroelastic collision geometry.</li>
 </ul>
 </li>
 <li>Best practices<ul>
@@ -225,13 +245,14 @@ Wavefront (obj) file</h2>
 glTFᵀᴹ (.gltf)</h2>
 <p>A <a href="https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html">glTF</a> file is an "open interoperable 3D asset 'transmission' format". Like an .obj file it can include the definition of meshes and materials. glTF is designed to include data for an entire scene, including such diverse elements as nodes, animations, transform hierarchies, cameras, animations, morph targets, etc. Drake does not necessarily use all of that data.</p>
 <p>It's worth noting that glTF is designed, from the start, to support <a href="https://en.wikipedia.org/wiki/Physically_based_rendering">Physically Based Rendering (PBR)</a>. While the Wavefront .obj specification has informal extensions to achieve the same (replacing Phong with PBR), glTF uses it as its native shading model. This can produce images with higher fidelity, in both rasterization and path-tracing rendering algorithms.</p>
+<p>Drake can compute the convex hull for a .gltf file, so it is fully compatible with <a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">Convex</a>.</p>
 <p>Generally, Drake provides broad support of glTF features. But there are some notable exceptions:</p>
 <ul>
 <li>.glb "container" files are not supported.</li>
 <li>Support for glTF extensions depends on the ultimate consumer of the glTF file (see below).</li>
 <li>Animation and skinning. If such data is present, it is ignored.</li>
 </ul>
-<p>As with .obj files, both <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) triangular surface mesh.">Mesh</a> and <a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">Convex</a> shapes can accept a .gltf file.</p>
+<p>A <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) mesh.">Mesh</a> file can reference a .gltf file but only for visual roles.</p>
 <ul>
 <li>Illustration roles<ul>
 <li>.gltf features are well supported in meshcat-based visualizers (using either <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html" title="A system wrapper for Meshcat that publishes the current state of a SceneGraph instance (whose QueryOb...">MeshcatVisualizer</a> or <a class="el" href="classdrake_1_1geometry_1_1_drake_visualizer.html" title="A system that publishes LCM messages representing the current state of a SceneGraph instance (whose Q...">DrakeVisualizer</a> in conjunction with meldis).</li>
@@ -240,7 +261,7 @@ glTFᵀᴹ (.gltf)</h2>
 </ul>
 </li>
 <li>Perception roles<ul>
-<li>RenderEngineGl does not support .gltf files. A <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) triangular surface mesh.">Mesh</a> or <a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">Convex</a> which references such a file will be silently ignored.</li>
+<li>RenderEngineGl does not support .gltf files. A <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) mesh.">Mesh</a> or <a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">Convex</a> which references such a file will be silently ignored.</li>
 <li>RenderEngineVtk does support .gltf files.<ul>
 <li>As VTK does not support extensions, RenderEngineVtk does not either.</li>
 <li>RenderEngineVtk does not yet support specifying an environment map. This will lead to PBR materials being under illuminated.</li>
@@ -254,21 +275,34 @@ glTFᵀᴹ (.gltf)</h2>
 </ul>
 </li>
 <li>Proximity role<ul>
-<li>.gltf files are not currently supported for proximity roles at all. Assigning the proximity role to a <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) triangular surface mesh.">Mesh</a> with anything other than a .obj file will throw an exception.</li>
+<li>.gltf files <em>can</em> be used with the <a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">Convex</a> shape type (as indicated above).</li>
+<li>.gltf files <em>cannot</em> be used with the <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) mesh.">Mesh</a> shape type. Assigning the proximity role to a <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) mesh.">Mesh</a> which references a .gtlf file will throw an exception.</li>
 </ul>
 </li>
 </ul>
 <p>As a rule of thumb, for Drake's purposes .gltf files with external assets (i.e., separate .bin and .png files) will load faster than .gltf files with assets embedded as base64-encoded <code>data:</code> URIs.</p>
 <h2><a class="anchor" id="vtk_support"></a>
 VTK file (.vtk)</h2>
-<p>Drake uses tetrahedral meshes a couple of different ways: as compliant hydroelastic geometries (see <a class="el" href="group__hydroelastic__user__guide.html#hug_title">here</a> for more details) and deformable bodies (see, e.g., <a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html" title="DeformableModel implements the interface in PhysicalModel and provides the functionalities to specify...">multibody::DeformableModel</a>). For some of the <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The abstract base class for all shape specifications.">Shape</a> types, Drake will provide a tetrahedralization of the shape at run time. However, Drake cannot yet do so for arbitrary surface meshes. Drake allows you to create your own tetrahedral mesh offline and request that Drake use it. We use the <a href="https://examples.vtk.org/site/VTKFileFormats/">.vtk</a> file format.</p>
-<p>Depending on the application (hydroelastics or deformable bodies), not every tetrahedralization is created equal. There are best practices for each domain which must be followed to get best results. More details on these best practices are coming.</p>
+<p>Drake uses tetrahedral meshes a couple of different ways: as compliant hydroelastic geometries (see <a class="el" href="group__hydroelastic__user__guide.html#hug_title">here</a> for more details) and deformable bodies (see, e.g., <a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html" title="DeformableModel implements the interface in PhysicalModel and provides the functionalities to specify...">multibody::DeformableModel</a>). For some of the <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The abstract base class for all shape specifications.">Shape</a> types (the mathematical primitives), Drake will provide a tetrahedralization of the shape at run time. However, Drake cannot yet do so for arbitrary surface meshes. Drake allows you to create your own tetrahedral mesh offline and request that Drake use it. We use the <a href="https://examples.vtk.org/site/VTKFileFormats/">.vtk</a> file format.</p>
+<p>Depending on the application (hydroelastics or deformable bodies), not every tetrahedralization is equally valid. There are best practices for each domain which must be followed to get best results. More details on these best practices are coming.</p>
+<p>Drake can compute the convex hull for a tetrahedral .vtk file, so it is fully compatible with <a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">Convex</a>.</p>
 <p>In addition to specifying the tetrahedral mesh for deformable or compliant hydroelastic geometries, the .vtk file can be used more generally:</p>
 <ul>
-<li>When specified as <a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">Convex</a> without hydroelastic properties, it produces the same representation for point contact as if you'd provided an .obj of just the surface polygons.</li>
-<li>When specified as <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) triangular surface mesh.">Mesh</a> without hydroelastic properties, it is treated as a non-convex surface mesh; its convex hull is used for point contact.</li>
+<li>Illustration roles<ul>
+<li>A <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) mesh.">Mesh</a> that references a tetrahedral .vtk file cannot have the illustration role assigned to it.</li>
 </ul>
-<p>N.B. The .vtk file must still define a tetrahedral mesh and <em>not</em> a surface mesh.</p>
+</li>
+<li>Perception roles<ul>
+<li>A <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) mesh.">Mesh</a> that references a tetrahedral .vtk file cannot have the perception role assigned to it.</li>
+</ul>
+</li>
+<li><p class="startli">Proximity role</p><ul>
+<li>A <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) mesh.">Mesh</a> that references a tetrahedral .vtk file can declared to have a rigid* hydroelastic representation. In that case, the tetrahedral mesh's surface is used (as a rigid triangle mesh).</li>
+<li>When specified as <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) mesh.">Mesh</a> without hydroelastic properties, it is treated as a non-convex surface mesh; its convex hull is used as documented above.</li>
+</ul>
+<p class="startli">N.B. The .vtk file must still define a tetrahedral mesh and <em>not</em> a surface mesh.</p>
+</li>
+</ul>
 <h1><a class="anchor" id="geometry_materials"></a>
 Drake materials and the specification heuristic</h1>
 <p>Drake has a very rudimentary <em>internal</em> definition of visual materials. Don't mistake a "visual" material from a "dynamics" material. The latter consists of parameters such as elasticity, friction, etc. The former models how <em>light</em> interacts with the object including parameters such as diffuse color, specularity, etc. Drakes visual material model is based on the <a href="https://en.wikipedia.org/wiki/Phong_shading">Phong shading model</a>, but only makes use of a subset of that model's parameters. Currently, only the diffuse color property is parameterized. It can be either a single <a class="el" href="classdrake_1_1geometry_1_1_rgba.html" title="Defines RGBA (red, green, blue, alpha) values on the range [0, 1].">Rgba</a> value, or a texture map.</p>
@@ -290,7 +324,7 @@ Drake materials and the specification heuristic</h1>
 <li>Default diffuse color defined by geometry consumer (visualizer or render engine) will be applied.</li>
 </ol>
 <hr/>
-<p><a class="anchor" id="file_footnote_1"></a> ¹ The distinction between <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) triangular surface mesh.">Mesh</a> and <a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">Convex</a> is only relevant for proximity queries; a <a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">Convex</a> shape is treated differently from a <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) triangular surface mesh.">Mesh</a> shape. For illustration and perception roles, there is no practical distinction. </p>
+<p><a class="anchor" id="file_footnote_1"></a> ¹ The distinction between <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) mesh.">Mesh</a> and <a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">Convex</a> is only relevant for proximity queries; a <a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">Convex</a> shape is treated differently from a <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) mesh.">Mesh</a> shape. For illustration and perception roles, there is no practical distinction. </p>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- footer -->

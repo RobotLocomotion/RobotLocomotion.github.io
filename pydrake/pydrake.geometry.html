@@ -1464,6 +1464,15 @@ volume.</p>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">Convex</span></span><a class="headerlink" href="#pydrake.geometry.Convex" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.Shape" title="pydrake.geometry.Shape"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.geometry.Shape</span></code></a></p>
 <p>Definition of a <em>convex</em> surface mesh.</p>
+<p>This shape is <em>not</em> the mesh contained in the file named by
+<code class="docutils literal notranslate"><span class="pre">filename</span></code>. It is the convex hull of that mesh. As such, the only
+contents of the mesh file that matter are the vertex positions. All
+other data is ignored. This includes materials, textures, normals etc.
+This is true for <em>all</em> roles. Its appearance in an illustration or
+perception role, will be a faceted polytope whose color is defined by
+its assigned properties (or by the geometry consumer’s defaults).</p>
+<p>Because Drake computes the convex hull, the named mesh file need not
+be convex.</p>
 <p>The mesh is defined in a canonical frame C, implicit in the file
 parsed. Upon loading it in SceneGraph it can be scaled around the
 origin of C by a given <code class="docutils literal notranslate"><span class="pre">scale</span></code> amount.</p>
@@ -1473,8 +1482,7 @@ origin of C by a given <code class="docutils literal notranslate"><span class="p
 <dd><p>Constructs a convex shape specification from the file located at the
 given file path. Optionally uniformly scaled by the given scale
 factor.</p>
-<p>We only support an .obj file with only one polyhedron. We assume that
-the polyhedron is convex.</p>
+<p>The mesh file referenced can be an .obj, .gltf, or a tetrahedral .vtk.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">filename</span></code>:</dt><dd><p>The file name; if it is not absolute, it will be interpreted
 relative to the current working directory.</p>
@@ -1485,10 +1493,6 @@ relative to the current working directory.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if the .obj file doesn't define a single object. This</strong> – </p></li>
-<li><p><strong>can happen if it is empty</strong><strong>, </strong><strong>if there are multiple object-name</strong> – </p></li>
-<li><p><strong>statements</strong><strong> (</strong><strong>e.g.</strong><strong>, </strong><strong>&quot;o object_name&quot;</strong><strong>)</strong><strong>, or </strong><strong>if there are faces defined</strong> – </p></li>
-<li><p><strong>outside a single object-name statement.</strong> – </p></li>
 <li><p><strong>RuntimeError if scale &lt; 1e-8. Note that a negative scale is</strong> – </p></li>
 <li><p><strong>considered valid. We want to preclude scales near zero but</strong> – </p></li>
 <li><p><strong>recognise that scale is a convenience tool for &quot;tweaking&quot; models.</strong> – </p></li>
@@ -3709,21 +3713,46 @@ e.g., render label validation).</p>
 <dt class="sig sig-object py" id="pydrake.geometry.Mesh">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">Mesh</span></span><a class="headerlink" href="#pydrake.geometry.Mesh" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.Shape" title="pydrake.geometry.Shape"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.geometry.Shape</span></code></a></p>
-<p>Definition of a general (possibly non-convex) triangular surface mesh.
-Meshes can be used for illustration and perception roles, but have
-limited proximity support. See the documentation of QueryObject’s
-proximity queries to see how meshes are used in each type of proximity
-query.</p>
+<p>Definition of a general (possibly non-convex) mesh.</p>
+<p>The mesh may be a triangular surface mesh or a tetrahedral volume
+mesh, depending on how it used.</p>
+<p>Meshes can be used with all three roles but, currently, the support
+for the proximity role is limited. Where a general mesh is not
+supported, the mesh is replaced by its convex hull. See the
+documentation of QueryObject’s proximity queries for more details. The
+notable cases where the actual mesh topology is used includes:</p>
+<ul class="simple">
+<li><p>Specifying the Mesh as rigid hydroelastic.</p></li>
+<li><p>Specifying the Mesh as compliant hydroelastic (when it references a</p></li>
+</ul>
+<p>tetrahedral .vtk file).
+- Specifying the Mesh as deformable (when it references a tetrahedral .vtk
+file).</p>
+<p>This convex-hull substitution is a regrettable stop-gap solution until
+we fully support general, non-convex meshes throughout proximity
+queries.</p>
+<p>For visual roles (illustration and perception), the specified mesh
+file is used as directly as possible.</p>
 <p>The mesh is defined in a canonical frame C, implicit in the file
 parsed. Upon loading it in SceneGraph it can be scaled around the
 origin of C by a given <code class="docutils literal notranslate"><span class="pre">scale</span></code> amount.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.Mesh.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Mesh" title="pydrake.geometry.Mesh"><span class="pre">pydrake.geometry.Mesh</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.Mesh.__init__" title="Permalink to this definition"></a></dt>
-<dd><p>Constructs a mesh specification from the mesh file located at the
-given file path; if the path is not absolute, it will be interpreted
-relative to the current working directory. Optionally uniformly scaled
-by the given scale factor.</p>
+<dd><p>Constructs a mesh shape specification from the mesh file located at
+the given file path. Optionally uniformly scaled by the given scale
+factor.</p>
+<p>The mesh file referenced can be an .obj, a volume mesh in a .vtk, or a
+.gltf file. However, not all file formats are appropriate for all
+roles. (E.g., a tetrahedral .vtk file should not be assigned a
+perception role.)</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">filename</span></code>:</dt><dd><p>The file name; if it is not absolute, it will be interpreted
+relative to the current working directory.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">scale</span></code>:</dt><dd><p>An optional scale to coordinates.</p>
+</dd>
+</dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6837,17 +6866,22 @@ implementation. That has several implications, as described below:</p>
 Capsule | yes | yes | | Ellipsoid | yes | yes | | HalfSpace | yes |
 yes | | Mesh | yesᵃ | yesᵇ | | Convex | yesᶜ | yesᶜ |</p>
 <ul class="simple">
-<li><p>ᵃ For compliant Mesh, please specify a tetrahedral mesh</p></li>
+<li><p>ᵃ The exact representation of a compliant mesh depends on the type of</p></li>
 </ul>
-<p>in a VTK file in Mesh(filename). This external working
+<p>mesh file it references:
+- .obj: the convex hull of the mesh will be used (as if it were
+declared to be a Convex shape).
+- .vtk: the tetrahedral mesh will be used directly. This external
+working
 &lt;a href=”<a class="reference external" href="https://docs.google.com/document/d/1VZtVsxIjOLKvgQ8SNSrF6PtWuPW5z9PP7-dQuxfmqpc/edit?usp=sharing">https://docs.google.com/document/d/1VZtVsxIjOLKvgQ8SNSrF6PtWuPW5z9PP7-dQuxfmqpc/edit?usp=sharing</a>”&gt;
 document&lt;/a&gt; provides guidance how to generate a tetrahedral mesh
 in a VTK file from a surface mesh in an OBJ file.
 - ᵇ For rigid Mesh, please specify a surface mesh in an OBJ file in
 Mesh(filename). A tetrahedral mesh in a VTK file can also be
 specified.
-- ᶜ For both compliant Convex and rigid Convex, please specify a surface
-mesh in an OBJ file in Convex(filename).</p>
+- ᶜ The Convex shape can reference either an .obj or a .vtk tetrahedral
+mesh. In both cases, its convex hull will be used to define the
+hydroelastic representation.</p>
 <ul class="simple">
 <li><p>We do not support contact between two rigid geometries. One geometry</p></li>
 </ul>
@@ -7280,13 +7314,13 @@ as a zero-radius sphere.</p>
 <div class="line-block">
 <div class="line">Scalar | Box | Capsule | Convex | Cylinder | Ellipsoid | HalfSpace |</div>
 </div>
-<p>Mesh | Sphere | | :—-: | :—–: | :——: | :—–: | :——-: |
-:——–: | :——–: | :—–: | :—–: | | double | 2e-15 | 4e-15
-| ᵃ | 3e-15 | 3e-5ᵇ | 5e-15 | ᵃ | 4e-15 | | AutoDiffXd | 1e-15 | 4e-15
-| ᵃ | ᵃ | ᵃ | 5e-15 | ᵃ | 3e-15 | | Expression | ᵃ | ᵃ | ᵃ | ᵃ | ᵃ | ᵃ
-| ᵃ | ᵃ | <strong>*Table 8*</strong>: Worst observed error (in m) for 2mm
-penetration/separation between geometry approximately 20cm in size and
-a point.</p>
+<p>Mesh | Sphere | | :——–: | :—–: | :——: | :—–: |
+:——-: | :——–: | :——–: | :—–: | :—–: | | double |
+2e-15 | 4e-15 | ᵃ | 3e-15 | 3e-5ᵇ | 5e-15 | ᵃ | 4e-15 | | AutoDiffXd |
+1e-15 | 4e-15 | ᵃ | ᵃ | ᵃ | 5e-15 | ᵃ | 3e-15 | | Expression | ᵃ | ᵃ |
+ᵃ | ᵃ | ᵃ | ᵃ | ᵃ | ᵃ | <strong>*Table 8*</strong>: Worst observed error (in m) for
+2mm penetration/separation between geometry approximately 20cm in size
+and a point.</p>
 <ul class="simple">
 <li><p>ᵃ Unsupported geometry/scalar combinations are simply ignored; no results</p></li>
 </ul>
@@ -7613,17 +7647,22 @@ implementation. That has several implications, as described below:</p>
 Capsule | yes | yes | | Ellipsoid | yes | yes | | HalfSpace | yes |
 yes | | Mesh | yesᵃ | yesᵇ | | Convex | yesᶜ | yesᶜ |</p>
 <ul class="simple">
-<li><p>ᵃ For compliant Mesh, please specify a tetrahedral mesh</p></li>
+<li><p>ᵃ The exact representation of a compliant mesh depends on the type of</p></li>
 </ul>
-<p>in a VTK file in Mesh(filename). This external working
+<p>mesh file it references:
+- .obj: the convex hull of the mesh will be used (as if it were
+declared to be a Convex shape).
+- .vtk: the tetrahedral mesh will be used directly. This external
+working
 &lt;a href=”<a class="reference external" href="https://docs.google.com/document/d/1VZtVsxIjOLKvgQ8SNSrF6PtWuPW5z9PP7-dQuxfmqpc/edit?usp=sharing">https://docs.google.com/document/d/1VZtVsxIjOLKvgQ8SNSrF6PtWuPW5z9PP7-dQuxfmqpc/edit?usp=sharing</a>”&gt;
 document&lt;/a&gt; provides guidance how to generate a tetrahedral mesh
 in a VTK file from a surface mesh in an OBJ file.
 - ᵇ For rigid Mesh, please specify a surface mesh in an OBJ file in
 Mesh(filename). A tetrahedral mesh in a VTK file can also be
 specified.
-- ᶜ For both compliant Convex and rigid Convex, please specify a surface
-mesh in an OBJ file in Convex(filename).</p>
+- ᶜ The Convex shape can reference either an .obj or a .vtk tetrahedral
+mesh. In both cases, its convex hull will be used to define the
+hydroelastic representation.</p>
 <ul class="simple">
 <li><p>We do not support contact between two rigid geometries. One geometry</p></li>
 </ul>
@@ -8056,13 +8095,13 @@ as a zero-radius sphere.</p>
 <div class="line-block">
 <div class="line">Scalar | Box | Capsule | Convex | Cylinder | Ellipsoid | HalfSpace |</div>
 </div>
-<p>Mesh | Sphere | | :—-: | :—–: | :——: | :—–: | :——-: |
-:——–: | :——–: | :—–: | :—–: | | double | 2e-15 | 4e-15
-| ᵃ | 3e-15 | 3e-5ᵇ | 5e-15 | ᵃ | 4e-15 | | AutoDiffXd | 1e-15 | 4e-15
-| ᵃ | ᵃ | ᵃ | 5e-15 | ᵃ | 3e-15 | | Expression | ᵃ | ᵃ | ᵃ | ᵃ | ᵃ | ᵃ
-| ᵃ | ᵃ | <strong>*Table 8*</strong>: Worst observed error (in m) for 2mm
-penetration/separation between geometry approximately 20cm in size and
-a point.</p>
+<p>Mesh | Sphere | | :——–: | :—–: | :——: | :—–: |
+:——-: | :——–: | :——–: | :—–: | :—–: | | double |
+2e-15 | 4e-15 | ᵃ | 3e-15 | 3e-5ᵇ | 5e-15 | ᵃ | 4e-15 | | AutoDiffXd |
+1e-15 | 4e-15 | ᵃ | ᵃ | ᵃ | 5e-15 | ᵃ | 3e-15 | | Expression | ᵃ | ᵃ |
+ᵃ | ᵃ | ᵃ | ᵃ | ᵃ | ᵃ | <strong>*Table 8*</strong>: Worst observed error (in m) for
+2mm penetration/separation between geometry approximately 20cm in size
+and a point.</p>
 <ul class="simple">
 <li><p>ᵃ Unsupported geometry/scalar combinations are simply ignored; no results</p></li>
 </ul>
@@ -8706,13 +8745,13 @@ as a zero-radius sphere.</p>
 <div class="line-block">
 <div class="line">Scalar | Box | Capsule | Convex | Cylinder | Ellipsoid | HalfSpace |</div>
 </div>
-<p>Mesh | Sphere | | :—-: | :—–: | :——: | :—–: | :——-: |
-:——–: | :——–: | :—–: | :—–: | | double | 2e-15 | 4e-15
-| ᵃ | 3e-15 | 3e-5ᵇ | 5e-15 | ᵃ | 4e-15 | | AutoDiffXd | 1e-15 | 4e-15
-| ᵃ | ᵃ | ᵃ | 5e-15 | ᵃ | 3e-15 | | Expression | ᵃ | ᵃ | ᵃ | ᵃ | ᵃ | ᵃ
-| ᵃ | ᵃ | <strong>*Table 8*</strong>: Worst observed error (in m) for 2mm
-penetration/separation between geometry approximately 20cm in size and
-a point.</p>
+<p>Mesh | Sphere | | :——–: | :—–: | :——: | :—–: |
+:——-: | :——–: | :——–: | :—–: | :—–: | | double |
+2e-15 | 4e-15 | ᵃ | 3e-15 | 3e-5ᵇ | 5e-15 | ᵃ | 4e-15 | | AutoDiffXd |
+1e-15 | 4e-15 | ᵃ | ᵃ | ᵃ | 5e-15 | ᵃ | 3e-15 | | Expression | ᵃ | ᵃ |
+ᵃ | ᵃ | ᵃ | ᵃ | ᵃ | ᵃ | <strong>*Table 8*</strong>: Worst observed error (in m) for
+2mm penetration/separation between geometry approximately 20cm in size
+and a point.</p>
 <ul class="simple">
 <li><p>ᵃ Unsupported geometry/scalar combinations are simply ignored; no results</p></li>
 </ul>

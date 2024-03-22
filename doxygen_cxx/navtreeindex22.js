@@ -1,5 +1,7 @@
 var NAVTREEINDEX22 =
 {
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation.html#a91b3d512821b5f210669cef35d8e4859":[1,4,2,1,1,0],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html":[1,1,0,22],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a198bf2c564777ff4d7d5acd711e5e349":[1,1,0,22,9],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a3cbd3e24f7648ab7712c803ca8a63f3e":[1,1,0,22,10],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a4e8411c6f694362a4520129e1e7bc3b4":[1,1,0,22,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX22 =
 "classdrake_1_1schema_1_1_distribution_vector.html#ab3de9dee6ae7b9e5eab7ea60911553ca":[3,0,0,12,3,6],
 "classdrake_1_1schema_1_1_distribution_vector.html#ac55f9292f1e0f747e75526151ae869bc":[3,0,0,12,3,1],
 "classdrake_1_1schema_1_1_distribution_vector.html#ad3bfe7c8dd211e654d170fa8c3874e41":[3,0,0,12,3,5],
-"classdrake_1_1schema_1_1_gaussian.html":[3,0,0,12,4],
-"classdrake_1_1schema_1_1_gaussian.html#a00398c6c9c4a255df67ab03035ab5628":[3,0,0,12,4,1],
-"classdrake_1_1schema_1_1_gaussian.html#a13884ab1df4ecb9b600a2af9a2cf7eb9":[3,0,0,12,4,5]
+"classdrake_1_1schema_1_1_gaussian.html":[3,0,0,12,4]
 };

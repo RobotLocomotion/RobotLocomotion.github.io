@@ -167,6 +167,8 @@ $(document).ready(function(){initNavTree('classdrake_1_1geometry_1_1_convex.html
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Definition of a <em>convex</em> surface mesh. </p>
+<p>This shape is <em>not</em> the mesh contained in the file named by <code>filename</code>. It is the convex hull of that mesh. As such, the only contents of the mesh file that matter are the vertex positions. All other data is ignored. This includes materials, textures, normals etc. This is true for <em>all</em> roles. Its appearance in an illustration or perception role, will be a faceted polytope whose color is defined by its assigned properties (or by the geometry consumer's defaults).</p>
+<p>Because Drake computes the convex hull, the named mesh file need not be convex.</p>
 <p>The mesh is defined in a canonical frame C, implicit in the file parsed. Upon loading it in <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> it can be scaled around the origin of C by a given <code>scale</code> amount. </p>
 </div>
 <p><code>#include &lt;drake/geometry/shape_specification.h&gt;</code></p>
@@ -185,6 +187,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5a2ba33fb44bb4a5f4e273a5d9d440ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5109cb042f782c4a77fcb072e4d4bf10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_convex.html#a5109cb042f782c4a77fcb072e4d4bf10">scale</a> () const</td></tr>
 <tr class="separator:a5109cb042f782c4a77fcb072e4d4bf10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d96b16cce43676ccf7e0614703c9fc8"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1_polygon_surface_mesh.html">PolygonSurfaceMesh</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_convex.html#a9d96b16cce43676ccf7e0614703c9fc8">convex_hull</a> () const</td></tr>
+<tr class="memdesc:a9d96b16cce43676ccf7e0614703c9fc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the convex hull of the named mesh.  <a href="#a9d96b16cce43676ccf7e0614703c9fc8">More...</a><br /></td></tr>
+<tr class="separator:a9d96b16cce43676ccf7e0614703c9fc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
 <tr class="memitem:ac71926f74e5eb4d52ebc237f44cf1b18"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_convex.html#ac71926f74e5eb4d52ebc237f44cf1b18">Convex</a> (const <a class="el" href="classdrake_1_1geometry_1_1_convex.html">Convex</a> &amp;)=default</td></tr>
 <tr class="separator:ac71926f74e5eb4d52ebc237f44cf1b18"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -318,7 +323,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Constructs a convex shape specification from the file located at the given file path. </p>
 <p>Optionally uniformly scaled by the given scale factor.</p>
-<p>We only support an .obj file with only one polyhedron. We assume that the polyhedron is convex.</p>
+<p>The mesh file referenced can be an .obj, .gltf, or a tetrahedral .vtk.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">filename</td><td>The file name; if it is not absolute, it will be interpreted relative to the current working directory. </td></tr>
@@ -328,7 +333,6 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if the .obj file doesn't define a single object. This can happen if it is empty, if there are multiple object-name statements (e.g., "o object_name"), or if there are faces defined outside a single object-name statement. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if |scale| &lt; 1e-8. Note that a negative scale is considered valid. We want to preclude scales near zero but recognise that scale is a convenience tool for "tweaking" models. 8 orders of magnitude should be plenty without considering revisiting the model itself. </td></tr>
   </table>
   </dd>
@@ -362,6 +366,32 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a9d96b16cce43676ccf7e0614703c9fc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d96b16cce43676ccf7e0614703c9fc8">&#9670;&nbsp;</a></span>convex_hull()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1geometry_1_1_polygon_surface_mesh.html">PolygonSurfaceMesh</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;&amp; convex_hull </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reports the convex hull of the named mesh. </p>
+<p>Note: the convex hull is computed on demand on the first invocation. All subsequent invocations should have an O(1) cost.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td>the referenced mesh data cannot be read or is degenerate (insufficient number of vertices, co-linear or coincident vertices, etc.) All of the vertices lying on a plane is <em>not</em> considered degenerate. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a5a2ba33fb44bb4a5f4e273a5d9d440ea"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5a2ba33fb44bb4a5f4e273a5d9d440ea">&#9670;&nbsp;</a></span>extension()</h2>
 

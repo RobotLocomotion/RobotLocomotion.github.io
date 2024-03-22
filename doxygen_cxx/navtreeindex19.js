@@ -1,5 +1,7 @@
 var NAVTREEINDEX19 =
 {
+"classdrake_1_1multibody_1_1_triangle_quadrature_rule.html#a7e3b1644467cb91e5b886b97a10ce047":[3,0,0,8,103,0],
+"classdrake_1_1multibody_1_1_triangle_quadrature_rule.html#a8a3a4c92ec269f8a9bb5100cf1e9820b":[3,0,0,8,103,1],
 "classdrake_1_1multibody_1_1_triangle_quadrature_rule.html#a97c4388a09a5a153905340812d256d2a":[3,0,0,8,103,2],
 "classdrake_1_1multibody_1_1_triangle_quadrature_rule.html#a9ecf49938d41de3ed0378c11cd6e8960":[3,0,0,8,103,3],
 "classdrake_1_1multibody_1_1_triangle_quadrature_rule.html#aab13b7707222ff73198e714da6069fe6":[3,0,0,8,103,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX19 =
 "classdrake_1_1multibody_1_1fem_1_1_damping_model.html#a92fc5f62ebd60ae740cf3820ae95ebda":[3,0,0,8,2,0,5],
 "classdrake_1_1multibody_1_1fem_1_1_damping_model.html#aa244069969fa102d54cccacc207808c4":[3,0,0,8,2,0,0],
 "classdrake_1_1multibody_1_1fem_1_1_damping_model.html#aa6a18a1b58417f8d4f8a7838bb470fc7":[3,0,0,8,2,0,3],
-"classdrake_1_1multibody_1_1fem_1_1_damping_model.html#ab2b276774befbd68c810a4d7792ff376":[3,0,0,8,2,0,1],
-"classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html":[3,0,0,8,2,1],
-"classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html#a220b34cff05e3d9969b48779570a938f":[3,0,0,8,2,1,16]
+"classdrake_1_1multibody_1_1fem_1_1_damping_model.html#ab2b276774befbd68c810a4d7792ff376":[3,0,0,8,2,0,1]
 };

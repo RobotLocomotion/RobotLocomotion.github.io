@@ -1,5 +1,7 @@
 var NAVTREEINDEX46 =
 {
+"decompose_8h.html#a0c152941a4e06624bac5926fac2d4e32":[4,0,0,1,3,4,1],
+"decompose_8h.html#a13c0db41d89c9257d2fbfc4928fa5bd7":[4,0,0,1,3,4,9],
 "decompose_8h.html#a168045cc4df5fee36f317095c2a9f891":[4,0,0,1,3,4,5],
 "decompose_8h.html#a47d95a6b1bc2f740b30a4735cc6dcd3c":[4,0,0,1,3,4,0],
 "decompose_8h.html#a4f9f98ac0c3db06d72227b0502cf8934":[4,0,0,1,3,4,7],
@@ -247,7 +249,5 @@ var NAVTREEINDEX46 =
 "drake__assert_8h.html":[4,0,0,1,18],
 "drake__assert_8h.html#a0d126d5c79d6e74d5f03f8c81e4b3a63":[4,0,0,1,18,0],
 "drake__assert_8h.html#a53797785bb2511ded7061028fcca65c5":[4,0,0,1,18,1],
-"drake__assert_8h.html#a90a6aa22721ddd3bc514c45d8e1d8674":[4,0,0,1,18,2],
-"drake__assert_8h.html#aaf9506c208e2a7d09f67d1a9ab84992a":[4,0,0,1,18,3],
-"drake__assertion__error_8h.html":[4,0,0,1,19]
+"drake__assert_8h.html#a90a6aa22721ddd3bc514c45d8e1d8674":[4,0,0,1,18,2]
 };

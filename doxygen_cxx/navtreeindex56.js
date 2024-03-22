@@ -1,5 +1,8 @@
 var NAVTREEINDEX56 =
 {
+"simulator__status_8h.html":[4,0,0,12,0,29],
+"sine_8h.html":[4,0,0,12,6,22],
+"single__output__vector__source_8h.html":[4,0,0,12,3,35],
 "slicing__and__indexing_8h.html":[4,0,0,8,10,35],
 "sliding__friction__complementarity__constraint_8h.html":[4,0,0,8,8,5],
 "sliding__friction__complementarity__constraint_8h.html#gaa1fd44e85ab30519ef7a904a4ebeb82d":[4,0,0,8,8,5,0],
@@ -69,7 +72,7 @@ var NAVTREEINDEX56 =
 "sorted__triplet_8h.html":[4,0,0,4,2,55],
 "sos__basis__generator_8h.html":[4,0,0,11,57],
 "sos__basis__generator_8h.html#a6703c1f6f99f3e06a86f6a54e7dbd63d":[4,0,0,11,57,0],
-"spanning__forest_8h.html":[4,0,0,8,13,8],
+"spanning__forest_8h.html":[4,0,0,8,13,9],
 "sparse__and__dense__matrix_8h.html":[4,0,0,11,58],
 "sparse__linear__operator_8h.html":[4,0,0,8,2,18],
 "spatial__acceleration_8h.html":[4,0,0,8,6,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX56 =
 "structdrake_1_1dummy__value_3_01symbolic_1_1_expression_01_4.html#a0bc222e26c2e949909b7f7845e9cff18":[3,0,0,25,0],
 "structdrake_1_1geometry_1_1_drake_visualizer_params.html":[3,0,0,4,11],
 "structdrake_1_1geometry_1_1_drake_visualizer_params.html#a2d836029fd25573125bd231e1ad19ecb":[3,0,0,4,11,3],
-"structdrake_1_1geometry_1_1_drake_visualizer_params.html#a3a415b5e7e1f412ec0002e0251ced626":[3,0,0,4,11,2],
-"structdrake_1_1geometry_1_1_drake_visualizer_params.html#a3fa2976e721c8d9ed2ed3c79c6fdab2e":[3,0,0,4,11,1],
-"structdrake_1_1geometry_1_1_drake_visualizer_params.html#a802a9c3334d60afa02164d2d559365e8":[3,0,0,4,11,5],
-"structdrake_1_1geometry_1_1_drake_visualizer_params.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,11,0]
+"structdrake_1_1geometry_1_1_drake_visualizer_params.html#a3a415b5e7e1f412ec0002e0251ced626":[3,0,0,4,11,2]
 };

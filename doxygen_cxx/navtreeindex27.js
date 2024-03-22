@@ -1,5 +1,7 @@
 var NAVTREEINDEX27 =
 {
+"classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#aa2789d79ee441d9c90e1234b5f08f801":[1,1,0,34,2],
+"classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#aa8e1e9254703f4bfe3d3e4d01807f441":[1,1,0,34,7],
 "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#ac070804dddf0300f7245aa6692940d95":[1,1,0,34,8],
 "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#af6182a9803c81d9ef793685fd891082f":[1,1,0,34,10],
 "classdrake_1_1solvers_1_1_quadratic_constraint.html":[1,1,0,25],
@@ -247,7 +249,5 @@ var NAVTREEINDEX27 =
 "classdrake_1_1symbolic_1_1_environment.html#a259cb5a711406a8c3e5d937eb9350cca":[3,0,0,14,5,28],
 "classdrake_1_1symbolic_1_1_environment.html#a29305669b60ca1680752e2fc3592ba99":[3,0,0,14,5,13],
 "classdrake_1_1symbolic_1_1_environment.html#a320bbed240a1470cd9be984ab1fbbb50":[3,0,0,14,5,11],
-"classdrake_1_1symbolic_1_1_environment.html#a39112ae08f6ffc7ee58c6aa79772e094":[3,0,0,14,5,14],
-"classdrake_1_1symbolic_1_1_environment.html#a3d26d853ee0e9c78a4fbb44e5a8488e0":[3,0,0,14,5,1],
-"classdrake_1_1symbolic_1_1_environment.html#a4b32e107dfb0df05488ec4ec410be075":[3,0,0,14,5,25]
+"classdrake_1_1symbolic_1_1_environment.html#a39112ae08f6ffc7ee58c6aa79772e094":[3,0,0,14,5,14]
 };

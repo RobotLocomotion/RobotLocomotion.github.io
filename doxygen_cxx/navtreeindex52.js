@@ -1,5 +1,7 @@
 var NAVTREEINDEX52 =
 {
+"linear__system_8h.html#gafef1c264968026046996e35551b7155e":[4,0,0,12,6,11,3],
+"linear__system__internal_8h.html":[4,0,0,12,6,12],
 "linear__system__solver_8h.html":[4,0,0,11,27],
 "linear__transform__density_8h.html":[4,0,0,12,6,13],
 "link__joint__graph_8h.html":[4,0,0,8,13,2],
@@ -7,6 +9,7 @@ var NAVTREEINDEX52 =
 "link__joint__graph__inlines_8h.html":[4,0,0,8,13,4],
 "link__joint__graph__joint_8h.html":[4,0,0,8,13,5],
 "link__joint__graph__link_8h.html":[4,0,0,8,13,6],
+"link__joint__graph__loop__constraint_8h.html":[4,0,0,8,13,7],
 "logistic__system_8h.html":[4,0,0,12,0,0,7],
 "luenberger__observer_8h.html":[4,0,0,12,2,1],
 "lyapunov_8h.html":[4,0,0,12,0,12],
@@ -185,7 +188,7 @@ var NAVTREEINDEX52 =
 "multibody__doxygen_8h.html":[4,0,0,8,16],
 "multibody__element_8h.html":[4,0,0,8,14,23],
 "multibody__forces_8h.html":[4,0,0,8,14,24],
-"multibody__graph_8h.html":[4,0,0,8,13,7],
+"multibody__graph_8h.html":[4,0,0,8,13,8],
 "multibody__plant_8h.html":[4,0,0,8,10,25],
 "multibody__plant_8h.html#a6f6e054758d34b83e86bea87d65dfe4e":[4,0,0,8,10,25,2],
 "multibody__plant_8h.html#a6f6e054758d34b83e86bea87d65dfe4ea0f9136530df40294d8404d10cc150423":[4,0,0,8,10,25,2,3],
@@ -245,9 +248,6 @@ var NAVTREEINDEX52 =
 "name__value_8h.html#a4f1f5c73dacf99966ffa810a1fd23cd3":[4,0,0,1,43,2],
 "namespacedrake.html":[3,0,0],
 "namespacedrake.html":[2,0,0],
-"namespacedrake_1_1ad.html":[2,0,0,0],
 "namespacedrake_1_1ad.html":[3,0,0,0],
-"namespacedrake_1_1assert.html":[3,0,0,1],
-"namespacedrake_1_1assert.html":[2,0,0,1],
-"namespacedrake_1_1common.html":[2,0,0,2]
+"namespacedrake_1_1ad.html":[2,0,0,0]
 };

@@ -49,6 +49,7 @@ var searchData=
   ['pointtolinedistanceconstraint',['PointToLineDistanceConstraint',['../classdrake_1_1multibody_1_1_point_to_line_distance_constraint.html',1,'drake::multibody']]],
   ['pointtopointdistanceconstraint',['PointToPointDistanceConstraint',['../classdrake_1_1multibody_1_1_point_to_point_distance_constraint.html',1,'drake::multibody']]],
   ['polygonsurfacemesh',['PolygonSurfaceMesh',['../classdrake_1_1geometry_1_1_polygon_surface_mesh.html',1,'drake::geometry']]],
+  ['polygonsurfacemesh_3c_20double_20_3e',['PolygonSurfaceMesh&lt; double &gt;',['../classdrake_1_1geometry_1_1_polygon_surface_mesh.html',1,'drake::geometry']]],
   ['polygonsurfacemeshtest',['PolygonSurfaceMeshTest',['../classdrake_1_1geometry_1_1_polygon_surface_mesh_test.html',1,'drake::geometry']]],
   ['polyhedronconstraint',['PolyhedronConstraint',['../classdrake_1_1multibody_1_1_polyhedron_constraint.html',1,'drake::multibody']]],
   ['polynomial',['Polynomial',['../classdrake_1_1symbolic_1_1_polynomial.html',1,'Polynomial'],['../classdrake_1_1_polynomial.html',1,'Polynomial&lt; T &gt;']]],

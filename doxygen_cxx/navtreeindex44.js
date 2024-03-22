@@ -1,5 +1,7 @@
 var NAVTREEINDEX44 =
 {
+"classdrake_1_1trajectories_1_1_bspline_trajectory.html#a2a8a7c06f6f68cd4e58721aab4eb5885":[3,0,0,17,1,18],
+"classdrake_1_1trajectories_1_1_bspline_trajectory.html#a34cedb829a75120bfb60c98f376c4c19":[3,0,0,17,1,10],
 "classdrake_1_1trajectories_1_1_bspline_trajectory.html#a3d0f848e23c2d6e2ff99c8838ad439f8":[3,0,0,17,1,4],
 "classdrake_1_1trajectories_1_1_bspline_trajectory.html#a576612a037dee8597b5975d3525b3a48":[3,0,0,17,1,6],
 "classdrake_1_1trajectories_1_1_bspline_trajectory.html#a641bfb18296d6976a000cf31c213dfdf":[3,0,0,17,1,13],
@@ -247,7 +249,5 @@ var NAVTREEINDEX44 =
 "classdrake_1_1visualization_1_1_colorize_depth_image.html#ab182668c7189b0a48787d990b1773aa0":[1,2,11,4,5],
 "classdrake_1_1visualization_1_1_colorize_depth_image.html#accd5e33fc91c644a938d014c26026f78":[1,2,11,4,4],
 "classdrake_1_1visualization_1_1_colorize_depth_image.html#ae35d904a52a563fef78643d4e612d2fd":[1,2,11,4,3],
-"classdrake_1_1visualization_1_1_colorize_label_image.html":[1,2,11,5],
-"classdrake_1_1visualization_1_1_colorize_label_image.html#a4a4d804bb9945b6a98fa44c1fc39ded8":[1,2,11,5,3],
-"classdrake_1_1visualization_1_1_colorize_label_image.html#a7e915b7642a98e2e3a657d531c40e4ed":[1,2,11,5,2]
+"classdrake_1_1visualization_1_1_colorize_label_image.html":[1,2,11,5]
 };

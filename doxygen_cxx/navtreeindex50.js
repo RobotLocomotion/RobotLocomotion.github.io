@@ -1,5 +1,7 @@
 var NAVTREEINDEX50 =
 {
+"globals_func.html":[4,1,1],
+"globals_vars.html":[4,1,2],
 "gradient_8h.html":[4,0,0,7,17],
 "gradient__util_8h.html":[4,0,0,7,18],
 "gradient__util_8h.html#a20c21cde851510ab3ae5a7527ed62d22":[4,0,0,7,18,13],
@@ -83,12 +85,12 @@ var NAVTREEINDEX50 =
 "group__default__scalars.html#ga3273477e81e9dcb7d96cfb28382798b6":[1,6,1,5],
 "group__default__scalars.html#ga6333534b3097a37c55fbacf434491e2e":[4,0,0,1,14,0],
 "group__default__scalars.html#ga6333534b3097a37c55fbacf434491e2e":[1,6,1,0],
-"group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[1,6,1,4],
 "group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[4,0,0,1,14,4],
+"group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[1,6,1,4],
 "group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[1,6,1,2],
 "group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[4,0,0,1,14,2],
-"group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[4,0,0,1,14,3],
 "group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[1,6,1,3],
+"group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[4,0,0,1,14,3],
 "group__discrete__systems.html":[1,2,9],
 "group__discretization.html":[1,3,0,5],
 "group__drake__contacts.html":[1,3,3],
@@ -112,8 +114,8 @@ var NAVTREEINDEX50 =
 "group__geometry__optimization.html#ga3a51e0fec449a0abcf498f78a2a390a8":[1,5,5,14],
 "group__geometry__optimization.html#ga5f3ad49bfffd1b9a968ed7f1bf4d4c80":[1,5,5,16],
 "group__geometry__optimization.html#ga5f3ad49bfffd1b9a968ed7f1bf4d4c80":[1,1,1,16],
-"group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af":[1,5,5,15],
 "group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af":[1,1,1,15],
+"group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af":[1,5,5,15],
 "group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6":[1,5,5,13],
 "group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6":[1,1,1,13],
 "group__geometry__roles.html":[1,5,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX50 =
 "iiwa__constants_8h.html#a9928d513b6bc1764162c83859fe70ad5a418831c3a400f7c6e099f1109c47b14d":[4,0,0,6,1,3,0,2],
 "iiwa__constants_8h.html#a9928d513b6bc1764162c83859fe70ad5aa3cad6375c1e6bdd5243a20d8cabc101":[4,0,0,6,1,3,0,0],
 "iiwa__constants_8h.html#aa604a09fa622f05945317405b3bb6b79":[4,0,0,6,1,3,1],
-"iiwa__constants_8h.html#ab5064aebe6beff8d3ab30a4455e0dc11":[4,0,0,6,1,3,5],
-"iiwa__constants_8h.html#ad5758b8a5ccb2514426434630787295d":[4,0,0,6,1,3,4],
-"iiwa__driver_8h.html":[4,0,0,6,1,4]
+"iiwa__constants_8h.html#ab5064aebe6beff8d3ab30a4455e0dc11":[4,0,0,6,1,3,5]
 };

@@ -23,12 +23,13 @@ var NAVTREEINDEX4 =
 "classdrake_1_1geometry_1_1_contact_surface.html#af931921055f30df1a5f7185dcefa83a2":[3,0,0,4,7,3],
 "classdrake_1_1geometry_1_1_convex.html":[3,0,0,4,8],
 "classdrake_1_1geometry_1_1_convex.html#a0835d42bc864d8d9d8323e4f157803f3":[3,0,0,4,8,2],
-"classdrake_1_1geometry_1_1_convex.html#a461227a8207000598c5578ed3428fbcd":[3,0,0,4,8,6],
-"classdrake_1_1geometry_1_1_convex.html#a5109cb042f782c4a77fcb072e4d4bf10":[3,0,0,4,8,8],
-"classdrake_1_1geometry_1_1_convex.html#a5a2ba33fb44bb4a5f4e273a5d9d440ea":[3,0,0,4,8,4],
-"classdrake_1_1geometry_1_1_convex.html#a64b4c300fe95c104df48d1328b1d381e":[3,0,0,4,8,5],
+"classdrake_1_1geometry_1_1_convex.html#a461227a8207000598c5578ed3428fbcd":[3,0,0,4,8,7],
+"classdrake_1_1geometry_1_1_convex.html#a5109cb042f782c4a77fcb072e4d4bf10":[3,0,0,4,8,9],
+"classdrake_1_1geometry_1_1_convex.html#a5a2ba33fb44bb4a5f4e273a5d9d440ea":[3,0,0,4,8,5],
+"classdrake_1_1geometry_1_1_convex.html#a64b4c300fe95c104df48d1328b1d381e":[3,0,0,4,8,6],
+"classdrake_1_1geometry_1_1_convex.html#a9d96b16cce43676ccf7e0614703c9fc8":[3,0,0,4,8,4],
 "classdrake_1_1geometry_1_1_convex.html#aae78da78d792b38ecf8a3b05f8f31058":[3,0,0,4,8,1],
-"classdrake_1_1geometry_1_1_convex.html#ab9b8bdc626d95cc812727195393f2899":[3,0,0,4,8,7],
+"classdrake_1_1geometry_1_1_convex.html#ab9b8bdc626d95cc812727195393f2899":[3,0,0,4,8,8],
 "classdrake_1_1geometry_1_1_convex.html#ac71926f74e5eb4d52ebc237f44cf1b18":[3,0,0,4,8,0],
 "classdrake_1_1geometry_1_1_convex.html#af6e6797b1b18f3012ba8f10ad734e61d":[3,0,0,4,8,3],
 "classdrake_1_1geometry_1_1_cylinder.html":[3,0,0,4,9],
@@ -248,6 +249,5 @@ var NAVTREEINDEX4 =
 "classdrake_1_1geometry_1_1_geometry_state.html#abe68c0c5789d461e1d2077774c0d9907":[3,0,0,4,22,26],
 "classdrake_1_1geometry_1_1_geometry_state.html#ac77bc5f9031b7902b411c0196db43b88":[3,0,0,4,22,39],
 "classdrake_1_1geometry_1_1_geometry_state.html#ac78aaecc0c0fce32f05da2879fde24a6":[3,0,0,4,22,2],
-"classdrake_1_1geometry_1_1_geometry_state.html#aca30abcce190c0618f4b6e57f7f56658":[3,0,0,4,22,47],
-"classdrake_1_1geometry_1_1_geometry_state.html#acaa0f71e9327ba0ba58b653046ca8619":[3,0,0,4,22,81]
+"classdrake_1_1geometry_1_1_geometry_state.html#aca30abcce190c0618f4b6e57f7f56658":[3,0,0,4,22,47]
 };
