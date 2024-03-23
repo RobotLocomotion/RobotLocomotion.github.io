@@ -395,7 +395,7 @@ var group__solver__evaluators =
     [ "LinearMatrixInequalityConstraint", "classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html", [
       [ "LinearMatrixInequalityConstraint", "classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#a4797a69a4a7f9a8301f07cb92c227117", null ],
       [ "LinearMatrixInequalityConstraint", "classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#a014f55daaf9e78a3ba95c4af7ea8c902", null ],
-      [ "LinearMatrixInequalityConstraint", "classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#a08d38d0111c17039b731232fb4396180", null ],
+      [ "LinearMatrixInequalityConstraint", "classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#a52a53a9acf0fd8a36ddbce016fe57272", null ],
       [ "~LinearMatrixInequalityConstraint", "classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#ab37e9a6561784595afc928dfc5657c8e", null ],
       [ "DoEval", "classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#a863f7df9d3ee10378794b4c6842a4377", null ],
       [ "DoEval", "classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#aa2431c2dbd82437d8f621033d8af8231", null ],
