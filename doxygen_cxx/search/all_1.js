@@ -266,6 +266,7 @@ var searchData=
   ['addworldorientationconstraint',['AddWorldOrientationConstraint',['../classdrake_1_1multibody_1_1_global_inverse_kinematics.html#abd9dab40309516418c4505d11b0e3207',1,'drake::multibody::GlobalInverseKinematics']]],
   ['addworldpositionconstraint',['AddWorldPositionConstraint',['../classdrake_1_1multibody_1_1_global_inverse_kinematics.html#a9dd2e395ffa22f3d6a83ff596a26f1ff',1,'drake::multibody::GlobalInverseKinematics']]],
   ['addworldrelativepositionconstraint',['AddWorldRelativePositionConstraint',['../classdrake_1_1multibody_1_1_global_inverse_kinematics.html#aec429d0b3253b415fcb92f22ba218c2b',1,'drake::multibody::GlobalInverseKinematics']]],
+  ['addzeroderivativeconstraints',['AddZeroDerivativeConstraints',['../classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html#a3f6b4f835d276bfd98c41e028a8af3bb',1,'drake::planning::trajectory_optimization::GcsTrajectoryOptimization::EdgesBetweenSubgraphs']]],
   ['adjacent_5fbodies_5fcollision_5ffilters',['adjacent_bodies_collision_filters',['../structdrake_1_1multibody_1_1_multibody_plant_config.html#a80e753afd58d6c37211d1e1caed32b24',1,'drake::multibody::MultibodyPlantConfig']]],
   ['advancependingevents',['AdvancePendingEvents',['../classdrake_1_1systems_1_1_simulator.html#ad8252b9d897ed041c44c301cfcd8c5ce',1,'drake::systems::Simulator']]],
   ['advanceto',['AdvanceTo',['../classdrake_1_1systems_1_1_simulator.html#aba4b04299c9b1d41d9dd85563600012d',1,'drake::systems::Simulator']]],

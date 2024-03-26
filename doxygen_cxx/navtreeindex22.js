@@ -1,5 +1,8 @@
 var NAVTREEINDEX22 =
 {
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation.html#a6b919734963d0c38356747786ca44f55":[1,4,2,1,1,4],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation.html#a6b91e418f6215db5d8ea7fc3b831c7ac":[1,4,2,1,1,2],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation.html#a732aeddf39ef1457d22d5629dca4e41c":[1,4,2,1,1,3],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation.html#a91b3d512821b5f210669cef35d8e4859":[1,4,2,1,1,0],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html":[1,1,0,22],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a198bf2c564777ff4d7d5acd711e5e349":[1,1,0,22,9],
@@ -54,10 +57,11 @@ var NAVTREEINDEX22 =
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#afce2be43547f60d510c7e46154eac653":[3,0,0,10,2,3,7],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#aff9544b6375a592b1b9bda5eb1149a6f":[3,0,0,10,2,3,10],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html":[3,0,0,10,2,3,0],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html#aa69be52668ec461d59f91ad7eaca3a89":[3,0,0,10,2,3,0,7],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html#a3f6b4f835d276bfd98c41e028a8af3bb":[3,0,0,10,2,3,0,5],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html#aa69be52668ec461d59f91ad7eaca3a89":[3,0,0,10,2,3,0,8],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html#aae29721eac65539aa19e424aaef66589":[3,0,0,10,2,3,0,1],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html#abf75b0f596cc9aa68c9819a4674f0269":[3,0,0,10,2,3,0,5],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html#ace0e9a0c85d4205f2a7d2a25aa24122c":[3,0,0,10,2,3,0,6],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html#abf75b0f596cc9aa68c9819a4674f0269":[3,0,0,10,2,3,0,6],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html#ace0e9a0c85d4205f2a7d2a25aa24122c":[3,0,0,10,2,3,0,7],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html#ad8c6ac3db7c5565d4742881f0f6e0c32":[3,0,0,10,2,3,0,2],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html#ae7ba9e174af2c666240c009b99d5dfa1":[3,0,0,10,2,3,0,0],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html#af27492cb5b0dbf8cd8ce10e792486052":[3,0,0,10,2,3,0,4],
@@ -245,9 +249,5 @@ var NAVTREEINDEX22 =
 "classdrake_1_1schema_1_1_distribution_vector.html#a3860015b1f97ecc4264b2730d4e0bc47":[3,0,0,12,3,2],
 "classdrake_1_1schema_1_1_distribution_vector.html#a631c0480a074fd9358d708348739fc9a":[3,0,0,12,3,0],
 "classdrake_1_1schema_1_1_distribution_vector.html#a6403b28da2ef8e7f4411ab3c09cf1890":[3,0,0,12,3,3],
-"classdrake_1_1schema_1_1_distribution_vector.html#ab1c17c7b68a6d51b97885b717a6465a3":[3,0,0,12,3,7],
-"classdrake_1_1schema_1_1_distribution_vector.html#ab3de9dee6ae7b9e5eab7ea60911553ca":[3,0,0,12,3,6],
-"classdrake_1_1schema_1_1_distribution_vector.html#ac55f9292f1e0f747e75526151ae869bc":[3,0,0,12,3,1],
-"classdrake_1_1schema_1_1_distribution_vector.html#ad3bfe7c8dd211e654d170fa8c3874e41":[3,0,0,12,3,5],
-"classdrake_1_1schema_1_1_gaussian.html":[3,0,0,12,4]
+"classdrake_1_1schema_1_1_distribution_vector.html#ab1c17c7b68a6d51b97885b717a6465a3":[3,0,0,12,3,7]
 };

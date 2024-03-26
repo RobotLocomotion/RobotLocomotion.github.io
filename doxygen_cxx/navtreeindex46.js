@@ -1,5 +1,9 @@
 var NAVTREEINDEX46 =
 {
+"decision__variable_8h.html#ac04cfbe6b8d63ecb463fc087385ce061":[4,0,0,11,17,2],
+"decision__variable_8h.html#aca924499b3b011a50d3bd9d051295efa":[4,0,0,11,17,5],
+"decision__variable_8h.html#acf84184cb10b49233b007295d1880e17":[4,0,0,11,17,1],
+"decompose_8h.html":[4,0,0,1,3,4],
 "decompose_8h.html#a0c152941a4e06624bac5926fac2d4e32":[4,0,0,1,3,4,1],
 "decompose_8h.html#a13c0db41d89c9257d2fbfc4928fa5bd7":[4,0,0,1,3,4,9],
 "decompose_8h.html#a168045cc4df5fee36f317095c2a9f891":[4,0,0,1,3,4,5],
@@ -245,9 +249,5 @@ var NAVTREEINDEX46 =
 "double__overloads_8h.html":[4,0,0,1,16],
 "double__overloads_8h.html#ad14dd00683f82b89dc0f08f9adec904e":[4,0,0,1,16,0],
 "doxygen_8h.html":[4,0,0,2,0,0],
-"doxygen__cxx_8h.html":[4,0,0,1,17],
-"drake__assert_8h.html":[4,0,0,1,18],
-"drake__assert_8h.html#a0d126d5c79d6e74d5f03f8c81e4b3a63":[4,0,0,1,18,0],
-"drake__assert_8h.html#a53797785bb2511ded7061028fcca65c5":[4,0,0,1,18,1],
-"drake__assert_8h.html#a90a6aa22721ddd3bc514c45d8e1d8674":[4,0,0,1,18,2]
+"doxygen__cxx_8h.html":[4,0,0,1,17]
 };

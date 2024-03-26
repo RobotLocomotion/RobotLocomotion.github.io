@@ -160,6 +160,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1geometry_1_1_shape.html'
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-types">Protected Types</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classdrake_1_1geometry_1_1_shape-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -194,6 +195,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aac993ecccd3d88aafefb6b8e3caa1dee"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_shape.html#aac993ecccd3d88aafefb6b8e3caa1dee">to_string</a> () const</td></tr>
 <tr class="memdesc:aac993ecccd3d88aafefb6b8e3caa1dee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string representation of this shape.  <a href="#aac993ecccd3d88aafefb6b8e3caa1dee">More...</a><br /></td></tr>
 <tr class="separator:aac993ecccd3d88aafefb6b8e3caa1dee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad60fe701b675aace3d2ab5b6f0b51871"><td class="memTemplParams" colspan="2">template&lt;typename ReturnType  = void, typename Visitor &gt; </td></tr>
+<tr class="memitem:ad60fe701b675aace3d2ab5b6f0b51871"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_shape.html#ad60fe701b675aace3d2ab5b6f0b51871">Visit</a> (Visitor &amp;&amp;visitor) const</td></tr>
+<tr class="memdesc:ad60fe701b675aace3d2ab5b6f0b51871"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls the given <code>visitor</code> function with <code>*this</code> as the sole argument, but with <code>*this</code> downcast to be the shape's concrete subclass.  <a href="#ad60fe701b675aace3d2ab5b6f0b51871">More...</a><br /></td></tr>
+<tr class="separator:ad60fe701b675aace3d2ab5b6f0b51871"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-types"></a>
+Protected Types</h2></td></tr>
+<tr class="memitem:a43c72bdd543f8aead9259092f6f85093"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_shape.html#a43c72bdd543f8aead9259092f6f85093">VariantShapeConstPtr</a> = std::variant&lt; const <a class="el" href="classdrake_1_1geometry_1_1_box.html">Box</a> *, const <a class="el" href="classdrake_1_1geometry_1_1_capsule.html">Capsule</a> *, const <a class="el" href="classdrake_1_1geometry_1_1_convex.html">Convex</a> *, const <a class="el" href="classdrake_1_1geometry_1_1_cylinder.html">Cylinder</a> *, const <a class="el" href="classdrake_1_1geometry_1_1_ellipsoid.html">Ellipsoid</a> *, const <a class="el" href="classdrake_1_1geometry_1_1_half_space.html">HalfSpace</a> *, const <a class="el" href="classdrake_1_1geometry_1_1_mesh.html">Mesh</a> *, const <a class="el" href="classdrake_1_1geometry_1_1_meshcat_cone.html">MeshcatCone</a> *, const <a class="el" href="classdrake_1_1geometry_1_1_sphere.html">Sphere</a> * &gt;</td></tr>
+<tr class="memdesc:a43c72bdd543f8aead9259092f6f85093"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) All concrete subclasses, as const pointers.  <a href="#a43c72bdd543f8aead9259092f6f85093">More...</a><br /></td></tr>
+<tr class="separator:a43c72bdd543f8aead9259092f6f85093"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -224,7 +235,35 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a7109f29ebaaa3e8c63e158df763d1c1c"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_shape.html#a7109f29ebaaa3e8c63e158df763d1c1c">do_to_string</a> () const =0</td></tr>
 <tr class="memdesc:a7109f29ebaaa3e8c63e158df763d1c1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) NVI for <a class="el" href="classdrake_1_1geometry_1_1_shape.html#aac993ecccd3d88aafefb6b8e3caa1dee" title="Returns a string representation of this shape.">to_string()</a>.  <a href="#a7109f29ebaaa3e8c63e158df763d1c1c">More...</a><br /></td></tr>
 <tr class="separator:a7109f29ebaaa3e8c63e158df763d1c1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae875c0568a075aca238c76718ef144d3"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classdrake_1_1geometry_1_1_shape.html#a43c72bdd543f8aead9259092f6f85093">VariantShapeConstPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_shape.html#ae875c0568a075aca238c76718ef144d3">get_variant_this</a> () const =0</td></tr>
+<tr class="memdesc:ae875c0568a075aca238c76718ef144d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) NVI-like helper function for <a class="el" href="classdrake_1_1geometry_1_1_shape.html#ad60fe701b675aace3d2ab5b6f0b51871" title="Calls the given visitor function with *this as the sole argument, but with *this downcast to be the s...">Visit()</a>.  <a href="#ae875c0568a075aca238c76718ef144d3">More...</a><br /></td></tr>
+<tr class="separator:ae875c0568a075aca238c76718ef144d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a43c72bdd543f8aead9259092f6f85093"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43c72bdd543f8aead9259092f6f85093">&#9670;&nbsp;</a></span>VariantShapeConstPtr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classdrake_1_1geometry_1_1_shape.html#a43c72bdd543f8aead9259092f6f85093">VariantShapeConstPtr</a> =  std::variant&lt; const <a class="el" href="classdrake_1_1geometry_1_1_box.html">Box</a>*, const <a class="el" href="classdrake_1_1geometry_1_1_capsule.html">Capsule</a>*, const <a class="el" href="classdrake_1_1geometry_1_1_convex.html">Convex</a>*, const <a class="el" href="classdrake_1_1geometry_1_1_cylinder.html">Cylinder</a>*, const <a class="el" href="classdrake_1_1geometry_1_1_ellipsoid.html">Ellipsoid</a>*, const <a class="el" href="classdrake_1_1geometry_1_1_half_space.html">HalfSpace</a>*, const <a class="el" href="classdrake_1_1geometry_1_1_mesh.html">Mesh</a>*, const <a class="el" href="classdrake_1_1geometry_1_1_meshcat_cone.html">MeshcatCone</a>*, const <a class="el" href="classdrake_1_1geometry_1_1_sphere.html">Sphere</a>*&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Internal use only) All concrete subclasses, as const pointers. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ae7755ce81583b9f776b857856f7cc218"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae7755ce81583b9f776b857856f7cc218">&#9670;&nbsp;</a></span>~Shape()</h2>
@@ -474,6 +513,33 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ae875c0568a075aca238c76718ef144d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae875c0568a075aca238c76718ef144d3">&#9670;&nbsp;</a></span>get_variant_this()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classdrake_1_1geometry_1_1_shape.html#a43c72bdd543f8aead9259092f6f85093">VariantShapeConstPtr</a> get_variant_this </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Internal use only) NVI-like helper function for <a class="el" href="classdrake_1_1geometry_1_1_shape.html#ad60fe701b675aace3d2ab5b6f0b51871" title="Calls the given visitor function with *this as the sole argument, but with *this downcast to be the s...">Visit()</a>. </p>
+
+</div>
+</div>
 <a id="a9606f802f51cf313698b724cd8becfee"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9606f802f51cf313698b724cd8becfee">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
@@ -596,6 +662,33 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the (unqualified) type name of this <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The abstract base class for all shape specifications.">Shape</a>, e.g., "Box". </p>
+
+</div>
+</div>
+<a id="ad60fe701b675aace3d2ab5b6f0b51871"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad60fe701b675aace3d2ab5b6f0b51871">&#9670;&nbsp;</a></span>Visit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">decltype(auto) Visit </td>
+          <td>(</td>
+          <td class="paramtype">Visitor &amp;&amp;&#160;</td>
+          <td class="paramname"><em>visitor</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calls the given <code>visitor</code> function with <code>*this</code> as the sole argument, but with <code>*this</code> downcast to be the shape's concrete subclass. </p>
+<p>For example, if this shape is a Box then calls <code>visitor(static_cast&lt;const <a class="el" href="classdrake_1_1geometry_1_1_box.html" title="Definition of a box.">Box</a>&amp;&gt;(*this))</code>. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ReturnType</td><td>The return type to coerce return values into. When not <code>void</code>, anything returned by the visitor must be implicitly convertible to this type. When <code>void</code>, the return type will be whatever the Vistor's call operator returns by default.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>To see examples of how this is used, you can check the Drake source code, e.g., check the implementation of <a class="el" href="namespacedrake_1_1geometry.html#ae129ecc1484c1fab6e4d4b3e04d25198" title="Calculates the volume (in meters^3) for the Shape.">CalcVolume()</a> for one example. </p>
 
 </div>
 </div>

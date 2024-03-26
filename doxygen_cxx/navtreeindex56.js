@@ -1,5 +1,10 @@
 var NAVTREEINDEX56 =
 {
+"simulator__gflags_8h.html#a612cd2f0112fbe6b3f1465cdc6f90b0e":[4,0,0,12,0,26,0],
+"simulator__gflags_8h.html#aae7184a96835fe5037011cff956df981":[4,0,0,12,0,26,4],
+"simulator__print__stats_8h.html":[4,0,0,12,0,27],
+"simulator__print__stats_8h.html#a14e4e6cd73fdedd3dde63af60b3572e4":[4,0,0,12,0,27,0],
+"simulator__python__internal_8h.html":[4,0,0,12,0,28],
 "simulator__status_8h.html":[4,0,0,12,0,29],
 "sine_8h.html":[4,0,0,12,6,22],
 "single__output__vector__source_8h.html":[4,0,0,12,3,35],
@@ -244,10 +249,5 @@ var NAVTREEINDEX56 =
 "structdrake_1_1dummy__value.html":[3,0,0,23],
 "structdrake_1_1dummy__value.html#a72a5372833437d5493b91087dd74c903":[3,0,0,23,0],
 "structdrake_1_1dummy__value_3_01int_01_4.html":[3,0,0,24],
-"structdrake_1_1dummy__value_3_01int_01_4.html#a88985a0444cc6e887f3c57b56eda792d":[3,0,0,24,0],
-"structdrake_1_1dummy__value_3_01symbolic_1_1_expression_01_4.html":[3,0,0,25],
-"structdrake_1_1dummy__value_3_01symbolic_1_1_expression_01_4.html#a0bc222e26c2e949909b7f7845e9cff18":[3,0,0,25,0],
-"structdrake_1_1geometry_1_1_drake_visualizer_params.html":[3,0,0,4,11],
-"structdrake_1_1geometry_1_1_drake_visualizer_params.html#a2d836029fd25573125bd231e1ad19ecb":[3,0,0,4,11,3],
-"structdrake_1_1geometry_1_1_drake_visualizer_params.html#a3a415b5e7e1f412ec0002e0251ced626":[3,0,0,4,11,2]
+"structdrake_1_1dummy__value_3_01int_01_4.html#a88985a0444cc6e887f3c57b56eda792d":[3,0,0,24,0]
 };

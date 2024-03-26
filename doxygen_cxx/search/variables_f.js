@@ -26,6 +26,7 @@ var searchData=
   ['plant_5fcontext',['plant_context',['../structdrake_1_1multibody_1_1fem_1_1_fem_plant_data.html#a6566954e5346b9edae63e9a63fa68f20',1,'drake::multibody::fem::FemPlantData']]],
   ['pleides',['pleides',['../structdrake_1_1systems_1_1analysis__test_1_1_pleides_test.html#a410d487b09fd6b0a0a8cdc7b43b3a831',1,'drake::systems::analysis_test::PleidesTest']]],
   ['point_5fin_5fset_5ftol',['point_in_set_tol',['../structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#a10ad4072717f25576b867d014fcb6591',1,'drake::planning::IrisFromCliqueCoverOptions']]],
+  ['point_5fstiffness',['point_stiffness',['../structdrake_1_1geometry_1_1_default_proximity_properties.html#a724e701eb8bbecc4fbf5bb77227a5ab7',1,'drake::geometry::DefaultProximityProperties']]],
   ['polish_5ftime',['polish_time',['../structdrake_1_1solvers_1_1_osqp_solver_details.html#a26a18a3b5918fa06c2808f74aec256c0',1,'drake::solvers::OsqpSolverDetails']]],
   ['port',['port',['../structdrake_1_1geometry_1_1_meshcat_params.html#a37117f2a3803b9cfd665be53b850fee7',1,'drake::geometry::MeshcatParams']]],
   ['pos_5ftol',['pos_tol',['../structdrake_1_1multibody_1_1_constraint_relaxing_ik_1_1_ik_cartesian_waypoint.html#afeff966124fec7399f4a3e1eef5c9a26',1,'drake::multibody::ConstraintRelaxingIk::IkCartesianWaypoint']]],

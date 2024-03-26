@@ -2280,6 +2280,29 @@ subgraphs <code class="docutils literal notranslate"><span class="pre">lb</span>
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs.AddZeroDerivativeConstraints">
+<span class="sig-name descname"><span class="pre">AddZeroDerivativeConstraints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs" title="pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs"><span class="pre">pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">derivative_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs.AddZeroDerivativeConstraints" title="Permalink to this definition"></a></dt>
+<dd><p>Enforces zero derivatives on the control point connecting the
+subgraphs.</p>
+<p>For velocity, acceleration, jerk, etc. enforcing zero-derivative on
+the trajectory q(t) is equivalent to enforcing zero-derivative on the
+trajectory r(s). Hence this constraint is convex.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">derivative_order</span></code>:</dt><dd><p>is the order of the derivative to be constrained.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the derivative order &lt; 1.</strong> – </p></li>
+<li><p><strong>RuntimeError if both subgraphs order is less than the desired</strong> – </p></li>
+<li><p><strong>derivative order.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py method">

@@ -150,6 +150,7 @@ var hierarchy =
     [ "CSpaceSeparatingPlane< T >", "structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html", null ],
     [ "CSpaceSeparatingPlane< drake::symbolic::Variable >", "structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html", null ],
     [ "DampingModel< T >", "classdrake_1_1multibody_1_1fem_1_1_damping_model.html", null ],
+    [ "DefaultProximityProperties", "structdrake_1_1geometry_1_1_default_proximity_properties.html", null ],
     [ "DeformableBodyConfig< T >", "classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html", null ],
     [ "DeformableContactInfo< T >", "classdrake_1_1multibody_1_1_deformable_contact_info.html", null ],
     [ "DelegatingHasher", "structdrake_1_1_delegating_hasher.html", null ],
@@ -764,6 +765,7 @@ var hierarchy =
       [ "PhysicalModel< double >", "classdrake_1_1multibody_1_1_physical_model.html", null ]
     ] ],
     [ "ScalarInitialValueProblem< T >", "classdrake_1_1systems_1_1_scalar_initial_value_problem.html", null ],
+    [ "SceneGraphConfig", "structdrake_1_1geometry_1_1_scene_graph_config.html", null ],
     [ "SceneGraphInspector< T >", "classdrake_1_1geometry_1_1_scene_graph_inspector.html", null ],
     [ "SceneGraphInspector< AutoDiffXd >", "classdrake_1_1geometry_1_1_scene_graph_inspector.html", null ],
     [ "SceneGraphInspector< double >", "classdrake_1_1geometry_1_1_scene_graph_inspector.html", null ],

@@ -1,6 +1,7 @@
 var searchData=
 [
   ['dampingmodel',['DampingModel',['../classdrake_1_1multibody_1_1fem_1_1_damping_model.html',1,'drake::multibody::fem']]],
+  ['defaultproximityproperties',['DefaultProximityProperties',['../structdrake_1_1geometry_1_1_default_proximity_properties.html',1,'drake::geometry']]],
   ['deformablebodyconfig',['DeformableBodyConfig',['../classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html',1,'drake::multibody::fem']]],
   ['deformablecontactinfo',['DeformableContactInfo',['../classdrake_1_1multibody_1_1_deformable_contact_info.html',1,'drake::multibody']]],
   ['deformablemodel',['DeformableModel',['../classdrake_1_1multibody_1_1_deformable_model.html',1,'drake::multibody']]],

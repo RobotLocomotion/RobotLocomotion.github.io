@@ -10,6 +10,7 @@ var searchData=
   ['default_5fillustration_5fcolor',['default_illustration_color',['../structdrake_1_1visualization_1_1_visualization_config.html#a7c5955d58750f444fbad0c39fb6f7672',1,'drake::visualization::VisualizationConfig']]],
   ['default_5fjoint_5fpositions',['default_joint_positions',['../structdrake_1_1multibody_1_1parsing_1_1_add_model.html#ae88fbb6c242a8feeda1597a4462514a7',1,'drake::multibody::parsing::AddModel']]],
   ['default_5fproximity_5fcolor',['default_proximity_color',['../structdrake_1_1visualization_1_1_visualization_config.html#adfdda5f3f8c943cb23d22e9bf52afbe7',1,'drake::visualization::VisualizationConfig']]],
+  ['default_5fproximity_5fproperties',['default_proximity_properties',['../structdrake_1_1geometry_1_1_scene_graph_config.html#a4d119daf7f94bcd7666aa36b8794fd64',1,'drake::geometry::SceneGraphConfig']]],
   ['default_5fseed',['default_seed',['../classdrake_1_1_random_generator.html#ad2d1db10b28d705da531b1508caaf7bf',1,'drake::RandomGenerator']]],
   ['defer_5finitialization',['defer_initialization',['../structdrake_1_1lcm_1_1_drake_lcm_params.html#a3088c7d186c65efc9139b0d9d5772c4a',1,'drake::lcm::DrakeLcmParams']]],
   ['deg',['deg',['../structdrake_1_1schema_1_1_rotation_1_1_rpy.html#ad5c7ce055d37fc3f1ae1dbd5af47e3a5',1,'drake::schema::Rotation::Rpy']]],
@@ -31,5 +32,6 @@ var searchData=
   ['dual_5fobjective',['dual_objective',['../structdrake_1_1solvers_1_1_csdp_solver_details.html#a379ea2db61bec306bcb03b29a4d5b1cd',1,'drake::solvers::CsdpSolverDetails::dual_objective()'],['../structdrake_1_1solvers_1_1_scs_solver_details.html#a379ea2db61bec306bcb03b29a4d5b1cd',1,'drake::solvers::ScsSolverDetails::dual_objective()']]],
   ['dual_5fres',['dual_res',['../structdrake_1_1solvers_1_1_osqp_solver_details.html#ad8777b50c3dafc67e4f54047b62473b4',1,'drake::solvers::OsqpSolverDetails']]],
   ['duality_5fgap',['duality_gap',['../structdrake_1_1solvers_1_1_scs_solver_details.html#a88099c06f0d2a18e23e301b3cdf08020',1,'drake::solvers::ScsSolverDetails']]],
+  ['dynamic_5ffriction',['dynamic_friction',['../structdrake_1_1geometry_1_1_default_proximity_properties.html#a3e38e6cb42b54dab9e928c6166949782',1,'drake::geometry::DefaultProximityProperties']]],
   ['dynamic_5ffriction_5ftorque',['dynamic_friction_torque',['../structdrake_1_1multibody_1_1_door_hinge_config.html#aba281299fb18e40f37c6e1b5dd692da7',1,'drake::multibody::DoorHingeConfig']]]
 ];
