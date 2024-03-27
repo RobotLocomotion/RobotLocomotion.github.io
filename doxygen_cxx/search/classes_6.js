@@ -23,6 +23,7 @@ var searchData=
   ['getsubmatrixgradientarray',['GetSubMatrixGradientArray',['../structdrake_1_1math_1_1_get_sub_matrix_gradient_array.html',1,'drake::math']]],
   ['getsubmatrixgradientsingleelement',['GetSubMatrixGradientSingleElement',['../structdrake_1_1math_1_1_get_sub_matrix_gradient_single_element.html',1,'drake::math']]],
   ['globalinversekinematics',['GlobalInverseKinematics',['../classdrake_1_1multibody_1_1_global_inverse_kinematics.html',1,'drake::multibody']]],
+  ['gltfextension',['GltfExtension',['../structdrake_1_1geometry_1_1_gltf_extension.html',1,'drake::geometry']]],
   ['gradedreverselexorder',['GradedReverseLexOrder',['../structdrake_1_1symbolic_1_1_graded_reverse_lex_order.html',1,'drake::symbolic']]],
   ['gradient',['Gradient',['../structdrake_1_1math_1_1_gradient.html',1,'drake::math']]],
   ['gradient_3c_20derived_2c_20nq_2c_201_20_3e',['Gradient&lt; Derived, nq, 1 &gt;',['../structdrake_1_1math_1_1_gradient_3_01_derived_00_01nq_00_011_01_4.html',1,'drake::math']]],

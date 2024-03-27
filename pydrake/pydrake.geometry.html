@@ -3370,6 +3370,24 @@ as the <code class="docutils literal notranslate"><span class="pre">other</span>
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="pydrake.geometry.GltfExtension">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">GltfExtension</span></span><a class="headerlink" href="#pydrake.geometry.GltfExtension" title="Permalink to this definition"></a></dt>
+<dd><p>Specifies how to deal with glTF “extensions” (non-standard
+capabilities).
+<a class="reference external" href="https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html#specifying-extensions">https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html#specifying-extensions</a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.GltfExtension.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.GltfExtension" title="pydrake.geometry.GltfExtension"><span class="pre">pydrake.geometry.GltfExtension</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.GltfExtension.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.GltfExtension.warn_unimplemented">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">warn_unimplemented</span></span><a class="headerlink" href="#pydrake.geometry.GltfExtension.warn_unimplemented" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="pydrake.geometry.HalfSpace">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">HalfSpace</span></span><a class="headerlink" href="#pydrake.geometry.HalfSpace" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.Shape" title="pydrake.geometry.Shape"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.geometry.Shape</span></code></a></p>
@@ -9458,6 +9476,13 @@ caused by the lights will become more distinct.</p>
 practice will be to set exposure to one and enable tone mapping. You
 can increase the value if your image seems too dark, or reduce the
 value if it seems “washed out”.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.RenderEngineVtkParams.gltf_extensions">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">gltf_extensions</span></span><a class="headerlink" href="#pydrake.geometry.RenderEngineVtkParams.gltf_extensions" title="Permalink to this definition"></a></dt>
+<dd><p>Map from the name of a glTF extension (e.g., “KHR_materials_sheen”) to
+render engine settings related to that extension.</p>
 </dd></dl>
 
 <dl class="py property">

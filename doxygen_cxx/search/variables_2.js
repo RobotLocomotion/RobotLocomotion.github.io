@@ -22,7 +22,6 @@ var searchData=
   ['commanded_5fpositions',['commanded_positions',['../structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html#a64757f7b61980665cf6b5cd1efe1eb5b',1,'drake::manipulation::kuka_iiwa::IiwaControlPorts']]],
   ['commanded_5ftorque',['commanded_torque',['../structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html#af62d3b14337abc57cf36b03723d2724c',1,'drake::manipulation::kuka_iiwa::IiwaControlPorts']]],
   ['compliance_5ftype',['compliance_type',['../structdrake_1_1geometry_1_1_default_proximity_properties.html#a22d4299bf05a2a0f59b06b050cbf1e7f',1,'drake::geometry::DefaultProximityProperties']]],
-  ['compliance_5ftype_5frigid_5ffallback',['compliance_type_rigid_fallback',['../structdrake_1_1geometry_1_1_default_proximity_properties.html#af214a514b6b04afa8b5e39dd8fa6fa4b',1,'drake::geometry::DefaultProximityProperties']]],
   ['cone_5fangle',['cone_angle',['../structdrake_1_1geometry_1_1render_1_1_light_parameter.html#a0dc037cf2bcfb547da23636bd58f37dd',1,'drake::geometry::render::LightParameter']]],
   ['configs',['configs',['../structdrake_1_1planning_1_1test_1_1_collision_checker_test_configuration_data.html#ae981d6dfbbbad47f1783dedfd04fa1e0',1,'drake::planning::test::CollisionCheckerTestConfigurationData']]],
   ['configuration_5fdistance_5ffunction',['configuration_distance_function',['../structdrake_1_1planning_1_1_collision_checker_params.html#a35dcc56f9ad09e0a13d0bbb111554f32',1,'drake::planning::CollisionCheckerParams']]],

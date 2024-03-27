@@ -3,7 +3,6 @@ var structdrake_1_1geometry_1_1_default_proximity_properties =
     [ "Serialize", "structdrake_1_1geometry_1_1_default_proximity_properties.html#a8e8824802dedfbc36776227f7482b6bc", null ],
     [ "ValidateOrThrow", "structdrake_1_1geometry_1_1_default_proximity_properties.html#ac5e331dc922e5fcf0083aafe07e3ac0c", null ],
     [ "compliance_type", "structdrake_1_1geometry_1_1_default_proximity_properties.html#a22d4299bf05a2a0f59b06b050cbf1e7f", null ],
-    [ "compliance_type_rigid_fallback", "structdrake_1_1geometry_1_1_default_proximity_properties.html#af214a514b6b04afa8b5e39dd8fa6fa4b", null ],
     [ "dynamic_friction", "structdrake_1_1geometry_1_1_default_proximity_properties.html#a3e38e6cb42b54dab9e928c6166949782", null ],
     [ "hunt_crossley_dissipation", "structdrake_1_1geometry_1_1_default_proximity_properties.html#a42fb9f60338529459fa05fee8d4c4d2e", null ],
     [ "hydroelastic_modulus", "structdrake_1_1geometry_1_1_default_proximity_properties.html#ad67da500a161dc406336020e2f3be598", null ],

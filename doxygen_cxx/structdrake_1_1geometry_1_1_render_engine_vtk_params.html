@@ -201,6 +201,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a0ed870ed1bf654d8bdce7f9a6e3af3a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_vtk_params.html#a0ed870ed1bf654d8bdce7f9a6e3af3a4">shadow_map_size</a> {256}</td></tr>
 <tr class="memdesc:a0ed870ed1bf654d8bdce7f9a6e3af3a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The size of texture map (in pixels) to use for shadow maps.  <a href="#a0ed870ed1bf654d8bdce7f9a6e3af3a4">More...</a><br /></td></tr>
 <tr class="separator:a0ed870ed1bf654d8bdce7f9a6e3af3a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bf916e4d1f76c306700035b58b08842"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a4730f000053dc13014d5e316c6f91201">string_map</a>&lt; <a class="el" href="structdrake_1_1geometry_1_1_gltf_extension.html">GltfExtension</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_vtk_params.html#a8bf916e4d1f76c306700035b58b08842">gltf_extensions</a></td></tr>
+<tr class="memdesc:a8bf916e4d1f76c306700035b58b08842"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map from the name of a glTF extension (e.g., "KHR_materials_sheen") to render engine settings related to that extension.  <a href="#a8bf916e4d1f76c306700035b58b08842">More...</a><br /></td></tr>
+<tr class="separator:a8bf916e4d1f76c306700035b58b08842"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a8e8824802dedfbc36776227f7482b6bc"></a>
@@ -322,6 +325,22 @@ Public Attributes</h2></td></tr>
 <p>This property is analogous to the concept of "exposure" in traditional photography. Exposure controls how much the film material is exposed to the light in the scene. Too little exposure and the scene is dark and muddy. Too much exposure, and the image becomes over saturated. As the amount of radiant energy in the scene increases, reducing the exposure may be necessary. In essence, exposure serves as a scale factor on the radiant energy. When thinking about it as a scale factor, it may <em>seem</em> that setting exposure to one would leave the image unchanged (with respect to the images that RenderEngineVtk has historically produced). This is not the case. As noted above, setting any value, including one, enables tone mapping. Without tone mapping enabled, there is a direct correlation between radiant energy on the surface and the final pixel colors. Tone mapping defines a non-linear relationship between illumination levels and pixel color.</p>
 <p>The most common use for the <code>exposure</code> parameter is to combine an environment map with shadow-casting lights. If the environment map contains a great deal of light energy, it may overpower the strength of your lights. By reducing the exposure (below one), the shadows caused by the lights will become more distinct.</p>
 <p>If you plan on working with shadows and environment maps, best practice will be to set exposure to one and enable tone mapping. You can increase the value if your image seems too dark, or reduce the value if it seems "washed out". </p>
+
+</div>
+</div>
+<a id="a8bf916e4d1f76c306700035b58b08842"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bf916e4d1f76c306700035b58b08842">&#9670;&nbsp;</a></span>gltf_extensions</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a4730f000053dc13014d5e316c6f91201">string_map</a>&lt;<a class="el" href="structdrake_1_1geometry_1_1_gltf_extension.html">GltfExtension</a>&gt; gltf_extensions</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">{</div><div class="line">      </div><div class="line">      </div><div class="line">      </div><div class="line">      {<span class="stringliteral">&quot;KHR_texture_basisu&quot;</span>, {.warn_unimplemented = <span class="keyword">false</span>}},</div><div class="line">  }</div></div><!-- fragment -->
+<p>Map from the name of a glTF extension (e.g., "KHR_materials_sheen") to render engine settings related to that extension. </p>
 
 </div>
 </div>

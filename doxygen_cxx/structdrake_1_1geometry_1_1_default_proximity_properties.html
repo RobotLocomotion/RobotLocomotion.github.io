@@ -191,9 +191,6 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a22d4299bf05a2a0f59b06b050cbf1e7f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_default_proximity_properties.html#a22d4299bf05a2a0f59b06b050cbf1e7f">compliance_type</a> {&quot;undefined&quot;}</td></tr>
 <tr class="memdesc:a22d4299bf05a2a0f59b06b050cbf1e7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">There are three valid options for <code>compliance_type</code>:  <a href="#a22d4299bf05a2a0f59b06b050cbf1e7f">More...</a><br /></td></tr>
 <tr class="separator:a22d4299bf05a2a0f59b06b050cbf1e7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af214a514b6b04afa8b5e39dd8fa6fa4b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_default_proximity_properties.html#af214a514b6b04afa8b5e39dd8fa6fa4b">compliance_type_rigid_fallback</a> {true}</td></tr>
-<tr class="memdesc:af214a514b6b04afa8b5e39dd8fa6fa4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">If default compliance_type is "compliant" but the shape does not have a compliant hydroelastic representation (currently only for non-convex surface meshes), then the compliance type will fall back to "rigid".  <a href="#af214a514b6b04afa8b5e39dd8fa6fa4b">More...</a><br /></td></tr>
-<tr class="separator:af214a514b6b04afa8b5e39dd8fa6fa4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad67da500a161dc406336020e2f3be598"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_default_proximity_properties.html#ad67da500a161dc406336020e2f3be598">hydroelastic_modulus</a> {1e7}</td></tr>
 <tr class="memdesc:ad67da500a161dc406336020e2f3be598"><td class="mdescLeft">&#160;</td><td class="mdescRight">A measure of material stiffness, in units of Pascals.  <a href="#ad67da500a161dc406336020e2f3be598">More...</a><br /></td></tr>
 <tr class="separator:ad67da500a161dc406336020e2f3be598"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -284,24 +281,8 @@ Public Attributes</h2></td></tr>
 <ul>
 <li>"undefined": hydroelastic contact will not be used.</li>
 <li>"rigid": the default hydroelastic compliance type will be rigid; note that rigid-rigid contact is not supported by the hydroelastic contact model, but is supported by point contact (<a class="el" href="namespacedrake_1_1multibody.html#a6f6e054758d34b83e86bea87d65dfe4ea20e722b15a1b587c30633f0a136b7009" title="Contact forces are computed using a point contact model, see Numerical Approximation of Point Contact...">multibody::ContactModel::kPoint</a> or <a class="el" href="namespacedrake_1_1multibody.html#a6f6e054758d34b83e86bea87d65dfe4ea8ad3adce463edb0d2843e1f1c0057d4a" title="Contact forces are computed using the hydroelastic model, where possible.">multibody::ContactModel::kHydroelasticWithFallback</a>).</li>
-<li>"compliant": the default hydroelastic compliance type will be compliant; note that <code>compliance_type_rigid_fallback</code> offers a caveat for shapes that do not currently have compliant hydroelastic representations. </li>
+<li>"compliant": the default hydroelastic compliance type will be compliant. </li>
 </ul>
-
-</div>
-</div>
-<a id="af214a514b6b04afa8b5e39dd8fa6fa4b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af214a514b6b04afa8b5e39dd8fa6fa4b">&#9670;&nbsp;</a></span>compliance_type_rigid_fallback</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool compliance_type_rigid_fallback {true}</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>If default compliance_type is "compliant" but the shape does not have a compliant hydroelastic representation (currently only for non-convex surface meshes), then the compliance type will fall back to "rigid". </p>
 
 </div>
 </div>

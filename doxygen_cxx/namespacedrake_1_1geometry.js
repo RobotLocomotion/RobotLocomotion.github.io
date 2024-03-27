@@ -25,6 +25,7 @@ var namespacedrake_1_1geometry =
     [ "GeometrySetTester", "classdrake_1_1geometry_1_1_geometry_set_tester.html", "classdrake_1_1geometry_1_1_geometry_set_tester" ],
     [ "GeometryState", "classdrake_1_1geometry_1_1_geometry_state.html", "classdrake_1_1geometry_1_1_geometry_state" ],
     [ "GeometryVersion", "classdrake_1_1geometry_1_1_geometry_version.html", "classdrake_1_1geometry_1_1_geometry_version" ],
+    [ "GltfExtension", "structdrake_1_1geometry_1_1_gltf_extension.html", "structdrake_1_1geometry_1_1_gltf_extension" ],
     [ "HalfSpace", "classdrake_1_1geometry_1_1_half_space.html", "classdrake_1_1geometry_1_1_half_space" ],
     [ "IllustrationProperties", "classdrake_1_1geometry_1_1_illustration_properties.html", "classdrake_1_1geometry_1_1_illustration_properties" ],
     [ "KinematicsVector", "classdrake_1_1geometry_1_1_kinematics_vector.html", "classdrake_1_1geometry_1_1_kinematics_vector" ],

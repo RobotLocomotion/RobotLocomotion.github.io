@@ -2,6 +2,7 @@ var searchData=
 [
   ['working_20with_20contacts_20in_20drake',['Working with Contacts in Drake',['../group__contact__engineering.html',1,'']]],
   ['waitformessage',['WaitForMessage',['../classdrake_1_1systems_1_1lcm_1_1_lcm_subscriber_system.html#ac456d9170ae4b25ded776deffac5f039',1,'drake::systems::lcm::LcmSubscriberSystem']]],
+  ['warn_5funimplemented',['warn_unimplemented',['../structdrake_1_1geometry_1_1_gltf_extension.html#a3e06f5125c9d12865c929726ef90f723',1,'drake::geometry::GltfExtension']]],
   ['warndeprecated',['WarnDeprecated',['../namespacedrake_1_1pydrake.html#a88a20567ddf6e5978a874a3cb46353f4',1,'drake::pydrake']]],
   ['warning_5frecords_5f',['warning_records_',['../classdrake_1_1test_1_1_diagnostic_policy_test_base.html#abb1a7c282a053bfc11213227382e6b4f',1,'drake::test::DiagnosticPolicyTestBase']]],
   ['web_5furl',['web_url',['../classdrake_1_1geometry_1_1_meshcat.html#a3dfb466d67a1d1d068c1b8017b2d14c5',1,'drake::geometry::Meshcat']]],

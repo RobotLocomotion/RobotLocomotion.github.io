@@ -456,6 +456,7 @@ var hierarchy =
     [ "GetSubMatrixGradientArray< QSubvectorSize, Derived, NRows, NCols >", "structdrake_1_1math_1_1_get_sub_matrix_gradient_array.html", null ],
     [ "GetSubMatrixGradientSingleElement< QSubvectorSize, Derived >", "structdrake_1_1math_1_1_get_sub_matrix_gradient_single_element.html", null ],
     [ "GlobalInverseKinematics", "classdrake_1_1multibody_1_1_global_inverse_kinematics.html", null ],
+    [ "GltfExtension", "structdrake_1_1geometry_1_1_gltf_extension.html", null ],
     [ "GradedReverseLexOrder< VariableOrder >", "structdrake_1_1symbolic_1_1_graded_reverse_lex_order.html", null ],
     [ "Gradient< Derived, nq, derivative_order >", "structdrake_1_1math_1_1_gradient.html", null ],
     [ "Gradient< Derived, nq, 1 >", "structdrake_1_1math_1_1_gradient_3_01_derived_00_01nq_00_011_01_4.html", null ],

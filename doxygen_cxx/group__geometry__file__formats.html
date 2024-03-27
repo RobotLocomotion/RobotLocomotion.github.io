@@ -249,22 +249,22 @@ glTFᵀᴹ (.gltf)</h2>
 <p>Generally, Drake provides broad support of glTF features. But there are some notable exceptions:</p>
 <ul>
 <li>.glb "container" files are not supported.</li>
-<li>Support for glTF extensions depends on the ultimate consumer of the glTF file (see below).</li>
+<li>Support for glTF <a href="https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html#specifying-extensions">extensions</a> depends on the ultimate consumer of the glTF file (see below).</li>
 <li>Animation and skinning. If such data is present, it is ignored.</li>
 </ul>
 <p>A <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) mesh.">Mesh</a> file can reference a .gltf file but only for visual roles.</p>
 <ul>
 <li>Illustration roles<ul>
 <li>.gltf features are well supported in meshcat-based visualizers (using either <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html" title="A system wrapper for Meshcat that publishes the current state of a SceneGraph instance (whose QueryOb...">MeshcatVisualizer</a> or <a class="el" href="classdrake_1_1geometry_1_1_drake_visualizer.html" title="A system that publishes LCM messages representing the current state of a SceneGraph instance (whose Q...">DrakeVisualizer</a> in conjunction with meldis).</li>
-<li>There is generally broad support for glTF extensions.</li>
+<li>There is generally <a href="https://threejs.org/docs/?q=loader#examples/en/loaders/GLTFLoader">broad support</a> for glTF extensions.</li>
 <li>To get optimal visual appearance, <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> should be configured to use an environment map (see <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a4e604b24e8ece3d7d7ac74a8b4fe2783" title="Sets the environment texture.">Meshcat::SetEnvironmentMap()</a>).</li>
 </ul>
 </li>
 <li>Perception roles<ul>
 <li>RenderEngineGl does not support .gltf files. A <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) mesh.">Mesh</a> or <a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">Convex</a> which references such a file will be silently ignored.</li>
 <li>RenderEngineVtk does support .gltf files.<ul>
-<li>As VTK does not support extensions, RenderEngineVtk does not either.</li>
-<li>RenderEngineVtk does not yet support specifying an environment map. This will lead to PBR materials being under illuminated.</li>
+<li>The glTF extensions supported are whatever VTK's glTF loader implements, which at the time of this writing are KHR_lights_punctual and KHR_materials_unlit.</li>
+<li>To get optimal visual appearance, RenderEngineVtk should be configured to use an environment map (see <a class="el" href="structdrake_1_1geometry_1_1_render_engine_vtk_params.html#ad84a8836b437a560f61b53e899a80fc4" title="An optional environment map.">RenderEngineVtkParams::environment_map</a>).</li>
 </ul>
 </li>
 <li>RenderEngineGltfClient does support .gltf files (as the name suggests).<ul>
@@ -280,7 +280,8 @@ glTFᵀᴹ (.gltf)</h2>
 </ul>
 </li>
 </ul>
-<p>As a rule of thumb, for Drake's purposes .gltf files with external assets (i.e., separate .bin and .png files) will load faster than .gltf files with assets embedded as base64-encoded <code>data:</code> URIs.</p>
+<p>As a rule of thumb, for Drake's purposes .gltf files with external assets (i.e., separate .bin and .png files) will load faster than .gltf files with assets embedded as base64-encoded data URIs.</p>
+<p>For best performance, we recommend that meshes destined for the Illustration role use the <a href="https://github.com/KhronosGroup/glTF/blob/main/extensions/2.0/Khronos/KHR_texture_basisu/README.md">KHR_texture_basisu</a> extension, where textures are stored using the .ktx2 file format. Loading .ktx2 textures in a web browser is substantially faster than .png textures. In the common case where the same mesh will also be used by the Perception role, be aware that many render engines do not support the KHR_texture_basisu extension so it should be listed in "extensionsUsed" but not "extensionsRequired" in the .gltf file for widest compatibility. (The mesh will have both .png and .ktx2 textures available.) Refer to the <a href="https://github.com/RobotLocomotion/models">Drake models repository</a> for examples. To convert .png files to .ktx2 files, refer to the <a href="https://github.com/KhronosGroup/KTX-Software">KTX-Software</a> repository.</p>
 <h2><a class="anchor" id="vtk_support"></a>
 VTK file (.vtk)</h2>
 <p>Drake uses tetrahedral meshes a couple of different ways: as compliant hydroelastic geometries (see <a class="el" href="group__hydroelastic__user__guide.html#hug_title">here</a> for more details) and deformable bodies (see, e.g., <a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html" title="DeformableModel implements the interface in PhysicalModel and provides the functionalities to specify...">multibody::DeformableModel</a>). For some of the <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The abstract base class for all shape specifications.">Shape</a> types (the mathematical primitives), Drake will provide a tetrahedralization of the shape at run time. However, Drake cannot yet do so for arbitrary surface meshes. Drake allows you to create your own tetrahedral mesh offline and request that Drake use it. We use the <a href="https://examples.vtk.org/site/VTKFileFormats/">.vtk</a> file format.</p>
