@@ -128,7 +128,7 @@ var NAVTREEINDEX =
 "structdrake_1_1solvers_1_1_gurobi_solver_details.html#a3bd18d95fc284969ff5703de05b5a9f5",
 "structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_fov_degrees.html#a8e8824802dedfbc36776227f7482b6bc",
 "symbolic_2polynomial_8h.html#ab876f48eb96e82b718df0050b9d57d8b",
-"zmp__planner_8h.html"
+"zero__order__hold_8h.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -803,11 +803,8 @@ var hierarchy =
       [ "Sphere", "classdrake_1_1geometry_1_1_sphere.html", null ]
     ] ],
     [ "ShapeReifier", "classdrake_1_1geometry_1_1_shape_reifier.html", [
-      [ "CartesianProduct", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html", null ],
       [ "HPolyhedron", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html", null ],
       [ "Hyperellipsoid", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html", null ],
-      [ "MinkowskiSum", "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html", null ],
-      [ "Point", "classdrake_1_1geometry_1_1optimization_1_1_point.html", null ],
       [ "VPolytope", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html", null ],
       [ "ShapeName", "classdrake_1_1geometry_1_1_shape_name.html", null ],
       [ "ShapeToString", "classdrake_1_1geometry_1_1_shape_to_string.html", null ]
