@@ -1519,6 +1519,24 @@ std::filesystem::path::extension().</p>
 <dd></dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.Convex.GetConvexHull">
+<span class="sig-name descname"><span class="pre">GetConvexHull</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Convex" title="pydrake.geometry.Convex"><span class="pre">pydrake.geometry.Convex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.PolygonSurfaceMesh" title="pydrake.geometry.PolygonSurfaceMesh"><span class="pre">pydrake.geometry.PolygonSurfaceMesh</span></a></span></span><a class="headerlink" href="#pydrake.geometry.Convex.GetConvexHull" title="Permalink to this definition"></a></dt>
+<dd><p>Reports the convex hull of the named mesh.</p>
+<p>Note: the convex hull is computed on demand on the first invocation.
+All subsequent invocations should have an O(1) cost.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>if the referenced mesh data cannot be read</strong><strong> or </strong><strong>is degenerate</strong> – </p></li>
+<li><p><strong>(</strong><strong>insufficient number of vertices</strong><strong>, </strong><strong>co-linear</strong><strong> or </strong><strong>coincident</strong> – </p></li>
+<li><p><strong>vertices</strong><strong>, </strong><strong>etc.</strong><strong>) </strong><strong>All of the vertices lying on a plane is not</strong> – </p></li>
+<li><p><strong>considered degenerate.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.Convex.scale">
 <span class="sig-name descname"><span class="pre">scale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Convex" title="pydrake.geometry.Convex"><span class="pre">pydrake.geometry.Convex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.geometry.Convex.scale" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
@@ -3798,6 +3816,24 @@ std::filesystem::path::extension().</p>
 <dt class="sig sig-object py" id="pydrake.geometry.Mesh.filename">
 <span class="sig-name descname"><span class="pre">filename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Mesh" title="pydrake.geometry.Mesh"><span class="pre">pydrake.geometry.Mesh</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.geometry.Mesh.filename" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.Mesh.GetConvexHull">
+<span class="sig-name descname"><span class="pre">GetConvexHull</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Mesh" title="pydrake.geometry.Mesh"><span class="pre">pydrake.geometry.Mesh</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.PolygonSurfaceMesh" title="pydrake.geometry.PolygonSurfaceMesh"><span class="pre">pydrake.geometry.PolygonSurfaceMesh</span></a></span></span><a class="headerlink" href="#pydrake.geometry.Mesh.GetConvexHull" title="Permalink to this definition"></a></dt>
+<dd><p>Reports the convex hull of the named mesh.</p>
+<p>Note: the convex hull is computed on demand on the first invocation.
+All subsequent invocations should have an O(1) cost.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>if the referenced mesh data cannot be read</strong><strong> or </strong><strong>is degenerate</strong> – </p></li>
+<li><p><strong>(</strong><strong>insufficient number of vertices</strong><strong>, </strong><strong>co-linear</strong><strong> or </strong><strong>coincident</strong> – </p></li>
+<li><p><strong>vertices</strong><strong>, </strong><strong>etc.</strong><strong>) </strong><strong>All of the vertices lying on a plane is not</strong> – </p></li>
+<li><p><strong>considered degenerate.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.Mesh.scale">
@@ -8985,7 +9021,7 @@ the indicated parent frame P.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pydrake.geometry.ReadObjToTriangleSurfaceMesh">
-<span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">ReadObjToTriangleSurfaceMesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::geometry::TriangleSurfaceMesh&lt;double&gt;</span></span></span><a class="headerlink" href="#pydrake.geometry.ReadObjToTriangleSurfaceMesh" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">ReadObjToTriangleSurfaceMesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.TriangleSurfaceMesh" title="pydrake.geometry.TriangleSurfaceMesh"><span class="pre">pydrake.geometry.TriangleSurfaceMesh</span></a></span></span><a class="headerlink" href="#pydrake.geometry.ReadObjToTriangleSurfaceMesh" title="Permalink to this definition"></a></dt>
 <dd><p>Constructs a surface mesh from a Wavefront .obj file and optionally
 scales coordinates by the given scale factor. Polygons will be
 triangulated if they are not triangles already. All objects in the

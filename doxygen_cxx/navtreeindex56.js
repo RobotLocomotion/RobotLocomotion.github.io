@@ -1,5 +1,6 @@
 var NAVTREEINDEX56 =
 {
+"simulator__gflags_8h.html#a2ddf6e3d8e5f2ecb32db146fad3ce6bd":[4,0,0,12,0,26,1],
 "simulator__gflags_8h.html#a612cd2f0112fbe6b3f1465cdc6f90b0e":[4,0,0,12,0,26,0],
 "simulator__gflags_8h.html#aae7184a96835fe5037011cff956df981":[4,0,0,12,0,26,4],
 "simulator__print__stats_8h.html":[4,0,0,12,0,27],
@@ -248,6 +249,5 @@ var NAVTREEINDEX56 =
 "structdrake_1_1assert_1_1_condition_traits_3_01symbolic_1_1_formula_01_4.html#ac40e2f6b16673621ee11f794813446bf":[3,0,0,1,0,1],
 "structdrake_1_1dummy__value.html":[3,0,0,23],
 "structdrake_1_1dummy__value.html#a72a5372833437d5493b91087dd74c903":[3,0,0,23,0],
-"structdrake_1_1dummy__value_3_01int_01_4.html":[3,0,0,24],
-"structdrake_1_1dummy__value_3_01int_01_4.html#a88985a0444cc6e887f3c57b56eda792d":[3,0,0,24,0]
+"structdrake_1_1dummy__value_3_01int_01_4.html":[3,0,0,24]
 };
