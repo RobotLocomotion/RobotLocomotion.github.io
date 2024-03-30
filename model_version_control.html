@@ -164,8 +164,8 @@ them, as Drake is not a model repository.</p>
 <code class="language-plaintext highlighter-rouge">models</code> checkout using
 <code class="language-plaintext highlighter-rouge">github_archive(..., local_repository_override = &lt;path&gt;)</code>.</li>
   <li>Incorporate the new <code class="language-plaintext highlighter-rouge">models</code> files into a Drake <code class="language-plaintext highlighter-rouge">BUILD.bazel</code> file where
-they are needed, typically by adding <code class="language-plaintext highlighter-rouge">data = ["@drake_models"]</code> to the
-demo program or benchmark that uses them.
+they are needed by adding <code class="language-plaintext highlighter-rouge">data = ["@drake_models//:some_subdir"]</code>
+to the demo program or benchmark that uses them.
     <ol>
       <li>Do not ask the build system to “install” any files from <code class="language-plaintext highlighter-rouge">drake_models</code>;
 they are already available via remote fetching. In particular, don’t add
