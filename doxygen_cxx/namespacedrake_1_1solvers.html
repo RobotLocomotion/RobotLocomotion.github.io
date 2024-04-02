@@ -740,6 +740,9 @@ Choice" model.  <a href="#a81f7d44186352e1090de1343d468cad2">More...</a><br /></
 <tr class="memitem:af6da6d265dcd5e959082b17d3a94258b"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#af6da6d265dcd5e959082b17d3a94258b">MakeSemidefiniteRelaxation</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;prog)</td></tr>
 <tr class="memdesc:af6da6d265dcd5e959082b17d3a94258b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html" title="MathematicalProgram stores the decision variables, the constraints and costs of an optimization probl...">MathematicalProgram</a> which represents the semidefinite programming convex relaxation of the (likely nonconvex) program <code>prog</code>.  <a href="#af6da6d265dcd5e959082b17d3a94258b">More...</a><br /></td></tr>
 <tr class="separator:af6da6d265dcd5e959082b17d3a94258b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56eb3fcc2f03d972f06486730916cbf0"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a56eb3fcc2f03d972f06486730916cbf0">MakeSemidefiniteRelaxation</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;prog, const std::vector&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variables.html">symbolic::Variables</a> &gt; &amp;variable_groups)</td></tr>
+<tr class="memdesc:a56eb3fcc2f03d972f06486730916cbf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">A version of MakeSemidefiniteRelaxation that allows for specifying the sparsity of the relaxation.  <a href="#a56eb3fcc2f03d972f06486730916cbf0">More...</a><br /></td></tr>
+<tr class="separator:a56eb3fcc2f03d972f06486730916cbf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb1201a087105dc635e2bd748486171c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#acb1201a087105dc635e2bd748486171c">to_string</a> (<a class="el" href="namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136f">SolutionResult</a> solution_result)</td></tr>
 <tr class="separator:acb1201a087105dc635e2bd748486171c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a269b7066a168f80390ed6c496829ffcd"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a269b7066a168f80390ed6c496829ffcd">operator&lt;&lt;</a> (std::ostream &amp;os, <a class="el" href="namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136f">SolutionResult</a> solution_result)</td></tr>
@@ -2870,7 +2873,7 @@ s.t ∑ᵢ yᵢAᵢ - C ≽ 0
 </div>
 </div>
 <a id="af6da6d265dcd5e959082b17d3a94258b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6da6d265dcd5e959082b17d3a94258b">&#9670;&nbsp;</a></span>MakeSemidefiniteRelaxation()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af6da6d265dcd5e959082b17d3a94258b">&#9670;&nbsp;</a></span>MakeSemidefiniteRelaxation() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2892,6 +2895,54 @@ s.t ∑ᵢ yᵢAᵢ - C ≽ 0
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if <code>prog</code> has costs and constraints which are not linear nor quadratic. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a56eb3fcc2f03d972f06486730916cbf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56eb3fcc2f03d972f06486730916cbf0">&#9670;&nbsp;</a></span>MakeSemidefiniteRelaxation() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a>&gt; drake::solvers::MakeSemidefiniteRelaxation </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;&#160;</td>
+          <td class="paramname"><em>prog</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variables.html">symbolic::Variables</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>variable_groups</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A version of MakeSemidefiniteRelaxation that allows for specifying the sparsity of the relaxation. </p>
+<p>For each group in <code>variable_groups</code>, the costs and constraints whose variables are a subset of the group will be jointly relaxed into a single, dense semidefinite program in the same manner as MakeSemidefiniteRelaxation(prog).</p>
+<p>Each of these semidefinite relaxations are aggregated into a single program, and their semidefinite variables are made to agree where the variable groups overlap.</p>
+<p>The returned program will always have the same number of PSD variables as variable groups.</p>
+<p>Costs and constraints whose variables are not a subset of any of the groups are not relaxed and are simply added to the aggregated program. If these costs and constraints are non-convex, then this method will throw.</p>
+<p>As an example, consider the following program. min x₂ᵀ * Q * x₂ subject to x₁ + x₂ ≤ 1 x₂ + x₃ ≤ 2 x₁ + x₃ ≤ 3</p>
+<p>And suppose we call MakeSemidefiniteRelaxation(prog, std::vector&lt;Variables&gt;{{x₁, x₂}, {x₂,x₃}}).</p>
+<p>The resulting relaxation would have two semidefinite variables, namely: [U₁, U₂, x₁] [W₁, W₂, x₂] [U₂, U₃, x₂], [W₂, W₃, x₃] [x₁ᵀ, x₂ᵀ, 1] [x₂ᵀ, x₃ᵀ, 1]</p>
+<p>The first semidefinite variable would be associated to the semidefinite relaxation of the subprogram: min x₁ᵀ * Q * x₁ subject to x₁ + x₂ ≤ 1 And the implied constraints from x₁ + x₂ ≤ 1 would be added to the first semidefinite variable. These implied constraints are additional constraints that can be placed on the matrix [U₁, U₂, x₁] [U₂, U₃, x₂] [x₁ᵀ, x₂ᵀ, 1] which are redundant in the non-convex program, but are not redundant in the semidefinite relaxation. See <a href="https://underactuated.mit.edu/optimization.html#sdp_relaxation">https://underactuated.mit.edu/optimization.html#sdp_relaxation</a> for references and examples.</p>
+<p>The second semidefinite variable would be associated to the semidefinite relaxation of the subprogram: min x₂ᵀ * Q * x₂ subject to x₂ + x₃ ≤ 2 And the implied constraints from x₂ + x₃ ≤ 2 would be added to the second semidefinite variable.</p>
+<p>Since the constraint x₁ + x₃ ≤ 3 is not a subset of any of the variable groups, it will be added to the overall relaxation, but will not be used to generate implied constraints on any semidefinite variable.</p>
+<p>The total relaxation would also include an equality constraint that U₃ == W₁ so that the quadratic relaxation of x₂ is consistent between the two semidefinite variables.</p>
+<p>Note: 1) Costs are only associated to a single variable group, so that the resulting aggregated program has a relaxed cost with the same scaling. 2) The homogenization variable "1" is re-used in every semidefinite variable.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if there is a non-convex cost or constraint whose variables do not intersect with any of the variable groups. </td></tr>
   </table>
   </dd>
 </dl>

@@ -38,7 +38,7 @@ var searchData=
   ['modeldirective',['ModelDirective',['../structdrake_1_1multibody_1_1parsing_1_1_model_directive.html',1,'drake::multibody::parsing']]],
   ['modeldirectives',['ModelDirectives',['../structdrake_1_1multibody_1_1parsing_1_1_model_directives.html',1,'drake::multibody::parsing']]],
   ['modelinstanceinfo',['ModelInstanceInfo',['../structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html',1,'drake::multibody::parsing']]],
-  ['monomial',['Monomial',['../classdrake_1_1_polynomial_1_1_monomial.html',1,'Polynomial&lt; T &gt;::Monomial'],['../classdrake_1_1symbolic_1_1_monomial.html',1,'Monomial']]],
+  ['monomial',['Monomial',['../classdrake_1_1symbolic_1_1_monomial.html',1,'Monomial'],['../classdrake_1_1_polynomial_1_1_monomial.html',1,'Polynomial&lt; T &gt;::Monomial']]],
   ['monomialbasiselement',['MonomialBasisElement',['../classdrake_1_1symbolic_1_1_monomial_basis_element.html',1,'drake::symbolic']]],
   ['moseksolver',['MosekSolver',['../classdrake_1_1solvers_1_1_mosek_solver.html',1,'drake::solvers']]],
   ['moseksolverdetails',['MosekSolverDetails',['../structdrake_1_1solvers_1_1_mosek_solver_details.html',1,'drake::solvers']]],

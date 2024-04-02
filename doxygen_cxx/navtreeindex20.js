@@ -1,6 +1,5 @@
 var NAVTREEINDEX20 =
 {
-"classdrake_1_1multibody_1_1fem_1_1_damping_model.html#aa244069969fa102d54cccacc207808c4":[3,0,0,8,2,0,0],
 "classdrake_1_1multibody_1_1fem_1_1_damping_model.html#aa6a18a1b58417f8d4f8a7838bb470fc7":[3,0,0,8,2,0,3],
 "classdrake_1_1multibody_1_1fem_1_1_damping_model.html#ab2b276774befbd68c810a4d7792ff376":[3,0,0,8,2,0,1],
 "classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html":[3,0,0,8,2,1],
@@ -249,5 +248,6 @@ var NAVTREEINDEX20 =
 "classdrake_1_1planning_1_1_body_shape_description.html#a247f19b75733aea2973f1b54f269b5cf":[1,4,2,2,0,5],
 "classdrake_1_1planning_1_1_body_shape_description.html#a2fc0796487ccc0c7d24e9aa289e4be14":[1,4,2,2,0,3],
 "classdrake_1_1planning_1_1_body_shape_description.html#a7b7340e2a89a9e5f7375054e89605faf":[1,4,2,2,0,8],
-"classdrake_1_1planning_1_1_body_shape_description.html#aa2a0462e8e90fe75ebd9bf54fa15056c":[1,4,2,2,0,4]
+"classdrake_1_1planning_1_1_body_shape_description.html#aa2a0462e8e90fe75ebd9bf54fa15056c":[1,4,2,2,0,4],
+"classdrake_1_1planning_1_1_body_shape_description.html#ab6318d925a07ac3f6028731a025dd329":[1,4,2,2,0,6]
 };

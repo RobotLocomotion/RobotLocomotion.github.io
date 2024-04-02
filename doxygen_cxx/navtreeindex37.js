@@ -1,6 +1,5 @@
 var NAVTREEINDEX37 =
 {
-"classdrake_1_1systems_1_1_my_vector.html#abef4690e64e6a55fe0c2262ad81b8c9e":[3,0,0,15,70,1],
 "classdrake_1_1systems_1_1_output_port.html":[3,0,0,15,71],
 "classdrake_1_1systems_1_1_output_port.html#a0723a48f7997a82175cdf28941e65f9c":[3,0,0,15,71,6],
 "classdrake_1_1systems_1_1_output_port.html#a2d903c43489b2f5bd6e830a7bacb9bc9":[3,0,0,15,71,10],
@@ -249,5 +248,6 @@ var NAVTREEINDEX37 =
 "classdrake_1_1systems_1_1_semi_explicit_euler_integrator.html#a517f4c11b27374a04df1a338b31e614e":[1,4,0,0,8,0],
 "classdrake_1_1systems_1_1_semi_explicit_euler_integrator.html#a52ddb8ce13134e8e8afdfcfde6fd75ec":[1,4,0,0,8,7],
 "classdrake_1_1systems_1_1_semi_explicit_euler_integrator.html#a780fa5f8fa4dc5416f986db48acb2749":[1,4,0,0,8,2],
-"classdrake_1_1systems_1_1_semi_explicit_euler_integrator.html#a7932e0cc0f116b8a625cb025616d73ab":[1,4,0,0,8,4]
+"classdrake_1_1systems_1_1_semi_explicit_euler_integrator.html#a7932e0cc0f116b8a625cb025616d73ab":[1,4,0,0,8,4],
+"classdrake_1_1systems_1_1_semi_explicit_euler_integrator.html#a95194e50d44a8102937c73ae835e58d5":[1,4,0,0,8,6]
 };

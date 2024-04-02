@@ -1,6 +1,5 @@
 var NAVTREEINDEX47 =
 {
-"drake__assert_8h.html":[4,0,0,1,18],
 "drake__assert_8h.html#a0d126d5c79d6e74d5f03f8c81e4b3a63":[4,0,0,1,18,0],
 "drake__assert_8h.html#a53797785bb2511ded7061028fcca65c5":[4,0,0,1,18,1],
 "drake__assert_8h.html#a90a6aa22721ddd3bc514c45d8e1d8674":[4,0,0,1,18,2],
@@ -100,7 +99,7 @@ var NAVTREEINDEX47 =
 "eigen__types_8h.html#af359dfdb84d6c13b606bb3ed7b821e23":[4,0,0,1,29,30],
 "eigen__types_8h.html#af7e96394aef85f13f3fc84d3c3c238b3":[4,0,0,1,29,34],
 "eigen__types_8h.html#afc54e1f7aa3341a5f6b305705452d9bd":[4,0,0,1,29,22],
-"element__collection_8h.html":[4,0,0,8,14,10],
+"element__collection_8h.html":[4,0,0,8,14,9],
 "environment_8h.html":[4,0,0,1,3,0,2],
 "environment_8h.html#af50e3bc4e34ea64ae4d7065ad1fc72ac":[4,0,0,1,3,0,2,1],
 "equality__constrained__qp__solver_8h.html":[4,0,0,11,18],
@@ -249,5 +248,6 @@ var NAVTREEINDEX47 =
 "expression_2expression_8h.html#ae0f809da2a5c679df2b90aadedde5350":[4,0,0,1,3,0,3,53],
 "expression_2expression_8h.html#ae1a1c7093f3e8d89930f0aa748ee188c":[4,0,0,1,3,0,3,35],
 "expression_2expression_8h.html#ae3c2af38b09382376094bc4dcfafd491":[4,0,0,1,3,0,3,110],
-"expression_2expression_8h.html#ae5f80be049fb4a30021b74ef760b3cb5":[4,0,0,1,3,0,3,109]
+"expression_2expression_8h.html#ae5f80be049fb4a30021b74ef760b3cb5":[4,0,0,1,3,0,3,109],
+"expression_2expression_8h.html#ae6895bc9ae9e9e84f8f6a9bbc434b4e9":[4,0,0,1,3,0,3,89]
 };

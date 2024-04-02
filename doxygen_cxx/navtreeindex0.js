@@ -79,10 +79,9 @@ var NAVTREEINDEX0 =
 "block__sparse__lower__triangular__or__symmetric__matrix_8h.html":[4,0,0,8,2,3],
 "block__sparse__matrix_8h.html":[4,0,0,8,2,4],
 "block__sparse__supernodal__solver_8h.html":[4,0,0,8,2,5],
-"body_8h.html":[4,0,0,8,14,5],
-"body__node_8h.html":[4,0,0,8,14,6],
-"body__node__impl_8h.html":[4,0,0,8,14,7],
-"body__node__world_8h.html":[4,0,0,8,14,8],
+"body__node_8h.html":[4,0,0,8,14,5],
+"body__node__impl_8h.html":[4,0,0,8,14,6],
+"body__node__world_8h.html":[4,0,0,8,14,7],
 "body__shape__description_8h.html":[4,0,0,10,4],
 "body__shape__description_8h.html#a85bb1b7b473700a759d1eb836fb6e536":[4,0,0,10,4,0],
 "bogacki__shampine3__integrator_8h.html":[4,0,0,12,0,3],
@@ -249,5 +248,6 @@ var NAVTREEINDEX0 =
 "classdrake_1_1_polynomial.html#a38f4b1afcc5a0f495caad64cbf8688d3":[3,0,0,41,23],
 "classdrake_1_1_polynomial.html#a3b8ee5b634b35a7c4db1cddc532d177c":[3,0,0,41,57],
 "classdrake_1_1_polynomial.html#a3cb360c5667c073fe8f1b8a1271e56ba":[3,0,0,41,26],
-"classdrake_1_1_polynomial.html#a3d04328e0ea4df22f47e1651c706082d":[3,0,0,41,27]
+"classdrake_1_1_polynomial.html#a3d04328e0ea4df22f47e1651c706082d":[3,0,0,41,27],
+"classdrake_1_1_polynomial.html#a3dd692da2aab783313611876753b0b3f":[3,0,0,41,61]
 };

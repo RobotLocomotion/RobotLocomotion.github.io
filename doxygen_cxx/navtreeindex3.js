@@ -1,6 +1,5 @@
 var NAVTREEINDEX3 =
 {
-"classdrake_1_1examples_1_1planar__gripper_1_1_gripper_brick_helper.html#ad7d18471338aeb466dd91b3bdddd0b9d":[3,0,0,3,12,1,9],
 "classdrake_1_1examples_1_1planar__gripper_1_1_gripper_brick_helper.html#aea0352d20bf9cc88dfc4dbe69f0604ec":[3,0,0,3,12,1,3],
 "classdrake_1_1examples_1_1planar__gripper_1_1_gripper_brick_helper.html#aedde604f1032984573bfa5fb37df1bbd":[3,0,0,3,12,1,13],
 "classdrake_1_1examples_1_1planar__gripper_1_1_gripper_brick_helper.html#aee015903292c6e0091cbcaebed3f827a":[3,0,0,3,12,1,10],
@@ -249,5 +248,6 @@ var NAVTREEINDEX3 =
 "classdrake_1_1geometry_1_1_contact_surface.html#a162b2f40894082b5057435796adf2c04":[3,0,0,4,7,7],
 "classdrake_1_1geometry_1_1_contact_surface.html#a1bba298d00b3ca9aaccbcaa73ad3901d":[3,0,0,4,7,1],
 "classdrake_1_1geometry_1_1_contact_surface.html#a319e621fc359dd8daad48247f95b12fa":[3,0,0,4,7,17],
-"classdrake_1_1geometry_1_1_contact_surface.html#a3cb31831d648403e64867d5724c5e199":[3,0,0,4,7,10]
+"classdrake_1_1geometry_1_1_contact_surface.html#a3cb31831d648403e64867d5724c5e199":[3,0,0,4,7,10],
+"classdrake_1_1geometry_1_1_contact_surface.html#a468511b9c93cbc3a3754b93b738d90a4":[3,0,0,4,7,25]
 };

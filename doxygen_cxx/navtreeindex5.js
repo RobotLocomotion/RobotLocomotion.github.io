@@ -1,6 +1,5 @@
 var NAVTREEINDEX5 =
 {
-"classdrake_1_1geometry_1_1_geometry_state.html#acaa0f71e9327ba0ba58b653046ca8619":[3,0,0,4,23,81],
 "classdrake_1_1geometry_1_1_geometry_state.html#acc0fbd7f67bb4341fa2b52b23b97c171":[3,0,0,4,23,74],
 "classdrake_1_1geometry_1_1_geometry_state.html#acc1754da53dee9bbe4755e63d8a55f5a":[3,0,0,4,23,92],
 "classdrake_1_1geometry_1_1_geometry_state.html#ad4eade660f1b51f5efedd619b7653fc5":[3,0,0,4,23,65],
@@ -249,5 +248,6 @@ var NAVTREEINDEX5 =
 "classdrake_1_1geometry_1_1_polygon_surface_mesh.html#a9709fac7886877fc597e4a8117b4e549":[3,0,0,4,41,11],
 "classdrake_1_1geometry_1_1_polygon_surface_mesh.html#a972cf7cd80fb7a8357c8202a6c163612":[3,0,0,4,41,8],
 "classdrake_1_1geometry_1_1_polygon_surface_mesh.html#a98f8a4ac27c2c8008728ae504e8e68bc":[3,0,0,4,41,17],
-"classdrake_1_1geometry_1_1_polygon_surface_mesh.html#a9ec52d4217b88f37e7a782129bf52372":[3,0,0,4,41,0]
+"classdrake_1_1geometry_1_1_polygon_surface_mesh.html#a9ec52d4217b88f37e7a782129bf52372":[3,0,0,4,41,0],
+"classdrake_1_1geometry_1_1_polygon_surface_mesh.html#aa8388a3f4417bdec45042a7fd2166a6a":[3,0,0,4,41,26]
 };

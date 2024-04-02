@@ -9,7 +9,6 @@ var dir_3f9cb8dbb3b4911cb2ecb548acd672c3 =
     [ "ball_rpy_joint.h", "ball__rpy__joint_8h.html", [
       [ "BallRpyJoint", "classdrake_1_1multibody_1_1_ball_rpy_joint.html", "classdrake_1_1multibody_1_1_ball_rpy_joint" ]
     ] ],
-    [ "body.h", "body_8h.html", null ],
     [ "body_node.h", "body__node_8h.html", null ],
     [ "body_node_impl.h", "body__node__impl_8h.html", null ],
     [ "body_node_world.h", "body__node__world_8h.html", null ],

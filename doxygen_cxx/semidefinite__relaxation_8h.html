@@ -166,6 +166,7 @@ $(document).ready(function(){initNavTree('semidefinite__relaxation_8h.html','');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
 <code>#include &quot;<a class="el" href="mathematical__program_8h.html">drake/solvers/mathematical_program.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for semidefinite_relaxation.h:</div>
@@ -186,6 +187,9 @@ Functions</h2></td></tr>
 <tr class="memitem:af6da6d265dcd5e959082b17d3a94258b"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; MathematicalProgram &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#af6da6d265dcd5e959082b17d3a94258b">MakeSemidefiniteRelaxation</a> (const MathematicalProgram &amp;prog)</td></tr>
 <tr class="memdesc:af6da6d265dcd5e959082b17d3a94258b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html" title="MathematicalProgram stores the decision variables, the constraints and costs of an optimization probl...">MathematicalProgram</a> which represents the semidefinite programming convex relaxation of the (likely nonconvex) program <code>prog</code>.  <a href="namespacedrake_1_1solvers.html#af6da6d265dcd5e959082b17d3a94258b">More...</a><br /></td></tr>
 <tr class="separator:af6da6d265dcd5e959082b17d3a94258b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56eb3fcc2f03d972f06486730916cbf0"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; MathematicalProgram &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a56eb3fcc2f03d972f06486730916cbf0">MakeSemidefiniteRelaxation</a> (const MathematicalProgram &amp;prog, const std::vector&lt; symbolic::Variables &gt; &amp;variable_groups)</td></tr>
+<tr class="memdesc:a56eb3fcc2f03d972f06486730916cbf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">A version of MakeSemidefiniteRelaxation that allows for specifying the sparsity of the relaxation.  <a href="namespacedrake_1_1solvers.html#a56eb3fcc2f03d972f06486730916cbf0">More...</a><br /></td></tr>
+<tr class="separator:a56eb3fcc2f03d972f06486730916cbf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

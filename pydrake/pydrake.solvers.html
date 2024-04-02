@@ -2941,8 +2941,12 @@ available, throws a RuntimeError.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pydrake.solvers.MakeSemidefiniteRelaxation">
-<span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">MakeSemidefiniteRelaxation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prog</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></span><a class="headerlink" href="#pydrake.solvers.MakeSemidefiniteRelaxation" title="Permalink to this definition"></a></dt>
-<dd><p>Constructs a new MathematicalProgram which represents the semidefinite
+<span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">MakeSemidefiniteRelaxation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.MakeSemidefiniteRelaxation" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>MakeSemidefiniteRelaxation(prog: pydrake.solvers.MathematicalProgram) -&gt; pydrake.solvers.MathematicalProgram</p></li>
+</ol>
+<p>Constructs a new MathematicalProgram which represents the semidefinite
 programming convex relaxation of the (likely nonconvex) program
 <code class="docutils literal notranslate"><span class="pre">prog</span></code>. This method currently supports only linear and quadratic
 costs and constraints, but may be extended in the future with broader
@@ -2958,6 +2962,63 @@ LinearEqualityConstraint.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if prog has costs and constraints which are not</strong> – </p></li>
 <li><p><strong>linear nor quadratic.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>MakeSemidefiniteRelaxation(prog: pydrake.solvers.MathematicalProgram, variable_groups: List[pydrake.symbolic.Variables]) -&gt; pydrake.solvers.MathematicalProgram</p></li>
+</ol>
+<p>A version of MakeSemidefiniteRelaxation that allows for specifying the
+sparsity of the relaxation.</p>
+<p>For each group in <code class="docutils literal notranslate"><span class="pre">variable_groups</span></code>, the costs and constraints whose
+variables are a subset of the group will be jointly relaxed into a
+single, dense semidefinite program in the same manner as
+MakeSemidefiniteRelaxation(prog).</p>
+<p>Each of these semidefinite relaxations are aggregated into a single
+program, and their semidefinite variables are made to agree where the
+variable groups overlap.</p>
+<p>The returned program will always have the same number of PSD variables
+as variable groups.</p>
+<p>Costs and constraints whose variables are not a subset of any of the
+groups are not relaxed and are simply added to the aggregated program.
+If these costs and constraints are non-convex, then this method will
+throw.</p>
+<p>As an example, consider the following program. min x₂ᵀ * Q * x₂
+subject to x₁ + x₂ ≤ 1 x₂ + x₃ ≤ 2 x₁ + x₃ ≤ 3</p>
+<p>And suppose we call MakeSemidefiniteRelaxation(prog,
+std::vector&lt;Variables&gt;{{x₁, x₂}, {x₂,x₃}}).</p>
+<p>The resulting relaxation would have two semidefinite variables,
+namely: [U₁, U₂, x₁] [W₁, W₂, x₂] [U₂, U₃, x₂], [W₂, W₃, x₃] [x₁ᵀ,
+x₂ᵀ, 1] [x₂ᵀ, x₃ᵀ, 1]</p>
+<p>The first semidefinite variable would be associated to the
+semidefinite relaxation of the subprogram: min x₁ᵀ * Q * x₁ subject to
+x₁ + x₂ ≤ 1 And the implied constraints from x₁ + x₂ ≤ 1 would be
+added to the first semidefinite variable. These implied constraints
+are additional constraints that can be placed on the matrix [U₁, U₂,
+x₁] [U₂, U₃, x₂] [x₁ᵀ, x₂ᵀ, 1] which are redundant in the non-convex
+program, but are not redundant in the semidefinite relaxation. See
+<a class="reference external" href="https://underactuated.mit.edu/optimization.html#sdp_relaxation">https://underactuated.mit.edu/optimization.html#sdp_relaxation</a> for
+references and examples.</p>
+<p>The second semidefinite variable would be associated to the
+semidefinite relaxation of the subprogram: min x₂ᵀ * Q * x₂ subject to
+x₂ + x₃ ≤ 2 And the implied constraints from x₂ + x₃ ≤ 2 would be
+added to the second semidefinite variable.</p>
+<p>Since the constraint x₁ + x₃ ≤ 3 is not a subset of any of the
+variable groups, it will be added to the overall relaxation, but will
+not be used to generate implied constraints on any semidefinite
+variable.</p>
+<p>The total relaxation would also include an equality constraint that U₃
+== W₁ so that the quadratic relaxation of x₂ is consistent between the
+two semidefinite variables.</p>
+<p>Note: 1) Costs are only associated to a single variable group, so that
+the resulting aggregated program has a relaxed cost with the same
+scaling. 2) The homogenization variable “1” is re-used in every
+semidefinite variable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if there is a non-convex cost</strong><strong> or </strong><strong>constraint whose</strong> – </p></li>
+<li><p><strong>variables do not intersect with any of the variable groups.</strong> – </p></li>
 </ul>
 </dd>
 </dl>

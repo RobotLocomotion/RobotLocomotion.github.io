@@ -16,7 +16,6 @@ var searchData=
   ['block_5fsparse_5flower_5ftriangular_5for_5fsymmetric_5fmatrix_2eh',['block_sparse_lower_triangular_or_symmetric_matrix.h',['../block__sparse__lower__triangular__or__symmetric__matrix_8h.html',1,'']]],
   ['block_5fsparse_5fmatrix_2eh',['block_sparse_matrix.h',['../block__sparse__matrix_8h.html',1,'']]],
   ['block_5fsparse_5fsupernodal_5fsolver_2eh',['block_sparse_supernodal_solver.h',['../block__sparse__supernodal__solver_8h.html',1,'']]],
-  ['body_2eh',['body.h',['../body_8h.html',1,'']]],
   ['body_5fnode_2eh',['body_node.h',['../body__node_8h.html',1,'']]],
   ['body_5fnode_5fimpl_2eh',['body_node_impl.h',['../body__node__impl_8h.html',1,'']]],
   ['body_5fnode_5fworld_2eh',['body_node_world.h',['../body__node__world_8h.html',1,'']]],
