@@ -326,7 +326,7 @@ To inter-operate between the whole plant actuation vector and sets of per-model 
 <p>As an example, here is how to access and modify rigid body mass parameters: </p><div class="fragment"><div class="line">MultibodyPlant&lt;double&gt; plant;</div><div class="line"><span class="comment">// ... Code to add bodies, finalize plant, and to obtain a context.</span></div><div class="line"><span class="keyword">const</span> RigidBody&lt;double&gt;&amp; body =</div><div class="line">    plant.GetRigidBodyByName(<span class="stringliteral">&quot;BodyName&quot;</span>);</div><div class="line"><span class="keyword">const</span> SpatialInertia&lt;double&gt; M_BBo_B =</div><div class="line">    body.GetSpatialInertiaInBodyFrame(context);</div><div class="line"><span class="comment">// .. logic to determine a new SpatialInertia parameter for body.</span></div><div class="line"><span class="keyword">const</span> SpatialInertia&lt;double&gt;&amp; M_BBo_B_new = ....</div><div class="line"></div><div class="line"><span class="comment">// Modify the body parameter for spatial inertia.</span></div><div class="line">body.SetSpatialInertiaInBodyFrame(&amp;context, M_BBo_B_new);</div></div><!-- fragment --><p>Another example, working with automatic differentiation in order to take derivatives with respect to one of the bodies' masses: </p><div class="fragment"><div class="line">MultibodyPlant&lt;double&gt; plant;</div><div class="line"><span class="comment">// ... Code to add bodies, finalize plant, and to obtain a</span></div><div class="line"><span class="comment">// context and a body&#39;s spatial inertia M_BBo_B.</span></div><div class="line"></div><div class="line"><span class="comment">// Scalar convert the plant.</span></div><div class="line">unique_ptr&lt;MultibodyPlant&lt;AutoDiffXd&gt;&gt; plant_autodiff =</div><div class="line">    <a class="code" href="classdrake_1_1systems_1_1_system.html#aaa81bdf4638506d1ba5ee11e05821651">systems::System&lt;double&gt;::ToAutoDiffXd</a>(plant);</div><div class="line">unique_ptr&lt;Context&lt;AutoDiffXd&gt;&gt; context_autodiff =</div><div class="line">    plant_autodiff-&gt;CreateDefaultContext();</div><div class="line">context_autodiff-&gt;SetTimeStateAndParametersFrom(context);</div><div class="line"></div><div class="line"><span class="keyword">const</span> RigidBody&lt;AutoDiffXd&gt;&amp; body =</div><div class="line">    plant_autodiff-&gt;GetRigidBodyByName(<span class="stringliteral">&quot;BodyName&quot;</span>);</div><div class="line"></div><div class="line"><span class="comment">// Modify the body parameter for mass.</span></div><div class="line"><span class="keyword">const</span> <a class="code" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> mass_autodiff(mass, <a class="code" href="namespacedrake.html#a6d923e79e6e92c2556edd86520145077">Vector1d</a>(1));</div><div class="line">body.SetMass(context_autodiff.get(), mass_autodiff);</div><div class="line"></div><div class="line"><span class="comment">// M_autodiff(i, j).derivatives()(0), contains the derivatives of</span></div><div class="line"><span class="comment">// M(i, j) with respect to the body&#39;s mass.</span></div><div class="line">MatrixX&lt;AutoDiffXd&gt; M_autodiff(plant_autodiff-&gt;num_velocities(),</div><div class="line">    plant_autodiff-&gt;num_velocities());</div><div class="line">plant_autodiff-&gt;CalcMassMatrix(*context_autodiff, &amp;M_autodiff);</div></div><!-- fragment --><p><a class="anchor" id="mbp_adding_elements"></a></p><h3>Adding modeling elements</h3>
 <p>Add multibody elements to a MultibodyPlant with methods like:</p>
 <ul>
-<li>Bodies: <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a9f6a68c31772eaa0c855ebb44eeaa0b7" title="Creates a rigid body with the provided name and spatial inertia.">AddRigidBody()</a></li>
+<li>Bodies: <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#abbb5022b0809decc5cd30dd25ac9d0f3" title="Creates a rigid body with the provided name and spatial inertia.">AddRigidBody()</a></li>
 <li>Joints: <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a437f86026a2268c0fb06936b899ba8d7" title="This method adds a Joint of type JointType between two bodies.">AddJoint()</a></li>
 <li>see <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#mbp_construction">Construction</a> for more.</li>
 </ul>
@@ -449,12 +449,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a912adb84c4940893eb4634155e6e7e8b"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a912adb84c4940893eb4634155e6e7e8b">MultibodyPlant</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; U &gt; &amp;other)</td></tr>
 <tr class="memdesc:a912adb84c4940893eb4634155e6e7e8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scalar-converting copy constructor. See <a class="el" href="group__system__scalar__conversion.html">System Scalar Conversion</a>.  <a href="#a912adb84c4940893eb4634155e6e7e8b">More...</a><br /></td></tr>
 <tr class="separator:a912adb84c4940893eb4634155e6e7e8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f6a68c31772eaa0c855ebb44eeaa0b7"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a9f6a68c31772eaa0c855ebb44eeaa0b7">AddRigidBody</a> (const std::string &amp;name, <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;M_BBo_B)</td></tr>
-<tr class="memdesc:a9f6a68c31772eaa0c855ebb44eeaa0b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a rigid body with the provided name and spatial inertia.  <a href="#a9f6a68c31772eaa0c855ebb44eeaa0b7">More...</a><br /></td></tr>
-<tr class="separator:a9f6a68c31772eaa0c855ebb44eeaa0b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a461a59b672f8c3f7c0dcc5caed56d245"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a461a59b672f8c3f7c0dcc5caed56d245">AddRigidBody</a> (const std::string &amp;name, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;M_BBo_B)</td></tr>
-<tr class="memdesc:a461a59b672f8c3f7c0dcc5caed56d245"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a rigid body with the provided name and spatial inertia.  <a href="#a461a59b672f8c3f7c0dcc5caed56d245">More...</a><br /></td></tr>
-<tr class="separator:a461a59b672f8c3f7c0dcc5caed56d245"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbb5022b0809decc5cd30dd25ac9d0f3"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#abbb5022b0809decc5cd30dd25ac9d0f3">AddRigidBody</a> (const std::string &amp;name, <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;M_BBo_B=<a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;::Zero())</td></tr>
+<tr class="memdesc:abbb5022b0809decc5cd30dd25ac9d0f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a rigid body with the provided name and spatial inertia.  <a href="#abbb5022b0809decc5cd30dd25ac9d0f3">More...</a><br /></td></tr>
+<tr class="separator:abbb5022b0809decc5cd30dd25ac9d0f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d2828eaa6f5e384374e3ecec1a357ce"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a0d2828eaa6f5e384374e3ecec1a357ce">AddRigidBody</a> (const std::string &amp;name, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;M_BBo_B=<a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;::Zero())</td></tr>
+<tr class="memdesc:a0d2828eaa6f5e384374e3ecec1a357ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a rigid body with the provided name and spatial inertia.  <a href="#a0d2828eaa6f5e384374e3ecec1a357ce">More...</a><br /></td></tr>
+<tr class="separator:a0d2828eaa6f5e384374e3ecec1a357ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a474c90a0b3e4f9349533207026413186"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename &gt; class FrameType&gt; </td></tr>
 <tr class="memitem:a474c90a0b3e4f9349533207026413186"><td class="memTemplItemLeft" align="right" valign="top">const FrameType&lt; T &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a474c90a0b3e4f9349533207026413186">AddFrame</a> (std::unique_ptr&lt; FrameType&lt; T &gt;&gt; frame)</td></tr>
 <tr class="memdesc:a474c90a0b3e4f9349533207026413186"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method adds a <a class="el" href="classdrake_1_1multibody_1_1_frame.html" title="Frame is an abstract class representing a material frame (also called a physical frame),...">Frame</a> of type <code>FrameType&lt;T&gt;</code>.  <a href="#a474c90a0b3e4f9349533207026413186">More...</a><br /></td></tr>
@@ -1899,8 +1899,8 @@ A distance constraint is the wrong modeling choice if the distance needs to go t
 
 </div>
 </div>
-<a id="a9f6a68c31772eaa0c855ebb44eeaa0b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f6a68c31772eaa0c855ebb44eeaa0b7">&#9670;&nbsp;</a></span>AddRigidBody() <span class="overload">[1/2]</span></h2>
+<a id="abbb5022b0809decc5cd30dd25ac9d0f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbb5022b0809decc5cd30dd25ac9d0f3">&#9670;&nbsp;</a></span>AddRigidBody() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1921,7 +1921,7 @@ A distance constraint is the wrong modeling choice if the distance needs to go t
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>M_BBo_B</em>&#160;</td>
+          <td class="paramname"><em>M_BBo_B</em> = <code><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;::Zero()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1937,7 +1937,7 @@ A distance constraint is the wrong modeling choice if the distance needs to go t
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>A string that identifies the new body to be added to <code>this</code> model. A std::runtime_error is thrown if a body named <code>name</code> already is part of <code>model_instance</code>. See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a5aa037adf3002834caa1aedd305fa36d">HasBodyNamed()</a>, <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#ad8227ba86a01f26e4f173cd5e219d5d1" title="Gets the name associated with this rigid body.">RigidBody::name()</a>. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">model_instance</td><td>A model instance index which this body is part of. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">M_BBo_B</td><td>The <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html" title="This class represents the physical concept of a Spatial Inertia.">SpatialInertia</a> of the new rigid body to be added to <code>this</code> MultibodyPlant, computed about the body frame origin <code>Bo</code> and expressed in the body frame B. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">M_BBo_B</td><td>The <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html" title="This class represents the physical concept of a Spatial Inertia.">SpatialInertia</a> of the new rigid body to be added to <code>this</code> MultibodyPlant, computed about the body frame origin <code>Bo</code> and expressed in the body frame B. When not provided, defaults to zero. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1945,8 +1945,8 @@ A distance constraint is the wrong modeling choice if the distance needs to go t
 
 </div>
 </div>
-<a id="a461a59b672f8c3f7c0dcc5caed56d245"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a461a59b672f8c3f7c0dcc5caed56d245">&#9670;&nbsp;</a></span>AddRigidBody() <span class="overload">[2/2]</span></h2>
+<a id="a0d2828eaa6f5e384374e3ecec1a357ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d2828eaa6f5e384374e3ecec1a357ce">&#9670;&nbsp;</a></span>AddRigidBody() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1961,7 +1961,7 @@ A distance constraint is the wrong modeling choice if the distance needs to go t
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>M_BBo_B</em>&#160;</td>
+          <td class="paramname"><em>M_BBo_B</em> = <code><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;::Zero()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1976,7 +1976,7 @@ A distance constraint is the wrong modeling choice if the distance needs to go t
 <p>Example of usage: </p><div class="fragment"><div class="line">MultibodyPlant&lt;T&gt; plant;</div><div class="line"><span class="comment">// ... Code to define spatial_inertia, a SpatialInertia&lt;T&gt; object ...</span></div><div class="line"><span class="keyword">const</span> RigidBody&lt;T&gt;&amp; body =</div><div class="line">  plant.AddRigidBody(<span class="stringliteral">&quot;BodyName&quot;</span>, spatial_inertia);</div></div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>A string that identifies the new body to be added to <code>this</code> model. A std::runtime_error is thrown if a body named <code>name</code> already is part of the model in the default model instance. See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a5aa037adf3002834caa1aedd305fa36d">HasBodyNamed()</a>, <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#ad8227ba86a01f26e4f173cd5e219d5d1" title="Gets the name associated with this rigid body.">RigidBody::name()</a>. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">M_BBo_B</td><td>The <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html" title="This class represents the physical concept of a Spatial Inertia.">SpatialInertia</a> of the new rigid body to be added to <code>this</code> MultibodyPlant, computed about the body frame origin <code>Bo</code> and expressed in the body frame B. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">M_BBo_B</td><td>The <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html" title="This class represents the physical concept of a Spatial Inertia.">SpatialInertia</a> of the new rigid body to be added to <code>this</code> MultibodyPlant, computed about the body frame origin <code>Bo</code> and expressed in the body frame B. When not provided, defaults to zero. </td></tr>
   </table>
   </dd>
 </dl>
@@ -7066,7 +7066,7 @@ This function is guaranteed to allocate no heap. </dd></dl>
       </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if a body named <code>name</code> was added to the MultibodyPlant. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a9f6a68c31772eaa0c855ebb44eeaa0b7" title="Creates a rigid body with the provided name and spatial inertia.">AddRigidBody()</a>.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#abbb5022b0809decc5cd30dd25ac9d0f3" title="Creates a rigid body with the provided name and spatial inertia.">AddRigidBody()</a>.</dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if the body name occurs in multiple model instances. </td></tr>
@@ -7102,7 +7102,7 @@ This function is guaranteed to allocate no heap. </dd></dl>
       </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if a body named <code>name</code> was added to the MultibodyPlant in <code>model_instance</code>. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a9f6a68c31772eaa0c855ebb44eeaa0b7" title="Creates a rigid body with the provided name and spatial inertia.">AddRigidBody()</a>.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#abbb5022b0809decc5cd30dd25ac9d0f3" title="Creates a rigid body with the provided name and spatial inertia.">AddRigidBody()</a>.</dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if <code>model_instance</code> is not valid for this model. </td></tr>
@@ -7854,7 +7854,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 </div><div class="memdoc">
 
 <p>Returns the number of bodies in the model, including the "world" body, which is always part of the model. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a9f6a68c31772eaa0c855ebb44eeaa0b7" title="Creates a rigid body with the provided name and spatial inertia.">AddRigidBody()</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#abbb5022b0809decc5cd30dd25ac9d0f3" title="Creates a rigid body with the provided name and spatial inertia.">AddRigidBody()</a>. </dd></dl>
 
 </div>
 </div>

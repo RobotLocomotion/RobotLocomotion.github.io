@@ -176,15 +176,26 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8dcb5a3da4de49d28bc6f8d01325852a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_l2_norm_cost.html#a8dcb5a3da4de49d28bc6f8d01325852a">L2NormCost</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;<a class="el" href="classdrake_1_1solvers_1_1_l2_norm_cost.html#ace583a472a3bdc1b67f05d6a6571a903">A</a>, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;<a class="el" href="classdrake_1_1solvers_1_1_l2_norm_cost.html#aae45694d3595659922653fd027d15cb6">b</a>)</td></tr>
 <tr class="memdesc:a8dcb5a3da4de49d28bc6f8d01325852a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a cost of the form ‖Ax + b‖₂.  <a href="#a8dcb5a3da4de49d28bc6f8d01325852a">More...</a><br /></td></tr>
 <tr class="separator:a8dcb5a3da4de49d28bc6f8d01325852a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae691ac50d3dbb4b829c72fea4cdee3e1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_l2_norm_cost.html#ae691ac50d3dbb4b829c72fea4cdee3e1">L2NormCost</a> (const Eigen::SparseMatrix&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;<a class="el" href="classdrake_1_1solvers_1_1_l2_norm_cost.html#ace583a472a3bdc1b67f05d6a6571a903">A</a>, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;<a class="el" href="classdrake_1_1solvers_1_1_l2_norm_cost.html#aae45694d3595659922653fd027d15cb6">b</a>)</td></tr>
+<tr class="memdesc:ae691ac50d3dbb4b829c72fea4cdee3e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloads constructor with a sparse A matrix.  <a href="#ae691ac50d3dbb4b829c72fea4cdee3e1">More...</a><br /></td></tr>
+<tr class="separator:ae691ac50d3dbb4b829c72fea4cdee3e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acebf6030f544a5558f5530b22ef42d62"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_l2_norm_cost.html#acebf6030f544a5558f5530b22ef42d62">~L2NormCost</a> () override</td></tr>
 <tr class="separator:acebf6030f544a5558f5530b22ef42d62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace583a472a3bdc1b67f05d6a6571a903"><td class="memItemLeft" align="right" valign="top">const Eigen::MatrixXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_l2_norm_cost.html#ace583a472a3bdc1b67f05d6a6571a903">A</a> () const</td></tr>
+<tr class="memdesc:ace583a472a3bdc1b67f05d6a6571a903"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#ace583a472a3bdc1b67f05d6a6571a903">More...</a><br /></td></tr>
 <tr class="separator:ace583a472a3bdc1b67f05d6a6571a903"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c266571ce951e63d66d582a62854908"><td class="memItemLeft" align="right" valign="top">const Eigen::SparseMatrix&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_l2_norm_cost.html#a1c266571ce951e63d66d582a62854908">get_sparse_A</a> () const</td></tr>
+<tr class="separator:a1c266571ce951e63d66d582a62854908"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38e25e75fd44159789b93a0c7f180c39"><td class="memItemLeft" align="right" valign="top">const Eigen::MatrixXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_l2_norm_cost.html#a38e25e75fd44159789b93a0c7f180c39">GetDenseA</a> () const</td></tr>
+<tr class="separator:a38e25e75fd44159789b93a0c7f180c39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae45694d3595659922653fd027d15cb6"><td class="memItemLeft" align="right" valign="top">const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_l2_norm_cost.html#aae45694d3595659922653fd027d15cb6">b</a> () const</td></tr>
 <tr class="separator:aae45694d3595659922653fd027d15cb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c62a9fdaa320f7568a7ab93a80180dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_l2_norm_cost.html#a5c62a9fdaa320f7568a7ab93a80180dc">UpdateCoefficients</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;new_A, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;new_b)</td></tr>
 <tr class="memdesc:a5c62a9fdaa320f7568a7ab93a80180dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the coefficients of the cost.  <a href="#a5c62a9fdaa320f7568a7ab93a80180dc">More...</a><br /></td></tr>
 <tr class="separator:a5c62a9fdaa320f7568a7ab93a80180dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d9b39ef1f63164b8f727d7748603a88"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_l2_norm_cost.html#a2d9b39ef1f63164b8f727d7748603a88">UpdateCoefficients</a> (const Eigen::SparseMatrix&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;new_A, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;new_b)</td></tr>
+<tr class="memdesc:a2d9b39ef1f63164b8f727d7748603a88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloads UpdateCoefficients but with a sparse A matrix.  <a href="#a2d9b39ef1f63164b8f727d7748603a88">More...</a><br /></td></tr>
+<tr class="separator:a2d9b39ef1f63164b8f727d7748603a88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a78d0728758456a66a6723d1cd6d46c93"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_l2_norm_cost.html#a78d0728758456a66a6723d1cd6d46c93">L2NormCost</a> (const <a class="el" href="classdrake_1_1solvers_1_1_l2_norm_cost.html">L2NormCost</a> &amp;)=delete</td></tr>
 <tr class="separator:a78d0728758456a66a6723d1cd6d46c93"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -280,7 +291,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a78d0728758456a66a6723d1cd6d46c93"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a78d0728758456a66a6723d1cd6d46c93">&#9670;&nbsp;</a></span>L2NormCost() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a78d0728758456a66a6723d1cd6d46c93">&#9670;&nbsp;</a></span>L2NormCost() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -306,7 +317,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a9aaeea3b8a2befc955b9f21128888cb3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9aaeea3b8a2befc955b9f21128888cb3">&#9670;&nbsp;</a></span>L2NormCost() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9aaeea3b8a2befc955b9f21128888cb3">&#9670;&nbsp;</a></span>L2NormCost() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -332,7 +343,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a8dcb5a3da4de49d28bc6f8d01325852a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8dcb5a3da4de49d28bc6f8d01325852a">&#9670;&nbsp;</a></span>L2NormCost() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dcb5a3da4de49d28bc6f8d01325852a">&#9670;&nbsp;</a></span>L2NormCost() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -365,6 +376,36 @@ Protected Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ae691ac50d3dbb4b829c72fea4cdee3e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae691ac50d3dbb4b829c72fea4cdee3e1">&#9670;&nbsp;</a></span>L2NormCost() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_l2_norm_cost.html">L2NormCost</a> </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::SparseMatrix&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Overloads constructor with a sparse A matrix. </p>
 
 </div>
 </div>
@@ -408,6 +449,10 @@ Protected Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000018">Deprecated:</a></b></dt><dd>Use A_dense function instead. <br />
+ This will be removed from Drake on or after 2024-08-01.</dd></dl>
 
 </div>
 </div>
@@ -654,6 +699,40 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a1c266571ce951e63d66d582a62854908"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c266571ce951e63d66d582a62854908">&#9670;&nbsp;</a></span>get_sparse_A()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Eigen::SparseMatrix&lt;<a class="el" href="classdouble.html">double</a>&gt;&amp; get_sparse_A </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a38e25e75fd44159789b93a0c7f180c39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38e25e75fd44159789b93a0c7f180c39">&#9670;&nbsp;</a></span>GetDenseA()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Eigen::MatrixXd&amp; GetDenseA </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a4cf3e98daed7e5998c947592c2d7c3e0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4cf3e98daed7e5998c947592c2d7c3e0">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
@@ -707,7 +786,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a5c62a9fdaa320f7568a7ab93a80180dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c62a9fdaa320f7568a7ab93a80180dc">&#9670;&nbsp;</a></span>UpdateCoefficients()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c62a9fdaa320f7568a7ab93a80180dc">&#9670;&nbsp;</a></span>UpdateCoefficients() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -740,6 +819,36 @@ Protected Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a2d9b39ef1f63164b8f727d7748603a88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d9b39ef1f63164b8f727d7748603a88">&#9670;&nbsp;</a></span>UpdateCoefficients() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UpdateCoefficients </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::SparseMatrix&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>new_A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>new_b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Overloads UpdateCoefficients but with a sparse A matrix. </p>
 
 </div>
 </div>

@@ -1,5 +1,12 @@
 var NAVTREEINDEX46 =
 {
+"damping__model_8h.html#a637b32bd5b13e55117670a553e19c54f":[4,0,0,8,3,5,1],
+"decision__variable_8h.html":[4,0,0,11,17],
+"decision__variable_8h.html#a062b182db5c52f5a71221a4c5958ea0b":[4,0,0,11,17,3],
+"decision__variable_8h.html#a8f304c33d467b0bf0ad02e25a2ced143":[4,0,0,11,17,6],
+"decision__variable_8h.html#aa20d09ae94d1e722c2961fbaca37f967":[4,0,0,11,17,4],
+"decision__variable_8h.html#aa708f80d971209e3d46c1e41f05c1393":[4,0,0,11,17,0],
+"decision__variable_8h.html#ac04cfbe6b8d63ecb463fc087385ce061":[4,0,0,11,17,2],
 "decision__variable_8h.html#aca924499b3b011a50d3bd9d051295efa":[4,0,0,11,17,5],
 "decision__variable_8h.html#acf84184cb10b49233b007295d1880e17":[4,0,0,11,17,1],
 "decompose_8h.html":[4,0,0,1,3,4],
@@ -242,12 +249,5 @@ var NAVTREEINDEX46 =
 "distance__constraint_8h.html":[4,0,0,8,5,7],
 "distance__constraint__utilities_8h.html":[4,0,0,8,5,8],
 "distance__to__point__callback_8h.html":[4,0,0,4,2,14],
-"distance__to__shape__callback_8h.html":[4,0,0,4,2,15],
-"distance__to__shape__touching_8h.html":[4,0,0,4,2,16],
-"door__hinge_8h.html":[4,0,0,8,14,8],
-"double__overloads_8h.html":[4,0,0,1,16],
-"double__overloads_8h.html#ad14dd00683f82b89dc0f08f9adec904e":[4,0,0,1,16,0],
-"doxygen_8h.html":[4,0,0,2,0,0],
-"doxygen__cxx_8h.html":[4,0,0,1,17],
-"drake__assert_8h.html":[4,0,0,1,18]
+"distance__to__shape__callback_8h.html":[4,0,0,4,2,15]
 };

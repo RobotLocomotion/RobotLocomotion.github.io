@@ -587,6 +587,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a43caa3a499b973de17213d63a006b0ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a43caa3a499b973de17213d63a006b0ea">AggregateBoundingBoxConstraints</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;prog, Eigen::VectorXd *lower, Eigen::VectorXd *upper)</td></tr>
 <tr class="memdesc:a43caa3a499b973de17213d63a006b0ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aggregates all the BoundingBoxConstraints inside <code>prog</code>, returns the intersection of the bounding box constraints as the lower and upper bound for each variable in <code>prog</code>.  <a href="#a43caa3a499b973de17213d63a006b0ea">More...</a><br /></td></tr>
 <tr class="separator:a43caa3a499b973de17213d63a006b0ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb331e49dcccbb8d9d0e63a2190685f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#acb331e49dcccbb8d9d0e63a2190685f2">AggregateBoundingBoxConstraints</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;prog, std::vector&lt; <a class="el" href="classdouble.html">double</a> &gt; *lower, std::vector&lt; <a class="el" href="classdouble.html">double</a> &gt; *upper)</td></tr>
+<tr class="memdesc:acb331e49dcccbb8d9d0e63a2190685f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloads AggregateBoundingBoxConstraints, but the type of lower and upper are std::vector&lt;double&gt;.  <a href="#acb331e49dcccbb8d9d0e63a2190685f2">More...</a><br /></td></tr>
+<tr class="separator:acb331e49dcccbb8d9d0e63a2190685f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5999ff5df38e426f3e6c4a69aeec4305"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a5999ff5df38e426f3e6c4a69aeec4305">AggregateDuplicateVariables</a> (const Eigen::SparseMatrix&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;A, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &amp;vars, Eigen::SparseMatrix&lt; <a class="el" href="classdouble.html">double</a> &gt; *A_new, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; *vars_new)</td></tr>
 <tr class="memdesc:a5999ff5df38e426f3e6c4a69aeec4305"><td class="mdescLeft">&#160;</td><td class="mdescRight">For linear expression A * vars where <code>vars</code> might contain duplicated entries, rewrite this linear expression as A_new * vars_new where vars_new doesn't contain duplicated entries.  <a href="#a5999ff5df38e426f3e6c4a69aeec4305">More...</a><br /></td></tr>
 <tr class="separator:a5999ff5df38e426f3e6c4a69aeec4305"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1906,7 +1909,7 @@ The particular representation/algorithm here was developed in an attempt:<ul>
 </div>
 </div>
 <a id="aebc36100fe5dc287d0c0c41a65c31c21"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aebc36100fe5dc287d0c0c41a65c31c21">&#9670;&nbsp;</a></span>AggregateBoundingBoxConstraints() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aebc36100fe5dc287d0c0c41a65c31c21">&#9670;&nbsp;</a></span>AggregateBoundingBoxConstraints() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1938,7 +1941,7 @@ The particular representation/algorithm here was developed in an attempt:<ul>
 </div>
 </div>
 <a id="a43caa3a499b973de17213d63a006b0ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a43caa3a499b973de17213d63a006b0ea">&#9670;&nbsp;</a></span>AggregateBoundingBoxConstraints() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a43caa3a499b973de17213d63a006b0ea">&#9670;&nbsp;</a></span>AggregateBoundingBoxConstraints() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1978,6 +1981,42 @@ The particular representation/algorithm here was developed in an attempt:<ul>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="acb331e49dcccbb8d9d0e63a2190685f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb331e49dcccbb8d9d0e63a2190685f2">&#9670;&nbsp;</a></span>AggregateBoundingBoxConstraints() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drake::solvers::AggregateBoundingBoxConstraints </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;&#160;</td>
+          <td class="paramname"><em>prog</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td>
+          <td class="paramname"><em>lower</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td>
+          <td class="paramname"><em>upper</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Overloads AggregateBoundingBoxConstraints, but the type of lower and upper are std::vector&lt;double&gt;. </p>
 
 </div>
 </div>

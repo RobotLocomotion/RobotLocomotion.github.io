@@ -224,6 +224,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a087724eb9045117415e4d5a93db67ab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a111e7545f0a4fcae1b8a52fec666594a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a111e7545f0a4fcae1b8a52fec666594a">mixing_steps</a> {10}</td></tr>
 <tr class="separator:a111e7545f0a4fcae1b8a52fec666594a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c4438afbf2190941ebeae2f8e16dd11"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">solvers::SolverOptions</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a6c4438afbf2190941ebeae2f8e16dd11">solver_options</a></td></tr>
+<tr class="separator:a6c4438afbf2190941ebeae2f8e16dd11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a8e8824802dedfbc36776227f7482b6bc"></a>
@@ -446,6 +448,20 @@ Public Attributes</h2></td></tr>
 
 <p>The initial polytope is guaranteed to contain the point if that point is collision-free. </p>
 <p>However, the IRIS alternation objectives do not include (and can not easily include) a constraint that the original sample point is contained. Therefore, the IRIS paper recommends that if containment is a requirement, then the algorithm should simply terminate early if alternations would ever cause the set to not contain the point. </p>
+
+</div>
+</div>
+<a id="a6c4438afbf2190941ebeae2f8e16dd11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c4438afbf2190941ebeae2f8e16dd11">&#9670;&nbsp;</a></span>solver_options</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;<a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">solvers::SolverOptions</a>&gt; solver_options</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

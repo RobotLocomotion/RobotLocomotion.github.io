@@ -2603,7 +2603,7 @@ to or from symbolic::Expression after a call to this method.</p>
 <span class="sig-name descname"><span class="pre">AddRigidBody</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.AddRigidBody" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant, name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia) -&gt; pydrake.multibody.tree.RigidBody</p></li>
+<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant, name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f9b27dfc6f0&gt;) -&gt; pydrake.multibody.tree.RigidBody</p></li>
 </ol>
 <p>Creates a rigid body with the provided name and spatial inertia. This
 method returns a constant reference to the body just added, which will
@@ -2625,7 +2625,8 @@ HasBodyNamed(), RigidBody::name().</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>The SpatialInertia of the new rigid body to be added to <code class="docutils literal notranslate"><span class="pre">this</span></code>
 MultibodyPlant, computed about the body frame origin <code class="docutils literal notranslate"><span class="pre">Bo</span></code> and
-expressed in the body frame B.</p>
+expressed in the body frame B. When not provided, defaults to
+zero.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -2641,7 +2642,7 @@ remain valid for the lifetime of <code class="docutils literal notranslate"><spa
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant, name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia) -&gt; pydrake.multibody.tree.RigidBody</p></li>
+<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant, name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f9b2797b070&gt;) -&gt; pydrake.multibody.tree.RigidBody</p></li>
 </ol>
 <p>Creates a rigid body with the provided name and spatial inertia. This
 method returns a constant reference to the body just added, which will
@@ -2664,7 +2665,8 @@ RigidBody::name().</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>The SpatialInertia of the new rigid body to be added to <code class="docutils literal notranslate"><span class="pre">this</span></code>
 MultibodyPlant, computed about the body frame origin <code class="docutils literal notranslate"><span class="pre">Bo</span></code> and
-expressed in the body frame B.</p>
+expressed in the body frame B. When not provided, defaults to
+zero.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -7709,7 +7711,7 @@ to or from symbolic::Expression after a call to this method.</p>
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].AddRigidBody"></span><span class="sig-name descname"><span class="pre">AddRigidBody</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.AddRigidBody" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia) -&gt; pydrake.multibody.tree.RigidBody_[AutoDiffXd]</p></li>
+<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f9b277f3d70&gt;) -&gt; pydrake.multibody.tree.RigidBody_[AutoDiffXd]</p></li>
 </ol>
 <p>Creates a rigid body with the provided name and spatial inertia. This
 method returns a constant reference to the body just added, which will
@@ -7731,7 +7733,8 @@ HasBodyNamed(), RigidBody::name().</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>The SpatialInertia of the new rigid body to be added to <code class="docutils literal notranslate"><span class="pre">this</span></code>
 MultibodyPlant, computed about the body frame origin <code class="docutils literal notranslate"><span class="pre">Bo</span></code> and
-expressed in the body frame B.</p>
+expressed in the body frame B. When not provided, defaults to
+zero.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -7747,7 +7750,7 @@ remain valid for the lifetime of <code class="docutils literal notranslate"><spa
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia) -&gt; pydrake.multibody.tree.RigidBody_[AutoDiffXd]</p></li>
+<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f9b27868ef0&gt;) -&gt; pydrake.multibody.tree.RigidBody_[AutoDiffXd]</p></li>
 </ol>
 <p>Creates a rigid body with the provided name and spatial inertia. This
 method returns a constant reference to the body just added, which will
@@ -7770,7 +7773,8 @@ RigidBody::name().</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>The SpatialInertia of the new rigid body to be added to <code class="docutils literal notranslate"><span class="pre">this</span></code>
 MultibodyPlant, computed about the body frame origin <code class="docutils literal notranslate"><span class="pre">Bo</span></code> and
-expressed in the body frame B.</p>
+expressed in the body frame B. When not provided, defaults to
+zero.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -12771,7 +12775,7 @@ to or from symbolic::Expression after a call to this method.</p>
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].AddRigidBody"></span><span class="sig-name descname"><span class="pre">AddRigidBody</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.AddRigidBody" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[Expression], name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia) -&gt; pydrake.multibody.tree.RigidBody_[Expression]</p></li>
+<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[Expression], name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f9b2796a130&gt;) -&gt; pydrake.multibody.tree.RigidBody_[Expression]</p></li>
 </ol>
 <p>Creates a rigid body with the provided name and spatial inertia. This
 method returns a constant reference to the body just added, which will
@@ -12793,7 +12797,8 @@ HasBodyNamed(), RigidBody::name().</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>The SpatialInertia of the new rigid body to be added to <code class="docutils literal notranslate"><span class="pre">this</span></code>
 MultibodyPlant, computed about the body frame origin <code class="docutils literal notranslate"><span class="pre">Bo</span></code> and
-expressed in the body frame B.</p>
+expressed in the body frame B. When not provided, defaults to
+zero.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -12809,7 +12814,7 @@ remain valid for the lifetime of <code class="docutils literal notranslate"><spa
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[Expression], name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia) -&gt; pydrake.multibody.tree.RigidBody_[Expression]</p></li>
+<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[Expression], name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f9b24976c70&gt;) -&gt; pydrake.multibody.tree.RigidBody_[Expression]</p></li>
 </ol>
 <p>Creates a rigid body with the provided name and spatial inertia. This
 method returns a constant reference to the body just added, which will
@@ -12832,7 +12837,8 @@ RigidBody::name().</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>The SpatialInertia of the new rigid body to be added to <code class="docutils literal notranslate"><span class="pre">this</span></code>
 MultibodyPlant, computed about the body frame origin <code class="docutils literal notranslate"><span class="pre">Bo</span></code> and
-expressed in the body frame B.</p>
+expressed in the body frame B. When not provided, defaults to
+zero.</p>
 </dd>
 </dl>
 <dl class="field-list simple">

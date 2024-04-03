@@ -2,7 +2,7 @@ var classdrake_1_1multibody_1_1_spatial_inertia =
 [
     [ "SpatialInertia", "classdrake_1_1multibody_1_1_spatial_inertia.html#a8f02d78a11a4fd918699c75b48573520", null ],
     [ "SpatialInertia", "classdrake_1_1multibody_1_1_spatial_inertia.html#a423681189f9dd1726b750876f67dafe9", null ],
-    [ "SpatialInertia", "classdrake_1_1multibody_1_1_spatial_inertia.html#a4a70f239bc8c7a515ee38b9e26aad808", null ],
+    [ "SpatialInertia", "classdrake_1_1multibody_1_1_spatial_inertia.html#a6e9c573b8e817fdaccbbcbdd29810ae7", null ],
     [ "SpatialInertia", "classdrake_1_1multibody_1_1_spatial_inertia.html#a6d7aa4145ca54c5ab8e45728648f7c5b", null ],
     [ "CalcComMoment", "classdrake_1_1multibody_1_1_spatial_inertia.html#a3a1c2e2b7b334839c460e022d4686f54", null ],
     [ "CalcMinimumPhysicalLength", "classdrake_1_1multibody_1_1_spatial_inertia.html#ac8e8046a1dd852107b5f6a213b0cf2c5", null ],
@@ -21,6 +21,7 @@ var classdrake_1_1multibody_1_1_spatial_inertia =
     [ "IsPhysicallyValid", "classdrake_1_1multibody_1_1_spatial_inertia.html#a679852e6738fbcf5751ca37c51d2f084", null ],
     [ "MakeFromCentralInertia", "classdrake_1_1multibody_1_1_spatial_inertia.html#a122ea28cb0d9cc88f61b03765076e349", null ],
     [ "MakeUnitary", "classdrake_1_1multibody_1_1_spatial_inertia.html#a1f022e7b3f0771715149a808b11343fd", null ],
+    [ "NaN", "classdrake_1_1multibody_1_1_spatial_inertia.html#a5fd853ae2157259d63973818578119f4", null ],
     [ "operator *", "classdrake_1_1multibody_1_1_spatial_inertia.html#acd0afd330ef98eb2418ae915e3a1b024", null ],
     [ "operator *", "classdrake_1_1multibody_1_1_spatial_inertia.html#ab0efcd599640dacc6ef37cf640143fdc", null ],
     [ "operator *", "classdrake_1_1multibody_1_1_spatial_inertia.html#acc3f6e6102f427a8624f86758eb536fd", null ],
@@ -51,5 +52,6 @@ var classdrake_1_1multibody_1_1_spatial_inertia =
     [ "SolidTetrahedronAboutVertexWithDensity", "classdrake_1_1multibody_1_1_spatial_inertia.html#a8d0407ec30127d1a3d4fcb355453485c", null ],
     [ "ThinRodWithMass", "classdrake_1_1multibody_1_1_spatial_inertia.html#a5233380acba42c39c9b741b85660beca", null ],
     [ "ThinRodWithMassAboutEnd", "classdrake_1_1multibody_1_1_spatial_inertia.html#a97f17f72011d5c06da34f69245ac69bf", null ],
+    [ "Zero", "classdrake_1_1multibody_1_1_spatial_inertia.html#a4d8ac17f8615fe5634f54ad0423c0550", null ],
     [ "operator<<", "classdrake_1_1multibody_1_1_spatial_inertia.html#a3b6fb089613f2cdc65359c65d5a5d504", null ]
 ];

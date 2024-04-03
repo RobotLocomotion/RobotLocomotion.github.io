@@ -212,9 +212,9 @@ To create spatial inertia for a set of bodies, see <a class="el" href="classdrak
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4a70f239bc8c7a515ee38b9e26aad808"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a4a70f239bc8c7a515ee38b9e26aad808">SpatialInertia</a> ()</td></tr>
-<tr class="memdesc:a4a70f239bc8c7a515ee38b9e26aad808"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html" title="This class represents the physical concept of a Spatial Inertia.">SpatialInertia</a> constructor initializes mass, center of mass and rotational inertia to invalid NaN's for a quick detection of uninitialized values.  <a href="#a4a70f239bc8c7a515ee38b9e26aad808">More...</a><br /></td></tr>
-<tr class="separator:a4a70f239bc8c7a515ee38b9e26aad808"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e9c573b8e817fdaccbbcbdd29810ae7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a6e9c573b8e817fdaccbbcbdd29810ae7">SpatialInertia</a> ()=default</td></tr>
+<tr class="memdesc:a6e9c573b8e817fdaccbbcbdd29810ae7"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a6e9c573b8e817fdaccbbcbdd29810ae7">More...</a><br /></td></tr>
+<tr class="separator:a6e9c573b8e817fdaccbbcbdd29810ae7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d7aa4145ca54c5ab8e45728648f7c5b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a6d7aa4145ca54c5ab8e45728648f7c5b">SpatialInertia</a> (const T &amp;mass, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_PScm_E, const <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; T &gt; &amp;G_SP_E, const bool skip_validity_check=false)</td></tr>
 <tr class="memdesc:a6d7aa4145ca54c5ab8e45728648f7c5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a spatial inertia for a physical body or composite body S about a point P from a given mass, center of mass and rotational inertia.  <a href="#a6d7aa4145ca54c5ab8e45728648f7c5b">More...</a><br /></td></tr>
 <tr class="separator:a6d7aa4145ca54c5ab8e45728648f7c5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -377,6 +377,12 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a8d0407ec30127d1a3d4fcb355453485c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a8d0407ec30127d1a3d4fcb355453485c">SolidTetrahedronAboutVertexWithDensity</a> (const T &amp;density, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p1, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p2, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p3)</td></tr>
 <tr class="memdesc:a8d0407ec30127d1a3d4fcb355453485c"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Creates a spatial inertia for a uniform density solid tetrahedron B about its vertex B0, from which position vectors to B's other 3 vertices B1, B2, B3 are measured (position vectors are all expressed in a common frame E).  <a href="#a8d0407ec30127d1a3d4fcb355453485c">More...</a><br /></td></tr>
 <tr class="separator:a8d0407ec30127d1a3d4fcb355453485c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d8ac17f8615fe5634f54ad0423c0550"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a4d8ac17f8615fe5634f54ad0423c0550">Zero</a> ()</td></tr>
+<tr class="memdesc:a4d8ac17f8615fe5634f54ad0423c0550"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes mass, center of mass and rotational inertia to zero.  <a href="#a4d8ac17f8615fe5634f54ad0423c0550">More...</a><br /></td></tr>
+<tr class="separator:a4d8ac17f8615fe5634f54ad0423c0550"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fd853ae2157259d63973818578119f4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a5fd853ae2157259d63973818578119f4">NaN</a> ()</td></tr>
+<tr class="memdesc:a5fd853ae2157259d63973818578119f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes mass, center of mass and rotational inertia to invalid NaN's for a quick detection of uninitialized values.  <a href="#a5fd853ae2157259d63973818578119f4">More...</a><br /></td></tr>
+<tr class="separator:a5fd853ae2157259d63973818578119f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="related"></a>
 Related Functions</h2></td></tr>
@@ -440,11 +446,14 @@ Related Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a4a70f239bc8c7a515ee38b9e26aad808"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a70f239bc8c7a515ee38b9e26aad808">&#9670;&nbsp;</a></span>SpatialInertia() <span class="overload">[3/4]</span></h2>
+<a id="a6e9c573b8e817fdaccbbcbdd29810ae7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e9c573b8e817fdaccbbcbdd29810ae7">&#9670;&nbsp;</a></span>SpatialInertia() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a> </td>
@@ -453,9 +462,16 @@ Related Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Default <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html" title="This class represents the physical concept of a Spatial Inertia.">SpatialInertia</a> constructor initializes mass, center of mass and rotational inertia to invalid NaN's for a quick detection of uninitialized values. </p>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000016">Deprecated:</a></b></dt><dd>The default constructor is deprecated. If you really want NaNs, then  call the SpatialInertia&lt;T&gt;::NaN() factory function. If you were only  calling this constructor as part of adding a RigidBody to  MultibodyPlant, then instead you should omit the SpatialInertia  argument from MultibodyPlant::AddRigidBody(); it now defaults to zero. <br />
+ This will be removed from Drake on or after 2024-10-01.</dd></dl>
 
 </div>
 </div>
@@ -1007,6 +1023,33 @@ Minimum possible length can be used to detect erroneous inertias associated with
 </div><div class="memdoc">
 
 <p>(Internal use only) Creates a spatial inertia whose mass is 1, position vector to center of mass is zero, and whose rotational inertia has moments of inertia of 1 and products of inertia of 0. </p>
+
+</div>
+</div>
+<a id="a5fd853ae2157259d63973818578119f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fd853ae2157259d63973818578119f4">&#9670;&nbsp;</a></span>NaN()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a> NaN </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initializes mass, center of mass and rotational inertia to invalid NaN's for a quick detection of uninitialized values. </p>
 
 </div>
 </div>
@@ -2606,6 +2649,33 @@ B's rotational inertia about Bp is axially symmetric, meaning B has an equal mom
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a5233380acba42c39c9b741b85660beca" title="Creates a spatial inertia for a uniform-density thin rod B about its center of mass Bcm.">ThinRodWithMass()</a> to calculate M_BBcm_B, B's spatial inertia about Bcm (B's center of mass). </dd></dl>
+
+</div>
+</div>
+<a id="a4d8ac17f8615fe5634f54ad0423c0550"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d8ac17f8615fe5634f54ad0423c0550">&#9670;&nbsp;</a></span>Zero()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a> Zero </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initializes mass, center of mass and rotational inertia to zero. </p>
 
 </div>
 </div>

@@ -12571,7 +12571,7 @@ for the list of instantiations.</p>
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>__init__(self: pydrake.multibody.tree.RigidBody, body_name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.multibody.tree.RigidBody, body_name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f9b278f6fb0&gt;) -&gt; None</p></li>
 </ol>
 <p>Constructs a RigidBody named <code class="docutils literal notranslate"><span class="pre">body_name</span></code> with the given default
 SpatialInertia.</p>
@@ -12579,7 +12579,8 @@ SpatialInertia.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">body_name</span></code>:</dt><dd><p>A name associated with this body.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>Spatial inertia of this body B about the frame’s origin <code class="docutils literal notranslate"><span class="pre">Bo</span></code> and
-expressed in the body frame B.</p>
+expressed in the body frame B. When not provided, defaults to
+zero.</p>
 </dd>
 </dl>
 <div class="admonition note">
@@ -12588,7 +12589,7 @@ expressed in the body frame B.</p>
 used for spatial inertia quantities.</p>
 </div>
 <ol class="arabic simple" start="2">
-<li><p>__init__(self: pydrake.multibody.tree.RigidBody, body_name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.multibody.tree.RigidBody, body_name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f9b2495d1f0&gt;) -&gt; None</p></li>
 </ol>
 <p>Constructs a RigidBody named <code class="docutils literal notranslate"><span class="pre">body_name</span></code> with the given default
 SpatialInertia.</p>
@@ -12598,7 +12599,8 @@ SpatialInertia.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>:</dt><dd><p>The model instance associated with this body.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>Spatial inertia of this body B about the frame’s origin <code class="docutils literal notranslate"><span class="pre">Bo</span></code> and
-expressed in the body frame B.</p>
+expressed in the body frame B. When not provided, defaults to
+zero.</p>
 </dd>
 </dl>
 <div class="admonition note">
@@ -13159,7 +13161,7 @@ more degrees of freedom.</p>
 <span id="pydrake.multibody.tree.RigidBody_[AutoDiffXd].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody_-AutoDiffXd-.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>__init__(self: pydrake.multibody.tree.RigidBody_[AutoDiffXd], body_name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.multibody.tree.RigidBody_[AutoDiffXd], body_name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f9b27dd1030&gt;) -&gt; None</p></li>
 </ol>
 <p>Constructs a RigidBody named <code class="docutils literal notranslate"><span class="pre">body_name</span></code> with the given default
 SpatialInertia.</p>
@@ -13167,7 +13169,8 @@ SpatialInertia.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">body_name</span></code>:</dt><dd><p>A name associated with this body.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>Spatial inertia of this body B about the frame’s origin <code class="docutils literal notranslate"><span class="pre">Bo</span></code> and
-expressed in the body frame B.</p>
+expressed in the body frame B. When not provided, defaults to
+zero.</p>
 </dd>
 </dl>
 <div class="admonition note">
@@ -13176,7 +13179,7 @@ expressed in the body frame B.</p>
 used for spatial inertia quantities.</p>
 </div>
 <ol class="arabic simple" start="2">
-<li><p>__init__(self: pydrake.multibody.tree.RigidBody_[AutoDiffXd], body_name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.multibody.tree.RigidBody_[AutoDiffXd], body_name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f9b2794b2f0&gt;) -&gt; None</p></li>
 </ol>
 <p>Constructs a RigidBody named <code class="docutils literal notranslate"><span class="pre">body_name</span></code> with the given default
 SpatialInertia.</p>
@@ -13186,7 +13189,8 @@ SpatialInertia.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>:</dt><dd><p>The model instance associated with this body.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>Spatial inertia of this body B about the frame’s origin <code class="docutils literal notranslate"><span class="pre">Bo</span></code> and
-expressed in the body frame B.</p>
+expressed in the body frame B. When not provided, defaults to
+zero.</p>
 </dd>
 </dl>
 <div class="admonition note">
@@ -13741,7 +13745,7 @@ more degrees of freedom.</p>
 <span id="pydrake.multibody.tree.RigidBody_[Expression].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody_-Expression-.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>__init__(self: pydrake.multibody.tree.RigidBody_[Expression], body_name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.multibody.tree.RigidBody_[Expression], body_name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f9b2782afb0&gt;) -&gt; None</p></li>
 </ol>
 <p>Constructs a RigidBody named <code class="docutils literal notranslate"><span class="pre">body_name</span></code> with the given default
 SpatialInertia.</p>
@@ -13749,7 +13753,8 @@ SpatialInertia.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">body_name</span></code>:</dt><dd><p>A name associated with this body.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>Spatial inertia of this body B about the frame’s origin <code class="docutils literal notranslate"><span class="pre">Bo</span></code> and
-expressed in the body frame B.</p>
+expressed in the body frame B. When not provided, defaults to
+zero.</p>
 </dd>
 </dl>
 <div class="admonition note">
@@ -13758,7 +13763,7 @@ expressed in the body frame B.</p>
 used for spatial inertia quantities.</p>
 </div>
 <ol class="arabic simple" start="2">
-<li><p>__init__(self: pydrake.multibody.tree.RigidBody_[Expression], body_name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.multibody.tree.RigidBody_[Expression], body_name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f9b2793d0f0&gt;) -&gt; None</p></li>
 </ol>
 <p>Constructs a RigidBody named <code class="docutils literal notranslate"><span class="pre">body_name</span></code> with the given default
 SpatialInertia.</p>
@@ -13768,7 +13773,8 @@ SpatialInertia.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>:</dt><dd><p>The model instance associated with this body.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>Spatial inertia of this body B about the frame’s origin <code class="docutils literal notranslate"><span class="pre">Bo</span></code> and
-expressed in the body frame B.</p>
+expressed in the body frame B. When not provided, defaults to
+zero.</p>
 </dd>
 </dl>
 <div class="admonition note">
@@ -18648,9 +18654,16 @@ for the list of instantiations.</p>
 <ol class="arabic simple">
 <li><p>__init__(self: pydrake.multibody.tree.SpatialInertia) -&gt; None</p></li>
 </ol>
-<p>Default SpatialInertia constructor initializes mass, center of mass
-and rotational inertia to invalid NaN’s for a quick detection of
-uninitialized values.</p>
+<p>(Deprecated.)</p>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>The default constructor is deprecated. If you really want NaNs,
+then call the SpatialInertia&lt;T&gt;::NaN() factory function. If you
+were only calling this constructor as part of adding a RigidBody
+to MultibodyPlant, then instead you should omit the SpatialInertia
+argument from MultibodyPlant::AddRigidBody(); it now defaults to
+zero. This will be removed from Drake on or after 2024-10-01.</p>
+</dd>
+</dl>
 <ol class="arabic simple" start="2">
 <li><p>__init__(self: pydrake.multibody.tree.SpatialInertia, mass: float, p_PScm_E: numpy.ndarray[numpy.float64[3, 1]], G_SP_E: pydrake.multibody.tree.UnitInertia, skip_validity_check: bool = False) -&gt; None</p></li>
 </ol>
@@ -18873,6 +18886,13 @@ mass), expressed in a frame E.</p>
 <dt>Returns <code class="docutils literal notranslate"><span class="pre">M_SP_E</span></code>:</dt><dd><p>S’s spatial inertia about point P, expressed in frame E.</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia.NaN">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">NaN</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia" title="pydrake.multibody.tree.SpatialInertia"><span class="pre">pydrake.multibody.tree.SpatialInertia</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia.NaN" title="Permalink to this definition"></a></dt>
+<dd><p>Initializes mass, center of mass and rotational inertia to invalid
+NaN’s for a quick detection of uninitialized values.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -19424,6 +19444,12 @@ Bcm (B’s center of mass).</p>
 </div>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia.Zero">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Zero</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia" title="pydrake.multibody.tree.SpatialInertia"><span class="pre">pydrake.multibody.tree.SpatialInertia</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia.Zero" title="Permalink to this definition"></a></dt>
+<dd><p>Initializes mass, center of mass and rotational inertia to zero.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py template">
@@ -19548,9 +19574,16 @@ MultibodyPlant::CalcSpatialInertia().</p>
 <ol class="arabic simple">
 <li><p>__init__(self: pydrake.multibody.tree.SpatialInertia_[AutoDiffXd]) -&gt; None</p></li>
 </ol>
-<p>Default SpatialInertia constructor initializes mass, center of mass
-and rotational inertia to invalid NaN’s for a quick detection of
-uninitialized values.</p>
+<p>(Deprecated.)</p>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>The default constructor is deprecated. If you really want NaNs,
+then call the SpatialInertia&lt;T&gt;::NaN() factory function. If you
+were only calling this constructor as part of adding a RigidBody
+to MultibodyPlant, then instead you should omit the SpatialInertia
+argument from MultibodyPlant::AddRigidBody(); it now defaults to
+zero. This will be removed from Drake on or after 2024-10-01.</p>
+</dd>
+</dl>
 <ol class="arabic simple" start="2">
 <li><p>__init__(self: pydrake.multibody.tree.SpatialInertia_[AutoDiffXd], mass: pydrake.autodiffutils.AutoDiffXd, p_PScm_E: numpy.ndarray[object[3, 1]], G_SP_E: pydrake.multibody.tree.UnitInertia_[AutoDiffXd], skip_validity_check: bool = False) -&gt; None</p></li>
 </ol>
@@ -19773,6 +19806,13 @@ mass), expressed in a frame E.</p>
 <dt>Returns <code class="docutils literal notranslate"><span class="pre">M_SP_E</span></code>:</dt><dd><p>S’s spatial inertia about point P, expressed in frame E.</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.NaN">
+<span id="pydrake.multibody.tree.SpatialInertia_[AutoDiffXd].NaN"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">NaN</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.NaN" title="Permalink to this definition"></a></dt>
+<dd><p>Initializes mass, center of mass and rotational inertia to invalid
+NaN’s for a quick detection of uninitialized values.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -20324,6 +20364,12 @@ Bcm (B’s center of mass).</p>
 </div>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.Zero">
+<span id="pydrake.multibody.tree.SpatialInertia_[AutoDiffXd].Zero"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Zero</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.Zero" title="Permalink to this definition"></a></dt>
+<dd><p>Initializes mass, center of mass and rotational inertia to zero.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
@@ -20442,9 +20488,16 @@ MultibodyPlant::CalcSpatialInertia().</p>
 <ol class="arabic simple">
 <li><p>__init__(self: pydrake.multibody.tree.SpatialInertia_[Expression]) -&gt; None</p></li>
 </ol>
-<p>Default SpatialInertia constructor initializes mass, center of mass
-and rotational inertia to invalid NaN’s for a quick detection of
-uninitialized values.</p>
+<p>(Deprecated.)</p>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>The default constructor is deprecated. If you really want NaNs,
+then call the SpatialInertia&lt;T&gt;::NaN() factory function. If you
+were only calling this constructor as part of adding a RigidBody
+to MultibodyPlant, then instead you should omit the SpatialInertia
+argument from MultibodyPlant::AddRigidBody(); it now defaults to
+zero. This will be removed from Drake on or after 2024-10-01.</p>
+</dd>
+</dl>
 <ol class="arabic simple" start="2">
 <li><p>__init__(self: pydrake.multibody.tree.SpatialInertia_[Expression], mass: pydrake.symbolic.Expression, p_PScm_E: numpy.ndarray[object[3, 1]], G_SP_E: pydrake.multibody.tree.UnitInertia_[Expression], skip_validity_check: bool = False) -&gt; None</p></li>
 </ol>
@@ -20667,6 +20720,13 @@ mass), expressed in a frame E.</p>
 <dt>Returns <code class="docutils literal notranslate"><span class="pre">M_SP_E</span></code>:</dt><dd><p>S’s spatial inertia about point P, expressed in frame E.</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-Expression-.NaN">
+<span id="pydrake.multibody.tree.SpatialInertia_[Expression].NaN"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">NaN</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-Expression-.NaN" title="Permalink to this definition"></a></dt>
+<dd><p>Initializes mass, center of mass and rotational inertia to invalid
+NaN’s for a quick detection of uninitialized values.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -21216,6 +21276,12 @@ parallel to unit_vector.</p>
 <p>ThinRodWithMass() to calculate M_BBcm_B, B’s spatial inertia about
 Bcm (B’s center of mass).</p>
 </div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-Expression-.Zero">
+<span id="pydrake.multibody.tree.SpatialInertia_[Expression].Zero"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Zero</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-Expression-.Zero" title="Permalink to this definition"></a></dt>
+<dd><p>Initializes mass, center of mass and rotational inertia to zero.</p>
 </dd></dl>
 
 </dd></dl>

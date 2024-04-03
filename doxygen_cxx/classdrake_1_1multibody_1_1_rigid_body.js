@@ -2,8 +2,8 @@ var classdrake_1_1multibody_1_1_rigid_body =
 [
     [ "RigidBody", "classdrake_1_1multibody_1_1_rigid_body.html#afca86f5b938f1658a60abbc2c83a3428", null ],
     [ "RigidBody", "classdrake_1_1multibody_1_1_rigid_body.html#a3fb9d377594ec373e512901b23cab9ef", null ],
-    [ "RigidBody", "classdrake_1_1multibody_1_1_rigid_body.html#a217875f885ddfab306102f74f6a112d9", null ],
-    [ "RigidBody", "classdrake_1_1multibody_1_1_rigid_body.html#adaae712fe773dbd38f1c06c787ac4207", null ],
+    [ "RigidBody", "classdrake_1_1multibody_1_1_rigid_body.html#aa50309263cd1a4f01f3cead4288a8f49", null ],
+    [ "RigidBody", "classdrake_1_1multibody_1_1_rigid_body.html#a42cd421a2f04298b8896fbd68a04df54", null ],
     [ "AddInForce", "classdrake_1_1multibody_1_1_rigid_body.html#a325184199e87f0e800c11f57995dc6dc", null ],
     [ "AddInForceInWorld", "classdrake_1_1multibody_1_1_rigid_body.html#a64de0960e4ea0ac2144af8c2295a7871", null ],
     [ "body_frame", "classdrake_1_1multibody_1_1_rigid_body.html#a7548bfd7fb38358e82ab0977f918e364", null ],

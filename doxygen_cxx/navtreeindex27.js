@@ -1,5 +1,12 @@
 var NAVTREEINDEX27 =
 {
+"classdrake_1_1solvers_1_1_polynomial_evaluator.html#ac6d99026f137504bc679b191d2d8fa61":[3,0,0,13,59,4],
+"classdrake_1_1solvers_1_1_polynomial_evaluator.html#adb44a2531992a42f8172fd93aac16760":[3,0,0,13,59,1],
+"classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html":[1,1,0,34],
+"classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#a2ef19e543f4121af42e8d3f5e66ce4fa":[1,1,0,34,9],
+"classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#a5eea9354674efc1c07bf537319628ead":[1,1,0,34,6],
+"classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#a606f4db084fea67dad1e32fd17d580e1":[1,1,0,34,3],
+"classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#a6ea802357065d9fea923476dfa0ec159":[1,1,0,34,1],
 "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#a863f7df9d3ee10378794b4c6842a4377":[1,1,0,34,4],
 "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#a93b9495de294e391dc2411455d35125c":[1,1,0,34,0],
 "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#aa2431c2dbd82437d8f621033d8af8231":[1,1,0,34,5],
@@ -242,12 +249,5 @@ var NAVTREEINDEX27 =
 "classdrake_1_1symbolic_1_1_code_gen_visitor.html#a4c56baca15487270c31db085683d6637":[3,0,0,14,4,0],
 "classdrake_1_1symbolic_1_1_code_gen_visitor.html#a6afbb1bd6592ef400177d0f81f275a49":[3,0,0,14,4,7],
 "classdrake_1_1symbolic_1_1_code_gen_visitor.html#a7b55a258854d77cb53a4bac286b1a8e7":[3,0,0,14,4,4],
-"classdrake_1_1symbolic_1_1_code_gen_visitor.html#a97b40bd8e6cf22eed9c60f693f23b773":[3,0,0,14,4,1],
-"classdrake_1_1symbolic_1_1_code_gen_visitor.html#aa651496edf995fb5df1e62292bf75db6":[3,0,0,14,4,6],
-"classdrake_1_1symbolic_1_1_code_gen_visitor.html#aefd9307a0167a25f7d8f1cc91abab550":[3,0,0,14,4,3],
-"classdrake_1_1symbolic_1_1_environment.html":[3,0,0,14,5],
-"classdrake_1_1symbolic_1_1_environment.html#a153880e8b1e045676f1b093093fec91c":[3,0,0,14,5,22],
-"classdrake_1_1symbolic_1_1_environment.html#a228ca65a053b15ce17ff50ccbcc1f878":[3,0,0,14,5,27],
-"classdrake_1_1symbolic_1_1_environment.html#a231088519ec2ff5cfeacac5ae590570b":[3,0,0,14,5,4],
-"classdrake_1_1symbolic_1_1_environment.html#a259cb5a711406a8c3e5d937eb9350cca":[3,0,0,14,5,28]
+"classdrake_1_1symbolic_1_1_code_gen_visitor.html#a97b40bd8e6cf22eed9c60f693f23b773":[3,0,0,14,4,1]
 };

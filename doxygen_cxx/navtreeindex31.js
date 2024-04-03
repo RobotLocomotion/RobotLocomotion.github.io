@@ -1,5 +1,12 @@
 var NAVTREEINDEX31 =
 {
+"classdrake_1_1symbolic_1_1_nary_formula_cell.html#a8965adfb0f3378b303f93371ab14cc83":[3,0,0,14,57,2],
+"classdrake_1_1symbolic_1_1_nary_formula_cell.html#aa03cb810221c82391502fdd03553c47b":[3,0,0,14,57,11],
+"classdrake_1_1symbolic_1_1_nary_formula_cell.html#ab937adab3cb05b8a1d32bf0bdc6df9e6":[3,0,0,14,57,4],
+"classdrake_1_1symbolic_1_1_nary_formula_cell.html#aca48507b74379399514f6fc214b5404e":[3,0,0,14,57,10],
+"classdrake_1_1symbolic_1_1_nary_formula_cell.html#aeabbbb6c69ba676155d0965880d6c8dd":[3,0,0,14,57,9],
+"classdrake_1_1symbolic_1_1_nary_formula_cell.html#af3366a56a2a8c2942ee6fdd6a2d064b1":[3,0,0,14,57,7],
+"classdrake_1_1symbolic_1_1_polynomial.html":[3,0,0,14,58],
 "classdrake_1_1symbolic_1_1_polynomial.html#a024581d15508002faaf96e0b4b3e558b":[3,0,0,14,58,37],
 "classdrake_1_1symbolic_1_1_polynomial.html#a05b3624316b66d6957ab849780f51a5a":[3,0,0,14,58,53],
 "classdrake_1_1symbolic_1_1_polynomial.html#a07e43dd6afaaafb0291e1067a4479212":[3,0,0,14,58,50],
@@ -242,12 +249,5 @@ var NAVTREEINDEX31 =
 "classdrake_1_1systems_1_1_affine_system.html#a1185de83f79ac4b13a4c7c7509cf2b6e":[1,2,1,2,8],
 "classdrake_1_1systems_1_1_affine_system.html#a177faa2c20aa25f40661760c82db7759":[1,2,1,2,4],
 "classdrake_1_1systems_1_1_affine_system.html#a2171860e0992b61fb3736b2bb754a39b":[1,2,1,2,9],
-"classdrake_1_1systems_1_1_affine_system.html#a350b26ee4a2cb1ab86bf27f71491bb41":[1,2,1,2,1],
-"classdrake_1_1systems_1_1_affine_system.html#a4e8842b4740001e271439803a421ab1c":[1,2,1,2,15],
-"classdrake_1_1systems_1_1_affine_system.html#a5505ed1dda426944c335ccdd0e6baa69":[1,2,1,2,11],
-"classdrake_1_1systems_1_1_affine_system.html#a63f44f28b79a88163ecea4f217fd0707":[1,2,1,2,3],
-"classdrake_1_1systems_1_1_affine_system.html#a72a0d3162014193b1fc26f0f26284a65":[1,2,1,2,7],
-"classdrake_1_1systems_1_1_affine_system.html#a75939c59506633bf76199742eda9736f":[1,2,1,2,20],
-"classdrake_1_1systems_1_1_affine_system.html#a91e8ccf947dd609eb1ec3b7740bbd7ec":[1,2,1,2,10],
-"classdrake_1_1systems_1_1_affine_system.html#a9b9239e87b6c059d9f4e630113d0294c":[1,2,1,2,18]
+"classdrake_1_1systems_1_1_affine_system.html#a350b26ee4a2cb1ab86bf27f71491bb41":[1,2,1,2,1]
 };

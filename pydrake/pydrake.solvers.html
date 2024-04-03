@@ -2449,20 +2449,34 @@ variables (columns of A) cannot change.</p>
 <p>Implements a cost of the form ‖Ax + b‖₂.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.L2NormCost.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.L2NormCost" title="pydrake.solvers.L2NormCost"><span class="pre">pydrake.solvers.L2NormCost</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.L2NormCost.__init__" title="Permalink to this definition"></a></dt>
-<dd><p>Construct a cost of the form ‖Ax + b‖₂.</p>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.L2NormCost.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.solvers.L2NormCost, A: numpy.ndarray[numpy.float64[m, n]], b: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</p></li>
+</ol>
+<p>Construct a cost of the form ‖Ax + b‖₂.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">A</span></code>:</dt><dd><p>Linear term.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">b</span></code>:</dt><dd><p>Constant term.</p>
 </dd>
 </dl>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.solvers.L2NormCost, A: scipy.sparse.csc_matrix[numpy.float64], b: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</p></li>
+</ol>
+<p>Overloads constructor with a sparse A matrix.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.L2NormCost.A">
 <span class="sig-name descname"><span class="pre">A</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.L2NormCost" title="pydrake.solvers.L2NormCost"><span class="pre">pydrake.solvers.L2NormCost</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.solvers.L2NormCost.A" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>(Deprecated.)</p>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>Use A_dense function instead. This will be removed from Drake on
+or after 2024-08-01.</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.L2NormCost.b">
@@ -2470,9 +2484,23 @@ variables (columns of A) cannot change.</p>
 <dd></dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.L2NormCost.get_sparse_A">
+<span class="sig-name descname"><span class="pre">get_sparse_A</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.L2NormCost" title="pydrake.solvers.L2NormCost"><span class="pre">pydrake.solvers.L2NormCost</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">scipy.sparse.csc_matrix</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.solvers.L2NormCost.get_sparse_A" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.L2NormCost.GetDenseA">
+<span class="sig-name descname"><span class="pre">GetDenseA</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.L2NormCost" title="pydrake.solvers.L2NormCost"><span class="pre">pydrake.solvers.L2NormCost</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.solvers.L2NormCost.GetDenseA" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.L2NormCost.UpdateCoefficients">
-<span class="sig-name descname"><span class="pre">UpdateCoefficients</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.L2NormCost" title="pydrake.solvers.L2NormCost"><span class="pre">pydrake.solvers.L2NormCost</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_b</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.L2NormCost.UpdateCoefficients" title="Permalink to this definition"></a></dt>
-<dd><p>Updates the coefficients of the cost. Note that the number of
+<span class="sig-name descname"><span class="pre">UpdateCoefficients</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.L2NormCost.UpdateCoefficients" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>UpdateCoefficients(self: pydrake.solvers.L2NormCost, new_A: numpy.ndarray[numpy.float64[m, n]], new_b: numpy.ndarray[numpy.float64[m, 1]] = 0) -&gt; None</p></li>
+</ol>
+<p>Updates the coefficients of the cost. Note that the number of
 variables (columns of A) cannot change.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">new_A</span></code>:</dt><dd><p>New linear term.</p>
@@ -2480,6 +2508,10 @@ variables (columns of A) cannot change.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">new_b</span></code>:</dt><dd><p>New constant term.</p>
 </dd>
 </dl>
+<ol class="arabic simple" start="2">
+<li><p>UpdateCoefficients(self: pydrake.solvers.L2NormCost, new_A: scipy.sparse.csc_matrix[numpy.float64], new_b: numpy.ndarray[numpy.float64[m, 1]] = 0) -&gt; None</p></li>
+</ol>
+<p>Overloads UpdateCoefficients but with a sparse A matrix.</p>
 </dd></dl>
 
 </dd></dl>
