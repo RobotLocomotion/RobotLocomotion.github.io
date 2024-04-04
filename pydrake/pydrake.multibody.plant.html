@@ -2000,10 +2000,9 @@ URDF files. Consider the example below which loads an acrobot model:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">acrobot</span><span class="p">;</span><span class="w"></span>
 <span class="n">SceneGraph</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">scene_graph</span><span class="p">;</span><span class="w"></span>
 <span class="n">Parser</span><span class="w"> </span><span class="nf">parser</span><span class="p">(</span><span class="o">&amp;</span><span class="n">acrobot</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">scene_graph</span><span class="p">);</span><span class="w"></span>
-<span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">relative_name</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
-<span class="s">&quot;drake/multibody/benchmarks/acrobot/acrobot.sdf&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">full_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FindResourceOrThrow</span><span class="p">(</span><span class="n">relative_name</span><span class="p">);</span><span class="w"></span>
-<span class="n">parser</span><span class="p">.</span><span class="n">AddModels</span><span class="p">(</span><span class="n">full_name</span><span class="p">);</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="s">&quot;package://drake/multibody/benchmarks/acrobot/acrobot.sdf&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="n">parser</span><span class="p">.</span><span class="n">AddModelsFromUrl</span><span class="p">(</span><span class="n">url</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 </details><p>As in the example above, for models including visual geometry,
@@ -2603,7 +2602,7 @@ to or from symbolic::Expression after a call to this method.</p>
 <span class="sig-name descname"><span class="pre">AddRigidBody</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.AddRigidBody" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant, name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f9b27dfc6f0&gt;) -&gt; pydrake.multibody.tree.RigidBody</p></li>
+<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant, name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f1d9fb69930&gt;) -&gt; pydrake.multibody.tree.RigidBody</p></li>
 </ol>
 <p>Creates a rigid body with the provided name and spatial inertia. This
 method returns a constant reference to the body just added, which will
@@ -2642,7 +2641,7 @@ remain valid for the lifetime of <code class="docutils literal notranslate"><spa
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant, name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f9b2797b070&gt;) -&gt; pydrake.multibody.tree.RigidBody</p></li>
+<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant, name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f1da2ef4db0&gt;) -&gt; pydrake.multibody.tree.RigidBody</p></li>
 </ol>
 <p>Creates a rigid body with the provided name and spatial inertia. This
 method returns a constant reference to the body just added, which will
@@ -7113,10 +7112,9 @@ URDF files. Consider the example below which loads an acrobot model:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">acrobot</span><span class="p">;</span><span class="w"></span>
 <span class="n">SceneGraph</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">scene_graph</span><span class="p">;</span><span class="w"></span>
 <span class="n">Parser</span><span class="w"> </span><span class="nf">parser</span><span class="p">(</span><span class="o">&amp;</span><span class="n">acrobot</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">scene_graph</span><span class="p">);</span><span class="w"></span>
-<span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">relative_name</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
-<span class="s">&quot;drake/multibody/benchmarks/acrobot/acrobot.sdf&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">full_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FindResourceOrThrow</span><span class="p">(</span><span class="n">relative_name</span><span class="p">);</span><span class="w"></span>
-<span class="n">parser</span><span class="p">.</span><span class="n">AddModels</span><span class="p">(</span><span class="n">full_name</span><span class="p">);</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="s">&quot;package://drake/multibody/benchmarks/acrobot/acrobot.sdf&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="n">parser</span><span class="p">.</span><span class="n">AddModelsFromUrl</span><span class="p">(</span><span class="n">url</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 </details><p>As in the example above, for models including visual geometry,
@@ -7711,7 +7709,7 @@ to or from symbolic::Expression after a call to this method.</p>
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].AddRigidBody"></span><span class="sig-name descname"><span class="pre">AddRigidBody</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.AddRigidBody" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f9b277f3d70&gt;) -&gt; pydrake.multibody.tree.RigidBody_[AutoDiffXd]</p></li>
+<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f1da2bca9f0&gt;) -&gt; pydrake.multibody.tree.RigidBody_[AutoDiffXd]</p></li>
 </ol>
 <p>Creates a rigid body with the provided name and spatial inertia. This
 method returns a constant reference to the body just added, which will
@@ -7750,7 +7748,7 @@ remain valid for the lifetime of <code class="docutils literal notranslate"><spa
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f9b27868ef0&gt;) -&gt; pydrake.multibody.tree.RigidBody_[AutoDiffXd]</p></li>
+<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f1da2af3fb0&gt;) -&gt; pydrake.multibody.tree.RigidBody_[AutoDiffXd]</p></li>
 </ol>
 <p>Creates a rigid body with the provided name and spatial inertia. This
 method returns a constant reference to the body just added, which will
@@ -12177,10 +12175,9 @@ URDF files. Consider the example below which loads an acrobot model:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">acrobot</span><span class="p">;</span><span class="w"></span>
 <span class="n">SceneGraph</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">scene_graph</span><span class="p">;</span><span class="w"></span>
 <span class="n">Parser</span><span class="w"> </span><span class="nf">parser</span><span class="p">(</span><span class="o">&amp;</span><span class="n">acrobot</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">scene_graph</span><span class="p">);</span><span class="w"></span>
-<span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">relative_name</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
-<span class="s">&quot;drake/multibody/benchmarks/acrobot/acrobot.sdf&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">full_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FindResourceOrThrow</span><span class="p">(</span><span class="n">relative_name</span><span class="p">);</span><span class="w"></span>
-<span class="n">parser</span><span class="p">.</span><span class="n">AddModels</span><span class="p">(</span><span class="n">full_name</span><span class="p">);</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="s">&quot;package://drake/multibody/benchmarks/acrobot/acrobot.sdf&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="n">parser</span><span class="p">.</span><span class="n">AddModelsFromUrl</span><span class="p">(</span><span class="n">url</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 </details><p>As in the example above, for models including visual geometry,
@@ -12775,7 +12772,7 @@ to or from symbolic::Expression after a call to this method.</p>
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].AddRigidBody"></span><span class="sig-name descname"><span class="pre">AddRigidBody</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.AddRigidBody" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[Expression], name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f9b2796a130&gt;) -&gt; pydrake.multibody.tree.RigidBody_[Expression]</p></li>
+<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[Expression], name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f1da29b34b0&gt;) -&gt; pydrake.multibody.tree.RigidBody_[Expression]</p></li>
 </ol>
 <p>Creates a rigid body with the provided name and spatial inertia. This
 method returns a constant reference to the body just added, which will
@@ -12814,7 +12811,7 @@ remain valid for the lifetime of <code class="docutils literal notranslate"><spa
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[Expression], name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f9b24976c70&gt;) -&gt; pydrake.multibody.tree.RigidBody_[Expression]</p></li>
+<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[Expression], name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f1da29b06f0&gt;) -&gt; pydrake.multibody.tree.RigidBody_[Expression]</p></li>
 </ol>
 <p>Creates a rigid body with the provided name and spatial inertia. This
 method returns a constant reference to the body just added, which will
