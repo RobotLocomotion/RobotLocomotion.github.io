@@ -86,6 +86,10 @@ var NAVTREEINDEX56 =
 "sos__basis__generator_8h.html":[4,0,0,11,58],
 "sos__basis__generator_8h.html#a6703c1f6f99f3e06a86f6a54e7dbd63d":[4,0,0,11,58,0],
 "spanning__forest_8h.html":[4,0,0,8,13,9],
+"spanning__forest__inlines_8h.html":[4,0,0,8,13,10],
+"spanning__forest__loop__constraint_8h.html":[4,0,0,8,13,11],
+"spanning__forest__mobod_8h.html":[4,0,0,8,13,12],
+"spanning__forest__tree_8h.html":[4,0,0,8,13,13],
 "sparse__and__dense__matrix_8h.html":[4,0,0,11,59],
 "sparse__linear__operator_8h.html":[4,0,0,8,2,18],
 "spatial__acceleration_8h.html":[4,0,0,8,6,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX56 =
 "structdrake_1_1_sorted_pair.html#a0e69b204bc59433d6a3374ab602b7dcb":[3,0,0,49,9],
 "structdrake_1_1_sorted_pair.html#a167fa11f5bf36b4e808282c14c09b3e1":[3,0,0,49,6],
 "structdrake_1_1_sorted_pair.html#a2fc588ec6d00ca9a86173dcc508a12a9":[3,0,0,49,1],
-"structdrake_1_1_sorted_pair.html#a32b737917cbeeb58e2b54f4d4225bb6b":[3,0,0,49,2],
-"structdrake_1_1_sorted_pair.html#a4aecff03b3cdf08b4ed26f836cc9de31":[3,0,0,49,7],
-"structdrake_1_1_sorted_pair.html#a88eda7bfcc2bb51183a5c71ca7956731":[3,0,0,49,8],
-"structdrake_1_1_sorted_pair.html#aa92b10b40f1d60a4dce917bb942db4ce":[3,0,0,49,10],
-"structdrake_1_1_sorted_pair.html#ace5b7f162bab05d193bcdd27ddee7b3b":[3,0,0,49,3]
+"structdrake_1_1_sorted_pair.html#a32b737917cbeeb58e2b54f4d4225bb6b":[3,0,0,49,2]
 };

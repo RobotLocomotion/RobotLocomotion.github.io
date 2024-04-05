@@ -122,13 +122,13 @@ var NAVTREEINDEX =
 "optimization__pybind_8h.html#a3d712eb0a12e5f78078993172f842dfe",
 "radau__integrator_8h.html#af6af6956e79bb6e0b6fa6afe861fd91a",
 "simulator__config__functions_8h.html#ga5d1fc9d510c450590826170fca172e5a",
-"structdrake_1_1_sorted_pair.html#affe80b1feb4483db8575f33f3b23e07d",
-"structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#a6430583dae0d07964009a4345136d8ca",
-"structdrake_1_1multibody_1_1_spatial_velocity_constraint_1_1_angular_velocity_bounds.html#ad80deba1b41ca9286207d17a40d730ea",
-"structdrake_1_1solvers_1_1_csdp_solver_details.html#ab48163f67547336c2aadfc248321044a",
-"structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html",
-"symbolic_2polynomial_8h.html#a8fa3b0259a14e44faf2d959f540e9446",
-"yaml__io_8h.html#ab3b6d04d37236596751e626ed6aa3b5e"
+"structdrake_1_1_sorted_pair.html#a4aecff03b3cdf08b4ed26f836cc9de31",
+"structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html#ae874605a314dc8713c29ddf061d80eb3",
+"structdrake_1_1multibody_1_1_spatial_velocity_constraint_1_1_angular_velocity_bounds.html",
+"structdrake_1_1solvers_1_1_csdp_solver_details.html",
+"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#ad4489c31400be9adcd1f625f99c48134",
+"symbolic_2polynomial_8h.html#a7664d13fc20b1e7e30ebb16f3dfdeaac",
+"yaml__io_8h.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

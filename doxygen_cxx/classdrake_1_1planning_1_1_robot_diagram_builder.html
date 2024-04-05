@@ -183,9 +183,9 @@ class drake::planning::RobotDiagramBuilder&lt; T &gt;</h3>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9866c32c40cd79bf8d27fc03d7b5cf72"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_robot_diagram_builder.html#a9866c32c40cd79bf8d27fc03d7b5cf72">RobotDiagramBuilder</a> (<a class="el" href="classdouble.html">double</a> time_step=0.0)</td></tr>
-<tr class="memdesc:a9866c32c40cd79bf8d27fc03d7b5cf72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs with the specified time step for the contained plant.  <a href="#a9866c32c40cd79bf8d27fc03d7b5cf72">More...</a><br /></td></tr>
-<tr class="separator:a9866c32c40cd79bf8d27fc03d7b5cf72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ca7f3589283581d43b92090905f3c41"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_robot_diagram_builder.html#a6ca7f3589283581d43b92090905f3c41">RobotDiagramBuilder</a> (<a class="el" href="classdouble.html">double</a> time_step=0.001)</td></tr>
+<tr class="memdesc:a6ca7f3589283581d43b92090905f3c41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs with the specified time step for the contained plant.  <a href="#a6ca7f3589283581d43b92090905f3c41">More...</a><br /></td></tr>
+<tr class="separator:a6ca7f3589283581d43b92090905f3c41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcfb0c4d2f26618363069032bc873d00"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_robot_diagram_builder.html#afcfb0c4d2f26618363069032bc873d00">~RobotDiagramBuilder</a> ()</td></tr>
 <tr class="separator:afcfb0c4d2f26618363069032bc873d00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc75eb5d08543dbab60c9ff58eb96aeb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_robot_diagram_builder.html#adc75eb5d08543dbab60c9ff58eb96aeb">builder</a> ()</td></tr>
@@ -283,8 +283,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a9866c32c40cd79bf8d27fc03d7b5cf72"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9866c32c40cd79bf8d27fc03d7b5cf72">&#9670;&nbsp;</a></span>RobotDiagramBuilder() <span class="overload">[3/3]</span></h2>
+<a id="a6ca7f3589283581d43b92090905f3c41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ca7f3589283581d43b92090905f3c41">&#9670;&nbsp;</a></span>RobotDiagramBuilder() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -296,7 +296,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname"><a class="el" href="classdrake_1_1planning_1_1_robot_diagram_builder.html">RobotDiagramBuilder</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
-          <td class="paramname"><em>time_step</em> = <code>0.0</code></td><td>)</td>
+          <td class="paramname"><em>time_step</em> = <code>0.001</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -308,6 +308,12 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructs with the specified time step for the contained plant. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">time_step</td><td>Governs whether the MultibodyPlant is modeled as a discrete system (<code>time_step &gt; 0</code>) or as a continuous system (<code>time_step = 0</code>). See <a class="el" href="group__contact__engineering.html#time_advancement_strategy">Choice of Time Advancement Strategy</a> for further details. The default here matches the default value from <a class="el" href="structdrake_1_1multibody_1_1_multibody_plant_config.html" title="The set of configurable properties on a MultibodyPlant.">multibody::MultibodyPlantConfig</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

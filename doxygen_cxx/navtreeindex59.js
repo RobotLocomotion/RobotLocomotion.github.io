@@ -1,5 +1,9 @@
 var NAVTREEINDEX59 =
 {
+"structdrake_1_1multibody_1_1_spatial_velocity_constraint_1_1_angular_velocity_bounds.html":[1,1,0,19,0],
+"structdrake_1_1multibody_1_1_spatial_velocity_constraint_1_1_angular_velocity_bounds.html#a088a818f46f6f0e30da3349601732784":[1,1,0,19,0,1],
+"structdrake_1_1multibody_1_1_spatial_velocity_constraint_1_1_angular_velocity_bounds.html#a5515d4ab78b4b7db0f63e1a38959451f":[1,1,0,19,0,2],
+"structdrake_1_1multibody_1_1_spatial_velocity_constraint_1_1_angular_velocity_bounds.html#a67f516717a02d33ceb6885dc70206b28":[1,1,0,19,0,3],
 "structdrake_1_1multibody_1_1_spatial_velocity_constraint_1_1_angular_velocity_bounds.html#ad80deba1b41ca9286207d17a40d730ea":[1,1,0,19,0,0],
 "structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html":[3,0,0,8,99],
 "structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html#a372de693ad40b3f42839c8ec6ac845f4":[3,0,0,8,99,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX59 =
 "structdrake_1_1solvers_1_1_clarabel_solver_details.html#a73e4cc856cf85fecbb324b0280f30d21":[3,0,0,13,7,1],
 "structdrake_1_1solvers_1_1_clp_solver_details.html":[3,0,0,13,9],
 "structdrake_1_1solvers_1_1_clp_solver_details.html#a56ac23a03ae7df25b7cf800be94fa964":[3,0,0,13,9,0],
-"structdrake_1_1solvers_1_1_clp_solver_details.html#a6e27f49150e9a14580fb313cc2777e00":[3,0,0,13,9,1],
-"structdrake_1_1solvers_1_1_csdp_solver_details.html":[3,0,0,13,13],
-"structdrake_1_1solvers_1_1_csdp_solver_details.html#a379ea2db61bec306bcb03b29a4d5b1cd":[3,0,0,13,13,0],
-"structdrake_1_1solvers_1_1_csdp_solver_details.html#a90de5192c60705e7cc5fa526388280e0":[3,0,0,13,13,1],
-"structdrake_1_1solvers_1_1_csdp_solver_details.html#a934c111b1421c6aa91507fabd5c96deb":[3,0,0,13,13,2]
+"structdrake_1_1solvers_1_1_clp_solver_details.html#a6e27f49150e9a14580fb313cc2777e00":[3,0,0,13,9,1]
 };

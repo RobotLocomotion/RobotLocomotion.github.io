@@ -19,7 +19,7 @@ var group__planning__infrastructure =
     [ "RobotDiagramBuilder", "classdrake_1_1planning_1_1_robot_diagram_builder.html", [
       [ "RobotDiagramBuilder", "classdrake_1_1planning_1_1_robot_diagram_builder.html#abc40e743c8d48d2158863064885bb1c7", null ],
       [ "RobotDiagramBuilder", "classdrake_1_1planning_1_1_robot_diagram_builder.html#ad4059f303a9d87f9097f8428fd027a5a", null ],
-      [ "RobotDiagramBuilder", "classdrake_1_1planning_1_1_robot_diagram_builder.html#a9866c32c40cd79bf8d27fc03d7b5cf72", null ],
+      [ "RobotDiagramBuilder", "classdrake_1_1planning_1_1_robot_diagram_builder.html#a6ca7f3589283581d43b92090905f3c41", null ],
       [ "~RobotDiagramBuilder", "classdrake_1_1planning_1_1_robot_diagram_builder.html#afcfb0c4d2f26618363069032bc873d00", null ],
       [ "Build", "classdrake_1_1planning_1_1_robot_diagram_builder.html#ad56bf8e93cf790fb6af96a2052c4069c", null ],
       [ "builder", "classdrake_1_1planning_1_1_robot_diagram_builder.html#adc75eb5d08543dbab60c9ff58eb96aeb", null ],
