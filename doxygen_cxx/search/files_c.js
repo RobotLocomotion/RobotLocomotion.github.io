@@ -94,6 +94,7 @@ var searchData=
   ['multibody_5fplant_5fconfig_5ffunctions_2eh',['multibody_plant_config_functions.h',['../multibody__plant__config__functions_8h.html',1,'']]],
   ['multibody_5fplant_5fdiscrete_5fupdate_5fmanager_5fattorney_2eh',['multibody_plant_discrete_update_manager_attorney.h',['../multibody__plant__discrete__update__manager__attorney_8h.html',1,'']]],
   ['multibody_5fplant_5fmodel_5fattorney_2eh',['multibody_plant_model_attorney.h',['../multibody__plant__model__attorney_8h.html',1,'']]],
+  ['multibody_5fplant_5fremodeling_2eh',['multibody_plant_remodeling.h',['../multibody__plant__remodeling_8h.html',1,'']]],
   ['multibody_5fposition_5fto_5fgeometry_5fpose_2eh',['multibody_position_to_geometry_pose.h',['../multibody__position__to__geometry__pose_8h.html',1,'']]],
   ['multibody_5ftree_2dinl_2eh',['multibody_tree-inl.h',['../multibody__tree-inl_8h.html',1,'']]],
   ['multibody_5ftree_2eh',['multibody_tree.h',['../multibody__tree_8h.html',1,'']]],

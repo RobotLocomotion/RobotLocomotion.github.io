@@ -21,6 +21,7 @@ var searchData=
   ['evaluatorcost',['EvaluatorCost',['../classdrake_1_1solvers_1_1_evaluator_cost.html',1,'drake::solvers']]],
   ['evaluatorcost_3c_20polynomialevaluator_20_3e',['EvaluatorCost&lt; PolynomialEvaluator &gt;',['../classdrake_1_1solvers_1_1_evaluator_cost.html',1,'drake::solvers']]],
   ['event',['Event',['../classdrake_1_1systems_1_1_event.html',1,'drake::systems']]],
+  ['event_3c_20double_20_3e',['Event&lt; double &gt;',['../classdrake_1_1systems_1_1_event.html',1,'drake::systems']]],
   ['eventcollection',['EventCollection',['../classdrake_1_1systems_1_1_event_collection.html',1,'drake::systems']]],
   ['eventcollection_3c_20drake_3a_3asystems_3a_3adiscreteupdateevent_3c_20autodiffxd_20_3e_20_3e',['EventCollection&lt; drake::systems::DiscreteUpdateEvent&lt; AutoDiffXd &gt; &gt;',['../classdrake_1_1systems_1_1_event_collection.html',1,'drake::systems']]],
   ['eventcollection_3c_20drake_3a_3asystems_3a_3adiscreteupdateevent_3c_20double_20_3e_20_3e',['EventCollection&lt; drake::systems::DiscreteUpdateEvent&lt; double &gt; &gt;',['../classdrake_1_1systems_1_1_event_collection.html',1,'drake::systems']]],

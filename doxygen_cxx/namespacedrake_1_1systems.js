@@ -40,6 +40,7 @@ var namespacedrake_1_1systems =
     [ "DiagramState", "classdrake_1_1systems_1_1_diagram_state.html", "classdrake_1_1systems_1_1_diagram_state" ],
     [ "DiscreteDerivative", "classdrake_1_1systems_1_1_discrete_derivative.html", "classdrake_1_1systems_1_1_discrete_derivative" ],
     [ "DiscreteTimeDelay", "classdrake_1_1systems_1_1_discrete_time_delay.html", "classdrake_1_1systems_1_1_discrete_time_delay" ],
+    [ "DiscreteTimeIntegrator", "classdrake_1_1systems_1_1_discrete_time_integrator.html", "classdrake_1_1systems_1_1_discrete_time_integrator" ],
     [ "DiscreteUpdateEvent", "classdrake_1_1systems_1_1_discrete_update_event.html", "classdrake_1_1systems_1_1_discrete_update_event" ],
     [ "DiscreteValues", "classdrake_1_1systems_1_1_discrete_values.html", "classdrake_1_1systems_1_1_discrete_values" ],
     [ "Event", "classdrake_1_1systems_1_1_event.html", "classdrake_1_1systems_1_1_event" ],

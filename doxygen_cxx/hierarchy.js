@@ -168,6 +168,7 @@ var hierarchy =
     [ "DepthRenderCamera", "classdrake_1_1geometry_1_1render_1_1_depth_render_camera.html", null ],
     [ "DescriptorType", "classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html", null ],
     [ "DiagramBuilder< T >", "classdrake_1_1systems_1_1_diagram_builder.html", null ],
+    [ "DiagramBuilder< double >", "classdrake_1_1systems_1_1_diagram_builder.html", null ],
     [ "DifferentialInverseKinematicsParameters", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html", null ],
     [ "DifferentialInverseKinematicsResult", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_result.html", null ],
     [ "DiscreteValues< T >", "classdrake_1_1systems_1_1_discrete_values.html", [
@@ -292,6 +293,7 @@ var hierarchy =
       [ "PublishEvent< T >", "classdrake_1_1systems_1_1_publish_event.html", null ],
       [ "UnrestrictedUpdateEvent< T >", "classdrake_1_1systems_1_1_unrestricted_update_event.html", null ]
     ] ],
+    [ "Event< double >", "classdrake_1_1systems_1_1_event.html", null ],
     [ "EventCollection< EventType >", "classdrake_1_1systems_1_1_event_collection.html", [
       [ "DiagramEventCollection< EventType >", "classdrake_1_1systems_1_1_diagram_event_collection.html", null ],
       [ "LeafEventCollection< EventType >", "classdrake_1_1systems_1_1_leaf_event_collection.html", null ]
@@ -813,6 +815,7 @@ var hierarchy =
     [ "SignedDistanceToPoint< T >", "structdrake_1_1geometry_1_1_signed_distance_to_point.html", null ],
     [ "SignedDistanceWithTimeDerivative", "structdrake_1_1multibody_1_1_signed_distance_with_time_derivative.html", null ],
     [ "Simulator< T >", "classdrake_1_1systems_1_1_simulator.html", null ],
+    [ "Simulator< double >", "classdrake_1_1systems_1_1_simulator.html", null ],
     [ "SimulatorConfig", "structdrake_1_1systems_1_1_simulator_config.html", null ],
     [ "SimulatorStatus", "classdrake_1_1systems_1_1_simulator_status.html", null ],
     [ "SinCos", "structdrake_1_1symbolic_1_1_sin_cos.html", null ],
@@ -865,6 +868,7 @@ var hierarchy =
     [ "State< T >", "classdrake_1_1systems_1_1_state.html", [
       [ "DiagramState< T >", "classdrake_1_1systems_1_1_diagram_state.html", null ]
     ] ],
+    [ "State< double >", "classdrake_1_1systems_1_1_state.html", null ],
     [ "StateFeedbackControllerInterface< T >", "classdrake_1_1systems_1_1controllers_1_1_state_feedback_controller_interface.html", [
       [ "KukaTorqueController< T >", "classdrake_1_1examples_1_1kuka__iiwa__arm_1_1_kuka_torque_controller.html", null ],
       [ "InverseDynamicsController< T >", "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html", null ],
@@ -944,6 +948,7 @@ var hierarchy =
             [ "Demultiplexer< T >", "classdrake_1_1systems_1_1_demultiplexer.html", null ],
             [ "DiscreteDerivative< T >", "classdrake_1_1systems_1_1_discrete_derivative.html", null ],
             [ "DiscreteTimeDelay< T >", "classdrake_1_1systems_1_1_discrete_time_delay.html", null ],
+            [ "DiscreteTimeIntegrator< T >", "classdrake_1_1systems_1_1_discrete_time_integrator.html", null ],
             [ "LuenbergerObserver< T >", "classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html", null ],
             [ "LinearTransformDensity< T >", "classdrake_1_1systems_1_1_linear_transform_density.html", null ],
             [ "MultilayerPerceptron< T >", "classdrake_1_1systems_1_1_multilayer_perceptron.html", null ],
@@ -1113,6 +1118,7 @@ var hierarchy =
     [ "template_single_tag< Tpl >", "structdrake_1_1template__single__tag.html", null ],
     [ "Polynomial< T >::Term", "classdrake_1_1_polynomial_1_1_term.html", null ],
     [ "Test", null, [
+      [ "MultibodyPlantRemodeling", "classdrake_1_1multibody_1_1_multibody_plant_remodeling.html", null ],
       [ "ExplicitErrorControlledIntegratorTest< T >", "structdrake_1_1systems_1_1analysis__test_1_1_explicit_error_controlled_integrator_test.html", null ],
       [ "GenericIntegratorTest< T >", "structdrake_1_1systems_1_1analysis__test_1_1_generic_integrator_test.html", null ],
       [ "ImplicitIntegratorTest< IntegratorType >", "classdrake_1_1systems_1_1analysis__test_1_1_implicit_integrator_test.html", null ],
@@ -1263,6 +1269,7 @@ var hierarchy =
     [ "VolumeMeshTester< T >", "classdrake_1_1geometry_1_1_volume_mesh_tester.html", null ],
     [ "vtkCommand", "classvtk_command.html", null ],
     [ "WitnessFunction< T >", "classdrake_1_1systems_1_1_witness_function.html", null ],
+    [ "WitnessFunction< double >", "classdrake_1_1systems_1_1_witness_function.html", null ],
     [ "WitnessTriggeredEventData< T >", "classdrake_1_1systems_1_1_witness_triggered_event_data.html", null ],
     [ "wrap_arg_default< T >", "structdrake_1_1pydrake_1_1wrap__arg__default.html", null ],
     [ "ZeroForceDriver", "structdrake_1_1manipulation_1_1_zero_force_driver.html", null ],

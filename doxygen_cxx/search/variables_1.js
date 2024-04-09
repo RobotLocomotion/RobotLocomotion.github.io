@@ -16,5 +16,6 @@ var searchData=
   ['bounding_5fregion',['bounding_region',['../structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a0e0bd9a6fa7b0b7a30e8330f44812655',1,'drake::geometry::optimization::IrisOptions']]],
   ['brneg',['BRneg',['../structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#aee9e567dff5d8f017d7705118d22d31d',1,'drake::solvers::AddRotationMatrixBoxSphereIntersectionReturn']]],
   ['brpos',['BRpos',['../structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#a5fb1522ebe7e354d0ee6abc526454673',1,'drake::solvers::AddRotationMatrixBoxSphereIntersectionReturn']]],
+  ['builder_5f',['builder_',['../classdrake_1_1multibody_1_1_multibody_plant_remodeling.html#a6192854c6e6fb4582cf8e42b1c5fe5f7',1,'drake::multibody::MultibodyPlantRemodeling']]],
   ['button_5fvalues',['button_values',['../structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html#a28cb55393e1523165dc2b4f624437e29',1,'drake::geometry::Meshcat::Gamepad']]]
 ];

@@ -10,6 +10,7 @@ var dir_55f8630d5466d97e74952e939680a0a0 =
     [ "demultiplexer.h", "demultiplexer_8h.html", null ],
     [ "discrete_derivative.h", "discrete__derivative_8h.html", null ],
     [ "discrete_time_delay.h", "discrete__time__delay_8h.html", null ],
+    [ "discrete_time_integrator.h", "systems_2primitives_2discrete__time__integrator_8h.html", null ],
     [ "first_order_low_pass_filter.h", "first__order__low__pass__filter_8h.html", null ],
     [ "gain.h", "gain_8h.html", null ],
     [ "integrator.h", "integrator_8h.html", null ],

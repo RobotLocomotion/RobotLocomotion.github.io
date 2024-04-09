@@ -883,7 +883,7 @@ Additional Inherited Members</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">u_actuator</td><td>Actuation values for <code>this</code> actuator. It must be of size equal to <a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#a198bf2c564777ff4d7d5acd711e5e349" title="Returns the number of inputs associated with this actuator.">num_inputs()</a>. For units and sign conventions refer to the specific <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> sub-class documentation. </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">u</td><td>Actuation values for the entire plant model to which <code>this</code> actuator belongs to, indexed by JointActuatorIndex. Only values corresponding to this actuator are changed. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">u</td><td>Actuation values for the entire plant model to which <code>this</code> actuator belongs to. The actuation value in <code>u</code> for <code>this</code> actuator must be found at offset <a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#a42d883dde11e65819319f8060b0843b4" title="Returns the index to the first element for this joint actuator / within the vector of actuation input...">input_start()</a>. Only values corresponding to this actuator are changed. </td></tr>
   </table>
   </dd>
 </dl>

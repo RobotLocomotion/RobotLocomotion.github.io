@@ -1028,7 +1028,7 @@ The only way to suppress initialization events is by calling <a class="el" href=
 </div><div class="memdoc">
 
 <p>Resets the integrator with a new one using factory construction. </p>
-<div class="fragment"><div class="line">simulator.reset_integrator&lt;RungeKutta3Integrator&lt;double&gt;&gt;().</div></div><!-- fragment --><p> Resetting the integrator resets the Simulator such that it needs to be initialized again &ndash; see <a class="el" href="classdrake_1_1systems_1_1_simulator.html#aa1862c2aeab9862e391194d157a96c21" title="Prepares the Simulator for a simulation.">Initialize()</a> for details. </p><dl class="section note"><dt>Note</dt><dd><a class="el" href="classdrake_1_1systems_1_1_integrator.html" title="An integrator for a continuous vector input.">Integrator</a> needs a constructor of the form Integrator(const System&amp;, Context*); this constructor is usually associated with error-controlled integrators. </dd></dl>
+<div class="fragment"><div class="line">simulator.reset_integrator&lt;RungeKutta3Integrator&lt;double&gt;&gt;().</div></div><!-- fragment --><p> Resetting the integrator resets the Simulator such that it needs to be initialized again &ndash; see <a class="el" href="classdrake_1_1systems_1_1_simulator.html#aa1862c2aeab9862e391194d157a96c21" title="Prepares the Simulator for a simulation.">Initialize()</a> for details. </p><dl class="section note"><dt>Note</dt><dd><a class="el" href="classdrake_1_1systems_1_1_integrator.html" title="A continuous-time integrator for a vector input.">Integrator</a> needs a constructor of the form Integrator(const System&amp;, Context*); this constructor is usually associated with error-controlled integrators. </dd></dl>
 
 </div>
 </div>
@@ -1050,7 +1050,7 @@ The only way to suppress initialization events is by calling <a class="el" href=
 
 <p>Resets the integrator with a new one using factory construction and a maximum step size argument (which is required for constructing fixed-step integrators). </p>
 <div class="fragment"><div class="line">simulator.reset_integrator&lt;RungeKutta2Integrator&lt;double&gt;&gt;(0.1).</div></div><!-- fragment --> <dl class="section see"><dt>See also</dt><dd>argument-less version of <a class="el" href="classdrake_1_1systems_1_1_simulator.html#a5a9131a4f2e685ca0dafe9872f24ef11" title="Resets the integrator with a new one using factory construction.">reset_integrator()</a> for note about initialization. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd><a class="el" href="classdrake_1_1systems_1_1_integrator.html" title="An integrator for a continuous vector input.">Integrator</a> needs a constructor of the form Integrator(const System&amp;, const T&amp;, Context*); this constructor is usually associated with fixed-step integrators (i.e., integrators which do not support error estimation). </dd></dl>
+<dl class="section note"><dt>Note</dt><dd><a class="el" href="classdrake_1_1systems_1_1_integrator.html" title="A continuous-time integrator for a vector input.">Integrator</a> needs a constructor of the form Integrator(const System&amp;, const T&amp;, Context*); this constructor is usually associated with fixed-step integrators (i.e., integrators which do not support error estimation). </dd></dl>
 
 </div>
 </div>

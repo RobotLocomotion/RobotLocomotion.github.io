@@ -1860,11 +1860,15 @@ get_actuation_input_port(ModelInstanceIndex)const
 “get_actuation_input_port(ModelInstanceIndex)”) are summed up.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The vector data supplied to MultibodyPlant’s actuation input ports
-should be ordered by JointActuatorIndex. For the
-get_actuation_input_port() that covers all actuators, the iᵗʰ
-vector element corresponds to <code class="docutils literal notranslate"><span class="pre">JointActuatorIndex(i)</span></code>. For the
-get_actuation_input_port(ModelInstanceIndex)const
+<p>A JointActuator’s index into the vector data supplied to
+MultibodyPlant’s actuation input port for all actuators
+(get_actuation_input_port()) is given by
+JointActuator::input_start(), NOT by its JointActuatorIndex. That
+is, the vector element data for a JointActuator at index
+JointActuatorIndex(i) in the full input port vector is found at
+index:
+MultibodyPlant::get_joint_actuator(JointActuatorIndex(i)).input_start().
+For the get_actuation_input_port(ModelInstanceIndex)const
 “get_actuation_input_port(ModelInstanceIndex)” specific to a model
 index, the vector data is ordered by monotonically increasing
 JointActuatorIndex for the actuators within that model instance:
@@ -2538,7 +2542,9 @@ impose the saturation there.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>A constant reference to the new JointActuator just added, which
-will remain valid for the lifetime of <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
+will remain valid for the lifetime of <code class="docutils literal notranslate"><span class="pre">this</span></code> plant or until the
+JointActuator has been removed from the plant with
+RemoveJointActuator().</p>
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><ul class="simple">
@@ -2547,6 +2553,10 @@ will remain valid for the lifetime of <code class="docutils literal notranslate"
 </ul>
 </dd>
 </dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>RemoveJointActuator()</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -2602,7 +2612,7 @@ to or from symbolic::Expression after a call to this method.</p>
 <span class="sig-name descname"><span class="pre">AddRigidBody</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.AddRigidBody" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant, name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7fe696271130&gt;) -&gt; pydrake.multibody.tree.RigidBody</p></li>
+<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant, name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f059c937f70&gt;) -&gt; pydrake.multibody.tree.RigidBody</p></li>
 </ol>
 <p>Creates a rigid body with the provided name and spatial inertia. This
 method returns a constant reference to the body just added, which will
@@ -2641,7 +2651,7 @@ remain valid for the lifetime of <code class="docutils literal notranslate"><spa
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant, name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7fe69642b030&gt;) -&gt; pydrake.multibody.tree.RigidBody</p></li>
+<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant, name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f059f8bbdb0&gt;) -&gt; pydrake.multibody.tree.RigidBody</p></li>
 </ol>
 <p>Creates a rigid body with the provided name and spatial inertia. This
 method returns a constant reference to the body just added, which will
@@ -3928,9 +3938,10 @@ a SceneGraph, either pre- or post-finalize, see Finalize().</p>
 <li><p>get_actuation_input_port(self: pydrake.multibody.plant.MultibodyPlant) -&gt; pydrake.systems.framework.InputPort</p></li>
 </ol>
 <p>Returns a constant reference to the input port for external actuation
-for all actuated dofs. This input port is a vector valued port indexed
-by JointActuatorIndex, see JointActuator::index(), and can be set with
-JointActuator::set_actuation_vector(). Refer to mbp_actuation
+for all actuated dofs. This input port is a vector valued port and can
+be set with JointActuator::set_actuation_vector(). The actuation value
+for a particular actuator can be found at offset
+JointActuator::input_start() in this vector. Refer to mbp_actuation
 “Actuation” for further details.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
@@ -4152,11 +4163,16 @@ joints. This is true even for unactuated models, for which this
 port is zero sized. This port must provide one desired position
 and one desired velocity per joint actuator. Desired state is
 assumed to be packed as xd = [qd, vd] that is, configurations
-first followed by velocities. Configurations in qd are ordered by
-JointActuatorIndex, see JointActuator::set_actuation_vector().
-Similarly for velocities in vd.</p>
+first followed by velocities. The actuation value for a particular
+actuator can be found at offset JointActuator::input_start() in
+both qd and vd. For example:</p>
 </div>
-<div class="admonition warning">
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">qd_actuator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xd</span><span class="p">[</span><span class="n">actuator</span><span class="p">.</span><span class="n">input_start</span><span class="p">()];</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">vd_actuator</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="w">   </span><span class="n">xd</span><span class="p">[</span><span class="n">actuator</span><span class="p">.</span><span class="n">input_start</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">num_actuated_dofs</span><span class="p">()];</span><span class="w"></span>
+</pre></div>
+</div>
+</details><div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>If a user specifies a PD controller for an actuator from a given
 model instance, then all actuators of that model instance are
@@ -4358,9 +4374,10 @@ collision geometry registration and connection with a SceneGraph.</p>
 </ol>
 <p>Returns a constant reference to the output port that reports actuation
 values applied through joint actuators. This output port is a vector
-valued port indexed by JointActuatorIndex, see JointActuator::index().
-Models that include PD controllers will include their contribution in
-this port, refer to mbp_actuation “Actuation” for further details.</p>
+valued port. The actuation value for a particular actuator can be
+found at offset JointActuator::input_start() in this vector. Models
+that include PD controllers will include their contribution in this
+port, refer to mbp_actuation “Actuation” for further details.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>PD controllers are not considered for actuators on locked joints,
@@ -4950,8 +4967,18 @@ MultibodyPlant.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.GetJointActuatorIndices">
-<span class="sig-name descname"><span class="pre">GetJointActuatorIndices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JointActuatorIndex" title="pydrake.multibody.tree.JointActuatorIndex"><span class="pre">pydrake.multibody.tree.JointActuatorIndex</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.GetJointActuatorIndices" title="Permalink to this definition"></a></dt>
-<dd><p>Returns a list of joint actuator indices associated with
+<span class="sig-name descname"><span class="pre">GetJointActuatorIndices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.GetJointActuatorIndices" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>GetJointActuatorIndices(self: pydrake.multibody.plant.MultibodyPlant) -&gt; List[pydrake.multibody.tree.JointActuatorIndex]</p></li>
+</ol>
+<p>Returns a list of all joint actuator indices. The vector is ordered by
+monotonically increasing JointActuatorIndex, but the indexes will in
+general not be consecutive due to actuators that were removed.</p>
+<ol class="arabic simple" start="2">
+<li><p>GetJointActuatorIndices(self: pydrake.multibody.plant.MultibodyPlant, model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; List[pydrake.multibody.tree.JointActuatorIndex]</p></li>
+</ol>
+<p>Returns a list of joint actuator indices associated with
 <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>. The vector is ordered by monotonically increasing
 JointActuatorIndex.</p>
 <dl class="field-list simple">
@@ -5559,6 +5586,14 @@ Post-finalize calls will always return the same value.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.has_joint_actuator">
+<span class="sig-name descname"><span class="pre">has_joint_actuator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">actuator_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JointActuatorIndex" title="pydrake.multibody.tree.JointActuatorIndex"><span class="pre">pydrake.multibody.tree.JointActuatorIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.has_joint_actuator" title="Permalink to this definition"></a></dt>
+<dd><p>Returns true if plant has a joint actuator with unique index
+<code class="docutils literal notranslate"><span class="pre">actuator_index</span></code>. The value could be false if the actuator was
+removed using RemoveJointActuator().</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.HasBodyNamed">
 <span class="sig-name descname"><span class="pre">HasBodyNamed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.HasBodyNamed" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
@@ -5800,13 +5835,13 @@ joints.</p>
 <span class="sig-name descname"><span class="pre">MakeActuationMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.MakeActuationMatrix" title="Permalink to this definition"></a></dt>
 <dd><p>This method creates an actuation matrix B mapping a vector of
 actuation values u into generalized forces <code class="docutils literal notranslate"><span class="pre">tau_u</span> <span class="pre">=</span> <span class="pre">B</span> <span class="pre">*</span> <span class="pre">u</span></code>, where B
-is a matrix of size <code class="docutils literal notranslate"><span class="pre">nv</span> <span class="pre">x</span> <span class="pre">nu</span></code> with <code class="docutils literal notranslate"><span class="pre">nu</span></code> equal to num_actuators()
-and <code class="docutils literal notranslate"><span class="pre">nv</span></code> equal to num_velocities(). The vector u of actuation values
-is of size num_actuators(). For a given JointActuator,
-<code class="docutils literal notranslate"><span class="pre">u[JointActuator::index()]</span></code> stores the value for the external
-actuation corresponding to that actuator. <code class="docutils literal notranslate"><span class="pre">tau_u</span></code> on the other hand
-is indexed by generalized velocity indexes according to
-<code class="docutils literal notranslate"><span class="pre">Joint::velocity_start()</span></code>.</p>
+is a matrix of size <code class="docutils literal notranslate"><span class="pre">nv</span> <span class="pre">x</span> <span class="pre">nu</span></code> with <code class="docutils literal notranslate"><span class="pre">nu</span></code> equal to
+num_actuated_dofs() and <code class="docutils literal notranslate"><span class="pre">nv</span></code> equal to num_velocities(). The vector u
+of actuation values is of size num_actuated_dofs(). For a given
+JointActuator, <code class="docutils literal notranslate"><span class="pre">u[JointActuator::input_start()]</span></code> stores the value
+for the external actuation corresponding to that actuator. <code class="docutils literal notranslate"><span class="pre">tau_u</span></code>
+on the other hand is indexed by generalized velocity indexes according
+to <code class="docutils literal notranslate"><span class="pre">Joint::velocity_start()</span></code>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>B is a permutation matrix. While making a permutation has <code class="docutils literal notranslate"><span class="pre">O(n)</span></code>
@@ -5844,14 +5879,15 @@ on a portion of the state, see systems::controllers::PidController.</p>
 <p>A user specifies the preferred order in uₛ via
 <code class="docutils literal notranslate"><span class="pre">user_to_actuator_index_map</span></code>. The actuation values in uₛ are a
 concatenation of the values for each actuator in the order they appear
-in <code class="docutils literal notranslate"><span class="pre">user_to_actuator_index_map</span></code>. The full vector of actuation values
-u is ordered by JointActuatorIndex.</p>
+in <code class="docutils literal notranslate"><span class="pre">user_to_actuator_index_map</span></code>. The actuation value in the full
+vector of actuation values <code class="docutils literal notranslate"><span class="pre">u</span></code> for a particular actuator can be
+found at offset JointActuator::input_start().</p>
 <ol class="arabic simple" start="2">
 <li><p>MakeActuatorSelectorMatrix(self: pydrake.multibody.plant.MultibodyPlant, user_to_joint_index_map: List[pydrake.multibody.tree.JointIndex]) -&gt; numpy.ndarray[numpy.float64[m, n]]</p></li>
 </ol>
 <p>Alternative signature to build an actuation selector matrix <code class="docutils literal notranslate"><span class="pre">Su</span></code>
 such that <code class="docutils literal notranslate"><span class="pre">u</span> <span class="pre">=</span> <span class="pre">Su⋅uₛ</span></code>, where u is the vector of actuation values for
-the full model (ordered by JointActuatorIndex) and uₛ is a vector of
+the full model (see get_actuation_input_port()) and uₛ is a vector of
 actuation values for the actuators acting on the joints listed by
 <code class="docutils literal notranslate"><span class="pre">user_to_joint_index_map</span></code>. It is assumed that all joints referenced
 by <code class="docutils literal notranslate"><span class="pre">user_to_joint_index_map</span></code> are actuated. See
@@ -6304,6 +6340,24 @@ geometry::IllustrationProperties.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.RemoveJointActuator">
+<span class="sig-name descname"><span class="pre">RemoveJointActuator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">actuator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JointActuator" title="pydrake.multibody.tree.JointActuator"><span class="pre">pydrake.multibody.tree.JointActuator</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.RemoveJointActuator" title="Permalink to this definition"></a></dt>
+<dd><p>Removes and deletes <code class="docutils literal notranslate"><span class="pre">actuator</span></code> from this MultibodyPlant. Any
+existing references to <code class="docutils literal notranslate"><span class="pre">actuator</span></code> will become invalid, and future
+calls to <code class="docutils literal notranslate"><span class="pre">get_joint_actuator(actuator_index)</span></code> will throw an
+exception.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if the plant is already finalized.</strong> – </p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>AddJointActuator()</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.RenameModelInstance">
 <span class="sig-name descname"><span class="pre">RenameModelInstance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.RenameModelInstance" title="Permalink to this definition"></a></dt>
 <dd><p>Renames an existing model instance.</p>
@@ -6528,8 +6582,9 @@ mbp_actuation “Actuation” for further details.</p>
 monotonically increasing JointActuatorIndex within the model
 instance.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">u</span></code>:</dt><dd><p>Actuation values for the entire plant model, indexed by
-JointActuatorIndex. Only values corresponding to
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">u</span></code>:</dt><dd><p>Actuation values for the entire plant model. The actuation value
+in <code class="docutils literal notranslate"><span class="pre">u</span></code> for a particular actuator must be found at offset
+JointActuator::input_start(). Only values corresponding to
 <code class="docutils literal notranslate"><span class="pre">model_instance</span></code> are changed.</p>
 </dd>
 </dl>
@@ -6972,11 +7027,15 @@ get_actuation_input_port(ModelInstanceIndex)const
 “get_actuation_input_port(ModelInstanceIndex)”) are summed up.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The vector data supplied to MultibodyPlant’s actuation input ports
-should be ordered by JointActuatorIndex. For the
-get_actuation_input_port() that covers all actuators, the iᵗʰ
-vector element corresponds to <code class="docutils literal notranslate"><span class="pre">JointActuatorIndex(i)</span></code>. For the
-get_actuation_input_port(ModelInstanceIndex)const
+<p>A JointActuator’s index into the vector data supplied to
+MultibodyPlant’s actuation input port for all actuators
+(get_actuation_input_port()) is given by
+JointActuator::input_start(), NOT by its JointActuatorIndex. That
+is, the vector element data for a JointActuator at index
+JointActuatorIndex(i) in the full input port vector is found at
+index:
+MultibodyPlant::get_joint_actuator(JointActuatorIndex(i)).input_start().
+For the get_actuation_input_port(ModelInstanceIndex)const
 “get_actuation_input_port(ModelInstanceIndex)” specific to a model
 index, the vector data is ordered by monotonically increasing
 JointActuatorIndex for the actuators within that model instance:
@@ -7645,7 +7704,9 @@ impose the saturation there.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>A constant reference to the new JointActuator just added, which
-will remain valid for the lifetime of <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
+will remain valid for the lifetime of <code class="docutils literal notranslate"><span class="pre">this</span></code> plant or until the
+JointActuator has been removed from the plant with
+RemoveJointActuator().</p>
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><ul class="simple">
@@ -7654,6 +7715,10 @@ will remain valid for the lifetime of <code class="docutils literal notranslate"
 </ul>
 </dd>
 </dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>RemoveJointActuator()</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -7709,7 +7774,7 @@ to or from symbolic::Expression after a call to this method.</p>
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].AddRigidBody"></span><span class="sig-name descname"><span class="pre">AddRigidBody</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.AddRigidBody" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7fe6963c9f30&gt;) -&gt; pydrake.multibody.tree.RigidBody_[AutoDiffXd]</p></li>
+<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f059f798d30&gt;) -&gt; pydrake.multibody.tree.RigidBody_[AutoDiffXd]</p></li>
 </ol>
 <p>Creates a rigid body with the provided name and spatial inertia. This
 method returns a constant reference to the body just added, which will
@@ -7748,7 +7813,7 @@ remain valid for the lifetime of <code class="docutils literal notranslate"><spa
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7fe6933492f0&gt;) -&gt; pydrake.multibody.tree.RigidBody_[AutoDiffXd]</p></li>
+<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f059f7e42f0&gt;) -&gt; pydrake.multibody.tree.RigidBody_[AutoDiffXd]</p></li>
 </ol>
 <p>Creates a rigid body with the provided name and spatial inertia. This
 method returns a constant reference to the body just added, which will
@@ -9035,9 +9100,10 @@ a SceneGraph, either pre- or post-finalize, see Finalize().</p>
 <li><p>get_actuation_input_port(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd]) -&gt; pydrake.systems.framework.InputPort_[AutoDiffXd]</p></li>
 </ol>
 <p>Returns a constant reference to the input port for external actuation
-for all actuated dofs. This input port is a vector valued port indexed
-by JointActuatorIndex, see JointActuator::index(), and can be set with
-JointActuator::set_actuation_vector(). Refer to mbp_actuation
+for all actuated dofs. This input port is a vector valued port and can
+be set with JointActuator::set_actuation_vector(). The actuation value
+for a particular actuator can be found at offset
+JointActuator::input_start() in this vector. Refer to mbp_actuation
 “Actuation” for further details.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
@@ -9259,11 +9325,16 @@ joints. This is true even for unactuated models, for which this
 port is zero sized. This port must provide one desired position
 and one desired velocity per joint actuator. Desired state is
 assumed to be packed as xd = [qd, vd] that is, configurations
-first followed by velocities. Configurations in qd are ordered by
-JointActuatorIndex, see JointActuator::set_actuation_vector().
-Similarly for velocities in vd.</p>
+first followed by velocities. The actuation value for a particular
+actuator can be found at offset JointActuator::input_start() in
+both qd and vd. For example:</p>
 </div>
-<div class="admonition warning">
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">qd_actuator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xd</span><span class="p">[</span><span class="n">actuator</span><span class="p">.</span><span class="n">input_start</span><span class="p">()];</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">vd_actuator</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="w">   </span><span class="n">xd</span><span class="p">[</span><span class="n">actuator</span><span class="p">.</span><span class="n">input_start</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">num_actuated_dofs</span><span class="p">()];</span><span class="w"></span>
+</pre></div>
+</div>
+</details><div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>If a user specifies a PD controller for an actuator from a given
 model instance, then all actuators of that model instance are
@@ -9465,9 +9536,10 @@ collision geometry registration and connection with a SceneGraph.</p>
 </ol>
 <p>Returns a constant reference to the output port that reports actuation
 values applied through joint actuators. This output port is a vector
-valued port indexed by JointActuatorIndex, see JointActuator::index().
-Models that include PD controllers will include their contribution in
-this port, refer to mbp_actuation “Actuation” for further details.</p>
+valued port. The actuation value for a particular actuator can be
+found at offset JointActuator::input_start() in this vector. Models
+that include PD controllers will include their contribution in this
+port, refer to mbp_actuation “Actuation” for further details.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>PD controllers are not considered for actuators on locked joints,
@@ -10057,8 +10129,18 @@ MultibodyPlant.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetJointActuatorIndices">
-<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].GetJointActuatorIndices"></span><span class="sig-name descname"><span class="pre">GetJointActuatorIndices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JointActuatorIndex" title="pydrake.multibody.tree.JointActuatorIndex"><span class="pre">pydrake.multibody.tree.JointActuatorIndex</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetJointActuatorIndices" title="Permalink to this definition"></a></dt>
-<dd><p>Returns a list of joint actuator indices associated with
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].GetJointActuatorIndices"></span><span class="sig-name descname"><span class="pre">GetJointActuatorIndices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetJointActuatorIndices" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>GetJointActuatorIndices(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd]) -&gt; List[pydrake.multibody.tree.JointActuatorIndex]</p></li>
+</ol>
+<p>Returns a list of all joint actuator indices. The vector is ordered by
+monotonically increasing JointActuatorIndex, but the indexes will in
+general not be consecutive due to actuators that were removed.</p>
+<ol class="arabic simple" start="2">
+<li><p>GetJointActuatorIndices(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; List[pydrake.multibody.tree.JointActuatorIndex]</p></li>
+</ol>
+<p>Returns a list of joint actuator indices associated with
 <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>. The vector is ordered by monotonically increasing
 JointActuatorIndex.</p>
 <dl class="field-list simple">
@@ -10666,6 +10748,14 @@ Post-finalize calls will always return the same value.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.has_joint_actuator">
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].has_joint_actuator"></span><span class="sig-name descname"><span class="pre">has_joint_actuator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">actuator_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JointActuatorIndex" title="pydrake.multibody.tree.JointActuatorIndex"><span class="pre">pydrake.multibody.tree.JointActuatorIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.has_joint_actuator" title="Permalink to this definition"></a></dt>
+<dd><p>Returns true if plant has a joint actuator with unique index
+<code class="docutils literal notranslate"><span class="pre">actuator_index</span></code>. The value could be false if the actuator was
+removed using RemoveJointActuator().</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.HasBodyNamed">
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].HasBodyNamed"></span><span class="sig-name descname"><span class="pre">HasBodyNamed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.HasBodyNamed" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
@@ -10907,13 +10997,13 @@ joints.</p>
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].MakeActuationMatrix"></span><span class="sig-name descname"><span class="pre">MakeActuationMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.MakeActuationMatrix" title="Permalink to this definition"></a></dt>
 <dd><p>This method creates an actuation matrix B mapping a vector of
 actuation values u into generalized forces <code class="docutils literal notranslate"><span class="pre">tau_u</span> <span class="pre">=</span> <span class="pre">B</span> <span class="pre">*</span> <span class="pre">u</span></code>, where B
-is a matrix of size <code class="docutils literal notranslate"><span class="pre">nv</span> <span class="pre">x</span> <span class="pre">nu</span></code> with <code class="docutils literal notranslate"><span class="pre">nu</span></code> equal to num_actuators()
-and <code class="docutils literal notranslate"><span class="pre">nv</span></code> equal to num_velocities(). The vector u of actuation values
-is of size num_actuators(). For a given JointActuator,
-<code class="docutils literal notranslate"><span class="pre">u[JointActuator::index()]</span></code> stores the value for the external
-actuation corresponding to that actuator. <code class="docutils literal notranslate"><span class="pre">tau_u</span></code> on the other hand
-is indexed by generalized velocity indexes according to
-<code class="docutils literal notranslate"><span class="pre">Joint::velocity_start()</span></code>.</p>
+is a matrix of size <code class="docutils literal notranslate"><span class="pre">nv</span> <span class="pre">x</span> <span class="pre">nu</span></code> with <code class="docutils literal notranslate"><span class="pre">nu</span></code> equal to
+num_actuated_dofs() and <code class="docutils literal notranslate"><span class="pre">nv</span></code> equal to num_velocities(). The vector u
+of actuation values is of size num_actuated_dofs(). For a given
+JointActuator, <code class="docutils literal notranslate"><span class="pre">u[JointActuator::input_start()]</span></code> stores the value
+for the external actuation corresponding to that actuator. <code class="docutils literal notranslate"><span class="pre">tau_u</span></code>
+on the other hand is indexed by generalized velocity indexes according
+to <code class="docutils literal notranslate"><span class="pre">Joint::velocity_start()</span></code>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>B is a permutation matrix. While making a permutation has <code class="docutils literal notranslate"><span class="pre">O(n)</span></code>
@@ -10951,14 +11041,15 @@ on a portion of the state, see systems::controllers::PidController.</p>
 <p>A user specifies the preferred order in uₛ via
 <code class="docutils literal notranslate"><span class="pre">user_to_actuator_index_map</span></code>. The actuation values in uₛ are a
 concatenation of the values for each actuator in the order they appear
-in <code class="docutils literal notranslate"><span class="pre">user_to_actuator_index_map</span></code>. The full vector of actuation values
-u is ordered by JointActuatorIndex.</p>
+in <code class="docutils literal notranslate"><span class="pre">user_to_actuator_index_map</span></code>. The actuation value in the full
+vector of actuation values <code class="docutils literal notranslate"><span class="pre">u</span></code> for a particular actuator can be
+found at offset JointActuator::input_start().</p>
 <ol class="arabic simple" start="2">
 <li><p>MakeActuatorSelectorMatrix(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], user_to_joint_index_map: List[pydrake.multibody.tree.JointIndex]) -&gt; numpy.ndarray[numpy.float64[m, n]]</p></li>
 </ol>
 <p>Alternative signature to build an actuation selector matrix <code class="docutils literal notranslate"><span class="pre">Su</span></code>
 such that <code class="docutils literal notranslate"><span class="pre">u</span> <span class="pre">=</span> <span class="pre">Su⋅uₛ</span></code>, where u is the vector of actuation values for
-the full model (ordered by JointActuatorIndex) and uₛ is a vector of
+the full model (see get_actuation_input_port()) and uₛ is a vector of
 actuation values for the actuators acting on the joints listed by
 <code class="docutils literal notranslate"><span class="pre">user_to_joint_index_map</span></code>. It is assumed that all joints referenced
 by <code class="docutils literal notranslate"><span class="pre">user_to_joint_index_map</span></code> are actuated. See
@@ -11373,6 +11464,24 @@ geometry::IllustrationProperties.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.RemoveJointActuator">
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].RemoveJointActuator"></span><span class="sig-name descname"><span class="pre">RemoveJointActuator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">actuator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JointActuator_" title="pydrake.multibody.tree.JointActuator_"><span class="pre">pydrake.multibody.tree.JointActuator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.RemoveJointActuator" title="Permalink to this definition"></a></dt>
+<dd><p>Removes and deletes <code class="docutils literal notranslate"><span class="pre">actuator</span></code> from this MultibodyPlant. Any
+existing references to <code class="docutils literal notranslate"><span class="pre">actuator</span></code> will become invalid, and future
+calls to <code class="docutils literal notranslate"><span class="pre">get_joint_actuator(actuator_index)</span></code> will throw an
+exception.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if the plant is already finalized.</strong> – </p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>AddJointActuator()</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.RenameModelInstance">
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].RenameModelInstance"></span><span class="sig-name descname"><span class="pre">RenameModelInstance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.RenameModelInstance" title="Permalink to this definition"></a></dt>
 <dd><p>Renames an existing model instance.</p>
@@ -11597,8 +11706,9 @@ mbp_actuation “Actuation” for further details.</p>
 monotonically increasing JointActuatorIndex within the model
 instance.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">u</span></code>:</dt><dd><p>Actuation values for the entire plant model, indexed by
-JointActuatorIndex. Only values corresponding to
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">u</span></code>:</dt><dd><p>Actuation values for the entire plant model. The actuation value
+in <code class="docutils literal notranslate"><span class="pre">u</span></code> for a particular actuator must be found at offset
+JointActuator::input_start(). Only values corresponding to
 <code class="docutils literal notranslate"><span class="pre">model_instance</span></code> are changed.</p>
 </dd>
 </dl>
@@ -12035,11 +12145,15 @@ get_actuation_input_port(ModelInstanceIndex)const
 “get_actuation_input_port(ModelInstanceIndex)”) are summed up.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The vector data supplied to MultibodyPlant’s actuation input ports
-should be ordered by JointActuatorIndex. For the
-get_actuation_input_port() that covers all actuators, the iᵗʰ
-vector element corresponds to <code class="docutils literal notranslate"><span class="pre">JointActuatorIndex(i)</span></code>. For the
-get_actuation_input_port(ModelInstanceIndex)const
+<p>A JointActuator’s index into the vector data supplied to
+MultibodyPlant’s actuation input port for all actuators
+(get_actuation_input_port()) is given by
+JointActuator::input_start(), NOT by its JointActuatorIndex. That
+is, the vector element data for a JointActuator at index
+JointActuatorIndex(i) in the full input port vector is found at
+index:
+MultibodyPlant::get_joint_actuator(JointActuatorIndex(i)).input_start().
+For the get_actuation_input_port(ModelInstanceIndex)const
 “get_actuation_input_port(ModelInstanceIndex)” specific to a model
 index, the vector data is ordered by monotonically increasing
 JointActuatorIndex for the actuators within that model instance:
@@ -12708,7 +12822,9 @@ impose the saturation there.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>A constant reference to the new JointActuator just added, which
-will remain valid for the lifetime of <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
+will remain valid for the lifetime of <code class="docutils literal notranslate"><span class="pre">this</span></code> plant or until the
+JointActuator has been removed from the plant with
+RemoveJointActuator().</p>
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><ul class="simple">
@@ -12717,6 +12833,10 @@ will remain valid for the lifetime of <code class="docutils literal notranslate"
 </ul>
 </dd>
 </dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>RemoveJointActuator()</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -12772,7 +12892,7 @@ to or from symbolic::Expression after a call to this method.</p>
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].AddRigidBody"></span><span class="sig-name descname"><span class="pre">AddRigidBody</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.AddRigidBody" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[Expression], name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7fe6967f8cf0&gt;) -&gt; pydrake.multibody.tree.RigidBody_[Expression]</p></li>
+<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[Expression], name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f059f73beb0&gt;) -&gt; pydrake.multibody.tree.RigidBody_[Expression]</p></li>
 </ol>
 <p>Creates a rigid body with the provided name and spatial inertia. This
 method returns a constant reference to the body just added, which will
@@ -12811,7 +12931,7 @@ remain valid for the lifetime of <code class="docutils literal notranslate"><spa
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[Expression], name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7fe6962bccb0&gt;) -&gt; pydrake.multibody.tree.RigidBody_[Expression]</p></li>
+<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[Expression], name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f059f82b430&gt;) -&gt; pydrake.multibody.tree.RigidBody_[Expression]</p></li>
 </ol>
 <p>Creates a rigid body with the provided name and spatial inertia. This
 method returns a constant reference to the body just added, which will
@@ -14098,9 +14218,10 @@ a SceneGraph, either pre- or post-finalize, see Finalize().</p>
 <li><p>get_actuation_input_port(self: pydrake.multibody.plant.MultibodyPlant_[Expression]) -&gt; pydrake.systems.framework.InputPort_[Expression]</p></li>
 </ol>
 <p>Returns a constant reference to the input port for external actuation
-for all actuated dofs. This input port is a vector valued port indexed
-by JointActuatorIndex, see JointActuator::index(), and can be set with
-JointActuator::set_actuation_vector(). Refer to mbp_actuation
+for all actuated dofs. This input port is a vector valued port and can
+be set with JointActuator::set_actuation_vector(). The actuation value
+for a particular actuator can be found at offset
+JointActuator::input_start() in this vector. Refer to mbp_actuation
 “Actuation” for further details.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
@@ -14322,11 +14443,16 @@ joints. This is true even for unactuated models, for which this
 port is zero sized. This port must provide one desired position
 and one desired velocity per joint actuator. Desired state is
 assumed to be packed as xd = [qd, vd] that is, configurations
-first followed by velocities. Configurations in qd are ordered by
-JointActuatorIndex, see JointActuator::set_actuation_vector().
-Similarly for velocities in vd.</p>
+first followed by velocities. The actuation value for a particular
+actuator can be found at offset JointActuator::input_start() in
+both qd and vd. For example:</p>
 </div>
-<div class="admonition warning">
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">qd_actuator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xd</span><span class="p">[</span><span class="n">actuator</span><span class="p">.</span><span class="n">input_start</span><span class="p">()];</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">vd_actuator</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="w">   </span><span class="n">xd</span><span class="p">[</span><span class="n">actuator</span><span class="p">.</span><span class="n">input_start</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">num_actuated_dofs</span><span class="p">()];</span><span class="w"></span>
+</pre></div>
+</div>
+</details><div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>If a user specifies a PD controller for an actuator from a given
 model instance, then all actuators of that model instance are
@@ -14528,9 +14654,10 @@ collision geometry registration and connection with a SceneGraph.</p>
 </ol>
 <p>Returns a constant reference to the output port that reports actuation
 values applied through joint actuators. This output port is a vector
-valued port indexed by JointActuatorIndex, see JointActuator::index().
-Models that include PD controllers will include their contribution in
-this port, refer to mbp_actuation “Actuation” for further details.</p>
+valued port. The actuation value for a particular actuator can be
+found at offset JointActuator::input_start() in this vector. Models
+that include PD controllers will include their contribution in this
+port, refer to mbp_actuation “Actuation” for further details.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>PD controllers are not considered for actuators on locked joints,
@@ -15120,8 +15247,18 @@ MultibodyPlant.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.GetJointActuatorIndices">
-<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].GetJointActuatorIndices"></span><span class="sig-name descname"><span class="pre">GetJointActuatorIndices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JointActuatorIndex" title="pydrake.multibody.tree.JointActuatorIndex"><span class="pre">pydrake.multibody.tree.JointActuatorIndex</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetJointActuatorIndices" title="Permalink to this definition"></a></dt>
-<dd><p>Returns a list of joint actuator indices associated with
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].GetJointActuatorIndices"></span><span class="sig-name descname"><span class="pre">GetJointActuatorIndices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetJointActuatorIndices" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>GetJointActuatorIndices(self: pydrake.multibody.plant.MultibodyPlant_[Expression]) -&gt; List[pydrake.multibody.tree.JointActuatorIndex]</p></li>
+</ol>
+<p>Returns a list of all joint actuator indices. The vector is ordered by
+monotonically increasing JointActuatorIndex, but the indexes will in
+general not be consecutive due to actuators that were removed.</p>
+<ol class="arabic simple" start="2">
+<li><p>GetJointActuatorIndices(self: pydrake.multibody.plant.MultibodyPlant_[Expression], model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; List[pydrake.multibody.tree.JointActuatorIndex]</p></li>
+</ol>
+<p>Returns a list of joint actuator indices associated with
 <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>. The vector is ordered by monotonically increasing
 JointActuatorIndex.</p>
 <dl class="field-list simple">
@@ -15729,6 +15866,14 @@ Post-finalize calls will always return the same value.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.has_joint_actuator">
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].has_joint_actuator"></span><span class="sig-name descname"><span class="pre">has_joint_actuator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">actuator_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JointActuatorIndex" title="pydrake.multibody.tree.JointActuatorIndex"><span class="pre">pydrake.multibody.tree.JointActuatorIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.has_joint_actuator" title="Permalink to this definition"></a></dt>
+<dd><p>Returns true if plant has a joint actuator with unique index
+<code class="docutils literal notranslate"><span class="pre">actuator_index</span></code>. The value could be false if the actuator was
+removed using RemoveJointActuator().</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.HasBodyNamed">
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].HasBodyNamed"></span><span class="sig-name descname"><span class="pre">HasBodyNamed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.HasBodyNamed" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
@@ -15970,13 +16115,13 @@ joints.</p>
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].MakeActuationMatrix"></span><span class="sig-name descname"><span class="pre">MakeActuationMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.MakeActuationMatrix" title="Permalink to this definition"></a></dt>
 <dd><p>This method creates an actuation matrix B mapping a vector of
 actuation values u into generalized forces <code class="docutils literal notranslate"><span class="pre">tau_u</span> <span class="pre">=</span> <span class="pre">B</span> <span class="pre">*</span> <span class="pre">u</span></code>, where B
-is a matrix of size <code class="docutils literal notranslate"><span class="pre">nv</span> <span class="pre">x</span> <span class="pre">nu</span></code> with <code class="docutils literal notranslate"><span class="pre">nu</span></code> equal to num_actuators()
-and <code class="docutils literal notranslate"><span class="pre">nv</span></code> equal to num_velocities(). The vector u of actuation values
-is of size num_actuators(). For a given JointActuator,
-<code class="docutils literal notranslate"><span class="pre">u[JointActuator::index()]</span></code> stores the value for the external
-actuation corresponding to that actuator. <code class="docutils literal notranslate"><span class="pre">tau_u</span></code> on the other hand
-is indexed by generalized velocity indexes according to
-<code class="docutils literal notranslate"><span class="pre">Joint::velocity_start()</span></code>.</p>
+is a matrix of size <code class="docutils literal notranslate"><span class="pre">nv</span> <span class="pre">x</span> <span class="pre">nu</span></code> with <code class="docutils literal notranslate"><span class="pre">nu</span></code> equal to
+num_actuated_dofs() and <code class="docutils literal notranslate"><span class="pre">nv</span></code> equal to num_velocities(). The vector u
+of actuation values is of size num_actuated_dofs(). For a given
+JointActuator, <code class="docutils literal notranslate"><span class="pre">u[JointActuator::input_start()]</span></code> stores the value
+for the external actuation corresponding to that actuator. <code class="docutils literal notranslate"><span class="pre">tau_u</span></code>
+on the other hand is indexed by generalized velocity indexes according
+to <code class="docutils literal notranslate"><span class="pre">Joint::velocity_start()</span></code>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>B is a permutation matrix. While making a permutation has <code class="docutils literal notranslate"><span class="pre">O(n)</span></code>
@@ -16014,14 +16159,15 @@ on a portion of the state, see systems::controllers::PidController.</p>
 <p>A user specifies the preferred order in uₛ via
 <code class="docutils literal notranslate"><span class="pre">user_to_actuator_index_map</span></code>. The actuation values in uₛ are a
 concatenation of the values for each actuator in the order they appear
-in <code class="docutils literal notranslate"><span class="pre">user_to_actuator_index_map</span></code>. The full vector of actuation values
-u is ordered by JointActuatorIndex.</p>
+in <code class="docutils literal notranslate"><span class="pre">user_to_actuator_index_map</span></code>. The actuation value in the full
+vector of actuation values <code class="docutils literal notranslate"><span class="pre">u</span></code> for a particular actuator can be
+found at offset JointActuator::input_start().</p>
 <ol class="arabic simple" start="2">
 <li><p>MakeActuatorSelectorMatrix(self: pydrake.multibody.plant.MultibodyPlant_[Expression], user_to_joint_index_map: List[pydrake.multibody.tree.JointIndex]) -&gt; numpy.ndarray[numpy.float64[m, n]]</p></li>
 </ol>
 <p>Alternative signature to build an actuation selector matrix <code class="docutils literal notranslate"><span class="pre">Su</span></code>
 such that <code class="docutils literal notranslate"><span class="pre">u</span> <span class="pre">=</span> <span class="pre">Su⋅uₛ</span></code>, where u is the vector of actuation values for
-the full model (ordered by JointActuatorIndex) and uₛ is a vector of
+the full model (see get_actuation_input_port()) and uₛ is a vector of
 actuation values for the actuators acting on the joints listed by
 <code class="docutils literal notranslate"><span class="pre">user_to_joint_index_map</span></code>. It is assumed that all joints referenced
 by <code class="docutils literal notranslate"><span class="pre">user_to_joint_index_map</span></code> are actuated. See
@@ -16436,6 +16582,24 @@ geometry::IllustrationProperties.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.RemoveJointActuator">
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].RemoveJointActuator"></span><span class="sig-name descname"><span class="pre">RemoveJointActuator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">actuator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JointActuator_" title="pydrake.multibody.tree.JointActuator_"><span class="pre">pydrake.multibody.tree.JointActuator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.RemoveJointActuator" title="Permalink to this definition"></a></dt>
+<dd><p>Removes and deletes <code class="docutils literal notranslate"><span class="pre">actuator</span></code> from this MultibodyPlant. Any
+existing references to <code class="docutils literal notranslate"><span class="pre">actuator</span></code> will become invalid, and future
+calls to <code class="docutils literal notranslate"><span class="pre">get_joint_actuator(actuator_index)</span></code> will throw an
+exception.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if the plant is already finalized.</strong> – </p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>AddJointActuator()</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.RenameModelInstance">
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].RenameModelInstance"></span><span class="sig-name descname"><span class="pre">RenameModelInstance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.RenameModelInstance" title="Permalink to this definition"></a></dt>
 <dd><p>Renames an existing model instance.</p>
@@ -16660,8 +16824,9 @@ mbp_actuation “Actuation” for further details.</p>
 monotonically increasing JointActuatorIndex within the model
 instance.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">u</span></code>:</dt><dd><p>Actuation values for the entire plant model, indexed by
-JointActuatorIndex. Only values corresponding to
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">u</span></code>:</dt><dd><p>Actuation values for the entire plant model. The actuation value
+in <code class="docutils literal notranslate"><span class="pre">u</span></code> for a particular actuator must be found at offset
+JointActuator::input_start(). Only values corresponding to
 <code class="docutils literal notranslate"><span class="pre">model_instance</span></code> are changed.</p>
 </dd>
 </dl>

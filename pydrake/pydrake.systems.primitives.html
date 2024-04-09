@@ -1427,6 +1427,152 @@ for <code class="docutils literal notranslate"><span class="pre">delay_time_step
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.DiscreteTimeIntegrator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.primitives.</span></span><span class="sig-name descname"><span class="pre">DiscreteTimeIntegrator</span></span><a class="headerlink" href="#pydrake.systems.primitives.DiscreteTimeIntegrator" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<p>A discrete-time integrator for a vector input, using explicit Euler
+integration.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>DiscreteTimeIntegrator</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y</td></tr></table></td></tr></table><p>The discrete state space dynamics of DiscreteTimeIntegrator with time
+step <code class="docutils literal notranslate"><span class="pre">h</span></code> is:</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>xₙ₊₁ = xₙ + h uₙ  // update
+yₙ = xₙ           // output
+x₀ = xᵢₙᵢₜ        // initialize
+</pre></div>
+</div>
+</details><p>where xᵢₙᵢₜ = 0 by default. Use set_integral_value() to set xₙ in the
+context. The output at time <code class="docutils literal notranslate"><span class="pre">t</span></code> is <code class="docutils literal notranslate"><span class="pre">xₙ</span></code> where <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">ceil(t/h)</span></code>.
+See discrete_systems.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This class is templated; see <a class="reference internal" href="#pydrake.systems.primitives.DiscreteTimeIntegrator_" title="pydrake.systems.primitives.DiscreteTimeIntegrator_"><code class="xref py py-class docutils literal notranslate"><span class="pre">DiscreteTimeIntegrator_</span></code></a>
+for the list of instantiations.</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.DiscreteTimeIntegrator.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.DiscreteTimeIntegrator" title="pydrake.systems.primitives.DiscreteTimeIntegrator"><span class="pre">pydrake.systems.primitives.DiscreteTimeIntegrator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_step</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.DiscreteTimeIntegrator.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Constructs an DiscreteTimeIntegrator system.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">size</span></code>:</dt><dd><p>number of elements in the signal to be processed.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">time_step</span></code>:</dt><dd><p>the discrete time step.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>size &gt; 0. time_step &gt; 0.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.DiscreteTimeIntegrator.set_integral_value">
+<span class="sig-name descname"><span class="pre">set_integral_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.DiscreteTimeIntegrator" title="pydrake.systems.primitives.DiscreteTimeIntegrator"><span class="pre">pydrake.systems.primitives.DiscreteTimeIntegrator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.DiscreteTimeIntegrator.set_integral_value" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the value of the integral modifying the state in the context.
+<code class="docutils literal notranslate"><span class="pre">value</span></code> must be a column vector of the appropriate size.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.DiscreteTimeIntegrator.time_step">
+<span class="sig-name descname"><span class="pre">time_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.DiscreteTimeIntegrator" title="pydrake.systems.primitives.DiscreteTimeIntegrator"><span class="pre">pydrake.systems.primitives.DiscreteTimeIntegrator</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.DiscreteTimeIntegrator.time_step" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the time_step used by the integrator.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py template">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.DiscreteTimeIntegrator_">
+<em class="property"><span class="pre">template</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.primitives.</span></span><span class="sig-name descname"><span class="pre">DiscreteTimeIntegrator_</span></span><a class="headerlink" href="#pydrake.systems.primitives.DiscreteTimeIntegrator_" title="Permalink to this definition"></a></dt>
+<dd><p>Instantiations: <code class="xref py py-class docutils literal notranslate"><span class="pre">DiscreteTimeIntegrator_[float]</span></code>, <a class="reference internal" href="#pydrake.systems.primitives.DiscreteTimeIntegrator_-AutoDiffXd" title="pydrake.systems.primitives.DiscreteTimeIntegrator_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">DiscreteTimeIntegrator_[AutoDiffXd]</span></code></a>, <a class="reference internal" href="#pydrake.systems.primitives.DiscreteTimeIntegrator_-Expression" title="pydrake.systems.primitives.DiscreteTimeIntegrator_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">DiscreteTimeIntegrator_[Expression]</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.DiscreteTimeIntegrator_-AutoDiffXd">
+<span id="pydrake.systems.primitives.DiscreteTimeIntegrator_[AutoDiffXd]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.primitives.</span></span><span class="sig-name descname"><span class="pre">DiscreteTimeIntegrator_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.systems.primitives.DiscreteTimeIntegrator_-AutoDiffXd" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-AutoDiffXd" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[AutoDiffXd]</span></code></a></p>
+<p>A discrete-time integrator for a vector input, using explicit Euler
+integration.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>DiscreteTimeIntegrator</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y</td></tr></table></td></tr></table><p>The discrete state space dynamics of DiscreteTimeIntegrator with time
+step <code class="docutils literal notranslate"><span class="pre">h</span></code> is:</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>xₙ₊₁ = xₙ + h uₙ  // update
+yₙ = xₙ           // output
+x₀ = xᵢₙᵢₜ        // initialize
+</pre></div>
+</div>
+</details><p>where xᵢₙᵢₜ = 0 by default. Use set_integral_value() to set xₙ in the
+context. The output at time <code class="docutils literal notranslate"><span class="pre">t</span></code> is <code class="docutils literal notranslate"><span class="pre">xₙ</span></code> where <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">ceil(t/h)</span></code>.
+See discrete_systems.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.DiscreteTimeIntegrator_-AutoDiffXd-.__init__">
+<span id="pydrake.systems.primitives.DiscreteTimeIntegrator_[AutoDiffXd].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.DiscreteTimeIntegrator_" title="pydrake.systems.primitives.DiscreteTimeIntegrator_"><span class="pre">pydrake.systems.primitives.DiscreteTimeIntegrator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_step</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.DiscreteTimeIntegrator_-AutoDiffXd-.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Constructs an DiscreteTimeIntegrator system.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">size</span></code>:</dt><dd><p>number of elements in the signal to be processed.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">time_step</span></code>:</dt><dd><p>the discrete time step.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>size &gt; 0. time_step &gt; 0.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.DiscreteTimeIntegrator_-AutoDiffXd-.set_integral_value">
+<span id="pydrake.systems.primitives.DiscreteTimeIntegrator_[AutoDiffXd].set_integral_value"></span><span class="sig-name descname"><span class="pre">set_integral_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.DiscreteTimeIntegrator_" title="pydrake.systems.primitives.DiscreteTimeIntegrator_"><span class="pre">pydrake.systems.primitives.DiscreteTimeIntegrator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.DiscreteTimeIntegrator_-AutoDiffXd-.set_integral_value" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the value of the integral modifying the state in the context.
+<code class="docutils literal notranslate"><span class="pre">value</span></code> must be a column vector of the appropriate size.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.DiscreteTimeIntegrator_-AutoDiffXd-.time_step">
+<span id="pydrake.systems.primitives.DiscreteTimeIntegrator_[AutoDiffXd].time_step"></span><span class="sig-name descname"><span class="pre">time_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.DiscreteTimeIntegrator_" title="pydrake.systems.primitives.DiscreteTimeIntegrator_"><span class="pre">pydrake.systems.primitives.DiscreteTimeIntegrator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.DiscreteTimeIntegrator_-AutoDiffXd-.time_step" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the time_step used by the integrator.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.DiscreteTimeIntegrator_-Expression">
+<span id="pydrake.systems.primitives.DiscreteTimeIntegrator_[Expression]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.primitives.</span></span><span class="sig-name descname"><span class="pre">DiscreteTimeIntegrator_[Expression]</span></span><a class="headerlink" href="#pydrake.systems.primitives.DiscreteTimeIntegrator_-Expression" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-Expression" title="pydrake.systems.framework.LeafSystem_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[Expression]</span></code></a></p>
+<p>A discrete-time integrator for a vector input, using explicit Euler
+integration.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>DiscreteTimeIntegrator</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y</td></tr></table></td></tr></table><p>The discrete state space dynamics of DiscreteTimeIntegrator with time
+step <code class="docutils literal notranslate"><span class="pre">h</span></code> is:</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>xₙ₊₁ = xₙ + h uₙ  // update
+yₙ = xₙ           // output
+x₀ = xᵢₙᵢₜ        // initialize
+</pre></div>
+</div>
+</details><p>where xᵢₙᵢₜ = 0 by default. Use set_integral_value() to set xₙ in the
+context. The output at time <code class="docutils literal notranslate"><span class="pre">t</span></code> is <code class="docutils literal notranslate"><span class="pre">xₙ</span></code> where <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">ceil(t/h)</span></code>.
+See discrete_systems.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.DiscreteTimeIntegrator_-Expression-.__init__">
+<span id="pydrake.systems.primitives.DiscreteTimeIntegrator_[Expression].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.DiscreteTimeIntegrator_" title="pydrake.systems.primitives.DiscreteTimeIntegrator_"><span class="pre">pydrake.systems.primitives.DiscreteTimeIntegrator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_step</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.DiscreteTimeIntegrator_-Expression-.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Constructs an DiscreteTimeIntegrator system.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">size</span></code>:</dt><dd><p>number of elements in the signal to be processed.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">time_step</span></code>:</dt><dd><p>the discrete time step.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>size &gt; 0. time_step &gt; 0.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.DiscreteTimeIntegrator_-Expression-.set_integral_value">
+<span id="pydrake.systems.primitives.DiscreteTimeIntegrator_[Expression].set_integral_value"></span><span class="sig-name descname"><span class="pre">set_integral_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.DiscreteTimeIntegrator_" title="pydrake.systems.primitives.DiscreteTimeIntegrator_"><span class="pre">pydrake.systems.primitives.DiscreteTimeIntegrator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.DiscreteTimeIntegrator_-Expression-.set_integral_value" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the value of the integral modifying the state in the context.
+<code class="docutils literal notranslate"><span class="pre">value</span></code> must be a column vector of the appropriate size.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.DiscreteTimeIntegrator_-Expression-.time_step">
+<span id="pydrake.systems.primitives.DiscreteTimeIntegrator_[Expression].time_step"></span><span class="sig-name descname"><span class="pre">time_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.DiscreteTimeIntegrator_" title="pydrake.systems.primitives.DiscreteTimeIntegrator_"><span class="pre">pydrake.systems.primitives.DiscreteTimeIntegrator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.DiscreteTimeIntegrator_-Expression-.time_step" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the time_step used by the integrator.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.primitives.FirstOrderLowPassFilter">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.primitives.</span></span><span class="sig-name descname"><span class="pre">FirstOrderLowPassFilter</span></span><a class="headerlink" href="#pydrake.systems.primitives.FirstOrderLowPassFilter" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
@@ -1889,7 +2035,7 @@ subscript <code class="docutils literal notranslate"><span class="pre">i</span><
 <dt class="sig sig-object py" id="pydrake.systems.primitives.Integrator">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.primitives.</span></span><span class="sig-name descname"><span class="pre">Integrator</span></span><a class="headerlink" href="#pydrake.systems.primitives.Integrator" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
-<p>An integrator for a continuous vector input.</p>
+<p>A continuous-time integrator for a vector input.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Integrator</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This class is templated; see <a class="reference internal" href="#pydrake.systems.primitives.Integrator_" title="pydrake.systems.primitives.Integrator_"><code class="xref py py-class docutils literal notranslate"><span class="pre">Integrator_</span></code></a>
@@ -1924,7 +2070,7 @@ for the list of instantiations.</p>
 <dt class="sig sig-object py" id="pydrake.systems.primitives.Integrator_-AutoDiffXd">
 <span id="pydrake.systems.primitives.Integrator_[AutoDiffXd]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.primitives.</span></span><span class="sig-name descname"><span class="pre">Integrator_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.systems.primitives.Integrator_-AutoDiffXd" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-AutoDiffXd" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[AutoDiffXd]</span></code></a></p>
-<p>An integrator for a continuous vector input.</p>
+<p>A continuous-time integrator for a vector input.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Integrator</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.primitives.Integrator_-AutoDiffXd-.__init__">
 <span id="pydrake.systems.primitives.Integrator_[AutoDiffXd].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.Integrator_" title="pydrake.systems.primitives.Integrator_"><span class="pre">pydrake.systems.primitives.Integrator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.Integrator_-AutoDiffXd-.__init__" title="Permalink to this definition"></a></dt>
@@ -1948,7 +2094,7 @@ for the list of instantiations.</p>
 <dt class="sig sig-object py" id="pydrake.systems.primitives.Integrator_-Expression">
 <span id="pydrake.systems.primitives.Integrator_[Expression]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.primitives.</span></span><span class="sig-name descname"><span class="pre">Integrator_[Expression]</span></span><a class="headerlink" href="#pydrake.systems.primitives.Integrator_-Expression" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-Expression" title="pydrake.systems.framework.LeafSystem_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[Expression]</span></code></a></p>
-<p>An integrator for a continuous vector input.</p>
+<p>A continuous-time integrator for a vector input.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Integrator</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.primitives.Integrator_-Expression-.__init__">
 <span id="pydrake.systems.primitives.Integrator_[Expression].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.Integrator_" title="pydrake.systems.primitives.Integrator_"><span class="pre">pydrake.systems.primitives.Integrator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.Integrator_-Expression-.__init__" title="Permalink to this definition"></a></dt>
