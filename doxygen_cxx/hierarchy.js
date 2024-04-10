@@ -370,7 +370,7 @@ var hierarchy =
       [ "GravityForceField< T >", "classdrake_1_1multibody_1_1_gravity_force_field.html", null ]
     ] ],
     [ "ForceDensityField< double >", "classdrake_1_1multibody_1_1_force_density_field.html", [
-      [ "PointSourceForceField", "classdrake_1_1examples_1_1deformable__torus_1_1_point_source_force_field.html", null ]
+      [ "PointSourceForceField", "classdrake_1_1examples_1_1deformable_1_1_point_source_force_field.html", null ]
     ] ],
     [ "formatter", null, [
       [ "ostream_formatter", "structdrake_1_1ostream__formatter.html", [
@@ -1029,8 +1029,8 @@ var hierarchy =
             [ "AllegroCommandReceiver", "classdrake_1_1examples_1_1allegro__hand_1_1_allegro_command_receiver.html", null ],
             [ "AllegroStatusSender", "classdrake_1_1examples_1_1allegro__hand_1_1_allegro_status_sender.html", null ],
             [ "CompassGaitGeometry", "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_geometry.html", null ],
-            [ "ParallelGripperController", "classdrake_1_1examples_1_1deformable__torus_1_1_parallel_gripper_controller.html", null ],
-            [ "SuctionCupController", "classdrake_1_1examples_1_1deformable__torus_1_1_suction_cup_controller.html", null ],
+            [ "ParallelGripperController", "classdrake_1_1examples_1_1deformable_1_1_parallel_gripper_controller.html", null ],
+            [ "SuctionCupController", "classdrake_1_1examples_1_1deformable_1_1_suction_cup_controller.html", null ],
             [ "FibonacciDifferenceEquation", "classdrake_1_1examples_1_1fibonacci_1_1_fibonacci_difference_equation.html", null ],
             [ "ClothSpringModelGeometry", "classdrake_1_1examples_1_1mass__spring__cloth_1_1_cloth_spring_model_geometry.html", null ],
             [ "PendulumGeometry", "classdrake_1_1examples_1_1pendulum_1_1_pendulum_geometry.html", null ],

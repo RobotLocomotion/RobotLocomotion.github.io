@@ -111,7 +111,7 @@ var searchData=
   ['subscriber',['Subscriber',['../classdrake_1_1lcm_1_1_subscriber.html',1,'drake::lcm']]],
   ['substituteandexpandcachedata',['SubstituteAndExpandCacheData',['../structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data.html',1,'drake::symbolic::Polynomial']]],
   ['subvector',['Subvector',['../classdrake_1_1systems_1_1_subvector.html',1,'drake::systems']]],
-  ['suctioncupcontroller',['SuctionCupController',['../classdrake_1_1examples_1_1deformable__torus_1_1_suction_cup_controller.html',1,'drake::examples::deformable_torus']]],
+  ['suctioncupcontroller',['SuctionCupController',['../classdrake_1_1examples_1_1deformable_1_1_suction_cup_controller.html',1,'drake::examples::deformable']]],
   ['supervector',['Supervector',['../classdrake_1_1systems_1_1_supervector.html',1,'drake::systems']]],
   ['surfacepolygon',['SurfacePolygon',['../classdrake_1_1geometry_1_1_surface_polygon.html',1,'drake::geometry']]],
   ['surfacetriangle',['SurfaceTriangle',['../classdrake_1_1geometry_1_1_surface_triangle.html',1,'drake::geometry']]],
