@@ -1,5 +1,6 @@
 var classdrake_1_1test_1_1_diagnostic_policy_test_base =
 [
+    [ "ScopedTrace", "classdrake_1_1test_1_1_diagnostic_policy_test_base_1_1_scoped_trace.html", "classdrake_1_1test_1_1_diagnostic_policy_test_base_1_1_scoped_trace" ],
     [ "DiagnosticPolicyTestBase", "classdrake_1_1test_1_1_diagnostic_policy_test_base.html#a8502ed3afd37042e1ca538d70e09d20e", null ],
     [ "~DiagnosticPolicyTestBase", "classdrake_1_1test_1_1_diagnostic_policy_test_base.html#ad9be87e8c19668d196357e94f7391541", null ],
     [ "ClearDiagnostics", "classdrake_1_1test_1_1_diagnostic_policy_test_base.html#a76c3e0de6a7793277da61c382a0fc9b4", null ],

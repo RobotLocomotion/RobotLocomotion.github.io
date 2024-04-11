@@ -1,5 +1,11 @@
 var NAVTREEINDEX59 =
 {
+"structdrake_1_1multibody_1_1_multibody_plant_config.html#ab293e1ad65932eebf57568303f28c326":[3,0,0,8,57,5],
+"structdrake_1_1multibody_1_1_multibody_plant_config.html#ac7ad2e65450c6bf4784df0da7dc1ac10":[3,0,0,8,57,7],
+"structdrake_1_1multibody_1_1_multibody_plant_config.html#acfc94098ab828c8207b52f78ca3a1d51":[3,0,0,8,57,4],
+"structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html":[3,0,0,8,62,0],
+"structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html#a306ada97a24c8198c1a0c9c3c5b0bb25":[3,0,0,8,62,0,6],
+"structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html#a81066da499282f418a381f8a164a10af":[3,0,0,8,62,0,3],
 "structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,8,62,0,0],
 "structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html#a908a115b57885da98a8babc0d1f258fc":[3,0,0,8,62,0,1],
 "structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html#aa1d17972259be22a1fb95b557433e617":[3,0,0,8,62,0,5],
@@ -243,11 +249,5 @@ var NAVTREEINDEX59 =
 "structdrake_1_1schema_1_1_rotation_1_1_identity.html#aa3b4b0360b49f499d1d0996b08940f1c":[3,0,0,12,6,1,5],
 "structdrake_1_1schema_1_1_rotation_1_1_identity.html#ac245e156ef53146477344bf9965c3d8c":[3,0,0,12,6,1,1],
 "structdrake_1_1schema_1_1_rotation_1_1_identity.html#af4fb026178fdf3ce0a371f9f21f7ab9c":[3,0,0,12,6,1,3],
-"structdrake_1_1schema_1_1_rotation_1_1_identity.html#af7bbb7bd985ee9193d77994218614e17":[3,0,0,12,6,1,0],
-"structdrake_1_1schema_1_1_rotation_1_1_rpy.html":[3,0,0,12,6,2],
-"structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a1c90bdc946c78848a793eb4fc2e9b7e5":[3,0,0,12,6,2,1],
-"structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a2b5855cfba3ee924b2dd12eed326deba":[3,0,0,12,6,2,2],
-"structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a48fd1a491d4b55da113c50ad56ac0e0b":[3,0,0,12,6,2,3],
-"structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a6513041bec80f06f80601420be193a69":[3,0,0,12,6,2,0],
-"structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a81fc1edc9be7f6ca52a5c9f2d1f284a6":[3,0,0,12,6,2,4]
+"structdrake_1_1schema_1_1_rotation_1_1_identity.html#af7bbb7bd985ee9193d77994218614e17":[3,0,0,12,6,1,0]
 };

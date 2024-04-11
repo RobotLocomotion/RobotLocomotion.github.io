@@ -1,7 +1,8 @@
 var dir_0d10be3e24b4d05732d552ad443cc60a =
 [
     [ "diagnostic_policy_test_base.h", "diagnostic__policy__test__base_8h.html", [
-      [ "DiagnosticPolicyTestBase", "classdrake_1_1test_1_1_diagnostic_policy_test_base.html", "classdrake_1_1test_1_1_diagnostic_policy_test_base" ]
+      [ "DiagnosticPolicyTestBase", "classdrake_1_1test_1_1_diagnostic_policy_test_base.html", "classdrake_1_1test_1_1_diagnostic_policy_test_base" ],
+      [ "ScopedTrace", "classdrake_1_1test_1_1_diagnostic_policy_test_base_1_1_scoped_trace.html", "classdrake_1_1test_1_1_diagnostic_policy_test_base_1_1_scoped_trace" ]
     ] ],
     [ "eigen_matrix_compare.h", "eigen__matrix__compare_8h.html", "eigen__matrix__compare_8h" ],
     [ "eigen_printer.h", "eigen__printer_8h.html", null ],

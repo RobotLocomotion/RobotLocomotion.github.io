@@ -1,5 +1,11 @@
 var NAVTREEINDEX60 =
 {
+"structdrake_1_1schema_1_1_rotation_1_1_rpy.html":[3,0,0,12,6,2],
+"structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a1c90bdc946c78848a793eb4fc2e9b7e5":[3,0,0,12,6,2,1],
+"structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a2b5855cfba3ee924b2dd12eed326deba":[3,0,0,12,6,2,2],
+"structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a48fd1a491d4b55da113c50ad56ac0e0b":[3,0,0,12,6,2,3],
+"structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a6513041bec80f06f80601420be193a69":[3,0,0,12,6,2,0],
+"structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a81fc1edc9be7f6ca52a5c9f2d1f284a6":[3,0,0,12,6,2,4],
 "structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,12,6,2,5],
 "structdrake_1_1schema_1_1_rotation_1_1_rpy.html#ad5c7ce055d37fc3f1ae1dbd5af47e3a5":[3,0,0,12,6,2,6],
 "structdrake_1_1schema_1_1_rotation_1_1_uniform.html":[3,0,0,12,6,3],
@@ -243,11 +249,5 @@ var NAVTREEINDEX60 =
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01sensors_1_1_beam_model_01_4.html":[3,0,0,15,7,10],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter.html":[3,0,0,15,7,14],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter.html#a8a63ad999f7b515a27e608907704a113":[3,0,0,15,7,14,0],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter_3_01_t_00_01_t_01_4.html":[3,0,0,15,7,15],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter_3_01_t_00_01_t_01_4.html#a8a63ad999f7b515a27e608907704a113":[3,0,0,15,7,15,1],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter_3_01_t_00_01_t_01_4.html#a922b853b1fa03c63528dda71698c419a":[3,0,0,15,7,15,0],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config.html":[3,0,0,15,8,2],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a01a2a4e8cf420c179bc1253ca3d3a1c3":[3,0,0,15,8,2,8],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a079f690a782b18a752952851aafd792a":[3,0,0,15,8,2,23],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a0d7ddcc8efc929f872d88097097e9953":[3,0,0,15,8,2,29]
+"structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter_3_01_t_00_01_t_01_4.html":[3,0,0,15,7,15]
 };

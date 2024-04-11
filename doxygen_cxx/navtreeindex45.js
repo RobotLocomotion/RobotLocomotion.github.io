@@ -1,5 +1,11 @@
 var NAVTREEINDEX45 =
 {
+"classdrake_1_1trajectories_1_1_stacked_trajectory.html#aac002eea06875b91ada866e249fc7b6f":[3,0,0,17,10,3],
+"classdrake_1_1trajectories_1_1_stacked_trajectory.html#ab191f8ee68c549c494a6d49b0c381944":[3,0,0,17,10,7],
+"classdrake_1_1trajectories_1_1_stacked_trajectory.html#abec7b1f5c2c6face018616992476881f":[3,0,0,17,10,10],
+"classdrake_1_1trajectories_1_1_stacked_trajectory.html#adca2766204b86212e8ed2b91faa97775":[3,0,0,17,10,12],
+"classdrake_1_1trajectories_1_1_stacked_trajectory.html#ae2167a7e4dbf33198c4a3cfb4d8ff370":[3,0,0,17,10,1],
+"classdrake_1_1trajectories_1_1_stacked_trajectory.html#aef16c3e234e70a22d89678041a6bda57":[3,0,0,17,10,5],
 "classdrake_1_1trajectories_1_1_trajectory.html":[3,0,0,17,11],
 "classdrake_1_1trajectories_1_1_trajectory.html#a0a8606a2bfd8a6ecade8bf4f95fb40c5":[3,0,0,17,11,16],
 "classdrake_1_1trajectories_1_1_trajectory.html#a0a945567d9505ef681194f053ef5a1c2":[3,0,0,17,11,12],
@@ -243,11 +249,5 @@ var NAVTREEINDEX45 =
 "cost_8h.html#ga9d268ea8150fb094f1499a958c50defb":[4,0,0,11,10,1],
 "coulomb__friction_8h.html":[4,0,0,8,10,9],
 "coulomb__friction_8h.html#aada1fb90629198ff0ee920969d517335":[4,0,0,8,10,9,1],
-"coulomb__friction_8h.html#ad1adacac02531fd546981067a851d1be":[4,0,0,8,10,9,2],
-"cpp__param__pybind_8h.html":[4,0,0,0,0,1,0],
-"cpp__param__pybind_8h.html#a2274d953c5404b3021085ef6c9891603":[4,0,0,0,0,1,0,1],
-"cpp__template__pybind_8h.html":[4,0,0,0,0,1,1],
-"cpp__template__pybind_8h.html#a4790743839a4b041b37dc3820e2475ae":[4,0,0,0,0,1,1,4],
-"cpp__template__pybind_8h.html#a590ec0531f7c675e373909bb758740db":[4,0,0,0,0,1,1,1],
-"cpp__template__pybind_8h.html#a85dae944dd94ece7b256c9c46215268d":[4,0,0,0,0,1,1,0]
+"coulomb__friction_8h.html#ad1adacac02531fd546981067a851d1be":[4,0,0,8,10,9,2]
 };
