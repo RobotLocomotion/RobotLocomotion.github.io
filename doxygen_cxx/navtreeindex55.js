@@ -1,5 +1,9 @@
 var NAVTREEINDEX55 =
 {
+"pydrake__pybind_8h.html#ad82c192e2b875f6bd19163b69ba9075a":[4,0,0,0,0,16,7],
+"quadratic__form_8h.html":[4,0,0,7,26],
+"quadratic__form_8h.html#a296872692791b1e6d9e27311fc55a694":[4,0,0,7,26,1],
+"quadratic__form_8h.html#a2fccff311f09a5a35afac17388541c7f":[4,0,0,7,26,2],
 "quadratic__form_8h.html#a8c66e16411c4f0d53e005658a49ccf6a":[4,0,0,7,26,0],
 "quadratic__scalar__system_8h.html":[4,0,0,12,0,0,10],
 "quadrature_8h.html":[4,0,0,8,3,26],
@@ -245,9 +249,5 @@ var NAVTREEINDEX55 =
 "scs__clarabel__common_8h.html":[4,0,0,11,44],
 "scs__solver_8h.html":[4,0,0,11,45],
 "sdpa__free__format_8h.html":[4,0,0,11,46],
-"sdpa__free__format_8h.html#a121673ddbdadd10b2e3ceab52a93f5d3":[4,0,0,11,46,0],
-"sdpa__free__format_8h.html#a121673ddbdadd10b2e3ceab52a93f5d3a268e3bfe4e48f70785a46a8d3552e552":[4,0,0,11,46,0,0],
-"sdpa__free__format_8h.html#a121673ddbdadd10b2e3ceab52a93f5d3a2992c87df2428b480924bf6c6509edec":[4,0,0,11,46,0,2],
-"sdpa__free__format_8h.html#a121673ddbdadd10b2e3ceab52a93f5d3a54b9d7601ece96fc42e2ffd67aae2690":[4,0,0,11,46,0,1],
-"sdpa__free__format_8h.html#aeb2470f8cacd8e5f5a473b10d0acf6cc":[4,0,0,11,46,1]
+"sdpa__free__format_8h.html#a121673ddbdadd10b2e3ceab52a93f5d3":[4,0,0,11,46,0]
 };

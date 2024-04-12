@@ -2645,6 +2645,39 @@ length 2.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.HPolyhedron.MaximumVolumeInscribedAffineTransformation">
+<span class="sig-name descname"><span class="pre">MaximumVolumeInscribedAffineTransformation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.HPolyhedron" title="pydrake.geometry.optimization.HPolyhedron"><span class="pre">pydrake.geometry.optimization.HPolyhedron</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">circumbody</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.HPolyhedron" title="pydrake.geometry.optimization.HPolyhedron"><span class="pre">pydrake.geometry.optimization.HPolyhedron</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.optimization.HPolyhedron" title="pydrake.geometry.optimization.HPolyhedron"><span class="pre">pydrake.geometry.optimization.HPolyhedron</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.MaximumVolumeInscribedAffineTransformation" title="Permalink to this definition"></a></dt>
+<dd><p>Solves a semi-definite program to compute the maximum-volume affine
+transformation of <code class="docutils literal notranslate"><span class="pre">this</span></code>, subject to being a subset of
+<code class="docutils literal notranslate"><span class="pre">circumbody</span></code>, and subject to the transformation matrix being
+positive semi-definite. The latter condition is necessary for
+convexity of the program. We use the containment condition stated in
+Lemma 1 of “Linear Encodings for Polytope Containment Problems” by
+Sadra Sadraddini and Russ Tedrake, extended to apply to the affine
+transformation of <code class="docutils literal notranslate"><span class="pre">this</span></code>. We solve</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>max_{T,t} log det (T)
+s.t. T ≽ 0
+t + TX ⊆ Y
+</pre></div>
+</div>
+</details><p>where X is <code class="docutils literal notranslate"><span class="pre">this</span></code>, and Y is <code class="docutils literal notranslate"><span class="pre">circumbody</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the transformed polyhedron, t + TX.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">circumbody</span></code>:</dt><dd><p>is an HPolyhedron that must contain the returned inbody.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if the solver fails to solve the problem.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.HPolyhedron.MaximumVolumeInscribedEllipsoid">
 <span class="sig-name descname"><span class="pre">MaximumVolumeInscribedEllipsoid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.HPolyhedron" title="pydrake.geometry.optimization.HPolyhedron"><span class="pre">pydrake.geometry.optimization.HPolyhedron</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.optimization.Hyperellipsoid" title="pydrake.geometry.optimization.Hyperellipsoid"><span class="pre">pydrake.geometry.optimization.Hyperellipsoid</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.MaximumVolumeInscribedEllipsoid" title="Permalink to this definition"></a></dt>
 <dd><p>Solves a semi-definite program to compute the inscribed ellipsoid.
@@ -2713,6 +2746,61 @@ not need to be in the set.</p>
 <dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">scale</span></code> &gt;= 0.</p>
 </dd>
 <dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">center</span></code> has size equal to the ambient dimension.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.HPolyhedron.SimplifyByIncrementalFaceTranslation">
+<span class="sig-name descname"><span class="pre">SimplifyByIncrementalFaceTranslation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.HPolyhedron" title="pydrake.geometry.optimization.HPolyhedron"><span class="pre">pydrake.geometry.optimization.HPolyhedron</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_volume_ratio</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_affine_transformation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_iterations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points_to_contain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">array([],</span> <span class="pre">shape=(0,</span> <span class="pre">0),</span> <span class="pre">dtype=float64)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">intersecting_polytopes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.geometry.optimization.HPolyhedron" title="pydrake.geometry.optimization.HPolyhedron"><span class="pre">pydrake.geometry.optimization.HPolyhedron</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_whole_intersection</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">intersection_padding</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.optimization.HPolyhedron" title="pydrake.geometry.optimization.HPolyhedron"><span class="pre">pydrake.geometry.optimization.HPolyhedron</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.SimplifyByIncrementalFaceTranslation" title="Permalink to this definition"></a></dt>
+<dd><p>Returns an inner approximation of <code class="docutils literal notranslate"><span class="pre">this</span></code>, aiming to use fewer faces.
+Proceeds by incrementally translating faces inward and removing other
+faces that become redundant upon doing so.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">min_volume_ratio</span></code>:</dt><dd><p>is a lower bound for the ratio of the volume of the returned
+inbody and the volume of <code class="docutils literal notranslate"><span class="pre">this</span></code>.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">do_affine_transformation</span></code>:</dt><dd><p>specifies whether to call
+MaximumVolumeInscribedAffineTransformation(), to take an affine
+transformation of the inner approximation to maximize its volume.
+The affine transformation is reverted if the resulting inner
+approximation violates conditions related to <code class="docutils literal notranslate"><span class="pre">points_to_contain</span></code>
+or <code class="docutils literal notranslate"><span class="pre">intersecting_polytopes</span></code>.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">max_iterations</span></code>:</dt><dd><p>is the maximum number of times to loop through all faces.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">points_to_contain</span></code>:</dt><dd><p>is an optional matrix whose columns are points that must be
+contained in the returned inbody.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">intersecting_polytopes</span></code>:</dt><dd><p>is an optional list of HPolyhedrons that must intersect with the
+returned inbody.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">keep_whole_intersection</span></code>:</dt><dd><p>specifies whether the face translation step of the algorithm is
+prohibited from reducing the intersections with the HPolyhedrons
+in <code class="docutils literal notranslate"><span class="pre">intersecting_polytopes</span></code>. Regardless of the value of this
+parameter, the intersections may be reduced by the affine
+transformation step if <code class="docutils literal notranslate"><span class="pre">do_affine_transformation</span></code> is true.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">intersection_padding</span></code>:</dt><dd><p>is a distance by which each hyperplane is translated back outward
+after satisfing intersection constraints, subject to not
+surpassing the original hyperplane position. In the case where
+<code class="docutils literal notranslate"><span class="pre">keep_whole_intersection</span></code> is false, using a non-zero value for
+this parameter prevents intersections from being single points.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">random_seed</span></code>:</dt><dd><p>is a seed for a random number generator used to shuffle the
+ordering of hyperplanes in between iterations.</p>
+</dd>
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">min_volume_ratio</span></code> &gt; 0.</p>
+</dd>
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">max_iterations</span></code> &gt; 0.</p>
+</dd>
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">intersection_padding</span></code> &gt;= 0.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>All columns of <code class="docutils literal notranslate"><span class="pre">points_to_contain</span></code> are points contained within
+<code class="docutils literal notranslate"><span class="pre">this</span></code>.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>All elements of <code class="docutils literal notranslate"><span class="pre">intersecting_polytopes</span></code> intersect with
+<code class="docutils literal notranslate"><span class="pre">this</span></code>.</p>
 </dd>
 </dl>
 </dd></dl>

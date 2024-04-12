@@ -187,6 +187,7 @@ var group__geometry__optimization =
       [ "MakeBox", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a90a3c53754fc20d77419aae25ed1b1c1", null ],
       [ "MakeL1Ball", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a20de73193ff05f0d332edba9e48a4aee", null ],
       [ "MakeUnitBox", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#ad362319489a2c5507a34d9b5c0a6e696", null ],
+      [ "MaximumVolumeInscribedAffineTransformation", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a04f14c9b5aa9f7a04bd9aa12185916ce", null ],
       [ "MaximumVolumeInscribedEllipsoid", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a74afcf0235bb70d4d936c093fbb85a5d", null ],
       [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a51cda62fc83874a9e1c021873e9e9a64", null ],
       [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a33511869af259d5a743e9cb70f0f711d", null ],
@@ -194,6 +195,7 @@ var group__geometry__optimization =
       [ "ReduceInequalities", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#aff86786a71b7a4f6a0d8c8ad8c9f1eeb", null ],
       [ "Scale", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a95efbfc978d1926652dff936c8931e03", null ],
       [ "Serialize", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a8e8824802dedfbc36776227f7482b6bc", null ],
+      [ "SimplifyByIncrementalFaceTranslation", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a196e1a9660d75079e2491b6b2492bb84", null ],
       [ "UniformSample", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a80e9c64e03b429fb85e48d909a3674d8", null ],
       [ "UniformSample", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#acf256e1d8e05606d0c57f6ed1220ac49", null ]
     ] ],

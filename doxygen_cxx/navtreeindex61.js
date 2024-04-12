@@ -1,5 +1,9 @@
 var NAVTREEINDEX61 =
 {
+"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01sensors_1_1_beam_model_01_4.html":[3,0,0,15,7,10],
+"structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter.html":[3,0,0,15,7,14],
+"structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter.html#a8a63ad999f7b515a27e608907704a113":[3,0,0,15,7,14,0],
+"structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter_3_01_t_00_01_t_01_4.html":[3,0,0,15,7,15],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter_3_01_t_00_01_t_01_4.html#a8a63ad999f7b515a27e608907704a113":[3,0,0,15,7,15,1],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter_3_01_t_00_01_t_01_4.html#a922b853b1fa03c63528dda71698c419a":[3,0,0,15,7,15,0],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config.html":[3,0,0,15,8,2],
@@ -245,9 +249,5 @@ var NAVTREEINDEX61 =
 "structstd_1_1less_3_01drake_1_1solvers_1_1_solver_id_01_4.html":[3,0,2,23],
 "structstd_1_1less_3_01drake_1_1solvers_1_1_solver_id_01_4.html#aacab57c845ae554fb21a347bf8137ef3":[3,0,2,23,0],
 "structstd_1_1less_3_01drake_1_1symbolic_1_1_expression_01_4.html":[3,0,2,24],
-"structstd_1_1less_3_01drake_1_1symbolic_1_1_expression_01_4.html#a538d122bb822306915eed589daae8627":[3,0,2,24,0],
-"structstd_1_1less_3_01drake_1_1symbolic_1_1_formula_01_4.html":[3,0,2,25],
-"structstd_1_1less_3_01drake_1_1symbolic_1_1_formula_01_4.html#ad8fefac14435343adfcc69f7348f0961":[3,0,2,25,0],
-"structstd_1_1less_3_01drake_1_1symbolic_1_1_variable_01_4.html":[3,0,2,26],
-"structstd_1_1less_3_01drake_1_1symbolic_1_1_variable_01_4.html#a69e9ace88f698342e05dcf0cc1899818":[3,0,2,26,0]
+"structstd_1_1less_3_01drake_1_1symbolic_1_1_expression_01_4.html#a538d122bb822306915eed589daae8627":[3,0,2,24,0]
 };

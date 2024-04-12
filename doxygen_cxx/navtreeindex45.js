@@ -1,5 +1,9 @@
 var NAVTREEINDEX45 =
 {
+"classdrake_1_1trajectories_1_1_stacked_trajectory.html#a74dc3c05dd9c37aa42ee21a90b7822f7":[3,0,0,17,10,8],
+"classdrake_1_1trajectories_1_1_stacked_trajectory.html#a9830891fd34cc2e0313c865ac201c8fc":[3,0,0,17,10,0],
+"classdrake_1_1trajectories_1_1_stacked_trajectory.html#aa445a1729df406e75359e3c87b757290":[3,0,0,17,10,2],
+"classdrake_1_1trajectories_1_1_stacked_trajectory.html#aaacb08cadfa67d9aabcc07dbf57fce30":[3,0,0,17,10,4],
 "classdrake_1_1trajectories_1_1_stacked_trajectory.html#aac002eea06875b91ada866e249fc7b6f":[3,0,0,17,10,3],
 "classdrake_1_1trajectories_1_1_stacked_trajectory.html#ab191f8ee68c549c494a6d49b0c381944":[3,0,0,17,10,7],
 "classdrake_1_1trajectories_1_1_stacked_trajectory.html#abec7b1f5c2c6face018616992476881f":[3,0,0,17,10,10],
@@ -245,9 +249,5 @@ var NAVTREEINDEX45 =
 "corotated__model__data_8h.html":[4,0,0,8,3,4],
 "cost_8h.html":[4,0,0,11,10],
 "cost_8h.html#ga5f972e77c40a9afab91907620c621e11":[4,0,0,11,10,2],
-"cost_8h.html#ga62744a5e355fa26fa97169acfc946128":[4,0,0,11,10,0],
-"cost_8h.html#ga9d268ea8150fb094f1499a958c50defb":[4,0,0,11,10,1],
-"coulomb__friction_8h.html":[4,0,0,8,10,9],
-"coulomb__friction_8h.html#aada1fb90629198ff0ee920969d517335":[4,0,0,8,10,9,1],
-"coulomb__friction_8h.html#ad1adacac02531fd546981067a851d1be":[4,0,0,8,10,9,2]
+"cost_8h.html#ga62744a5e355fa26fa97169acfc946128":[4,0,0,11,10,0]
 };

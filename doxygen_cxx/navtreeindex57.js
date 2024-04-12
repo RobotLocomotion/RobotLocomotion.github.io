@@ -1,5 +1,9 @@
 var NAVTREEINDEX57 =
 {
+"stochastic_8h.html#ad0be9949c22ccf3d9bd836e204fc8523":[4,0,0,1,2,1,11],
+"stochastic_8h.html#ae3768479f5bd6420a9b9f347c400cf80":[4,0,0,1,2,1,13],
+"stochastic_8h.html#aefc9cc6990399b1828a73e50c2d360ee":[4,0,0,1,2,1,23],
+"stochastic_8h.html#af9a9a11adf4beb57a9f7b959e190ed3d":[4,0,0,1,2,1,16],
 "stochastic__systems_8h.html":[4,0,0,12,10],
 "string__hash_8h.html":[4,0,0,1,60],
 "string__map_8h.html":[4,0,0,1,61],
@@ -245,9 +249,5 @@ var NAVTREEINDEX57 =
 "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate.html#a37ff9ce4be74e434d4ae243886bdfec4":[3,0,0,4,1,6,6,1],
 "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate.html#a3ea0e73a2f12d09c13a62575a1dca851":[3,0,0,4,1,6,6,2],
 "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate.html#a63ce710762aed2b3de8f584365562f3f":[3,0,0,4,1,6,6,0],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate.html#ac67d27d2dbec3bc7b354ea6232c26c60":[3,0,0,4,1,6,6,4],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate.html#ad1fe465df1291c8c23b1a50d7a8d27b1":[3,0,0,4,1,6,6,3],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_program.html":[3,0,0,4,1,6,7],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_program.html#a01fb1405f64bd3ea03028b2afce388a7":[3,0,0,4,1,6,7,5],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_program.html#a1376ba277587535525d068be4f642166":[3,0,0,4,1,6,7,4]
+"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate.html#ac67d27d2dbec3bc7b354ea6232c26c60":[3,0,0,4,1,6,6,4]
 };

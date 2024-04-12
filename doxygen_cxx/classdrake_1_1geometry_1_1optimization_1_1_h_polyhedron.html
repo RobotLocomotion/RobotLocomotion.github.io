@@ -210,6 +210,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aff86786a71b7a4f6a0d8c8ad8c9f1eeb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#aff86786a71b7a4f6a0d8c8ad8c9f1eeb">ReduceInequalities</a> (<a class="el" href="classdouble.html">double</a> tol=1E-9) const</td></tr>
 <tr class="memdesc:aff86786a71b7a4f6a0d8c8ad8c9f1eeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reduces some (not necessarily all) redundant inequalities in the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html" title="Implements a polyhedral convex set using the half-space representation: {x| A x ≤ b}.">HPolyhedron</a>.  <a href="#aff86786a71b7a4f6a0d8c8ad8c9f1eeb">More...</a><br /></td></tr>
 <tr class="separator:aff86786a71b7a4f6a0d8c8ad8c9f1eeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a196e1a9660d75079e2491b6b2492bb84"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a196e1a9660d75079e2491b6b2492bb84">SimplifyByIncrementalFaceTranslation</a> (<a class="el" href="classdouble.html">double</a> min_volume_ratio=0.1, bool do_affine_transformation=true, <a class="el" href="classint.html">int</a> max_iterations=10, const Eigen::MatrixXd &amp;points_to_contain=Eigen::MatrixXd(), const std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">drake::geometry::optimization::HPolyhedron</a> &gt; &amp;intersecting_polytopes=std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> &gt;(), bool keep_whole_intersection=false, <a class="el" href="classdouble.html">double</a> intersection_padding=1e-4, int random_seed=0) const</td></tr>
+<tr class="memdesc:a196e1a9660d75079e2491b6b2492bb84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an inner approximation of <code>this</code>, aiming to use fewer faces.  <a href="#a196e1a9660d75079e2491b6b2492bb84">More...</a><br /></td></tr>
+<tr class="separator:a196e1a9660d75079e2491b6b2492bb84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04f14c9b5aa9f7a04bd9aa12185916ce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a04f14c9b5aa9f7a04bd9aa12185916ce">MaximumVolumeInscribedAffineTransformation</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> &amp;circumbody) const</td></tr>
+<tr class="memdesc:a04f14c9b5aa9f7a04bd9aa12185916ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves a semi-definite program to compute the maximum-volume affine transformation of <code>this</code>, subject to being a subset of <code>circumbody</code>, and subject to the transformation matrix being positive semi-definite.  <a href="#a04f14c9b5aa9f7a04bd9aa12185916ce">More...</a><br /></td></tr>
+<tr class="separator:a04f14c9b5aa9f7a04bd9aa12185916ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74afcf0235bb70d4d936c093fbb85a5d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html">Hyperellipsoid</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a74afcf0235bb70d4d936c093fbb85a5d">MaximumVolumeInscribedEllipsoid</a> () const</td></tr>
 <tr class="memdesc:a74afcf0235bb70d4d936c093fbb85a5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves a semi-definite program to compute the inscribed ellipsoid.  <a href="#a74afcf0235bb70d4d936c093fbb85a5d">More...</a><br /></td></tr>
 <tr class="separator:a74afcf0235bb70d4d936c093fbb85a5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -930,6 +936,43 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a04f14c9b5aa9f7a04bd9aa12185916ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04f14c9b5aa9f7a04bd9aa12185916ce">&#9670;&nbsp;</a></span>MaximumVolumeInscribedAffineTransformation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> MaximumVolumeInscribedAffineTransformation </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> &amp;&#160;</td>
+          <td class="paramname"><em>circumbody</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Solves a semi-definite program to compute the maximum-volume affine transformation of <code>this</code>, subject to being a subset of <code>circumbody</code>, and subject to the transformation matrix being positive semi-definite. </p>
+<p>The latter condition is necessary for convexity of the program. We use the containment condition stated in Lemma 1 of "Linear
+Encodings for Polytope Containment Problems" by Sadra Sadraddini and Russ Tedrake, extended to apply to the affine transformation of <code>this</code>. We solve </p><pre class="fragment">max_{T,t} log det (T)
+      s.t. T ≽ 0
+      t + TX ⊆ Y
+</pre><p> where X is <code>this</code>, and Y is <code>circumbody</code>. </p><dl class="section return"><dt>Returns</dt><dd>the transformed polyhedron, t + TX.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">circumbody</td><td>is an <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html" title="Implements a polyhedral convex set using the half-space representation: {x| A x ≤ b}.">HPolyhedron</a> that must contain the returned inbody. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the solver fails to solve the problem. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a74afcf0235bb70d4d936c093fbb85a5d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a74afcf0235bb70d4d936c093fbb85a5d">&#9670;&nbsp;</a></span>MaximumVolumeInscribedEllipsoid()</h2>
 
@@ -1117,6 +1160,94 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Passes this object to an Archive. </p>
 <p>Refer to <a class="el" href="group__yaml__serialization.html">YAML Serialization</a> for background. </p>
+
+</div>
+</div>
+<a id="a196e1a9660d75079e2491b6b2492bb84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a196e1a9660d75079e2491b6b2492bb84">&#9670;&nbsp;</a></span>SimplifyByIncrementalFaceTranslation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> SimplifyByIncrementalFaceTranslation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>min_volume_ratio</em> = <code>0.1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>do_affine_transformation</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>max_iterations</em> = <code>10</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::MatrixXd &amp;&#160;</td>
+          <td class="paramname"><em>points_to_contain</em> = <code>Eigen::MatrixXd()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">drake::geometry::optimization::HPolyhedron</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>intersecting_polytopes</em> = <code>std::vector&lt;&#160;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&#160;&gt;()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>keep_whole_intersection</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>intersection_padding</em> = <code>1e-4</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>random_seed</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns an inner approximation of <code>this</code>, aiming to use fewer faces. </p>
+<p>Proceeds by incrementally translating faces inward and removing other faces that become redundant upon doing so. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">min_volume_ratio</td><td>is a lower bound for the ratio of the volume of the returned inbody and the volume of <code>this</code>. </td></tr>
+    <tr><td class="paramname">do_affine_transformation</td><td>specifies whether to call <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a04f14c9b5aa9f7a04bd9aa12185916ce" title="Solves a semi-definite program to compute the maximum-volume affine transformation of this,...">MaximumVolumeInscribedAffineTransformation()</a>, to take an affine transformation of the inner approximation to maximize its volume. The affine transformation is reverted if the resulting inner approximation violates conditions related to <code>points_to_contain</code> or <code>intersecting_polytopes</code>. </td></tr>
+    <tr><td class="paramname">max_iterations</td><td>is the maximum number of times to loop through all faces. </td></tr>
+    <tr><td class="paramname">points_to_contain</td><td>is an optional matrix whose columns are points that must be contained in the returned inbody. </td></tr>
+    <tr><td class="paramname">intersecting_polytopes</td><td>is an optional list of HPolyhedrons that must intersect with the returned inbody. </td></tr>
+    <tr><td class="paramname">keep_whole_intersection</td><td>specifies whether the face translation step of the algorithm is prohibited from reducing the intersections with the HPolyhedrons in <code>intersecting_polytopes</code>. Regardless of the value of this parameter, the intersections may be reduced by the affine transformation step if <code>do_affine_transformation</code> is true. </td></tr>
+    <tr><td class="paramname">intersection_padding</td><td>is a distance by which each hyperplane is translated back outward after satisfing intersection constraints, subject to not surpassing the original hyperplane position. In the case where <code>keep_whole_intersection</code> is false, using a non-zero value for this parameter prevents intersections from being single points. </td></tr>
+    <tr><td class="paramname">random_seed</td><td>is a seed for a random number generator used to shuffle the ordering of hyperplanes in between iterations. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd><code>min_volume_ratio</code> &gt; 0. </dd>
+<dd>
+<code>max_iterations</code> &gt; 0. </dd>
+<dd>
+<code>intersection_padding</code> &gt;= 0. </dd>
+<dd>
+All columns of <code>points_to_contain</code> are points contained within <code>this</code>. </dd>
+<dd>
+All elements of <code>intersecting_polytopes</code> intersect with <code>this</code>. </dd></dl>
 
 </div>
 </div>
