@@ -169,7 +169,16 @@ $(document).ready(function(){initNavTree('classdrake_1_1trajectories_1_1_exponen
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
 class drake::trajectories::ExponentialPlusPiecewisePolynomial&lt; T &gt;</h3>
 
-<p>y(t) = K * exp(A * (t - t_j)) * alpha.col(j) + piecewise_polynomial_part(t) </p>
+<p>Represents a piecewise-trajectory with piece \(j\) given by: </p><p class="formulaDsp">
+\[ x(t) = K e^{A (t - t_j)} \alpha_j + \sum_{i=0}^k \beta_{j,i}(t-t_j)^i, \]
+</p>
+<p> where \(k\) is the order of the <code>piecewise_polynomial_part</code> and \(t_j\) is the start time of the \(j\)-th segment. </p>
+<p>This particular form can represent the solution to a linear dynamical system driven by a piecewise-polynomial input: </p><p class="formulaDsp">
+\[ \dot{x}(t) = A x(t) + B u(t), \]
+</p>
+<p> where the input \( u(t) \) is a piecewise-polynomial function of time. See [1] for details and a motivating use case.</p>
+<p>[1] R. Tedrake, S. Kuindersma, R. Deits and K. Miura, "A closed-form solution
+for real-time ZMP gait generation and feedback stabilization," 2015 IEEE-RAS 15th International Conference on Humanoid Robots (Humanoids), Seoul, 2015, pp. 936-940.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>The scalar type, which must be <code>double</code>. </td></tr>

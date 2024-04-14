@@ -180,7 +180,10 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html" title="A Trajectory represents a time-varying matrix, indexed by a single scalar time.">Trajectory</a> objects provide derivatives by implementing <code>DoEvalDerivative</code> <em>and</em> <code>DoMakeDerivative</code>.  <a href="classdrake_1_1trajectories_1_1_derivative_trajectory.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html">ExponentialPlusPiecewisePolynomial</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">y(t) = K * exp(A * (t - t_j)) * alpha.col(j) + piecewise_polynomial_part(t)  <a href="classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a piecewise-trajectory with piece \(j\) given by: </p><p class="formulaDsp">
+\[ x(t) = K e^{A (t - t_j)} \alpha_j + \sum_{i=0}^k \beta_{j,i}(t-t_j)^i, \]
+</p>
+<p> where \(k\) is the order of the <code>piecewise_polynomial_part</code> and \(t_j\) is the start time of the \(j\)-th segment.  <a href="classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html">PathParameterizedTrajectory</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A trajectory defined by a path and timing trajectory.  <a href="classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#details">More...</a><br /></td></tr>

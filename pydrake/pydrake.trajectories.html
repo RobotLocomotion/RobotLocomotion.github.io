@@ -13,6 +13,7 @@
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -1059,6 +1060,53 @@ derivatives of <code class="docutils literal notranslate"><span class="pre">nomi
 <span id="pydrake.trajectories.DerivativeTrajectory_[Expression].Clone"></span><span class="sig-name descname"><span class="pre">Clone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.DerivativeTrajectory_" title="pydrake.trajectories.DerivativeTrajectory_"><span class="pre">pydrake.trajectories.DerivativeTrajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.trajectories.Trajectory_" title="pydrake.trajectories.Trajectory_"><span class="pre">pydrake.trajectories.Trajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.DerivativeTrajectory_-Expression-.Clone" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.trajectories.ExponentialPlusPiecewisePolynomial">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.trajectories.</span></span><span class="sig-name descname"><span class="pre">ExponentialPlusPiecewisePolynomial</span></span><a class="headerlink" href="#pydrake.trajectories.ExponentialPlusPiecewisePolynomial" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.trajectories.PiecewiseTrajectory" title="pydrake.trajectories.PiecewiseTrajectory"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.trajectories.PiecewiseTrajectory</span></code></a></p>
+<p>Represents a piecewise-trajectory with piece <span class="math notranslate nohighlight">\(j\)</span> given by:</p>
+<div class="math notranslate nohighlight">
+\[x(t) = K e^{A (t - t_j)} \alpha_j + \sum_{i=0}^k \beta_{j,i}(t-t_j)^i,\]</div>
+<p>where <span class="math notranslate nohighlight">\(k\)</span> is the order of the <code class="docutils literal notranslate"><span class="pre">piecewise_polynomial_part</span></code> and
+<span class="math notranslate nohighlight">\(t_j\)</span> is the start time of the <span class="math notranslate nohighlight">\(j\)</span>-th segment.</p>
+<p>This particular form can represent the solution to a linear dynamical
+system driven by a piecewise-polynomial input:</p>
+<div class="math notranslate nohighlight">
+\[\dot{x}(t) = A x(t) + B u(t),\]</div>
+<p>where the input <span class="math notranslate nohighlight">\(u(t)\)</span> is a piecewise-polynomial function of
+time. See [1] for details and a motivating use case.</p>
+<p>[1] R. Tedrake, S. Kuindersma, R. Deits and K. Miura, “A closed-form
+solution for real-time ZMP gait generation and feedback
+stabilization,” 2015 IEEE-RAS 15th International Conference on
+Humanoid Robots (Humanoids), Seoul, 2015, pp. 936-940.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This class is templated; see <a class="reference internal" href="#pydrake.trajectories.ExponentialPlusPiecewisePolynomial_" title="pydrake.trajectories.ExponentialPlusPiecewisePolynomial_"><code class="xref py py-class docutils literal notranslate"><span class="pre">ExponentialPlusPiecewisePolynomial_</span></code></a>
+for the list of instantiations.</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.trajectories.ExponentialPlusPiecewisePolynomial.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.ExponentialPlusPiecewisePolynomial" title="pydrake.trajectories.ExponentialPlusPiecewisePolynomial"><span class="pre">pydrake.trajectories.ExponentialPlusPiecewisePolynomial</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">K</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">piecewise_polynomial_part</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.PiecewisePolynomial" title="pydrake.trajectories.PiecewisePolynomial"><span class="pre">pydrake.trajectories.PiecewisePolynomial</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.trajectories.ExponentialPlusPiecewisePolynomial.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.trajectories.ExponentialPlusPiecewisePolynomial.Clone">
+<span class="sig-name descname"><span class="pre">Clone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.ExponentialPlusPiecewisePolynomial" title="pydrake.trajectories.ExponentialPlusPiecewisePolynomial"><span class="pre">pydrake.trajectories.ExponentialPlusPiecewisePolynomial</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.trajectories.Trajectory" title="pydrake.trajectories.Trajectory"><span class="pre">pydrake.trajectories.Trajectory</span></a></span></span><a class="headerlink" href="#pydrake.trajectories.ExponentialPlusPiecewisePolynomial.Clone" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.trajectories.ExponentialPlusPiecewisePolynomial.shiftRight">
+<span class="sig-name descname"><span class="pre">shiftRight</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.ExponentialPlusPiecewisePolynomial" title="pydrake.trajectories.ExponentialPlusPiecewisePolynomial"><span class="pre">pydrake.trajectories.ExponentialPlusPiecewisePolynomial</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.trajectories.ExponentialPlusPiecewisePolynomial.shiftRight" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py template">
+<dt class="sig sig-object py" id="pydrake.trajectories.ExponentialPlusPiecewisePolynomial_">
+<em class="property"><span class="pre">template</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.trajectories.</span></span><span class="sig-name descname"><span class="pre">ExponentialPlusPiecewisePolynomial_</span></span><a class="headerlink" href="#pydrake.trajectories.ExponentialPlusPiecewisePolynomial_" title="Permalink to this definition"></a></dt>
+<dd><p>Instantiations: <code class="xref py py-class docutils literal notranslate"><span class="pre">ExponentialPlusPiecewisePolynomial_[float]</span></code></p>
 </dd></dl>
 
 <dl class="py class">

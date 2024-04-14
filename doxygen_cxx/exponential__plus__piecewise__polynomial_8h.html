@@ -188,7 +188,10 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html">ExponentialPlusPiecewisePolynomial&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">y(t) = K * exp(A * (t - t_j)) * alpha.col(j) + piecewise_polynomial_part(t)  <a href="classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a piecewise-trajectory with piece \(j\) given by: </p><p class="formulaDsp">
+\[ x(t) = K e^{A (t - t_j)} \alpha_j + \sum_{i=0}^k \beta_{j,i}(t-t_j)^i, \]
+</p>
+<p> where \(k\) is the order of the <code>piecewise_polynomial_part</code> and \(t_j\) is the start time of the \(j\)-th segment.  <a href="classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
