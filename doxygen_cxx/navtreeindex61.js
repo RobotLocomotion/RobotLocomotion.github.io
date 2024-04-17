@@ -1,5 +1,8 @@
 var NAVTREEINDEX61 =
 {
+"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_drake_visualizer_01_4.html":[3,0,0,15,7,5],
+"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_meshcat_point_cloud_visualizer_01_4.html":[3,0,0,15,7,6],
+"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_meshcat_visualizer_01_4.html":[3,0,0,15,7,7],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01sensors_1_1_beam_model_01_4.html":[3,0,0,15,7,10],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter.html":[3,0,0,15,7,14],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter.html#a8a63ad999f7b515a27e608907704a113":[3,0,0,15,7,14,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX61 =
 "structstd_1_1hash_3_01drake_1_1symbolic_1_1_variable_01_4.html":[3,0,2,19],
 "structstd_1_1hash_3_01drake_1_1symbolic_1_1_variables_01_4.html":[3,0,2,20],
 "structstd_1_1hash_3_01drake_1_1systems_1_1sensors_1_1_pixel_type_01_4.html":[3,0,2,21],
-"structstd_1_1less_3_01drake_1_1solvers_1_1_solver_id_01_4.html":[3,0,2,23],
-"structstd_1_1less_3_01drake_1_1solvers_1_1_solver_id_01_4.html#aacab57c845ae554fb21a347bf8137ef3":[3,0,2,23,0],
-"structstd_1_1less_3_01drake_1_1symbolic_1_1_expression_01_4.html":[3,0,2,24],
-"structstd_1_1less_3_01drake_1_1symbolic_1_1_expression_01_4.html#a538d122bb822306915eed589daae8627":[3,0,2,24,0]
+"structstd_1_1less_3_01drake_1_1solvers_1_1_solver_id_01_4.html":[3,0,2,23]
 };

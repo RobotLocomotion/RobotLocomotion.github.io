@@ -1,5 +1,7 @@
 var NAVTREEINDEX46 =
 {
+"cost_8h.html#ga5f972e77c40a9afab91907620c621e11":[4,0,0,11,10,2],
+"cost_8h.html#ga62744a5e355fa26fa97169acfc946128":[4,0,0,11,10,0],
 "cost_8h.html#ga9d268ea8150fb094f1499a958c50defb":[4,0,0,11,10,1],
 "coulomb__friction_8h.html":[4,0,0,8,10,9],
 "coulomb__friction_8h.html#aada1fb90629198ff0ee920969d517335":[4,0,0,8,10,9,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX46 =
 "dir_da11cd43e7bab310171e778f62212487.html":[4,0,0,8,5],
 "dir_dc85ca307a056e878fb7cdf32e7a9a8e.html":[4,0,0,3,12],
 "dir_dd40e4ced6d50249f5b665722b0662c5.html":[4,0,0,4,8],
-"dir_e56f4370c0abfd94d0eb867c3946e12e.html":[4,0,0,8,9],
-"dir_e67b9cd7d1b691e5dc83f84c637cb8c7.html":[4,0,0,4,0],
-"dir_ea36fc3ba6e4e5252c7024e61ca2d4a4.html":[4,0,0,4,6]
+"dir_e56f4370c0abfd94d0eb867c3946e12e.html":[4,0,0,8,9]
 };

@@ -10321,10 +10321,13 @@ this Joint allows frame M to translate and rotate freely with respect
 to F, introducing six degrees of freedom. This Joint introduces four
 generalized positions to describe the orientation <code class="docutils literal notranslate"><span class="pre">R_FM</span></code> of frame M
 in F with a quaternion <code class="docutils literal notranslate"><span class="pre">q_FM</span></code>, and three generalized positions to
-describe the position of frame M’s origin in F with a position vector
-<code class="docutils literal notranslate"><span class="pre">p_FM</span></code>. As generalized velocities, this Joint introduces the angular
-velocity <code class="docutils literal notranslate"><span class="pre">w_FM</span></code> of frame M in F and the linear velocity <code class="docutils literal notranslate"><span class="pre">v_FM</span></code> of
-frame M’s origin in frame F.</p>
+describe the translation of frame M’s origin in F with a position
+vector <code class="docutils literal notranslate"><span class="pre">p_FM</span></code>. The seven entries of the configuration vector q are
+ordered <code class="docutils literal notranslate"><span class="pre">(q_FM,</span> <span class="pre">p_FM)</span></code> with the quaternion, ordered wxyz (scalar
+then vector), preceding the translation vector. As generalized
+velocities, this Joint introduces the angular velocity <code class="docutils literal notranslate"><span class="pre">w_FM</span></code> of
+frame M in F and the linear velocity <code class="docutils literal notranslate"><span class="pre">v_FM</span></code> of frame M’s origin in
+frame F, ordered <code class="docutils literal notranslate"><span class="pre">(w_FM,</span> <span class="pre">v_FM)</span></code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This class is templated; see <a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint_" title="pydrake.multibody.tree.QuaternionFloatingJoint_"><code class="xref py py-class docutils literal notranslate"><span class="pre">QuaternionFloatingJoint_</span></code></a>
@@ -10712,10 +10715,13 @@ this Joint allows frame M to translate and rotate freely with respect
 to F, introducing six degrees of freedom. This Joint introduces four
 generalized positions to describe the orientation <code class="docutils literal notranslate"><span class="pre">R_FM</span></code> of frame M
 in F with a quaternion <code class="docutils literal notranslate"><span class="pre">q_FM</span></code>, and three generalized positions to
-describe the position of frame M’s origin in F with a position vector
-<code class="docutils literal notranslate"><span class="pre">p_FM</span></code>. As generalized velocities, this Joint introduces the angular
-velocity <code class="docutils literal notranslate"><span class="pre">w_FM</span></code> of frame M in F and the linear velocity <code class="docutils literal notranslate"><span class="pre">v_FM</span></code> of
-frame M’s origin in frame F.</p>
+describe the translation of frame M’s origin in F with a position
+vector <code class="docutils literal notranslate"><span class="pre">p_FM</span></code>. The seven entries of the configuration vector q are
+ordered <code class="docutils literal notranslate"><span class="pre">(q_FM,</span> <span class="pre">p_FM)</span></code> with the quaternion, ordered wxyz (scalar
+then vector), preceding the translation vector. As generalized
+velocities, this Joint introduces the angular velocity <code class="docutils literal notranslate"><span class="pre">w_FM</span></code> of
+frame M in F and the linear velocity <code class="docutils literal notranslate"><span class="pre">v_FM</span></code> of frame M’s origin in
+frame F, ordered <code class="docutils literal notranslate"><span class="pre">(w_FM,</span> <span class="pre">v_FM)</span></code>.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.QuaternionFloatingJoint_-AutoDiffXd-.__init__">
 <span id="pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint_" title="pydrake.multibody.tree.QuaternionFloatingJoint_"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_on_parent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Frame_" title="pydrake.multibody.tree.Frame_"><span class="pre">pydrake.multibody.tree.Frame_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_on_child</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Frame_" title="pydrake.multibody.tree.Frame_"><span class="pre">pydrake.multibody.tree.Frame_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angular_damping</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">translational_damping</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_-AutoDiffXd-.__init__" title="Permalink to this definition"></a></dt>
@@ -11092,10 +11098,13 @@ this Joint allows frame M to translate and rotate freely with respect
 to F, introducing six degrees of freedom. This Joint introduces four
 generalized positions to describe the orientation <code class="docutils literal notranslate"><span class="pre">R_FM</span></code> of frame M
 in F with a quaternion <code class="docutils literal notranslate"><span class="pre">q_FM</span></code>, and three generalized positions to
-describe the position of frame M’s origin in F with a position vector
-<code class="docutils literal notranslate"><span class="pre">p_FM</span></code>. As generalized velocities, this Joint introduces the angular
-velocity <code class="docutils literal notranslate"><span class="pre">w_FM</span></code> of frame M in F and the linear velocity <code class="docutils literal notranslate"><span class="pre">v_FM</span></code> of
-frame M’s origin in frame F.</p>
+describe the translation of frame M’s origin in F with a position
+vector <code class="docutils literal notranslate"><span class="pre">p_FM</span></code>. The seven entries of the configuration vector q are
+ordered <code class="docutils literal notranslate"><span class="pre">(q_FM,</span> <span class="pre">p_FM)</span></code> with the quaternion, ordered wxyz (scalar
+then vector), preceding the translation vector. As generalized
+velocities, this Joint introduces the angular velocity <code class="docutils literal notranslate"><span class="pre">w_FM</span></code> of
+frame M in F and the linear velocity <code class="docutils literal notranslate"><span class="pre">v_FM</span></code> of frame M’s origin in
+frame F, ordered <code class="docutils literal notranslate"><span class="pre">(w_FM,</span> <span class="pre">v_FM)</span></code>.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.QuaternionFloatingJoint_-Expression-.__init__">
 <span id="pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint_" title="pydrake.multibody.tree.QuaternionFloatingJoint_"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_on_parent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Frame_" title="pydrake.multibody.tree.Frame_"><span class="pre">pydrake.multibody.tree.Frame_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_on_child</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Frame_" title="pydrake.multibody.tree.Frame_"><span class="pre">pydrake.multibody.tree.Frame_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angular_damping</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">translational_damping</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_-Expression-.__init__" title="Permalink to this definition"></a></dt>
@@ -12574,7 +12583,7 @@ for the list of instantiations.</p>
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>__init__(self: pydrake.multibody.tree.RigidBody, body_name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7fe94d542d30&gt;) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.multibody.tree.RigidBody, body_name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7fdd21b078f0&gt;) -&gt; None</p></li>
 </ol>
 <p>Constructs a RigidBody named <code class="docutils literal notranslate"><span class="pre">body_name</span></code> with the given default
 SpatialInertia.</p>
@@ -12592,7 +12601,7 @@ zero.</p>
 used for spatial inertia quantities.</p>
 </div>
 <ol class="arabic simple" start="2">
-<li><p>__init__(self: pydrake.multibody.tree.RigidBody, body_name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7fe94a740ff0&gt;) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.multibody.tree.RigidBody, body_name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7fdd219ad870&gt;) -&gt; None</p></li>
 </ol>
 <p>Constructs a RigidBody named <code class="docutils literal notranslate"><span class="pre">body_name</span></code> with the given default
 SpatialInertia.</p>
@@ -13164,7 +13173,7 @@ more degrees of freedom.</p>
 <span id="pydrake.multibody.tree.RigidBody_[AutoDiffXd].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody_-AutoDiffXd-.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>__init__(self: pydrake.multibody.tree.RigidBody_[AutoDiffXd], body_name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7fe94d60c9f0&gt;) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.multibody.tree.RigidBody_[AutoDiffXd], body_name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7fdd21bb2fb0&gt;) -&gt; None</p></li>
 </ol>
 <p>Constructs a RigidBody named <code class="docutils literal notranslate"><span class="pre">body_name</span></code> with the given default
 SpatialInertia.</p>
@@ -13182,7 +13191,7 @@ zero.</p>
 used for spatial inertia quantities.</p>
 </div>
 <ol class="arabic simple" start="2">
-<li><p>__init__(self: pydrake.multibody.tree.RigidBody_[AutoDiffXd], body_name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7fe94d6b1630&gt;) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.multibody.tree.RigidBody_[AutoDiffXd], body_name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7fdd21b6c0f0&gt;) -&gt; None</p></li>
 </ol>
 <p>Constructs a RigidBody named <code class="docutils literal notranslate"><span class="pre">body_name</span></code> with the given default
 SpatialInertia.</p>
@@ -13748,7 +13757,7 @@ more degrees of freedom.</p>
 <span id="pydrake.multibody.tree.RigidBody_[Expression].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody_-Expression-.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>__init__(self: pydrake.multibody.tree.RigidBody_[Expression], body_name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7fe94a74e070&gt;) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.multibody.tree.RigidBody_[Expression], body_name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7fdd1eb3a230&gt;) -&gt; None</p></li>
 </ol>
 <p>Constructs a RigidBody named <code class="docutils literal notranslate"><span class="pre">body_name</span></code> with the given default
 SpatialInertia.</p>
@@ -13766,7 +13775,7 @@ zero.</p>
 used for spatial inertia quantities.</p>
 </div>
 <ol class="arabic simple" start="2">
-<li><p>__init__(self: pydrake.multibody.tree.RigidBody_[Expression], body_name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7fe94a780c30&gt;) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.multibody.tree.RigidBody_[Expression], body_name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7fdd1eb7b530&gt;) -&gt; None</p></li>
 </ol>
 <p>Constructs a RigidBody named <code class="docutils literal notranslate"><span class="pre">body_name</span></code> with the given default
 SpatialInertia.</p>

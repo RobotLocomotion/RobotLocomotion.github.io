@@ -1,5 +1,7 @@
 var NAVTREEINDEX27 =
 {
+"classdrake_1_1solvers_1_1_polynomial_constraint.html#a73f0868e6a43746c0d368f80b12ed428":[1,1,0,29,3],
+"classdrake_1_1solvers_1_1_polynomial_constraint.html#aacd88a44cead011690d465fbdf56026c":[1,1,0,29,1],
 "classdrake_1_1solvers_1_1_polynomial_constraint.html#ab3429d3e0cafa91ff2dab2bfde0de5d2":[1,1,0,29,2],
 "classdrake_1_1solvers_1_1_polynomial_constraint.html#ab5ba289ee6c1c0cd3e495aa59b6085dc":[1,1,0,29,4],
 "classdrake_1_1solvers_1_1_polynomial_constraint.html#ae141a256267715167e020e82602198a2":[1,1,0,29,5],
@@ -247,7 +249,5 @@ var NAVTREEINDEX27 =
 "classdrake_1_1symbolic_1_1_chebyshev_basis_element.html#af7f99b595b4e8a78116a3f6dcc6f2a5a":[3,0,0,14,2,5],
 "classdrake_1_1symbolic_1_1_chebyshev_polynomial.html":[3,0,0,14,3],
 "classdrake_1_1symbolic_1_1_chebyshev_polynomial.html#a02d52040a8c27a93acbf3c6f4438f912":[3,0,0,14,3,5],
-"classdrake_1_1symbolic_1_1_chebyshev_polynomial.html#a03a72be3355e6291a8ace9016df45bbd":[3,0,0,14,3,11],
-"classdrake_1_1symbolic_1_1_chebyshev_polynomial.html#a12bbd5b99675b3fb5d29f58535dcfb36":[3,0,0,14,3,0],
-"classdrake_1_1symbolic_1_1_chebyshev_polynomial.html#a1a9144f1ebdf663cbf084afd81e83923":[3,0,0,14,3,4]
+"classdrake_1_1symbolic_1_1_chebyshev_polynomial.html#a03a72be3355e6291a8ace9016df45bbd":[3,0,0,14,3,11]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX45 =
 {
+"classdrake_1_1trajectories_1_1_stacked_trajectory.html#a67132081ac654cacdf3adefd7e95a2f7":[3,0,0,17,10,11],
+"classdrake_1_1trajectories_1_1_stacked_trajectory.html#a6f3379a2754487a0ec8bf752912a41bf":[3,0,0,17,10,6],
 "classdrake_1_1trajectories_1_1_stacked_trajectory.html#a74dc3c05dd9c37aa42ee21a90b7822f7":[3,0,0,17,10,8],
 "classdrake_1_1trajectories_1_1_stacked_trajectory.html#a9830891fd34cc2e0313c865ac201c8fc":[3,0,0,17,10,0],
 "classdrake_1_1trajectories_1_1_stacked_trajectory.html#aa445a1729df406e75359e3c87b757290":[3,0,0,17,10,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX45 =
 "copyable__unique__ptr_8h.html":[4,0,0,1,13],
 "corotated__model_8h.html":[4,0,0,8,3,3],
 "corotated__model__data_8h.html":[4,0,0,8,3,4],
-"cost_8h.html":[4,0,0,11,10],
-"cost_8h.html#ga5f972e77c40a9afab91907620c621e11":[4,0,0,11,10,2],
-"cost_8h.html#ga62744a5e355fa26fa97169acfc946128":[4,0,0,11,10,0]
+"cost_8h.html":[4,0,0,11,10]
 };
