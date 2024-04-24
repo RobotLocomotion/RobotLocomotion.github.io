@@ -1,5 +1,11 @@
 var NAVTREEINDEX16 =
 {
+"classdrake_1_1multibody_1_1_multibody_plant.html#afa94cf2eeba3e27ad35132211ae6d074":[1,2,14,232],
+"classdrake_1_1multibody_1_1_multibody_plant.html#afab5cf2a636d29dd5b05225fab9b72de":[1,2,14,32],
+"classdrake_1_1multibody_1_1_multibody_plant.html#afad783d7e7e513feb7a73384c8080041":[1,2,14,54],
+"classdrake_1_1multibody_1_1_multibody_plant.html#afc63dd8f7d1461b1f6a263003ab4f819":[1,2,14,65],
+"classdrake_1_1multibody_1_1_multibody_plant.html#afc9ce98e9025085b7511227e5d12ebf1":[1,2,14,174],
+"classdrake_1_1multibody_1_1_multibody_plant.html#afcb4de9b58cb375d056da7e8ec30937a":[1,2,14,29],
 "classdrake_1_1multibody_1_1_multibody_plant.html#afdcdcb4e7798a5aef9bc3111402dfa5e":[1,2,14,108],
 "classdrake_1_1multibody_1_1_multibody_plant.html#aff063ba2ef6ea43b0abf574e27846c29":[1,2,14,193],
 "classdrake_1_1multibody_1_1_multibody_plant_remodeling.html":[3,0,0,8,58],
@@ -243,11 +249,5 @@ var NAVTREEINDEX16 =
 "classdrake_1_1multibody_1_1_quaternion_euler_integration_constraint.html#a502038f46bb7f00f0c08059f95a4fb7b":[1,1,0,18,0],
 "classdrake_1_1multibody_1_1_quaternion_euler_integration_constraint.html#a9d73dd4211e6d2b4105118f669b388b0":[1,1,0,18,4],
 "classdrake_1_1multibody_1_1_quaternion_euler_integration_constraint.html#aacbf22548b76c4efd3c34308dfab9434":[1,1,0,18,1],
-"classdrake_1_1multibody_1_1_quaternion_euler_integration_constraint.html#adce48ce3c022e95b6e2bb0f6b3575a47":[1,1,0,18,7],
-"classdrake_1_1multibody_1_1_quaternion_euler_integration_constraint.html#add626512e1b963e65d91e1a177541089":[1,1,0,18,5],
-"classdrake_1_1multibody_1_1_quaternion_floating_joint.html":[3,0,0,8,78],
-"classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a00a5faeb1a32863c01b4228719a26362":[3,0,0,8,78,11],
-"classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a04d5ae2ba950104bc99c5953c0ad1e24":[3,0,0,8,78,24],
-"classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a114f793155a38fcedc8477ee8066b307":[3,0,0,8,78,21],
-"classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a1855a67d90891e570c494a50cfcdebb1":[3,0,0,8,78,12]
+"classdrake_1_1multibody_1_1_quaternion_euler_integration_constraint.html#adce48ce3c022e95b6e2bb0f6b3575a47":[1,1,0,18,7]
 };

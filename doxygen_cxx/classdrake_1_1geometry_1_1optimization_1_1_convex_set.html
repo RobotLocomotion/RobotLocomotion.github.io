@@ -217,6 +217,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aea6ff00adfe03e87223d06bd4627d5f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_sampled_volume.html">SampledVolume</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aea6ff00adfe03e87223d06bd4627d5f8">CalcVolumeViaSampling</a> (<a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a> *generator, const <a class="el" href="classdouble.html">double</a> desired_rel_accuracy=1e-2, const int max_num_samples=1e4) const</td></tr>
 <tr class="memdesc:aea6ff00adfe03e87223d06bd4627d5f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates an estimate of the volume of the convex set using sampling and performing Monte Carlo integration.  <a href="#aea6ff00adfe03e87223d06bd4627d5f8">More...</a><br /></td></tr>
 <tr class="separator:aea6ff00adfe03e87223d06bd4627d5f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1975e2512e5a582f2b4b051f59dccd42"><td class="memItemLeft" align="right" valign="top">std::optional&lt; std::pair&lt; std::vector&lt; <a class="el" href="classdouble.html">double</a> &gt;, Eigen::MatrixXd &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a1975e2512e5a582f2b4b051f59dccd42">Projection</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;points) const</td></tr>
+<tr class="memdesc:a1975e2512e5a582f2b4b051f59dccd42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes in the L₂ norm the distance and the nearest point in this convex set to every column of <code>points</code>.  <a href="#a1975e2512e5a582f2b4b051f59dccd42">More...</a><br /></td></tr>
+<tr class="separator:a1975e2512e5a582f2b4b051f59dccd42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d9beaa673ec9f46fcf52eb4c49b62bd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a7d9beaa673ec9f46fcf52eb4c49b62bd">has_exact_volume</a> () const</td></tr>
 <tr class="memdesc:a7d9beaa673ec9f46fcf52eb4c49b62bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the exact volume can be computed for this convex set instance.  <a href="#a7d9beaa673ec9f46fcf52eb4c49b62bd">More...</a><br /></td></tr>
 <tr class="separator:a7d9beaa673ec9f46fcf52eb4c49b62bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -236,6 +239,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a2cac663c667a539d3fa44c3f5c933d6b"><td class="memItemLeft" align="right" valign="top">virtual std::optional&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a2cac663c667a539d3fa44c3f5c933d6b">DoIsBoundedShortcut</a> () const</td></tr>
 <tr class="memdesc:a2cac663c667a539d3fa44c3f5c933d6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a2cac663c667a539d3fa44c3f5c933d6b" title="Non-virtual interface implementation for DoIsBoundedShortcut().">DoIsBoundedShortcut()</a>.  <a href="#a2cac663c667a539d3fa44c3f5c933d6b">More...</a><br /></td></tr>
 <tr class="separator:a2cac663c667a539d3fa44c3f5c933d6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaacbd0a682d985194c7d94d6acdb50f3"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aaacbd0a682d985194c7d94d6acdb50f3">DoProjectionShortcut</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;points, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; Eigen::MatrixXd &gt; projected_points) const</td></tr>
+<tr class="memdesc:aaacbd0a682d985194c7d94d6acdb50f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aaacbd0a682d985194c7d94d6acdb50f3" title="Non-virtual interface implementation for DoProjectionShortcut().">DoProjectionShortcut()</a>.  <a href="#aaacbd0a682d985194c7d94d6acdb50f3">More...</a><br /></td></tr>
+<tr class="separator:aaacbd0a682d985194c7d94d6acdb50f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1cc320d6088c2debb29de0d55001596f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a1cc320d6088c2debb29de0d55001596f">DoIsEmpty</a> () const</td></tr>
 <tr class="memdesc:a1cc320d6088c2debb29de0d55001596f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a8e12342fc420701fbffd97025421575a" title="Returns true iff the set is empty.">IsEmpty()</a>.  <a href="#a1cc320d6088c2debb29de0d55001596f">More...</a><br /></td></tr>
 <tr class="separator:a1cc320d6088c2debb29de0d55001596f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -245,9 +251,12 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a32670386b6ba4debeba0e63df599fd83"><td class="memItemLeft" align="right" valign="top">virtual std::optional&lt; Eigen::VectorXd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a32670386b6ba4debeba0e63df599fd83">DoMaybeGetFeasiblePoint</a> () const</td></tr>
 <tr class="memdesc:a32670386b6ba4debeba0e63df599fd83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#adf2a514031fd04f603cb06743968fc47" title="Returns a feasible point within this convex set if it is nonempty, and nullopt otherwise.">MaybeGetFeasiblePoint()</a>.  <a href="#a32670386b6ba4debeba0e63df599fd83">More...</a><br /></td></tr>
 <tr class="separator:a32670386b6ba4debeba0e63df599fd83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade78c2696e0f7afdf38c59bf7b12ada5"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#ade78c2696e0f7afdf38c59bf7b12ada5">DoPointInSet</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;<a class="el" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>, <a class="el" href="classdouble.html">double</a> tol) const =0</td></tr>
-<tr class="memdesc:ade78c2696e0f7afdf38c59bf7b12ada5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aa7a4d7c125954dfde3c15238c852eeed" title="Returns true iff the point x is contained in the set.">PointInSet()</a>.  <a href="#ade78c2696e0f7afdf38c59bf7b12ada5">More...</a><br /></td></tr>
-<tr class="separator:ade78c2696e0f7afdf38c59bf7b12ada5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14a06ad1d58722819c3bbd609a59ae33"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a14a06ad1d58722819c3bbd609a59ae33">DoPointInSet</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;<a class="el" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>, <a class="el" href="classdouble.html">double</a> tol) const</td></tr>
+<tr class="memdesc:a14a06ad1d58722819c3bbd609a59ae33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aa7a4d7c125954dfde3c15238c852eeed" title="Returns true iff the point x is contained in the set.">PointInSet()</a>.  <a href="#a14a06ad1d58722819c3bbd609a59ae33">More...</a><br /></td></tr>
+<tr class="separator:a14a06ad1d58722819c3bbd609a59ae33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0bb24996d3355ce6cf6dcb07a0d64a6"><td class="memItemLeft" align="right" valign="top">virtual std::optional&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#ab0bb24996d3355ce6cf6dcb07a0d64a6">DoPointInSetShortcut</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;<a class="el" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>, <a class="el" href="classdouble.html">double</a> tol) const</td></tr>
+<tr class="memdesc:ab0bb24996d3355ce6cf6dcb07a0d64a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">A non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aa7a4d7c125954dfde3c15238c852eeed" title="Returns true iff the point x is contained in the set.">PointInSet()</a> that should be used when the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aa7a4d7c125954dfde3c15238c852eeed" title="Returns true iff the point x is contained in the set.">PointInSet()</a> can be computed more efficiently than solving a convex program.  <a href="#ab0bb24996d3355ce6cf6dcb07a0d64a6">More...</a><br /></td></tr>
+<tr class="separator:ab0bb24996d3355ce6cf6dcb07a0d64a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e36bd79c9772253165b5d5a308c8f09"><td class="memItemLeft" align="right" valign="top">virtual std::pair&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;, std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a4e36bd79c9772253165b5d5a308c8f09">DoAddPointInSetConstraints</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *prog, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &gt; &amp;vars) const =0</td></tr>
 <tr class="memdesc:a4e36bd79c9772253165b5d5a308c8f09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aeadb1b53981b5d37418f3386300e7497" title="Adds a constraint to an existing MathematicalProgram enforcing that the point defined by vars is insi...">AddPointInSetConstraints()</a>.  <a href="#a4e36bd79c9772253165b5d5a308c8f09">More...</a><br /></td></tr>
 <tr class="separator:a4e36bd79c9772253165b5d5a308c8f09"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1000,12 +1009,12 @@ c.rows() == t.size() </dd></dl>
 </div><div class="memdoc">
 
 <p>Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a0c8afc65a3f5ac1df8167abbbd13d218" title="If this set trivially contains exactly one point, returns the value of that point.">MaybeGetPoint()</a>. </p>
-<p>The default implementation returns nullopt. Sets that can model a single point should override with a custom implementation. </p><dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> &gt;= 0 </dd></dl>
+<p>The default implementation returns nullopt. Sets that can model a single point should override with a custom implementation. </p><dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> &gt;= 0. </dd></dl>
 
 </div>
 </div>
-<a id="ade78c2696e0f7afdf38c59bf7b12ada5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade78c2696e0f7afdf38c59bf7b12ada5">&#9670;&nbsp;</a></span>DoPointInSet()</h2>
+<a id="a14a06ad1d58722819c3bbd609a59ae33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14a06ad1d58722819c3bbd609a59ae33">&#9670;&nbsp;</a></span>DoPointInSet()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1033,7 +1042,7 @@ c.rows() == t.size() </dd></dl>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1042,6 +1051,97 @@ c.rows() == t.size() </dd></dl>
 <dl class="section pre"><dt>Precondition</dt><dd>x.size() == <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> </dd>
 <dd>
 <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> &gt;= 0 </dd></dl>
+
+</div>
+</div>
+<a id="ab0bb24996d3355ce6cf6dcb07a0d64a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0bb24996d3355ce6cf6dcb07a0d64a6">&#9670;&nbsp;</a></span>DoPointInSetShortcut()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::optional&lt;bool&gt; DoPointInSetShortcut </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>tol</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aa7a4d7c125954dfde3c15238c852eeed" title="Returns true iff the point x is contained in the set.">PointInSet()</a> that should be used when the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aa7a4d7c125954dfde3c15238c852eeed" title="Returns true iff the point x is contained in the set.">PointInSet()</a> can be computed more efficiently than solving a convex program. </p>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if and only if x is known to be in the set. Returns false if and only if x is known to not be in the set. Returns std::nullopt if a shortcut implementation is not provided (i.e. the method has not elected to decide whether the point x is in the set).</dd></dl>
+<p>For example, membership in a <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html" title="A polytope described using the vertex representation.">VPolytope</a> cannot be verified without solving a linear program and so no shortcut implementation should be provided. On the other hand, membership in an <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html" title="Implements a polyhedral convex set using the half-space representation: {x| A x ≤ b}.">HPolyhedron</a> can be checked by checking the inequality Ax ≤ b and so a shortcut is possible. </p>
+
+</div>
+</div>
+<a id="aaacbd0a682d985194c7d94d6acdb50f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaacbd0a682d985194c7d94d6acdb50f3">&#9670;&nbsp;</a></span>DoProjectionShortcut()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::vector&lt;std::optional&lt;<a class="el" href="classdouble.html">double</a>&gt; &gt; DoProjectionShortcut </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>points</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; Eigen::MatrixXd &gt;&#160;</td>
+          <td class="paramname"><em>projected_points</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aaacbd0a682d985194c7d94d6acdb50f3" title="Non-virtual interface implementation for DoProjectionShortcut().">DoProjectionShortcut()</a>. </p>
+<p>This allows a derived class to implement a method which computes the projection of some, but not necessarily all, of the <code>points</code> more efficiently than the generic implementation.</p>
+<p>The default implementation checks whether each column of <code>points</code> is in the set using DoPointInSetShortcut. Points in the set are given a distance of 0 and are projected to themselves.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">points</td><td>are the points which we wish to project to the convex set. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>projected_points are the projection of <code>points</code> onto the convex set. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A vector <code>distances</code> which is the same size as <code>points.cols()</code>.These are the distances from <code>points</code> to the convex set. If distances[i] has a value, then projected_points-&gt;col(i) is the projection of points.col(i) onto the set. If distances[i] is nullopt, then the projection of points.col(i) has not yet been computed, and so the value at projected_points-&gt;col(i) is meaningless.</dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> &gt;= 0 </dd>
+<dd>
+distances.size() == points.cols() </dd></dl>
 
 </div>
 </div>
@@ -1243,8 +1343,8 @@ c.rows() == t.size() </dd></dl>
 
 </div>
 </div>
-<a id="aaf56e31cd3546020503a8d7b3b359703"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaf56e31cd3546020503a8d7b3b359703">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a35e9f9166891aeacbca14f74e73018f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35e9f9166891aeacbca14f74e73018f3">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1255,7 +1355,7 @@ c.rows() == t.size() </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1269,8 +1369,8 @@ c.rows() == t.size() </dd></dl>
 
 </div>
 </div>
-<a id="a35e9f9166891aeacbca14f74e73018f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a35e9f9166891aeacbca14f74e73018f3">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="aaf56e31cd3546020503a8d7b3b359703"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf56e31cd3546020503a8d7b3b359703">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1281,7 +1381,7 @@ c.rows() == t.size() </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1323,6 +1423,33 @@ c.rows() == t.size() </dd></dl>
 
 <p>Returns true iff the point x is contained in the set. </p>
 <p>If the ambient dimension is zero, then if the set is nonempty, the point is trivially in the set, and if the set is empty, the point is trivially not in the set. </p>
+
+</div>
+</div>
+<a id="a1975e2512e5a582f2b4b051f59dccd42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1975e2512e5a582f2b4b051f59dccd42">&#9670;&nbsp;</a></span>Projection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;std::pair&lt;std::vector&lt;<a class="el" href="classdouble.html">double</a>&gt;, Eigen::MatrixXd&gt; &gt; Projection </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>points</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes in the L₂ norm the distance and the nearest point in this convex set to every column of <code>points</code>. </p>
+<p>If this set is empty, we return nullopt. </p><dl class="section pre"><dt>Precondition</dt><dd>points.rows() == <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a>. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td>the internal convex optimization solver fails. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

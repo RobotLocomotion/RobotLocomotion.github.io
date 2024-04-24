@@ -218,6 +218,12 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_unimplemented_collision_checker.html">UnimplementedCollisionChecker</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A concrete collision checker implementation that throws an exception for every virtual function hook.  <a href="classdrake_1_1planning_1_1_unimplemented_collision_checker.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html">ZmpPlanner</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a desired two dimensional (X and Y) zero-moment point (ZMP) trajectory parameterized as a piecewise polynomial, an optimal center of mass (CoM) trajectory is planned using a linear inverted pendulum model (LIPM).  <a href="classdrake_1_1planning_1_1_zmp_planner.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1planning_1_1_zmp_test_traj.html">ZmpTestTraj</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A structure for storing trajectories from simulating a linear inverted pendulum model (LIPM) using the policy from a <a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html" title="Given a desired two dimensional (X and Y) zero-moment point (ZMP) trajectory parameterized as a piece...">ZmpPlanner</a>.  <a href="structdrake_1_1planning_1_1_zmp_test_traj.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -246,6 +252,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ace53f3f8045d8eb96867bcd6eda63ed0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1planning.html#ace53f3f8045d8eb96867bcd6eda63ed0">IrisInConfigurationSpaceFromCliqueCover</a> (const <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html">CollisionChecker</a> &amp;checker, const <a class="el" href="structdrake_1_1planning_1_1_iris_from_clique_cover_options.html">IrisFromCliqueCoverOptions</a> &amp;options, <a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a> *generator, std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">geometry::optimization::HPolyhedron</a> &gt; *sets, const <a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html">planning::graph_algorithms::MaxCliqueSolverBase</a> *max_clique_solver=nullptr)</td></tr>
 <tr class="memdesc:ace53f3f8045d8eb96867bcd6eda63ed0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cover the configuration space in Iris regions using the Visibility Clique Cover Algorithm as described in.  <a href="#ace53f3f8045d8eb96867bcd6eda63ed0">More...</a><br /></td></tr>
 <tr class="separator:ace53f3f8045d8eb96867bcd6eda63ed0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae64c8241a2f657927f3bd69119e3ba4b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1planning_1_1_zmp_test_traj.html">ZmpTestTraj</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1planning.html#ae64c8241a2f657927f3bd69119e3ba4b">SimulateZmpPolicy</a> (const <a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html">ZmpPlanner</a> &amp;zmp_planner, const Eigen::Vector4d &amp;x0, <a class="el" href="classdouble.html">double</a> dt, <a class="el" href="classdouble.html">double</a> extra_time_at_the_end)</td></tr>
+<tr class="memdesc:ae64c8241a2f657927f3bd69119e3ba4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forward simulation using the linear policy from <code>zmp_planner</code> starting from the initial condition <code>x0</code> using explicit Euler integration.  <a href="#ae64c8241a2f657927f3bd69119e3ba4b">More...</a><br /></td></tr>
+<tr class="separator:ae64c8241a2f657927f3bd69119e3ba4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc139ce6423651554d45234f957a32d2"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">trajectories::PiecewisePolynomial</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1planning.html#abc139ce6423651554d45234f957a32d2">GenerateDesiredZmpTrajs</a> (const std::vector&lt; Eigen::Vector2d &gt; &amp;footsteps, <a class="el" href="classdouble.html">double</a> double_support_duration, <a class="el" href="classdouble.html">double</a> single_support_duration)</td></tr>
+<tr class="memdesc:abc139ce6423651554d45234f957a32d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates desired ZMP trajectories as piecewise polynomials given the desired footsteps.  <a href="#abc139ce6423651554d45234f957a32d2">More...</a><br /></td></tr>
+<tr class="separator:abc139ce6423651554d45234f957a32d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad65f73fdac346846cbc24ebae63c60be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__planning__collision__checker.html#ga6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1planning.html#ad65f73fdac346846cbc24ebae63c60be">SetInEnvironmentCollision</a> (<a class="el" href="group__planning__collision__checker.html#ga6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a> collision_type, bool in_environment_collision)</td></tr>
 <tr class="separator:ad65f73fdac346846cbc24ebae63c60be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0291e1222f1f88c5e1b5f4bac4abd10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__planning__collision__checker.html#ga6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1planning.html#ad0291e1222f1f88c5e1b5f4bac4abd10">SetInSelfCollision</a> (<a class="el" href="group__planning__collision__checker.html#ga6e884b3a7afc04b1a0c132ce264c14b7">RobotCollisionType</a> collision_type, bool in_self_collision)</td></tr>
@@ -302,6 +314,59 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="abc139ce6423651554d45234f957a32d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc139ce6423651554d45234f957a32d2">&#9670;&nbsp;</a></span>GenerateDesiredZmpTrajs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">trajectories::PiecewisePolynomial</a>&lt;<a class="el" href="classdouble.html">double</a>&gt; &gt; drake::planning::GenerateDesiredZmpTrajs </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; Eigen::Vector2d &gt; &amp;&#160;</td>
+          <td class="paramname"><em>footsteps</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>double_support_duration</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>single_support_duration</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generates desired ZMP trajectories as piecewise polynomials given the desired footsteps. </p>
+<p>The knot points are generated as follows: </p><pre>
+T: 0, knots: fs[0]
+T: ss, knots: fs[0]
+T: ss + ds, knots: fs[1]
+T: 2 * ss + ds, knots: fs[1]
+T: 2 * ss + 2 * ds, knots: fs[2]
+T: 3 * ss + 2 * ds, knots: fs[2]
+ ...
+</pre><p> ss stands for <code>single_support_duration</code>, and ds for <code>double_support_duration</code>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">footsteps,X</td><td>Y pair </td></tr>
+    <tr><td class="paramname">double_support_duration,Duration</td><td>for double support. </td></tr>
+    <tr><td class="paramname">single_support_duration,Duration</td><td>for single support. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Three trajectories: 0 is zero-order-hold, 1 is linear, 2 is cubic. </dd></dl>
+
+</div>
+</div>
 <a id="ace53f3f8045d8eb96867bcd6eda63ed0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ace53f3f8045d8eb96867bcd6eda63ed0">&#9670;&nbsp;</a></span>IrisInConfigurationSpaceFromCliqueCover()</h2>
 
@@ -458,6 +523,58 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>a RobotCollisionType where the self-collision value is that asserted by <code>in_self_collision</code>, and the environment-collision value is that asserted by <code>collision_type</code>. </dd></dl>
+
+</div>
+</div>
+<a id="ae64c8241a2f657927f3bd69119e3ba4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae64c8241a2f657927f3bd69119e3ba4b">&#9670;&nbsp;</a></span>SimulateZmpPolicy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdrake_1_1planning_1_1_zmp_test_traj.html">ZmpTestTraj</a> drake::planning::SimulateZmpPolicy </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html">ZmpPlanner</a> &amp;&#160;</td>
+          <td class="paramname"><em>zmp_planner</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Vector4d &amp;&#160;</td>
+          <td class="paramname"><em>x0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>dt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>extra_time_at_the_end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Forward simulation using the linear policy from <code>zmp_planner</code> starting from the initial condition <code>x0</code> using explicit Euler integration. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">zmp_planner,Contains</td><td>planned center of mass trajectory, value function, and linear policy. </td></tr>
+    <tr><td class="paramname">x0,Initial</td><td>condition. </td></tr>
+    <tr><td class="paramname">dt,Time</td><td>step. </td></tr>
+    <tr><td class="paramname">extra_time_at_the_end,Simulate</td><td><code>extra_time_at_the_end</code> seconds past the end of the trajectories for convergence. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structdrake_1_1planning_1_1_zmp_test_traj.html" title="A structure for storing trajectories from simulating a linear inverted pendulum model (LIPM) using th...">ZmpTestTraj</a> that contains all the information. </dd></dl>
 
 </div>
 </div>

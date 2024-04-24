@@ -61,6 +61,7 @@ var searchData=
   ['nodeselectfun',['NodeSelectFun',['../classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#afeaa0dd6491a96790fe00243942b7daf',1,'drake::solvers::MixedIntegerBranchAndBound']]],
   ['nodeselectionmethod',['NodeSelectionMethod',['../classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#ad3bb376a6d6d2164492750a2ee33fbd0',1,'drake::solvers::MixedIntegerBranchAndBound']]],
   ['nominal_5fangle',['nominal_angle',['../classdrake_1_1multibody_1_1_revolute_spring.html#a6b8142c37ce3b3ebc067d2de28ce88a0',1,'drake::multibody::RevoluteSpring']]],
+  ['nominal_5fcom',['nominal_com',['../structdrake_1_1planning_1_1_zmp_test_traj.html#a20ae58e972a3c748065e4f8dfe982f07',1,'drake::planning::ZmpTestTraj']]],
   ['nominal_5fposition',['nominal_position',['../classdrake_1_1multibody_1_1_prismatic_spring.html#a00881d5c03e5b231d26752f1f236fdc9',1,'drake::multibody::PrismaticSpring']]],
   ['non_5fconvex_5foptimization_5futil_2eh',['non_convex_optimization_util.h',['../non__convex__optimization__util_8h.html',1,'']]],
   ['non_5fsliding_5fcontacts',['non_sliding_contacts',['../structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#afd507a76abfe6745b786bbe0da7f5f89',1,'drake::multibody::constraint::ConstraintAccelProblemData']]],

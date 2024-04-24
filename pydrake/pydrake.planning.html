@@ -4496,6 +4496,315 @@ checker plant.</p>
 </dl>
 </dd></dl>
 
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.planning.ZmpPlanner">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">ZmpPlanner</span></span><a class="headerlink" href="#pydrake.planning.ZmpPlanner" title="Permalink to this definition"></a></dt>
+<dd><p>Given a desired two dimensional (X and Y) zero-moment point (ZMP)
+trajectory parameterized as a piecewise polynomial, an optimal center
+of mass (CoM) trajectory is planned using a linear inverted pendulum
+model (LIPM). A second order value function (optimal cost-to-go) and a
+linear policy are also computed alongside the optimal trajectory. The
+system dynamics for the X and Y directions are decoupled, however, we
+plan the XY motion together for convenience.</p>
+<p>Let <span class="math notranslate nohighlight">\(c\)</span> be the CoM position, the state of the system, <span class="math notranslate nohighlight">\(x\)</span>,
+is <span class="math notranslate nohighlight">\([c; \dot{c}]\)</span>, the control, <span class="math notranslate nohighlight">\(u = \ddot{c}\)</span>, and
+<span class="math notranslate nohighlight">\(y\)</span> represents the center of pressure (CoP). For the X
+direction, the LIPM dynamics is:</p>
+<div class="math notranslate nohighlight">
+\[y = c - \frac{z}{g} * u,\]</div>
+<p>where <span class="math notranslate nohighlight">\(g\)</span> is the gravity constant and <span class="math notranslate nohighlight">\(z\)</span> is the CoM
+height. <span class="math notranslate nohighlight">\(z\)</span> is assumed to be constant in LIPM. The full dynamics
+can also be written in the matrix form as:</p>
+<div class="math notranslate nohighlight">
+\[\dot{x} = A x + B u \\]</div>
+<p>y = C x + D u</p>
+<p>The one step cost function <span class="math notranslate nohighlight">\(L\)</span> is defined as:</p>
+<div class="math notranslate nohighlight">
+\[L(y, u, t) = (y - y_d(t))^T Q_y (y - y_d(t)) + u^T R u,\]</div>
+<p>where <span class="math notranslate nohighlight">\(Q_y\)</span> and <span class="math notranslate nohighlight">\(R\)</span> are weighting matrices, and
+<span class="math notranslate nohighlight">\(y_d(t)\)</span> is the desired ZMP trajectory at time <span class="math notranslate nohighlight">\(t\)</span>.</p>
+<p>The value function is defined as</p>
+<div class="math notranslate nohighlight">
+\[V(x, t) = \min_{u[t:t_f]} \bar{x}(t_f)^T S \bar{x}(t_f)\]</div>
+<ul class="simple">
+<li><p>int_{t}^{t_f} L(y, u, tau) dtau,</p></li>
+</ul>
+<p>subject to the dynamics, and <span class="math notranslate nohighlight">\(t_f\)</span> is the last time in the
+desired ZMP trajectory, <span class="math notranslate nohighlight">\(\bar{x} = [c - y_d(t_f); \dot{c}]\)</span>,
+<span class="math notranslate nohighlight">\(S\)</span> is the quadratic term from the infinite horizon continuous
+time LQR solution solved with the same dynamics and one step cost
+function.</p>
+<p>For this problem, <span class="math notranslate nohighlight">\(V\)</span> is known to have a quadratic form of:</p>
+<div class="math notranslate nohighlight">
+\[V(x, t) = \bar{x}^T V_{xx} \bar{x} + \bar{x}^T V_x(t) + V_0(t),\]</div>
+<p>and the corresponding optimal control policy, <span class="math notranslate nohighlight">\(u^*\)</span>, is linear
+w.r.t. to <span class="math notranslate nohighlight">\(x\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[u^*(x, t) = K \bar{x} + u_0(t).\]</div>
+<p>See the following reference for more details about the algorithm:</p>
+<p>[1] R. Tedrake, S. Kuindersma, R. Deits and K. Miura, “A closed-form
+solution for real-time ZMP gait generation and feedback
+stabilization,” 2015 IEEE-RAS 15th International Conference on
+Humanoid Robots (Humanoids), Seoul, 2015, pp. 936-940.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.ZmpPlanner.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.ZmpPlanner" title="pydrake.planning.ZmpPlanner"><span class="pre">pydrake.planning.ZmpPlanner</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.ZmpPlanner.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.ZmpPlanner.comdd_to_cop">
+<span class="sig-name descname"><span class="pre">comdd_to_cop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.ZmpPlanner" title="pydrake.planning.ZmpPlanner"><span class="pre">pydrake.planning.ZmpPlanner</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">2</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">2</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.ZmpPlanner.comdd_to_cop" title="Permalink to this definition"></a></dt>
+<dd><p>Converts CoM acceleration to center of pressure (CoP) using cop = C *
+x + D * u, which is equivalent to cop = com - z / g * comdd Should
+only be called after Plan is called.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">x</span></code>:</dt><dd><p>CoM position and velocity</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">u</span></code>:</dt><dd><p>CoM acceleration</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>center of pressure (CoP)</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>Plan() has already been called.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.ZmpPlanner.ComputeOptimalCoMdd">
+<span class="sig-name descname"><span class="pre">ComputeOptimalCoMdd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.ZmpPlanner" title="pydrake.planning.ZmpPlanner"><span class="pre">pydrake.planning.ZmpPlanner</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">2</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.ZmpPlanner.ComputeOptimalCoMdd" title="Permalink to this definition"></a></dt>
+<dd><p>Computes the optimal control (CoM acceleration) at <code class="docutils literal notranslate"><span class="pre">time</span></code> given CoM
+state <code class="docutils literal notranslate"><span class="pre">x</span></code> using the linear policy.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">time</span></code>:</dt><dd><p>Current time.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">x</span></code>:</dt><dd><p>Current state.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Optimal CoMdd.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>Plan() has already been called.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.ZmpPlanner.get_A">
+<span class="sig-name descname"><span class="pre">get_A</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.ZmpPlanner" title="pydrake.planning.ZmpPlanner"><span class="pre">pydrake.planning.ZmpPlanner</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.ZmpPlanner.get_A" title="Permalink to this definition"></a></dt>
+<dd><p>Getter for A matrix.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>Plan() has already been called.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.ZmpPlanner.get_B">
+<span class="sig-name descname"><span class="pre">get_B</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.ZmpPlanner" title="pydrake.planning.ZmpPlanner"><span class="pre">pydrake.planning.ZmpPlanner</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.ZmpPlanner.get_B" title="Permalink to this definition"></a></dt>
+<dd><p>Getter for B matrix.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>Plan() has already been called.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.ZmpPlanner.get_C">
+<span class="sig-name descname"><span class="pre">get_C</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.ZmpPlanner" title="pydrake.planning.ZmpPlanner"><span class="pre">pydrake.planning.ZmpPlanner</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">2</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.ZmpPlanner.get_C" title="Permalink to this definition"></a></dt>
+<dd><p>Getter for C matrix.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>Plan() has already been called.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.ZmpPlanner.get_D">
+<span class="sig-name descname"><span class="pre">get_D</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.ZmpPlanner" title="pydrake.planning.ZmpPlanner"><span class="pre">pydrake.planning.ZmpPlanner</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">2</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.ZmpPlanner.get_D" title="Permalink to this definition"></a></dt>
+<dd><p>Getter for D matrix.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>Plan() has already been called.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.ZmpPlanner.get_desired_zmp">
+<span class="sig-name descname"><span class="pre">get_desired_zmp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.planning.ZmpPlanner.get_desired_zmp" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>get_desired_zmp(self: pydrake.planning.ZmpPlanner, time: float) -&gt; numpy.ndarray[numpy.float64[2, 1]]</p></li>
+</ol>
+<p>Returns the desired ZMP evaluated at <code class="docutils literal notranslate"><span class="pre">time</span></code>.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>Plan() has already been called.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>get_desired_zmp(self: pydrake.planning.ZmpPlanner) -&gt; pydrake.trajectories.PiecewisePolynomial</p></li>
+</ol>
+<p>Returns the desired ZMP trajectory.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>Plan() has already been called.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.ZmpPlanner.get_final_desired_zmp">
+<span class="sig-name descname"><span class="pre">get_final_desired_zmp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.ZmpPlanner" title="pydrake.planning.ZmpPlanner"><span class="pre">pydrake.planning.ZmpPlanner</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">2</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.ZmpPlanner.get_final_desired_zmp" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the position of the ZMP at the end of the desired trajectory.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>Plan() has already been called.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.ZmpPlanner.get_nominal_com">
+<span class="sig-name descname"><span class="pre">get_nominal_com</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.planning.ZmpPlanner.get_nominal_com" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>get_nominal_com(self: pydrake.planning.ZmpPlanner, time: float) -&gt; numpy.ndarray[numpy.float64[2, 1]]</p></li>
+</ol>
+<p>Returns the nominal CoM position evaluated at <code class="docutils literal notranslate"><span class="pre">time</span></code>.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>Plan() has already been called.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>get_nominal_com(self: pydrake.planning.ZmpPlanner) -&gt; pydrake.trajectories.ExponentialPlusPiecewisePolynomial</p></li>
+</ol>
+<p>Returns the nominal CoM trajectory.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>Plan() has already been called.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.ZmpPlanner.get_nominal_comd">
+<span class="sig-name descname"><span class="pre">get_nominal_comd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.planning.ZmpPlanner.get_nominal_comd" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>get_nominal_comd(self: pydrake.planning.ZmpPlanner, time: float) -&gt; numpy.ndarray[numpy.float64[2, 1]]</p></li>
+</ol>
+<p>Returns the nominal CoM velocity evaluated at <code class="docutils literal notranslate"><span class="pre">time</span></code>.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>Plan() has already been called.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>get_nominal_comd(self: pydrake.planning.ZmpPlanner) -&gt; pydrake.trajectories.ExponentialPlusPiecewisePolynomial</p></li>
+</ol>
+<p>Returns the nominal CoM velocity trajectory.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>Plan() has already been called.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.ZmpPlanner.get_nominal_comdd">
+<span class="sig-name descname"><span class="pre">get_nominal_comdd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.planning.ZmpPlanner.get_nominal_comdd" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>get_nominal_comdd(self: pydrake.planning.ZmpPlanner, time: float) -&gt; numpy.ndarray[numpy.float64[2, 1]]</p></li>
+</ol>
+<p>Returns the nominal CoM acceleration evaluated at <code class="docutils literal notranslate"><span class="pre">time</span></code>.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>Plan() has already been called.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>get_nominal_comdd(self: pydrake.planning.ZmpPlanner) -&gt; pydrake.trajectories.ExponentialPlusPiecewisePolynomial</p></li>
+</ol>
+<p>Returns the nominal CoM acceleration trajectory.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>Plan() has already been called.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.ZmpPlanner.get_Qy">
+<span class="sig-name descname"><span class="pre">get_Qy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.ZmpPlanner" title="pydrake.planning.ZmpPlanner"><span class="pre">pydrake.planning.ZmpPlanner</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">2</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.ZmpPlanner.get_Qy" title="Permalink to this definition"></a></dt>
+<dd><p>Getter for Qy matrix.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>Plan() has already been called.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.ZmpPlanner.get_R">
+<span class="sig-name descname"><span class="pre">get_R</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.ZmpPlanner" title="pydrake.planning.ZmpPlanner"><span class="pre">pydrake.planning.ZmpPlanner</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">2</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.ZmpPlanner.get_R" title="Permalink to this definition"></a></dt>
+<dd><p>Getter for R matrix.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>Plan() has already been called.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.ZmpPlanner.get_Vx">
+<span class="sig-name descname"><span class="pre">get_Vx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.planning.ZmpPlanner.get_Vx" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>get_Vx(self: pydrake.planning.ZmpPlanner, time: float) -&gt; numpy.ndarray[numpy.float64[4, 1]]</p></li>
+</ol>
+<p>Returns the time varying first order term (s2 in [1]) of the value
+function, evaluated at the given <code class="docutils literal notranslate"><span class="pre">time</span></code>.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>Plan() has already been called.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>get_Vx(self: pydrake.planning.ZmpPlanner) -&gt; pydrake.trajectories.ExponentialPlusPiecewisePolynomial</p></li>
+</ol>
+<p>Returns the time varying first order term (s2 in [1]) of the value
+function.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>Plan() has already been called.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.ZmpPlanner.get_Vxx">
+<span class="sig-name descname"><span class="pre">get_Vxx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.ZmpPlanner" title="pydrake.planning.ZmpPlanner"><span class="pre">pydrake.planning.ZmpPlanner</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.ZmpPlanner.get_Vxx" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the time invariant second order term (S1 in [1]) of the value
+function.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>Plan() has already been called.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.ZmpPlanner.has_planned">
+<span class="sig-name descname"><span class="pre">has_planned</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.ZmpPlanner" title="pydrake.planning.ZmpPlanner"><span class="pre">pydrake.planning.ZmpPlanner</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.planning.ZmpPlanner.has_planned" title="Permalink to this definition"></a></dt>
+<dd><p>Returns true if Plan() has been called.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.ZmpPlanner.Plan">
+<span class="sig-name descname"><span class="pre">Plan</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.planning.ZmpPlanner.Plan" title="Permalink to this definition"></a></dt>
+<dd><p>Plan(self: pydrake.planning.ZmpPlanner, zmp_d: pydrake.trajectories.PiecewisePolynomial, x0: numpy.ndarray[numpy.float64[4, 1]], height: float, gravity: float = 9.81, Qy: numpy.ndarray[numpy.float64[2, 2]] = array([[1., 0.],
+[0., 1.]]), R: numpy.ndarray[numpy.float64[2, 2]] = array([[0.1, 0. ],
+[0. , 0.1]])) -&gt; None</p>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 
 

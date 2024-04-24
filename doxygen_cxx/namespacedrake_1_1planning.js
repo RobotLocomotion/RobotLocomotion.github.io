@@ -15,5 +15,7 @@ var namespacedrake_1_1planning =
     [ "RobotDiagram", "classdrake_1_1planning_1_1_robot_diagram.html", "classdrake_1_1planning_1_1_robot_diagram" ],
     [ "RobotDiagramBuilder", "classdrake_1_1planning_1_1_robot_diagram_builder.html", "classdrake_1_1planning_1_1_robot_diagram_builder" ],
     [ "SceneGraphCollisionChecker", "classdrake_1_1planning_1_1_scene_graph_collision_checker.html", "classdrake_1_1planning_1_1_scene_graph_collision_checker" ],
-    [ "UnimplementedCollisionChecker", "classdrake_1_1planning_1_1_unimplemented_collision_checker.html", "classdrake_1_1planning_1_1_unimplemented_collision_checker" ]
+    [ "UnimplementedCollisionChecker", "classdrake_1_1planning_1_1_unimplemented_collision_checker.html", "classdrake_1_1planning_1_1_unimplemented_collision_checker" ],
+    [ "ZmpPlanner", "classdrake_1_1planning_1_1_zmp_planner.html", "classdrake_1_1planning_1_1_zmp_planner" ],
+    [ "ZmpTestTraj", "structdrake_1_1planning_1_1_zmp_test_traj.html", "structdrake_1_1planning_1_1_zmp_test_traj" ]
 ];

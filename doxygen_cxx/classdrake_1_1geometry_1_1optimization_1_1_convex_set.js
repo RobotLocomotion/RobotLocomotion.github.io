@@ -20,7 +20,9 @@ var classdrake_1_1geometry_1_1optimization_1_1_convex_set =
     [ "DoIsEmpty", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a1cc320d6088c2debb29de0d55001596f", null ],
     [ "DoMaybeGetFeasiblePoint", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a32670386b6ba4debeba0e63df599fd83", null ],
     [ "DoMaybeGetPoint", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a54d6f25d563615123ccee12d0a41e81d", null ],
-    [ "DoPointInSet", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#ade78c2696e0f7afdf38c59bf7b12ada5", null ],
+    [ "DoPointInSet", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a14a06ad1d58722819c3bbd609a59ae33", null ],
+    [ "DoPointInSetShortcut", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#ab0bb24996d3355ce6cf6dcb07a0d64a6", null ],
+    [ "DoProjectionShortcut", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aaacbd0a682d985194c7d94d6acdb50f3", null ],
     [ "DoToShapeWithPose", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a2da746fed405258f0af4dc5c385f6e2a", null ],
     [ "HandleZeroAmbientDimensionConstraints", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a7da589d9fc72f5064b7bbc48a97d0845", null ],
     [ "has_exact_volume", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a7d9beaa673ec9f46fcf52eb4c49b62bd", null ],
@@ -29,9 +31,10 @@ var classdrake_1_1geometry_1_1optimization_1_1_convex_set =
     [ "IsEmpty", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a8e12342fc420701fbffd97025421575a", null ],
     [ "MaybeGetFeasiblePoint", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#adf2a514031fd04f603cb06743968fc47", null ],
     [ "MaybeGetPoint", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a0c8afc65a3f5ac1df8167abbbd13d218", null ],
-    [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aaf56e31cd3546020503a8d7b3b359703", null ],
     [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a35e9f9166891aeacbca14f74e73018f3", null ],
+    [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aaf56e31cd3546020503a8d7b3b359703", null ],
     [ "PointInSet", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aa7a4d7c125954dfde3c15238c852eeed", null ],
+    [ "Projection", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a1975e2512e5a582f2b4b051f59dccd42", null ],
     [ "Serialize", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a8e8824802dedfbc36776227f7482b6bc", null ],
     [ "ToShapeWithPose", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#af7add202067720eb1a04fac8f1781c87", null ]
 ];

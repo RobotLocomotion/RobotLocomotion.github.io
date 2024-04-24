@@ -139,7 +139,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html','');});
+$(document).ready(function(){initNavTree('classdrake_1_1planning_1_1_zmp_planner.html','');});
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -160,7 +160,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1controllers_1
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner-members.html">List of all members</a>  </div>
+<a href="classdrake_1_1planning_1_1_zmp_planner-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ZmpPlanner Class Reference<div class="ingroups"><a class="el" href="group__algorithms.html">Algorithms</a> &raquo; <a class="el" href="group__planning.html">Planning</a> &raquo; <a class="el" href="group__planning__trajectory.html">Trajectories</a></div></div>  </div>
 </div><!--header-->
@@ -192,86 +192,86 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1controllers_1
 <p>[1] R. Tedrake, S. Kuindersma, R. Deits and K. Miura, "A closed-form solution
 for real-time ZMP gait generation and feedback stabilization," 2015 IEEE-RAS 15th International Conference on Humanoid Robots (Humanoids), Seoul, 2015, pp. 936-940. </p>
 </div>
-<p><code>#include &lt;drake/systems/controllers/zmp_planner.h&gt;</code></p>
+<p><code>#include &lt;drake/planning/locomotion/zmp_planner.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae25ada6dc0b95fc31239a47fa0b9eb74"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#ae25ada6dc0b95fc31239a47fa0b9eb74">ZmpPlanner</a> ()=default</td></tr>
+<tr class="memitem:ae25ada6dc0b95fc31239a47fa0b9eb74"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#ae25ada6dc0b95fc31239a47fa0b9eb74">ZmpPlanner</a> ()=default</td></tr>
 <tr class="separator:ae25ada6dc0b95fc31239a47fa0b9eb74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afbd73e15fe7be53f20440245d9b562ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad">Plan</a> (const <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">trajectories::PiecewisePolynomial</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;zmp_d, const Eigen::Vector4d &amp;x0, <a class="el" href="classdouble.html">double</a> height, <a class="el" href="classdouble.html">double</a> gravity=9.81, const Eigen::Matrix2d &amp;Qy=Eigen::Matrix2d::Identity(), const Eigen::Matrix2d &amp;R=0.1 *Eigen::Matrix2d::Identity())</td></tr>
+<tr class="memitem:afbd73e15fe7be53f20440245d9b562ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad">Plan</a> (const <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">trajectories::PiecewisePolynomial</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;zmp_d, const Eigen::Vector4d &amp;x0, <a class="el" href="classdouble.html">double</a> height, <a class="el" href="classdouble.html">double</a> gravity=9.81, const Eigen::Matrix2d &amp;Qy=Eigen::Matrix2d::Identity(), const Eigen::Matrix2d &amp;R=0.1 *Eigen::Matrix2d::Identity())</td></tr>
 <tr class="memdesc:afbd73e15fe7be53f20440245d9b562ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second order value function and linear policy.  <a href="#afbd73e15fe7be53f20440245d9b562ad">More...</a><br /></td></tr>
 <tr class="separator:afbd73e15fe7be53f20440245d9b562ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5961273e32d12f566ce8e6129efe7641"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#a5961273e32d12f566ce8e6129efe7641">has_planned</a> () const</td></tr>
-<tr class="memdesc:a5961273e32d12f566ce8e6129efe7641"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if <a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has been called.  <a href="#a5961273e32d12f566ce8e6129efe7641">More...</a><br /></td></tr>
+<tr class="memitem:a5961273e32d12f566ce8e6129efe7641"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#a5961273e32d12f566ce8e6129efe7641">has_planned</a> () const</td></tr>
+<tr class="memdesc:a5961273e32d12f566ce8e6129efe7641"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if <a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has been called.  <a href="#a5961273e32d12f566ce8e6129efe7641">More...</a><br /></td></tr>
 <tr class="separator:a5961273e32d12f566ce8e6129efe7641"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d259816cc050fd1a0e4fea4a55fc3c1"><td class="memItemLeft" align="right" valign="top">Eigen::Vector2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#a9d259816cc050fd1a0e4fea4a55fc3c1">ComputeOptimalCoMdd</a> (<a class="el" href="classdouble.html">double</a> time, const Eigen::Vector4d &amp;<a class="el" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>) const</td></tr>
+<tr class="memitem:a9d259816cc050fd1a0e4fea4a55fc3c1"><td class="memItemLeft" align="right" valign="top">Eigen::Vector2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#a9d259816cc050fd1a0e4fea4a55fc3c1">ComputeOptimalCoMdd</a> (<a class="el" href="classdouble.html">double</a> time, const Eigen::Vector4d &amp;<a class="el" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>) const</td></tr>
 <tr class="memdesc:a9d259816cc050fd1a0e4fea4a55fc3c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the optimal control (CoM acceleration) at <code>time</code> given CoM state <code>x</code> using the linear policy.  <a href="#a9d259816cc050fd1a0e4fea4a55fc3c1">More...</a><br /></td></tr>
 <tr class="separator:a9d259816cc050fd1a0e4fea4a55fc3c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0579793f4ce5ad302173ab0f1ab8d4fe"><td class="memItemLeft" align="right" valign="top">Eigen::Vector2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#a0579793f4ce5ad302173ab0f1ab8d4fe">comdd_to_cop</a> (const Eigen::Vector4d &amp;<a class="el" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>, const Eigen::Vector2d &amp;u) const</td></tr>
+<tr class="memitem:a0579793f4ce5ad302173ab0f1ab8d4fe"><td class="memItemLeft" align="right" valign="top">Eigen::Vector2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#a0579793f4ce5ad302173ab0f1ab8d4fe">comdd_to_cop</a> (const Eigen::Vector4d &amp;<a class="el" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>, const Eigen::Vector2d &amp;u) const</td></tr>
 <tr class="memdesc:a0579793f4ce5ad302173ab0f1ab8d4fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts CoM acceleration to center of pressure (CoP) using cop = C * x + D * u, which is equivalent to cop = com - z / g * comdd Should only be called after Plan is called.  <a href="#a0579793f4ce5ad302173ab0f1ab8d4fe">More...</a><br /></td></tr>
 <tr class="separator:a0579793f4ce5ad302173ab0f1ab8d4fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acadc5e001313f21ebbd82fada3303ce3"><td class="memItemLeft" align="right" valign="top">const Eigen::Matrix&lt; <a class="el" href="classdouble.html">double</a>, 4, 4 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#acadc5e001313f21ebbd82fada3303ce3">get_A</a> () const</td></tr>
+<tr class="memitem:acadc5e001313f21ebbd82fada3303ce3"><td class="memItemLeft" align="right" valign="top">const Eigen::Matrix&lt; <a class="el" href="classdouble.html">double</a>, 4, 4 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#acadc5e001313f21ebbd82fada3303ce3">get_A</a> () const</td></tr>
 <tr class="memdesc:acadc5e001313f21ebbd82fada3303ce3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for A matrix.  <a href="#acadc5e001313f21ebbd82fada3303ce3">More...</a><br /></td></tr>
 <tr class="separator:acadc5e001313f21ebbd82fada3303ce3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a835642ec16e025a9d71a01508d4355a1"><td class="memItemLeft" align="right" valign="top">const Eigen::Matrix&lt; <a class="el" href="classdouble.html">double</a>, 4, 2 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#a835642ec16e025a9d71a01508d4355a1">get_B</a> () const</td></tr>
+<tr class="memitem:a835642ec16e025a9d71a01508d4355a1"><td class="memItemLeft" align="right" valign="top">const Eigen::Matrix&lt; <a class="el" href="classdouble.html">double</a>, 4, 2 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#a835642ec16e025a9d71a01508d4355a1">get_B</a> () const</td></tr>
 <tr class="memdesc:a835642ec16e025a9d71a01508d4355a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for B matrix.  <a href="#a835642ec16e025a9d71a01508d4355a1">More...</a><br /></td></tr>
 <tr class="separator:a835642ec16e025a9d71a01508d4355a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d9a2ad767cf5d9b75b66c05148efc07"><td class="memItemLeft" align="right" valign="top">const Eigen::Matrix&lt; <a class="el" href="classdouble.html">double</a>, 2, 4 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#a2d9a2ad767cf5d9b75b66c05148efc07">get_C</a> () const</td></tr>
+<tr class="memitem:a2d9a2ad767cf5d9b75b66c05148efc07"><td class="memItemLeft" align="right" valign="top">const Eigen::Matrix&lt; <a class="el" href="classdouble.html">double</a>, 2, 4 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#a2d9a2ad767cf5d9b75b66c05148efc07">get_C</a> () const</td></tr>
 <tr class="memdesc:a2d9a2ad767cf5d9b75b66c05148efc07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for C matrix.  <a href="#a2d9a2ad767cf5d9b75b66c05148efc07">More...</a><br /></td></tr>
 <tr class="separator:a2d9a2ad767cf5d9b75b66c05148efc07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8783e38fc64a114a64c34f7c12416f51"><td class="memItemLeft" align="right" valign="top">const Eigen::Matrix&lt; <a class="el" href="classdouble.html">double</a>, 2, 2 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#a8783e38fc64a114a64c34f7c12416f51">get_D</a> () const</td></tr>
+<tr class="memitem:a8783e38fc64a114a64c34f7c12416f51"><td class="memItemLeft" align="right" valign="top">const Eigen::Matrix&lt; <a class="el" href="classdouble.html">double</a>, 2, 2 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#a8783e38fc64a114a64c34f7c12416f51">get_D</a> () const</td></tr>
 <tr class="memdesc:a8783e38fc64a114a64c34f7c12416f51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for D matrix.  <a href="#a8783e38fc64a114a64c34f7c12416f51">More...</a><br /></td></tr>
 <tr class="separator:a8783e38fc64a114a64c34f7c12416f51"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e653d639ab03f6e13229289c5fd4088"><td class="memItemLeft" align="right" valign="top">const Eigen::Matrix&lt; <a class="el" href="classdouble.html">double</a>, 2, 2 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#a6e653d639ab03f6e13229289c5fd4088">get_Qy</a> () const</td></tr>
+<tr class="memitem:a6e653d639ab03f6e13229289c5fd4088"><td class="memItemLeft" align="right" valign="top">const Eigen::Matrix&lt; <a class="el" href="classdouble.html">double</a>, 2, 2 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#a6e653d639ab03f6e13229289c5fd4088">get_Qy</a> () const</td></tr>
 <tr class="memdesc:a6e653d639ab03f6e13229289c5fd4088"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for Qy matrix.  <a href="#a6e653d639ab03f6e13229289c5fd4088">More...</a><br /></td></tr>
 <tr class="separator:a6e653d639ab03f6e13229289c5fd4088"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2ae07d986ada1331a7c587b18f35454"><td class="memItemLeft" align="right" valign="top">const Eigen::Matrix&lt; <a class="el" href="classdouble.html">double</a>, 2, 2 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#ae2ae07d986ada1331a7c587b18f35454">get_R</a> () const</td></tr>
+<tr class="memitem:ae2ae07d986ada1331a7c587b18f35454"><td class="memItemLeft" align="right" valign="top">const Eigen::Matrix&lt; <a class="el" href="classdouble.html">double</a>, 2, 2 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#ae2ae07d986ada1331a7c587b18f35454">get_R</a> () const</td></tr>
 <tr class="memdesc:ae2ae07d986ada1331a7c587b18f35454"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for R matrix.  <a href="#ae2ae07d986ada1331a7c587b18f35454">More...</a><br /></td></tr>
 <tr class="separator:ae2ae07d986ada1331a7c587b18f35454"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a328a17e97de675ae438ec0ee283f44e1"><td class="memItemLeft" align="right" valign="top">Eigen::Vector2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#a328a17e97de675ae438ec0ee283f44e1">get_desired_zmp</a> (<a class="el" href="classdouble.html">double</a> time) const</td></tr>
+<tr class="memitem:a328a17e97de675ae438ec0ee283f44e1"><td class="memItemLeft" align="right" valign="top">Eigen::Vector2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#a328a17e97de675ae438ec0ee283f44e1">get_desired_zmp</a> (<a class="el" href="classdouble.html">double</a> time) const</td></tr>
 <tr class="memdesc:a328a17e97de675ae438ec0ee283f44e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the desired ZMP evaluated at <code>time</code>.  <a href="#a328a17e97de675ae438ec0ee283f44e1">More...</a><br /></td></tr>
 <tr class="separator:a328a17e97de675ae438ec0ee283f44e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae41c5a002b84ba0ef89cb2c3022a2368"><td class="memItemLeft" align="right" valign="top">Eigen::Vector2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#ae41c5a002b84ba0ef89cb2c3022a2368">get_nominal_com</a> (<a class="el" href="classdouble.html">double</a> time) const</td></tr>
+<tr class="memitem:ae41c5a002b84ba0ef89cb2c3022a2368"><td class="memItemLeft" align="right" valign="top">Eigen::Vector2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#ae41c5a002b84ba0ef89cb2c3022a2368">get_nominal_com</a> (<a class="el" href="classdouble.html">double</a> time) const</td></tr>
 <tr class="memdesc:ae41c5a002b84ba0ef89cb2c3022a2368"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the nominal CoM position evaluated at <code>time</code>.  <a href="#ae41c5a002b84ba0ef89cb2c3022a2368">More...</a><br /></td></tr>
 <tr class="separator:ae41c5a002b84ba0ef89cb2c3022a2368"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5cc5a4c9a2fc70193ffd47c60ba999ea"><td class="memItemLeft" align="right" valign="top">Eigen::Vector2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#a5cc5a4c9a2fc70193ffd47c60ba999ea">get_nominal_comd</a> (<a class="el" href="classdouble.html">double</a> time) const</td></tr>
+<tr class="memitem:a5cc5a4c9a2fc70193ffd47c60ba999ea"><td class="memItemLeft" align="right" valign="top">Eigen::Vector2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#a5cc5a4c9a2fc70193ffd47c60ba999ea">get_nominal_comd</a> (<a class="el" href="classdouble.html">double</a> time) const</td></tr>
 <tr class="memdesc:a5cc5a4c9a2fc70193ffd47c60ba999ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the nominal CoM velocity evaluated at <code>time</code>.  <a href="#a5cc5a4c9a2fc70193ffd47c60ba999ea">More...</a><br /></td></tr>
 <tr class="separator:a5cc5a4c9a2fc70193ffd47c60ba999ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5eb138b6387be03b993e8c09688916a6"><td class="memItemLeft" align="right" valign="top">Eigen::Vector2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#a5eb138b6387be03b993e8c09688916a6">get_nominal_comdd</a> (<a class="el" href="classdouble.html">double</a> time) const</td></tr>
+<tr class="memitem:a5eb138b6387be03b993e8c09688916a6"><td class="memItemLeft" align="right" valign="top">Eigen::Vector2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#a5eb138b6387be03b993e8c09688916a6">get_nominal_comdd</a> (<a class="el" href="classdouble.html">double</a> time) const</td></tr>
 <tr class="memdesc:a5eb138b6387be03b993e8c09688916a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the nominal CoM acceleration evaluated at <code>time</code>.  <a href="#a5eb138b6387be03b993e8c09688916a6">More...</a><br /></td></tr>
 <tr class="separator:a5eb138b6387be03b993e8c09688916a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f3fd7e27e913d308840ce47c5c4fc37"><td class="memItemLeft" align="right" valign="top">Eigen::Vector2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#a5f3fd7e27e913d308840ce47c5c4fc37">get_final_desired_zmp</a> () const</td></tr>
+<tr class="memitem:a5f3fd7e27e913d308840ce47c5c4fc37"><td class="memItemLeft" align="right" valign="top">Eigen::Vector2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#a5f3fd7e27e913d308840ce47c5c4fc37">get_final_desired_zmp</a> () const</td></tr>
 <tr class="memdesc:a5f3fd7e27e913d308840ce47c5c4fc37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the position of the ZMP at the end of the desired trajectory.  <a href="#a5f3fd7e27e913d308840ce47c5c4fc37">More...</a><br /></td></tr>
 <tr class="separator:a5f3fd7e27e913d308840ce47c5c4fc37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51943e18ec0f3184625d1b8d0519f732"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">trajectories::PiecewisePolynomial</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#a51943e18ec0f3184625d1b8d0519f732">get_desired_zmp</a> () const</td></tr>
+<tr class="memitem:a51943e18ec0f3184625d1b8d0519f732"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">trajectories::PiecewisePolynomial</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#a51943e18ec0f3184625d1b8d0519f732">get_desired_zmp</a> () const</td></tr>
 <tr class="memdesc:a51943e18ec0f3184625d1b8d0519f732"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the desired ZMP trajectory.  <a href="#a51943e18ec0f3184625d1b8d0519f732">More...</a><br /></td></tr>
 <tr class="separator:a51943e18ec0f3184625d1b8d0519f732"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50f6558b40b7155071e5d4b6605857fe"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html">trajectories::ExponentialPlusPiecewisePolynomial</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#a50f6558b40b7155071e5d4b6605857fe">get_nominal_com</a> () const</td></tr>
+<tr class="memitem:a50f6558b40b7155071e5d4b6605857fe"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html">trajectories::ExponentialPlusPiecewisePolynomial</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#a50f6558b40b7155071e5d4b6605857fe">get_nominal_com</a> () const</td></tr>
 <tr class="memdesc:a50f6558b40b7155071e5d4b6605857fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the nominal CoM trajectory.  <a href="#a50f6558b40b7155071e5d4b6605857fe">More...</a><br /></td></tr>
 <tr class="separator:a50f6558b40b7155071e5d4b6605857fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69e4da8d15d4f2dc46e537dbfcdc7ec0"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html">trajectories::ExponentialPlusPiecewisePolynomial</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#a69e4da8d15d4f2dc46e537dbfcdc7ec0">get_nominal_comd</a> () const</td></tr>
+<tr class="memitem:a69e4da8d15d4f2dc46e537dbfcdc7ec0"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html">trajectories::ExponentialPlusPiecewisePolynomial</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#a69e4da8d15d4f2dc46e537dbfcdc7ec0">get_nominal_comd</a> () const</td></tr>
 <tr class="memdesc:a69e4da8d15d4f2dc46e537dbfcdc7ec0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the nominal CoM velocity trajectory.  <a href="#a69e4da8d15d4f2dc46e537dbfcdc7ec0">More...</a><br /></td></tr>
 <tr class="separator:a69e4da8d15d4f2dc46e537dbfcdc7ec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b96099ad4b5cdb6cd27f5f6c4f5b245"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html">trajectories::ExponentialPlusPiecewisePolynomial</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#a4b96099ad4b5cdb6cd27f5f6c4f5b245">get_nominal_comdd</a> () const</td></tr>
+<tr class="memitem:a4b96099ad4b5cdb6cd27f5f6c4f5b245"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html">trajectories::ExponentialPlusPiecewisePolynomial</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#a4b96099ad4b5cdb6cd27f5f6c4f5b245">get_nominal_comdd</a> () const</td></tr>
 <tr class="memdesc:a4b96099ad4b5cdb6cd27f5f6c4f5b245"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the nominal CoM acceleration trajectory.  <a href="#a4b96099ad4b5cdb6cd27f5f6c4f5b245">More...</a><br /></td></tr>
 <tr class="separator:a4b96099ad4b5cdb6cd27f5f6c4f5b245"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a581c6185f037117b781bebb85bd89aa4"><td class="memItemLeft" align="right" valign="top">const Eigen::Matrix&lt; <a class="el" href="classdouble.html">double</a>, 4, 4 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#a581c6185f037117b781bebb85bd89aa4">get_Vxx</a> () const</td></tr>
+<tr class="memitem:a581c6185f037117b781bebb85bd89aa4"><td class="memItemLeft" align="right" valign="top">const Eigen::Matrix&lt; <a class="el" href="classdouble.html">double</a>, 4, 4 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#a581c6185f037117b781bebb85bd89aa4">get_Vxx</a> () const</td></tr>
 <tr class="memdesc:a581c6185f037117b781bebb85bd89aa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the time invariant second order term (S1 in [1]) of the value function.  <a href="#a581c6185f037117b781bebb85bd89aa4">More...</a><br /></td></tr>
 <tr class="separator:a581c6185f037117b781bebb85bd89aa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae044d1635713f78183db74d7f890f4ed"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html">trajectories::ExponentialPlusPiecewisePolynomial</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#ae044d1635713f78183db74d7f890f4ed">get_Vx</a> () const</td></tr>
+<tr class="memitem:ae044d1635713f78183db74d7f890f4ed"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html">trajectories::ExponentialPlusPiecewisePolynomial</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#ae044d1635713f78183db74d7f890f4ed">get_Vx</a> () const</td></tr>
 <tr class="memdesc:ae044d1635713f78183db74d7f890f4ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the time varying first order term (s2 in [1]) of the value function.  <a href="#ae044d1635713f78183db74d7f890f4ed">More...</a><br /></td></tr>
 <tr class="separator:ae044d1635713f78183db74d7f890f4ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96a757e27b1ce2d3380e66f4ea492f29"><td class="memItemLeft" align="right" valign="top">const Eigen::Vector4d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#a96a757e27b1ce2d3380e66f4ea492f29">get_Vx</a> (<a class="el" href="classdouble.html">double</a> time) const</td></tr>
+<tr class="memitem:a96a757e27b1ce2d3380e66f4ea492f29"><td class="memItemLeft" align="right" valign="top">const Eigen::Vector4d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#a96a757e27b1ce2d3380e66f4ea492f29">get_Vx</a> (<a class="el" href="classdouble.html">double</a> time) const</td></tr>
 <tr class="memdesc:a96a757e27b1ce2d3380e66f4ea492f29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the time varying first order term (s2 in [1]) of the value function, evaluated at the given <code>time</code>.  <a href="#a96a757e27b1ce2d3380e66f4ea492f29">More...</a><br /></td></tr>
 <tr class="separator:a96a757e27b1ce2d3380e66f4ea492f29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
-<tr class="memitem:a3bcc365fc2bb05ffe3b2501e66794e73"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#a3bcc365fc2bb05ffe3b2501e66794e73">ZmpPlanner</a> (const <a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html">ZmpPlanner</a> &amp;)=default</td></tr>
+<tr class="memitem:a3bcc365fc2bb05ffe3b2501e66794e73"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#a3bcc365fc2bb05ffe3b2501e66794e73">ZmpPlanner</a> (const <a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html">ZmpPlanner</a> &amp;)=default</td></tr>
 <tr class="separator:a3bcc365fc2bb05ffe3b2501e66794e73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ad44e1ac60f99a1d234a03529b9f49d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html">ZmpPlanner</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#a1ad44e1ac60f99a1d234a03529b9f49d">operator=</a> (const <a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html">ZmpPlanner</a> &amp;)=default</td></tr>
+<tr class="memitem:a1ad44e1ac60f99a1d234a03529b9f49d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html">ZmpPlanner</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#a1ad44e1ac60f99a1d234a03529b9f49d">operator=</a> (const <a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html">ZmpPlanner</a> &amp;)=default</td></tr>
 <tr class="separator:a1ad44e1ac60f99a1d234a03529b9f49d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd2452f9c95ca4a7d17f976bfb24c93c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#afd2452f9c95ca4a7d17f976bfb24c93c">ZmpPlanner</a> (<a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html">ZmpPlanner</a> &amp;&amp;)=default</td></tr>
+<tr class="memitem:afd2452f9c95ca4a7d17f976bfb24c93c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#afd2452f9c95ca4a7d17f976bfb24c93c">ZmpPlanner</a> (<a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html">ZmpPlanner</a> &amp;&amp;)=default</td></tr>
 <tr class="separator:afd2452f9c95ca4a7d17f976bfb24c93c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6e9fb473689bcf0409c7dc1ca7952c2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html">ZmpPlanner</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#ad6e9fb473689bcf0409c7dc1ca7952c2">operator=</a> (<a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html">ZmpPlanner</a> &amp;&amp;)=default</td></tr>
+<tr class="memitem:ad6e9fb473689bcf0409c7dc1ca7952c2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html">ZmpPlanner</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#ad6e9fb473689bcf0409c7dc1ca7952c2">operator=</a> (<a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html">ZmpPlanner</a> &amp;&amp;)=default</td></tr>
 <tr class="separator:ad6e9fb473689bcf0409c7dc1ca7952c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -285,9 +285,9 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html">ZmpPlanner</a> </td>
+          <td class="memname"><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html">ZmpPlanner</a> </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html">ZmpPlanner</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html">ZmpPlanner</a> &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -311,9 +311,9 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html">ZmpPlanner</a> </td>
+          <td class="memname"><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html">ZmpPlanner</a> </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html">ZmpPlanner</a> &amp;&amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html">ZmpPlanner</a> &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -337,7 +337,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html">ZmpPlanner</a> </td>
+          <td class="memname"><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html">ZmpPlanner</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -388,7 +388,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>center of pressure (CoP) </dd></dl>
-<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has already been called. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has already been called. </dd></dl>
 
 </div>
 </div>
@@ -427,7 +427,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Optimal CoMdd. </dd></dl>
-<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has already been called. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has already been called. </dd></dl>
 
 </div>
 </div>
@@ -447,7 +447,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Getter for A matrix. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has already been called. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has already been called. </dd></dl>
 
 </div>
 </div>
@@ -467,7 +467,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Getter for B matrix. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has already been called. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has already been called. </dd></dl>
 
 </div>
 </div>
@@ -487,7 +487,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Getter for C matrix. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has already been called. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has already been called. </dd></dl>
 
 </div>
 </div>
@@ -507,7 +507,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Getter for D matrix. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has already been called. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has already been called. </dd></dl>
 
 </div>
 </div>
@@ -528,7 +528,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the desired ZMP evaluated at <code>time</code>. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has already been called. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has already been called. </dd></dl>
 
 </div>
 </div>
@@ -548,7 +548,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the desired ZMP trajectory. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has already been called. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has already been called. </dd></dl>
 
 </div>
 </div>
@@ -568,7 +568,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the position of the ZMP at the end of the desired trajectory. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has already been called. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has already been called. </dd></dl>
 
 </div>
 </div>
@@ -589,7 +589,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the nominal CoM position evaluated at <code>time</code>. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has already been called. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has already been called. </dd></dl>
 
 </div>
 </div>
@@ -609,7 +609,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the nominal CoM trajectory. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has already been called. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has already been called. </dd></dl>
 
 </div>
 </div>
@@ -630,7 +630,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the nominal CoM velocity evaluated at <code>time</code>. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has already been called. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has already been called. </dd></dl>
 
 </div>
 </div>
@@ -650,7 +650,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the nominal CoM velocity trajectory. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has already been called. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has already been called. </dd></dl>
 
 </div>
 </div>
@@ -671,7 +671,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the nominal CoM acceleration evaluated at <code>time</code>. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has already been called. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has already been called. </dd></dl>
 
 </div>
 </div>
@@ -691,7 +691,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the nominal CoM acceleration trajectory. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has already been called. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has already been called. </dd></dl>
 
 </div>
 </div>
@@ -711,7 +711,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Getter for Qy matrix. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has already been called. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has already been called. </dd></dl>
 
 </div>
 </div>
@@ -731,7 +731,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Getter for R matrix. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has already been called. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has already been called. </dd></dl>
 
 </div>
 </div>
@@ -751,7 +751,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the time varying first order term (s2 in [1]) of the value function. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has already been called. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has already been called. </dd></dl>
 
 </div>
 </div>
@@ -772,7 +772,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the time varying first order term (s2 in [1]) of the value function, evaluated at the given <code>time</code>. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has already been called. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has already been called. </dd></dl>
 
 </div>
 </div>
@@ -792,7 +792,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the time invariant second order term (S1 in [1]) of the value function. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has already been called. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has already been called. </dd></dl>
 
 </div>
 </div>
@@ -811,7 +811,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns true if <a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has been called. </p>
+<p>Returns true if <a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has been called. </p>
 
 </div>
 </div>
@@ -825,9 +825,9 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html">ZmpPlanner</a>&amp; operator= </td>
+          <td class="memname"><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html">ZmpPlanner</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html">ZmpPlanner</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html">ZmpPlanner</a> &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -851,9 +851,9 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html">ZmpPlanner</a>&amp; operator= </td>
+          <td class="memname"><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html">ZmpPlanner</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html">ZmpPlanner</a> &amp;&amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html">ZmpPlanner</a> &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -918,7 +918,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second order value function and linear policy. </p>
-<p>No other public method should be called until <a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has been called.</p>
+<p>No other public method should be called until <a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has been called.</p>
 <p>The velocity of the ZMP at the end of <code>zmp_d</code> does not need to be zero, but the user should treat the result with caution, since the resulting nominal CoM trajectory diverges exponentially quickly beyond the end of <code>zmp_d</code>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">zmp_d</td><td>Desired two dimensional ZMP trajectory. </td></tr>
@@ -934,14 +934,14 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>drake/systems/controllers/<a class="el" href="zmp__planner_8h.html">zmp_planner.h</a></li>
+<li>drake/planning/locomotion/<a class="el" href="planning_2locomotion_2zmp__planner_8h.html">zmp_planner.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- footer -->
 <div class="navpath">
   <ul>
-    <li class="navelem"><a class="el" href="namespacedrake.html">drake</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1systems.html">systems</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1systems_1_1controllers.html">controllers</a></li><li class="navelem"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_zmp_planner.html">ZmpPlanner</a></li>
+    <li class="navelem"><a class="el" href="namespacedrake.html">drake</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1planning.html">planning</a></li><li class="navelem"><a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html">ZmpPlanner</a></li>
   </ul>
 </div>
 <footer id="nav-path", class="site-footer padding">

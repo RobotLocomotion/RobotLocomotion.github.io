@@ -1,5 +1,11 @@
 var NAVTREEINDEX17 =
 {
+"classdrake_1_1multibody_1_1_quaternion_euler_integration_constraint.html#add626512e1b963e65d91e1a177541089":[1,1,0,18,5],
+"classdrake_1_1multibody_1_1_quaternion_floating_joint.html":[3,0,0,8,78],
+"classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a00a5faeb1a32863c01b4228719a26362":[3,0,0,8,78,11],
+"classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a04d5ae2ba950104bc99c5953c0ad1e24":[3,0,0,8,78,24],
+"classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a114f793155a38fcedc8477ee8066b307":[3,0,0,8,78,21],
+"classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a1855a67d90891e570c494a50cfcdebb1":[3,0,0,8,78,12],
 "classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a1d8e7dad171e0ce4706f5bb89c6e02b2":[3,0,0,8,78,23],
 "classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a28376decbea1f79f4bf51b0edb30a203":[3,0,0,8,78,26],
 "classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a2bb3ce50974c9f369e8401d55c035820":[3,0,0,8,78,28],
@@ -243,11 +249,5 @@ var NAVTREEINDEX17 =
 "classdrake_1_1multibody_1_1_rpy_floating_joint.html#ac7583eca4df20c0db97d10b2ea63b484":[3,0,0,8,85,25],
 "classdrake_1_1multibody_1_1_rpy_floating_joint.html#ae24bf1ddac317b629f326fba2119d296":[3,0,0,8,85,10],
 "classdrake_1_1multibody_1_1_rpy_floating_joint.html#ae2d75a23ca8e71cd8ba917d3b965bcc4":[3,0,0,8,85,3],
-"classdrake_1_1multibody_1_1_rpy_floating_joint.html#ae4fa9c904accccf5900c63c3e65ca277":[3,0,0,8,85,29],
-"classdrake_1_1multibody_1_1_rpy_floating_joint.html#aefd6d11b423a11a306adf0d341fd3a3e":[3,0,0,8,85,16],
-"classdrake_1_1multibody_1_1_scoped_name.html":[3,0,0,8,86],
-"classdrake_1_1multibody_1_1_scoped_name.html#a15624ceef6c460ea198e86d8baf7cb14":[3,0,0,8,86,2],
-"classdrake_1_1multibody_1_1_scoped_name.html#a25f087a27c97dfc1614454ccacb9949b":[3,0,0,8,86,7],
-"classdrake_1_1multibody_1_1_scoped_name.html#a302d2517c1b5970dbfa3ab81cb6e32ff":[3,0,0,8,86,4],
-"classdrake_1_1multibody_1_1_scoped_name.html#a3ab585f77e98060b755ce5b5342c87c8":[3,0,0,8,86,11]
+"classdrake_1_1multibody_1_1_rpy_floating_joint.html#ae4fa9c904accccf5900c63c3e65ca277":[3,0,0,8,85,29]
 };

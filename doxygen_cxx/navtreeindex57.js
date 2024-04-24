@@ -1,5 +1,16 @@
 var NAVTREEINDEX57 =
 {
+"stiff__double__mass__spring__system_8h.html":[4,0,0,12,0,0,18],
+"stochastic_8h.html":[4,0,0,1,2,1],
+"stochastic_8h.html#a025af5d6df759f4a5bdb396846dcca74":[4,0,0,1,2,1,20],
+"stochastic_8h.html#a0611532f6e53d2b3eb39986468ad1399":[4,0,0,1,2,1,9],
+"stochastic_8h.html#a0d1c5da87f4161d4e6a493411c26976a":[4,0,0,1,2,1,24],
+"stochastic_8h.html#a2f098a551fbf448099900c3f3c3e13b4":[4,0,0,1,2,1,21],
+"stochastic_8h.html#a4891bbf6ba4372801a10dacfcbbd6172":[4,0,0,1,2,1,14],
+"stochastic_8h.html#a4f95ed0d3b0cb1459ef88fa33e833e5e":[4,0,0,1,2,1,19],
+"stochastic_8h.html#a57679ebbc3affa5691736cd9fae0173c":[4,0,0,1,2,1,17],
+"stochastic_8h.html#a57f6c7970d805c54498388c6e47113fa":[4,0,0,1,2,1,12],
+"stochastic_8h.html#a7d8363da077652b8868dcd5f6200358c":[4,0,0,1,2,1,22],
 "stochastic_8h.html#a884497545d6076a3763d5e62549b117d":[4,0,0,1,2,1,18],
 "stochastic_8h.html#a9db0a3ddbcab1e2ecbb6e6257c03ea3d":[4,0,0,1,2,1,15],
 "stochastic_8h.html#ab732700b0814fc1fba1b7b8cd80f9e53":[4,0,0,1,2,1,10],
@@ -238,16 +249,5 @@ var NAVTREEINDEX57 =
 "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_binary_search_options.html#ab1b44c3109bef4f0e17329fd44b7a006":[3,0,0,4,1,6,1,4],
 "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_binary_search_options.html#ae90ffbfbdade0558e319428b1d25e0f1":[3,0,0,4,1,6,1,1],
 "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html":[3,0,0,4,1,6,2],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#a00b3b24514bf89edc6ca5e662eba136d":[3,0,0,4,1,6,2,0],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#a0845096282a9a709315f3fe6cdb0fdfc":[3,0,0,4,1,6,2,1],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#a1295fafef4c110ac834bc4efda3dfd1e":[3,0,0,4,1,6,2,4],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#a3f5e525b55e7919db6fd454ca67c1566":[3,0,0,4,1,6,2,3],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#a6c4438afbf2190941ebeae2f8e16dd11":[3,0,0,4,1,6,2,6],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#ab33e404245eaa2fad3341ef9018bb54e":[3,0,0,4,1,6,2,5],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#adfbc0ec5326fc2132aa538699f74281a":[3,0,0,4,1,6,2,2],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_separation_certificate_given_polytope_options.html":[3,0,0,4,1,6,3],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_separation_certificate_given_polytope_options.html#aa435fc27c0cdc3bf251313acb02f499f":[3,0,0,4,1,6,3,0],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_separation_certificate_given_polytope_options.html#ad174bf3a68f2afc5a998eddf1fbbe860":[3,0,0,4,1,6,3,1],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate.html":[3,0,0,4,1,6,6],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate.html#a37ff9ce4be74e434d4ae243886bdfec4":[3,0,0,4,1,6,6,1]
+"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#a00b3b24514bf89edc6ca5e662eba136d":[3,0,0,4,1,6,2,0]
 };

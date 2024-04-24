@@ -1,5 +1,11 @@
 var NAVTREEINDEX12 =
 {
+"classdrake_1_1math_1_1_roll_pitch_yaw.html#a6fe481ebbe032779741a43038c7df8b6":[3,0,0,7,12,31],
+"classdrake_1_1math_1_1_roll_pitch_yaw.html#a752cee7d06a108142e5a63947d7431fe":[3,0,0,7,12,40],
+"classdrake_1_1math_1_1_roll_pitch_yaw.html#a94badf0407176b4873d7a4159b00f2b0":[3,0,0,7,12,29],
+"classdrake_1_1math_1_1_roll_pitch_yaw.html#a9608dfad05e4d055ccd12ea16724d682":[3,0,0,7,12,11],
+"classdrake_1_1math_1_1_roll_pitch_yaw.html#a978a8b146ac3388416fc5c72b553f91a":[3,0,0,7,12,34],
+"classdrake_1_1math_1_1_roll_pitch_yaw.html#a9def8efe29252cfb96e1d49ba4bfb952":[3,0,0,7,12,38],
 "classdrake_1_1math_1_1_roll_pitch_yaw.html#aa3085e2be2a7a63a64033ac4861d349e":[3,0,0,7,12,23],
 "classdrake_1_1math_1_1_roll_pitch_yaw.html#aa45c856194c1c3f7bcc86c2d97bcd78c":[3,0,0,7,12,2],
 "classdrake_1_1math_1_1_roll_pitch_yaw.html#aa6002620cfd6839681352ac9b57e0606":[3,0,0,7,12,13],
@@ -243,11 +249,5 @@ var NAVTREEINDEX12 =
 "classdrake_1_1multibody_1_1_deformable_contact_info.html#ac82dd03d7c709425b77ffe79bd4a3fa5":[3,0,0,8,24,6],
 "classdrake_1_1multibody_1_1_deformable_model.html":[3,0,0,8,25],
 "classdrake_1_1multibody_1_1_deformable_model.html#a0522dd997904b1a3c75fce34250b63a7":[3,0,0,8,25,11],
-"classdrake_1_1multibody_1_1_deformable_model.html#a0c18b0c8d67975d2ee7ca2b8bb01c28d":[3,0,0,8,25,4],
-"classdrake_1_1multibody_1_1_deformable_model.html#a0dcc2aacf14abcecaaa220ceda00d7eb":[3,0,0,8,25,12],
-"classdrake_1_1multibody_1_1_deformable_model.html#a1fbbceb086e5b356101ff99949aaa0d3":[3,0,0,8,25,5],
-"classdrake_1_1multibody_1_1_deformable_model.html#a30fb3e3a83ccc6c084e2366b891c5e70":[3,0,0,8,25,6],
-"classdrake_1_1multibody_1_1_deformable_model.html#a3edee15645c6e2abd1f8d70b27f0a0cb":[3,0,0,8,25,7],
-"classdrake_1_1multibody_1_1_deformable_model.html#a43232b40951ba5412cc46880c836caff":[3,0,0,8,25,0],
-"classdrake_1_1multibody_1_1_deformable_model.html#a466a23330391176d84dbb60a03db8a39":[3,0,0,8,25,19]
+"classdrake_1_1multibody_1_1_deformable_model.html#a0c18b0c8d67975d2ee7ca2b8bb01c28d":[3,0,0,8,25,4]
 };
