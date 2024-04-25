@@ -1,5 +1,11 @@
 var NAVTREEINDEX7 =
 {
+"classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a319e621fc359dd8daad48247f95b12fa":[3,0,0,4,62,18],
+"classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a39b0509ce7179535d6b30f11fb305dc6":[3,0,0,4,62,29],
+"classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a3c9e33a8f7704980ea0a0f3a4455eaf7":[3,0,0,4,62,21],
+"classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a421490ed6cab1812d3a8380432739880":[3,0,0,4,62,28],
+"classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a4635cbdcb02988477b2dbaaf5e9f6dbd":[3,0,0,4,62,2],
+"classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a4bd970f0f7b8983764e827d11802605f":[3,0,0,4,62,13],
 "classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a505ea28f0f6274285a379c870c44bb37":[3,0,0,4,62,24],
 "classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a592a16c903cba74df19b8b070bee0b7f":[3,0,0,4,62,8],
 "classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a5d8645defeea4264d39cf1bdf5a66f79":[3,0,0,4,62,23],
@@ -243,11 +249,5 @@ var NAVTREEINDEX7 =
 "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aee74f49fab7ccaabd8661e516c7a8d9f":[1,1,1,3,1],
 "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aee74f49fab7ccaabd8661e516c7a8d9f":[1,5,5,3,1],
 "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#af2bcbfea8bf330173c41c6cbe4985361":[1,1,1,3,14],
-"classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#af2bcbfea8bf330173c41c6cbe4985361":[1,5,5,3,14],
-"classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#af7add202067720eb1a04fac8f1781c87":[1,1,1,3,36],
-"classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#af7add202067720eb1a04fac8f1781c87":[1,5,5,3,36],
-"classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#affad14a5bd9a8a9827a0e9d15d08dd4e":[1,1,1,3,12],
-"classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#affad14a5bd9a8a9827a0e9d15d08dd4e":[1,5,5,3,12],
-"classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box.html":[3,0,0,4,1,5],
-"classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box.html#a1c23b4c5693c34544927876b910c7e42":[3,0,0,4,1,5,5]
+"classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#af2bcbfea8bf330173c41c6cbe4985361":[1,5,5,3,14]
 };

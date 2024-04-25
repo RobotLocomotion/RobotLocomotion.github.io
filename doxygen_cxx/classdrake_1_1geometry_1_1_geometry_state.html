@@ -229,6 +229,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aab26f2d2a53102c9f4915433cf90e443"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#aab26f2d2a53102c9f4915433cf90e443">NumGeometriesWithRole</a> (<a class="el" href="namespacedrake_1_1geometry.html#acdd79a1a4f81dd6ee5cddcb21149b951">Role</a> role) const</td></tr>
 <tr class="memdesc:aab26f2d2a53102c9f4915433cf90e443"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#aab26f2d2a53102c9f4915433cf90e443" title="Reports the total number of geometries in the scene graph with the indicated role.">SceneGraphInspector::NumGeometriesWithRole()</a>.  <a href="#aab26f2d2a53102c9f4915433cf90e443">More...</a><br /></td></tr>
 <tr class="separator:aab26f2d2a53102c9f4915433cf90e443"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b6230f377de538ecc2a305cf70d9e04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a8b6230f377de538ecc2a305cf70d9e04">NumDeformableGeometriesWithRole</a> (<a class="el" href="namespacedrake_1_1geometry.html#acdd79a1a4f81dd6ee5cddcb21149b951">Role</a> role) const</td></tr>
+<tr class="memdesc:a8b6230f377de538ecc2a305cf70d9e04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a8b6230f377de538ecc2a305cf70d9e04" title="Reports the total number of deformable geometries in the scene graph with the indicated role.">SceneGraphInspector::NumDeformableGeometriesWithRole()</a>.  <a href="#a8b6230f377de538ecc2a305cf70d9e04">More...</a><br /></td></tr>
+<tr class="separator:a8b6230f377de538ecc2a305cf70d9e04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92fed16317ea47894538967d2e340473"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a92fed16317ea47894538967d2e340473">NumDynamicGeometries</a> () const</td></tr>
 <tr class="memdesc:a92fed16317ea47894538967d2e340473"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a92fed16317ea47894538967d2e340473" title="Reports the total number of dynamic geometries in the scene graph.">SceneGraphInspector::NumDynamicGeometries()</a>.  <a href="#a92fed16317ea47894538967d2e340473">More...</a><br /></td></tr>
 <tr class="separator:a92fed16317ea47894538967d2e340473"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -328,6 +331,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9a58efa800a86370e7c5ad9b6849302c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html">VolumeMesh</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a9a58efa800a86370e7c5ad9b6849302c">GetReferenceMesh</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id) const</td></tr>
 <tr class="memdesc:a9a58efa800a86370e7c5ad9b6849302c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a1323170e73b8758ec1f22bfa1fd9a4de" title="Returns the reference mesh of the geometry with the given geometry_id, measured and expressed in the ...">SceneGraphInspector::GetReferenceMesh()</a>.  <a href="#a9a58efa800a86370e7c5ad9b6849302c">More...</a><br /></td></tr>
 <tr class="separator:a9a58efa800a86370e7c5ad9b6849302c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b16519a3d83537ec145272c57bbfe99"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; internal::RenderMesh &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a0b16519a3d83537ec145272c57bbfe99">GetDrivenRenderMeshes</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id, <a class="el" href="namespacedrake_1_1geometry.html#acdd79a1a4f81dd6ee5cddcb21149b951">Role</a> role) const</td></tr>
+<tr class="memdesc:a0b16519a3d83537ec145272c57bbfe99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#aaf6036a1f97f1b292af01330afcc522c" title="Returns the render mesh representation of the driven meshes associated with the given role of the geo...">SceneGraphInspector::GetDrivenRenderMeshes()</a>.  <a href="#a0b16519a3d83537ec145272c57bbfe99">More...</a><br /></td></tr>
+<tr class="separator:a0b16519a3d83537ec145272c57bbfe99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa89ca0267e4297ea3e505971673ac22c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#aa89ca0267e4297ea3e505971673ac22c">IsDeformableGeometry</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id) const</td></tr>
 <tr class="memdesc:aa89ca0267e4297ea3e505971673ac22c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a8c8bed334a4066e25a0e1abcf556daea" title="Returns true if the geometry with the given geometry_id is deformable.">SceneGraphInspector::IsDeformableGeometry()</a>.  <a href="#aa89ca0267e4297ea3e505971673ac22c">More...</a><br /></td></tr>
 <tr class="separator:aa89ca0267e4297ea3e505971673ac22c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -353,8 +359,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ab8b8b5d86e5586c5cd5d1d88250003dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a68254463fc7cb0837ab0eeab307c1195" title="Reports the position of the frame indicated by frame_id relative to its parent frame.">QueryObject::GetPoseInParent()</a>.  <a href="#ab8b8b5d86e5586c5cd5d1d88250003dc">More...</a><br /></td></tr>
 <tr class="separator:ab8b8b5d86e5586c5cd5d1d88250003dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39434892a961bb8d60a1ef7d3878ffa4"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a39434892a961bb8d60a1ef7d3878ffa4">get_configurations_in_world</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id) const</td></tr>
-<tr class="memdesc:a39434892a961bb8d60a1ef7d3878ffa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a7ef16ceab68157261224e26f51a96e76" title="Reports the configuration of the deformable geometry indicated by geometry_id relative to the world f...">QueryObject::GetConfigurationsInWorld()</a>.  <a href="#a39434892a961bb8d60a1ef7d3878ffa4">More...</a><br /></td></tr>
+<tr class="memdesc:a39434892a961bb8d60a1ef7d3878ffa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a7ef16ceab68157261224e26f51a96e76" title="Reports the configuration of the deformable geometry indicated by deformable_geometry_id relative to ...">QueryObject::GetConfigurationsInWorld()</a>.  <a href="#a39434892a961bb8d60a1ef7d3878ffa4">More...</a><br /></td></tr>
 <tr class="separator:a39434892a961bb8d60a1ef7d3878ffa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46aef56d7463861828053f6ae82b835b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a46aef56d7463861828053f6ae82b835b">GetDrivenMeshConfigurationsInWorld</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id, <a class="el" href="namespacedrake_1_1geometry.html#acdd79a1a4f81dd6ee5cddcb21149b951">Role</a> role) const</td></tr>
+<tr class="memdesc:a46aef56d7463861828053f6ae82b835b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a156d1376f245f1d98f70ae940fffce19" title="Reports the configurations of the driven meshes associated with the given role for the deformable geo...">QueryObject::GetDrivenMeshConfigurationsInWorld()</a>.  <a href="#a46aef56d7463861828053f6ae82b835b">More...</a><br /></td></tr>
+<tr class="separator:a46aef56d7463861828053f6ae82b835b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">State management</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>The methods that modify the state including: adding/removing entities from the state, modifying values in the state, etc.</p>
 </div></td></tr>
@@ -1205,7 +1214,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Implementation of <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a7ef16ceab68157261224e26f51a96e76" title="Reports the configuration of the deformable geometry indicated by geometry_id relative to the world f...">QueryObject::GetConfigurationsInWorld()</a>. </p>
+<p>Implementation of <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a7ef16ceab68157261224e26f51a96e76" title="Reports the configuration of the deformable geometry indicated by deformable_geometry_id relative to ...">QueryObject::GetConfigurationsInWorld()</a>. </p>
 
 </div>
 </div>
@@ -1440,6 +1449,66 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#adc1f51afc52b8dfd27aafbc8649cc278" title="Returns the convex hull (a polytope) associated with the given geometry_id, if it exists.">SceneGraphInspector::GetConvexHull()</a>. </p>
+
+</div>
+</div>
+<a id="a46aef56d7463861828053f6ae82b835b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46aef56d7463861828053f6ae82b835b">&#9670;&nbsp;</a></span>GetDrivenMeshConfigurationsInWorld()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt; &gt; GetDrivenMeshConfigurationsInWorld </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&#160;</td>
+          <td class="paramname"><em>geometry_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1geometry.html#acdd79a1a4f81dd6ee5cddcb21149b951">Role</a>&#160;</td>
+          <td class="paramname"><em>role</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implementation of <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a156d1376f245f1d98f70ae940fffce19" title="Reports the configurations of the driven meshes associated with the given role for the deformable geo...">QueryObject::GetDrivenMeshConfigurationsInWorld()</a>. </p>
+
+</div>
+</div>
+<a id="a0b16519a3d83537ec145272c57bbfe99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b16519a3d83537ec145272c57bbfe99">&#9670;&nbsp;</a></span>GetDrivenRenderMeshes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt;internal::RenderMesh&gt;&amp; GetDrivenRenderMeshes </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1geometry.html#acdd79a1a4f81dd6ee5cddcb21149b951">Role</a>&#160;</td>
+          <td class="paramname"><em>role</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#aaf6036a1f97f1b292af01330afcc522c" title="Returns the render mesh representation of the driven meshes associated with the given role of the geo...">SceneGraphInspector::GetDrivenRenderMeshes()</a>. </p>
 
 </div>
 </div>
@@ -2005,6 +2074,26 @@ Friends</h2></td></tr>
 
 <p>Returns the total number of registered deformable geometries. </p>
 <p>All deformable geometries are dynamic and <em>not</em> anchored. </p>
+
+</div>
+</div>
+<a id="a8b6230f377de538ecc2a305cf70d9e04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b6230f377de538ecc2a305cf70d9e04">&#9670;&nbsp;</a></span>NumDeformableGeometriesWithRole()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> NumDeformableGeometriesWithRole </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1geometry.html#acdd79a1a4f81dd6ee5cddcb21149b951">Role</a>&#160;</td>
+          <td class="paramname"><em>role</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a8b6230f377de538ecc2a305cf70d9e04" title="Reports the total number of deformable geometries in the scene graph with the indicated role.">SceneGraphInspector::NumDeformableGeometriesWithRole()</a>. </p>
 
 </div>
 </div>

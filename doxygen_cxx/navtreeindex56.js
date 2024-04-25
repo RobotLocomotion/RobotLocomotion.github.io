@@ -1,5 +1,11 @@
 var NAVTREEINDEX56 =
 {
+"schunk__wsg__lcm_8h.html":[4,0,0,6,2,5],
+"schunk__wsg__plain__controller_8h.html":[4,0,0,6,2,6],
+"schunk__wsg__plain__controller_8h.html#aee3ea37f4f505980157cf93a84687bcb":[4,0,0,6,2,6,0],
+"schunk__wsg__plain__controller_8h.html#aee3ea37f4f505980157cf93a84687bcba5f1cd95b5107d0b426a753a484765cc9":[4,0,0,6,2,6,0,1],
+"schunk__wsg__plain__controller_8h.html#aee3ea37f4f505980157cf93a84687bcbaea78f90b3c3afd64e139a391d6fdd88a":[4,0,0,6,2,6,0,0],
+"schunk__wsg__position__controller_8h.html":[4,0,0,6,2,7],
 "schunk__wsg__trajectory__generator_8h.html":[4,0,0,6,2,8],
 "scope__exit_8h.html":[4,0,0,1,55],
 "scoped__name_8h.html":[4,0,0,8,14,46],
@@ -243,11 +249,5 @@ var NAVTREEINDEX56 =
 "state_8h.html":[4,0,0,12,3,36],
 "state__feedback__controller__interface_8h.html":[4,0,0,12,1,11],
 "stateless__system_8h.html":[4,0,0,12,0,0,16],
-"static__equilibrium__constraint_8h.html":[4,0,0,8,8,7],
-"static__equilibrium__problem_8h.html":[4,0,0,8,8,8],
-"static__friction__cone__complementarity__constraint_8h.html":[4,0,0,8,8,9],
-"static__friction__cone__complementarity__constraint_8h.html#ga4508ec670196c3fe45e9b52af8a73d4a":[4,0,0,8,8,9,0],
-"static__friction__cone__constraint_8h.html":[4,0,0,8,8,10],
-"stationary__system_8h.html":[4,0,0,12,0,0,17],
-"stepwise__dense__output_8h.html":[4,0,0,12,0,30]
+"static__equilibrium__constraint_8h.html":[4,0,0,8,8,7]
 };

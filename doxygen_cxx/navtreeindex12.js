@@ -1,5 +1,11 @@
 var NAVTREEINDEX12 =
 {
+"classdrake_1_1math_1_1_roll_pitch_yaw.html#a459ec135d33ffe8af29e4de8411b038f":[3,0,0,7,12,8],
+"classdrake_1_1math_1_1_roll_pitch_yaw.html#a48a94c24dc4c0a6b79d0adb7f9639bd0":[3,0,0,7,12,4],
+"classdrake_1_1math_1_1_roll_pitch_yaw.html#a4ad4c305a20bcd72fe81699869055af6":[3,0,0,7,12,14],
+"classdrake_1_1math_1_1_roll_pitch_yaw.html#a4d644381846b1486e6295a0d46d8ef53":[3,0,0,7,12,25],
+"classdrake_1_1math_1_1_roll_pitch_yaw.html#a5bf1684541a32796ac3342bf505d0fdb":[3,0,0,7,12,32],
+"classdrake_1_1math_1_1_roll_pitch_yaw.html#a6c207f539cbcb4f3dd6e0aa1de517398":[3,0,0,7,12,19],
 "classdrake_1_1math_1_1_roll_pitch_yaw.html#a6fe481ebbe032779741a43038c7df8b6":[3,0,0,7,12,31],
 "classdrake_1_1math_1_1_roll_pitch_yaw.html#a752cee7d06a108142e5a63947d7431fe":[3,0,0,7,12,40],
 "classdrake_1_1math_1_1_roll_pitch_yaw.html#a94badf0407176b4873d7a4159b00f2b0":[3,0,0,7,12,29],
@@ -243,11 +249,5 @@ var NAVTREEINDEX12 =
 "classdrake_1_1multibody_1_1_deformable_contact_info.html#a4c02784ce80a279f6fd568ad1bcc7d44":[3,0,0,8,24,2],
 "classdrake_1_1multibody_1_1_deformable_contact_info.html#a5e75e607ebf2e82f0f6d774a0ca5f0f1":[3,0,0,8,24,5],
 "classdrake_1_1multibody_1_1_deformable_contact_info.html#a69d03e02820eeae5a08d9529226649a1":[3,0,0,8,24,1],
-"classdrake_1_1multibody_1_1_deformable_contact_info.html#a6ac05bc95e69c0667681ae90ce0ed1e2":[3,0,0,8,24,0],
-"classdrake_1_1multibody_1_1_deformable_contact_info.html#a71ce1b105045cb51e258230d31fa0819":[3,0,0,8,24,8],
-"classdrake_1_1multibody_1_1_deformable_contact_info.html#ab2cc67dee56fc240f02d70156e7079a0":[3,0,0,8,24,4],
-"classdrake_1_1multibody_1_1_deformable_contact_info.html#ac82dd03d7c709425b77ffe79bd4a3fa5":[3,0,0,8,24,6],
-"classdrake_1_1multibody_1_1_deformable_model.html":[3,0,0,8,25],
-"classdrake_1_1multibody_1_1_deformable_model.html#a0522dd997904b1a3c75fce34250b63a7":[3,0,0,8,25,11],
-"classdrake_1_1multibody_1_1_deformable_model.html#a0c18b0c8d67975d2ee7ca2b8bb01c28d":[3,0,0,8,25,4]
+"classdrake_1_1multibody_1_1_deformable_contact_info.html#a6ac05bc95e69c0667681ae90ce0ed1e2":[3,0,0,8,24,0]
 };

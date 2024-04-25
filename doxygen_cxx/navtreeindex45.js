@@ -1,5 +1,11 @@
 var NAVTREEINDEX45 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a65dc25e24cd2903a0861b9589065c897":[3,0,0,17,9,2],
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a80ed62d7a0f2d3eee401cdd29e47d534":[3,0,0,17,9,0],
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a854d7d9baf86ffadcceca2620d4b347d":[3,0,0,17,9,13],
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#aa1a71ddfb9ab85211d522ad0e948c426":[3,0,0,17,9,5],
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#aaeabb3c1dcb114550eee132dcebb3a6e":[3,0,0,17,9,9],
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#adff893a14b498f0e779c90305602e44d":[3,0,0,17,9,16],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#ae09cf8e8ad481f69f3cc1969ef491d60":[3,0,0,17,9,20],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#ae6ebde0f5bcaf6df51d6a4d1acc162b5":[3,0,0,17,9,12],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#af360987538c584ed2a7c5ad8e2f3d6e4":[3,0,0,17,9,1],
@@ -243,11 +249,5 @@ var NAVTREEINDEX45 =
 "continuous__algebraic__riccati__equation_8h.html":[4,0,0,7,6],
 "continuous__algebraic__riccati__equation_8h.html#a44ee9a3e4b4fa7d4359e3b05af563979":[4,0,0,7,6,1],
 "continuous__algebraic__riccati__equation_8h.html#a527ab4851f7449ff47374855c79b8413":[4,0,0,7,6,0],
-"continuous__lyapunov__equation_8h.html":[4,0,0,7,7],
-"continuous__lyapunov__equation_8h.html#a781bfc30740843ad1203fa68b7497401":[4,0,0,7,7,0],
-"continuous__state_8h.html":[4,0,0,12,3,9],
-"controlled__spring__mass__system_8h.html":[4,0,0,12,0,0,0],
-"convert__time__derivative_8h.html":[4,0,0,7,8],
-"convert__time__derivative_8h.html#a7ad7ab2561d0c05591eb9720adccc7d5":[4,0,0,7,8,0],
-"convex__set_8h.html":[4,0,0,4,1,4]
+"continuous__lyapunov__equation_8h.html":[4,0,0,7,7]
 };

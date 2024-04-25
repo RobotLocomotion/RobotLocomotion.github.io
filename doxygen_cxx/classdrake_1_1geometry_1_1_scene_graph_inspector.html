@@ -237,6 +237,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aab26f2d2a53102c9f4915433cf90e443"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#aab26f2d2a53102c9f4915433cf90e443">NumGeometriesWithRole</a> (<a class="el" href="namespacedrake_1_1geometry.html#acdd79a1a4f81dd6ee5cddcb21149b951">Role</a> role) const</td></tr>
 <tr class="memdesc:aab26f2d2a53102c9f4915433cf90e443"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the <em>total</em> number of geometries in the scene graph with the indicated role.  <a href="#aab26f2d2a53102c9f4915433cf90e443">More...</a><br /></td></tr>
 <tr class="separator:aab26f2d2a53102c9f4915433cf90e443"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b6230f377de538ecc2a305cf70d9e04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a8b6230f377de538ecc2a305cf70d9e04">NumDeformableGeometriesWithRole</a> (<a class="el" href="namespacedrake_1_1geometry.html#acdd79a1a4f81dd6ee5cddcb21149b951">Role</a> role) const</td></tr>
+<tr class="memdesc:a8b6230f377de538ecc2a305cf70d9e04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the <em>total</em> number of <em>deformable</em> geometries in the scene graph with the indicated role.  <a href="#a8b6230f377de538ecc2a305cf70d9e04">More...</a><br /></td></tr>
+<tr class="separator:a8b6230f377de538ecc2a305cf70d9e04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92fed16317ea47894538967d2e340473"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a92fed16317ea47894538967d2e340473">NumDynamicGeometries</a> () const</td></tr>
 <tr class="memdesc:a92fed16317ea47894538967d2e340473"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the total number of <em>dynamic</em> geometries in the scene graph.  <a href="#a92fed16317ea47894538967d2e340473">More...</a><br /></td></tr>
 <tr class="separator:a92fed16317ea47894538967d2e340473"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -327,6 +330,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1323170e73b8758ec1f22bfa1fd9a4de"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html">VolumeMesh</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a1323170e73b8758ec1f22bfa1fd9a4de">GetReferenceMesh</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id) const</td></tr>
 <tr class="memdesc:a1323170e73b8758ec1f22bfa1fd9a4de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the reference mesh of the geometry with the given <code>geometry_id</code>, measured and expressed in the geometry's frame, G.  <a href="#a1323170e73b8758ec1f22bfa1fd9a4de">More...</a><br /></td></tr>
 <tr class="separator:a1323170e73b8758ec1f22bfa1fd9a4de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf6036a1f97f1b292af01330afcc522c"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; internal::RenderMesh &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#aaf6036a1f97f1b292af01330afcc522c">GetDrivenRenderMeshes</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id, <a class="el" href="namespacedrake_1_1geometry.html#acdd79a1a4f81dd6ee5cddcb21149b951">Role</a> role) const</td></tr>
+<tr class="memdesc:aaf6036a1f97f1b292af01330afcc522c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the render mesh representation of the driven meshes associated with the given <code>role</code> of the geometry with the given <code>geometry_id</code>.  <a href="#aaf6036a1f97f1b292af01330afcc522c">More...</a><br /></td></tr>
+<tr class="separator:aaf6036a1f97f1b292af01330afcc522c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c8bed334a4066e25a0e1abcf556daea"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a8c8bed334a4066e25a0e1abcf556daea">IsDeformableGeometry</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id) const</td></tr>
 <tr class="memdesc:a8c8bed334a4066e25a0e1abcf556daea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the geometry with the given <code>geometry_id</code> is deformable.  <a href="#a8c8bed334a4066e25a0e1abcf556daea">More...</a><br /></td></tr>
 <tr class="separator:a8c8bed334a4066e25a0e1abcf556daea"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -731,6 +737,50 @@ Friends</h2></td></tr>
 
 <p>Returns the convex hull (a polytope) associated with the given <code>geometry_id</code>, if it exists. </p>
 <p>Basic primitive shapes don't have convex hulls (including, arbitrarily, <a class="el" href="classdrake_1_1geometry_1_1_box.html" title="Definition of a box.">Box</a>). But <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) mesh.">Mesh</a> and <a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">Convex</a> shapes do. Alternatively, if you already have a <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) mesh.">Mesh</a> or <a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">Convex</a> you can call <a class="el" href="classdrake_1_1geometry_1_1_mesh.html#abc7849f0d8f3e992a4f357f17fa6ae45" title="Reports the convex hull of the named mesh.">Mesh::GetConvexHull()</a> or <a class="el" href="classdrake_1_1geometry_1_1_convex.html#abc7849f0d8f3e992a4f357f17fa6ae45" title="Reports the convex hull of the named mesh.">Convex::GetConvexHull()</a>, respectively. </p>
+
+</div>
+</div>
+<a id="aaf6036a1f97f1b292af01330afcc522c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf6036a1f97f1b292af01330afcc522c">&#9670;&nbsp;</a></span>GetDrivenRenderMeshes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt;internal::RenderMesh&gt;&amp; GetDrivenRenderMeshes </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&#160;</td>
+          <td class="paramname"><em>geometry_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1geometry.html#acdd79a1a4f81dd6ee5cddcb21149b951">Role</a>&#160;</td>
+          <td class="paramname"><em>role</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the render mesh representation of the driven meshes associated with the given <code>role</code> of the geometry with the given <code>geometry_id</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">geometry_id</td><td>The identifier for the queried geometry. </td></tr>
+    <tr><td class="paramname">role</td><td>The role whose driven mesh representations are acquired. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>geometry_id</code> does not map to a registered deformable geometry with the given <code>role</code> or if <code>role</code> is <a class="el" href="namespacedrake_1_1geometry.html#acdd79a1a4f81dd6ee5cddcb21149b951a41ba12ed492ce20c3ff503a553ae85ea">Role::kUnassigned</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>This feature is considered to be <b>experimental</b> and may change or be removed at any time, without any deprecation notice ahead of time. </dd></dl>
 
 </div>
 </div>
@@ -1443,6 +1493,26 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="a8b6230f377de538ecc2a305cf70d9e04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b6230f377de538ecc2a305cf70d9e04">&#9670;&nbsp;</a></span>NumDeformableGeometriesWithRole()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> NumDeformableGeometriesWithRole </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1geometry.html#acdd79a1a4f81dd6ee5cddcb21149b951">Role</a>&#160;</td>
+          <td class="paramname"><em>role</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reports the <em>total</em> number of <em>deformable</em> geometries in the scene graph with the indicated role. </p>
+
+</div>
+</div>
 <a id="a92fed16317ea47894538967d2e340473"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a92fed16317ea47894538967d2e340473">&#9670;&nbsp;</a></span>NumDynamicGeometries()</h2>
 
@@ -1571,8 +1641,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a9174b38bac2fe383418fa6fa711ee153"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9174b38bac2fe383418fa6fa711ee153">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a7b176f170af189d4f31f33371e7d732c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b176f170af189d4f31f33371e7d732c">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1583,7 +1653,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html">SceneGraphInspector</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html">SceneGraphInspector</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html">SceneGraphInspector</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1597,8 +1667,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a7b176f170af189d4f31f33371e7d732c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b176f170af189d4f31f33371e7d732c">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a9174b38bac2fe383418fa6fa711ee153"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9174b38bac2fe383418fa6fa711ee153">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1609,7 +1679,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html">SceneGraphInspector</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html">SceneGraphInspector</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html">SceneGraphInspector</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
