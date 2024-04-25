@@ -248,6 +248,6 @@ var NAVTREEINDEX54 =
 "proximity__doxygen_8h.html":[4,0,0,4,2,53],
 "proximity__engine_8h.html":[4,0,0,4,40],
 "proximity__properties_8h.html":[4,0,0,4,41],
-"proximity__properties_8h.html#a06f08c367a0ef97e7fc397a8a44d49d8":[4,0,0,4,41,2],
-"proximity__properties_8h.html#a331f457a6ce0d146213faa844725dcda":[4,0,0,4,41,1]
+"proximity__properties_8h.html#a331f457a6ce0d146213faa844725dcda":[4,0,0,4,41,1],
+"proximity__properties_8h.html#a524d11f70b0594572404257e3f8640ee":[4,0,0,4,41,2]
 };

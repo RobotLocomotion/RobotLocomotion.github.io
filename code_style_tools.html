@@ -187,7 +187,7 @@ install Drake’s required version of <code class="language-plaintext highlighte
 
 <p>To run <code class="language-plaintext highlighter-rouge">clang-format</code>:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>clang-format-12 -i -style=file [file name]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>clang-format-15 -i -style=file [file name]
 </code></pre></div></div>
 
 <p>Using <code class="language-plaintext highlighter-rouge">clang-format</code> will modify the entire file that is specified. As an
@@ -195,11 +195,16 @@ alternative, you can use <code class="language-plaintext highlighter-rouge">git 
 portions of a file that you have modified. To run <code class="language-plaintext highlighter-rouge">git clang-format</code>:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># For development on Ubuntu: format a file that has been staged in git
-git clang-format-12 --binary=/usr/bin/clang-format-12 -- [file name]
+git clang-format-15 --binary=/usr/bin/clang-format-15 -- [file name]
 
 # For development on Ubuntu: format a file that has been modified but not staged
-git clang-format-12 --binary=/usr/bin/clang-format-12 -f -- [file name]
+git clang-format-15 --binary=/usr/bin/clang-format-15 -f -- [file name]
 </code></pre></div></div>
+
+<p>On macOS, the command to use is
+<code class="language-plaintext highlighter-rouge">/opt/homebrew/opt/llvm@15/bin/clang-format</code>.
+Note in particular that <code class="language-plaintext highlighter-rouge">15</code> is part of the directory name, not a suffix on
+the program name.</p>
 
 <h3 id="ide-integration">IDE integration</h3>
 

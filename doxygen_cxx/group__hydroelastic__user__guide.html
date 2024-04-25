@@ -354,13 +354,13 @@ Assigning hydroelastic properties in file specifications</h4>
 Assigning hydroelastic properties in code</h4>
 <p>Hydroelastic properties can be set to objects programmatically via the following APIs (see their documentation for further details):</p>
 <ul>
-<li><a class="el" href="namespacedrake_1_1geometry.html#a06f08c367a0ef97e7fc397a8a44d49d8" title="AddContactMaterial() adds general contact material properties to the given set of proximity propertie...">AddContactMaterial()</a></li>
+<li><a class="el" href="namespacedrake_1_1geometry.html#a524d11f70b0594572404257e3f8640ee" title="AddContactMaterial() adds general contact material properties to the given set of proximity propertie...">AddContactMaterial()</a></li>
 <li><a class="el" href="namespacedrake_1_1geometry.html#af76ed94bef3f81765a1b3ce069562e00" title="Adds properties to the given set of proximity properties sufficient to cause the associated geometry ...">AddRigidHydroelasticProperties()</a></li>
 <li><a class="el" href="namespacedrake_1_1geometry.html#a5a4cec840d5cb801271dbe609deaf0fe" title="Adds properties to the given set of proximity properties sufficient to cause the associated geometry ...">AddCompliantHydroelasticProperties()</a></li>
 <li><a class="el" href="namespacedrake_1_1geometry.html#a331f457a6ce0d146213faa844725dcda" title="Compliant half spaces are handled as a special case; they do not get tessellated.">AddCompliantHydroelasticPropertiesForHalfSpace()</a></li>
 </ul>
 <p>Some extra notes:</p>
-<p><a class="el" href="namespacedrake_1_1geometry.html#a06f08c367a0ef97e7fc397a8a44d49d8" title="AddContactMaterial() adds general contact material properties to the given set of proximity propertie...">AddContactMaterial()</a> isn’t hydroelastic contact specific, but does provide a mechanism for setting the friction coefficients that hydroelastic and point contact models both use.</p>
+<p><a class="el" href="namespacedrake_1_1geometry.html#a524d11f70b0594572404257e3f8640ee" title="AddContactMaterial() adds general contact material properties to the given set of proximity propertie...">AddContactMaterial()</a> isn’t hydroelastic contact specific, but does provide a mechanism for setting the friction coefficients that hydroelastic and point contact models both use.</p>
 <p><a class="el" href="namespacedrake_1_1geometry.html#af76ed94bef3f81765a1b3ce069562e00" title="Adds properties to the given set of proximity properties sufficient to cause the associated geometry ...">AddRigidHydroelasticProperties()</a> is overloaded. One version accepts a value for resolution hint, one does not. When in doubt which to use, it is harmless to provide a resolution hint value that would be ignored for some geometries, but failing to provide one where necessary will cause the simulation to throw an exception. Note the special case for declaring a compliant half space &ndash; it takes the required slab thickness parameter in addition to the hydroelastic modulus value.</p>
 <h2><a class="anchor" id="hug_visualizing"></a>
 Visualizing hydroelastic contact</h2>
