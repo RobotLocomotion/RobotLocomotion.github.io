@@ -4112,16 +4112,11 @@ browser.</p>
 <dt class="sig sig-object py" id="pydrake.geometry.Meshcat.get_mutable_recording">
 <span class="sig-name descname"><span class="pre">get_mutable_recording</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Meshcat" title="pydrake.geometry.Meshcat"><span class="pre">pydrake.geometry.Meshcat</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::geometry::MeshcatAnimation</span></span></span><a class="headerlink" href="#pydrake.geometry.Meshcat.get_mutable_recording" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a mutable pointer to this Meshcat’s unique MeshcatAnimation
-object, if it exists, in which the frames will be recorded. This
-pointer can be used to set animation properties (like autoplay, the
-loop mode, number of repetitions, etc).</p>
+object, in which the frames will be recorded. This pointer can be used
+to set animation properties (like autoplay, the loop mode, number of
+repetitions, etc).</p>
 <p>The MeshcatAnimation object will only remain valid for the lifetime of
 <code class="docutils literal notranslate"><span class="pre">this</span></code> or until DeleteRecording() is called.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if meshcat does not have a recording.</strong> – </p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -4950,7 +4945,7 @@ animation to make the object appear or disappear at a particular
 frame.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.MeshcatAnimation.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.MeshcatAnimation" title="pydrake.geometry.MeshcatAnimation"><span class="pre">pydrake.geometry.MeshcatAnimation</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">frames_per_second</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">32.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.MeshcatAnimation.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.MeshcatAnimation" title="pydrake.geometry.MeshcatAnimation"><span class="pre">pydrake.geometry.MeshcatAnimation</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">frames_per_second</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">64.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.MeshcatAnimation.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Constructs the animation object.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">frames_per_second</span></code>:</dt><dd><p>a positive integer specifying the timing at which the frames are
