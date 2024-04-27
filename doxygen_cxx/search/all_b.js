@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['k',['k',['../classdrake_1_1examples_1_1scene__graph_1_1bouncing__ball_1_1_bouncing_ball_plant.html#af613e2b0ce080dc98b634661eca4e6ae',1,'drake::examples::scene_graph::bouncing_ball::BouncingBallPlant::k()'],['../structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html#a118c80afa021941c77e3295fbb2677ea',1,'drake::systems::controllers::FiniteHorizonLinearQuadraticRegulatorResult::K()'],['../structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html#a8f78ef113f89e86b283522fb7e59b308',1,'drake::systems::controllers::LinearQuadraticRegulatorResult::K()']]],
+  ['k',['K',['../structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html#a118c80afa021941c77e3295fbb2677ea',1,'drake::systems::controllers::FiniteHorizonLinearQuadraticRegulatorResult::K()'],['../structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html#a8f78ef113f89e86b283522fb7e59b308',1,'drake::systems::controllers::LinearQuadraticRegulatorResult::K()'],['../classdrake_1_1examples_1_1scene__graph_1_1bouncing__ball_1_1_bouncing_ball_plant.html#af613e2b0ce080dc98b634661eca4e6ae',1,'drake::examples::scene_graph::bouncing_ball::BouncingBallPlant::k()']]],
   ['k0',['k0',['../structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html#ae491527110c4ca50bb4fe345d2ef467a',1,'drake::systems::controllers::FiniteHorizonLinearQuadraticRegulatorResult']]],
   ['k16i',['k16I',['../namespacedrake_1_1systems_1_1sensors.html#aa27964439659a0be90e567d865ffb792a00582391087709af581a9e896ef882ef',1,'drake::systems::sensors']]],
   ['k16u',['k16U',['../namespacedrake_1_1systems_1_1sensors.html#aa27964439659a0be90e567d865ffb792a9368b1a6dc329fd741e75949a4c8b99a',1,'drake::systems::sensors']]],
@@ -178,6 +178,7 @@ var searchData=
   ['kmilp',['kMILP',['../namespacedrake_1_1solvers.html#ab09ca5e1afe9e5a4e8744ecb27839b15a41adb3a46194a70e097f15c9848b2c97',1,'drake::solvers']]],
   ['kminimalcoordinates',['kMinimalCoordinates',['../classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#af532ebccf30da4696c48ec61f6b4d663a9ff3e250bc19253cd24615673cc6c378',1,'drake::examples::bead_on_a_wire::BeadOnAWire']]],
   ['kminlowerbound',['kMinLowerBound',['../classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#ad3bb376a6d6d2164492750a2ee33fbd0af322fe68b3aa4385e65e59b4225af10b',1,'drake::solvers::MixedIntegerBranchAndBound']]],
+  ['kmip',['kMIP',['../classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5ba058f4d93de65b4c9dd778be760beaa90',1,'drake::geometry::optimization::GraphOfConvexSets']]],
   ['kmiqp',['kMIQP',['../namespacedrake_1_1solvers.html#ab09ca5e1afe9e5a4e8744ecb27839b15aa1029d46d3092d1662ee6baccbd926f8',1,'drake::solvers']]],
   ['kmisdp',['kMISDP',['../namespacedrake_1_1solvers.html#ab09ca5e1afe9e5a4e8744ecb27839b15aea23768965b758e81bdb3e2fb62476c8',1,'drake::solvers']]],
   ['kmisocp',['kMISOCP',['../namespacedrake_1_1solvers.html#ab09ca5e1afe9e5a4e8744ecb27839b15af91d74856b95694eb9624142e4317bb4',1,'drake::solvers']]],
@@ -263,8 +264,10 @@ var searchData=
   ['kreachedupdatetime',['kReachedUpdateTime',['../classdrake_1_1systems_1_1_integrator_base.html#a95ae527571e3f25c4415b93d12cb0ad9a804060ac669eb47e5d384d3800e59d9c',1,'drake::systems::IntegratorBase']]],
   ['kreachedzerocrossing',['kReachedZeroCrossing',['../classdrake_1_1systems_1_1_integrator_base.html#a95ae527571e3f25c4415b93d12cb0ad9a1d1f7136371fa0489571cddeb08084e8',1,'drake::systems::IntegratorBase']]],
   ['krelative',['kRelative',['../namespacedrake.html#af8777bc10296f9d39d52753861110e26af460a96ab20647996c15854794763384',1,'drake']]],
+  ['krelaxation',['kRelaxation',['../classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5baf0eaaa21b3713d009fbdbbcfc1f8b9b8',1,'drake::geometry::optimization::GraphOfConvexSets']]],
   ['krelu',['kReLU',['../namespacedrake_1_1systems.html#a30ed135f597ef0f136767f629a0472b0aaf7b6001c9a71950fb6858250e78f0fc',1,'drake::systems']]],
   ['kreplace',['kReplace',['../namespacedrake_1_1geometry.html#a52f8cb466b0827379bc8815f0d58aac3a8ba1782ca7c04c255b3d69d6d2411d90',1,'drake::geometry']]],
+  ['krestriction',['kRestriction',['../classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5bae6e3b13561e5aed0294cf5ca5765dd02',1,'drake::geometry::optimization::GraphOfConvexSets']]],
   ['kreuse',['kReuse',['../namespacedrake_1_1systems_1_1analysis__test.html#a7f6b93be07d871c8ff90c6018a226c5fa59157a08c563cdbd73eadab048cf7a64',1,'drake::systems::analysis_test']]],
   ['krgb',['kRgb',['../namespacedrake_1_1systems_1_1sensors.html#a60883d4958a60b91661e97027a85072aa79c7503f0e2c40a13957e8aac9ac9f7b',1,'drake::systems::sensors']]],
   ['krgb8u',['kRgb8U',['../namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3daeee66110e8b7e5d4ffd4f739ba15f5f6',1,'drake::systems::sensors']]],

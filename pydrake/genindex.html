@@ -683,6 +683,8 @@
 </li>
         <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.GraphOfConvexSets.EdgeId.__init__">(pydrake.geometry.optimization.GraphOfConvexSets.EdgeId method)</a>
 </li>
+        <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.GraphOfConvexSets.Transcription.__init__">(pydrake.geometry.optimization.GraphOfConvexSets.Transcription method)</a>
+</li>
         <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.GraphOfConvexSets.Vertex.__init__">(pydrake.geometry.optimization.GraphOfConvexSets.Vertex method)</a>
 </li>
         <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.GraphOfConvexSets.VertexId.__init__">(pydrake.geometry.optimization.GraphOfConvexSets.VertexId method)</a>
@@ -11186,6 +11188,8 @@
 </li>
       <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.GraphOfConvexSets.EdgeId">GraphOfConvexSets.EdgeId (class in pydrake.geometry.optimization)</a>
 </li>
+      <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.GraphOfConvexSets.Transcription">GraphOfConvexSets.Transcription (class in pydrake.geometry.optimization)</a>
+</li>
       <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.GraphOfConvexSets.Vertex">GraphOfConvexSets.Vertex (class in pydrake.geometry.optimization)</a>
 </li>
       <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.GraphOfConvexSets.VertexId">GraphOfConvexSets.VertexId (class in pydrake.geometry.optimization)</a>
@@ -12822,11 +12826,13 @@
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.ProgramType.kLP">kLP (pydrake.solvers.ProgramType attribute)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.geometry.html#pydrake.geometry.RenderLabel.kMaxUnreserved">kMaxUnreserved (pydrake.geometry.RenderLabel attribute)</a>
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.ProgramType.kMILP">kMILP (pydrake.solvers.ProgramType attribute)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.GraphOfConvexSets.Transcription.kMIP">kMIP (pydrake.geometry.optimization.GraphOfConvexSets.Transcription attribute)</a>
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.ProgramType.kMIQP">kMIQP (pydrake.solvers.ProgramType attribute)</a>
 </li>
@@ -12968,9 +12974,13 @@
 </li>
       <li><a href="pydrake.common.html#pydrake.common.ToleranceType.kRelative">kRelative (pydrake.common.ToleranceType attribute)</a>
 </li>
+      <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.GraphOfConvexSets.Transcription.kRelaxation">kRelaxation (pydrake.geometry.optimization.GraphOfConvexSets.Transcription attribute)</a>
+</li>
       <li><a href="pydrake.systems.primitives.html#pydrake.systems.primitives.PerceptronActivationType.kReLU">kReLU (pydrake.systems.primitives.PerceptronActivationType attribute)</a>
 </li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.RoleAssign.kReplace">kReplace (pydrake.geometry.RoleAssign attribute)</a>
+</li>
+      <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.GraphOfConvexSets.Transcription.kRestriction">kRestriction (pydrake.geometry.optimization.GraphOfConvexSets.Transcription attribute)</a>
 </li>
       <li><a href="pydrake.systems.sensors.html#pydrake.systems.sensors.PixelFormat.kRgb">kRgb (pydrake.systems.sensors.PixelFormat attribute)</a>
 </li>
@@ -14333,6 +14343,8 @@
         <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.CIrisGeometryType.name">(pydrake.geometry.optimization.CIrisGeometryType property)</a>
 </li>
         <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.CspaceFreePolytope.EllipsoidMarginCost.name">(pydrake.geometry.optimization.CspaceFreePolytope.EllipsoidMarginCost property)</a>
+</li>
+        <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.GraphOfConvexSets.Transcription.name">(pydrake.geometry.optimization.GraphOfConvexSets.Transcription property)</a>
 </li>
         <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.PlaneSide.name">(pydrake.geometry.optimization.PlaneSide property)</a>
 </li>
@@ -16966,6 +16978,10 @@
       </ul></li>
       <li><a href="pydrake.multibody.parsing.html#pydrake.multibody.parsing.PackageMap.ResolveUrl">ResolveUrl() (pydrake.multibody.parsing.PackageMap method)</a>
 </li>
+      <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.GraphOfConvexSetsOptions.restriction_solver">restriction_solver (pydrake.geometry.optimization.GraphOfConvexSetsOptions property)</a>
+</li>
+      <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.GraphOfConvexSetsOptions.restriction_solver_options">restriction_solver_options (pydrake.geometry.optimization.GraphOfConvexSetsOptions property)</a>
+</li>
       <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificateResult.result">result (pydrake.geometry.optimization.CspaceFreePolytope.SeparationCertificateResult property)</a>
 
       <ul>
@@ -17215,8 +17231,6 @@
 </li>
       </ul></li>
       <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.GraphOfConvexSetsOptions.rounding_seed">rounding_seed (pydrake.geometry.optimization.GraphOfConvexSetsOptions property)</a>
-</li>
-      <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.GraphOfConvexSetsOptions.rounding_solver_options">rounding_solver_options (pydrake.geometry.optimization.GraphOfConvexSetsOptions property)</a>
 </li>
       <li><a href="pydrake.math.html#pydrake.math.RotationMatrix.row">row() (pydrake.math.RotationMatrix method)</a>
 
@@ -21132,6 +21146,8 @@
         <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.CIrisGeometryType.value">(pydrake.geometry.optimization.CIrisGeometryType property)</a>
 </li>
         <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.CspaceFreePolytope.EllipsoidMarginCost.value">(pydrake.geometry.optimization.CspaceFreePolytope.EllipsoidMarginCost property)</a>
+</li>
+        <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.GraphOfConvexSets.Transcription.value">(pydrake.geometry.optimization.GraphOfConvexSets.Transcription property)</a>
 </li>
         <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.PlaneSide.value">(pydrake.geometry.optimization.PlaneSide property)</a>
 </li>

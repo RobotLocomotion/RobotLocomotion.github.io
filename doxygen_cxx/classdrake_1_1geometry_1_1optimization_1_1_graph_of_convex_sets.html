@@ -172,8 +172,14 @@ $(document).ready(function(){initNavTree('classdrake_1_1geometry_1_1optimization
 <div class="textblock"><p><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html" title="GraphOfConvexSets (GCS) implements the design pattern and optimization problems first introduced in t...">GraphOfConvexSets</a> (GCS) implements the design pattern and optimization problems first introduced in the paper "Shortest Paths in Graphs of Convex Sets". </p>
 <p>"Shortest Paths in Graphs of Convex Sets" by Tobia Marcucci, Jack Umenberger, Pablo A. Parrilo, Russ Tedrake. <a href="https://arxiv.org/abs/2101.11565">https://arxiv.org/abs/2101.11565</a></p>
 <dl class="section warning"><dt>Warning</dt><dd>This feature is considered to be <b>experimental</b> and may change or be removed at any time, without any deprecation notice ahead of time.</dd></dl>
-<p>Each vertex in the graph is associated with a convex set over continuous variables, edges in the graph contain convex costs and constraints on these continuous variables. We can then formulate optimization problems over this graph, such as the shortest path problem where each visit to a vertex also corresponds to selecting an element from the convex set subject to the costs and constraints. Behind the scenes, we construct efficient mixed-integer convex transcriptions of the graph problem using MathematicalProgram.</p>
-<p>Design note: This class avoids providing any direct access to the MathematicalProgram that it constructs nor to the decision variables / constraints. The users should be able to write constraints against "placeholder" decision variables on the vertices and edges, but these get translated in non-trivial ways to the underlying program. </p>
+<p>Each vertex in the graph is associated with a convex set over continuous variables, edges in the graph contain convex costs and constraints on these continuous variables. We can then formulate optimization problems over this graph, such as the shortest path problem where each visit to a vertex also corresponds to selecting an element from the convex set subject to the costs and constraints. Behind the scenes, we construct efficient mixed-integer convex transcriptions of the graph problem using MathematicalProgram. However, we provide the option to solve an often tight convex relaxation of the problem with <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#a6787cfcca13150e38baf6ec079b36cc6" title="Flag to solve the relaxed version of the problem.">GraphOfConvexSetsOptions::convex_relaxation</a> and employ a cheap rounding stage which solves the convex restriction along potential paths to find a feasible solution to the original problem.</p>
+<p>Design note: This class avoids providing any direct access to the MathematicalProgram that it constructs nor to the decision variables / constraints. The users should be able to write constraints against "placeholder" decision variables on the vertices and edges, but these get translated in non-trivial ways to the underlying program.</p>
+<p><b>Advanced Usage: Guiding Non-convex Optimization with the GraphOfConvexSets</b></p>
+<p>Solving a GCS problem using convex relaxation involves two components:</p><ul>
+<li><a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">Convex</a> Relaxation: The relaxation of the binary variables (edge activations) and perspective operations on the convex cost/constraints leads to a convex problem that considers the graph as a whole.</li>
+<li>Rounding: After solving the relaxation, a randomized rounding scheme is applied to obtain a feasible solution for the original problem. We interpret the relaxed flow variables as edge probabilities to guide the maximum likelyhood depth first search from the source to target vertices. Each rounding is calling SolveConvexRestriction.</li>
+</ul>
+<p>To handle non-convex constraints, one can provide convex surrogates to the relaxation and the true non-convex constraints to the rounding problem. These surrogates approximate the non-convex constraints, making the relaxation solvable as a convex optimization to guide the non-convex rounding. This can be controlled by the Transcription enum in the AddConstraint method. We encourage users to provide a strong convex surrogate, when possible, to better approximate the original non-convex problem. </p>
 </div>
 <p><code>#include &lt;drake/geometry/optimization/graph_of_convex_sets.h&gt;</code></p>
 <table class="memberdecls">
@@ -188,6 +194,12 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
+<tr class="memitem:a5b9188d435083bda24dd1cb73a7b5d5b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5b">Transcription</a> { <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5ba058f4d93de65b4c9dd778be760beaa90">kMIP</a>, 
+<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5baf0eaaa21b3713d009fbdbbcfc1f8b9b8">kRelaxation</a>, 
+<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5bae6e3b13561e5aed0294cf5ca5765dd02">kRestriction</a>
+ }</td></tr>
+<tr class="memdesc:a5b9188d435083bda24dd1cb73a7b5d5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify the transcription of the optimization problem to which a constraint or cost should be added, or from which they should be retrieved.  <a href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5b">More...</a><br /></td></tr>
+<tr class="separator:a5b9188d435083bda24dd1cb73a7b5d5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40866c7a0f18b425f096b14788af5301"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a40866c7a0f18b425f096b14788af5301">VertexId</a> = <a class="el" href="classdrake_1_1_identifier.html">Identifier</a>&lt; class VertexTag &gt;</td></tr>
 <tr class="separator:a40866c7a0f18b425f096b14788af5301"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4df1a3580f1ae7e96903c7b3f7b00974"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a4df1a3580f1ae7e96903c7b3f7b00974">EdgeId</a> = <a class="el" href="classdrake_1_1_identifier.html">Identifier</a>&lt; class EdgeTag &gt;</td></tr>
@@ -280,6 +292,39 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a5b9188d435083bda24dd1cb73a7b5d5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b9188d435083bda24dd1cb73a7b5d5b">&#9670;&nbsp;</a></span>Transcription</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5b">Transcription</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Specify the transcription of the optimization problem to which a constraint or cost should be added, or from which they should be retrieved. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a5b9188d435083bda24dd1cb73a7b5d5ba058f4d93de65b4c9dd778be760beaa90"></a>kMIP&#160;</td><td class="fielddoc"><p>The mixed integer formulation of the GCS problem. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5b9188d435083bda24dd1cb73a7b5d5baf0eaaa21b3713d009fbdbbcfc1f8b9b8"></a>kRelaxation&#160;</td><td class="fielddoc"><p>The relaxation of the GCS problem. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5b9188d435083bda24dd1cb73a7b5d5bae6e3b13561e5aed0294cf5ca5765dd02"></a>kRestriction&#160;</td><td class="fielddoc"><p>The restrction of the GCS problem where the path is fixed. </p>
+</td></tr>
+</table>
 
 </div>
 </div>
@@ -741,12 +786,7 @@ Friends</h2></td></tr>
 <p>The non-convexity in a GCS problem comes from the binary variables (phi) associated with the edges being active or inactive in the solution. </p>
 <p>If those binary variables are fixed, then the problem is convex &ndash; this is a so-called "convex restriction" of the original problem.</p>
 <p>The convex restriction can often be solved much more efficiently than solving the full GCS problem with additional constraints to fix the binaries; it can be written using less decision variables, and needs only to include the vertices associated with at least one of the active edges. Decision variables for all other convex sets will be set to NaN.</p>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if the program cannot be written as a convex optimization consumable by one of the standard solvers. </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Note that one can specify additional non-convex constraints, which may be not supported by all solvers. In this case, the provided solver will throw an exception. </p>
 
 </div>
 </div>

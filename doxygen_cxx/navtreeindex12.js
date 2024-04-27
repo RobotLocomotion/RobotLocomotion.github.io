@@ -1,5 +1,13 @@
 var NAVTREEINDEX12 =
 {
+"classdrake_1_1math_1_1_roll_pitch_yaw.html#a0f91696896d7b658dc357decb978b1ee":[3,0,0,7,12,24],
+"classdrake_1_1math_1_1_roll_pitch_yaw.html#a19246fa6997ba1bcfa96c5778206a435":[3,0,0,7,12,18],
+"classdrake_1_1math_1_1_roll_pitch_yaw.html#a1963c491b2b030410e51cda8a0c1350a":[3,0,0,7,12,30],
+"classdrake_1_1math_1_1_roll_pitch_yaw.html#a1d985b9afd6444973d176f246d937e09":[3,0,0,7,12,16],
+"classdrake_1_1math_1_1_roll_pitch_yaw.html#a1f2ab0e82c604812e4972069ea6d5fff":[3,0,0,7,12,1],
+"classdrake_1_1math_1_1_roll_pitch_yaw.html#a25e97cc71253ec54a478126d98fccca6":[3,0,0,7,12,21],
+"classdrake_1_1math_1_1_roll_pitch_yaw.html#a2aed89bb07dd455aabe953361562507c":[3,0,0,7,12,9],
+"classdrake_1_1math_1_1_roll_pitch_yaw.html#a36869c43028f54219e934c88c9179999":[3,0,0,7,12,27],
 "classdrake_1_1math_1_1_roll_pitch_yaw.html#a459ec135d33ffe8af29e4de8411b038f":[3,0,0,7,12,8],
 "classdrake_1_1math_1_1_roll_pitch_yaw.html#a48a94c24dc4c0a6b79d0adb7f9639bd0":[3,0,0,7,12,4],
 "classdrake_1_1math_1_1_roll_pitch_yaw.html#a4ad4c305a20bcd72fe81699869055af6":[3,0,0,7,12,14],
@@ -241,13 +249,5 @@ var NAVTREEINDEX12 =
 "classdrake_1_1multibody_1_1_coulomb_friction.html#a91980ef764c2fa43ebf7e60dd52c36e1":[3,0,0,8,23,1],
 "classdrake_1_1multibody_1_1_coulomb_friction.html#aa95ec70abea05997f50b5372501baacb":[3,0,0,8,23,2],
 "classdrake_1_1multibody_1_1_coulomb_friction.html#ad5b08fa5c4a715557c97d7e37cf51e2b":[3,0,0,8,23,7],
-"classdrake_1_1multibody_1_1_coulomb_friction.html#afc71862df754e2fe939a8e144374073f":[3,0,0,8,23,3],
-"classdrake_1_1multibody_1_1_deformable_contact_info.html":[3,0,0,8,24],
-"classdrake_1_1multibody_1_1_deformable_contact_info.html#a083fc52348e2a57c24ce16ad914cc7c6":[3,0,0,8,24,3],
-"classdrake_1_1multibody_1_1_deformable_contact_info.html#a2d90c51773e190f116b0b91c18cbf0cd":[3,0,0,8,24,9],
-"classdrake_1_1multibody_1_1_deformable_contact_info.html#a3d96e529452cd5214d50da17cd02db0e":[3,0,0,8,24,7],
-"classdrake_1_1multibody_1_1_deformable_contact_info.html#a4c02784ce80a279f6fd568ad1bcc7d44":[3,0,0,8,24,2],
-"classdrake_1_1multibody_1_1_deformable_contact_info.html#a5e75e607ebf2e82f0f6d774a0ca5f0f1":[3,0,0,8,24,5],
-"classdrake_1_1multibody_1_1_deformable_contact_info.html#a69d03e02820eeae5a08d9529226649a1":[3,0,0,8,24,1],
-"classdrake_1_1multibody_1_1_deformable_contact_info.html#a6ac05bc95e69c0667681ae90ce0ed1e2":[3,0,0,8,24,0]
+"classdrake_1_1multibody_1_1_coulomb_friction.html#afc71862df754e2fe939a8e144374073f":[3,0,0,8,23,3]
 };

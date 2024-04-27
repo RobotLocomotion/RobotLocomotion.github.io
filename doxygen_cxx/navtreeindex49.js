@@ -1,5 +1,13 @@
 var NAVTREEINDEX49 =
 {
+"formula_8h.html#a6869e7044dd90be5d972ee7dd4e821b6aa74c05d080620f087c4e523977230666":[4,0,0,1,3,0,7,5,11],
+"formula_8h.html#a6869e7044dd90be5d972ee7dd4e821b6abe5721bf93d718a79358217ec9b88176":[4,0,0,1,3,0,7,5,8],
+"formula_8h.html#a6869e7044dd90be5d972ee7dd4e821b6ac33315685a0cba3ce53be378b3c7874b":[4,0,0,1,3,0,7,5,9],
+"formula_8h.html#a6869e7044dd90be5d972ee7dd4e821b6ae4ecc5da3c6dbb4448f25990dc609727":[4,0,0,1,3,0,7,5,4],
+"formula_8h.html#a6869e7044dd90be5d972ee7dd4e821b6af827cf462f62848df37c5e1e94a4da74":[4,0,0,1,3,0,7,5,1],
+"formula_8h.html#a6869e7044dd90be5d972ee7dd4e821b6af8320b26d30ab433c5a54546d21f414c":[4,0,0,1,3,0,7,5,0],
+"formula_8h.html#a6869e7044dd90be5d972ee7dd4e821b6afd116e3418522ffc34d7423bc601510d":[4,0,0,1,3,0,7,5,13],
+"formula_8h.html#a71017b418d6504f2947c3a1a0e04d799":[4,0,0,1,3,0,7,14],
 "formula_8h.html#a71e40924c21a4f08a5cc274eaf7ddebd":[4,0,0,1,3,0,7,38],
 "formula_8h.html#a819538a0900f5b91b88a5a5b25f756d1":[4,0,0,1,3,0,7,23],
 "formula_8h.html#a912368173773912a9b75abfaf208e1e1":[4,0,0,1,3,0,7,47],
@@ -115,8 +123,8 @@ var NAVTREEINDEX49 =
 "functions_enum.html":[3,3,4],
 "functions_eval.html":[3,3,5],
 "functions_f.html":[3,3,0,5],
-"functions_func.html":[3,3,1],
 "functions_func.html":[3,3,1,0],
+"functions_func.html":[3,3,1],
 "functions_func_b.html":[3,3,1,1],
 "functions_func_c.html":[3,3,1,2],
 "functions_func_d.html":[3,3,1,3],
@@ -241,13 +249,5 @@ var NAVTREEINDEX49 =
 "generic__polynomial_8h.html#a51133160077bdcba90013d1f21b88410":[4,0,0,1,3,6,30],
 "generic__polynomial_8h.html#a580ca04916246340e08ec69b45276827":[4,0,0,1,3,6,21],
 "generic__polynomial_8h.html#a5935b2c56af883d2bacdfa61998c0d2e":[4,0,0,1,3,6,11],
-"generic__polynomial_8h.html#a5e9f5fa3d4c2770a38947956973fe27e":[4,0,0,1,3,6,23],
-"generic__polynomial_8h.html#a673a4c5428fa87d2279c587959d5e3e7":[4,0,0,1,3,6,35],
-"generic__polynomial_8h.html#a687f88372c74f4500af3df50cb687b88":[4,0,0,1,3,6,13],
-"generic__polynomial_8h.html#a6a635f8429c26e19e7582b7753751636":[4,0,0,1,3,6,17],
-"generic__polynomial_8h.html#a6e51bfc83d5ab488518b664db9e5cd34":[4,0,0,1,3,6,12],
-"generic__polynomial_8h.html#a7632adf109d2b13d0a4fb81e7cb81f96":[4,0,0,1,3,6,26],
-"generic__polynomial_8h.html#a830fbf97ac01bf807b4915e3087585da":[4,0,0,1,3,6,36],
-"generic__polynomial_8h.html#a876c3318865d9ffaadd1c3f7a711fdfa":[4,0,0,1,3,6,5],
-"generic__polynomial_8h.html#a8d786db05bfa5937e62a34b9519424f3":[4,0,0,1,3,6,10]
+"generic__polynomial_8h.html#a5e9f5fa3d4c2770a38947956973fe27e":[4,0,0,1,3,6,23]
 };

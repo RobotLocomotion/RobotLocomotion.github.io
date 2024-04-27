@@ -20,6 +20,8 @@ var searchData=
   ['residue_5funbounded_5fa',['residue_unbounded_a',['../structdrake_1_1solvers_1_1_scs_solver_details.html#a2f2f3ad142051a0c2f94d66d7430c67b',1,'drake::solvers::ScsSolverDetails']]],
   ['residue_5funbounded_5fp',['residue_unbounded_p',['../structdrake_1_1solvers_1_1_scs_solver_details.html#aea40e482640dbccf5ac387adf5df2b5a',1,'drake::solvers::ScsSolverDetails']]],
   ['resolution_5fhint',['resolution_hint',['../structdrake_1_1geometry_1_1_default_proximity_properties.html#a114a86a4dc5c458db9cc50a31ec8fdbf',1,'drake::geometry::DefaultProximityProperties']]],
+  ['restriction_5fsolver',['restriction_solver',['../structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#a2af5f59f2eac4720da5c5d9a901d414f',1,'drake::geometry::optimization::GraphOfConvexSetsOptions']]],
+  ['restriction_5fsolver_5foptions',['restriction_solver_options',['../structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#ab41a3270130e638897f5c67f2cae3705',1,'drake::geometry::optimization::GraphOfConvexSetsOptions']]],
   ['result',['result',['../structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#ab3f1efd3efefa056724514d6d247de2f',1,'drake::geometry::optimization::SeparationCertificateResultBase']]],
   ['retain_5fmap_5fdefaults',['retain_map_defaults',['../structdrake_1_1yaml_1_1_load_yaml_options.html#a121abbb69f58eeb8186f484386d65b9d',1,'drake::yaml::LoadYamlOptions']]],
   ['return_5fcode',['return_code',['../structdrake_1_1solvers_1_1_csdp_solver_details.html#a934c111b1421c6aa91507fabd5c96deb',1,'drake::solvers::CsdpSolverDetails']]],
@@ -30,7 +32,6 @@ var searchData=
   ['rot_5ftol',['rot_tol',['../structdrake_1_1multibody_1_1_constraint_relaxing_ik_1_1_ik_cartesian_waypoint.html#a1c465fdede6b5ea8a96275e2b9f1ecb3',1,'drake::multibody::ConstraintRelaxingIk::IkCartesianWaypoint']]],
   ['rotation',['rotation',['../classdrake_1_1schema_1_1_transform.html#a892c274d76368b44189e47bfa5dc8ba3',1,'drake::schema::Transform::rotation()'],['../structdrake_1_1multibody_1_1_rational_forward_kinematics_1_1_pose.html#a0b30bc39e0d8a9a3e9c8f305b6c39808',1,'drake::multibody::RationalForwardKinematics::Pose::rotation()']]],
   ['rounding_5fseed',['rounding_seed',['../structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#abb7b16d4d092f7b7572de4c058b30d96',1,'drake::geometry::optimization::GraphOfConvexSetsOptions']]],
-  ['rounding_5fsolver_5foptions',['rounding_solver_options',['../structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#a3019fa32c49876dc6f980676632987f5',1,'drake::geometry::optimization::GraphOfConvexSetsOptions']]],
   ['rows',['Rows',['../structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html#ad7023f370a56939d6a62930614f16911',1,'drake::solvers::LogarithmicSos2NewBinaryVariables']]],
   ['run_5ftime',['run_time',['../structdrake_1_1solvers_1_1_osqp_solver_details.html#a0eff91e1e435ad1b7f404b01a93c908f',1,'drake::solvers::OsqpSolverDetails']]]
 ];
