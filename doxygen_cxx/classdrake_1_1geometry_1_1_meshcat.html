@@ -350,8 +350,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa4272f092573240b5824fbc8caa049ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#aa4272f092573240b5824fbc8caa049ce">DeleteRecording</a> ()</td></tr>
 <tr class="memdesc:aa4272f092573240b5824fbc8caa049ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes the current animation holding the recorded frames.  <a href="#aa4272f092573240b5824fbc8caa049ce">More...</a><br /></td></tr>
 <tr class="separator:aa4272f092573240b5824fbc8caa049ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2495973164738aa5f3c326c8bf78bbf"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html">MeshcatAnimation</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#ab2495973164738aa5f3c326c8bf78bbf">get_recording</a> () const</td></tr>
+<tr class="memdesc:ab2495973164738aa5f3c326c8bf78bbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to this <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a>'s <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html" title="An interface for recording/playback animations in Meshcat.">MeshcatAnimation</a> object.  <a href="#ab2495973164738aa5f3c326c8bf78bbf">More...</a><br /></td></tr>
+<tr class="separator:ab2495973164738aa5f3c326c8bf78bbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74916eddef1ba24184bf974d233a1b59"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html">MeshcatAnimation</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a74916eddef1ba24184bf974d233a1b59">get_mutable_recording</a> ()</td></tr>
-<tr class="memdesc:a74916eddef1ba24184bf974d233a1b59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a mutable pointer to this <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a>'s unique <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html" title="An interface for recording/playback animations in Meshcat.">MeshcatAnimation</a> object, in which the frames will be recorded.  <a href="#a74916eddef1ba24184bf974d233a1b59">More...</a><br /></td></tr>
+<tr class="memdesc:a74916eddef1ba24184bf974d233a1b59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a mutable reference to this <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a>'s <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html" title="An interface for recording/playback animations in Meshcat.">MeshcatAnimation</a> object.  <a href="#a74916eddef1ba24184bf974d233a1b59">More...</a><br /></td></tr>
 <tr class="separator:a74916eddef1ba24184bf974d233a1b59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae40769135bba976dde79af9499e8d000"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#ae40769135bba976dde79af9499e8d000">HasPath</a> (std::string_view path) const</td></tr>
 <tr class="separator:ae40769135bba976dde79af9499e8d000"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -752,7 +755,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Deletes the current animation holding the recorded frames. </p>
-<p>Animation options (autoplay, repetitions, etc) will also be reset, and any pointers obtained from <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a74916eddef1ba24184bf974d233a1b59" title="Returns a mutable pointer to this Meshcat&#39;s unique MeshcatAnimation object, in which the frames will ...">get_mutable_recording()</a> will be rendered invalid. This does not* currently remove the animation from <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a>. </p>
+<p>Animation options (autoplay, repetitions, etc) will also be reset, and any pointers obtained from <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a74916eddef1ba24184bf974d233a1b59" title="Returns a mutable reference to this Meshcat&#39;s MeshcatAnimation object.">get_mutable_recording()</a> will be rendered invalid. This does not* currently remove the animation from <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a>. </p>
 
 </div>
 </div>
@@ -817,9 +820,28 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns a mutable pointer to this <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a>'s unique <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html" title="An interface for recording/playback animations in Meshcat.">MeshcatAnimation</a> object, in which the frames will be recorded. </p>
-<p>This pointer can be used to set animation properties (like autoplay, the loop mode, number of repetitions, etc).</p>
-<p>The <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html" title="An interface for recording/playback animations in Meshcat.">MeshcatAnimation</a> object will only remain valid for the lifetime of <code>this</code> or until <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#aa4272f092573240b5824fbc8caa049ce" title="Deletes the current animation holding the recorded frames.">DeleteRecording()</a> is called. </p>
+<p>Returns a mutable reference to this <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a>'s <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html" title="An interface for recording/playback animations in Meshcat.">MeshcatAnimation</a> object. </p>
+<p>This can be used to set animation properties (like autoplay, the loop mode, number of repetitions, etc). The return value will only remain valid for the lifetime of <code>this</code> or until <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#aa4272f092573240b5824fbc8caa049ce" title="Deletes the current animation holding the recorded frames.">DeleteRecording()</a> is called. </p>
+
+</div>
+</div>
+<a id="ab2495973164738aa5f3c326c8bf78bbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2495973164738aa5f3c326c8bf78bbf">&#9670;&nbsp;</a></span>get_recording()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html">MeshcatAnimation</a>&amp; get_recording </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a const reference to this <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a>'s <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html" title="An interface for recording/playback animations in Meshcat.">MeshcatAnimation</a> object. </p>
+<p>This can be used to check animation properties (e.g., autoplay). The return value will only remain valid for the lifetime of <code>this</code> or until <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#aa4272f092573240b5824fbc8caa049ce" title="Deletes the current animation holding the recorded frames.">DeleteRecording()</a> is called. </p>
 
 </div>
 </div>

@@ -22,6 +22,7 @@ var classdrake_1_1geometry_1_1_meshcat =
     [ "DeleteSlider", "classdrake_1_1geometry_1_1_meshcat.html#a50fc49ac1d55ac00b10946b748db02dc", null ],
     [ "Flush", "classdrake_1_1geometry_1_1_meshcat.html#a548a7b441b7900dcbd5481778c7dec9f", null ],
     [ "get_mutable_recording", "classdrake_1_1geometry_1_1_meshcat.html#a74916eddef1ba24184bf974d233a1b59", null ],
+    [ "get_recording", "classdrake_1_1geometry_1_1_meshcat.html#ab2495973164738aa5f3c326c8bf78bbf", null ],
     [ "GetButtonClicks", "classdrake_1_1geometry_1_1_meshcat.html#a3af3f4e27821f5f1630844a5cf4e39be", null ],
     [ "GetGamepad", "classdrake_1_1geometry_1_1_meshcat.html#a99102c7b2a8ca0cd1a9f1d55b3819b7d", null ],
     [ "GetNumActiveConnections", "classdrake_1_1geometry_1_1_meshcat.html#a85bcb12442dbc8a27d51e005ec7a922f", null ],

@@ -1,5 +1,6 @@
 var NAVTREEINDEX57 =
 {
+"standard__operations_8h.html#af2afb4760e5c5ef40db8af9479db1cee":[4,0,0,1,0,0,2,4],
 "standard__operations_8h.html#af581ee768c19ce4a3dfb29e66a786097":[4,0,0,1,0,0,2,23],
 "standard__operations_8h.html#af58fefa0bc73a348e5bed3f39e58827b":[4,0,0,1,0,0,2,69],
 "standard__operations_8h.html#afb32ad0c5b67af845de755dce6767dc8":[4,0,0,1,0,0,2,47],
@@ -248,6 +249,5 @@ var NAVTREEINDEX57 =
 "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result.html#aa22edceebce91d507158e1e2b688b131":[3,0,0,4,1,5,3,5],
 "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result.html#ab5970b949456bdcdcdabb8c5890d291d":[3,0,0,4,1,5,3,2],
 "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result.html#ac67d27d2dbec3bc7b354ea6232c26c60":[3,0,0,4,1,5,3,8],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result.html#ad1fe465df1291c8c23b1a50d7a8d27b1":[3,0,0,4,1,5,3,7],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result.html#af4785f1c637fd480c9b1c3c2f7805675":[3,0,0,4,1,5,3,1]
+"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result.html#ad1fe465df1291c8c23b1a50d7a8d27b1":[3,0,0,4,1,5,3,7]
 };

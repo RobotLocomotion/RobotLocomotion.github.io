@@ -1,5 +1,6 @@
 var NAVTREEINDEX60 =
 {
+"structdrake_1_1planning_1_1test_1_1_collision_checker_test_configuration_data.html":[3,0,0,10,1,2],
 "structdrake_1_1planning_1_1test_1_1_collision_checker_test_configuration_data.html#a34d9f563a87f3b1bed1fabd4cae935ed":[3,0,0,10,1,2,6],
 "structdrake_1_1planning_1_1test_1_1_collision_checker_test_configuration_data.html#a492e1743184f229bbdc6ed9f93ba9d1a":[3,0,0,10,1,2,0],
 "structdrake_1_1planning_1_1test_1_1_collision_checker_test_configuration_data.html#a611913f2ba0249b13096053ee1099cc8":[3,0,0,10,1,2,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX60 =
 "structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html":[3,0,0,15,2,1],
 "structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a0e3cbe33d19f96def02ebd180f9267a0":[3,0,0,15,2,1,1],
 "structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a10106668012c2b809949d73d6e72f88f":[3,0,0,15,2,1,3],
-"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a1ba9dae3af1b60cc4f276e689b8f3134":[3,0,0,15,2,1,6],
-"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a267538df8d3c6c1cf0dcd83eafa308ca":[3,0,0,15,2,1,8]
+"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a1ba9dae3af1b60cc4f276e689b8f3134":[3,0,0,15,2,1,6]
 };

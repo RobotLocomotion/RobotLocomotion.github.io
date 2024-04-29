@@ -493,6 +493,7 @@ var searchData=
   ['get_5frandom_5fstate_5fcovariance',['get_random_state_covariance',['../classdrake_1_1systems_1_1_time_varying_affine_system.html#a63aa9fad9409cc640fdde12ae1e3c45c',1,'drake::systems::TimeVaryingAffineSystem']]],
   ['get_5frandom_5ftype',['get_random_type',['../classdrake_1_1systems_1_1_input_port_base.html#adc91200b03493b30470dba23fff30a72',1,'drake::systems::InputPortBase']]],
   ['get_5freaction_5fforces_5foutput_5fport',['get_reaction_forces_output_port',['../classdrake_1_1multibody_1_1_multibody_plant.html#a5b03afbfe072f83e3681cf9798121eb2',1,'drake::multibody::MultibodyPlant']]],
+  ['get_5frecording',['get_recording',['../classdrake_1_1geometry_1_1_meshcat.html#ab2495973164738aa5f3c326c8bf78bbf',1,'drake::geometry::Meshcat']]],
   ['get_5frequested_5fminimum_5fstep_5fsize',['get_requested_minimum_step_size',['../classdrake_1_1systems_1_1_integrator_base.html#a59add268d553fd546ffb04eca70b693b',1,'drake::systems::IntegratorBase']]],
   ['get_5fresource_5fpath',['get_resource_path',['../classdrake_1_1_find_resource_result.html#a8ab650903020153ccd36aeb3ec63483a',1,'drake::FindResourceResult']]],
   ['get_5frestitution_5fcoef',['get_restitution_coef',['../classdrake_1_1examples_1_1bouncing__ball_1_1_bouncing_ball.html#af95eebed4797c704168b1a45e3cada0f',1,'drake::examples::bouncing_ball::BouncingBall']]],

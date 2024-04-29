@@ -1,5 +1,6 @@
 var NAVTREEINDEX13 =
 {
+"classdrake_1_1multibody_1_1_coulomb_friction.html#afc71862df754e2fe939a8e144374073f":[3,0,0,8,23,3],
 "classdrake_1_1multibody_1_1_deformable_contact_info.html":[3,0,0,8,24],
 "classdrake_1_1multibody_1_1_deformable_contact_info.html#a083fc52348e2a57c24ce16ad914cc7c6":[3,0,0,8,24,3],
 "classdrake_1_1multibody_1_1_deformable_contact_info.html#a2d90c51773e190f116b0b91c18cbf0cd":[3,0,0,8,24,9],
@@ -248,6 +249,5 @@ var NAVTREEINDEX13 =
 "classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#a02c0dfd2622354b8ba7e0c2a35fc5656":[3,0,0,8,44,0],
 "classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#a12ae1c95e942924afbd21907bab9f6a1":[3,0,0,8,44,8],
 "classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#a1466326a0af1bf52d39ac3158dc16d21":[3,0,0,8,44,2],
-"classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#a158a4c10cbb446de97811be1251b819a":[3,0,0,8,44,3],
-"classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#a5e75e607ebf2e82f0f6d774a0ca5f0f1":[3,0,0,8,44,5]
+"classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#a158a4c10cbb446de97811be1251b819a":[3,0,0,8,44,3]
 };
