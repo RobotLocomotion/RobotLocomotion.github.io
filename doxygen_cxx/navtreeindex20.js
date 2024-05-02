@@ -1,8 +1,5 @@
 var NAVTREEINDEX20 =
 {
-"classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#acabb927a720a280e0de5d5a7ffc586cb":[3,0,0,8,0,2,0,9],
-"classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#ad136510994e0802edec084f8f0dea379":[3,0,0,8,0,2,0,7],
-"classdrake_1_1multibody_1_1benchmarks_1_1pendulum_1_1_pendulum_parameters.html":[3,0,0,8,0,3,0],
 "classdrake_1_1multibody_1_1benchmarks_1_1pendulum_1_1_pendulum_parameters.html#a288b504edf60fa7ec5d642222dec6b14":[3,0,0,8,0,3,0,9],
 "classdrake_1_1multibody_1_1benchmarks_1_1pendulum_1_1_pendulum_parameters.html#a2fc0796487ccc0c7d24e9aa289e4be14":[3,0,0,8,0,3,0,4],
 "classdrake_1_1multibody_1_1benchmarks_1_1pendulum_1_1_pendulum_parameters.html#a4d353cbb4968e31da37a033d0175fa8e":[3,0,0,8,0,3,0,3],
@@ -249,5 +246,8 @@ var NAVTREEINDEX20 =
 "classdrake_1_1perception_1_1_point_cloud.html#af9593d4a5ff4274efaf429cb4f9e57cc":[3,0,0,9,2,44],
 "classdrake_1_1perception_1_1_point_cloud.html#afc4df8c734872593efbc6c722b866764":[3,0,0,9,2,28],
 "classdrake_1_1perception_1_1_point_cloud.html#afdd6c6a1f7d8ff561217b55d7e5eb61c":[3,0,0,9,2,49],
-"classdrake_1_1perception_1_1_point_cloud_to_lcm.html":[3,0,0,9,3]
+"classdrake_1_1perception_1_1_point_cloud_to_lcm.html":[3,0,0,9,3],
+"classdrake_1_1perception_1_1_point_cloud_to_lcm.html#a208857b41352ca62963c80a56884e1c7":[3,0,0,9,3,1],
+"classdrake_1_1perception_1_1_point_cloud_to_lcm.html#a5e0a26fc3b06486051c9658841e34353":[3,0,0,9,3,4],
+"classdrake_1_1perception_1_1_point_cloud_to_lcm.html#a6a8a8e63ea2983821e3762d423f46b1a":[3,0,0,9,3,0]
 };

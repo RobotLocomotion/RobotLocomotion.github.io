@@ -32,7 +32,6 @@ var searchData=
   ['collisionfiltermanager',['CollisionFilterManager',['../classdrake_1_1geometry_1_1_collision_filter_manager.html',1,'drake::geometry']]],
   ['colorizedepthimage',['ColorizeDepthImage',['../classdrake_1_1visualization_1_1_colorize_depth_image.html',1,'drake::visualization']]],
   ['colorizelabelimage',['ColorizeLabelImage',['../classdrake_1_1visualization_1_1_colorize_label_image.html',1,'drake::visualization']]],
-  ['colorpalette',['ColorPalette',['../classdrake_1_1systems_1_1sensors_1_1_color_palette.html',1,'drake::systems::sensors']]],
   ['colorrendercamera',['ColorRenderCamera',['../classdrake_1_1geometry_1_1render_1_1_color_render_camera.html',1,'drake::geometry::render']]],
   ['cominpolyhedronconstraint',['ComInPolyhedronConstraint',['../classdrake_1_1multibody_1_1_com_in_polyhedron_constraint.html',1,'drake::multibody']]],
   ['compassgait',['CompassGait',['../classdrake_1_1examples_1_1compass__gait_1_1_compass_gait.html',1,'drake::examples::compass_gait']]],

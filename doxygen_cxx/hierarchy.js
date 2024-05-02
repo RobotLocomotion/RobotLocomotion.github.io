@@ -85,7 +85,6 @@ var hierarchy =
     [ "CollisionFilterDeclaration", "classdrake_1_1geometry_1_1_collision_filter_declaration.html", null ],
     [ "CollisionFilterGroups", "classdrake_1_1multibody_1_1_collision_filter_groups.html", null ],
     [ "CollisionFilterManager", "classdrake_1_1geometry_1_1_collision_filter_manager.html", null ],
-    [ "ColorPalette< IdType >", "classdrake_1_1systems_1_1sensors_1_1_color_palette.html", null ],
     [ "ColorRenderCamera", "classdrake_1_1geometry_1_1render_1_1_color_render_camera.html", null ],
     [ "CompositeEventCollection< T >", "classdrake_1_1systems_1_1_composite_event_collection.html", [
       [ "DiagramCompositeEventCollection< T >", "classdrake_1_1systems_1_1_diagram_composite_event_collection.html", null ],
@@ -687,8 +686,8 @@ var hierarchy =
     [ "PolygonSurfaceMesh< T >", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html", null ],
     [ "PolygonSurfaceMesh< double >", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html", null ],
     [ "PolygonSurfaceMeshTest< T >", "classdrake_1_1geometry_1_1_polygon_surface_mesh_test.html", null ],
-    [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html", null ],
     [ "Polynomial< T >", "classdrake_1_1_polynomial.html", null ],
+    [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html", null ],
     [ "PolynomialBasisElement", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html", [
       [ "ChebyshevBasisElement", "classdrake_1_1symbolic_1_1_chebyshev_basis_element.html", null ],
       [ "MonomialBasisElement", "classdrake_1_1symbolic_1_1_monomial_basis_element.html", null ]

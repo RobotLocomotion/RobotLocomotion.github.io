@@ -1225,13 +1225,6 @@ angles) may not necessarily match that measure on the returned value.</p>
 <span class="sig-name descname"><span class="pre">Sample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.common.schema.Transform" title="pydrake.common.schema.Transform"><span class="pre">pydrake.common.schema.Transform</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">generator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.common.html#pydrake.common.RandomGenerator" title="pydrake.common.RandomGenerator"><span class="pre">pydrake.common.RandomGenerator</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.common.schema.Transform.Sample" title="Permalink to this definition"></a></dt>
 <dd><p>Samples this Transform. If this is deterministic, the result is the
 same as GetDeterministicValue.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Calling this function when this object has a non-null, non-world
-<code class="docutils literal notranslate"><span class="pre">base_frame</span></code> is deprecated and will become an error on
-2024-05-01. (The returned value would be misleading because it
-doesn’t incorporate the base frame.)</p>
-</div>
 </dd></dl>
 
 <dl class="py method">

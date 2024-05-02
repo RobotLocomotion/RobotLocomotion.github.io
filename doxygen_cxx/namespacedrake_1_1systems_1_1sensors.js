@@ -4,7 +4,6 @@ var namespacedrake_1_1systems_1_1sensors =
     [ "BeamModel", "classdrake_1_1systems_1_1sensors_1_1_beam_model.html", "classdrake_1_1systems_1_1sensors_1_1_beam_model" ],
     [ "CameraConfig", "structdrake_1_1systems_1_1sensors_1_1_camera_config.html", "structdrake_1_1systems_1_1sensors_1_1_camera_config" ],
     [ "CameraInfo", "classdrake_1_1systems_1_1sensors_1_1_camera_info.html", "classdrake_1_1systems_1_1sensors_1_1_camera_info" ],
-    [ "ColorPalette", "classdrake_1_1systems_1_1sensors_1_1_color_palette.html", "classdrake_1_1systems_1_1sensors_1_1_color_palette" ],
     [ "Gyroscope", "classdrake_1_1systems_1_1sensors_1_1_gyroscope.html", "classdrake_1_1systems_1_1sensors_1_1_gyroscope" ],
     [ "Image", "classdrake_1_1systems_1_1sensors_1_1_image.html", "classdrake_1_1systems_1_1sensors_1_1_image" ],
     [ "ImageIo", "classdrake_1_1systems_1_1sensors_1_1_image_io.html", "classdrake_1_1systems_1_1sensors_1_1_image_io" ],

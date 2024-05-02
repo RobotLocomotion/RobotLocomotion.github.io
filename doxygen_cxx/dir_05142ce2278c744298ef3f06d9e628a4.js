@@ -1,7 +1,6 @@
 var dir_05142ce2278c744298ef3f06d9e628a4 =
 [
     [ "shaders", "dir_265f5a0dc516db63016326957882384b.html", "dir_265f5a0dc516db63016326957882384b" ],
-    [ "color_deprecated.h", "color__deprecated_8h.html", "color__deprecated_8h" ],
     [ "light_parameter.h", "light__parameter_8h.html", "light__parameter_8h" ],
     [ "render_camera.h", "render__camera_8h.html", [
       [ "ClippingRange", "classdrake_1_1geometry_1_1render_1_1_clipping_range.html", "classdrake_1_1geometry_1_1render_1_1_clipping_range" ],

@@ -1,8 +1,5 @@
 var NAVTREEINDEX12 =
 {
-"classdrake_1_1math_1_1_roll_pitch_yaw.html#a0f6f85f8cd20c70b02c858074f024898":[3,0,0,7,12,26],
-"classdrake_1_1math_1_1_roll_pitch_yaw.html#a0f91696896d7b658dc357decb978b1ee":[3,0,0,7,12,24],
-"classdrake_1_1math_1_1_roll_pitch_yaw.html#a19246fa6997ba1bcfa96c5778206a435":[3,0,0,7,12,18],
 "classdrake_1_1math_1_1_roll_pitch_yaw.html#a1963c491b2b030410e51cda8a0c1350a":[3,0,0,7,12,30],
 "classdrake_1_1math_1_1_roll_pitch_yaw.html#a1d985b9afd6444973d176f246d937e09":[3,0,0,7,12,16],
 "classdrake_1_1math_1_1_roll_pitch_yaw.html#a1f2ab0e82c604812e4972069ea6d5fff":[3,0,0,7,12,1],
@@ -249,5 +246,8 @@ var NAVTREEINDEX12 =
 "classdrake_1_1multibody_1_1_coulomb_friction.html#a87fae0c02525bbeacea7ade6fb1b1fde":[3,0,0,8,23,8],
 "classdrake_1_1multibody_1_1_coulomb_friction.html#a91980ef764c2fa43ebf7e60dd52c36e1":[3,0,0,8,23,1],
 "classdrake_1_1multibody_1_1_coulomb_friction.html#aa95ec70abea05997f50b5372501baacb":[3,0,0,8,23,2],
-"classdrake_1_1multibody_1_1_coulomb_friction.html#ad5b08fa5c4a715557c97d7e37cf51e2b":[3,0,0,8,23,7]
+"classdrake_1_1multibody_1_1_coulomb_friction.html#ad5b08fa5c4a715557c97d7e37cf51e2b":[3,0,0,8,23,7],
+"classdrake_1_1multibody_1_1_coulomb_friction.html#afc71862df754e2fe939a8e144374073f":[3,0,0,8,23,3],
+"classdrake_1_1multibody_1_1_deformable_contact_info.html":[3,0,0,8,24],
+"classdrake_1_1multibody_1_1_deformable_contact_info.html#a083fc52348e2a57c24ce16ad914cc7c6":[3,0,0,8,24,3]
 };

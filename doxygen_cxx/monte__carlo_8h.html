@@ -162,8 +162,7 @@ $(document).ready(function(){initNavTree('monte__carlo_8h.html','');});
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">monte_carlo.h File Reference</div>  </div>
 </div><!--header-->
@@ -172,7 +171,6 @@ $(document).ready(function(){initNavTree('monte__carlo_8h.html','');});
 <code>#include &lt;memory&gt;</code><br />
 <code>#include &lt;utility&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
-<code>#include &quot;<a class="el" href="drake__deprecated_8h.html">drake/common/drake_deprecated.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="parallelism_8h.html">drake/common/parallelism.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="simulator_8h.html">drake/systems/analysis/simulator.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -212,18 +210,6 @@ Functions</h2></td></tr>
 <tr class="memitem:ga25e477f2efbdae38b357d7c39d8452bd"><td class="memItemLeft" align="right" valign="top">std::vector&lt; RandomSimulationResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__analysis.html#ga25e477f2efbdae38b357d7c39d8452bd">MonteCarloSimulation</a> (const SimulatorFactory &amp;make_simulator, const ScalarSystemFunction &amp;output, <a class="el" href="classdouble.html">double</a> final_time, <a class="el" href="classint.html">int</a> num_samples, RandomGenerator *generator=nullptr, Parallelism parallelism=false)</td></tr>
 <tr class="memdesc:ga25e477f2efbdae38b357d7c39d8452bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates samples of a scalar random variable output by running many random simulations drawn from independent samples of the distributions governing the stochastic simulation.  <a href="group__analysis.html#ga25e477f2efbdae38b357d7c39d8452bd">More...</a><br /></td></tr>
 <tr class="separator:ga25e477f2efbdae38b357d7c39d8452bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91ebf18b028db3b1b760d6cb422ac193"><td class="memItemLeft" align="right" valign="top">std::vector&lt; RandomSimulationResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1analysis.html#a91ebf18b028db3b1b760d6cb422ac193">MonteCarloSimulation</a> (const SimulatorFactory &amp;make_simulator, const ScalarSystemFunction &amp;output, <a class="el" href="classdouble.html">double</a> final_time, <a class="el" href="classint.html">int</a> num_samples, RandomGenerator *generator=nullptr, <a class="el" href="classint.html">int</a> num_parallel_executions=1)</td></tr>
-<tr class="memdesc:a91ebf18b028db3b1b760d6cb422ac193"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="namespacedrake_1_1systems_1_1analysis.html#a91ebf18b028db3b1b760d6cb422ac193">More...</a><br /></td></tr>
-<tr class="separator:a91ebf18b028db3b1b760d6cb422ac193"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:acbf0cc4b5c52b3cb6a6c113450610e3b"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1analysis.html#acbf0cc4b5c52b3cb6a6c113450610e3b">kNoConcurrency</a> = 1</td></tr>
-<tr class="memdesc:acbf0cc4b5c52b3cb6a6c113450610e3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="namespacedrake_1_1systems_1_1analysis.html#acbf0cc4b5c52b3cb6a6c113450610e3b">More...</a><br /></td></tr>
-<tr class="separator:acbf0cc4b5c52b3cb6a6c113450610e3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2df45efdced327ad20c26403412fb37f"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1analysis.html#a2df45efdced327ad20c26403412fb37f">kUseHardwareConcurrency</a> = -1</td></tr>
-<tr class="memdesc:a2df45efdced327ad20c26403412fb37f"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="namespacedrake_1_1systems_1_1analysis.html#a2df45efdced327ad20c26403412fb37f">More...</a><br /></td></tr>
-<tr class="separator:a2df45efdced327ad20c26403412fb37f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

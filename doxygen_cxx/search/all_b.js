@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['k',['k',['../classdrake_1_1examples_1_1scene__graph_1_1bouncing__ball_1_1_bouncing_ball_plant.html#af613e2b0ce080dc98b634661eca4e6ae',1,'drake::examples::scene_graph::bouncing_ball::BouncingBallPlant::k()'],['../structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html#a118c80afa021941c77e3295fbb2677ea',1,'drake::systems::controllers::FiniteHorizonLinearQuadraticRegulatorResult::K()'],['../structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html#a8f78ef113f89e86b283522fb7e59b308',1,'drake::systems::controllers::LinearQuadraticRegulatorResult::K()']]],
+  ['k',['K',['../structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html#a118c80afa021941c77e3295fbb2677ea',1,'drake::systems::controllers::FiniteHorizonLinearQuadraticRegulatorResult::K()'],['../structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html#a8f78ef113f89e86b283522fb7e59b308',1,'drake::systems::controllers::LinearQuadraticRegulatorResult::K()'],['../classdrake_1_1examples_1_1scene__graph_1_1bouncing__ball_1_1_bouncing_ball_plant.html#af613e2b0ce080dc98b634661eca4e6ae',1,'drake::examples::scene_graph::bouncing_ball::BouncingBallPlant::k()']]],
   ['k0',['k0',['../structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html#ae491527110c4ca50bb4fe345d2ef467a',1,'drake::systems::controllers::FiniteHorizonLinearQuadraticRegulatorResult']]],
   ['k16i',['k16I',['../namespacedrake_1_1systems_1_1sensors.html#aa27964439659a0be90e567d865ffb792a00582391087709af581a9e896ef882ef',1,'drake::systems::sensors']]],
   ['k16u',['k16U',['../namespacedrake_1_1systems_1_1sensors.html#aa27964439659a0be90e567d865ffb792a9368b1a6dc329fd741e75949a4c8b99a',1,'drake::systems::sensors']]],
@@ -195,7 +195,6 @@ var searchData=
   ['knlopt',['kNlopt',['../namespacedrake_1_1solvers.html#a8b06041d7c1fb05f379714f4312306eca64e0ff0ce277a08ed59a9fe9140a8fd7',1,'drake::solvers']]],
   ['knlp',['kNLP',['../namespacedrake_1_1solvers.html#ab09ca5e1afe9e5a4e8744ecb27839b15aced0324bc370cd8712746abd28ac3844',1,'drake::solvers']]],
   ['knocollision',['kNoCollision',['../namespacedrake_1_1examples_1_1manipulation__station.html#ad52e754b3d3e57fdbf865d450da88b8dae9e690a25422e7ed157a6f924b06c20c',1,'drake::examples::manipulation_station::kNoCollision()'],['../group__planning__collision__checker.html#gga6e884b3a7afc04b1a0c132ce264c14b7ae9e690a25422e7ed157a6f924b06c20c',1,'drake::planning::kNoCollision()']]],
-  ['knoconcurrency',['kNoConcurrency',['../namespacedrake_1_1systems_1_1analysis.html#acbf0cc4b5c52b3cb6a6c113450610e3b',1,'drake::systems::analysis']]],
   ['knoinput',['kNoInput',['../namespacedrake_1_1systems.html#a5484375bdbfb17f525cd2ed396d747f9a757e9aed460a5351e83462b6ac3e8627',1,'drake::systems']]],
   ['knolimits',['kNoLimits',['../namespacedrake_1_1solvers.html#a1949f5edc628077e2d780c150de88d74a34bbac4b028a742de1b931cc2694dcea',1,'drake::solvers']]],
   ['knonconvex',['kNonconvex',['../classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#a7e69b5efb34e150cd2b2422e1e943da4afa9ab8d116c77d49dee47845f12f5725',1,'drake::solvers::LorentzConeConstraint']]],
@@ -335,7 +334,6 @@ var searchData=
   ['kusedefaultname',['kUseDefaultName',['../namespacedrake_1_1systems.html#a399dec16d9f072ee3a256c35ba3379fa',1,'drake::systems']]],
   ['kusefirstinputifitexists',['kUseFirstInputIfItExists',['../namespacedrake_1_1systems.html#a5484375bdbfb17f525cd2ed396d747f9ae969b88961b5a19a96fee66796e8d713',1,'drake::systems']]],
   ['kusefirstoutputifitexists',['kUseFirstOutputIfItExists',['../namespacedrake_1_1systems.html#a00432489001229d1f63cb6d373403a6ea2e0016ab225d09e0af0e4648992d8be5',1,'drake::systems']]],
-  ['kusehardwareconcurrency',['kUseHardwareConcurrency',['../namespacedrake_1_1systems_1_1analysis.html#a2df45efdced327ad20c26403412fb37f',1,'drake::systems::analysis']]],
   ['kuserdefined',['kUserDefined',['../classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#afa218114576445568fafd96dce0f2916a6d0e92592f596eacaa92b16042a2ecc3',1,'drake::solvers::MixedIntegerBranchAndBound::kUserDefined()'],['../classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#ad3bb376a6d6d2164492750a2ee33fbd0a6d0e92592f596eacaa92b16042a2ecc3',1,'drake::solvers::MixedIntegerBranchAndBound::kUserDefined()']]],
   ['kv',['kV',['../namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658a63b39853c60d1092c257c1ab898bad0a',1,'drake::multibody']]],
   ['kvectorvalued',['kVectorValued',['../namespacedrake_1_1systems.html#ae516fceb67f15f61c7a232b9cc483fbea8224a2a2efb09b6189f8fd5a42c8ce52',1,'drake::systems']]],

@@ -32,8 +32,6 @@ var searchData=
   ['collision_5ffilter_5fgroups_2eh',['collision_filter_groups.h',['../collision__filter__groups_8h.html',1,'']]],
   ['collision_5ffilter_5fmanager_2eh',['collision_filter_manager.h',['../collision__filter__manager_8h.html',1,'']]],
   ['collisions_5fexist_5fcallback_2eh',['collisions_exist_callback.h',['../collisions__exist__callback_8h.html',1,'']]],
-  ['color_5fdeprecated_2eh',['color_deprecated.h',['../color__deprecated_8h.html',1,'']]],
-  ['color_5fpalette_2eh',['color_palette.h',['../color__palette_8h.html',1,'']]],
   ['colorize_5fdepth_5fimage_2eh',['colorize_depth_image.h',['../colorize__depth__image_8h.html',1,'']]],
   ['colorize_5flabel_5fimage_2eh',['colorize_label_image.h',['../colorize__label__image_8h.html',1,'']]],
   ['com_5fin_5fpolyhedron_5fconstraint_2eh',['com_in_polyhedron_constraint.h',['../com__in__polyhedron__constraint_8h.html',1,'']]],
