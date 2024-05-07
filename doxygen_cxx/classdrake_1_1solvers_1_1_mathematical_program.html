@@ -792,6 +792,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0c27da874a5e06bccfb91ff25ec05fb9"><td class="memItemLeft" align="right" valign="top">const std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html#ad045777573c866588ca72937e92c1a2c">symbolic::Variable::Id</a>, <a class="el" href="classint.html">int</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a0c27da874a5e06bccfb91ff25ec05fb9">indeterminates_index</a> () const</td></tr>
 <tr class="memdesc:a0c27da874a5e06bccfb91ff25ec05fb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the mapping from an indeterminate ID to its index in the vector containing all the indeterminates in the mathematical program.  <a href="#a0c27da874a5e06bccfb91ff25ec05fb9">More...</a><br /></td></tr>
 <tr class="separator:a0c27da874a5e06bccfb91ff25ec05fb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a581e627b1c23f4427ec3cee17760812a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a581e627b1c23f4427ec3cee17760812a">RemoveDecisionVariable</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;var)</td></tr>
+<tr class="memdesc:a581e627b1c23f4427ec3cee17760812a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove <code>var</code> from this program's decision variable.  <a href="#a581e627b1c23f4427ec3cee17760812a">More...</a><br /></td></tr>
+<tr class="separator:a581e627b1c23f4427ec3cee17760812a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment.</div></td></tr>
 <tr class="memitem:a6d281d024510ccc0f7787ebbb1e534ee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a6d281d024510ccc0f7787ebbb1e534ee">MathematicalProgram</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;)=delete</td></tr>
 <tr class="separator:a6d281d024510ccc0f7787ebbb1e534ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -7944,6 +7947,35 @@ Symmetric(rows-1,0) Symmetric(rows-1,1) ... Symmetric(rows-1, rows-1)
 
 <p>Removes <code>cost</code> from this mathematical program. </p>
 <p>See <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#remove_cost_constraint">Remove costs or constraints</a> for more details. </p><dl class="section return"><dt>Returns</dt><dd>number of cost objects removed from this program. If this program doesn't contain <code>cost</code>, then returns 0. If this program contains multiple <code>cost</code> objects, then returns the repetition of <code>cost</code> in this program. </dd></dl>
+
+</div>
+</div>
+<a id="a581e627b1c23f4427ec3cee17760812a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a581e627b1c23f4427ec3cee17760812a">&#9670;&nbsp;</a></span>RemoveDecisionVariable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> RemoveDecisionVariable </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;&#160;</td>
+          <td class="paramname"><em>var</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove <code>var</code> from this program's decision variable. </p>
+<dl class="section note"><dt>Note</dt><dd>after removing the variable, the indices of some remaining variables inside this <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html" title="MathematicalProgram stores the decision variables, the constraints and costs of an optimization probl...">MathematicalProgram</a> will change. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the index of <code>var</code> in this optimization program. return -1 if <code>var</code> is not a decision variable. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">exception</td><td>if <code>var</code> is bound with any cost or constraint. </td></tr>
+    <tr><td class="paramname">exception</td><td>if <code>var</code> is not a decision variable of the program. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

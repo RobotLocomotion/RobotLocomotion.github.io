@@ -22,6 +22,7 @@ var symbolic__test__util_8h =
     [ "PolyNotEqualAfterExpansion", "symbolic__test__util_8h.html#a8bce1dea155cf606b8fd9c58718bd2b8", null ],
     [ "RationalFunctionEqual", "symbolic__test__util_8h.html#a97bec4ad79d4ed1a5017738221a61a7e", null ],
     [ "RationalFunctionNotEqual", "symbolic__test__util_8h.html#ac8a7cacf437717f7d6c4273e34705279", null ],
+    [ "TupleVarEqual", "symbolic__test__util_8h.html#aad1326f608fbd88ee7647d116ae23e97", null ],
     [ "VarEqual", "symbolic__test__util_8h.html#a9f9f40ffa7e74c90169e1269d087ff7f", null ],
     [ "VarLess", "symbolic__test__util_8h.html#afdad08477a5777cd81c0d08dbd2009e6", null ],
     [ "VarNotEqual", "symbolic__test__util_8h.html#af647b0d3ff5da746607f765a0f7e212d", null ],

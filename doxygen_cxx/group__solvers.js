@@ -213,6 +213,7 @@ var group__solvers =
       [ "RelaxPsdConstraintToSddDualCone", "classdrake_1_1solvers_1_1_mathematical_program.html#aef8b2eed5068425fb32e0718b8aa6c3e", null ],
       [ "RemoveConstraint", "classdrake_1_1solvers_1_1_mathematical_program.html#acb1b59ceeeec9235267e4a8b6d440c9f", null ],
       [ "RemoveCost", "classdrake_1_1solvers_1_1_mathematical_program.html#a776ae5f3bb0dc9a705c584e511aff067", null ],
+      [ "RemoveDecisionVariable", "classdrake_1_1solvers_1_1_mathematical_program.html#a581e627b1c23f4427ec3cee17760812a", null ],
       [ "Reparse", "classdrake_1_1solvers_1_1_mathematical_program.html#aee9493ea7d08a35395634bfbfd5713dd", null ],
       [ "required_capabilities", "classdrake_1_1solvers_1_1_mathematical_program.html#a2a7f71f7ae23678cd721de4cfcb52f54", null ],
       [ "rotated_lorentz_cone_constraints", "classdrake_1_1solvers_1_1_mathematical_program.html#aeb8ffa00352e1b2d8f1e8cfa720dc88c", null ],

@@ -1,5 +1,6 @@
 var NAVTREEINDEX62 =
 {
+"structstd_1_1hash_3_01drake_1_1symbolic_1_1_expression_01_4.html":[3,0,2,13],
 "structstd_1_1hash_3_01drake_1_1symbolic_1_1_formula_01_4.html":[3,0,2,14],
 "structstd_1_1hash_3_01drake_1_1symbolic_1_1_generic_polynomial_3_01_basis_element_01_4_01_4.html":[3,0,2,15],
 "structstd_1_1hash_3_01drake_1_1symbolic_1_1_monomial_01_4.html":[3,0,2,16],
@@ -89,7 +90,8 @@ var NAVTREEINDEX62 =
 "symbolic__test__util_8h.html#a8709d7c6c2135beaf013d99f406cd183":[4,0,0,1,4,12,1],
 "symbolic__test__util_8h.html#a8bce1dea155cf606b8fd9c58718bd2b8":[4,0,0,1,4,12,19],
 "symbolic__test__util_8h.html#a97bec4ad79d4ed1a5017738221a61a7e":[4,0,0,1,4,12,20],
-"symbolic__test__util_8h.html#a9f9f40ffa7e74c90169e1269d087ff7f":[4,0,0,1,4,12,22],
+"symbolic__test__util_8h.html#a9f9f40ffa7e74c90169e1269d087ff7f":[4,0,0,1,4,12,23],
+"symbolic__test__util_8h.html#aad1326f608fbd88ee7647d116ae23e97":[4,0,0,1,4,12,22],
 "symbolic__test__util_8h.html#ab8b985282beb0cb444b7e03d9fc1bf30":[4,0,0,1,4,12,6],
 "symbolic__test__util_8h.html#abca93568505710bf72e917c5c73d4b9c":[4,0,0,1,4,12,9],
 "symbolic__test__util_8h.html#ac651807ee0ec1298966869ae92a500e7":[4,0,0,1,4,12,3],
@@ -98,10 +100,10 @@ var NAVTREEINDEX62 =
 "symbolic__test__util_8h.html#ad7cee2f49aca9d7d87803728389fdfae":[4,0,0,1,4,12,15],
 "symbolic__test__util_8h.html#adb8b893205178f5d6b6d50f7421ec51a":[4,0,0,1,4,12,5],
 "symbolic__test__util_8h.html#ade9bc3fff93c686d4776771a8e0249af":[4,0,0,1,4,12,7],
-"symbolic__test__util_8h.html#af647b0d3ff5da746607f765a0f7e212d":[4,0,0,1,4,12,24],
+"symbolic__test__util_8h.html#af647b0d3ff5da746607f765a0f7e212d":[4,0,0,1,4,12,25],
 "symbolic__test__util_8h.html#af842ed89ccb0acfd93b9704b6daa7d16":[4,0,0,1,4,12,4],
-"symbolic__test__util_8h.html#af936eee6e6ccab95c3d4597af366c73e":[4,0,0,1,4,12,25],
-"symbolic__test__util_8h.html#afdad08477a5777cd81c0d08dbd2009e6":[4,0,0,1,4,12,23],
+"symbolic__test__util_8h.html#af936eee6e6ccab95c3d4597af366c73e":[4,0,0,1,4,12,26],
+"symbolic__test__util_8h.html#afdad08477a5777cd81c0d08dbd2009e6":[4,0,0,1,4,12,24],
 "symbolic__types__pybind_8h.html":[4,0,0,0,0,17],
 "symbolic__vector__system_8h.html":[4,0,0,12,6,24],
 "symbolic__vector__system_8h.html#aab7d5774e6ddd8a01ac4ee761a5b1e0f":[4,0,0,12,6,24,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX62 =
 "variables_8h.html#aba2399f6ee5b4c18bc26dc3fd5b6c07a":[4,0,0,1,3,0,12,3],
 "variables_8h.html#ac861cf2992e3fa03746df6ca291c5020":[4,0,0,1,3,0,12,6],
 "vector__base_8h.html":[4,0,0,12,3,52],
-"vector__base_8h.html#a854a6645678bcf40744ca37effe890b8":[4,0,0,12,3,52,2],
-"vector__log_8h.html":[4,0,0,12,6,29],
-"vector__log__sink_8h.html":[4,0,0,12,6,30]
+"vector__base_8h.html#a854a6645678bcf40744ca37effe890b8":[4,0,0,12,3,52,2]
 };

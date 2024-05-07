@@ -5489,6 +5489,29 @@ in this program.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.MathematicalProgram.RemoveDecisionVariable">
+<span class="sig-name descname"><span class="pre">RemoveDecisionVariable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">var</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Variable" title="pydrake.symbolic.Variable"><span class="pre">pydrake.symbolic.Variable</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.solvers.MathematicalProgram.RemoveDecisionVariable" title="Permalink to this definition"></a></dt>
+<dd><p>Remove <code class="docutils literal notranslate"><span class="pre">var</span></code> from this program’s decision variable.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>after removing the variable, the indices of some remaining
+variables inside this MathematicalProgram will change.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the index of <code class="docutils literal notranslate"><span class="pre">var</span></code> in this optimization program. return -1 if
+<code class="docutils literal notranslate"><span class="pre">var</span></code> is not a decision variable.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>exception if var is bound with any cost</strong><strong> or </strong><strong>constraint.</strong> – </p></li>
+<li><p><strong>exception if var is not a decision variable of the program.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.MathematicalProgram.Reparse">
 <span class="sig-name descname"><span class="pre">Reparse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Polynomial" title="pydrake.symbolic.Polynomial"><span class="pre">pydrake.symbolic.Polynomial</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.MathematicalProgram.Reparse" title="Permalink to this definition"></a></dt>
 <dd><p>Reparses the polynomial <code class="docutils literal notranslate"><span class="pre">p</span></code> using this MathematicalProgram’s

@@ -1,5 +1,6 @@
 var NAVTREEINDEX56 =
 {
+"scs__solver_8h.html":[4,0,0,11,45],
 "sdpa__free__format_8h.html":[4,0,0,11,46],
 "sdpa__free__format_8h.html#a121673ddbdadd10b2e3ceab52a93f5d3":[4,0,0,11,46,0],
 "sdpa__free__format_8h.html#a121673ddbdadd10b2e3ceab52a93f5d3a268e3bfe4e48f70785a46a8d3552e552":[4,0,0,11,46,0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX56 =
 "stochastic_8h.html#a4891bbf6ba4372801a10dacfcbbd6172":[4,0,0,1,2,1,14],
 "stochastic_8h.html#a4f95ed0d3b0cb1459ef88fa33e833e5e":[4,0,0,1,2,1,19],
 "stochastic_8h.html#a57679ebbc3affa5691736cd9fae0173c":[4,0,0,1,2,1,17],
-"stochastic_8h.html#a57f6c7970d805c54498388c6e47113fa":[4,0,0,1,2,1,12],
-"stochastic_8h.html#a7d8363da077652b8868dcd5f6200358c":[4,0,0,1,2,1,22]
+"stochastic_8h.html#a57f6c7970d805c54498388c6e47113fa":[4,0,0,1,2,1,12]
 };
