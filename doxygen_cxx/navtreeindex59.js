@@ -1,5 +1,8 @@
 var NAVTREEINDEX59 =
 {
+"structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html#a003ffd6a91f75e2a858b2fefaa2a061c":[3,0,0,8,47,1,0],
+"structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html#a31729076a3bb78d786ce5573e0f39144":[3,0,0,8,47,1,1],
+"structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html#a497ba947ec5f475c2de347175fb488a5":[3,0,0,8,47,1,3],
 "structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html#a8a2e7198dc47a29051d2896858f0f721":[3,0,0,8,47,1,2],
 "structdrake_1_1multibody_1_1_multibody_plant_config.html":[3,0,0,8,57],
 "structdrake_1_1multibody_1_1_multibody_plant_config.html#a0f73b758fdc6b763190aa6ea76e014c2":[3,0,0,8,57,8],
@@ -246,8 +249,5 @@ var NAVTREEINDEX59 =
 "structdrake_1_1pydrake_1_1overload__cast__impl.html#ad8669f38296275ae761b8ea5ca557cd6":[3,0,0,11,2,2],
 "structdrake_1_1pydrake_1_1wrap__arg__default.html":[3,0,0,11,3],
 "structdrake_1_1pydrake_1_1wrap__arg__default.html#a48a259ef8336ef23e66f632b0ddad145":[3,0,0,11,3,2],
-"structdrake_1_1pydrake_1_1wrap__arg__default.html#ac0d8dfca95588efef734b244410fa031":[3,0,0,11,3,1],
-"structdrake_1_1pydrake_1_1wrap__arg__default.html#af86f89529a81600b291217b3f9b1a067":[3,0,0,11,3,0],
-"structdrake_1_1scalar__predicate.html":[3,0,0,46],
-"structdrake_1_1scalar__predicate.html#a945d5b96b85fa30cf7587ef08b38f3d2":[3,0,0,46,0]
+"structdrake_1_1pydrake_1_1wrap__arg__default.html#ac0d8dfca95588efef734b244410fa031":[3,0,0,11,3,1]
 };

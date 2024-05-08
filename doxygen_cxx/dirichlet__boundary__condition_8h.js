@@ -1,4 +1,4 @@
 var dirichlet__boundary__condition_8h =
 [
-    [ "DRAKE_DECLARE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_NONSYMBOLIC_SCALARS", "dirichlet__boundary__condition_8h.html#ae2a9fef64ae955d7fad6cbef266f2d68", null ]
+    [ "DRAKE_DECLARE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_SCALARS", "dirichlet__boundary__condition_8h.html#a30f7635fdfd5c32323992a6ae496d5ca", null ]
 ];

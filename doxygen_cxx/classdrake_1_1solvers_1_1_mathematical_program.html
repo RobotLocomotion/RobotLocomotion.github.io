@@ -927,8 +927,8 @@ Pursuit with Linear and Second Order Cone Programming" by Ahmadi and Hall with a
 <tr class="memitem:ac2079c8eee90c77853f4a9a96c14715a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#ac2079c8eee90c77853f4a9a96c14715a">ClearVariableScaling</a> ()</td></tr>
 <tr class="memdesc:ac2079c8eee90c77853f4a9a96c14715a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the scaling factors for decision variables.  <a href="#ac2079c8eee90c77853f4a9a96c14715a">More...</a><br /></td></tr>
 <tr class="separator:ac2079c8eee90c77853f4a9a96c14715a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Remove costs or constraints</div></td></tr>
-<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="remove_cost_constraint"></a> Removes costs or constraints from this program. If this program contains multiple costs/constraints objects matching the given argument, then all of these costs/constraints are removed. If this program doesn't contain the specified cost/constraint, then the code does nothing. We regard two costs/constraints being equal, if their evaluators point to the same object, and the associated variables are also the same. </p><dl class="section note"><dt>Note</dt><dd>If two costs/constraints represent the same expression, but their evaluators point to different objects, then they are NOT regarded the same. For example, if we have <div class="fragment"><div class="line"><span class="keyword">auto</span> cost1 = prog.AddLinearCost(<a class="code" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>[0] + <a class="code" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>[1]);</div><div class="line"><span class="keyword">auto</span> cost2 = prog.AddLinearCost(<a class="code" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>[0] + <a class="code" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>[1]);</div><div class="line"><span class="comment">// cost1 and cost2 represent the same cost, but cost1.evaluator() and</span></div><div class="line"><span class="comment">// cost2.evaluator() point to different objects. So after removing cost1,</span></div><div class="line"><span class="comment">// cost2 still lives in prog.</span></div><div class="line">prog.RemoveCost(cost1);</div><div class="line"><span class="comment">// This will print true.</span></div><div class="line">std::cout &lt;&lt; (prog.linear_costs()[0] == cost2) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div></div><!-- fragment --> </dd></dl>
+<tr><td colspan="2"><div class="groupHeader">Remove costs, constraints or callbacks.</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="remove_cost_constraint"></a> Removes costs, constraints or visualization callbacks from this program. If this program contains multiple costs/constraints/callbacks objects matching the given argument, then all of these costs/constraints/callbacks are removed. If this program doesn't contain the specified cost/constraint/callback, then the code does nothing. We regard two costs/constraints/callbacks being equal, if their evaluators point to the same object, and the associated variables are also the same. </p><dl class="section note"><dt>Note</dt><dd>If two costs/constraints/callbacks represent the same expression, but their evaluators point to different objects, then they are NOT regarded the same. For example, if we have <div class="fragment"><div class="line"><span class="keyword">auto</span> cost1 = prog.AddLinearCost(<a class="code" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>[0] + <a class="code" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>[1]);</div><div class="line"><span class="keyword">auto</span> cost2 = prog.AddLinearCost(<a class="code" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>[0] + <a class="code" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>[1]);</div><div class="line"><span class="comment">// cost1 and cost2 represent the same cost, but cost1.evaluator() and</span></div><div class="line"><span class="comment">// cost2.evaluator() point to different objects. So after removing cost1,</span></div><div class="line"><span class="comment">// cost2 still lives in prog.</span></div><div class="line">prog.RemoveCost(cost1);</div><div class="line"><span class="comment">// This will print true.</span></div><div class="line">std::cout &lt;&lt; (prog.linear_costs()[0] == cost2) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div></div><!-- fragment --> </dd></dl>
 </div></td></tr>
 <tr class="memitem:a776ae5f3bb0dc9a705c584e511aff067"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a776ae5f3bb0dc9a705c584e511aff067">RemoveCost</a> (const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">Cost</a> &gt; &amp;cost)</td></tr>
 <tr class="memdesc:a776ae5f3bb0dc9a705c584e511aff067"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes <code>cost</code> from this mathematical program.  <a href="#a776ae5f3bb0dc9a705c584e511aff067">More...</a><br /></td></tr>
@@ -936,6 +936,9 @@ Pursuit with Linear and Second Order Cone Programming" by Ahmadi and Hall with a
 <tr class="memitem:acb1b59ceeeec9235267e4a8b6d440c9f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#acb1b59ceeeec9235267e4a8b6d440c9f">RemoveConstraint</a> (const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">Constraint</a> &gt; &amp;constraint)</td></tr>
 <tr class="memdesc:acb1b59ceeeec9235267e4a8b6d440c9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes <code>constraint</code> from this mathematical program.  <a href="#acb1b59ceeeec9235267e4a8b6d440c9f">More...</a><br /></td></tr>
 <tr class="separator:acb1b59ceeeec9235267e4a8b6d440c9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed6328ee1df2fa0f13f00151bc9f579f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#aed6328ee1df2fa0f13f00151bc9f579f">RemoveVisualizationCallback</a> (const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_visualization_callback.html">VisualizationCallback</a> &gt; &amp;callback)</td></tr>
+<tr class="memdesc:aed6328ee1df2fa0f13f00151bc9f579f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes <code>callback</code> from this mathematical program.  <a href="#aed6328ee1df2fa0f13f00151bc9f579f">More...</a><br /></td></tr>
+<tr class="separator:aed6328ee1df2fa0f13f00151bc9f579f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -7925,7 +7928,7 @@ Symmetric(rows-1,0) Symmetric(rows-1,1) ... Symmetric(rows-1, rows-1)
 </div><div class="memdoc">
 
 <p>Removes <code>constraint</code> from this mathematical program. </p>
-<p>See <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#remove_cost_constraint">Remove costs or constraints</a> for more details. </p><dl class="section return"><dt>Returns</dt><dd>number of constraint objects removed from this program. If this program doesn't contain <code>constraint</code>, then returns 0. If this program contains multiple <code>constraint</code> objects, then returns the repetition of <code>constraint</code> in this program. </dd></dl>
+<p>See <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#remove_cost_constraint">Remove costs, constraints or callbacks</a> for more details. </p><dl class="section return"><dt>Returns</dt><dd>number of constraint objects removed from this program. If this program doesn't contain <code>constraint</code>, then returns 0. If this program contains multiple <code>constraint</code> objects, then returns the repetition of <code>constraint</code> in this program. </dd></dl>
 
 </div>
 </div>
@@ -7946,7 +7949,7 @@ Symmetric(rows-1,0) Symmetric(rows-1,1) ... Symmetric(rows-1, rows-1)
 </div><div class="memdoc">
 
 <p>Removes <code>cost</code> from this mathematical program. </p>
-<p>See <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#remove_cost_constraint">Remove costs or constraints</a> for more details. </p><dl class="section return"><dt>Returns</dt><dd>number of cost objects removed from this program. If this program doesn't contain <code>cost</code>, then returns 0. If this program contains multiple <code>cost</code> objects, then returns the repetition of <code>cost</code> in this program. </dd></dl>
+<p>See <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#remove_cost_constraint">Remove costs, constraints or callbacks</a> for more details. </p><dl class="section return"><dt>Returns</dt><dd>number of cost objects removed from this program. If this program doesn't contain <code>cost</code>, then returns 0. If this program contains multiple <code>cost</code> objects, then returns the repetition of <code>cost</code> in this program. </dd></dl>
 
 </div>
 </div>
@@ -7976,6 +7979,27 @@ Symmetric(rows-1,0) Symmetric(rows-1,1) ... Symmetric(rows-1, rows-1)
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="aed6328ee1df2fa0f13f00151bc9f579f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed6328ee1df2fa0f13f00151bc9f579f">&#9670;&nbsp;</a></span>RemoveVisualizationCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> RemoveVisualizationCallback </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_visualization_callback.html">VisualizationCallback</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>callback</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes <code>callback</code> from this mathematical program. </p>
+<p>See <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#remove_cost_constraint">Remove costs, constraints or callbacks</a> for more details. </p><dl class="section return"><dt>Returns</dt><dd>number of callback objects removed from this program. If this program doesn't contain <code>callback</code>, then returns 0. If this program contains multiple <code>callback</code> objects, then returns the repetition of <code>callback</code> in this program. </dd></dl>
 
 </div>
 </div>

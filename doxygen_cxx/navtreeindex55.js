@@ -1,5 +1,8 @@
 var NAVTREEINDEX55 =
 {
+"pydrake__pybind_8h.html#a4937c776ae795edfe27824821a0d14a5":[4,0,0,0,0,16,5],
+"pydrake__pybind_8h.html#a6e587c4c8d044dd6eee74dad65c203ed":[4,0,0,0,0,16,3],
+"pydrake__pybind_8h.html#a770b1f61c8d50f505dd2502203abeeed":[4,0,0,0,0,16,1],
 "pydrake__pybind_8h.html#aa8cec9d64f8d0017db630acd8740021e":[4,0,0,0,0,16,6],
 "pydrake__pybind_8h.html#abae292352a6ccb4d07b1aa13d4c7f143":[4,0,0,0,0,16,2],
 "pydrake__pybind_8h.html#ad48601ea388e9d2a662aff6f8b42dca4":[4,0,0,0,0,16,4],
@@ -246,8 +249,5 @@ var NAVTREEINDEX55 =
 "scoped__names_8h.html":[4,0,0,8,9,27],
 "scoped__names_8h.html#ad0442d59f36dad1157430528e91d147f":[4,0,0,8,9,27,1],
 "scoped__names_8h.html#aea5ef9ce73e6aad999339261567758eb":[4,0,0,8,9,27,0],
-"scoped__singleton_8h.html":[4,0,0,1,56],
-"screw__joint_8h.html":[4,0,0,8,14,47],
-"screw__mobilizer_8h.html":[4,0,0,8,14,48],
-"scs__clarabel__common_8h.html":[4,0,0,11,44]
+"scoped__singleton_8h.html":[4,0,0,1,56]
 };

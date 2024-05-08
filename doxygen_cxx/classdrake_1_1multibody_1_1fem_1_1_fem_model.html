@@ -188,7 +188,7 @@ A(X,t) = ∑ᵢ aᵢ(t)Nᵢ(X)
 deformable solids." Synthesis Lectures on Visual Computing: Computer Graphics, Animation, Computational Photography, and Imaging 1.1 (2015): 1-69.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default nonsymbolic scalars</a>. </td></tr>
+    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -203,8 +203,10 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4534d41423f7c3fd5763b65f0421e3af"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a4534d41423f7c3fd5763b65f0421e3af">~FemModel</a> ()=default</td></tr>
-<tr class="separator:a4534d41423f7c3fd5763b65f0421e3af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a239e28b01ac45b960f558e999010ecb2"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a239e28b01ac45b960f558e999010ecb2">~FemModel</a> ()</td></tr>
+<tr class="separator:a239e28b01ac45b960f558e999010ecb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31a87536e5e89e2d73d335f8a4b8c311"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html">FemModel</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a31a87536e5e89e2d73d335f8a4b8c311">Clone</a> () const</td></tr>
+<tr class="separator:a31a87536e5e89e2d73d335f8a4b8c311"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90e3616a403cd3f26b9aae1ffe0ec76c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a90e3616a403cd3f26b9aae1ffe0ec76c">num_nodes</a> () const</td></tr>
 <tr class="memdesc:a90e3616a403cd3f26b9aae1ffe0ec76c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of nodes that are associated with this model.  <a href="#a90e3616a403cd3f26b9aae1ffe0ec76c">More...</a><br /></td></tr>
 <tr class="separator:a90e3616a403cd3f26b9aae1ffe0ec76c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -259,6 +261,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a2bcebe0224e78e72f3c664de4801e8dd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a2bcebe0224e78e72f3c664de4801e8dd">FemModel</a> ()</td></tr>
 <tr class="memdesc:a2bcebe0224e78e72f3c664de4801e8dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an empty FEM model.  <a href="#a2bcebe0224e78e72f3c664de4801e8dd">More...</a><br /></td></tr>
 <tr class="separator:a2bcebe0224e78e72f3c664de4801e8dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ca1539033f0994cc2b9091198c3e8a2"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html">FemModel</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a3ca1539033f0994cc2b9091198c3e8a2">DoClone</a> () const =0</td></tr>
+<tr class="memdesc:a3ca1539033f0994cc2b9091198c3e8a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">FemModelImpl must override this method to provide an implementation to make a deep copy of the concrete <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html" title="FemModel calculates the components of the spatially discretized FEM equations for dynamic elasticity ...">FemModel</a>.  <a href="#a3ca1539033f0994cc2b9091198c3e8a2">More...</a><br /></td></tr>
+<tr class="separator:a3ca1539033f0994cc2b9091198c3e8a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1255ca32db4bae2e53394d503b563c00"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a1255ca32db4bae2e53394d503b563c00">MakeReferencePositions</a> () const =0</td></tr>
 <tr class="memdesc:a1255ca32db4bae2e53394d503b563c00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the reference positions of this model.  <a href="#a1255ca32db4bae2e53394d503b563c00">More...</a><br /></td></tr>
 <tr class="separator:a1255ca32db4bae2e53394d503b563c00"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -337,8 +342,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a4534d41423f7c3fd5763b65f0421e3af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4534d41423f7c3fd5763b65f0421e3af">&#9670;&nbsp;</a></span>~FemModel()</h2>
+<a id="a239e28b01ac45b960f558e999010ecb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a239e28b01ac45b960f558e999010ecb2">&#9670;&nbsp;</a></span>~FemModel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -355,7 +360,7 @@ Protected Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -516,6 +521,23 @@ All entries in <code>weights</code> are non-negative. </dd></dl>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a31a87536e5e89e2d73d335f8a4b8c311"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31a87536e5e89e2d73d335f8a4b8c311">&#9670;&nbsp;</a></span>Clone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html">FemModel</a>&lt;T&gt; &gt; Clone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -680,6 +702,33 @@ All entries in <code>weights</code> are non-negative. </dd></dl>
 
 <p>FemModelImpl must override this method to provide an implementation for the NVI <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a8fd0b48d92cb1c3b92e6c88f69b07420" title="Calculates an approximated tangent matrix evaluated at the given FEM state.">CalcTangentMatrix()</a>. </p>
 <p>The input <code>fem_state</code> is guaranteed to be compatible with <code>this</code> FEM model, and the input <code>tangent_matrix</code> is guaranteed to be non-null and properly sized. </p>
+
+</div>
+</div>
+<a id="a3ca1539033f0994cc2b9091198c3e8a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ca1539033f0994cc2b9091198c3e8a2">&#9670;&nbsp;</a></span>DoClone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::unique_ptr&lt;<a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html">FemModel</a>&lt;T&gt; &gt; DoClone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>FemModelImpl must override this method to provide an implementation to make a deep copy of the concrete <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html" title="FemModel calculates the components of the spatially discretized FEM equations for dynamic elasticity ...">FemModel</a>. </p>
 
 </div>
 </div>
@@ -912,8 +961,8 @@ All entries in <code>weights</code> are non-negative. </dd></dl>
 
 </div>
 </div>
-<a id="a22e6cae04151e6b39cf8ceecfc7f4cf9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22e6cae04151e6b39cf8ceecfc7f4cf9">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a52811120b5134c610e2af3fc096c92af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52811120b5134c610e2af3fc096c92af">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -924,7 +973,7 @@ All entries in <code>weights</code> are non-negative. </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html">FemModel</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html">FemModel</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html">FemModel</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -938,8 +987,8 @@ All entries in <code>weights</code> are non-negative. </dd></dl>
 
 </div>
 </div>
-<a id="a52811120b5134c610e2af3fc096c92af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52811120b5134c610e2af3fc096c92af">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a22e6cae04151e6b39cf8ceecfc7f4cf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22e6cae04151e6b39cf8ceecfc7f4cf9">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -950,7 +999,7 @@ All entries in <code>weights</code> are non-negative. </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html">FemModel</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html">FemModel</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html">FemModel</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

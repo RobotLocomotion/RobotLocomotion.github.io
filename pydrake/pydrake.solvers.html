@@ -5462,7 +5462,8 @@ applied to the variables in <code class="docutils literal notranslate"><span cla
 <dt class="sig sig-object py" id="pydrake.solvers.MathematicalProgram.RemoveConstraint">
 <span class="sig-name descname"><span class="pre">RemoveConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">constraint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><span class="pre">Constraint</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.solvers.MathematicalProgram.RemoveConstraint" title="Permalink to this definition"></a></dt>
 <dd><p>Removes <code class="docutils literal notranslate"><span class="pre">constraint</span></code> from this mathematical program. See
-remove_cost_constraint “Remove costs or constraints” for more details.</p>
+remove_cost_constraint “Remove costs, constraints or callbacks” for
+more details.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>number of constraint objects removed from this program. If this
@@ -5477,7 +5478,8 @@ repetition of <code class="docutils literal notranslate"><span class="pre">const
 <dt class="sig sig-object py" id="pydrake.solvers.MathematicalProgram.RemoveCost">
 <span class="sig-name descname"><span class="pre">RemoveCost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">cost</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.Cost" title="pydrake.solvers.Cost"><span class="pre">Cost</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.solvers.MathematicalProgram.RemoveCost" title="Permalink to this definition"></a></dt>
 <dd><p>Removes <code class="docutils literal notranslate"><span class="pre">cost</span></code> from this mathematical program. See
-remove_cost_constraint “Remove costs or constraints” for more details.</p>
+remove_cost_constraint “Remove costs, constraints or callbacks” for
+more details.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>number of cost objects removed from this program. If this program
@@ -5507,6 +5509,22 @@ variables inside this MathematicalProgram will change.</p>
 <li><p><strong>exception if var is bound with any cost</strong><strong> or </strong><strong>constraint.</strong> – </p></li>
 <li><p><strong>exception if var is not a decision variable of the program.</strong> – </p></li>
 </ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.MathematicalProgram.RemoveVisualizationCallback">
+<span class="sig-name descname"><span class="pre">RemoveVisualizationCallback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.VisualizationCallback" title="pydrake.solvers.VisualizationCallback"><span class="pre">VisualizationCallback</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.solvers.MathematicalProgram.RemoveVisualizationCallback" title="Permalink to this definition"></a></dt>
+<dd><p>Removes <code class="docutils literal notranslate"><span class="pre">callback</span></code> from this mathematical program. See
+remove_cost_constraint “Remove costs, constraints or callbacks” for
+more details.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>number of callback objects removed from this program. If this
+program doesn’t contain <code class="docutils literal notranslate"><span class="pre">callback</span></code>, then returns 0. If this
+program contains multiple <code class="docutils literal notranslate"><span class="pre">callback</span></code> objects, then returns the
+repetition of <code class="docutils literal notranslate"><span class="pre">callback</span></code> in this program.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -5712,6 +5730,12 @@ names. Providing useful variable names and calling
 Evaluator::set_description() to describe the costs and constraints can
 dramatically improve the readability of the output. See the tutorial
 <code class="docutils literal notranslate"><span class="pre">debug_mathematical_program.ipynb</span></code> for more information.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.MathematicalProgram.visualization_callbacks">
+<span class="sig-name descname"><span class="pre">visualization_callbacks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.VisualizationCallback" title="pydrake.solvers.VisualizationCallback"><span class="pre">VisualizationCallback</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.solvers.MathematicalProgram.visualization_callbacks" title="Permalink to this definition"></a></dt>
+<dd><p>Getter for all callbacks.</p>
 </dd></dl>
 
 </dd></dl>
