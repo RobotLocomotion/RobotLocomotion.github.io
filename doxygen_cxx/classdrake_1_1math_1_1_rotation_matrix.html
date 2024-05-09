@@ -289,6 +289,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a7ca8d7510ad355ad869f71f5bcbd2c41"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">RotationMatrix</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#a7ca8d7510ad355ad869f71f5bcbd2c41">MakeUnchecked</a> (const <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667">Matrix3</a>&lt; T &gt; &amp;R)</td></tr>
+<tr class="memdesc:a7ca8d7510ad355ad869f71f5bcbd2c41"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Makes a RotationMatrix from a Matrix3.  <a href="#a7ca8d7510ad355ad869f71f5bcbd2c41">More...</a><br /></td></tr>
+<tr class="separator:a7ca8d7510ad355ad869f71f5bcbd2c41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1890eaa31728581cedbf2bd40457560"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">RotationMatrix</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#aa1890eaa31728581cedbf2bd40457560">MakeFromOrthonormalColumns</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;Bx, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;By, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;Bz)</td></tr>
 <tr class="memdesc:aa1890eaa31728581cedbf2bd40457560"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Makes the RotationMatrix <code>R_AB</code> from right-handed orthogonal unit vectors <code>Bx</code>, <code>By</code>, <code>Bz</code> so the columns of <code>R_AB</code> are <code>[Bx, By, Bz]</code>.  <a href="#aa1890eaa31728581cedbf2bd40457560">More...</a><br /></td></tr>
 <tr class="separator:aa1890eaa31728581cedbf2bd40457560"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1415,6 +1418,35 @@ The rotation matrix <code>R_AB</code> relates two sets of right-handed orthogona
 <dl class="section note"><dt>Note</dt><dd>In release builds, the caller can subsequently test if <code>R_AB</code> is, in fact, a valid RotationMatrix by calling <code>R_AB.IsValid()</code>. </dd>
 <dd>
 The rotation matrix <code>R_AB</code> relates two sets of right-handed orthogonal unit vectors, namely Ax, Ay, Az and Bx, By, Bz. The rows of <code>R_AB</code> are Ax, Ay, Az expressed in frame B (i.e.,<code>Ax_B</code>, <code>Ay_B</code>, <code>Az_B</code>). The columns of <code>R_AB</code> are Bx, By, Bz expressed in frame A (i.e., <code>Bx_A</code>, <code>By_A</code>, <code>Bz_A</code>). </dd></dl>
+
+</div>
+</div>
+<a id="a7ca8d7510ad355ad869f71f5bcbd2c41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ca8d7510ad355ad869f71f5bcbd2c41">&#9670;&nbsp;</a></span>MakeUnchecked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">RotationMatrix</a>&lt;T&gt; MakeUnchecked </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667">Matrix3</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>R</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Advanced) Makes a RotationMatrix from a Matrix3. </p>
+<p>No check is performed to test whether or not the parameter R is a valid rotation matrix. </p>
 
 </div>
 </div>

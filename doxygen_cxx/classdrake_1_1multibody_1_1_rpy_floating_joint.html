@@ -236,8 +236,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aad97e3933c46c6419e4bdb2bd0a2609d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rpy_floating_joint.html#aad97e3933c46c6419e4bdb2bd0a2609d">get_translation</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
 <tr class="memdesc:aad97e3933c46c6419e4bdb2bd0a2609d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the translation (position vector) <code>p_FM</code> of the child frame M's origin Mo as measured and expressed in the parent frame F.  <a href="#aad97e3933c46c6419e4bdb2bd0a2609d">More...</a><br /></td></tr>
 <tr class="separator:aad97e3933c46c6419e4bdb2bd0a2609d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61ffaa75ca0ee1ddbc8ac4e0ffdf4eef"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_rpy_floating_joint.html">RpyFloatingJoint</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rpy_floating_joint.html#a61ffaa75ca0ee1ddbc8ac4e0ffdf4eef">SetTranslation</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_FM) const</td></tr>
+<tr class="memdesc:a61ffaa75ca0ee1ddbc8ac4e0ffdf4eef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets <code>context</code> to store the translation (position vector) <code>p_FM</code> of frame M's origin Mo measured and expressed in frame F.  <a href="#a61ffaa75ca0ee1ddbc8ac4e0ffdf4eef">More...</a><br /></td></tr>
+<tr class="separator:a61ffaa75ca0ee1ddbc8ac4e0ffdf4eef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09dca4f598093065362c869df4a03e2e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_rpy_floating_joint.html">RpyFloatingJoint</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rpy_floating_joint.html#a09dca4f598093065362c869df4a03e2e">set_translation</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_FM) const</td></tr>
-<tr class="memdesc:a09dca4f598093065362c869df4a03e2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets <code>context</code> to store the translation (position vector) <code>p_FM</code> of frame M's origin Mo measured and expressed in frame F.  <a href="#a09dca4f598093065362c869df4a03e2e">More...</a><br /></td></tr>
+<tr class="memdesc:a09dca4f598093065362c869df4a03e2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a09dca4f598093065362c869df4a03e2e">More...</a><br /></td></tr>
 <tr class="separator:a09dca4f598093065362c869df4a03e2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac698d80df068cadbde2883f52fd7ad96"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rpy_floating_joint.html#ac698d80df068cadbde2883f52fd7ad96">GetPose</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
 <tr class="memdesc:ac698d80df068cadbde2883f52fd7ad96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the pose <code>X_FM</code> of the outboard frame M as measured and expressed in the inboard frame F.  <a href="#ac698d80df068cadbde2883f52fd7ad96">More...</a><br /></td></tr>
@@ -659,7 +662,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000011">Deprecated:</a></b></dt><dd>Use default_angular_damping() instead. <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000022">Deprecated:</a></b></dt><dd>Use default_angular_damping() instead. <br />
  This will be removed from Drake on or after 2024-06-01.</dd></dl>
 
 </div>
@@ -1093,7 +1096,7 @@ Friends</h2></td></tr>
 <p>Sets the <code>context</code> so that the generalized coordinates corresponding to the roll-pitch-yaw rotation angles of this joint equals <code>angles</code>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>A Context for the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> this joint belongs to. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">context</td><td>A Context for the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> this joint belongs to. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">angles</td><td>Angles in radians to be stored in <code>context</code> ordered as θr, θp, θy. </td></tr>
   </table>
   </dd>
@@ -1133,7 +1136,7 @@ Friends</h2></td></tr>
 <p>Sets in <code>context</code> the state for this joint so that the angular velocity of the child frame M in the parent frame F is <code>w_FM</code>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">context</td><td>A Context for the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> this joint belongs to. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">context</td><td>A Context for the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> this joint belongs to. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">w_FM</td><td>A vector in ℝ³ with the angular velocity of the child frame M in the parent frame F, expressed in F. Refer to this class's documentation for further details and definitions of these frames. </td></tr>
   </table>
   </dd>
@@ -1263,15 +1266,9 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Sets <code>context</code> to store the translation (position vector) <code>p_FM</code> of frame M's origin Mo measured and expressed in frame F. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">context</td><td>A Context for the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> this joint belongs to. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">p_FM</td><td>The desired position of frame M's origin in frame F, to be stored in <code>context</code>. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>a constant reference to this joint. </dd></dl>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000024">Deprecated:</a></b></dt><dd>Use RpyFloatingJoint::SetTranslation() <br />
+ This will be removed from Drake on or after 2024-08-01.</dd></dl>
 
 </div>
 </div>
@@ -1304,7 +1301,7 @@ Friends</h2></td></tr>
 <p>Sets in <code>context</code> the state for this joint so that the translational velocity of the child frame M's origin in the parent frame F is <code>v_FM</code>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">context</td><td>A Context for the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> this joint belongs to. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">context</td><td>A Context for the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> this joint belongs to. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">v_FM</td><td>A vector in ℝ³ with the translational velocity of the child frame M's origin in the parent frame F, expressed in F. Refer to this class's documentation for further details and definitions of these frames. </td></tr>
   </table>
   </dd>
@@ -1342,7 +1339,7 @@ Friends</h2></td></tr>
 <p>Sets the roll-pitch-yaw angles in <code>context</code> so this <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a>'s orientation is consistent with the given <code>R_FM</code> rotation matrix. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>A Context for the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> this joint belongs to. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">context</td><td>A Context for the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> this joint belongs to. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">R_FM</td><td>The rotation matrix giving the orientation of frame M in frame F. </td></tr>
   </table>
   </dd>
@@ -1381,13 +1378,51 @@ Friends</h2></td></tr>
 <p>Sets <code>context</code> to store <code>X_FM</code> the pose of frame M measured and expressed in frame F. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">context</td><td>A Context for the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> this joint belongs to. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">X_FM</td><td>The desired pose of frame M in F to be stored in <code>context</code>. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">context</td><td>A Context for the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> this joint belongs to. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">X_FM</td><td>The desired pose of frame M in frame F to be stored in <code>context</code>. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section warning"><dt>Warning</dt><dd>See class documentation for discussion of singular configurations. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>a constant reference to <code>this</code> joint. </dd></dl>
+
+</div>
+</div>
+<a id="a61ffaa75ca0ee1ddbc8ac4e0ffdf4eef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61ffaa75ca0ee1ddbc8ac4e0ffdf4eef">&#9670;&nbsp;</a></span>SetTranslation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1multibody_1_1_rpy_floating_joint.html">RpyFloatingJoint</a>&lt;T&gt;&amp; SetTranslation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>p_FM</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets <code>context</code> to store the translation (position vector) <code>p_FM</code> of frame M's origin Mo measured and expressed in frame F. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">context</td><td>A Context for the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> this joint belongs to. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_FM</td><td>The desired position of frame M's origin in frame F, to be stored in <code>context</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a constant reference to this joint. </dd></dl>
 
 </div>
 </div>
@@ -1407,7 +1442,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000012">Deprecated:</a></b></dt><dd>Use default_translational_damping() instead. <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000023">Deprecated:</a></b></dt><dd>Use default_translational_damping() instead. <br />
  This will be removed from Drake on or after 2024-06-01.</dd></dl>
 
 </div>

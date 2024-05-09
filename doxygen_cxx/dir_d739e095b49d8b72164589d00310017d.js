@@ -64,6 +64,7 @@ var dir_d739e095b49d8b72164589d00310017d =
       [ "PropertyTuple", "structdrake_1_1geometry_1_1_meshcat_params_1_1_property_tuple.html", "structdrake_1_1geometry_1_1_meshcat_params_1_1_property_tuple" ]
     ] ],
     [ "meshcat_point_cloud_visualizer.h", "meshcat__point__cloud__visualizer_8h.html", "meshcat__point__cloud__visualizer_8h" ],
+    [ "meshcat_recording_internal.h", "meshcat__recording__internal_8h.html", null ],
     [ "meshcat_types_internal.h", "meshcat__types__internal_8h.html", "meshcat__types__internal_8h" ],
     [ "meshcat_visualizer.h", "meshcat__visualizer_8h.html", "meshcat__visualizer_8h" ],
     [ "meshcat_visualizer_params.h", "meshcat__visualizer__params_8h.html", [

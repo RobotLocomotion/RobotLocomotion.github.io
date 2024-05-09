@@ -247,6 +247,7 @@ var classdrake_1_1multibody_1_1_multibody_plant =
     [ "SetFreeBodyRandomPositionDistribution", "classdrake_1_1multibody_1_1_multibody_plant.html#a6714b39ed77d548326ca4b02c4ff23d7", null ],
     [ "SetFreeBodyRandomRotationDistribution", "classdrake_1_1multibody_1_1_multibody_plant.html#a0e948d3233ccb5bf0001d5bd7425062a", null ],
     [ "SetFreeBodyRandomRotationDistributionToUniform", "classdrake_1_1multibody_1_1_multibody_plant.html#a057dc09db3cf93f1cc47fb1db6995ca0", null ],
+    [ "SetFreeBodyRandomTranslationDistribution", "classdrake_1_1multibody_1_1_multibody_plant.html#ad44332b9a38a3534af794581915407ec", null ],
     [ "SetFreeBodySpatialVelocity", "classdrake_1_1multibody_1_1_multibody_plant.html#aa99ba0014b077c4bbf7ae1aaa920447e", null ],
     [ "SetFreeBodySpatialVelocity", "classdrake_1_1multibody_1_1_multibody_plant.html#aed2b93b9cedf90d1e84aba6cbd397790", null ],
     [ "SetPositions", "classdrake_1_1multibody_1_1_multibody_plant.html#a22bbb4e44e611ba49f34a3fe9f46c794", null ],

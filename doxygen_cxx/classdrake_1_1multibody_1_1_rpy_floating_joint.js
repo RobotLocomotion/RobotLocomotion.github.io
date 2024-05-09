@@ -28,6 +28,7 @@ var classdrake_1_1multibody_1_1_rpy_floating_joint =
     [ "set_translational_velocity", "classdrake_1_1multibody_1_1_rpy_floating_joint.html#ac7583eca4df20c0db97d10b2ea63b484", null ],
     [ "SetOrientation", "classdrake_1_1multibody_1_1_rpy_floating_joint.html#a24ee6b28184a173aa3bcaeaaa4568bed", null ],
     [ "SetPose", "classdrake_1_1multibody_1_1_rpy_floating_joint.html#a488d11cb18b724242bf38e7c090f3c41", null ],
+    [ "SetTranslation", "classdrake_1_1multibody_1_1_rpy_floating_joint.html#a61ffaa75ca0ee1ddbc8ac4e0ffdf4eef", null ],
     [ "translational_damping", "classdrake_1_1multibody_1_1_rpy_floating_joint.html#a5d447b184aa0d500cefbc725641bd10a", null ],
     [ "type_name", "classdrake_1_1multibody_1_1_rpy_floating_joint.html#ae4fa9c904accccf5900c63c3e65ca277", null ],
     [ "RpyFloatingJoint", "classdrake_1_1multibody_1_1_rpy_floating_joint.html#a17bb23661e06c5e79b69d7ea93974b12", null ],

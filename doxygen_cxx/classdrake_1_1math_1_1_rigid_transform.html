@@ -230,9 +230,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa36e94d338e3be24e9fde24f1d58a4fb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html#aa36e94d338e3be24e9fde24f1d58a4fb">RigidTransform</a> (const <a class="el" href="namespacedrake.html#a9eb383d64a842ca9002f66b2e10254aa">Isometry3</a>&lt; T &gt; &amp;pose)</td></tr>
 <tr class="memdesc:aa36e94d338e3be24e9fde24f1d58a4fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a RigidTransform from an Eigen Isometry3.  <a href="#aa36e94d338e3be24e9fde24f1d58a4fb">More...</a><br /></td></tr>
 <tr class="separator:aa36e94d338e3be24e9fde24f1d58a4fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8b71809f27af855296a40b46d8f0a83"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html#ab8b71809f27af855296a40b46d8f0a83">RigidTransform</a> (const Eigen::Matrix&lt; T, 3, 4 &gt; pose)</td></tr>
-<tr class="memdesc:ab8b71809f27af855296a40b46d8f0a83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a RigidTransform from a 3x4 matrix whose structure is below.  <a href="#ab8b71809f27af855296a40b46d8f0a83">More...</a><br /></td></tr>
-<tr class="separator:ab8b71809f27af855296a40b46d8f0a83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca9bb867abe5a56d1f4f9ae9c62df07b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html#aca9bb867abe5a56d1f4f9ae9c62df07b">RigidTransform</a> (const Eigen::Matrix&lt; T, 3, 4 &gt; &amp;pose)</td></tr>
+<tr class="memdesc:aca9bb867abe5a56d1f4f9ae9c62df07b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a RigidTransform from a 3x4 matrix whose structure is below.  <a href="#aca9bb867abe5a56d1f4f9ae9c62df07b">More...</a><br /></td></tr>
+<tr class="separator:aca9bb867abe5a56d1f4f9ae9c62df07b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d2232216392f2045d6907a99fa0b423"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html#a5d2232216392f2045d6907a99fa0b423">RigidTransform</a> (const <a class="el" href="namespacedrake.html#ae74155a11dfcdaad0adc0349f0956148">Matrix4</a>&lt; T &gt; &amp;pose)</td></tr>
 <tr class="memdesc:a5d2232216392f2045d6907a99fa0b423"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a RigidTransform from a 4x4 matrix whose structure is below.  <a href="#a5d2232216392f2045d6907a99fa0b423">More...</a><br /></td></tr>
 <tr class="separator:a5d2232216392f2045d6907a99fa0b423"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -338,6 +338,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
+<tr class="memitem:acb881d1b299f651b18051c6f85f2281e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">RigidTransform</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html#acb881d1b299f651b18051c6f85f2281e">MakeUnchecked</a> (const Eigen::Matrix&lt; T, 3, 4 &gt; &amp;pose)</td></tr>
+<tr class="memdesc:acb881d1b299f651b18051c6f85f2281e"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Constructs a RigidTransform from a 3x4 matrix, without any validity checks nor orthogonalization.  <a href="#acb881d1b299f651b18051c6f85f2281e">More...</a><br /></td></tr>
+<tr class="separator:acb881d1b299f651b18051c6f85f2281e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9af123d3a901431db4b446e542b55b98"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">RigidTransform</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html#a9af123d3a901431db4b446e542b55b98">Identity</a> ()</td></tr>
 <tr class="memdesc:a9af123d3a901431db4b446e542b55b98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the identity RigidTransform (corresponds to coincident frames).  <a href="#a9af123d3a901431db4b446e542b55b98">More...</a><br /></td></tr>
 <tr class="separator:a9af123d3a901431db4b446e542b55b98"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -746,8 +749,8 @@ This constructor provides an implicit conversion from Translation to RigidTransf
 
 </div>
 </div>
-<a id="ab8b71809f27af855296a40b46d8f0a83"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab8b71809f27af855296a40b46d8f0a83">&#9670;&nbsp;</a></span>RigidTransform() <span class="overload">[12/14]</span></h2>
+<a id="aca9bb867abe5a56d1f4f9ae9c62df07b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca9bb867abe5a56d1f4f9ae9c62df07b">&#9670;&nbsp;</a></span>RigidTransform() <span class="overload">[12/14]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -758,7 +761,7 @@ This constructor provides an implicit conversion from Translation to RigidTransf
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">RigidTransform</a> </td>
           <td>(</td>
-          <td class="paramtype">const Eigen::Matrix&lt; T, 3, 4 &gt;&#160;</td>
+          <td class="paramtype">const Eigen::Matrix&lt; T, 3, 4 &gt; &amp;&#160;</td>
           <td class="paramname"><em>pose</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1225,6 +1228,44 @@ This constructor prevents ambiguity that would otherwise exist for a RigidTransf
 
 </div>
 </div>
+<a id="acb881d1b299f651b18051c6f85f2281e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb881d1b299f651b18051c6f85f2281e">&#9670;&nbsp;</a></span>MakeUnchecked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">RigidTransform</a>&lt;T&gt; MakeUnchecked </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Matrix&lt; T, 3, 4 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>pose</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Advanced) Constructs a RigidTransform from a 3x4 matrix, without any validity checks nor orthogonalization. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pose</td><td>3x4 matrix that contains a 3x3 rotation matrix <code>R_AB</code> and also a 3x1 position vector <code>p_AoBo_A</code> (the position vector from frame A's origin to frame B's origin, expressed in frame A). <pre>
+ ┌                ┐
+ │ R_AB  p_AoBo_A │
+ └                ┘
+</pre> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="af5ba8ece1175e9cb229649a048096e79"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af5ba8ece1175e9cb229649a048096e79">&#9670;&nbsp;</a></span>operator *() <span class="overload">[1/5]</span></h2>
 
@@ -1396,8 +1437,8 @@ This constructor prevents ambiguity that would otherwise exist for a RigidTransf
 
 </div>
 </div>
-<a id="a814b6772b29ffd1c2bbc34befae3667d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a814b6772b29ffd1c2bbc34befae3667d">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a257f755b0f58f8958f8827b0651e205c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a257f755b0f58f8958f8827b0651e205c">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1408,7 +1449,7 @@ This constructor prevents ambiguity that would otherwise exist for a RigidTransf
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">RigidTransform</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">RigidTransform</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">RigidTransform</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1422,8 +1463,8 @@ This constructor prevents ambiguity that would otherwise exist for a RigidTransf
 
 </div>
 </div>
-<a id="a257f755b0f58f8958f8827b0651e205c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a257f755b0f58f8958f8827b0651e205c">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a814b6772b29ffd1c2bbc34befae3667d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a814b6772b29ffd1c2bbc34befae3667d">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1434,7 +1475,7 @@ This constructor prevents ambiguity that would otherwise exist for a RigidTransf
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">RigidTransform</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">RigidTransform</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">RigidTransform</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

@@ -29,6 +29,7 @@ var classdrake_1_1math_1_1_rotation_matrix =
     [ "MakeFromOneVector", "classdrake_1_1math_1_1_rotation_matrix.html#aa1f727008230bd6410b3ff8849fd78e9", null ],
     [ "MakeFromOrthonormalColumns", "classdrake_1_1math_1_1_rotation_matrix.html#aa1890eaa31728581cedbf2bd40457560", null ],
     [ "MakeFromOrthonormalRows", "classdrake_1_1math_1_1_rotation_matrix.html#a8b686ab545dd2e1fb9bf4fb28aac8560", null ],
+    [ "MakeUnchecked", "classdrake_1_1math_1_1_rotation_matrix.html#a7ca8d7510ad355ad869f71f5bcbd2c41", null ],
     [ "MakeXRotation", "classdrake_1_1math_1_1_rotation_matrix.html#a1141e549f6e5d8a195f24c8c95e91797", null ],
     [ "MakeYRotation", "classdrake_1_1math_1_1_rotation_matrix.html#abd982e9a592eef1b86ff6db747f01098", null ],
     [ "MakeZRotation", "classdrake_1_1math_1_1_rotation_matrix.html#aceeffb4f32ea6d3eb8e17c2919d5cfe9", null ],

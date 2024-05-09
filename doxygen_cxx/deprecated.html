@@ -167,49 +167,85 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 <dd><a class="anchor" id="_deprecated000001"></a>Projection has moved to `ConvexSet`; use `Projection()` instead. <br />
  This will be removed from Drake on or after 2024-08-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_ball_rpy_joint.html#aad91b55e6b714db4ba96190e6fab07ac">BallRpyJoint&lt; T &gt;::damping</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000004"></a>Use default_damping() instead. <br />
+<dd><a class="anchor" id="_deprecated000005"></a>Use default_damping() instead. <br />
  This will be removed from Drake on or after 2024-06-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a404e1937742b0f345d746f2b2043e9e3">Joint&lt; T &gt;::damping_vector</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000005"></a>Use default_damping_vector() instead. <br />
+<dd><a class="anchor" id="_deprecated000006"></a>Use default_damping_vector() instead. <br />
  This will be removed from Drake on or after 2024-06-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1solvers_1_1_l2_norm_cost.html#ace583a472a3bdc1b67f05d6a6571a903">L2NormCost::A</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000016"></a>Use A_dense function instead. <br />
+<dd><a class="anchor" id="_deprecated000028"></a>Use A_dense function instead. <br />
  This will be removed from Drake on or after 2024-08-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a217d8aa9218c9d981b7bc2e8a983c4be">MultibodyPlant&lt; T &gt;::set_discrete_contact_solver</a>  (DiscreteContactSolver contact_solver)</dt>
 <dd><a class="anchor" id="_deprecated000003"></a>Use set_discrete_contact_approximation() to set the contact model  approximation. The underlying solver will be inferred automatically. <br />
  This will be removed from Drake on or after 2024-04-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a6714b39ed77d548326ca4b02c4ff23d7">MultibodyPlant&lt; T &gt;::SetFreeBodyRandomPositionDistribution</a>  (const RigidBody&lt; T &gt; &amp;body, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2" title="A column vector of size 3, templated on scalar type.">Vector3&lt; symbolic::Expression &gt;</a> &amp;position)</dt>
+<dd><a class="anchor" id="_deprecated000004"></a>Use MultibodyPlant::SetFreeBodyRandomTranslationDistribution() <br />
+ This will be removed from Drake on or after 2024-08-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_planar_joint.html#ab5b708cf8c49f2b731dd3fa988bebecb">PlanarJoint&lt; T &gt;::damping</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000006"></a>Use default_damping() instead. <br />
- This will be removed from Drake on or after 2024-06-01. </dd>
-<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_prismatic_joint.html#aad91b55e6b714db4ba96190e6fab07ac">PrismaticJoint&lt; T &gt;::damping</a>  () const</dt>
 <dd><a class="anchor" id="_deprecated000007"></a>Use default_damping() instead. <br />
  This will be removed from Drake on or after 2024-06-01. </dd>
-<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a33a39dbcfe8db8e29092329d7794fce6">QuaternionFloatingJoint&lt; T &gt;::angular_damping</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000008"></a>Use default_angular_damping() instead. <br />
+<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_prismatic_joint.html#aad91b55e6b714db4ba96190e6fab07ac">PrismaticJoint&lt; T &gt;::damping</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000008"></a>Use default_damping() instead. <br />
  This will be removed from Drake on or after 2024-06-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a33a39dbcfe8db8e29092329d7794fce6">QuaternionFloatingJoint&lt; T &gt;::angular_damping</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000009"></a>Use default_angular_damping() instead. <br />
+ This will be removed from Drake on or after 2024-06-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a4f6e27cbb99fadfd3e6592b31a281387">QuaternionFloatingJoint&lt; T &gt;::get_default_pose</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000019"></a>Removed since functionality already provided by base class  Joint::GetDefaultPose() <br />
+ This will be removed from Drake on or after 2024-08-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a81be0d8f705b5ed14126e2fd9c4ce775">QuaternionFloatingJoint&lt; T &gt;::get_default_position</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000018"></a>Use QuaternionFloatingJoint::get_default_translation() <br />
+ This will be removed from Drake on or after 2024-08-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a1855a67d90891e570c494a50cfcdebb1">QuaternionFloatingJoint&lt; T &gt;::get_pose</a>  (const systems::Context&lt; T &gt; &amp;context) const</dt>
+<dd><a class="anchor" id="_deprecated000012"></a>Use QuaternionFloatingJoint::GetPose() <br />
+ This will be removed from Drake on or after 2024-08-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_quaternion_floating_joint.html#aede12e74fc5e3813f4c41ab0415da1d0">QuaternionFloatingJoint&lt; T &gt;::get_position</a>  (const systems::Context&lt; T &gt; &amp;context) const</dt>
+<dd><a class="anchor" id="_deprecated000011"></a>Use QuaternionFloatingJoint::get_translation() <br />
+ This will be removed from Drake on or after 2024-08-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a36490345a4b30b855ef0ac374eb39d3c">QuaternionFloatingJoint&lt; T &gt;::set_default_position</a>  (const Vector3&lt; double &gt; &amp;p_FM)</dt>
+<dd><a class="anchor" id="_deprecated000020"></a>Use QuaternionFloatingJoint::set_default_translation() <br />
+ This will be removed from Drake on or after 2024-08-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a114f793155a38fcedc8477ee8066b307">QuaternionFloatingJoint&lt; T &gt;::set_pose</a>  (systems::Context&lt; T &gt; *context, const math::RigidTransform&lt; T &gt; &amp;X_FM) const</dt>
+<dd><a class="anchor" id="_deprecated000016"></a>Use QuaternionFloatingJoint::SetPose() <br />
+ This will be removed from Drake on or after 2024-08-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a526acf920b1e95219fd94e03bf8599f7">QuaternionFloatingJoint&lt; T &gt;::set_position</a>  (systems::Context&lt; T &gt; *context, const Vector3&lt; T &gt; &amp;p_FM) const</dt>
+<dd><a class="anchor" id="_deprecated000015"></a>Use QuaternionFloatingJoint::SetTranslation() <br />
+ This will be removed from Drake on or after 2024-08-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a1d8e7dad171e0ce4706f5bb89c6e02b2">QuaternionFloatingJoint&lt; T &gt;::set_quaternion</a>  (systems::Context&lt; T &gt; *context, const Quaternion&lt; T &gt; &amp;q_FM) const</dt>
+<dd><a class="anchor" id="_deprecated000013"></a>Use QuaternionFloatingJoint::SetQuaternion() <br />
+ This will be removed from Drake on or after 2024-08-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a04d5ae2ba950104bc99c5953c0ad1e24">QuaternionFloatingJoint&lt; T &gt;::set_random_position_distribution</a>  (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2" title="A column vector of size 3, templated on scalar type.">Vector3&lt; symbolic::Expression &gt;</a> &amp;p_FM)</dt>
+<dd><a class="anchor" id="_deprecated000017"></a>Use QuaternionFloatingJoint::set_random_translation_distribution() <br />
+ This will be removed from Drake on or after 2024-08-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a2bb3ce50974c9f369e8401d55c035820">QuaternionFloatingJoint&lt; T &gt;::SetFromRotationMatrix</a>  (systems::Context&lt; T &gt; *context, const math::RotationMatrix&lt; T &gt; &amp;R_FM) const</dt>
+<dd><a class="anchor" id="_deprecated000014"></a>Use QuaternionFloatingJoint::SetOrientation() <br />
+ This will be removed from Drake on or after 2024-08-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a5d447b184aa0d500cefbc725641bd10a">QuaternionFloatingJoint&lt; T &gt;::translational_damping</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000009"></a>Use default_translational_damping() instead. <br />
+<dd><a class="anchor" id="_deprecated000010"></a>Use default_translational_damping() instead. <br />
  This will be removed from Drake on or after 2024-06-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_revolute_joint.html#aad91b55e6b714db4ba96190e6fab07ac">RevoluteJoint&lt; T &gt;::damping</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000010"></a>Use default_damping() instead. <br />
+<dd><a class="anchor" id="_deprecated000021"></a>Use default_damping() instead. <br />
  This will be removed from Drake on or after 2024-06-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_rpy_floating_joint.html#a33a39dbcfe8db8e29092329d7794fce6">RpyFloatingJoint&lt; T &gt;::angular_damping</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000011"></a>Use default_angular_damping() instead. <br />
+<dd><a class="anchor" id="_deprecated000022"></a>Use default_angular_damping() instead. <br />
  This will be removed from Drake on or after 2024-06-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_rpy_floating_joint.html#a09dca4f598093065362c869df4a03e2e">RpyFloatingJoint&lt; T &gt;::set_translation</a>  (systems::Context&lt; T &gt; *context, const Vector3&lt; T &gt; &amp;p_FM) const</dt>
+<dd><a class="anchor" id="_deprecated000024"></a>Use RpyFloatingJoint::SetTranslation() <br />
+ This will be removed from Drake on or after 2024-08-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_rpy_floating_joint.html#a5d447b184aa0d500cefbc725641bd10a">RpyFloatingJoint&lt; T &gt;::translational_damping</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000012"></a>Use default_translational_damping() instead. <br />
+<dd><a class="anchor" id="_deprecated000023"></a>Use default_translational_damping() instead. <br />
  This will be removed from Drake on or after 2024-06-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#acea936a2d449be8d43bb1037568cc81b">SceneGraphInspector&lt; T &gt;::Reify</a>  (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html" title="Type used to identify geometry instances in SceneGraph.">GeometryId</a> geometry_id, <a class="el" href="classdrake_1_1geometry_1_1_shape_reifier.html" title="The interface for converting shape descriptions to real shapes.">ShapeReifier</a> *reifier) const</dt>
 <dd><a class="anchor" id="_deprecated000002"></a>This shortcut function is being removed.  Instead, call inspector.GetShape(geometry_id).Reify(reifier) <br />
  This will be removed from Drake on or after 2024-06-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_screw_joint.html#aad91b55e6b714db4ba96190e6fab07ac">ScrewJoint&lt; T &gt;::damping</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000013"></a>Use default_damping() instead. <br />
+<dd><a class="anchor" id="_deprecated000025"></a>Use default_damping() instead. <br />
  This will be removed from Drake on or after 2024-06-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a6e9c573b8e817fdaccbbcbdd29810ae7">SpatialInertia&lt; T &gt;::SpatialInertia</a>  ()=default</dt>
-<dd><a class="anchor" id="_deprecated000014"></a>The default constructor is deprecated. If you really want NaNs, then  call the SpatialInertia&lt;T&gt;::NaN() factory function. If you were only  calling this constructor as part of adding a RigidBody to  MultibodyPlant, then instead you should omit the SpatialInertia  argument from MultibodyPlant::AddRigidBody(); it now defaults to zero. <br />
+<dd><a class="anchor" id="_deprecated000026"></a>The default constructor is deprecated. If you really want NaNs, then  call the SpatialInertia&lt;T&gt;::NaN() factory function. If you were only  calling this constructor as part of adding a RigidBody to  MultibodyPlant, then instead you should omit the SpatialInertia  argument from MultibodyPlant::AddRigidBody(); it now defaults to zero. <br />
  This will be removed from Drake on or after 2024-10-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_universal_joint.html#aad91b55e6b714db4ba96190e6fab07ac">UniversalJoint&lt; T &gt;::damping</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000015"></a>Use `default_damping()` instead. <br />
+<dd><a class="anchor" id="_deprecated000027"></a>Use `default_damping()` instead. <br />
  This will be removed from Drake on or after 2024-06-01.</dd>
 </dl>
 </div></div><!-- PageDoc -->

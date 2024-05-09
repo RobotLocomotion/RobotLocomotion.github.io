@@ -758,8 +758,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aed2b93b9cedf90d1e84aba6cbd397790"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aed2b93b9cedf90d1e84aba6cbd397790">SetFreeBodySpatialVelocity</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1systems_1_1_state.html">systems::State</a>&lt; T &gt; *state, const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;body, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html">SpatialVelocity</a>&lt; T &gt; &amp;V_WB) const</td></tr>
 <tr class="memdesc:aed2b93b9cedf90d1e84aba6cbd397790"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets <code>state</code> to store the spatial velocity <code>V_WB</code> of a given <code>body</code> B in the world frame W, for a given <code>context</code> of <code>this</code> model.  <a href="#aed2b93b9cedf90d1e84aba6cbd397790">More...</a><br /></td></tr>
 <tr class="separator:aed2b93b9cedf90d1e84aba6cbd397790"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad44332b9a38a3534af794581915407ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ad44332b9a38a3534af794581915407ec">SetFreeBodyRandomTranslationDistribution</a> (const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;body, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &amp;translation)</td></tr>
+<tr class="memdesc:ad44332b9a38a3534af794581915407ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the distribution used by <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a470c99c41ab31927ae50c9996786bd10" title="Assigns random values to all elements of the state, by drawing samples independently for each joint/f...">SetRandomState()</a> to populate the free body's x-y-z <code>translation</code> with respect to World.  <a href="#ad44332b9a38a3534af794581915407ec">More...</a><br /></td></tr>
+<tr class="separator:ad44332b9a38a3534af794581915407ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6714b39ed77d548326ca4b02c4ff23d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a6714b39ed77d548326ca4b02c4ff23d7">SetFreeBodyRandomPositionDistribution</a> (const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;body, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &amp;position)</td></tr>
-<tr class="memdesc:a6714b39ed77d548326ca4b02c4ff23d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the distribution used by <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a470c99c41ab31927ae50c9996786bd10" title="Assigns random values to all elements of the state, by drawing samples independently for each joint/f...">SetRandomState()</a> to populate the free body's x-y-z <code>position</code> with respect to World.  <a href="#a6714b39ed77d548326ca4b02c4ff23d7">More...</a><br /></td></tr>
+<tr class="memdesc:a6714b39ed77d548326ca4b02c4ff23d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a6714b39ed77d548326ca4b02c4ff23d7">More...</a><br /></td></tr>
 <tr class="separator:a6714b39ed77d548326ca4b02c4ff23d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e948d3233ccb5bf0001d5bd7425062a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a0e948d3233ccb5bf0001d5bd7425062a">SetFreeBodyRandomRotationDistribution</a> (const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;body, const Eigen::Quaternion&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &amp;rotation)</td></tr>
 <tr class="memdesc:a0e948d3233ccb5bf0001d5bd7425062a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the distribution used by <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a470c99c41ab31927ae50c9996786bd10" title="Assigns random values to all elements of the state, by drawing samples independently for each joint/f...">SetRandomState()</a> to populate the free body's <code>rotation</code> with respect to World.  <a href="#a0e948d3233ccb5bf0001d5bd7425062a">More...</a><br /></td></tr>
@@ -9514,14 +9517,9 @@ manager != nullptr. </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Sets the distribution used by <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a470c99c41ab31927ae50c9996786bd10" title="Assigns random values to all elements of the state, by drawing samples independently for each joint/f...">SetRandomState()</a> to populate the free body's x-y-z <code>position</code> with respect to World. </p>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if <code>body</code> is not a free body in the model. </td></tr>
-    <tr><td class="paramname">std::exception</td><td>if called pre-finalize. </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000004">Deprecated:</a></b></dt><dd>Use MultibodyPlant::SetFreeBodyRandomTranslationDistribution() <br />
+ This will be removed from Drake on or after 2024-08-01.</dd></dl>
 
 </div>
 </div>
@@ -9579,6 +9577,43 @@ manager != nullptr. </dd></dl>
 </div><div class="memdoc">
 
 <p>Sets the distribution used by <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a470c99c41ab31927ae50c9996786bd10" title="Assigns random values to all elements of the state, by drawing samples independently for each joint/f...">SetRandomState()</a> to populate the free body's rotation with respect to World using uniformly random rotations. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>body</code> is not a free body in the model. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if called pre-finalize. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad44332b9a38a3534af794581915407ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad44332b9a38a3534af794581915407ec">&#9670;&nbsp;</a></span>SetFreeBodyRandomTranslationDistribution()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetFreeBodyRandomTranslationDistribution </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>body</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>translation</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the distribution used by <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a470c99c41ab31927ae50c9996786bd10" title="Assigns random values to all elements of the state, by drawing samples independently for each joint/f...">SetRandomState()</a> to populate the free body's x-y-z <code>translation</code> with respect to World. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if <code>body</code> is not a free body in the model. </td></tr>

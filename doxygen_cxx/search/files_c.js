@@ -58,6 +58,7 @@ var searchData=
   ['meshcat_5fparams_2eh',['meshcat_params.h',['../meshcat__params_8h.html',1,'']]],
   ['meshcat_5fpoint_5fcloud_5fvisualizer_2eh',['meshcat_point_cloud_visualizer.h',['../meshcat__point__cloud__visualizer_8h.html',1,'']]],
   ['meshcat_5fpose_5fsliders_2eh',['meshcat_pose_sliders.h',['../meshcat__pose__sliders_8h.html',1,'']]],
+  ['meshcat_5frecording_5finternal_2eh',['meshcat_recording_internal.h',['../meshcat__recording__internal_8h.html',1,'']]],
   ['meshcat_5ftypes_5finternal_2eh',['meshcat_types_internal.h',['../meshcat__types__internal_8h.html',1,'']]],
   ['meshcat_5fvisualizer_2eh',['meshcat_visualizer.h',['../meshcat__visualizer_8h.html',1,'']]],
   ['meshcat_5fvisualizer_5fparams_2eh',['meshcat_visualizer_params.h',['../meshcat__visualizer__params_8h.html',1,'']]],
