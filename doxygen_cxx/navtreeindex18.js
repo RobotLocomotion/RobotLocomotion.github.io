@@ -1,5 +1,13 @@
 var NAVTREEINDEX18 =
 {
+"classdrake_1_1multibody_1_1_rpy_floating_joint.html":[3,0,0,8,85],
+"classdrake_1_1multibody_1_1_rpy_floating_joint.html#a09dca4f598093065362c869df4a03e2e":[3,0,0,8,85,24],
+"classdrake_1_1multibody_1_1_rpy_floating_joint.html#a112e483d99a972114f20c6f7fc040316":[3,0,0,8,85,2],
+"classdrake_1_1multibody_1_1_rpy_floating_joint.html#a17bb23661e06c5e79b69d7ea93974b12":[3,0,0,8,85,31],
+"classdrake_1_1multibody_1_1_rpy_floating_joint.html#a24ee6b28184a173aa3bcaeaaa4568bed":[3,0,0,8,85,26],
+"classdrake_1_1multibody_1_1_rpy_floating_joint.html#a28c50134f42cc652878abd18032d88dc":[3,0,0,8,85,22],
+"classdrake_1_1multibody_1_1_rpy_floating_joint.html#a29bdad8d4231117850fdc44bf362b295":[3,0,0,8,85,12],
+"classdrake_1_1multibody_1_1_rpy_floating_joint.html#a2f0a9cd2ddeb8ce9976e95fe59dcc843":[3,0,0,8,85,5],
 "classdrake_1_1multibody_1_1_rpy_floating_joint.html#a33a39dbcfe8db8e29092329d7794fce6":[3,0,0,8,85,4],
 "classdrake_1_1multibody_1_1_rpy_floating_joint.html#a3bcb7c789e9b3babe99718c75c30996e":[3,0,0,8,85,1],
 "classdrake_1_1multibody_1_1_rpy_floating_joint.html#a488d11cb18b724242bf38e7c090f3c41":[3,0,0,8,85,27],
@@ -241,13 +249,5 @@ var NAVTREEINDEX18 =
 "classdrake_1_1multibody_1_1_static_equilibrium_constraint.html#afd28cdc8a2b7097828f54b10cc668141":[1,1,0,20,6],
 "classdrake_1_1multibody_1_1_static_equilibrium_problem.html":[1,4,2,4],
 "classdrake_1_1multibody_1_1_static_equilibrium_problem.html#a2006baace224820a4278cf419319359a":[1,4,2,4,7],
-"classdrake_1_1multibody_1_1_static_equilibrium_problem.html#a26f429aa613c9a34137b6519a45a105e":[1,4,2,4,3],
-"classdrake_1_1multibody_1_1_static_equilibrium_problem.html#a3e9e39c3838a0bd70efe3fa22b41af59":[1,4,2,4,10],
-"classdrake_1_1multibody_1_1_static_equilibrium_problem.html#a58258a9d5b841817c31f720671e1e7d7":[1,4,2,4,2],
-"classdrake_1_1multibody_1_1_static_equilibrium_problem.html#a727804209642a450777a561df6d98d9b":[1,4,2,4,4],
-"classdrake_1_1multibody_1_1_static_equilibrium_problem.html#a801fa077979a700420e65001bede392d":[1,4,2,4,0],
-"classdrake_1_1multibody_1_1_static_equilibrium_problem.html#ad0e601f2bb04bf0a3dd6771440ddee14":[1,4,2,4,9],
-"classdrake_1_1multibody_1_1_static_equilibrium_problem.html#ad23bfbe321eba0ecfded8e1a4c62da0a":[1,4,2,4,1],
-"classdrake_1_1multibody_1_1_static_equilibrium_problem.html#ad3245e4e2851513cc645dd1fdc103d36":[1,4,2,4,6],
-"classdrake_1_1multibody_1_1_static_equilibrium_problem.html#ad5f8f5a00b12a48cf5bd4f5a55ba1133":[1,4,2,4,5]
+"classdrake_1_1multibody_1_1_static_equilibrium_problem.html#a26f429aa613c9a34137b6519a45a105e":[1,4,2,4,3]
 };

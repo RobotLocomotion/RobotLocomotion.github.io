@@ -160,6 +160,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_deformable
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="classdrake_1_1multibody_1_1_deformable_model-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">DeformableModel&lt; T &gt; Class Template Reference<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
@@ -182,7 +183,7 @@ class drake::multibody::DeformableModel&lt; T &gt;</h3>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4d641d06b345cafc39cfddf51513b211"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a4d641d06b345cafc39cfddf51513b211">DeformableModel</a> (<a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; *plant)</td></tr>
+<tr class="memitem:a4d641d06b345cafc39cfddf51513b211"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a4d641d06b345cafc39cfddf51513b211">DeformableModel</a> (<a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; *<a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a208fb8b999d2a234339e911892f24369">plant</a>)</td></tr>
 <tr class="memdesc:a4d641d06b345cafc39cfddf51513b211"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html" title="DeformableModel implements the interface in PhysicalModel and provides the functionalities to specify...">DeformableModel</a> to be owned by the given <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>.  <a href="#a4d641d06b345cafc39cfddf51513b211">More...</a><br /></td></tr>
 <tr class="separator:a4d641d06b345cafc39cfddf51513b211"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af92b53211e54243aff4490a700168eb4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#af92b53211e54243aff4490a700168eb4">num_bodies</a> () const</td></tr>
@@ -233,9 +234,20 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1fbbceb086e5b356101ff99949aaa0d3"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a1fbbceb086e5b356101ff99949aaa0d3">fixed_constraint_ids</a> (<a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a> id) const</td></tr>
 <tr class="memdesc:a1fbbceb086e5b356101ff99949aaa0d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns a reference to the all ids of fixed constraints registered with the deformable body with the given <code>id</code>.  <a href="#a1fbbceb086e5b356101ff99949aaa0d3">More...</a><br /></td></tr>
 <tr class="separator:a1fbbceb086e5b356101ff99949aaa0d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afac56d6fb777c0514c4be690ebd2d743"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#afac56d6fb777c0514c4be690ebd2d743">vertex_positions_port</a> () const</td></tr>
-<tr class="memdesc:afac56d6fb777c0514c4be690ebd2d743"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the output port of the vertex positions for all registered deformable bodies.  <a href="#afac56d6fb777c0514c4be690ebd2d743">More...</a><br /></td></tr>
-<tr class="separator:afac56d6fb777c0514c4be690ebd2d743"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31f05a59c9fd329e0e4379d6885aa543"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake_1_1systems.html#afb427ae7d4f36f7a3cfe34eb5a3d51aa">systems::OutputPortIndex</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a31f05a59c9fd329e0e4379d6885aa543">configuration_output_port_index</a> () const</td></tr>
+<tr class="memdesc:a31f05a59c9fd329e0e4379d6885aa543"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the output port index of the vertex positions port for all registered deformable bodies.  <a href="#a31f05a59c9fd329e0e4379d6885aa543">More...</a><br /></td></tr>
+<tr class="separator:a31f05a59c9fd329e0e4379d6885aa543"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a2b7a58dc85678d08752945ff655362"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a5a2b7a58dc85678d08752945ff655362">is_empty</a> () const</td></tr>
+<tr class="memdesc:a5a2b7a58dc85678d08752945ff655362"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if there's no deformable body or external force registered to <code>this</code> DeformableModel.  <a href="#a5a2b7a58dc85678d08752945ff655362">More...</a><br /></td></tr>
+<tr class="separator:a5a2b7a58dc85678d08752945ff655362"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7cbbe20841b68bac6481216b94e3501"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#ad7cbbe20841b68bac6481216b94e3501">is_cloneable_to_double</a> () const final</td></tr>
+<tr class="separator:ad7cbbe20841b68bac6481216b94e3501"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a697327f87bef2705ce2682a5fcf876e4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a697327f87bef2705ce2682a5fcf876e4">is_cloneable_to_autodiff</a> () const final</td></tr>
+<tr class="memdesc:a697327f87bef2705ce2682a5fcf876e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if and only if this DeformableModel is empty.  <a href="#a697327f87bef2705ce2682a5fcf876e4">More...</a><br /></td></tr>
+<tr class="separator:a697327f87bef2705ce2682a5fcf876e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f356a4e007916eb25e4f0df6c17b9ca"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a0f356a4e007916eb25e4f0df6c17b9ca">is_cloneable_to_symbolic</a> () const final</td></tr>
+<tr class="memdesc:a0f356a4e007916eb25e4f0df6c17b9ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if and only if this DeformableModel is empty.  <a href="#a0f356a4e007916eb25e4f0df6c17b9ca">More...</a><br /></td></tr>
+<tr class="separator:a0f356a4e007916eb25e4f0df6c17b9ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a43232b40951ba5412cc46880c836caff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a43232b40951ba5412cc46880c836caff">DeformableModel</a> (const <a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html">DeformableModel</a> &amp;)=delete</td></tr>
 <tr class="separator:a43232b40951ba5412cc46880c836caff"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -246,14 +258,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a68fd2d05f3e8b6982ddb2ab108275688"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html">DeformableModel</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a68fd2d05f3e8b6982ddb2ab108275688">operator=</a> (<a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html">DeformableModel</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:a68fd2d05f3e8b6982ddb2ab108275688"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classdrake_1_1multibody_1_1_physical_model"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classdrake_1_1multibody_1_1_physical_model')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classdrake_1_1multibody_1_1_physical_model.html">PhysicalModel&lt; T &gt;</a></td></tr>
-<tr class="memitem:a2ce68b7c0d6553d11c8ced7a36fd9fba inherit pub_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a2ce68b7c0d6553d11c8ced7a36fd9fba">PhysicalModel</a> ()=default</td></tr>
-<tr class="separator:a2ce68b7c0d6553d11c8ced7a36fd9fba inherit pub_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e6998dbc2b9d4a0e08ee2fad02f1659 inherit pub_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a9e6998dbc2b9d4a0e08ee2fad02f1659">PhysicalModel</a> (<a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; *owning_plant)</td></tr>
+<tr class="memdesc:a9e6998dbc2b9d4a0e08ee2fad02f1659 inherit pub_methods_classdrake_1_1multibody_1_1_physical_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1multibody_1_1_physical_model.html" title="(Internal) PhysicalModel provides the functionalities to extend the type of physical model of Multibo...">PhysicalModel</a> owned by the given <code>owning_plant</code>.  <a href="classdrake_1_1multibody_1_1_physical_model.html#a9e6998dbc2b9d4a0e08ee2fad02f1659">More...</a><br /></td></tr>
+<tr class="separator:a9e6998dbc2b9d4a0e08ee2fad02f1659 inherit pub_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5a6a3375b5f40468f7eb8254490f85b inherit pub_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#ab5a6a3375b5f40468f7eb8254490f85b">~PhysicalModel</a> () override=default</td></tr>
 <tr class="separator:ab5a6a3375b5f40468f7eb8254490f85b inherit pub_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ea1e5e512bd1acbc4565fccd89a4760 inherit pub_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memTemplParams" colspan="2">template&lt;typename ScalarType &gt; </td></tr>
-<tr class="memitem:a9ea1e5e512bd1acbc4565fccd89a4760 inherit pub_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_physical_model.html">PhysicalModel</a>&lt; ScalarType &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a9ea1e5e512bd1acbc4565fccd89a4760">CloneToScalar</a> () const</td></tr>
-<tr class="memdesc:a9ea1e5e512bd1acbc4565fccd89a4760 inherit pub_methods_classdrake_1_1multibody_1_1_physical_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a clone of the concrete <a class="el" href="classdrake_1_1multibody_1_1_physical_model.html" title="(Internal) PhysicalModel provides the functionalities to extend the type of physical model of Multibo...">PhysicalModel</a> object with the scalar type <code>ScalarType</code>.  <a href="classdrake_1_1multibody_1_1_physical_model.html#a9ea1e5e512bd1acbc4565fccd89a4760">More...</a><br /></td></tr>
-<tr class="separator:a9ea1e5e512bd1acbc4565fccd89a4760 inherit pub_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab81c3c69cdd33842c0b9a1927d2d6e4e inherit pub_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memTemplParams" colspan="2">template&lt;typename ScalarType &gt; </td></tr>
+<tr class="memitem:ab81c3c69cdd33842c0b9a1927d2d6e4e inherit pub_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_physical_model.html">PhysicalModel</a>&lt; ScalarType &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#ab81c3c69cdd33842c0b9a1927d2d6e4e">CloneToScalar</a> (<a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; ScalarType &gt; *<a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a208fb8b999d2a234339e911892f24369">plant</a>) const</td></tr>
+<tr class="memdesc:ab81c3c69cdd33842c0b9a1927d2d6e4e inherit pub_methods_classdrake_1_1multibody_1_1_physical_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal only) Creates a clone of <code>this</code> concrete <a class="el" href="classdrake_1_1multibody_1_1_physical_model.html" title="(Internal) PhysicalModel provides the functionalities to extend the type of physical model of Multibo...">PhysicalModel</a> object with the scalar type <code>ScalarType</code> to be owned by the given <code>plant</code>.  <a href="classdrake_1_1multibody_1_1_physical_model.html#ab81c3c69cdd33842c0b9a1927d2d6e4e">More...</a><br /></td></tr>
+<tr class="separator:ab81c3c69cdd33842c0b9a1927d2d6e4e inherit pub_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af99e858849720a1a5e4de720afd4dc8c inherit pub_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#af99e858849720a1a5e4de720afd4dc8c">is_cloneable_to_double</a> () const override</td></tr>
 <tr class="memdesc:af99e858849720a1a5e4de720afd4dc8c inherit pub_methods_classdrake_1_1multibody_1_1_physical_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defaults to false.  <a href="classdrake_1_1multibody_1_1_physical_model.html#af99e858849720a1a5e4de720afd4dc8c">More...</a><br /></td></tr>
 <tr class="separator:af99e858849720a1a5e4de720afd4dc8c inherit pub_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -263,9 +276,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adc9fa2421a4abeb0bd2ffaa935e984c8 inherit pub_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#adc9fa2421a4abeb0bd2ffaa935e984c8">is_cloneable_to_symbolic</a> () const override</td></tr>
 <tr class="memdesc:adc9fa2421a4abeb0bd2ffaa935e984c8 inherit pub_methods_classdrake_1_1multibody_1_1_physical_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defaults to false.  <a href="classdrake_1_1multibody_1_1_physical_model.html#adc9fa2421a4abeb0bd2ffaa935e984c8">More...</a><br /></td></tr>
 <tr class="separator:adc9fa2421a4abeb0bd2ffaa935e984c8 inherit pub_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48489c4506f24067b600db16e9225ecd inherit pub_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a48489c4506f24067b600db16e9225ecd">DeclareSystemResources</a> (<a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; *plant)</td></tr>
-<tr class="memdesc:a48489c4506f24067b600db16e9225ecd inherit pub_methods_classdrake_1_1multibody_1_1_physical_model"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> calls this from within Finalize() to declare additional system resources.  <a href="classdrake_1_1multibody_1_1_physical_model.html#a48489c4506f24067b600db16e9225ecd">More...</a><br /></td></tr>
-<tr class="separator:a48489c4506f24067b600db16e9225ecd inherit pub_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4488af419a2128b0d862f52a79a2d83b inherit pub_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a4488af419a2128b0d862f52a79a2d83b">DeclareSystemResources</a> ()</td></tr>
+<tr class="memdesc:a4488af419a2128b0d862f52a79a2d83b inherit pub_methods_classdrake_1_1multibody_1_1_physical_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal only) <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> calls this from within Finalize() to declare additional system resources.  <a href="classdrake_1_1multibody_1_1_physical_model.html#a4488af419a2128b0d862f52a79a2d83b">More...</a><br /></td></tr>
+<tr class="separator:a4488af419a2128b0d862f52a79a2d83b inherit pub_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a5ebecfc441ca76e53598e424761b9c inherit pub_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#adb169d7f3b447c98cbd02015fba0d6f9">PhysicalModelPointerVariant</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a2a5ebecfc441ca76e53598e424761b9c">ToPhysicalModelPointerVariant</a> () const</td></tr>
 <tr class="memdesc:a2a5ebecfc441ca76e53598e424761b9c inherit pub_methods_classdrake_1_1multibody_1_1_physical_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns (a const pointer to) the specific model variant of <code>this</code> <a class="el" href="classdrake_1_1multibody_1_1_physical_model.html" title="(Internal) PhysicalModel provides the functionalities to extend the type of physical model of Multibo...">PhysicalModel</a>.  <a href="classdrake_1_1multibody_1_1_physical_model.html#a2a5ebecfc441ca76e53598e424761b9c">More...</a><br /></td></tr>
 <tr class="separator:a2a5ebecfc441ca76e53598e424761b9c inherit pub_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -278,28 +291,31 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a51234009d59ed832d580c9ac84d9c519 inherit pub_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html">PhysicalModel</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a51234009d59ed832d580c9ac84d9c519">operator=</a> (<a class="el" href="classdrake_1_1multibody_1_1_physical_model.html">PhysicalModel</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:a51234009d59ed832d580c9ac84d9c519 inherit pub_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a8668cbb69c3c1ed4e0e93608be9d93a1"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
+<tr class="memitem:a8668cbb69c3c1ed4e0e93608be9d93a1"><td class="memTemplItemLeft" align="right" valign="top">class&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a8668cbb69c3c1ed4e0e93608be9d93a1">DeformableModel</a></td></tr>
+<tr class="separator:a8668cbb69c3c1ed4e0e93608be9d93a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_classdrake_1_1multibody_1_1_physical_model"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classdrake_1_1multibody_1_1_physical_model')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classdrake_1_1multibody_1_1_physical_model.html">PhysicalModel&lt; T &gt;</a></td></tr>
-<tr class="memitem:a424f55dc5be656154afe8d32d933e255 inherit pro_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_physical_model.html">PhysicalModel</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a424f55dc5be656154afe8d32d933e255">CloneToDouble</a> () const</td></tr>
-<tr class="separator:a424f55dc5be656154afe8d32d933e255 inherit pro_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e18cd19456d32d0edbe64dec4d1ea4f inherit pro_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_physical_model.html">PhysicalModel</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a2e18cd19456d32d0edbe64dec4d1ea4f">CloneToAutoDiffXd</a> () const</td></tr>
-<tr class="separator:a2e18cd19456d32d0edbe64dec4d1ea4f inherit pro_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3249c6b844c240ffedc2a60298bbdca9 inherit pro_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_physical_model.html">PhysicalModel</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a3249c6b844c240ffedc2a60298bbdca9">CloneToSymbolic</a> () const</td></tr>
-<tr class="separator:a3249c6b844c240ffedc2a60298bbdca9 inherit pro_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a9cf37dfb788cbd20d4d1556694cbf5 inherit pro_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a4a9cf37dfb788cbd20d4d1556694cbf5">ThrowIfSystemResourcesDeclared</a> (const char *source_method) const</td></tr>
-<tr class="separator:a4a9cf37dfb788cbd20d4d1556694cbf5 inherit pro_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac46458558dea45d33178eeb97b892243 inherit pro_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#ac46458558dea45d33178eeb97b892243">ThrowIfSystemResourcesNotDeclared</a> (const char *source_method) const</td></tr>
-<tr class="separator:ac46458558dea45d33178eeb97b892243 inherit pro_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a949dd156450f782b8ef0d1c32a1169ec inherit pro_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a949dd156450f782b8ef0d1c32a1169ec">mutable_scene_graph</a> (<a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; *plant)</td></tr>
-<tr class="separator:a949dd156450f782b8ef0d1c32a1169ec inherit pro_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_static_methods_classdrake_1_1multibody_1_1_physical_model"><td colspan="2" onclick="javascript:toggleInherit('pro_static_methods_classdrake_1_1multibody_1_1_physical_model')"><img src="closed.png" alt="-"/>&#160;Static Protected Member Functions inherited from <a class="el" href="classdrake_1_1multibody_1_1_physical_model.html">PhysicalModel&lt; T &gt;</a></td></tr>
-<tr class="memitem:aef0b9cfa4ac98147ad5a1b67e110db63 inherit pro_static_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespacedrake_1_1systems.html#acf2a50397e9fa764d32553cf98460ba7">systems::DiscreteStateIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#aef0b9cfa4ac98147ad5a1b67e110db63">DeclareDiscreteState</a> (<a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; *plant, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;model_value)</td></tr>
-<tr class="separator:aef0b9cfa4ac98147ad5a1b67e110db63 inherit pro_static_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3fc5df9ed156d42d1867b0770f01f2ce inherit pro_static_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1systems_1_1_leaf_output_port.html">systems::LeafOutputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a3fc5df9ed156d42d1867b0770f01f2ce">DeclareAbstractOutputPort</a> (<a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; *plant, std::string name, typename <a class="el" href="classdrake_1_1systems_1_1_leaf_output_port.html">systems::LeafOutputPort</a>&lt; T &gt;::AllocCallback alloc_function, typename <a class="el" href="classdrake_1_1systems_1_1_leaf_output_port.html">systems::LeafOutputPort</a>&lt; T &gt;::CalcCallback calc_function, std::set&lt; <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">systems::DependencyTicket</a> &gt; prerequisites_of_calc={ <a class="el" href="classdrake_1_1systems_1_1_system.html">systems::System</a>&lt; T &gt;::all_sources_ticket()})</td></tr>
-<tr class="separator:a3fc5df9ed156d42d1867b0770f01f2ce inherit pro_static_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0527266b4dc5bd0b9d4e44f9005c647 inherit pro_static_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1systems_1_1_leaf_output_port.html">systems::LeafOutputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#ac0527266b4dc5bd0b9d4e44f9005c647">DeclareVectorOutputPort</a> (<a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; *plant, std::string name, const <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html">systems::BasicVector</a>&lt; T &gt; &amp;model_vector, typename <a class="el" href="classdrake_1_1systems_1_1_leaf_output_port.html">systems::LeafOutputPort</a>&lt; T &gt;::CalcVectorCallback vector_calc_function, std::set&lt; <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">systems::DependencyTicket</a> &gt; prerequisites_of_calc={ <a class="el" href="classdrake_1_1systems_1_1_system.html">systems::System</a>&lt; T &gt;::all_sources_ticket()})</td></tr>
-<tr class="separator:ac0527266b4dc5bd0b9d4e44f9005c647 inherit pro_static_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a208fb8b999d2a234339e911892f24369 inherit pro_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a208fb8b999d2a234339e911892f24369">plant</a> () const</td></tr>
+<tr class="separator:a208fb8b999d2a234339e911892f24369 inherit pro_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66c11a70248722c02f276a1f5da32651 inherit pro_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a66c11a70248722c02f276a1f5da32651">mutable_plant</a> ()</td></tr>
+<tr class="separator:a66c11a70248722c02f276a1f5da32651 inherit pro_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a946f0c9e4f20c87fbea0cb1b534d8fd7 inherit pro_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a946f0c9e4f20c87fbea0cb1b534d8fd7">ThrowIfSystemResourcesDeclared</a> (const char *function_name) const</td></tr>
+<tr class="separator:a946f0c9e4f20c87fbea0cb1b534d8fd7 inherit pro_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a130f2b2cf6ab11021a6e502071715ddb inherit pro_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a130f2b2cf6ab11021a6e502071715ddb">ThrowIfSystemResourcesNotDeclared</a> (const char *function_name) const</td></tr>
+<tr class="separator:a130f2b2cf6ab11021a6e502071715ddb inherit pro_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d1596ed4273e0c56065638de34b95e0 inherit pro_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a0d1596ed4273e0c56065638de34b95e0">mutable_scene_graph</a> ()</td></tr>
+<tr class="separator:a0d1596ed4273e0c56065638de34b95e0 inherit pro_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a812249a29d2c4215aba7e1adc6ed8a34 inherit pro_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#acf2a50397e9fa764d32553cf98460ba7">systems::DiscreteStateIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a812249a29d2c4215aba7e1adc6ed8a34">DeclareDiscreteState</a> (const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;model_value)</td></tr>
+<tr class="separator:a812249a29d2c4215aba7e1adc6ed8a34 inherit pro_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac448d2cea01da91d11a1f6c6b42539c2 inherit pro_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_leaf_output_port.html">systems::LeafOutputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#ac448d2cea01da91d11a1f6c6b42539c2">DeclareAbstractOutputPort</a> (std::string name, typename <a class="el" href="classdrake_1_1systems_1_1_leaf_output_port.html">systems::LeafOutputPort</a>&lt; T &gt;::AllocCallback alloc_function, typename <a class="el" href="classdrake_1_1systems_1_1_leaf_output_port.html">systems::LeafOutputPort</a>&lt; T &gt;::CalcCallback calc_function, std::set&lt; <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">systems::DependencyTicket</a> &gt; prerequisites_of_calc={ <a class="el" href="classdrake_1_1systems_1_1_system.html">systems::System</a>&lt; T &gt;::all_sources_ticket()})</td></tr>
+<tr class="separator:ac448d2cea01da91d11a1f6c6b42539c2 inherit pro_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb4eb788998948eb146247a83136f56e inherit pro_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_leaf_output_port.html">systems::LeafOutputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#acb4eb788998948eb146247a83136f56e">DeclareVectorOutputPort</a> (std::string name, const <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html">systems::BasicVector</a>&lt; T &gt; &amp;model_vector, typename <a class="el" href="classdrake_1_1systems_1_1_leaf_output_port.html">systems::LeafOutputPort</a>&lt; T &gt;::CalcVectorCallback vector_calc_function, std::set&lt; <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">systems::DependencyTicket</a> &gt; prerequisites_of_calc={ <a class="el" href="classdrake_1_1systems_1_1_system.html">systems::System</a>&lt; T &gt;::all_sources_ticket()})</td></tr>
+<tr class="separator:acb4eb788998948eb146247a83136f56e inherit pro_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a43232b40951ba5412cc46880c836caff"></a>
@@ -405,6 +421,7 @@ Finalize() has not been called on <code>plant</code>. </dd></dl>
 <p>Registers an external force density field that applies external force to all deformable bodies. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>this</code> DeformableModel is not of scalar type double. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if Finalize() has been called on the multibody plant owning this deformable model. </td></tr>
   </table>
   </dd>
@@ -477,10 +494,30 @@ Finalize() has not been called on <code>plant</code>. </dd></dl>
     <tr><td class="paramname">std::exception</td><td>unless <code>body_B</code> is registered with the same multibody plant owning this deformable model. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if shape is not supported by QueryObject::ComputeSignedDistanceToPoint(). Currently, supported shapes include Box, Capsule, Cylinder, Ellipsoid, HalfSpace, and Sphere. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if Finalize() has been called on the multibody plant owning this deformable model. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>this</code> DeformableModel is not of scalar type double. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if no constraint is added (i.e. no vertex of the deformable body is inside the given <code>shape</code> with the given poses). </td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a31f05a59c9fd329e0e4379d6885aa543"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31f05a59c9fd329e0e4379d6885aa543">&#9670;&nbsp;</a></span>configuration_output_port_index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake_1_1systems.html#afb427ae7d4f36f7a3cfe34eb5a3d51aa">systems::OutputPortIndex</a>&amp; configuration_output_port_index </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the output port index of the vertex positions port for all registered deformable bodies. </p>
 
 </div>
 </div>
@@ -758,6 +795,104 @@ Finalize() has not been called on <code>plant</code>. </dd></dl>
 
 </div>
 </div>
+<a id="a697327f87bef2705ce2682a5fcf876e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a697327f87bef2705ce2682a5fcf876e4">&#9670;&nbsp;</a></span>is_cloneable_to_autodiff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool is_cloneable_to_autodiff </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns true if and only if this DeformableModel is empty. </p>
+
+</div>
+</div>
+<a id="ad7cbbe20841b68bac6481216b94e3501"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7cbbe20841b68bac6481216b94e3501">&#9670;&nbsp;</a></span>is_cloneable_to_double()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool is_cloneable_to_double </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0f356a4e007916eb25e4f0df6c17b9ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f356a4e007916eb25e4f0df6c17b9ca">&#9670;&nbsp;</a></span>is_cloneable_to_symbolic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool is_cloneable_to_symbolic </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns true if and only if this DeformableModel is empty. </p>
+
+</div>
+</div>
+<a id="a5a2b7a58dc85678d08752945ff655362"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a2b7a58dc85678d08752945ff655362">&#9670;&nbsp;</a></span>is_empty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool is_empty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if there's no deformable body or external force registered to <code>this</code> DeformableModel. </p>
+
+</div>
+</div>
 <a id="af92b53211e54243aff4490a700168eb4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af92b53211e54243aff4490a700168eb4">&#9670;&nbsp;</a></span>num_bodies()</h2>
 
@@ -873,6 +1008,7 @@ Finalize() has not been called on <code>plant</code>. </dd></dl>
 <dl class="section pre"><dt>Precondition</dt><dd>resolution_hint &gt; 0. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>this</code> DeformableModel is not of scalar type double. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if Finalize() has been called on the multibody plant owning this deformable model. </td></tr>
   </table>
   </dd>
@@ -932,28 +1068,26 @@ Finalize() has not been called on <code>plant</code>. </dd></dl>
 
 </div>
 </div>
-<a id="afac56d6fb777c0514c4be690ebd2d743"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afac56d6fb777c0514c4be690ebd2d743">&#9670;&nbsp;</a></span>vertex_positions_port()</h2>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="a8668cbb69c3c1ed4e0e93608be9d93a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8668cbb69c3c1ed4e0e93608be9d93a1">&#9670;&nbsp;</a></span>DeformableModel</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt;T&gt;&amp; vertex_positions_port </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td class="memname">friend class <a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html">DeformableModel</a></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-
-<p>Returns the output port of the vertex positions for all registered deformable bodies. </p>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">MultibodyPlant::Finalize()</a> has not been called yet. </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>

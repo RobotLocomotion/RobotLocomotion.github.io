@@ -5,6 +5,7 @@ var classdrake_1_1multibody_1_1_deformable_model =
     [ "DeformableModel", "classdrake_1_1multibody_1_1_deformable_model.html#a4d641d06b345cafc39cfddf51513b211", null ],
     [ "AddExternalForce", "classdrake_1_1multibody_1_1_deformable_model.html#a577ee07a79c5e8e65594ea8ee16ab0e5", null ],
     [ "AddFixedConstraint", "classdrake_1_1multibody_1_1_deformable_model.html#a0c18b0c8d67975d2ee7ca2b8bb01c28d", null ],
+    [ "configuration_output_port_index", "classdrake_1_1multibody_1_1_deformable_model.html#a31f05a59c9fd329e0e4379d6885aa543", null ],
     [ "fixed_constraint_ids", "classdrake_1_1multibody_1_1_deformable_model.html#a1fbbceb086e5b356101ff99949aaa0d3", null ],
     [ "fixed_constraint_spec", "classdrake_1_1multibody_1_1_deformable_model.html#a30fb3e3a83ccc6c084e2366b891c5e70", null ],
     [ "GetBodyId", "classdrake_1_1multibody_1_1_deformable_model.html#a3edee15645c6e2abd1f8d70b27f0a0cb", null ],
@@ -16,10 +17,14 @@ var classdrake_1_1multibody_1_1_deformable_model =
     [ "GetGeometryId", "classdrake_1_1multibody_1_1_deformable_model.html#ac1d094e88bf62c509d5a146cc04df966", null ],
     [ "GetReferencePositions", "classdrake_1_1multibody_1_1_deformable_model.html#a4ddf03bd29da69359f022038999cb4ac", null ],
     [ "HasConstraint", "classdrake_1_1multibody_1_1_deformable_model.html#aba11a421c05ac3fe0dec30c33cf6e244", null ],
+    [ "is_cloneable_to_autodiff", "classdrake_1_1multibody_1_1_deformable_model.html#a697327f87bef2705ce2682a5fcf876e4", null ],
+    [ "is_cloneable_to_double", "classdrake_1_1multibody_1_1_deformable_model.html#ad7cbbe20841b68bac6481216b94e3501", null ],
+    [ "is_cloneable_to_symbolic", "classdrake_1_1multibody_1_1_deformable_model.html#a0f356a4e007916eb25e4f0df6c17b9ca", null ],
+    [ "is_empty", "classdrake_1_1multibody_1_1_deformable_model.html#a5a2b7a58dc85678d08752945ff655362", null ],
     [ "num_bodies", "classdrake_1_1multibody_1_1_deformable_model.html#af92b53211e54243aff4490a700168eb4", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_deformable_model.html#a68fd2d05f3e8b6982ddb2ab108275688", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_deformable_model.html#a6f045b3a39c4d8397fc55b2cb4e48f01", null ],
     [ "RegisterDeformableBody", "classdrake_1_1multibody_1_1_deformable_model.html#a466a23330391176d84dbb60a03db8a39", null ],
     [ "SetWallBoundaryCondition", "classdrake_1_1multibody_1_1_deformable_model.html#a8e4f2d02a025433b059374ae0023881c", null ],
-    [ "vertex_positions_port", "classdrake_1_1multibody_1_1_deformable_model.html#afac56d6fb777c0514c4be690ebd2d743", null ]
+    [ "DeformableModel", "classdrake_1_1multibody_1_1_deformable_model.html#a8668cbb69c3c1ed4e0e93608be9d93a1", null ]
 ];

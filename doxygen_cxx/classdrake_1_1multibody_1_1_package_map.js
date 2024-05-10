@@ -1,9 +1,9 @@
 var classdrake_1_1multibody_1_1_package_map =
 [
     [ "RemoteParams", "structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html", "structdrake_1_1multibody_1_1_package_map_1_1_remote_params" ],
-    [ "PackageMap", "classdrake_1_1multibody_1_1_package_map.html#a26f6421b2b1971f71b16c808851bf044", null ],
     [ "PackageMap", "classdrake_1_1multibody_1_1_package_map.html#a473376f1ec8aff24748a7ca879ebca3b", null ],
     [ "PackageMap", "classdrake_1_1multibody_1_1_package_map.html#aab33cc3508417f648f27a8046abbebb8", null ],
+    [ "PackageMap", "classdrake_1_1multibody_1_1_package_map.html#a26f6421b2b1971f71b16c808851bf044", null ],
     [ "~PackageMap", "classdrake_1_1multibody_1_1_package_map.html#a7576eb33e811e50e52ef498b346f5889", null ],
     [ "Add", "classdrake_1_1multibody_1_1_package_map.html#ac51ed3119aaced1a4d66bc104c7a8241", null ],
     [ "AddMap", "classdrake_1_1multibody_1_1_package_map.html#a1b6898c14b340f42747bdef9a77abfe3", null ],
@@ -14,8 +14,8 @@ var classdrake_1_1multibody_1_1_package_map =
     [ "GetPackageNames", "classdrake_1_1multibody_1_1_package_map.html#afaa68d5d43369307f840901e3d9fed97", null ],
     [ "GetPath", "classdrake_1_1multibody_1_1_package_map.html#a92aba2d00ca04be3c0d858b2c4d862b5", null ],
     [ "MakeEmpty", "classdrake_1_1multibody_1_1_package_map.html#a9b54d0bb91bc2d4f6a629ccd3868d4c1", null ],
-    [ "operator=", "classdrake_1_1multibody_1_1_package_map.html#a27d20120c7665c270eeec7dffc976630", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_package_map.html#a5397805251678399fd8cb99ed22434ec", null ],
+    [ "operator=", "classdrake_1_1multibody_1_1_package_map.html#a27d20120c7665c270eeec7dffc976630", null ],
     [ "PopulateFromEnvironment", "classdrake_1_1multibody_1_1_package_map.html#ab17a29ee7c846aaca8f0d50248a42068", null ],
     [ "PopulateFromFolder", "classdrake_1_1multibody_1_1_package_map.html#a510d35f38c93d44fa6a70d727f55cb8c", null ],
     [ "PopulateFromRosPackagePath", "classdrake_1_1multibody_1_1_package_map.html#a82b086143ce943e2318a7b2added1313", null ],

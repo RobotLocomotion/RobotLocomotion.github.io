@@ -1,5 +1,13 @@
 var NAVTREEINDEX17 =
 {
+"classdrake_1_1multibody_1_1_prismatic_spring.html#afa4381977890fe7162c38c41337a7901":[3,0,0,8,74,0],
+"classdrake_1_1multibody_1_1_prismatic_spring.html#afd645833d7942a6d6927337a3be8d4eb":[3,0,0,8,74,9],
+"classdrake_1_1multibody_1_1_propeller.html":[1,2,7,0],
+"classdrake_1_1multibody_1_1_propeller.html#a00bb1bf6b619e332e440549f5ae2bcb3":[1,2,7,0,5],
+"classdrake_1_1multibody_1_1_propeller.html#a1282a8877c657a710e2f8c154db8575a":[1,2,7,0,1],
+"classdrake_1_1multibody_1_1_propeller.html#a280fde2ed6d0906edaa37c422fd7f410":[1,2,7,0,7],
+"classdrake_1_1multibody_1_1_propeller.html#a3eef44c7936aab51f7f0ee330892277c":[1,2,7,0,2],
+"classdrake_1_1multibody_1_1_propeller.html#a4f89cbd2b0c2cdd6cbd69555aaf94501":[1,2,7,0,8],
 "classdrake_1_1multibody_1_1_propeller.html#a7a1acac5cd79500cabe361e1203d1706":[1,2,7,0,3],
 "classdrake_1_1multibody_1_1_propeller.html#a88266abb81081f12190360acabfec8aa":[1,2,7,0,4],
 "classdrake_1_1multibody_1_1_propeller.html#a928e24a4dfe9a740a39acc21c0e1eb61":[1,2,7,0,0],
@@ -241,13 +249,5 @@ var NAVTREEINDEX17 =
 "classdrake_1_1multibody_1_1_rotational_inertia.html#af38985b256018ac664935ee8423bbe8b":[3,0,0,8,84,11],
 "classdrake_1_1multibody_1_1_rotational_inertia.html#afa1e01c37486db2e78263fb70eaff550":[3,0,0,8,84,9],
 "classdrake_1_1multibody_1_1_rotational_inertia.html#afae48d85764cacfd54fc3001250b4eac":[3,0,0,8,84,24],
-"classdrake_1_1multibody_1_1_rotational_inertia.html#afe098429bda51991a3e6ead89f365838":[3,0,0,8,84,33],
-"classdrake_1_1multibody_1_1_rpy_floating_joint.html":[3,0,0,8,85],
-"classdrake_1_1multibody_1_1_rpy_floating_joint.html#a09dca4f598093065362c869df4a03e2e":[3,0,0,8,85,24],
-"classdrake_1_1multibody_1_1_rpy_floating_joint.html#a112e483d99a972114f20c6f7fc040316":[3,0,0,8,85,2],
-"classdrake_1_1multibody_1_1_rpy_floating_joint.html#a17bb23661e06c5e79b69d7ea93974b12":[3,0,0,8,85,31],
-"classdrake_1_1multibody_1_1_rpy_floating_joint.html#a24ee6b28184a173aa3bcaeaaa4568bed":[3,0,0,8,85,26],
-"classdrake_1_1multibody_1_1_rpy_floating_joint.html#a28c50134f42cc652878abd18032d88dc":[3,0,0,8,85,22],
-"classdrake_1_1multibody_1_1_rpy_floating_joint.html#a29bdad8d4231117850fdc44bf362b295":[3,0,0,8,85,12],
-"classdrake_1_1multibody_1_1_rpy_floating_joint.html#a2f0a9cd2ddeb8ce9976e95fe59dcc843":[3,0,0,8,85,5]
+"classdrake_1_1multibody_1_1_rotational_inertia.html#afe098429bda51991a3e6ead89f365838":[3,0,0,8,84,33]
 };

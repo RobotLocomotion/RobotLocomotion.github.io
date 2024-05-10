@@ -216,6 +216,8 @@ class drake::multibody::MultibodyPlant&lt; T &gt;</h3>
 <td align="left" style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_net_actuation</td></tr>
 <tr>
 <td align="left" style="padding:5px 0px 5px 0px">&rarr; <span style="color:green">geometry_pose</span></td></tr>
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; <span style="color:green">deformable_body_configuration</span></td></tr>
 </table>
 </td></tr>
 </table>
@@ -439,6 +441,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1f20f6e2e2de42a5225e86baff2ca0e5"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a1f20f6e2e2de42a5225e86baff2ca0e5">get_geometry_poses_output_port</a> () const</td></tr>
 <tr class="memdesc:a1f20f6e2e2de42a5225e86baff2ca0e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the output port of frames' poses to communicate with a SceneGraph.  <a href="#a1f20f6e2e2de42a5225e86baff2ca0e5">More...</a><br /></td></tr>
 <tr class="separator:a1f20f6e2e2de42a5225e86baff2ca0e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0835e38aebf432f9389e5be0ca06a5c4"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a0835e38aebf432f9389e5be0ca06a5c4">get_deformable_body_configuration_output_port</a> () const</td></tr>
+<tr class="memdesc:a0835e38aebf432f9389e5be0ca06a5c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the output port for vertex positions (configurations), measured and expressed in the World frame, of the deformable bodies in <code>this</code> plant as a GeometryConfigurationVector.  <a href="#a0835e38aebf432f9389e5be0ca06a5c4">More...</a><br /></td></tr>
+<tr class="separator:a0835e38aebf432f9389e5be0ca06a5c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Construction</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="mbp_construction"></a> To add modeling elements like bodies, joints, force elements, constraints, etc. to a MultibodyPlant, use one of the following construction methods. Once <em>all</em> modeling elements have been added, the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a> method <b>must</b> be called. A call to any construction method <b>after</b> a call to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a> causes an exception to be thrown. After calling <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a>, you may invoke MultibodyPlant methods that perform computations. See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a> for details. </p>
 </div></td></tr>
@@ -4434,6 +4439,31 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 
 </div>
 </div>
+<a id="a0835e38aebf432f9389e5be0ca06a5c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0835e38aebf432f9389e5be0ca06a5c4">&#9670;&nbsp;</a></span>get_deformable_body_configuration_output_port()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt;T&gt;&amp; get_deformable_body_configuration_output_port </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the output port for vertex positions (configurations), measured and expressed in the World frame, of the deformable bodies in <code>this</code> plant as a GeometryConfigurationVector. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>this</code> MultibodyPlant doesn't have a <a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html" title="DeformableModel implements the interface in PhysicalModel and provides the functionalities to specify...">DeformableModel</a>. See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a2041985030e48b4fbb6229e7453a847c" title="For use only by advanced developers wanting to try out their new physical models.">AddPhysicalModel()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a10da7d22fff4db1da5c396eef5780ae2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a10da7d22fff4db1da5c396eef5780ae2">&#9670;&nbsp;</a></span>get_desired_state_input_port()</h2>
 
@@ -8280,8 +8310,8 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 
 </div>
 </div>
-<a id="af4f43a6f72128af8e926d32c37ed7580"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4f43a6f72128af8e926d32c37ed7580">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="aecc2576d314d5baf56ad6ad593b26f9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecc2576d314d5baf56ad6ad593b26f9f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -8292,7 +8322,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -8306,8 +8336,8 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 
 </div>
 </div>
-<a id="aecc2576d314d5baf56ad6ad593b26f9f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aecc2576d314d5baf56ad6ad593b26f9f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="af4f43a6f72128af8e926d32c37ed7580"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4f43a6f72128af8e926d32c37ed7580">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -8318,7 +8348,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

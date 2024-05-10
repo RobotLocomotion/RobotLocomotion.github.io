@@ -177,8 +177,37 @@ Macros</h2></td></tr>
 <tr class="memitem:ae6322b9e40935343a422cbdfb41e310e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="drake__copyable_8h.html#ae6322b9e40935343a422cbdfb41e310e">DRAKE_DEFAULT_COPY_AND_MOVE_AND_ASSIGN</a>(Classname)</td></tr>
 <tr class="memdesc:ae6322b9e40935343a422cbdfb41e310e"><td class="mdescLeft">&#160;</td><td class="mdescRight">DRAKE_DEFAULT_COPY_AND_MOVE_AND_ASSIGN defaults the special member functions for copy-construction, copy-assignment, move-construction, and move-assignment.  <a href="#ae6322b9e40935343a422cbdfb41e310e">More...</a><br /></td></tr>
 <tr class="separator:ae6322b9e40935343a422cbdfb41e310e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d60a299683340853a6c62040721c9a0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="drake__copyable_8h.html#a8d60a299683340853a6c62040721c9a0">DRAKE_DECLARE_COPY_AND_MOVE_AND_ASSIGN</a>(Classname)</td></tr>
+<tr class="memdesc:a8d60a299683340853a6c62040721c9a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">DRAKE_DECLARE_COPY_AND_MOVE_AND_ASSIGN declares the special member functions for copy-construction, copy-assignment, move-construction, and move-assignment.  <a href="#a8d60a299683340853a6c62040721c9a0">More...</a><br /></td></tr>
+<tr class="separator:a8d60a299683340853a6c62040721c9a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a8d60a299683340853a6c62040721c9a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d60a299683340853a6c62040721c9a0">&#9670;&nbsp;</a></span>DRAKE_DECLARE_COPY_AND_MOVE_AND_ASSIGN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DRAKE_DECLARE_COPY_AND_MOVE_AND_ASSIGN</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Classname</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">Classname(<span class="keyword">const</span> Classname&amp;);                            \</div><div class="line">  Classname&amp; operator=(<span class="keyword">const</span> Classname&amp;);                 \</div><div class="line">  Classname(Classname&amp;&amp;);                                 \</div><div class="line">  Classname&amp; operator=(Classname&amp;&amp;);</div></div><!-- fragment -->
+<p>DRAKE_DECLARE_COPY_AND_MOVE_AND_ASSIGN declares the special member functions for copy-construction, copy-assignment, move-construction, and move-assignment. </p>
+<p>Use this macro when these functions are available, but require non-default implementations. (Use DRAKE_DEFAULT_COPY_AND_MOVE_AND_ASSIGN instead if you can use the compiler-generated default implementations.) Drake's Doxygen is customized to render the declarations in detail, with appropriate comments assuming <em>unsurprising</em> behavior of your hand-written functions. Invoke this macro in the public section of the class declaration, e.g.: </p><pre>
+class Foo {
+ public:
+  <a class="el" href="drake__copyable_8h.html#a8d60a299683340853a6c62040721c9a0" title="DRAKE_DECLARE_COPY_AND_MOVE_AND_ASSIGN declares the special member functions for copy-construction,...">DRAKE_DECLARE_COPY_AND_MOVE_AND_ASSIGN(Foo)</a></pre><pre>  // ...
+};
+</pre><p> Then the matching definitions should be placed in the associated .cc file. </p>
+
+</div>
+</div>
 <a id="ae6322b9e40935343a422cbdfb41e310e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae6322b9e40935343a422cbdfb41e310e">&#9670;&nbsp;</a></span>DRAKE_DEFAULT_COPY_AND_MOVE_AND_ASSIGN</h2>
 

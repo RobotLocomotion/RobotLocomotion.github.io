@@ -1,5 +1,13 @@
 var NAVTREEINDEX45 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#ab787e9c02a03724506130824c403f3af":[3,0,0,17,8,19],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#adca8eca2ee324f57170dedfb4b06160b":[3,0,0,17,8,14],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#add41849231c25a154e54d762f55c488c":[3,0,0,17,8,5],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#af2a0658eb97b715c3c7066f1b24dd00b":[3,0,0,17,8,8],
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html":[3,0,0,17,9],
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a0539f01602cd1ab9b25989206d302401":[3,0,0,17,9,21],
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a0a4ac30a258a47b6ea610f16f4accece":[3,0,0,17,9,17],
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a0f1bc48c32072f8a84aa295528a66440":[3,0,0,17,9,18],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a1019f41dcfe440c98c91029f4b0b0bc0":[3,0,0,17,9,19],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a205b86a6552919d515ba544c185c04c3":[3,0,0,17,9,4],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a293c775020a0b5f25770dd398ea14f1d":[3,0,0,17,9,3],
@@ -241,13 +249,5 @@ var NAVTREEINDEX45 =
 "contact__surface_8h.html#a227f80cb57c9c87f6ecc4e839e364979a3a53496ffe96227ef579995d332425c1":[4,0,0,4,3,0,1,0],
 "contact__surface_8h.html#a227f80cb57c9c87f6ecc4e839e364979a64edd70c85c6854f380a0cbbc3db3cbb":[4,0,0,4,3,0,1,1],
 "contact__surface__doxygen_8h.html":[4,0,0,4,2,7],
-"contact__surface__utility_8h.html":[4,0,0,4,2,8],
-"contact__visualizer_8h.html":[4,0,0,8,7,0],
-"contact__visualizer_8h.html#aaef19a49dabf0bd3fe0fd47e32a84706":[4,0,0,8,7,0,1],
-"contact__visualizer__params_8h.html":[4,0,0,8,7,1],
-"contact__wrench_8h.html":[4,0,0,8,8,1],
-"contact__wrench__evaluator_8h.html":[4,0,0,8,8,2],
-"context_8h.html":[4,0,0,12,3,7],
-"context_8h.html#a28d54aeb4ed10ced064d5b36f5aa8b67":[4,0,0,12,3,7,1],
-"context__base_8h.html":[4,0,0,12,3,8]
+"contact__surface__utility_8h.html":[4,0,0,4,2,8]
 };
