@@ -1,7 +1,8 @@
 var classdrake_1_1multibody_1_1_multibody_plant_remodeling =
 [
+    [ "BuildModel", "classdrake_1_1multibody_1_1_multibody_plant_remodeling.html#aca779aaa5d8f022b39923717cbc56eca", null ],
+    [ "DoRemoval", "classdrake_1_1multibody_1_1_multibody_plant_remodeling.html#a4f1050d996f8737092a509a2a4279784", null ],
     [ "FinalizeAndBuild", "classdrake_1_1multibody_1_1_multibody_plant_remodeling.html#a9f775831a4ae1713bbd116ec51d86d5e", null ],
-    [ "SetUp", "classdrake_1_1multibody_1_1_multibody_plant_remodeling.html#a3a1707f6479611fdc609a3eb8a0cef1b", null ],
     [ "builder_", "classdrake_1_1multibody_1_1_multibody_plant_remodeling.html#a6192854c6e6fb4582cf8e42b1c5fe5f7", null ],
     [ "diagram_", "classdrake_1_1multibody_1_1_multibody_plant_remodeling.html#a14afae7bb5e2e3892c5de9c06e55657c", null ],
     [ "kTimeStep", "classdrake_1_1multibody_1_1_multibody_plant_remodeling.html#a2e9790b2ba228c3a1b908618d6ffe6d2", null ],

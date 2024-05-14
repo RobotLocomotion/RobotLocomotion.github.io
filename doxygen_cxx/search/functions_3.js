@@ -333,6 +333,7 @@ var searchData=
   ['doregisterdeformablevisual',['DoRegisterDeformableVisual',['../classdrake_1_1geometry_1_1render_1_1_render_engine.html#a5021a551918ae0a1f8dc3d380360eaba',1,'drake::geometry::render::RenderEngine']]],
   ['doregistervisual',['DoRegisterVisual',['../classdrake_1_1geometry_1_1render_1_1_render_engine.html#a82d0e6767d25d9f985c731fcf8b134cb',1,'drake::geometry::render::RenderEngine']]],
   ['doreify',['DoReify',['../classdrake_1_1geometry_1_1_shape.html#ab3405ef6f91107a97cb2376987bfbd5b',1,'drake::geometry::Shape']]],
+  ['doremoval',['DoRemoval',['../classdrake_1_1multibody_1_1_multibody_plant_remodeling.html#a4f1050d996f8737092a509a2a4279784',1,'drake::multibody::MultibodyPlantRemodeling']]],
   ['doremovegeometry',['DoRemoveGeometry',['../classdrake_1_1geometry_1_1render_1_1_render_engine.html#ade97bf7ef53a4bdd2cdcb52eac2bfdc6',1,'drake::geometry::render::RenderEngine']]],
   ['dorendercolorimage',['DoRenderColorImage',['../classdrake_1_1geometry_1_1render_1_1_render_engine.html#a3a05e57a0c1352d5b7bf21ec5b040848',1,'drake::geometry::render::RenderEngine']]],
   ['dorenderdepthimage',['DoRenderDepthImage',['../classdrake_1_1geometry_1_1render_1_1_render_engine.html#ac033875c5794ef9811501fbebf0f40a7',1,'drake::geometry::render::RenderEngine']]],

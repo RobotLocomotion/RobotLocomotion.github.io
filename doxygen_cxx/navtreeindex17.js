@@ -1,5 +1,11 @@
 var NAVTREEINDEX17 =
 {
+"classdrake_1_1multibody_1_1_prismatic_spring.html#a2a3b98d7bf6ebbdb80f69b550edc86ab":[3,0,0,8,74,3],
+"classdrake_1_1multibody_1_1_prismatic_spring.html#a7381bf1f4074c4adcf6e46a735842dd8":[3,0,0,8,74,1],
+"classdrake_1_1multibody_1_1_prismatic_spring.html#a75683bf166b878a6015a678297513872":[3,0,0,8,74,2],
+"classdrake_1_1multibody_1_1_prismatic_spring.html#a81dd319536d45d3a063c366db5543541":[3,0,0,8,74,8],
+"classdrake_1_1multibody_1_1_prismatic_spring.html#a92dfd7d053dfa0e282432186c76c391c":[3,0,0,8,74,11],
+"classdrake_1_1multibody_1_1_prismatic_spring.html#ac8467a9ff79bbea98fa2605ca44b047e":[3,0,0,8,74,10],
 "classdrake_1_1multibody_1_1_prismatic_spring.html#afa4381977890fe7162c38c41337a7901":[3,0,0,8,74,0],
 "classdrake_1_1multibody_1_1_prismatic_spring.html#afd645833d7942a6d6927337a3be8d4eb":[3,0,0,8,74,9],
 "classdrake_1_1multibody_1_1_propeller.html":[1,2,7,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX17 =
 "classdrake_1_1multibody_1_1_rotational_inertia.html#ac917bf1dfed2a1cfe26be9d258285a2d":[3,0,0,8,84,47],
 "classdrake_1_1multibody_1_1_rotational_inertia.html#ad107abcacb84cbabb41b87ba81360f91":[3,0,0,8,84,35],
 "classdrake_1_1multibody_1_1_rotational_inertia.html#ae461fd75b1b4eba6c95a57621adb4e9d":[3,0,0,8,84,36],
-"classdrake_1_1multibody_1_1_rotational_inertia.html#ae57e5aca5db002545e4b9335c8d9dbfa":[3,0,0,8,84,37],
-"classdrake_1_1multibody_1_1_rotational_inertia.html#af016e2a9451f4692a56bec5209ddbaf5":[3,0,0,8,84,19],
-"classdrake_1_1multibody_1_1_rotational_inertia.html#af36dbdaa401764e4df48b07d3b6ad7d4":[3,0,0,8,84,3],
-"classdrake_1_1multibody_1_1_rotational_inertia.html#af38985b256018ac664935ee8423bbe8b":[3,0,0,8,84,11],
-"classdrake_1_1multibody_1_1_rotational_inertia.html#afa1e01c37486db2e78263fb70eaff550":[3,0,0,8,84,9],
-"classdrake_1_1multibody_1_1_rotational_inertia.html#afae48d85764cacfd54fc3001250b4eac":[3,0,0,8,84,24],
-"classdrake_1_1multibody_1_1_rotational_inertia.html#afe098429bda51991a3e6ead89f365838":[3,0,0,8,84,33]
+"classdrake_1_1multibody_1_1_rotational_inertia.html#ae57e5aca5db002545e4b9335c8d9dbfa":[3,0,0,8,84,37]
 };

@@ -1,5 +1,11 @@
 var NAVTREEINDEX23 =
 {
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ac1e9e3e110151e83db01f19f0dd99f46":[1,4,2,1,5,0],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ac5ec168ba2fdfe3900aca37b8580c8ad":[1,4,2,1,5,4],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ad0da7cef1acfba329513b0c072bbe784":[1,4,2,1,5,53],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ad5d70f396be36bd160c2eb380c39bd9a":[1,4,2,1,5,49],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#adfdd25520386a4df952c26050e544f0f":[1,4,2,1,5,26],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ae0ee3cf6bf50e6695a4c35c725eaa823":[1,4,2,1,5,11],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ae53f152a770c0e399fd18519a82111ca":[1,4,2,1,5,17],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ae67390ae3d55a7e0e060b4def47e53ee":[1,4,2,1,5,29],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ae8a8a3244e3e70007474108a9b024d50":[1,4,2,1,5,48],
@@ -243,11 +249,5 @@ var NAVTREEINDEX23 =
 "classdrake_1_1solvers_1_1_bounding_box_constraint.html#a0f4aea653972c0370d15013802058f8b":[1,1,0,32,4],
 "classdrake_1_1solvers_1_1_bounding_box_constraint.html#a3aa1168d3862ead95422de4b913a99fd":[1,1,0,32,5],
 "classdrake_1_1solvers_1_1_bounding_box_constraint.html#a4b921d3ad8be9d128728805b3cff5158":[1,1,0,32,1],
-"classdrake_1_1solvers_1_1_bounding_box_constraint.html#aa1ffdd02b02109e8f3b444a4d8f14579":[1,1,0,32,3],
-"classdrake_1_1solvers_1_1_bounding_box_constraint.html#acbf0357db5f93ea215825f0c7767585b":[1,1,0,32,0],
-"classdrake_1_1solvers_1_1_bounding_box_constraint.html#afb4013b924f2a7a2155bc7cddd5ecbf3":[1,1,0,32,2],
-"classdrake_1_1solvers_1_1_clarabel_solver.html":[3,0,0,13,6],
-"classdrake_1_1solvers_1_1_clarabel_solver.html#a00b55f8b4c1c4f19b45621a84deed66c":[3,0,0,13,6,11],
-"classdrake_1_1solvers_1_1_clarabel_solver.html#a19b7f75e04ee98a7f87e6d08c60ab057":[3,0,0,13,6,4],
-"classdrake_1_1solvers_1_1_clarabel_solver.html#a277134785588d69bb461a4a402877e7a":[3,0,0,13,6,6]
+"classdrake_1_1solvers_1_1_bounding_box_constraint.html#aa1ffdd02b02109e8f3b444a4d8f14579":[1,1,0,32,3]
 };

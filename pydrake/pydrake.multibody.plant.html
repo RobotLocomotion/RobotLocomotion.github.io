@@ -2599,7 +2599,7 @@ to or from symbolic::Expression after a call to this method.</p>
 <span class="sig-name descname"><span class="pre">AddRigidBody</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.AddRigidBody" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant, name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7fa0d196dff0&gt;) -&gt; pydrake.multibody.tree.RigidBody</p></li>
+<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant, name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f17fd4e83f0&gt;) -&gt; pydrake.multibody.tree.RigidBody</p></li>
 </ol>
 <p>Creates a rigid body with the provided name and spatial inertia. This
 method returns a constant reference to the body just added, which will
@@ -2638,7 +2638,7 @@ remain valid for the lifetime of <code class="docutils literal notranslate"><spa
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant, name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7fa0d184b3f0&gt;) -&gt; pydrake.multibody.tree.RigidBody</p></li>
+<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant, name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f17fa58ce30&gt;) -&gt; pydrake.multibody.tree.RigidBody</p></li>
 </ol>
 <p>Creates a rigid body with the provided name and spatial inertia. This
 method returns a constant reference to the body just added, which will
@@ -3570,19 +3570,36 @@ columns.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.CalcRelativeTransform">
-<span class="sig-name descname"><span class="pre">CalcRelativeTransform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame" title="pydrake.multibody.tree.Frame"><span class="pre">pydrake.multibody.tree.Frame</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_B</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame" title="pydrake.multibody.tree.Frame"><span class="pre">pydrake.multibody.tree.Frame</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.CalcRelativeTransform" title="Permalink to this definition"></a></dt>
-<dd><p>Calculates the rigid transform (pose) <code class="docutils literal notranslate"><span class="pre">X_FG</span></code> relating frame F and
-frame G.</p>
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.CalcRelativeRotationMatrix">
+<span class="sig-name descname"><span class="pre">CalcRelativeRotationMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame" title="pydrake.multibody.tree.Frame"><span class="pre">pydrake.multibody.tree.Frame</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_B</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame" title="pydrake.multibody.tree.Frame"><span class="pre">pydrake.multibody.tree.Frame</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RotationMatrix" title="pydrake.math.RotationMatrix"><span class="pre">pydrake.math.RotationMatrix</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.CalcRelativeRotationMatrix" title="Permalink to this definition"></a></dt>
+<dd><p>Calculates the rotation matrix <code class="docutils literal notranslate"><span class="pre">R_AB</span></code> relating frame A and frame B.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The state of the multibody system, which includes the system’s
-generalized positions q. Note: <code class="docutils literal notranslate"><span class="pre">X_FG</span></code> is a function of q.</p>
+generalized positions q. Note: <code class="docutils literal notranslate"><span class="pre">R_AB</span></code> is a function of q.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_F</span></code>:</dt><dd><p>The frame F designated in the rigid transform <code class="docutils literal notranslate"><span class="pre">X_FG</span></code>.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>The frame A designated in the rigid transform <code class="docutils literal notranslate"><span class="pre">R_AB</span></code>.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_G</span></code>:</dt><dd><p>The frame G designated in the rigid transform <code class="docutils literal notranslate"><span class="pre">X_FG</span></code>.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_B</span></code>:</dt><dd><p>The frame G designated in the rigid transform <code class="docutils literal notranslate"><span class="pre">R_AB</span></code>.</p>
 </dd>
-<dt>Returns <code class="docutils literal notranslate"><span class="pre">X_FG</span></code>:</dt><dd><p>The RigidTransform relating frame F and frame G.</p>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">R_AB</span></code>:</dt><dd><p>The RigidTransform relating frame A and frame B.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.CalcRelativeTransform">
+<span class="sig-name descname"><span class="pre">CalcRelativeTransform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame" title="pydrake.multibody.tree.Frame"><span class="pre">pydrake.multibody.tree.Frame</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_B</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame" title="pydrake.multibody.tree.Frame"><span class="pre">pydrake.multibody.tree.Frame</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.CalcRelativeTransform" title="Permalink to this definition"></a></dt>
+<dd><p>Calculates the rigid transform (pose) <code class="docutils literal notranslate"><span class="pre">X_AB</span></code> relating frame A and
+frame B.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The state of the multibody system, which includes the system’s
+generalized positions q. Note: <code class="docutils literal notranslate"><span class="pre">X_AB</span></code> is a function of q.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>The frame A designated in the rigid transform <code class="docutils literal notranslate"><span class="pre">X_AB</span></code>.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_B</span></code>:</dt><dd><p>The frame G designated in the rigid transform <code class="docutils literal notranslate"><span class="pre">X_AB</span></code>.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">X_AB</span></code>:</dt><dd><p>The RigidTransform relating frame A and frame B.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -5021,8 +5038,18 @@ MultibodyPlant with a given specified name.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.GetJointIndices">
-<span class="sig-name descname"><span class="pre">GetJointIndices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JointIndex" title="pydrake.multibody.tree.JointIndex"><span class="pre">pydrake.multibody.tree.JointIndex</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.GetJointIndices" title="Permalink to this definition"></a></dt>
-<dd><p>Returns a list of joint indices associated with <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>.</p>
+<span class="sig-name descname"><span class="pre">GetJointIndices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.GetJointIndices" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>GetJointIndices(self: pydrake.multibody.plant.MultibodyPlant) -&gt; List[pydrake.multibody.tree.JointIndex]</p></li>
+</ol>
+<p>Returns a list of all joint indices. The vector is ordered by
+monotonically increasing JointIndex, but the indexes will in general
+not be consecutive due to joints that were removed.</p>
+<ol class="arabic simple" start="2">
+<li><p>GetJointIndices(self: pydrake.multibody.plant.MultibodyPlant, model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; List[pydrake.multibody.tree.JointIndex]</p></li>
+</ol>
+<p>Returns a list of joint indices associated with <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -5586,6 +5613,13 @@ Post-finalize calls will always return the same value.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.gravity_field">
 <span class="sig-name descname"><span class="pre">gravity_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.UniformGravityFieldElement" title="pydrake.multibody.tree.UniformGravityFieldElement"><span class="pre">pydrake.multibody.tree.UniformGravityFieldElement</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.gravity_field" title="Permalink to this definition"></a></dt>
 <dd><p>An accessor to the current gravity field.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.has_joint">
+<span class="sig-name descname"><span class="pre">has_joint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">joint_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JointIndex" title="pydrake.multibody.tree.JointIndex"><span class="pre">pydrake.multibody.tree.JointIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.has_joint" title="Permalink to this definition"></a></dt>
+<dd><p>Returns true if plant has a joint with unique index <code class="docutils literal notranslate"><span class="pre">joint_index</span></code>.
+The value could be false if the joint was removed using RemoveJoint().</p>
 </dd></dl>
 
 <dl class="py method">
@@ -6341,6 +6375,52 @@ geometry::IllustrationProperties.</p>
 </dd>
 </dl>
 </dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.RemoveJoint">
+<span class="sig-name descname"><span class="pre">RemoveJoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">joint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Joint" title="pydrake.multibody.tree.Joint"><span class="pre">pydrake.multibody.tree.Joint</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.RemoveJoint" title="Permalink to this definition"></a></dt>
+<dd><p>Removes and deletes <code class="docutils literal notranslate"><span class="pre">joint</span></code> from this MultibodyPlant. Any existing
+references to <code class="docutils literal notranslate"><span class="pre">joint</span></code> will become invalid, and future calls to
+<code class="docutils literal notranslate"><span class="pre">get_joint(joint_index)</span></code> will throw an exception. Other elements of
+the plant may depend on <code class="docutils literal notranslate"><span class="pre">joint</span></code> at the time of removal and should be
+removed first. For example, a JointActuator that depends on <code class="docutils literal notranslate"><span class="pre">joint</span></code>
+should be removed with RemoveJointActuator(). Currently, we do not
+provide joint dependency tracking for force elements or constraints,
+so this function will throw an exception if there are <em>any</em> user-added
+force elements or constraints in the plant.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the plant is already finalized.</strong> – </p></li>
+<li><p><strong>RuntimeError if the plant contains a non-zero number of user-added</strong> – </p></li>
+<li><p><strong>force elements</strong><strong> or </strong><strong>user-added constraints.</strong> – </p></li>
+<li><p><strong>RuntimeError if joint has a dependent JointActuator.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>AddJoint()</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is important to note that the JointIndex assigned to a joint is
+immutable. New joint indices are assigned in increasing order,
+even if a joint with a lower index has been removed. This has the
+consequence that when a joint is removed from the plant, the
+sequence <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">num_joints())</span></code> is not necessarily the correct set
+of un-removed joint indices in the plant. Thus, it is important
+<em>NOT</em> to loop over joint indices sequentially from <code class="docutils literal notranslate"><span class="pre">0</span></code> to
+<code class="docutils literal notranslate"><span class="pre">num_joints()</span> <span class="pre">-</span> <span class="pre">1</span></code>. Instead users should use the provided
+GetJointIndices() and GetJointIndices(ModelIndex) functions:</p>
+</div>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">JointIndex</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">GetJointIndices</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">Joint</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">joint</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">get_joint</span><span class="p">(</span><span class="n">index</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">...</span><span class="w"></span>
+<span class="w"> </span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.RemoveJointActuator">
@@ -7777,7 +7857,7 @@ to or from symbolic::Expression after a call to this method.</p>
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].AddRigidBody"></span><span class="sig-name descname"><span class="pre">AddRigidBody</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.AddRigidBody" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7fa0d17d6430&gt;) -&gt; pydrake.multibody.tree.RigidBody_[AutoDiffXd]</p></li>
+<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f17fd3aff70&gt;) -&gt; pydrake.multibody.tree.RigidBody_[AutoDiffXd]</p></li>
 </ol>
 <p>Creates a rigid body with the provided name and spatial inertia. This
 method returns a constant reference to the body just added, which will
@@ -7816,7 +7896,7 @@ remain valid for the lifetime of <code class="docutils literal notranslate"><spa
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7fa0d196d730&gt;) -&gt; pydrake.multibody.tree.RigidBody_[AutoDiffXd]</p></li>
+<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f17fd5274f0&gt;) -&gt; pydrake.multibody.tree.RigidBody_[AutoDiffXd]</p></li>
 </ol>
 <p>Creates a rigid body with the provided name and spatial inertia. This
 method returns a constant reference to the body just added, which will
@@ -8748,19 +8828,36 @@ columns.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.CalcRelativeTransform">
-<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].CalcRelativeTransform"></span><span class="sig-name descname"><span class="pre">CalcRelativeTransform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame_" title="pydrake.multibody.tree.Frame_"><span class="pre">pydrake.multibody.tree.Frame_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_B</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame_" title="pydrake.multibody.tree.Frame_"><span class="pre">pydrake.multibody.tree.Frame_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform_" title="pydrake.math.RigidTransform_"><span class="pre">pydrake.math.RigidTransform_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.CalcRelativeTransform" title="Permalink to this definition"></a></dt>
-<dd><p>Calculates the rigid transform (pose) <code class="docutils literal notranslate"><span class="pre">X_FG</span></code> relating frame F and
-frame G.</p>
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.CalcRelativeRotationMatrix">
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].CalcRelativeRotationMatrix"></span><span class="sig-name descname"><span class="pre">CalcRelativeRotationMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame_" title="pydrake.multibody.tree.Frame_"><span class="pre">pydrake.multibody.tree.Frame_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_B</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame_" title="pydrake.multibody.tree.Frame_"><span class="pre">pydrake.multibody.tree.Frame_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RotationMatrix_" title="pydrake.math.RotationMatrix_"><span class="pre">pydrake.math.RotationMatrix_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.CalcRelativeRotationMatrix" title="Permalink to this definition"></a></dt>
+<dd><p>Calculates the rotation matrix <code class="docutils literal notranslate"><span class="pre">R_AB</span></code> relating frame A and frame B.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The state of the multibody system, which includes the system’s
-generalized positions q. Note: <code class="docutils literal notranslate"><span class="pre">X_FG</span></code> is a function of q.</p>
+generalized positions q. Note: <code class="docutils literal notranslate"><span class="pre">R_AB</span></code> is a function of q.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_F</span></code>:</dt><dd><p>The frame F designated in the rigid transform <code class="docutils literal notranslate"><span class="pre">X_FG</span></code>.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>The frame A designated in the rigid transform <code class="docutils literal notranslate"><span class="pre">R_AB</span></code>.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_G</span></code>:</dt><dd><p>The frame G designated in the rigid transform <code class="docutils literal notranslate"><span class="pre">X_FG</span></code>.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_B</span></code>:</dt><dd><p>The frame G designated in the rigid transform <code class="docutils literal notranslate"><span class="pre">R_AB</span></code>.</p>
 </dd>
-<dt>Returns <code class="docutils literal notranslate"><span class="pre">X_FG</span></code>:</dt><dd><p>The RigidTransform relating frame F and frame G.</p>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">R_AB</span></code>:</dt><dd><p>The RigidTransform relating frame A and frame B.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.CalcRelativeTransform">
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].CalcRelativeTransform"></span><span class="sig-name descname"><span class="pre">CalcRelativeTransform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame_" title="pydrake.multibody.tree.Frame_"><span class="pre">pydrake.multibody.tree.Frame_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_B</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame_" title="pydrake.multibody.tree.Frame_"><span class="pre">pydrake.multibody.tree.Frame_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform_" title="pydrake.math.RigidTransform_"><span class="pre">pydrake.math.RigidTransform_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.CalcRelativeTransform" title="Permalink to this definition"></a></dt>
+<dd><p>Calculates the rigid transform (pose) <code class="docutils literal notranslate"><span class="pre">X_AB</span></code> relating frame A and
+frame B.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The state of the multibody system, which includes the system’s
+generalized positions q. Note: <code class="docutils literal notranslate"><span class="pre">X_AB</span></code> is a function of q.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>The frame A designated in the rigid transform <code class="docutils literal notranslate"><span class="pre">X_AB</span></code>.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_B</span></code>:</dt><dd><p>The frame G designated in the rigid transform <code class="docutils literal notranslate"><span class="pre">X_AB</span></code>.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">X_AB</span></code>:</dt><dd><p>The RigidTransform relating frame A and frame B.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -10199,8 +10296,18 @@ MultibodyPlant with a given specified name.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetJointIndices">
-<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].GetJointIndices"></span><span class="sig-name descname"><span class="pre">GetJointIndices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JointIndex" title="pydrake.multibody.tree.JointIndex"><span class="pre">pydrake.multibody.tree.JointIndex</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetJointIndices" title="Permalink to this definition"></a></dt>
-<dd><p>Returns a list of joint indices associated with <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>.</p>
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].GetJointIndices"></span><span class="sig-name descname"><span class="pre">GetJointIndices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetJointIndices" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>GetJointIndices(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd]) -&gt; List[pydrake.multibody.tree.JointIndex]</p></li>
+</ol>
+<p>Returns a list of all joint indices. The vector is ordered by
+monotonically increasing JointIndex, but the indexes will in general
+not be consecutive due to joints that were removed.</p>
+<ol class="arabic simple" start="2">
+<li><p>GetJointIndices(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; List[pydrake.multibody.tree.JointIndex]</p></li>
+</ol>
+<p>Returns a list of joint indices associated with <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -10764,6 +10871,13 @@ Post-finalize calls will always return the same value.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.gravity_field">
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].gravity_field"></span><span class="sig-name descname"><span class="pre">gravity_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.UniformGravityFieldElement_" title="pydrake.multibody.tree.UniformGravityFieldElement_"><span class="pre">pydrake.multibody.tree.UniformGravityFieldElement_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.gravity_field" title="Permalink to this definition"></a></dt>
 <dd><p>An accessor to the current gravity field.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.has_joint">
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].has_joint"></span><span class="sig-name descname"><span class="pre">has_joint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">joint_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JointIndex" title="pydrake.multibody.tree.JointIndex"><span class="pre">pydrake.multibody.tree.JointIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.has_joint" title="Permalink to this definition"></a></dt>
+<dd><p>Returns true if plant has a joint with unique index <code class="docutils literal notranslate"><span class="pre">joint_index</span></code>.
+The value could be false if the joint was removed using RemoveJoint().</p>
 </dd></dl>
 
 <dl class="py method">
@@ -11481,6 +11595,52 @@ geometry::IllustrationProperties.</p>
 </dd>
 </dl>
 </dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.RemoveJoint">
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].RemoveJoint"></span><span class="sig-name descname"><span class="pre">RemoveJoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">joint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Joint_" title="pydrake.multibody.tree.Joint_"><span class="pre">pydrake.multibody.tree.Joint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.RemoveJoint" title="Permalink to this definition"></a></dt>
+<dd><p>Removes and deletes <code class="docutils literal notranslate"><span class="pre">joint</span></code> from this MultibodyPlant. Any existing
+references to <code class="docutils literal notranslate"><span class="pre">joint</span></code> will become invalid, and future calls to
+<code class="docutils literal notranslate"><span class="pre">get_joint(joint_index)</span></code> will throw an exception. Other elements of
+the plant may depend on <code class="docutils literal notranslate"><span class="pre">joint</span></code> at the time of removal and should be
+removed first. For example, a JointActuator that depends on <code class="docutils literal notranslate"><span class="pre">joint</span></code>
+should be removed with RemoveJointActuator(). Currently, we do not
+provide joint dependency tracking for force elements or constraints,
+so this function will throw an exception if there are <em>any</em> user-added
+force elements or constraints in the plant.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the plant is already finalized.</strong> – </p></li>
+<li><p><strong>RuntimeError if the plant contains a non-zero number of user-added</strong> – </p></li>
+<li><p><strong>force elements</strong><strong> or </strong><strong>user-added constraints.</strong> – </p></li>
+<li><p><strong>RuntimeError if joint has a dependent JointActuator.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>AddJoint()</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is important to note that the JointIndex assigned to a joint is
+immutable. New joint indices are assigned in increasing order,
+even if a joint with a lower index has been removed. This has the
+consequence that when a joint is removed from the plant, the
+sequence <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">num_joints())</span></code> is not necessarily the correct set
+of un-removed joint indices in the plant. Thus, it is important
+<em>NOT</em> to loop over joint indices sequentially from <code class="docutils literal notranslate"><span class="pre">0</span></code> to
+<code class="docutils literal notranslate"><span class="pre">num_joints()</span> <span class="pre">-</span> <span class="pre">1</span></code>. Instead users should use the provided
+GetJointIndices() and GetJointIndices(ModelIndex) functions:</p>
+</div>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">JointIndex</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">GetJointIndices</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">Joint</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">joint</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">get_joint</span><span class="p">(</span><span class="n">index</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">...</span><span class="w"></span>
+<span class="w"> </span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.RemoveJointActuator">
@@ -12911,7 +13071,7 @@ to or from symbolic::Expression after a call to this method.</p>
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].AddRigidBody"></span><span class="sig-name descname"><span class="pre">AddRigidBody</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.AddRigidBody" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[Expression], name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7fa0ce93f970&gt;) -&gt; pydrake.multibody.tree.RigidBody_[Expression]</p></li>
+<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[Expression], name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f17fd51c3f0&gt;) -&gt; pydrake.multibody.tree.RigidBody_[Expression]</p></li>
 </ol>
 <p>Creates a rigid body with the provided name and spatial inertia. This
 method returns a constant reference to the body just added, which will
@@ -12950,7 +13110,7 @@ remain valid for the lifetime of <code class="docutils literal notranslate"><spa
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[Expression], name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7fa0d17f2bf0&gt;) -&gt; pydrake.multibody.tree.RigidBody_[Expression]</p></li>
+<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[Expression], name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f17fa51d470&gt;) -&gt; pydrake.multibody.tree.RigidBody_[Expression]</p></li>
 </ol>
 <p>Creates a rigid body with the provided name and spatial inertia. This
 method returns a constant reference to the body just added, which will
@@ -13882,19 +14042,36 @@ columns.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.CalcRelativeTransform">
-<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].CalcRelativeTransform"></span><span class="sig-name descname"><span class="pre">CalcRelativeTransform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame_" title="pydrake.multibody.tree.Frame_"><span class="pre">pydrake.multibody.tree.Frame_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_B</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame_" title="pydrake.multibody.tree.Frame_"><span class="pre">pydrake.multibody.tree.Frame_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform_" title="pydrake.math.RigidTransform_"><span class="pre">pydrake.math.RigidTransform_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.CalcRelativeTransform" title="Permalink to this definition"></a></dt>
-<dd><p>Calculates the rigid transform (pose) <code class="docutils literal notranslate"><span class="pre">X_FG</span></code> relating frame F and
-frame G.</p>
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.CalcRelativeRotationMatrix">
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].CalcRelativeRotationMatrix"></span><span class="sig-name descname"><span class="pre">CalcRelativeRotationMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame_" title="pydrake.multibody.tree.Frame_"><span class="pre">pydrake.multibody.tree.Frame_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_B</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame_" title="pydrake.multibody.tree.Frame_"><span class="pre">pydrake.multibody.tree.Frame_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RotationMatrix_" title="pydrake.math.RotationMatrix_"><span class="pre">pydrake.math.RotationMatrix_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.CalcRelativeRotationMatrix" title="Permalink to this definition"></a></dt>
+<dd><p>Calculates the rotation matrix <code class="docutils literal notranslate"><span class="pre">R_AB</span></code> relating frame A and frame B.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The state of the multibody system, which includes the system’s
-generalized positions q. Note: <code class="docutils literal notranslate"><span class="pre">X_FG</span></code> is a function of q.</p>
+generalized positions q. Note: <code class="docutils literal notranslate"><span class="pre">R_AB</span></code> is a function of q.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_F</span></code>:</dt><dd><p>The frame F designated in the rigid transform <code class="docutils literal notranslate"><span class="pre">X_FG</span></code>.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>The frame A designated in the rigid transform <code class="docutils literal notranslate"><span class="pre">R_AB</span></code>.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_G</span></code>:</dt><dd><p>The frame G designated in the rigid transform <code class="docutils literal notranslate"><span class="pre">X_FG</span></code>.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_B</span></code>:</dt><dd><p>The frame G designated in the rigid transform <code class="docutils literal notranslate"><span class="pre">R_AB</span></code>.</p>
 </dd>
-<dt>Returns <code class="docutils literal notranslate"><span class="pre">X_FG</span></code>:</dt><dd><p>The RigidTransform relating frame F and frame G.</p>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">R_AB</span></code>:</dt><dd><p>The RigidTransform relating frame A and frame B.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.CalcRelativeTransform">
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].CalcRelativeTransform"></span><span class="sig-name descname"><span class="pre">CalcRelativeTransform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame_" title="pydrake.multibody.tree.Frame_"><span class="pre">pydrake.multibody.tree.Frame_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_B</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame_" title="pydrake.multibody.tree.Frame_"><span class="pre">pydrake.multibody.tree.Frame_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform_" title="pydrake.math.RigidTransform_"><span class="pre">pydrake.math.RigidTransform_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.CalcRelativeTransform" title="Permalink to this definition"></a></dt>
+<dd><p>Calculates the rigid transform (pose) <code class="docutils literal notranslate"><span class="pre">X_AB</span></code> relating frame A and
+frame B.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The state of the multibody system, which includes the system’s
+generalized positions q. Note: <code class="docutils literal notranslate"><span class="pre">X_AB</span></code> is a function of q.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>The frame A designated in the rigid transform <code class="docutils literal notranslate"><span class="pre">X_AB</span></code>.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_B</span></code>:</dt><dd><p>The frame G designated in the rigid transform <code class="docutils literal notranslate"><span class="pre">X_AB</span></code>.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">X_AB</span></code>:</dt><dd><p>The RigidTransform relating frame A and frame B.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -15333,8 +15510,18 @@ MultibodyPlant with a given specified name.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.GetJointIndices">
-<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].GetJointIndices"></span><span class="sig-name descname"><span class="pre">GetJointIndices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JointIndex" title="pydrake.multibody.tree.JointIndex"><span class="pre">pydrake.multibody.tree.JointIndex</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetJointIndices" title="Permalink to this definition"></a></dt>
-<dd><p>Returns a list of joint indices associated with <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>.</p>
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].GetJointIndices"></span><span class="sig-name descname"><span class="pre">GetJointIndices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetJointIndices" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>GetJointIndices(self: pydrake.multibody.plant.MultibodyPlant_[Expression]) -&gt; List[pydrake.multibody.tree.JointIndex]</p></li>
+</ol>
+<p>Returns a list of all joint indices. The vector is ordered by
+monotonically increasing JointIndex, but the indexes will in general
+not be consecutive due to joints that were removed.</p>
+<ol class="arabic simple" start="2">
+<li><p>GetJointIndices(self: pydrake.multibody.plant.MultibodyPlant_[Expression], model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; List[pydrake.multibody.tree.JointIndex]</p></li>
+</ol>
+<p>Returns a list of joint indices associated with <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -15898,6 +16085,13 @@ Post-finalize calls will always return the same value.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.gravity_field">
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].gravity_field"></span><span class="sig-name descname"><span class="pre">gravity_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.UniformGravityFieldElement_" title="pydrake.multibody.tree.UniformGravityFieldElement_"><span class="pre">pydrake.multibody.tree.UniformGravityFieldElement_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.gravity_field" title="Permalink to this definition"></a></dt>
 <dd><p>An accessor to the current gravity field.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.has_joint">
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].has_joint"></span><span class="sig-name descname"><span class="pre">has_joint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">joint_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JointIndex" title="pydrake.multibody.tree.JointIndex"><span class="pre">pydrake.multibody.tree.JointIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.has_joint" title="Permalink to this definition"></a></dt>
+<dd><p>Returns true if plant has a joint with unique index <code class="docutils literal notranslate"><span class="pre">joint_index</span></code>.
+The value could be false if the joint was removed using RemoveJoint().</p>
 </dd></dl>
 
 <dl class="py method">
@@ -16615,6 +16809,52 @@ geometry::IllustrationProperties.</p>
 </dd>
 </dl>
 </dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.RemoveJoint">
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].RemoveJoint"></span><span class="sig-name descname"><span class="pre">RemoveJoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">joint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Joint_" title="pydrake.multibody.tree.Joint_"><span class="pre">pydrake.multibody.tree.Joint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.RemoveJoint" title="Permalink to this definition"></a></dt>
+<dd><p>Removes and deletes <code class="docutils literal notranslate"><span class="pre">joint</span></code> from this MultibodyPlant. Any existing
+references to <code class="docutils literal notranslate"><span class="pre">joint</span></code> will become invalid, and future calls to
+<code class="docutils literal notranslate"><span class="pre">get_joint(joint_index)</span></code> will throw an exception. Other elements of
+the plant may depend on <code class="docutils literal notranslate"><span class="pre">joint</span></code> at the time of removal and should be
+removed first. For example, a JointActuator that depends on <code class="docutils literal notranslate"><span class="pre">joint</span></code>
+should be removed with RemoveJointActuator(). Currently, we do not
+provide joint dependency tracking for force elements or constraints,
+so this function will throw an exception if there are <em>any</em> user-added
+force elements or constraints in the plant.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the plant is already finalized.</strong> – </p></li>
+<li><p><strong>RuntimeError if the plant contains a non-zero number of user-added</strong> – </p></li>
+<li><p><strong>force elements</strong><strong> or </strong><strong>user-added constraints.</strong> – </p></li>
+<li><p><strong>RuntimeError if joint has a dependent JointActuator.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>AddJoint()</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is important to note that the JointIndex assigned to a joint is
+immutable. New joint indices are assigned in increasing order,
+even if a joint with a lower index has been removed. This has the
+consequence that when a joint is removed from the plant, the
+sequence <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">num_joints())</span></code> is not necessarily the correct set
+of un-removed joint indices in the plant. Thus, it is important
+<em>NOT</em> to loop over joint indices sequentially from <code class="docutils literal notranslate"><span class="pre">0</span></code> to
+<code class="docutils literal notranslate"><span class="pre">num_joints()</span> <span class="pre">-</span> <span class="pre">1</span></code>. Instead users should use the provided
+GetJointIndices() and GetJointIndices(ModelIndex) functions:</p>
+</div>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">JointIndex</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">GetJointIndices</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">Joint</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">joint</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">get_joint</span><span class="p">(</span><span class="n">index</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">...</span><span class="w"></span>
+<span class="w"> </span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.RemoveJointActuator">

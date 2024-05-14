@@ -1,5 +1,11 @@
 var NAVTREEINDEX25 =
 {
+"classdrake_1_1solvers_1_1_l_inf_norm_cost.html#a6e9dfc57bddcdce7615d0b26b43048d6":[1,1,0,43,2],
+"classdrake_1_1solvers_1_1_l_inf_norm_cost.html#a81cfcad3fd0e7a14b9549c397bd7d6aa":[1,1,0,43,1],
+"classdrake_1_1solvers_1_1_l_inf_norm_cost.html#a863f7df9d3ee10378794b4c6842a4377":[1,1,0,43,7],
+"classdrake_1_1solvers_1_1_l_inf_norm_cost.html#aa2431c2dbd82437d8f621033d8af8231":[1,1,0,43,8],
+"classdrake_1_1solvers_1_1_l_inf_norm_cost.html#aa8e1e9254703f4bfe3d3e4d01807f441":[1,1,0,43,10],
+"classdrake_1_1solvers_1_1_l_inf_norm_cost.html#aae45694d3595659922653fd027d15cb6":[1,1,0,43,5],
 "classdrake_1_1solvers_1_1_l_inf_norm_cost.html#ab6304fd980ebd27b25e88b5d2cfec5e8":[1,1,0,43,11],
 "classdrake_1_1solvers_1_1_l_inf_norm_cost.html#ab765f2102252bded1d21b19ac5184576":[1,1,0,43,12],
 "classdrake_1_1solvers_1_1_l_inf_norm_cost.html#ace583a472a3bdc1b67f05d6a6571a903":[1,1,0,43,4],
@@ -243,11 +249,5 @@ var NAVTREEINDEX25 =
 "classdrake_1_1solvers_1_1_mathematical_program.html#a85baa493f8445101d0367606e3bf5f32":[1,1,2,90],
 "classdrake_1_1solvers_1_1_mathematical_program.html#a8874425f3b864d09e7a05f6ca2c97805":[1,1,2,74],
 "classdrake_1_1solvers_1_1_mathematical_program.html#a8a9082746a4852ea5087b2a6e3cc57ee":[1,1,2,86],
-"classdrake_1_1solvers_1_1_mathematical_program.html#a8b16dc5af33d4fd617a189a905d02173":[1,1,2,26],
-"classdrake_1_1solvers_1_1_mathematical_program.html#a8cae2adfde468f154fc70a367e0f0ff6":[1,1,2,53],
-"classdrake_1_1solvers_1_1_mathematical_program.html#a8d203a1789d8fe03eeaaacdb49a267d4":[1,1,2,159],
-"classdrake_1_1solvers_1_1_mathematical_program.html#a8d26f3d31c9cfba7144b9a0d96aebdd0":[1,1,2,20],
-"classdrake_1_1solvers_1_1_mathematical_program.html#a8d2cc4c49122282ae0b2fe0511e86817":[1,1,2,125],
-"classdrake_1_1solvers_1_1_mathematical_program.html#a8dfe4319252cfe4f6b290986b504c404":[1,1,2,89],
-"classdrake_1_1solvers_1_1_mathematical_program.html#a8f22188fff7a464ac091b8fea727a89d":[1,1,2,174]
+"classdrake_1_1solvers_1_1_mathematical_program.html#a8b16dc5af33d4fd617a189a905d02173":[1,1,2,26]
 };

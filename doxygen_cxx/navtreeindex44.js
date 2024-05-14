@@ -1,5 +1,11 @@
 var NAVTREEINDEX44 =
 {
+"classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#ab9ed4e2a0b5730711b8a3d28804e9a07":[1,2,4,4,1],
+"classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#ad21badaf40ab842db851a4a380c0e22f":[1,2,4,4,0],
+"classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#adf4572bb00056a157be83e44f7f41523":[1,2,4,4,12],
+"classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#ae506e99f31653fd9861c90d1623163fd":[1,2,4,4,6],
+"classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#aea1c4f5f5823d9fd788df60be071025a":[1,2,4,4,8],
+"classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#afaf00d756e556d58e224c3cb82bd9987":[1,2,4,4,13],
 "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#afd0368849f35be23e914079d5373ee2c":[1,2,4,4,9],
 "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#aff74e4980084b28c29f132bd18606031":[1,2,4,4,3],
 "classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html":[1,2,4,5],
@@ -243,11 +249,5 @@ var NAVTREEINDEX44 =
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a52ec91bfc0bdaeacdb3be7800ab7d43e":[3,0,0,17,8,17],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a611b9bd79f548904a032ba3992d705e7":[3,0,0,17,8,15],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a6fd5552029547f8e16ebbed98e108bbb":[3,0,0,17,8,3],
-"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a76ec9d05feedef776f4510cfdc3caecd":[3,0,0,17,8,2],
-"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a847303eb7ec2b752d7eee59d3f07ea0e":[3,0,0,17,8,7],
-"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a8743b4bccdaf5d24987b1f76403bbe41":[3,0,0,17,8,13],
-"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a89e113d205dc5ec5eff6d7f331a8c156":[3,0,0,17,8,12],
-"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a97e610bb883f37a631873104d8f6209d":[3,0,0,17,8,0],
-"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a9aa1f1cfff6dcb352d5fbb15a80ee1a9":[3,0,0,17,8,20],
-"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a9efee334e7a31b81c6056b8a0bb2cad1":[3,0,0,17,8,1]
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a76ec9d05feedef776f4510cfdc3caecd":[3,0,0,17,8,2]
 };

@@ -1,5 +1,13 @@
 var NAVTREEINDEX62 =
 {
+"structfmt_1_1formatter_3_01drake_1_1solvers_1_1_common_solver_option_01_4.html":[3,0,1,18],
+"structfmt_1_1formatter_3_01drake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator_1_1_approach_01_4.html":[3,0,1,19],
+"structfmt_1_1formatter_3_01drake_1_1solvers_1_1_program_attribute_01_4.html":[3,0,1,20],
+"structfmt_1_1formatter_3_01drake_1_1solvers_1_1_program_attributes_01_4.html":[3,0,1,21],
+"structfmt_1_1formatter_3_01drake_1_1solvers_1_1_program_type_01_4.html":[3,0,1,22],
+"structfmt_1_1formatter_3_01drake_1_1solvers_1_1_solver_id_01_4.html":[3,0,1,23],
+"structfmt_1_1formatter_3_01drake_1_1solvers_1_1_solver_options_01_4.html":[3,0,1,24],
+"structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_chebyshev_basis_element_01_4.html":[3,0,1,25],
 "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_chebyshev_polynomial_01_4.html":[3,0,1,26],
 "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_generic_polynomial_3_01_basis_element_01_4_01_4.html":[3,0,1,27],
 "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_monomial_basis_element_01_4.html":[3,0,1,28],
@@ -233,7 +241,7 @@ var NAVTREEINDEX62 =
 "unused_8h.html":[4,0,0,1,69],
 "unused_8h.html#ade20b7bf635eecb13adbaac4df980af0":[4,0,0,1,69,0],
 "utilities_8h.html":[4,0,0,4,51],
-"validate__constraint__gradients_8h.html":[4,0,0,8,2,0,19],
+"validate__constraint__gradients_8h.html":[4,0,0,8,2,0,21],
 "value_8h.html":[4,0,0,1,70],
 "value__checker_8h.html":[4,0,0,12,3,49],
 "value__producer_8h.html":[4,0,0,12,3,50],
@@ -241,13 +249,5 @@ var NAVTREEINDEX62 =
 "value__pybind_8h.html#a210546c12706075cdd90f811470ac4b0":[4,0,0,0,0,1,12,0],
 "value__to__abstract__value_8h.html":[4,0,0,12,3,51],
 "van__der__pol_8h.html":[4,0,0,3,18,0],
-"variable_8h.html":[4,0,0,1,3,0,11],
-"variable_8h.html#a0db73b37d01f12010d12cd426f7f5054":[4,0,0,1,3,0,11,19],
-"variable_8h.html#a29875ac163c78c1d1e75106b5890c949":[4,0,0,1,3,0,11,11],
-"variable_8h.html#a2a22da2ebae3f3ca478d07976adfca85":[4,0,0,1,3,0,11,24],
-"variable_8h.html#a2ab43ed8981b8575f24e83fdf4b26295":[4,0,0,1,3,0,11,10],
-"variable_8h.html#a3abc75a1263e517c17a4fcb5944ba474":[4,0,0,1,3,0,11,21],
-"variable_8h.html#a3d8075d8a54d9c85d7b0cdcdff660ee1":[4,0,0,1,3,0,11,25],
-"variable_8h.html#a486a6cf03a93f8f8693c94e57d29e0ea":[4,0,0,1,3,0,11,17],
-"variable_8h.html#a4a8fedc6cdc53869462f7aebaafa32c0":[4,0,0,1,3,0,11,9]
+"variable_8h.html":[4,0,0,1,3,0,11]
 };

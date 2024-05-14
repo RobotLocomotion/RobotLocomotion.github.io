@@ -472,6 +472,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a72230ce90807a7564e19faa1a401dd75"><td class="memTemplItemLeft" align="right" valign="top">const JointType&lt; T &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a72230ce90807a7564e19faa1a401dd75">AddJoint</a> (const std::string &amp;name, const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;parent, const std::optional&lt; <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&gt; &amp;X_PF, const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;child, const std::optional&lt; <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&gt; &amp;X_BM, Args &amp;&amp;... args)</td></tr>
 <tr class="memdesc:a72230ce90807a7564e19faa1a401dd75"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method adds a <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> of type <code>JointType</code> between two bodies.  <a href="#a72230ce90807a7564e19faa1a401dd75">More...</a><br /></td></tr>
 <tr class="separator:a72230ce90807a7564e19faa1a401dd75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9ac269076a123de9d88132d946d0827"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#af9ac269076a123de9d88132d946d0827">RemoveJoint</a> (const <a class="el" href="classdrake_1_1multibody_1_1_joint.html">Joint</a>&lt; T &gt; &amp;joint)</td></tr>
+<tr class="memdesc:af9ac269076a123de9d88132d946d0827"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes and deletes <code>joint</code> from this MultibodyPlant.  <a href="#af9ac269076a123de9d88132d946d0827">More...</a><br /></td></tr>
+<tr class="separator:af9ac269076a123de9d88132d946d0827"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6636bf1e0900fb58b6a2e465c404fa8d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_weld_joint.html">WeldJoint</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a6636bf1e0900fb58b6a2e465c404fa8d">WeldFrames</a> (const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_on_parent_F, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_on_child_M, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_FM=<a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;::Identity())</td></tr>
 <tr class="memdesc:a6636bf1e0900fb58b6a2e465c404fa8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Welds <code>frame_on_parent_F</code> and <code>frame_on_child_M</code> with relative pose <code>X_FM</code>.  <a href="#a6636bf1e0900fb58b6a2e465c404fa8d">More...</a><br /></td></tr>
 <tr class="separator:a6636bf1e0900fb58b6a2e465c404fa8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -802,12 +805,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aecf801449932225a58b7daeb64a8f911"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="structdrake_1_1geometry_1_1_penetration_as_point_pair.html">geometry::PenetrationAsPointPair</a>&lt; T &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aecf801449932225a58b7daeb64a8f911">EvalPointPairPenetrations</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
 <tr class="memdesc:aecf801449932225a58b7daeb64a8f911"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates all point pairs of contact for a given state of the model stored in <code>context</code>.  <a href="#aecf801449932225a58b7daeb64a8f911">More...</a><br /></td></tr>
 <tr class="separator:aecf801449932225a58b7daeb64a8f911"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ff38c1d07aa9cbaf82c256dace67f29"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8ff38c1d07aa9cbaf82c256dace67f29">CalcRelativeTransform</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_F, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_G) const</td></tr>
-<tr class="memdesc:a8ff38c1d07aa9cbaf82c256dace67f29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the rigid transform (pose) <code>X_FG</code> relating frame F and frame G.  <a href="#a8ff38c1d07aa9cbaf82c256dace67f29">More...</a><br /></td></tr>
-<tr class="separator:a8ff38c1d07aa9cbaf82c256dace67f29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8e779bd785d02c0b0e14264b9055391"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#af8e779bd785d02c0b0e14264b9055391">CalcRelativeRotationMatrix</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_F, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_G) const</td></tr>
-<tr class="memdesc:af8e779bd785d02c0b0e14264b9055391"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the rotation matrix <code>R_FG</code> relating frame F and frame G.  <a href="#af8e779bd785d02c0b0e14264b9055391">More...</a><br /></td></tr>
-<tr class="separator:af8e779bd785d02c0b0e14264b9055391"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e86b07e42fb4ce047ffecd82f263571"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a5e86b07e42fb4ce047ffecd82f263571">CalcRelativeTransform</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_A, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_B) const</td></tr>
+<tr class="memdesc:a5e86b07e42fb4ce047ffecd82f263571"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the rigid transform (pose) <code>X_AB</code> relating frame A and frame B.  <a href="#a5e86b07e42fb4ce047ffecd82f263571">More...</a><br /></td></tr>
+<tr class="separator:a5e86b07e42fb4ce047ffecd82f263571"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01ce77dbf66f174912d1f81b60d00f2d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a01ce77dbf66f174912d1f81b60d00f2d">CalcRelativeRotationMatrix</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_A, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_B) const</td></tr>
+<tr class="memdesc:a01ce77dbf66f174912d1f81b60d00f2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the rotation matrix <code>R_AB</code> relating frame A and frame B.  <a href="#a01ce77dbf66f174912d1f81b60d00f2d">More...</a><br /></td></tr>
+<tr class="separator:a01ce77dbf66f174912d1f81b60d00f2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27bce36db6170b2ed1ee53481f8017a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a27bce36db6170b2ed1ee53481f8017a5">CalcPointsPositions</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_B, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; &amp;p_BQi, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_A, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; p_AQi) const</td></tr>
 <tr class="memdesc:a27bce36db6170b2ed1ee53481f8017a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the positions <code>p_BQi</code> for a set of points <code>Qi</code> measured and expressed in a frame B, this method computes the positions <code>p_AQi(q)</code> of each point <code>Qi</code> in the set as measured and expressed in another frame A, as a function of the generalized positions q of the model.  <a href="#a27bce36db6170b2ed1ee53481f8017a5">More...</a><br /></td></tr>
 <tr class="separator:a27bce36db6170b2ed1ee53481f8017a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -980,6 +983,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a636804b6c40e538d83d5c2dfefb7929e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a636804b6c40e538d83d5c2dfefb7929e">num_joints</a> () const</td></tr>
 <tr class="memdesc:a636804b6c40e538d83d5c2dfefb7929e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of joints in the model.  <a href="#a636804b6c40e538d83d5c2dfefb7929e">More...</a><br /></td></tr>
 <tr class="separator:a636804b6c40e538d83d5c2dfefb7929e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee8d8c1e520c405dc36cbffccbfe2ad8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aee8d8c1e520c405dc36cbffccbfe2ad8">has_joint</a> (<a class="el" href="namespacedrake_1_1multibody.html#a27485be8a33f5ed2ee7f3f8de9dd40c0">JointIndex</a> joint_index) const</td></tr>
+<tr class="memdesc:aee8d8c1e520c405dc36cbffccbfe2ad8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if plant has a joint with unique index <code>joint_index</code>.  <a href="#aee8d8c1e520c405dc36cbffccbfe2ad8">More...</a><br /></td></tr>
+<tr class="separator:aee8d8c1e520c405dc36cbffccbfe2ad8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad293b63a81a28c455fdfb7e5f04c35b0"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_joint.html">Joint</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ad293b63a81a28c455fdfb7e5f04c35b0">get_joint</a> (<a class="el" href="namespacedrake_1_1multibody.html#a27485be8a33f5ed2ee7f3f8de9dd40c0">JointIndex</a> joint_index) const</td></tr>
 <tr class="memdesc:ad293b63a81a28c455fdfb7e5f04c35b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constant reference to the joint with unique index <code>joint_index</code>.  <a href="#ad293b63a81a28c455fdfb7e5f04c35b0">More...</a><br /></td></tr>
 <tr class="separator:ad293b63a81a28c455fdfb7e5f04c35b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -990,6 +996,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab56a3621a122cdff1729f71b756a75d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_joint.html">Joint</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ab56a3621a122cdff1729f71b756a75d0">get_mutable_joint</a> (<a class="el" href="namespacedrake_1_1multibody.html#a27485be8a33f5ed2ee7f3f8de9dd40c0">JointIndex</a> joint_index)</td></tr>
 <tr class="memdesc:ab56a3621a122cdff1729f71b756a75d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a mutable reference to the joint with unique index <code>joint_index</code>.  <a href="#ab56a3621a122cdff1729f71b756a75d0">More...</a><br /></td></tr>
 <tr class="separator:ab56a3621a122cdff1729f71b756a75d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8776938fd37b9c194c456566f6133375"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#a27485be8a33f5ed2ee7f3f8de9dd40c0">JointIndex</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8776938fd37b9c194c456566f6133375">GetJointIndices</a> () const</td></tr>
+<tr class="memdesc:a8776938fd37b9c194c456566f6133375"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of all joint indices.  <a href="#a8776938fd37b9c194c456566f6133375">More...</a><br /></td></tr>
+<tr class="separator:a8776938fd37b9c194c456566f6133375"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af7918857fc5c0c9deffef433ca5cb85f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#a27485be8a33f5ed2ee7f3f8de9dd40c0">JointIndex</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#af7918857fc5c0c9deffef433ca5cb85f">GetJointIndices</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance) const</td></tr>
 <tr class="memdesc:af7918857fc5c0c9deffef433ca5cb85f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of joint indices associated with <code>model_instance</code>.  <a href="#af7918857fc5c0c9deffef433ca5cb85f">More...</a><br /></td></tr>
 <tr class="separator:af7918857fc5c0c9deffef433ca5cb85f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3349,8 +3358,8 @@ A distance constraint is the wrong modeling choice if the distance needs to go t
 
 </div>
 </div>
-<a id="af8e779bd785d02c0b0e14264b9055391"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8e779bd785d02c0b0e14264b9055391">&#9670;&nbsp;</a></span>CalcRelativeRotationMatrix()</h2>
+<a id="a01ce77dbf66f174912d1f81b60d00f2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01ce77dbf66f174912d1f81b60d00f2d">&#9670;&nbsp;</a></span>CalcRelativeRotationMatrix()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3365,13 +3374,13 @@ A distance constraint is the wrong modeling choice if the distance needs to go t
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>frame_F</em>, </td>
+          <td class="paramname"><em>frame_A</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>frame_G</em>&#160;</td>
+          <td class="paramname"><em>frame_B</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -3381,26 +3390,26 @@ A distance constraint is the wrong modeling choice if the distance needs to go t
       </table>
 </div><div class="memdoc">
 
-<p>Calculates the rotation matrix <code>R_FG</code> relating frame F and frame G. </p>
+<p>Calculates the rotation matrix <code>R_AB</code> relating frame A and frame B. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The state of the multibody system, which includes the system's generalized positions q. Note: <code>R_FG</code> is a function of q. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">frame_F</td><td>The frame F designated in the rigid transform <code>R_FG</code>. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">frame_G</td><td>The frame G designated in the rigid transform <code>R_FG</code>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The state of the multibody system, which includes the system's generalized positions q. Note: <code>R_AB</code> is a function of q. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">frame_A</td><td>The frame A designated in the rigid transform <code>R_AB</code>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">frame_B</td><td>The frame G designated in the rigid transform <code>R_AB</code>. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">R_FG</td><td>The RigidTransform relating frame F and frame G. </td></tr>
+    <tr><td class="paramname">R_AB</td><td>The RigidTransform relating frame A and frame B. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="a8ff38c1d07aa9cbaf82c256dace67f29"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ff38c1d07aa9cbaf82c256dace67f29">&#9670;&nbsp;</a></span>CalcRelativeTransform()</h2>
+<a id="a5e86b07e42fb4ce047ffecd82f263571"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e86b07e42fb4ce047ffecd82f263571">&#9670;&nbsp;</a></span>CalcRelativeTransform()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3415,13 +3424,13 @@ A distance constraint is the wrong modeling choice if the distance needs to go t
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>frame_F</em>, </td>
+          <td class="paramname"><em>frame_A</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>frame_G</em>&#160;</td>
+          <td class="paramname"><em>frame_B</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -3431,18 +3440,18 @@ A distance constraint is the wrong modeling choice if the distance needs to go t
       </table>
 </div><div class="memdoc">
 
-<p>Calculates the rigid transform (pose) <code>X_FG</code> relating frame F and frame G. </p>
+<p>Calculates the rigid transform (pose) <code>X_AB</code> relating frame A and frame B. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The state of the multibody system, which includes the system's generalized positions q. Note: <code>X_FG</code> is a function of q. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">frame_F</td><td>The frame F designated in the rigid transform <code>X_FG</code>. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">frame_G</td><td>The frame G designated in the rigid transform <code>X_FG</code>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The state of the multibody system, which includes the system's generalized positions q. Note: <code>X_AB</code> is a function of q. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">frame_A</td><td>The frame A designated in the rigid transform <code>X_AB</code>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">frame_B</td><td>The frame G designated in the rigid transform <code>X_AB</code>. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">X_FG</td><td>The RigidTransform relating frame F and frame G. </td></tr>
+    <tr><td class="paramname">X_AB</td><td>The RigidTransform relating frame A and frame B. </td></tr>
   </table>
   </dd>
 </dl>
@@ -6017,8 +6026,28 @@ It is required to connect this port for PD controlled model instances. </dd></dl
 
 </div>
 </div>
+<a id="a8776938fd37b9c194c456566f6133375"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8776938fd37b9c194c456566f6133375">&#9670;&nbsp;</a></span>GetJointIndices() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt;<a class="el" href="namespacedrake_1_1multibody.html#a27485be8a33f5ed2ee7f3f8de9dd40c0">JointIndex</a>&gt;&amp; GetJointIndices </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a list of all joint indices. </p>
+<p>The vector is ordered by monotonically increasing <a class="el" href="namespacedrake_1_1multibody.html#a27485be8a33f5ed2ee7f3f8de9dd40c0">JointIndex</a>, but the indexes will in general not be consecutive due to joints that were removed. </p>
+
+</div>
+</div>
 <a id="af7918857fc5c0c9deffef433ca5cb85f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af7918857fc5c0c9deffef433ca5cb85f">&#9670;&nbsp;</a></span>GetJointIndices()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af7918857fc5c0c9deffef433ca5cb85f">&#9670;&nbsp;</a></span>GetJointIndices() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7110,6 +7139,27 @@ This function is guaranteed to allocate no heap. </dd></dl>
 </div><div class="memdoc">
 
 <p>An accessor to the current gravity field. </p>
+
+</div>
+</div>
+<a id="aee8d8c1e520c405dc36cbffccbfe2ad8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee8d8c1e520c405dc36cbffccbfe2ad8">&#9670;&nbsp;</a></span>has_joint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool has_joint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#a27485be8a33f5ed2ee7f3f8de9dd40c0">JointIndex</a>&#160;</td>
+          <td class="paramname"><em>joint_index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if plant has a joint with unique index <code>joint_index</code>. </p>
+<p>The value could be false if the joint was removed using <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#af9ac269076a123de9d88132d946d0827" title="Removes and deletes joint from this MultibodyPlant.">RemoveJoint()</a>. </p>
 
 </div>
 </div>
@@ -8712,6 +8762,37 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="af9ac269076a123de9d88132d946d0827"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9ac269076a123de9d88132d946d0827">&#9670;&nbsp;</a></span>RemoveJoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RemoveJoint </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_joint.html">Joint</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>joint</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes and deletes <code>joint</code> from this MultibodyPlant. </p>
+<p>Any existing references to <code>joint</code> will become invalid, and future calls to <code>get_joint(joint_index)</code> will throw an exception. Other elements of the plant may depend on <code>joint</code> at the time of removal and should be removed first. For example, a <a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html" title="The JointActuator class is mostly a simple bookkeeping structure to represent an actuator acting on a...">JointActuator</a> that depends on <code>joint</code> should be removed with <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae9eafac01a6cf0c90fa9005418ee2ec8" title="Removes and deletes actuator from this MultibodyPlant.">RemoveJointActuator()</a>. Currently, we do not provide joint dependency tracking for force elements or constraints, so this function will throw an exception if there are <em>any</em> user-added force elements or constraints in the plant.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the plant is already finalized. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the plant contains a non-zero number of user-added force elements or user-added constraints. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>joint</code> has a dependent <a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html" title="The JointActuator class is mostly a simple bookkeeping structure to represent an actuator acting on a...">JointActuator</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a437f86026a2268c0fb06936b899ba8d7" title="This method adds a Joint of type JointType between two bodies.">AddJoint()</a> </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is important to note that the JointIndex assigned to a joint is immutable. New joint indices are assigned in increasing order, even if a joint with a lower index has been removed. This has the consequence that when a joint is removed from the plant, the sequence <code>[0, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a636804b6c40e538d83d5c2dfefb7929e" title="Returns the number of joints in the model.">num_joints()</a>)</code> is not necessarily the correct set of un-removed joint indices in the plant. Thus, it is important <em>NOT</em> to loop over joint indices sequentially from <code>0</code> to <code><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a636804b6c40e538d83d5c2dfefb7929e" title="Returns the number of joints in the model.">num_joints()</a> - 1</code>. Instead users should use the provided <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8776938fd37b9c194c456566f6133375" title="Returns a list of all joint indices.">GetJointIndices()</a> and GetJointIndices(ModelIndex) functions: <div class="fragment"><div class="line"><span class="keywordflow">for</span> (<a class="code" href="namespacedrake_1_1multibody.html#a27485be8a33f5ed2ee7f3f8de9dd40c0">JointIndex</a> index : plant.GetJointIndices()) {</div><div class="line">  <span class="keyword">const</span> Joint&lt;double&gt;&amp; joint = plant.get_joint(index);</div><div class="line">  ...</div><div class="line"> }</div></div><!-- fragment --> </dd></dl>
 
 </div>
 </div>

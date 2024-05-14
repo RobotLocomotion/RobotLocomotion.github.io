@@ -155,6 +155,7 @@ var searchData=
   ['builder_5f',['builder_',['../classdrake_1_1multibody_1_1_multibody_plant_remodeling.html#a6192854c6e6fb4582cf8e42b1c5fe5f7',1,'drake::multibody::MultibodyPlantRemodeling']]],
   ['buildiiwacontrol',['BuildIiwaControl',['../namespacedrake_1_1manipulation_1_1kuka__iiwa.html#ad3720de284f34533b4dbbaa0710637b4',1,'drake::manipulation::kuka_iiwa']]],
   ['buildinto',['BuildInto',['../classdrake_1_1systems_1_1_diagram_builder.html#ab9083fea37e8137d3ef54c13bb51cdc4',1,'drake::systems::DiagramBuilder']]],
+  ['buildmodel',['BuildModel',['../classdrake_1_1multibody_1_1_multibody_plant_remodeling.html#aca779aaa5d8f022b39923717cbc56eca',1,'drake::multibody::MultibodyPlantRemodeling']]],
   ['buildschunkwsgcontrol',['BuildSchunkWsgControl',['../namespacedrake_1_1manipulation_1_1schunk__wsg.html#a14a60a2f02484fb53b2d71953545c202',1,'drake::manipulation::schunk_wsg']]],
   ['buildsimplifiediiwacontrol',['BuildSimplifiedIiwaControl',['../namespacedrake_1_1manipulation_1_1kuka__iiwa.html#a4662f54d834653e1b9af1848f753e32c',1,'drake::manipulation::kuka_iiwa']]],
   ['buildtrackerpointermap',['BuildTrackerPointerMap',['../classdrake_1_1systems_1_1_context_base.html#a0bc286597677a6e760c75a6c80387fea',1,'drake::systems::ContextBase']]],

@@ -1,5 +1,11 @@
 var NAVTREEINDEX45 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a847303eb7ec2b752d7eee59d3f07ea0e":[3,0,0,17,8,7],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a8743b4bccdaf5d24987b1f76403bbe41":[3,0,0,17,8,13],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a89e113d205dc5ec5eff6d7f331a8c156":[3,0,0,17,8,12],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a97e610bb883f37a631873104d8f6209d":[3,0,0,17,8,0],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a9aa1f1cfff6dcb352d5fbb15a80ee1a9":[3,0,0,17,8,20],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a9efee334e7a31b81c6056b8a0bb2cad1":[3,0,0,17,8,1],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#ab787e9c02a03724506130824c403f3af":[3,0,0,17,8,19],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#adca8eca2ee324f57170dedfb4b06160b":[3,0,0,17,8,14],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#add41849231c25a154e54d762f55c488c":[3,0,0,17,8,5],
@@ -243,11 +249,5 @@ var NAVTREEINDEX45 =
 "contact__solver_8h.html":[4,0,0,8,2,8],
 "contact__solver__results_8h.html":[4,0,0,8,2,9],
 "contact__solver__utils_8h.html":[4,0,0,8,2,10],
-"contact__solvers_2schur__complement_8h.html":[4,0,0,8,2,17],
-"contact__surface_8h.html":[4,0,0,4,3,0],
-"contact__surface_8h.html#a227f80cb57c9c87f6ecc4e839e364979":[4,0,0,4,3,0,1],
-"contact__surface_8h.html#a227f80cb57c9c87f6ecc4e839e364979a3a53496ffe96227ef579995d332425c1":[4,0,0,4,3,0,1,0],
-"contact__surface_8h.html#a227f80cb57c9c87f6ecc4e839e364979a64edd70c85c6854f380a0cbbc3db3cbb":[4,0,0,4,3,0,1,1],
-"contact__surface__doxygen_8h.html":[4,0,0,4,2,7],
-"contact__surface__utility_8h.html":[4,0,0,4,2,8]
+"contact__solvers_2schur__complement_8h.html":[4,0,0,8,2,17]
 };

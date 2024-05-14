@@ -1,5 +1,11 @@
 var NAVTREEINDEX35 =
 {
+"classdrake_1_1systems_1_1_discrete_time_integrator.html#ab31e6c294928ac7c131675fad3777073":[1,2,1,9,7],
+"classdrake_1_1systems_1_1_discrete_time_integrator.html#abb6db497b5e07e7672b306d156b92de3":[1,2,1,9,1],
+"classdrake_1_1systems_1_1_discrete_update_event.html":[3,0,0,15,41],
+"classdrake_1_1systems_1_1_discrete_update_event.html#a3fce47af8425efff0a6c1141c002550a":[3,0,0,15,41,6],
+"classdrake_1_1systems_1_1_discrete_update_event.html#a6411929eebb98e856021335d43bcb7f4":[3,0,0,15,41,5],
+"classdrake_1_1systems_1_1_discrete_update_event.html#a69dfa70adfc53ee7b4deaebd2d15f381":[3,0,0,15,41,2],
 "classdrake_1_1systems_1_1_discrete_update_event.html#aa2cade880acf332eef698892a30397d0":[3,0,0,15,41,3],
 "classdrake_1_1systems_1_1_discrete_update_event.html#ac65543aabc8ab1b8c4fcd1bcf1ec48c5":[3,0,0,15,41,7],
 "classdrake_1_1systems_1_1_discrete_update_event.html#acbfac42a00b3f308ad6f69dc6c654b6a":[3,0,0,15,41,1],
@@ -243,11 +249,5 @@ var NAVTREEINDEX35 =
 "classdrake_1_1systems_1_1_implicit_integrator.html#adeea68656d7b6fb197df03495668b133":[3,0,0,15,53,42],
 "classdrake_1_1systems_1_1_implicit_integrator.html#ae439c1fc23c3bdeba6a2efdae6466895":[3,0,0,15,53,12],
 "classdrake_1_1systems_1_1_implicit_integrator.html#aead04b43e79b3c929e8f2e633d393261":[3,0,0,15,53,27],
-"classdrake_1_1systems_1_1_implicit_integrator.html#afcb7d2fbbe7b0f1bb5b0207f1abf2ec3":[3,0,0,15,53,8],
-"classdrake_1_1systems_1_1_implicit_integrator.html#afe0fe49897eb21e92fb07b6f58433d08":[3,0,0,15,53,14],
-"classdrake_1_1systems_1_1_implicit_integrator.html#afe3b83b211bb511fcdd4d9f3c08e1093":[3,0,0,15,53,34],
-"classdrake_1_1systems_1_1_implicit_integrator_1_1_iteration_matrix.html":[3,0,0,15,53,0],
-"classdrake_1_1systems_1_1_implicit_integrator_1_1_iteration_matrix.html#a4309730e8a9221c2a027c09a128c7b3c":[3,0,0,15,53,0,1],
-"classdrake_1_1systems_1_1_implicit_integrator_1_1_iteration_matrix.html#a4b5eade68c726dc79cb60d121769d4b1":[3,0,0,15,53,0,3],
-"classdrake_1_1systems_1_1_implicit_integrator_1_1_iteration_matrix.html#a739eb5a53d29a68514da87bafd7b517f":[3,0,0,15,53,0,0]
+"classdrake_1_1systems_1_1_implicit_integrator.html#afcb7d2fbbe7b0f1bb5b0207f1abf2ec3":[3,0,0,15,53,8]
 };

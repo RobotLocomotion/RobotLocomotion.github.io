@@ -1,5 +1,13 @@
 var NAVTREEINDEX61 =
 {
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#ad7e0abe77b84e16a4224c12492730d30":[3,0,0,15,2,0,4],
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html":[3,0,0,15,2,0,0],
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html#a1fbdf8974a433578feee716bd2074060":[3,0,0,15,2,0,0,1],
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html#a2fdb1c59d7e0362407f9784fff99c6ef":[3,0,0,15,2,0,0,0],
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html#a868930cd95abeb4a0a903df323444fd9":[3,0,0,15,2,0,0,2],
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html#ae2bfa68803b302dc2c985a150d7f9205":[3,0,0,15,2,0,0,3],
+"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html":[3,0,0,15,2,1],
+"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a0e3cbe33d19f96def02ebd180f9267a0":[3,0,0,15,2,1,1],
 "structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a10106668012c2b809949d73d6e72f88f":[3,0,0,15,2,1,3],
 "structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a1ba9dae3af1b60cc4f276e689b8f3134":[3,0,0,15,2,1,6],
 "structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a267538df8d3c6c1cf0dcd83eafa308ca":[3,0,0,15,2,1,8],
@@ -241,13 +249,5 @@ var NAVTREEINDEX61 =
 "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_spatial_inertia_3_01_t_01_4_01_4.html":[3,0,1,12],
 "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_spatial_vector_3_01_spatial_quantity_00_01_t_01_4_01_4.html":[3,0,1,13],
 "structfmt_1_1formatter_3_01drake_1_1perception_1_1pc__flags_1_1_fields_01_4.html":[3,0,1,14],
-"structfmt_1_1formatter_3_01drake_1_1solvers_1_1_binding_3_01_c_01_4_01_4.html":[3,0,1,17],
-"structfmt_1_1formatter_3_01drake_1_1solvers_1_1_common_solver_option_01_4.html":[3,0,1,18],
-"structfmt_1_1formatter_3_01drake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator_1_1_approach_01_4.html":[3,0,1,19],
-"structfmt_1_1formatter_3_01drake_1_1solvers_1_1_program_attribute_01_4.html":[3,0,1,20],
-"structfmt_1_1formatter_3_01drake_1_1solvers_1_1_program_attributes_01_4.html":[3,0,1,21],
-"structfmt_1_1formatter_3_01drake_1_1solvers_1_1_program_type_01_4.html":[3,0,1,22],
-"structfmt_1_1formatter_3_01drake_1_1solvers_1_1_solver_id_01_4.html":[3,0,1,23],
-"structfmt_1_1formatter_3_01drake_1_1solvers_1_1_solver_options_01_4.html":[3,0,1,24],
-"structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_chebyshev_basis_element_01_4.html":[3,0,1,25]
+"structfmt_1_1formatter_3_01drake_1_1solvers_1_1_binding_3_01_c_01_4_01_4.html":[3,0,1,17]
 };

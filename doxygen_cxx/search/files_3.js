@@ -19,6 +19,7 @@ var searchData=
   ['deformation_5fgradient_5fdata_2eh',['deformation_gradient_data.h',['../deformation__gradient__data_8h.html',1,'']]],
   ['demultiplexer_2eh',['demultiplexer.h',['../demultiplexer_8h.html',1,'']]],
   ['dense_5foutput_2eh',['dense_output.h',['../dense__output_8h.html',1,'']]],
+  ['dense_5fsupernodal_5fsolver_2eh',['dense_supernodal_solver.h',['../dense__supernodal__solver_8h.html',1,'']]],
   ['dependency_5ftracker_2eh',['dependency_tracker.h',['../dependency__tracker_8h.html',1,'']]],
   ['deprecation_5fpybind_2eh',['deprecation_pybind.h',['../deprecation__pybind_8h.html',1,'']]],
   ['depth_5fimage_5fto_5fpoint_5fcloud_2eh',['depth_image_to_point_cloud.h',['../depth__image__to__point__cloud_8h.html',1,'']]],
