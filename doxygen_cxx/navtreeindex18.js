@@ -1,5 +1,7 @@
 var NAVTREEINDEX18 =
 {
+"classdrake_1_1multibody_1_1_rotational_inertia.html#ae461fd75b1b4eba6c95a57621adb4e9d":[3,0,0,8,84,36],
+"classdrake_1_1multibody_1_1_rotational_inertia.html#ae57e5aca5db002545e4b9335c8d9dbfa":[3,0,0,8,84,37],
 "classdrake_1_1multibody_1_1_rotational_inertia.html#af016e2a9451f4692a56bec5209ddbaf5":[3,0,0,8,84,19],
 "classdrake_1_1multibody_1_1_rotational_inertia.html#af36dbdaa401764e4df48b07d3b6ad7d4":[3,0,0,8,84,3],
 "classdrake_1_1multibody_1_1_rotational_inertia.html#af38985b256018ac664935ee8423bbe8b":[3,0,0,8,84,11],
@@ -247,7 +249,5 @@ var NAVTREEINDEX18 =
 "classdrake_1_1multibody_1_1_spatial_velocity_constraint.html#ac190c0b9a023e5263b7330c61652df93":[1,1,0,19,1],
 "classdrake_1_1multibody_1_1_static_equilibrium_constraint.html":[1,1,0,20],
 "classdrake_1_1multibody_1_1_static_equilibrium_constraint.html#a067072a2d1a33d106edc9fd2580731f1":[1,1,0,20,1],
-"classdrake_1_1multibody_1_1_static_equilibrium_constraint.html#a0ed0f83f02683c361320074259c77a82":[1,1,0,20,4],
-"classdrake_1_1multibody_1_1_static_equilibrium_constraint.html#a5e525a19d46b30f1d607e4f56019bbc0":[1,1,0,20,2],
-"classdrake_1_1multibody_1_1_static_equilibrium_constraint.html#a5ff5b6030752a7e5cc7579bb498d4571":[1,1,0,20,3]
+"classdrake_1_1multibody_1_1_static_equilibrium_constraint.html#a0ed0f83f02683c361320074259c77a82":[1,1,0,20,4]
 };

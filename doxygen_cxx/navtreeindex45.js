@@ -1,5 +1,7 @@
 var NAVTREEINDEX45 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a6fd5552029547f8e16ebbed98e108bbb":[3,0,0,17,8,3],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a76ec9d05feedef776f4510cfdc3caecd":[3,0,0,17,8,2],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a847303eb7ec2b752d7eee59d3f07ea0e":[3,0,0,17,8,7],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a8743b4bccdaf5d24987b1f76403bbe41":[3,0,0,17,8,13],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a89e113d205dc5ec5eff6d7f331a8c156":[3,0,0,17,8,12],
@@ -247,7 +249,5 @@ var NAVTREEINDEX45 =
 "contact__results__to__lcm_8h.html#ga34c9c8f0a78446ac29edf4a3202127c3":[4,0,0,8,10,8,0],
 "contact__results__to__lcm_8h.html#ga732349f929601b37e30b15ad557057e7":[4,0,0,8,10,8,1],
 "contact__solver_8h.html":[4,0,0,8,2,8],
-"contact__solver__results_8h.html":[4,0,0,8,2,9],
-"contact__solver__utils_8h.html":[4,0,0,8,2,10],
-"contact__solvers_2schur__complement_8h.html":[4,0,0,8,2,17]
+"contact__solver__results_8h.html":[4,0,0,8,2,9]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX50 =
 {
+"generic__polynomial_8h.html#a120ae90dfc24dd3f7b4f42aededbabfd":[4,0,0,1,3,6,32],
+"generic__polynomial_8h.html#a1504176a6220b744ee8b07a0ed920f15":[4,0,0,1,3,6,34],
 "generic__polynomial_8h.html#a173be3cb77f72bb9481db5c8fd04741e":[4,0,0,1,3,6,6],
 "generic__polynomial_8h.html#a2176f7eb786ddec5cd9ea0683a019482":[4,0,0,1,3,6,16],
 "generic__polynomial_8h.html#a21d8313aa6cdb78da3f2cd6d84b92e39":[4,0,0,1,3,6,22],
@@ -167,12 +169,12 @@ var NAVTREEINDEX50 =
 "group__default__scalars.html#ga3273477e81e9dcb7d96cfb28382798b6":[1,6,1,5],
 "group__default__scalars.html#ga6333534b3097a37c55fbacf434491e2e":[4,0,0,1,14,0],
 "group__default__scalars.html#ga6333534b3097a37c55fbacf434491e2e":[1,6,1,0],
-"group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[4,0,0,1,14,4],
 "group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[1,6,1,4],
+"group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[4,0,0,1,14,4],
 "group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[1,6,1,2],
 "group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[4,0,0,1,14,2],
-"group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[1,6,1,3],
 "group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[4,0,0,1,14,3],
+"group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[1,6,1,3],
 "group__discrete__systems.html":[1,2,9],
 "group__discretization.html":[1,3,0,5],
 "group__drake__contacts.html":[1,3,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX50 =
 "group__pydrake__python__logging.html":[1,6,6,0],
 "group__python__bindings.html":[1,6,0],
 "group__render__benchmarks.html":[1,5,3,0],
-"group__render__engine__benchmarks.html":[1,5,3,0,0],
-"group__render__engine__gltf__client__server__api.html":[1,5,3,1],
-"group__render__engines.html":[1,5,3]
+"group__render__engine__benchmarks.html":[1,5,3,0,0]
 };

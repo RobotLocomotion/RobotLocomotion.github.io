@@ -1,5 +1,7 @@
 var NAVTREEINDEX52 =
 {
+"kinematics__vector_8h.html#aa4d02909b70fea4c7cb0d0e62fa220a4":[4,0,0,4,27,1],
+"kinematics__vector_8h.html#ae94262ef74be53331dd7db2d6ffb246a":[4,0,0,4,27,2],
 "knot__vector__type_8h.html":[4,0,0,7,22],
 "knot__vector__type_8h.html#a2dc222f66e0f5092e8cfe879f24874b2":[4,0,0,7,22,0],
 "knot__vector__type_8h.html#a2dc222f66e0f5092e8cfe879f24874b2a3ea9f7aca87fd7b64469a0d1119f0b50":[4,0,0,7,22,0,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX52 =
 "monomial_8h.html#a8b3d409cea5e6c6495394208c8c8c6ee":[4,0,0,1,3,8,4],
 "monomial__basis__element_8h.html":[4,0,0,1,3,9],
 "monomial__basis__element_8h.html#a5885669a7b9958dc209c13778d48e6ef":[4,0,0,1,3,9,3],
-"monomial__basis__element_8h.html#aec1d54669ca8ae5ea474b5904c50e85e":[4,0,0,1,3,9,5],
-"monomial__basis__element_8h.html#af71ffcec2b8e06d52b7c6e8f53106160":[4,0,0,1,3,9,4],
-"monomial__util_8h.html":[4,0,0,1,3,10]
+"monomial__basis__element_8h.html#aec1d54669ca8ae5ea474b5904c50e85e":[4,0,0,1,3,9,5]
 };

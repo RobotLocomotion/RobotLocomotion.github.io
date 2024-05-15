@@ -1,5 +1,7 @@
 var NAVTREEINDEX60 =
 {
+"structdrake_1_1planning_1_1_zmp_test_traj.html":[3,0,0,10,17],
+"structdrake_1_1planning_1_1_zmp_test_traj.html#a20ae58e972a3c748065e4f8dfe982f07":[3,0,0,10,17,3],
 "structdrake_1_1planning_1_1_zmp_test_traj.html#a493480e3e8aafc05211da06f51b4f3dc":[3,0,0,10,17,0],
 "structdrake_1_1planning_1_1_zmp_test_traj.html#a67d4dd9a5784a9fd35ed1f472d8de5df":[3,0,0,10,17,5],
 "structdrake_1_1planning_1_1_zmp_test_traj.html#a7a60f8ee97668e1db4e7eb7eb1c38815":[3,0,0,10,17,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX60 =
 "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a07223f916e770d3b62d2a1d1ca40ba23":[3,0,0,15,2,0,7],
 "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a0e3cbe33d19f96def02ebd180f9267a0":[3,0,0,15,2,0,5],
 "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a2f676e6424410f6f9742e3f7177cb90c":[3,0,0,15,2,0,2],
-"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a346a6402fcd260661880427be3759741":[3,0,0,15,2,0,1],
-"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#ab05ba1c548fa1a71138dcdac91ddeaf6":[3,0,0,15,2,0,3],
-"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#ab63f7cdb7cd14bc9cc48c4b9d4a629a5":[3,0,0,15,2,0,6]
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a346a6402fcd260661880427be3759741":[3,0,0,15,2,0,1]
 };

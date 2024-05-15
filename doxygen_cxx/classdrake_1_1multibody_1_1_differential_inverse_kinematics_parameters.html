@@ -181,6 +181,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adba8d81382b049afd07c56852e28f8b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#adba8d81382b049afd07c56852e28f8b9">ClearLinearVelocityConstraints</a> ()</td></tr>
 <tr class="memdesc:adba8d81382b049afd07c56852e28f8b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears all linear velocity constraints.  <a href="#adba8d81382b049afd07c56852e28f8b9">More...</a><br /></td></tr>
 <tr class="separator:adba8d81382b049afd07c56852e28f8b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcd1386ef834ddfa9d47156485803db5"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">solvers::SolverOptions</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#afcd1386ef834ddfa9d47156485803db5">get_solver_options</a> () const</td></tr>
+<tr class="memdesc:afcd1386ef834ddfa9d47156485803db5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides const access to read the solver options.  <a href="#afcd1386ef834ddfa9d47156485803db5">More...</a><br /></td></tr>
+<tr class="separator:afcd1386ef834ddfa9d47156485803db5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04692593f73bb1a0be6110433d35d79d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">solvers::SolverOptions</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#a04692593f73bb1a0be6110433d35d79d">get_mutable_solver_options</a> ()</td></tr>
+<tr class="memdesc:a04692593f73bb1a0be6110433d35d79d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides mutable access to change the solver options, e.g., to tune for speed vs accuracy.  <a href="#a04692593f73bb1a0be6110433d35d79d">More...</a><br /></td></tr>
+<tr class="separator:a04692593f73bb1a0be6110433d35d79d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
 <tr class="memitem:a95fe98122c0f9611fe9b26d0f578e5f7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#a95fe98122c0f9611fe9b26d0f578e5f7">DifferentialInverseKinematicsParameters</a> (const <a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> &amp;)=default</td></tr>
 <tr class="separator:a95fe98122c0f9611fe9b26d0f578e5f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -544,6 +550,25 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a04692593f73bb1a0be6110433d35d79d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04692593f73bb1a0be6110433d35d79d">&#9670;&nbsp;</a></span>get_mutable_solver_options()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">solvers::SolverOptions</a>&amp; get_mutable_solver_options </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Provides mutable access to change the solver options, e.g., to tune for speed vs accuracy. </p>
+
+</div>
+</div>
 <a id="ade91078e9a324118c271dbf4d071965e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ade91078e9a324118c271dbf4d071965e">&#9670;&nbsp;</a></span>get_nominal_joint_position()</h2>
 
@@ -592,6 +617,25 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="afcd1386ef834ddfa9d47156485803db5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcd1386ef834ddfa9d47156485803db5">&#9670;&nbsp;</a></span>get_solver_options()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">solvers::SolverOptions</a>&amp; get_solver_options </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Provides const access to read the solver options. </p>
 
 </div>
 </div>
