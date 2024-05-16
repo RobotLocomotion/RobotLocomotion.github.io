@@ -1,5 +1,6 @@
 var NAVTREEINDEX61 =
 {
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a346a6402fcd260661880427be3759741":[3,0,0,15,2,0,1],
 "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#ab05ba1c548fa1a71138dcdac91ddeaf6":[3,0,0,15,2,0,3],
 "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#ab63f7cdb7cd14bc9cc48c4b9d4a629a5":[3,0,0,15,2,0,6],
 "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#ad7e0abe77b84e16a4224c12492730d30":[3,0,0,15,2,0,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX61 =
 "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_differential_inverse_kinematics_status_01_4.html":[3,0,1,9],
 "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_package_map_01_4.html":[3,0,1,10],
 "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_rotational_inertia_3_01_t_01_4_01_4.html":[3,0,1,11],
-"structfmt_1_1formatter_3_01drake_1_1multibody_1_1_spatial_inertia_3_01_t_01_4_01_4.html":[3,0,1,12],
-"structfmt_1_1formatter_3_01drake_1_1multibody_1_1_spatial_vector_3_01_spatial_quantity_00_01_t_01_4_01_4.html":[3,0,1,13]
+"structfmt_1_1formatter_3_01drake_1_1multibody_1_1_spatial_inertia_3_01_t_01_4_01_4.html":[3,0,1,12]
 };

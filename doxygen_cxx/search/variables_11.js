@@ -26,6 +26,7 @@ var searchData=
   ['retain_5fmap_5fdefaults',['retain_map_defaults',['../structdrake_1_1yaml_1_1_load_yaml_options.html#a121abbb69f58eeb8186f484386d65b9d',1,'drake::yaml::LoadYamlOptions']]],
   ['return_5fcode',['return_code',['../structdrake_1_1solvers_1_1_csdp_solver_details.html#a934c111b1421c6aa91507fabd5c96deb',1,'drake::solvers::CsdpSolverDetails']]],
   ['rgb',['rgb',['../structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a51a5f94eea0e5ea757caaddb41c3eb79',1,'drake::systems::sensors::CameraConfig']]],
+  ['rho_5fupdates',['rho_updates',['../structdrake_1_1solvers_1_1_osqp_solver_details.html#ac92db05d92e30518b1be4d186d2a1475',1,'drake::solvers::OsqpSolverDetails']]],
   ['right',['right',['../structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#ab833bacb3fa8d1a189efcbba74f10fa1',1,'drake::geometry::Meshcat::OrthographicCamera']]],
   ['robot_5fmodel_5finstances',['robot_model_instances',['../structdrake_1_1planning_1_1_collision_checker_params.html#a9e6dd7347da1885477cd5b895b47ce9a',1,'drake::planning::CollisionCheckerParams']]],
   ['role',['role',['../structdrake_1_1geometry_1_1_drake_visualizer_params.html#a2d836029fd25573125bd231e1ad19ecb',1,'drake::geometry::DrakeVisualizerParams::role()'],['../structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a2d836029fd25573125bd231e1ad19ecb',1,'drake::geometry::MeshcatVisualizerParams::role()']]],

@@ -6953,6 +6953,17 @@ obtain the details.</p>
 <dt class="sig sig-object py" id="pydrake.solvers.OsqpSolver">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">OsqpSolver</span></span><a class="headerlink" href="#pydrake.solvers.OsqpSolver" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.SolverInterface" title="pydrake.solvers.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.SolverInterface</span></code></a></p>
+<p>A wrapper to call <a class="reference external" href="https://osqp.org/">OSQP</a> using Drake’s
+MathematicalProgram.</p>
+<p>For details about OSQP’s available options, refer to the <a class="reference external" href="https://osqp.org/docs/interfaces/solver_settings.html">OSQP manual</a>. Drake uses
+OSQP’s default values for all options except following: - Drake
+defaults to <code class="docutils literal notranslate"><span class="pre">polish=true</span></code> (upstream default is <code class="docutils literal notranslate"><span class="pre">False</span></code>). - Drake
+defaults to <code class="docutils literal notranslate"><span class="pre">adaptive_rho_interval=ADAPTIVE_RHO_FIXED</span></code> to make the
+output deterministic (upstream default is <code class="docutils literal notranslate"><span class="pre">0</span></code>, which uses
+non-deterministic timing measurements to establish the interval). N.B.
+Generally the interval should be an integer multiple of
+<code class="docutils literal notranslate"><span class="pre">check_termination</span></code>, so if you choose to override either option you
+should probably override both at once.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.OsqpSolver.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.OsqpSolver" title="pydrake.solvers.OsqpSolver"><span class="pre">pydrake.solvers.OsqpSolver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.OsqpSolver.__init__" title="Permalink to this definition"></a></dt>

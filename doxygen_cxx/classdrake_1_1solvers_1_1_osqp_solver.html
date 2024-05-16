@@ -166,7 +166,13 @@ $(document).ready(function(){initNavTree('classdrake_1_1solvers_1_1_osqp_solver.
 <div class="title">OsqpSolver Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
-
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A wrapper to call <a href="https://osqp.org/">OSQP</a> using Drake's <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html" title="MathematicalProgram stores the decision variables, the constraints and costs of an optimization probl...">MathematicalProgram</a>. </p>
+<p>For details about OSQP's available options, refer to the <a href="https://osqp.org/docs/interfaces/solver_settings.html">OSQP manual</a>. Drake uses OSQP's default values for all options except following:</p><ul>
+<li>Drake defaults to <code>polish=true</code> (upstream default is <code>false</code>).</li>
+<li>Drake defaults to <code>adaptive_rho_interval=ADAPTIVE_RHO_FIXED</code> to make the output deterministic (upstream default is <code>0</code>, which uses non-deterministic timing measurements to establish the interval). N.B. Generally the interval should be an integer multiple of <code>check_termination</code>, so if you choose to override either option you should probably override both at once. </li>
+</ul>
+</div>
 <p><code>#include &lt;drake/solvers/osqp_solver.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
