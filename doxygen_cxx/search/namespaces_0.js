@@ -10,6 +10,7 @@ var searchData=
   ['bead_5fon_5fa_5fwire',['bead_on_a_wire',['../namespacedrake_1_1examples_1_1bead__on__a__wire.html',1,'drake::examples']]],
   ['benchmarks',['benchmarks',['../namespacedrake_1_1multibody_1_1benchmarks.html',1,'drake::multibody']]],
   ['bouncing_5fball',['bouncing_ball',['../namespacedrake_1_1examples_1_1bouncing__ball.html',1,'drake::examples::bouncing_ball'],['../namespacedrake_1_1examples_1_1multibody_1_1bouncing__ball.html',1,'drake::examples::multibody::bouncing_ball'],['../namespacedrake_1_1examples_1_1scene__graph_1_1bouncing__ball.html',1,'drake::examples::scene_graph::bouncing_ball']]],
+  ['cart_5fpole',['cart_pole',['../namespacedrake_1_1examples_1_1multibody_1_1cart__pole.html',1,'drake::examples::multibody']]],
   ['common',['common',['../namespacedrake_1_1common.html',1,'drake']]],
   ['compass_5fgait',['compass_gait',['../namespacedrake_1_1examples_1_1compass__gait.html',1,'drake::examples']]],
   ['constraint',['constraint',['../namespacedrake_1_1multibody_1_1constraint.html',1,'drake::multibody']]],

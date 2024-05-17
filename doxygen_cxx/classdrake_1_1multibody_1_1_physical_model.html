@@ -209,6 +209,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2a5ebecfc441ca76e53598e424761b9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#adb169d7f3b447c98cbd02015fba0d6f9">PhysicalModelPointerVariant</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a2a5ebecfc441ca76e53598e424761b9c">ToPhysicalModelPointerVariant</a> () const</td></tr>
 <tr class="memdesc:a2a5ebecfc441ca76e53598e424761b9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns (a const pointer to) the specific model variant of <code>this</code> <a class="el" href="classdrake_1_1multibody_1_1_physical_model.html" title="(Internal) PhysicalModel provides the functionalities to extend the type of physical model of Multibo...">PhysicalModel</a>.  <a href="#a2a5ebecfc441ca76e53598e424761b9c">More...</a><br /></td></tr>
 <tr class="separator:a2a5ebecfc441ca76e53598e424761b9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a208fb8b999d2a234339e911892f24369"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a208fb8b999d2a234339e911892f24369">plant</a> () const</td></tr>
+<tr class="separator:a208fb8b999d2a234339e911892f24369"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a6e7dbc75c04706cda4b36798cfc60297"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a6e7dbc75c04706cda4b36798cfc60297">PhysicalModel</a> (const <a class="el" href="classdrake_1_1multibody_1_1_physical_model.html">PhysicalModel</a> &amp;)=delete</td></tr>
 <tr class="separator:a6e7dbc75c04706cda4b36798cfc60297"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -221,8 +223,6 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a208fb8b999d2a234339e911892f24369"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a208fb8b999d2a234339e911892f24369">plant</a> () const</td></tr>
-<tr class="separator:a208fb8b999d2a234339e911892f24369"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66c11a70248722c02f276a1f5da32651"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a66c11a70248722c02f276a1f5da32651">mutable_plant</a> ()</td></tr>
 <tr class="separator:a66c11a70248722c02f276a1f5da32651"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37d274f571a48f8e1d9c85f4373763e1"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacedrake_1_1multibody.html#adb169d7f3b447c98cbd02015fba0d6f9">PhysicalModelPointerVariant</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a37d274f571a48f8e1d9c85f4373763e1">DoToPhysicalModelPointerVariant</a> () const =0</td></tr>
@@ -857,9 +857,6 @@ Protected Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt;T&gt;* plant </td>
@@ -868,11 +865,6 @@ Protected Member Functions</h2></td></tr>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>

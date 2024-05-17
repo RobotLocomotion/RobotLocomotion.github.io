@@ -274,6 +274,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a69b7c400cb9ee0b5ebe0dcb2b86a7f12"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a69b7c400cb9ee0b5ebe0dcb2b86a7f12">SceneGraph</a> ()</td></tr>
 <tr class="memdesc:a69b7c400cb9ee0b5ebe0dcb2b86a7f12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a default (empty) scene graph.  <a href="#a69b7c400cb9ee0b5ebe0dcb2b86a7f12">More...</a><br /></td></tr>
 <tr class="separator:a69b7c400cb9ee0b5ebe0dcb2b86a7f12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d11622a921913afacfcd62a4fa8ee7f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a5d11622a921913afacfcd62a4fa8ee7f">SceneGraph</a> (const <a class="el" href="structdrake_1_1geometry_1_1_scene_graph_config.html">SceneGraphConfig</a> &amp;config)</td></tr>
+<tr class="memdesc:a5d11622a921913afacfcd62a4fa8ee7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an empty scene graph with the provided configuration.  <a href="#a5d11622a921913afacfcd62a4fa8ee7f">More...</a><br /></td></tr>
+<tr class="separator:a5d11622a921913afacfcd62a4fa8ee7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26eded4be5dd50b32d8cba6151e850f1"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
 <tr class="memitem:a26eded4be5dd50b32d8cba6151e850f1"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a26eded4be5dd50b32d8cba6151e850f1">SceneGraph</a> (const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&lt; U &gt; &amp;other)</td></tr>
 <tr class="memdesc:a26eded4be5dd50b32d8cba6151e850f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor used for scalar conversions.  <a href="#a26eded4be5dd50b32d8cba6151e850f1">More...</a><br /></td></tr>
@@ -292,6 +295,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a331f7bdcffde753165cd98d7081f75d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1124e1d23f8363e47ef7db90e57e4900"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a1124e1d23f8363e47ef7db90e57e4900">operator=</a> (<a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:a1124e1d23f8363e47ef7db90e57e4900"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Configuration</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>Allows configuration changes to scene graph systems. </p>
+</div></td></tr>
+<tr class="memitem:a468b8439e50231c9ee03d33a7c0611cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a468b8439e50231c9ee03d33a7c0611cf">set_config</a> (const <a class="el" href="structdrake_1_1geometry_1_1_scene_graph_config.html">SceneGraphConfig</a> &amp;config)</td></tr>
+<tr class="memdesc:a468b8439e50231c9ee03d33a7c0611cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the configuration.  <a href="#a468b8439e50231c9ee03d33a7c0611cf">More...</a><br /></td></tr>
+<tr class="separator:a468b8439e50231c9ee03d33a7c0611cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac70b7b0f0b3da23cd685030306a57bc8"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structdrake_1_1geometry_1_1_scene_graph_config.html">SceneGraphConfig</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#ac70b7b0f0b3da23cd685030306a57bc8">get_config</a> () const</td></tr>
+<tr class="separator:ac70b7b0f0b3da23cd685030306a57bc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af73f19571aec0d70216c48ca91485f9a"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structdrake_1_1geometry_1_1_scene_graph_config.html">SceneGraphConfig</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#af73f19571aec0d70216c48ca91485f9a">get_config</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
+<tr class="separator:af73f19571aec0d70216c48ca91485f9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Port management</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Access to <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a>'s input/output ports.</p>
 <p>This topic includes registration of geometry sources because the input ports are mapped to registered geometry sources.</p>
@@ -1530,7 +1543,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a7df6907a9e82dda25b30e182d68b5d1c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7df6907a9e82dda25b30e182d68b5d1c">&#9670;&nbsp;</a></span>SceneGraph() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7df6907a9e82dda25b30e182d68b5d1c">&#9670;&nbsp;</a></span>SceneGraph() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1556,7 +1569,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="a331f7bdcffde753165cd98d7081f75d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a331f7bdcffde753165cd98d7081f75d4">&#9670;&nbsp;</a></span>SceneGraph() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a331f7bdcffde753165cd98d7081f75d4">&#9670;&nbsp;</a></span>SceneGraph() <span class="overload">[2/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1582,7 +1595,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="a69b7c400cb9ee0b5ebe0dcb2b86a7f12"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a69b7c400cb9ee0b5ebe0dcb2b86a7f12">&#9670;&nbsp;</a></span>SceneGraph() <span class="overload">[3/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a69b7c400cb9ee0b5ebe0dcb2b86a7f12">&#9670;&nbsp;</a></span>SceneGraph() <span class="overload">[3/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1600,8 +1613,36 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a5d11622a921913afacfcd62a4fa8ee7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d11622a921913afacfcd62a4fa8ee7f">&#9670;&nbsp;</a></span>SceneGraph() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1geometry_1_1_scene_graph_config.html">SceneGraphConfig</a> &amp;&#160;</td>
+          <td class="paramname"><em>config</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs an empty scene graph with the provided configuration. </p>
+
+</div>
+</div>
 <a id="a26eded4be5dd50b32d8cba6151e850f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a26eded4be5dd50b32d8cba6151e850f1">&#9670;&nbsp;</a></span>SceneGraph() <span class="overload">[4/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a26eded4be5dd50b32d8cba6151e850f1">&#9670;&nbsp;</a></span>SceneGraph() <span class="overload">[5/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2165,6 +2206,43 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
 
 </div>
 </div>
+<a id="ac70b7b0f0b3da23cd685030306a57bc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac70b7b0f0b3da23cd685030306a57bc8">&#9670;&nbsp;</a></span>get_config() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structdrake_1_1geometry_1_1_scene_graph_config.html">SceneGraphConfig</a>&amp; get_config </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>the current configuration. </dd></dl>
+
+</div>
+</div>
+<a id="af73f19571aec0d70216c48ca91485f9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af73f19571aec0d70216c48ca91485f9a">&#9670;&nbsp;</a></span>get_config() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structdrake_1_1geometry_1_1_scene_graph_config.html">SceneGraphConfig</a>&amp; get_config </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>the scene graph configuration from the given context. Note: there is no matching per-Context <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a468b8439e50231c9ee03d33a7c0611cf" title="Sets the configuration.">set_config()</a> function. The context's scene graph configuration is copied from the main scene graph configuration at context construction time. Thereafter, the context's scene graph configuration is not mutable. </dd></dl>
+
+</div>
+</div>
 <a id="a26da55d64bd1dda5bda1ea5ae8b985c4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a26da55d64bd1dda5bda1ea5ae8b985c4">&#9670;&nbsp;</a></span>get_query_output_port()</h2>
 
@@ -2358,8 +2436,8 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
 
 </div>
 </div>
-<a id="a0a8b0295af9d14d2555ceca831cd8a14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a8b0295af9d14d2555ceca831cd8a14">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a1124e1d23f8363e47ef7db90e57e4900"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1124e1d23f8363e47ef7db90e57e4900">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2370,7 +2448,7 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -2384,8 +2462,8 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
 
 </div>
 </div>
-<a id="a1124e1d23f8363e47ef7db90e57e4900"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1124e1d23f8363e47ef7db90e57e4900">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a0a8b0295af9d14d2555ceca831cd8a14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a8b0295af9d14d2555ceca831cd8a14">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2396,7 +2474,7 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -3283,6 +3361,26 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
 
 <p><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>-query variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#ae614976e788b66b5ceed6df5fa7fba5e" title="Reports the number of renderers registered to this SceneGraph.">RendererCount()</a>. </p>
 <p>Rather than querying SceneGraph's model, it queries the copy of the model stored in the provided context. </p>
+
+</div>
+</div>
+<a id="a468b8439e50231c9ee03d33a7c0611cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a468b8439e50231c9ee03d33a7c0611cf">&#9670;&nbsp;</a></span>set_config()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_config </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1geometry_1_1_scene_graph_config.html">SceneGraphConfig</a> &amp;&#160;</td>
+          <td class="paramname"><em>config</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the configuration. </p>
 
 </div>
 </div>

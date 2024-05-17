@@ -142,10 +142,21 @@
 <p>Bindings for MultibodyPlant and related classes.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.AddMultibodyPlant">
-<span class="sig-prename descclassname"><span class="pre">pydrake.multibody.plant.</span></span><span class="sig-name descname"><span class="pre">AddMultibodyPlant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlantConfig" title="pydrake.multibody.plant.MultibodyPlantConfig"><span class="pre">pydrake.multibody.plant.MultibodyPlantConfig</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">builder</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.DiagramBuilder" title="pydrake.systems.framework.DiagramBuilder"><span class="pre">pydrake.systems.framework.DiagramBuilder</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.AddMultibodyPlant" title="Permalink to this definition"></a></dt>
-<dd><p>Adds a new MultibodyPlant and SceneGraph to the given <code class="docutils literal notranslate"><span class="pre">builder</span></code>. The
+<span class="sig-prename descclassname"><span class="pre">pydrake.multibody.plant.</span></span><span class="sig-name descname"><span class="pre">AddMultibodyPlant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.AddMultibodyPlant" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>AddMultibodyPlant(config: pydrake.multibody.plant.MultibodyPlantConfig, builder: pydrake.systems.framework.DiagramBuilder) -&gt; tuple</p></li>
+</ol>
+<p>Adds a new MultibodyPlant and SceneGraph to the given <code class="docutils literal notranslate"><span class="pre">builder</span></code>. The
 plant’s settings such as <code class="docutils literal notranslate"><span class="pre">time_step</span></code> are set using the given
 <code class="docutils literal notranslate"><span class="pre">config</span></code>.</p>
+<ol class="arabic simple" start="2">
+<li><p>AddMultibodyPlant(plant_config: pydrake.multibody.plant.MultibodyPlantConfig, scene_graph_config: pydrake.geometry.SceneGraphConfig, builder: pydrake.systems.framework.DiagramBuilder) -&gt; tuple</p></li>
+</ol>
+<p>Adds a new MultibodyPlant and SceneGraph to the given <code class="docutils literal notranslate"><span class="pre">builder</span></code>. The
+plant’s settings such as <code class="docutils literal notranslate"><span class="pre">time_step</span></code> are set using the given
+<code class="docutils literal notranslate"><span class="pre">plant_config</span></code>. The scene graph’s settings are set using the given
+<code class="docutils literal notranslate"><span class="pre">scene_graph_config</span></code>.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -2599,7 +2610,7 @@ to or from symbolic::Expression after a call to this method.</p>
 <span class="sig-name descname"><span class="pre">AddRigidBody</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.AddRigidBody" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant, name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7fdb395fb970&gt;) -&gt; pydrake.multibody.tree.RigidBody</p></li>
+<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant, name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7efcd1d6af70&gt;) -&gt; pydrake.multibody.tree.RigidBody</p></li>
 </ol>
 <p>Creates a rigid body with the provided name and spatial inertia. This
 method returns a constant reference to the body just added, which will
@@ -2638,7 +2649,7 @@ remain valid for the lifetime of <code class="docutils literal notranslate"><spa
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant, name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7fdb395f93f0&gt;) -&gt; pydrake.multibody.tree.RigidBody</p></li>
+<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant, name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7efcd1d820b0&gt;) -&gt; pydrake.multibody.tree.RigidBody</p></li>
 </ol>
 <p>Creates a rigid body with the provided name and spatial inertia. This
 method returns a constant reference to the body just added, which will
@@ -7857,7 +7868,7 @@ to or from symbolic::Expression after a call to this method.</p>
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].AddRigidBody"></span><span class="sig-name descname"><span class="pre">AddRigidBody</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.AddRigidBody" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7fdb394764b0&gt;) -&gt; pydrake.multibody.tree.RigidBody_[AutoDiffXd]</p></li>
+<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7efcd4cb7db0&gt;) -&gt; pydrake.multibody.tree.RigidBody_[AutoDiffXd]</p></li>
 </ol>
 <p>Creates a rigid body with the provided name and spatial inertia. This
 method returns a constant reference to the body just added, which will
@@ -7896,7 +7907,7 @@ remain valid for the lifetime of <code class="docutils literal notranslate"><spa
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7fdb3a6a9530&gt;) -&gt; pydrake.multibody.tree.RigidBody_[AutoDiffXd]</p></li>
+<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7efcd51eb370&gt;) -&gt; pydrake.multibody.tree.RigidBody_[AutoDiffXd]</p></li>
 </ol>
 <p>Creates a rigid body with the provided name and spatial inertia. This
 method returns a constant reference to the body just added, which will
@@ -13071,7 +13082,7 @@ to or from symbolic::Expression after a call to this method.</p>
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].AddRigidBody"></span><span class="sig-name descname"><span class="pre">AddRigidBody</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.AddRigidBody" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[Expression], name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7fdb3944be70&gt;) -&gt; pydrake.multibody.tree.RigidBody_[Expression]</p></li>
+<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[Expression], name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7efcd4db9d70&gt;) -&gt; pydrake.multibody.tree.RigidBody_[Expression]</p></li>
 </ol>
 <p>Creates a rigid body with the provided name and spatial inertia. This
 method returns a constant reference to the body just added, which will
@@ -13110,7 +13121,7 @@ remain valid for the lifetime of <code class="docutils literal notranslate"><spa
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[Expression], name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7fdb3aad8170&gt;) -&gt; pydrake.multibody.tree.RigidBody_[Expression]</p></li>
+<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[Expression], name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7efcd4d86670&gt;) -&gt; pydrake.multibody.tree.RigidBody_[Expression]</p></li>
 </ol>
 <p>Creates a rigid body with the provided name and spatial inertia. This
 method returns a constant reference to the body just added, which will

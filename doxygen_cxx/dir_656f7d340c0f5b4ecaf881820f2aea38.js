@@ -48,6 +48,7 @@ var dir_656f7d340c0f5b4ecaf881820f2aea38 =
       [ "PhysicalModel", "classdrake_1_1multibody_1_1_physical_model.html", "classdrake_1_1multibody_1_1_physical_model" ]
     ] ],
     [ "physical_model.h", "physical__model_8h.html", "physical__model_8h" ],
+    [ "physical_model_collection.h", "physical__model__collection_8h.html", null ],
     [ "point_pair_contact_info.h", "point__pair__contact__info_8h.html", [
       [ "PointPairContactInfo", "classdrake_1_1multibody_1_1_point_pair_contact_info.html", "classdrake_1_1multibody_1_1_point_pair_contact_info" ]
     ] ],

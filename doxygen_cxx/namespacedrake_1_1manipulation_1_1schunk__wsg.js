@@ -10,5 +10,7 @@ var namespacedrake_1_1manipulation_1_1schunk__wsg =
     [ "SchunkWsgPositionController", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_position_controller.html", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_position_controller" ],
     [ "SchunkWsgStatusReceiver", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_status_receiver.html", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_status_receiver" ],
     [ "SchunkWsgStatusSender", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_status_sender.html", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_status_sender" ],
-    [ "SchunkWsgTrajectoryGenerator", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator.html", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator" ]
+    [ "SchunkWsgTrajectoryGenerator", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator.html", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator" ],
+    [ "SchunkWsgTrajectoryGeneratorStateVector", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator_state_vector.html", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator_state_vector" ],
+    [ "SchunkWsgTrajectoryGeneratorStateVectorIndices", "structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator_state_vector_indices.html", "structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator_state_vector_indices" ]
 ];

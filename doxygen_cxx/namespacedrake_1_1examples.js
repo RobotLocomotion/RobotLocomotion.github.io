@@ -10,7 +10,7 @@ var namespacedrake_1_1examples =
     [ "kuka_iiwa_arm", "namespacedrake_1_1examples_1_1kuka__iiwa__arm.html", "namespacedrake_1_1examples_1_1kuka__iiwa__arm" ],
     [ "manipulation_station", "namespacedrake_1_1examples_1_1manipulation__station.html", "namespacedrake_1_1examples_1_1manipulation__station" ],
     [ "mass_spring_cloth", "namespacedrake_1_1examples_1_1mass__spring__cloth.html", "namespacedrake_1_1examples_1_1mass__spring__cloth" ],
-    [ "multibody", "namespacedrake_1_1examples_1_1multibody.html", null ],
+    [ "multibody", "namespacedrake_1_1examples_1_1multibody.html", "namespacedrake_1_1examples_1_1multibody" ],
     [ "pendulum", "namespacedrake_1_1examples_1_1pendulum.html", "namespacedrake_1_1examples_1_1pendulum" ],
     [ "planar_gripper", "namespacedrake_1_1examples_1_1planar__gripper.html", "namespacedrake_1_1examples_1_1planar__gripper" ],
     [ "quadrotor", "namespacedrake_1_1examples_1_1quadrotor.html", "namespacedrake_1_1examples_1_1quadrotor" ],

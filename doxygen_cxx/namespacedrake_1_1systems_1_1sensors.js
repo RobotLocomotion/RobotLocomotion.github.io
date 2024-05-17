@@ -2,6 +2,8 @@ var namespacedrake_1_1systems_1_1sensors =
 [
     [ "Accelerometer", "classdrake_1_1systems_1_1sensors_1_1_accelerometer.html", "classdrake_1_1systems_1_1sensors_1_1_accelerometer" ],
     [ "BeamModel", "classdrake_1_1systems_1_1sensors_1_1_beam_model.html", "classdrake_1_1systems_1_1sensors_1_1_beam_model" ],
+    [ "BeamModelParams", "classdrake_1_1systems_1_1sensors_1_1_beam_model_params.html", "classdrake_1_1systems_1_1sensors_1_1_beam_model_params" ],
+    [ "BeamModelParamsIndices", "structdrake_1_1systems_1_1sensors_1_1_beam_model_params_indices.html", "structdrake_1_1systems_1_1sensors_1_1_beam_model_params_indices" ],
     [ "CameraConfig", "structdrake_1_1systems_1_1sensors_1_1_camera_config.html", "structdrake_1_1systems_1_1sensors_1_1_camera_config" ],
     [ "CameraInfo", "classdrake_1_1systems_1_1sensors_1_1_camera_info.html", "classdrake_1_1systems_1_1sensors_1_1_camera_info" ],
     [ "Gyroscope", "classdrake_1_1systems_1_1sensors_1_1_gyroscope.html", "classdrake_1_1systems_1_1sensors_1_1_gyroscope" ],

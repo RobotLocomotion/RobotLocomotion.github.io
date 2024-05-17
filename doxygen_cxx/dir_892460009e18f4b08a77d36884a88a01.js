@@ -1,9 +1,14 @@
 var dir_892460009e18f4b08a77d36884a88a01 =
 [
+    [ "gen", "dir_028657a50a3a9406d0f0dd56f1c15b09.html", "dir_028657a50a3a9406d0f0dd56f1c15b09" ],
     [ "test_utilities", "dir_151f1047457156d866eb63636a2c74e3.html", "dir_151f1047457156d866eb63636a2c74e3" ],
     [ "accelerometer.h", "accelerometer_8h.html", null ],
     [ "beam_model.h", "beam__model_8h.html", [
       [ "Traits< sensors::BeamModel >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01sensors_1_1_beam_model_01_4.html", null ]
+    ] ],
+    [ "beam_model_params.h", "beam__model__params_8h.html", [
+      [ "BeamModelParamsIndices", "structdrake_1_1systems_1_1sensors_1_1_beam_model_params_indices.html", "structdrake_1_1systems_1_1sensors_1_1_beam_model_params_indices" ],
+      [ "BeamModelParams", "classdrake_1_1systems_1_1sensors_1_1_beam_model_params.html", "classdrake_1_1systems_1_1sensors_1_1_beam_model_params" ]
     ] ],
     [ "camera_config.h", "camera__config_8h.html", [
       [ "CameraConfig", "structdrake_1_1systems_1_1sensors_1_1_camera_config.html", "structdrake_1_1systems_1_1sensors_1_1_camera_config" ],

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['x',['x',['../classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#ad7acb25ff1d4759a67548a22e11c1a5f',1,'drake::geometry::optimization::GraphOfConvexSets::Vertex::x()'],['../classdrake_1_1geometry_1_1optimization_1_1_point.html#a2fc93d35ec165e7a8ebd31b025a5f766',1,'drake::geometry::optimization::Point::x()']]],
+  ['x',['x',['../classdrake_1_1examples_1_1rod2d_1_1_rod2d_state_vector.html#ad0bd962a702d18fa55e1a95435b1a39e',1,'drake::examples::rod2d::Rod2dStateVector::x()'],['../classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#ad7acb25ff1d4759a67548a22e11c1a5f',1,'drake::geometry::optimization::GraphOfConvexSets::Vertex::x()'],['../classdrake_1_1geometry_1_1optimization_1_1_point.html#a2fc93d35ec165e7a8ebd31b025a5f766',1,'drake::geometry::optimization::Point::x()']]],
   ['x_5fbc',['X_BC',['../classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#ab8817bc0f987f64e506b92be652d5644',1,'drake::systems::sensors::RgbdSensor']]],
   ['x_5fbd',['X_BD',['../classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#ad83228b39a7566b1cf862392f1e5e19a',1,'drake::systems::sensors::RgbdSensor']]],
   ['x_5fbg',['X_BG',['../classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html#ad1a29f5c9188a3eef88a3c7f8fbb9baf',1,'drake::geometry::optimization::CIrisCollisionGeometry']]],
@@ -18,6 +18,7 @@ var searchData=
   ['xcf',['xcf',['../classdrake_1_1systems_1_1_witness_triggered_event_data.html#aa220cd3808a2ef7b27dcc1715589c77c',1,'drake::systems::WitnessTriggeredEventData']]],
   ['xd_5fticket',['xd_ticket',['../classdrake_1_1systems_1_1_system_base.html#a64938d044107c8eedc97f89aaf0e4a32',1,'drake::systems::SystemBase']]],
   ['xd_5funique_5fperiodic_5fupdate_5fticket',['xd_unique_periodic_update_ticket',['../classdrake_1_1systems_1_1_system_base.html#a5cf3c0c47d4d7a5b2a28a8c0e76a4811',1,'drake::systems::SystemBase']]],
+  ['xdot',['xdot',['../classdrake_1_1examples_1_1rod2d_1_1_rod2d_state_vector.html#aaebf553648450077b26ae3964c6f36b0',1,'drake::examples::rod2d::Rod2dStateVector']]],
   ['xrelativetolerancename',['XRelativeToleranceName',['../classdrake_1_1solvers_1_1_nlopt_solver.html#ae7ee35ef18027156f5cb7b485de8d574',1,'drake::solvers::NloptSolver']]],
   ['xu',['xu',['../classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#aeacbc2abb655b394b863536ddcd78036',1,'drake::geometry::optimization::GraphOfConvexSets::Edge']]],
   ['xv',['xv',['../classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a09f1477bfa664da452fb472f7c1959cc',1,'drake::geometry::optimization::GraphOfConvexSets::Edge']]],

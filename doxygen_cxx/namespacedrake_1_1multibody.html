@@ -641,6 +641,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a7e468aa35ef6a84196ac20a13065ca0c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html">AddMultibodyPlantSceneGraphResult</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a7e468aa35ef6a84196ac20a13065ca0c">AddMultibodyPlant</a> (const <a class="el" href="structdrake_1_1multibody_1_1_multibody_plant_config.html">MultibodyPlantConfig</a> &amp;config, <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *builder)</td></tr>
 <tr class="memdesc:a7e468aa35ef6a84196ac20a13065ca0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a new <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> and SceneGraph to the given <code>builder</code>.  <a href="#a7e468aa35ef6a84196ac20a13065ca0c">More...</a><br /></td></tr>
 <tr class="separator:a7e468aa35ef6a84196ac20a13065ca0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22ed1c510eb488cbf334e6203dfd3de8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html">AddMultibodyPlantSceneGraphResult</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a22ed1c510eb488cbf334e6203dfd3de8">AddMultibodyPlant</a> (const <a class="el" href="structdrake_1_1multibody_1_1_multibody_plant_config.html">MultibodyPlantConfig</a> &amp;plant_config, const <a class="el" href="structdrake_1_1geometry_1_1_scene_graph_config.html">geometry::SceneGraphConfig</a> &amp;scene_graph_config, <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *builder)</td></tr>
+<tr class="memdesc:a22ed1c510eb488cbf334e6203dfd3de8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a new <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> and SceneGraph to the given <code>builder</code>.  <a href="#a22ed1c510eb488cbf334e6203dfd3de8">More...</a><br /></td></tr>
+<tr class="separator:a22ed1c510eb488cbf334e6203dfd3de8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51df2ec1bd2eb651cb428c5a950481db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a51df2ec1bd2eb651cb428c5a950481db">ApplyMultibodyPlantConfig</a> (const <a class="el" href="structdrake_1_1multibody_1_1_multibody_plant_config.html">MultibodyPlantConfig</a> &amp;config, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *plant)</td></tr>
 <tr class="memdesc:a51df2ec1bd2eb651cb428c5a950481db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies settings given in <code>config</code> to an existing <code>plant</code>.  <a href="#a51df2ec1bd2eb651cb428c5a950481db">More...</a><br /></td></tr>
 <tr class="separator:a51df2ec1bd2eb651cb428c5a950481db"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1170,7 +1173,7 @@ Functions</h2></td></tr>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a7e468aa35ef6a84196ac20a13065ca0c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e468aa35ef6a84196ac20a13065ca0c">&#9670;&nbsp;</a></span>AddMultibodyPlant()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e468aa35ef6a84196ac20a13065ca0c">&#9670;&nbsp;</a></span>AddMultibodyPlant() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1197,6 +1200,43 @@ Functions</h2></td></tr>
 
 <p>Adds a new <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> and SceneGraph to the given <code>builder</code>. </p>
 <p>The plant's settings such as <code>time_step</code> are set using the given <code>config</code>. </p>
+
+</div>
+</div>
+<a id="a22ed1c510eb488cbf334e6203dfd3de8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22ed1c510eb488cbf334e6203dfd3de8">&#9670;&nbsp;</a></span>AddMultibodyPlant() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html">AddMultibodyPlantSceneGraphResult</a>&lt;<a class="el" href="classdouble.html">double</a>&gt; drake::multibody::AddMultibodyPlant </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1multibody_1_1_multibody_plant_config.html">MultibodyPlantConfig</a> &amp;&#160;</td>
+          <td class="paramname"><em>plant_config</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1geometry_1_1_scene_graph_config.html">geometry::SceneGraphConfig</a> &amp;&#160;</td>
+          <td class="paramname"><em>scene_graph_config</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td>
+          <td class="paramname"><em>builder</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a new <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> and SceneGraph to the given <code>builder</code>. </p>
+<p>The plant's settings such as <code>time_step</code> are set using the given <code>plant_config</code>. The scene graph's settings are set using the given <code>scene_graph_config</code>. </p>
 
 </div>
 </div>

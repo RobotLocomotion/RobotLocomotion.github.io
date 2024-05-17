@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['k',['k',['../classdrake_1_1examples_1_1scene__graph_1_1bouncing__ball_1_1_bouncing_ball_plant.html#af613e2b0ce080dc98b634661eca4e6ae',1,'drake::examples::scene_graph::bouncing_ball::BouncingBallPlant']]],
+  ['k',['k',['../classdrake_1_1examples_1_1mass__spring__cloth_1_1_cloth_spring_model_params.html#a44b8b1a427ab7efb39273653ee5650cf',1,'drake::examples::mass_spring_cloth::ClothSpringModelParams::k()'],['../classdrake_1_1examples_1_1scene__graph_1_1bouncing__ball_1_1_bouncing_ball_plant.html#af613e2b0ce080dc98b634661eca4e6ae',1,'drake::examples::scene_graph::bouncing_ball::BouncingBallPlant::k()']]],
+  ['k_5fd',['k_d',['../classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a83d937b8b5bbaf87d0eb1403a2600516',1,'drake::examples::acrobot::SpongControllerParams']]],
+  ['k_5fe',['k_e',['../classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#ab37f6b08cf17fe85bcd429fd34690643',1,'drake::examples::acrobot::SpongControllerParams']]],
+  ['k_5fp',['k_p',['../classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#ad21531c3cb8df95bcfe64fd7caff6f05',1,'drake::examples::acrobot::SpongControllerParams']]],
   ['kdescriptorcurvature',['kDescriptorCurvature',['../namespacedrake_1_1perception_1_1pc__flags.html#a2b85005afefc35fb842f7ad4ed1b0b20',1,'drake::perception::pc_flags']]],
   ['kdescriptorfpfh',['kDescriptorFPFH',['../namespacedrake_1_1perception_1_1pc__flags.html#a5936de647fa23e69aa865a4835e16f29',1,'drake::perception::pc_flags']]],
   ['kdescriptornone',['kDescriptorNone',['../namespacedrake_1_1perception_1_1pc__flags.html#acff44cbce439811c7213d1bb4e295e4c',1,'drake::perception::pc_flags']]],

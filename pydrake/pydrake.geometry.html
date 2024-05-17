@@ -1589,6 +1589,121 @@ the length of the cylinder parallel with the frame’s z-axis.</p>
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="pydrake.geometry.DefaultProximityProperties">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">DefaultProximityProperties</span></span><a class="headerlink" href="#pydrake.geometry.DefaultProximityProperties" title="Permalink to this definition"></a></dt>
+<dd><p>These properties will be used as defaults when the geometry as added
+via API calls or parsed from model files doesn’t say anything more
+specific.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>hug_title, hug_quick_hydro, hug_properties,
+stribeck_approximation.</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.DefaultProximityProperties.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.DefaultProximityProperties" title="pydrake.geometry.DefaultProximityProperties"><span class="pre">pydrake.geometry.DefaultProximityProperties</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.DefaultProximityProperties.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.DefaultProximityProperties.compliance_type">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">compliance_type</span></span><a class="headerlink" href="#pydrake.geometry.DefaultProximityProperties.compliance_type" title="Permalink to this definition"></a></dt>
+<dd><p>&#64;name Hydroelastic Contact Properties</p>
+<p>These properties affect hydroelastic contact only. For more detail,
+including limits of the numeric parameters,</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>geometry::AddRigidHydroelasticProperties,
+geometry::AddCompliantHydroelasticProperties,
+geometry::AddCompliantHydroelasticPropertiesForHalfSpace.</p>
+</div>
+<p>For more context,</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>hug_properties. There are three valid options for
+<code class="docutils literal notranslate"><span class="pre">compliance_type</span></code>: - “undefined”: hydroelastic contact will not
+be used. - “rigid”: the default hydroelastic compliance type will
+be rigid; note that rigid-rigid contact is not supported by the
+hydroelastic contact model, but is supported by point contact
+(multibody::ContactModel::kPoint or
+multibody::ContactModel::kHydroelasticWithFallback). -
+“compliant”: the default hydroelastic compliance type will be
+compliant.</p>
+</div>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.DefaultProximityProperties.dynamic_friction">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dynamic_friction</span></span><a class="headerlink" href="#pydrake.geometry.DefaultProximityProperties.dynamic_friction" title="Permalink to this definition"></a></dt>
+<dd><p>&#64;name General Contact Properties</p>
+<p>These properties affect contact in general. For more detail, including
+limits of the numeric parameters,</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>geometry::AddContactMaterial, multibody::CoulombFriction,
+mbp_contact_modeling, mbp_dissipation_model. To be valid, either
+both friction values must be populated, or neither. Friction
+quantities are unitless.</p>
+</div>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.DefaultProximityProperties.hunt_crossley_dissipation">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">hunt_crossley_dissipation</span></span><a class="headerlink" href="#pydrake.geometry.DefaultProximityProperties.hunt_crossley_dissipation" title="Permalink to this definition"></a></dt>
+<dd><p>Controls energy damping from contact, for contact models <em>other than</em>
+multibody::DiscreteContactApproximation::kSap. Units are seconds per
+meter.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.DefaultProximityProperties.hydroelastic_modulus">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">hydroelastic_modulus</span></span><a class="headerlink" href="#pydrake.geometry.DefaultProximityProperties.hydroelastic_modulus" title="Permalink to this definition"></a></dt>
+<dd><p>A measure of material stiffness, in units of Pascals.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.DefaultProximityProperties.point_stiffness">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">point_stiffness</span></span><a class="headerlink" href="#pydrake.geometry.DefaultProximityProperties.point_stiffness" title="Permalink to this definition"></a></dt>
+<dd><p>&#64;name Point Contact Properties</p>
+<p>These properties affect point contact only. For complete descriptions
+of the numeric parameters,</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>geometry::AddContactMaterial. A measure of material stiffness, in
+units of Newtons per meter.</p>
+</div>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.DefaultProximityProperties.relaxation_time">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">relaxation_time</span></span><a class="headerlink" href="#pydrake.geometry.DefaultProximityProperties.relaxation_time" title="Permalink to this definition"></a></dt>
+<dd><p>Controls energy damping from contact, <em>only for</em>
+multibody::DiscreteContactApproximation::kSap. Units are seconds.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.DefaultProximityProperties.resolution_hint">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">resolution_hint</span></span><a class="headerlink" href="#pydrake.geometry.DefaultProximityProperties.resolution_hint" title="Permalink to this definition"></a></dt>
+<dd><p>Controls how finely primitive geometries are tessellated, units of
+meters.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.DefaultProximityProperties.slab_thickness">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">slab_thickness</span></span><a class="headerlink" href="#pydrake.geometry.DefaultProximityProperties.slab_thickness" title="Permalink to this definition"></a></dt>
+<dd><p>For a halfspace, the thickness of compliant material to model, in
+units of meters.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.DefaultProximityProperties.static_friction">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">static_friction</span></span><a class="headerlink" href="#pydrake.geometry.DefaultProximityProperties.static_friction" title="Permalink to this definition"></a></dt>
+<dd><p>See also:
+dynamic_friction.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="pydrake.geometry.DepthRange">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">DepthRange</span></span><a class="headerlink" href="#pydrake.geometry.DepthRange" title="Permalink to this definition"></a></dt>
 <dd><dl class="py method">
@@ -10050,8 +10165,16 @@ for the list of instantiations.</p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraph.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraph" title="pydrake.geometry.SceneGraph"><span class="pre">pydrake.geometry.SceneGraph</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraph.__init__" title="Permalink to this definition"></a></dt>
-<dd><p>Constructs a default (empty) scene graph.</p>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.geometry.SceneGraph) -&gt; None</p></li>
+</ol>
+<p>Constructs a default (empty) scene graph.</p>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.geometry.SceneGraph, config: pydrake.geometry.SceneGraphConfig) -&gt; None</p></li>
+</ol>
+<p>Constructs an empty scene graph with the provided configuration.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -10241,6 +10364,35 @@ manager.</p>
 </ol>
 <p>Returns the collision filter manager for this SceneGraph instance’s
 model*.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraph.get_config">
+<span class="sig-name descname"><span class="pre">get_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph.get_config" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>get_config(self: pydrake.geometry.SceneGraph) -&gt; pydrake.geometry.SceneGraphConfig</p></li>
+</ol>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the current configuration.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>get_config(self: pydrake.geometry.SceneGraph, arg0: pydrake.systems.framework.Context) -&gt; pydrake.geometry.SceneGraphConfig</p></li>
+</ol>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>there
+is no matching per-Context set_config() function. The context’s
+scene graph configuration is copied from the main scene graph
+configuration at context construction time. Thereafter, the
+context’s scene graph configuration is not mutable.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>the scene graph configuration from the given context. Note</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -10689,6 +10841,12 @@ in the provided context.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraph.set_config">
+<span class="sig-name descname"><span class="pre">set_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraph" title="pydrake.geometry.SceneGraph"><span class="pre">pydrake.geometry.SceneGraph</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphConfig" title="pydrake.geometry.SceneGraphConfig"><span class="pre">pydrake.geometry.SceneGraphConfig</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraph.set_config" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the configuration.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraph.world_frame_id">
 <em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">world_frame_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.FrameId" title="pydrake.geometry.FrameId"><span class="pre">pydrake.geometry.FrameId</span></a></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraph.world_frame_id" title="Permalink to this definition"></a></dt>
 <dd><p>Reports the identifier for the world frame.</p>
@@ -10930,8 +11088,16 @@ cause it to thrash whatever components depends on geometry version.
 The system should <em>clearly</em> document this fact.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraph_-AutoDiffXd-.__init__">
-<span id="pydrake.geometry.SceneGraph_[AutoDiffXd].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraph_" title="pydrake.geometry.SceneGraph_"><span class="pre">pydrake.geometry.SceneGraph_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-AutoDiffXd-.__init__" title="Permalink to this definition"></a></dt>
-<dd><p>Constructs a default (empty) scene graph.</p>
+<span id="pydrake.geometry.SceneGraph_[AutoDiffXd].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-AutoDiffXd-.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.geometry.SceneGraph_[AutoDiffXd]) -&gt; None</p></li>
+</ol>
+<p>Constructs a default (empty) scene graph.</p>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.geometry.SceneGraph_[AutoDiffXd], config: pydrake.geometry.SceneGraphConfig) -&gt; None</p></li>
+</ol>
+<p>Constructs an empty scene graph with the provided configuration.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -11121,6 +11287,35 @@ manager.</p>
 </ol>
 <p>Returns the collision filter manager for this SceneGraph instance’s
 model*.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraph_-AutoDiffXd-.get_config">
+<span id="pydrake.geometry.SceneGraph_[AutoDiffXd].get_config"></span><span class="sig-name descname"><span class="pre">get_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-AutoDiffXd-.get_config" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>get_config(self: pydrake.geometry.SceneGraph_[AutoDiffXd]) -&gt; pydrake.geometry.SceneGraphConfig</p></li>
+</ol>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the current configuration.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>get_config(self: pydrake.geometry.SceneGraph_[AutoDiffXd], arg0: pydrake.systems.framework.Context_[AutoDiffXd]) -&gt; pydrake.geometry.SceneGraphConfig</p></li>
+</ol>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>there
+is no matching per-Context set_config() function. The context’s
+scene graph configuration is copied from the main scene graph
+configuration at context construction time. Thereafter, the
+context’s scene graph configuration is not mutable.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>the scene graph configuration from the given context. Note</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -11569,6 +11764,12 @@ in the provided context.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraph_-AutoDiffXd-.set_config">
+<span id="pydrake.geometry.SceneGraph_[AutoDiffXd].set_config"></span><span class="sig-name descname"><span class="pre">set_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraph_" title="pydrake.geometry.SceneGraph_"><span class="pre">pydrake.geometry.SceneGraph_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphConfig" title="pydrake.geometry.SceneGraphConfig"><span class="pre">pydrake.geometry.SceneGraphConfig</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-AutoDiffXd-.set_config" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the configuration.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraph_-AutoDiffXd-.world_frame_id">
 <span id="pydrake.geometry.SceneGraph_[AutoDiffXd].world_frame_id"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">world_frame_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.FrameId" title="pydrake.geometry.FrameId"><span class="pre">pydrake.geometry.FrameId</span></a></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-AutoDiffXd-.world_frame_id" title="Permalink to this definition"></a></dt>
 <dd><p>Reports the identifier for the world frame.</p>
@@ -11804,8 +12005,16 @@ cause it to thrash whatever components depends on geometry version.
 The system should <em>clearly</em> document this fact.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraph_-Expression-.__init__">
-<span id="pydrake.geometry.SceneGraph_[Expression].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraph_" title="pydrake.geometry.SceneGraph_"><span class="pre">pydrake.geometry.SceneGraph_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-Expression-.__init__" title="Permalink to this definition"></a></dt>
-<dd><p>Constructs a default (empty) scene graph.</p>
+<span id="pydrake.geometry.SceneGraph_[Expression].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-Expression-.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.geometry.SceneGraph_[Expression]) -&gt; None</p></li>
+</ol>
+<p>Constructs a default (empty) scene graph.</p>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.geometry.SceneGraph_[Expression], config: pydrake.geometry.SceneGraphConfig) -&gt; None</p></li>
+</ol>
+<p>Constructs an empty scene graph with the provided configuration.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -11995,6 +12204,35 @@ manager.</p>
 </ol>
 <p>Returns the collision filter manager for this SceneGraph instance’s
 model*.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraph_-Expression-.get_config">
+<span id="pydrake.geometry.SceneGraph_[Expression].get_config"></span><span class="sig-name descname"><span class="pre">get_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-Expression-.get_config" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>get_config(self: pydrake.geometry.SceneGraph_[Expression]) -&gt; pydrake.geometry.SceneGraphConfig</p></li>
+</ol>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the current configuration.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>get_config(self: pydrake.geometry.SceneGraph_[Expression], arg0: pydrake.systems.framework.Context_[Expression]) -&gt; pydrake.geometry.SceneGraphConfig</p></li>
+</ol>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>there
+is no matching per-Context set_config() function. The context’s
+scene graph configuration is copied from the main scene graph
+configuration at context construction time. Thereafter, the
+context’s scene graph configuration is not mutable.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>the scene graph configuration from the given context. Note</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -12443,9 +12681,33 @@ in the provided context.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraph_-Expression-.set_config">
+<span id="pydrake.geometry.SceneGraph_[Expression].set_config"></span><span class="sig-name descname"><span class="pre">set_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraph_" title="pydrake.geometry.SceneGraph_"><span class="pre">pydrake.geometry.SceneGraph_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphConfig" title="pydrake.geometry.SceneGraphConfig"><span class="pre">pydrake.geometry.SceneGraphConfig</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-Expression-.set_config" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the configuration.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraph_-Expression-.world_frame_id">
 <span id="pydrake.geometry.SceneGraph_[Expression].world_frame_id"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">world_frame_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.FrameId" title="pydrake.geometry.FrameId"><span class="pre">pydrake.geometry.FrameId</span></a></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-Expression-.world_frame_id" title="Permalink to this definition"></a></dt>
 <dd><p>Reports the identifier for the world frame.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraphConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">SceneGraphConfig</span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphConfig" title="Permalink to this definition"></a></dt>
+<dd><p>The set of configurable properties on a SceneGraph.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraphConfig.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphConfig" title="pydrake.geometry.SceneGraphConfig"><span class="pre">pydrake.geometry.SceneGraphConfig</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphConfig.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraphConfig.default_proximity_properties">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">default_proximity_properties</span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphConfig.default_proximity_properties" title="Permalink to this definition"></a></dt>
+<dd><p>Provides SceneGraph-wide contact material values to use when none have
+been otherwise specified.</p>
 </dd></dl>
 
 </dd></dl>
