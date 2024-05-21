@@ -329,9 +329,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a03e71eb4bd2a7648a411e1cbaf94812b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b">CouldBePhysicallyValid</a> () const</td></tr>
 <tr class="memdesc:a03e71eb4bd2a7648a411e1cbaf94812b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs several necessary checks to verify whether <code>this</code> rotational inertia <em>could</em> be physically valid, including:  <a href="#a03e71eb4bd2a7648a411e1cbaf94812b">More...</a><br /></td></tr>
 <tr class="separator:a03e71eb4bd2a7648a411e1cbaf94812b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a800af438924a7ab6a1eeaf5a58865f28"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a800af438924a7ab6a1eeaf5a58865f28">ReExpressInPlace</a> (const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; T &gt; &amp;R_AE)</td></tr>
-<tr class="memdesc:a800af438924a7ab6a1eeaf5a58865f28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Re-expresses <code>this</code> rotational inertia <code>I_BP_E</code> in place to <code>I_BP_A</code>.  <a href="#a800af438924a7ab6a1eeaf5a58865f28">More...</a><br /></td></tr>
-<tr class="separator:a800af438924a7ab6a1eeaf5a58865f28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af397b4c3403d23ab61a128dbeaa1c3aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#af397b4c3403d23ab61a128dbeaa1c3aa">ReExpressInPlace</a> (const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; T &gt; &amp;R_AE)</td></tr>
+<tr class="memdesc:af397b4c3403d23ab61a128dbeaa1c3aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Re-expresses <code>this</code> rotational inertia <code>I_BP_E</code> in place to <code>I_BP_A</code>.  <a href="#af397b4c3403d23ab61a128dbeaa1c3aa">More...</a><br /></td></tr>
+<tr class="separator:af397b4c3403d23ab61a128dbeaa1c3aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe098429bda51991a3e6ead89f365838"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#afe098429bda51991a3e6ead89f365838">ReExpress</a> (const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; T &gt; &amp;R_AE) const</td></tr>
 <tr class="memdesc:afe098429bda51991a3e6ead89f365838"><td class="mdescLeft">&#160;</td><td class="mdescRight">Re-expresses <code>this</code> rotational inertia <code>I_BP_E</code> to <code>I_BP_A</code> i.e., re-expresses body B's rotational inertia from frame E to frame A.  <a href="#afe098429bda51991a3e6ead89f365838">More...</a><br /></td></tr>
 <tr class="separator:afe098429bda51991a3e6ead89f365838"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -358,21 +358,21 @@ Public Member Functions</h2></td></tr>
 <td class="markdownTableBodyNone">ShiftToThenAwayFromCenterOfMassInPlace  </td><td class="markdownTableBodyNone">ShiftToThenAwayFromCenterOfMass   </td></tr>
 </table>
 </div></td></tr>
-<tr class="memitem:a233d049441510e6de4347afa89eff0e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a233d049441510e6de4347afa89eff0e0">ShiftFromCenterOfMassInPlace</a> (const T &amp;mass, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_BcmQ_E)</td></tr>
-<tr class="memdesc:a233d049441510e6de4347afa89eff0e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shifts <code>this</code> rotational inertia for a body (or composite body) B from about-point Bcm (B's center of mass) to about-point Q.  <a href="#a233d049441510e6de4347afa89eff0e0">More...</a><br /></td></tr>
-<tr class="separator:a233d049441510e6de4347afa89eff0e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaad06162821520625a28e0526d698e87"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#aaad06162821520625a28e0526d698e87">ShiftFromCenterOfMassInPlace</a> (const T &amp;mass, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_BcmQ_E)</td></tr>
+<tr class="memdesc:aaad06162821520625a28e0526d698e87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shifts <code>this</code> rotational inertia for a body (or composite body) B from about-point Bcm (B's center of mass) to about-point Q.  <a href="#aaad06162821520625a28e0526d698e87">More...</a><br /></td></tr>
+<tr class="separator:aaad06162821520625a28e0526d698e87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac9f70ae20fe85c17f248a40bba0db5a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#aac9f70ae20fe85c17f248a40bba0db5a">ShiftFromCenterOfMass</a> (const T &amp;mass, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_BcmQ_E) const</td></tr>
 <tr class="memdesc:aac9f70ae20fe85c17f248a40bba0db5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the rotational inertia that results from shifting <code>this</code> rotational inertia for a body (or composite body) B from about-point Bcm (B's center of mass) to about-point Q.  <a href="#aac9f70ae20fe85c17f248a40bba0db5a">More...</a><br /></td></tr>
 <tr class="separator:aac9f70ae20fe85c17f248a40bba0db5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82a43d32c412efc0f5e1b6ccc1b1cc17"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a82a43d32c412efc0f5e1b6ccc1b1cc17">ShiftToCenterOfMassInPlace</a> (const T &amp;mass, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_QBcm_E)</td></tr>
-<tr class="memdesc:a82a43d32c412efc0f5e1b6ccc1b1cc17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shifts <code>this</code> rotational inertia for a body (or composite body) B from about-point Q to about-point <code>Bcm</code> (B's center of mass).  <a href="#a82a43d32c412efc0f5e1b6ccc1b1cc17">More...</a><br /></td></tr>
-<tr class="separator:a82a43d32c412efc0f5e1b6ccc1b1cc17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8ca1f1551b6a301c66903cee8db94d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#af8ca1f1551b6a301c66903cee8db94d5">ShiftToCenterOfMassInPlace</a> (const T &amp;mass, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_QBcm_E)</td></tr>
+<tr class="memdesc:af8ca1f1551b6a301c66903cee8db94d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shifts <code>this</code> rotational inertia for a body (or composite body) B from about-point Q to about-point <code>Bcm</code> (B's center of mass).  <a href="#af8ca1f1551b6a301c66903cee8db94d5">More...</a><br /></td></tr>
+<tr class="separator:af8ca1f1551b6a301c66903cee8db94d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a08dda5dfc4ee0f6279bad54ceecd9b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a2a08dda5dfc4ee0f6279bad54ceecd9b">ShiftToCenterOfMass</a> (const T &amp;mass, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_QBcm_E) const</td></tr>
 <tr class="memdesc:a2a08dda5dfc4ee0f6279bad54ceecd9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the rotational inertia that results from shifting <code>this</code> rotational inertia for a body (or composite body) B from about-point Q to about-point <code>Bcm</code> (B's center of mass).  <a href="#a2a08dda5dfc4ee0f6279bad54ceecd9b">More...</a><br /></td></tr>
 <tr class="separator:a2a08dda5dfc4ee0f6279bad54ceecd9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a631d7db4d8c28e6108d78b8309dabc2b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a631d7db4d8c28e6108d78b8309dabc2b">ShiftToThenAwayFromCenterOfMassInPlace</a> (const T &amp;mass, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_PBcm_E, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_QBcm_E)</td></tr>
-<tr class="memdesc:a631d7db4d8c28e6108d78b8309dabc2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shifts <code>this</code> rotational inertia for a body (or composite body) B from about-point P to about-point Q via Bcm (B's center of mass).  <a href="#a631d7db4d8c28e6108d78b8309dabc2b">More...</a><br /></td></tr>
-<tr class="separator:a631d7db4d8c28e6108d78b8309dabc2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae531c9b24ec6c5cc94481a0231c331b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#ae531c9b24ec6c5cc94481a0231c331b7">ShiftToThenAwayFromCenterOfMassInPlace</a> (const T &amp;mass, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_PBcm_E, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_QBcm_E)</td></tr>
+<tr class="memdesc:ae531c9b24ec6c5cc94481a0231c331b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shifts <code>this</code> rotational inertia for a body (or composite body) B from about-point P to about-point Q via Bcm (B's center of mass).  <a href="#ae531c9b24ec6c5cc94481a0231c331b7">More...</a><br /></td></tr>
+<tr class="separator:ae531c9b24ec6c5cc94481a0231c331b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4039f309d3c69e57353331055a995e75"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a4039f309d3c69e57353331055a995e75">ShiftToThenAwayFromCenterOfMass</a> (const T &amp;mass, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_PBcm_E, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_QBcm_E) const</td></tr>
 <tr class="memdesc:a4039f309d3c69e57353331055a995e75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the rotational inertia that results from shifting <code>this</code> rotational inertia for a body (or composite body) B from about-point P to about-point Q via Bcm (B's center of mass).  <a href="#a4039f309d3c69e57353331055a995e75">More...</a><br /></td></tr>
 <tr class="separator:a4039f309d3c69e57353331055a995e75"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1468,18 +1468,18 @@ Related Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a800af438924a7ab6a1eeaf5a58865f28" title="Re-expresses this rotational inertia I_BP_E in place to I_BP_A.">ReExpressInPlace()</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#af397b4c3403d23ab61a128dbeaa1c3aa" title="Re-expresses this rotational inertia I_BP_E in place to I_BP_A.">ReExpressInPlace()</a> </dd></dl>
 
 </div>
 </div>
-<a id="a800af438924a7ab6a1eeaf5a58865f28"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a800af438924a7ab6a1eeaf5a58865f28">&#9670;&nbsp;</a></span>ReExpressInPlace()</h2>
+<a id="af397b4c3403d23ab61a128dbeaa1c3aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af397b4c3403d23ab61a128dbeaa1c3aa">&#9670;&nbsp;</a></span>ReExpressInPlace()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt; T &gt; &amp; ReExpressInPlace </td>
+          <td class="memname">void ReExpressInPlace </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>R_AE</em></td><td>)</td>
@@ -1496,7 +1496,6 @@ Related Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A reference to <code>this</code> rotational inertia about-point P, but with <code>this</code> now expressed in frame A (instead of frame E). </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>for Debug builds if the rotational inertia that is re-expressed-in frame A violates <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several necessary checks to verify whether this rotational inertia could be physically valid...">CouldBePhysicallyValid()</a>. </td></tr>
@@ -1616,14 +1615,14 @@ Related Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a233d049441510e6de4347afa89eff0e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a233d049441510e6de4347afa89eff0e0">&#9670;&nbsp;</a></span>ShiftFromCenterOfMassInPlace()</h2>
+<a id="aaad06162821520625a28e0526d698e87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaad06162821520625a28e0526d698e87">&#9670;&nbsp;</a></span>ShiftFromCenterOfMassInPlace()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt;T&gt;&amp; ShiftFromCenterOfMassInPlace </td>
+          <td class="memname">void ShiftFromCenterOfMassInPlace </td>
           <td>(</td>
           <td class="paramtype">const T &amp;&#160;</td>
           <td class="paramname"><em>mass</em>, </td>
@@ -1643,14 +1642,13 @@ Related Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Shifts <code>this</code> rotational inertia for a body (or composite body) B from about-point Bcm (B's center of mass) to about-point Q. </p>
-<p>I.e., shifts <code>I_BBcm_E</code> to <code>I_BQ_E</code> (both are expressed-in frame E). </p><dl class="params"><dt>Parameters</dt><dd>
+<p>I.e., shifts <code>I_BBcm_E</code> to <code>I_BQ_E</code> (both are expressed-in frame E). On return, <code>this</code> is modified to be shifted from about-point Bcm to about-point Q. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">mass</td><td>The mass of body (or composite body) B. </td></tr>
     <tr><td class="paramname">p_BcmQ_E</td><td>Position vector from Bcm to Q, expressed-in frame E. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A reference to <code>this</code> rotational inertia expressed-in frame E, but with <code>this</code> shifted from about-point Bcm to about-point Q. i.e., returns I_BQ_E, B's rotational inertia about-point Bcm expressed-in frame E. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>for Debug builds if the rotational inertia that is shifted to about-point Q violates <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several necessary checks to verify whether this rotational inertia could be physically valid...">CouldBePhysicallyValid()</a>. </td></tr>
@@ -1711,14 +1709,14 @@ Related Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a82a43d32c412efc0f5e1b6ccc1b1cc17"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a82a43d32c412efc0f5e1b6ccc1b1cc17">&#9670;&nbsp;</a></span>ShiftToCenterOfMassInPlace()</h2>
+<a id="af8ca1f1551b6a301c66903cee8db94d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8ca1f1551b6a301c66903cee8db94d5">&#9670;&nbsp;</a></span>ShiftToCenterOfMassInPlace()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt;T&gt;&amp; ShiftToCenterOfMassInPlace </td>
+          <td class="memname">void ShiftToCenterOfMassInPlace </td>
           <td>(</td>
           <td class="paramtype">const T &amp;&#160;</td>
           <td class="paramname"><em>mass</em>, </td>
@@ -1738,14 +1736,13 @@ Related Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Shifts <code>this</code> rotational inertia for a body (or composite body) B from about-point Q to about-point <code>Bcm</code> (B's center of mass). </p>
-<p>I.e., shifts <code>I_BQ_E</code> to <code>I_BBcm_E</code> (both are expressed-in frame E). </p><dl class="params"><dt>Parameters</dt><dd>
+<p>I.e., shifts <code>I_BQ_E</code> to <code>I_BBcm_E</code> (both are expressed-in frame E). On return, <code>this</code> is shifted from about-point Q to about-point <code>Bcm</code>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">mass</td><td>The mass of body (or composite body) B. </td></tr>
     <tr><td class="paramname">p_QBcm_E</td><td>Position vector from Q to <code>Bcm</code>, expressed-in frame E. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A reference to <code>this</code> rotational inertia expressed-in frame E, but with <code>this</code> shifted from about-point Q to about-point <code>Bcm</code>, i.e., returns <code>I_BBcm_E</code>, B's rotational inertia about-point <code>Bcm</code> expressed-in frame E. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>for Debug builds if the rotational inertia that is shifted to about-point <code>Bcm</code> violates <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several necessary checks to verify whether this rotational inertia could be physically valid...">CouldBePhysicallyValid()</a>. </td></tr>
@@ -1813,14 +1810,14 @@ Related Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a631d7db4d8c28e6108d78b8309dabc2b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a631d7db4d8c28e6108d78b8309dabc2b">&#9670;&nbsp;</a></span>ShiftToThenAwayFromCenterOfMassInPlace()</h2>
+<a id="ae531c9b24ec6c5cc94481a0231c331b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae531c9b24ec6c5cc94481a0231c331b7">&#9670;&nbsp;</a></span>ShiftToThenAwayFromCenterOfMassInPlace()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt;T&gt;&amp; ShiftToThenAwayFromCenterOfMassInPlace </td>
+          <td class="memname">void ShiftToThenAwayFromCenterOfMassInPlace </td>
           <td>(</td>
           <td class="paramtype">const T &amp;&#160;</td>
           <td class="paramname"><em>mass</em>, </td>
@@ -1846,7 +1843,7 @@ Related Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Shifts <code>this</code> rotational inertia for a body (or composite body) B from about-point P to about-point Q via Bcm (B's center of mass). </p>
-<p>I.e., shifts <code>I_BP_E</code> to <code>I_BQ_E</code> (both are expressed-in frame E). </p><dl class="params"><dt>Parameters</dt><dd>
+<p>I.e., shifts <code>I_BP_E</code> to <code>I_BQ_E</code> (both are expressed-in frame E). On return, <code>this</code> is modified to be shifted from about-point P to about-point Q. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">mass</td><td>The mass of body (or composite body) B. </td></tr>
     <tr><td class="paramname">p_PBcm_E</td><td>Position vector from P to Bcm, expressed-in frame E. </td></tr>
@@ -1854,7 +1851,6 @@ Related Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A reference to <code>this</code> rotational inertia expressed-in frame E, but with <code>this</code> shifted from about-point P to about-point Q, i.e., returns I_BQ_E, B's rotational inertia about-point Q expressed-in frame E. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>for Debug builds if the rotational inertia that is shifted to about-point Q violates <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several necessary checks to verify whether this rotational inertia could be physically valid...">CouldBePhysicallyValid()</a>. </td></tr>
@@ -1863,7 +1859,7 @@ Related Functions</h2></td></tr>
 </dl>
 <dl class="section remark"><dt>Remarks</dt><dd>Negating either (or both) position vectors p_PBcm_E and p_QBcm_E has no affect on the result. </dd>
 <dd>
-This method is more efficient (by 6 multiplications) than first shifting to the center of mass, then shifting away, e.g., as (<a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a82a43d32c412efc0f5e1b6ccc1b1cc17" title="Shifts this rotational inertia for a body (or composite body) B from about-point Q to about-point Bcm...">ShiftToCenterOfMassInPlace()</a>).<a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a233d049441510e6de4347afa89eff0e0" title="Shifts this rotational inertia for a body (or composite body) B from about-point Bcm (B&#39;s center of m...">ShiftFromCenterOfMassInPlace()</a>; </dd></dl>
+This method is more efficient (by 6 multiplications) than first shifting to the center of mass, then shifting away, e.g., as (<a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#af8ca1f1551b6a301c66903cee8db94d5" title="Shifts this rotational inertia for a body (or composite body) B from about-point Q to about-point Bcm...">ShiftToCenterOfMassInPlace()</a>).<a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#aaad06162821520625a28e0526d698e87" title="Shifts this rotational inertia for a body (or composite body) B from about-point Bcm (B&#39;s center of m...">ShiftFromCenterOfMassInPlace()</a>; </dd></dl>
 
 </div>
 </div>

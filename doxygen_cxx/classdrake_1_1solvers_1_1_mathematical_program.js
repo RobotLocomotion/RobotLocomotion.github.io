@@ -55,6 +55,7 @@ var classdrake_1_1solvers_1_1_mathematical_program =
     [ "AddIndeterminates", "classdrake_1_1solvers_1_1_mathematical_program.html#a4b39856ec07e10a4f9f9980dbc33ef98", null ],
     [ "AddL2NormCost", "classdrake_1_1solvers_1_1_mathematical_program.html#ac57dac7a44fa56077931a7998f7069e2", null ],
     [ "AddL2NormCost", "classdrake_1_1solvers_1_1_mathematical_program.html#a7f5853578a7be1dd5279c7e73cd719e6", null ],
+    [ "AddL2NormCost", "classdrake_1_1solvers_1_1_mathematical_program.html#ae67df20380ff252b1f22ff6509372987", null ],
     [ "AddL2NormCostUsingConicConstraint", "classdrake_1_1solvers_1_1_mathematical_program.html#a6060c77125050d8c1b479a83d983a569", null ],
     [ "AddLinearComplementarityConstraint", "classdrake_1_1solvers_1_1_mathematical_program.html#aefb8281bc9e90a665dab64afa9749542", null ],
     [ "AddLinearComplementarityConstraint", "classdrake_1_1solvers_1_1_mathematical_program.html#a8cae2adfde468f154fc70a367e0f0ff6", null ],

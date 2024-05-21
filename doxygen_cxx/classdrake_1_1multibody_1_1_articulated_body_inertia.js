@@ -16,7 +16,7 @@ var classdrake_1_1multibody_1_1_articulated_body_inertia =
     [ "operator=", "classdrake_1_1multibody_1_1_articulated_body_inertia.html#ad47d1b4caefc3416208c61e09d221e18", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_articulated_body_inertia.html#a589e7341c3eeb0ac0c4c71c57c03e8ce", null ],
     [ "Shift", "classdrake_1_1multibody_1_1_articulated_body_inertia.html#a4a2a3ad9747df360ab2ccfebe5a2e55b", null ],
-    [ "ShiftInPlace", "classdrake_1_1multibody_1_1_articulated_body_inertia.html#a9b4bcc3ca011dbb3e484ebb19ce7faa5", null ],
+    [ "ShiftInPlace", "classdrake_1_1multibody_1_1_articulated_body_inertia.html#ad00ef87db45627df9128fd872dcebdc4", null ],
     [ "ArticulatedBodyInertia", "classdrake_1_1multibody_1_1_articulated_body_inertia.html#af8b25c3b08abdc24e4de1e63ab09ef04", null ],
     [ "operator *", "classdrake_1_1multibody_1_1_articulated_body_inertia.html#aea774becb012c524dbd2b9d56b095c04", null ]
 ];

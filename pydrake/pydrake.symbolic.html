@@ -318,6 +318,37 @@ vars + b\)</span></p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="pydrake.symbolic.DecomposeL2NormExpression">
+<span class="sig-prename descclassname"><span class="pre">pydrake.symbolic.</span></span><span class="sig-name descname"><span class="pre">DecomposeL2NormExpression</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">e</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">psd_tol</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1e-08</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coefficient_tol</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1e-08</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.symbolic.DecomposeL2NormExpression" title="Permalink to this definition"></a></dt>
+<dd><p>Decomposes an L2 norm <code class="docutils literal notranslate"><span class="pre">e</span></code> = <a href="#id1"><span class="problematic" id="id2">|</span></a>Ax+b|₂ into A, b, and the variable
+vector x (or returns false if the decomposition is not possible).</p>
+<p>In order for the decomposition to succeed, the following conditions
+must be met: 1. e is a sqrt expression. 2. e.get_argument() is a
+polynomial of degree 2, which can be expressed as a quadratic form
+(Ax+b)ᵀ(Ax+b).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">e</span></code>:</dt><dd><p>The symbolic affine expression</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">psd_tol</span></code>:</dt><dd><p>The tolerance for checking positive semidefiniteness. Eigenvalues
+less that this threshold are considered to be zero. Matrices with
+negative eigenvalues less than this threshold are considered to be
+not positive semidefinite, and will cause the decomposition to
+fail.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">coefficient_tol</span></code>:</dt><dd><p>The absolute tolerance for checking that the coefficients of the
+expression inside the sqrt match the coefficients of <a href="#id3"><span class="problematic" id="id4">|</span></a>Ax+b|₂².</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>[is_l2norm, A, b, vars] where is_l2norm is true iff the
+decomposition was successful, and if is_l2norm is true then
+<a href="#id5"><span class="problematic" id="id6">|</span></a>A*vars + b|₂ = e.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="pydrake.symbolic.DecomposeLinearExpressions">
 <span class="sig-prename descclassname"><span class="pre">pydrake.symbolic.</span></span><span class="sig-name descname"><span class="pre">DecomposeLinearExpressions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expressions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vars</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.symbolic.DecomposeLinearExpressions" title="Permalink to this definition"></a></dt>
 <dd><p>Decomposes <code class="docutils literal notranslate"><span class="pre">expressions</span></code> into <code class="docutils literal notranslate"><span class="pre">M</span></code> * <code class="docutils literal notranslate"><span class="pre">vars</span></code>.</p>
@@ -841,7 +872,7 @@ y).Substitute({{x, y}, {y, x}}) gets (y / x).</p>
 <dt class="sig sig-object py" id="pydrake.symbolic.Expression.Unapply">
 <span class="sig-name descname"><span class="pre">Unapply</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#pydrake.symbolic.Expression.Unapply" title="Permalink to this definition"></a></dt>
 <dd><p>Given an expression, returns a tuple (ctor, args) that would re-create an
-equivalent expression when called as ctor(<a href="#id1"><span class="problematic" id="id2">*</span></a>args).  This is a useful way to
+equivalent expression when called as ctor(<a href="#id7"><span class="problematic" id="id8">*</span></a>args).  This is a useful way to
 unpack the contents of a compound expression, e.g., to obtain the terms of
 an addition.  In many cases (all arithmetic operators, trig functions,
 max, min, sqrt, etc.), the returned args will all be either Expressions or
@@ -1131,7 +1162,7 @@ codebase. In general, a user of this class should explicitly call
 <li><p>__init__(self: pydrake.symbolic.Formula) -&gt; None</p></li>
 </ol>
 <p>Default constructor. Sets the value to Formula::False, to be
-consistent with value-initialized <a href="#id3"><span class="problematic" id="id4">`</span></a>bool`s.</p>
+consistent with value-initialized <a href="#id9"><span class="problematic" id="id10">`</span></a>bool`s.</p>
 <ol class="arabic simple" start="2">
 <li><p>__init__(self: pydrake.symbolic.Formula, value: bool) -&gt; None</p></li>
 </ol>
@@ -1254,7 +1285,7 @@ the substitutions occur simultaneously. For example, (x / y &gt;
 <dt class="sig sig-object py" id="pydrake.symbolic.Formula.Unapply">
 <span class="sig-name descname"><span class="pre">Unapply</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.symbolic.Formula" title="pydrake.symbolic.Formula"><span class="pre">pydrake.symbolic.Formula</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#pydrake.symbolic.Formula.Unapply" title="Permalink to this definition"></a></dt>
 <dd><p>Given a formula, returns a tuple (ctor, args) that would re-create an
-equivalent formula when called as ctor(<a href="#id5"><span class="problematic" id="id6">*</span></a>args).  This is a useful way to
+equivalent formula when called as ctor(<a href="#id11"><span class="problematic" id="id12">*</span></a>args).  This is a useful way to
 unpack the contents of a compound formula, e.g., to obtain the terms of
 a comparison.  For relational formulae (==, &lt;, &gt;, etc.) the returned args
 will both be of type Expression.  For compound formulae (and, or, not) the
@@ -1271,8 +1302,8 @@ ctor’s identity.</p>
 <dd><p>Kinds of symbolic formulas.</p>
 <p>Members:</p>
 <blockquote>
-<div><p><a href="#id11"><span class="problematic" id="id12">False_</span></a> : ⊥</p>
-<p><a href="#id13"><span class="problematic" id="id14">True_</span></a> : ⊤</p>
+<div><p><a href="#id17"><span class="problematic" id="id18">False_</span></a> : ⊥</p>
+<p><a href="#id19"><span class="problematic" id="id20">True_</span></a> : ⊤</p>
 <p>Var : Boolean Variable</p>
 <p>Eq : =</p>
 <p>Neq : !=</p>
@@ -1441,7 +1472,7 @@ expression <code class="docutils literal notranslate"><span class="pre">expr_els
 expression <code class="docutils literal notranslate"><span class="pre">cond</span></code> is evaluated to <strong>true</strong> (respectively, when <code class="docutils literal notranslate"><span class="pre">cond</span></code> is
 evaluated to <strong>false)</strong>.</p>
 <ul class="simple">
-<li><p>In case of the symbolic expression, <a href="#id7"><span class="problematic" id="id8">``</span></a>if_then_else(cond, expr_then,</p></li>
+<li><p>In case of the symbolic expression, <a href="#id13"><span class="problematic" id="id14">``</span></a>if_then_else(cond, expr_then,</p></li>
 </ul>
 <p>expr_else)``, however, <strong>both</strong> arguments <code class="docutils literal notranslate"><span class="pre">expr_then</span></code> and <code class="docutils literal notranslate"><span class="pre">expr_else</span></code>
 are evaluated first and then passed to the <code class="docutils literal notranslate"><span class="pre">if_then_else</span></code> function.</p>
@@ -2532,7 +2563,7 @@ the corresponding term in <code class="docutils literal notranslate"><span class
 </dl>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">y</span></code>:</dt><dd><p>The bilinear product between <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> will be replaced by
-the corresponding term in <a href="#id9"><span class="problematic" id="id10">``</span></a>W.</p>
+the corresponding term in <a href="#id15"><span class="problematic" id="id16">``</span></a>W.</p>
 </dd>
 </dl>
 <dl class="field-list simple">

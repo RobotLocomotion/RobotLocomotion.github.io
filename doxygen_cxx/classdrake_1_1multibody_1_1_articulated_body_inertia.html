@@ -221,9 +221,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a413ff91e8caf0498a96e5b1e06da9cd1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a11f9aa896d31437a219ed19fa944fe20">Matrix6</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_articulated_body_inertia.html#a413ff91e8caf0498a96e5b1e06da9cd1">CopyToFullMatrix6</a> () const</td></tr>
 <tr class="memdesc:a413ff91e8caf0498a96e5b1e06da9cd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy to a full 6x6 matrix representation.  <a href="#a413ff91e8caf0498a96e5b1e06da9cd1">More...</a><br /></td></tr>
 <tr class="separator:a413ff91e8caf0498a96e5b1e06da9cd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b4bcc3ca011dbb3e484ebb19ce7faa5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_articulated_body_inertia.html">ArticulatedBodyInertia</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_articulated_body_inertia.html#a9b4bcc3ca011dbb3e484ebb19ce7faa5">ShiftInPlace</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_QR_E)</td></tr>
-<tr class="memdesc:a9b4bcc3ca011dbb3e484ebb19ce7faa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given <code>this</code> articulated body inertia <code>P_AQ_E</code> for some articulated body A, computed about point Q, and expressed in frame E, this method uses the rigid body shift operator to compute the same articulated body inertia about a new point R.  <a href="#a9b4bcc3ca011dbb3e484ebb19ce7faa5">More...</a><br /></td></tr>
-<tr class="separator:a9b4bcc3ca011dbb3e484ebb19ce7faa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad00ef87db45627df9128fd872dcebdc4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_articulated_body_inertia.html#ad00ef87db45627df9128fd872dcebdc4">ShiftInPlace</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_QR_E)</td></tr>
+<tr class="memdesc:ad00ef87db45627df9128fd872dcebdc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given <code>this</code> articulated body inertia <code>P_AQ_E</code> for some articulated body A, computed about point Q, and expressed in frame E, this method uses the rigid body shift operator to compute the same articulated body inertia about a new point R.  <a href="#ad00ef87db45627df9128fd872dcebdc4">More...</a><br /></td></tr>
+<tr class="separator:ad00ef87db45627df9128fd872dcebdc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a2a3ad9747df360ab2ccfebe5a2e55b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_articulated_body_inertia.html">ArticulatedBodyInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_articulated_body_inertia.html#a4a2a3ad9747df360ab2ccfebe5a2e55b">Shift</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_QR_E) const</td></tr>
 <tr class="memdesc:a4a2a3ad9747df360ab2ccfebe5a2e55b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given <code>this</code> articulated body inertia <code>P_AQ_E</code> for some articulated body A, computed about point Q, and expressed in frame E, this method uses the rigid body shift operator to compute the same articulated body inertia about a new point R.  <a href="#a4a2a3ad9747df360ab2ccfebe5a2e55b">More...</a><br /></td></tr>
 <tr class="separator:a4a2a3ad9747df360ab2ccfebe5a2e55b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -665,7 +665,7 @@ Friends</h2></td></tr>
 
 <p>Given <code>this</code> articulated body inertia <code>P_AQ_E</code> for some articulated body A, computed about point Q, and expressed in frame E, this method uses the rigid body shift operator to compute the same articulated body inertia about a new point R. </p>
 <p>The result still is expressed in frame E.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_articulated_body_inertia.html#a9b4bcc3ca011dbb3e484ebb19ce7faa5" title="Given this articulated body inertia P_AQ_E for some articulated body A, computed about point Q,...">ShiftInPlace()</a> for more details.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_articulated_body_inertia.html#ad00ef87db45627df9128fd872dcebdc4" title="Given this articulated body inertia P_AQ_E for some articulated body A, computed about point Q,...">ShiftInPlace()</a> for more details.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">p_QR_E</td><td>Vector from the original about point Q to the new about point R, expressed in the same frame E <code>this</code> articulated body inertia is expressed in. </td></tr>
@@ -681,14 +681,14 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a9b4bcc3ca011dbb3e484ebb19ce7faa5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9b4bcc3ca011dbb3e484ebb19ce7faa5">&#9670;&nbsp;</a></span>ShiftInPlace()</h2>
+<a id="ad00ef87db45627df9128fd872dcebdc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad00ef87db45627df9128fd872dcebdc4">&#9670;&nbsp;</a></span>ShiftInPlace()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_articulated_body_inertia.html">ArticulatedBodyInertia</a>&lt;T&gt;&amp; ShiftInPlace </td>
+          <td class="memname">void ShiftInPlace </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>p_QR_E</em></td><td>)</td>
@@ -714,7 +714,6 @@ P_AR_E = Φ(P_RQ_E) P_AQ_E Φ(p_RQ_E)ᵀ
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A reference to <code>this</code> articulated body inertia for articulated body A but now computed about a new point R. </dd></dl>
 
 </div>
 </div>

@@ -1428,7 +1428,7 @@ R.rows() equals to the rank of the matrix</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pydrake.math.DecomposePSDmatrixIntoXtransposeTimesX">
-<span class="sig-prename descclassname"><span class="pre">pydrake.math.</span></span><span class="sig-name descname"><span class="pre">DecomposePSDmatrixIntoXtransposeTimesX</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zero_tol</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.math.DecomposePSDmatrixIntoXtransposeTimesX" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">pydrake.math.</span></span><span class="sig-name descname"><span class="pre">DecomposePSDmatrixIntoXtransposeTimesX</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zero_tol</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_empty_if_not_psd</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.math.DecomposePSDmatrixIntoXtransposeTimesX" title="Permalink to this definition"></a></dt>
 <dd><p>For a symmetric positive semidefinite matrix Y, decompose it into XᵀX,
 where the number of rows in X equals to the rank of Y. Notice that
 this decomposition is not unique. For any orthonormal matrix U, s.t
@@ -1441,11 +1441,18 @@ we only return one valid decomposition.</p>
 value of Y’s eigenvalues) is smaller than zero_tol. If it is, then
 we deem that value as 0.</p>
 </dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">return_empty_if_not_psd</span></code>:</dt><dd><p>If true, then return an empty matrix of size 0-by-Y.cols() if Y is
+not PSD (either the decomposition fails or the resulting
+eigenvalues are less that <code class="docutils literal notranslate"><span class="pre">zero_tol)</span></code>. If false (the default),
+then throw an exception if Y is not PSD. This option is
+particularly useful because it is brittle/expensive to test the
+exact success criteria before calling this function.</p>
+</dd>
 <dt>Returns <code class="docutils literal notranslate"><span class="pre">X</span></code>:</dt><dd><p>. The matrix X satisfies XᵀX = Y and X.rows() = rank(Y).</p>
 </dd>
 </dl>
 <p>Precondition:
-1. Y is positive semidefinite.</p>
+1. Y is positive semidefinite or return_empty_if_not_psd = true.</p>
 <blockquote>
 <div><blockquote>
 <div><ol class="arabic simple" start="2">
@@ -1748,14 +1755,10 @@ tolerance.</p>
 <dt class="sig sig-object py" id="pydrake.math.IsPositiveDefinite">
 <span class="sig-prename descclassname"><span class="pre">pydrake.math.</span></span><span class="sig-name descname"><span class="pre">IsPositiveDefinite</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matrix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.math.IsPositiveDefinite" title="Permalink to this definition"></a></dt>
 <dd><p>Checks if a matrix is symmetric (with tolerance <code class="docutils literal notranslate"><span class="pre">symmetry_tolerance</span></code>
-–</p>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>IsSymmetric) and has all eigenvalues greater than
+– see IsSymmetric) and has all eigenvalues greater than
 <code class="docutils literal notranslate"><span class="pre">eigenvalue_tolerance</span></code>. <code class="docutils literal notranslate"><span class="pre">eigenvalue_tolerance</span></code> must be &gt;= 0 –
-where 0 implies positive semi-definite (but is of course subject
-to all of the pitfalls of floating point).</p>
-</div>
+where 0 implies positive semi-definite (but is of course subject to
+all of the pitfalls of floating point).</p>
 <p>To consider the numerical robustness of the eigenvalue estimation, we
 specifically check that min_eigenvalue &gt;= eigenvalue_tolerance *
 max(1, max_abs_eigenvalue).</p>

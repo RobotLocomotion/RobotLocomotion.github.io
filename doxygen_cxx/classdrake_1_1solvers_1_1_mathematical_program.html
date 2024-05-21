@@ -374,6 +374,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7f5853578a7be1dd5279c7e73cd719e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_l2_norm_cost.html">L2NormCost</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a7f5853578a7be1dd5279c7e73cd719e6">AddL2NormCost</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;A, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;b, const <a class="el" href="namespacedrake_1_1solvers.html#a062b182db5c52f5a71221a4c5958ea0b">VariableRefList</a> &amp;vars)</td></tr>
 <tr class="memdesc:a7f5853578a7be1dd5279c7e73cd719e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an L2 norm cost |Ax+b|₂ (notice this cost is not quadratic since we don't take the square of the L2 norm)  <a href="#a7f5853578a7be1dd5279c7e73cd719e6">More...</a><br /></td></tr>
 <tr class="separator:a7f5853578a7be1dd5279c7e73cd719e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae67df20380ff252b1f22ff6509372987"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_l2_norm_cost.html">L2NormCost</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#ae67df20380ff252b1f22ff6509372987">AddL2NormCost</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;e, <a class="el" href="classdouble.html">double</a> psd_tol=1e-8, double coefficient_tol=1e-8)</td></tr>
+<tr class="memdesc:ae67df20380ff252b1f22ff6509372987"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an L2 norm cost |Ax+b|₂ from a symbolic expression which can be decomposed into sqrt((Ax+b)'(Ax+b)).  <a href="#ae67df20380ff252b1f22ff6509372987">More...</a><br /></td></tr>
+<tr class="separator:ae67df20380ff252b1f22ff6509372987"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6060c77125050d8c1b479a83d983a569"><td class="memItemLeft" align="right" valign="top">std::tuple&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>, <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_cost.html">LinearCost</a> &gt;, <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_lorentz_cone_constraint.html">LorentzConeConstraint</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a6060c77125050d8c1b479a83d983a569">AddL2NormCostUsingConicConstraint</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;A, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;b, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">VectorXDecisionVariable</a> &gt; &amp;vars)</td></tr>
 <tr class="memdesc:a6060c77125050d8c1b479a83d983a569"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an L2 norm cost min |Ax+b|₂ as a linear cost min s on the slack variable s, together with a Lorentz cone constraint s ≥ |Ax+b|₂ Many conic optimization solvers (Gurobi, MOSEK<a href="/tm.html">™</a>, SCS, etc) natively prefers this form of linear cost + conic constraints.  <a href="#a6060c77125050d8c1b479a83d983a569">More...</a><br /></td></tr>
 <tr class="separator:a6060c77125050d8c1b479a83d983a569"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2450,7 +2453,7 @@ Each entry in new_indeterminates should be of CONTINUOUS type. </dd></dl>
 </div>
 </div>
 <a id="ac57dac7a44fa56077931a7998f7069e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac57dac7a44fa56077931a7998f7069e2">&#9670;&nbsp;</a></span>AddL2NormCost() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac57dac7a44fa56077931a7998f7069e2">&#9670;&nbsp;</a></span>AddL2NormCost() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2487,7 +2490,7 @@ Each entry in new_indeterminates should be of CONTINUOUS type. </dd></dl>
 </div>
 </div>
 <a id="a7f5853578a7be1dd5279c7e73cd719e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7f5853578a7be1dd5279c7e73cd719e6">&#9670;&nbsp;</a></span>AddL2NormCost() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f5853578a7be1dd5279c7e73cd719e6">&#9670;&nbsp;</a></span>AddL2NormCost() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2519,6 +2522,48 @@ Each entry in new_indeterminates should be of CONTINUOUS type. </dd></dl>
 </div><div class="memdoc">
 
 <p>Adds an L2 norm cost |Ax+b|₂ (notice this cost is not quadratic since we don't take the square of the L2 norm) </p>
+
+</div>
+</div>
+<a id="ae67df20380ff252b1f22ff6509372987"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae67df20380ff252b1f22ff6509372987">&#9670;&nbsp;</a></span>AddL2NormCost() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_l2_norm_cost.html">L2NormCost</a>&gt; AddL2NormCost </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;&#160;</td>
+          <td class="paramname"><em>e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>psd_tol</em> = <code>1e-8</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>coefficient_tol</em> = <code>1e-8</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds an L2 norm cost |Ax+b|₂ from a symbolic expression which can be decomposed into sqrt((Ax+b)'(Ax+b)). </p>
+<p>See <a class="el" href="namespacedrake_1_1symbolic.html#a20c5b25729d776ddbbcc40dd07e7f617" title="Decomposes an L2 norm e = |Ax+b|₂ into A, b, and the variable vector x (or returns false if the decom...">symbolic::DecomposeL2NormExpression</a> for details on the tolerance parameters. </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>e</code> cannot be decomposed into an L2 norm. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

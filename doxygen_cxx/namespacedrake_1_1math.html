@@ -404,7 +404,7 @@ Functions</h2></td></tr>
 <tr class="separator:ad043d4eca27f8743d1ad1f95316b0383"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a6d10bc0b3dfc5902d0a06f186dba8f"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
 <tr class="memitem:a8a6d10bc0b3dfc5902d0a06f186dba8f"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a8a6d10bc0b3dfc5902d0a06f186dba8f">IsPositiveDefinite</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;matrix, <a class="el" href="classdouble.html">double</a> eigenvalue_tolerance=0.0, <a class="el" href="classdouble.html">double</a> symmetry_tolerance=0.0)</td></tr>
-<tr class="memdesc:a8a6d10bc0b3dfc5902d0a06f186dba8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a matrix is symmetric (with tolerance <code>symmetry_tolerance</code> &ndash;.  <a href="#a8a6d10bc0b3dfc5902d0a06f186dba8f">More...</a><br /></td></tr>
+<tr class="memdesc:a8a6d10bc0b3dfc5902d0a06f186dba8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a matrix is symmetric (with tolerance <code>symmetry_tolerance</code> &ndash; see IsSymmetric) and has all eigenvalues greater than <code>eigenvalue_tolerance</code>.  <a href="#a8a6d10bc0b3dfc5902d0a06f186dba8f">More...</a><br /></td></tr>
 <tr class="separator:a8a6d10bc0b3dfc5902d0a06f186dba8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedd054648f2874f8e5a37769758a132b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:aedd054648f2874f8e5a37769758a132b"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#aedd054648f2874f8e5a37769758a132b">EigenToStdVector</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; &amp;mat)</td></tr>
@@ -422,9 +422,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a48484009086db12d881bea6bcaab2514"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a48484009086db12d881bea6bcaab2514">NormalizeVector</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;<a class="el" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>, typename Derived::PlainObject &amp;x_norm, typename <a class="el" href="structdrake_1_1math_1_1_gradient.html">drake::math::Gradient</a>&lt; Derived, Derived::RowsAtCompileTime, 1 &gt;::type *dx_norm=nullptr, typename <a class="el" href="structdrake_1_1math_1_1_gradient.html">drake::math::Gradient</a>&lt; Derived, Derived::RowsAtCompileTime, 2 &gt;::type *ddx_norm=nullptr)</td></tr>
 <tr class="memdesc:a48484009086db12d881bea6bcaab2514"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the normalized vector, optionally with its gradient and second derivative.  <a href="#a48484009086db12d881bea6bcaab2514">More...</a><br /></td></tr>
 <tr class="separator:a48484009086db12d881bea6bcaab2514"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2fccff311f09a5a35afac17388541c7f"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a2fccff311f09a5a35afac17388541c7f">DecomposePSDmatrixIntoXtransposeTimesX</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Y, <a class="el" href="classdouble.html">double</a> zero_tol)</td></tr>
-<tr class="memdesc:a2fccff311f09a5a35afac17388541c7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">For a symmetric positive semidefinite matrix Y, decompose it into XᵀX, where the number of rows in X equals to the rank of Y.  <a href="#a2fccff311f09a5a35afac17388541c7f">More...</a><br /></td></tr>
-<tr class="separator:a2fccff311f09a5a35afac17388541c7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc391d10568071dcb57bf6f214675cfe"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#adc391d10568071dcb57bf6f214675cfe">DecomposePSDmatrixIntoXtransposeTimesX</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Y, <a class="el" href="classdouble.html">double</a> zero_tol, bool return_empty_if_not_psd=false)</td></tr>
+<tr class="memdesc:adc391d10568071dcb57bf6f214675cfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">For a symmetric positive semidefinite matrix Y, decompose it into XᵀX, where the number of rows in X equals to the rank of Y.  <a href="#adc391d10568071dcb57bf6f214675cfe">More...</a><br /></td></tr>
+<tr class="separator:adc391d10568071dcb57bf6f214675cfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a296872692791b1e6d9e27311fc55a694"><td class="memItemLeft" align="right" valign="top">std::pair&lt; Eigen::MatrixXd, Eigen::MatrixXd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a296872692791b1e6d9e27311fc55a694">DecomposePositiveQuadraticForm</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;b, <a class="el" href="classdouble.html">double</a> c, <a class="el" href="classdouble.html">double</a> tol=0)</td></tr>
 <tr class="memdesc:a296872692791b1e6d9e27311fc55a694"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rewrite a quadratic form xᵀQx + bᵀx + c to (Rx+d)ᵀ(Rx+d) where.  <a href="#a296872692791b1e6d9e27311fc55a694">More...</a><br /></td></tr>
 <tr class="separator:a296872692791b1e6d9e27311fc55a694"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1354,8 +1354,8 @@ d₁ = P*d
 
 </div>
 </div>
-<a id="a2fccff311f09a5a35afac17388541c7f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2fccff311f09a5a35afac17388541c7f">&#9670;&nbsp;</a></span>DecomposePSDmatrixIntoXtransposeTimesX()</h2>
+<a id="adc391d10568071dcb57bf6f214675cfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc391d10568071dcb57bf6f214675cfe">&#9670;&nbsp;</a></span>DecomposePSDmatrixIntoXtransposeTimesX()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1370,7 +1370,13 @@ d₁ = P*d
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
-          <td class="paramname"><em>zero_tol</em>&#160;</td>
+          <td class="paramname"><em>zero_tol</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>return_empty_if_not_psd</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1385,6 +1391,7 @@ d₁ = P*d
   <table class="params">
     <tr><td class="paramname">Y</td><td>A symmetric positive semidefinite matrix. </td></tr>
     <tr><td class="paramname">zero_tol</td><td>We will need to check if some value (for example, the absolute value of Y's eigenvalues) is smaller than zero_tol. If it is, then we deem that value as 0. </td></tr>
+    <tr><td class="paramname">return_empty_if_not_psd</td><td>If true, then return an empty matrix of size 0-by-Y.cols() if Y is not PSD (either the decomposition fails or the resulting eigenvalues are less that <code>zero_tol</code>). If false (the default), then throw an exception if Y is not PSD. This option is particularly useful because it is brittle/expensive to test the exact success criteria before calling this function. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1394,7 +1401,7 @@ d₁ = P*d
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd>1. Y is positive semidefinite.<ol type="1">
+<dl class="section pre"><dt>Precondition</dt><dd>1. Y is positive semidefinite or return_empty_if_not_psd = true.<ol type="1">
 <li>zero_tol is non-negative. </li>
 </ol>
 </dd></dl>
@@ -2565,8 +2572,8 @@ J = Σ [uₖ] [0 R][uₖ] ΔT
       </table>
 </div><div class="memdoc">
 
-<p>Checks if a matrix is symmetric (with tolerance <code>symmetry_tolerance</code> &ndash;. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacedrake_1_1math.html#a84760cbea23b50efdbe9a85f3967f098" title="Determines if a matrix is symmetric.">IsSymmetric</a>) and has <a class="el" href="namespacedrake.html#adcc2d90ce6051e150effadd72fac548c" title="Checks truth for all elements in matrix m.">all</a> eigenvalues greater than <code>eigenvalue_tolerance</code>. <code>eigenvalue_tolerance</code> must be &gt;= 0 &ndash; where 0 implies positive semi-definite (but is of course subject to <a class="el" href="namespacedrake.html#adcc2d90ce6051e150effadd72fac548c" title="Checks truth for all elements in matrix m.">all</a> of the pitfalls of floating point).</dd></dl>
+<p>Checks if a matrix is symmetric (with tolerance <code>symmetry_tolerance</code> &ndash; see IsSymmetric) and has all eigenvalues greater than <code>eigenvalue_tolerance</code>. </p>
+<p><code>eigenvalue_tolerance</code> must be &gt;= 0 &ndash; where 0 implies positive semi-definite (but is of course subject to all of the pitfalls of floating point).</p>
 <p>To consider the numerical robustness of the eigenvalue estimation, we specifically check that min_eigenvalue &gt;= eigenvalue_tolerance * max(1, max_abs_eigenvalue). </p>
 
 </div>

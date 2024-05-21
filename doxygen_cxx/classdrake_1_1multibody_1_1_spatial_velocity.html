@@ -193,9 +193,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a151e062d652d72e6b0e9ad4610ac69fd"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html#a151e062d652d72e6b0e9ad4610ac69fd">SpatialVelocity</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;V)</td></tr>
 <tr class="memdesc:a151e062d652d72e6b0e9ad4610ac69fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a spatial velocity V from an Eigen expression that represents a 6-element vector, i.e., two 3-element vectors, namely an angular velocity ω and a translational velocity v.  <a href="#a151e062d652d72e6b0e9ad4610ac69fd">More...</a><br /></td></tr>
 <tr class="separator:a151e062d652d72e6b0e9ad4610ac69fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca91c65b10161c39c8fe8ba36ce38ea8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html">SpatialVelocity</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html#aca91c65b10161c39c8fe8ba36ce38ea8">ShiftInPlace</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;offset)</td></tr>
-<tr class="memdesc:aca91c65b10161c39c8fe8ba36ce38ea8"><td class="mdescLeft">&#160;</td><td class="mdescRight">In-place shift of a SpatialVelocity from a frame B to a frame C, where both B and C are fixed to the same frame or rigid body.  <a href="#aca91c65b10161c39c8fe8ba36ce38ea8">More...</a><br /></td></tr>
-<tr class="separator:aca91c65b10161c39c8fe8ba36ce38ea8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad7931b3356064db79accf2be8557f4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html#aad7931b3356064db79accf2be8557f4f">ShiftInPlace</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;offset)</td></tr>
+<tr class="memdesc:aad7931b3356064db79accf2be8557f4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">In-place shift of a SpatialVelocity from a frame B to a frame C, where both B and C are fixed to the same frame or rigid body.  <a href="#aad7931b3356064db79accf2be8557f4f">More...</a><br /></td></tr>
+<tr class="separator:aad7931b3356064db79accf2be8557f4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d20926f2bbbdc2f74b5e88de92e8579"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html">SpatialVelocity</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html#a2d20926f2bbbdc2f74b5e88de92e8579">Shift</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;offset) const</td></tr>
 <tr class="memdesc:a2d20926f2bbbdc2f74b5e88de92e8579"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shifts a SpatialVelocity from a frame B to a frame C, where both B and C are fixed to the same frame or rigid body.  <a href="#a2d20926f2bbbdc2f74b5e88de92e8579">More...</a><br /></td></tr>
 <tr class="separator:a2d20926f2bbbdc2f74b5e88de92e8579"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -656,19 +656,19 @@ As shown below, K_MB can be calculated from any frame Bp fixed on B, including b
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html#a2d20926f2bbbdc2f74b5e88de92e8579" title="Shifts a SpatialVelocity from a frame B to a frame C, where both B and C are fixed to the same frame ...">Shift()</a> differs from <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html#aca91c65b10161c39c8fe8ba36ce38ea8" title="In-place shift of a SpatialVelocity from a frame B to a frame C, where both B and C are fixed to the ...">ShiftInPlace()</a> in that <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html#a2d20926f2bbbdc2f74b5e88de92e8579" title="Shifts a SpatialVelocity from a frame B to a frame C, where both B and C are fixed to the same frame ...">Shift()</a> does not modify <code>this</code> whereas <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html#aca91c65b10161c39c8fe8ba36ce38ea8" title="In-place shift of a SpatialVelocity from a frame B to a frame C, where both B and C are fixed to the ...">ShiftInPlace()</a> does modify <code>this</code>. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html#aca91c65b10161c39c8fe8ba36ce38ea8" title="In-place shift of a SpatialVelocity from a frame B to a frame C, where both B and C are fixed to the ...">ShiftInPlace()</a> for more information and how V_MC_E is calculated. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html#a2d20926f2bbbdc2f74b5e88de92e8579" title="Shifts a SpatialVelocity from a frame B to a frame C, where both B and C are fixed to the same frame ...">Shift()</a> differs from <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html#aad7931b3356064db79accf2be8557f4f" title="In-place shift of a SpatialVelocity from a frame B to a frame C, where both B and C are fixed to the ...">ShiftInPlace()</a> in that <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html#a2d20926f2bbbdc2f74b5e88de92e8579" title="Shifts a SpatialVelocity from a frame B to a frame C, where both B and C are fixed to the same frame ...">Shift()</a> does not modify <code>this</code> whereas <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html#aad7931b3356064db79accf2be8557f4f" title="In-place shift of a SpatialVelocity from a frame B to a frame C, where both B and C are fixed to the ...">ShiftInPlace()</a> does modify <code>this</code>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html#aad7931b3356064db79accf2be8557f4f" title="In-place shift of a SpatialVelocity from a frame B to a frame C, where both B and C are fixed to the ...">ShiftInPlace()</a> for more information and how V_MC_E is calculated. </dd></dl>
 
 </div>
 </div>
-<a id="aca91c65b10161c39c8fe8ba36ce38ea8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aca91c65b10161c39c8fe8ba36ce38ea8">&#9670;&nbsp;</a></span>ShiftInPlace()</h2>
+<a id="aad7931b3356064db79accf2be8557f4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad7931b3356064db79accf2be8557f4f">&#9670;&nbsp;</a></span>ShiftInPlace()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html">SpatialVelocity</a>&lt;T&gt;&amp; ShiftInPlace </td>
+          <td class="memname">void ShiftInPlace </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>offset</em></td><td>)</td>
@@ -678,18 +678,12 @@ As shown below, K_MB can be calculated from any frame Bp fixed on B, including b
 </div><div class="memdoc">
 
 <p>In-place shift of a SpatialVelocity from a frame B to a frame C, where both B and C are fixed to the same frame or rigid body. </p>
-<p>On entry, <code>this</code> is V_MB_E (frame B's spatial velocity measured in a frame M and expressed in a frame E). On return <code>this</code> is modified to V_MC_E (frame C's spatial velocity measured in frame M and expressed in frame E). </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>which is the position vector p_BoCo_E from frame B's origin to frame C's origin, expressed in frame E. p_BoCo_E must have the same expressed-in frame E as <code>this</code> spatial velocity. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">V_MC_E</td><td>reference to <code>this</code> spatial velocity which has been modified to be frame C's spatial velocity measured in frame M and expressed in frame E. The components of V_MC_E are calculated as: <pre>
+<p>On entry, <code>this</code> is V_MB_E (frame B's spatial velocity measured in a frame M and expressed in a frame E). On return <code>this</code> is modified to V_MC_E (frame C's spatial velocity measured in frame M and expressed in frame E). The components of V_MC_E are calculated as: </p><pre>
  ω_MC_E = ω_MB_E                (angular velocity of `this` is unchanged).
  v_MC_E = v_MB_E + ω_MB_E x p_BoCo_E     (translational velocity changes).
-</pre> </td></tr>
+</pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>which is the position vector p_BoCo_E from frame B's origin to frame C's origin, expressed in frame E. p_BoCo_E must have the same expressed-in frame E as <code>this</code> spatial velocity. </td></tr>
   </table>
   </dd>
 </dl>
@@ -741,7 +735,7 @@ As shown below, K_MB can be calculated from any frame Bp fixed on B, including b
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>The general utility of this <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html#a242b021a24954a1624800f6c96be81d3" title="Adds two spatial velocities by simply adding their 6 underlying elements.">operator+()</a> function is questionable and it should only be used if you are sure it makes sense. One use case is for calculating the spatial velocity V_MC of a frame C measured in a frame M when frame C is moving on a frame B and one has pre-calculated V_MBc (frame Bc's spatial velocity measured in frame M, where frame Bc is instantaneously coincident with frame C). For this use case, the operator+ function returns V_MC_E = V_MBc_E + V_BC_E, where the precalculated V_MBc_E is equal to V_MBo_E.Shift(p_BoCo_E). </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html#a2d20926f2bbbdc2f74b5e88de92e8579" title="Shifts a SpatialVelocity from a frame B to a frame C, where both B and C are fixed to the same frame ...">Shift()</a>, <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html#aca91c65b10161c39c8fe8ba36ce38ea8" title="In-place shift of a SpatialVelocity from a frame B to a frame C, where both B and C are fixed to the ...">ShiftInPlace()</a>, and <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html#ac4e7e683b8cdc0661624323b6b8e2aea" title="Compose this spatial velocity (measured in some frame M) with the spatial velocity of another frame t...">ComposeWithMovingFrameVelocity()</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html#a2d20926f2bbbdc2f74b5e88de92e8579" title="Shifts a SpatialVelocity from a frame B to a frame C, where both B and C are fixed to the same frame ...">Shift()</a>, <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html#aad7931b3356064db79accf2be8557f4f" title="In-place shift of a SpatialVelocity from a frame B to a frame C, where both B and C are fixed to the ...">ShiftInPlace()</a>, and <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html#ac4e7e683b8cdc0661624323b6b8e2aea" title="Compose this spatial velocity (measured in some frame M) with the spatial velocity of another frame t...">ComposeWithMovingFrameVelocity()</a>. </dd></dl>
 
 </div>
 </div>
@@ -791,7 +785,7 @@ As shown below, K_MB can be calculated from any frame Bp fixed on B, including b
  ω_BC  = ω_MC - ω_MB
  v_M_BoCo = v_MCo - v_MBo = DtM(p_BoCo)
 </pre> where DtM(p_BoCo) is the time-derivative in frame M of p_BoCo (position vector from Bo to Co). A second use case has to do with a frame C that is moving on a frame B and calculates frame C's spatial velocity measured in frame B. It assumes you have pre-calculated V_MBc (frame Bc's spatial velocity measured in frame M, where frame Bc is fixed to B and instantaneously coincident with frame C. This use case returns V_BC_E = V_MC_E - V_MBc_E, where the precalculated V_MBc_E is equal to V_MBo_E.Shift(p_BoBc_E). </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html#a2d20926f2bbbdc2f74b5e88de92e8579" title="Shifts a SpatialVelocity from a frame B to a frame C, where both B and C are fixed to the same frame ...">Shift()</a>, <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html#aca91c65b10161c39c8fe8ba36ce38ea8" title="In-place shift of a SpatialVelocity from a frame B to a frame C, where both B and C are fixed to the ...">ShiftInPlace()</a>, and <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html#ac4e7e683b8cdc0661624323b6b8e2aea" title="Compose this spatial velocity (measured in some frame M) with the spatial velocity of another frame t...">ComposeWithMovingFrameVelocity()</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html#a2d20926f2bbbdc2f74b5e88de92e8579" title="Shifts a SpatialVelocity from a frame B to a frame C, where both B and C are fixed to the same frame ...">Shift()</a>, <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html#aad7931b3356064db79accf2be8557f4f" title="In-place shift of a SpatialVelocity from a frame B to a frame C, where both B and C are fixed to the ...">ShiftInPlace()</a>, and <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html#ac4e7e683b8cdc0661624323b6b8e2aea" title="Compose this spatial velocity (measured in some frame M) with the spatial velocity of another frame t...">ComposeWithMovingFrameVelocity()</a>. </dd></dl>
 
 </div>
 </div>

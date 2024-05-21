@@ -1,5 +1,6 @@
 var NAVTREEINDEX47 =
 {
+"classdrake_1_1visualization_1_1_colorize_depth_image.html":[1,2,11,4],
 "classdrake_1_1visualization_1_1_colorize_depth_image.html#a240a15b8455ae37da1da08127a021e5e":[1,2,11,4,6],
 "classdrake_1_1visualization_1_1_colorize_depth_image.html#a2826b4556c9c5a9d785c0b2635cdf9f5":[1,2,11,4,7],
 "classdrake_1_1visualization_1_1_colorize_depth_image.html#a2d90d1217dd06d5701b6bab4ec2089c2":[1,2,11,4,9],
@@ -248,6 +249,5 @@ var NAVTREEINDEX47 =
 "cspace__separating__plane_8h.html#a6febb8c28b6d49e494dbe16b5ed5b089ac3af1341756d0c5a66c8ea473dc38927":[4,0,0,4,1,10,1,0],
 "cspace__separating__plane_8h.html#ac176296e2c3b79a9f480c7a38b0842b0":[4,0,0,4,1,10,3],
 "cubic__scalar__system_8h.html":[4,0,0,12,0,0,1],
-"damping__model_8h.html":[4,0,0,8,3,5],
-"damping__model_8h.html#a637b32bd5b13e55117670a553e19c54f":[4,0,0,8,3,5,1]
+"damping__model_8h.html":[4,0,0,8,3,5]
 };

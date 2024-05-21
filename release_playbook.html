@@ -278,7 +278,7 @@ ignore)</li>
       </li>
       <li>Check the logs for those packaging builds and find the URLs they posted
 to (open the latest build, go to “View as plain text”, and search for
-<code class="language-plaintext highlighter-rouge">drake/nightly/drake-20</code>), and find the date.  It will be <code class="language-plaintext highlighter-rouge">YYYYMMDD</code>
+<code class="language-plaintext highlighter-rouge">drake/nightly/drake-0.0.20</code>), and find the date.  It will be <code class="language-plaintext highlighter-rouge">YYYYMMDD</code>
 with today’s date (they kick off after midnight).  All of the builds
 should have the same date. If not, wait until the following night.</li>
       <li>Use the
@@ -313,7 +313,7 @@ appear to work, but actually fail 5-6 minutes later.</li>
       <li>Click “Build”; each build will take around an hour, give or take.</li>
       <li>Wait for all staging jobs to succeed.  It’s OK to work on release notes
 finishing touches in the meantime, but do not merge the release notes nor
-tag the release until all five builds have succeeded.</li>
+tag the release until all four builds have succeeded.</li>
     </ol>
   </li>
   <li>Update the release notes to have the <code class="language-plaintext highlighter-rouge">YYYY-MM-DD</code> we choose.
@@ -439,7 +439,8 @@ tutorials deployment now (so that others are aware of the potentially-
 disruptive changes).</li>
   <li>Open the tutorials <a href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/Dockerfile">Dockerfile</a>:
     <ol>
-      <li>Edit the first line to refer to the YYYYMMDD for this release.
+      <li>Edit the first line to refer to the YYYYMMDD for this release (login 
+with your github account; otherwise, the file is read-only).
         <ol>
           <li>For reference, the typical content is thus:
             <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>FROM robotlocomotion/drake:jammy-20230518

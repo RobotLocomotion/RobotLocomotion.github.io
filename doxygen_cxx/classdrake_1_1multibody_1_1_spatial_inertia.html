@@ -252,15 +252,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a09dd10c733d7fcef47041dc724f31ff9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a09dd10c733d7fcef47041dc724f31ff9">operator+=</a> (const <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt; &amp;M_BP_E)</td></tr>
 <tr class="memdesc:a09dd10c733d7fcef47041dc724f31ff9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds in a spatial inertia to <code>this</code> spatial inertia.  <a href="#a09dd10c733d7fcef47041dc724f31ff9">More...</a><br /></td></tr>
 <tr class="separator:a09dd10c733d7fcef47041dc724f31ff9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49b415756d74ade2ad71be5d4693182a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a49b415756d74ade2ad71be5d4693182a">ReExpressInPlace</a> (const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; T &gt; &amp;R_AE)</td></tr>
-<tr class="memdesc:a49b415756d74ade2ad71be5d4693182a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given <code>this</code> spatial inertia <code>M_SP_E</code> for some body or composite body S, taken about a point P and expressed in frame E, this method computes the same inertia re-expressed in another frame A.  <a href="#a49b415756d74ade2ad71be5d4693182a">More...</a><br /></td></tr>
-<tr class="separator:a49b415756d74ade2ad71be5d4693182a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af397b4c3403d23ab61a128dbeaa1c3aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#af397b4c3403d23ab61a128dbeaa1c3aa">ReExpressInPlace</a> (const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; T &gt; &amp;R_AE)</td></tr>
+<tr class="memdesc:af397b4c3403d23ab61a128dbeaa1c3aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given <code>this</code> spatial inertia <code>M_SP_E</code> for some body or composite body S, taken about a point P and expressed in frame E, this method computes the same inertia re-expressed in another frame A.  <a href="#af397b4c3403d23ab61a128dbeaa1c3aa">More...</a><br /></td></tr>
+<tr class="separator:af397b4c3403d23ab61a128dbeaa1c3aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa45bbc7d0e5521d0d91579645636b7ed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#aa45bbc7d0e5521d0d91579645636b7ed">ReExpress</a> (const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; T &gt; &amp;R_AE) const</td></tr>
 <tr class="memdesc:aa45bbc7d0e5521d0d91579645636b7ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given <code>this</code> spatial inertia <code>M_SP_E</code> for some body or composite body S, taken about a point P and expressed in frame E, this method computes the same inertia re-expressed in another frame A.  <a href="#aa45bbc7d0e5521d0d91579645636b7ed">More...</a><br /></td></tr>
 <tr class="separator:aa45bbc7d0e5521d0d91579645636b7ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66defbdba0b2894045b1f6ffe31c46bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a66defbdba0b2894045b1f6ffe31c46bc">ShiftInPlace</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_PQ_E)</td></tr>
-<tr class="memdesc:a66defbdba0b2894045b1f6ffe31c46bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given <code>this</code> spatial inertia <code>M_SP_E</code> for some body or composite body S, computed about point P, and expressed in frame E, this method uses the <em>Parallel Axis Theorem</em> for spatial inertias to compute the same spatial inertia about a new point Q.  <a href="#a66defbdba0b2894045b1f6ffe31c46bc">More...</a><br /></td></tr>
-<tr class="separator:a66defbdba0b2894045b1f6ffe31c46bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99c4eb50d113f896c897289fa10c3464"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a99c4eb50d113f896c897289fa10c3464">ShiftInPlace</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_PQ_E)</td></tr>
+<tr class="memdesc:a99c4eb50d113f896c897289fa10c3464"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given <code>this</code> spatial inertia <code>M_SP_E</code> for some body or composite body S, computed about point P, and expressed in frame E, this method uses the <em>Parallel Axis Theorem</em> for spatial inertias to compute the same spatial inertia about a new point Q.  <a href="#a99c4eb50d113f896c897289fa10c3464">More...</a><br /></td></tr>
+<tr class="separator:a99c4eb50d113f896c897289fa10c3464"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7f8142e184c3d2f68a4c7f342a6c549"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#ae7f8142e184c3d2f68a4c7f342a6c549">Shift</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_PQ_E) const</td></tr>
 <tr class="memdesc:ae7f8142e184c3d2f68a4c7f342a6c549"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given <code>this</code> spatial inertia <code>M_SP_E</code> for some body or composite body S, computed about point P, and expressed in frame E, this method uses the <em>Parallel Axis Theorem</em> for spatial inertias to compute the same spatial inertia about a new point Q.  <a href="#ae7f8142e184c3d2f68a4c7f342a6c549">More...</a><br /></td></tr>
 <tr class="separator:ae7f8142e184c3d2f68a4c7f342a6c549"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1297,18 +1297,18 @@ Minimum possible length can be used to detect erroneous inertias associated with
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a49b415756d74ade2ad71be5d4693182a" title="Given this spatial inertia M_SP_E for some body or composite body S, taken about a point P and expres...">ReExpressInPlace()</a> for details. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#af397b4c3403d23ab61a128dbeaa1c3aa" title="Given this spatial inertia M_SP_E for some body or composite body S, taken about a point P and expres...">ReExpressInPlace()</a> for details. </dd></dl>
 
 </div>
 </div>
-<a id="a49b415756d74ade2ad71be5d4693182a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a49b415756d74ade2ad71be5d4693182a">&#9670;&nbsp;</a></span>ReExpressInPlace()</h2>
+<a id="af397b4c3403d23ab61a128dbeaa1c3aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af397b4c3403d23ab61a128dbeaa1c3aa">&#9670;&nbsp;</a></span>ReExpressInPlace()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt;T&gt;&amp; ReExpressInPlace </td>
+          <td class="memname">void ReExpressInPlace </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>R_AE</em></td><td>)</td>
@@ -1318,13 +1318,12 @@ Minimum possible length can be used to detect erroneous inertias associated with
 </div><div class="memdoc">
 
 <p>Given <code>this</code> spatial inertia <code>M_SP_E</code> for some body or composite body S, taken about a point P and expressed in frame E, this method computes the same inertia re-expressed in another frame A. </p>
-<p>This operation is performed in-place modifying the original object. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>This operation is performed in-place modifying the original object. On return, <code>this</code> is now re-expressed in frame A, that is, <code>M_SP_A</code>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">R_AE</td><td>Rotation matrix from frame E to frame A. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A reference to <code>this</code> rotational inertia about the same point P but now re-expressed in frame A, that is, <code>M_SP_A</code>. </dd></dl>
 
 </div>
 </div>
@@ -1365,7 +1364,7 @@ Minimum possible length can be used to detect erroneous inertias associated with
 </div><div class="memdoc">
 
 <p>Given <code>this</code> spatial inertia <code>M_SP_E</code> for some body or composite body S, computed about point P, and expressed in frame E, this method uses the <em>Parallel Axis Theorem</em> for spatial inertias to compute the same spatial inertia about a new point Q. </p>
-<p>The result still is expressed in frame E. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a66defbdba0b2894045b1f6ffe31c46bc" title="Given this spatial inertia M_SP_E for some body or composite body S, computed about point P,...">ShiftInPlace()</a> for more details.</dd></dl>
+<p>The result still is expressed in frame E. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a99c4eb50d113f896c897289fa10c3464" title="Given this spatial inertia M_SP_E for some body or composite body S, computed about point P,...">ShiftInPlace()</a> for more details.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">p_PQ_E</td><td>Vector from the original about point P to the new about point Q, expressed in the same frame E <code>this</code> spatial inertia is expressed in. </td></tr>
@@ -1381,14 +1380,14 @@ Minimum possible length can be used to detect erroneous inertias associated with
 
 </div>
 </div>
-<a id="a66defbdba0b2894045b1f6ffe31c46bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a66defbdba0b2894045b1f6ffe31c46bc">&#9670;&nbsp;</a></span>ShiftInPlace()</h2>
+<a id="a99c4eb50d113f896c897289fa10c3464"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99c4eb50d113f896c897289fa10c3464">&#9670;&nbsp;</a></span>ShiftInPlace()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt;T&gt;&amp; ShiftInPlace </td>
+          <td class="memname">void ShiftInPlace </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>p_PQ_E</em></td><td>)</td>
@@ -1398,7 +1397,7 @@ Minimum possible length can be used to detect erroneous inertias associated with
 </div><div class="memdoc">
 
 <p>Given <code>this</code> spatial inertia <code>M_SP_E</code> for some body or composite body S, computed about point P, and expressed in frame E, this method uses the <em>Parallel Axis Theorem</em> for spatial inertias to compute the same spatial inertia about a new point Q. </p>
-<p>The result still is expressed in frame E. This operation is performed in-place modifying the original object. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#ae7f8142e184c3d2f68a4c7f342a6c549" title="Given this spatial inertia M_SP_E for some body or composite body S, computed about point P,...">Shift()</a> which does not modify this object.</dd></dl>
+<p>The result still is expressed in frame E. This operation is performed in-place modifying the original object. On return, <code>this</code> is now computed about a new point Q. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#ae7f8142e184c3d2f68a4c7f342a6c549" title="Given this spatial inertia M_SP_E for some body or composite body S, computed about point P,...">Shift()</a> which does not modify this object.</dd></dl>
 <p>For details see Section 2.1.2, p. 20 of [Jain 2010].</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1406,7 +1405,6 @@ Minimum possible length can be used to detect erroneous inertias associated with
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A reference to <code>this</code> spatial inertia for body or composite body S but now computed about a new point Q. </dd></dl>
 
 </div>
 </div>

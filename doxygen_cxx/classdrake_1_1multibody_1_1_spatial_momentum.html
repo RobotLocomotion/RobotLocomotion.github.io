@@ -199,9 +199,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a443c65e3aa700e20cffca0d6530abd2f"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_momentum.html#a443c65e3aa700e20cffca0d6530abd2f">SpatialMomentum</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;L)</td></tr>
 <tr class="memdesc:a443c65e3aa700e20cffca0d6530abd2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a spatial momentum L from an Eigen expression that represents a 6-element vector, i.e., a 3-element angular momentum 𝐡 and a 3-element translational momentum 𝐥.  <a href="#a443c65e3aa700e20cffca0d6530abd2f">More...</a><br /></td></tr>
 <tr class="separator:a443c65e3aa700e20cffca0d6530abd2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa91737d065e467e0606561e201cc9394"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_momentum.html">SpatialMomentum</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_momentum.html#aa91737d065e467e0606561e201cc9394">ShiftInPlace</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;offset)</td></tr>
-<tr class="memdesc:aa91737d065e467e0606561e201cc9394"><td class="mdescLeft">&#160;</td><td class="mdescRight">In-place shift of a SpatialMomentum from an about-point P to an about-point Q, On entry, <code>this</code> is L_MSP_E (system S's spatial momentum about point P, measured in a frame M and expressed in a frame E).  <a href="#aa91737d065e467e0606561e201cc9394">More...</a><br /></td></tr>
-<tr class="separator:aa91737d065e467e0606561e201cc9394"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad7931b3356064db79accf2be8557f4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_momentum.html#aad7931b3356064db79accf2be8557f4f">ShiftInPlace</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;offset)</td></tr>
+<tr class="memdesc:aad7931b3356064db79accf2be8557f4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">In-place shift of a SpatialMomentum from an about-point P to an about-point Q.  <a href="#aad7931b3356064db79accf2be8557f4f">More...</a><br /></td></tr>
+<tr class="separator:aad7931b3356064db79accf2be8557f4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80adf254abcd794a723b6c43c5e32832"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_momentum.html">SpatialMomentum</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_momentum.html#a80adf254abcd794a723b6c43c5e32832">Shift</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;offset) const</td></tr>
 <tr class="memdesc:a80adf254abcd794a723b6c43c5e32832"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shifts a SpatialMomentum from an about-point P to an about-point Q.  <a href="#a80adf254abcd794a723b6c43c5e32832">More...</a><br /></td></tr>
 <tr class="separator:a80adf254abcd794a723b6c43c5e32832"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -578,19 +578,19 @@ As shown below, K_MB can be calculated from any frame Bp fixed on B, including b
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_spatial_momentum.html#a80adf254abcd794a723b6c43c5e32832" title="Shifts a SpatialMomentum from an about-point P to an about-point Q.">Shift()</a> differs from <a class="el" href="classdrake_1_1multibody_1_1_spatial_momentum.html#aa91737d065e467e0606561e201cc9394" title="In-place shift of a SpatialMomentum from an about-point P to an about-point Q, On entry,...">ShiftInPlace()</a> in that <a class="el" href="classdrake_1_1multibody_1_1_spatial_momentum.html#a80adf254abcd794a723b6c43c5e32832" title="Shifts a SpatialMomentum from an about-point P to an about-point Q.">Shift()</a> does not modify <code>this</code> whereas <a class="el" href="classdrake_1_1multibody_1_1_spatial_momentum.html#aa91737d065e467e0606561e201cc9394" title="In-place shift of a SpatialMomentum from an about-point P to an about-point Q, On entry,...">ShiftInPlace()</a> does modify <code>this</code>. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_spatial_momentum.html#aa91737d065e467e0606561e201cc9394" title="In-place shift of a SpatialMomentum from an about-point P to an about-point Q, On entry,...">ShiftInPlace()</a> for more information and how L_MSQ_E is calculated. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_spatial_momentum.html#a80adf254abcd794a723b6c43c5e32832" title="Shifts a SpatialMomentum from an about-point P to an about-point Q.">Shift()</a> differs from <a class="el" href="classdrake_1_1multibody_1_1_spatial_momentum.html#aad7931b3356064db79accf2be8557f4f" title="In-place shift of a SpatialMomentum from an about-point P to an about-point Q.">ShiftInPlace()</a> in that <a class="el" href="classdrake_1_1multibody_1_1_spatial_momentum.html#a80adf254abcd794a723b6c43c5e32832" title="Shifts a SpatialMomentum from an about-point P to an about-point Q.">Shift()</a> does not modify <code>this</code> whereas <a class="el" href="classdrake_1_1multibody_1_1_spatial_momentum.html#aad7931b3356064db79accf2be8557f4f" title="In-place shift of a SpatialMomentum from an about-point P to an about-point Q.">ShiftInPlace()</a> does modify <code>this</code>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_spatial_momentum.html#aad7931b3356064db79accf2be8557f4f" title="In-place shift of a SpatialMomentum from an about-point P to an about-point Q.">ShiftInPlace()</a> for more information and how L_MSQ_E is calculated. </dd></dl>
 
 </div>
 </div>
-<a id="aa91737d065e467e0606561e201cc9394"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa91737d065e467e0606561e201cc9394">&#9670;&nbsp;</a></span>ShiftInPlace()</h2>
+<a id="aad7931b3356064db79accf2be8557f4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad7931b3356064db79accf2be8557f4f">&#9670;&nbsp;</a></span>ShiftInPlace()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_spatial_momentum.html">SpatialMomentum</a>&lt;T&gt;&amp; ShiftInPlace </td>
+          <td class="memname">void ShiftInPlace </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>offset</em></td><td>)</td>
@@ -599,23 +599,18 @@ As shown below, K_MB can be calculated from any frame Bp fixed on B, including b
       </table>
 </div><div class="memdoc">
 
-<p>In-place shift of a SpatialMomentum from an about-point P to an about-point Q, On entry, <code>this</code> is L_MSP_E (system S's spatial momentum about point P, measured in a frame M and expressed in a frame E). </p>
-<p>On return <code>this</code> is modified to L_MSQ_E (S's spatial momentum about point Q, measured in frame M and expressed in frame E). </p><dl class="params"><dt>Parameters</dt><dd>
+<p>In-place shift of a SpatialMomentum from an about-point P to an about-point Q. </p>
+<p>On entry, <code>this</code> is L_MSP_E (system S's spatial momentum about point P, measured in a frame M and expressed in a frame E). On return <code>this</code> is modified to L_MSQ_E (S's spatial momentum about point Q, measured in frame M and expressed in frame E). The components of L_MSQ_E are: </p><pre>
+  l_MS_E = l_MS_E         (translational momentum of `this` is unchanged).
+ h_MSQ_E = h_MSP_E + p_QP_E x l_MS_E
+         = h_MSP_E - p_PQ_E x l_MS_E
+</pre> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>which is the position vector p_PQ_E from point P to point Q, with the same expressed-in frame E as <code>this</code> spatial momentum. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">L_MSQ_E</td><td>reference to <code>this</code> spatial momentum which has been modified to be system S's spatial momentum about point Q, measured in frame M and expressed in frame E. The components of L_MSQ_E are: <pre>
-  l_MS_E = l_MS_E         (translational momentum of `this` is unchanged).
- h_MSQ_E = h_MSP_E + p_QP_E x l_MS_E
-         = h_MSP_E - p_PQ_E x l_MS_E
-</pre> Note: Spatial momenta shift similar to spatial force (see <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html" title="This class represents a spatial force F (also called a wrench) and has 6 elements with a torque 𝛕 (3-...">SpatialForce</a>) and in a related/different way for spatial velocity (see <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html" title="This class represents a spatial velocity V (also called a twist) and has 6 elements with an angular (...">SpatialVelocity</a>). </td></tr>
-  </table>
-  </dd>
-</dl>
+<dl class="section note"><dt>Note</dt><dd>Spatial momenta shift similar to spatial force (see <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html" title="This class represents a spatial force F (also called a wrench) and has 6 elements with a torque 𝛕 (3-...">SpatialForce</a>) and in a related/different way for spatial velocity (see <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html" title="This class represents a spatial velocity V (also called a twist) and has 6 elements with an angular (...">SpatialVelocity</a>). </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_spatial_momentum.html#a80adf254abcd794a723b6c43c5e32832" title="Shifts a SpatialMomentum from an about-point P to an about-point Q.">Shift()</a> to shift spatial momentum without modifying <code>this</code>. </dd></dl>
 
 </div>

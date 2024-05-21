@@ -519,6 +519,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ae8c85e424b3109ed84a5bb309238bc3c"><td class="memItemLeft" align="right" valign="top">std::tuple&lt; <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &gt;, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &gt;, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#ae8c85e424b3109ed84a5bb309238bc3c">DecomposeLumpedParameters</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &gt;&gt; &amp;f, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &gt;&gt; &amp;parameters)</td></tr>
 <tr class="memdesc:ae8c85e424b3109ed84a5bb309238bc3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a vector of Expressions <code>f</code> and a list of <code>parameters</code> we define all additional variables in <code>f</code> to be a vector of "non-parameter variables", n.  <a href="#ae8c85e424b3109ed84a5bb309238bc3c">More...</a><br /></td></tr>
 <tr class="separator:ae8c85e424b3109ed84a5bb309238bc3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20c5b25729d776ddbbcc40dd07e7f617"><td class="memItemLeft" align="right" valign="top">std::tuple&lt; bool, Eigen::MatrixXd, Eigen::VectorXd, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a20c5b25729d776ddbbcc40dd07e7f617">DecomposeL2NormExpression</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;e, <a class="el" href="classdouble.html">double</a> psd_tol=1e-8, double coefficient_tol=1e-8)</td></tr>
+<tr class="memdesc:a20c5b25729d776ddbbcc40dd07e7f617"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decomposes an L2 norm <code>e</code> = |Ax+b|₂ into A, b, and the variable vector x (or returns false if the decomposition is not possible).  <a href="#a20c5b25729d776ddbbcc40dd07e7f617">More...</a><br /></td></tr>
+<tr class="separator:a20c5b25729d776ddbbcc40dd07e7f617"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af50e3bc4e34ea64ae4d7065ad1fc72ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#af50e3bc4e34ea64ae4d7065ad1fc72ac">PopulateRandomVariables</a> (<a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a> env, const <a class="el" href="classdrake_1_1symbolic_1_1_variables.html">Variables</a> &amp;variables, <a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a> *random_generator)</td></tr>
 <tr class="memdesc:af50e3bc4e34ea64ae4d7065ad1fc72ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Populates the environment <code>env</code> by sampling values for the unassigned random variables in <code>variables</code> using <code>random_generator</code>.  <a href="#af50e3bc4e34ea64ae4d7065ad1fc72ac">More...</a><br /></td></tr>
 <tr class="separator:af50e3bc4e34ea64ae4d7065ad1fc72ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2479,6 +2482,55 @@ v.rows() == expressions.rows(). </dd></dl>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a20c5b25729d776ddbbcc40dd07e7f617"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20c5b25729d776ddbbcc40dd07e7f617">&#9670;&nbsp;</a></span>DecomposeL2NormExpression()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::tuple&lt;bool, Eigen::MatrixXd, Eigen::VectorXd, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;<a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a>&gt; &gt; drake::symbolic::DecomposeL2NormExpression </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;&#160;</td>
+          <td class="paramname"><em>e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>psd_tol</em> = <code>1e-8</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>coefficient_tol</em> = <code>1e-8</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Decomposes an L2 norm <code>e</code> = |Ax+b|₂ into A, b, and the variable vector x (or returns false if the decomposition is not possible). </p>
+<p>In order for the decomposition to succeed, the following conditions must be met:</p><ol type="1">
+<li>e is a sqrt expression.</li>
+<li><a class="el" href="namespacedrake_1_1symbolic.html#af785f16951e394debcd11a9225ef469c" title="Returns the argument in the unary expression e.">e.get_argument()</a> is a polynomial of degree 2, which can be expressed as a quadratic form (Ax+b)ᵀ(Ax+b).</li>
+</ol>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>The symbolic affine expression </td></tr>
+    <tr><td class="paramname">psd_tol</td><td>The tolerance for checking positive semidefiniteness. Eigenvalues less that this threshold are considered to be zero. Matrices with negative eigenvalues less than this threshold are considered to be not positive semidefinite, and will cause the decomposition to fail. </td></tr>
+    <tr><td class="paramname">coefficient_tol</td><td>The absolute tolerance for checking that the coefficients of the expression inside the sqrt match the coefficients of |Ax+b|₂².</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>[is_l2norm, A, b, vars] where is_l2norm is true iff the decomposition was successful, and if is_l2norm is true then |A*vars + b|₂ = e. </dd></dl>
 
 </div>
 </div>
@@ -7459,36 +7511,8 @@ we do not provide operator*= function for this class, since operator*= would ret
 
 </div>
 </div>
-<a id="a812892dbfc6443dc1eed055e1915f5e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a812892dbfc6443dc1eed055e1915f5e4">&#9670;&nbsp;</a></span>operator *() <span class="overload">[19/43]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> drake::symbolic::operator * </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a> &amp;&#160;</td>
-          <td class="paramname"><em>m</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
-          <td class="paramname"><em>c</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a46745f049faa36c24020902f121e900c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a46745f049faa36c24020902f121e900c">&#9670;&nbsp;</a></span>operator *() <span class="overload">[20/43]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a46745f049faa36c24020902f121e900c">&#9670;&nbsp;</a></span>operator *() <span class="overload">[19/43]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7504,6 +7528,34 @@ we do not provide operator*= function for this class, since operator*= would ret
           <td></td>
           <td class="paramtype"><a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt;&#160;</td>
           <td class="paramname"><em>p</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a812892dbfc6443dc1eed055e1915f5e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a812892dbfc6443dc1eed055e1915f5e4">&#9670;&nbsp;</a></span>operator *() <span class="overload">[20/43]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> drake::symbolic::operator * </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a> &amp;&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -7655,36 +7707,8 @@ we do not provide operator*= function for this class, since operator*= would ret
 
 </div>
 </div>
-<a id="aca14414fd5dcd3628a3a5aff79eabebc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aca14414fd5dcd3628a3a5aff79eabebc">&#9670;&nbsp;</a></span>operator *() <span class="overload">[26/43]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator * </td>
-          <td>(</td>
-          <td class="paramtype">const BasisElement &amp;&#160;</td>
-          <td class="paramname"><em>m</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
-          <td class="paramname"><em>c</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a7664d13fc20b1e7e30ebb16f3dfdeaac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7664d13fc20b1e7e30ebb16f3dfdeaac">&#9670;&nbsp;</a></span>operator *() <span class="overload">[27/43]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7664d13fc20b1e7e30ebb16f3dfdeaac">&#9670;&nbsp;</a></span>operator *() <span class="overload">[26/43]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7700,6 +7724,34 @@ we do not provide operator*= function for this class, since operator*= would ret
           <td></td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;&#160;</td>
           <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aca14414fd5dcd3628a3a5aff79eabebc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca14414fd5dcd3628a3a5aff79eabebc">&#9670;&nbsp;</a></span>operator *() <span class="overload">[27/43]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1symbolic.html#a4f60d4b8ada97a4fb724b2d66d273892">GenericPolynomialEnable</a>&lt;BasisElement&gt; drake::symbolic::operator * </td>
+          <td>(</td>
+          <td class="paramtype">const BasisElement &amp;&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -9830,8 +9882,36 @@ we do not provide operator*= function for this class, since operator*= would ret
 
 </div>
 </div>
+<a id="a579d06e36f094bf2eebf127dcbb46a1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a579d06e36f094bf2eebf127dcbb46a1c">&#9670;&nbsp;</a></span>operator-() <span class="overload">[7/36]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">RationalFunction</a> drake::symbolic::operator- </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">RationalFunction</a>&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a> &amp;&#160;</td>
+          <td class="paramname"><em>m</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a3d93012a42e93f92eb3b7fab8bd60733"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3d93012a42e93f92eb3b7fab8bd60733">&#9670;&nbsp;</a></span>operator-() <span class="overload">[7/36]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d93012a42e93f92eb3b7fab8bd60733">&#9670;&nbsp;</a></span>operator-() <span class="overload">[8/36]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -9857,34 +9937,6 @@ we do not provide operator*= function for this class, since operator*= would ret
 </div><div class="memdoc">
 
 <p>Returns set-minus(<code>var1</code>, <code>vars2</code>). </p>
-
-</div>
-</div>
-<a id="a579d06e36f094bf2eebf127dcbb46a1c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a579d06e36f094bf2eebf127dcbb46a1c">&#9670;&nbsp;</a></span>operator-() <span class="overload">[8/36]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">RationalFunction</a> drake::symbolic::operator- </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">RationalFunction</a>&#160;</td>
-          <td class="paramname"><em>f</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a> &amp;&#160;</td>
-          <td class="paramname"><em>m</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>
@@ -11236,8 +11288,39 @@ we do not provide operator*= function for this class, since operator*= would ret
 
 </div>
 </div>
+<a id="a528367e2321df46235c2fed21eb0d433"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a528367e2321df46235c2fed21eb0d433">&#9670;&nbsp;</a></span>operator&lt;() <span class="overload">[4/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::enable_if_t&lt; std::is_same_v&lt;typename Eigen::internal::traits&lt;Derived&gt;::XprKind, Eigen::ArrayXpr&gt; &amp;&amp; std::is_same_v&lt;decltype(typename Derived::Scalar() &lt; ScalarType()), <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a>&gt;, Eigen::Array&lt;<a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a>, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime&gt; &gt; drake::symbolic::operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const Derived &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ScalarType &amp;&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns an Eigen array of symbolic formulas where each element includes element-wise comparison between an array <code>a</code> and a scalar <code>v</code> using less-than operator (&lt;). </p>
+<p>That is, for all i and j, the (i, j)-th entry of <code>(a &lt; v)</code> has a symbolic formula <code>a(i, j) &lt; v</code>. </p>
+
+</div>
+</div>
 <a id="a40dd892a8b6492f65a8995abc666b3f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a40dd892a8b6492f65a8995abc666b3f3">&#9670;&nbsp;</a></span>operator&lt;() <span class="overload">[4/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a40dd892a8b6492f65a8995abc666b3f3">&#9670;&nbsp;</a></span>operator&lt;() <span class="overload">[5/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -11267,7 +11350,7 @@ we do not provide operator*= function for this class, since operator*= would ret
 </div>
 </div>
 <a id="aa4f5aab12f951d127ecfaf06b4f175c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa4f5aab12f951d127ecfaf06b4f175c5">&#9670;&nbsp;</a></span>operator&lt;() <span class="overload">[5/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4f5aab12f951d127ecfaf06b4f175c5">&#9670;&nbsp;</a></span>operator&lt;() <span class="overload">[6/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -11294,37 +11377,6 @@ we do not provide operator*= function for this class, since operator*= would ret
 
 <p>Returns an Eigen array of symbolic formulas where each element includes element-wise comparison between a scalar <code>v</code> and an array <code>using</code> less-than operator (&lt;). </p>
 <p>That is, for all i and j, the (i, j)-th entry of <code>(v &lt; a)</code> has a symbolic formula <code>v &lt; a(i, j)</code>. </p>
-
-</div>
-</div>
-<a id="a528367e2321df46235c2fed21eb0d433"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a528367e2321df46235c2fed21eb0d433">&#9670;&nbsp;</a></span>operator&lt;() <span class="overload">[6/7]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::enable_if_t&lt; std::is_same_v&lt;typename Eigen::internal::traits&lt;Derived&gt;::XprKind, Eigen::ArrayXpr&gt; &amp;&amp; std::is_same_v&lt;decltype(typename Derived::Scalar() &lt; ScalarType()), <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a>&gt;, Eigen::Array&lt;<a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a>, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime&gt; &gt; drake::symbolic::operator&lt; </td>
-          <td>(</td>
-          <td class="paramtype">const Derived &amp;&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const ScalarType &amp;&#160;</td>
-          <td class="paramname"><em>v</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns an Eigen array of symbolic formulas where each element includes element-wise comparison between an array <code>a</code> and a scalar <code>v</code> using less-than operator (&lt;). </p>
-<p>That is, for all i and j, the (i, j)-th entry of <code>(a &lt; v)</code> has a symbolic formula <code>a(i, j) &lt; v</code>. </p>
 
 </div>
 </div>
@@ -11650,8 +11702,39 @@ we do not provide operator*= function for this class, since operator*= would ret
 
 </div>
 </div>
+<a id="a6718d0b755c47edc3fade14221574a03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6718d0b755c47edc3fade14221574a03">&#9670;&nbsp;</a></span>operator&lt;=() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::enable_if_t&lt; std::is_same_v&lt;typename Eigen::internal::traits&lt;Derived&gt;::XprKind, Eigen::ArrayXpr&gt; &amp;&amp; std::is_same_v&lt;decltype(typename Derived::Scalar() &lt;= ScalarType()), <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a>&gt;, Eigen::Array&lt;<a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a>, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime&gt; &gt; drake::symbolic::operator&lt;= </td>
+          <td>(</td>
+          <td class="paramtype">const Derived &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ScalarType &amp;&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns an Eigen array of symbolic formulas where each element includes element-wise comparison between an array <code>a</code> and a scalar <code>v</code> using less-than-or-equal operator (&lt;=). </p>
+<p>That is, for all i and j, the (i, j)-th entry of <code>(a &lt;= v)</code> has a symbolic formula <code>a(i, j) &lt;= v</code>. </p>
+
+</div>
+</div>
 <a id="a52479ecb229048e750782273796768c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52479ecb229048e750782273796768c2">&#9670;&nbsp;</a></span>operator&lt;=() <span class="overload">[2/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a52479ecb229048e750782273796768c2">&#9670;&nbsp;</a></span>operator&lt;=() <span class="overload">[3/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -11682,7 +11765,7 @@ we do not provide operator*= function for this class, since operator*= would ret
 </div>
 </div>
 <a id="ad0de903abee4a9e39dbc9148d86c770c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad0de903abee4a9e39dbc9148d86c770c">&#9670;&nbsp;</a></span>operator&lt;=() <span class="overload">[3/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0de903abee4a9e39dbc9148d86c770c">&#9670;&nbsp;</a></span>operator&lt;=() <span class="overload">[4/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -11708,37 +11791,6 @@ we do not provide operator*= function for this class, since operator*= would ret
 </div><div class="memdoc">
 
 <p>Returns an Eigen array of symbolic formulas where each element includes element-wise comparison of two arrays <code>a1</code> and <code>a2</code> using less-than-or-equal operator (&lt;=). </p>
-
-</div>
-</div>
-<a id="a6718d0b755c47edc3fade14221574a03"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6718d0b755c47edc3fade14221574a03">&#9670;&nbsp;</a></span>operator&lt;=() <span class="overload">[4/5]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::enable_if_t&lt; std::is_same_v&lt;typename Eigen::internal::traits&lt;Derived&gt;::XprKind, Eigen::ArrayXpr&gt; &amp;&amp; std::is_same_v&lt;decltype(typename Derived::Scalar() &lt;= ScalarType()), <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a>&gt;, Eigen::Array&lt;<a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a>, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime&gt; &gt; drake::symbolic::operator&lt;= </td>
-          <td>(</td>
-          <td class="paramtype">const Derived &amp;&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const ScalarType &amp;&#160;</td>
-          <td class="paramname"><em>v</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns an Eigen array of symbolic formulas where each element includes element-wise comparison between an array <code>a</code> and a scalar <code>v</code> using less-than-or-equal operator (&lt;=). </p>
-<p>That is, for all i and j, the (i, j)-th entry of <code>(a &lt;= v)</code> has a symbolic formula <code>a(i, j) &lt;= v</code>. </p>
 
 </div>
 </div>
