@@ -1,10 +1,5 @@
 var NAVTREEINDEX57 =
 {
-"pydrake__pybind_8h.html#ad48601ea388e9d2a662aff6f8b42dca4":[4,0,0,0,0,16,4],
-"pydrake__pybind_8h.html#ad82c192e2b875f6bd19163b69ba9075a":[4,0,0,0,0,16,7],
-"quadratic__form_8h.html":[4,0,0,7,26],
-"quadratic__form_8h.html#a296872692791b1e6d9e27311fc55a694":[4,0,0,7,26,1],
-"quadratic__form_8h.html#a8c66e16411c4f0d53e005658a49ccf6a":[4,0,0,7,26,0],
 "quadratic__form_8h.html#adc391d10568071dcb57bf6f214675cfe":[4,0,0,7,26,2],
 "quadratic__scalar__system_8h.html":[4,0,0,12,0,0,10],
 "quadrature_8h.html":[4,0,0,8,3,26],
@@ -146,9 +141,9 @@ var NAVTREEINDEX57 =
 "robot__plan__utils_8h.html#a03defeaacd8e6e4a43260eb910c1913c":[4,0,0,6,3,5,0],
 "robot__plan__utils_8h.html#a34dd83b8c99f86f80129b54cf879beda":[4,0,0,6,3,5,1],
 "robot__plan__utils_8h.html#a8cac2550a9a52551ff82e51b3d5b29e3":[4,0,0,6,3,5,2],
-"rod2d_8h.html":[4,0,0,3,16,0],
-"rod2d__geometry_8h.html":[4,0,0,3,16,1],
-"rod2d__state__vector_8h.html":[4,0,0,3,16,2],
+"rod2d_8h.html":[4,0,0,3,16,2],
+"rod2d__geometry_8h.html":[4,0,0,3,16,3],
+"rod2d__state__vector_8h.html":[4,0,0,3,16,4],
 "roll__pitch__yaw_8h.html":[4,0,0,7,30],
 "rotary__encoders_8h.html":[4,0,0,12,8,21],
 "rotation_8h.html":[4,0,0,1,2,0],
@@ -249,5 +244,10 @@ var NAVTREEINDEX57 =
 "scoped__names_8h.html#ad0442d59f36dad1157430528e91d147f":[4,0,0,8,9,27,1],
 "scoped__names_8h.html#aea5ef9ce73e6aad999339261567758eb":[4,0,0,8,9,27,0],
 "scoped__singleton_8h.html":[4,0,0,1,56],
-"screw__joint_8h.html":[4,0,0,8,14,47]
+"screw__joint_8h.html":[4,0,0,8,14,47],
+"screw__mobilizer_8h.html":[4,0,0,8,14,48],
+"scs__clarabel__common_8h.html":[4,0,0,11,44],
+"scs__solver_8h.html":[4,0,0,11,45],
+"sdpa__free__format_8h.html":[4,0,0,11,46],
+"sdpa__free__format_8h.html#a121673ddbdadd10b2e3ceab52a93f5d3":[4,0,0,11,46,0]
 };

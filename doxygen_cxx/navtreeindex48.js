@@ -1,8 +1,5 @@
 var NAVTREEINDEX48 =
 {
-"damping__model_8h.html#a637b32bd5b13e55117670a553e19c54f":[4,0,0,8,3,5,1],
-"decision__variable_8h.html":[4,0,0,11,17],
-"decision__variable_8h.html#a062b182db5c52f5a71221a4c5958ea0b":[4,0,0,11,17,3],
 "decision__variable_8h.html#a8f304c33d467b0bf0ad02e25a2ced143":[4,0,0,11,17,6],
 "decision__variable_8h.html#aa20d09ae94d1e722c2961fbaca37f967":[4,0,0,11,17,4],
 "decision__variable_8h.html#aa708f80d971209e3d46c1e41f05c1393":[4,0,0,11,17,0],
@@ -249,5 +246,8 @@ var NAVTREEINDEX48 =
 "discrete__contact__pair_8h.html":[4,0,0,8,10,15],
 "discrete__derivative_8h.html":[4,0,0,12,6,6],
 "discrete__lyapunov__equation_8h.html":[4,0,0,7,12],
-"discrete__lyapunov__equation_8h.html#a41733a5b284046800224cd293e055ff7":[4,0,0,7,12,0]
+"discrete__lyapunov__equation_8h.html#a41733a5b284046800224cd293e055ff7":[4,0,0,7,12,0],
+"discrete__systems_8h.html":[4,0,0,12,9],
+"discrete__time__delay_8h.html":[4,0,0,12,6,7],
+"discrete__time__trajectory_8h.html":[4,0,0,1,5,4]
 };

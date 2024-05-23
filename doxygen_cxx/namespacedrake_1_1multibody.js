@@ -1,7 +1,6 @@
 var namespacedrake_1_1multibody =
 [
     [ "benchmarks", "namespacedrake_1_1multibody_1_1benchmarks.html", "namespacedrake_1_1multibody_1_1benchmarks" ],
-    [ "constraint", "namespacedrake_1_1multibody_1_1constraint.html", "namespacedrake_1_1multibody_1_1constraint" ],
     [ "fem", "namespacedrake_1_1multibody_1_1fem.html", "namespacedrake_1_1multibody_1_1fem" ],
     [ "meshcat", "namespacedrake_1_1multibody_1_1meshcat.html", "namespacedrake_1_1multibody_1_1meshcat" ],
     [ "parsing", "namespacedrake_1_1multibody_1_1parsing.html", "namespacedrake_1_1multibody_1_1parsing" ],

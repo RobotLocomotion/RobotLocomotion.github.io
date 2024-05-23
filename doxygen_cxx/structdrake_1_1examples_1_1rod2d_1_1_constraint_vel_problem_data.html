@@ -1,0 +1,694 @@
+<!-- HTML header for doxygen 1.8.15-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: ConstraintVelProblemData&lt; T &gt; Struct Template Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/%2Findex.ipynb">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+ </div>
+</div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">ConstraintVelProblemData&lt; T &gt; Struct Template Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;class T&gt;<br />
+struct drake::examples::rod2d::ConstraintVelProblemData&lt; T &gt;</h3>
+
+<p>Structure for holding constraint data for computing constraint forces at the velocity-level (i.e., impact problems). </p>
+</div>
+<p><code>#include &lt;drake/examples/rod2d/constraint_problem_data.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ab3761062bae0c167009fd92d36f460fc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html#ab3761062bae0c167009fd92d36f460fc">ConstraintVelProblemData</a> (<a class="el" href="classint.html">int</a> gv_dim)</td></tr>
+<tr class="memdesc:ab3761062bae0c167009fd92d36f460fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs velocity problem data for a system with a <code>gv_dim</code> dimensional generalized velocity.  <a href="#ab3761062bae0c167009fd92d36f460fc">More...</a><br /></td></tr>
+<tr class="separator:ab3761062bae0c167009fd92d36f460fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25efbc7b4af31078308a2eb610edb0c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html#a25efbc7b4af31078308a2eb610edb0c9">Reinitialize</a> (<a class="el" href="classint.html">int</a> gv_dim)</td></tr>
+<tr class="memdesc:a25efbc7b4af31078308a2eb610edb0c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reinitializes the constraint problem data using the specified dimension of the generalized velocities.  <a href="#a25efbc7b4af31078308a2eb610edb0c9">More...</a><br /></td></tr>
+<tr class="separator:a25efbc7b4af31078308a2eb610edb0c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:aecfdc8cfc228ee64e73c891738c3863d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classint.html">int</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html#aecfdc8cfc228ee64e73c891738c3863d">r</a></td></tr>
+<tr class="memdesc:aecfdc8cfc228ee64e73c891738c3863d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of spanning vectors in the contact tangents (used to linearize the friction cone) at the nc contact points.  <a href="#aecfdc8cfc228ee64e73c891738c3863d">More...</a><br /></td></tr>
+<tr class="separator:aecfdc8cfc228ee64e73c891738c3863d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e97e2acb651ea12e16c84daec5ec89e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html#a0e97e2acb651ea12e16c84daec5ec89e">mu</a></td></tr>
+<tr class="memdesc:a0e97e2acb651ea12e16c84daec5ec89e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coefficients of friction for the nc contacts.  <a href="#a0e97e2acb651ea12e16c84daec5ec89e">More...</a><br /></td></tr>
+<tr class="separator:a0e97e2acb651ea12e16c84daec5ec89e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a274d84c1487d6903a06861fea93b6165"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html#a274d84c1487d6903a06861fea93b6165">Mv</a></td></tr>
+<tr class="memdesc:a274d84c1487d6903a06861fea93b6165"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ℝⁿᵛ generalized momentum immediately before any impulsive forces (from impact) are applied.  <a href="#a274d84c1487d6903a06861fea93b6165">More...</a><br /></td></tr>
+<tr class="separator:a274d84c1487d6903a06861fea93b6165"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16c5614af40edee599284c373fba9c09"><td class="memItemLeft" align="right" valign="top">std::function&lt; <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt; &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html#a16c5614af40edee599284c373fba9c09">solve_inertia</a></td></tr>
+<tr class="memdesc:a16c5614af40edee599284c373fba9c09"><td class="mdescLeft">&#160;</td><td class="mdescRight">A function for solving the equation MX = B for matrix X, given input matrix B, where M is the generalized inertia matrix for the rigid body system.  <a href="#a16c5614af40edee599284c373fba9c09">More...</a><br /></td></tr>
+<tr class="separator:a16c5614af40edee599284c373fba9c09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Data for bilateral constraints at the velocity level</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>Problem data for bilateral constraints of functions of system velocity, where the constraint can be formulated as:</p>
+<pre>
+0 = G(q)⋅v + kᴳ(t,q)
+</pre><p> which implies the constraint definition g(t,q,v) ≡ G(q)⋅v + kᴳ(t,q). G is defined as the ℝⁿᵇˣⁿᵛ Jacobian matrix that transforms generalized velocities (v ∈ ℝⁿᵛ) into the time derivatives of nb bilateral constraint functions. The class of constraint functions naturally includes holonomic constraints, which are constraints posable as g(t,q). Such holonomic constraints must be differentiated with respect to time to yield a velocity-level formulation (i.e., ġ(t, q, v), for the aforementioned definition of g(t,q)). That differentiation yields ġ = G⋅v, which is consistent with the constraint class under the definition kᴳ(t,q) ≡ 0. An example such holonomic constraint function is the transmission (gearing) constraint below:</p><pre>
+0 = vᵢ - rvⱼ
+</pre><p> which can be read as the velocity at joint i (vᵢ) must equal to <code>r</code> times the velocity at joint j (vⱼ); <code>r</code> is thus the gear ratio. In this example, the corresponding holonomic constraint function is g(q) ≡ qᵢ - rqⱼ, yielding ġ(q, v) = vᵢ - rvⱼ. </p>
+</div></td></tr>
+<tr class="memitem:aa24636f116f235120b6b9c48c083a7e2"><td class="memItemLeft" align="right" valign="top">std::function&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html#aa24636f116f235120b6b9c48c083a7e2">G_mult</a></td></tr>
+<tr class="memdesc:aa24636f116f235120b6b9c48c083a7e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">An operator that performs the multiplication G⋅v.  <a href="#aa24636f116f235120b6b9c48c083a7e2">More...</a><br /></td></tr>
+<tr class="separator:aa24636f116f235120b6b9c48c083a7e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3d38d1b83f93e18d5a4633beef4639f"><td class="memItemLeft" align="right" valign="top">std::function&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html#ac3d38d1b83f93e18d5a4633beef4639f">G_transpose_mult</a></td></tr>
+<tr class="memdesc:ac3d38d1b83f93e18d5a4633beef4639f"><td class="mdescLeft">&#160;</td><td class="mdescRight">An operator that performs the multiplication Gᵀ⋅f where f ∈ ℝⁿᵇ are the magnitudes of the constraint forces.  <a href="#ac3d38d1b83f93e18d5a4633beef4639f">More...</a><br /></td></tr>
+<tr class="separator:ac3d38d1b83f93e18d5a4633beef4639f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cde9da79a1a8aba25ee8aacdb2ffd39"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html#a3cde9da79a1a8aba25ee8aacdb2ffd39">kG</a></td></tr>
+<tr class="memdesc:a3cde9da79a1a8aba25ee8aacdb2ffd39"><td class="mdescLeft">&#160;</td><td class="mdescRight">This ℝⁿᵇ vector is the vector kᴳ(t,q) defined above.  <a href="#a3cde9da79a1a8aba25ee8aacdb2ffd39">More...</a><br /></td></tr>
+<tr class="separator:a3cde9da79a1a8aba25ee8aacdb2ffd39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Data for constraints on velocities along the contact normal</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>Problem data for constraining the velocity of two bodies projected along the contact surface normal, for n point contacts.</p>
+<p>These data center around the Jacobian matrix N, the ℝⁿᶜˣⁿᵛ Jacobian matrix that transforms generalized velocities (v ∈ ℝⁿᵛ) into velocities projected along the contact normals at the n point contacts. Constraint error (φ &lt; 0, where φ is the signed distance between two bodies) can be incorporated into the constraint solution process (and thereby reduced) through setting the <code>kN</code> term to something other than its nonzero value (typically <code>kN = αφ</code>, where <code>α ≥ 0</code>). The resulting constraint on the motion will be: </p><pre>
+0 ≤ N(q) v + kᴺ(t,q)  ⊥  fᶜ ≥ 0
+</pre><p> which means that the constraint ċ(q,v) ≡ N(q)⋅v + kᴺ(t,q) is coupled to an impulsive force constraint (fᶜ ≥ 0) and a complementarity constraint fᶜ⋅(Nv + kᴺ(t,q)) = 0, meaning that the constraint can apply no force if it is inactive (i.e., if ġ(q,v) is strictly greater than zero). </p>
+</div></td></tr>
+<tr class="memitem:a29af929fcff5a59a15ac072ebe89d26e"><td class="memItemLeft" align="right" valign="top">std::function&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html#a29af929fcff5a59a15ac072ebe89d26e">N_mult</a></td></tr>
+<tr class="memdesc:a29af929fcff5a59a15ac072ebe89d26e"><td class="mdescLeft">&#160;</td><td class="mdescRight">An operator that performs the multiplication N⋅v.  <a href="#a29af929fcff5a59a15ac072ebe89d26e">More...</a><br /></td></tr>
+<tr class="separator:a29af929fcff5a59a15ac072ebe89d26e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e0a73ed81afb10613aa17eb4902e879"><td class="memItemLeft" align="right" valign="top">std::function&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html#a7e0a73ed81afb10613aa17eb4902e879">N_transpose_mult</a></td></tr>
+<tr class="memdesc:a7e0a73ed81afb10613aa17eb4902e879"><td class="mdescLeft">&#160;</td><td class="mdescRight">An operator that performs the multiplication Nᵀ⋅f, where f ∈ ℝⁿᶜ are the the magnitudes of the impulsive forces applied along the contact normals at the nc point contacts.  <a href="#a7e0a73ed81afb10613aa17eb4902e879">More...</a><br /></td></tr>
+<tr class="separator:a7e0a73ed81afb10613aa17eb4902e879"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a613d499d309c4906c2df5db6580dd665"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html#a613d499d309c4906c2df5db6580dd665">kN</a></td></tr>
+<tr class="memdesc:a613d499d309c4906c2df5db6580dd665"><td class="mdescLeft">&#160;</td><td class="mdescRight">This ℝⁿᶜ vector is the vector kᴺ(t,q,v) defined above.  <a href="#a613d499d309c4906c2df5db6580dd665">More...</a><br /></td></tr>
+<tr class="separator:a613d499d309c4906c2df5db6580dd665"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a235e103284e33844b7704d12373bcbd5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html#a235e103284e33844b7704d12373bcbd5">gammaN</a></td></tr>
+<tr class="memdesc:a235e103284e33844b7704d12373bcbd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">This ℝⁿᶜ vector represents the diagonal matrix γᴺ.  <a href="#a235e103284e33844b7704d12373bcbd5">More...</a><br /></td></tr>
+<tr class="separator:a235e103284e33844b7704d12373bcbd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Data for constraints on contact friction</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>Problem data for constraining the tangential velocity of two bodies projected along the contact surface tangents, for n point contacts.</p>
+<p>These data center around the Jacobian matrix, F ∈ ℝⁿⁿʳˣⁿᵛ, that transforms generalized velocities (v ∈ ℝⁿᵛ) into velocities projected along the nr vectors that span the contact tangents at the nc point contacts (these nc * nr vectors are denoted nnr for brevity). For contact problems in two dimensions, nr will be one and nnr would equal nc. For a friction pyramid at each point contact in three dimensions, nr would be two and nnr would equation 2nc. While the definition of the dimension of the Jacobian matrix above indicates that every one of the nc contacts uses the same "nr", the code imposes no such requirement. Constraint error (F⋅v &lt; 0) can be reduced through the constraint solution process by setting the <code>kF</code> term to something other than its default zero value. The resulting constraint on the motion will be:</p><pre>
+0 ≤ F(q)⋅v + kᴺ(t,q) + eλ  ⊥  fᶜ ≥ 0
+</pre><p> which means that the constraint ġ(q,v) ≡ F(q)⋅v + kᶠ(t,q) + eλ is coupled to an impulsive force constraint (fᶜ ≥ 0) and a complementarity constraint fᶜ⋅(Fv + kᶠ(t,q) + eλ) = 0, meaning that the constraint can apply no force if it is inactive (i.e., if ġ(q,v) is strictly greater than zero). The presence of the λe term is taken directly from [Anitescu 1997], where e is a vector of ones and zeros and λ corresponds roughly to the tangential acceleration at the contacts. The interested reader should refer to [Anitescu 1997] for a more thorough explanation of this constraint; the full constraint equation is presented only to elucidate the purpose of the kᶠ term. </p>
+</div></td></tr>
+<tr class="memitem:a1b267a517e862262fc1f50dd62c48f41"><td class="memItemLeft" align="right" valign="top">std::function&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html#a1b267a517e862262fc1f50dd62c48f41">F_mult</a></td></tr>
+<tr class="memdesc:a1b267a517e862262fc1f50dd62c48f41"><td class="mdescLeft">&#160;</td><td class="mdescRight">An operator that performs the multiplication F⋅v.  <a href="#a1b267a517e862262fc1f50dd62c48f41">More...</a><br /></td></tr>
+<tr class="separator:a1b267a517e862262fc1f50dd62c48f41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a148f4adaece02fe36243c84bafd8d467"><td class="memItemLeft" align="right" valign="top">std::function&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html#a148f4adaece02fe36243c84bafd8d467">F_transpose_mult</a></td></tr>
+<tr class="memdesc:a148f4adaece02fe36243c84bafd8d467"><td class="mdescLeft">&#160;</td><td class="mdescRight">An operator that performs the multiplication Fᵀ⋅f, where f ∈ ℝⁿᶜʳ corresponds to frictional impulsive force magnitudes.  <a href="#a148f4adaece02fe36243c84bafd8d467">More...</a><br /></td></tr>
+<tr class="separator:a148f4adaece02fe36243c84bafd8d467"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83d22b9ce633cccb2b57d1739e59d94d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html#a83d22b9ce633cccb2b57d1739e59d94d">kF</a></td></tr>
+<tr class="memdesc:a83d22b9ce633cccb2b57d1739e59d94d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This ℝⁿᶜʳ vector is the vector kᶠ(t,q,v) defined above.  <a href="#a83d22b9ce633cccb2b57d1739e59d94d">More...</a><br /></td></tr>
+<tr class="separator:a83d22b9ce633cccb2b57d1739e59d94d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3815aa96e3f447bd132aea97ff48bdb9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html#a3815aa96e3f447bd132aea97ff48bdb9">gammaF</a></td></tr>
+<tr class="memdesc:a3815aa96e3f447bd132aea97ff48bdb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">This ℝⁿᶜʳ vector represents the diagonal matrix γᶠ.  <a href="#a3815aa96e3f447bd132aea97ff48bdb9">More...</a><br /></td></tr>
+<tr class="separator:a3815aa96e3f447bd132aea97ff48bdb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6cd0704f982975fb9d4ab32e55750f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html#ac6cd0704f982975fb9d4ab32e55750f2">gammaE</a></td></tr>
+<tr class="memdesc:ac6cd0704f982975fb9d4ab32e55750f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">This ℝⁿᶜ vector represents the diagonal matrix γᴱ.  <a href="#ac6cd0704f982975fb9d4ab32e55750f2">More...</a><br /></td></tr>
+<tr class="separator:ac6cd0704f982975fb9d4ab32e55750f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Data for unilateral constraints at the velocity level</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>Problem data for unilateral constraints of functions of system velocity, where the constraint can be formulated as:</p>
+<pre>
+0 ≤ L(q)⋅v + kᴸ(t,q)  ⊥  fᶜ ≥ 0
+</pre><p> which means that the constraint ċ(q,v) ≡ L(q)⋅v + kᴸ(t,q) is coupled to an impulsive force constraint (fᶜ ≥ 0) and a complementarity constraint fᶜ⋅(L⋅v + kᴸ(t,q)) = 0, meaning that the constraint can apply no force if it is inactive (i.e., if ġ(q,v) is strictly greater than zero). L is defined as the ℝⁿᵘˣⁿᵛ Jacobian matrix that transforms generalized velocities (v ∈ ℝⁿᵛ) into the time derivatives of nu unilateral constraint functions. The class of constraint functions naturally includes holonomic constraints, which are constraints posable as g(q, t). Such holonomic constraints must be differentiated with respect to time to yield a velocity-level formulation (i.e., ġ(q, v, t), for the aforementioned definition of g(q, t)). That differentiation yields ġ = L⋅v, which is consistent with the constraint class under the definition kᴸ(t,q) ≡ 0. An example such holonomic constraint function is a joint velocity limit:</p><pre>
+0 ≤ -vⱼ + r  ⊥  fᶜⱼ ≥ 0
+</pre><p> which can be read as the velocity at joint j (vⱼ) must be no larger than r, the impulsive force must be applied to limit the acceleration at the joint, and the limiting force cannot be applied if the velocity at the joint is not at the limit (i.e., vⱼ &lt; r). In this example, the constraint function is g(t,q) ≡ qⱼ + rt, yielding ġ(q, v) = -vⱼ + r. </p>
+</div></td></tr>
+<tr class="memitem:ad03bc5722287da0acf149346388fa1b0"><td class="memItemLeft" align="right" valign="top">std::function&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html#ad03bc5722287da0acf149346388fa1b0">L_mult</a></td></tr>
+<tr class="memdesc:ad03bc5722287da0acf149346388fa1b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">An operator that performs the multiplication L⋅v.  <a href="#ad03bc5722287da0acf149346388fa1b0">More...</a><br /></td></tr>
+<tr class="separator:ad03bc5722287da0acf149346388fa1b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c4a40b91dff8e9d8d5c4d39b3e93df2"><td class="memItemLeft" align="right" valign="top">std::function&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html#a7c4a40b91dff8e9d8d5c4d39b3e93df2">L_transpose_mult</a></td></tr>
+<tr class="memdesc:a7c4a40b91dff8e9d8d5c4d39b3e93df2"><td class="mdescLeft">&#160;</td><td class="mdescRight">An operator that performs the multiplication Lᵀ⋅f where f ∈ ℝᵗ are the magnitudes of the impulsive constraint forces.  <a href="#a7c4a40b91dff8e9d8d5c4d39b3e93df2">More...</a><br /></td></tr>
+<tr class="separator:a7c4a40b91dff8e9d8d5c4d39b3e93df2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f29fed6311156aa9a7efefa57dfae06"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html#a0f29fed6311156aa9a7efefa57dfae06">kL</a></td></tr>
+<tr class="memdesc:a0f29fed6311156aa9a7efefa57dfae06"><td class="mdescLeft">&#160;</td><td class="mdescRight">This ℝⁿᵘ vector is the vector kᴸ(t,q) defined above.  <a href="#a0f29fed6311156aa9a7efefa57dfae06">More...</a><br /></td></tr>
+<tr class="separator:a0f29fed6311156aa9a7efefa57dfae06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34f9c5615cadcbffa3bfbfd8fe849952"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html#a34f9c5615cadcbffa3bfbfd8fe849952">gammaL</a></td></tr>
+<tr class="memdesc:a34f9c5615cadcbffa3bfbfd8fe849952"><td class="mdescLeft">&#160;</td><td class="mdescRight">This ℝⁿᵘ vector represents the diagonal matrix γᴸ.  <a href="#a34f9c5615cadcbffa3bfbfd8fe849952">More...</a><br /></td></tr>
+<tr class="separator:a34f9c5615cadcbffa3bfbfd8fe849952"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ab3761062bae0c167009fd92d36f460fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3761062bae0c167009fd92d36f460fc">&#9670;&nbsp;</a></span>ConstraintVelProblemData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html">ConstraintVelProblemData</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>gv_dim</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs velocity problem data for a system with a <code>gv_dim</code> dimensional generalized velocity. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a25efbc7b4af31078308a2eb610edb0c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25efbc7b4af31078308a2eb610edb0c9">&#9670;&nbsp;</a></span>Reinitialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Reinitialize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>gv_dim</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reinitializes the constraint problem data using the specified dimension of the generalized velocities. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a1b267a517e862262fc1f50dd62c48f41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b267a517e862262fc1f50dd62c48f41">&#9670;&nbsp;</a></span>F_mult</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::function&lt;<a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt;const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt;&amp;)&gt; F_mult</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>An operator that performs the multiplication F⋅v. </p>
+<p>The default operator returns an empty vector. </p>
+
+</div>
+</div>
+<a id="a148f4adaece02fe36243c84bafd8d467"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a148f4adaece02fe36243c84bafd8d467">&#9670;&nbsp;</a></span>F_transpose_mult</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::function&lt;<a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt;const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt;&amp;)&gt; F_transpose_mult</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>An operator that performs the multiplication Fᵀ⋅f, where f ∈ ℝⁿᶜʳ corresponds to frictional impulsive force magnitudes. </p>
+<p>The default operator returns a zero vector of dimension equal to that of the generalized forces. </p>
+
+</div>
+</div>
+<a id="aa24636f116f235120b6b9c48c083a7e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa24636f116f235120b6b9c48c083a7e2">&#9670;&nbsp;</a></span>G_mult</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::function&lt;<a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt;const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt;&amp;)&gt; G_mult</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>An operator that performs the multiplication G⋅v. </p>
+<p>The default operator returns an empty vector. </p>
+
+</div>
+</div>
+<a id="ac3d38d1b83f93e18d5a4633beef4639f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3d38d1b83f93e18d5a4633beef4639f">&#9670;&nbsp;</a></span>G_transpose_mult</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::function&lt;<a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt;const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt;&amp;)&gt; G_transpose_mult</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>An operator that performs the multiplication Gᵀ⋅f where f ∈ ℝⁿᵇ are the magnitudes of the constraint forces. </p>
+<p>The default operator returns a zero vector of dimension equal to that of the generalized forces. </p>
+
+</div>
+</div>
+<a id="ac6cd0704f982975fb9d4ab32e55750f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6cd0704f982975fb9d4ab32e55750f2">&#9670;&nbsp;</a></span>gammaE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt; gammaE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This ℝⁿᶜ vector represents the diagonal matrix γᴱ. </p>
+
+</div>
+</div>
+<a id="a3815aa96e3f447bd132aea97ff48bdb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3815aa96e3f447bd132aea97ff48bdb9">&#9670;&nbsp;</a></span>gammaF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt; gammaF</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This ℝⁿᶜʳ vector represents the diagonal matrix γᶠ. </p>
+
+</div>
+</div>
+<a id="a34f9c5615cadcbffa3bfbfd8fe849952"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34f9c5615cadcbffa3bfbfd8fe849952">&#9670;&nbsp;</a></span>gammaL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt; gammaL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This ℝⁿᵘ vector represents the diagonal matrix γᴸ. </p>
+
+</div>
+</div>
+<a id="a235e103284e33844b7704d12373bcbd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a235e103284e33844b7704d12373bcbd5">&#9670;&nbsp;</a></span>gammaN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt; gammaN</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This ℝⁿᶜ vector represents the diagonal matrix γᴺ. </p>
+
+</div>
+</div>
+<a id="a83d22b9ce633cccb2b57d1739e59d94d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83d22b9ce633cccb2b57d1739e59d94d">&#9670;&nbsp;</a></span>kF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt; kF</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This ℝⁿᶜʳ vector is the vector kᶠ(t,q,v) defined above. </p>
+
+</div>
+</div>
+<a id="a3cde9da79a1a8aba25ee8aacdb2ffd39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cde9da79a1a8aba25ee8aacdb2ffd39">&#9670;&nbsp;</a></span>kG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt; kG</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This ℝⁿᵇ vector is the vector kᴳ(t,q) defined above. </p>
+
+</div>
+</div>
+<a id="a0f29fed6311156aa9a7efefa57dfae06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f29fed6311156aa9a7efefa57dfae06">&#9670;&nbsp;</a></span>kL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt; kL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This ℝⁿᵘ vector is the vector kᴸ(t,q) defined above. </p>
+
+</div>
+</div>
+<a id="a613d499d309c4906c2df5db6580dd665"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a613d499d309c4906c2df5db6580dd665">&#9670;&nbsp;</a></span>kN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt; kN</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This ℝⁿᶜ vector is the vector kᴺ(t,q,v) defined above. </p>
+
+</div>
+</div>
+<a id="ad03bc5722287da0acf149346388fa1b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad03bc5722287da0acf149346388fa1b0">&#9670;&nbsp;</a></span>L_mult</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::function&lt;<a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt;const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt;&amp;)&gt; L_mult</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>An operator that performs the multiplication L⋅v. </p>
+<p>The default operator returns an empty vector. </p>
+
+</div>
+</div>
+<a id="a7c4a40b91dff8e9d8d5c4d39b3e93df2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c4a40b91dff8e9d8d5c4d39b3e93df2">&#9670;&nbsp;</a></span>L_transpose_mult</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::function&lt;<a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt;const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt;&amp;)&gt; L_transpose_mult</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>An operator that performs the multiplication Lᵀ⋅f where f ∈ ℝᵗ are the magnitudes of the impulsive constraint forces. </p>
+<p>The default operator returns a zero vector of dimension equal to that of the generalized forces. </p>
+
+</div>
+</div>
+<a id="a0e97e2acb651ea12e16c84daec5ec89e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e97e2acb651ea12e16c84daec5ec89e">&#9670;&nbsp;</a></span>mu</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt; mu</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Coefficients of friction for the nc contacts. </p>
+<p>This problem specification does not distinguish between static and dynamic friction coefficients. </p>
+
+</div>
+</div>
+<a id="a274d84c1487d6903a06861fea93b6165"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a274d84c1487d6903a06861fea93b6165">&#9670;&nbsp;</a></span>Mv</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt; Mv</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The ℝⁿᵛ generalized momentum immediately before any impulsive forces (from impact) are applied. </p>
+
+</div>
+</div>
+<a id="a29af929fcff5a59a15ac072ebe89d26e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29af929fcff5a59a15ac072ebe89d26e">&#9670;&nbsp;</a></span>N_mult</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::function&lt;<a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt;const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt;&amp;)&gt; N_mult</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>An operator that performs the multiplication N⋅v. </p>
+<p>The default operator returns an empty vector. </p>
+
+</div>
+</div>
+<a id="a7e0a73ed81afb10613aa17eb4902e879"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e0a73ed81afb10613aa17eb4902e879">&#9670;&nbsp;</a></span>N_transpose_mult</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::function&lt;<a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt;const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt;&amp;)&gt; N_transpose_mult</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>An operator that performs the multiplication Nᵀ⋅f, where f ∈ ℝⁿᶜ are the the magnitudes of the impulsive forces applied along the contact normals at the nc point contacts. </p>
+<p>The default operator returns a zero vector of dimension equal to that of the generalized velocities (which should be identical to the dimension of the generalized forces). </p>
+
+</div>
+</div>
+<a id="aecfdc8cfc228ee64e73c891738c3863d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecfdc8cfc228ee64e73c891738c3863d">&#9670;&nbsp;</a></span>r</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classint.html">int</a>&gt; r</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The number of spanning vectors in the contact tangents (used to linearize the friction cone) at the nc contact points. </p>
+<p>For contact problems in two dimensions, each element of r will be one. For contact problems in three dimensions, a friction pyramid (for example), for a contact point i will have rᵢ = 2. [Anitescu 1997] define k such vectors and require that, for each vector w in the spanning set, -w also exists in the spanning set. The RigidContactVelProblemData structure expects that the contact solving mechanism negates the spanning vectors so <code>r</code> = k/2 spanning vectors will correspond to a k-edge polygon friction cone approximation. </p>
+
+</div>
+</div>
+<a id="a16c5614af40edee599284c373fba9c09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16c5614af40edee599284c373fba9c09">&#9670;&nbsp;</a></span>solve_inertia</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::function&lt;<a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt;T&gt;const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt;T&gt;&amp;)&gt; solve_inertia</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A function for solving the equation MX = B for matrix X, given input matrix B, where M is the generalized inertia matrix for the rigid body system. </p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>drake/examples/rod2d/<a class="el" href="examples_2rod2d_2constraint__problem__data_8h.html">constraint_problem_data.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a class="el" href="namespacedrake.html">drake</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1examples.html">examples</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1examples_1_1rod2d.html">rod2d</a></li><li class="navelem"><a class="el" href="structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html">ConstraintVelProblemData</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>    
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>    
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().value = searchBox.searchLabel;
+</script>
+</body>
+</html>

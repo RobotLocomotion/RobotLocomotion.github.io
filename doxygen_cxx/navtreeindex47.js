@@ -167,10 +167,7 @@ var NAVTREEINDEX47 =
 "constants_8h.html#af8777bc10296f9d39d52753861110e26af460a96ab20647996c15854794763384":[4,0,0,1,12,0,1],
 "constitutive__model_8h.html":[4,0,0,8,3,2],
 "constraint_8h.html":[4,0,0,11,9],
-"constraint__doxygen_8h.html":[4,0,0,8,1,0],
-"constraint__problem__data_8h.html":[4,0,0,8,1,1],
 "constraint__relaxing__ik_8h.html":[4,0,0,8,5,4],
-"constraint__solver_8h.html":[4,0,0,8,1,2],
 "constraint__specs_8h.html":[4,0,0,8,10,3],
 "contact__configuration_8h.html":[4,0,0,8,2,7],
 "contact__jacobians_8h.html":[4,0,0,8,10,4],
@@ -249,5 +246,8 @@ var NAVTREEINDEX47 =
 "cspace__separating__plane_8h.html#a6febb8c28b6d49e494dbe16b5ed5b089ac3af1341756d0c5a66c8ea473dc38927":[4,0,0,4,1,10,1,0],
 "cspace__separating__plane_8h.html#ac176296e2c3b79a9f480c7a38b0842b0":[4,0,0,4,1,10,3],
 "cubic__scalar__system_8h.html":[4,0,0,12,0,0,1],
-"damping__model_8h.html":[4,0,0,8,3,5]
+"damping__model_8h.html":[4,0,0,8,3,5],
+"damping__model_8h.html#a637b32bd5b13e55117670a553e19c54f":[4,0,0,8,3,5,1],
+"decision__variable_8h.html":[4,0,0,11,17],
+"decision__variable_8h.html#a062b182db5c52f5a71221a4c5958ea0b":[4,0,0,11,17,3]
 };
