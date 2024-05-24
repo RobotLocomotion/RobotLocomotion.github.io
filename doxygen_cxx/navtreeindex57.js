@@ -1,5 +1,8 @@
 var NAVTREEINDEX57 =
 {
+"quadratic__form_8h.html":[4,0,0,7,26],
+"quadratic__form_8h.html#a296872692791b1e6d9e27311fc55a694":[4,0,0,7,26,1],
+"quadratic__form_8h.html#a8c66e16411c4f0d53e005658a49ccf6a":[4,0,0,7,26,0],
 "quadratic__form_8h.html#adc391d10568071dcb57bf6f214675cfe":[4,0,0,7,26,2],
 "quadratic__scalar__system_8h.html":[4,0,0,12,0,0,10],
 "quadrature_8h.html":[4,0,0,8,3,26],
@@ -246,8 +249,5 @@ var NAVTREEINDEX57 =
 "scoped__singleton_8h.html":[4,0,0,1,56],
 "screw__joint_8h.html":[4,0,0,8,14,47],
 "screw__mobilizer_8h.html":[4,0,0,8,14,48],
-"scs__clarabel__common_8h.html":[4,0,0,11,44],
-"scs__solver_8h.html":[4,0,0,11,45],
-"sdpa__free__format_8h.html":[4,0,0,11,46],
-"sdpa__free__format_8h.html#a121673ddbdadd10b2e3ceab52a93f5d3":[4,0,0,11,46,0]
+"scs__clarabel__common_8h.html":[4,0,0,11,44]
 };

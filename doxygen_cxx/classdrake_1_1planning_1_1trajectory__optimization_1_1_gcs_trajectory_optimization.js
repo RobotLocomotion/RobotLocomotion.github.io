@@ -7,6 +7,7 @@ var classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimi
     [ "GcsTrajectoryOptimization", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#ad515c3a3a5a3ad8e6f2ad33059021f48", null ],
     [ "~GcsTrajectoryOptimization", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a9c41ee6c46e4e39173da8e589408b9ef", null ],
     [ "AddEdges", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a8bebbda88b8d0ae4fadc88777404491e", null ],
+    [ "AddNonlinearDerivativeBounds", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a096ce11cacbbdc3be3dd3d189d81b93f", null ],
     [ "AddPathContinuityConstraints", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#afce2be43547f60d510c7e46154eac653", null ],
     [ "AddPathLengthCost", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a5120b456754eef916922cd73d2ec846a", null ],
     [ "AddPathLengthCost", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a34f92ff4feccc5aa2e289b9a514486ac", null ],

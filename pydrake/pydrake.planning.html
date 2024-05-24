@@ -2019,6 +2019,34 @@ instances of ConvexSets.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.AddNonlinearDerivativeBounds">
+<span class="sig-name descname"><span class="pre">AddNonlinearDerivativeBounds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.GcsTrajectoryOptimization" title="pydrake.planning.GcsTrajectoryOptimization"><span class="pre">pydrake.planning.GcsTrajectoryOptimization</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">lb</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ub</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">derivative_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.AddNonlinearDerivativeBounds" title="Permalink to this definition"></a></dt>
+<dd><p>Adds a nonlinear derivative constraints to the entire graph <code class="docutils literal notranslate"><span class="pre">lb</span></code> ≤
+dᴺq(t) / dtᴺ ≤ <code class="docutils literal notranslate"><span class="pre">ub</span></code>.</p>
+<p>This adds a nonlinear constraint to the restriction and MIP
+GraphOfConvexSets::Transcription, while adding a convex surrogate to
+the relaxation. For more details, see nonconvex_graph_of_convex_sets
+“Guiding Non-convex Optimization with the GraphOfConvexSets”.</p>
+<p>The nonlinear constraint involves the derivative dᴺq(t) / dtᴺ which is
+decomposed as dᴺr(s) / dsᴺ / hᴺ. The convex surrogate replaces the
+nonlinear component hᴺ with h₀ᴺ⁻¹h, where h₀ is the characteristic
+time of the set. For now, h₀ is set to 1.0 for all sets.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lb</span></code>:</dt><dd><p>is the lower bound of the derivative.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">ub</span></code>:</dt><dd><p>is the upper bound of the derivative.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">derivative_order</span></code>:</dt><dd><p>is the order of the derivative to be constrained.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if lb</strong><strong> or </strong><strong>ub are not of size num_positions</strong><strong>(</strong><strong>)</strong><strong></strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.AddPathContinuityConstraints">
 <span class="sig-name descname"><span class="pre">AddPathContinuityConstraints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.GcsTrajectoryOptimization" title="pydrake.planning.GcsTrajectoryOptimization"><span class="pre">pydrake.planning.GcsTrajectoryOptimization</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">continuity_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.AddPathContinuityConstraints" title="Permalink to this definition"></a></dt>
 <dd><p>Enforces derivative continuity constraints on the entire graph.</p>
@@ -2230,6 +2258,40 @@ GCSTrajetoryOptimization is not supported.</p>
 <dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs.__init__" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs.AddNonlinearDerivativeBounds">
+<span class="sig-name descname"><span class="pre">AddNonlinearDerivativeBounds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs" title="pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs"><span class="pre">pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">lb</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ub</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">derivative_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs.AddNonlinearDerivativeBounds" title="Permalink to this definition"></a></dt>
+<dd><p>Adds a nonlinear derivative constraints to the control point
+connecting the subgraphs <code class="docutils literal notranslate"><span class="pre">lb</span></code> ≤ dᴺq(t) / dtᴺ ≤ <code class="docutils literal notranslate"><span class="pre">ub</span></code>.</p>
+<p>This adds a nonlinear constraint to the restriction and MIP
+GraphOfConvexSets::Transcription, while adding a convex surrogate to
+the relaxation. For more details, see nonconvex_graph_of_convex_sets
+“Guiding Non-convex Optimization with the GraphOfConvexSets”.</p>
+<p>The nonlinear constraint involves the derivative dᴺq(t) / dtᴺ which is
+decomposed as dᴺr(s) / dsᴺ / hᴺ. The convex surrogate replaces the
+nonlinear component hᴺ with h₀ᴺ⁻¹h, where h₀ is the characteristic
+time of the set. For now, h₀ is set to 1.0 for all sets.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lb</span></code>:</dt><dd><p>is the lower bound of the derivative.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">ub</span></code>:</dt><dd><p>is the upper bound of the derivative.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">derivative_order</span></code>:</dt><dd><p>is the order of the derivative to be constrained.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if both subgraphs order is less than the desired</strong> – </p></li>
+<li><p><strong>derivative order.</strong> – </p></li>
+<li><p><strong>RuntimeError if the derivative order &lt;= 1</strong><strong>, </strong><strong>since the linear</strong> – </p></li>
+<li><p><strong>velocity bounds are preferred.</strong> – </p></li>
+<li><p><strong>RuntimeError if lb</strong><strong> or </strong><strong>ub are not of size num_positions</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs.AddPathContinuityConstraints">
@@ -2470,6 +2532,39 @@ be mixed with other instances of GcsTrajectoryOptimization.</p>
 <dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.Subgraph.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.Subgraph.__init__" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.Subgraph.AddNonlinearDerivativeBounds">
+<span class="sig-name descname"><span class="pre">AddNonlinearDerivativeBounds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.GcsTrajectoryOptimization.Subgraph" title="pydrake.planning.GcsTrajectoryOptimization.Subgraph"><span class="pre">pydrake.planning.GcsTrajectoryOptimization.Subgraph</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">lb</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ub</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">derivative_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.Subgraph.AddNonlinearDerivativeBounds" title="Permalink to this definition"></a></dt>
+<dd><p>Adds a nonlinear derivative constraints to the subgraph <code class="docutils literal notranslate"><span class="pre">lb</span></code> ≤
+dᴺq(t) / dtᴺ ≤ <code class="docutils literal notranslate"><span class="pre">ub</span></code>.</p>
+<p>This adds a nonlinear constraint to the restriction and MIP
+GraphOfConvexSets::Transcription, while adding a convex surrogate to
+the relaxation. For more details, see nonconvex_graph_of_convex_sets
+“Guiding Non-convex Optimization with the GraphOfConvexSets”.</p>
+<p>The nonlinear constraint involves the derivative dᴺq(t) / dtᴺ which is
+decomposed as dᴺr(s) / dsᴺ / hᴺ. The convex surrogate replaces the
+nonlinear component hᴺ with h₀ᴺ⁻¹h, where h₀ is the characteristic
+time of the set. For now, h₀ is set to 1.0 for all sets.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lb</span></code>:</dt><dd><p>is the lower bound of the derivative.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">ub</span></code>:</dt><dd><p>is the upper bound of the derivative.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">derivative_order</span></code>:</dt><dd><p>is the order of the derivative to be constrained.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if subgraph order is less than the derivative order.</strong> – </p></li>
+<li><p><strong>RuntimeError if the derivative order &lt;= 1</strong><strong>, </strong><strong>since the linear</strong> – </p></li>
+<li><p><strong>velocity bounds are preferred.</strong> – </p></li>
+<li><p><strong>RuntimeError if lb</strong><strong> or </strong><strong>ub are not of size num_positions</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.Subgraph.AddPathContinuityConstraints">

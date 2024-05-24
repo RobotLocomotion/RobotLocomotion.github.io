@@ -3,6 +3,7 @@ var classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimi
     [ "Subgraph", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#af9772f89f467b3eb25e91de87a3d4ee8", null ],
     [ "Subgraph", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a2bed1e04d783671aecf7e72323f48959", null ],
     [ "~Subgraph", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#afd4d76dbdc92a7faeadeaeb590c266fa", null ],
+    [ "AddNonlinearDerivativeBounds", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a096ce11cacbbdc3be3dd3d189d81b93f", null ],
     [ "AddPathContinuityConstraints", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#afce2be43547f60d510c7e46154eac653", null ],
     [ "AddPathLengthCost", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a5120b456754eef916922cd73d2ec846a", null ],
     [ "AddPathLengthCost", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a34f92ff4feccc5aa2e289b9a514486ac", null ],
