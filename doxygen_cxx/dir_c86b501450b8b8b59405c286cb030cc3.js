@@ -53,6 +53,7 @@ var dir_c86b501450b8b8b59405c286cb030cc3 =
       [ "IpoptSolverDetails", "structdrake_1_1solvers_1_1_ipopt_solver_details.html", "structdrake_1_1solvers_1_1_ipopt_solver_details" ],
       [ "IpoptSolver", "classdrake_1_1solvers_1_1_ipopt_solver.html", "classdrake_1_1solvers_1_1_ipopt_solver" ]
     ] ],
+    [ "ipopt_solver_internal.h", "ipopt__solver__internal_8h.html", null ],
     [ "linear_system_solver.h", "linear__system__solver_8h.html", [
       [ "LinearSystemSolver", "classdrake_1_1solvers_1_1_linear_system_solver.html", "classdrake_1_1solvers_1_1_linear_system_solver" ]
     ] ],

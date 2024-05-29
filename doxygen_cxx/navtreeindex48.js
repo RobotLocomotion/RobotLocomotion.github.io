@@ -1,5 +1,8 @@
 var NAVTREEINDEX48 =
 {
+"cspace__separating__plane_8h.html#ac176296e2c3b79a9f480c7a38b0842b0":[4,0,0,4,1,10,3],
+"cubic__scalar__system_8h.html":[4,0,0,12,0,0,1],
+"damping__model_8h.html":[4,0,0,8,3,5],
 "damping__model_8h.html#a637b32bd5b13e55117670a553e19c54f":[4,0,0,8,3,5,1],
 "decision__variable_8h.html":[4,0,0,11,17],
 "decision__variable_8h.html#a062b182db5c52f5a71221a4c5958ea0b":[4,0,0,11,17,3],
@@ -246,8 +249,5 @@ var NAVTREEINDEX48 =
 "discrete__algebraic__riccati__equation_8h.html#a8cd8a0787e886faf633f2c1f5be2365e":[4,0,0,7,11,0],
 "discrete__algebraic__riccati__equation_8h.html#aa957c0c1b13e62f96ae84dd8abe45dd9":[4,0,0,7,11,1],
 "discrete__contact__data_8h.html":[4,0,0,8,10,14],
-"discrete__contact__pair_8h.html":[4,0,0,8,10,15],
-"discrete__derivative_8h.html":[4,0,0,12,6,6],
-"discrete__lyapunov__equation_8h.html":[4,0,0,7,12],
-"discrete__lyapunov__equation_8h.html#a41733a5b284046800224cd293e055ff7":[4,0,0,7,12,0]
+"discrete__contact__pair_8h.html":[4,0,0,8,10,15]
 };

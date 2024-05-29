@@ -1991,6 +1991,40 @@ subspace.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.AddContinuityConstraints">
+<span class="sig-name descname"><span class="pre">AddContinuityConstraints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.GcsTrajectoryOptimization" title="pydrake.planning.GcsTrajectoryOptimization"><span class="pre">pydrake.planning.GcsTrajectoryOptimization</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">continuity_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.AddContinuityConstraints" title="Permalink to this definition"></a></dt>
+<dd><p>Enforces derivative continuity constraints on the entire graph.</p>
+<p>This adds a nonlinear constraint to the restriction and MIP
+GraphOfConvexSets::Transcription, while adding a convex surrogate to
+the relaxation. For more details, see nonconvex_graph_of_convex_sets
+“Guiding Non-convex Optimization with the GraphOfConvexSets”.</p>
+<p>The continuity is enforced on the control points of q(t), which appear
+as nonlinear constraints.</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">dᴺrᵤ</span><span class="p">(</span><span class="n">s</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">dsᴺ</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">hᵤᴺ</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="p">(</span><span class="n">dᴺrᵥ</span><span class="p">(</span><span class="n">s</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">dsᴺ</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">hᵥᴺ</span><span class="w"></span>
+</pre></div>
+</div>
+</details><p>The convex surrogate is simply the path continuity, where hᵤᴺ and hᵥᴺ
+are replaced by the characteristic times of the respective sets:</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">dᴺrᵤ</span><span class="p">(</span><span class="n">s</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">dsᴺ</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">hᵤ₀ᴺ</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="p">(</span><span class="n">dᴺrᵥ</span><span class="p">(</span><span class="n">s</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">dsᴺ</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">hᵥ₀ᴺ</span><span class="w"></span>
+</pre></div>
+</div>
+</details><p>. For now, these are set to one, but future work may involve scaling
+them by the size of the sets.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">continuity_order</span></code>:</dt><dd><p>is the order of the continuity constraint.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the continuity order is less than one since path</strong> – </p></li>
+<li><p><strong>continuity is enforced by default.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.AddEdges">
 <span class="sig-name descname"><span class="pre">AddEdges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.GcsTrajectoryOptimization" title="pydrake.planning.GcsTrajectoryOptimization"><span class="pre">pydrake.planning.GcsTrajectoryOptimization</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_subgraph</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.GcsTrajectoryOptimization.Subgraph" title="pydrake.planning.GcsTrajectoryOptimization.Subgraph"><span class="pre">pydrake.planning.GcsTrajectoryOptimization.Subgraph</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_subgraph</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.GcsTrajectoryOptimization.Subgraph" title="pydrake.planning.GcsTrajectoryOptimization.Subgraph"><span class="pre">pydrake.planning.GcsTrajectoryOptimization.Subgraph</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">subspace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs" title="pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs"><span class="pre">pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs</span></a></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.AddEdges" title="Permalink to this definition"></a></dt>
 <dd><p>Connects two subgraphs with directed edges.</p>
@@ -2050,15 +2084,15 @@ time of the set. For now, h₀ is set to 1.0 for all sets.</p>
 <dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.AddPathContinuityConstraints">
 <span class="sig-name descname"><span class="pre">AddPathContinuityConstraints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.GcsTrajectoryOptimization" title="pydrake.planning.GcsTrajectoryOptimization"><span class="pre">pydrake.planning.GcsTrajectoryOptimization</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">continuity_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.AddPathContinuityConstraints" title="Permalink to this definition"></a></dt>
 <dd><p>Enforces derivative continuity constraints on the entire graph.</p>
-<dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">continuity_order</span></code>:</dt><dd><p>is the order of the continuity constraint.</p>
-</dd>
-</dl>
 <p>Note that the constraints are on the control points of the derivatives
 of r(s) and not q(t). This may result in discontinuities of the
 trajectory return by <code class="docutils literal notranslate"><span class="pre">SolvePath()</span></code> since the r(s) will get rescaled
 by the duration h to yield q(t). <code class="docutils literal notranslate"><span class="pre">NormalizeSegmentTimes()</span></code> will
 return r(s) with valid continuity.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">continuity_order</span></code>:</dt><dd><p>is the order of the continuity constraint.</p>
+</dd>
+</dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2260,6 +2294,43 @@ GCSTrajetoryOptimization is not supported.</p>
 <dd></dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs.AddContinuityConstraints">
+<span class="sig-name descname"><span class="pre">AddContinuityConstraints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs" title="pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs"><span class="pre">pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">continuity_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs.AddContinuityConstraints" title="Permalink to this definition"></a></dt>
+<dd><p>Enforces derivative continuity constraints on the edges between the
+subgraphs.</p>
+<p>This adds a nonlinear constraint to the restriction and MIP
+GraphOfConvexSets::Transcription, while adding a convex surrogate to
+the relaxation. For more details, see nonconvex_graph_of_convex_sets
+“Guiding Non-convex Optimization with the GraphOfConvexSets”.</p>
+<p>The continuity is enforced on the control points of q(t), which appear
+as nonlinear constraints.</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">dᴺrᵤ</span><span class="p">(</span><span class="n">s</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">dsᴺ</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">hᵤᴺ</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="p">(</span><span class="n">dᴺrᵥ</span><span class="p">(</span><span class="n">s</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">dsᴺ</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">hᵥᴺ</span><span class="w"></span>
+</pre></div>
+</div>
+</details><p>The convex surrogate is simply the path continuity, where hᵤᴺ and hᵥᴺ
+are replaced by the characteristic times of the respective sets:</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">dᴺrᵤ</span><span class="p">(</span><span class="n">s</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">dsᴺ</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">hᵤ₀ᴺ</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="p">(</span><span class="n">dᴺrᵥ</span><span class="p">(</span><span class="n">s</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">dsᴺ</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">hᵥ₀ᴺ</span><span class="w"></span>
+</pre></div>
+</div>
+</details><p>. For now, these are set to one, but future work may involve scaling
+them by the size of the sets.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">continuity_order</span></code>:</dt><dd><p>is the order of the continuity constraint.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the continuity order is not equal</strong><strong> or </strong><strong>less than the</strong> – </p></li>
+<li><p><strong>order of both subgraphs.</strong> – </p></li>
+<li><p><strong>RuntimeError if the continuity order is less than one since path</strong> – </p></li>
+<li><p><strong>continuity is enforced by default.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs.AddNonlinearDerivativeBounds">
 <span class="sig-name descname"><span class="pre">AddNonlinearDerivativeBounds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs" title="pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs"><span class="pre">pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">lb</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ub</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">derivative_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs.AddNonlinearDerivativeBounds" title="Permalink to this definition"></a></dt>
 <dd><p>Adds a nonlinear derivative constraints to the control point
@@ -2298,15 +2369,15 @@ time of the set. For now, h₀ is set to 1.0 for all sets.</p>
 <span class="sig-name descname"><span class="pre">AddPathContinuityConstraints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs" title="pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs"><span class="pre">pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">continuity_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs.AddPathContinuityConstraints" title="Permalink to this definition"></a></dt>
 <dd><p>Enforces derivative continuity constraints on the edges between the
 subgraphs.</p>
-<dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">continuity_order</span></code>:</dt><dd><p>is the order of the continuity constraint.</p>
-</dd>
-</dl>
 <p>Note that the constraints are on the control points of the derivatives
 of r(s) and not q(t). This may result in discontinuities of the
 trajectory return by <code class="docutils literal notranslate"><span class="pre">SolvePath()</span></code> since the r(s) will get rescaled
 by the duration h to yield q(t). <code class="docutils literal notranslate"><span class="pre">NormalizeSegmentTimes()</span></code> will
 return r(s) with valid continuity.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">continuity_order</span></code>:</dt><dd><p>is the order of the continuity constraint.</p>
+</dd>
+</dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2534,6 +2605,42 @@ be mixed with other instances of GcsTrajectoryOptimization.</p>
 <dd></dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.Subgraph.AddContinuityConstraints">
+<span class="sig-name descname"><span class="pre">AddContinuityConstraints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.GcsTrajectoryOptimization.Subgraph" title="pydrake.planning.GcsTrajectoryOptimization.Subgraph"><span class="pre">pydrake.planning.GcsTrajectoryOptimization.Subgraph</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">continuity_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.Subgraph.AddContinuityConstraints" title="Permalink to this definition"></a></dt>
+<dd><p>Enforces derivative continuity constraints on the subgraph.</p>
+<p>This adds a nonlinear constraint to the restriction and MIP
+GraphOfConvexSets::Transcription, while adding a convex surrogate to
+the relaxation. For more details, see nonconvex_graph_of_convex_sets
+“Guiding Non-convex Optimization with the GraphOfConvexSets”.</p>
+<p>The continuity is enforced on the control points of q(t), which appear
+as nonlinear constraints.</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">dᴺrᵤ</span><span class="p">(</span><span class="n">s</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">dsᴺ</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">hᵤᴺ</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="p">(</span><span class="n">dᴺrᵥ</span><span class="p">(</span><span class="n">s</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">dsᴺ</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">hᵥᴺ</span><span class="w"></span>
+</pre></div>
+</div>
+</details><p>The convex surrogate is simply the path continuity, where hᵤᴺ and hᵥᴺ
+are replaced by the characteristic times of the respective sets:</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">dᴺrᵤ</span><span class="p">(</span><span class="n">s</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">dsᴺ</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">hᵤ₀ᴺ</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="p">(</span><span class="n">dᴺrᵥ</span><span class="p">(</span><span class="n">s</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">dsᴺ</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">hᵥ₀ᴺ</span><span class="w"></span>
+</pre></div>
+</div>
+</details><p>. For now, these are set to one, but future work may involve scaling
+them by the size of the sets.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">continuity_order</span></code>:</dt><dd><p>is the order of the continuity constraint.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the continuity order is not equal</strong><strong> or </strong><strong>less than the</strong> – </p></li>
+<li><p><strong>order the subgraphs.</strong> – </p></li>
+<li><p><strong>RuntimeError if the continuity order is less than one since path</strong> – </p></li>
+<li><p><strong>continuity is enforced by default.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.Subgraph.AddNonlinearDerivativeBounds">
 <span class="sig-name descname"><span class="pre">AddNonlinearDerivativeBounds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.GcsTrajectoryOptimization.Subgraph" title="pydrake.planning.GcsTrajectoryOptimization.Subgraph"><span class="pre">pydrake.planning.GcsTrajectoryOptimization.Subgraph</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">lb</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ub</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">derivative_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.Subgraph.AddNonlinearDerivativeBounds" title="Permalink to this definition"></a></dt>
 <dd><p>Adds a nonlinear derivative constraints to the subgraph <code class="docutils literal notranslate"><span class="pre">lb</span></code> ≤
@@ -2570,15 +2677,15 @@ time of the set. For now, h₀ is set to 1.0 for all sets.</p>
 <dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.Subgraph.AddPathContinuityConstraints">
 <span class="sig-name descname"><span class="pre">AddPathContinuityConstraints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.GcsTrajectoryOptimization.Subgraph" title="pydrake.planning.GcsTrajectoryOptimization.Subgraph"><span class="pre">pydrake.planning.GcsTrajectoryOptimization.Subgraph</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">continuity_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.Subgraph.AddPathContinuityConstraints" title="Permalink to this definition"></a></dt>
 <dd><p>Enforces derivative continuity constraints on the subgraph.</p>
-<dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">continuity_order</span></code>:</dt><dd><p>is the order of the continuity constraint.</p>
-</dd>
-</dl>
 <p>Note that the constraints are on the control points of the derivatives
 of r(s) and not q(t). This may result in discontinuities of the
 trajectory return by <code class="docutils literal notranslate"><span class="pre">SolvePath()</span></code> since the r(s) will get rescaled
 by the duration h to yield q(t). <code class="docutils literal notranslate"><span class="pre">NormalizeSegmentTimes()</span></code> will
 return r(s) with valid continuity.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">continuity_order</span></code>:</dt><dd><p>is the order of the continuity constraint.</p>
+</dd>
+</dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
