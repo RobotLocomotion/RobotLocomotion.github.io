@@ -50,6 +50,8 @@ var searchData=
   ['robotdiagram',['RobotDiagram',['../classdrake_1_1planning_1_1_robot_diagram.html',1,'drake::planning']]],
   ['robotdiagram_3c_20double_20_3e',['RobotDiagram&lt; double &gt;',['../classdrake_1_1planning_1_1_robot_diagram.html',1,'drake::planning']]],
   ['robotdiagrambuilder',['RobotDiagramBuilder',['../classdrake_1_1planning_1_1_robot_diagram_builder.html',1,'drake::planning']]],
+  ['robotmodel',['RobotModel',['../classdrake_1_1multibody_1_1test_1_1_robot_model.html',1,'drake::multibody::test']]],
+  ['robotmodelconfig',['RobotModelConfig',['../structdrake_1_1multibody_1_1test_1_1_robot_model_config.html',1,'drake::multibody::test']]],
   ['robotplaninterpolator',['RobotPlanInterpolator',['../classdrake_1_1manipulation_1_1util_1_1_robot_plan_interpolator.html',1,'drake::manipulation::util']]],
   ['rod2d',['Rod2D',['../classdrake_1_1examples_1_1rod2d_1_1_rod2_d.html',1,'drake::examples::rod2d']]],
   ['rod2dgeometry',['Rod2dGeometry',['../classdrake_1_1examples_1_1rod2d_1_1_rod2d_geometry.html',1,'drake::examples::rod2d']]],

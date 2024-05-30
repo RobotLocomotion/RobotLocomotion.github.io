@@ -171,12 +171,20 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html">AxiallySymmetricFreeBodyPlant</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This plant models the free motion of a torque free body in space.  <a href="classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1test_1_1_robot_model.html">RobotModel</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1test_1_1_robot_model_config.html">RobotModelConfig</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a6a2faff4d58a2704dd29573c3fd20921"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a6a2faff4d58a2704dd29573c3fd20921"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1test.html#a6a2faff4d58a2704dd29573c3fd20921">AddFixedObjectsToPlant</a> (<a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; *plant)</td></tr>
 <tr class="separator:a6a2faff4d58a2704dd29573c3fd20921"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb2cfc6c945092ef6e7101b9c7d66434"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1test.html#aeb2cfc6c945092ef6e7101b9c7d66434">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="structdrake_1_1multibody_1_1test_1_1_robot_model_config.html">RobotModelConfig</a> &amp;c)</td></tr>
+<tr class="separator:aeb2cfc6c945092ef6e7101b9c7d66434"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac72a634e745e32ca2633a8dbd7081f78"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1test.html#ac72a634e745e32ca2633a8dbd7081f78">VisualizeRobotModel</a> ()</td></tr>
+<tr class="separator:ac72a634e745e32ca2633a8dbd7081f78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a6a2faff4d58a2704dd29573c3fd20921"></a>
@@ -190,6 +198,51 @@ Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; *&#160;</td>
           <td class="paramname"><em>plant</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeb2cfc6c945092ef6e7101b9c7d66434"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb2cfc6c945092ef6e7101b9c7d66434">&#9670;&nbsp;</a></span>operator&lt;&lt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; drake::multibody::test::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1multibody_1_1test_1_1_robot_model_config.html">RobotModelConfig</a> &amp;&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac72a634e745e32ca2633a8dbd7081f78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac72a634e745e32ca2633a8dbd7081f78">&#9670;&nbsp;</a></span>VisualizeRobotModel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drake::multibody::test::VisualizeRobotModel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>

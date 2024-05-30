@@ -22,11 +22,11 @@ var dir_9f920ef99dcb5f2ba14ba6c3f54b363c =
     [ "initial_value_problem.h", "initial__value__problem_8h.html", [
       [ "InitialValueProblem", "classdrake_1_1systems_1_1_initial_value_problem.html", "classdrake_1_1systems_1_1_initial_value_problem" ]
     ] ],
-    [ "instantaneous_realtime_rate_calculator.h", "instantaneous__realtime__rate__calculator_8h.html", null ],
     [ "integrator_base.h", "integrator__base_8h.html", null ],
     [ "lyapunov.h", "lyapunov_8h.html", "lyapunov_8h" ],
     [ "monte_carlo.h", "monte__carlo_8h.html", "monte__carlo_8h" ],
     [ "radau_integrator.h", "radau__integrator_8h.html", "radau__integrator_8h" ],
+    [ "realtime_rate_calculator.h", "realtime__rate__calculator_8h.html", null ],
     [ "region_of_attraction.h", "region__of__attraction_8h.html", "region__of__attraction_8h" ],
     [ "runge_kutta2_integrator.h", "runge__kutta2__integrator_8h.html", null ],
     [ "runge_kutta3_integrator.h", "runge__kutta3__integrator_8h.html", null ],
