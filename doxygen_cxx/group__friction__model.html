@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Drake: Multibody Kinematics and Dynamics</title>
+<title>Drake: Modeling of Dry Friction</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -139,7 +139,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('group__multibody.html','');});
+$(document).ready(function(){initNavTree('group__friction__model.html','');});
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -158,27 +158,28 @@ $(document).ready(function(){initNavTree('group__multibody.html','');});
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#groups">Modules</a>  </div>
   <div class="headertitle">
-<div class="title">Multibody Kinematics and Dynamics</div>  </div>
+<div class="title">Modeling of Dry Friction<div class="ingroups"><a class="el" href="group__multibody.html">Multibody Kinematics and Dynamics</a> &raquo; <a class="el" href="group__drake__contacts.html">Contact Modeling in Drake</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
-Modules</h2></td></tr>
-<tr class="memitem:group__drake__contacts"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drake__contacts.html">Contact Modeling in Drake</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:group__multibody__solvers"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__multibody__solvers.html">Simulation of Multibody Systems</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:group__multibody__parsing"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__multibody__parsing.html">Parsing Models for Multibody Dynamics</a></td></tr>
-<tr class="memdesc:group__multibody__parsing"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drake's <a class="el" href="classdrake_1_1multibody_1_1_parser.html" title="Parses model description input into a MultibodyPlant and (optionally) a SceneGraph.">drake::multibody::Parser</a> accepts model files written in a variety of input formats. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:group__hydroelastic__user__guide"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__hydroelastic__user__guide.html">Hydroelastic Contact User Guide</a></td></tr>
-<tr class="memdesc:group__hydroelastic__user__guide"><td class="mdescLeft">&#160;</td><td class="mdescRight">A guide to using hydroelastic contact in practice. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
+<h1><a class="anchor" id="friction_physical_model"></a>
+Physical Model</h1>
+<p>Despite several <a class="el" href="group__friction__model.html#friction_numerical_approximations">numerical approximations</a> that Drake provides, the underlying physical "model" is the same; Coulomb's law of friction coupled with the maximum dissipation principle (MDP).</p>
+<p>Coulomb's law of friction can be stated in terms of forces for <a class="el" href="group__compliant__contact.html#compliant_point_contact">point contact</a> as:</p><pre>
+ ‖fₜ‖ ≤ μₛfₙ,
+</pre><p> where μₛ is the "static" coefficient of friction and fₜ and fₙ are the tangential (friction) and normal components of the contact force, respectively.</p>
+<p>For <a class="el" href="group__compliant__contact.html#hydro_contact">hydroelastic contact</a> the same law can be stated in terms of stresses as:</p><pre>
+ ‖Tₜ‖ ≤ μₛpₙ,
+</pre><p> where Tₜ and pₙ are the tangential (friction) and normal stresses, respectively.</p>
+<p>The friction force fₜ (or stress Tₜ) is perpendicular to the contact normal. It's direction within a plane perpendicular to the contact normal, is determined by MDP. The MDP states that the direction of the friction force is such that it maximizes the amount of dissipation due to friction. Therefore, for a sliding contact with a non-zero slip velocity vector vₜ, the friction force directly opposes vₜ and its magnitude is μₖfₙ (or μₖpₙ), where μₖ is the "dynamic" (or kinetic) coefficient of friction, with μₖ ≤ μₛ. This can be written as: </p><pre> 
+ fₜ = -μₖ vₜ/‖vₜ‖ fₙ.
+</pre><h1><a class="anchor" id="friction_numerical_approximations"></a>
+Numerical Approximations</h1>
+<p>Drake can model multibody systems as being <a class="el" href="group__mbp__continuous.html">continuous</a> or <a class="el" href="group__mbp__discrete.html">discrete</a>. Each of these represent different numerical approximations of the same underlying physics.</p>
+<p>In a nutshell, <a class="el" href="group__mbp__continuous.html">continuous</a> models formulate the multibody physics at the acceleration level and use a <a class="el" href="group__mbp__continuous.html#stribeck_approximation">regularized model of Coulomb friction</a>. This model is a continuous function of state that can be integrated in time using standard error-controlled numerical methods.</p>
+<p><a class="el" href="group__mbp__discrete.html">Discrete</a> models on the other hand, formulate the multibody physics at the velocity level, and incorporate friction as constraints. Now, these constraints can be regularized similarly to continuous models, to improve numerics and robustness. Drake's discrete non-convex model with regularized friction is presented in <a class="el" href="group__drake__contacts.html#Castro2019">[Castro et al., 2019]</a>, and novel convex approximations are presented <a class="el" href="group__drake__contacts.html#Castro2022">[Castro et al., 2022]</a> and <a class="el" href="group__drake__contacts.html#Castro2023">[Castro et al., 2023]</a>.</p>
+<p>Please refer to <a class="el" href="group__multibody__solvers.html">Simulation of Multibody Systems</a> for further details.</p>
+<dl class="section note"><dt>Note</dt><dd>Discrete models, formulated at the velocity level, cannot differentiate between static (μₛ) and dynamic (μₖ) friction; only dynamic friction can be resolved. Therefore the static coefficient of friction is ignored. </dd></dl>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- footer -->

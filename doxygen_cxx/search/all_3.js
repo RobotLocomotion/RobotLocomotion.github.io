@@ -653,11 +653,11 @@ var searchData=
   ['c_2b_2b_20support_20features',['C++ support features',['../group__cxx.html',1,'']]],
   ['cylinder',['Cylinder',['../classdrake_1_1geometry_1_1_cylinder.html',1,'Cylinder'],['../classdrake_1_1geometry_1_1_cylinder.html#acf30dff23bda145676c11a0303358e11',1,'drake::geometry::Cylinder::Cylinder(const Cylinder &amp;)=default'],['../classdrake_1_1geometry_1_1_cylinder.html#a2ec95712d33d7e2859be8264c18de553',1,'drake::geometry::Cylinder::Cylinder(Cylinder &amp;&amp;)=default'],['../classdrake_1_1geometry_1_1_cylinder.html#ab1683c1d8c02a0c1e6f27bbe2b47c9a7',1,'drake::geometry::Cylinder::Cylinder(double radius, double length)'],['../classdrake_1_1geometry_1_1_cylinder.html#a767ed95fe1f4141b796f975f5a3222ce',1,'drake::geometry::Cylinder::Cylinder(const Vector2&lt; double &gt; &amp;measures)']]],
   ['contact_20modeling_20in_20drake',['Contact Modeling in Drake',['../group__drake__contacts.html',1,'']]],
+  ['continuous_20models_20for_20simulation',['Continuous Models for Simulation',['../group__mbp__continuous.html',1,'']]],
   ['contact_20surface',['Contact Surface',['../group__module__contact__surface.html',1,'']]],
   ['collision_20checking',['Collision checking',['../group__planning__collision__checker.html',1,'']]],
   ['convenience_20classes',['Convenience classes',['../group__planning__infrastructure.html',1,'']]],
   ['configuring_20distributions',['Configuring distributions',['../group__schema__stochastic.html',1,'']]],
   ['configuring_20transforms',['Configuring transforms',['../group__schema__transform.html',1,'']]],
-  ['costs_20and_20constraints',['Costs and Constraints',['../group__solver__evaluators.html',1,'']]],
-  ['continuous_20approximation_20of_20coulomb_20friction',['Continuous Approximation of Coulomb Friction',['../group__stribeck__approximation.html',1,'']]]
+  ['costs_20and_20constraints',['Costs and Constraints',['../group__solver__evaluators.html',1,'']]]
 ];

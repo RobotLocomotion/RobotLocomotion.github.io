@@ -484,8 +484,7 @@ of Coulomb’s law coefficients of friction.</p>
 <blockquote>
 <div><p>kPoint : Contact forces are computed using a point contact model, see</p>
 </div></blockquote>
-<p>point_contact_approximation “Numerical Approximation of Point
-Contact”.</p>
+<p>compliant_point_contact.</p>
 <blockquote>
 <div><p>kHydroelasticWithFallback : Contact forces are computed using the hydroelastic model, where</p>
 </div></blockquote>
@@ -2104,8 +2103,8 @@ geometry::ProximityProperties object that contains the (“material”,
 “coulomb_friction”) property. If the property is missing,
 MultibodyPlant will throw an exception.</p>
 <p>² If the property is missing, MultibodyPlant will use a heuristic
-value as the default. Refer to the section mbp_compliant_point_contact
-“Compliant point contact model” for further details.</p>
+value as the default. Refer to the section point_contact_defaults
+“Point Contact Default Parameters” for further details.</p>
 <p>³ When using a linear Kelvin–Voigt model of dissipation (for instance
 when selecting the SAP solver), collision geometry is required to be
 registered with a geometry::ProximityProperties object that contains
@@ -2268,8 +2267,7 @@ continuous system, <code class="docutils literal notranslate"><span class="pre">
 <p>Currently the discrete model is preferred for simulation given its
 robustness and speed in problems with frictional contact. However this
 might change as we work towards developing better strategies to model
-contact. See time_advancement_strategy “Choice of Time Advancement
-Strategy” for further details.</p>
+contact. See multibody_simulation for further details.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Users should be aware of current limitations in either modeling
@@ -2286,8 +2284,8 @@ practice and especially due to poor performance.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">time_step</span></code>:</dt><dd><p>Indicates whether <code class="docutils literal notranslate"><span class="pre">this</span></code> plant is modeled as a continuous system
 (<code class="docutils literal notranslate"><span class="pre">time_step</span> <span class="pre">=</span> <span class="pre">0</span></code>) or as a discrete system with periodic updates
-of period <code class="docutils literal notranslate"><span class="pre">time_step</span> <span class="pre">&gt;</span> <span class="pre">0</span></code>. See time_advancement_strategy “Choice
-of Time Advancement Strategy” for further details.</p>
+of period <code class="docutils literal notranslate"><span class="pre">time_step</span> <span class="pre">&gt;</span> <span class="pre">0</span></code>. See multibody_simulation for further
+details.</p>
 </dd>
 </dl>
 <div class="admonition warning">
@@ -2610,7 +2608,7 @@ to or from symbolic::Expression after a call to this method.</p>
 <span class="sig-name descname"><span class="pre">AddRigidBody</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.AddRigidBody" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant, name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7fde41921c30&gt;) -&gt; pydrake.multibody.tree.RigidBody</p></li>
+<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant, name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f6a3a740470&gt;) -&gt; pydrake.multibody.tree.RigidBody</p></li>
 </ol>
 <p>Creates a rigid body with the provided name and spatial inertia. This
 method returns a constant reference to the body just added, which will
@@ -2649,7 +2647,7 @@ remain valid for the lifetime of <code class="docutils literal notranslate"><spa
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant, name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7fde44d465b0&gt;) -&gt; pydrake.multibody.tree.RigidBody</p></li>
+<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant, name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f6a3a7bb6f0&gt;) -&gt; pydrake.multibody.tree.RigidBody</p></li>
 </ol>
 <p>Creates a rigid body with the provided name and spatial inertia. This
 method returns a constant reference to the body just added, which will
@@ -6590,8 +6588,8 @@ all model instances.</p>
 <span class="sig-name descname"><span class="pre">set_penetration_allowance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">penetration_allowance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.001</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.set_penetration_allowance" title="Permalink to this definition"></a></dt>
 <dd><p>Sets the penetration allowance used to estimate the coefficients in
 the penalty method used to impose non-penetration among bodies. Refer
-to the section mbp_compliant_point_contact “Compliant point contact
-model” for further details.</p>
+to the section point_contact_defaults “Point Contact Default
+Parameters” for further details.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if penetration_allowance is not positive.</strong> – </p>
@@ -6636,9 +6634,8 @@ standard numerical methods for integration of ODE’s, it often leads to
 stiff dynamics that require an explicit integrator to take very small
 time steps. It is therefore recommended to use error controlled
 integrators when using this model or the discrete time stepping (see
-time_advancement_strategy “Choice of Time Advancement Strategy”). See
-stribeck_approximation for a detailed discussion of the Stribeck
-model.</p>
+multibody_simulation). See stribeck_approximation for a detailed
+discussion of the Stribeck model.</p>
 <p>Sets the stiction tolerance <code class="docutils literal notranslate"><span class="pre">v_stiction</span></code> for the Stribeck model,
 where <code class="docutils literal notranslate"><span class="pre">v_stiction</span></code> must be specified in m/s (meters per second.)
 <code class="docutils literal notranslate"><span class="pre">v_stiction</span></code> defaults to a value of 1 millimeter per second. In
@@ -7367,8 +7364,8 @@ geometry::ProximityProperties object that contains the (“material”,
 “coulomb_friction”) property. If the property is missing,
 MultibodyPlant will throw an exception.</p>
 <p>² If the property is missing, MultibodyPlant will use a heuristic
-value as the default. Refer to the section mbp_compliant_point_contact
-“Compliant point contact model” for further details.</p>
+value as the default. Refer to the section point_contact_defaults
+“Point Contact Default Parameters” for further details.</p>
 <p>³ When using a linear Kelvin–Voigt model of dissipation (for instance
 when selecting the SAP solver), collision geometry is required to be
 registered with a geometry::ProximityProperties object that contains
@@ -7526,8 +7523,7 @@ continuous system, <code class="docutils literal notranslate"><span class="pre">
 <p>Currently the discrete model is preferred for simulation given its
 robustness and speed in problems with frictional contact. However this
 might change as we work towards developing better strategies to model
-contact. See time_advancement_strategy “Choice of Time Advancement
-Strategy” for further details.</p>
+contact. See multibody_simulation for further details.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Users should be aware of current limitations in either modeling
@@ -7544,8 +7540,8 @@ practice and especially due to poor performance.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">time_step</span></code>:</dt><dd><p>Indicates whether <code class="docutils literal notranslate"><span class="pre">this</span></code> plant is modeled as a continuous system
 (<code class="docutils literal notranslate"><span class="pre">time_step</span> <span class="pre">=</span> <span class="pre">0</span></code>) or as a discrete system with periodic updates
-of period <code class="docutils literal notranslate"><span class="pre">time_step</span> <span class="pre">&gt;</span> <span class="pre">0</span></code>. See time_advancement_strategy “Choice
-of Time Advancement Strategy” for further details.</p>
+of period <code class="docutils literal notranslate"><span class="pre">time_step</span> <span class="pre">&gt;</span> <span class="pre">0</span></code>. See multibody_simulation for further
+details.</p>
 </dd>
 </dl>
 <div class="admonition warning">
@@ -7868,7 +7864,7 @@ to or from symbolic::Expression after a call to this method.</p>
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].AddRigidBody"></span><span class="sig-name descname"><span class="pre">AddRigidBody</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.AddRigidBody" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7fde44931f30&gt;) -&gt; pydrake.multibody.tree.RigidBody_[AutoDiffXd]</p></li>
+<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f6a3a6a0df0&gt;) -&gt; pydrake.multibody.tree.RigidBody_[AutoDiffXd]</p></li>
 </ol>
 <p>Creates a rigid body with the provided name and spatial inertia. This
 method returns a constant reference to the body just added, which will
@@ -7907,7 +7903,7 @@ remain valid for the lifetime of <code class="docutils literal notranslate"><spa
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7fde44cef770&gt;) -&gt; pydrake.multibody.tree.RigidBody_[AutoDiffXd]</p></li>
+<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f6a3a65d8f0&gt;) -&gt; pydrake.multibody.tree.RigidBody_[AutoDiffXd]</p></li>
 </ol>
 <p>Creates a rigid body with the provided name and spatial inertia. This
 method returns a constant reference to the body just added, which will
@@ -11810,8 +11806,8 @@ all model instances.</p>
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].set_penetration_allowance"></span><span class="sig-name descname"><span class="pre">set_penetration_allowance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">penetration_allowance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.001</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.set_penetration_allowance" title="Permalink to this definition"></a></dt>
 <dd><p>Sets the penetration allowance used to estimate the coefficients in
 the penalty method used to impose non-penetration among bodies. Refer
-to the section mbp_compliant_point_contact “Compliant point contact
-model” for further details.</p>
+to the section point_contact_defaults “Point Contact Default
+Parameters” for further details.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if penetration_allowance is not positive.</strong> – </p>
@@ -11856,9 +11852,8 @@ standard numerical methods for integration of ODE’s, it often leads to
 stiff dynamics that require an explicit integrator to take very small
 time steps. It is therefore recommended to use error controlled
 integrators when using this model or the discrete time stepping (see
-time_advancement_strategy “Choice of Time Advancement Strategy”). See
-stribeck_approximation for a detailed discussion of the Stribeck
-model.</p>
+multibody_simulation). See stribeck_approximation for a detailed
+discussion of the Stribeck model.</p>
 <p>Sets the stiction tolerance <code class="docutils literal notranslate"><span class="pre">v_stiction</span></code> for the Stribeck model,
 where <code class="docutils literal notranslate"><span class="pre">v_stiction</span></code> must be specified in m/s (meters per second.)
 <code class="docutils literal notranslate"><span class="pre">v_stiction</span></code> defaults to a value of 1 millimeter per second. In
@@ -12581,8 +12576,8 @@ geometry::ProximityProperties object that contains the (“material”,
 “coulomb_friction”) property. If the property is missing,
 MultibodyPlant will throw an exception.</p>
 <p>² If the property is missing, MultibodyPlant will use a heuristic
-value as the default. Refer to the section mbp_compliant_point_contact
-“Compliant point contact model” for further details.</p>
+value as the default. Refer to the section point_contact_defaults
+“Point Contact Default Parameters” for further details.</p>
 <p>³ When using a linear Kelvin–Voigt model of dissipation (for instance
 when selecting the SAP solver), collision geometry is required to be
 registered with a geometry::ProximityProperties object that contains
@@ -12740,8 +12735,7 @@ continuous system, <code class="docutils literal notranslate"><span class="pre">
 <p>Currently the discrete model is preferred for simulation given its
 robustness and speed in problems with frictional contact. However this
 might change as we work towards developing better strategies to model
-contact. See time_advancement_strategy “Choice of Time Advancement
-Strategy” for further details.</p>
+contact. See multibody_simulation for further details.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Users should be aware of current limitations in either modeling
@@ -12758,8 +12752,8 @@ practice and especially due to poor performance.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">time_step</span></code>:</dt><dd><p>Indicates whether <code class="docutils literal notranslate"><span class="pre">this</span></code> plant is modeled as a continuous system
 (<code class="docutils literal notranslate"><span class="pre">time_step</span> <span class="pre">=</span> <span class="pre">0</span></code>) or as a discrete system with periodic updates
-of period <code class="docutils literal notranslate"><span class="pre">time_step</span> <span class="pre">&gt;</span> <span class="pre">0</span></code>. See time_advancement_strategy “Choice
-of Time Advancement Strategy” for further details.</p>
+of period <code class="docutils literal notranslate"><span class="pre">time_step</span> <span class="pre">&gt;</span> <span class="pre">0</span></code>. See multibody_simulation for further
+details.</p>
 </dd>
 </dl>
 <div class="admonition warning">
@@ -13082,7 +13076,7 @@ to or from symbolic::Expression after a call to this method.</p>
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].AddRigidBody"></span><span class="sig-name descname"><span class="pre">AddRigidBody</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.AddRigidBody" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[Expression], name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7fde4497c7f0&gt;) -&gt; pydrake.multibody.tree.RigidBody_[Expression]</p></li>
+<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[Expression], name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f6a3a7153b0&gt;) -&gt; pydrake.multibody.tree.RigidBody_[Expression]</p></li>
 </ol>
 <p>Creates a rigid body with the provided name and spatial inertia. This
 method returns a constant reference to the body just added, which will
@@ -13121,7 +13115,7 @@ remain valid for the lifetime of <code class="docutils literal notranslate"><spa
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[Expression], name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7fde4480fa30&gt;) -&gt; pydrake.multibody.tree.RigidBody_[Expression]</p></li>
+<li><p>AddRigidBody(self: pydrake.multibody.plant.MultibodyPlant_[Expression], name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f6a3a645770&gt;) -&gt; pydrake.multibody.tree.RigidBody_[Expression]</p></li>
 </ol>
 <p>Creates a rigid body with the provided name and spatial inertia. This
 method returns a constant reference to the body just added, which will
@@ -17024,8 +17018,8 @@ all model instances.</p>
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].set_penetration_allowance"></span><span class="sig-name descname"><span class="pre">set_penetration_allowance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">penetration_allowance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.001</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.set_penetration_allowance" title="Permalink to this definition"></a></dt>
 <dd><p>Sets the penetration allowance used to estimate the coefficients in
 the penalty method used to impose non-penetration among bodies. Refer
-to the section mbp_compliant_point_contact “Compliant point contact
-model” for further details.</p>
+to the section point_contact_defaults “Point Contact Default
+Parameters” for further details.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if penetration_allowance is not positive.</strong> – </p>
@@ -17070,9 +17064,8 @@ standard numerical methods for integration of ODE’s, it often leads to
 stiff dynamics that require an explicit integrator to take very small
 time steps. It is therefore recommended to use error controlled
 integrators when using this model or the discrete time stepping (see
-time_advancement_strategy “Choice of Time Advancement Strategy”). See
-stribeck_approximation for a detailed discussion of the Stribeck
-model.</p>
+multibody_simulation). See stribeck_approximation for a detailed
+discussion of the Stribeck model.</p>
 <p>Sets the stiction tolerance <code class="docutils literal notranslate"><span class="pre">v_stiction</span></code> for the Stribeck model,
 where <code class="docutils literal notranslate"><span class="pre">v_stiction</span></code> must be specified in m/s (meters per second.)
 <code class="docutils literal notranslate"><span class="pre">v_stiction</span></code> defaults to a value of 1 millimeter per second. In

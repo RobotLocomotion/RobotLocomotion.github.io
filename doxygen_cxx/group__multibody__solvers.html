@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Drake: Detecting Contact</title>
+<title>Drake: Simulation of Multibody Systems</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -139,7 +139,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('group__contact__geometry.html','');});
+$(document).ready(function(){initNavTree('group__multibody__solvers.html','');});
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -158,17 +158,29 @@ $(document).ready(function(){initNavTree('group__contact__geometry.html','');});
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#groups">Modules</a>  </div>
   <div class="headertitle">
-<div class="title">Detecting Contact<div class="ingroups"><a class="el" href="group__multibody.html">Multibody Kinematics and Dynamics</a> &raquo; <a class="el" href="group__drake__contacts.html">Contact Modeling in Drake</a></div></div>  </div>
+<div class="title">Simulation of Multibody Systems<div class="ingroups"><a class="el" href="group__multibody.html">Multibody Kinematics and Dynamics</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
-<p>Given two posed geometric shapes in a common frame, the collision detection system is responsible for determining if those shapes are penetrating and characterizing that penetration. </p>
-<p>We won't go into the details of the how and why these techniques work the way they do, but, instead, focus on <em>what</em> the properties of the results of the <em>current implementation</em> are. It is worth noting that some of these properties are considered <em>problems</em> yet to be resolved and should not necessarily be considered desirable.</p><ol type="1">
-<li>Between any two collision geometries, there is a single contact point <code>Co</code>. This point is characterized by two <em>witness points</em> <code>Aw</code> and <code>Bw</code> on the geometry surfaces at the points of deepest penetration, see <a class="el" href="group__drake__contacts.html#point_contact_approximation">Numerical Approximation of Point Contact</a>.</li>
-<li>Contacts are reported as the pair of deepest-penetration witness points <code>Aw</code> and <code>Bw</code>, a <a class="el" href="structdrake_1_1geometry_1_1_penetration_as_point_pair.html">PenetrationAsPointPair</a> in Drake.</li>
-<li>Surface-to-surface contacts (such as a block sitting on a plane) are unfortunately still limited to a single contact point, typically located at the point of deepest penetration. That point will necessarily change from step to step in an essentially non-physical manner. Our contact solver has generally exhibited stable behavior, even under these adversarial conditions. However, we recommend emulating multi-point contact by adding a collection of spheres covering the contact surfaces of interest. Refer to the example in drake/examples/multibody/inclined_plane_with_body/inclined_plane_with_body.cc for a demonstration of this strategy.</li>
-<li>A contact <em>normal</em> is determined that approximates the mutual normal of the contacting surfaces at the contact point. Next topic: <a class="el" href="group__contact__engineering.html">Working with Contacts in Drake</a> </li>
-</ol>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<h1><a class="anchor" id="multibody_simulation"></a>
+Simulation of Multibody Systems with Frictional Contact</h1>
+<p><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a> offers two different modalities to model mechanical systems in time. These are:</p><ul>
+<li><a class="el" href="group__mbp__discrete.html">Discrete Models for Simulation</a> (currently the preferred method for robustness and speed),</li>
+<li><a class="el" href="group__mbp__continuous.html">Continuous Models for Simulation</a>,</li>
+</ul>
+<p>In the following sections we'll only provide a very limited distinction between a continuous and a discrete system. A complete discussion of the subject, including the modeling of hybrid systems is beyond the scope of this section and thus interested readers are referred to the documentation for <a class="el" href="classdrake_1_1systems_1_1_simulator.html">Simulator</a>.</p>
+<p>As of today (May 2024), for multibody problems involving contact with friction, discrete solvers in Drake perform significantly better than error-controlled integration methods. </p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
+Modules</h2></td></tr>
+<tr class="memitem:group__mbp__discrete"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mbp__discrete.html">Discrete Models for Simulation</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__mbp__continuous"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mbp__continuous.html">Continuous Models for Simulation</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- footer -->

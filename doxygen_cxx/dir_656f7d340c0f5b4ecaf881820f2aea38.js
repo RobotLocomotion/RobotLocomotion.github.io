@@ -57,6 +57,7 @@ var dir_656f7d340c0f5b4ecaf881820f2aea38 =
     ] ],
     [ "sap_driver.h", "sap__driver_8h.html", null ],
     [ "scalar_convertible_component.h", "scalar__convertible__component_8h.html", null ],
+    [ "simulation_and_solvers_doxygen.h", "simulation__and__solvers__doxygen_8h.html", null ],
     [ "slicing_and_indexing.h", "slicing__and__indexing_8h.html", null ],
     [ "tamsi_driver.h", "tamsi__driver_8h.html", "tamsi__driver_8h" ],
     [ "tamsi_solver.h", "tamsi__solver_8h.html", "tamsi__solver_8h" ],

@@ -118,19 +118,19 @@ var NAVTREEINDEX =
 "expression_2expression_8h.html#a93e09e7b40ee56f60a121014f02603fb",
 "formula_8h.html#aa71ff98005aa4a5b0d0639c055fb295f",
 "generic__polynomial_8h.html#a830fbf97ac01bf807b4915e3087585da",
-"group__visualization.html#ga34c9c8f0a78446ac29edf4a3202127c3",
-"lcm__pybind_8h.html",
-"multibody__plant_8h.html#a6f6e054758d34b83e86bea87d65dfe4e",
-"namespacemembers_func_m.html",
-"proximity__properties_8h.html",
-"schunk__wsg__constants_8h.html#a61bd2a6df7e108de0e18d2cc85a1eb43",
-"standard__operations_8h.html#aeb6bf33add06bc05bd046c803bf6da00",
-"structdrake_1_1geometry_1_1_drake_visualizer_params.html#a802a9c3334d60afa02164d2d559365e8",
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a49f1367efbb0c0efddaec6ed273e8bb7",
-"structdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_kuka_robot_joint_reaction_forces.html#adddb155f97ee7c54be548096bbbba70e",
-"structdrake_1_1solvers_1_1_osqp_solver_details.html#ad8777b50c3dafc67e4f54047b62473b4",
-"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_depth16_u_01_4.html#afe6901f952a36afe20ac9b9e21e1a22a",
-"symbolic__test__util_8h.html#abca93568505710bf72e917c5c73d4b9c"
+"group__terminology__and__notation.html",
+"lcm__py__bind__cpp__serializers_8h.html",
+"multibody__graph_8h.html",
+"namespacemembers_func_k.html",
+"proximity__doxygen_8h.html",
+"schunk__wsg__constants_8h.html#a2fbb9739d01b7281a1633aa49c419d6e",
+"standard__operations_8h.html#ae521245b6aec25f233036d952061fb5b",
+"structdrake_1_1geometry_1_1_drake_visualizer_params.html#a2d836029fd25573125bd231e1ad19ecb",
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a2213eafbc5c4f73c4af52ecd163494c6",
+"structdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_kuka_robot_joint_reaction_forces.html#aaaeae014c3934ee5060476d52c6e9181",
+"structdrake_1_1solvers_1_1_osqp_solver_details.html#aab6f168571c2073e01e240524b8a3da0",
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_depth16_u_01_4.html#a770fd0c30a2b985c180ebffb9747a07a",
+"symbolic__test__util_8h.html#a9f9f40ffa7e74c90169e1269d087ff7f"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Drake: Continuous Approximation of Coulomb Friction</title>
+<title>Drake: Discrete Models for Simulation</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -139,7 +139,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('group__stribeck__approximation.html','');});
+$(document).ready(function(){initNavTree('group__mbp__discrete.html','');});
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -159,33 +159,18 @@ $(document).ready(function(){initNavTree('group__stribeck__approximation.html','
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Continuous Approximation of Coulomb Friction<div class="ingroups"><a class="el" href="group__multibody.html">Multibody Kinematics and Dynamics</a> &raquo; <a class="el" href="group__drake__contacts.html">Contact Modeling in Drake</a></div></div>  </div>
+<div class="title">Discrete Models for Simulation<div class="ingroups"><a class="el" href="group__multibody.html">Multibody Kinematics and Dynamics</a> &raquo; <a class="el" href="group__multibody__solvers.html">Simulation of Multibody Systems</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
-<p>Static friction (or stiction) arises due to surface characteristics at the microscopic level (e.g., mechanical interference of surface imperfections, electrostatic, and/or Van der Waals forces). </p>
-<p>Two objects in static contact need to have a force <code>fₚ</code> applied parallel to the surface of contact sufficient to <em>break</em> stiction. Once the objects are moving, kinetic (dynamic) friction takes over. It is possible to accelerate one body sliding across another body with a force that would have been too small to break stiction. In essence, stiction will create a contrary force canceling out any force too small to break stiction (see Figure 2).</p>
-<div class="image">
-<img src="ideal_stiction.png" alt="ideal_stiction.png"/>
-<div class="caption">
-Figure 2: Idealized Stiction/Sliding Friction Model</div></div>
-<p> In <em>idealized</em> stiction, tangent force <code>fₜ</code> is equal and opposite to the pushing force <code>fₚ</code> up to the point where that force is sufficient to break stiction (the red dot in Figure 2). At that point, the tangent force immediately becomes a constant force based on the <em>kinetic</em> coefficient of friction. There are obvious discontinuities in this function which do not occur in reality, but this can be a useful approximation and can be implemented in this form using constraints that can be enabled and disabled discontinuously. However, here we are looking for a continuous model that can produce reasonable behavior using only unconstrained differential equations. With this model we can also capture the empirically-observed Stribeck effect where the friction force declines with increasing slip velocity until it reaches the kinetic friction level.</p>
-<div class="image">
-<img src="stribeck.png" alt="stribeck.png"/>
-<div class="caption">
-Figure 3: Stribeck function for stiction</div></div>
-<p> The Stribeck model is a variation of Coulomb friction, where the frictional (aka <em>tangential</em>) force is proportional to the normal force as:</p>
-<p><code>fₜ = μ⋅fₙ</code>,</p>
-<p>In the Stribeck model, the coefficient of friction, μ, is replaced with a slip speed-dependent function:</p>
-<p><code>fₜ = μ(s)⋅fₙ</code>,</p>
-<p>where <code>s</code> is a unitless multiple of a <em>new</em> parameter: <em>slip tolerance</em> (<code>vₛ</code>). Rather than modeling <em>perfect</em> stiction, it makes use of an <em>allowable</em> amount of relative motion to approximate stiction. When we refer to "relative motion", we refer specifically to the relative translational speed of two points <code>Ac</code> and <code>Bc</code> defined to instantly be located at contact point <code>Co</code> and moving with bodies A and B, respectively.</p>
-<p>The function, as illustrated in Figure 3, is a function of the unitless <em>multiple</em> of <code>vₛ</code>. The domain is divided into three intervals:</p>
-<ul>
-<li><code>s ∈ [0, 1)</code>: the coefficient of friction rises smoothly from zero to the static coefficient of friction, μs.</li>
-<li><code>s ∈ [1, 3)</code>: The coefficient of friction falls smoothly from μs to the kinetic (dynamic) coefficient of friction, μd.</li>
-<li><code>s ∈ [3, ∞)</code>: Coefficient of friction is held constant at μd.</li>
-</ul>
-<p>Other than the residual "creep" velocity limited by <code>vₛ</code>, which can be arbitrarily small (in theory; see <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#afa94cf2eeba3e27ad35132211ae6d074">set_stiction_tolerance()</a> for practical considerations), this model produces a reasonably good approximation of Coulomb friction. Its primary drawback is that the model is numerically very stiff in the stiction region, which requires either small step sizes with an explicit integrator, or use of a more-stable implicit integrator.</p>
-<dl class="section note"><dt>Note</dt><dd>When modeling the multibody system as discrete (refer to the <a class="el" href="group__contact__engineering.html#time_advancement_strategy">Choice of Time Advancement Strategy</a> section), the model assumes both static and kinetic coefficients of friction to be equal and the static coefficient of friction is ignored. </dd></dl>
+<h1><a class="anchor" id="mbp_discrete_intro"></a>
+Discrete Models for Simulation</h1>
+<p>Currently, this is the preferred modality given its speed and robustness. In this modality, the system is updated through periodic updates of length <code>time_step</code>. This can essentially be seen as a time-stepping strategy with a fixed <code>time_step</code>. The value of <code>time_step</code> is provided at construction of the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>.</p>
+<p>Drake provides two very different simulation technologies:</p><ol type="1">
+<li>TAMSI, which formulates non-linear compliant contact with regularized friction using a Newton-Raphson solver with a custom "transition aware" line search, see <a class="el" href="group__drake__contacts.html#Castro2019">[Castro et al., 2019]</a></li>
+<li>SAP, a convex formulation originally developed in <a class="el" href="group__drake__contacts.html#Castro2022">[Castro et al., 2022]</a> as an extension to the work in <a class="el" href="group__drake__contacts.html#Anitescu2006">[Anitescu, 2006]</a> and <a class="el" href="group__drake__contacts.html#Todorov2014">[Todorov, 2014]</a> to resolve physical compliance, providing a performant implementation in primal coordinates.</li>
+</ol>
+<p>To choose different approximations of discrete contact refer to <a class="el" href="namespacedrake_1_1multibody.html#aa1d02176591187cb83e77e9ff779d679">DiscreteContactApproximation</a>. Today SAP is our preferred discrete solver for its robustness, speed, and rich feature set of constraints. A novel extension to SAP presented in <a class="el" href="group__drake__contacts.html#Castro2023">[Castro et al., 2023]</a>, still convex, allows for the introduction of complex models of compliant contact, such as <a class="el" href="group__drake__contacts.html#HuntCrossley1975">[Hunt and Crossley 1975]</a>. The Hunt &amp; Crossley model is based on physics, it is continuous and has been experimentally validated. Therefore it is the preferred model to capture the physics of contact.</p>
+<dl class="section note"><dt>Note</dt><dd>Discrete models, formulated at the velocity level, cannot differentiate between static (μₛ) and dynamic (μₖ) friction; only dynamic friction can be resolved. Therefore the static coefficient of friction is ignored. </dd></dl>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- footer -->

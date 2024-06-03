@@ -6,6 +6,7 @@ var searchData=
   ['supported_20file_20formats',['Supported file formats',['../group__geometry__file__formats.html',1,'']]],
   ['scenegraph_2c_20scenegraphinspector_2c_20queryobject',['SceneGraph, SceneGraphInspector, QueryObject',['../group__geometry__infrastructure.html',1,'']]],
   ['system_20identification',['System Identification',['../group__identification.html',1,'']]],
+  ['simulation_20of_20multibody_20systems',['Simulation of Multibody Systems',['../group__multibody__solvers.html',1,'']]],
   ['spatial_20algebra',['Spatial Algebra',['../group__multibody__spatial__algebra.html',1,'']]],
   ['spatial_20mass_20matrix_20_28spatial_20inertia_29',['Spatial Mass Matrix (Spatial Inertia)',['../group__multibody__spatial__inertia.html',1,'']]],
   ['spatial_20pose_20and_20transform',['Spatial Pose and Transform',['../group__multibody__spatial__pose.html',1,'']]],

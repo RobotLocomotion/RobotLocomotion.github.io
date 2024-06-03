@@ -564,7 +564,7 @@ drake:hunt_crossley_dissipation</h2>
 <h3><a class="anchor" id="tag_drake_hunt_crossley_dissipation_semantics"></a>
 Semantics</h3>
 <p>If present, this element provides a value (units of inverse of velocity, i.e. s/m) for the Hunt-Crossley dissipation model. It is stored in a ProximityProperties object under <code>(material, hunt_crossley_dissipation)</code>.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1geometry_1_1_proximity_properties.html" title="The set of properties for geometry used in a proximity role.">drake::geometry::ProximityProperties</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#mbp_hydroelastic_materials_properties">Hydroelastic contact</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#mbp_dissipation_model">Modeling Dissipation</a></dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1geometry_1_1_proximity_properties.html" title="The set of properties for geometry used in a proximity role.">drake::geometry::ProximityProperties</a>, <a class="el" href="group__compliant__contact.html#hydro_model_parameters">Hydroelastic contact parameters</a>, <a class="el" href="group__compliant__contact.html#mbp_dissipation_model">Modeling Dissipation</a></dd></dl>
 <h2><a class="anchor" id="tag_drake_hydroelastic_modulus"></a>
 drake:hydroelastic_modulus</h2>
 <ul>
@@ -575,7 +575,7 @@ drake:hydroelastic_modulus</h2>
 <h3><a class="anchor" id="tag_drake_hydroelastic_modulus_semantics"></a>
 Semantics</h3>
 <p>If present, this element provides a value (units of pressure, i.e. Pa (N/m²)) for the hydroelastic modulus. It is stored in a ProximityProperties object under <code>(hydroelastic, hydroelastic_modulus)</code>.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1geometry_1_1_proximity_properties.html" title="The set of properties for geometry used in a proximity role.">drake::geometry::ProximityProperties</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#mbp_hydroelastic_materials_properties">Hydroelastic contact</a>, <a class="el" href="group__hydroelastic__user__guide.html#hug_properties">Properties for hydroelastic contact</a></dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1geometry_1_1_proximity_properties.html" title="The set of properties for geometry used in a proximity role.">drake::geometry::ProximityProperties</a>, <a class="el" href="group__compliant__contact.html#hydro_model_parameters">Hydroelastic contact parameters</a>, <a class="el" href="group__hydroelastic__user__guide.html#hug_properties">Properties for hydroelastic contact</a></dd></dl>
 <h2><a class="anchor" id="tag_drake_ignored_collision_filter_group"></a>
 drake:ignored_collision_filter_group</h2>
 <ul>
@@ -666,8 +666,8 @@ drake:mu_dynamic</h2>
 </ul>
 <h3><a class="anchor" id="tag_drake_mu_dynamic_semantics"></a>
 Semantics</h3>
-<p>The provided (dimensionless) value sets the dynamic friction parameter for CoulombFriction. Refer to <a class="el" href="group__stribeck__approximation.html">Continuous Approximation of Coulomb Friction</a> for details on the friction model.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__multibody__parsing.html#tag_drake_proximity_properties">drake:proximity_properties</a>, <a class="el" href="classdrake_1_1multibody_1_1_coulomb_friction.html" title="Parameters for Coulomb&#39;s Law of Friction, namely:">drake::multibody::CoulombFriction</a>, <a class="el" href="group__stribeck__approximation.html">Continuous Approximation of Coulomb Friction</a></dd></dl>
+<p>The provided (dimensionless) value sets the dynamic friction parameter for CoulombFriction. Refer to <a class="el" href="group__mbp__continuous.html#stribeck_approximation">Continuous Approximation of Coulomb Friction</a> for details on the friction model.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__multibody__parsing.html#tag_drake_proximity_properties">drake:proximity_properties</a>, <a class="el" href="classdrake_1_1multibody_1_1_coulomb_friction.html" title="Parameters for Coulomb&#39;s Law of Friction, namely:">drake::multibody::CoulombFriction</a>, <a class="el" href="group__mbp__continuous.html#stribeck_approximation">Continuous Approximation of Coulomb Friction</a></dd></dl>
 <h2><a class="anchor" id="tag_drake_mu_static"></a>
 drake:mu_static</h2>
 <ul>
@@ -677,9 +677,9 @@ drake:mu_static</h2>
 </ul>
 <h3><a class="anchor" id="tag_drake_mu_static_semantics"></a>
 Semantics</h3>
-<p>The provided (dimensionless) value sets the static friction parameter for CoulombFriction. Refer to <a class="el" href="group__stribeck__approximation.html">Continuous Approximation of Coulomb Friction</a> for details on the friction model.</p>
+<p>The provided (dimensionless) value sets the static friction parameter for CoulombFriction. Refer to <a class="el" href="group__mbp__continuous.html#stribeck_approximation">Continuous Approximation of Coulomb Friction</a> for details on the friction model.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Both <code>mu_dynamic</code> and <code>mu_static</code> are used by MultibodyPlant when the plant <code>time_step=0</code>, but only <code>mu_dynamic</code> is used when <code>time_step&gt;0</code>. Refer to MultibodyPlant's constructor documentation for details.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__multibody__parsing.html#tag_drake_proximity_properties">drake:proximity_properties</a>, <a class="el" href="classdrake_1_1multibody_1_1_coulomb_friction.html" title="Parameters for Coulomb&#39;s Law of Friction, namely:">drake::multibody::CoulombFriction</a>, <a class="el" href="group__stribeck__approximation.html">Continuous Approximation of Coulomb Friction</a></dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__multibody__parsing.html#tag_drake_proximity_properties">drake:proximity_properties</a>, <a class="el" href="classdrake_1_1multibody_1_1_coulomb_friction.html" title="Parameters for Coulomb&#39;s Law of Friction, namely:">drake::multibody::CoulombFriction</a>, <a class="el" href="group__mbp__continuous.html#stribeck_approximation">Continuous Approximation of Coulomb Friction</a></dd></dl>
 <h2><a class="anchor" id="tag_drake_parent"></a>
 drake:parent</h2>
 <ul>
@@ -701,7 +701,7 @@ drake:point_contact_stiffness</h2>
 <h3><a class="anchor" id="tag_drake_point_contact_stiffness_semantics"></a>
 Semantics</h3>
 <p>If present, this element provides a stiffness value (units of N/m) for point contact calculations for this specific geometry. It is stored in a ProximityProperties object under <code>(material, point_contact_stiffness)</code>.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#accessing_contact_properties">accessing_contact_properties</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#mbp_compliant_point_contact">mbp_compliant_point_contact</a>, <a class="el" href="classdrake_1_1geometry_1_1_proximity_properties.html" title="The set of properties for geometry used in a proximity role.">drake::geometry::ProximityProperties</a></dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#accessing_contact_properties">Accessing point contact parameters</a>, <a class="el" href="group__compliant__contact.html#point_forces_modeling">Point Contact Forces</a>, and <a class="el" href="classdrake_1_1geometry_1_1_proximity_properties.html" title="The set of properties for geometry used in a proximity role.">drake::geometry::ProximityProperties</a></dd></dl>
 <h2><a class="anchor" id="tag_drake_proximity_properties"></a>
 drake:proximity_properties</h2>
 <ul>
@@ -732,7 +732,7 @@ drake:relaxation_time</h2>
 <h3><a class="anchor" id="tag_drake_relaxation_time_semantics"></a>
 Semantics</h3>
 <p>If present, this element provides a value (units of time, i.e. seconds) for a linear Kelvin-Voigt model of dissipation. It is stored in a ProximityProperties object under <code>(material, relaxation_time)</code>.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1geometry_1_1_proximity_properties.html" title="The set of properties for geometry used in a proximity role.">drake::geometry::ProximityProperties</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#mbp_dissipation_model">Modeling Dissipation</a></dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1geometry_1_1_proximity_properties.html" title="The set of properties for geometry used in a proximity role.">drake::geometry::ProximityProperties</a>, <a class="el" href="group__compliant__contact.html#mbp_dissipation_model">Modeling Dissipation</a></dd></dl>
 <h2><a class="anchor" id="tag_drake_rigid_hydroelastic"></a>
 drake:rigid_hydroelastic</h2>
 <ul>
