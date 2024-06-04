@@ -12916,7 +12916,7 @@ for the list of instantiations.</p>
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>__init__(self: pydrake.multibody.tree.RigidBody, body_name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f6a37757430&gt;) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.multibody.tree.RigidBody, body_name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = SpatialInertia.Zero()) -&gt; None</p></li>
 </ol>
 <p>Constructs a RigidBody named <code class="docutils literal notranslate"><span class="pre">body_name</span></code> with the given default
 SpatialInertia.</p>
@@ -12934,7 +12934,7 @@ zero.</p>
 used for spatial inertia quantities.</p>
 </div>
 <ol class="arabic simple" start="2">
-<li><p>__init__(self: pydrake.multibody.tree.RigidBody, body_name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f6a3774b5b0&gt;) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.multibody.tree.RigidBody, body_name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = SpatialInertia.Zero()) -&gt; None</p></li>
 </ol>
 <p>Constructs a RigidBody named <code class="docutils literal notranslate"><span class="pre">body_name</span></code> with the given default
 SpatialInertia.</p>
@@ -13506,7 +13506,7 @@ more degrees of freedom.</p>
 <span id="pydrake.multibody.tree.RigidBody_[AutoDiffXd].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody_-AutoDiffXd-.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>__init__(self: pydrake.multibody.tree.RigidBody_[AutoDiffXd], body_name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f6a3a6a2df0&gt;) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.multibody.tree.RigidBody_[AutoDiffXd], body_name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = SpatialInertia.Zero()) -&gt; None</p></li>
 </ol>
 <p>Constructs a RigidBody named <code class="docutils literal notranslate"><span class="pre">body_name</span></code> with the given default
 SpatialInertia.</p>
@@ -13524,7 +13524,7 @@ zero.</p>
 used for spatial inertia quantities.</p>
 </div>
 <ol class="arabic simple" start="2">
-<li><p>__init__(self: pydrake.multibody.tree.RigidBody_[AutoDiffXd], body_name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f6a3a6a2870&gt;) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.multibody.tree.RigidBody_[AutoDiffXd], body_name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = SpatialInertia.Zero()) -&gt; None</p></li>
 </ol>
 <p>Constructs a RigidBody named <code class="docutils literal notranslate"><span class="pre">body_name</span></code> with the given default
 SpatialInertia.</p>
@@ -14090,7 +14090,7 @@ more degrees of freedom.</p>
 <span id="pydrake.multibody.tree.RigidBody_[Expression].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody_-Expression-.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>__init__(self: pydrake.multibody.tree.RigidBody_[Expression], body_name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f6a3aac43f0&gt;) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.multibody.tree.RigidBody_[Expression], body_name: str, M_BBo_B: pydrake.multibody.tree.SpatialInertia = SpatialInertia.Zero()) -&gt; None</p></li>
 </ol>
 <p>Constructs a RigidBody named <code class="docutils literal notranslate"><span class="pre">body_name</span></code> with the given default
 SpatialInertia.</p>
@@ -14108,7 +14108,7 @@ zero.</p>
 used for spatial inertia quantities.</p>
 </div>
 <ol class="arabic simple" start="2">
-<li><p>__init__(self: pydrake.multibody.tree.RigidBody_[Expression], body_name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = &lt;pydrake.multibody.tree.SpatialInertia object at 0x7f6a3778acb0&gt;) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.multibody.tree.RigidBody_[Expression], body_name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex, M_BBo_B: pydrake.multibody.tree.SpatialInertia = SpatialInertia.Zero()) -&gt; None</p></li>
 </ol>
 <p>Constructs a RigidBody named <code class="docutils literal notranslate"><span class="pre">body_name</span></code> with the given default
 SpatialInertia.</p>
@@ -15172,6 +15172,13 @@ AutoDiffXd). It fails at runtime if type T cannot be converted to
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.RotationalInertia.IsZero">
+<span class="sig-name descname"><span class="pre">IsZero</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RotationalInertia" title="pydrake.multibody.tree.RotationalInertia"><span class="pre">pydrake.multibody.tree.RotationalInertia</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RotationalInertia.IsZero" title="Permalink to this definition"></a></dt>
+<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if all moments and products of inertia are exactly
+zero.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.RotationalInertia.ReExpress">
 <span class="sig-name descname"><span class="pre">ReExpress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RotationalInertia" title="pydrake.multibody.tree.RotationalInertia"><span class="pre">pydrake.multibody.tree.RotationalInertia</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">R_AE</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RotationMatrix" title="pydrake.math.RotationMatrix"><span class="pre">pydrake.math.RotationMatrix</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.RotationalInertia" title="pydrake.multibody.tree.RotationalInertia"><span class="pre">pydrake.multibody.tree.RotationalInertia</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.RotationalInertia.ReExpress" title="Permalink to this definition"></a></dt>
 <dd><p>Re-expresses <code class="docutils literal notranslate"><span class="pre">this</span></code> rotational inertia <code class="docutils literal notranslate"><span class="pre">I_BP_E</span></code> to <code class="docutils literal notranslate"><span class="pre">I_BP_A</span></code>
@@ -15757,6 +15764,13 @@ AutoDiffXd). It fails at runtime if type T cannot be converted to
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.RotationalInertia_-AutoDiffXd-.IsZero">
+<span id="pydrake.multibody.tree.RotationalInertia_[AutoDiffXd].IsZero"></span><span class="sig-name descname"><span class="pre">IsZero</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RotationalInertia_" title="pydrake.multibody.tree.RotationalInertia_"><span class="pre">pydrake.multibody.tree.RotationalInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RotationalInertia_-AutoDiffXd-.IsZero" title="Permalink to this definition"></a></dt>
+<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if all moments and products of inertia are exactly
+zero.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.RotationalInertia_-AutoDiffXd-.ReExpress">
 <span id="pydrake.multibody.tree.RotationalInertia_[AutoDiffXd].ReExpress"></span><span class="sig-name descname"><span class="pre">ReExpress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RotationalInertia_" title="pydrake.multibody.tree.RotationalInertia_"><span class="pre">pydrake.multibody.tree.RotationalInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R_AE</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RotationMatrix_" title="pydrake.math.RotationMatrix_"><span class="pre">pydrake.math.RotationMatrix_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.RotationalInertia_" title="pydrake.multibody.tree.RotationalInertia_"><span class="pre">pydrake.multibody.tree.RotationalInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RotationalInertia_-AutoDiffXd-.ReExpress" title="Permalink to this definition"></a></dt>
 <dd><p>Re-expresses <code class="docutils literal notranslate"><span class="pre">this</span></code> rotational inertia <code class="docutils literal notranslate"><span class="pre">I_BP_E</span></code> to <code class="docutils literal notranslate"><span class="pre">I_BP_A</span></code>
@@ -16333,6 +16347,13 @@ type T in <code class="docutils literal notranslate"><span class="pre">this</spa
 AutoDiffXd). It fails at runtime if type T cannot be converted to
 <code class="docutils literal notranslate"><span class="pre">double</span></code>.</p>
 </div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.RotationalInertia_-Expression-.IsZero">
+<span id="pydrake.multibody.tree.RotationalInertia_[Expression].IsZero"></span><span class="sig-name descname"><span class="pre">IsZero</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RotationalInertia_" title="pydrake.multibody.tree.RotationalInertia_"><span class="pre">pydrake.multibody.tree.RotationalInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Formula" title="pydrake.symbolic.Formula"><span class="pre">pydrake.symbolic.Formula</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.RotationalInertia_-Expression-.IsZero" title="Permalink to this definition"></a></dt>
+<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if all moments and products of inertia are exactly
+zero.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -19244,6 +19265,13 @@ of mass.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia.IsZero">
+<span class="sig-name descname"><span class="pre">IsZero</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia" title="pydrake.multibody.tree.SpatialInertia"><span class="pre">pydrake.multibody.tree.SpatialInertia</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia.IsZero" title="Permalink to this definition"></a></dt>
+<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if all of the elements in this spatial inertia are
+zero and <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia.MakeFromCentralInertia">
 <em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MakeFromCentralInertia</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_PScm_E</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">I_SScm_E</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RotationalInertia" title="pydrake.multibody.tree.RotationalInertia"><span class="pre">pydrake.multibody.tree.RotationalInertia</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia" title="pydrake.multibody.tree.SpatialInertia"><span class="pre">pydrake.multibody.tree.SpatialInertia</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia.MakeFromCentralInertia" title="Permalink to this definition"></a></dt>
 <dd><p>Creates a spatial inertia for a physical body or composite body S
@@ -20164,6 +20192,13 @@ of mass.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.IsZero">
+<span id="pydrake.multibody.tree.SpatialInertia_[AutoDiffXd].IsZero"></span><span class="sig-name descname"><span class="pre">IsZero</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.IsZero" title="Permalink to this definition"></a></dt>
+<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if all of the elements in this spatial inertia are
+zero and <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.MakeFromCentralInertia">
 <span id="pydrake.multibody.tree.SpatialInertia_[AutoDiffXd].MakeFromCentralInertia"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MakeFromCentralInertia</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_PScm_E</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">I_SScm_E</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RotationalInertia_" title="pydrake.multibody.tree.RotationalInertia_"><span class="pre">pydrake.multibody.tree.RotationalInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.MakeFromCentralInertia" title="Permalink to this definition"></a></dt>
 <dd><p>Creates a spatial inertia for a physical body or composite body S
@@ -21075,6 +21110,13 @@ of mass.</p>
 <p class="admonition-title">See also</p>
 <p>RotationalInertia::CouldBePhysicallyValid().</p>
 </div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-Expression-.IsZero">
+<span id="pydrake.multibody.tree.SpatialInertia_[Expression].IsZero"></span><span class="sig-name descname"><span class="pre">IsZero</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Formula" title="pydrake.symbolic.Formula"><span class="pre">pydrake.symbolic.Formula</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-Expression-.IsZero" title="Permalink to this definition"></a></dt>
+<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if all of the elements in this spatial inertia are
+zero and <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p>
 </dd></dl>
 
 <dl class="py method">

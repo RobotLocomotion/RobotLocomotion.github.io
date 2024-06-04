@@ -19,6 +19,7 @@ var classdrake_1_1multibody_1_1_spatial_inertia =
     [ "HollowSphereWithMass", "classdrake_1_1multibody_1_1_spatial_inertia.html#aa6970a4978940025cb8fccef2ce0018b", null ],
     [ "IsNaN", "classdrake_1_1multibody_1_1_spatial_inertia.html#a1a73339c4b21bba9c3fa975f7a6c4220", null ],
     [ "IsPhysicallyValid", "classdrake_1_1multibody_1_1_spatial_inertia.html#a679852e6738fbcf5751ca37c51d2f084", null ],
+    [ "IsZero", "classdrake_1_1multibody_1_1_spatial_inertia.html#a55630ea16dd7fcd906f2c9d9db36bb66", null ],
     [ "MakeFromCentralInertia", "classdrake_1_1multibody_1_1_spatial_inertia.html#a122ea28cb0d9cc88f61b03765076e349", null ],
     [ "MakeUnitary", "classdrake_1_1multibody_1_1_spatial_inertia.html#a1f022e7b3f0771715149a808b11343fd", null ],
     [ "NaN", "classdrake_1_1multibody_1_1_spatial_inertia.html#a5fd853ae2157259d63973818578119f4", null ],

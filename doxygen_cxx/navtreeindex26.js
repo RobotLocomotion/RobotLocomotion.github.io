@@ -1,5 +1,6 @@
 var NAVTREEINDEX26 =
 {
+"classdrake_1_1solvers_1_1_csdp_solver.html#af2ff6a250a78bb79ef64f7527c51b01c":[3,0,0,13,12,11],
 "classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html":[3,0,0,13,14],
 "classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html#a00b55f8b4c1c4f19b45621a84deed66c":[3,0,0,13,14,12],
 "classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html#a030544dd34f8d35fa24233b4e399fdfa":[3,0,0,13,14,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX26 =
 "classdrake_1_1solvers_1_1_linear_equality_constraint.html":[1,1,0,31],
 "classdrake_1_1solvers_1_1_linear_equality_constraint.html#a03d00476564c0fab5843b1f31ad274bc":[1,1,0,31,8],
 "classdrake_1_1solvers_1_1_linear_equality_constraint.html#a20e4a4051faefd6611d0372943fffcdd":[1,1,0,31,0],
-"classdrake_1_1solvers_1_1_linear_equality_constraint.html#a43a3ad9096c1ae05c122dbd3d2720336":[1,1,0,31,4],
-"classdrake_1_1solvers_1_1_linear_equality_constraint.html#a5ccb20910f90294814f8bec5c857ed10":[1,1,0,31,6]
+"classdrake_1_1solvers_1_1_linear_equality_constraint.html#a43a3ad9096c1ae05c122dbd3d2720336":[1,1,0,31,4]
 };

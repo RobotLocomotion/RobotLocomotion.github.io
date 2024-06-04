@@ -1,5 +1,6 @@
 var NAVTREEINDEX59 =
 {
+"standard__operations_8h.html#ae44e54592a38f223146ee6362a44320e":[4,0,0,1,0,0,2,46],
 "standard__operations_8h.html#ae521245b6aec25f233036d952061fb5b":[4,0,0,1,0,0,2,24],
 "standard__operations_8h.html#ae9c0dd77c635dceb7612cfeea18f258b":[4,0,0,1,0,0,2,40],
 "standard__operations_8h.html#aeb2505be9197ae5fe3dc22623d663e44":[4,0,0,1,0,0,2,51],
@@ -248,6 +249,5 @@ var NAVTREEINDEX59 =
 "structdrake_1_1geometry_1_1_default_proximity_properties.html#ac5e331dc922e5fcf0083aafe07e3ac0c":[3,0,0,4,10,1],
 "structdrake_1_1geometry_1_1_default_proximity_properties.html#ad4cce1d859d70cf4b5b9620ea36b7a42":[3,0,0,4,10,10],
 "structdrake_1_1geometry_1_1_default_proximity_properties.html#ad67da500a161dc406336020e2f3be598":[3,0,0,4,10,5],
-"structdrake_1_1geometry_1_1_default_proximity_properties.html#af27f062b2892a8a4f0c782238e1936a3":[3,0,0,4,10,7],
-"structdrake_1_1geometry_1_1_drake_visualizer_params.html":[3,0,0,4,12]
+"structdrake_1_1geometry_1_1_default_proximity_properties.html#af27f062b2892a8a4f0c782238e1936a3":[3,0,0,4,10,7]
 };

@@ -240,6 +240,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1a73339c4b21bba9c3fa975f7a6c4220"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a1a73339c4b21bba9c3fa975f7a6c4220">IsNaN</a> () const</td></tr>
 <tr class="memdesc:a1a73339c4b21bba9c3fa975f7a6c4220"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if any of the elements in this spatial inertia is NaN and <code>false</code> otherwise.  <a href="#a1a73339c4b21bba9c3fa975f7a6c4220">More...</a><br /></td></tr>
 <tr class="separator:a1a73339c4b21bba9c3fa975f7a6c4220"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55630ea16dd7fcd906f2c9d9db36bb66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a55630ea16dd7fcd906f2c9d9db36bb66">IsZero</a> () const</td></tr>
+<tr class="memdesc:a55630ea16dd7fcd906f2c9d9db36bb66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if all of the elements in this spatial inertia are zero and <code>false</code> otherwise.  <a href="#a55630ea16dd7fcd906f2c9d9db36bb66">More...</a><br /></td></tr>
+<tr class="separator:a55630ea16dd7fcd906f2c9d9db36bb66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a679852e6738fbcf5751ca37c51d2f084"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a679852e6738fbcf5751ca37c51d2f084">IsPhysicallyValid</a> () const</td></tr>
 <tr class="memdesc:a679852e6738fbcf5751ca37c51d2f084"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a number of checks to verify that this is a physically valid spatial inertia.  <a href="#a679852e6738fbcf5751ca37c51d2f084">More...</a><br /></td></tr>
 <tr class="separator:a679852e6738fbcf5751ca37c51d2f084"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -936,6 +939,25 @@ Minimum possible length can be used to detect erroneous inertias associated with
 </li>
 </ul>
 <p>These are the tests performed by <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several necessary checks to verify whether this rotational inertia could be physically valid...">RotationalInertia::CouldBePhysicallyValid()</a> which become a sufficient condition when performed on a rotational inertia about a body's center of mass. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several necessary checks to verify whether this rotational inertia could be physically valid...">RotationalInertia::CouldBePhysicallyValid()</a>. </dd></dl>
+
+</div>
+</div>
+<a id="a55630ea16dd7fcd906f2c9d9db36bb66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55630ea16dd7fcd906f2c9d9db36bb66">&#9670;&nbsp;</a></span>IsZero()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt;T&gt; IsZero </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns <code>true</code> if all of the elements in this spatial inertia are zero and <code>false</code> otherwise. </p>
 
 </div>
 </div>

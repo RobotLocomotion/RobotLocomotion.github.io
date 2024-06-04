@@ -1,5 +1,6 @@
 var NAVTREEINDEX53 =
 {
+"group__templates.html":[1,6,5],
 "group__terminology__and__notation.html":[1,0],
 "group__visualization.html":[1,2,11],
 "group__visualization.html#ga34c9c8f0a78446ac29edf4a3202127c3":[1,2,11,9],
@@ -248,6 +249,5 @@ var NAVTREEINDEX53 =
 "lcm__messages_8h.html#a3410f8215ef08138021e839ab12535fe":[4,0,0,5,5,1],
 "lcm__messages_8h.html#ac73c46ff1f2d1fe789314be3fe200e64":[4,0,0,5,5,0],
 "lcm__messages_8h.html#adcda0f8a699ead06121a53903686013d":[4,0,0,5,5,2],
-"lcm__plan__interpolator_8h.html":[4,0,0,3,8,3],
-"lcm__publisher__system_8h.html":[4,0,0,12,4,4]
+"lcm__plan__interpolator_8h.html":[4,0,0,3,8,3]
 };

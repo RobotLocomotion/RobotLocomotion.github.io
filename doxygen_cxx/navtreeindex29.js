@@ -1,5 +1,6 @@
 var NAVTREEINDEX29 =
 {
+"classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#acd63f52880d3aad51f3d675636b4832c":[1,1,0,44,12],
 "classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#ace583a472a3bdc1b67f05d6a6571a903":[1,1,0,44,4],
 "classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#af32fe83b5bd0308ba9deac5a0331b76b":[1,1,0,44,11],
 "classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#afd5ade712b02fa2e71e8c26811c9494a":[1,1,0,44,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX29 =
 "classdrake_1_1symbolic_1_1_chebyshev_basis_element.html#aaf22e557ede1a46c5e97c194b30ecb15":[3,0,0,14,2,15],
 "classdrake_1_1symbolic_1_1_chebyshev_basis_element.html#ab1a0beb3ea74b58b133dd8e7b1c31878":[3,0,0,14,2,3],
 "classdrake_1_1symbolic_1_1_chebyshev_basis_element.html#ab742e6229cad2845385553c42f101511":[3,0,0,14,2,6],
-"classdrake_1_1symbolic_1_1_chebyshev_basis_element.html#aba26a87c6147b18e8abf8c2bbccd2e06":[3,0,0,14,2,11],
-"classdrake_1_1symbolic_1_1_chebyshev_basis_element.html#ad07bb4182d6a3dc3b0ddcf165a492825":[3,0,0,14,2,10]
+"classdrake_1_1symbolic_1_1_chebyshev_basis_element.html#aba26a87c6147b18e8abf8c2bbccd2e06":[3,0,0,14,2,11]
 };

@@ -266,5 +266,5 @@ var searchData=
   ['isvalidgeometryname',['IsValidGeometryName',['../classdrake_1_1geometry_1_1_geometry_state.html#a4babe6700dc65baf6c98e0594362eabc',1,'drake::geometry::GeometryState']]],
   ['isvalidvariablename',['IsValidVariableName',['../classdrake_1_1_polynomial.html#ada60946d276f79e555d32badc0d8a91f',1,'drake::Polynomial']]],
   ['isvelocityequaltoqdot',['IsVelocityEqualToQDot',['../classdrake_1_1multibody_1_1_multibody_plant.html#aa20199c5afe02d72dab2e59f1523fcae',1,'drake::multibody::MultibodyPlant']]],
-  ['iszero',['IsZero',['../classdrake_1_1multibody_1_1_rotational_inertia.html#a55630ea16dd7fcd906f2c9d9db36bb66',1,'drake::multibody::RotationalInertia']]]
+  ['iszero',['IsZero',['../classdrake_1_1multibody_1_1_rotational_inertia.html#a55630ea16dd7fcd906f2c9d9db36bb66',1,'drake::multibody::RotationalInertia::IsZero()'],['../classdrake_1_1multibody_1_1_spatial_inertia.html#a55630ea16dd7fcd906f2c9d9db36bb66',1,'drake::multibody::SpatialInertia::IsZero()']]]
 ];

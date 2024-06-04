@@ -1,5 +1,6 @@
 var NAVTREEINDEX45 =
 {
+"classdrake_1_1systems_1_1rendering_1_1_multibody_position_to_geometry_pose.html#ae234bdb0bf0d63dc927a8e35d44d3f91":[1,2,11,3,6],
 "classdrake_1_1systems_1_1rendering_1_1_multibody_position_to_geometry_pose.html#ae44005e3185b2dd4aaab4b94e06a5d2e":[1,2,11,3,8],
 "classdrake_1_1systems_1_1rendering_1_1_multibody_position_to_geometry_pose.html#ae6accdc02e6e608cb47e7818e236ba0f":[1,2,11,3,0],
 "classdrake_1_1systems_1_1rendering_1_1_multibody_position_to_geometry_pose.html#af9ba06560efe73cdb549a14ca4d56c37":[1,2,11,3,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX45 =
 "classdrake_1_1test_1_1_diagnostic_policy_test_base.html#af7e6479c38091d0a35be77114e0c2269":[3,0,0,16,0,15],
 "classdrake_1_1test_1_1_diagnostic_policy_test_base.html#af938b6ab81cf57d098d164ace2343ed8":[3,0,0,16,0,7],
 "classdrake_1_1test_1_1_diagnostic_policy_test_base_1_1_scoped_trace.html":[3,0,0,16,0,0],
-"classdrake_1_1test_1_1_diagnostic_policy_test_base_1_1_scoped_trace.html#a097745b2828249d6e3e415378a32e7e8":[3,0,0,16,0,0,2],
-"classdrake_1_1test_1_1_diagnostic_policy_test_base_1_1_scoped_trace.html#a173557c103f648d82833abdecab8c7fe":[3,0,0,16,0,0,0]
+"classdrake_1_1test_1_1_diagnostic_policy_test_base_1_1_scoped_trace.html#a097745b2828249d6e3e415378a32e7e8":[3,0,0,16,0,0,2]
 };
