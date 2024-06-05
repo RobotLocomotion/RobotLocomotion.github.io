@@ -90,8 +90,5 @@ var dir_d739e095b49d8b72164589d00310017d =
       [ "SceneGraphInspector", "classdrake_1_1geometry_1_1_scene_graph_inspector.html", "classdrake_1_1geometry_1_1_scene_graph_inspector" ]
     ] ],
     [ "shape_specification.h", "shape__specification_8h.html", "shape__specification_8h" ],
-    [ "shape_to_string.h", "shape__to__string_8h.html", [
-      [ "ShapeToString", "classdrake_1_1geometry_1_1_shape_to_string.html", "classdrake_1_1geometry_1_1_shape_to_string" ]
-    ] ],
     [ "utilities.h", "utilities_8h.html", null ]
 ];

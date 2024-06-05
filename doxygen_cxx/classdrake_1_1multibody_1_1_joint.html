@@ -279,9 +279,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a23a1a2447cbaf3453ff7e1e6adbe310e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a23a1a2447cbaf3453ff7e1e6adbe310e">default_damping_vector</a> () const</td></tr>
 <tr class="memdesc:a23a1a2447cbaf3453ff7e1e6adbe310e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all default damping coefficients for joints that model viscous damping, of size <a class="el" href="classdrake_1_1multibody_1_1_joint.html#ae0163ac0976659d811e3337647ff0313" title="Returns the number of generalized velocities describing this joint.">num_velocities()</a>.  <a href="#a23a1a2447cbaf3453ff7e1e6adbe310e">More...</a><br /></td></tr>
 <tr class="separator:a23a1a2447cbaf3453ff7e1e6adbe310e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a404e1937742b0f345d746f2b2043e9e3"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a404e1937742b0f345d746f2b2043e9e3">damping_vector</a> () const</td></tr>
-<tr class="memdesc:a404e1937742b0f345d746f2b2043e9e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a404e1937742b0f345d746f2b2043e9e3">More...</a><br /></td></tr>
-<tr class="separator:a404e1937742b0f345d746f2b2043e9e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca5a7652c185aaa3175292e6624cb627"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#aca5a7652c185aaa3175292e6624cb627">GetDampingVector</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
 <tr class="memdesc:aca5a7652c185aaa3175292e6624cb627"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Context dependent damping coefficients stored as parameters in <code>context</code>.  <a href="#aca5a7652c185aaa3175292e6624cb627">More...</a><br /></td></tr>
 <tr class="separator:aca5a7652c185aaa3175292e6624cb627"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -909,27 +906,6 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns a const reference to the child body B. </p>
-
-</div>
-</div>
-<a id="a404e1937742b0f345d746f2b2043e9e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a404e1937742b0f345d746f2b2043e9e3">&#9670;&nbsp;</a></span>damping_vector()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;&amp; damping_vector </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000006">Deprecated:</a></b></dt><dd>Use default_damping_vector() instead. <br />
- This will be removed from Drake on or after 2024-06-01.</dd></dl>
 
 </div>
 </div>

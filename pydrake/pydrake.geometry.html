@@ -1682,6 +1682,12 @@ multibody::DiscreteContactApproximation::kSap. Units are seconds.</p>
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">resolution_hint</span></span><a class="headerlink" href="#pydrake.geometry.DefaultProximityProperties.resolution_hint" title="Permalink to this definition"></a></dt>
 <dd><p>Controls how finely primitive geometries are tessellated, units of
 meters.</p>
+<p>While no single value is universally appropriate, this value was
+selected based on the following idea. We’re attempting to make
+introducing novel manipulands as easy as possible. Considering a
+simple soup can as a representative manipuland, we’ve picked a value
+that would result in a tessellated cylinder with enough faces to be
+appropriate for contact with a compliant gripper.</p>
 </dd></dl>
 
 <dl class="py property">

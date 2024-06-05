@@ -345,9 +345,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a852fbed1b4f83ddf4c9b3913a772f4bd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a852fbed1b4f83ddf4c9b3913a772f4bd">CollisionFiltered</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id1, <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id2) const</td></tr>
 <tr class="memdesc:a852fbed1b4f83ddf4c9b3913a772f4bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports true if the two geometries with given ids <code>geometry_id1</code> and <code>geometry_id2</code>, define a collision pair that has been filtered out.  <a href="#a852fbed1b4f83ddf4c9b3913a772f4bd">More...</a><br /></td></tr>
 <tr class="separator:a852fbed1b4f83ddf4c9b3913a772f4bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acea936a2d449be8d43bb1037568cc81b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#acea936a2d449be8d43bb1037568cc81b">Reify</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id, <a class="el" href="classdrake_1_1geometry_1_1_shape_reifier.html">ShapeReifier</a> *reifier) const</td></tr>
-<tr class="memdesc:acea936a2d449be8d43bb1037568cc81b"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#acea936a2d449be8d43bb1037568cc81b">More...</a><br /></td></tr>
-<tr class="separator:acea936a2d449be8d43bb1037568cc81b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23ddceb0d0bb58106ffe335407692a73"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html">GeometryInstance</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a23ddceb0d0bb58106ffe335407692a73">CloneGeometryInstance</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id) const</td></tr>
 <tr class="memdesc:a23ddceb0d0bb58106ffe335407692a73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtains a new <a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html" title="A geometry instance combines a geometry definition (i.e., a shape of some sort), a pose (relative to ...">GeometryInstance</a> that copies the geometry indicated by the given <code>geometry_id</code>.  <a href="#a23ddceb0d0bb58106ffe335407692a73">More...</a><br /></td></tr>
 <tr class="separator:a23ddceb0d0bb58106ffe335407692a73"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1690,38 +1687,6 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a id="acea936a2d449be8d43bb1037568cc81b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acea936a2d449be8d43bb1037568cc81b">&#9670;&nbsp;</a></span>Reify()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Reify </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&#160;</td>
-          <td class="paramname"><em>geometry_id</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_shape_reifier.html">ShapeReifier</a> *&#160;</td>
-          <td class="paramname"><em>reifier</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">Deprecated:</a></b></dt><dd>This shortcut function is being removed.  Instead, call inspector.GetShape(geometry_id).Reify(reifier) <br />
- This will be removed from Drake on or after 2024-06-01.</dd></dl>
 
 </div>
 </div>

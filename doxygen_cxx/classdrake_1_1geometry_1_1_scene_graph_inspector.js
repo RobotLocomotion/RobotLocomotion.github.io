@@ -47,7 +47,6 @@ var classdrake_1_1geometry_1_1_scene_graph_inspector =
     [ "NumGeometriesWithRole", "classdrake_1_1geometry_1_1_scene_graph_inspector.html#aab26f2d2a53102c9f4915433cf90e443", null ],
     [ "operator=", "classdrake_1_1geometry_1_1_scene_graph_inspector.html#a7b176f170af189d4f31f33371e7d732c", null ],
     [ "operator=", "classdrake_1_1geometry_1_1_scene_graph_inspector.html#a9174b38bac2fe383418fa6fa711ee153", null ],
-    [ "Reify", "classdrake_1_1geometry_1_1_scene_graph_inspector.html#acea936a2d449be8d43bb1037568cc81b", null ],
     [ "SourceIsRegistered", "classdrake_1_1geometry_1_1_scene_graph_inspector.html#ab7bb60e8005dd347c7df107f334b166b", null ],
     [ "world_frame_id", "classdrake_1_1geometry_1_1_scene_graph_inspector.html#a435ca2d678e9212415a657db3629a8d1", null ],
     [ "QueryObject< T >", "classdrake_1_1geometry_1_1_scene_graph_inspector.html#ae1a7db1a4349ffeebee18617b3db82e4", null ],

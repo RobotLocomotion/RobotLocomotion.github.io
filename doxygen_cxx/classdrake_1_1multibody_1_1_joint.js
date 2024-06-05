@@ -14,7 +14,6 @@ var classdrake_1_1multibody_1_1_joint =
     [ "can_rotate", "classdrake_1_1multibody_1_1_joint.html#a8152c34c2684e7b492b2076f1c5762b4", null ],
     [ "can_translate", "classdrake_1_1multibody_1_1_joint.html#a506d612447dfb1899a6b03f54932978a", null ],
     [ "child_body", "classdrake_1_1multibody_1_1_joint.html#a0fd97e889594550f4b2ef7174a4a3e1e", null ],
-    [ "damping_vector", "classdrake_1_1multibody_1_1_joint.html#a404e1937742b0f345d746f2b2043e9e3", null ],
     [ "default_damping_vector", "classdrake_1_1multibody_1_1_joint.html#a23a1a2447cbaf3453ff7e1e6adbe310e", null ],
     [ "default_positions", "classdrake_1_1multibody_1_1_joint.html#aa7e3799ff0a2d7f2dd697c7f71e522a2", null ],
     [ "do_get_num_positions", "classdrake_1_1multibody_1_1_joint.html#af216b8c3b4d1010cd8037e3e27c4f16b", null ],

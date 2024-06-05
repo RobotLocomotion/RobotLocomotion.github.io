@@ -4,7 +4,6 @@ var classdrake_1_1multibody_1_1_rpy_floating_joint =
     [ "RpyFloatingJoint", "classdrake_1_1multibody_1_1_rpy_floating_joint.html#a3bcb7c789e9b3babe99718c75c30996e", null ],
     [ "RpyFloatingJoint", "classdrake_1_1multibody_1_1_rpy_floating_joint.html#a112e483d99a972114f20c6f7fc040316", null ],
     [ "RpyFloatingJoint", "classdrake_1_1multibody_1_1_rpy_floating_joint.html#ae2d75a23ca8e71cd8ba917d3b965bcc4", null ],
-    [ "angular_damping", "classdrake_1_1multibody_1_1_rpy_floating_joint.html#a33a39dbcfe8db8e29092329d7794fce6", null ],
     [ "default_angular_damping", "classdrake_1_1multibody_1_1_rpy_floating_joint.html#a2f0a9cd2ddeb8ce9976e95fe59dcc843", null ],
     [ "default_translational_damping", "classdrake_1_1multibody_1_1_rpy_floating_joint.html#a7b17c035e227e8fee348373149aed08b", null ],
     [ "DoAddInDamping", "classdrake_1_1multibody_1_1_rpy_floating_joint.html#a5d61e0fa9ce2f6e50096cebbc3100fa3", null ],
@@ -29,7 +28,6 @@ var classdrake_1_1multibody_1_1_rpy_floating_joint =
     [ "SetOrientation", "classdrake_1_1multibody_1_1_rpy_floating_joint.html#a24ee6b28184a173aa3bcaeaaa4568bed", null ],
     [ "SetPose", "classdrake_1_1multibody_1_1_rpy_floating_joint.html#a488d11cb18b724242bf38e7c090f3c41", null ],
     [ "SetTranslation", "classdrake_1_1multibody_1_1_rpy_floating_joint.html#a61ffaa75ca0ee1ddbc8ac4e0ffdf4eef", null ],
-    [ "translational_damping", "classdrake_1_1multibody_1_1_rpy_floating_joint.html#a5d447b184aa0d500cefbc725641bd10a", null ],
     [ "type_name", "classdrake_1_1multibody_1_1_rpy_floating_joint.html#ae4fa9c904accccf5900c63c3e65ca277", null ],
     [ "RpyFloatingJoint", "classdrake_1_1multibody_1_1_rpy_floating_joint.html#a17bb23661e06c5e79b69d7ea93974b12", null ],
     [ "kTypeName", "classdrake_1_1multibody_1_1_rpy_floating_joint.html#a503af5e7b7477b89d8920f5ec29582e1", null ]

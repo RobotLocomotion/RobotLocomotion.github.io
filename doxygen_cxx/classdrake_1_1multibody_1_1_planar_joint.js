@@ -4,7 +4,6 @@ var classdrake_1_1multibody_1_1_planar_joint =
     [ "PlanarJoint", "classdrake_1_1multibody_1_1_planar_joint.html#a99a00bbcfc23980cb9f43d4211c583b4", null ],
     [ "PlanarJoint", "classdrake_1_1multibody_1_1_planar_joint.html#a538a9c45c3d84f4d98ae16f2467b4d2b", null ],
     [ "PlanarJoint", "classdrake_1_1multibody_1_1_planar_joint.html#a21b918ffb6523a4ecf3ed7f866369d84", null ],
-    [ "damping", "classdrake_1_1multibody_1_1_planar_joint.html#ab5b708cf8c49f2b731dd3fa988bebecb", null ],
     [ "default_damping", "classdrake_1_1multibody_1_1_planar_joint.html#a8295553f72f3662ebce834a1b2de0a62", null ],
     [ "get_angular_velocity", "classdrake_1_1multibody_1_1_planar_joint.html#ad76be9d40c3f33db0711c565cb3c7278", null ],
     [ "get_default_rotation", "classdrake_1_1multibody_1_1_planar_joint.html#a1afd87f9af71c38de81ebfa078a30042", null ],

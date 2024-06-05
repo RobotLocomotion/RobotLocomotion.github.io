@@ -194,7 +194,7 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ad67da500a161dc406336020e2f3be598"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_default_proximity_properties.html#ad67da500a161dc406336020e2f3be598">hydroelastic_modulus</a> {1e7}</td></tr>
 <tr class="memdesc:ad67da500a161dc406336020e2f3be598"><td class="mdescLeft">&#160;</td><td class="mdescRight">A measure of material stiffness, in units of Pascals.  <a href="#ad67da500a161dc406336020e2f3be598">More...</a><br /></td></tr>
 <tr class="separator:ad67da500a161dc406336020e2f3be598"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a114a86a4dc5c458db9cc50a31ec8fdbf"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_default_proximity_properties.html#a114a86a4dc5c458db9cc50a31ec8fdbf">resolution_hint</a> {0.5}</td></tr>
+<tr class="memitem:a114a86a4dc5c458db9cc50a31ec8fdbf"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_default_proximity_properties.html#a114a86a4dc5c458db9cc50a31ec8fdbf">resolution_hint</a> {0.02}</td></tr>
 <tr class="memdesc:a114a86a4dc5c458db9cc50a31ec8fdbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls how finely primitive geometries are tessellated, units of meters.  <a href="#a114a86a4dc5c458db9cc50a31ec8fdbf">More...</a><br /></td></tr>
 <tr class="separator:a114a86a4dc5c458db9cc50a31ec8fdbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab464f1343904abb84d2b27e78dac2a69"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_default_proximity_properties.html#ab464f1343904abb84d2b27e78dac2a69">slab_thickness</a></td></tr>
@@ -376,12 +376,13 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::optional&lt;<a class="el" href="classdouble.html">double</a>&gt; resolution_hint {0.5}</td>
+          <td class="memname">std::optional&lt;<a class="el" href="classdouble.html">double</a>&gt; resolution_hint {0.02}</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Controls how finely primitive geometries are tessellated, units of meters. </p>
+<p>While no single value is universally appropriate, this value was selected based on the following idea. We're attempting to make introducing novel manipulands as easy as possible. Considering a simple soup can as a representative manipuland, we've picked a value that would result in a tessellated cylinder with enough faces to be appropriate for contact with a compliant gripper. </p>
 
 </div>
 </div>

@@ -8,7 +8,6 @@ var classdrake_1_1multibody_1_1_revolute_joint =
     [ "acceleration_lower_limit", "classdrake_1_1multibody_1_1_revolute_joint.html#abfd0eba87edfca3b02cfc44475f06c4c", null ],
     [ "acceleration_upper_limit", "classdrake_1_1multibody_1_1_revolute_joint.html#ac29ca0ee759d2862539406a971f95169", null ],
     [ "AddInTorque", "classdrake_1_1multibody_1_1_revolute_joint.html#a79b24d1bde5380500b8bdf2bd9a28228", null ],
-    [ "damping", "classdrake_1_1multibody_1_1_revolute_joint.html#aad91b55e6b714db4ba96190e6fab07ac", null ],
     [ "default_damping", "classdrake_1_1multibody_1_1_revolute_joint.html#aea9614ad4bc22801505a7399550293ce", null ],
     [ "DoAddInDamping", "classdrake_1_1multibody_1_1_revolute_joint.html#ae58dc70f3e0535c09582b85ecbc612a7", null ],
     [ "DoAddInOneForce", "classdrake_1_1multibody_1_1_revolute_joint.html#ab3c16872b1d7ca25be9f833acd33264b", null ],

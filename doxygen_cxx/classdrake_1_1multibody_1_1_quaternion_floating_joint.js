@@ -3,7 +3,6 @@ var classdrake_1_1multibody_1_1_quaternion_floating_joint =
     [ "QuaternionFloatingJoint", "classdrake_1_1multibody_1_1_quaternion_floating_joint.html#aec50b43f08fa86164b1df26254330fa7", null ],
     [ "QuaternionFloatingJoint", "classdrake_1_1multibody_1_1_quaternion_floating_joint.html#acbe025471edf1a97493cb093467b659d", null ],
     [ "QuaternionFloatingJoint", "classdrake_1_1multibody_1_1_quaternion_floating_joint.html#aee2fe7aa0851c239e3194454e8a2ea1b", null ],
-    [ "angular_damping", "classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a33a39dbcfe8db8e29092329d7794fce6", null ],
     [ "default_angular_damping", "classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a2f0a9cd2ddeb8ce9976e95fe59dcc843", null ],
     [ "default_translational_damping", "classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a7b17c035e227e8fee348373149aed08b", null ],
     [ "DoAddInDamping", "classdrake_1_1multibody_1_1_quaternion_floating_joint.html#ae58dc70f3e0535c09582b85ecbc612a7", null ],
@@ -38,7 +37,6 @@ var classdrake_1_1multibody_1_1_quaternion_floating_joint =
     [ "SetPose", "classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a7cf4c321198098f398ff8fd890f2e7a3", null ],
     [ "SetQuaternion", "classdrake_1_1multibody_1_1_quaternion_floating_joint.html#ae13697cc7b985ee4e21a82f39d53b873", null ],
     [ "SetTranslation", "classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a108f1d55eefe36717befa0982f4ec2a7", null ],
-    [ "translational_damping", "classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a5d447b184aa0d500cefbc725641bd10a", null ],
     [ "type_name", "classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a952a908b4c1b68ac11b2e31ef31e9524", null ],
     [ "QuaternionFloatingJoint", "classdrake_1_1multibody_1_1_quaternion_floating_joint.html#abaa3b05b8448e583e622a1a623fbf069", null ],
     [ "kTypeName", "classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a503af5e7b7477b89d8920f5ec29582e1", null ]
