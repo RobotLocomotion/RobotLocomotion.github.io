@@ -506,6 +506,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a23f1475b0c301d9d78814fce265fd6ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a23f1475b0c301d9d78814fce265fd6ea">num_constraints</a> () const</td></tr>
 <tr class="memdesc:a23f1475b0c301d9d78814fce265fd6ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the total number of constraints specified by the user.  <a href="#a23f1475b0c301d9d78814fce265fd6ea">More...</a><br /></td></tr>
 <tr class="separator:a23f1475b0c301d9d78814fce265fd6ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18e86f09b75963bac92cb052797d62a7"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a18e86f09b75963bac92cb052797d62a7">GetConstraintIds</a> () const</td></tr>
+<tr class="memdesc:a18e86f09b75963bac92cb052797d62a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of all constraint identifiers.  <a href="#a18e86f09b75963bac92cb052797d62a7">More...</a><br /></td></tr>
+<tr class="separator:a18e86f09b75963bac92cb052797d62a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aabbb62902b23cee44ddb8a5ad0b04e07"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aabbb62902b23cee44ddb8a5ad0b04e07">num_coupler_constraints</a> () const</td></tr>
 <tr class="memdesc:aabbb62902b23cee44ddb8a5ad0b04e07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the total number of coupler constraints specified by the user.  <a href="#aabbb62902b23cee44ddb8a5ad0b04e07">More...</a><br /></td></tr>
 <tr class="separator:aabbb62902b23cee44ddb8a5ad0b04e07"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -5481,6 +5484,26 @@ It is required to connect this port for PD controlled model instances. </dd></dl
 
 </div>
 </div>
+<a id="a18e86f09b75963bac92cb052797d62a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18e86f09b75963bac92cb052797d62a7">&#9670;&nbsp;</a></span>GetConstraintIds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a>&gt; GetConstraintIds </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a list of all constraint identifiers. </p>
+<p>The returned vector becomes invalid after any calls to Add*Constraint() or <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ab868821d19fbf79f94b50147c4d90b9b" title="Removes the constraint id from the plant.">RemoveConstraint()</a>. </p>
+
+</div>
+</div>
 <a id="a93cf63581a2d40a28d9cf65a3017839b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a93cf63581a2d40a28d9cf65a3017839b">&#9670;&nbsp;</a></span>GetDefaultContactSurfaceRepresentation()</h2>
 
@@ -8888,7 +8911,12 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 </div><div class="memdoc">
 
 <p>Sets the representation of contact surfaces to be used by <code>this</code> MultibodyPlant. </p>
-<p>See <a class="el" href="namespacedrake_1_1geometry.html#a227f80cb57c9c87f6ecc4e839e364979" title="Reports on how a hydroelastic contact surface is represented.">geometry::HydroelasticContactRepresentation</a> for available options. See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a93cf63581a2d40a28d9cf65a3017839b" title="Return the default value for contact representation, given the desired time step.">GetDefaultContactSurfaceRepresentation()</a> for explanation of default values. </p>
+<p>See <a class="el" href="namespacedrake_1_1geometry.html#a227f80cb57c9c87f6ecc4e839e364979" title="Reports on how a hydroelastic contact surface is represented.">geometry::HydroelasticContactRepresentation</a> for available options. See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a93cf63581a2d40a28d9cf65a3017839b" title="Return the default value for contact representation, given the desired time step.">GetDefaultContactSurfaceRepresentation()</a> for explanation of default values. </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if called post-finalize. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -8953,7 +8981,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
   </table>
   </dd>
 </dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">Deprecated:</a></b></dt><dd>Use set_discrete_contact_approximation() to set the contact model  approximation. The underlying solver will be inferred automatically. <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000003">Deprecated:</a></b></dt><dd>Use set_discrete_contact_approximation() to set the contact model  approximation. The underlying solver will be inferred automatically. <br />
  This will be removed from Drake on or after 2024-04-01.</dd></dl>
 
 </div>
@@ -9579,7 +9607,7 @@ manager != nullptr. </dd></dl>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000003">Deprecated:</a></b></dt><dd>Use MultibodyPlant::SetFreeBodyRandomTranslationDistribution() <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000004">Deprecated:</a></b></dt><dd>Use MultibodyPlant::SetFreeBodyRandomTranslationDistribution() <br />
  This will be removed from Drake on or after 2024-08-01.</dd></dl>
 
 </div>

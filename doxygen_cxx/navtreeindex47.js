@@ -1,5 +1,7 @@
 var NAVTREEINDEX47 =
 {
+"classdrake_1_1trajectories_1_1_trajectory.html#a7607cc5c56514557ed9441479ae70e71":[3,0,0,17,11,18],
+"classdrake_1_1trajectories_1_1_trajectory.html#a857db071d9bf847d026ba7046aa9744e":[3,0,0,17,11,15],
 "classdrake_1_1trajectories_1_1_trajectory.html#a9507f1cc6b538dc632d20e3d681bbaba":[3,0,0,17,11,11],
 "classdrake_1_1trajectories_1_1_trajectory.html#ac51b842ba9d2ee39e9398c86fdc38a75":[3,0,0,17,11,8],
 "classdrake_1_1trajectories_1_1_trajectory.html#ae4c7cdf72ed60fd130e1985ecd8c3846":[3,0,0,17,11,6],
@@ -247,7 +249,5 @@ var NAVTREEINDEX47 =
 "cspace__free__polytope__base_8h.html":[4,0,0,4,1,8],
 "cspace__free__structs_8h.html":[4,0,0,4,1,9],
 "cspace__separating__plane_8h.html":[4,0,0,4,1,10],
-"cspace__separating__plane_8h.html#a0a6bfeb13bf4fc1924f61f81051d7561":[4,0,0,4,1,10,2],
-"cspace__separating__plane_8h.html#a6d1ae826ab17a7ccd2b08fab3222813d":[4,0,0,4,1,10,4],
-"cspace__separating__plane_8h.html#a6febb8c28b6d49e494dbe16b5ed5b089":[4,0,0,4,1,10,1]
+"cspace__separating__plane_8h.html#a0a6bfeb13bf4fc1924f61f81051d7561":[4,0,0,4,1,10,2]
 };

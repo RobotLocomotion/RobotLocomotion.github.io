@@ -4787,6 +4787,14 @@ Post-finalize calls will always return the same value.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.GetConstraintIds">
+<span class="sig-name descname"><span class="pre">GetConstraintIds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.MultibodyConstraintId" title="pydrake.multibody.tree.MultibodyConstraintId"><span class="pre">pydrake.multibody.tree.MultibodyConstraintId</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.GetConstraintIds" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a list of all constraint identifiers. The returned vector
+becomes invalid after any calls to Add*Constraint() or
+RemoveConstraint().</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.GetDefaultContactSurfaceRepresentation">
 <em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetDefaultContactSurfaceRepresentation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time_step</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.HydroelasticContactRepresentation" title="pydrake.geometry.HydroelasticContactRepresentation"><span class="pre">pydrake.geometry.HydroelasticContactRepresentation</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.GetDefaultContactSurfaceRepresentation" title="Permalink to this definition"></a></dt>
 <dd><p>Return the default value for contact representation, given the desired
@@ -6505,6 +6513,11 @@ ContactModel::kHydroelasticWithFallback.</p>
 MultibodyPlant. See geometry::HydroelasticContactRepresentation for
 available options. See GetDefaultContactSurfaceRepresentation() for
 explanation of default values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if called post-finalize.</strong> – </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -10043,6 +10056,14 @@ Post-finalize calls will always return the same value.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetConstraintIds">
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].GetConstraintIds"></span><span class="sig-name descname"><span class="pre">GetConstraintIds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.MultibodyConstraintId" title="pydrake.multibody.tree.MultibodyConstraintId"><span class="pre">pydrake.multibody.tree.MultibodyConstraintId</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetConstraintIds" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a list of all constraint identifiers. The returned vector
+becomes invalid after any calls to Add*Constraint() or
+RemoveConstraint().</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetDefaultContactSurfaceRepresentation">
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].GetDefaultContactSurfaceRepresentation"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetDefaultContactSurfaceRepresentation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time_step</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.HydroelasticContactRepresentation" title="pydrake.geometry.HydroelasticContactRepresentation"><span class="pre">pydrake.geometry.HydroelasticContactRepresentation</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetDefaultContactSurfaceRepresentation" title="Permalink to this definition"></a></dt>
 <dd><p>Return the default value for contact representation, given the desired
@@ -11723,6 +11744,11 @@ ContactModel::kHydroelasticWithFallback.</p>
 MultibodyPlant. See geometry::HydroelasticContactRepresentation for
 available options. See GetDefaultContactSurfaceRepresentation() for
 explanation of default values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if called post-finalize.</strong> – </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -15255,6 +15281,14 @@ Post-finalize calls will always return the same value.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.GetConstraintIds">
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].GetConstraintIds"></span><span class="sig-name descname"><span class="pre">GetConstraintIds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.MultibodyConstraintId" title="pydrake.multibody.tree.MultibodyConstraintId"><span class="pre">pydrake.multibody.tree.MultibodyConstraintId</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetConstraintIds" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a list of all constraint identifiers. The returned vector
+becomes invalid after any calls to Add*Constraint() or
+RemoveConstraint().</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.GetDefaultContactSurfaceRepresentation">
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].GetDefaultContactSurfaceRepresentation"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetDefaultContactSurfaceRepresentation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time_step</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.HydroelasticContactRepresentation" title="pydrake.geometry.HydroelasticContactRepresentation"><span class="pre">pydrake.geometry.HydroelasticContactRepresentation</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetDefaultContactSurfaceRepresentation" title="Permalink to this definition"></a></dt>
 <dd><p>Return the default value for contact representation, given the desired
@@ -16935,6 +16969,11 @@ ContactModel::kHydroelasticWithFallback.</p>
 MultibodyPlant. See geometry::HydroelasticContactRepresentation for
 available options. See GetDefaultContactSurfaceRepresentation() for
 explanation of default values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if called post-finalize.</strong> – </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">

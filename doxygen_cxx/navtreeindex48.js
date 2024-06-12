@@ -1,5 +1,7 @@
 var NAVTREEINDEX48 =
 {
+"cspace__separating__plane_8h.html#a6d1ae826ab17a7ccd2b08fab3222813d":[4,0,0,4,1,10,4],
+"cspace__separating__plane_8h.html#a6febb8c28b6d49e494dbe16b5ed5b089":[4,0,0,4,1,10,1],
 "cspace__separating__plane_8h.html#a6febb8c28b6d49e494dbe16b5ed5b089ac3af1341756d0c5a66c8ea473dc38927":[4,0,0,4,1,10,1,0],
 "cspace__separating__plane_8h.html#ac176296e2c3b79a9f480c7a38b0842b0":[4,0,0,4,1,10,3],
 "cubic__scalar__system_8h.html":[4,0,0,12,0,0,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX48 =
 "dirichlet__boundary__condition_8h.html#a30f7635fdfd5c32323992a6ae496d5ca":[4,0,0,8,3,8,0],
 "discontinuous__spring__mass__damper__system_8h.html":[4,0,0,12,0,0,2],
 "discrete__algebraic__riccati__equation_8h.html":[4,0,0,7,11],
-"discrete__algebraic__riccati__equation_8h.html#a8cd8a0787e886faf633f2c1f5be2365e":[4,0,0,7,11,0],
-"discrete__algebraic__riccati__equation_8h.html#aa957c0c1b13e62f96ae84dd8abe45dd9":[4,0,0,7,11,1],
-"discrete__contact__data_8h.html":[4,0,0,8,10,14]
+"discrete__algebraic__riccati__equation_8h.html#a8cd8a0787e886faf633f2c1f5be2365e":[4,0,0,7,11,0]
 };

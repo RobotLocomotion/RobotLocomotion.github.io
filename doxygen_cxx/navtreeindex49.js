@@ -1,5 +1,7 @@
 var NAVTREEINDEX49 =
 {
+"discrete__algebraic__riccati__equation_8h.html#aa957c0c1b13e62f96ae84dd8abe45dd9":[4,0,0,7,11,1],
+"discrete__contact__data_8h.html":[4,0,0,8,10,14],
 "discrete__contact__pair_8h.html":[4,0,0,8,10,15],
 "discrete__derivative_8h.html":[4,0,0,12,6,6],
 "discrete__lyapunov__equation_8h.html":[4,0,0,7,12],
@@ -247,7 +249,5 @@ var NAVTREEINDEX49 =
 "expression_2expression_8h.html#aa66cbc3a6c390d0d04bf3839e4377850":[4,0,0,1,3,0,3,70],
 "expression_2expression_8h.html#aa8f471231c119fee48c6dba7a2d5ab18":[4,0,0,1,3,0,3,58],
 "expression_2expression_8h.html#aac410f7e82c9d06e796d7fcb4508f5e4":[4,0,0,1,3,0,3,93],
-"expression_2expression_8h.html#aad0d56f8b2a9f5a4e7a6d23e244341df":[4,0,0,1,3,0,3,97],
-"expression_2expression_8h.html#aaeec5ad743203c7161bd07bbb00dd96b":[4,0,0,1,3,0,3,86],
-"expression_2expression_8h.html#ab1ebc87f878cdb6a3f0339711d591a26":[4,0,0,1,3,0,3,43]
+"expression_2expression_8h.html#aad0d56f8b2a9f5a4e7a6d23e244341df":[4,0,0,1,3,0,3,97]
 };

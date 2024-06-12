@@ -1,5 +1,7 @@
 var NAVTREEINDEX58 =
 {
+"schunk__wsg__position__controller_8h.html":[4,0,0,6,2,8],
+"schunk__wsg__trajectory__generator_8h.html":[4,0,0,6,2,9],
 "schunk__wsg__trajectory__generator__state__vector_8h.html":[4,0,0,6,2,10],
 "scope__exit_8h.html":[4,0,0,1,55],
 "scoped__name_8h.html":[4,0,0,8,14,46],
@@ -247,7 +249,5 @@ var NAVTREEINDEX58 =
 "static__equilibrium__constraint_8h.html":[4,0,0,8,8,7],
 "static__equilibrium__problem_8h.html":[4,0,0,8,8,8],
 "static__friction__cone__complementarity__constraint_8h.html":[4,0,0,8,8,9],
-"static__friction__cone__complementarity__constraint_8h.html#ga4508ec670196c3fe45e9b52af8a73d4a":[4,0,0,8,8,9,0],
-"static__friction__cone__constraint_8h.html":[4,0,0,8,8,10],
-"stationary__system_8h.html":[4,0,0,12,0,0,17]
+"static__friction__cone__complementarity__constraint_8h.html#ga4508ec670196c3fe45e9b52af8a73d4a":[4,0,0,8,8,9,0]
 };
