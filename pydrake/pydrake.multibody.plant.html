@@ -4881,7 +4881,7 @@ JointActuator::index().</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.GetFloatingBaseBodies">
 <span class="sig-name descname"><span class="pre">GetFloatingBaseBodies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.BodyIndex" title="pydrake.multibody.tree.BodyIndex"><span class="pre">pydrake.multibody.tree.BodyIndex</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.GetFloatingBaseBodies" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the set of body indexes corresponding to the free (floating)
+<dd><p>Returns the set of body indices corresponding to the free (floating)
 bodies in the model, in no particular order.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
@@ -5010,7 +5010,7 @@ MultibodyPlant.</p>
 <li><p>GetJointActuatorIndices(self: pydrake.multibody.plant.MultibodyPlant) -&gt; List[pydrake.multibody.tree.JointActuatorIndex]</p></li>
 </ol>
 <p>Returns a list of all joint actuator indices. The vector is ordered by
-monotonically increasing JointActuatorIndex, but the indexes will in
+monotonically increasing JointActuatorIndex, but the indices will in
 general not be consecutive due to actuators that were removed.</p>
 <ol class="arabic simple" start="2">
 <li><p>GetJointActuatorIndices(self: pydrake.multibody.plant.MultibodyPlant, model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; List[pydrake.multibody.tree.JointActuatorIndex]</p></li>
@@ -5061,7 +5061,7 @@ MultibodyPlant with a given specified name.</p>
 <li><p>GetJointIndices(self: pydrake.multibody.plant.MultibodyPlant) -&gt; List[pydrake.multibody.tree.JointIndex]</p></li>
 </ol>
 <p>Returns a list of all joint indices. The vector is ordered by
-monotonically increasing JointIndex, but the indexes will in general
+monotonically increasing JointIndex, but the indices will in general
 not be consecutive due to joints that were removed.</p>
 <ol class="arabic simple" start="2">
 <li><p>GetJointIndices(self: pydrake.multibody.plant.MultibodyPlant, model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; List[pydrake.multibody.tree.JointIndex]</p></li>
@@ -5894,7 +5894,7 @@ num_actuated_dofs() and <code class="docutils literal notranslate"><span class="
 of actuation values is of size num_actuated_dofs(). For a given
 JointActuator, <code class="docutils literal notranslate"><span class="pre">u[JointActuator::input_start()]</span></code> stores the value
 for the external actuation corresponding to that actuator. <code class="docutils literal notranslate"><span class="pre">tau_u</span></code>
-on the other hand is indexed by generalized velocity indexes according
+on the other hand is indexed by generalized velocity indices according
 to <code class="docutils literal notranslate"><span class="pre">Joint::velocity_start()</span></code>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -5998,7 +5998,7 @@ velocities vₛ.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if there are repeated indexes in</strong> – </p></li>
+<li><p><strong>RuntimeError if there are repeated indices in</strong> – </p></li>
 <li><p><strong>user_to_joint_index_map`</strong> – </p></li>
 </ul>
 </dd>
@@ -10150,7 +10150,7 @@ JointActuator::index().</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetFloatingBaseBodies">
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].GetFloatingBaseBodies"></span><span class="sig-name descname"><span class="pre">GetFloatingBaseBodies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.BodyIndex" title="pydrake.multibody.tree.BodyIndex"><span class="pre">pydrake.multibody.tree.BodyIndex</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetFloatingBaseBodies" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the set of body indexes corresponding to the free (floating)
+<dd><p>Returns the set of body indices corresponding to the free (floating)
 bodies in the model, in no particular order.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
@@ -10279,7 +10279,7 @@ MultibodyPlant.</p>
 <li><p>GetJointActuatorIndices(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd]) -&gt; List[pydrake.multibody.tree.JointActuatorIndex]</p></li>
 </ol>
 <p>Returns a list of all joint actuator indices. The vector is ordered by
-monotonically increasing JointActuatorIndex, but the indexes will in
+monotonically increasing JointActuatorIndex, but the indices will in
 general not be consecutive due to actuators that were removed.</p>
 <ol class="arabic simple" start="2">
 <li><p>GetJointActuatorIndices(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; List[pydrake.multibody.tree.JointActuatorIndex]</p></li>
@@ -10330,7 +10330,7 @@ MultibodyPlant with a given specified name.</p>
 <li><p>GetJointIndices(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd]) -&gt; List[pydrake.multibody.tree.JointIndex]</p></li>
 </ol>
 <p>Returns a list of all joint indices. The vector is ordered by
-monotonically increasing JointIndex, but the indexes will in general
+monotonically increasing JointIndex, but the indices will in general
 not be consecutive due to joints that were removed.</p>
 <ol class="arabic simple" start="2">
 <li><p>GetJointIndices(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; List[pydrake.multibody.tree.JointIndex]</p></li>
@@ -11163,7 +11163,7 @@ num_actuated_dofs() and <code class="docutils literal notranslate"><span class="
 of actuation values is of size num_actuated_dofs(). For a given
 JointActuator, <code class="docutils literal notranslate"><span class="pre">u[JointActuator::input_start()]</span></code> stores the value
 for the external actuation corresponding to that actuator. <code class="docutils literal notranslate"><span class="pre">tau_u</span></code>
-on the other hand is indexed by generalized velocity indexes according
+on the other hand is indexed by generalized velocity indices according
 to <code class="docutils literal notranslate"><span class="pre">Joint::velocity_start()</span></code>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -11249,7 +11249,7 @@ velocities vₛ.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if there are repeated indexes in</strong> – </p></li>
+<li><p><strong>RuntimeError if there are repeated indices in</strong> – </p></li>
 <li><p><strong>user_to_joint_index_map`</strong> – </p></li>
 </ul>
 </dd>
@@ -15375,7 +15375,7 @@ JointActuator::index().</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.GetFloatingBaseBodies">
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].GetFloatingBaseBodies"></span><span class="sig-name descname"><span class="pre">GetFloatingBaseBodies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.BodyIndex" title="pydrake.multibody.tree.BodyIndex"><span class="pre">pydrake.multibody.tree.BodyIndex</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetFloatingBaseBodies" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the set of body indexes corresponding to the free (floating)
+<dd><p>Returns the set of body indices corresponding to the free (floating)
 bodies in the model, in no particular order.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
@@ -15504,7 +15504,7 @@ MultibodyPlant.</p>
 <li><p>GetJointActuatorIndices(self: pydrake.multibody.plant.MultibodyPlant_[Expression]) -&gt; List[pydrake.multibody.tree.JointActuatorIndex]</p></li>
 </ol>
 <p>Returns a list of all joint actuator indices. The vector is ordered by
-monotonically increasing JointActuatorIndex, but the indexes will in
+monotonically increasing JointActuatorIndex, but the indices will in
 general not be consecutive due to actuators that were removed.</p>
 <ol class="arabic simple" start="2">
 <li><p>GetJointActuatorIndices(self: pydrake.multibody.plant.MultibodyPlant_[Expression], model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; List[pydrake.multibody.tree.JointActuatorIndex]</p></li>
@@ -15555,7 +15555,7 @@ MultibodyPlant with a given specified name.</p>
 <li><p>GetJointIndices(self: pydrake.multibody.plant.MultibodyPlant_[Expression]) -&gt; List[pydrake.multibody.tree.JointIndex]</p></li>
 </ol>
 <p>Returns a list of all joint indices. The vector is ordered by
-monotonically increasing JointIndex, but the indexes will in general
+monotonically increasing JointIndex, but the indices will in general
 not be consecutive due to joints that were removed.</p>
 <ol class="arabic simple" start="2">
 <li><p>GetJointIndices(self: pydrake.multibody.plant.MultibodyPlant_[Expression], model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; List[pydrake.multibody.tree.JointIndex]</p></li>
@@ -16388,7 +16388,7 @@ num_actuated_dofs() and <code class="docutils literal notranslate"><span class="
 of actuation values is of size num_actuated_dofs(). For a given
 JointActuator, <code class="docutils literal notranslate"><span class="pre">u[JointActuator::input_start()]</span></code> stores the value
 for the external actuation corresponding to that actuator. <code class="docutils literal notranslate"><span class="pre">tau_u</span></code>
-on the other hand is indexed by generalized velocity indexes according
+on the other hand is indexed by generalized velocity indices according
 to <code class="docutils literal notranslate"><span class="pre">Joint::velocity_start()</span></code>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -16474,7 +16474,7 @@ velocities vₛ.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if there are repeated indexes in</strong> – </p></li>
+<li><p><strong>RuntimeError if there are repeated indices in</strong> – </p></li>
 <li><p><strong>user_to_joint_index_map`</strong> – </p></li>
 </ul>
 </dd>
