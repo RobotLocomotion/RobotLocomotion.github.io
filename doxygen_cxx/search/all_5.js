@@ -101,6 +101,7 @@ var searchData=
   ['evalpointpairpenetrations',['EvalPointPairPenetrations',['../classdrake_1_1multibody_1_1_multibody_plant.html#aecf801449932225a58b7daeb64a8f911',1,'drake::multibody::MultibodyPlant']]],
   ['evalposeinworld',['EvalPoseInWorld',['../classdrake_1_1multibody_1_1_rigid_body.html#adb15f7a08a083af61068735632ada406',1,'drake::multibody::RigidBody']]],
   ['evalpotentialenergy',['EvalPotentialEnergy',['../classdrake_1_1systems_1_1_system.html#a432bd44170a669c140bc483e18f9e6df',1,'drake::systems::System']]],
+  ['evalscenegraphinspector',['EvalSceneGraphInspector',['../classdrake_1_1multibody_1_1_multibody_plant.html#ab138232d432d7a1e454ecb479bbfd81d',1,'drake::multibody::MultibodyPlant']]],
   ['evalspatialaccelerationinworld',['EvalSpatialAccelerationInWorld',['../classdrake_1_1multibody_1_1_rigid_body.html#a87451694c9fdf67303c1550f11bdf3c2',1,'drake::multibody::RigidBody']]],
   ['evalspatialvelocityinworld',['EvalSpatialVelocityInWorld',['../classdrake_1_1multibody_1_1_rigid_body.html#a9c07832f25dde3f8403e98c73dd24d1b',1,'drake::multibody::RigidBody']]],
   ['evalspringdamperforces',['EvalSpringDamperForces',['../classdrake_1_1systems_1_1analysis_1_1test_1_1_stiff_double_mass_spring_system.html#adfb97422619ce05f36cd5a728be0255a',1,'drake::systems::analysis::test::StiffDoubleMassSpringSystem']]],

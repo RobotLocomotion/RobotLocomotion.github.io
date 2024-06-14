@@ -1,5 +1,6 @@
 var NAVTREEINDEX30 =
 {
+"classdrake_1_1symbolic_1_1_chebyshev_polynomial.html#aa0712ee1db6bc60cf5929e27695a681e":[3,0,0,14,3,8],
 "classdrake_1_1symbolic_1_1_chebyshev_polynomial.html#ae8847fad4ffecbee9cecf9ac6fa75056":[3,0,0,14,3,1],
 "classdrake_1_1symbolic_1_1_chebyshev_polynomial.html#aeeb784504d4a07effa2390dd9fd3ef6a":[3,0,0,14,3,2],
 "classdrake_1_1symbolic_1_1_code_gen_visitor.html":[3,0,0,14,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX30 =
 "classdrake_1_1symbolic_1_1_expression_asin.html#a72ae45ea810c2e68f74e59000dca8337":[3,0,0,14,11,1],
 "classdrake_1_1symbolic_1_1_expression_asin.html#ab022b2a7bc26750aab90eeafb49c2d8a":[3,0,0,14,11,2],
 "classdrake_1_1symbolic_1_1_expression_asin.html#ae4fb457c881d49e1e698120eae9e4c52":[3,0,0,14,11,4],
-"classdrake_1_1symbolic_1_1_expression_atan.html":[3,0,0,14,12],
-"classdrake_1_1symbolic_1_1_expression_atan.html#a174e88ea34010c2773c177a2cd3a7371":[3,0,0,14,12,5]
+"classdrake_1_1symbolic_1_1_expression_atan.html":[3,0,0,14,12]
 };

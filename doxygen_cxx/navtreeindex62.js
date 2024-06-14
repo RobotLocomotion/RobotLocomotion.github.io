@@ -1,5 +1,6 @@
 var NAVTREEINDEX62 =
 {
+"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a3f67c53b80389c5f53961936edba04c9":[3,0,0,8,2,1,11],
 "structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a78fb15511f687fe7fdb8e3ba9613648b":[3,0,0,8,2,1,9],
 "structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a796122705bf6508783b49e113fb500b1":[3,0,0,8,2,1,7],
 "structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a7efd266a84dc02bc8bb42bb8d73273e5":[3,0,0,8,2,1,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX62 =
 "structdrake_1_1solvers_1_1_scs_solver_details.html#a88099c06f0d2a18e23e301b3cdf08020":[3,0,0,13,65,1],
 "structdrake_1_1solvers_1_1_scs_solver_details.html#a90de5192c60705e7cc5fa526388280e0":[3,0,0,13,65,3],
 "structdrake_1_1solvers_1_1_scs_solver_details.html#aa19049e37f2ac70a89ed4a46ddb36b40":[3,0,0,13,65,8],
-"structdrake_1_1solvers_1_1_scs_solver_details.html#aab6f168571c2073e01e240524b8a3da0":[3,0,0,13,65,2],
-"structdrake_1_1solvers_1_1_scs_solver_details.html#ab14ffec13ba48949eb5344938b168ec0":[3,0,0,13,65,11]
+"structdrake_1_1solvers_1_1_scs_solver_details.html#aab6f168571c2073e01e240524b8a3da0":[3,0,0,13,65,2]
 };

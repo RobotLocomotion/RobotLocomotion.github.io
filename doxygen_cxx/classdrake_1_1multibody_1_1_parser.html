@@ -235,9 +235,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3485d7db4daca85028608bb5ba790a1f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_collision_filter_groups.html">CollisionFilterGroups</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_parser.html#a3485d7db4daca85028608bb5ba790a1f">GetCollisionFilterGroups</a> () const</td></tr>
 <tr class="memdesc:a3485d7db4daca85028608bb5ba790a1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the accumulated set of collision filter definitions seen by this parser.  <a href="#a3485d7db4daca85028608bb5ba790a1f">More...</a><br /></td></tr>
 <tr class="separator:a3485d7db4daca85028608bb5ba790a1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2cfbddf079d6bfbdeb3a6ea1ab357f87"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_collision_filter_groups.html">CollisionFilterGroups</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_parser.html#a2cfbddf079d6bfbdeb3a6ea1ab357f87">collision_filter_groups</a> () const</td></tr>
-<tr class="memdesc:a2cfbddf079d6bfbdeb3a6ea1ab357f87"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a2cfbddf079d6bfbdeb3a6ea1ab357f87">More...</a><br /></td></tr>
-<tr class="separator:a2cfbddf079d6bfbdeb3a6ea1ab357f87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ff0ade340da12810522723bf3749152"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_collision_filter_groups.html">CollisionFilterGroups</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_parser.html#a6ff0ade340da12810522723bf3749152">collision_filter_groups</a> () const</td></tr>
+<tr class="memdesc:a6ff0ade340da12810522723bf3749152"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a6ff0ade340da12810522723bf3749152">More...</a><br /></td></tr>
+<tr class="separator:a6ff0ade340da12810522723bf3749152"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3bec3a31ebbe841c05773d4f5cb1791"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_parser.html#ad3bec3a31ebbe841c05773d4f5cb1791">AddModels</a> (const std::filesystem::path &amp;file_name)</td></tr>
 <tr class="memdesc:ad3bec3a31ebbe841c05773d4f5cb1791"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the input file named in <code>file_name</code> and adds all of its model(s) to <code>plant</code>.  <a href="#ad3bec3a31ebbe841c05773d4f5cb1791">More...</a><br /></td></tr>
 <tr class="separator:ad3bec3a31ebbe841c05773d4f5cb1791"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -555,14 +555,14 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a2cfbddf079d6bfbdeb3a6ea1ab357f87"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2cfbddf079d6bfbdeb3a6ea1ab357f87">&#9670;&nbsp;</a></span>collision_filter_groups()</h2>
+<a id="a6ff0ade340da12810522723bf3749152"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ff0ade340da12810522723bf3749152">&#9670;&nbsp;</a></span>collision_filter_groups()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_collision_filter_groups.html">CollisionFilterGroups</a> collision_filter_groups </td>
+          <td class="memname">const <a class="el" href="classdrake_1_1multibody_1_1_collision_filter_groups.html">CollisionFilterGroups</a>&amp; collision_filter_groups </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -571,7 +571,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">Deprecated:</a></b></dt><dd>Use GetCollisionFilterGroups() instead. <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">Deprecated:</a></b></dt><dd>Use GetCollisionFilterGroups() instead. Note that the return type is  changed to by-value in the new method; callers may need to store the  return value in a variable with an appropriate lifetime. <br />
  This will be removed from Drake on or after 2024-10-01.</dd></dl>
 
 </div>

@@ -1,5 +1,6 @@
 var NAVTREEINDEX48 =
 {
+"cspace__separating__plane_8h.html#a0a6bfeb13bf4fc1924f61f81051d7561":[4,0,0,4,1,10,2],
 "cspace__separating__plane_8h.html#a6d1ae826ab17a7ccd2b08fab3222813d":[4,0,0,4,1,10,4],
 "cspace__separating__plane_8h.html#a6febb8c28b6d49e494dbe16b5ed5b089":[4,0,0,4,1,10,1],
 "cspace__separating__plane_8h.html#a6febb8c28b6d49e494dbe16b5ed5b089ac3af1341756d0c5a66c8ea473dc38927":[4,0,0,4,1,10,1,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX48 =
 "dirichlet__boundary__condition_8h.html":[4,0,0,8,3,8],
 "dirichlet__boundary__condition_8h.html#a30f7635fdfd5c32323992a6ae496d5ca":[4,0,0,8,3,8,0],
 "discontinuous__spring__mass__damper__system_8h.html":[4,0,0,12,0,0,2],
-"discrete__algebraic__riccati__equation_8h.html":[4,0,0,7,11],
-"discrete__algebraic__riccati__equation_8h.html#a8cd8a0787e886faf633f2c1f5be2365e":[4,0,0,7,11,0]
+"discrete__algebraic__riccati__equation_8h.html":[4,0,0,7,11]
 };

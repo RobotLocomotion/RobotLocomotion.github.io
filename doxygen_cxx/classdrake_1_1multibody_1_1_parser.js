@@ -8,7 +8,7 @@ var classdrake_1_1multibody_1_1_parser =
     [ "AddModels", "classdrake_1_1multibody_1_1_parser.html#ad3bec3a31ebbe841c05773d4f5cb1791", null ],
     [ "AddModelsFromString", "classdrake_1_1multibody_1_1_parser.html#a0f86ad0f6f34758be876e93e46ec2e79", null ],
     [ "AddModelsFromUrl", "classdrake_1_1multibody_1_1_parser.html#a42ecd936860fa30a7c3d248fb75353c0", null ],
-    [ "collision_filter_groups", "classdrake_1_1multibody_1_1_parser.html#a2cfbddf079d6bfbdeb3a6ea1ab357f87", null ],
+    [ "collision_filter_groups", "classdrake_1_1multibody_1_1_parser.html#a6ff0ade340da12810522723bf3749152", null ],
     [ "GetAutoRenaming", "classdrake_1_1multibody_1_1_parser.html#a5179938bbe0564df009603816008880e", null ],
     [ "GetCollisionFilterGroups", "classdrake_1_1multibody_1_1_parser.html#a3485d7db4daca85028608bb5ba790a1f", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_parser.html#aeebdf7001a0290c2891454d506c67a74", null ],

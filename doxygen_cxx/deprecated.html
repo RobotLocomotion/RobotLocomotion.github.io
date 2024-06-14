@@ -175,8 +175,8 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a6714b39ed77d548326ca4b02c4ff23d7">MultibodyPlant&lt; T &gt;::SetFreeBodyRandomPositionDistribution</a>  (const RigidBody&lt; T &gt; &amp;body, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2" title="A column vector of size 3, templated on scalar type.">Vector3&lt; symbolic::Expression &gt;</a> &amp;position)</dt>
 <dd><a class="anchor" id="_deprecated000004"></a>Use MultibodyPlant::SetFreeBodyRandomTranslationDistribution() <br />
  This will be removed from Drake on or after 2024-08-01. </dd>
-<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_parser.html#a2cfbddf079d6bfbdeb3a6ea1ab357f87">Parser::collision_filter_groups</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000002"></a>Use GetCollisionFilterGroups() instead. <br />
+<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_parser.html#a6ff0ade340da12810522723bf3749152">Parser::collision_filter_groups</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000002"></a>Use GetCollisionFilterGroups() instead. Note that the return type is  changed to by-value in the new method; callers may need to store the  return value in a variable with an appropriate lifetime. <br />
  This will be removed from Drake on or after 2024-10-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a4f6e27cbb99fadfd3e6592b31a281387">QuaternionFloatingJoint&lt; T &gt;::get_default_pose</a>  () const</dt>
 <dd><a class="anchor" id="_deprecated000013"></a>Removed since functionality already provided by base class  Joint::GetDefaultPose() <br />

@@ -2138,14 +2138,11 @@ SceneGraph as:</p>
 </pre></div>
 </div>
 </details><p>After context creation, an inspector can be retrieved from the state
-stored in the context by the plant’s geometry query input port:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// For a MultibodyPlant&lt;T&gt; instance called mbp and a</span>
-<span class="c1">// Context&lt;T&gt; called context.</span>
-<span class="k">const</span><span class="w"> </span><span class="n">geometry</span><span class="o">::</span><span class="n">QueryObject</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">query_object</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
-<span class="n">mbp</span><span class="p">.</span><span class="n">get_geometry_query_input_port</span><span class="p">()</span><span class="w"></span>
-<span class="p">.</span><span class="k">template</span><span class="w"> </span><span class="n">Eval</span><span class="o">&lt;</span><span class="n">geometry</span><span class="o">::</span><span class="n">QueryObject</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">context</span><span class="p">);</span><span class="w"></span>
+stored in the context:</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// For a MultibodyPlant&lt;T&gt; instance called mbp and a Context&lt;T&gt; called</span>
+<span class="c1">// context.</span>
 <span class="k">const</span><span class="w"> </span><span class="n">geometry</span><span class="o">::</span><span class="n">SceneGraphInspector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">inspector</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
-<span class="n">query_object</span><span class="p">.</span><span class="n">inspector</span><span class="p">();</span><span class="w"></span>
+<span class="n">mbp</span><span class="p">.</span><span class="n">EvalSceneGraphInspector</span><span class="p">(</span><span class="n">context</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 </details><p>Once an inspector is available, proximity properties can be retrieved
@@ -3904,6 +3901,16 @@ W (for point Bo, the body’s origin).</p>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.EvalSceneGraphInspector">
+<span class="sig-name descname"><span class="pre">EvalSceneGraphInspector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.SceneGraphInspector" title="pydrake.geometry.SceneGraphInspector"><span class="pre">pydrake.geometry.SceneGraphInspector</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.EvalSceneGraphInspector" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the inspector from the <code class="docutils literal notranslate"><span class="pre">context</span></code> for the SceneGraph
+associated with this plant, via this plant’s “geometry_query” input
+port. (In the future, the inspector might come from a different
+context source that is more efficient than the “geometry_query” input
+port.)</p>
 </dd></dl>
 
 <dl class="py method">
@@ -7412,14 +7419,11 @@ SceneGraph as:</p>
 </pre></div>
 </div>
 </details><p>After context creation, an inspector can be retrieved from the state
-stored in the context by the plant’s geometry query input port:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// For a MultibodyPlant&lt;T&gt; instance called mbp and a</span>
-<span class="c1">// Context&lt;T&gt; called context.</span>
-<span class="k">const</span><span class="w"> </span><span class="n">geometry</span><span class="o">::</span><span class="n">QueryObject</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">query_object</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
-<span class="n">mbp</span><span class="p">.</span><span class="n">get_geometry_query_input_port</span><span class="p">()</span><span class="w"></span>
-<span class="p">.</span><span class="k">template</span><span class="w"> </span><span class="n">Eval</span><span class="o">&lt;</span><span class="n">geometry</span><span class="o">::</span><span class="n">QueryObject</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">context</span><span class="p">);</span><span class="w"></span>
+stored in the context:</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// For a MultibodyPlant&lt;T&gt; instance called mbp and a Context&lt;T&gt; called</span>
+<span class="c1">// context.</span>
 <span class="k">const</span><span class="w"> </span><span class="n">geometry</span><span class="o">::</span><span class="n">SceneGraphInspector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">inspector</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
-<span class="n">query_object</span><span class="p">.</span><span class="n">inspector</span><span class="p">();</span><span class="w"></span>
+<span class="n">mbp</span><span class="p">.</span><span class="n">EvalSceneGraphInspector</span><span class="p">(</span><span class="n">context</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 </details><p>Once an inspector is available, proximity properties can be retrieved
@@ -9173,6 +9177,16 @@ W (for point Bo, the body’s origin).</p>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.EvalSceneGraphInspector">
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].EvalSceneGraphInspector"></span><span class="sig-name descname"><span class="pre">EvalSceneGraphInspector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.SceneGraphInspector_" title="pydrake.geometry.SceneGraphInspector_"><span class="pre">pydrake.geometry.SceneGraphInspector_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.EvalSceneGraphInspector" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the inspector from the <code class="docutils literal notranslate"><span class="pre">context</span></code> for the SceneGraph
+associated with this plant, via this plant’s “geometry_query” input
+port. (In the future, the inspector might come from a different
+context source that is more efficient than the “geometry_query” input
+port.)</p>
 </dd></dl>
 
 <dl class="py method">
@@ -12637,14 +12651,11 @@ SceneGraph as:</p>
 </pre></div>
 </div>
 </details><p>After context creation, an inspector can be retrieved from the state
-stored in the context by the plant’s geometry query input port:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// For a MultibodyPlant&lt;T&gt; instance called mbp and a</span>
-<span class="c1">// Context&lt;T&gt; called context.</span>
-<span class="k">const</span><span class="w"> </span><span class="n">geometry</span><span class="o">::</span><span class="n">QueryObject</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">query_object</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
-<span class="n">mbp</span><span class="p">.</span><span class="n">get_geometry_query_input_port</span><span class="p">()</span><span class="w"></span>
-<span class="p">.</span><span class="k">template</span><span class="w"> </span><span class="n">Eval</span><span class="o">&lt;</span><span class="n">geometry</span><span class="o">::</span><span class="n">QueryObject</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">context</span><span class="p">);</span><span class="w"></span>
+stored in the context:</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// For a MultibodyPlant&lt;T&gt; instance called mbp and a Context&lt;T&gt; called</span>
+<span class="c1">// context.</span>
 <span class="k">const</span><span class="w"> </span><span class="n">geometry</span><span class="o">::</span><span class="n">SceneGraphInspector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">inspector</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
-<span class="n">query_object</span><span class="p">.</span><span class="n">inspector</span><span class="p">();</span><span class="w"></span>
+<span class="n">mbp</span><span class="p">.</span><span class="n">EvalSceneGraphInspector</span><span class="p">(</span><span class="n">context</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 </details><p>Once an inspector is available, proximity properties can be retrieved
@@ -14398,6 +14409,16 @@ W (for point Bo, the body’s origin).</p>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.EvalSceneGraphInspector">
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].EvalSceneGraphInspector"></span><span class="sig-name descname"><span class="pre">EvalSceneGraphInspector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.SceneGraphInspector_" title="pydrake.geometry.SceneGraphInspector_"><span class="pre">pydrake.geometry.SceneGraphInspector_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.EvalSceneGraphInspector" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the inspector from the <code class="docutils literal notranslate"><span class="pre">context</span></code> for the SceneGraph
+associated with this plant, via this plant’s “geometry_query” input
+port. (In the future, the inspector might come from a different
+context source that is more efficient than the “geometry_query” input
+port.)</p>
 </dd></dl>
 
 <dl class="py method">

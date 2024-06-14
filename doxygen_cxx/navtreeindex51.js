@@ -1,5 +1,6 @@
 var NAVTREEINDEX51 =
 {
+"formula_8h.html#ad0de903abee4a9e39dbc9148d86c770c":[4,0,0,1,3,0,7,58],
 "formula_8h.html#ad1245bbf1795b4f97ec4c04cd79dcde3":[4,0,0,1,3,0,7,49],
 "formula_8h.html#ad4bd0f6e944bac326e6e943f26d3d043":[4,0,0,1,3,0,7,25],
 "formula_8h.html#ad81230526e0921e5d17d5e08c2817cc7":[4,0,0,1,3,0,7,70],
@@ -248,6 +249,5 @@ var NAVTREEINDEX51 =
 "generic__polynomial_8h.html#afc778273d730c518678796b632e4de8f":[4,0,0,1,3,6,31],
 "geodesic__convexity_8h.html":[4,0,0,4,1,11],
 "geodesic__convexity_8h.html#a05bd75c8b08787c334065792f8532797":[4,0,0,4,1,11,2],
-"geodesic__convexity_8h.html#a0f945f0d43e169b238695da629d93ff7":[4,0,0,4,1,11,3],
-"geodesic__convexity_8h.html#a2c11e361e030be5ef7e6aa3cdbe785bd":[4,0,0,4,1,11,1]
+"geodesic__convexity_8h.html#a0f945f0d43e169b238695da629d93ff7":[4,0,0,4,1,11,3]
 };
