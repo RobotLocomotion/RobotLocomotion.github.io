@@ -128,7 +128,7 @@
 <span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">ApplyDriverConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.manipulation.ApplyDriverConfig" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>ApplyDriverConfig(driver_config: pydrake.manipulation.IiwaDriver, model_instance_name: str, sim_plant: drake::multibody::MultibodyPlant&lt;double&gt;, models_from_directives: Dict[str, drake::multibody::parsing::ModelInstanceInfo], lcms: drake::systems::lcm::LcmBuses, builder: pydrake.systems.framework.DiagramBuilder) -&gt; None</p></li>
+<li><p>ApplyDriverConfig(driver_config: pydrake.manipulation.IiwaDriver, model_instance_name: str, sim_plant: drake::multibody::MultibodyPlant&lt;double&gt;, models_from_directives: dict[str, drake::multibody::parsing::ModelInstanceInfo], lcms: drake::systems::lcm::LcmBuses, builder: pydrake.systems.framework.DiagramBuilder) -&gt; None</p></li>
 </ol>
 <p>Wires up Drake systems between an LCM interface and the actuation
 input ports of a MultibodyPlant. This simulates the role that driver
@@ -140,13 +140,13 @@ software and control cabinets would take in real life.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>ApplyDriverConfig(driver_config: pydrake.manipulation.SchunkWsgDriver, model_instance_name: str, sim_plant: drake::multibody::MultibodyPlant&lt;double&gt;, models_from_directives: Dict[str, drake::multibody::parsing::ModelInstanceInfo], lcms: drake::systems::lcm::LcmBuses, builder: pydrake.systems.framework.DiagramBuilder) -&gt; None</p></li>
+<li><p>ApplyDriverConfig(driver_config: pydrake.manipulation.SchunkWsgDriver, model_instance_name: str, sim_plant: drake::multibody::MultibodyPlant&lt;double&gt;, models_from_directives: dict[str, drake::multibody::parsing::ModelInstanceInfo], lcms: drake::systems::lcm::LcmBuses, builder: pydrake.systems.framework.DiagramBuilder) -&gt; None</p></li>
 </ol>
 <p>Wires up Drake systems between an LCM interface and the actuation
 input ports of a MultibodyPlant. This simulates the role that driver
 software and robot firmware would take in real life.</p>
 <ol class="arabic simple" start="3">
-<li><p>ApplyDriverConfig(driver_config: pydrake.manipulation.ZeroForceDriver, model_instance_name: str, sim_plant: drake::multibody::MultibodyPlant&lt;double&gt;, models_from_directives: Dict[str, drake::multibody::parsing::ModelInstanceInfo], lcms: drake::systems::lcm::LcmBuses, builder: pydrake.systems.framework.DiagramBuilder) -&gt; None</p></li>
+<li><p>ApplyDriverConfig(driver_config: pydrake.manipulation.ZeroForceDriver, model_instance_name: str, sim_plant: drake::multibody::MultibodyPlant&lt;double&gt;, models_from_directives: dict[str, drake::multibody::parsing::ModelInstanceInfo], lcms: drake::systems::lcm::LcmBuses, builder: pydrake.systems.framework.DiagramBuilder) -&gt; None</p></li>
 </ol>
 <p>Applies zero actuation to every joint of a model mainly for debugging
 and testing purposes.</p>

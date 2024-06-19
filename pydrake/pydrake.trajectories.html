@@ -508,7 +508,7 @@ for the list of instantiations.</p>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
 <li><p>__init__(self: pydrake.trajectories.BsplineTrajectory) -&gt; None</p></li>
-<li><p>__init__(self: pydrake.trajectories.BsplineTrajectory, basis: pydrake.math.BsplineBasis, control_points: List[List[float]]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.trajectories.BsplineTrajectory, basis: pydrake.math.BsplineBasis, control_points: list[list[float]]) -&gt; None</p></li>
 </ol>
 <p>Constructs a B-spline trajectory with the given <code class="docutils literal notranslate"><span class="pre">basis</span></code> and
 <code class="docutils literal notranslate"><span class="pre">control_points</span></code>.</p>
@@ -517,7 +517,7 @@ for the list of instantiations.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="3">
-<li><p>__init__(self: pydrake.trajectories.BsplineTrajectory, basis: pydrake.math.BsplineBasis, control_points: List[numpy.ndarray[numpy.float64[m, n]]]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.trajectories.BsplineTrajectory, basis: pydrake.math.BsplineBasis, control_points: list[numpy.ndarray[numpy.float64[m, n]]]) -&gt; None</p></li>
 </ol>
 <p>Constructs a B-spline trajectory with the given <code class="docutils literal notranslate"><span class="pre">basis</span></code> and
 <code class="docutils literal notranslate"><span class="pre">control_points</span></code>.</p>
@@ -540,7 +540,7 @@ for the list of instantiations.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.trajectories.BsplineTrajectory.control_points">
-<span class="sig-name descname"><span class="pre">control_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.BsplineTrajectory" title="pydrake.trajectories.BsplineTrajectory"><span class="pre">pydrake.trajectories.BsplineTrajectory</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.BsplineTrajectory.control_points" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">control_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.BsplineTrajectory" title="pydrake.trajectories.BsplineTrajectory"><span class="pre">pydrake.trajectories.BsplineTrajectory</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.BsplineTrajectory.control_points" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the control points of this curve.</p>
 </dd></dl>
 
@@ -581,7 +581,7 @@ on each <code class="docutils literal notranslate"><span class="pre">point</span
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.trajectories.BsplineTrajectory.InsertKnots">
-<span class="sig-name descname"><span class="pre">InsertKnots</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.BsplineTrajectory" title="pydrake.trajectories.BsplineTrajectory"><span class="pre">pydrake.trajectories.BsplineTrajectory</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_knots</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.trajectories.BsplineTrajectory.InsertKnots" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">InsertKnots</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.BsplineTrajectory" title="pydrake.trajectories.BsplineTrajectory"><span class="pre">pydrake.trajectories.BsplineTrajectory</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_knots</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.trajectories.BsplineTrajectory.InsertKnots" title="Permalink to this definition"></a></dt>
 <dd><p>Adds new knots at the specified <code class="docutils literal notranslate"><span class="pre">additional_knots</span></code> without changing
 the behavior of the trajectory. The basis and control points of the
 trajectory are adjusted such that it produces the same value for any
@@ -626,7 +626,7 @@ original, even if knot values are duplicated. Note that
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
 <li><p>__init__(self: pydrake.trajectories.BsplineTrajectory_[AutoDiffXd]) -&gt; None</p></li>
-<li><p>__init__(self: pydrake.trajectories.BsplineTrajectory_[AutoDiffXd], basis: pydrake.math.BsplineBasis_[AutoDiffXd], control_points: List[List[pydrake.autodiffutils.AutoDiffXd]]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.trajectories.BsplineTrajectory_[AutoDiffXd], basis: pydrake.math.BsplineBasis_[AutoDiffXd], control_points: list[list[pydrake.autodiffutils.AutoDiffXd]]) -&gt; None</p></li>
 </ol>
 <p>Constructs a B-spline trajectory with the given <code class="docutils literal notranslate"><span class="pre">basis</span></code> and
 <code class="docutils literal notranslate"><span class="pre">control_points</span></code>.</p>
@@ -635,7 +635,7 @@ original, even if knot values are duplicated. Note that
 </dd>
 </dl>
 <ol class="arabic simple" start="3">
-<li><p>__init__(self: pydrake.trajectories.BsplineTrajectory_[AutoDiffXd], basis: pydrake.math.BsplineBasis_[AutoDiffXd], control_points: List[numpy.ndarray[object[m, n]]]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.trajectories.BsplineTrajectory_[AutoDiffXd], basis: pydrake.math.BsplineBasis_[AutoDiffXd], control_points: list[numpy.ndarray[object[m, n]]]) -&gt; None</p></li>
 </ol>
 <p>Constructs a B-spline trajectory with the given <code class="docutils literal notranslate"><span class="pre">basis</span></code> and
 <code class="docutils literal notranslate"><span class="pre">control_points</span></code>.</p>
@@ -658,7 +658,7 @@ original, even if knot values are duplicated. Note that
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.trajectories.BsplineTrajectory_-AutoDiffXd-.control_points">
-<span id="pydrake.trajectories.BsplineTrajectory_[AutoDiffXd].control_points"></span><span class="sig-name descname"><span class="pre">control_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.BsplineTrajectory_" title="pydrake.trajectories.BsplineTrajectory_"><span class="pre">pydrake.trajectories.BsplineTrajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.BsplineTrajectory_-AutoDiffXd-.control_points" title="Permalink to this definition"></a></dt>
+<span id="pydrake.trajectories.BsplineTrajectory_[AutoDiffXd].control_points"></span><span class="sig-name descname"><span class="pre">control_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.BsplineTrajectory_" title="pydrake.trajectories.BsplineTrajectory_"><span class="pre">pydrake.trajectories.BsplineTrajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.BsplineTrajectory_-AutoDiffXd-.control_points" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the control points of this curve.</p>
 </dd></dl>
 
@@ -699,7 +699,7 @@ on each <code class="docutils literal notranslate"><span class="pre">point</span
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.trajectories.BsplineTrajectory_-AutoDiffXd-.InsertKnots">
-<span id="pydrake.trajectories.BsplineTrajectory_[AutoDiffXd].InsertKnots"></span><span class="sig-name descname"><span class="pre">InsertKnots</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.BsplineTrajectory_" title="pydrake.trajectories.BsplineTrajectory_"><span class="pre">pydrake.trajectories.BsplineTrajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_knots</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.trajectories.BsplineTrajectory_-AutoDiffXd-.InsertKnots" title="Permalink to this definition"></a></dt>
+<span id="pydrake.trajectories.BsplineTrajectory_[AutoDiffXd].InsertKnots"></span><span class="sig-name descname"><span class="pre">InsertKnots</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.BsplineTrajectory_" title="pydrake.trajectories.BsplineTrajectory_"><span class="pre">pydrake.trajectories.BsplineTrajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_knots</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.trajectories.BsplineTrajectory_-AutoDiffXd-.InsertKnots" title="Permalink to this definition"></a></dt>
 <dd><p>Adds new knots at the specified <code class="docutils literal notranslate"><span class="pre">additional_knots</span></code> without changing
 the behavior of the trajectory. The basis and control points of the
 trajectory are adjusted such that it produces the same value for any
@@ -738,7 +738,7 @@ original, even if knot values are duplicated. Note that
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
 <li><p>__init__(self: pydrake.trajectories.BsplineTrajectory_[Expression]) -&gt; None</p></li>
-<li><p>__init__(self: pydrake.trajectories.BsplineTrajectory_[Expression], basis: pydrake.math.BsplineBasis_[Expression], control_points: List[List[pydrake.symbolic.Expression]]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.trajectories.BsplineTrajectory_[Expression], basis: pydrake.math.BsplineBasis_[Expression], control_points: list[list[pydrake.symbolic.Expression]]) -&gt; None</p></li>
 </ol>
 <p>Constructs a B-spline trajectory with the given <code class="docutils literal notranslate"><span class="pre">basis</span></code> and
 <code class="docutils literal notranslate"><span class="pre">control_points</span></code>.</p>
@@ -747,7 +747,7 @@ original, even if knot values are duplicated. Note that
 </dd>
 </dl>
 <ol class="arabic simple" start="3">
-<li><p>__init__(self: pydrake.trajectories.BsplineTrajectory_[Expression], basis: pydrake.math.BsplineBasis_[Expression], control_points: List[numpy.ndarray[object[m, n]]]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.trajectories.BsplineTrajectory_[Expression], basis: pydrake.math.BsplineBasis_[Expression], control_points: list[numpy.ndarray[object[m, n]]]) -&gt; None</p></li>
 </ol>
 <p>Constructs a B-spline trajectory with the given <code class="docutils literal notranslate"><span class="pre">basis</span></code> and
 <code class="docutils literal notranslate"><span class="pre">control_points</span></code>.</p>
@@ -770,7 +770,7 @@ original, even if knot values are duplicated. Note that
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.trajectories.BsplineTrajectory_-Expression-.control_points">
-<span id="pydrake.trajectories.BsplineTrajectory_[Expression].control_points"></span><span class="sig-name descname"><span class="pre">control_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.BsplineTrajectory_" title="pydrake.trajectories.BsplineTrajectory_"><span class="pre">pydrake.trajectories.BsplineTrajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.BsplineTrajectory_-Expression-.control_points" title="Permalink to this definition"></a></dt>
+<span id="pydrake.trajectories.BsplineTrajectory_[Expression].control_points"></span><span class="sig-name descname"><span class="pre">control_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.BsplineTrajectory_" title="pydrake.trajectories.BsplineTrajectory_"><span class="pre">pydrake.trajectories.BsplineTrajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.BsplineTrajectory_-Expression-.control_points" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the control points of this curve.</p>
 </dd></dl>
 
@@ -811,7 +811,7 @@ on each <code class="docutils literal notranslate"><span class="pre">point</span
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.trajectories.BsplineTrajectory_-Expression-.InsertKnots">
-<span id="pydrake.trajectories.BsplineTrajectory_[Expression].InsertKnots"></span><span class="sig-name descname"><span class="pre">InsertKnots</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.BsplineTrajectory_" title="pydrake.trajectories.BsplineTrajectory_"><span class="pre">pydrake.trajectories.BsplineTrajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_knots</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.trajectories.BsplineTrajectory_-Expression-.InsertKnots" title="Permalink to this definition"></a></dt>
+<span id="pydrake.trajectories.BsplineTrajectory_[Expression].InsertKnots"></span><span class="sig-name descname"><span class="pre">InsertKnots</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.BsplineTrajectory_" title="pydrake.trajectories.BsplineTrajectory_"><span class="pre">pydrake.trajectories.BsplineTrajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_knots</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.trajectories.BsplineTrajectory_-Expression-.InsertKnots" title="Permalink to this definition"></a></dt>
 <dd><p>Adds new knots at the specified <code class="docutils literal notranslate"><span class="pre">additional_knots</span></code> without changing
 the behavior of the trajectory. The basis and control points of the
 trajectory are adjusted such that it produces the same value for any
@@ -849,7 +849,7 @@ for the list of instantiations.</p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.trajectories.CompositeTrajectory.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.CompositeTrajectory" title="pydrake.trajectories.CompositeTrajectory"><span class="pre">pydrake.trajectories.CompositeTrajectory</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">segments</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.trajectories.Trajectory" title="pydrake.trajectories.Trajectory"><span class="pre">pydrake.trajectories.Trajectory</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.trajectories.CompositeTrajectory.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.CompositeTrajectory" title="pydrake.trajectories.CompositeTrajectory"><span class="pre">pydrake.trajectories.CompositeTrajectory</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">segments</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.trajectories.Trajectory" title="pydrake.trajectories.Trajectory"><span class="pre">pydrake.trajectories.Trajectory</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.trajectories.CompositeTrajectory.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Constructs a composite trajectory from a list of Trajectories.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>∀i, <code class="docutils literal notranslate"><span class="pre">segments[i+1].start_time()</span> <span class="pre">==</span> <span class="pre">segments[i].end_time()</span></code>.</p>
@@ -885,7 +885,7 @@ of the next.</p>
 preferred if all of the segments are PiecewisePolynomial.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.trajectories.CompositeTrajectory_-AutoDiffXd-.__init__">
-<span id="pydrake.trajectories.CompositeTrajectory_[AutoDiffXd].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.CompositeTrajectory_" title="pydrake.trajectories.CompositeTrajectory_"><span class="pre">pydrake.trajectories.CompositeTrajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">segments</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.trajectories.Trajectory_" title="pydrake.trajectories.Trajectory_"><span class="pre">pydrake.trajectories.Trajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.trajectories.CompositeTrajectory_-AutoDiffXd-.__init__" title="Permalink to this definition"></a></dt>
+<span id="pydrake.trajectories.CompositeTrajectory_[AutoDiffXd].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.CompositeTrajectory_" title="pydrake.trajectories.CompositeTrajectory_"><span class="pre">pydrake.trajectories.CompositeTrajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">segments</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.trajectories.Trajectory_" title="pydrake.trajectories.Trajectory_"><span class="pre">pydrake.trajectories.Trajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.trajectories.CompositeTrajectory_-AutoDiffXd-.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Constructs a composite trajectory from a list of Trajectories.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>∀i, <code class="docutils literal notranslate"><span class="pre">segments[i+1].start_time()</span> <span class="pre">==</span> <span class="pre">segments[i].end_time()</span></code>.</p>
@@ -915,7 +915,7 @@ of the next.</p>
 preferred if all of the segments are PiecewisePolynomial.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.trajectories.CompositeTrajectory_-Expression-.__init__">
-<span id="pydrake.trajectories.CompositeTrajectory_[Expression].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.CompositeTrajectory_" title="pydrake.trajectories.CompositeTrajectory_"><span class="pre">pydrake.trajectories.CompositeTrajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">segments</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.trajectories.Trajectory_" title="pydrake.trajectories.Trajectory_"><span class="pre">pydrake.trajectories.Trajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.trajectories.CompositeTrajectory_-Expression-.__init__" title="Permalink to this definition"></a></dt>
+<span id="pydrake.trajectories.CompositeTrajectory_[Expression].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.CompositeTrajectory_" title="pydrake.trajectories.CompositeTrajectory_"><span class="pre">pydrake.trajectories.CompositeTrajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">segments</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.trajectories.Trajectory_" title="pydrake.trajectories.Trajectory_"><span class="pre">pydrake.trajectories.Trajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.trajectories.CompositeTrajectory_-Expression-.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Constructs a composite trajectory from a list of Trajectories.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>∀i, <code class="docutils literal notranslate"><span class="pre">segments[i+1].start_time()</span> <span class="pre">==</span> <span class="pre">segments[i].end_time()</span></code>.</p>
@@ -1303,7 +1303,7 @@ The constructed PiecewisePolynomial will return <code class="docutils literal no
 every evaluated point (i.e., <code class="docutils literal notranslate"><span class="pre">value(t)</span> <span class="pre">=</span> <span class="pre">constant_value</span></code> ∀t ∈ [-∞,
 ∞]).</p>
 <ol class="arabic simple" start="3">
-<li><p>__init__(self: pydrake.trajectories.PiecewisePolynomial, arg0: List[numpy.ndarray[object[m, n]]], arg1: List[float]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.trajectories.PiecewisePolynomial, arg0: list[numpy.ndarray[object[m, n]]], arg1: list[float]) -&gt; None</p></li>
 </ol>
 <p>Constructs a PiecewisePolynomial using matrix-output Polynomials
 defined over each segment.</p>
@@ -1312,7 +1312,7 @@ defined over each segment.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="4">
-<li><p>__init__(self: pydrake.trajectories.PiecewisePolynomial, arg0: List[pydrake.polynomial.Polynomial], arg1: List[float]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.trajectories.PiecewisePolynomial, arg0: list[pydrake.polynomial.Polynomial], arg1: list[float]) -&gt; None</p></li>
 </ol>
 <p>Constructs a PiecewisePolynomial using scalar-output Polynomials
 defined over each segment.</p>
@@ -1401,7 +1401,7 @@ discontinuous derivatives at breaks in derivative().</p>
 <em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CubicHermite</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial.CubicHermite" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>CubicHermite(breaks: List[float], samples: List[List[float]], samples_dot: List[List[float]]) -&gt; pydrake.trajectories.PiecewisePolynomial</p></li>
+<li><p>CubicHermite(breaks: list[float], samples: list[list[float]], samples_dot: list[list[float]]) -&gt; pydrake.trajectories.PiecewisePolynomial</p></li>
 </ol>
 <p>Version of CubicHermite(breaks, samples, samples_dot) that uses vector
 samples and Eigen VectorXd / MatrixX&lt;T&gt; arguments. Corresponding
@@ -1412,7 +1412,7 @@ point and independent variable derivative, respectively.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>CubicHermite(breaks: List[float], samples: List[numpy.ndarray[numpy.float64[m, n]]], samples_dot: List[numpy.ndarray[numpy.float64[m, n]]]) -&gt; pydrake.trajectories.PiecewisePolynomial</p></li>
+<li><p>CubicHermite(breaks: list[float], samples: list[numpy.ndarray[numpy.float64[m, n]]], samples_dot: list[numpy.ndarray[numpy.float64[m, n]]]) -&gt; pydrake.trajectories.PiecewisePolynomial</p></li>
 </ol>
 <p>Constructs a third order PiecewisePolynomial using matrix samples and
 derivatives of samples (<code class="docutils literal notranslate"><span class="pre">samples_dot</span></code>); each matrix element of
@@ -1428,7 +1428,7 @@ continuous.</p>
 <em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CubicShapePreserving</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial.CubicShapePreserving" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>CubicShapePreserving(breaks: List[float], samples: List[List[float]], zero_end_point_derivatives: bool = False) -&gt; pydrake.trajectories.PiecewisePolynomial</p></li>
+<li><p>CubicShapePreserving(breaks: list[float], samples: list[list[float]], zero_end_point_derivatives: bool = False) -&gt; pydrake.trajectories.PiecewisePolynomial</p></li>
 </ol>
 <p>Version of CubicShapePreserving(breaks, samples,
 zero_end_point_derivatives) that uses vector samples and Eigen
@@ -1447,7 +1447,7 @@ represents a sample point.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>CubicShapePreserving(breaks: List[float], samples: List[numpy.ndarray[numpy.float64[m, n]]], zero_end_point_derivatives: bool = False) -&gt; pydrake.trajectories.PiecewisePolynomial</p></li>
+<li><p>CubicShapePreserving(breaks: list[float], samples: list[numpy.ndarray[numpy.float64[m, n]]], zero_end_point_derivatives: bool = False) -&gt; pydrake.trajectories.PiecewisePolynomial</p></li>
 </ol>
 <p>Constructs a third order PiecewisePolynomial using vector samples,
 where each column of <code class="docutils literal notranslate"><span class="pre">samples</span></code> represents a sample point. First
@@ -1493,7 +1493,7 @@ given by <code class="docutils literal notranslate"><span class="pre">samples</s
 <em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CubicWithContinuousSecondDerivatives</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial.CubicWithContinuousSecondDerivatives" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>CubicWithContinuousSecondDerivatives(breaks: List[float], samples: List[List[float]], sample_dot_at_start: numpy.ndarray[numpy.float64[m, n]], sample_dot_at_end: numpy.ndarray[numpy.float64[m, n]]) -&gt; pydrake.trajectories.PiecewisePolynomial</p></li>
+<li><p>CubicWithContinuousSecondDerivatives(breaks: list[float], samples: list[list[float]], sample_dot_at_start: numpy.ndarray[numpy.float64[m, n]], sample_dot_at_end: numpy.ndarray[numpy.float64[m, n]]) -&gt; pydrake.trajectories.PiecewisePolynomial</p></li>
 </ol>
 <p>Version of CubicWithContinuousSecondDerivatives() that uses vector
 samples and Eigen VectorXd / MatrixX&lt;T&gt; arguments. Each column of
@@ -1511,7 +1511,7 @@ samples and Eigen VectorXd / MatrixX&lt;T&gt; arguments. Each column of
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>CubicWithContinuousSecondDerivatives(breaks: List[float], samples: List[numpy.ndarray[numpy.float64[m, n]]], sample_dot_at_start: numpy.ndarray[numpy.float64[m, n]], sample_dot_at_end: numpy.ndarray[numpy.float64[m, n]]) -&gt; pydrake.trajectories.PiecewisePolynomial</p></li>
+<li><p>CubicWithContinuousSecondDerivatives(breaks: list[float], samples: list[numpy.ndarray[numpy.float64[m, n]]], sample_dot_at_start: numpy.ndarray[numpy.float64[m, n]], sample_dot_at_end: numpy.ndarray[numpy.float64[m, n]]) -&gt; pydrake.trajectories.PiecewisePolynomial</p></li>
 </ol>
 <p>Constructs a third order PiecewisePolynomial using matrix samples. The
 PiecewisePolynomial is constructed such that the interior segments
@@ -1529,7 +1529,7 @@ and last first derivatives.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="3">
-<li><p>CubicWithContinuousSecondDerivatives(breaks: List[float], samples: List[List[float]], periodic_end_condition: bool = False) -&gt; pydrake.trajectories.PiecewisePolynomial</p></li>
+<li><p>CubicWithContinuousSecondDerivatives(breaks: list[float], samples: list[list[float]], periodic_end_condition: bool = False) -&gt; pydrake.trajectories.PiecewisePolynomial</p></li>
 </ol>
 <p>Version of CubicWithContinuousSecondDerivatives(breaks, samples) that
 uses vector samples and Eigen VectorXd / MatrixX&lt;T&gt; arguments. Each
@@ -1539,7 +1539,7 @@ column of <code class="docutils literal notranslate"><span class="pre">samples</
 </dd>
 </dl>
 <ol class="arabic simple" start="4">
-<li><p>CubicWithContinuousSecondDerivatives(breaks: List[float], samples: List[numpy.ndarray[numpy.float64[m, n]]], periodic_end: bool) -&gt; pydrake.trajectories.PiecewisePolynomial</p></li>
+<li><p>CubicWithContinuousSecondDerivatives(breaks: list[float], samples: list[numpy.ndarray[numpy.float64[m, n]]], periodic_end: bool) -&gt; pydrake.trajectories.PiecewisePolynomial</p></li>
 </ol>
 <p>Constructs a third order PiecewisePolynomial using matrix samples. The
 PiecewisePolynomial is constructed such that the interior segments
@@ -1593,7 +1593,7 @@ break) will be the one that is evaluated at the break.</p>
 <em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">FirstOrderHold</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial.FirstOrderHold" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>FirstOrderHold(breaks: List[float], samples: List[List[float]]) -&gt; pydrake.trajectories.PiecewisePolynomial</p></li>
+<li><p>FirstOrderHold(breaks: list[float], samples: list[list[float]]) -&gt; pydrake.trajectories.PiecewisePolynomial</p></li>
 </ol>
 <p>Version of FirstOrderHold(breaks, samples) that uses vector samples
 and Eigen VectorXd / MatrixX&lt;T&gt; arguments. Each column of <code class="docutils literal notranslate"><span class="pre">samples</span></code>
@@ -1611,7 +1611,7 @@ represents a sample point.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>FirstOrderHold(breaks: List[float], samples: List[numpy.ndarray[numpy.float64[m, n]]]) -&gt; pydrake.trajectories.PiecewisePolynomial</p></li>
+<li><p>FirstOrderHold(breaks: list[float], samples: list[numpy.ndarray[numpy.float64[m, n]]]) -&gt; pydrake.trajectories.PiecewisePolynomial</p></li>
 </ol>
 <p>Constructs a piecewise linear PiecewisePolynomial using matrix
 samples.</p>
@@ -1674,7 +1674,7 @@ element of every segment.</p>
 <em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">LagrangeInterpolatingPolynomial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial.LagrangeInterpolatingPolynomial" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>LagrangeInterpolatingPolynomial(times: List[float], samples: List[List[float]]) -&gt; pydrake.trajectories.PiecewisePolynomial</p></li>
+<li><p>LagrangeInterpolatingPolynomial(times: list[float], samples: list[list[float]]) -&gt; pydrake.trajectories.PiecewisePolynomial</p></li>
 </ol>
 <p>Version of LagrangeInterpolatingPolynomial(times, samples) that uses
 vector samples and Eigen VectorXd / MatrixX&lt;T&gt; arguments. Each column
@@ -1684,7 +1684,7 @@ of <code class="docutils literal notranslate"><span class="pre">samples</span></
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>LagrangeInterpolatingPolynomial(times: List[float], samples: List[numpy.ndarray[numpy.float64[m, n]]]) -&gt; pydrake.trajectories.PiecewisePolynomial</p></li>
+<li><p>LagrangeInterpolatingPolynomial(times: list[float], samples: list[numpy.ndarray[numpy.float64[m, n]]]) -&gt; pydrake.trajectories.PiecewisePolynomial</p></li>
 </ol>
 <p>Constructs a polynomial with a <em>single segment</em> of the lowest possible
 degree that passes through all of the sample points. See “polynomial
@@ -1799,7 +1799,7 @@ this.value(t).transpose().</p>
 <em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ZeroOrderHold</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial.ZeroOrderHold" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>ZeroOrderHold(breaks: List[float], samples: List[List[float]]) -&gt; pydrake.trajectories.PiecewisePolynomial</p></li>
+<li><p>ZeroOrderHold(breaks: list[float], samples: list[list[float]]) -&gt; pydrake.trajectories.PiecewisePolynomial</p></li>
 </ol>
 <p>Version of ZeroOrderHold(breaks, samples) that uses vector samples and
 Eigen VectorXd/MatrixX&lt;T&gt; arguments. Each column of <code class="docutils literal notranslate"><span class="pre">samples</span></code>
@@ -1817,7 +1817,7 @@ represents a sample point.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>ZeroOrderHold(breaks: List[float], samples: List[numpy.ndarray[numpy.float64[m, n]]]) -&gt; pydrake.trajectories.PiecewisePolynomial</p></li>
+<li><p>ZeroOrderHold(breaks: list[float], samples: list[numpy.ndarray[numpy.float64[m, n]]]) -&gt; pydrake.trajectories.PiecewisePolynomial</p></li>
 </ol>
 <p>Constructs a piecewise constant PiecewisePolynomial using matrix
 samples. Note that constructing a PiecewisePolynomial requires at
@@ -1911,7 +1911,7 @@ The constructed PiecewisePolynomial will return <code class="docutils literal no
 every evaluated point (i.e., <code class="docutils literal notranslate"><span class="pre">value(t)</span> <span class="pre">=</span> <span class="pre">constant_value</span></code> ∀t ∈ [-∞,
 ∞]).</p>
 <ol class="arabic simple" start="3">
-<li><p>__init__(self: pydrake.trajectories.PiecewisePolynomial_[AutoDiffXd], arg0: List[numpy.ndarray[object[m, n]]], arg1: List[pydrake.autodiffutils.AutoDiffXd]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.trajectories.PiecewisePolynomial_[AutoDiffXd], arg0: list[numpy.ndarray[object[m, n]]], arg1: list[pydrake.autodiffutils.AutoDiffXd]) -&gt; None</p></li>
 </ol>
 <p>Constructs a PiecewisePolynomial using matrix-output Polynomials
 defined over each segment.</p>
@@ -1920,7 +1920,7 @@ defined over each segment.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="4">
-<li><p>__init__(self: pydrake.trajectories.PiecewisePolynomial_[AutoDiffXd], arg0: List[pydrake.polynomial.Polynomial_[AutoDiffXd]], arg1: List[pydrake.autodiffutils.AutoDiffXd]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.trajectories.PiecewisePolynomial_[AutoDiffXd], arg0: list[pydrake.polynomial.Polynomial_[AutoDiffXd]], arg1: list[pydrake.autodiffutils.AutoDiffXd]) -&gt; None</p></li>
 </ol>
 <p>Constructs a PiecewisePolynomial using scalar-output Polynomials
 defined over each segment.</p>
@@ -2009,7 +2009,7 @@ discontinuous derivatives at breaks in derivative().</p>
 <span id="pydrake.trajectories.PiecewisePolynomial_[AutoDiffXd].CubicHermite"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CubicHermite</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial_-AutoDiffXd-.CubicHermite" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>CubicHermite(breaks: List[pydrake.autodiffutils.AutoDiffXd], samples: List[List[pydrake.autodiffutils.AutoDiffXd]], samples_dot: List[List[pydrake.autodiffutils.AutoDiffXd]]) -&gt; pydrake.trajectories.PiecewisePolynomial_[AutoDiffXd]</p></li>
+<li><p>CubicHermite(breaks: list[pydrake.autodiffutils.AutoDiffXd], samples: list[list[pydrake.autodiffutils.AutoDiffXd]], samples_dot: list[list[pydrake.autodiffutils.AutoDiffXd]]) -&gt; pydrake.trajectories.PiecewisePolynomial_[AutoDiffXd]</p></li>
 </ol>
 <p>Version of CubicHermite(breaks, samples, samples_dot) that uses vector
 samples and Eigen VectorXd / MatrixX&lt;T&gt; arguments. Corresponding
@@ -2020,7 +2020,7 @@ point and independent variable derivative, respectively.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>CubicHermite(breaks: List[pydrake.autodiffutils.AutoDiffXd], samples: List[numpy.ndarray[object[m, n]]], samples_dot: List[numpy.ndarray[object[m, n]]]) -&gt; pydrake.trajectories.PiecewisePolynomial_[AutoDiffXd]</p></li>
+<li><p>CubicHermite(breaks: list[pydrake.autodiffutils.AutoDiffXd], samples: list[numpy.ndarray[object[m, n]]], samples_dot: list[numpy.ndarray[object[m, n]]]) -&gt; pydrake.trajectories.PiecewisePolynomial_[AutoDiffXd]</p></li>
 </ol>
 <p>Constructs a third order PiecewisePolynomial using matrix samples and
 derivatives of samples (<code class="docutils literal notranslate"><span class="pre">samples_dot</span></code>); each matrix element of
@@ -2036,7 +2036,7 @@ continuous.</p>
 <span id="pydrake.trajectories.PiecewisePolynomial_[AutoDiffXd].CubicShapePreserving"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CubicShapePreserving</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial_-AutoDiffXd-.CubicShapePreserving" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>CubicShapePreserving(breaks: List[pydrake.autodiffutils.AutoDiffXd], samples: List[List[pydrake.autodiffutils.AutoDiffXd]], zero_end_point_derivatives: bool = False) -&gt; pydrake.trajectories.PiecewisePolynomial_[AutoDiffXd]</p></li>
+<li><p>CubicShapePreserving(breaks: list[pydrake.autodiffutils.AutoDiffXd], samples: list[list[pydrake.autodiffutils.AutoDiffXd]], zero_end_point_derivatives: bool = False) -&gt; pydrake.trajectories.PiecewisePolynomial_[AutoDiffXd]</p></li>
 </ol>
 <p>Version of CubicShapePreserving(breaks, samples,
 zero_end_point_derivatives) that uses vector samples and Eigen
@@ -2055,7 +2055,7 @@ represents a sample point.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>CubicShapePreserving(breaks: List[pydrake.autodiffutils.AutoDiffXd], samples: List[numpy.ndarray[object[m, n]]], zero_end_point_derivatives: bool = False) -&gt; pydrake.trajectories.PiecewisePolynomial_[AutoDiffXd]</p></li>
+<li><p>CubicShapePreserving(breaks: list[pydrake.autodiffutils.AutoDiffXd], samples: list[numpy.ndarray[object[m, n]]], zero_end_point_derivatives: bool = False) -&gt; pydrake.trajectories.PiecewisePolynomial_[AutoDiffXd]</p></li>
 </ol>
 <p>Constructs a third order PiecewisePolynomial using vector samples,
 where each column of <code class="docutils literal notranslate"><span class="pre">samples</span></code> represents a sample point. First
@@ -2101,7 +2101,7 @@ given by <code class="docutils literal notranslate"><span class="pre">samples</s
 <span id="pydrake.trajectories.PiecewisePolynomial_[AutoDiffXd].CubicWithContinuousSecondDerivatives"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CubicWithContinuousSecondDerivatives</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial_-AutoDiffXd-.CubicWithContinuousSecondDerivatives" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>CubicWithContinuousSecondDerivatives(breaks: List[pydrake.autodiffutils.AutoDiffXd], samples: List[List[pydrake.autodiffutils.AutoDiffXd]], sample_dot_at_start: numpy.ndarray[object[m, n]], sample_dot_at_end: numpy.ndarray[object[m, n]]) -&gt; pydrake.trajectories.PiecewisePolynomial_[AutoDiffXd]</p></li>
+<li><p>CubicWithContinuousSecondDerivatives(breaks: list[pydrake.autodiffutils.AutoDiffXd], samples: list[list[pydrake.autodiffutils.AutoDiffXd]], sample_dot_at_start: numpy.ndarray[object[m, n]], sample_dot_at_end: numpy.ndarray[object[m, n]]) -&gt; pydrake.trajectories.PiecewisePolynomial_[AutoDiffXd]</p></li>
 </ol>
 <p>Version of CubicWithContinuousSecondDerivatives() that uses vector
 samples and Eigen VectorXd / MatrixX&lt;T&gt; arguments. Each column of
@@ -2119,7 +2119,7 @@ samples and Eigen VectorXd / MatrixX&lt;T&gt; arguments. Each column of
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>CubicWithContinuousSecondDerivatives(breaks: List[pydrake.autodiffutils.AutoDiffXd], samples: List[numpy.ndarray[object[m, n]]], sample_dot_at_start: numpy.ndarray[object[m, n]], sample_dot_at_end: numpy.ndarray[object[m, n]]) -&gt; pydrake.trajectories.PiecewisePolynomial_[AutoDiffXd]</p></li>
+<li><p>CubicWithContinuousSecondDerivatives(breaks: list[pydrake.autodiffutils.AutoDiffXd], samples: list[numpy.ndarray[object[m, n]]], sample_dot_at_start: numpy.ndarray[object[m, n]], sample_dot_at_end: numpy.ndarray[object[m, n]]) -&gt; pydrake.trajectories.PiecewisePolynomial_[AutoDiffXd]</p></li>
 </ol>
 <p>Constructs a third order PiecewisePolynomial using matrix samples. The
 PiecewisePolynomial is constructed such that the interior segments
@@ -2137,7 +2137,7 @@ and last first derivatives.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="3">
-<li><p>CubicWithContinuousSecondDerivatives(breaks: List[pydrake.autodiffutils.AutoDiffXd], samples: List[List[pydrake.autodiffutils.AutoDiffXd]], periodic_end_condition: bool = False) -&gt; pydrake.trajectories.PiecewisePolynomial_[AutoDiffXd]</p></li>
+<li><p>CubicWithContinuousSecondDerivatives(breaks: list[pydrake.autodiffutils.AutoDiffXd], samples: list[list[pydrake.autodiffutils.AutoDiffXd]], periodic_end_condition: bool = False) -&gt; pydrake.trajectories.PiecewisePolynomial_[AutoDiffXd]</p></li>
 </ol>
 <p>Version of CubicWithContinuousSecondDerivatives(breaks, samples) that
 uses vector samples and Eigen VectorXd / MatrixX&lt;T&gt; arguments. Each
@@ -2147,7 +2147,7 @@ column of <code class="docutils literal notranslate"><span class="pre">samples</
 </dd>
 </dl>
 <ol class="arabic simple" start="4">
-<li><p>CubicWithContinuousSecondDerivatives(breaks: List[pydrake.autodiffutils.AutoDiffXd], samples: List[numpy.ndarray[object[m, n]]], periodic_end: bool) -&gt; pydrake.trajectories.PiecewisePolynomial_[AutoDiffXd]</p></li>
+<li><p>CubicWithContinuousSecondDerivatives(breaks: list[pydrake.autodiffutils.AutoDiffXd], samples: list[numpy.ndarray[object[m, n]]], periodic_end: bool) -&gt; pydrake.trajectories.PiecewisePolynomial_[AutoDiffXd]</p></li>
 </ol>
 <p>Constructs a third order PiecewisePolynomial using matrix samples. The
 PiecewisePolynomial is constructed such that the interior segments
@@ -2201,7 +2201,7 @@ break) will be the one that is evaluated at the break.</p>
 <span id="pydrake.trajectories.PiecewisePolynomial_[AutoDiffXd].FirstOrderHold"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">FirstOrderHold</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial_-AutoDiffXd-.FirstOrderHold" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>FirstOrderHold(breaks: List[pydrake.autodiffutils.AutoDiffXd], samples: List[List[pydrake.autodiffutils.AutoDiffXd]]) -&gt; pydrake.trajectories.PiecewisePolynomial_[AutoDiffXd]</p></li>
+<li><p>FirstOrderHold(breaks: list[pydrake.autodiffutils.AutoDiffXd], samples: list[list[pydrake.autodiffutils.AutoDiffXd]]) -&gt; pydrake.trajectories.PiecewisePolynomial_[AutoDiffXd]</p></li>
 </ol>
 <p>Version of FirstOrderHold(breaks, samples) that uses vector samples
 and Eigen VectorXd / MatrixX&lt;T&gt; arguments. Each column of <code class="docutils literal notranslate"><span class="pre">samples</span></code>
@@ -2219,7 +2219,7 @@ represents a sample point.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>FirstOrderHold(breaks: List[pydrake.autodiffutils.AutoDiffXd], samples: List[numpy.ndarray[object[m, n]]]) -&gt; pydrake.trajectories.PiecewisePolynomial_[AutoDiffXd]</p></li>
+<li><p>FirstOrderHold(breaks: list[pydrake.autodiffutils.AutoDiffXd], samples: list[numpy.ndarray[object[m, n]]]) -&gt; pydrake.trajectories.PiecewisePolynomial_[AutoDiffXd]</p></li>
 </ol>
 <p>Constructs a piecewise linear PiecewisePolynomial using matrix
 samples.</p>
@@ -2282,7 +2282,7 @@ element of every segment.</p>
 <span id="pydrake.trajectories.PiecewisePolynomial_[AutoDiffXd].LagrangeInterpolatingPolynomial"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">LagrangeInterpolatingPolynomial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial_-AutoDiffXd-.LagrangeInterpolatingPolynomial" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>LagrangeInterpolatingPolynomial(times: List[pydrake.autodiffutils.AutoDiffXd], samples: List[List[pydrake.autodiffutils.AutoDiffXd]]) -&gt; pydrake.trajectories.PiecewisePolynomial_[AutoDiffXd]</p></li>
+<li><p>LagrangeInterpolatingPolynomial(times: list[pydrake.autodiffutils.AutoDiffXd], samples: list[list[pydrake.autodiffutils.AutoDiffXd]]) -&gt; pydrake.trajectories.PiecewisePolynomial_[AutoDiffXd]</p></li>
 </ol>
 <p>Version of LagrangeInterpolatingPolynomial(times, samples) that uses
 vector samples and Eigen VectorXd / MatrixX&lt;T&gt; arguments. Each column
@@ -2292,7 +2292,7 @@ of <code class="docutils literal notranslate"><span class="pre">samples</span></
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>LagrangeInterpolatingPolynomial(times: List[pydrake.autodiffutils.AutoDiffXd], samples: List[numpy.ndarray[object[m, n]]]) -&gt; pydrake.trajectories.PiecewisePolynomial_[AutoDiffXd]</p></li>
+<li><p>LagrangeInterpolatingPolynomial(times: list[pydrake.autodiffutils.AutoDiffXd], samples: list[numpy.ndarray[object[m, n]]]) -&gt; pydrake.trajectories.PiecewisePolynomial_[AutoDiffXd]</p></li>
 </ol>
 <p>Constructs a polynomial with a <em>single segment</em> of the lowest possible
 degree that passes through all of the sample points. See “polynomial
@@ -2407,7 +2407,7 @@ this.value(t).transpose().</p>
 <span id="pydrake.trajectories.PiecewisePolynomial_[AutoDiffXd].ZeroOrderHold"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ZeroOrderHold</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial_-AutoDiffXd-.ZeroOrderHold" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>ZeroOrderHold(breaks: List[pydrake.autodiffutils.AutoDiffXd], samples: List[List[pydrake.autodiffutils.AutoDiffXd]]) -&gt; pydrake.trajectories.PiecewisePolynomial_[AutoDiffXd]</p></li>
+<li><p>ZeroOrderHold(breaks: list[pydrake.autodiffutils.AutoDiffXd], samples: list[list[pydrake.autodiffutils.AutoDiffXd]]) -&gt; pydrake.trajectories.PiecewisePolynomial_[AutoDiffXd]</p></li>
 </ol>
 <p>Version of ZeroOrderHold(breaks, samples) that uses vector samples and
 Eigen VectorXd/MatrixX&lt;T&gt; arguments. Each column of <code class="docutils literal notranslate"><span class="pre">samples</span></code>
@@ -2425,7 +2425,7 @@ represents a sample point.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>ZeroOrderHold(breaks: List[pydrake.autodiffutils.AutoDiffXd], samples: List[numpy.ndarray[object[m, n]]]) -&gt; pydrake.trajectories.PiecewisePolynomial_[AutoDiffXd]</p></li>
+<li><p>ZeroOrderHold(breaks: list[pydrake.autodiffutils.AutoDiffXd], samples: list[numpy.ndarray[object[m, n]]]) -&gt; pydrake.trajectories.PiecewisePolynomial_[AutoDiffXd]</p></li>
 </ol>
 <p>Constructs a piecewise constant PiecewisePolynomial using matrix
 samples. Note that constructing a PiecewisePolynomial requires at
@@ -2513,7 +2513,7 @@ The constructed PiecewisePolynomial will return <code class="docutils literal no
 every evaluated point (i.e., <code class="docutils literal notranslate"><span class="pre">value(t)</span> <span class="pre">=</span> <span class="pre">constant_value</span></code> ∀t ∈ [-∞,
 ∞]).</p>
 <ol class="arabic simple" start="3">
-<li><p>__init__(self: pydrake.trajectories.PiecewisePolynomial_[Expression], arg0: List[numpy.ndarray[object[m, n]]], arg1: List[pydrake.symbolic.Expression]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.trajectories.PiecewisePolynomial_[Expression], arg0: list[numpy.ndarray[object[m, n]]], arg1: list[pydrake.symbolic.Expression]) -&gt; None</p></li>
 </ol>
 <p>Constructs a PiecewisePolynomial using matrix-output Polynomials
 defined over each segment.</p>
@@ -2522,7 +2522,7 @@ defined over each segment.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="4">
-<li><p>__init__(self: pydrake.trajectories.PiecewisePolynomial_[Expression], arg0: List[pydrake.polynomial.Polynomial_[Expression]], arg1: List[pydrake.symbolic.Expression]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.trajectories.PiecewisePolynomial_[Expression], arg0: list[pydrake.polynomial.Polynomial_[Expression]], arg1: list[pydrake.symbolic.Expression]) -&gt; None</p></li>
 </ol>
 <p>Constructs a PiecewisePolynomial using scalar-output Polynomials
 defined over each segment.</p>
@@ -2611,7 +2611,7 @@ discontinuous derivatives at breaks in derivative().</p>
 <span id="pydrake.trajectories.PiecewisePolynomial_[Expression].CubicHermite"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CubicHermite</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial_-Expression-.CubicHermite" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>CubicHermite(breaks: List[pydrake.symbolic.Expression], samples: List[List[pydrake.symbolic.Expression]], samples_dot: List[List[pydrake.symbolic.Expression]]) -&gt; pydrake.trajectories.PiecewisePolynomial_[Expression]</p></li>
+<li><p>CubicHermite(breaks: list[pydrake.symbolic.Expression], samples: list[list[pydrake.symbolic.Expression]], samples_dot: list[list[pydrake.symbolic.Expression]]) -&gt; pydrake.trajectories.PiecewisePolynomial_[Expression]</p></li>
 </ol>
 <p>Version of CubicHermite(breaks, samples, samples_dot) that uses vector
 samples and Eigen VectorXd / MatrixX&lt;T&gt; arguments. Corresponding
@@ -2622,7 +2622,7 @@ point and independent variable derivative, respectively.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>CubicHermite(breaks: List[pydrake.symbolic.Expression], samples: List[numpy.ndarray[object[m, n]]], samples_dot: List[numpy.ndarray[object[m, n]]]) -&gt; pydrake.trajectories.PiecewisePolynomial_[Expression]</p></li>
+<li><p>CubicHermite(breaks: list[pydrake.symbolic.Expression], samples: list[numpy.ndarray[object[m, n]]], samples_dot: list[numpy.ndarray[object[m, n]]]) -&gt; pydrake.trajectories.PiecewisePolynomial_[Expression]</p></li>
 </ol>
 <p>Constructs a third order PiecewisePolynomial using matrix samples and
 derivatives of samples (<code class="docutils literal notranslate"><span class="pre">samples_dot</span></code>); each matrix element of
@@ -2638,7 +2638,7 @@ continuous.</p>
 <span id="pydrake.trajectories.PiecewisePolynomial_[Expression].CubicShapePreserving"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CubicShapePreserving</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial_-Expression-.CubicShapePreserving" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>CubicShapePreserving(breaks: List[pydrake.symbolic.Expression], samples: List[List[pydrake.symbolic.Expression]], zero_end_point_derivatives: bool = False) -&gt; pydrake.trajectories.PiecewisePolynomial_[Expression]</p></li>
+<li><p>CubicShapePreserving(breaks: list[pydrake.symbolic.Expression], samples: list[list[pydrake.symbolic.Expression]], zero_end_point_derivatives: bool = False) -&gt; pydrake.trajectories.PiecewisePolynomial_[Expression]</p></li>
 </ol>
 <p>Version of CubicShapePreserving(breaks, samples,
 zero_end_point_derivatives) that uses vector samples and Eigen
@@ -2657,7 +2657,7 @@ represents a sample point.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>CubicShapePreserving(breaks: List[pydrake.symbolic.Expression], samples: List[numpy.ndarray[object[m, n]]], zero_end_point_derivatives: bool = False) -&gt; pydrake.trajectories.PiecewisePolynomial_[Expression]</p></li>
+<li><p>CubicShapePreserving(breaks: list[pydrake.symbolic.Expression], samples: list[numpy.ndarray[object[m, n]]], zero_end_point_derivatives: bool = False) -&gt; pydrake.trajectories.PiecewisePolynomial_[Expression]</p></li>
 </ol>
 <p>Constructs a third order PiecewisePolynomial using vector samples,
 where each column of <code class="docutils literal notranslate"><span class="pre">samples</span></code> represents a sample point. First
@@ -2703,7 +2703,7 @@ given by <code class="docutils literal notranslate"><span class="pre">samples</s
 <span id="pydrake.trajectories.PiecewisePolynomial_[Expression].CubicWithContinuousSecondDerivatives"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CubicWithContinuousSecondDerivatives</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial_-Expression-.CubicWithContinuousSecondDerivatives" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>CubicWithContinuousSecondDerivatives(breaks: List[pydrake.symbolic.Expression], samples: List[List[pydrake.symbolic.Expression]], sample_dot_at_start: numpy.ndarray[object[m, n]], sample_dot_at_end: numpy.ndarray[object[m, n]]) -&gt; pydrake.trajectories.PiecewisePolynomial_[Expression]</p></li>
+<li><p>CubicWithContinuousSecondDerivatives(breaks: list[pydrake.symbolic.Expression], samples: list[list[pydrake.symbolic.Expression]], sample_dot_at_start: numpy.ndarray[object[m, n]], sample_dot_at_end: numpy.ndarray[object[m, n]]) -&gt; pydrake.trajectories.PiecewisePolynomial_[Expression]</p></li>
 </ol>
 <p>Version of CubicWithContinuousSecondDerivatives() that uses vector
 samples and Eigen VectorXd / MatrixX&lt;T&gt; arguments. Each column of
@@ -2721,7 +2721,7 @@ samples and Eigen VectorXd / MatrixX&lt;T&gt; arguments. Each column of
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>CubicWithContinuousSecondDerivatives(breaks: List[pydrake.symbolic.Expression], samples: List[numpy.ndarray[object[m, n]]], sample_dot_at_start: numpy.ndarray[object[m, n]], sample_dot_at_end: numpy.ndarray[object[m, n]]) -&gt; pydrake.trajectories.PiecewisePolynomial_[Expression]</p></li>
+<li><p>CubicWithContinuousSecondDerivatives(breaks: list[pydrake.symbolic.Expression], samples: list[numpy.ndarray[object[m, n]]], sample_dot_at_start: numpy.ndarray[object[m, n]], sample_dot_at_end: numpy.ndarray[object[m, n]]) -&gt; pydrake.trajectories.PiecewisePolynomial_[Expression]</p></li>
 </ol>
 <p>Constructs a third order PiecewisePolynomial using matrix samples. The
 PiecewisePolynomial is constructed such that the interior segments
@@ -2739,7 +2739,7 @@ and last first derivatives.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="3">
-<li><p>CubicWithContinuousSecondDerivatives(breaks: List[pydrake.symbolic.Expression], samples: List[List[pydrake.symbolic.Expression]], periodic_end_condition: bool = False) -&gt; pydrake.trajectories.PiecewisePolynomial_[Expression]</p></li>
+<li><p>CubicWithContinuousSecondDerivatives(breaks: list[pydrake.symbolic.Expression], samples: list[list[pydrake.symbolic.Expression]], periodic_end_condition: bool = False) -&gt; pydrake.trajectories.PiecewisePolynomial_[Expression]</p></li>
 </ol>
 <p>Version of CubicWithContinuousSecondDerivatives(breaks, samples) that
 uses vector samples and Eigen VectorXd / MatrixX&lt;T&gt; arguments. Each
@@ -2749,7 +2749,7 @@ column of <code class="docutils literal notranslate"><span class="pre">samples</
 </dd>
 </dl>
 <ol class="arabic simple" start="4">
-<li><p>CubicWithContinuousSecondDerivatives(breaks: List[pydrake.symbolic.Expression], samples: List[numpy.ndarray[object[m, n]]], periodic_end: bool) -&gt; pydrake.trajectories.PiecewisePolynomial_[Expression]</p></li>
+<li><p>CubicWithContinuousSecondDerivatives(breaks: list[pydrake.symbolic.Expression], samples: list[numpy.ndarray[object[m, n]]], periodic_end: bool) -&gt; pydrake.trajectories.PiecewisePolynomial_[Expression]</p></li>
 </ol>
 <p>Constructs a third order PiecewisePolynomial using matrix samples. The
 PiecewisePolynomial is constructed such that the interior segments
@@ -2803,7 +2803,7 @@ break) will be the one that is evaluated at the break.</p>
 <span id="pydrake.trajectories.PiecewisePolynomial_[Expression].FirstOrderHold"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">FirstOrderHold</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial_-Expression-.FirstOrderHold" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>FirstOrderHold(breaks: List[pydrake.symbolic.Expression], samples: List[List[pydrake.symbolic.Expression]]) -&gt; pydrake.trajectories.PiecewisePolynomial_[Expression]</p></li>
+<li><p>FirstOrderHold(breaks: list[pydrake.symbolic.Expression], samples: list[list[pydrake.symbolic.Expression]]) -&gt; pydrake.trajectories.PiecewisePolynomial_[Expression]</p></li>
 </ol>
 <p>Version of FirstOrderHold(breaks, samples) that uses vector samples
 and Eigen VectorXd / MatrixX&lt;T&gt; arguments. Each column of <code class="docutils literal notranslate"><span class="pre">samples</span></code>
@@ -2821,7 +2821,7 @@ represents a sample point.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>FirstOrderHold(breaks: List[pydrake.symbolic.Expression], samples: List[numpy.ndarray[object[m, n]]]) -&gt; pydrake.trajectories.PiecewisePolynomial_[Expression]</p></li>
+<li><p>FirstOrderHold(breaks: list[pydrake.symbolic.Expression], samples: list[numpy.ndarray[object[m, n]]]) -&gt; pydrake.trajectories.PiecewisePolynomial_[Expression]</p></li>
 </ol>
 <p>Constructs a piecewise linear PiecewisePolynomial using matrix
 samples.</p>
@@ -2884,7 +2884,7 @@ element of every segment.</p>
 <span id="pydrake.trajectories.PiecewisePolynomial_[Expression].LagrangeInterpolatingPolynomial"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">LagrangeInterpolatingPolynomial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial_-Expression-.LagrangeInterpolatingPolynomial" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>LagrangeInterpolatingPolynomial(times: List[pydrake.symbolic.Expression], samples: List[List[pydrake.symbolic.Expression]]) -&gt; pydrake.trajectories.PiecewisePolynomial_[Expression]</p></li>
+<li><p>LagrangeInterpolatingPolynomial(times: list[pydrake.symbolic.Expression], samples: list[list[pydrake.symbolic.Expression]]) -&gt; pydrake.trajectories.PiecewisePolynomial_[Expression]</p></li>
 </ol>
 <p>Version of LagrangeInterpolatingPolynomial(times, samples) that uses
 vector samples and Eigen VectorXd / MatrixX&lt;T&gt; arguments. Each column
@@ -2894,7 +2894,7 @@ of <code class="docutils literal notranslate"><span class="pre">samples</span></
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>LagrangeInterpolatingPolynomial(times: List[pydrake.symbolic.Expression], samples: List[numpy.ndarray[object[m, n]]]) -&gt; pydrake.trajectories.PiecewisePolynomial_[Expression]</p></li>
+<li><p>LagrangeInterpolatingPolynomial(times: list[pydrake.symbolic.Expression], samples: list[numpy.ndarray[object[m, n]]]) -&gt; pydrake.trajectories.PiecewisePolynomial_[Expression]</p></li>
 </ol>
 <p>Constructs a polynomial with a <em>single segment</em> of the lowest possible
 degree that passes through all of the sample points. See “polynomial
@@ -3009,7 +3009,7 @@ this.value(t).transpose().</p>
 <span id="pydrake.trajectories.PiecewisePolynomial_[Expression].ZeroOrderHold"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ZeroOrderHold</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial_-Expression-.ZeroOrderHold" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>ZeroOrderHold(breaks: List[pydrake.symbolic.Expression], samples: List[List[pydrake.symbolic.Expression]]) -&gt; pydrake.trajectories.PiecewisePolynomial_[Expression]</p></li>
+<li><p>ZeroOrderHold(breaks: list[pydrake.symbolic.Expression], samples: list[list[pydrake.symbolic.Expression]]) -&gt; pydrake.trajectories.PiecewisePolynomial_[Expression]</p></li>
 </ol>
 <p>Version of ZeroOrderHold(breaks, samples) that uses vector samples and
 Eigen VectorXd/MatrixX&lt;T&gt; arguments. Each column of <code class="docutils literal notranslate"><span class="pre">samples</span></code>
@@ -3027,7 +3027,7 @@ represents a sample point.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>ZeroOrderHold(breaks: List[pydrake.symbolic.Expression], samples: List[numpy.ndarray[object[m, n]]]) -&gt; pydrake.trajectories.PiecewisePolynomial_[Expression]</p></li>
+<li><p>ZeroOrderHold(breaks: list[pydrake.symbolic.Expression], samples: list[numpy.ndarray[object[m, n]]]) -&gt; pydrake.trajectories.PiecewisePolynomial_[Expression]</p></li>
 </ol>
 <p>Constructs a piecewise constant PiecewisePolynomial using matrix
 samples. Note that constructing a PiecewisePolynomial requires at
@@ -3118,7 +3118,7 @@ within <code class="docutils literal notranslate"><span class="pre">tol</span></
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.trajectories.PiecewisePose.MakeCubicLinearWithEndLinearVelocity">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MakeCubicLinearWithEndLinearVelocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">times</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">poses</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_vel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">array([0.,</span> <span class="pre">0.,</span> <span class="pre">0.])</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_vel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">array([0.,</span> <span class="pre">0.,</span> <span class="pre">0.])</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.trajectories.PiecewisePose" title="pydrake.trajectories.PiecewisePose"><span class="pre">pydrake.trajectories.PiecewisePose</span></a></span></span><a class="headerlink" href="#pydrake.trajectories.PiecewisePose.MakeCubicLinearWithEndLinearVelocity" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MakeCubicLinearWithEndLinearVelocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">times</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">poses</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_vel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">array([0.,</span> <span class="pre">0.,</span> <span class="pre">0.])</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_vel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">array([0.,</span> <span class="pre">0.,</span> <span class="pre">0.])</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.trajectories.PiecewisePose" title="pydrake.trajectories.PiecewisePose"><span class="pre">pydrake.trajectories.PiecewisePose</span></a></span></span><a class="headerlink" href="#pydrake.trajectories.PiecewisePose.MakeCubicLinearWithEndLinearVelocity" title="Permalink to this definition"></a></dt>
 <dd><p>Constructs a PiecewisePose from given <code class="docutils literal notranslate"><span class="pre">times</span></code> and <code class="docutils literal notranslate"><span class="pre">poses</span></code>. A cubic
 polynomial with given end velocities is used to construct the position
 part. The rotational part is represented by a piecewise quaterion
@@ -3138,7 +3138,7 @@ trajectory. There must be at least two elements in <code class="docutils literal
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.trajectories.PiecewisePose.MakeLinear">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MakeLinear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">times</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">poses</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.trajectories.PiecewisePose" title="pydrake.trajectories.PiecewisePose"><span class="pre">pydrake.trajectories.PiecewisePose</span></a></span></span><a class="headerlink" href="#pydrake.trajectories.PiecewisePose.MakeLinear" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MakeLinear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">times</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">poses</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.trajectories.PiecewisePose" title="pydrake.trajectories.PiecewisePose"><span class="pre">pydrake.trajectories.PiecewisePose</span></a></span></span><a class="headerlink" href="#pydrake.trajectories.PiecewisePose.MakeLinear" title="Permalink to this definition"></a></dt>
 <dd><p>Constructs a PiecewisePose from given <code class="docutils literal notranslate"><span class="pre">times</span></code> and <code class="docutils literal notranslate"><span class="pre">poses</span></code>. The
 positions trajectory is constructed as a first-order hold. The
 orientation is constructed using the quaternion slerp. There must be
@@ -3227,13 +3227,8 @@ within <code class="docutils literal notranslate"><span class="pre">tol</span></
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.trajectories.PiecewisePose_-AutoDiffXd-.MakeCubicLinearWithEndLinearVelocity">
-<span id="pydrake.trajectories.PiecewisePose_[AutoDiffXd].MakeCubicLinearWithEndLinearVelocity"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MakeCubicLinearWithEndLinearVelocity</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.trajectories.PiecewisePose_-AutoDiffXd-.MakeCubicLinearWithEndLinearVelocity" title="Permalink to this definition"></a></dt>
-<dd><dl class="simple">
-<dt>MakeCubicLinearWithEndLinearVelocity(times: List[pydrake.autodiffutils.AutoDiffXd], poses: List[pydrake.math.RigidTransform_[AutoDiffXd]], start_vel: numpy.ndarray[object[3, 1]] = array([&lt;AutoDiffXd 0.0 nderiv=0&gt;, &lt;AutoDiffXd 0.0 nderiv=0&gt;,</dt><dd><p>&lt;AutoDiffXd 0.0 nderiv=0&gt;], dtype=object), end_vel: numpy.ndarray[object[3, 1]] = array([&lt;AutoDiffXd 0.0 nderiv=0&gt;, &lt;AutoDiffXd 0.0 nderiv=0&gt;,
-&lt;AutoDiffXd 0.0 nderiv=0&gt;], dtype=object)) -&gt; pydrake.trajectories.PiecewisePose_[AutoDiffXd]</p>
-</dd>
-</dl>
-<p>Constructs a PiecewisePose from given <code class="docutils literal notranslate"><span class="pre">times</span></code> and <code class="docutils literal notranslate"><span class="pre">poses</span></code>. A cubic
+<span id="pydrake.trajectories.PiecewisePose_[AutoDiffXd].MakeCubicLinearWithEndLinearVelocity"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MakeCubicLinearWithEndLinearVelocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">times:</span> <span class="pre">list[pydrake.autodiffutils.AutoDiffXd],</span> <span class="pre">poses:</span> <span class="pre">list[pydrake.math.RigidTransform_[AutoDiffXd]],</span> <span class="pre">start_vel:</span> <span class="pre">numpy.ndarray[object[3,</span> <span class="pre">1]]</span> <span class="pre">=</span> <span class="pre">array([&lt;AutoDiffXd</span> <span class="pre">0.0</span> <span class="pre">nderiv=0&gt;,</span> <span class="pre">&lt;AutoDiffXd</span> <span class="pre">0.0</span> <span class="pre">nderiv=0&gt;,</span> <span class="pre">&lt;AutoDiffXd</span> <span class="pre">0.0</span> <span class="pre">nderiv=0&gt;],</span> <span class="pre">dtype=object),</span> <span class="pre">end_vel:</span> <span class="pre">numpy.ndarray[object[3,</span> <span class="pre">1]]</span> <span class="pre">=</span> <span class="pre">array([&lt;AutoDiffXd</span> <span class="pre">0.0</span> <span class="pre">nderiv=0&gt;,</span> <span class="pre">&lt;AutoDiffXd</span> <span class="pre">0.0</span> <span class="pre">nderiv=0&gt;,</span> <span class="pre">&lt;AutoDiffXd</span> <span class="pre">0.0</span> <span class="pre">nderiv=0&gt;],</span> <span class="pre">dtype=object)</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.trajectories.PiecewisePose_" title="pydrake.trajectories.PiecewisePose_"><span class="pre">pydrake.trajectories.PiecewisePose_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.PiecewisePose_-AutoDiffXd-.MakeCubicLinearWithEndLinearVelocity" title="Permalink to this definition"></a></dt>
+<dd><p>Constructs a PiecewisePose from given <code class="docutils literal notranslate"><span class="pre">times</span></code> and <code class="docutils literal notranslate"><span class="pre">poses</span></code>. A cubic
 polynomial with given end velocities is used to construct the position
 part. The rotational part is represented by a piecewise quaterion
 trajectory. There must be at least two elements in <code class="docutils literal notranslate"><span class="pre">times</span></code> and
@@ -3252,7 +3247,7 @@ trajectory. There must be at least two elements in <code class="docutils literal
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.trajectories.PiecewisePose_-AutoDiffXd-.MakeLinear">
-<span id="pydrake.trajectories.PiecewisePose_[AutoDiffXd].MakeLinear"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MakeLinear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">times</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">poses</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform_" title="pydrake.math.RigidTransform_"><span class="pre">pydrake.math.RigidTransform_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.trajectories.PiecewisePose_" title="pydrake.trajectories.PiecewisePose_"><span class="pre">pydrake.trajectories.PiecewisePose_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.PiecewisePose_-AutoDiffXd-.MakeLinear" title="Permalink to this definition"></a></dt>
+<span id="pydrake.trajectories.PiecewisePose_[AutoDiffXd].MakeLinear"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MakeLinear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">times</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">poses</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform_" title="pydrake.math.RigidTransform_"><span class="pre">pydrake.math.RigidTransform_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.trajectories.PiecewisePose_" title="pydrake.trajectories.PiecewisePose_"><span class="pre">pydrake.trajectories.PiecewisePose_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.PiecewisePose_-AutoDiffXd-.MakeLinear" title="Permalink to this definition"></a></dt>
 <dd><p>Constructs a PiecewisePose from given <code class="docutils literal notranslate"><span class="pre">times</span></code> and <code class="docutils literal notranslate"><span class="pre">poses</span></code>. The
 positions trajectory is constructed as a first-order hold. The
 orientation is constructed using the quaternion slerp. There must be
@@ -3335,7 +3330,7 @@ within <code class="docutils literal notranslate"><span class="pre">tol</span></
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.trajectories.PiecewisePose_-Expression-.MakeCubicLinearWithEndLinearVelocity">
-<span id="pydrake.trajectories.PiecewisePose_[Expression].MakeCubicLinearWithEndLinearVelocity"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MakeCubicLinearWithEndLinearVelocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">times:</span> <span class="pre">List[pydrake.symbolic.Expression],</span> <span class="pre">poses:</span> <span class="pre">List[pydrake.math.RigidTransform_[Expression]],</span> <span class="pre">start_vel:</span> <span class="pre">numpy.ndarray[object[3,</span> <span class="pre">1]]</span> <span class="pre">=</span> <span class="pre">array([&lt;Expression</span> <span class="pre">&quot;0&quot;&gt;,</span> <span class="pre">&lt;Expression</span> <span class="pre">&quot;0&quot;&gt;,</span> <span class="pre">&lt;Expression</span> <span class="pre">&quot;0&quot;&gt;],</span> <span class="pre">dtype=object),</span> <span class="pre">end_vel:</span> <span class="pre">numpy.ndarray[object[3,</span> <span class="pre">1]]</span> <span class="pre">=</span> <span class="pre">array([&lt;Expression</span> <span class="pre">&quot;0&quot;&gt;,</span> <span class="pre">&lt;Expression</span> <span class="pre">&quot;0&quot;&gt;,</span> <span class="pre">&lt;Expression</span> <span class="pre">&quot;0&quot;&gt;],</span> <span class="pre">dtype=object)</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.trajectories.PiecewisePose_" title="pydrake.trajectories.PiecewisePose_"><span class="pre">pydrake.trajectories.PiecewisePose_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.PiecewisePose_-Expression-.MakeCubicLinearWithEndLinearVelocity" title="Permalink to this definition"></a></dt>
+<span id="pydrake.trajectories.PiecewisePose_[Expression].MakeCubicLinearWithEndLinearVelocity"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MakeCubicLinearWithEndLinearVelocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">times:</span> <span class="pre">list[pydrake.symbolic.Expression],</span> <span class="pre">poses:</span> <span class="pre">list[pydrake.math.RigidTransform_[Expression]],</span> <span class="pre">start_vel:</span> <span class="pre">numpy.ndarray[object[3,</span> <span class="pre">1]]</span> <span class="pre">=</span> <span class="pre">array([&lt;Expression</span> <span class="pre">&quot;0&quot;&gt;,</span> <span class="pre">&lt;Expression</span> <span class="pre">&quot;0&quot;&gt;,</span> <span class="pre">&lt;Expression</span> <span class="pre">&quot;0&quot;&gt;],</span> <span class="pre">dtype=object),</span> <span class="pre">end_vel:</span> <span class="pre">numpy.ndarray[object[3,</span> <span class="pre">1]]</span> <span class="pre">=</span> <span class="pre">array([&lt;Expression</span> <span class="pre">&quot;0&quot;&gt;,</span> <span class="pre">&lt;Expression</span> <span class="pre">&quot;0&quot;&gt;,</span> <span class="pre">&lt;Expression</span> <span class="pre">&quot;0&quot;&gt;],</span> <span class="pre">dtype=object)</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.trajectories.PiecewisePose_" title="pydrake.trajectories.PiecewisePose_"><span class="pre">pydrake.trajectories.PiecewisePose_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.PiecewisePose_-Expression-.MakeCubicLinearWithEndLinearVelocity" title="Permalink to this definition"></a></dt>
 <dd><p>Constructs a PiecewisePose from given <code class="docutils literal notranslate"><span class="pre">times</span></code> and <code class="docutils literal notranslate"><span class="pre">poses</span></code>. A cubic
 polynomial with given end velocities is used to construct the position
 part. The rotational part is represented by a piecewise quaterion
@@ -3355,7 +3350,7 @@ trajectory. There must be at least two elements in <code class="docutils literal
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.trajectories.PiecewisePose_-Expression-.MakeLinear">
-<span id="pydrake.trajectories.PiecewisePose_[Expression].MakeLinear"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MakeLinear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">times</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">poses</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform_" title="pydrake.math.RigidTransform_"><span class="pre">pydrake.math.RigidTransform_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.trajectories.PiecewisePose_" title="pydrake.trajectories.PiecewisePose_"><span class="pre">pydrake.trajectories.PiecewisePose_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.PiecewisePose_-Expression-.MakeLinear" title="Permalink to this definition"></a></dt>
+<span id="pydrake.trajectories.PiecewisePose_[Expression].MakeLinear"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MakeLinear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">times</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">poses</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform_" title="pydrake.math.RigidTransform_"><span class="pre">pydrake.math.RigidTransform_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.trajectories.PiecewisePose_" title="pydrake.trajectories.PiecewisePose_"><span class="pre">pydrake.trajectories.PiecewisePose_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.PiecewisePose_-Expression-.MakeLinear" title="Permalink to this definition"></a></dt>
 <dd><p>Constructs a PiecewisePose from given <code class="docutils literal notranslate"><span class="pre">times</span></code> and <code class="docutils literal notranslate"><span class="pre">poses</span></code>. The
 positions trajectory is constructed as a first-order hold. The
 orientation is constructed using the quaternion slerp. There must be
@@ -3403,7 +3398,7 @@ for the list of instantiations.</p>
 </ol>
 <p>Builds an empty PiecewiseQuaternionSlerp.</p>
 <ol class="arabic simple" start="2">
-<li><p>__init__(self: pydrake.trajectories.PiecewiseQuaternionSlerp, breaks: List[float], quaternions: List[pydrake.common.eigen_geometry.Quaternion]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.trajectories.PiecewiseQuaternionSlerp, breaks: list[float], quaternions: list[pydrake.common.eigen_geometry.Quaternion]) -&gt; None</p></li>
 </ol>
 <p>Builds a PiecewiseQuaternionSlerp.</p>
 <dl class="field-list simple">
@@ -3415,7 +3410,7 @@ for the list of instantiations.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="3">
-<li><p>__init__(self: pydrake.trajectories.PiecewiseQuaternionSlerp, breaks: List[float], rotation_matrices: List[numpy.ndarray[numpy.float64[3, 3]]]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.trajectories.PiecewiseQuaternionSlerp, breaks: list[float], rotation_matrices: list[numpy.ndarray[numpy.float64[3, 3]]]) -&gt; None</p></li>
 </ol>
 <p>Builds a PiecewiseQuaternionSlerp.</p>
 <dl class="field-list simple">
@@ -3427,7 +3422,7 @@ for the list of instantiations.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="4">
-<li><p>__init__(self: pydrake.trajectories.PiecewiseQuaternionSlerp, breaks: List[float], rotation_matrices: List[pydrake.math.RotationMatrix]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.trajectories.PiecewiseQuaternionSlerp, breaks: list[float], rotation_matrices: list[pydrake.math.RotationMatrix]) -&gt; None</p></li>
 </ol>
 <p>Builds a PiecewiseQuaternionSlerp.</p>
 <dl class="field-list simple">
@@ -3439,7 +3434,7 @@ for the list of instantiations.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="5">
-<li><p>__init__(self: pydrake.trajectories.PiecewiseQuaternionSlerp, breaks: List[float], angle_axes: List[pydrake.common.eigen_geometry.AngleAxis]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.trajectories.PiecewiseQuaternionSlerp, breaks: list[float], angle_axes: list[pydrake.common.eigen_geometry.AngleAxis]) -&gt; None</p></li>
 </ol>
 <p>Builds a PiecewiseQuaternionSlerp.</p>
 <dl class="field-list simple">
@@ -3556,7 +3551,7 @@ Vector4.</p>
 </ol>
 <p>Builds an empty PiecewiseQuaternionSlerp.</p>
 <ol class="arabic simple" start="2">
-<li><p>__init__(self: pydrake.trajectories.PiecewiseQuaternionSlerp_[AutoDiffXd], breaks: List[pydrake.autodiffutils.AutoDiffXd], quaternions: List[pydrake.common.eigen_geometry.Quaternion_[AutoDiffXd]]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.trajectories.PiecewiseQuaternionSlerp_[AutoDiffXd], breaks: list[pydrake.autodiffutils.AutoDiffXd], quaternions: list[pydrake.common.eigen_geometry.Quaternion_[AutoDiffXd]]) -&gt; None</p></li>
 </ol>
 <p>Builds a PiecewiseQuaternionSlerp.</p>
 <dl class="field-list simple">
@@ -3568,7 +3563,7 @@ Vector4.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="3">
-<li><p>__init__(self: pydrake.trajectories.PiecewiseQuaternionSlerp_[AutoDiffXd], breaks: List[pydrake.autodiffutils.AutoDiffXd], rotation_matrices: List[numpy.ndarray[object[3, 3]]]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.trajectories.PiecewiseQuaternionSlerp_[AutoDiffXd], breaks: list[pydrake.autodiffutils.AutoDiffXd], rotation_matrices: list[numpy.ndarray[object[3, 3]]]) -&gt; None</p></li>
 </ol>
 <p>Builds a PiecewiseQuaternionSlerp.</p>
 <dl class="field-list simple">
@@ -3580,7 +3575,7 @@ Vector4.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="4">
-<li><p>__init__(self: pydrake.trajectories.PiecewiseQuaternionSlerp_[AutoDiffXd], breaks: List[pydrake.autodiffutils.AutoDiffXd], rotation_matrices: List[pydrake.math.RotationMatrix_[AutoDiffXd]]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.trajectories.PiecewiseQuaternionSlerp_[AutoDiffXd], breaks: list[pydrake.autodiffutils.AutoDiffXd], rotation_matrices: list[pydrake.math.RotationMatrix_[AutoDiffXd]]) -&gt; None</p></li>
 </ol>
 <p>Builds a PiecewiseQuaternionSlerp.</p>
 <dl class="field-list simple">
@@ -3592,7 +3587,7 @@ Vector4.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="5">
-<li><p>__init__(self: pydrake.trajectories.PiecewiseQuaternionSlerp_[AutoDiffXd], breaks: List[pydrake.autodiffutils.AutoDiffXd], angle_axes: List[pydrake.common.eigen_geometry.AngleAxis_[AutoDiffXd]]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.trajectories.PiecewiseQuaternionSlerp_[AutoDiffXd], breaks: list[pydrake.autodiffutils.AutoDiffXd], angle_axes: list[pydrake.common.eigen_geometry.AngleAxis_[AutoDiffXd]]) -&gt; None</p></li>
 </ol>
 <p>Builds a PiecewiseQuaternionSlerp.</p>
 <dl class="field-list simple">
@@ -3703,7 +3698,7 @@ Vector4.</p>
 </ol>
 <p>Builds an empty PiecewiseQuaternionSlerp.</p>
 <ol class="arabic simple" start="2">
-<li><p>__init__(self: pydrake.trajectories.PiecewiseQuaternionSlerp_[Expression], breaks: List[pydrake.symbolic.Expression], quaternions: List[pydrake.common.eigen_geometry.Quaternion_[Expression]]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.trajectories.PiecewiseQuaternionSlerp_[Expression], breaks: list[pydrake.symbolic.Expression], quaternions: list[pydrake.common.eigen_geometry.Quaternion_[Expression]]) -&gt; None</p></li>
 </ol>
 <p>Builds a PiecewiseQuaternionSlerp.</p>
 <dl class="field-list simple">
@@ -3715,7 +3710,7 @@ Vector4.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="3">
-<li><p>__init__(self: pydrake.trajectories.PiecewiseQuaternionSlerp_[Expression], breaks: List[pydrake.symbolic.Expression], rotation_matrices: List[numpy.ndarray[object[3, 3]]]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.trajectories.PiecewiseQuaternionSlerp_[Expression], breaks: list[pydrake.symbolic.Expression], rotation_matrices: list[numpy.ndarray[object[3, 3]]]) -&gt; None</p></li>
 </ol>
 <p>Builds a PiecewiseQuaternionSlerp.</p>
 <dl class="field-list simple">
@@ -3727,7 +3722,7 @@ Vector4.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="4">
-<li><p>__init__(self: pydrake.trajectories.PiecewiseQuaternionSlerp_[Expression], breaks: List[pydrake.symbolic.Expression], rotation_matrices: List[pydrake.math.RotationMatrix_[Expression]]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.trajectories.PiecewiseQuaternionSlerp_[Expression], breaks: list[pydrake.symbolic.Expression], rotation_matrices: list[pydrake.math.RotationMatrix_[Expression]]) -&gt; None</p></li>
 </ol>
 <p>Builds a PiecewiseQuaternionSlerp.</p>
 <dl class="field-list simple">
@@ -3739,7 +3734,7 @@ Vector4.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="5">
-<li><p>__init__(self: pydrake.trajectories.PiecewiseQuaternionSlerp_[Expression], breaks: List[pydrake.symbolic.Expression], angle_axes: List[pydrake.common.eigen_geometry.AngleAxis_[Expression]]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.trajectories.PiecewiseQuaternionSlerp_[Expression], breaks: list[pydrake.symbolic.Expression], angle_axes: list[pydrake.common.eigen_geometry.AngleAxis_[Expression]]) -&gt; None</p></li>
 </ol>
 <p>Builds a PiecewiseQuaternionSlerp.</p>
 <dl class="field-list simple">
@@ -3867,7 +3862,7 @@ for the list of instantiations.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.trajectories.PiecewiseTrajectory.get_segment_times">
-<span class="sig-name descname"><span class="pre">get_segment_times</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.PiecewiseTrajectory" title="pydrake.trajectories.PiecewiseTrajectory"><span class="pre">pydrake.trajectories.PiecewiseTrajectory</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.PiecewiseTrajectory.get_segment_times" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">get_segment_times</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.PiecewiseTrajectory" title="pydrake.trajectories.PiecewiseTrajectory"><span class="pre">pydrake.trajectories.PiecewiseTrajectory</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.PiecewiseTrajectory.get_segment_times" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -3934,7 +3929,7 @@ trajectory that is represented by simpler logic in each segment or
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.trajectories.PiecewiseTrajectory_-AutoDiffXd-.get_segment_times">
-<span id="pydrake.trajectories.PiecewiseTrajectory_[AutoDiffXd].get_segment_times"></span><span class="sig-name descname"><span class="pre">get_segment_times</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.PiecewiseTrajectory_" title="pydrake.trajectories.PiecewiseTrajectory_"><span class="pre">pydrake.trajectories.PiecewiseTrajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.PiecewiseTrajectory_-AutoDiffXd-.get_segment_times" title="Permalink to this definition"></a></dt>
+<span id="pydrake.trajectories.PiecewiseTrajectory_[AutoDiffXd].get_segment_times"></span><span class="sig-name descname"><span class="pre">get_segment_times</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.PiecewiseTrajectory_" title="pydrake.trajectories.PiecewiseTrajectory_"><span class="pre">pydrake.trajectories.PiecewiseTrajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.PiecewiseTrajectory_-AutoDiffXd-.get_segment_times" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -3995,7 +3990,7 @@ trajectory that is represented by simpler logic in each segment or
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.trajectories.PiecewiseTrajectory_-Expression-.get_segment_times">
-<span id="pydrake.trajectories.PiecewiseTrajectory_[Expression].get_segment_times"></span><span class="sig-name descname"><span class="pre">get_segment_times</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.PiecewiseTrajectory_" title="pydrake.trajectories.PiecewiseTrajectory_"><span class="pre">pydrake.trajectories.PiecewiseTrajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.PiecewiseTrajectory_-Expression-.get_segment_times" title="Permalink to this definition"></a></dt>
+<span id="pydrake.trajectories.PiecewiseTrajectory_[Expression].get_segment_times"></span><span class="sig-name descname"><span class="pre">get_segment_times</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.PiecewiseTrajectory_" title="pydrake.trajectories.PiecewiseTrajectory_"><span class="pre">pydrake.trajectories.PiecewiseTrajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.PiecewiseTrajectory_-Expression-.get_segment_times" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -4269,7 +4264,7 @@ returns a result.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.trajectories.Trajectory.vector_values">
-<span class="sig-name descname"><span class="pre">vector_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.Trajectory" title="pydrake.trajectories.Trajectory"><span class="pre">pydrake.trajectories.Trajectory</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.Trajectory.vector_values" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">vector_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.Trajectory" title="pydrake.trajectories.Trajectory"><span class="pre">pydrake.trajectories.Trajectory</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.Trajectory.vector_values" title="Permalink to this definition"></a></dt>
 <dd><p>If cols()==1, then evaluates the trajectory at each time <code class="docutils literal notranslate"><span class="pre">t</span></code>, and
 returns the results as a Matrix with the ith column corresponding to
 the ith time. Otherwise, if rows()==1, then evaluates the trajectory
@@ -4386,7 +4381,7 @@ returns a result.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.trajectories.Trajectory_-AutoDiffXd-.vector_values">
-<span id="pydrake.trajectories.Trajectory_[AutoDiffXd].vector_values"></span><span class="sig-name descname"><span class="pre">vector_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.Trajectory_" title="pydrake.trajectories.Trajectory_"><span class="pre">pydrake.trajectories.Trajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.Trajectory_-AutoDiffXd-.vector_values" title="Permalink to this definition"></a></dt>
+<span id="pydrake.trajectories.Trajectory_[AutoDiffXd].vector_values"></span><span class="sig-name descname"><span class="pre">vector_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.Trajectory_" title="pydrake.trajectories.Trajectory_"><span class="pre">pydrake.trajectories.Trajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.Trajectory_-AutoDiffXd-.vector_values" title="Permalink to this definition"></a></dt>
 <dd><p>If cols()==1, then evaluates the trajectory at each time <code class="docutils literal notranslate"><span class="pre">t</span></code>, and
 returns the results as a Matrix with the ith column corresponding to
 the ith time. Otherwise, if rows()==1, then evaluates the trajectory
@@ -4497,7 +4492,7 @@ returns a result.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.trajectories.Trajectory_-Expression-.vector_values">
-<span id="pydrake.trajectories.Trajectory_[Expression].vector_values"></span><span class="sig-name descname"><span class="pre">vector_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.Trajectory_" title="pydrake.trajectories.Trajectory_"><span class="pre">pydrake.trajectories.Trajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.Trajectory_-Expression-.vector_values" title="Permalink to this definition"></a></dt>
+<span id="pydrake.trajectories.Trajectory_[Expression].vector_values"></span><span class="sig-name descname"><span class="pre">vector_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.Trajectory_" title="pydrake.trajectories.Trajectory_"><span class="pre">pydrake.trajectories.Trajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.Trajectory_-Expression-.vector_values" title="Permalink to this definition"></a></dt>
 <dd><p>If cols()==1, then evaluates the trajectory at each time <code class="docutils literal notranslate"><span class="pre">t</span></code>, and
 returns the results as a Matrix with the ith column corresponding to
 the ith time. Otherwise, if rows()==1, then evaluates the trajectory

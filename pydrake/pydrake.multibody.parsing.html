@@ -583,7 +583,7 @@ already exists in this map.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.parsing.PackageMap.GetPackageNames">
-<span class="sig-name descname"><span class="pre">GetPackageNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.PackageMap" title="pydrake.multibody.parsing.PackageMap"><span class="pre">pydrake.multibody.parsing.PackageMap</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.PackageMap.GetPackageNames" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">GetPackageNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.PackageMap" title="pydrake.multibody.parsing.PackageMap"><span class="pre">pydrake.multibody.parsing.PackageMap</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.PackageMap.GetPackageNames" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the package names in this PackageMap. The order of package
 names returned is unspecified.</p>
 </dd></dl>
@@ -885,7 +885,7 @@ be added.</p>
 <span class="sig-name descname"><span class="pre">AddModels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.parsing.Parser.AddModels" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>AddModels(self: pydrake.multibody.parsing.Parser, file_name: str) -&gt; List[drake::TypeSafeIndex&lt;drake::multibody::ModelInstanceTag&gt;]</p></li>
+<li><p>AddModels(self: pydrake.multibody.parsing.Parser, file_name: str) -&gt; list[drake::TypeSafeIndex&lt;drake::multibody::ModelInstanceTag&gt;]</p></li>
 </ol>
 <p>Parses the input file named in <code class="docutils literal notranslate"><span class="pre">file_name</span></code> and adds all of its
 model(s) to <code class="docutils literal notranslate"><span class="pre">plant</span></code>.</p>
@@ -904,7 +904,7 @@ including nested models.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>AddModels(self: pydrake.multibody.parsing.Parser, <a href="#id3"><span class="problematic" id="id4">*</span></a>, url: str) -&gt; List[drake::TypeSafeIndex&lt;drake::multibody::ModelInstanceTag&gt;]</p></li>
+<li><p>AddModels(self: pydrake.multibody.parsing.Parser, <a href="#id3"><span class="problematic" id="id4">*</span></a>, url: str) -&gt; list[drake::TypeSafeIndex&lt;drake::multibody::ModelInstanceTag&gt;]</p></li>
 </ol>
 <p>Parses the input file named in <code class="docutils literal notranslate"><span class="pre">url</span></code> and adds all of its model(s) to
 <code class="docutils literal notranslate"><span class="pre">plant</span></code>. The allowed URL schemes are either <code class="docutils literal notranslate"><span class="pre">file://</span></code> for local
@@ -925,7 +925,7 @@ including nested models.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="3">
-<li><p>AddModels(self: pydrake.multibody.parsing.Parser, <a href="#id5"><span class="problematic" id="id6">*</span></a>, file_contents: str, file_type: str) -&gt; List[drake::TypeSafeIndex&lt;drake::multibody::ModelInstanceTag&gt;]</p></li>
+<li><p>AddModels(self: pydrake.multibody.parsing.Parser, <a href="#id5"><span class="problematic" id="id6">*</span></a>, file_contents: str, file_type: str) -&gt; list[drake::TypeSafeIndex&lt;drake::multibody::ModelInstanceTag&gt;]</p></li>
 </ol>
 <p>Provides same functionality as AddModels, but instead parses the model
 description text data via <code class="docutils literal notranslate"><span class="pre">file_contents</span></code> with format dictated by
@@ -950,7 +950,7 @@ including nested models.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.parsing.Parser.AddModelsFromString">
-<span class="sig-name descname"><span class="pre">AddModelsFromString</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.Parser" title="pydrake.multibody.parsing.Parser"><span class="pre">pydrake.multibody.parsing.Parser</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_contents</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List[drake::TypeSafeIndex&lt;drake::multibody::ModelInstanceTag&gt;]</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.Parser.AddModelsFromString" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">AddModelsFromString</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.Parser" title="pydrake.multibody.parsing.Parser"><span class="pre">pydrake.multibody.parsing.Parser</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_contents</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list[drake::TypeSafeIndex&lt;drake::multibody::ModelInstanceTag&gt;]</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.Parser.AddModelsFromString" title="Permalink to this definition"></a></dt>
 <dd><p>Provides same functionality as AddModels, but instead parses the model
 description text data via <code class="docutils literal notranslate"><span class="pre">file_contents</span></code> with format dictated by
 <code class="docutils literal notranslate"><span class="pre">file_type</span></code>.</p>
@@ -974,7 +974,7 @@ including nested models.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.parsing.Parser.AddModelsFromUrl">
-<span class="sig-name descname"><span class="pre">AddModelsFromUrl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.Parser" title="pydrake.multibody.parsing.Parser"><span class="pre">pydrake.multibody.parsing.Parser</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List[drake::TypeSafeIndex&lt;drake::multibody::ModelInstanceTag&gt;]</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.Parser.AddModelsFromUrl" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">AddModelsFromUrl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.Parser" title="pydrake.multibody.parsing.Parser"><span class="pre">pydrake.multibody.parsing.Parser</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list[drake::TypeSafeIndex&lt;drake::multibody::ModelInstanceTag&gt;]</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.Parser.AddModelsFromUrl" title="Permalink to this definition"></a></dt>
 <dd><p>Parses the input file named in <code class="docutils literal notranslate"><span class="pre">url</span></code> and adds all of its model(s) to
 <code class="docutils literal notranslate"><span class="pre">plant</span></code>. The allowed URL schemes are either <code class="docutils literal notranslate"><span class="pre">file://</span></code> for local
 files or <code class="docutils literal notranslate"><span class="pre">package://</span></code> (or <code class="docutils literal notranslate"><span class="pre">model://</span></code>) to use this Parser’s
@@ -1042,14 +1042,14 @@ warnings will be treated as errors.</p>
 <span class="sig-prename descclassname"><span class="pre">pydrake.multibody.parsing.</span></span><span class="sig-name descname"><span class="pre">ProcessModelDirectives</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.parsing.ProcessModelDirectives" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>ProcessModelDirectives(directives: pydrake.multibody.parsing.ModelDirectives, parser: pydrake.multibody.parsing.Parser) -&gt; List[pydrake.multibody.parsing.ModelInstanceInfo]</p></li>
+<li><p>ProcessModelDirectives(directives: pydrake.multibody.parsing.ModelDirectives, parser: pydrake.multibody.parsing.Parser) -&gt; list[pydrake.multibody.parsing.ModelInstanceInfo]</p></li>
 </ol>
 <p>Parses the given model directives using the given parser. The
 MultibodyPlant (and optionally SceneGraph) being modified are
 implicitly associated with the Parser object. Returns the list of
 added models.</p>
 <ol class="arabic simple" start="2">
-<li><p>ProcessModelDirectives(directives: pydrake.multibody.parsing.ModelDirectives, plant: drake::multibody::MultibodyPlant&lt;double&gt;, parser: pydrake.multibody.parsing.Parser = None) -&gt; List[pydrake.multibody.parsing.ModelInstanceInfo]</p></li>
+<li><p>ProcessModelDirectives(directives: pydrake.multibody.parsing.ModelDirectives, plant: drake::multibody::MultibodyPlant&lt;double&gt;, parser: pydrake.multibody.parsing.Parser = None) -&gt; list[pydrake.multibody.parsing.ModelInstanceInfo]</p></li>
 </ol>
 <p>Processes model directives for a given MultibodyPlant.</p>
 </dd></dl>
