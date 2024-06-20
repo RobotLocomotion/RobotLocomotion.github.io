@@ -1,5 +1,9 @@
 var NAVTREEINDEX57 =
 {
+"proximity__utilities_8h.html#a8f106b9c67eabf12f6e34a632561cd26":[4,0,0,4,2,54,1],
+"proximity__utilities_8h.html#a9181fb586ba454606318ae13d07b6517":[4,0,0,4,2,54,3],
+"proximity__utilities_8h.html#aa157ce1fbdd1dfbf0f83de850a4dc009":[4,0,0,4,2,54,6],
+"pydrake__doxygen_8h.html":[4,0,0,0,0,15],
 "pydrake__pybind_8h.html":[4,0,0,0,0,16],
 "pydrake__pybind_8h.html#a3001fa4c52ff2d0f13a58523f67be8e0":[4,0,0,0,0,16,8],
 "pydrake__pybind_8h.html#a4937c776ae795edfe27824821a0d14a5":[4,0,0,0,0,16,5],
@@ -245,9 +249,5 @@ var NAVTREEINDEX57 =
 "schunk__wsg__controller_8h.html":[4,0,0,6,2,3],
 "schunk__wsg__driver_8h.html":[4,0,0,6,2,4],
 "schunk__wsg__driver__functions_8h.html":[4,0,0,6,2,5],
-"schunk__wsg__driver__functions_8h.html#a4439da2b643292abc0bbb07129cbd324":[4,0,0,6,2,5,0],
-"schunk__wsg__lcm_8h.html":[4,0,0,6,2,6],
-"schunk__wsg__plain__controller_8h.html":[4,0,0,6,2,7],
-"schunk__wsg__plain__controller_8h.html#aee3ea37f4f505980157cf93a84687bcb":[4,0,0,6,2,7,0],
-"schunk__wsg__plain__controller_8h.html#aee3ea37f4f505980157cf93a84687bcba5f1cd95b5107d0b426a753a484765cc9":[4,0,0,6,2,7,0,1]
+"schunk__wsg__driver__functions_8h.html#a4439da2b643292abc0bbb07129cbd324":[4,0,0,6,2,5,0]
 };

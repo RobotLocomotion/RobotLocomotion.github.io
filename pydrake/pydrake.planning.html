@@ -2075,7 +2075,11 @@ time of the set. For now, h₀ is set to 1.0 for all sets.</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if lb</strong><strong> or </strong><strong>ub are not of size num_positions</strong><strong>(</strong><strong>)</strong><strong></strong> – </p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if lb</strong><strong> or </strong><strong>ub are not of size num_positions</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>RuntimeError if the derivative order &lt;= 1</strong><strong>, </strong><strong>since the linear</strong> – </p></li>
+<li><p><strong>velocity bounds are preferred.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -2436,6 +2440,13 @@ trajectory r(s). Hence this constraint is convex.</p>
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs.Edges">
+<span class="sig-name descname"><span class="pre">Edges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs" title="pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs"><span class="pre">pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.GraphOfConvexSets.Edge" title="pydrake.geometry.optimization.GraphOfConvexSets.Edge"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Edge</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs.Edges" title="Permalink to this definition"></a></dt>
+<dd><p>Returns constant reference to a vector of mutable pointers to the
+edges.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py method">
@@ -2765,6 +2776,13 @@ the sum of the time scaling variables.</p>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.Subgraph.Edges">
+<span class="sig-name descname"><span class="pre">Edges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.GcsTrajectoryOptimization.Subgraph" title="pydrake.planning.GcsTrajectoryOptimization.Subgraph"><span class="pre">pydrake.planning.GcsTrajectoryOptimization.Subgraph</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.GraphOfConvexSets.Edge" title="pydrake.geometry.optimization.GraphOfConvexSets.Edge"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Edge</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.Subgraph.Edges" title="Permalink to this definition"></a></dt>
+<dd><p>Returns constant reference to a vector of mutable pointers to the
+edges.</p>
 </dd></dl>
 
 <dl class="py method">

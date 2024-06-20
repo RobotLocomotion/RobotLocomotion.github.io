@@ -1,5 +1,9 @@
 var NAVTREEINDEX48 =
 {
+"cspace__free__polytope_8h.html":[4,0,0,4,1,7],
+"cspace__free__polytope__base_8h.html":[4,0,0,4,1,8],
+"cspace__free__structs_8h.html":[4,0,0,4,1,9],
+"cspace__separating__plane_8h.html":[4,0,0,4,1,10],
 "cspace__separating__plane_8h.html#a0a6bfeb13bf4fc1924f61f81051d7561":[4,0,0,4,1,10,2],
 "cspace__separating__plane_8h.html#a6d1ae826ab17a7ccd2b08fab3222813d":[4,0,0,4,1,10,4],
 "cspace__separating__plane_8h.html#a6febb8c28b6d49e494dbe16b5ed5b089":[4,0,0,4,1,10,1],
@@ -245,9 +249,5 @@ var NAVTREEINDEX48 =
 "dir_ffd084df0f71d68f8337a7d6f3dcd2dc.html":[4,0,0,4,2],
 "direct__collocation_8h.html":[4,0,0,10,4,0],
 "direct__collocation_8h.html#adbb6bc996413925c93dca6d2f5e2bb3d":[4,0,0,10,4,0,0],
-"direct__transcription_8h.html":[4,0,0,10,4,1],
-"dirichlet__boundary__condition_8h.html":[4,0,0,8,3,8],
-"dirichlet__boundary__condition_8h.html#a30f7635fdfd5c32323992a6ae496d5ca":[4,0,0,8,3,8,0],
-"discontinuous__spring__mass__damper__system_8h.html":[4,0,0,12,0,0,2],
-"discrete__algebraic__riccati__equation_8h.html":[4,0,0,7,11]
+"direct__transcription_8h.html":[4,0,0,10,4,1]
 };

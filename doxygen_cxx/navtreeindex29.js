@@ -1,5 +1,9 @@
 var NAVTREEINDEX29 =
 {
+"classdrake_1_1solvers_1_1_polynomial_cost.html":[1,1,0,46],
+"classdrake_1_1solvers_1_1_polynomial_cost.html#a25f396d1eaf4be52eb3db66072895105":[1,1,0,46,6],
+"classdrake_1_1solvers_1_1_polynomial_cost.html#a4cfabc8f2d2a53ee991b848f84516bb6":[1,1,0,46,5],
+"classdrake_1_1solvers_1_1_polynomial_cost.html#a7ac486efb96e05a296c7d114d64f2ead":[1,1,0,46,1],
 "classdrake_1_1solvers_1_1_polynomial_cost.html#a8f99a12c084358b7a5c4cc6ec1722450":[1,1,0,46,3],
 "classdrake_1_1solvers_1_1_polynomial_cost.html#aa2d7ab409cc841882a99f3e9b5d034c3":[1,1,0,46,0],
 "classdrake_1_1solvers_1_1_polynomial_cost.html#ab934f3e9477d69de1b7e4d21adaa59c1":[1,1,0,46,4],
@@ -245,9 +249,5 @@ var NAVTREEINDEX29 =
 "classdrake_1_1symbolic_1_1_chebyshev_polynomial.html#a1a9144f1ebdf663cbf084afd81e83923":[3,0,0,14,3,4],
 "classdrake_1_1symbolic_1_1_chebyshev_polynomial.html#a28f7f91a7edf412dddfa57c1a479cd4a":[3,0,0,14,3,7],
 "classdrake_1_1symbolic_1_1_chebyshev_polynomial.html#a30f25c5bdbe576452e9841887380b79c":[3,0,0,14,3,9],
-"classdrake_1_1symbolic_1_1_chebyshev_polynomial.html#a387079b52f79c8490fcc3ca011e5b70d":[3,0,0,14,3,10],
-"classdrake_1_1symbolic_1_1_chebyshev_polynomial.html#a5008d440bf1b5f7e6759e1801ec26f0c":[3,0,0,14,3,12],
-"classdrake_1_1symbolic_1_1_chebyshev_polynomial.html#a5154e421d79f1dbb1fb2e8be2d330532":[3,0,0,14,3,6],
-"classdrake_1_1symbolic_1_1_chebyshev_polynomial.html#a70206d806676b4e382284669ce8a4de8":[3,0,0,14,3,13],
-"classdrake_1_1symbolic_1_1_chebyshev_polynomial.html#a777ab64a78d6207443b1b48099a90946":[3,0,0,14,3,3]
+"classdrake_1_1symbolic_1_1_chebyshev_polynomial.html#a387079b52f79c8490fcc3ca011e5b70d":[3,0,0,14,3,10]
 };

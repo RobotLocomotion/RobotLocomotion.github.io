@@ -1,5 +1,9 @@
 var NAVTREEINDEX51 =
 {
+"formula_8h.html#ac5c1c4bfd4434de52e240126b78853c0":[4,0,0,1,3,0,7,44],
+"formula_8h.html#ac66d112b9b6d693ee82d08c7a01f7a14":[4,0,0,1,3,0,7,35],
+"formula_8h.html#ac9f34a1136227779b18433cd0a2f4dde":[4,0,0,1,3,0,7,43],
+"formula_8h.html#acbfcc66d64e8756ae983891059050205":[4,0,0,1,3,0,7,11],
 "formula_8h.html#ad0de903abee4a9e39dbc9148d86c770c":[4,0,0,1,3,0,7,58],
 "formula_8h.html#ad1245bbf1795b4f97ec4c04cd79dcde3":[4,0,0,1,3,0,7,49],
 "formula_8h.html#ad4bd0f6e944bac326e6e943f26d3d043":[4,0,0,1,3,0,7,25],
@@ -245,9 +249,5 @@ var NAVTREEINDEX51 =
 "generic__polynomial_8h.html#acf8ec1d6463a6936e7865e8cef04082f":[4,0,0,1,3,6,4],
 "generic__polynomial_8h.html#ad6ff0b6772551662f2b02b77b5889504":[4,0,0,1,3,6,29],
 "generic__polynomial_8h.html#adfcadf9b33656022c0c071a8af3fd85e":[4,0,0,1,3,6,33],
-"generic__polynomial_8h.html#aed13274bad687cfe8b3a1effa40d3117":[4,0,0,1,3,6,24],
-"generic__polynomial_8h.html#afc778273d730c518678796b632e4de8f":[4,0,0,1,3,6,31],
-"geodesic__convexity_8h.html":[4,0,0,4,1,11],
-"geodesic__convexity_8h.html#a05bd75c8b08787c334065792f8532797":[4,0,0,4,1,11,2],
-"geodesic__convexity_8h.html#a0f945f0d43e169b238695da629d93ff7":[4,0,0,4,1,11,3]
+"generic__polynomial_8h.html#aed13274bad687cfe8b3a1effa40d3117":[4,0,0,1,3,6,24]
 };

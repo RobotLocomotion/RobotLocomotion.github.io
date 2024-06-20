@@ -1,5 +1,9 @@
 var NAVTREEINDEX47 =
 {
+"classdrake_1_1trajectories_1_1_trajectory.html#a50929a6273d23c3db2a0ba8d431fa9d9":[3,0,0,17,11,17],
+"classdrake_1_1trajectories_1_1_trajectory.html#a51223614aa5ad65e500cce2625aaf328":[3,0,0,17,11,14],
+"classdrake_1_1trajectories_1_1_trajectory.html#a5921e7a9f7532c682fd111d829f0258e":[3,0,0,17,11,4],
+"classdrake_1_1trajectories_1_1_trajectory.html#a6a03dfabaf0999ebcae4cbf8cde49083":[3,0,0,17,11,13],
 "classdrake_1_1trajectories_1_1_trajectory.html#a6b15b4592b800d6cf4d9273f46a2774b":[3,0,0,17,11,1],
 "classdrake_1_1trajectories_1_1_trajectory.html#a7607cc5c56514557ed9441479ae70e71":[3,0,0,17,11,18],
 "classdrake_1_1trajectories_1_1_trajectory.html#a857db071d9bf847d026ba7046aa9744e":[3,0,0,17,11,15],
@@ -245,9 +249,5 @@ var NAVTREEINDEX47 =
 "csdp__solver__error__handling_8h.html":[4,0,0,11,15],
 "csdp__solver__internal_8h.html":[4,0,0,11,16],
 "cspace__free__box_8h.html":[4,0,0,4,1,5],
-"cspace__free__internal_8h.html":[4,0,0,4,1,6],
-"cspace__free__polytope_8h.html":[4,0,0,4,1,7],
-"cspace__free__polytope__base_8h.html":[4,0,0,4,1,8],
-"cspace__free__structs_8h.html":[4,0,0,4,1,9],
-"cspace__separating__plane_8h.html":[4,0,0,4,1,10]
+"cspace__free__internal_8h.html":[4,0,0,4,1,6]
 };

@@ -1,5 +1,9 @@
 var NAVTREEINDEX45 =
 {
+"classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#ac00966c8749aec375110e166e0b7eea2":[1,2,4,0,13],
+"classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#ac0926d674dddedc1dd650f2f5d78bc5a":[1,2,4,0,11],
+"classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#ac65edc397e5ac441462d19a1873c8a07":[1,2,4,0,8],
+"classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#ac951e9461fe35f8b40719a8ba37acea6":[1,2,4,0,7],
 "classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#acdf7e0b5ab9acb099133124fa05833b8":[1,2,4,0,6],
 "classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#ad43a45a9bfeee26aafe9eef51139485a":[1,2,4,0,5],
 "classdrake_1_1systems_1_1sensors_1_1_beam_model.html":[1,2,4,1],
@@ -245,9 +249,5 @@ var NAVTREEINDEX45 =
 "classdrake_1_1test_1_1_limit_malloc.html#a8b0b677bcfc5aadb02adacc95d993b95":[3,0,0,16,1,2],
 "classdrake_1_1test_1_1_limit_malloc.html#a923eedb579481aa1bab9babf206d3ead":[3,0,0,16,1,3],
 "classdrake_1_1test_1_1_limit_malloc.html#aab5411a4588acfe4e13675e9234adedf":[3,0,0,16,1,7],
-"classdrake_1_1test_1_1_limit_malloc.html#afcdbfd967bf9091f3554dc4b5609c288":[3,0,0,16,1,5],
-"classdrake_1_1test_1_1_limit_malloc.html#afef229bd4c5ea3baf6feca1c8720d9da":[3,0,0,16,1,1],
-"classdrake_1_1trajectories_1_1_bezier_curve.html":[3,0,0,17,0],
-"classdrake_1_1trajectories_1_1_bezier_curve.html#a07c5c6d262d1976bc5f747cbb00e26fb":[3,0,0,17,0,9],
-"classdrake_1_1trajectories_1_1_bezier_curve.html#a0d37069b2edc37d7662aa809b6070e4e":[3,0,0,17,0,7]
+"classdrake_1_1test_1_1_limit_malloc.html#afcdbfd967bf9091f3554dc4b5609c288":[3,0,0,16,1,5]
 };
