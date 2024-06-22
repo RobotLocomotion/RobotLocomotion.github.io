@@ -79,6 +79,7 @@ var group__planning__trajectory =
       [ "AddDurationCost", "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#ae3f60fe9552c90c9a3986f023ba18a56", null ],
       [ "AddJerkBounds", "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#ab13f393292d6592dc959f55625fe0f5d", null ],
       [ "AddPathAccelerationConstraint", "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a67ebb878e71a66ac8d6ea1e739766d3b", null ],
+      [ "AddPathEnergyCost", "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a411b4823b494999f0d51e7d0afac17c0", null ],
       [ "AddPathLengthCost", "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a6da88e725b9e65eb10ffe19f25742ad4", null ],
       [ "AddPathPositionConstraint", "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a030ffdb9bb87db95f7ab4b4271f3f7db", null ],
       [ "AddPathPositionConstraint", "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a21f8c3c709d1033af97e84221e2cf33b", null ],

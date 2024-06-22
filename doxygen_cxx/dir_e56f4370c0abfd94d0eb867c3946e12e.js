@@ -1,11 +1,15 @@
 var dir_e56f4370c0abfd94d0eb867c3946e12e =
 [
-    [ "collision_filter_groups.h", "collision__filter__groups_8h.html", "collision__filter__groups_8h" ],
+    [ "collision_filter_groups.h", "collision__filter__groups_8h.html", [
+      [ "CollisionFilterGroups", "classdrake_1_1multibody_1_1_collision_filter_groups.html", "classdrake_1_1multibody_1_1_collision_filter_groups" ]
+    ] ],
     [ "detail_collision_filter_group_resolver.h", "detail__collision__filter__group__resolver_8h.html", null ],
+    [ "detail_collision_filter_groups_impl.h", "detail__collision__filter__groups__impl_8h.html", null ],
     [ "detail_common.h", "detail__common_8h.html", null ],
     [ "detail_composite_parse.h", "detail__composite__parse_8h.html", null ],
     [ "detail_dmd_parser.h", "detail__dmd__parser_8h.html", null ],
     [ "detail_ignition.h", "detail__ignition_8h.html", null ],
+    [ "detail_instanced_name.h", "detail__instanced__name_8h.html", null ],
     [ "detail_make_model_name.h", "detail__make__model__name_8h.html", null ],
     [ "detail_mesh_parser.h", "detail__mesh__parser_8h.html", null ],
     [ "detail_mujoco_parser.h", "detail__mujoco__parser_8h.html", null ],

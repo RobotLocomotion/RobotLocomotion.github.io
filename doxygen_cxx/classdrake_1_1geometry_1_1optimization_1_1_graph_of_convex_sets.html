@@ -248,9 +248,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab615e29dafcd98a50d5b22314cfd9f3d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html">Edge</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#ab615e29dafcd98a50d5b22314cfd9f3d">GetSolutionPath</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a> &amp;source, const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a> &amp;target, const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &amp;result, <a class="el" href="classdouble.html">double</a> tolerance=1e-3) const</td></tr>
 <tr class="memdesc:ab615e29dafcd98a50d5b22314cfd9f3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extracts a path from <code>source</code> to <code>target</code> described by the <code>result</code> returned by <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a51f263df76c721f1bbdeb5708bf7df86" title="Formulates and solves the mixed-integer convex formulation of the shortest path problem on the graph,...">SolveShortestPath()</a>, via depth-first search following the largest values of the edge binary variables.  <a href="#ab615e29dafcd98a50d5b22314cfd9f3d">More...</a><br /></td></tr>
 <tr class="separator:ab615e29dafcd98a50d5b22314cfd9f3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab25b5b85ea26d22e0702ca76e695c659"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#ab25b5b85ea26d22e0702ca76e695c659">SolveConvexRestriction</a> (const std::vector&lt; const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html">Edge</a> * &gt; &amp;active_edges, const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html">GraphOfConvexSetsOptions</a> &amp;options=<a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html">GraphOfConvexSetsOptions</a>()) const</td></tr>
-<tr class="memdesc:ab25b5b85ea26d22e0702ca76e695c659"><td class="mdescLeft">&#160;</td><td class="mdescRight">The non-convexity in a GCS problem comes from the binary variables (phi) associated with the edges being active or inactive in the solution.  <a href="#ab25b5b85ea26d22e0702ca76e695c659">More...</a><br /></td></tr>
-<tr class="separator:ab25b5b85ea26d22e0702ca76e695c659"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c50ae80b0c136e138f815b4a83a30d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5c50ae80b0c136e138f815b4a83a30d1">SolveConvexRestriction</a> (const std::vector&lt; const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html">Edge</a> * &gt; &amp;active_edges, const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html">GraphOfConvexSetsOptions</a> &amp;options=<a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html">GraphOfConvexSetsOptions</a>(), const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> *initial_guess=nullptr) const</td></tr>
+<tr class="memdesc:a5c50ae80b0c136e138f815b4a83a30d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The non-convexity in a GCS problem comes from the binary variables (phi) associated with the edges being active or inactive in the solution.  <a href="#a5c50ae80b0c136e138f815b4a83a30d1">More...</a><br /></td></tr>
+<tr class="separator:a5c50ae80b0c136e138f815b4a83a30d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:aee71a4d66e8a29651242b12019c0a30e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#aee71a4d66e8a29651242b12019c0a30e">GraphOfConvexSets</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html">GraphOfConvexSets</a> &amp;)=delete</td></tr>
 <tr class="separator:aee71a4d66e8a29651242b12019c0a30e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -757,8 +757,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="ab25b5b85ea26d22e0702ca76e695c659"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab25b5b85ea26d22e0702ca76e695c659">&#9670;&nbsp;</a></span>SolveConvexRestriction()</h2>
+<a id="a5c50ae80b0c136e138f815b4a83a30d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c50ae80b0c136e138f815b4a83a30d1">&#9670;&nbsp;</a></span>SolveConvexRestriction()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -773,7 +773,13 @@ Friends</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html">GraphOfConvexSetsOptions</a> &amp;&#160;</td>
-          <td class="paramname"><em>options</em> = <code><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html">GraphOfConvexSetsOptions</a>()</code>&#160;</td>
+          <td class="paramname"><em>options</em> = <code><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html">GraphOfConvexSetsOptions</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> *&#160;</td>
+          <td class="paramname"><em>initial_guess</em> = <code>nullptr</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -786,7 +792,14 @@ Friends</h2></td></tr>
 <p>The non-convexity in a GCS problem comes from the binary variables (phi) associated with the edges being active or inactive in the solution. </p>
 <p>If those binary variables are fixed, then the problem is convex &ndash; this is a so-called "convex restriction" of the original problem.</p>
 <p>The convex restriction can often be solved much more efficiently than solving the full GCS problem with additional constraints to fix the binaries; it can be written using less decision variables, and needs only to include the vertices associated with at least one of the active edges. Decision variables for all other convex sets will be set to NaN.</p>
-<p>Note that one can specify additional non-convex constraints, which may be not supported by all solvers. In this case, the provided solver will throw an exception. </p>
+<p>Note that one can specify additional non-convex constraints, which may be not supported by all solvers. In this case, the provided solver will throw an exception.</p>
+<p>If an <code>initial_guess</code> is provided, the solution inside this result will be used to set the initial guess for the convex restriction. Typically, this will be the result obtained by solving the convex relaxation.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the <code>initial_guess</code> does not contain solutions for the decision variables required in this convex restriction. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

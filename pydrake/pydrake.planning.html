@@ -3070,13 +3070,32 @@ point of the jerk trajectory.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.KinematicTrajectoryOptimization.AddPathEnergyCost">
+<span class="sig-name descname"><span class="pre">AddPathEnergyCost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.KinematicTrajectoryOptimization" title="pydrake.planning.KinematicTrajectoryOptimization"><span class="pre">pydrake.planning.KinematicTrajectoryOptimization</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Cost</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.KinematicTrajectoryOptimization.AddPathEnergyCost" title="Permalink to this definition"></a></dt>
+<dd><p>Adds a convex quadratic cost on an upper bound on the energy of the
+path, ∫₀¹ <a href="#id11"><span class="problematic" id="id12">|</span></a>ṙ(s)|₂² ds, by summing the squared distance between the
+path control points. In the limit of infinitely many control points,
+minimizers for AddPathLengthCost and AddPathEnergyCost will follow the
+same path, but potentially with different timing. They may have
+different values if additional costs and constraints are imposed. This
+cost yields simpler gradients than AddPathLengthCost, and biases the
+control points towards being evenly spaced.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A vector of bindings with the ith element adding a cost to the ith
+control point of the velocity trajectory.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.KinematicTrajectoryOptimization.AddPathLengthCost">
 <span class="sig-name descname"><span class="pre">AddPathLengthCost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.KinematicTrajectoryOptimization" title="pydrake.planning.KinematicTrajectoryOptimization"><span class="pre">pydrake.planning.KinematicTrajectoryOptimization</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_conic_constraint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Cost</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.KinematicTrajectoryOptimization.AddPathLengthCost" title="Permalink to this definition"></a></dt>
-<dd><p>Adds a cost on an upper bound on length of the path, ∫₀ᵀ <a href="#id11"><span class="problematic" id="id12">|</span></a>q̇(t)|₂ dt,
-by summing the distance between the path control points. If
-<code class="docutils literal notranslate"><span class="pre">use_conic_constraint</span> <span class="pre">=</span> <span class="pre">false</span></code>, then costs are added via
-MathematicalProgram::AddL2NormCost; otherwise they are added via
-MathematicalProgram::AddL2NormCostUsingConicConstraint.</p>
+<dd><p>Adds a cost on an upper bound of the length of the path, ∫₀ᵀ <a href="#id13"><span class="problematic" id="id14">|</span></a>q̇(t)|₂
+dt, or equivalently ∫₀¹ <a href="#id15"><span class="problematic" id="id16">|</span></a>ṙ(s)|₂ ds, by summing the distance between
+the path control points. If <code class="docutils literal notranslate"><span class="pre">use_conic_constraint</span> <span class="pre">=</span> <span class="pre">false</span></code>, then
+costs are added via MathematicalProgram::AddL2NormCost; otherwise they
+are added via MathematicalProgram::AddL2NormCostUsingConicConstraint.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>A vector of bindings with the ith element adding a cost to the ith
@@ -3161,6 +3180,10 @@ with variables corresponding to <code class="docutils literal notranslate"><span
 important in practice. For instance if you want to constrain the true
 (trajectory) velocity at the final time, one would naturally want to
 write AddVelocityConstraint(constraint, s=1).</p>
+<p>This method should be compared with AddPathVelocityConstraint, which
+only constrains ṙ(s) because it does not reason about the time
+scaling, T. However, AddPathVelocityConstraint adds convex
+constraints, whereas this method adds nonconvex generic constraints.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>constraint.num_vars() == num_positions()</p>
 </dd>

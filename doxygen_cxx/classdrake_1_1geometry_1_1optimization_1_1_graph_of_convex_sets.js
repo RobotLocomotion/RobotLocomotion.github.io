@@ -24,7 +24,7 @@ var classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets =
     [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a788cd0d235aa941ef4fa5c923ef9607b", null ],
     [ "RemoveEdge", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a4a8e888889d95b9ad42a70d3eff08801", null ],
     [ "RemoveVertex", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a219e082fcdebc032744ff53102dc0e1f", null ],
-    [ "SolveConvexRestriction", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#ab25b5b85ea26d22e0702ca76e695c659", null ],
+    [ "SolveConvexRestriction", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5c50ae80b0c136e138f815b4a83a30d1", null ],
     [ "SolveShortestPath", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a51f263df76c721f1bbdeb5708bf7df86", null ],
     [ "Vertices", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a3afd44d1f388580db86e3a8603363714", null ],
     [ "Vertices", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a4371f3be108a7d70f7e797633b60c910", null ],

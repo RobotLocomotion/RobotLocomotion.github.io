@@ -1,5 +1,10 @@
 var NAVTREEINDEX57 =
 {
+"proximity__properties_8h.html#af76ed94bef3f81765a1b3ce069562e00":[4,0,0,4,42,3],
+"proximity__utilities_8h.html":[4,0,0,4,2,54],
+"proximity__utilities_8h.html#a4f24aa7e86f9331b9bd72b84a7672963":[4,0,0,4,2,54,2],
+"proximity__utilities_8h.html#a54e88575f94080e2f54bd4b79ac25f5d":[4,0,0,4,2,54,5],
+"proximity__utilities_8h.html#a80a8ed53b2aebbfe932e097efa7d4da3":[4,0,0,4,2,54,4],
 "proximity__utilities_8h.html#a8f106b9c67eabf12f6e34a632561cd26":[4,0,0,4,2,54,1],
 "proximity__utilities_8h.html#a9181fb586ba454606318ae13d07b6517":[4,0,0,4,2,54,3],
 "proximity__utilities_8h.html#aa157ce1fbdd1dfbf0f83de850a4dc009":[4,0,0,4,2,54,6],
@@ -244,10 +249,5 @@ var NAVTREEINDEX57 =
 "schunk__wsg__constants_8h.html#a711e5cc36bb4a36b15f109e28b623d28":[4,0,0,6,2,2,4],
 "schunk__wsg__constants_8h.html#a80a43febe2b6239f4d48a63094288d1b":[4,0,0,6,2,2,5],
 "schunk__wsg__constants_8h.html#ad3478526c69fa04f5dff9ad3c2ebf055":[4,0,0,6,2,2,8],
-"schunk__wsg__constants_8h.html#ga4466f959f6516ddf231455e01f6ce3df":[4,0,0,6,2,2,2],
-"schunk__wsg__constants_8h.html#ga9d4acc482bc52a69383e884679887402":[4,0,0,6,2,2,1],
-"schunk__wsg__controller_8h.html":[4,0,0,6,2,3],
-"schunk__wsg__driver_8h.html":[4,0,0,6,2,4],
-"schunk__wsg__driver__functions_8h.html":[4,0,0,6,2,5],
-"schunk__wsg__driver__functions_8h.html#a4439da2b643292abc0bbb07129cbd324":[4,0,0,6,2,5,0]
+"schunk__wsg__constants_8h.html#ga4466f959f6516ddf231455e01f6ce3df":[4,0,0,6,2,2,2]
 };

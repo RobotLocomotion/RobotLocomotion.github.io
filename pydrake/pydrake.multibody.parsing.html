@@ -366,6 +366,87 @@ If unspecified, the Identity transform will be used.</p>
 
 </dd></dl>
 
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.multibody.parsing.CollisionFilterGroups">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.parsing.</span></span><span class="sig-name descname"><span class="pre">CollisionFilterGroups</span></span><a class="headerlink" href="#pydrake.multibody.parsing.CollisionFilterGroups" title="Permalink to this definition"></a></dt>
+<dd><p>This is storage for parsed collision filter groups and group pairs.
+This data may be useful to users needing to compose further collision
+filters in code, without having to restate the data already captured
+in model files.</p>
+<p>The contents of this object will be made up of names of collision
+filter groups and bodies. By convention, the name strings are treated
+as scoped names.</p>
+<p>Note that this object enforces few invariants on the data. In the
+expected workflow, the parser will add groups and exclusion pairs
+found during parsing. The only condition checked here is that a group
+with a given name is only added once.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.parsing.CollisionFilterGroups.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.CollisionFilterGroups" title="pydrake.multibody.parsing.CollisionFilterGroups"><span class="pre">pydrake.multibody.parsing.CollisionFilterGroups</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.CollisionFilterGroups.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.parsing.CollisionFilterGroups.AddExclusionPair">
+<span class="sig-name descname"><span class="pre">AddExclusionPair</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.CollisionFilterGroups" title="pydrake.multibody.parsing.CollisionFilterGroups"><span class="pre">pydrake.multibody.parsing.CollisionFilterGroups</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.CollisionFilterGroups.AddExclusionPair" title="Permalink to this definition"></a></dt>
+<dd><p>Adds an exclusion pair between two collision filter groups.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">pair</span></code>:</dt><dd><p>a pair of fully-qualified scoped names of groups.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A pair can consist of the same name twice, which means the pair
+defines a rule where all members of the group exclude each other.
+Adding an already defined pair does nothing.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.parsing.CollisionFilterGroups.AddGroup">
+<span class="sig-name descname"><span class="pre">AddGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.CollisionFilterGroups" title="pydrake.multibody.parsing.CollisionFilterGroups"><span class="pre">pydrake.multibody.parsing.CollisionFilterGroups</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">members</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">set</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.CollisionFilterGroups.AddGroup" title="Permalink to this definition"></a></dt>
+<dd><p>Adds a new collision filter group.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt><dd><p>the fully-qualified scoped name of the group being defined.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">members</span></code>:</dt><dd><p>the fully-qualified scoped names of the member bodies.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>name is not already a defined group in this object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.parsing.CollisionFilterGroups.empty">
+<span class="sig-name descname"><span class="pre">empty</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.CollisionFilterGroups" title="pydrake.multibody.parsing.CollisionFilterGroups"><span class="pre">pydrake.multibody.parsing.CollisionFilterGroups</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.CollisionFilterGroups.empty" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>true iff both groups() and exclusion_pairs() are empty.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.parsing.CollisionFilterGroups.exclusion_pairs">
+<span class="sig-name descname"><span class="pre">exclusion_pairs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.CollisionFilterGroups" title="pydrake.multibody.parsing.CollisionFilterGroups"><span class="pre">pydrake.multibody.parsing.CollisionFilterGroups</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">set</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.CollisionFilterGroups.exclusion_pairs" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the pairs stored by prior calls to AddExclusionPair().</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.parsing.CollisionFilterGroups.groups">
+<span class="sig-name descname"><span class="pre">groups</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.CollisionFilterGroups" title="pydrake.multibody.parsing.CollisionFilterGroups"><span class="pre">pydrake.multibody.parsing.CollisionFilterGroups</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">set</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.CollisionFilterGroups.groups" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the groups stored by prior calls to AddGroup().</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="pydrake.multibody.parsing.FlattenModelDirectives">
 <span class="sig-prename descclassname"><span class="pre">pydrake.multibody.parsing.</span></span><span class="sig-name descname"><span class="pre">FlattenModelDirectives</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">directives</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.ModelDirectives" title="pydrake.multibody.parsing.ModelDirectives"><span class="pre">pydrake.multibody.parsing.ModelDirectives</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">package_map</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.PackageMap" title="pydrake.multibody.parsing.PackageMap"><span class="pre">pydrake.multibody.parsing.PackageMap</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.parsing.ModelDirectives" title="pydrake.multibody.parsing.ModelDirectives"><span class="pre">pydrake.multibody.parsing.ModelDirectives</span></a></span></span><a class="headerlink" href="#pydrake.multibody.parsing.FlattenModelDirectives" title="Permalink to this definition"></a></dt>
@@ -1003,6 +1084,20 @@ including nested models.</p>
 <p class="admonition-title">See also</p>
 <p>the Parser class documentation for more detail.</p>
 </div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.parsing.Parser.GetCollisionFilterGroups">
+<span class="sig-name descname"><span class="pre">GetCollisionFilterGroups</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.Parser" title="pydrake.multibody.parsing.Parser"><span class="pre">pydrake.multibody.parsing.Parser</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.parsing.CollisionFilterGroups" title="pydrake.multibody.parsing.CollisionFilterGroups"><span class="pre">pydrake.multibody.parsing.CollisionFilterGroups</span></a></span></span><a class="headerlink" href="#pydrake.multibody.parsing.Parser.GetCollisionFilterGroups" title="Permalink to this definition"></a></dt>
+<dd><p>Gets the accumulated set of collision filter definitions seen by this
+parser.</p>
+<p>There are two kinds of names in the returned data: group names and
+body names. Both may occur within scoped names indicating the model
+instance where they are defined. Note that the model instance names
+used in the returned data will reflect the current names in plant() at
+the time this accessor is called (see
+MultibodyPlant::RenameModelInstance()), but the local group and body
+names will be the names seen during parsing.</p>
 </dd></dl>
 
 <dl class="py method">

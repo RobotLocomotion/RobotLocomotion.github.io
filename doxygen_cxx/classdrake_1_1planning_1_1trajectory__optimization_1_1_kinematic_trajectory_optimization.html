@@ -247,8 +247,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ae3f60fe9552c90c9a3986f023ba18a56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a linear cost on the duration of the trajectory.  <a href="#ae3f60fe9552c90c9a3986f023ba18a56">More...</a><br /></td></tr>
 <tr class="separator:ae3f60fe9552c90c9a3986f023ba18a56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6da88e725b9e65eb10ffe19f25742ad4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a6da88e725b9e65eb10ffe19f25742ad4">AddPathLengthCost</a> (<a class="el" href="classdouble.html">double</a> weight=1.0, bool use_conic_constraint=false)</td></tr>
-<tr class="memdesc:a6da88e725b9e65eb10ffe19f25742ad4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a cost on an upper bound on length of the path, ∫₀ᵀ |q̇(t)|₂ dt, by summing the distance between the path control points.  <a href="#a6da88e725b9e65eb10ffe19f25742ad4">More...</a><br /></td></tr>
+<tr class="memdesc:a6da88e725b9e65eb10ffe19f25742ad4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a cost on an upper bound of the length of the path, ∫₀ᵀ |q̇(t)|₂ dt, or equivalently ∫₀¹ |ṙ(s)|₂ ds, by summing the distance between the path control points.  <a href="#a6da88e725b9e65eb10ffe19f25742ad4">More...</a><br /></td></tr>
 <tr class="separator:a6da88e725b9e65eb10ffe19f25742ad4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a411b4823b494999f0d51e7d0afac17c0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a411b4823b494999f0d51e7d0afac17c0">AddPathEnergyCost</a> (<a class="el" href="classdouble.html">double</a> weight=1.0)</td></tr>
+<tr class="memdesc:a411b4823b494999f0d51e7d0afac17c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a convex quadratic cost on an upper bound on the energy of the path, ∫₀¹ |ṙ(s)|₂² ds, by summing the squared distance between the path control points.  <a href="#a411b4823b494999f0d51e7d0afac17c0">More...</a><br /></td></tr>
+<tr class="separator:a411b4823b494999f0d51e7d0afac17c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a9a8474ae1e7ce1dab9a404fd6e6f6054"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a9a8474ae1e7ce1dab9a404fd6e6f6054">KinematicTrajectoryOptimization</a> (const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html">KinematicTrajectoryOptimization</a> &amp;)=delete</td></tr>
 <tr class="separator:a9a8474ae1e7ce1dab9a404fd6e6f6054"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -544,6 +547,28 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a411b4823b494999f0d51e7d0afac17c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a411b4823b494999f0d51e7d0afac17c0">&#9670;&nbsp;</a></span>AddPathEnergyCost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a>&gt; &gt; AddPathEnergyCost </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>weight</em> = <code>1.0</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a convex quadratic cost on an upper bound on the energy of the path, ∫₀¹ |ṙ(s)|₂² ds, by summing the squared distance between the path control points. </p>
+<p>In the limit of infinitely many control points, minimizers for AddPathLengthCost and AddPathEnergyCost will follow the same path, but potentially with different timing. They may have different values if additional costs and constraints are imposed. This cost yields simpler gradients than AddPathLengthCost, and biases the control points towards being evenly spaced.</p>
+<dl class="section return"><dt>Returns</dt><dd>A vector of bindings with the ith element adding a cost to the ith control point of the velocity trajectory. </dd></dl>
+
+</div>
+</div>
 <a id="a6da88e725b9e65eb10ffe19f25742ad4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6da88e725b9e65eb10ffe19f25742ad4">&#9670;&nbsp;</a></span>AddPathLengthCost()</h2>
 
@@ -570,7 +595,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Adds a cost on an upper bound on length of the path, ∫₀ᵀ |q̇(t)|₂ dt, by summing the distance between the path control points. </p>
+<p>Adds a cost on an upper bound of the length of the path, ∫₀ᵀ |q̇(t)|₂ dt, or equivalently ∫₀¹ |ṙ(s)|₂ ds, by summing the distance between the path control points. </p>
 <p>If <code>use_conic_constraint = false</code>, then costs are added via MathematicalProgram::AddL2NormCost; otherwise they are added via MathematicalProgram::AddL2NormCostUsingConicConstraint.</p>
 <dl class="section return"><dt>Returns</dt><dd>A vector of bindings with the ith element adding a cost to the ith control point of the velocity trajectory. </dd></dl>
 
@@ -775,7 +800,9 @@ Public Member Functions</h2></td></tr>
 
 <p>Adds a (generic) constraint on trajectory velocity <code>q̇(t)</code>, evaluated at <code>s</code>. </p>
 <p>The constraint will be evaluated as if it is bound with variables corresponding to <code>[q(T*s), q̇(T*s)]</code>.</p>
-<p>This is a potentially confusing mix of <code>s</code> and <code>t</code>, but it is important in practice. For instance if you want to constrain the true (trajectory) velocity at the final time, one would naturally want to write AddVelocityConstraint(constraint, s=1). </p><dl class="section pre"><dt>Precondition</dt><dd>constraint.num_vars() == <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#aba2887f0ca1fbbdfb49cf6b0ee21e553" title="Returns the number of position variables.">num_positions()</a> </dd>
+<p>This is a potentially confusing mix of <code>s</code> and <code>t</code>, but it is important in practice. For instance if you want to constrain the true (trajectory) velocity at the final time, one would naturally want to write AddVelocityConstraint(constraint, s=1).</p>
+<p>This method should be compared with AddPathVelocityConstraint, which only constrains ṙ(s) because it does not reason about the time scaling, T. However, AddPathVelocityConstraint adds convex constraints, whereas this method adds nonconvex generic constraints.</p>
+<dl class="section pre"><dt>Precondition</dt><dd>constraint.num_vars() == <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#aba2887f0ca1fbbdfb49cf6b0ee21e553" title="Returns the number of position variables.">num_positions()</a> </dd>
 <dd>
 0 &lt;= <code>s</code> &lt;= 1. </dd></dl>
 

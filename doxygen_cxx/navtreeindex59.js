@@ -1,5 +1,10 @@
 var NAVTREEINDEX59 =
 {
+"standard__operations_8h.html#af58fefa0bc73a348e5bed3f39e58827b":[4,0,0,1,0,0,2,69],
+"standard__operations_8h.html#afb32ad0c5b67af845de755dce6767dc8":[4,0,0,1,0,0,2,47],
+"standard__operations_8h.html#afc29155af5cab118516ad1184659e2de":[4,0,0,1,0,0,2,17],
+"state_8h.html":[4,0,0,12,3,36],
+"state__feedback__controller__interface_8h.html":[4,0,0,12,1,11],
 "stateless__system_8h.html":[4,0,0,12,0,0,16],
 "static__equilibrium__constraint_8h.html":[4,0,0,8,8,7],
 "static__equilibrium__problem_8h.html":[4,0,0,8,8,8],
@@ -244,10 +249,5 @@ var NAVTREEINDEX59 =
 "structdrake_1_1geometry_1_1_drake_visualizer_params.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,12,0],
 "structdrake_1_1geometry_1_1_drake_visualizer_params.html#ae7f364184aa2780e090858d0b3cfda14":[3,0,0,4,12,4],
 "structdrake_1_1geometry_1_1_environment_map.html":[3,0,0,4,15],
-"structdrake_1_1geometry_1_1_environment_map.html#a2219ced5556859c62efc2d1f2fff2f26":[3,0,0,4,15,2],
-"structdrake_1_1geometry_1_1_environment_map.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,15,0],
-"structdrake_1_1geometry_1_1_environment_map.html#ae23ac8769253350f41ba92594f9bb0b5":[3,0,0,4,15,1],
-"structdrake_1_1geometry_1_1_equirectangular_map.html":[3,0,0,4,16],
-"structdrake_1_1geometry_1_1_equirectangular_map.html#a4d455efceee21e97d8e21ee40e9b4a20":[3,0,0,4,16,1],
-"structdrake_1_1geometry_1_1_equirectangular_map.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,16,0]
+"structdrake_1_1geometry_1_1_environment_map.html#a2219ced5556859c62efc2d1f2fff2f26":[3,0,0,4,15,2]
 };

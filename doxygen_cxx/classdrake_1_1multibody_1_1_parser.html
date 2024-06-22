@@ -217,6 +217,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1b8bf396f9f7a335098ea5eb96e525d1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_parser.html#a1b8bf396f9f7a335098ea5eb96e525d1">Parser</a> (<a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *<a class="el" href="classdrake_1_1multibody_1_1_parser.html#adbcfdbffd423372fd0b6ece742437971">plant</a>, std::string_view model_name_prefix)</td></tr>
 <tr class="memdesc:a1b8bf396f9f7a335098ea5eb96e525d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classdrake_1_1multibody_1_1_parser.html" title="Parses model description input into a MultibodyPlant and (optionally) a SceneGraph.">Parser</a> that adds models to the given plant and scene_graph.  <a href="#a1b8bf396f9f7a335098ea5eb96e525d1">More...</a><br /></td></tr>
 <tr class="separator:a1b8bf396f9f7a335098ea5eb96e525d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb927943cae3ef783a6623389f39c78d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_parser.html#afb927943cae3ef783a6623389f39c78d">~Parser</a> ()</td></tr>
+<tr class="separator:afb927943cae3ef783a6623389f39c78d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbcfdbffd423372fd0b6ece742437971"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_parser.html#adbcfdbffd423372fd0b6ece742437971">plant</a> ()</td></tr>
 <tr class="memdesc:adbcfdbffd423372fd0b6ece742437971"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a mutable reference to the plant that will be modified by this parser.  <a href="#adbcfdbffd423372fd0b6ece742437971">More...</a><br /></td></tr>
 <tr class="separator:adbcfdbffd423372fd0b6ece742437971"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -443,6 +445,23 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="afb927943cae3ef783a6623389f39c78d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb927943cae3ef783a6623389f39c78d">&#9670;&nbsp;</a></span>~Parser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="classdrake_1_1multibody_1_1_parser.html">Parser</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="ad3bec3a31ebbe841c05773d4f5cb1791"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad3bec3a31ebbe841c05773d4f5cb1791">&#9670;&nbsp;</a></span>AddModels()</h2>
@@ -612,6 +631,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Gets the accumulated set of collision filter definitions seen by this parser. </p>
+<p>There are two kinds of names in the returned data: group names and body names. Both may occur within scoped names indicating the model instance where they are defined. Note that the model instance names used in the returned data will reflect the current names in <a class="el" href="classdrake_1_1multibody_1_1_parser.html#adbcfdbffd423372fd0b6ece742437971" title="Gets a mutable reference to the plant that will be modified by this parser.">plant()</a> at the time this accessor is called (see <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a43433a05aa2c28c03644da7319adab9f" title="Renames an existing model instance.">MultibodyPlant::RenameModelInstance()</a>), but the local group and body names will be the names seen during parsing. </p>
 
 </div>
 </div>

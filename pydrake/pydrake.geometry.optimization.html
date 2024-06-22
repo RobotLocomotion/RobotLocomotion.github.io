@@ -2134,7 +2134,7 @@ graph.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.GraphOfConvexSets.SolveConvexRestriction">
-<span class="sig-name descname"><span class="pre">SolveConvexRestriction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.geometry.optimization.GraphOfConvexSets,</span> <span class="pre">active_edges:</span> <span class="pre">list[pydrake.geometry.optimization.GraphOfConvexSets.Edge],</span> <span class="pre">options:</span> <span class="pre">pydrake.geometry.optimization.GraphOfConvexSetsOptions</span> <span class="pre">=</span> <span class="pre">GraphOfConvexSetsOptions(convex_relaxation=None,</span> <span class="pre">preprocessing=None,</span> <span class="pre">max_rounded_paths=None,</span> <span class="pre">max_rounding_trials=100,</span> <span class="pre">flow_tolerance=1e-05,</span> <span class="pre">rounding_seed=0,</span> <span class="pre">solver=None,</span> <span class="pre">restriction_solver=None,</span> <span class="pre">solver_options=&lt;SolverOptions&gt;,</span> <span class="pre">restriction_solver_options=None,</span> <span class="pre">)</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.MathematicalProgramResult" title="pydrake.solvers.MathematicalProgramResult"><span class="pre">pydrake.solvers.MathematicalProgramResult</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.SolveConvexRestriction" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">SolveConvexRestriction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.geometry.optimization.GraphOfConvexSets,</span> <span class="pre">active_edges:</span> <span class="pre">list[pydrake.geometry.optimization.GraphOfConvexSets.Edge],</span> <span class="pre">options:</span> <span class="pre">pydrake.geometry.optimization.GraphOfConvexSetsOptions</span> <span class="pre">=</span> <span class="pre">GraphOfConvexSetsOptions(convex_relaxation=None,</span> <span class="pre">preprocessing=None,</span> <span class="pre">max_rounded_paths=None,</span> <span class="pre">max_rounding_trials=100,</span> <span class="pre">flow_tolerance=1e-05,</span> <span class="pre">rounding_seed=0,</span> <span class="pre">solver=None,</span> <span class="pre">restriction_solver=None,</span> <span class="pre">solver_options=&lt;SolverOptions&gt;,</span> <span class="pre">restriction_solver_options=None,</span> <span class="pre">),</span> <span class="pre">initial_guess:</span> <span class="pre">pydrake.solvers.MathematicalProgramResult</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.MathematicalProgramResult" title="pydrake.solvers.MathematicalProgramResult"><span class="pre">pydrake.solvers.MathematicalProgramResult</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.SolveConvexRestriction" title="Permalink to this definition"></a></dt>
 <dd><p>The non-convexity in a GCS problem comes from the binary variables
 (phi) associated with the edges being active or inactive in the
 solution. If those binary variables are fixed, then the problem is
@@ -2149,6 +2149,18 @@ to NaN.</p>
 <p>Note that one can specify additional non-convex constraints, which may
 be not supported by all solvers. In this case, the provided solver
 will throw an exception.</p>
+<p>If an <code class="docutils literal notranslate"><span class="pre">initial_guess</span></code> is provided, the solution inside this result
+will be used to set the initial guess for the convex restriction.
+Typically, this will be the result obtained by solving the convex
+relaxation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the initial_guess does not contain solutions</strong> – </p></li>
+<li><p><strong>for the decision variables required in this convex restriction.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">

@@ -8,7 +8,6 @@ var namespacefmt =
     [ "formatter< drake::Identifier< Tag > >", "structfmt_1_1formatter_3_01drake_1_1_identifier_3_01_tag_01_4_01_4.html", null ],
     [ "formatter< drake::math::RigidTransform< T > >", "structfmt_1_1formatter_3_01drake_1_1math_1_1_rigid_transform_3_01_t_01_4_01_4.html", null ],
     [ "formatter< drake::math::RollPitchYaw< T > >", "structfmt_1_1formatter_3_01drake_1_1math_1_1_roll_pitch_yaw_3_01_t_01_4_01_4.html", null ],
-    [ "formatter< drake::multibody::CollisionFilterGroups >", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_collision_filter_groups_01_4.html", null ],
     [ "formatter< drake::multibody::DifferentialInverseKinematicsStatus >", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_differential_inverse_kinematics_status_01_4.html", null ],
     [ "formatter< drake::multibody::PackageMap >", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_package_map_01_4.html", null ],
     [ "formatter< drake::multibody::RotationalInertia< T > >", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_rotational_inertia_3_01_t_01_4_01_4.html", null ],

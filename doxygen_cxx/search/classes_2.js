@@ -97,6 +97,7 @@ var searchData=
   ['copyable_5funique_5fptr_3c_20drake_3a_3atrajectories_3a_3atrajectory_3c_20double_20_3e_20_3e',['copyable_unique_ptr&lt; drake::trajectories::Trajectory&lt; double &gt; &gt;',['../classdrake_1_1copyable__unique__ptr.html',1,'drake']]],
   ['copyable_5funique_5fptr_3c_20drake_3a_3atrajectories_3a_3atrajectory_3c_20t_20_3e_20_3e',['copyable_unique_ptr&lt; drake::trajectories::Trajectory&lt; T &gt; &gt;',['../classdrake_1_1copyable__unique__ptr.html',1,'drake']]],
   ['copyable_5funique_5fptr_3c_20engine_20_3e',['copyable_unique_ptr&lt; Engine &gt;',['../classdrake_1_1copyable__unique__ptr.html',1,'drake']]],
+  ['copyable_5funique_5fptr_3c_20internal_3a_3acollisionfiltergroupsimpl_3c_20std_3a_3astring_20_3e_20_3e',['copyable_unique_ptr&lt; internal::CollisionFilterGroupsImpl&lt; std::string &gt; &gt;',['../classdrake_1_1copyable__unique__ptr.html',1,'drake']]],
   ['copyable_5funique_5fptr_3c_20internal_3a_3aproximityengine_3c_20autodiffxd_20_3e_20_3e',['copyable_unique_ptr&lt; internal::ProximityEngine&lt; AutoDiffXd &gt; &gt;',['../classdrake_1_1copyable__unique__ptr.html',1,'drake']]],
   ['copyable_5funique_5fptr_3c_20internal_3a_3aproximityengine_3c_20double_20_3e_20_3e',['copyable_unique_ptr&lt; internal::ProximityEngine&lt; double &gt; &gt;',['../classdrake_1_1copyable__unique__ptr.html',1,'drake']]],
   ['copyable_5funique_5fptr_3c_20internal_3a_3aproximityengine_3c_20t_20_3e_20_3e',['copyable_unique_ptr&lt; internal::ProximityEngine&lt; T &gt; &gt;',['../classdrake_1_1copyable__unique__ptr.html',1,'drake']]],
