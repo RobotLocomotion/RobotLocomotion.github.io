@@ -185,6 +185,12 @@ class drake::systems::sensors::RotaryEncoders&lt; T &gt;</h3>
 </table>
 </td></tr>
 </table>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
 </div>
 <p><code>#include &lt;drake/systems/sensors/rotary_encoders.h&gt;</code></p>
 <table class="memberdecls">
@@ -203,9 +209,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a51a52e381e9b808c5dca3613dc01270f"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#a51a52e381e9b808c5dca3613dc01270f">RotaryEncoders</a> (const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html">RotaryEncoders</a>&lt; U &gt; &amp;)</td></tr>
 <tr class="memdesc:a51a52e381e9b808c5dca3613dc01270f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scalar-converting copy constructor. See <a class="el" href="group__system__scalar__conversion.html">System Scalar Conversion</a>.  <a href="#a51a52e381e9b808c5dca3613dc01270f">More...</a><br /></td></tr>
 <tr class="separator:a51a52e381e9b808c5dca3613dc01270f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a986d3a37418853352dd6b89a461cda8e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#a986d3a37418853352dd6b89a461cda8e">set_calibration_offsets</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; *context, const Eigen::Ref&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;calibration_offsets) const</td></tr>
-<tr class="memdesc:a986d3a37418853352dd6b89a461cda8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the calibration offset parameters.  <a href="#a986d3a37418853352dd6b89a461cda8e">More...</a><br /></td></tr>
-<tr class="separator:a986d3a37418853352dd6b89a461cda8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2870708bdf972cdfbacc0fa776a01a5d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#a2870708bdf972cdfbacc0fa776a01a5d">set_calibration_offsets</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; *context, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;calibration_offsets) const</td></tr>
+<tr class="memdesc:a2870708bdf972cdfbacc0fa776a01a5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the calibration offset parameters.  <a href="#a2870708bdf972cdfbacc0fa776a01a5d">More...</a><br /></td></tr>
+<tr class="separator:a2870708bdf972cdfbacc0fa776a01a5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d1b2dbe47a753e6935a63f02e5cc586"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#a0d1b2dbe47a753e6935a63f02e5cc586">get_calibration_offsets</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context) const</td></tr>
 <tr class="memdesc:a0d1b2dbe47a753e6935a63f02e5cc586"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the calibration offset parameters.  <a href="#a0d1b2dbe47a753e6935a63f02e5cc586">More...</a><br /></td></tr>
 <tr class="separator:a0d1b2dbe47a753e6935a63f02e5cc586"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1556,8 +1562,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a986d3a37418853352dd6b89a461cda8e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a986d3a37418853352dd6b89a461cda8e">&#9670;&nbsp;</a></span>set_calibration_offsets()</h2>
+<a id="a2870708bdf972cdfbacc0fa776a01a5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2870708bdf972cdfbacc0fa776a01a5d">&#9670;&nbsp;</a></span>set_calibration_offsets()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1571,7 +1577,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Eigen::Ref&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>calibration_offsets</em>&#160;</td>
         </tr>
         <tr>

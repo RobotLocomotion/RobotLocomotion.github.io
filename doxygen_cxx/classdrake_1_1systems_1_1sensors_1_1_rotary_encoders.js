@@ -9,6 +9,6 @@ var classdrake_1_1systems_1_1sensors_1_1_rotary_encoders =
     [ "get_calibration_offsets", "classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#a0d1b2dbe47a753e6935a63f02e5cc586", null ],
     [ "operator=", "classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#aab9f68ba747ce2d23132a1348d1604e7", null ],
     [ "operator=", "classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#a8c0ff1bb8149d8b123c52ce2c6c5615e", null ],
-    [ "set_calibration_offsets", "classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#a986d3a37418853352dd6b89a461cda8e", null ],
+    [ "set_calibration_offsets", "classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#a2870708bdf972cdfbacc0fa776a01a5d", null ],
     [ "RotaryEncoders", "classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#af176a3cbce08b1273cadb85c547666e0", null ]
 ];

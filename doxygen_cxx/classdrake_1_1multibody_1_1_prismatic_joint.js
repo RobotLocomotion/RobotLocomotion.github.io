@@ -4,6 +4,7 @@ var classdrake_1_1multibody_1_1_prismatic_joint =
     [ "PrismaticJoint", "classdrake_1_1multibody_1_1_prismatic_joint.html#a0882afbed041f1a4823cb105abe80af4", null ],
     [ "PrismaticJoint", "classdrake_1_1multibody_1_1_prismatic_joint.html#adc69cb1263cdaec551e07233f470e598", null ],
     [ "PrismaticJoint", "classdrake_1_1multibody_1_1_prismatic_joint.html#a4bb544cad098dd3988a693ae8b3a7665", null ],
+    [ "~PrismaticJoint", "classdrake_1_1multibody_1_1_prismatic_joint.html#a024b638bc44aba4eebd816979faaa5ba", null ],
     [ "acceleration_lower_limit", "classdrake_1_1multibody_1_1_prismatic_joint.html#abfd0eba87edfca3b02cfc44475f06c4c", null ],
     [ "acceleration_upper_limit", "classdrake_1_1multibody_1_1_prismatic_joint.html#ac29ca0ee759d2862539406a971f95169", null ],
     [ "AddInForce", "classdrake_1_1multibody_1_1_prismatic_joint.html#a11e1f7cbfbd10702a7febc6aa8140ae1", null ],

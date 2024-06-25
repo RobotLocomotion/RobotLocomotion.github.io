@@ -3,6 +3,7 @@ var classdrake_1_1multibody_1_1_door_hinge =
     [ "DoorHinge", "classdrake_1_1multibody_1_1_door_hinge.html#ace66480acefc240c2a3dd75a7c4e20ab", null ],
     [ "DoorHinge", "classdrake_1_1multibody_1_1_door_hinge.html#a1c1522be243a3ab3eeca60c8c56696ce", null ],
     [ "DoorHinge", "classdrake_1_1multibody_1_1_door_hinge.html#aea84c5e088a697ae4571e5b165e9b2bd", null ],
+    [ "~DoorHinge", "classdrake_1_1multibody_1_1_door_hinge.html#a5e203c1a0451b21d8eb3013e29793b88", null ],
     [ "CalcConservativePower", "classdrake_1_1multibody_1_1_door_hinge.html#a0480114a02d8ac4edc2f4011a3f3e3cd", null ],
     [ "CalcHingeConservativePower", "classdrake_1_1multibody_1_1_door_hinge.html#a23c73f4faed4d94c062ef26f1143c9ea", null ],
     [ "CalcHingeFrictionalTorque", "classdrake_1_1multibody_1_1_door_hinge.html#a1a3872435692d59007761e82cb48b17e", null ],

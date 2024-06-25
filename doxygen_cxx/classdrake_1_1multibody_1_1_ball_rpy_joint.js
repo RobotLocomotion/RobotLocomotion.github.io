@@ -4,6 +4,7 @@ var classdrake_1_1multibody_1_1_ball_rpy_joint =
     [ "BallRpyJoint", "classdrake_1_1multibody_1_1_ball_rpy_joint.html#ab594bdc4b5325c7efa500360ba442670", null ],
     [ "BallRpyJoint", "classdrake_1_1multibody_1_1_ball_rpy_joint.html#adb6d51c7db9bc4797c029d3353a19b67", null ],
     [ "BallRpyJoint", "classdrake_1_1multibody_1_1_ball_rpy_joint.html#ac189d164261c82d5cdf02ceff0e22e98", null ],
+    [ "~BallRpyJoint", "classdrake_1_1multibody_1_1_ball_rpy_joint.html#a1c10a31af71f52f146b97dd1656ecdb4", null ],
     [ "default_damping", "classdrake_1_1multibody_1_1_ball_rpy_joint.html#aea9614ad4bc22801505a7399550293ce", null ],
     [ "DoAddInDamping", "classdrake_1_1multibody_1_1_ball_rpy_joint.html#ae58dc70f3e0535c09582b85ecbc612a7", null ],
     [ "DoAddInOneForce", "classdrake_1_1multibody_1_1_ball_rpy_joint.html#a83a06d8a7b5e79c67b09f98583b0d807", null ],

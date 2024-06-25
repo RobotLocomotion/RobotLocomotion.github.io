@@ -5,6 +5,7 @@ var classdrake_1_1multibody_1_1_screw_joint =
     [ "ScrewJoint", "classdrake_1_1multibody_1_1_screw_joint.html#a860344579493829af87f8235ed7793ed", null ],
     [ "ScrewJoint", "classdrake_1_1multibody_1_1_screw_joint.html#ac17d35a2433c154463a76f2c97399c83", null ],
     [ "ScrewJoint", "classdrake_1_1multibody_1_1_screw_joint.html#ad92dad6df59ace2a85b68cb6b43d960c", null ],
+    [ "~ScrewJoint", "classdrake_1_1multibody_1_1_screw_joint.html#ae9417c8e82eae0e387b2c6f07cbe7b1a", null ],
     [ "default_damping", "classdrake_1_1multibody_1_1_screw_joint.html#aea9614ad4bc22801505a7399550293ce", null ],
     [ "get_angular_velocity", "classdrake_1_1multibody_1_1_screw_joint.html#ad76be9d40c3f33db0711c565cb3c7278", null ],
     [ "get_default_rotation", "classdrake_1_1multibody_1_1_screw_joint.html#a1afd87f9af71c38de81ebfa078a30042", null ],

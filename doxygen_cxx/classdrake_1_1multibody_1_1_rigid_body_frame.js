@@ -2,6 +2,7 @@ var classdrake_1_1multibody_1_1_rigid_body_frame =
 [
     [ "RigidBodyFrame", "classdrake_1_1multibody_1_1_rigid_body_frame.html#ad61d2c71c1094b3fd326bf7cf6606bf2", null ],
     [ "RigidBodyFrame", "classdrake_1_1multibody_1_1_rigid_body_frame.html#a0c26a37d9eed691bfb0f29b3c481c4ff", null ],
+    [ "~RigidBodyFrame", "classdrake_1_1multibody_1_1_rigid_body_frame.html#aacf2f04ceeed7f66f226a1e077c440e2", null ],
     [ "CalcOffsetPoseInBody", "classdrake_1_1multibody_1_1_rigid_body_frame.html#a359a32149ff74ea25f4f381533bf67de", null ],
     [ "CalcOffsetRotationMatrixInBody", "classdrake_1_1multibody_1_1_rigid_body_frame.html#a435e455a5023bdbaef4f38d4c6ed1c76", null ],
     [ "CalcPoseInBodyFrame", "classdrake_1_1multibody_1_1_rigid_body_frame.html#af545520bafbd67a7e6c8b3c0bf4aae6f", null ],

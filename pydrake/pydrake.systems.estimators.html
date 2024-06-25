@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pydrake.systems.estimators &mdash; pydrake  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pydrake.systems.framework" href="pydrake.systems.framework.html" />
+    <link rel="prev" title="pydrake.systems.drawing" href="pydrake.systems.drawing.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+<header class="site-header">
+  <div class="site-header-inner contain">
+    <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+    <div class="menu-mobile-toggle">
+      <span></span>
+    </div>
+    <nav class="site-menu">
+      <ul>
+        <li class="site-menu-item site-menu-item-main">
+          <a class="site-menu-item" href="/">Home</a>
+        </li>
+        <li class="site-menu-item site-menu-item-main">
+          <a class="site-menu-item" href="/installation.html">Installation</a>
+        </li>
+        <li class="site-menu-item site-menu-item-main">
+          <a class="site-menu-item" href="/gallery.html">Gallery</a>
+        </li>
+        <li class="site-menu-item site-menu-item-main">API Documentation
+          <div class="sub">
+            <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a> <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+          </div>
+        </li>
+        <li class="site-menu-item site-menu-item-main">Resources
+          <div class="sub">
+            <a class="site-menu-item" href="/getting_help.html">Getting Help</a> <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/%2Findex.ipynb">Tutorials</a> <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a> <a class="site-menu-item" href="/developers.html">For Developers</a> <a class="site-menu-item" href="/credits.html">Credits</a>
+          </div>
+        </li>
+        <li class="github-link">
+          <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> pydrake
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search pydrake only…" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+    <input type="text" name="q" placeholder="Search all of Drake…" />
+    <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu" />
+  </form>
+</div>
+
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.gym.html">pydrake.gym</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.planning.html">pydrake.planning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.polynomial.html">pydrake.polynomial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.all.html">pydrake.systems.all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.analysis.html">pydrake.systems.analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.controllers.html">pydrake.systems.controllers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.drawing.html">pydrake.systems.drawing</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.systems.estimators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.framework.html">pydrake.systems.framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.lcm.html">pydrake.systems.lcm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.perception.html">pydrake.systems.perception</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.planar_scenegraph_visualizer.html">pydrake.systems.planar_scenegraph_visualizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.primitives.html">pydrake.systems.primitives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.pyplot_visualizer.html">pydrake.systems.pyplot_visualizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.rendering.html">pydrake.systems.rendering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.scalar_conversion.html">pydrake.systems.scalar_conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.sensors.html">pydrake.systems.sensors</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.tutorials.html">pydrake.tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.visualization.html">pydrake.visualization</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="pydrake.systems.html">pydrake.systems</a> &raquo;</li>
+      <li>pydrake.systems.estimators</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-pydrake.systems.estimators">
+<span id="pydrake-systems-estimators"></span><h1>pydrake.systems.estimators<a class="headerlink" href="#module-pydrake.systems.estimators" title="Permalink to this headline"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.estimators.LuenbergerObserver">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.estimators.</span></span><span class="sig-name descname"><span class="pre">LuenbergerObserver</span></span><a class="headerlink" href="#pydrake.systems.estimators.LuenbergerObserver" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<p>A simple state observer for a dynamical system of the form:</p>
+<div class="math notranslate nohighlight">
+\[\dot{x} = f(x,u)\]</div>
+<div class="math notranslate nohighlight">
+\[y = g(x,u)\]</div>
+<p>the observer dynamics takes the form</p>
+<div class="math notranslate nohighlight">
+\[\dot{\hat{x}} = f(\hat{x},u) + L(y - g(\hat{x},u))\]</div>
+<p>where <span class="math notranslate nohighlight">\(\hat{x}\)</span> is the estimated state of the original system.</p>
+<p>The output of the observer system is <span class="math notranslate nohighlight">\(\hat{x}\)</span>.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">observed system input&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">observed_system_output&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>LuenbergerObserver</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; estimated_state</td></tr></table></td></tr></table><dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.estimators.LuenbergerObserver.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.estimators.LuenbergerObserver" title="pydrake.systems.estimators.LuenbergerObserver"><span class="pre">pydrake.systems.estimators.LuenbergerObserver</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">observed_system</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.System" title="pydrake.systems.framework.System"><span class="pre">pydrake.systems.framework.System</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">observed_system_context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">observer_gain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.estimators.LuenbergerObserver.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Constructs the observer.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">observed_system</span></code>:</dt><dd><p>The forward model for the observer. Currently, this system must
+have a maximum of one input port and exactly one output port.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">observed_system_context</span></code>:</dt><dd><p>Required because it may contain parameters which we need to
+evaluate the system.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">observer_gain</span></code>:</dt><dd><p>A m-by-n matrix where m is the number of state variables in
+<code class="docutils literal notranslate"><span class="pre">observed_system</span></code>, and n is the dimension of the output port of
+<code class="docutils literal notranslate"><span class="pre">observed_system</span></code>.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>The observed_system output port must be vector-valued.</p>
+</dd>
+</dl>
+<p>Note: The <code class="docutils literal notranslate"><span class="pre">observed_system</span></code> reference must remain valid for the
+lifetime of this system.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.estimators.LuenbergerObserver.get_estimated_state_output_port">
+<span class="sig-name descname"><span class="pre">get_estimated_state_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.estimators.LuenbergerObserver" title="pydrake.systems.estimators.LuenbergerObserver"><span class="pre">pydrake.systems.estimators.LuenbergerObserver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.estimators.LuenbergerObserver.get_estimated_state_output_port" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.estimators.LuenbergerObserver.get_observed_system_input_input_port">
+<span class="sig-name descname"><span class="pre">get_observed_system_input_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.estimators.LuenbergerObserver" title="pydrake.systems.estimators.LuenbergerObserver"><span class="pre">pydrake.systems.estimators.LuenbergerObserver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.estimators.LuenbergerObserver.get_observed_system_input_input_port" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.estimators.LuenbergerObserver.get_observed_system_output_input_port">
+<span class="sig-name descname"><span class="pre">get_observed_system_output_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.estimators.LuenbergerObserver" title="pydrake.systems.estimators.LuenbergerObserver"><span class="pre">pydrake.systems.estimators.LuenbergerObserver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.estimators.LuenbergerObserver.get_observed_system_output_input_port" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.estimators.LuenbergerObserver.L">
+<span class="sig-name descname"><span class="pre">L</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.estimators.LuenbergerObserver" title="pydrake.systems.estimators.LuenbergerObserver"><span class="pre">pydrake.systems.estimators.LuenbergerObserver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.estimators.LuenbergerObserver.L" title="Permalink to this definition"></a></dt>
+<dd><p>Provides access via the short-hand name, L, too.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.estimators.LuenbergerObserver.observer_gain">
+<span class="sig-name descname"><span class="pre">observer_gain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.estimators.LuenbergerObserver" title="pydrake.systems.estimators.LuenbergerObserver"><span class="pre">pydrake.systems.estimators.LuenbergerObserver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.estimators.LuenbergerObserver.observer_gain" title="Permalink to this definition"></a></dt>
+<dd><p>Provides access to the observer gain.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydrake.systems.estimators.SteadyStateKalmanFilter">
+<span class="sig-prename descclassname"><span class="pre">pydrake.systems.estimators.</span></span><span class="sig-name descname"><span class="pre">SteadyStateKalmanFilter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.estimators.SteadyStateKalmanFilter" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>SteadyStateKalmanFilter(A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], C: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], W: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], V: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]) -&gt; numpy.ndarray[numpy.float64[m, n]]</p></li>
+</ol>
+<p>Computes the optimal observer gain, L, for the linear system defined
+by</p>
+<div class="math notranslate nohighlight">
+\[\dot{x} = Ax + Bu + w,\]</div>
+<div class="math notranslate nohighlight">
+\[y = Cx + Du + v.\]</div>
+<p>The resulting observer is of the form</p>
+<div class="math notranslate nohighlight">
+\[\dot{\hat{x}} = A\hat{x} + Bu + L(y - C\hat{x} - Du).\]</div>
+<p>The process noise, w, and the measurement noise, v, are assumed to be
+iid mean-zero Gaussian.</p>
+<p>This is a simplified form of the full Kalman filter obtained by
+assuming that the state-covariance matrix has already converged to its
+steady-state solution.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">A</span></code>:</dt><dd><p>The state-space dynamics matrix of size num_states x num_states.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">C</span></code>:</dt><dd><p>The state-space output matrix of size num_outputs x num_states.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">W</span></code>:</dt><dd><p>The process noise covariance matrix, E[ww’], of size num_states x
+num_states.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">V</span></code>:</dt><dd><p>The measurement noise covariance matrix, E[vv’], of size <a href="#id1"><span class="problematic" id="id2">num_</span></a>.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The steady-state observer gain matrix of size num_states x
+num_outputs.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>RuntimeError if V is not positive definite.</strong> – </p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>SteadyStateKalmanFilter(system: pydrake.systems.primitives.LinearSystem, W: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], V: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]) -&gt; pydrake.systems.estimators.LuenbergerObserver</p></li>
+</ol>
+<p>Creates a Luenberger observer system using the optimal steady-state
+Kalman filter gain matrix, L, as described above.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">system</span></code>:</dt><dd><p>A unique_ptr to a LinearSystem describing the system to be
+observed. The new observer will take and maintain ownership of
+this pointer.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">W</span></code>:</dt><dd><p>The process noise covariance matrix, E[ww’], of size num_states x
+num_states.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">V</span></code>:</dt><dd><p>The measurement noise covariance matrix, E[vv’], of size <a href="#id3"><span class="problematic" id="id4">num_</span></a>.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A unique_ptr to the constructed observer system.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>RuntimeError if V is not positive definite.</strong> – </p>
+</dd>
+</dl>
+<ol class="arabic simple" start="3">
+<li><p>SteadyStateKalmanFilter(system: pydrake.systems.framework.System, context: pydrake.systems.framework.Context, W: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], V: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]) -&gt; pydrake.systems.estimators.LuenbergerObserver</p></li>
+</ol>
+<p>Creates a Luenberger observer system using the steady-state Kalman
+filter observer gain.</p>
+<p>Assuming <code class="docutils literal notranslate"><span class="pre">system</span></code> has the (continuous-time) dynamics: dx/dt =
+f(x,u), and the output: y = g(x,u), then the resulting observer will
+have the form dx̂/dt = f(x̂,u) + L(y - g(x̂,u)), where x̂ is the
+estimated state and the gain matrix, L, is designed as a steady-state
+Kalman filter using a linearization of f(x,u) at <code class="docutils literal notranslate"><span class="pre">context</span></code> as
+described above.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">system</span></code>:</dt><dd><p>A unique_ptr to a System describing the system to be observed. The
+new observer will take and maintain ownership of this pointer.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>A unique_ptr to the context describing a fixed-point of the system
+(plus any additional parameters). The new observer will take and
+maintain ownership of this pointer for use in its internal forward
+simulation.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">W</span></code>:</dt><dd><p>The process noise covariance matrix, E[ww’], of size num_states x
+num_states.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">V</span></code>:</dt><dd><p>The measurement noise covariance matrix, E[vv’], of size <a href="#id5"><span class="problematic" id="id6">num_</span></a>.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A unique_ptr to the constructed observer system.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>RuntimeError if V is not positive definite.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pydrake.systems.drawing.html" class="btn btn-neutral float-left" title="pydrake.systems.drawing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pydrake.systems.framework.html" class="btn btn-neutral float-right" title="pydrake.systems.framework" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+</footer>
+<script>
+  /* Enables clicking for the mobile "hamburger" (three-line) menu item. */
+  const siteHeader = document.querySelector('.site-header')
+  const mobileButton = document.querySelector('.menu-mobile-toggle')
+  const body = document.querySelector('body')
+
+  mobileButton.addEventListener('click', function(event) {
+    siteHeader.classList.toggle('open');
+    body.classList.toggle('overflow-hidden');
+  })
+</script>
+<footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg">
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

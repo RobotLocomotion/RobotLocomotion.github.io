@@ -22,5 +22,10 @@ var event_8h =
       [ "kPeriodic", "event_8h.html#a59b7f49353f2a99b6c22d2eaae0fe9e9aa4dadcf41a1fb6841557aad7688dc1a4", null ],
       [ "kPerStep", "event_8h.html#a59b7f49353f2a99b6c22d2eaae0fe9e9a04a6eca450c24af0269212fb90c57d9f", null ],
       [ "kWitness", "event_8h.html#a59b7f49353f2a99b6c22d2eaae0fe9e9a74e1dac7f98f52df26d510f93c36ae34", null ]
-    ] ]
+    ] ],
+    [ "DRAKE_DECLARE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_SCALARS", "event_8h.html#a1489bfec0090055bcfc544fb3b9d0480", null ],
+    [ "DRAKE_DECLARE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_SCALARS", "event_8h.html#a58c58f77a369467b07d56a14caf9f1e4", null ],
+    [ "DRAKE_DECLARE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_SCALARS", "event_8h.html#a13fd534867c96f90604d19a3f39023d6", null ],
+    [ "DRAKE_DECLARE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_SCALARS", "event_8h.html#aec87b6ddf64a376ead29c1ea2dd7d56c", null ],
+    [ "DRAKE_DECLARE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_SCALARS", "event_8h.html#a282cee32afcddf92ffc187326559316a", null ]
 ];

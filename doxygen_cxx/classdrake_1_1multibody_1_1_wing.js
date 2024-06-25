@@ -4,6 +4,7 @@ var classdrake_1_1multibody_1_1_wing =
     [ "Wing", "classdrake_1_1multibody_1_1_wing.html#a30c2af8386010347ab0e75471db8bd5f", null ],
     [ "Wing", "classdrake_1_1multibody_1_1_wing.html#ae6a304621c46494db84d8ca2791cdc7f", null ],
     [ "Wing", "classdrake_1_1multibody_1_1_wing.html#ad16f6945d33d45216dc313e01e71d26d", null ],
+    [ "~Wing", "classdrake_1_1multibody_1_1_wing.html#a41b07ba63cfdc3c42033697bad5e149b", null ],
     [ "AddToBuilder", "classdrake_1_1multibody_1_1_wing.html#a45c1f100f951d5be7ed13fab820088c4", null ],
     [ "get_aerodynamic_center_output_port", "classdrake_1_1multibody_1_1_wing.html#ad8a61762549243f762062683051f14f6", null ],
     [ "get_body_poses_input_port", "classdrake_1_1multibody_1_1_wing.html#a00bb1bf6b619e332e440549f5ae2bcb3", null ],

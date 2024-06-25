@@ -1,5 +1,17 @@
 var NAVTREEINDEX1 =
 {
+"classdrake_1_1_parallelism.html#ad54de9b4a6c9b53f9ad672ca833eb208":[3,0,0,40,4],
+"classdrake_1_1_parallelism.html#ae799e481d047b101dbabbd4250f8e109":[3,0,0,40,3],
+"classdrake_1_1_polynomial.html":[3,0,0,41],
+"classdrake_1_1_polynomial.html#a03a34972aa2903d7210d0bda55e5c157":[3,0,0,41,31],
+"classdrake_1_1_polynomial.html#a0a83f7960aa020c56d20f435dba4d3cd":[3,0,0,41,33],
+"classdrake_1_1_polynomial.html#a0b48b4297791d2a4f9cbb45f14ed94c7":[3,0,0,41,36],
+"classdrake_1_1_polynomial.html#a113f39750edd840d2f269940e5ca1cb6":[3,0,0,41,12],
+"classdrake_1_1_polynomial.html#a11cf4226b2a620c6cbe8d4f953de0891":[3,0,0,41,18],
+"classdrake_1_1_polynomial.html#a2144bf3acf165a2a921d7df87ac4eafe":[3,0,0,41,63],
+"classdrake_1_1_polynomial.html#a268b9f8605e7fc2cca049db6c64182cf":[3,0,0,41,62],
+"classdrake_1_1_polynomial.html#a270da73b23ef39efde1f1848d6349434":[3,0,0,41,22],
+"classdrake_1_1_polynomial.html#a2f4e320eb4e56b74c4e212067ae9fbf0":[3,0,0,41,11],
 "classdrake_1_1_polynomial.html#a30d861d1bfde004747d8a90c6e61e728":[3,0,0,41,60],
 "classdrake_1_1_polynomial.html#a349fd2f5f3296a57e503bf9f2f25bc55":[3,0,0,41,39],
 "classdrake_1_1_polynomial.html#a38f4b1afcc5a0f495caad64cbf8688d3":[3,0,0,41,23],
@@ -237,17 +249,5 @@ var NAVTREEINDEX1 =
 "classdrake_1_1examples_1_1acrobot_1_1_acrobot_input.html#a2863f0f72224a659d57a38927f49a594":[3,0,0,3,0,3,13],
 "classdrake_1_1examples_1_1acrobot_1_1_acrobot_input.html#a3d4b11d9c533faf32d18368098a91bd6":[3,0,0,3,0,3,10],
 "classdrake_1_1examples_1_1acrobot_1_1_acrobot_input.html#a4f326f1ded578674c93eeb9a24c02500":[3,0,0,3,0,3,5],
-"classdrake_1_1examples_1_1acrobot_1_1_acrobot_input.html#a5fd62c170a6956447389968a256b26d3":[3,0,0,3,0,3,1],
-"classdrake_1_1examples_1_1acrobot_1_1_acrobot_input.html#a79540416b54685822a1017b50cd3e6be":[3,0,0,3,0,3,8],
-"classdrake_1_1examples_1_1acrobot_1_1_acrobot_input.html#a7cd30f14f537b18cd56e7534c00c104e":[3,0,0,3,0,3,7],
-"classdrake_1_1examples_1_1acrobot_1_1_acrobot_input.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,3,0,3,9],
-"classdrake_1_1examples_1_1acrobot_1_1_acrobot_input.html#a964ff3471229cb8acad1626f9a624ce1":[3,0,0,3,0,3,6],
-"classdrake_1_1examples_1_1acrobot_1_1_acrobot_input.html#a9b917b6f9f89a635459e87eb693bf862":[3,0,0,3,0,3,12],
-"classdrake_1_1examples_1_1acrobot_1_1_acrobot_input.html#aaac14393905a011f6749cd97c5f36c4e":[3,0,0,3,0,3,3],
-"classdrake_1_1examples_1_1acrobot_1_1_acrobot_input.html#ab48e9663fca0ae538bab834847951b52":[3,0,0,3,0,3,11],
-"classdrake_1_1examples_1_1acrobot_1_1_acrobot_input.html#ab5975d1ee7666d2ad55d644856910a3d":[3,0,0,3,0,3,4],
-"classdrake_1_1examples_1_1acrobot_1_1_acrobot_params.html":[3,0,0,3,0,5],
-"classdrake_1_1examples_1_1acrobot_1_1_acrobot_params.html#a095be9be73197ab01031199df0ac6ebd":[3,0,0,3,0,5,19],
-"classdrake_1_1examples_1_1acrobot_1_1_acrobot_params.html#a1284fd913899498da927427280763087":[3,0,0,3,0,5,38],
-"classdrake_1_1examples_1_1acrobot_1_1_acrobot_params.html#a13c3dccc72607c5cb0e5ac83cc08e475":[3,0,0,3,0,5,9]
+"classdrake_1_1examples_1_1acrobot_1_1_acrobot_input.html#a5fd62c170a6956447389968a256b26d3":[3,0,0,3,0,3,1]
 };

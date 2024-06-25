@@ -3,6 +3,7 @@ var classdrake_1_1multibody_1_1_deformable_model =
     [ "DeformableModel", "classdrake_1_1multibody_1_1_deformable_model.html#a43232b40951ba5412cc46880c836caff", null ],
     [ "DeformableModel", "classdrake_1_1multibody_1_1_deformable_model.html#a6aa557681c0dfec2a475f02fad65d74e", null ],
     [ "DeformableModel", "classdrake_1_1multibody_1_1_deformable_model.html#a4d641d06b345cafc39cfddf51513b211", null ],
+    [ "~DeformableModel", "classdrake_1_1multibody_1_1_deformable_model.html#aa67160df8616d99a24a65769c1a72f26", null ],
     [ "AddExternalForce", "classdrake_1_1multibody_1_1_deformable_model.html#a577ee07a79c5e8e65594ea8ee16ab0e5", null ],
     [ "AddFixedConstraint", "classdrake_1_1multibody_1_1_deformable_model.html#a0c18b0c8d67975d2ee7ca2b8bb01c28d", null ],
     [ "configuration_output_port_index", "classdrake_1_1multibody_1_1_deformable_model.html#a31f05a59c9fd329e0e4379d6885aa543", null ],

@@ -328,6 +328,17 @@ for <code class="language-plaintext highlighter-rouge">REMOTE_CACHE_KEY</code> a
 <a href="https://drakedevelopers.slack.com/messages/buildcop/details/">#buildcop</a>
 channel on Slack, ensuring that <code class="language-plaintext highlighter-rouge">@betsymcphail</code> is mentioned in the message.</p>
 
+<h2 id="monitor-the-build-queue">Monitor the Build Queue</h2>
+
+<p>Check once per week that jobs are not stuck on the Build Queue. Occasionally,
+jobs are added to the queue but never start. This is likely due to
+infrastructure issues that prevent nodes from launching. In this case, as the
+jobs never fail, build cops are not notified via email.</p>
+
+<p>If jobs seems to be stuck, report the issue by tagging <code class="language-plaintext highlighter-rouge">@betsymcphail</code> on the
+<a href="https://drakedevelopers.slack.com/messages/buildcop/details/">#buildcop</a>
+channel on Slack.</p>
+
 <h2 id="respond-to-breakage">Respond to Breakage</h2>
 
 <p>There are various reasons the build might break. Diagnose the failure, and

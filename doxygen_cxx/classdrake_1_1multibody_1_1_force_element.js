@@ -3,6 +3,7 @@ var classdrake_1_1multibody_1_1_force_element =
     [ "ForceElement", "classdrake_1_1multibody_1_1_force_element.html#a8f84680c0a78595b5aee3d2296df9e46", null ],
     [ "ForceElement", "classdrake_1_1multibody_1_1_force_element.html#a634f562a40c03473c7e04e0ffdd02edb", null ],
     [ "ForceElement", "classdrake_1_1multibody_1_1_force_element.html#a7d376e6e11619a2712464d679dfdca3b", null ],
+    [ "~ForceElement", "classdrake_1_1multibody_1_1_force_element.html#a070a81a28982a758abc93d33c50a1048", null ],
     [ "CalcAndAddForceContribution", "classdrake_1_1multibody_1_1_force_element.html#a2a177da26f0638b6f11384fdecdf7812", null ],
     [ "CalcConservativePower", "classdrake_1_1multibody_1_1_force_element.html#a1d5b76789dc3865d6f64ec353b57c5f2", null ],
     [ "CalcNonConservativePower", "classdrake_1_1multibody_1_1_force_element.html#a9f588044d9a3cb0afa1f355966e9bede", null ],

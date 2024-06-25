@@ -3,6 +3,7 @@ var classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw =
     [ "LinearBushingRollPitchYaw", "classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#aa0575e0cf14a1364e61f353eb16a22fd", null ],
     [ "LinearBushingRollPitchYaw", "classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#a6ea959631c28d8f76b3e44b60e0ac4de", null ],
     [ "LinearBushingRollPitchYaw", "classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#a010d176ec7ea15d25bb4e70b85283db0", null ],
+    [ "~LinearBushingRollPitchYaw", "classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#affa320abd4331fa4b471b0f0b431fc8b", null ],
     [ "CalcBushingSpatialForceOnFrameA", "classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#a144ce0c6a9c0f4827fe6c0a8c3da226c", null ],
     [ "CalcBushingSpatialForceOnFrameC", "classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#a425889c333ac04815f5ed0b9a3740ff5", null ],
     [ "force_damping_constants", "classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#a267edae8605e4acdddde78de1197fdc6", null ],

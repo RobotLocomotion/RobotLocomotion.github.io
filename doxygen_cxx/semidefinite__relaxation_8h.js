@@ -1,5 +1,6 @@
 var semidefinite__relaxation_8h =
 [
-    [ "MakeSemidefiniteRelaxation", "semidefinite__relaxation_8h.html#af6da6d265dcd5e959082b17d3a94258b", null ],
-    [ "MakeSemidefiniteRelaxation", "semidefinite__relaxation_8h.html#a56eb3fcc2f03d972f06486730916cbf0", null ]
+    [ "SemidefiniteRelaxationOptions", "structdrake_1_1solvers_1_1_semidefinite_relaxation_options.html", "structdrake_1_1solvers_1_1_semidefinite_relaxation_options" ],
+    [ "MakeSemidefiniteRelaxation", "semidefinite__relaxation_8h.html#a369749919dd3d182cd40a1c089731158", null ],
+    [ "MakeSemidefiniteRelaxation", "semidefinite__relaxation_8h.html#a163b69b1b6a59eef7209dc949537b941", null ]
 ];

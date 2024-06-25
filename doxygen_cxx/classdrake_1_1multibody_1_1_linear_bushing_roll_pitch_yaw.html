@@ -318,6 +318,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a010d176ec7ea15d25bb4e70b85283db0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#a010d176ec7ea15d25bb4e70b85283db0">LinearBushingRollPitchYaw</a> (const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;<a class="el" href="classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#a0a77b7988d6de40ca1ced003d165ceb8">frameA</a>, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;<a class="el" href="classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#a493af1883d5b4eb87c796ba239ee5a88">frameC</a>, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;<a class="el" href="classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#a616822d70102798cd0150b17765d47f0">torque_stiffness_constants</a>, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;<a class="el" href="classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#ac760412f0669c2940dc271293904c8ed">torque_damping_constants</a>, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;<a class="el" href="classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#acb05fce88471997a4d5f87674085d0b3">force_stiffness_constants</a>, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;<a class="el" href="classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#a267edae8605e4acdddde78de1197fdc6">force_damping_constants</a>)</td></tr>
 <tr class="memdesc:a010d176ec7ea15d25bb4e70b85283db0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html" title="This ForceElement models a massless flexible bushing that connects a frame A of a link (body) L0 to a...">LinearBushingRollPitchYaw</a> B that connects frames A and C, where frame A is welded to a link L0 and frame C is welded to a link L1.  <a href="#a010d176ec7ea15d25bb4e70b85283db0">More...</a><br /></td></tr>
 <tr class="separator:a010d176ec7ea15d25bb4e70b85283db0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affa320abd4331fa4b471b0f0b431fc8b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#affa320abd4331fa4b471b0f0b431fc8b">~LinearBushingRollPitchYaw</a> () override</td></tr>
+<tr class="separator:affa320abd4331fa4b471b0f0b431fc8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06da396088eecd221c5299a310d437df"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#a06da396088eecd221c5299a310d437df">link0</a> () const</td></tr>
 <tr class="memdesc:a06da396088eecd221c5299a310d437df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns link (body) L0 (frame A is welded to link L0).  <a href="#a06da396088eecd221c5299a310d437df">More...</a><br /></td></tr>
 <tr class="separator:a06da396088eecd221c5299a310d437df"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -386,6 +388,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7d376e6e11619a2712464d679dfdca3b inherit pub_methods_classdrake_1_1multibody_1_1_force_element"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_force_element.html#a7d376e6e11619a2712464d679dfdca3b">ForceElement</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#acd2192bbd60e8c8d2c14763041d66d50">model_instance</a>)</td></tr>
 <tr class="memdesc:a7d376e6e11619a2712464d679dfdca3b inherit pub_methods_classdrake_1_1multibody_1_1_force_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor for a generic force element.  <a href="classdrake_1_1multibody_1_1_force_element.html#a7d376e6e11619a2712464d679dfdca3b">More...</a><br /></td></tr>
 <tr class="separator:a7d376e6e11619a2712464d679dfdca3b inherit pub_methods_classdrake_1_1multibody_1_1_force_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a070a81a28982a758abc93d33c50a1048 inherit pub_methods_classdrake_1_1multibody_1_1_force_element"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_force_element.html#a070a81a28982a758abc93d33c50a1048">~ForceElement</a> () override</td></tr>
+<tr class="separator:a070a81a28982a758abc93d33c50a1048 inherit pub_methods_classdrake_1_1multibody_1_1_force_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a835dc93131525dfdb27839207c43ccfa inherit pub_methods_classdrake_1_1multibody_1_1_force_element"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#add80e949328b179d78312d1455319868">ForceElementIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_force_element.html#a835dc93131525dfdb27839207c43ccfa">index</a> () const</td></tr>
 <tr class="memdesc:a835dc93131525dfdb27839207c43ccfa inherit pub_methods_classdrake_1_1multibody_1_1_force_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns this element's unique index.  <a href="classdrake_1_1multibody_1_1_force_element.html#a835dc93131525dfdb27839207c43ccfa">More...</a><br /></td></tr>
 <tr class="separator:a835dc93131525dfdb27839207c43ccfa inherit pub_methods_classdrake_1_1multibody_1_1_force_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -596,6 +600,31 @@ The net moment on C about Co is affected by both the gimbal torque and the momen
 <dd>
 The ModelInstanceIndex assigned to this by the constructor is the one assigned to frame C, i.e., frameC.model_instance(). </dd></dl>
 <dl class="section pre"><dt>Precondition</dt><dd>All the stiffness and damping constants must be non-negative. </dd></dl>
+
+</div>
+</div>
+<a id="affa320abd4331fa4b471b0f0b431fc8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affa320abd4331fa4b471b0f0b431fc8b">&#9670;&nbsp;</a></span>~LinearBushingRollPitchYaw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html">LinearBushingRollPitchYaw</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

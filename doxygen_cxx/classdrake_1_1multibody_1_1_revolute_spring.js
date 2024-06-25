@@ -3,6 +3,7 @@ var classdrake_1_1multibody_1_1_revolute_spring =
     [ "RevoluteSpring", "classdrake_1_1multibody_1_1_revolute_spring.html#a983f1c984b54cf9211f297139d4cb3e7", null ],
     [ "RevoluteSpring", "classdrake_1_1multibody_1_1_revolute_spring.html#afb247ae190f03648bc1f1de4465d2554", null ],
     [ "RevoluteSpring", "classdrake_1_1multibody_1_1_revolute_spring.html#af641c0af58b7c26976405a71d87914f9", null ],
+    [ "~RevoluteSpring", "classdrake_1_1multibody_1_1_revolute_spring.html#a94375b8dbcaefb6612fa6ff85ba902f2", null ],
     [ "CalcConservativePower", "classdrake_1_1multibody_1_1_revolute_spring.html#a2a3b98d7bf6ebbdb80f69b550edc86ab", null ],
     [ "CalcNonConservativePower", "classdrake_1_1multibody_1_1_revolute_spring.html#a138e6e888ff71dc31cdc64b33f056e68", null ],
     [ "CalcPotentialEnergy", "classdrake_1_1multibody_1_1_revolute_spring.html#a0fc55c54d954d864281289c0dead6cce", null ],

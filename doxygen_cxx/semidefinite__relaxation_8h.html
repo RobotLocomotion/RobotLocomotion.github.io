@@ -159,6 +159,7 @@ $(document).ready(function(){initNavTree('semidefinite__relaxation_8h.html','');
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
@@ -175,6 +176,12 @@ Include dependency graph for semidefinite_relaxation.h:</div>
 </div>
 </div>
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1solvers_1_1_semidefinite_relaxation_options.html">SemidefiniteRelaxationOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration options for the MakeSemidefiniteRelaxation.  <a href="structdrake_1_1solvers_1_1_semidefinite_relaxation_options.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacedrake"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html">drake</a></td></tr>
@@ -184,12 +191,12 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:af6da6d265dcd5e959082b17d3a94258b"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; MathematicalProgram &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#af6da6d265dcd5e959082b17d3a94258b">MakeSemidefiniteRelaxation</a> (const MathematicalProgram &amp;prog)</td></tr>
-<tr class="memdesc:af6da6d265dcd5e959082b17d3a94258b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html" title="MathematicalProgram stores the decision variables, the constraints and costs of an optimization probl...">MathematicalProgram</a> which represents the semidefinite programming convex relaxation of the (likely nonconvex) program <code>prog</code>.  <a href="namespacedrake_1_1solvers.html#af6da6d265dcd5e959082b17d3a94258b">More...</a><br /></td></tr>
-<tr class="separator:af6da6d265dcd5e959082b17d3a94258b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56eb3fcc2f03d972f06486730916cbf0"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; MathematicalProgram &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a56eb3fcc2f03d972f06486730916cbf0">MakeSemidefiniteRelaxation</a> (const MathematicalProgram &amp;prog, const std::vector&lt; symbolic::Variables &gt; &amp;variable_groups)</td></tr>
-<tr class="memdesc:a56eb3fcc2f03d972f06486730916cbf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">A version of MakeSemidefiniteRelaxation that allows for specifying the sparsity of the relaxation.  <a href="namespacedrake_1_1solvers.html#a56eb3fcc2f03d972f06486730916cbf0">More...</a><br /></td></tr>
-<tr class="separator:a56eb3fcc2f03d972f06486730916cbf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a369749919dd3d182cd40a1c089731158"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; MathematicalProgram &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a369749919dd3d182cd40a1c089731158">MakeSemidefiniteRelaxation</a> (const MathematicalProgram &amp;prog, const SemidefiniteRelaxationOptions &amp;options={})</td></tr>
+<tr class="memdesc:a369749919dd3d182cd40a1c089731158"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html" title="MathematicalProgram stores the decision variables, the constraints and costs of an optimization probl...">MathematicalProgram</a> which represents the semidefinite programming convex relaxation of the (likely nonconvex) program <code>prog</code>.  <a href="namespacedrake_1_1solvers.html#a369749919dd3d182cd40a1c089731158">More...</a><br /></td></tr>
+<tr class="separator:a369749919dd3d182cd40a1c089731158"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a163b69b1b6a59eef7209dc949537b941"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; MathematicalProgram &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a163b69b1b6a59eef7209dc949537b941">MakeSemidefiniteRelaxation</a> (const MathematicalProgram &amp;prog, const std::vector&lt; symbolic::Variables &gt; &amp;variable_groups, const SemidefiniteRelaxationOptions &amp;options={})</td></tr>
+<tr class="memdesc:a163b69b1b6a59eef7209dc949537b941"><td class="mdescLeft">&#160;</td><td class="mdescRight">A version of MakeSemidefiniteRelaxation that allows for specifying the sparsity of the relaxation.  <a href="namespacedrake_1_1solvers.html#a163b69b1b6a59eef7209dc949537b941">More...</a><br /></td></tr>
+<tr class="separator:a163b69b1b6a59eef7209dc949537b941"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

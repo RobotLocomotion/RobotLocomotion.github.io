@@ -60,7 +60,7 @@ var dir_892460009e18f4b08a77d36884a88a01 =
       [ "RgbdSensorAsync", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_async.html", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_async" ]
     ] ],
     [ "rgbd_sensor_discrete.h", "rgbd__sensor__discrete_8h.html", null ],
-    [ "rotary_encoders.h", "rotary__encoders_8h.html", null ],
+    [ "rotary_encoders.h", "rotary__encoders_8h.html", "rotary__encoders_8h" ],
     [ "sim_rgbd_sensor.h", "sim__rgbd__sensor_8h.html", null ],
     [ "vtk_diagnostic_event_observer.h", "vtk__diagnostic__event__observer_8h.html", null ],
     [ "vtk_image_reader_writer.h", "vtk__image__reader__writer_8h.html", null ]

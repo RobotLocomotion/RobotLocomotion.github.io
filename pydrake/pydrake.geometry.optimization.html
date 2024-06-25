@@ -2492,7 +2492,8 @@ builds.</p>
 <dd><p>Flag to solve the relaxed version of the problem. As discussed in the
 paper, we know that this relaxation cannot solve the original NP-hard
 problem for all instances, but there are also many instances for which
-the convex relaxation is tight.</p>
+the convex relaxation is tight. If convex_relaxation=nullopt, then
+each GCS method is free to choose an appropriate default.</p>
 </dd></dl>
 
 <dl class="py property">
@@ -2508,7 +2509,9 @@ equal to zero, this option is ignored.</p>
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_rounded_paths</span></span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSetsOptions.max_rounded_paths" title="Permalink to this definition"></a></dt>
 <dd><p>Maximum number of distinct paths to compare during random rounding;
 only the lowest cost path is returned. If convex_relaxation is false
-or this is less than or equal to zero, rounding is not performed.</p>
+or this is less than or equal to zero, rounding is not performed. If
+max_rounded_paths=nullopt, then each GCS method is free to choose an
+appropriate default.</p>
 </dd></dl>
 
 <dl class="py property">
@@ -2527,7 +2530,8 @@ path from source to target. In most cases, preprocessing causes a net
 reduction in computation by reducing the size of the optimization
 solved. Note that this preprocessing is not exact. There may be edges
 that cannot lie on the path from source to target that this does not
-detect.</p>
+detect. If preprocessing=nullopt, then each GCS method is free to
+choose an appropriate default.</p>
 </dd></dl>
 
 <dl class="py property">

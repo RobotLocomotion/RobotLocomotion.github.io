@@ -22,8 +22,8 @@ var dir_c1924aea86cc02fece93f366eec781e1 =
     [ "planning_doxygen.h", "planning__doxygen_8h.html", null ],
     [ "robot_clearance.h", "robot__clearance_8h.html", null ],
     [ "robot_collision_type.h", "robot__collision__type_8h.html", "robot__collision__type_8h" ],
-    [ "robot_diagram.h", "robot__diagram_8h.html", null ],
-    [ "robot_diagram_builder.h", "robot__diagram__builder_8h.html", null ],
+    [ "robot_diagram.h", "robot__diagram_8h.html", "robot__diagram_8h" ],
+    [ "robot_diagram_builder.h", "robot__diagram__builder_8h.html", "robot__diagram__builder_8h" ],
     [ "scene_graph_collision_checker.h", "scene__graph__collision__checker_8h.html", null ],
     [ "unimplemented_collision_checker.h", "unimplemented__collision__checker_8h.html", [
       [ "UnimplementedCollisionChecker", "classdrake_1_1planning_1_1_unimplemented_collision_checker.html", "classdrake_1_1planning_1_1_unimplemented_collision_checker" ]

@@ -10,5 +10,6 @@ var multibody__tree_8h =
     [ "JacobianWrtVariable", "multibody__tree_8h.html#ad95b5f6a8d72582ad91a1aca26d76658", [
       [ "kQDot", "multibody__tree_8h.html#ad95b5f6a8d72582ad91a1aca26d76658a08a6dd2b7a7e7a0a13886a70c696f72b", null ],
       [ "kV", "multibody__tree_8h.html#ad95b5f6a8d72582ad91a1aca26d76658a63b39853c60d1092c257c1ab898bad0a", null ]
-    ] ]
+    ] ],
+    [ "DRAKE_DECLARE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_SCALARS", "multibody__tree_8h.html#a18f768c02fbfd924025562480eae833f", null ]
 ];

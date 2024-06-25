@@ -173,7 +173,7 @@ class drake::multibody::ForceDensityField&lt; T &gt;</h3>
 <p>The ForceDensityField class is an abstract base class that represents a force density field affecting deformable bodies in a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>. </p>
 <p>The force field is described by the member function <a class="el" href="classdrake_1_1multibody_1_1_force_density_field.html#a60e328d070ad76a196fa2b8a14ad07d8" title="Evaluates the force density [N/m³] with the given context of the owning MultibodyPlant and a position...">EvaluateAt()</a> which takes as input a position in the world frame and returns the force density from the force density field at the given location, with unit [N/m³]. The force density function can depend on other Context-dependent parameters. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default nonsymbolic scalars</a>. </td></tr>
+    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -182,8 +182,8 @@ class drake::multibody::ForceDensityField&lt; T &gt;</h3>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a449fc482be0cfbb8474939921f5c5c8c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_force_density_field.html#a449fc482be0cfbb8474939921f5c5c8c">~ForceDensityField</a> ()=default</td></tr>
-<tr class="separator:a449fc482be0cfbb8474939921f5c5c8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7078bb7b8979f70119871c8e5fd5445"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_force_density_field.html#ac7078bb7b8979f70119871c8e5fd5445">~ForceDensityField</a> ()</td></tr>
+<tr class="separator:ac7078bb7b8979f70119871c8e5fd5445"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60e328d070ad76a196fa2b8a14ad07d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_force_density_field.html#a60e328d070ad76a196fa2b8a14ad07d8">EvaluateAt</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_WQ) const</td></tr>
 <tr class="memdesc:a60e328d070ad76a196fa2b8a14ad07d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the force density [N/m³] with the given <code>context</code> of the owning <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> and a position in world, <code>p_WQ</code>.  <a href="#a60e328d070ad76a196fa2b8a14ad07d8">More...</a><br /></td></tr>
 <tr class="separator:a60e328d070ad76a196fa2b8a14ad07d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -232,8 +232,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a637f59d90b735e4de0ff28a933e1c984"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a449fc482be0cfbb8474939921f5c5c8c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a449fc482be0cfbb8474939921f5c5c8c">&#9670;&nbsp;</a></span>~ForceDensityField()</h2>
+<a id="ac7078bb7b8979f70119871c8e5fd5445"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7078bb7b8979f70119871c8e5fd5445">&#9670;&nbsp;</a></span>~ForceDensityField()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -250,7 +250,7 @@ Protected Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

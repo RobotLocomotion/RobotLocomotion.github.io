@@ -3,7 +3,7 @@ var classdrake_1_1multibody_1_1_physical_model =
     [ "PhysicalModel", "classdrake_1_1multibody_1_1_physical_model.html#a6e7dbc75c04706cda4b36798cfc60297", null ],
     [ "PhysicalModel", "classdrake_1_1multibody_1_1_physical_model.html#a4316068204e6e84b318f7399374bb3ca", null ],
     [ "PhysicalModel", "classdrake_1_1multibody_1_1_physical_model.html#a9e6998dbc2b9d4a0e08ee2fad02f1659", null ],
-    [ "~PhysicalModel", "classdrake_1_1multibody_1_1_physical_model.html#ab5a6a3375b5f40468f7eb8254490f85b", null ],
+    [ "~PhysicalModel", "classdrake_1_1multibody_1_1_physical_model.html#a9bedd1ff3f58aee9ed5818597875b5b0", null ],
     [ "CloneToAutoDiffXd", "classdrake_1_1multibody_1_1_physical_model.html#a55944069cede6743fee42a170ebccd98", null ],
     [ "CloneToDouble", "classdrake_1_1multibody_1_1_physical_model.html#a9299ee7e4ec6e6612b088ec3ecd962f8", null ],
     [ "CloneToScalar", "classdrake_1_1multibody_1_1_physical_model.html#ab81c3c69cdd33842c0b9a1927d2d6e4e", null ],

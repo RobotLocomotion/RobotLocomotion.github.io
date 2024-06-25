@@ -81,7 +81,7 @@ var dir_d739e095b49d8b72164589d00310017d =
     [ "rgba.h", "rgba_8h.html", [
       [ "Rgba", "classdrake_1_1geometry_1_1_rgba.html", "classdrake_1_1geometry_1_1_rgba" ]
     ] ],
-    [ "scene_graph.h", "scene__graph_8h.html", null ],
+    [ "scene_graph.h", "scene__graph_8h.html", "scene__graph_8h" ],
     [ "scene_graph_config.h", "scene__graph__config_8h.html", [
       [ "DefaultProximityProperties", "structdrake_1_1geometry_1_1_default_proximity_properties.html", "structdrake_1_1geometry_1_1_default_proximity_properties" ],
       [ "SceneGraphConfig", "structdrake_1_1geometry_1_1_scene_graph_config.html", "structdrake_1_1geometry_1_1_scene_graph_config" ]

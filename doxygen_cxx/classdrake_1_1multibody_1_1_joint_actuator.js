@@ -3,6 +3,7 @@ var classdrake_1_1multibody_1_1_joint_actuator =
     [ "JointActuator", "classdrake_1_1multibody_1_1_joint_actuator.html#a51aefd06d016c29ee25018216a7d5ff2", null ],
     [ "JointActuator", "classdrake_1_1multibody_1_1_joint_actuator.html#ac2abe86d242ea7704d469dcabe028f3f", null ],
     [ "JointActuator", "classdrake_1_1multibody_1_1_joint_actuator.html#ad0a76a710eff20920ee421eeefc81072", null ],
+    [ "~JointActuator", "classdrake_1_1multibody_1_1_joint_actuator.html#ab16b375a54049e1164ad544241c1a0e2", null ],
     [ "AddInOneForce", "classdrake_1_1multibody_1_1_joint_actuator.html#ac1dd511b968cee9545a54a228020546e", null ],
     [ "calc_reflected_inertia", "classdrake_1_1multibody_1_1_joint_actuator.html#a5b0758f9f10b1a8a122a6e3c1ee1ff92", null ],
     [ "default_gear_ratio", "classdrake_1_1multibody_1_1_joint_actuator.html#a5434b36ff862492d2aed1ba6a5dbe503", null ],

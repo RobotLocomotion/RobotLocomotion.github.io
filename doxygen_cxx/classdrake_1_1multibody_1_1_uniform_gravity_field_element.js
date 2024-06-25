@@ -5,6 +5,7 @@ var classdrake_1_1multibody_1_1_uniform_gravity_field_element =
     [ "UniformGravityFieldElement", "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a7550e320ab6c15635e57f8a8c75ab6c8", null ],
     [ "UniformGravityFieldElement", "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a71f3f09fbee9e7eb8ef6bdf7ffa324aa", null ],
     [ "UniformGravityFieldElement", "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#ad3938c9766d4ac06758562d35981290a", null ],
+    [ "~UniformGravityFieldElement", "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a31743a6be38fbb58b722b2b442d26b70", null ],
     [ "CalcConservativePower", "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a28078a2e8016ea5fbbb37d5aa1a3dbf8", null ],
     [ "CalcGravityGeneralizedForces", "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#ad877d988ac4cd1942aa84e91e3c5d49a", null ],
     [ "CalcNonConservativePower", "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a51e284f0060fff10b85fac98a984210e", null ],

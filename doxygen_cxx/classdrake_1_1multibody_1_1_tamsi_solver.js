@@ -3,6 +3,7 @@ var classdrake_1_1multibody_1_1_tamsi_solver =
     [ "TamsiSolver", "classdrake_1_1multibody_1_1_tamsi_solver.html#ad5d558d0bc7ccbe0202ccd40e1929815", null ],
     [ "TamsiSolver", "classdrake_1_1multibody_1_1_tamsi_solver.html#a3b3d2411402ef5b22576cabf83a2072d", null ],
     [ "TamsiSolver", "classdrake_1_1multibody_1_1_tamsi_solver.html#a8c6125a41db505a5d9caf8b5d93c591e", null ],
+    [ "~TamsiSolver", "classdrake_1_1multibody_1_1_tamsi_solver.html#ab6be7f9aa8c3b2ee850bca3d63178cc2", null ],
     [ "Clone", "classdrake_1_1multibody_1_1_tamsi_solver.html#a22e607b6eb869231eecd9c1a0fbba625", null ],
     [ "get_friction_forces", "classdrake_1_1multibody_1_1_tamsi_solver.html#adf39c5d5444717701cd76801700fe812", null ],
     [ "get_generalized_contact_forces", "classdrake_1_1multibody_1_1_tamsi_solver.html#aed2fca834884c6abf9c0351c74730787", null ],

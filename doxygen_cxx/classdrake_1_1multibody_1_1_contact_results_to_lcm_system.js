@@ -4,6 +4,7 @@ var classdrake_1_1multibody_1_1_contact_results_to_lcm_system =
     [ "ContactResultsToLcmSystem", "classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html#a36fbe0a2527e058e929d672510516df8", null ],
     [ "ContactResultsToLcmSystem", "classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html#a6f8acd03fde1b1bb850e8fbd952575b5", null ],
     [ "ContactResultsToLcmSystem", "classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html#a1e93180e6caa73ddbc4d6821d8b14a09", null ],
+    [ "~ContactResultsToLcmSystem", "classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html#a58e49a83a1ee331231348ce32b0425e0", null ],
     [ "get_contact_result_input_port", "classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html#a528e484660a911e8e443a1c2e68ebf4e", null ],
     [ "get_lcm_message_output_port", "classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html#a3cf1dedf84121ef792a85bdb86a18374", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html#aaccb65a551c978a2987efc277a771d8f", null ],

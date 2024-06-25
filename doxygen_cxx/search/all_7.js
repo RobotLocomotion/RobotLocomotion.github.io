@@ -40,6 +40,7 @@ var searchData=
   ['geodesic_5fconvexity_2eh',['geodesic_convexity.h',['../geodesic__convexity_8h.html',1,'']]],
   ['geometries',['geometries',['../classdrake_1_1geometry_1_1_geometry_set_tester.html#a95d6287881eb09bccb052b219e526456',1,'drake::geometry::GeometrySetTester']]],
   ['geometry',['geometry',['../classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html#a865459ef30effc60d20fcd393787e390',1,'drake::geometry::optimization::CIrisCollisionGeometry::geometry()'],['../structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a9bae89849c60ffcef775b55b000bd872',1,'drake::geometry::optimization::CSpaceSeparatingPlane::geometry()'],['../group__geometry.html',1,'(Global Namespace)']]],
+  ['geometry_5fcontact_5fdata_2eh',['geometry_contact_data.h',['../geometry__contact__data_8h.html',1,'']]],
   ['geometry_5fdoxygen_2eh',['geometry_doxygen.h',['../geometry__doxygen_8h.html',1,'']]],
   ['geometry_5ffile_5fformats_5fdoxygen_2eh',['geometry_file_formats_doxygen.h',['../geometry__file__formats__doxygen_8h.html',1,'']]],
   ['geometry_5fframe_2eh',['geometry_frame.h',['../geometry__frame_8h.html',1,'']]],

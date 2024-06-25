@@ -49,12 +49,7 @@ var dir_ffd084df0f71d68f8337a7d6f3dcd2dc =
     [ "penetration_as_point_pair_callback.h", "penetration__as__point__pair__callback_8h.html", null ],
     [ "penetration_doxygen.h", "penetration__doxygen_8h.html", null ],
     [ "plane.h", "plane_8h.html", null ],
-    [ "polygon_surface_mesh.h", "polygon__surface__mesh_8h.html", [
-      [ "PolygonSurfaceMesh", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html", "classdrake_1_1geometry_1_1_polygon_surface_mesh" ],
-      [ "PolygonSurfaceMeshTest", "classdrake_1_1geometry_1_1_polygon_surface_mesh_test.html", null ],
-      [ "SurfacePolygon", "classdrake_1_1geometry_1_1_surface_polygon.html", "classdrake_1_1geometry_1_1_surface_polygon" ],
-      [ "PolygonSurfaceMesh", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html", "classdrake_1_1geometry_1_1_polygon_surface_mesh" ]
-    ] ],
+    [ "polygon_surface_mesh.h", "polygon__surface__mesh_8h.html", "polygon__surface__mesh_8h" ],
     [ "polygon_surface_mesh_field.h", "polygon__surface__mesh__field_8h.html", "polygon__surface__mesh__field_8h" ],
     [ "polygon_to_triangle_mesh.h", "polygon__to__triangle__mesh_8h.html", null ],
     [ "posed_half_space.h", "posed__half__space_8h.html", null ],
@@ -62,11 +57,7 @@ var dir_ffd084df0f71d68f8337a7d6f3dcd2dc =
     [ "proximity_utilities.h", "proximity__utilities_8h.html", "proximity__utilities_8h" ],
     [ "sorted_triplet.h", "sorted__triplet_8h.html", null ],
     [ "tessellation_strategy.h", "tessellation__strategy_8h.html", null ],
-    [ "triangle_surface_mesh.h", "triangle__surface__mesh_8h.html", [
-      [ "SurfaceTriangle", "classdrake_1_1geometry_1_1_surface_triangle.html", "classdrake_1_1geometry_1_1_surface_triangle" ],
-      [ "TriangleSurfaceMeshTester", "classdrake_1_1geometry_1_1_triangle_surface_mesh_tester.html", null ],
-      [ "TriangleSurfaceMesh", "classdrake_1_1geometry_1_1_triangle_surface_mesh.html", "classdrake_1_1geometry_1_1_triangle_surface_mesh" ]
-    ] ],
+    [ "triangle_surface_mesh.h", "triangle__surface__mesh_8h.html", "triangle__surface__mesh_8h" ],
     [ "triangle_surface_mesh_field.h", "triangle__surface__mesh__field_8h.html", "triangle__surface__mesh__field_8h" ],
     [ "volume_mesh.h", "volume__mesh_8h.html", "volume__mesh_8h" ],
     [ "volume_mesh_field.h", "volume__mesh__field_8h.html", "volume__mesh__field_8h" ],

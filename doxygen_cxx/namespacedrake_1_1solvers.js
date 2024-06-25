@@ -66,6 +66,7 @@ var namespacedrake_1_1solvers =
     [ "RotatedLorentzConeConstraint", "classdrake_1_1solvers_1_1_rotated_lorentz_cone_constraint.html", "classdrake_1_1solvers_1_1_rotated_lorentz_cone_constraint" ],
     [ "ScsSolver", "classdrake_1_1solvers_1_1_scs_solver.html", "classdrake_1_1solvers_1_1_scs_solver" ],
     [ "ScsSolverDetails", "structdrake_1_1solvers_1_1_scs_solver_details.html", "structdrake_1_1solvers_1_1_scs_solver_details" ],
+    [ "SemidefiniteRelaxationOptions", "structdrake_1_1solvers_1_1_semidefinite_relaxation_options.html", "structdrake_1_1solvers_1_1_semidefinite_relaxation_options" ],
     [ "SnoptSolver", "classdrake_1_1solvers_1_1_snopt_solver.html", "classdrake_1_1solvers_1_1_snopt_solver" ],
     [ "SnoptSolverDetails", "structdrake_1_1solvers_1_1_snopt_solver_details.html", "structdrake_1_1solvers_1_1_snopt_solver_details" ],
     [ "SolverBase", "classdrake_1_1solvers_1_1_solver_base.html", "classdrake_1_1solvers_1_1_solver_base" ],

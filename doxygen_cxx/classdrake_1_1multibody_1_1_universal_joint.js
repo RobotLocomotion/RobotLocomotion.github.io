@@ -4,6 +4,7 @@ var classdrake_1_1multibody_1_1_universal_joint =
     [ "UniversalJoint", "classdrake_1_1multibody_1_1_universal_joint.html#a9c12fca95ad21784cfb84970e8b90f3d", null ],
     [ "UniversalJoint", "classdrake_1_1multibody_1_1_universal_joint.html#a32b3165a92b6b04a9412bfcea8e8eb5e", null ],
     [ "UniversalJoint", "classdrake_1_1multibody_1_1_universal_joint.html#aad4a8172e3c292ddea2fb294221458cd", null ],
+    [ "~UniversalJoint", "classdrake_1_1multibody_1_1_universal_joint.html#a65b4142b6ead88cb39177e6989615c6f", null ],
     [ "default_damping", "classdrake_1_1multibody_1_1_universal_joint.html#aea9614ad4bc22801505a7399550293ce", null ],
     [ "DoAddInDamping", "classdrake_1_1multibody_1_1_universal_joint.html#ae58dc70f3e0535c09582b85ecbc612a7", null ],
     [ "DoAddInOneForce", "classdrake_1_1multibody_1_1_universal_joint.html#ab3c16872b1d7ca25be9f833acd33264b", null ],

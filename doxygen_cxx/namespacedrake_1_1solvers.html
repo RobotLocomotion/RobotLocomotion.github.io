@@ -387,6 +387,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1solvers_1_1_scs_solver_details.html">ScsSolverDetails</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The SCS solver details after calling <a class="el" href="namespacedrake_1_1solvers.html#a07bf1722e3e347d7878ae44be98b4b92" title="Solves an optimization program, with optional initial guess and solver options.">Solve()</a> function.  <a href="structdrake_1_1solvers_1_1_scs_solver_details.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1solvers_1_1_semidefinite_relaxation_options.html">SemidefiniteRelaxationOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration options for the MakeSemidefiniteRelaxation.  <a href="structdrake_1_1solvers_1_1_semidefinite_relaxation_options.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_snopt_solver.html">SnoptSolver</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An implementation of <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html" title="Interface used by implementations of individual solvers.">SolverInterface</a> for the commercially-licensed SNOPT solver (<a href="https://ccom.ucsd.edu/~optimizers/solvers/snopt/">https://ccom.ucsd.edu/~optimizers/solvers/snopt/</a>).  <a href="classdrake_1_1solvers_1_1_snopt_solver.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -743,12 +746,12 @@ Choice" model.  <a href="#a81f7d44186352e1090de1343d468cad2">More...</a><br /></
 <tr class="memitem:aeb2470f8cacd8e5f5a473b10d0acf6cc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#aeb2470f8cacd8e5f5a473b10d0acf6cc">GenerateSDPA</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;prog, const std::string &amp;file_name, <a class="el" href="namespacedrake_1_1solvers.html#a121673ddbdadd10b2e3ceab52a93f5d3">RemoveFreeVariableMethod</a> method=<a class="el" href="namespacedrake_1_1solvers.html#a121673ddbdadd10b2e3ceab52a93f5d3a54b9d7601ece96fc42e2ffd67aae2690">RemoveFreeVariableMethod::kNullspace</a>)</td></tr>
 <tr class="memdesc:aeb2470f8cacd8e5f5a473b10d0acf6cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">SDPA is a format to record an SDP problem.  <a href="#aeb2470f8cacd8e5f5a473b10d0acf6cc">More...</a><br /></td></tr>
 <tr class="separator:aeb2470f8cacd8e5f5a473b10d0acf6cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6da6d265dcd5e959082b17d3a94258b"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#af6da6d265dcd5e959082b17d3a94258b">MakeSemidefiniteRelaxation</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;prog)</td></tr>
-<tr class="memdesc:af6da6d265dcd5e959082b17d3a94258b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html" title="MathematicalProgram stores the decision variables, the constraints and costs of an optimization probl...">MathematicalProgram</a> which represents the semidefinite programming convex relaxation of the (likely nonconvex) program <code>prog</code>.  <a href="#af6da6d265dcd5e959082b17d3a94258b">More...</a><br /></td></tr>
-<tr class="separator:af6da6d265dcd5e959082b17d3a94258b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56eb3fcc2f03d972f06486730916cbf0"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a56eb3fcc2f03d972f06486730916cbf0">MakeSemidefiniteRelaxation</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;prog, const std::vector&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variables.html">symbolic::Variables</a> &gt; &amp;variable_groups)</td></tr>
-<tr class="memdesc:a56eb3fcc2f03d972f06486730916cbf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">A version of MakeSemidefiniteRelaxation that allows for specifying the sparsity of the relaxation.  <a href="#a56eb3fcc2f03d972f06486730916cbf0">More...</a><br /></td></tr>
-<tr class="separator:a56eb3fcc2f03d972f06486730916cbf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a369749919dd3d182cd40a1c089731158"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a369749919dd3d182cd40a1c089731158">MakeSemidefiniteRelaxation</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;prog, const <a class="el" href="structdrake_1_1solvers_1_1_semidefinite_relaxation_options.html">SemidefiniteRelaxationOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:a369749919dd3d182cd40a1c089731158"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html" title="MathematicalProgram stores the decision variables, the constraints and costs of an optimization probl...">MathematicalProgram</a> which represents the semidefinite programming convex relaxation of the (likely nonconvex) program <code>prog</code>.  <a href="#a369749919dd3d182cd40a1c089731158">More...</a><br /></td></tr>
+<tr class="separator:a369749919dd3d182cd40a1c089731158"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a163b69b1b6a59eef7209dc949537b941"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a163b69b1b6a59eef7209dc949537b941">MakeSemidefiniteRelaxation</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;prog, const std::vector&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variables.html">symbolic::Variables</a> &gt; &amp;variable_groups, const <a class="el" href="structdrake_1_1solvers_1_1_semidefinite_relaxation_options.html">SemidefiniteRelaxationOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:a163b69b1b6a59eef7209dc949537b941"><td class="mdescLeft">&#160;</td><td class="mdescRight">A version of MakeSemidefiniteRelaxation that allows for specifying the sparsity of the relaxation.  <a href="#a163b69b1b6a59eef7209dc949537b941">More...</a><br /></td></tr>
+<tr class="separator:a163b69b1b6a59eef7209dc949537b941"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb1201a087105dc635e2bd748486171c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#acb1201a087105dc635e2bd748486171c">to_string</a> (<a class="el" href="namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136f">SolutionResult</a> solution_result)</td></tr>
 <tr class="separator:acb1201a087105dc635e2bd748486171c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a269b7066a168f80390ed6c496829ffcd"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a269b7066a168f80390ed6c496829ffcd">operator&lt;&lt;</a> (std::ostream &amp;os, <a class="el" href="namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136f">SolutionResult</a> solution_result)</td></tr>
@@ -2914,8 +2917,8 @@ s.t ∑ᵢ yᵢAᵢ - C ≽ 0
 
 </div>
 </div>
-<a id="af6da6d265dcd5e959082b17d3a94258b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6da6d265dcd5e959082b17d3a94258b">&#9670;&nbsp;</a></span>MakeSemidefiniteRelaxation() <span class="overload">[1/2]</span></h2>
+<a id="a369749919dd3d182cd40a1c089731158"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a369749919dd3d182cd40a1c089731158">&#9670;&nbsp;</a></span>MakeSemidefiniteRelaxation() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2924,8 +2927,18 @@ s.t ∑ᵢ yᵢAᵢ - C ≽ 0
           <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a>&gt; drake::solvers::MakeSemidefiniteRelaxation </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;&#160;</td>
-          <td class="paramname"><em>prog</em></td><td>)</td>
+          <td class="paramname"><em>prog</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1solvers_1_1_semidefinite_relaxation_options.html">SemidefiniteRelaxationOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -2943,8 +2956,8 @@ s.t ∑ᵢ yᵢAᵢ - C ≽ 0
 
 </div>
 </div>
-<a id="a56eb3fcc2f03d972f06486730916cbf0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a56eb3fcc2f03d972f06486730916cbf0">&#9670;&nbsp;</a></span>MakeSemidefiniteRelaxation() <span class="overload">[2/2]</span></h2>
+<a id="a163b69b1b6a59eef7209dc949537b941"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a163b69b1b6a59eef7209dc949537b941">&#9670;&nbsp;</a></span>MakeSemidefiniteRelaxation() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2959,7 +2972,13 @@ s.t ∑ᵢ yᵢAᵢ - C ≽ 0
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::vector&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variables.html">symbolic::Variables</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>variable_groups</em>&#160;</td>
+          <td class="paramname"><em>variable_groups</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1solvers_1_1_semidefinite_relaxation_options.html">SemidefiniteRelaxationOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
         </tr>
         <tr>
           <td></td>

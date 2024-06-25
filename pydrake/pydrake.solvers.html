@@ -2978,7 +2978,7 @@ available, throws a RuntimeError.</p>
 <span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">MakeSemidefiniteRelaxation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.MakeSemidefiniteRelaxation" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>MakeSemidefiniteRelaxation(prog: pydrake.solvers.MathematicalProgram) -&gt; pydrake.solvers.MathematicalProgram</p></li>
+<li><p>MakeSemidefiniteRelaxation(prog: pydrake.solvers.MathematicalProgram, options: pydrake.solvers.SemidefiniteRelaxationOptions = SemidefiniteRelaxationOptions(add_implied_linear_equality_constraints=True, add_implied_linear_constraints=True, preserve_convex_quadratic_constraints=False)) -&gt; pydrake.solvers.MathematicalProgram</p></li>
 </ol>
 <p>Constructs a new MathematicalProgram which represents the semidefinite
 programming convex relaxation of the (likely nonconvex) program
@@ -3000,7 +3000,7 @@ LinearEqualityConstraint.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>MakeSemidefiniteRelaxation(prog: pydrake.solvers.MathematicalProgram, variable_groups: list[pydrake.symbolic.Variables]) -&gt; pydrake.solvers.MathematicalProgram</p></li>
+<li><p>MakeSemidefiniteRelaxation(prog: pydrake.solvers.MathematicalProgram, variable_groups: list[pydrake.symbolic.Variables], options: pydrake.solvers.SemidefiniteRelaxationOptions = SemidefiniteRelaxationOptions(add_implied_linear_equality_constraints=True, add_implied_linear_constraints=True, preserve_convex_quadratic_constraints=False)) -&gt; pydrake.solvers.MathematicalProgram</p></li>
 </ol>
 <p>A version of MakeSemidefiniteRelaxation that allows for specifying the
 sparsity of the relaxation.</p>
@@ -7798,6 +7798,67 @@ the version used in Drake.</p>
 <dt class="sig sig-object py" id="pydrake.solvers.ScsSolverDetails.y">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">y</span></span><a class="headerlink" href="#pydrake.solvers.ScsSolverDetails.y" title="Permalink to this definition"></a></dt>
 <dd><p>The dual variable values at termination.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.solvers.SemidefiniteRelaxationOptions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">SemidefiniteRelaxationOptions</span></span><a class="headerlink" href="#pydrake.solvers.SemidefiniteRelaxationOptions" title="Permalink to this definition"></a></dt>
+<dd><p>Configuration options for the MakeSemidefiniteRelaxation. Throughout
+these options, we refer to the variables of the original optimization
+program as y, and the semidefinite variable of the associate
+relaxation as X.</p>
+<p>X has the structure X = [Y, y] [yᵀ, one]</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.SemidefiniteRelaxationOptions.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.SemidefiniteRelaxationOptions" title="pydrake.solvers.SemidefiniteRelaxationOptions"><span class="pre">pydrake.solvers.SemidefiniteRelaxationOptions</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.SemidefiniteRelaxationOptions.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.solvers.SemidefiniteRelaxationOptions.add_implied_linear_constraints">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">add_implied_linear_constraints</span></span><a class="headerlink" href="#pydrake.solvers.SemidefiniteRelaxationOptions.add_implied_linear_constraints" title="Permalink to this definition"></a></dt>
+<dd><p>Given a program with the linear equality constraints Ay = b, sets
+whether to add the implied linear constraints [A, -b]X = 0 to the
+semidefinite relaxation.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.solvers.SemidefiniteRelaxationOptions.add_implied_linear_equality_constraints">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">add_implied_linear_equality_constraints</span></span><a class="headerlink" href="#pydrake.solvers.SemidefiniteRelaxationOptions.add_implied_linear_equality_constraints" title="Permalink to this definition"></a></dt>
+<dd><p>Given a program with the linear constraints Ay ≤ b, sets whether to
+add the implied linear constraints [A,-b]X[A,-b]ᵀ ≤ 0 to the
+semidefinite relaxation.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.solvers.SemidefiniteRelaxationOptions.preserve_convex_quadratic_constraints">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">preserve_convex_quadratic_constraints</span></span><a class="headerlink" href="#pydrake.solvers.SemidefiniteRelaxationOptions.preserve_convex_quadratic_constraints" title="Permalink to this definition"></a></dt>
+<dd><p>Given a program with convex quadratic constraints, sets whether
+equivalent rotated second order cone constraints are enforced on the
+last column of X in the semidefinite relaxation. This ensures that the
+last column of X, which are a relaxation of the original program’s
+variables satisfy the original progam’s quadratic constraints.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.SemidefiniteRelaxationOptions.set_to_strongest">
+<span class="sig-name descname"><span class="pre">set_to_strongest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.SemidefiniteRelaxationOptions" title="pydrake.solvers.SemidefiniteRelaxationOptions"><span class="pre">pydrake.solvers.SemidefiniteRelaxationOptions</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.SemidefiniteRelaxationOptions.set_to_strongest" title="Permalink to this definition"></a></dt>
+<dd><p>Configure the semidefinite relaxation options to provide the strongest
+possible semidefinite relaxation that we currently support. This in
+general will give the tightest convex relaxation we support, but the
+longest solve times.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.SemidefiniteRelaxationOptions.set_to_weakest">
+<span class="sig-name descname"><span class="pre">set_to_weakest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.SemidefiniteRelaxationOptions" title="pydrake.solvers.SemidefiniteRelaxationOptions"><span class="pre">pydrake.solvers.SemidefiniteRelaxationOptions</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.SemidefiniteRelaxationOptions.set_to_weakest" title="Permalink to this definition"></a></dt>
+<dd><p>Configure the semidefinite relaxation options to provide the weakest
+semidefinite relaxation that we currently support. This in general
+will create the loosest convex relaxation we support, but the shortest
+solve times. This is equivalent to the standard Shor Relaxation (see
+Quadratic Optimization Problems by NZ Shor or Semidefinite Programming
+by Vandenberghe and Boyd).</p>
 </dd></dl>
 
 </dd></dl>

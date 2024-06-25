@@ -97,6 +97,7 @@
 <li class="toctree-l2"><a class="reference internal" href="pydrake.systems.analysis.html">pydrake.systems.analysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.systems.controllers.html">pydrake.systems.controllers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.systems.drawing.html">pydrake.systems.drawing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.estimators.html">pydrake.systems.estimators</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.systems.framework.html">pydrake.systems.framework</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.systems.lcm.html">pydrake.systems.lcm</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.systems.perception.html">pydrake.systems.perception</a></li>
@@ -3129,6 +3130,170 @@ the simulation time when the image outputs were captured, in seconds
 <dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensorDiscrete.sensor">
 <span class="sig-name descname"><span class="pre">sensor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensorDiscrete" title="pydrake.systems.sensors.RgbdSensorDiscrete"><span class="pre">pydrake.systems.sensors.RgbdSensorDiscrete</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensor" title="pydrake.systems.sensors.RgbdSensor"><span class="pre">pydrake.systems.sensors.RgbdSensor</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensorDiscrete.sensor" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a reference to the underlying RgbdSensor object.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.RotaryEncoders">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.sensors.</span></span><span class="sig-name descname"><span class="pre">RotaryEncoders</span></span><a class="headerlink" href="#pydrake.systems.sensors.RotaryEncoders" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.VectorSystem" title="pydrake.systems.framework.VectorSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.VectorSystem</span></code></a></p>
+<p>Simple model to capture the quantization and calibration offset
+effects of a rotary encoder. Consider combining this with a
+ZeroOrderHold system to capture the sampled-data effects.</p>
+<p>The inputs to this system are assumed to be in radians, and the
+outputs of the system are also in radians.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>RotaryEncoders</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This class is templated; see <a class="reference internal" href="#pydrake.systems.sensors.RotaryEncoders_" title="pydrake.systems.sensors.RotaryEncoders_"><code class="xref py py-class docutils literal notranslate"><span class="pre">RotaryEncoders_</span></code></a>
+for the list of instantiations.</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.RotaryEncoders.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.sensors.RotaryEncoders.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.systems.sensors.RotaryEncoders, ticks_per_revolution: list[int]) -&gt; None</p></li>
+</ol>
+<p>Quantization-only constructor. Specifies one ticks_per_revolution
+count for every element of the input port.</p>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.systems.sensors.RotaryEncoders, input_port_size: int, input_vector_indices: list[int]) -&gt; None</p></li>
+</ol>
+<p>Selector-only constructor. Provides arguments to select particular
+indices from the input signal to use in the output. Since
+ticks_per_revolution is not being set, the outputs will NOT be
+quantized.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">input_port_size</span></code>:</dt><dd><p>Dimension of the expected input signal</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">input_vector_indices</span></code>:</dt><dd><p>List of indices</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="3">
+<li><p>__init__(self: pydrake.systems.sensors.RotaryEncoders, input_port_size: int, input_vector_indices: list[int], ticks_per_revolution: list[int]) -&gt; None</p></li>
+</ol>
+<p>Quantization and Selector constructor.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.RotaryEncoders.get_calibration_offsets">
+<span class="sig-name descname"><span class="pre">get_calibration_offsets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RotaryEncoders" title="pydrake.systems.sensors.RotaryEncoders"><span class="pre">pydrake.systems.sensors.RotaryEncoders</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.sensors.RotaryEncoders.get_calibration_offsets" title="Permalink to this definition"></a></dt>
+<dd><p>Retrieve the calibration offset parameters.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.RotaryEncoders.set_calibration_offsets">
+<span class="sig-name descname"><span class="pre">set_calibration_offsets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RotaryEncoders" title="pydrake.systems.sensors.RotaryEncoders"><span class="pre">pydrake.systems.sensors.RotaryEncoders</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">calibration_offsets</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.RotaryEncoders.set_calibration_offsets" title="Permalink to this definition"></a></dt>
+<dd><p>Set the calibration offset parameters.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py template">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.RotaryEncoders_">
+<em class="property"><span class="pre">template</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.sensors.</span></span><span class="sig-name descname"><span class="pre">RotaryEncoders_</span></span><a class="headerlink" href="#pydrake.systems.sensors.RotaryEncoders_" title="Permalink to this definition"></a></dt>
+<dd><p>Instantiations: <code class="xref py py-class docutils literal notranslate"><span class="pre">RotaryEncoders_[float]</span></code>, <a class="reference internal" href="#pydrake.systems.sensors.RotaryEncoders_-AutoDiffXd" title="pydrake.systems.sensors.RotaryEncoders_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">RotaryEncoders_[AutoDiffXd]</span></code></a>, <a class="reference internal" href="#pydrake.systems.sensors.RotaryEncoders_-Expression" title="pydrake.systems.sensors.RotaryEncoders_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">RotaryEncoders_[Expression]</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.RotaryEncoders_-AutoDiffXd">
+<span id="pydrake.systems.sensors.RotaryEncoders_[AutoDiffXd]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.sensors.</span></span><span class="sig-name descname"><span class="pre">RotaryEncoders_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.systems.sensors.RotaryEncoders_-AutoDiffXd" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.VectorSystem_-AutoDiffXd" title="pydrake.systems.framework.VectorSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.VectorSystem_[AutoDiffXd]</span></code></a></p>
+<p>Simple model to capture the quantization and calibration offset
+effects of a rotary encoder. Consider combining this with a
+ZeroOrderHold system to capture the sampled-data effects.</p>
+<p>The inputs to this system are assumed to be in radians, and the
+outputs of the system are also in radians.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>RotaryEncoders</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.RotaryEncoders_-AutoDiffXd-.__init__">
+<span id="pydrake.systems.sensors.RotaryEncoders_[AutoDiffXd].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.sensors.RotaryEncoders_-AutoDiffXd-.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.systems.sensors.RotaryEncoders_[AutoDiffXd], ticks_per_revolution: list[int]) -&gt; None</p></li>
+</ol>
+<p>Quantization-only constructor. Specifies one ticks_per_revolution
+count for every element of the input port.</p>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.systems.sensors.RotaryEncoders_[AutoDiffXd], input_port_size: int, input_vector_indices: list[int]) -&gt; None</p></li>
+</ol>
+<p>Selector-only constructor. Provides arguments to select particular
+indices from the input signal to use in the output. Since
+ticks_per_revolution is not being set, the outputs will NOT be
+quantized.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">input_port_size</span></code>:</dt><dd><p>Dimension of the expected input signal</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">input_vector_indices</span></code>:</dt><dd><p>List of indices</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="3">
+<li><p>__init__(self: pydrake.systems.sensors.RotaryEncoders_[AutoDiffXd], input_port_size: int, input_vector_indices: list[int], ticks_per_revolution: list[int]) -&gt; None</p></li>
+</ol>
+<p>Quantization and Selector constructor.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.RotaryEncoders_-AutoDiffXd-.get_calibration_offsets">
+<span id="pydrake.systems.sensors.RotaryEncoders_[AutoDiffXd].get_calibration_offsets"></span><span class="sig-name descname"><span class="pre">get_calibration_offsets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RotaryEncoders_" title="pydrake.systems.sensors.RotaryEncoders_"><span class="pre">pydrake.systems.sensors.RotaryEncoders_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.sensors.RotaryEncoders_-AutoDiffXd-.get_calibration_offsets" title="Permalink to this definition"></a></dt>
+<dd><p>Retrieve the calibration offset parameters.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.RotaryEncoders_-AutoDiffXd-.set_calibration_offsets">
+<span id="pydrake.systems.sensors.RotaryEncoders_[AutoDiffXd].set_calibration_offsets"></span><span class="sig-name descname"><span class="pre">set_calibration_offsets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RotaryEncoders_" title="pydrake.systems.sensors.RotaryEncoders_"><span class="pre">pydrake.systems.sensors.RotaryEncoders_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calibration_offsets</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.RotaryEncoders_-AutoDiffXd-.set_calibration_offsets" title="Permalink to this definition"></a></dt>
+<dd><p>Set the calibration offset parameters.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.RotaryEncoders_-Expression">
+<span id="pydrake.systems.sensors.RotaryEncoders_[Expression]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.sensors.</span></span><span class="sig-name descname"><span class="pre">RotaryEncoders_[Expression]</span></span><a class="headerlink" href="#pydrake.systems.sensors.RotaryEncoders_-Expression" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.VectorSystem_-Expression" title="pydrake.systems.framework.VectorSystem_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.VectorSystem_[Expression]</span></code></a></p>
+<p>Simple model to capture the quantization and calibration offset
+effects of a rotary encoder. Consider combining this with a
+ZeroOrderHold system to capture the sampled-data effects.</p>
+<p>The inputs to this system are assumed to be in radians, and the
+outputs of the system are also in radians.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>RotaryEncoders</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.RotaryEncoders_-Expression-.__init__">
+<span id="pydrake.systems.sensors.RotaryEncoders_[Expression].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.sensors.RotaryEncoders_-Expression-.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.systems.sensors.RotaryEncoders_[Expression], ticks_per_revolution: list[int]) -&gt; None</p></li>
+</ol>
+<p>Quantization-only constructor. Specifies one ticks_per_revolution
+count for every element of the input port.</p>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.systems.sensors.RotaryEncoders_[Expression], input_port_size: int, input_vector_indices: list[int]) -&gt; None</p></li>
+</ol>
+<p>Selector-only constructor. Provides arguments to select particular
+indices from the input signal to use in the output. Since
+ticks_per_revolution is not being set, the outputs will NOT be
+quantized.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">input_port_size</span></code>:</dt><dd><p>Dimension of the expected input signal</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">input_vector_indices</span></code>:</dt><dd><p>List of indices</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="3">
+<li><p>__init__(self: pydrake.systems.sensors.RotaryEncoders_[Expression], input_port_size: int, input_vector_indices: list[int], ticks_per_revolution: list[int]) -&gt; None</p></li>
+</ol>
+<p>Quantization and Selector constructor.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.RotaryEncoders_-Expression-.get_calibration_offsets">
+<span id="pydrake.systems.sensors.RotaryEncoders_[Expression].get_calibration_offsets"></span><span class="sig-name descname"><span class="pre">get_calibration_offsets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RotaryEncoders_" title="pydrake.systems.sensors.RotaryEncoders_"><span class="pre">pydrake.systems.sensors.RotaryEncoders_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.sensors.RotaryEncoders_-Expression-.get_calibration_offsets" title="Permalink to this definition"></a></dt>
+<dd><p>Retrieve the calibration offset parameters.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.RotaryEncoders_-Expression-.set_calibration_offsets">
+<span id="pydrake.systems.sensors.RotaryEncoders_[Expression].set_calibration_offsets"></span><span class="sig-name descname"><span class="pre">set_calibration_offsets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RotaryEncoders_" title="pydrake.systems.sensors.RotaryEncoders_"><span class="pre">pydrake.systems.sensors.RotaryEncoders_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calibration_offsets</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.RotaryEncoders_-Expression-.set_calibration_offsets" title="Permalink to this definition"></a></dt>
+<dd><p>Set the calibration offset parameters.</p>
 </dd></dl>
 
 </dd></dl>

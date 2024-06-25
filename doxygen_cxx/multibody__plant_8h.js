@@ -18,5 +18,7 @@ var multibody__plant_8h =
     [ "DiscreteContactSolver", "multibody__plant_8h.html#a902306c5e0120a67c07f80e9219a3e8d", [
       [ "kTamsi", "multibody__plant_8h.html#a902306c5e0120a67c07f80e9219a3e8dad454de89727cb520148830aa54cb3a90", null ],
       [ "kSap", "multibody__plant_8h.html#a902306c5e0120a67c07f80e9219a3e8dad48dc7e3221aee2d9e1af665ebfbeeec", null ]
-    ] ]
+    ] ],
+    [ "DRAKE_DECLARE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_SCALARS", "multibody__plant_8h.html#a437f497fb77335910dbda38e00d0a465", null ],
+    [ "DRAKE_DECLARE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_SCALARS", "multibody__plant_8h.html#adde8c1ff40a3ea0eb1c7bcf6fa5721df", null ]
 ];

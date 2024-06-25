@@ -4,6 +4,7 @@ var classdrake_1_1multibody_1_1_rpy_floating_joint =
     [ "RpyFloatingJoint", "classdrake_1_1multibody_1_1_rpy_floating_joint.html#a3bcb7c789e9b3babe99718c75c30996e", null ],
     [ "RpyFloatingJoint", "classdrake_1_1multibody_1_1_rpy_floating_joint.html#a112e483d99a972114f20c6f7fc040316", null ],
     [ "RpyFloatingJoint", "classdrake_1_1multibody_1_1_rpy_floating_joint.html#ae2d75a23ca8e71cd8ba917d3b965bcc4", null ],
+    [ "~RpyFloatingJoint", "classdrake_1_1multibody_1_1_rpy_floating_joint.html#a32c47422cc3a4a4724e7865efc1862c8", null ],
     [ "default_angular_damping", "classdrake_1_1multibody_1_1_rpy_floating_joint.html#a2f0a9cd2ddeb8ce9976e95fe59dcc843", null ],
     [ "default_translational_damping", "classdrake_1_1multibody_1_1_rpy_floating_joint.html#a7b17c035e227e8fee348373149aed08b", null ],
     [ "DoAddInDamping", "classdrake_1_1multibody_1_1_rpy_floating_joint.html#a5d61e0fa9ce2f6e50096cebbc3100fa3", null ],

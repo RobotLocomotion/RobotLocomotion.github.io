@@ -170,7 +170,12 @@ $(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_gravity_fo
 class drake::multibody::GravityForceField&lt; T &gt;</h3>
 
 <p>A uniform gravitational force density field for a uniform density object. </p>
-<p>The force density f [N/m³] is given by the product of mass density ρ [kg/m³] and gravity vector g [m/s²]. </p>
+<p>The force density f [N/m³] is given by the product of mass density ρ [kg/m³] and gravity vector g [m/s²]. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
 </div>
 <p><code>#include &lt;drake/multibody/plant/force_density_field.h&gt;</code></p>
 <table class="memberdecls">
@@ -179,6 +184,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aaffe9589f9327b5be45a3e32810bfff2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_gravity_force_field.html#aaffe9589f9327b5be45a3e32810bfff2">GravityForceField</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;gravity_vector, const T &amp;mass_density)</td></tr>
 <tr class="memdesc:aaffe9589f9327b5be45a3e32810bfff2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a uniform gravitational force density field for a uniform density object with the given <code>gravity_vector</code> [m/s²] and <code>mass_density</code> [kg/m³] in the reference (undeformed) configuration where the reference (undeformed) configuration is defined by the input mesh provided by the user.  <a href="#aaffe9589f9327b5be45a3e32810bfff2">More...</a><br /></td></tr>
 <tr class="separator:aaffe9589f9327b5be45a3e32810bfff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82ba285f6f576b3b72084114b687e3e4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_gravity_force_field.html#a82ba285f6f576b3b72084114b687e3e4">~GravityForceField</a> () override</td></tr>
+<tr class="separator:a82ba285f6f576b3b72084114b687e3e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
 <tr class="memitem:aaabba753638c89bded7acbc3775198a6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_gravity_force_field.html#aaabba753638c89bded7acbc3775198a6">GravityForceField</a> (const <a class="el" href="classdrake_1_1multibody_1_1_gravity_force_field.html">GravityForceField</a> &amp;)=default</td></tr>
 <tr class="separator:aaabba753638c89bded7acbc3775198a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -189,8 +196,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7275852ad76f4ec378a52df7e35d478f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_gravity_force_field.html">GravityForceField</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_gravity_force_field.html#a7275852ad76f4ec378a52df7e35d478f">operator=</a> (<a class="el" href="classdrake_1_1multibody_1_1_gravity_force_field.html">GravityForceField</a> &amp;&amp;)=default</td></tr>
 <tr class="separator:a7275852ad76f4ec378a52df7e35d478f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classdrake_1_1multibody_1_1_force_density_field"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classdrake_1_1multibody_1_1_force_density_field')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classdrake_1_1multibody_1_1_force_density_field.html">ForceDensityField&lt; T &gt;</a></td></tr>
-<tr class="memitem:a449fc482be0cfbb8474939921f5c5c8c inherit pub_methods_classdrake_1_1multibody_1_1_force_density_field"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_force_density_field.html#a449fc482be0cfbb8474939921f5c5c8c">~ForceDensityField</a> ()=default</td></tr>
-<tr class="separator:a449fc482be0cfbb8474939921f5c5c8c inherit pub_methods_classdrake_1_1multibody_1_1_force_density_field"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7078bb7b8979f70119871c8e5fd5445 inherit pub_methods_classdrake_1_1multibody_1_1_force_density_field"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_force_density_field.html#ac7078bb7b8979f70119871c8e5fd5445">~ForceDensityField</a> ()</td></tr>
+<tr class="separator:ac7078bb7b8979f70119871c8e5fd5445 inherit pub_methods_classdrake_1_1multibody_1_1_force_density_field"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60e328d070ad76a196fa2b8a14ad07d8 inherit pub_methods_classdrake_1_1multibody_1_1_force_density_field"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_force_density_field.html#a60e328d070ad76a196fa2b8a14ad07d8">EvaluateAt</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_WQ) const</td></tr>
 <tr class="memdesc:a60e328d070ad76a196fa2b8a14ad07d8 inherit pub_methods_classdrake_1_1multibody_1_1_force_density_field"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the force density [N/m³] with the given <code>context</code> of the owning <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> and a position in world, <code>p_WQ</code>.  <a href="classdrake_1_1multibody_1_1_force_density_field.html#a60e328d070ad76a196fa2b8a14ad07d8">More...</a><br /></td></tr>
 <tr class="separator:a60e328d070ad76a196fa2b8a14ad07d8 inherit pub_methods_classdrake_1_1multibody_1_1_force_density_field"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -313,6 +320,31 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructs a uniform gravitational force density field for a uniform density object with the given <code>gravity_vector</code> [m/s²] and <code>mass_density</code> [kg/m³] in the reference (undeformed) configuration where the reference (undeformed) configuration is defined by the input mesh provided by the user. </p>
+
+</div>
+</div>
+<a id="a82ba285f6f576b3b72084114b687e3e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82ba285f6f576b3b72084114b687e3e4">&#9670;&nbsp;</a></span>~GravityForceField()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="classdrake_1_1multibody_1_1_gravity_force_field.html">GravityForceField</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

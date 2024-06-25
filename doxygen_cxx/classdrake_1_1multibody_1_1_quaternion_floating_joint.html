@@ -188,6 +188,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aee2fe7aa0851c239e3194454e8a2ea1b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_quaternion_floating_joint.html#aee2fe7aa0851c239e3194454e8a2ea1b">QuaternionFloatingJoint</a> (const std::string &amp;<a class="el" href="classdrake_1_1multibody_1_1_joint.html#ad8227ba86a01f26e4f173cd5e219d5d1">name</a>, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;<a class="el" href="classdrake_1_1multibody_1_1_joint.html#af544171c3e9756dd27830a3b5b4ff781">frame_on_parent</a>, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;<a class="el" href="classdrake_1_1multibody_1_1_joint.html#adeb59e44e49a847f2a338211882d00f6">frame_on_child</a>, <a class="el" href="classdouble.html">double</a> angular_damping=0.0, <a class="el" href="classdouble.html">double</a> translational_damping=0.0)</td></tr>
 <tr class="memdesc:aee2fe7aa0851c239e3194454e8a2ea1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for a QuaternionFloatingJoint granting six degrees of freedom to an outboard frame M attached to the child body B with respect to an inboard frame F attached to the parent body P.  <a href="#aee2fe7aa0851c239e3194454e8a2ea1b">More...</a><br /></td></tr>
 <tr class="separator:aee2fe7aa0851c239e3194454e8a2ea1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae33495defb6bd4a18ce40e82223cd53f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_quaternion_floating_joint.html#ae33495defb6bd4a18ce40e82223cd53f">~QuaternionFloatingJoint</a> () override</td></tr>
+<tr class="separator:ae33495defb6bd4a18ce40e82223cd53f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a952a908b4c1b68ac11b2e31ef31e9524"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a952a908b4c1b68ac11b2e31ef31e9524">type_name</a> () const override</td></tr>
 <tr class="memdesc:a952a908b4c1b68ac11b2e31ef31e9524"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name of this joint type: "quaternion_floating".  <a href="#a952a908b4c1b68ac11b2e31ef31e9524">More...</a><br /></td></tr>
 <tr class="separator:a952a908b4c1b68ac11b2e31ef31e9524"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -644,6 +646,31 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="ae33495defb6bd4a18ce40e82223cd53f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae33495defb6bd4a18ce40e82223cd53f">&#9670;&nbsp;</a></span>~QuaternionFloatingJoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="classdrake_1_1multibody_1_1_quaternion_floating_joint.html">QuaternionFloatingJoint</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a2f0a9cd2ddeb8ce9976e95fe59dcc843"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2f0a9cd2ddeb8ce9976e95fe59dcc843">&#9670;&nbsp;</a></span>default_angular_damping()</h2>
@@ -827,7 +854,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000013">Deprecated:</a></b></dt><dd>Removed since functionality already provided by base class  Joint::GetDefaultPose() <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000014">Deprecated:</a></b></dt><dd>Removed since functionality already provided by base class  Joint::GetDefaultPose() <br />
  This will be removed from Drake on or after 2024-08-01.</dd></dl>
 
 </div>
@@ -848,7 +875,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000012">Deprecated:</a></b></dt><dd>Use QuaternionFloatingJoint::get_default_translation() <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000013">Deprecated:</a></b></dt><dd>Use QuaternionFloatingJoint::get_default_translation() <br />
  This will be removed from Drake on or after 2024-08-01.</dd></dl>
 
 </div>
@@ -915,7 +942,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000006">Deprecated:</a></b></dt><dd>Use QuaternionFloatingJoint::GetPose() <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000007">Deprecated:</a></b></dt><dd>Use QuaternionFloatingJoint::GetPose() <br />
  This will be removed from Drake on or after 2024-08-01.</dd></dl>
 
 </div>
@@ -937,7 +964,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000005">Deprecated:</a></b></dt><dd>Use QuaternionFloatingJoint::get_translation() <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000006">Deprecated:</a></b></dt><dd>Use QuaternionFloatingJoint::get_translation() <br />
  This will be removed from Drake on or after 2024-08-01.</dd></dl>
 
 </div>
@@ -1178,7 +1205,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000014">Deprecated:</a></b></dt><dd>Use QuaternionFloatingJoint::set_default_translation() <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000015">Deprecated:</a></b></dt><dd>Use QuaternionFloatingJoint::set_default_translation() <br />
  This will be removed from Drake on or after 2024-08-01.</dd></dl>
 
 </div>
@@ -1262,7 +1289,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000010">Deprecated:</a></b></dt><dd>Use QuaternionFloatingJoint::SetPose() <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000011">Deprecated:</a></b></dt><dd>Use QuaternionFloatingJoint::SetPose() <br />
  This will be removed from Drake on or after 2024-08-01.</dd></dl>
 
 </div>
@@ -1294,7 +1321,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000009">Deprecated:</a></b></dt><dd>Use QuaternionFloatingJoint::SetTranslation() <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000010">Deprecated:</a></b></dt><dd>Use QuaternionFloatingJoint::SetTranslation() <br />
  This will be removed from Drake on or after 2024-08-01.</dd></dl>
 
 </div>
@@ -1326,7 +1353,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000007">Deprecated:</a></b></dt><dd>Use QuaternionFloatingJoint::SetQuaternion() <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000008">Deprecated:</a></b></dt><dd>Use QuaternionFloatingJoint::SetQuaternion() <br />
  This will be removed from Drake on or after 2024-08-01.</dd></dl>
 
 </div>
@@ -1348,7 +1375,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000011">Deprecated:</a></b></dt><dd>Use QuaternionFloatingJoint::set_random_translation_distribution() <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000012">Deprecated:</a></b></dt><dd>Use QuaternionFloatingJoint::set_random_translation_distribution() <br />
  This will be removed from Drake on or after 2024-08-01.</dd></dl>
 
 </div>
@@ -1479,7 +1506,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000008">Deprecated:</a></b></dt><dd>Use QuaternionFloatingJoint::SetOrientation() <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000009">Deprecated:</a></b></dt><dd>Use QuaternionFloatingJoint::SetOrientation() <br />
  This will be removed from Drake on or after 2024-08-01.</dd></dl>
 
 </div>

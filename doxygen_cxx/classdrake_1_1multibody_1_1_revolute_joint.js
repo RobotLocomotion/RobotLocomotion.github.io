@@ -5,6 +5,7 @@ var classdrake_1_1multibody_1_1_revolute_joint =
     [ "RevoluteJoint", "classdrake_1_1multibody_1_1_revolute_joint.html#ad8a91d30e147e5f361e07c1dca026a73", null ],
     [ "RevoluteJoint", "classdrake_1_1multibody_1_1_revolute_joint.html#a1cf746f6557c48732c1c2898f9ed51c2", null ],
     [ "RevoluteJoint", "classdrake_1_1multibody_1_1_revolute_joint.html#a7bfac2e954b2a595a7eb903eee290b22", null ],
+    [ "~RevoluteJoint", "classdrake_1_1multibody_1_1_revolute_joint.html#a40761d81b70170a352232d559ce564cb", null ],
     [ "acceleration_lower_limit", "classdrake_1_1multibody_1_1_revolute_joint.html#abfd0eba87edfca3b02cfc44475f06c4c", null ],
     [ "acceleration_upper_limit", "classdrake_1_1multibody_1_1_revolute_joint.html#ac29ca0ee759d2862539406a971f95169", null ],
     [ "AddInTorque", "classdrake_1_1multibody_1_1_revolute_joint.html#a79b24d1bde5380500b8bdf2bd9a28228", null ],

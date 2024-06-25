@@ -209,9 +209,9 @@ class drake::multibody::MultibodyPlant&lt; T &gt;</h3>
 <tr>
 <td align="left" style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_state</td></tr>
 <tr>
-<td align="left" style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray"> model_instance_name[i]</em>_generalized_acceleration</td></tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_generalized_acceleration</td></tr>
 <tr>
-<td align="left" style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray"> model_instance_name[i]</em>_generalized_contact_forces</td></tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_generalized_contact_forces</td></tr>
 <tr>
 <td align="left" style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_net_actuation</td></tr>
 <tr>
@@ -222,7 +222,7 @@ class drake::multibody::MultibodyPlant&lt; T &gt;</h3>
 </td></tr>
 </table>
 <p>The ports whose names begin with <em style="color:gray"> model_instance_name[i]</em> represent groups of ports, one for each of the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#model_instances">model instances</a>, with i ∈ {0, ..., N-1} for the N model instances. If a model instance does not contain any data of the indicated type the port will still be present but its value will be a zero-length vector. (Model instances <code><a class="el" href="namespacedrake_1_1multibody.html#a777a2894881e59d27fc9eb7b4413406f" title="Returns the model instance containing the world body.">world_model_instance()</a></code> and <code><a class="el" href="namespacedrake_1_1multibody.html#a786cd667a624e8cbd915cf50b02c8792" title="Returns the model instance which contains all tree elements with no explicit model instance specified...">default_model_instance()</a></code> always exist.)</p>
-<p>The ports shown in <span style="color:green"> green</span> are for communication with Drake's <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a> system for dealing with geometry.</p>
+<p>The ports shown in <span style="color:green">green</span> are for communication with Drake's <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a> system for dealing with geometry.</p>
 <p>MultibodyPlant provides a user-facing API for:</p>
 <ul>
 <li><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#mbp_input_and_output_ports">Ports</a>: Access input and output ports.</li>
@@ -454,6 +454,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a912adb84c4940893eb4634155e6e7e8b"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a912adb84c4940893eb4634155e6e7e8b">MultibodyPlant</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; U &gt; &amp;other)</td></tr>
 <tr class="memdesc:a912adb84c4940893eb4634155e6e7e8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scalar-converting copy constructor. See <a class="el" href="group__system__scalar__conversion.html">System Scalar Conversion</a>.  <a href="#a912adb84c4940893eb4634155e6e7e8b">More...</a><br /></td></tr>
 <tr class="separator:a912adb84c4940893eb4634155e6e7e8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad119698acd3da506dbdd68f19372dbfb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ad119698acd3da506dbdd68f19372dbfb">~MultibodyPlant</a> () override</td></tr>
+<tr class="separator:ad119698acd3da506dbdd68f19372dbfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbb5022b0809decc5cd30dd25ac9d0f3"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#abbb5022b0809decc5cd30dd25ac9d0f3">AddRigidBody</a> (const std::string &amp;name, <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;M_BBo_B=<a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;::Zero())</td></tr>
 <tr class="memdesc:abbb5022b0809decc5cd30dd25ac9d0f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a rigid body with the provided name and spatial inertia.  <a href="#abbb5022b0809decc5cd30dd25ac9d0f3">More...</a><br /></td></tr>
 <tr class="separator:abbb5022b0809decc5cd30dd25ac9d0f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1380,6 +1382,31 @@ Contact modeling</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Scalar-converting copy constructor. See <a class="el" href="group__system__scalar__conversion.html">System Scalar Conversion</a>. </p>
+
+</div>
+</div>
+<a id="ad119698acd3da506dbdd68f19372dbfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad119698acd3da506dbdd68f19372dbfb">&#9670;&nbsp;</a></span>~MultibodyPlant()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -3919,10 +3946,12 @@ A distance constraint is the wrong modeling choice if the distance needs to go t
 PenetrationAsPointPair for further details on the returned data. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if called pre-finalize. See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if called pre-finalize. See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a>. (Deprecated.) </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000005">Deprecated:</a></b></dt><dd>We anticipate that after the deprecation date, MultibodyPlant will no  longer provide public access access to its cached contact information.  To inquire about collisions, ask the SceneGraph's QueryObject directly. <br />
+ This will be removed from Drake on or after 2024-10-01.</dd></dl>
 
 </div>
 </div>

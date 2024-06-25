@@ -5,6 +5,7 @@ var classdrake_1_1multibody_1_1_propeller =
     [ "Propeller", "classdrake_1_1multibody_1_1_propeller.html#a3eef44c7936aab51f7f0ee330892277c", null ],
     [ "Propeller", "classdrake_1_1multibody_1_1_propeller.html#a7a1acac5cd79500cabe361e1203d1706", null ],
     [ "Propeller", "classdrake_1_1multibody_1_1_propeller.html#a88266abb81081f12190360acabfec8aa", null ],
+    [ "~Propeller", "classdrake_1_1multibody_1_1_propeller.html#ac1e0d0df13e2d99aeb5b7b01f95538d0", null ],
     [ "get_body_poses_input_port", "classdrake_1_1multibody_1_1_propeller.html#a00bb1bf6b619e332e440549f5ae2bcb3", null ],
     [ "get_command_input_port", "classdrake_1_1multibody_1_1_propeller.html#afac37922f9197458d85cf6f30b8050fa", null ],
     [ "get_spatial_forces_output_port", "classdrake_1_1multibody_1_1_propeller.html#a280fde2ed6d0906edaa37c422fd7f410", null ],
