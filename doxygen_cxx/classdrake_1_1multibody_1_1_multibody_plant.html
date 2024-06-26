@@ -301,7 +301,7 @@ To inter-operate between the whole plant actuation vector and sets of per-model 
 <li>Calls to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a90d32a93de07ef91744b95ed152c578d" title="Registers geometry in a SceneGraph with a given geometry::Shape to be used for the contact modeling o...">RegisterCollisionGeometry()</a>, as many as needed.</li>
 <li>Call to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a>, user is done specifying the model.</li>
 <li>Connect <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a26da55d64bd1dda5bda1ea5ae8b985c4" title="Returns the output port which produces the QueryObject for performing geometric queries.">geometry::SceneGraph::get_query_output_port()</a> to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aecfca4e84a8ed96fb3004ff979e89154" title="Returns a constant reference to the input port used to perform geometric queries on a SceneGraph.">get_geometry_query_input_port()</a>.</li>
-<li>Connect <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a1f20f6e2e2de42a5225e86baff2ca0e5" title="Returns the output port of frames&#39; poses to communicate with a SceneGraph.">get_geometry_poses_output_port()</a> to <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#af6a9586065e37f08cc0dd316e9bdd480" title="Given a valid source id, returns a pose input port associated with that id.">geometry::SceneGraph::get_source_pose_port()</a></li>
+<li>Connect <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a595655796fe729cca5af338d9702bdfb" title="Returns the output port of frames&#39; poses to communicate with a SceneGraph.">get_geometry_pose_output_port()</a> to <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#af6a9586065e37f08cc0dd316e9bdd480" title="Given a valid source id, returns a pose input port associated with that id.">geometry::SceneGraph::get_source_pose_port()</a></li>
 </ol>
 <p>Refer to the documentation provided in each of the methods above for further details.</p>
 <p><a class="anchor" id="accessing_contact_properties"></a></p><h4>Accessing point contact parameters</h4>
@@ -438,8 +438,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa6f63e059613961ba0abb2c1c4532e7c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aa6f63e059613961ba0abb2c1c4532e7c">get_contact_results_output_port</a> () const</td></tr>
 <tr class="memdesc:aa6f63e059613961ba0abb2c1c4532e7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constant reference to the port that outputs <a class="el" href="classdrake_1_1multibody_1_1_contact_results.html" title="A container class storing the contact results information for each contact pair for a given state of ...">ContactResults</a>.  <a href="#aa6f63e059613961ba0abb2c1c4532e7c">More...</a><br /></td></tr>
 <tr class="separator:aa6f63e059613961ba0abb2c1c4532e7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a595655796fe729cca5af338d9702bdfb"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a595655796fe729cca5af338d9702bdfb">get_geometry_pose_output_port</a> () const</td></tr>
+<tr class="memdesc:a595655796fe729cca5af338d9702bdfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the output port of frames' poses to communicate with a SceneGraph.  <a href="#a595655796fe729cca5af338d9702bdfb">More...</a><br /></td></tr>
+<tr class="separator:a595655796fe729cca5af338d9702bdfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f20f6e2e2de42a5225e86baff2ca0e5"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a1f20f6e2e2de42a5225e86baff2ca0e5">get_geometry_poses_output_port</a> () const</td></tr>
-<tr class="memdesc:a1f20f6e2e2de42a5225e86baff2ca0e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the output port of frames' poses to communicate with a SceneGraph.  <a href="#a1f20f6e2e2de42a5225e86baff2ca0e5">More...</a><br /></td></tr>
+<tr class="memdesc:a1f20f6e2e2de42a5225e86baff2ca0e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a1f20f6e2e2de42a5225e86baff2ca0e5">More...</a><br /></td></tr>
 <tr class="separator:a1f20f6e2e2de42a5225e86baff2ca0e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0835e38aebf432f9389e5be0ca06a5c4"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a0835e38aebf432f9389e5be0ca06a5c4">get_deformable_body_configuration_output_port</a> () const</td></tr>
 <tr class="memdesc:a0835e38aebf432f9389e5be0ca06a5c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the output port for vertex positions (configurations), measured and expressed in the World frame, of the deformable bodies in <code>this</code> plant as a GeometryConfigurationVector.  <a href="#a0835e38aebf432f9389e5be0ca06a5c4">More...</a><br /></td></tr>
@@ -3950,7 +3953,7 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
   </table>
   </dd>
 </dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000005">Deprecated:</a></b></dt><dd>We anticipate that after the deprecation date, MultibodyPlant will no  longer provide public access access to its cached contact information.  To inquire about collisions, ask the SceneGraph's QueryObject directly. <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000006">Deprecated:</a></b></dt><dd>We anticipate that after the deprecation date, MultibodyPlant will no  longer provide public access access to its cached contact information.  To inquire about collisions, ask the SceneGraph's QueryObject directly. <br />
  This will be removed from Drake on or after 2024-10-01.</dd></dl>
 
 </div>
@@ -4292,7 +4295,7 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 </div><div class="memdoc">
 
 <p>Returns the output port of all body spatial accelerations in the world frame. </p>
-<p>You can obtain the spatial acceleration <code>A_WB</code> of a body B in the world frame W with: </p><div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span>&amp; A_WB_all =</div><div class="line">plant.get_body_spatial_accelerations_output_port().</div><div class="line">    .Eval&lt;std::vector&lt;SpatialAcceleration&lt;double&gt;&gt;&gt;(plant_context);</div><div class="line"><span class="keyword">const</span> <a class="code" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">BodyIndex</a> arm_body_index = plant.GetBodyByName(<span class="stringliteral">&quot;arm&quot;</span>).index();</div><div class="line"><span class="keyword">const</span> SpatialVelocity&lt;double&gt;&amp; A_WArm = A_WB_all[arm_body_index];</div></div><!-- fragment --><p> As shown in the example above, the resulting <code>std::vector</code> of body spatial accelerations is indexed by BodyIndex, and it has size <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#af92b53211e54243aff4490a700168eb4" title="Returns the number of bodies in the model, including the &quot;world&quot; body, which is always part of the mo...">num_bodies()</a>. BodyIndex "zero" (0) always corresponds to the world body, with zero spatial acceleration at all times. </p><dl class="exception"><dt>Exceptions</dt><dd>
+<p>You can obtain the spatial acceleration <code>A_WB</code> of a body B (for point Bo, the body's origin) in the world frame W with: </p><div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span>&amp; A_WB_all =</div><div class="line">plant.get_body_spatial_accelerations_output_port().</div><div class="line">    .Eval&lt;std::vector&lt;SpatialAcceleration&lt;double&gt;&gt;&gt;(plant_context);</div><div class="line"><span class="keyword">const</span> <a class="code" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">BodyIndex</a> arm_body_index = plant.GetBodyByName(<span class="stringliteral">&quot;arm&quot;</span>).index();</div><div class="line"><span class="keyword">const</span> SpatialVelocity&lt;double&gt;&amp; A_WArm = A_WB_all[arm_body_index];</div></div><!-- fragment --><p> As shown in the example above, the resulting <code>std::vector</code> of body spatial accelerations is indexed by BodyIndex, and it has size <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#af92b53211e54243aff4490a700168eb4" title="Returns the number of bodies in the model, including the &quot;world&quot; body, which is always part of the mo...">num_bodies()</a>. BodyIndex "zero" (0) always corresponds to the world body, with zero spatial acceleration at all times. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if called pre-finalize. </td></tr>
   </table>
@@ -4721,6 +4724,25 @@ It is required to connect this port for PD controlled model instances. </dd></dl
 
 </div>
 </div>
+<a id="a595655796fe729cca5af338d9702bdfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a595655796fe729cca5af338d9702bdfb">&#9670;&nbsp;</a></span>get_geometry_pose_output_port()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt;T&gt;&amp; get_geometry_pose_output_port </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the output port of frames' poses to communicate with a SceneGraph. </p>
+
+</div>
+</div>
 <a id="a1f20f6e2e2de42a5225e86baff2ca0e5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1f20f6e2e2de42a5225e86baff2ca0e5">&#9670;&nbsp;</a></span>get_geometry_poses_output_port()</h2>
 
@@ -4736,7 +4758,9 @@ It is required to connect this port for PD controlled model instances. </dd></dl
       </table>
 </div><div class="memdoc">
 
-<p>Returns the output port of frames' poses to communicate with a SceneGraph. </p>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000003">Deprecated:</a></b></dt><dd>Use get_geometry_pose_output_port() instead (note no 's' plural).  If you were only using this port to connect it to a SceneGraph,  instead should you should use the AddMultibodyPlantSceneGraph() or  AddMultibodyPlant(MultibodyPlantConfig) to add the plant and scene  graph to a DiagramBuilder, already wired up correctly. <br />
+ This will be removed from Drake on or after 2024-10-01.</dd></dl>
 
 </div>
 </div>
@@ -9034,7 +9058,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
   </table>
   </dd>
 </dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000003">Deprecated:</a></b></dt><dd>Use set_discrete_contact_approximation() to set the contact model  approximation. The underlying solver will be inferred automatically. <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000004">Deprecated:</a></b></dt><dd>Use set_discrete_contact_approximation() to set the contact model  approximation. The underlying solver will be inferred automatically. <br />
  This will be removed from Drake on or after 2024-04-01.</dd></dl>
 
 </div>
@@ -9660,7 +9684,7 @@ manager != nullptr. </dd></dl>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000004">Deprecated:</a></b></dt><dd>Use MultibodyPlant::SetFreeBodyRandomTranslationDistribution() <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000005">Deprecated:</a></b></dt><dd>Use MultibodyPlant::SetFreeBodyRandomTranslationDistribution() <br />
  This will be removed from Drake on or after 2024-08-01.</dd></dl>
 
 </div>

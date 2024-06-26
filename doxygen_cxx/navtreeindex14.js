@@ -1,5 +1,7 @@
 var NAVTREEINDEX14 =
 {
+"classdrake_1_1math_1_1_rotation_matrix.html#a9771c03401395a6e30c398f5663799ed":[3,0,0,7,13,52],
+"classdrake_1_1math_1_1_rotation_matrix.html#a978a8b146ac3388416fc5c72b553f91a":[3,0,0,7,13,44],
 "classdrake_1_1math_1_1_rotation_matrix.html#aa1890eaa31728581cedbf2bd40457560":[3,0,0,7,13,27],
 "classdrake_1_1math_1_1_rotation_matrix.html#aa1f727008230bd6410b3ff8849fd78e9":[3,0,0,7,13,26],
 "classdrake_1_1math_1_1_rotation_matrix.html#aa5d5438bbed70f2290a46a73e91cc78a":[3,0,0,7,13,18],
@@ -247,7 +249,5 @@ var NAVTREEINDEX14 =
 "classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#a7cb95b46de5f097ad53e170a78f566bd":[3,0,0,8,26,6],
 "classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#a858c66fabb526c359788e4fb7e1f0e39":[3,0,0,8,26,12],
 "classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#a95fe98122c0f9611fe9b26d0f578e5f7":[3,0,0,8,26,0],
-"classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#aa8788820988ccd595c42b7086ccd130a":[3,0,0,8,26,23],
-"classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#aafa0fe3c681d351227ed84813301574a":[3,0,0,8,26,2],
-"classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#abbe2315c890f06cae8e10bdc13e4d080":[3,0,0,8,26,1]
+"classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#aa8788820988ccd595c42b7086ccd130a":[3,0,0,8,26,23]
 };

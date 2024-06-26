@@ -1,5 +1,7 @@
 var NAVTREEINDEX10 =
 {
+"classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a40866c7a0f18b425f096b14788af5301":[1,5,5,4,3],
+"classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a4371f3be108a7d70f7e797633b60c910":[1,1,1,4,23],
 "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a4371f3be108a7d70f7e797633b60c910":[1,5,5,4,23],
 "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a4a8e888889d95b9ad42a70d3eff08801":[1,1,1,4,18],
 "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a4a8e888889d95b9ad42a70d3eff08801":[1,5,5,4,18],
@@ -247,7 +249,5 @@ var NAVTREEINDEX10 =
 "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#af994292c5b8d256af40b63f7a125c456":[1,5,5,6,1],
 "classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html":[3,0,0,4,1,14],
 "classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html#a26ba28914aa5a6945a50a2221f053d95":[3,0,0,4,1,14,0],
-"classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html#a48e40be6382b66a7fd0cdf4ac8aad2a6":[3,0,0,4,1,14,5],
-"classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html#a621852108208d835ec699ee7ba6a0eea":[3,0,0,4,1,14,4],
-"classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html#a67d251c01ea5f9c0add9099193393f14":[3,0,0,4,1,14,8]
+"classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html#a48e40be6382b66a7fd0cdf4ac8aad2a6":[3,0,0,4,1,14,5]
 };

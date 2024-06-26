@@ -1,5 +1,14 @@
 var NAVTREEINDEX47 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a4a93c5b33b420280509114f8a9ac86aa":[3,0,0,17,8,10],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a52ec91bfc0bdaeacdb3be7800ab7d43e":[3,0,0,17,8,17],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a611b9bd79f548904a032ba3992d705e7":[3,0,0,17,8,15],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a6fd5552029547f8e16ebbed98e108bbb":[3,0,0,17,8,3],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a76ec9d05feedef776f4510cfdc3caecd":[3,0,0,17,8,2],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a847303eb7ec2b752d7eee59d3f07ea0e":[3,0,0,17,8,7],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a8743b4bccdaf5d24987b1f76403bbe41":[3,0,0,17,8,13],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a89e113d205dc5ec5eff6d7f331a8c156":[3,0,0,17,8,12],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a97e610bb883f37a631873104d8f6209d":[3,0,0,17,8,0],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a9aa1f1cfff6dcb352d5fbb15a80ee1a9":[3,0,0,17,8,20],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a9efee334e7a31b81c6056b8a0bb2cad1":[3,0,0,17,8,1],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#ab787e9c02a03724506130824c403f3af":[3,0,0,17,8,19],
@@ -240,14 +249,5 @@ var NAVTREEINDEX47 =
 "contact__model__doxygen_8h.html":[4,0,0,8,10,5],
 "contact__problem__graph_8h.html":[4,0,0,8,2,0,0],
 "contact__properties_8h.html":[4,0,0,8,10,6],
-"contact__results_8h.html":[4,0,0,8,10,7],
-"contact__results_8h.html#a1769185ab2e227305eb6677ae38c5824":[4,0,0,8,10,7,1],
-"contact__results__to__lcm_8h.html":[4,0,0,8,10,8],
-"contact__results__to__lcm_8h.html#a4ae0d9975ca572b1bae9da2e87f6c0c5":[4,0,0,8,10,8,2],
-"contact__results__to__lcm_8h.html#ga34c9c8f0a78446ac29edf4a3202127c3":[4,0,0,8,10,8,0],
-"contact__results__to__lcm_8h.html#ga732349f929601b37e30b15ad557057e7":[4,0,0,8,10,8,1],
-"contact__solver_8h.html":[4,0,0,8,2,8],
-"contact__solver_8h.html#ab16ce32bfbad29d6742866c9b838d1ce":[4,0,0,8,2,8,0],
-"contact__solver__results_8h.html":[4,0,0,8,2,9],
-"contact__solver__results_8h.html#a1b5d23d29a49395a5858645bee86699d":[4,0,0,8,2,9,0]
+"contact__results_8h.html":[4,0,0,8,10,7]
 };

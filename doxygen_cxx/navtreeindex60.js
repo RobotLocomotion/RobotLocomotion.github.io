@@ -1,5 +1,14 @@
 var NAVTREEINDEX60 =
 {
+"structdrake_1_1_polynomial_1_1_product.html":[3,0,0,41,1],
+"structdrake_1_1_polynomial_1_1_product.html#a7a4135c74ceab3342f130fb491ccbe29":[3,0,0,41,1,0],
+"structdrake_1_1_rlocation_or_error.html":[3,0,0,45],
+"structdrake_1_1_rlocation_or_error.html#a73f9ba255d9f67483bea8f29d42f9e13":[3,0,0,45,0],
+"structdrake_1_1_rlocation_or_error.html#a8c94119e5bd6fbde0680ef83f01c9685":[3,0,0,45,1],
+"structdrake_1_1_sorted_pair.html":[3,0,0,49],
+"structdrake_1_1_sorted_pair.html#a033c34221f2b1b73e55b19cdef241054":[3,0,0,49,5],
+"structdrake_1_1_sorted_pair.html#a060d674b4b2ac71089f02707fcc90632":[3,0,0,49,4],
+"structdrake_1_1_sorted_pair.html#a0e69b204bc59433d6a3374ab602b7dcb":[3,0,0,49,9],
 "structdrake_1_1_sorted_pair.html#a167fa11f5bf36b4e808282c14c09b3e1":[3,0,0,49,6],
 "structdrake_1_1_sorted_pair.html#a2fc588ec6d00ca9a86173dcc508a12a9":[3,0,0,49,1],
 "structdrake_1_1_sorted_pair.html#a32b737917cbeeb58e2b54f4d4225bb6b":[3,0,0,49,2],
@@ -240,14 +249,5 @@ var NAVTREEINDEX60 =
 "structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a3fa2976e721c8d9ed2ed3c79c6fdab2e":[3,0,0,4,36,1],
 "structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a6dbc96d0c47bae755771279d3ecb3452":[3,0,0,4,36,5],
 "structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a773906248693626d9c3ca17bca32a6e2":[3,0,0,4,36,10],
-"structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a78fb15511f687fe7fdb8e3ba9613648b":[3,0,0,4,36,6],
-"structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,36,0],
-"structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#aa320d63d28f6de621da0a93f91d6ed9f":[3,0,0,4,36,2],
-"structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#aafe5692abc5edf40d59b37edb67c4571":[3,0,0,4,36,3],
-"structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#ae7f364184aa2780e090858d0b3cfda14":[3,0,0,4,36,9],
-"structdrake_1_1geometry_1_1_null_texture.html":[3,0,0,4,38],
-"structdrake_1_1geometry_1_1_null_texture.html#aa3b4b0360b49f499d1d0996b08940f1c":[3,0,0,4,38,0],
-"structdrake_1_1geometry_1_1_penetration_as_point_pair.html":[3,0,0,4,39],
-"structdrake_1_1geometry_1_1_penetration_as_point_pair.html#a03dd077d6a46472c4cbcc37ba07e6655":[3,0,0,4,39,6],
-"structdrake_1_1geometry_1_1_penetration_as_point_pair.html#a09d9dc26f5ad9558065022d1cdab2b27":[3,0,0,4,39,0]
+"structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a78fb15511f687fe7fdb8e3ba9613648b":[3,0,0,4,36,6]
 };

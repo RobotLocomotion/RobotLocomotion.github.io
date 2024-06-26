@@ -261,7 +261,21 @@ glTFᵀᴹ (.gltf)</h2>
 </ul>
 </li>
 <li>Perception roles<ul>
-<li>RenderEngineGl does not support .gltf files. A <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) mesh.">Mesh</a> or <a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">Convex</a> which references such a file will be silently ignored.</li>
+<li>RenderEngineGl has partial support for .gltf files. It doesn't support the full set of valid glTF files. We're not going to attempt to fully characterize what is/isn't supported and, instead, emphasize what will make the glTF file work best.<ul>
+<li>Limitations<ul>
+<li>RenderEngineGl uses simple Phong-based shaders. The PBR materials defined in the glTF will be automatically converted into an approximation. This approximation may change with time as the shaders mature. The appearance of PBR materials in RenderEngineGl is not part of Drake's API stability.</li>
+<li>Drake requires the glTF to define vertex normals.</li>
+</ul>
+</li>
+<li>Supported features<ul>
+<li>Both embedded and external images.</li>
+<li>Your glTF should indicate a <a href="https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html#_gltf_scene">default scene</a>. It is <em>not</em> required and if absent, RenderEngineGl will use an arbitrary protocol for deciding which nodes in the glTF file will be rendered. This protocol is not part of the stable API. Making sure the <code>glTF.scene</code> value is well defined will provide long-term guarantees about what renders.</li>
+<li>A single set of texture coordinates (the vertex attribute called "TEXCOORD_0").</li>
+<li>glTF does not require specification of a material. If a mesh primitive doesn't indicate a material, the <a class="el" href="group__geometry__file__formats.html#geometry_materials">heuristic outlined below</a> will be applied.</li>
+</ul>
+</li>
+</ul>
+</li>
 <li>RenderEngineVtk does support .gltf files.<ul>
 <li>The glTF extensions supported are whatever VTK's glTF loader implements, which at the time of this writing are KHR_lights_punctual and KHR_materials_unlit.</li>
 <li>To get optimal visual appearance, RenderEngineVtk should be configured to use an environment map (see <a class="el" href="structdrake_1_1geometry_1_1_render_engine_vtk_params.html#ad84a8836b437a560f61b53e899a80fc4" title="An optional environment map.">RenderEngineVtkParams::environment_map</a>).</li>

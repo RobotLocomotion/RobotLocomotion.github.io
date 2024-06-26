@@ -85,6 +85,7 @@ var classdrake_1_1multibody_1_1_multibody_plant =
     [ "get_generalized_acceleration_output_port", "classdrake_1_1multibody_1_1_multibody_plant.html#a4023fdbc98667217be9f14a5073a87cf", null ],
     [ "get_generalized_acceleration_output_port", "classdrake_1_1multibody_1_1_multibody_plant.html#a7e127b9f8310b3eeb8a82b40c5d80114", null ],
     [ "get_generalized_contact_forces_output_port", "classdrake_1_1multibody_1_1_multibody_plant.html#a8df9a2d4c286d8da80719d8ed314fcdc", null ],
+    [ "get_geometry_pose_output_port", "classdrake_1_1multibody_1_1_multibody_plant.html#a595655796fe729cca5af338d9702bdfb", null ],
     [ "get_geometry_poses_output_port", "classdrake_1_1multibody_1_1_multibody_plant.html#a1f20f6e2e2de42a5225e86baff2ca0e5", null ],
     [ "get_geometry_query_input_port", "classdrake_1_1multibody_1_1_multibody_plant.html#aecfca4e84a8ed96fb3004ff979e89154", null ],
     [ "get_joint", "classdrake_1_1multibody_1_1_multibody_plant.html#ad293b63a81a28c455fdfb7e5f04c35b0", null ],

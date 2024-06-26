@@ -1632,6 +1632,8 @@ centroid of the contact surface.</p>
 <p>The two geometries, denoted M and N (and obtainable via
 <code class="docutils literal notranslate"><span class="pre">contact_surface().id_M()</span></code> and <code class="docutils literal notranslate"><span class="pre">contact_surface().id_N()</span></code>) are
 attached to bodies A and B, respectively.</p>
+<p>When T = Expression, the class is specialized to not contain any
+member data, because ContactSurface doesn’t support Expression.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This class is templated; see <a class="reference internal" href="#pydrake.multibody.plant.HydroelasticContactInfo_" title="pydrake.multibody.plant.HydroelasticContactInfo_"><code class="xref py py-class docutils literal notranslate"><span class="pre">HydroelasticContactInfo_</span></code></a>
@@ -1683,6 +1685,8 @@ centroid of the contact surface.</p>
 <p>The two geometries, denoted M and N (and obtainable via
 <code class="docutils literal notranslate"><span class="pre">contact_surface().id_M()</span></code> and <code class="docutils literal notranslate"><span class="pre">contact_surface().id_N()</span></code>) are
 attached to bodies A and B, respectively.</p>
+<p>When T = Expression, the class is specialized to not contain any
+member data, because ContactSurface doesn’t support Expression.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.HydroelasticContactInfo_-AutoDiffXd-.__init__">
 <span id="pydrake.multibody.plant.HydroelasticContactInfo_[AutoDiffXd].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.HydroelasticContactInfo_-AutoDiffXd-.__init__" title="Permalink to this definition"></a></dt>
@@ -1723,26 +1727,12 @@ centroid of the contact surface.</p>
 <p>The two geometries, denoted M and N (and obtainable via
 <code class="docutils literal notranslate"><span class="pre">contact_surface().id_M()</span></code> and <code class="docutils literal notranslate"><span class="pre">contact_surface().id_N()</span></code>) are
 attached to bodies A and B, respectively.</p>
+<p>When T = Expression, the class is specialized to not contain any
+member data, because ContactSurface doesn’t support Expression.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.HydroelasticContactInfo_-Expression-.__init__">
 <span id="pydrake.multibody.plant.HydroelasticContactInfo_[Expression].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.HydroelasticContactInfo_-Expression-.__init__" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.plant.HydroelasticContactInfo_-Expression-.contact_surface">
-<span id="pydrake.multibody.plant.HydroelasticContactInfo_[Expression].contact_surface"></span><span class="sig-name descname"><span class="pre">contact_surface</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.HydroelasticContactInfo_" title="pydrake.multibody.plant.HydroelasticContactInfo_"><span class="pre">pydrake.multibody.plant.HydroelasticContactInfo_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::geometry::ContactSurface&lt;drake::symbolic::Expression&gt;</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.HydroelasticContactInfo_-Expression-.contact_surface" title="Permalink to this definition"></a></dt>
-<dd><p>Returns a reference to the ContactSurface data structure. Note that
-the mesh and gradient vector fields are expressed in the world frame.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.plant.HydroelasticContactInfo_-Expression-.F_Ac_W">
-<span id="pydrake.multibody.plant.HydroelasticContactInfo_[Expression].F_Ac_W"></span><span class="sig-name descname"><span class="pre">F_Ac_W</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.HydroelasticContactInfo_" title="pydrake.multibody.plant.HydroelasticContactInfo_"><span class="pre">pydrake.multibody.plant.HydroelasticContactInfo_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.math.html#pydrake.multibody.math.SpatialForce_" title="pydrake.multibody.math.SpatialForce_"><span class="pre">pydrake.multibody.math.SpatialForce_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.HydroelasticContactInfo_-Expression-.F_Ac_W" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the spatial force applied on body A, at the centroid point C of
-the surface mesh M, and expressed in the world frame W. The position
-<code class="docutils literal notranslate"><span class="pre">p_WC</span></code> of the centroid point C in the world frame W can be obtained
-with <code class="docutils literal notranslate"><span class="pre">contact_surface().centroid()</span></code>.</p>
-</dd></dl>
 
 </dd></dl>
 
@@ -2080,7 +2070,7 @@ process will include:</p>
 </ol>
 <p>4. Connect geometry::SceneGraph::get_query_output_port() to
 get_geometry_query_input_port().
-5. Connect get_geometry_poses_output_port() to
+5. Connect get_geometry_pose_output_port() to
 geometry::SceneGraph::get_source_pose_port()</p>
 <p>Refer to the documentation provided in each of the methods above for
 further details.</p>
@@ -4073,8 +4063,8 @@ the identity at all times.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.get_body_spatial_accelerations_output_port">
 <span class="sig-name descname"><span class="pre">get_body_spatial_accelerations_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.get_body_spatial_accelerations_output_port" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the output port of all body spatial accelerations in the world
-frame. You can obtain the spatial acceleration <code class="docutils literal notranslate"><span class="pre">A_WB</span></code> of a body B in
-the world frame W with:</p>
+frame. You can obtain the spatial acceleration <code class="docutils literal notranslate"><span class="pre">A_WB</span></code> of a body B
+(for point Bo, the body’s origin) in the world frame W with:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">A_WB_all</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
 <span class="w">  </span><span class="n">plant</span><span class="p">.</span><span class="n">get_body_spatial_accelerations_output_port</span><span class="p">().</span><span class="w"></span>
 <span class="w">      </span><span class="p">.</span><span class="n">Eval</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SpatialAcceleration</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&gt;&gt;</span><span class="p">(</span><span class="n">plant_context</span><span class="p">);</span><span class="w"></span>
@@ -4325,10 +4315,25 @@ forces for a specific model instance.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.get_geometry_poses_output_port">
-<span class="sig-name descname"><span class="pre">get_geometry_poses_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.get_geometry_poses_output_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.get_geometry_pose_output_port">
+<span class="sig-name descname"><span class="pre">get_geometry_pose_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.get_geometry_pose_output_port" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the output port of frames’ poses to communicate with a
 SceneGraph.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.get_geometry_poses_output_port">
+<span class="sig-name descname"><span class="pre">get_geometry_poses_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.get_geometry_poses_output_port" title="Permalink to this definition"></a></dt>
+<dd><p>(Deprecated.)</p>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>Use get_geometry_pose_output_port() instead (note no ‘s’ plural).
+If you were only using this port to connect it to a SceneGraph,
+instead should you should use the AddMultibodyPlantSceneGraph() or
+AddMultibodyPlant(MultibodyPlantConfig) to add the plant and scene
+graph to a DiagramBuilder, already wired up correctly. This will
+be removed from Drake on or after 2024-10-01.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -7349,7 +7354,7 @@ process will include:</p>
 </ol>
 <p>4. Connect geometry::SceneGraph::get_query_output_port() to
 get_geometry_query_input_port().
-5. Connect get_geometry_poses_output_port() to
+5. Connect get_geometry_pose_output_port() to
 geometry::SceneGraph::get_source_pose_port()</p>
 <p>Refer to the documentation provided in each of the methods above for
 further details.</p>
@@ -9337,8 +9342,8 @@ the identity at all times.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_body_spatial_accelerations_output_port">
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].get_body_spatial_accelerations_output_port"></span><span class="sig-name descname"><span class="pre">get_body_spatial_accelerations_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort_" title="pydrake.systems.framework.OutputPort_"><span class="pre">pydrake.systems.framework.OutputPort_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_body_spatial_accelerations_output_port" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the output port of all body spatial accelerations in the world
-frame. You can obtain the spatial acceleration <code class="docutils literal notranslate"><span class="pre">A_WB</span></code> of a body B in
-the world frame W with:</p>
+frame. You can obtain the spatial acceleration <code class="docutils literal notranslate"><span class="pre">A_WB</span></code> of a body B
+(for point Bo, the body’s origin) in the world frame W with:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">A_WB_all</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
 <span class="w">  </span><span class="n">plant</span><span class="p">.</span><span class="n">get_body_spatial_accelerations_output_port</span><span class="p">().</span><span class="w"></span>
 <span class="w">      </span><span class="p">.</span><span class="n">Eval</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SpatialAcceleration</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&gt;&gt;</span><span class="p">(</span><span class="n">plant_context</span><span class="p">);</span><span class="w"></span>
@@ -9589,10 +9594,25 @@ forces for a specific model instance.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_geometry_poses_output_port">
-<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].get_geometry_poses_output_port"></span><span class="sig-name descname"><span class="pre">get_geometry_poses_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort_" title="pydrake.systems.framework.OutputPort_"><span class="pre">pydrake.systems.framework.OutputPort_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_geometry_poses_output_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_geometry_pose_output_port">
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].get_geometry_pose_output_port"></span><span class="sig-name descname"><span class="pre">get_geometry_pose_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort_" title="pydrake.systems.framework.OutputPort_"><span class="pre">pydrake.systems.framework.OutputPort_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_geometry_pose_output_port" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the output port of frames’ poses to communicate with a
 SceneGraph.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_geometry_poses_output_port">
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].get_geometry_poses_output_port"></span><span class="sig-name descname"><span class="pre">get_geometry_poses_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort_" title="pydrake.systems.framework.OutputPort_"><span class="pre">pydrake.systems.framework.OutputPort_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_geometry_poses_output_port" title="Permalink to this definition"></a></dt>
+<dd><p>(Deprecated.)</p>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>Use get_geometry_pose_output_port() instead (note no ‘s’ plural).
+If you were only using this port to connect it to a SceneGraph,
+instead should you should use the AddMultibodyPlantSceneGraph() or
+AddMultibodyPlant(MultibodyPlantConfig) to add the plant and scene
+graph to a DiagramBuilder, already wired up correctly. This will
+be removed from Drake on or after 2024-10-01.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -12569,7 +12589,7 @@ process will include:</p>
 </ol>
 <p>4. Connect geometry::SceneGraph::get_query_output_port() to
 get_geometry_query_input_port().
-5. Connect get_geometry_poses_output_port() to
+5. Connect get_geometry_pose_output_port() to
 geometry::SceneGraph::get_source_pose_port()</p>
 <p>Refer to the documentation provided in each of the methods above for
 further details.</p>
@@ -14557,8 +14577,8 @@ the identity at all times.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.get_body_spatial_accelerations_output_port">
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].get_body_spatial_accelerations_output_port"></span><span class="sig-name descname"><span class="pre">get_body_spatial_accelerations_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort_" title="pydrake.systems.framework.OutputPort_"><span class="pre">pydrake.systems.framework.OutputPort_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.get_body_spatial_accelerations_output_port" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the output port of all body spatial accelerations in the world
-frame. You can obtain the spatial acceleration <code class="docutils literal notranslate"><span class="pre">A_WB</span></code> of a body B in
-the world frame W with:</p>
+frame. You can obtain the spatial acceleration <code class="docutils literal notranslate"><span class="pre">A_WB</span></code> of a body B
+(for point Bo, the body’s origin) in the world frame W with:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">A_WB_all</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
 <span class="w">  </span><span class="n">plant</span><span class="p">.</span><span class="n">get_body_spatial_accelerations_output_port</span><span class="p">().</span><span class="w"></span>
 <span class="w">      </span><span class="p">.</span><span class="n">Eval</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SpatialAcceleration</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&gt;&gt;</span><span class="p">(</span><span class="n">plant_context</span><span class="p">);</span><span class="w"></span>
@@ -14809,10 +14829,25 @@ forces for a specific model instance.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.get_geometry_poses_output_port">
-<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].get_geometry_poses_output_port"></span><span class="sig-name descname"><span class="pre">get_geometry_poses_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort_" title="pydrake.systems.framework.OutputPort_"><span class="pre">pydrake.systems.framework.OutputPort_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.get_geometry_poses_output_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.get_geometry_pose_output_port">
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].get_geometry_pose_output_port"></span><span class="sig-name descname"><span class="pre">get_geometry_pose_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort_" title="pydrake.systems.framework.OutputPort_"><span class="pre">pydrake.systems.framework.OutputPort_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.get_geometry_pose_output_port" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the output port of frames’ poses to communicate with a
 SceneGraph.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.get_geometry_poses_output_port">
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].get_geometry_poses_output_port"></span><span class="sig-name descname"><span class="pre">get_geometry_poses_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort_" title="pydrake.systems.framework.OutputPort_"><span class="pre">pydrake.systems.framework.OutputPort_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.get_geometry_poses_output_port" title="Permalink to this definition"></a></dt>
+<dd><p>(Deprecated.)</p>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>Use get_geometry_pose_output_port() instead (note no ‘s’ plural).
+If you were only using this port to connect it to a SceneGraph,
+instead should you should use the AddMultibodyPlantSceneGraph() or
+AddMultibodyPlant(MultibodyPlantConfig) to add the plant and scene
+graph to a DiagramBuilder, already wired up correctly. This will
+be removed from Drake on or after 2024-10-01.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">

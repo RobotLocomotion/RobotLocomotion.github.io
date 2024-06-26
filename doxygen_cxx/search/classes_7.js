@@ -23,6 +23,7 @@ var searchData=
   ['hermitiandenseoutput',['HermitianDenseOutput',['../classdrake_1_1systems_1_1_hermitian_dense_output.html',1,'drake::systems']]],
   ['hpolyhedron',['HPolyhedron',['../classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html',1,'drake::geometry::optimization']]],
   ['hydroelasticcontactinfo',['HydroelasticContactInfo',['../classdrake_1_1multibody_1_1_hydroelastic_contact_info.html',1,'drake::multibody']]],
+  ['hydroelasticcontactinfo_3c_20symbolic_3a_3aexpression_20_3e',['HydroelasticContactInfo&lt; symbolic::Expression &gt;',['../classdrake_1_1multibody_1_1_hydroelastic_contact_info_3_01symbolic_1_1_expression_01_4.html',1,'drake::multibody']]],
   ['hydroelasticquadraturepointdata',['HydroelasticQuadraturePointData',['../structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html',1,'drake::multibody']]],
   ['hyperellipsoid',['Hyperellipsoid',['../classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html',1,'drake::geometry::optimization']]],
   ['hyperrectangle',['Hyperrectangle',['../classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html',1,'drake::geometry::optimization']]]

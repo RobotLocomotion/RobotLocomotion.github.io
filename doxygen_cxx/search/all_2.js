@@ -134,6 +134,7 @@ var searchData=
   ['box',['Box',['../classdrake_1_1geometry_1_1_box.html',1,'Box'],['../classdrake_1_1geometry_1_1_box.html#a0ac2ce6e5fab2e2f088846cee710de4d',1,'drake::geometry::Box::Box(const Box &amp;)=default'],['../classdrake_1_1geometry_1_1_box.html#ab9d562f23daeb465002adabc9a03cee7',1,'drake::geometry::Box::Box(Box &amp;&amp;)=default'],['../classdrake_1_1geometry_1_1_box.html#ad39839897f916b4f52411f3ed4f04327',1,'drake::geometry::Box::Box(double width, double depth, double height)'],['../classdrake_1_1geometry_1_1_box.html#ac77e708fba013f00ffee10a956fec3d8',1,'drake::geometry::Box::Box(const Vector3&lt; double &gt; &amp;measures)']]],
   ['boxed_5fcell_2eh',['boxed_cell.h',['../boxed__cell_8h.html',1,'']]],
   ['boxes_5foverlap_2eh',['boxes_overlap.h',['../boxes__overlap_8h.html',1,'']]],
+  ['boxes_5foverlap_5ftransforms_2eh',['boxes_overlap_transforms.h',['../boxes__overlap__transforms_8h.html',1,'']]],
   ['branch',['Branch',['../classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html#aa054d315807a9cfed54baf07b31cdcb5',1,'drake::solvers::MixedIntegerBranchAndBoundNode']]],
   ['branch_5fand_5fbound_2eh',['branch_and_bound.h',['../branch__and__bound_8h.html',1,'']]],
   ['breaks',['breaks',['../classdrake_1_1trajectories_1_1_piecewise_trajectory.html#aa1a71ddfb9ab85211d522ad0e948c426',1,'drake::trajectories::PiecewiseTrajectory']]],

@@ -1,9 +1,10 @@
 var classdrake_1_1geometry_1_1_contact_surface =
 [
-    [ "ContactSurface", "classdrake_1_1geometry_1_1_contact_surface.html#a9e1465537ee24fd7a053d0a117024011", null ],
-    [ "ContactSurface", "classdrake_1_1geometry_1_1_contact_surface.html#a1bba298d00b3ca9aaccbcaa73ad3901d", null ],
+    [ "ContactSurface", "classdrake_1_1geometry_1_1_contact_surface.html#a995bbea49dd6633a4fcf02a47b1c670c", null ],
+    [ "ContactSurface", "classdrake_1_1geometry_1_1_contact_surface.html#a4a0ce4b6954481f1c7300e4bc6efb0bf", null ],
     [ "ContactSurface", "classdrake_1_1geometry_1_1_contact_surface.html#a56af70f8f16a051a279af30429f76da2", null ],
     [ "ContactSurface", "classdrake_1_1geometry_1_1_contact_surface.html#af931921055f30df1a5f7185dcefa83a2", null ],
+    [ "~ContactSurface", "classdrake_1_1geometry_1_1_contact_surface.html#a2f11e433d81423d8cf64b7f314fc06d7", null ],
     [ "area", "classdrake_1_1geometry_1_1_contact_surface.html#a9531fa7a3036a381a925e5fa35d7a6cb", null ],
     [ "centroid", "classdrake_1_1geometry_1_1_contact_surface.html#a4fc1e636e256ca4526d23300e5cdd1c9", null ],
     [ "centroid", "classdrake_1_1geometry_1_1_contact_surface.html#a819bca2023eaa88015e3e51f6e9f557e", null ],
@@ -18,8 +19,8 @@ var classdrake_1_1geometry_1_1_contact_surface =
     [ "is_triangle", "classdrake_1_1geometry_1_1_contact_surface.html#ac1777d06cb15879ee1356176db3c77f1", null ],
     [ "num_faces", "classdrake_1_1geometry_1_1_contact_surface.html#a132d1bbcbcc1ac76319da744805bd865", null ],
     [ "num_vertices", "classdrake_1_1geometry_1_1_contact_surface.html#a319e621fc359dd8daad48247f95b12fa", null ],
-    [ "operator=", "classdrake_1_1geometry_1_1_contact_surface.html#a8be7c6c77842e11a97c3f72352762b5a", null ],
-    [ "operator=", "classdrake_1_1geometry_1_1_contact_surface.html#ac9a52b778bb77c0f15e6ad48cbe43bb0", null ],
+    [ "operator=", "classdrake_1_1geometry_1_1_contact_surface.html#a509acfd07499b9e5a8f74d6fc9119144", null ],
+    [ "operator=", "classdrake_1_1geometry_1_1_contact_surface.html#ac3bec615323128813d2cc37222b4788c", null ],
     [ "poly_e_MN", "classdrake_1_1geometry_1_1_contact_surface.html#aedec78ea13a9aaf9a3e3b2f3beed70d6", null ],
     [ "poly_mesh_W", "classdrake_1_1geometry_1_1_contact_surface.html#a485044c2b55a4ca39c50c13455d9337c", null ],
     [ "representation", "classdrake_1_1geometry_1_1_contact_surface.html#a96d488ade2f4cdc251cfb36601fa8652", null ],

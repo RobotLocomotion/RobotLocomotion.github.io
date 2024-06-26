@@ -178,6 +178,7 @@ class drake::multibody::HydroelasticContactInfo&lt; T &gt;</h3>
 <li>The spatial force from the integrated tractions that is applied at the centroid of the contact surface.</li>
 </ul>
 <p>The two geometries, denoted M and N (and obtainable via <code><a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#ac38327b0cc2eae38d5291f0507738411" title="Returns a reference to the ContactSurface data structure.">contact_surface()</a>.id_M()</code> and <code><a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#ac38327b0cc2eae38d5291f0507738411" title="Returns a reference to the ContactSurface data structure.">contact_surface()</a>.id_N()</code>) are attached to bodies A and B, respectively.</p>
+<p>When T = Expression, the class is specialized to not contain any member data, because ContactSurface doesn't support Expression.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>

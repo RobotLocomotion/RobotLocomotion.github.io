@@ -480,6 +480,7 @@ var hierarchy =
     [ "hash< drake::geometry::GeometryId >", "structstd_1_1hash_3_01drake_1_1geometry_1_1_geometry_id_01_4.html", null ],
     [ "hash< drake::Sha256 >", "structstd_1_1hash_3_01drake_1_1_sha256_01_4.html", null ],
     [ "HydroelasticContactInfo< T >", "classdrake_1_1multibody_1_1_hydroelastic_contact_info.html", null ],
+    [ "HydroelasticContactInfo< symbolic::Expression >", "classdrake_1_1multibody_1_1_hydroelastic_contact_info_3_01symbolic_1_1_expression_01_4.html", null ],
     [ "HydroelasticQuadraturePointData< T >", "structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html", null ],
     [ "Identifier< Tag >", "classdrake_1_1_identifier.html", null ],
     [ "Identifier< class FrameTag >", "classdrake_1_1_identifier.html", null ],
