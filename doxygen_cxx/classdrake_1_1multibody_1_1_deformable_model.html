@@ -184,7 +184,7 @@ class drake::multibody::DeformableModel&lt; T &gt;</h3>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a4d641d06b345cafc39cfddf51513b211"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a4d641d06b345cafc39cfddf51513b211">DeformableModel</a> (<a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; *<a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a208fb8b999d2a234339e911892f24369">plant</a>)</td></tr>
-<tr class="memdesc:a4d641d06b345cafc39cfddf51513b211"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html" title="DeformableModel implements the interface in PhysicalModel and provides the functionalities to specify...">DeformableModel</a> to be owned by the given <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>.  <a href="#a4d641d06b345cafc39cfddf51513b211">More...</a><br /></td></tr>
+<tr class="memdesc:a4d641d06b345cafc39cfddf51513b211"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal only) Constructs a <a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html" title="DeformableModel implements the interface in PhysicalModel and provides the functionalities to specify...">DeformableModel</a> to be owned by the given <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>.  <a href="#a4d641d06b345cafc39cfddf51513b211">More...</a><br /></td></tr>
 <tr class="separator:a4d641d06b345cafc39cfddf51513b211"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa67160df8616d99a24a65769c1a72f26"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#aa67160df8616d99a24a65769c1a72f26">~DeformableModel</a> () final</td></tr>
 <tr class="separator:aa67160df8616d99a24a65769c1a72f26"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -236,9 +236,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1fbbceb086e5b356101ff99949aaa0d3"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a1fbbceb086e5b356101ff99949aaa0d3">fixed_constraint_ids</a> (<a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a> id) const</td></tr>
 <tr class="memdesc:a1fbbceb086e5b356101ff99949aaa0d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns a reference to the all ids of fixed constraints registered with the deformable body with the given <code>id</code>.  <a href="#a1fbbceb086e5b356101ff99949aaa0d3">More...</a><br /></td></tr>
 <tr class="separator:a1fbbceb086e5b356101ff99949aaa0d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31f05a59c9fd329e0e4379d6885aa543"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake_1_1systems.html#afb427ae7d4f36f7a3cfe34eb5a3d51aa">systems::OutputPortIndex</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a31f05a59c9fd329e0e4379d6885aa543">configuration_output_port_index</a> () const</td></tr>
-<tr class="memdesc:a31f05a59c9fd329e0e4379d6885aa543"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the output port index of the vertex positions port for all registered deformable bodies.  <a href="#a31f05a59c9fd329e0e4379d6885aa543">More...</a><br /></td></tr>
-<tr class="separator:a31f05a59c9fd329e0e4379d6885aa543"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae48e04215f73edc66de1f732e4968899"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#afb427ae7d4f36f7a3cfe34eb5a3d51aa">systems::OutputPortIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#ae48e04215f73edc66de1f732e4968899">configuration_output_port_index</a> () const</td></tr>
+<tr class="memdesc:ae48e04215f73edc66de1f732e4968899"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the output port index of the vertex positions port for all registered deformable bodies.  <a href="#ae48e04215f73edc66de1f732e4968899">More...</a><br /></td></tr>
+<tr class="separator:ae48e04215f73edc66de1f732e4968899"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a2b7a58dc85678d08752945ff655362"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a5a2b7a58dc85678d08752945ff655362">is_empty</a> () const</td></tr>
 <tr class="memdesc:a5a2b7a58dc85678d08752945ff655362"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if there's no deformable body or external force registered to <code>this</code> DeformableModel.  <a href="#a5a2b7a58dc85678d08752945ff655362">More...</a><br /></td></tr>
 <tr class="separator:a5a2b7a58dc85678d08752945ff655362"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -281,6 +281,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4488af419a2128b0d862f52a79a2d83b inherit pub_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a4488af419a2128b0d862f52a79a2d83b">DeclareSystemResources</a> ()</td></tr>
 <tr class="memdesc:a4488af419a2128b0d862f52a79a2d83b inherit pub_methods_classdrake_1_1multibody_1_1_physical_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal only) <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> calls this from within Finalize() to declare additional system resources.  <a href="classdrake_1_1multibody_1_1_physical_model.html#a4488af419a2128b0d862f52a79a2d83b">More...</a><br /></td></tr>
 <tr class="separator:a4488af419a2128b0d862f52a79a2d83b inherit pub_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeac673af572017abd863d759450110b7 inherit pub_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#aeac673af572017abd863d759450110b7">DeclareSceneGraphPorts</a> ()</td></tr>
+<tr class="memdesc:aeac673af572017abd863d759450110b7 inherit pub_methods_classdrake_1_1multibody_1_1_physical_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal only) Declares zero or more output ports in the owning <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> to communicate with a SceneGraph.  <a href="classdrake_1_1multibody_1_1_physical_model.html#aeac673af572017abd863d759450110b7">More...</a><br /></td></tr>
+<tr class="separator:aeac673af572017abd863d759450110b7 inherit pub_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a5ebecfc441ca76e53598e424761b9c inherit pub_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#adb169d7f3b447c98cbd02015fba0d6f9">PhysicalModelPointerVariant</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a2a5ebecfc441ca76e53598e424761b9c">ToPhysicalModelPointerVariant</a> () const</td></tr>
 <tr class="memdesc:a2a5ebecfc441ca76e53598e424761b9c inherit pub_methods_classdrake_1_1multibody_1_1_physical_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns (a const pointer to) the specific model variant of <code>this</code> <a class="el" href="classdrake_1_1multibody_1_1_physical_model.html" title="(Internal) PhysicalModel provides the functionalities to extend the type of physical model of Multibo...">PhysicalModel</a>.  <a href="classdrake_1_1multibody_1_1_physical_model.html#a2a5ebecfc441ca76e53598e424761b9c">More...</a><br /></td></tr>
 <tr class="separator:a2a5ebecfc441ca76e53598e424761b9c inherit pub_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -396,8 +399,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Constructs a <a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html" title="DeformableModel implements the interface in PhysicalModel and provides the functionalities to specify...">DeformableModel</a> to be owned by the given <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>. </p>
-<dl class="section pre"><dt>Precondition</dt><dd>plant != nullptr. </dd>
+<p>(Internal only) Constructs a <a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html" title="DeformableModel implements the interface in PhysicalModel and provides the functionalities to specify...">DeformableModel</a> to be owned by the given <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>. </p>
+<p>This constructor is only intended to be called internally by MultibodyPlant. </p><dl class="section pre"><dt>Precondition</dt><dd>plant != nullptr. </dd>
 <dd>
 Finalize() has not been called on <code>plant</code>. </dd></dl>
 
@@ -529,14 +532,14 @@ Finalize() has not been called on <code>plant</code>. </dd></dl>
 
 </div>
 </div>
-<a id="a31f05a59c9fd329e0e4379d6885aa543"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a31f05a59c9fd329e0e4379d6885aa543">&#9670;&nbsp;</a></span>configuration_output_port_index()</h2>
+<a id="ae48e04215f73edc66de1f732e4968899"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae48e04215f73edc66de1f732e4968899">&#9670;&nbsp;</a></span>configuration_output_port_index()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="namespacedrake_1_1systems.html#afb427ae7d4f36f7a3cfe34eb5a3d51aa">systems::OutputPortIndex</a>&amp; configuration_output_port_index </td>
+          <td class="memname"><a class="el" href="namespacedrake_1_1systems.html#afb427ae7d4f36f7a3cfe34eb5a3d51aa">systems::OutputPortIndex</a> configuration_output_port_index </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -545,6 +548,12 @@ Finalize() has not been called on <code>plant</code>. </dd></dl>
 </div><div class="memdoc">
 
 <p>Returns the output port index of the vertex positions port for all registered deformable bodies. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if called before <code><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#aeac673af572017abd863d759450110b7" title="(Internal only) Declares zero or more output ports in the owning MultibodyPlant to communicate with a...">DeclareSceneGraphPorts()</a></code> is called. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

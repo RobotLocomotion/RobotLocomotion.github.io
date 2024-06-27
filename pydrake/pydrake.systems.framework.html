@@ -11054,9 +11054,14 @@ CalcForcedUnrestrictedUpdate()</p>
 <span class="sig-name descname"><span class="pre">get_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.System.get_input_port" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>get_input_port(self: pydrake.systems.framework.System, port_index: int) -&gt; pydrake.systems.framework.InputPort</p></li>
+<li><p>get_input_port(self: pydrake.systems.framework.System, port_index: int, warn_deprecated: bool = True) -&gt; pydrake.systems.framework.InputPort</p></li>
 </ol>
 <p>Returns the typed input port at index <code class="docutils literal notranslate"><span class="pre">port_index</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">warn_deprecated</span></code>:</dt><dd><p>Whether or not to print a warning in case the port was marked as
+deprecated.</p>
+</dd>
+</dl>
 <ol class="arabic simple" start="2">
 <li><p>get_input_port(self: pydrake.systems.framework.System) -&gt; pydrake.systems.framework.InputPort</p></li>
 </ol>
@@ -11070,9 +11075,14 @@ which case it will return the deprecated port.</p>
 <span class="sig-name descname"><span class="pre">get_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.System.get_output_port" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>get_output_port(self: pydrake.systems.framework.System, port_index: int) -&gt; pydrake.systems.framework.OutputPort</p></li>
+<li><p>get_output_port(self: pydrake.systems.framework.System, port_index: int, warn_deprecated: bool = True) -&gt; pydrake.systems.framework.OutputPort</p></li>
 </ol>
 <p>Returns the typed output port at index <code class="docutils literal notranslate"><span class="pre">port_index</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">warn_deprecated</span></code>:</dt><dd><p>Whether or not to print a warning in case the port was marked as
+deprecated.</p>
+</dd>
+</dl>
 <ol class="arabic simple" start="2">
 <li><p>get_output_port(self: pydrake.systems.framework.System) -&gt; pydrake.systems.framework.OutputPort</p></li>
 </ol>
@@ -12200,9 +12210,14 @@ CalcForcedUnrestrictedUpdate()</p>
 <span id="pydrake.systems.framework.System_[AutoDiffXd].get_input_port"></span><span class="sig-name descname"><span class="pre">get_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.System_-AutoDiffXd-.get_input_port" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>get_input_port(self: pydrake.systems.framework.System_[AutoDiffXd], port_index: int) -&gt; pydrake.systems.framework.InputPort_[AutoDiffXd]</p></li>
+<li><p>get_input_port(self: pydrake.systems.framework.System_[AutoDiffXd], port_index: int, warn_deprecated: bool = True) -&gt; pydrake.systems.framework.InputPort_[AutoDiffXd]</p></li>
 </ol>
 <p>Returns the typed input port at index <code class="docutils literal notranslate"><span class="pre">port_index</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">warn_deprecated</span></code>:</dt><dd><p>Whether or not to print a warning in case the port was marked as
+deprecated.</p>
+</dd>
+</dl>
 <ol class="arabic simple" start="2">
 <li><p>get_input_port(self: pydrake.systems.framework.System_[AutoDiffXd]) -&gt; pydrake.systems.framework.InputPort_[AutoDiffXd]</p></li>
 </ol>
@@ -12216,9 +12231,14 @@ which case it will return the deprecated port.</p>
 <span id="pydrake.systems.framework.System_[AutoDiffXd].get_output_port"></span><span class="sig-name descname"><span class="pre">get_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.System_-AutoDiffXd-.get_output_port" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>get_output_port(self: pydrake.systems.framework.System_[AutoDiffXd], port_index: int) -&gt; pydrake.systems.framework.OutputPort_[AutoDiffXd]</p></li>
+<li><p>get_output_port(self: pydrake.systems.framework.System_[AutoDiffXd], port_index: int, warn_deprecated: bool = True) -&gt; pydrake.systems.framework.OutputPort_[AutoDiffXd]</p></li>
 </ol>
 <p>Returns the typed output port at index <code class="docutils literal notranslate"><span class="pre">port_index</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">warn_deprecated</span></code>:</dt><dd><p>Whether or not to print a warning in case the port was marked as
+deprecated.</p>
+</dd>
+</dl>
 <ol class="arabic simple" start="2">
 <li><p>get_output_port(self: pydrake.systems.framework.System_[AutoDiffXd]) -&gt; pydrake.systems.framework.OutputPort_[AutoDiffXd]</p></li>
 </ol>
@@ -13340,9 +13360,14 @@ CalcForcedUnrestrictedUpdate()</p>
 <span id="pydrake.systems.framework.System_[Expression].get_input_port"></span><span class="sig-name descname"><span class="pre">get_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.System_-Expression-.get_input_port" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>get_input_port(self: pydrake.systems.framework.System_[Expression], port_index: int) -&gt; pydrake.systems.framework.InputPort_[Expression]</p></li>
+<li><p>get_input_port(self: pydrake.systems.framework.System_[Expression], port_index: int, warn_deprecated: bool = True) -&gt; pydrake.systems.framework.InputPort_[Expression]</p></li>
 </ol>
 <p>Returns the typed input port at index <code class="docutils literal notranslate"><span class="pre">port_index</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">warn_deprecated</span></code>:</dt><dd><p>Whether or not to print a warning in case the port was marked as
+deprecated.</p>
+</dd>
+</dl>
 <ol class="arabic simple" start="2">
 <li><p>get_input_port(self: pydrake.systems.framework.System_[Expression]) -&gt; pydrake.systems.framework.InputPort_[Expression]</p></li>
 </ol>
@@ -13356,9 +13381,14 @@ which case it will return the deprecated port.</p>
 <span id="pydrake.systems.framework.System_[Expression].get_output_port"></span><span class="sig-name descname"><span class="pre">get_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.System_-Expression-.get_output_port" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>get_output_port(self: pydrake.systems.framework.System_[Expression], port_index: int) -&gt; pydrake.systems.framework.OutputPort_[Expression]</p></li>
+<li><p>get_output_port(self: pydrake.systems.framework.System_[Expression], port_index: int, warn_deprecated: bool = True) -&gt; pydrake.systems.framework.OutputPort_[Expression]</p></li>
 </ol>
 <p>Returns the typed output port at index <code class="docutils literal notranslate"><span class="pre">port_index</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">warn_deprecated</span></code>:</dt><dd><p>Whether or not to print a warning in case the port was marked as
+deprecated.</p>
+</dd>
+</dl>
 <ol class="arabic simple" start="2">
 <li><p>get_output_port(self: pydrake.systems.framework.System_[Expression]) -&gt; pydrake.systems.framework.OutputPort_[Expression]</p></li>
 </ol>

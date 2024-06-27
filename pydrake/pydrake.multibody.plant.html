@@ -1154,7 +1154,9 @@ time.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.DeformableModel.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">pydrake.multibody.plant.DeformableModel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.__init__" title="Permalink to this definition"></a></dt>
-<dd><p>Constructs a DeformableModel to be owned by the given MultibodyPlant.</p>
+<dd><p>(Internal only) Constructs a DeformableModel to be owned by the given
+MultibodyPlant. This constructor is only intended to be called
+internally by MultibodyPlant.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>plant != nullptr.</p>
 </dd>
@@ -2557,40 +2559,6 @@ HasModelInstanceNamed().</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.AddPhysicalModel">
-<span class="sig-name descname"><span class="pre">AddPhysicalModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.PhysicalModel" title="pydrake.multibody.plant.PhysicalModel"><span class="pre">pydrake.multibody.plant.PhysicalModel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.AddPhysicalModel" title="Permalink to this definition"></a></dt>
-<dd><p>For use only by advanced developers wanting to try out their new
-physical models.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This feature is considered to be <strong>experimental</strong> and may change
-or be removed at any time, without any deprecation notice ahead of
-time.</p>
-</div>
-<p>With this method MultibodyPlant takes ownership of <code class="docutils literal notranslate"><span class="pre">model</span></code> and calls
-its DeclareSystemResources() method at Finalize(), giving specific
-physical model implementations a chance to declare the system
-resources it needs. Each type of PhysicalModel can be added at most
-once.</p>
-<dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">model</span></code>:</dt><dd><p>After this call the model is owned by <code class="docutils literal notranslate"><span class="pre">this</span></code> MultibodyPlant.</p>
-</dd>
-<dt>Precondition:</dt><dd><p>model != nullptr.</p>
-</dd>
-</dl>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if called post-finalize. See Finalize</strong><strong>(</strong><strong>)</strong><strong></strong> – </p>
-</dd>
-</dl>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><code class="docutils literal notranslate"><span class="pre">this</span></code> MultibodyPlant will no longer support scalar conversion
-to or from symbolic::Expression after a call to this method.</p>
-</div>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.AddRigidBody">
 <span class="sig-name descname"><span class="pre">AddRigidBody</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.AddRigidBody" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
@@ -3819,6 +3787,23 @@ filter collisions between the geometries registered to the bodies.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.deformable_model">
+<span class="sig-name descname"><span class="pre">deformable_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.plant.DeformableModel" title="pydrake.multibody.plant.DeformableModel"><span class="pre">pydrake.multibody.plant.DeformableModel</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.deformable_model" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the DeformableModel owned by this plant.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if this plant doesn't own a DeformableModel.</strong> – </p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This feature is considered to be <strong>experimental</strong> and may change
+or be removed at any time, without any deprecation notice ahead of
+time.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.EvalBodyPoseInWorld">
 <span class="sig-name descname"><span class="pre">EvalBodyPoseInWorld</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.RigidBody" title="pydrake.multibody.tree.RigidBody"><span class="pre">pydrake.multibody.tree.RigidBody</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.EvalBodyPoseInWorld" title="Permalink to this definition"></a></dt>
 <dd><p>Evaluate the pose <code class="docutils literal notranslate"><span class="pre">X_WB</span></code> of a body B in the world frame W.</p>
@@ -4162,14 +4147,6 @@ MultibodyPlant.</p>
 <dd><p>Returns the output port for vertex positions (configurations),
 measured and expressed in the World frame, of the deformable bodies in
 <code class="docutils literal notranslate"><span class="pre">this</span></code> plant as a GeometryConfigurationVector.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if this MultibodyPlant doesn't have a</strong> – </p></li>
-<li><p><strong>DeformableModel. See AddPhysicalModel</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
-</ul>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -6102,6 +6079,24 @@ if it is not of size num_positions().</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.mutable_deformable_model">
+<span class="sig-name descname"><span class="pre">mutable_deformable_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.plant.DeformableModel" title="pydrake.multibody.plant.DeformableModel"><span class="pre">pydrake.multibody.plant.DeformableModel</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.mutable_deformable_model" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a mutable reference to the DeformableModel owned by this
+plant.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if the plant is finalized.</strong> – </p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This feature is considered to be <strong>experimental</strong> and may change
+or be removed at any time, without any deprecation notice ahead of
+time.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.mutable_gravity_field">
 <span class="sig-name descname"><span class="pre">mutable_gravity_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.UniformGravityFieldElement" title="pydrake.multibody.tree.UniformGravityFieldElement"><span class="pre">pydrake.multibody.tree.UniformGravityFieldElement</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.mutable_gravity_field" title="Permalink to this definition"></a></dt>
 <dd><p>A mutable accessor to the current gravity field.</p>
@@ -6292,19 +6287,6 @@ instance i.</p>
 <dd class="field-odd"><p><strong>RuntimeError if called pre-finalize.</strong> – </p>
 </dd>
 </dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.physical_models">
-<span class="sig-name descname"><span class="pre">physical_models</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.multibody.plant.PhysicalModel" title="pydrake.multibody.plant.PhysicalModel"><span class="pre">pydrake.multibody.plant.PhysicalModel</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.physical_models" title="Permalink to this definition"></a></dt>
-<dd><p>Returns a vector of pointers to all physical models registered with
-this MultibodyPlant. For use only by advanced developers.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This feature is considered to be <strong>experimental</strong> and may change
-or be removed at any time, without any deprecation notice ahead of
-time.</p>
-</div>
 </dd></dl>
 
 <dl class="py method">
@@ -7836,40 +7818,6 @@ HasModelInstanceNamed().</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.AddPhysicalModel">
-<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].AddPhysicalModel"></span><span class="sig-name descname"><span class="pre">AddPhysicalModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd],</span> <span class="pre">model:</span> <span class="pre">drake::multibody::PhysicalModel&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double,</span> <span class="pre">-1,</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">-1,</span> <span class="pre">1&gt;</span> <span class="pre">&gt;</span> <span class="pre">&gt;</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.AddPhysicalModel" title="Permalink to this definition"></a></dt>
-<dd><p>For use only by advanced developers wanting to try out their new
-physical models.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This feature is considered to be <strong>experimental</strong> and may change
-or be removed at any time, without any deprecation notice ahead of
-time.</p>
-</div>
-<p>With this method MultibodyPlant takes ownership of <code class="docutils literal notranslate"><span class="pre">model</span></code> and calls
-its DeclareSystemResources() method at Finalize(), giving specific
-physical model implementations a chance to declare the system
-resources it needs. Each type of PhysicalModel can be added at most
-once.</p>
-<dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">model</span></code>:</dt><dd><p>After this call the model is owned by <code class="docutils literal notranslate"><span class="pre">this</span></code> MultibodyPlant.</p>
-</dd>
-<dt>Precondition:</dt><dd><p>model != nullptr.</p>
-</dd>
-</dl>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if called post-finalize. See Finalize</strong><strong>(</strong><strong>)</strong><strong></strong> – </p>
-</dd>
-</dl>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><code class="docutils literal notranslate"><span class="pre">this</span></code> MultibodyPlant will no longer support scalar conversion
-to or from symbolic::Expression after a call to this method.</p>
-</div>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.AddRigidBody">
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].AddRigidBody"></span><span class="sig-name descname"><span class="pre">AddRigidBody</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.AddRigidBody" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
@@ -9098,6 +9046,23 @@ filter collisions between the geometries registered to the bodies.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.deformable_model">
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].deformable_model"></span><span class="sig-name descname"><span class="pre">deformable_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::multibody::DeformableModel&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double,</span> <span class="pre">-1,</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">-1,</span> <span class="pre">1&gt;</span> <span class="pre">&gt;</span> <span class="pre">&gt;</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.deformable_model" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the DeformableModel owned by this plant.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if this plant doesn't own a DeformableModel.</strong> – </p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This feature is considered to be <strong>experimental</strong> and may change
+or be removed at any time, without any deprecation notice ahead of
+time.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.EvalBodyPoseInWorld">
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].EvalBodyPoseInWorld"></span><span class="sig-name descname"><span class="pre">EvalBodyPoseInWorld</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.RigidBody_" title="pydrake.multibody.tree.RigidBody_"><span class="pre">pydrake.multibody.tree.RigidBody_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform_" title="pydrake.math.RigidTransform_"><span class="pre">pydrake.math.RigidTransform_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.EvalBodyPoseInWorld" title="Permalink to this definition"></a></dt>
 <dd><p>Evaluate the pose <code class="docutils literal notranslate"><span class="pre">X_WB</span></code> of a body B in the world frame W.</p>
@@ -9441,14 +9406,6 @@ MultibodyPlant.</p>
 <dd><p>Returns the output port for vertex positions (configurations),
 measured and expressed in the World frame, of the deformable bodies in
 <code class="docutils literal notranslate"><span class="pre">this</span></code> plant as a GeometryConfigurationVector.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if this MultibodyPlant doesn't have a</strong> – </p></li>
-<li><p><strong>DeformableModel. See AddPhysicalModel</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
-</ul>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -11343,6 +11300,24 @@ if it is not of size num_positions().</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.mutable_deformable_model">
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].mutable_deformable_model"></span><span class="sig-name descname"><span class="pre">mutable_deformable_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::multibody::DeformableModel&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double,</span> <span class="pre">-1,</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">-1,</span> <span class="pre">1&gt;</span> <span class="pre">&gt;</span> <span class="pre">&gt;</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.mutable_deformable_model" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a mutable reference to the DeformableModel owned by this
+plant.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if the plant is finalized.</strong> – </p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This feature is considered to be <strong>experimental</strong> and may change
+or be removed at any time, without any deprecation notice ahead of
+time.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.mutable_gravity_field">
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].mutable_gravity_field"></span><span class="sig-name descname"><span class="pre">mutable_gravity_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.UniformGravityFieldElement_" title="pydrake.multibody.tree.UniformGravityFieldElement_"><span class="pre">pydrake.multibody.tree.UniformGravityFieldElement_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.mutable_gravity_field" title="Permalink to this definition"></a></dt>
 <dd><p>A mutable accessor to the current gravity field.</p>
@@ -11533,19 +11508,6 @@ instance i.</p>
 <dd class="field-odd"><p><strong>RuntimeError if called pre-finalize.</strong> – </p>
 </dd>
 </dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.physical_models">
-<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].physical_models"></span><span class="sig-name descname"><span class="pre">physical_models</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list[drake::multibody::PhysicalModel&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double,</span> <span class="pre">-1,</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">-1,</span> <span class="pre">1&gt;</span> <span class="pre">&gt;</span> <span class="pre">&gt;]</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.physical_models" title="Permalink to this definition"></a></dt>
-<dd><p>Returns a vector of pointers to all physical models registered with
-this MultibodyPlant. For use only by advanced developers.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This feature is considered to be <strong>experimental</strong> and may change
-or be removed at any time, without any deprecation notice ahead of
-time.</p>
-</div>
 </dd></dl>
 
 <dl class="py method">
@@ -13071,40 +13033,6 @@ HasModelInstanceNamed().</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.AddPhysicalModel">
-<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].AddPhysicalModel"></span><span class="sig-name descname"><span class="pre">AddPhysicalModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.multibody.plant.MultibodyPlant_[Expression],</span> <span class="pre">model:</span> <span class="pre">drake::multibody::PhysicalModel&lt;drake::symbolic::Expression&gt;</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.AddPhysicalModel" title="Permalink to this definition"></a></dt>
-<dd><p>For use only by advanced developers wanting to try out their new
-physical models.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This feature is considered to be <strong>experimental</strong> and may change
-or be removed at any time, without any deprecation notice ahead of
-time.</p>
-</div>
-<p>With this method MultibodyPlant takes ownership of <code class="docutils literal notranslate"><span class="pre">model</span></code> and calls
-its DeclareSystemResources() method at Finalize(), giving specific
-physical model implementations a chance to declare the system
-resources it needs. Each type of PhysicalModel can be added at most
-once.</p>
-<dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">model</span></code>:</dt><dd><p>After this call the model is owned by <code class="docutils literal notranslate"><span class="pre">this</span></code> MultibodyPlant.</p>
-</dd>
-<dt>Precondition:</dt><dd><p>model != nullptr.</p>
-</dd>
-</dl>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if called post-finalize. See Finalize</strong><strong>(</strong><strong>)</strong><strong></strong> – </p>
-</dd>
-</dl>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><code class="docutils literal notranslate"><span class="pre">this</span></code> MultibodyPlant will no longer support scalar conversion
-to or from symbolic::Expression after a call to this method.</p>
-</div>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.AddRigidBody">
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].AddRigidBody"></span><span class="sig-name descname"><span class="pre">AddRigidBody</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.AddRigidBody" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
@@ -14333,6 +14261,23 @@ filter collisions between the geometries registered to the bodies.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.deformable_model">
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].deformable_model"></span><span class="sig-name descname"><span class="pre">deformable_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::multibody::DeformableModel&lt;drake::symbolic::Expression&gt;</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.deformable_model" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the DeformableModel owned by this plant.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if this plant doesn't own a DeformableModel.</strong> – </p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This feature is considered to be <strong>experimental</strong> and may change
+or be removed at any time, without any deprecation notice ahead of
+time.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.EvalBodyPoseInWorld">
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].EvalBodyPoseInWorld"></span><span class="sig-name descname"><span class="pre">EvalBodyPoseInWorld</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.RigidBody_" title="pydrake.multibody.tree.RigidBody_"><span class="pre">pydrake.multibody.tree.RigidBody_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform_" title="pydrake.math.RigidTransform_"><span class="pre">pydrake.math.RigidTransform_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.EvalBodyPoseInWorld" title="Permalink to this definition"></a></dt>
 <dd><p>Evaluate the pose <code class="docutils literal notranslate"><span class="pre">X_WB</span></code> of a body B in the world frame W.</p>
@@ -14676,14 +14621,6 @@ MultibodyPlant.</p>
 <dd><p>Returns the output port for vertex positions (configurations),
 measured and expressed in the World frame, of the deformable bodies in
 <code class="docutils literal notranslate"><span class="pre">this</span></code> plant as a GeometryConfigurationVector.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if this MultibodyPlant doesn't have a</strong> – </p></li>
-<li><p><strong>DeformableModel. See AddPhysicalModel</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
-</ul>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -16578,6 +16515,24 @@ if it is not of size num_positions().</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.mutable_deformable_model">
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].mutable_deformable_model"></span><span class="sig-name descname"><span class="pre">mutable_deformable_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::multibody::DeformableModel&lt;drake::symbolic::Expression&gt;</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.mutable_deformable_model" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a mutable reference to the DeformableModel owned by this
+plant.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if the plant is finalized.</strong> – </p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This feature is considered to be <strong>experimental</strong> and may change
+or be removed at any time, without any deprecation notice ahead of
+time.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.mutable_gravity_field">
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].mutable_gravity_field"></span><span class="sig-name descname"><span class="pre">mutable_gravity_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.UniformGravityFieldElement_" title="pydrake.multibody.tree.UniformGravityFieldElement_"><span class="pre">pydrake.multibody.tree.UniformGravityFieldElement_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.mutable_gravity_field" title="Permalink to this definition"></a></dt>
 <dd><p>A mutable accessor to the current gravity field.</p>
@@ -16768,19 +16723,6 @@ instance i.</p>
 <dd class="field-odd"><p><strong>RuntimeError if called pre-finalize.</strong> – </p>
 </dd>
 </dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.physical_models">
-<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].physical_models"></span><span class="sig-name descname"><span class="pre">physical_models</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list[drake::multibody::PhysicalModel&lt;drake::symbolic::Expression&gt;]</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.physical_models" title="Permalink to this definition"></a></dt>
-<dd><p>Returns a vector of pointers to all physical models registered with
-this MultibodyPlant. For use only by advanced developers.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This feature is considered to be <strong>experimental</strong> and may change
-or be removed at any time, without any deprecation notice ahead of
-time.</p>
-</div>
 </dd></dl>
 
 <dl class="py method">

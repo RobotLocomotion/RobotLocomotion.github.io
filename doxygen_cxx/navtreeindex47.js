@@ -1,5 +1,7 @@
 var NAVTREEINDEX47 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a320fae9dc5f8cb947997f9fdb205ec9c":[3,0,0,17,8,4],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a37135ec545f4025fc50aba0017d8566d":[3,0,0,17,8,9],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a4a93c5b33b420280509114f8a9ac86aa":[3,0,0,17,8,10],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a52ec91bfc0bdaeacdb3be7800ab7d43e":[3,0,0,17,8,17],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a611b9bd79f548904a032ba3992d705e7":[3,0,0,17,8,15],
@@ -247,7 +249,5 @@ var NAVTREEINDEX47 =
 "contact__jacobians_8h.html":[4,0,0,8,10,4],
 "contact__jacobians_8h.html#a9436deb241da5e1c194a7d7ecd3e1ae8":[4,0,0,8,10,4,0],
 "contact__model__doxygen_8h.html":[4,0,0,8,10,5],
-"contact__problem__graph_8h.html":[4,0,0,8,2,0,0],
-"contact__properties_8h.html":[4,0,0,8,10,6],
-"contact__results_8h.html":[4,0,0,8,10,7]
+"contact__problem__graph_8h.html":[4,0,0,8,2,0,0]
 };
