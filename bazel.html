@@ -476,6 +476,23 @@ coverage for multi-line statements properly. Statements that use delimiter
 pairs to span more than two lines, or statements that use string token pasting
 across multiple lines may be mistakenly shown as only partially executed.</p>
 
+<h3 id="drake-bazel-rules-and-kcov">Drake bazel rules and kcov</h3>
+
+<p>Some Drake-specific bazel rules (e.g. <code class="language-plaintext highlighter-rouge">drake_cc_google_test</code>) use various
+heuristics to skip certain tests in <code class="language-plaintext highlighter-rouge">kcov</code> builds. This may hinder developers
+trying to use <code class="language-plaintext highlighter-rouge">kcov</code> locally on specific tests. For example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bazel test --config=kcov //common:temp_directory_test
+</code></pre></div></div>
+
+<p>results in:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ERROR: No test targets were found, yet testing was requested
+</code></pre></div></div>
+
+<p>To force execution with kcov, add an empty <code class="language-plaintext highlighter-rouge">test_tag_filters</code> option:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bazel test --config=kcov --test_tag_filters= //common:temp_directory_test
+</code></pre></div></div>
+
       </article>
     </div>
   </section>

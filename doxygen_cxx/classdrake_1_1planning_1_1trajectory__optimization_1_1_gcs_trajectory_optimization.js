@@ -29,5 +29,5 @@ var classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimi
     [ "RemoveSubgraph", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a88df1e80fc5caca3da4c817fc3e23338", null ],
     [ "SolveConvexRestriction", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a9e725d3d3b1c11c6760e99faeaa0aa35", null ],
     [ "SolvePath", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a8ddb1df26a2324afc83f84c90281c249", null ],
-    [ "UnwrapToContinousTrajectory", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a350f75f8f76e13987b85cae47c2bf6d1", null ]
+    [ "UnwrapToContinousTrajectory", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#ac7f436a97eef7126a7cd5136848ff459", null ]
 ];
