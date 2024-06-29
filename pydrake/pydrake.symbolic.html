@@ -276,7 +276,11 @@ map_var_to_index[vi.get_ID()] = i.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>num_variable. Number of variables in the expression. 2 * x(0) + 3
-has 1 variable, 2 * x(0) + 3 * x(1) - 2 * x(0) has 1 variable.</p>
+has 1 variable; 2 * x(0) + 3 * x(1) - 2 * x(0) has 1 variable,
+since the x(0) term cancels.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>RuntimeError if the input expression is not affine.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -313,6 +317,11 @@ vars + b\)</span></p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">b</span></code>:</dt><dd><p>The vector containing all the constant terms.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">vars</span></code>:</dt><dd><p>All variables.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if the input expressions are not affine.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>

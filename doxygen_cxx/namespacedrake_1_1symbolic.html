@@ -2379,7 +2379,13 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>num_variable. Number of variables in the expression. 2 * x(0) + 3 has 1 variable, 2 * x(0) + 3 * x(1) - 2 * x(0) has 1 variable. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>num_variable. Number of variables in the expression. 2 * x(0) + 3 has 1 variable; 2 * x(0) + 3 * x(1) - 2 * x(0) has 1 variable, since the x(0) term cancels.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the input expression is not affine. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -2478,7 +2484,13 @@ v.rows() == expressions.rows(). </dd></dl>
     <tr><td class="paramdir">[in]</td><td class="paramname">v</td><td>A vector of affine expressions </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">A</td><td>The matrix containing the linear coefficients. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">b</td><td>The vector containing all the constant terms. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">vars</td><td>All variables. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">vars</td><td>All variables.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the input expressions are not affine. </td></tr>
   </table>
   </dd>
 </dl>

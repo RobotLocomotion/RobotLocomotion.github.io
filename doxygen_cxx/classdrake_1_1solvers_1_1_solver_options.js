@@ -8,6 +8,7 @@ var classdrake_1_1solvers_1_1_solver_options =
     [ "common_solver_options", "classdrake_1_1solvers_1_1_solver_options.html#acf436474c8cf3ddc0ab64013b833e6a7", null ],
     [ "get_print_file_name", "classdrake_1_1solvers_1_1_solver_options.html#ac2adda584ed29a23b6e0bced598f22c3", null ],
     [ "get_print_to_console", "classdrake_1_1solvers_1_1_solver_options.html#a2894ce2c8df835376f1df65dabc7d321", null ],
+    [ "get_standalone_reproduction_file_name", "classdrake_1_1solvers_1_1_solver_options.html#ad0387089aeb1d2e2f42052740bc945cc", null ],
     [ "GetOptions", "classdrake_1_1solvers_1_1_solver_options.html#af3a6a8693d5410ab5dc7ee4c98752311", null ],
     [ "GetOptionsDouble", "classdrake_1_1solvers_1_1_solver_options.html#a67dd3ecde66be98e181e18e72dda8a66", null ],
     [ "GetOptionsInt", "classdrake_1_1solvers_1_1_solver_options.html#a3ad61449561de80a18154855903a80e5", null ],

@@ -1,5 +1,8 @@
 var NAVTREEINDEX53 =
 {
+"group__estimator__systems.html#ga3949eebe88ae99b71a997dfa0bad5cff":[1,2,3,5],
+"group__estimator__systems.html#ga483f8a39c210ad058dfc19ae26d93e16":[1,2,3,4],
+"group__estimator__systems.html#ga9bb685faf49982e65d0e4bbf2c1d460b":[1,2,3,2],
 "group__estimator__systems.html#gaa15831763ec42b356a75c6bb616a6531":[1,2,3,3],
 "group__estimator__systems.html#gafef1c264968026046996e35551b7155e":[1,2,3,1],
 "group__estimator__systems.html#gaffc5a5eabe473ebd57f96b0310d70ed8":[1,2,3,6],
@@ -11,8 +14,8 @@ var NAVTREEINDEX53 =
 "group__geometry__infrastructure.html":[1,5,0],
 "group__geometry__optimization.html":[1,1,1],
 "group__geometry__optimization.html":[1,5,5],
-"group__geometry__optimization.html#ga3a51e0fec449a0abcf498f78a2a390a8":[1,1,1,14],
 "group__geometry__optimization.html#ga3a51e0fec449a0abcf498f78a2a390a8":[1,5,5,14],
+"group__geometry__optimization.html#ga3a51e0fec449a0abcf498f78a2a390a8":[1,1,1,14],
 "group__geometry__optimization.html#ga5f3ad49bfffd1b9a968ed7f1bf4d4c80":[1,5,5,16],
 "group__geometry__optimization.html#ga5f3ad49bfffd1b9a968ed7f1bf4d4c80":[1,1,1,16],
 "group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af":[1,5,5,15],
@@ -246,8 +249,5 @@ var NAVTREEINDEX53 =
 "integer__inequality__solver_8h.html":[4,0,0,11,25],
 "integer__inequality__solver_8h.html#a897158ddd3d5fd975edd151850ecc639":[4,0,0,11,25,0],
 "integer__optimization__util_8h.html":[4,0,0,11,26],
-"integer__optimization__util_8h.html#a1460b4c245321e57b234a724d774fc50":[4,0,0,11,26,0],
-"integer__optimization__util_8h.html#aa7a863c255da14a1441e3ac58d082472":[4,0,0,11,26,3],
-"integer__optimization__util_8h.html#ab3ba521ece6e61a25713f11610b01d97":[4,0,0,11,26,1],
-"integer__optimization__util_8h.html#ada3cfbf9597820039fe2d6c3f175731b":[4,0,0,11,26,2]
+"integer__optimization__util_8h.html#a1460b4c245321e57b234a724d774fc50":[4,0,0,11,26,0]
 };

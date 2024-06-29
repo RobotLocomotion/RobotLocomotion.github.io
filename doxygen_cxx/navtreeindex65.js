@@ -1,5 +1,8 @@
 var NAVTREEINDEX65 =
 {
+"structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_rgba8_u_01_4.html":[3,0,0,15,8,29],
+"structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_rgba8_u_01_4.html#ae99b366a9a1126b3fc6014ceb7eca8d5":[3,0,0,15,8,29,0],
+"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits.html":[3,0,0,15,8,30],
 "structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_bgr_01_4.html":[3,0,0,15,8,31],
 "structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_bgr_01_4.html#ab9d071a35c456d7863cadc4f413e8fcf":[3,0,0,15,8,31,0],
 "structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_bgra_01_4.html":[3,0,0,15,8,32],
@@ -246,8 +249,5 @@ var NAVTREEINDEX65 =
 "systems_2controllers_2stub_2zmp__planner_8h.html#a14730193ccd26d5af6dbc508a8837f56":[4,0,0,12,1,0,0,0],
 "systems_2primitives_2discrete__time__integrator_8h.html":[4,0,0,12,6,8],
 "systems_2primitives_2discrete__time__integrator_8h.html#acd86104f3ad8e8e5808c3533cc9b4d5b":[4,0,0,12,6,8,0],
-"systems_8h.html":[4,0,0,12,11],
-"tamsi__driver_8h.html":[4,0,0,8,10,40],
-"tamsi__driver_8h.html#a7054df7b1a85d4b44d101d60c0b9e11b":[4,0,0,8,10,40,0],
-"tamsi__solver_8h.html":[4,0,0,8,10,41]
+"systems_8h.html":[4,0,0,12,11]
 };

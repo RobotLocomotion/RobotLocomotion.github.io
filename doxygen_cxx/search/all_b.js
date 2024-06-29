@@ -348,6 +348,7 @@ var searchData=
   ['kspringk',['kSpringK',['../structdrake_1_1systems_1_1analysis__test_1_1_explicit_error_controlled_integrator_test.html#a6aa3dc95330ca350010af07f6fc6a3d9',1,'drake::systems::analysis_test::ExplicitErrorControlledIntegratorTest']]],
   ['kstance',['kStance',['../structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state_indices.html#af07dfcb34968cb33074bae14513b2dbc',1,'drake::examples::compass_gait::CompassGaitContinuousStateIndices']]],
   ['kstancedot',['kStancedot',['../structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state_indices.html#a923a3136a01f740f0f947c4efaed50cc',1,'drake::examples::compass_gait::CompassGaitContinuousStateIndices']]],
+  ['kstandalonereproductionfilename',['kStandaloneReproductionFileName',['../namespacedrake_1_1solvers.html#ae07229124cd16e9d8b62fe359c7d0b40a88b173449afee96caef8bf2715f31380',1,'drake::solvers']]],
   ['kstuck',['kStuck',['../namespacedrake_1_1multibody.html#a3e26d472253fc2fe452f8b4bb2d1bcdca2090aef3abe80df58a23b77aa3a10bc3',1,'drake::multibody']]],
   ['ksucceeded',['kSucceeded',['../classdrake_1_1systems_1_1_event_status.html#a11717da96dc4e4a5f79371318448f82ba6c37a7435a4069d24dd684abdb57d9ae',1,'drake::systems::EventStatus']]],
   ['ksuccess',['kSuccess',['../namespacedrake_1_1multibody.html#a6144c2c8d4494bcb283f3f9e5841bfd2a8c632159fa131f09d04f94e3cbcd8782',1,'drake::multibody']]],

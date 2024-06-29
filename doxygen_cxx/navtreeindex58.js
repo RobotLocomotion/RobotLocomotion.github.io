@@ -1,5 +1,8 @@
 var NAVTREEINDEX58 =
 {
+"rational__function_8h.html#a579d06e36f094bf2eebf127dcbb46a1c":[4,0,0,1,3,14,23],
+"rational__function_8h.html#a687c99f46e854d9237083b2f34e6665c":[4,0,0,1,3,14,27],
+"rational__function_8h.html#a6d99af1951c74ac5377ce5e7ec953eb6":[4,0,0,1,3,14,14],
 "rational__function_8h.html#a8327415ae13cae1b0d450c384079a49e":[4,0,0,1,3,14,10],
 "rational__function_8h.html#a9120c262586410f015a00fcdd6fed2a7":[4,0,0,1,3,14,19],
 "rational__function_8h.html#a97671d479c281451e703b58530b17082":[4,0,0,1,3,14,2],
@@ -246,8 +249,5 @@ var NAVTREEINDEX58 =
 "simplification_8h.html#a697784ea0eafd05039e3a0c97b7c1415":[4,0,0,1,3,16,3],
 "simplification_8h.html#aeb27ddf30420e620beb8e6725d83208f":[4,0,0,1,3,16,1],
 "simulation__and__solvers__doxygen_8h.html":[4,0,0,8,10,38],
-"simulator_8h.html":[4,0,0,12,0,23],
-"simulator_8h.html#a5550f1ea43c6ce83be0355c2321d706a":[4,0,0,12,0,23,0],
-"simulator__config_8h.html":[4,0,0,12,0,24],
-"simulator__config__functions_8h.html":[4,0,0,12,0,25]
+"simulator_8h.html":[4,0,0,12,0,23]
 };

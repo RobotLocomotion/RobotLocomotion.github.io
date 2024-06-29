@@ -1,5 +1,7 @@
 var multibody__plant_8h =
 [
+    [ "Instance", "structdrake_1_1multibody_1_1_multibody_plant_1_1_input_port_indices_1_1_instance.html", "structdrake_1_1multibody_1_1_multibody_plant_1_1_input_port_indices_1_1_instance" ],
+    [ "Instance", "structdrake_1_1multibody_1_1_multibody_plant_1_1_output_port_indices_1_1_instance.html", "structdrake_1_1multibody_1_1_multibody_plant_1_1_output_port_indices_1_1_instance" ],
     [ "AddMultibodyPlantSceneGraphResult", "structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html", "structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result" ],
     [ "AddMultibodyPlantSceneGraphResult", "structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html", "structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result" ],
     [ "ContactModel", "multibody__plant_8h.html#a6f6e054758d34b83e86bea87d65dfe4e", [

@@ -229,6 +229,7 @@ var searchData=
   ['kspatialvectorsize',['kSpatialVectorSize',['../classdrake_1_1multibody_1_1_spatial_vector.html#adf764cbdea00d65edcd07bb9953ad2b7a38ca6e91f04c4a5339893a4461e2985a',1,'drake::multibody::SpatialVector']]],
   ['ksphere',['kSphere',['../namespacedrake_1_1geometry_1_1optimization.html#a95690619e9b8d2e9047a607703cfbfffaf88bbd242f1721920aa0eb72a18767a4',1,'drake::geometry::optimization']]],
   ['kspot',['kSpot',['../namespacedrake_1_1geometry_1_1render.html#adc3ec8293e6a97ebe43f0196b9a7f638a4a679103e90e5b1d77370e744134971a',1,'drake::geometry::render']]],
+  ['kstandalonereproductionfilename',['kStandaloneReproductionFileName',['../namespacedrake_1_1solvers.html#ae07229124cd16e9d8b62fe359c7d0b40a88b173449afee96caef8bf2715f31380',1,'drake::solvers']]],
   ['kstuck',['kStuck',['../namespacedrake_1_1multibody.html#a3e26d472253fc2fe452f8b4bb2d1bcdca2090aef3abe80df58a23b77aa3a10bc3',1,'drake::multibody']]],
   ['ksucceeded',['kSucceeded',['../classdrake_1_1systems_1_1_event_status.html#a11717da96dc4e4a5f79371318448f82ba6c37a7435a4069d24dd684abdb57d9ae',1,'drake::systems::EventStatus']]],
   ['ksuccess',['kSuccess',['../namespacedrake_1_1multibody.html#a6144c2c8d4494bcb283f3f9e5841bfd2a8c632159fa131f09d04f94e3cbcd8782',1,'drake::multibody']]],

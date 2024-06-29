@@ -464,7 +464,8 @@ Typedefs</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:ae07229124cd16e9d8b62fe359c7d0b40"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#ae07229124cd16e9d8b62fe359c7d0b40">CommonSolverOption</a> { <a class="el" href="namespacedrake_1_1solvers.html#ae07229124cd16e9d8b62fe359c7d0b40a222307df6fb67d2a524cade7227ca4f8">kPrintFileName</a>, 
-<a class="el" href="namespacedrake_1_1solvers.html#ae07229124cd16e9d8b62fe359c7d0b40aca5719f05d0aceacc42e256644394100">kPrintToConsole</a>
+<a class="el" href="namespacedrake_1_1solvers.html#ae07229124cd16e9d8b62fe359c7d0b40aca5719f05d0aceacc42e256644394100">kPrintToConsole</a>, 
+<a class="el" href="namespacedrake_1_1solvers.html#ae07229124cd16e9d8b62fe359c7d0b40a88b173449afee96caef8bf2715f31380">kStandaloneReproductionFileName</a>
  }</td></tr>
 <tr class="memdesc:ae07229124cd16e9d8b62fe359c7d0b40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Some options can be applied to not one solver, but many solvers (for example, many solvers support printing out the progress in each iteration).  <a href="namespacedrake_1_1solvers.html#ae07229124cd16e9d8b62fe359c7d0b40">More...</a><br /></td></tr>
 <tr class="separator:ae07229124cd16e9d8b62fe359c7d0b40"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1037,6 +1038,9 @@ Choice" model.  <a href="#a81f7d44186352e1090de1343d468cad2">More...</a><br /></
 <p>The user can call SolverOptions::SetOption(kPrintFileName, file_name) where file_name is a string. If the user doesn't want to print to a file, then use <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html#a64f5a75df2c33b77454e88fae4d08047" title="Sets a double-valued solver option for a specific solver.">SolverOptions::SetOption</a>(kPrintFileName, ""), where the empty string "" indicates no print. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ae07229124cd16e9d8b62fe359c7d0b40aca5719f05d0aceacc42e256644394100"></a>kPrintToConsole&#160;</td><td class="fielddoc"><p>Many solvers support printing the progress of each iteration to the console, the user can call SolverOptions::SetOption(kPrintToConsole, 1) to turn on printing to the console, or SolverOptions::SetOption(kPrintToConsole, 0) to turn off printing to the console. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae07229124cd16e9d8b62fe359c7d0b40a88b173449afee96caef8bf2715f31380"></a>kStandaloneReproductionFileName&#160;</td><td class="fielddoc"><p>Some of our solver interfaces support writing a standalone (e.g. </p>
+<p>it does not depend on Drake) minimal reproduction of the problem to a file. This is especially useful for sending bug reports upstream to the developers of the solver. To enable this, use e.g. <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html#a64f5a75df2c33b77454e88fae4d08047" title="Sets a double-valued solver option for a specific solver.">SolverOptions::SetOption</a>(kStandaloneReproductionFileName, "reproduction.txt"). To disable, use <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html#a64f5a75df2c33b77454e88fae4d08047" title="Sets a double-valued solver option for a specific solver.">SolverOptions::SetOption</a>(kStandaloneReproductionFileName, ""), where the empty string "" indicates that no file should be written. </p>
 </td></tr>
 </table>
 
@@ -3094,36 +3098,8 @@ s.t ∑ᵢ yᵢAᵢ - C ≽ 0
 
 </div>
 </div>
-<a id="aed794af38e7da9270528fd2185861862"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed794af38e7da9270528fd2185861862">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[1/12]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ostream&amp; drake::solvers::operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>os</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespacedrake_1_1solvers.html#ae07229124cd16e9d8b62fe359c7d0b40">CommonSolverOption</a>&#160;</td>
-          <td class="paramname"><em>common_solver_option</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a269b7066a168f80390ed6c496829ffcd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a269b7066a168f80390ed6c496829ffcd">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[2/12]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a269b7066a168f80390ed6c496829ffcd">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[1/12]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3139,6 +3115,34 @@ s.t ∑ᵢ yᵢAᵢ - C ≽ 0
           <td></td>
           <td class="paramtype"><a class="el" href="namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136f">SolutionResult</a>&#160;</td>
           <td class="paramname"><em>solution_result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aed794af38e7da9270528fd2185861862"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed794af38e7da9270528fd2185861862">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[2/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; drake::solvers::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1solvers.html#ae07229124cd16e9d8b62fe359c7d0b40">CommonSolverOption</a>&#160;</td>
+          <td class="paramname"><em>common_solver_option</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

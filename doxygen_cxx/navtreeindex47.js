@@ -1,5 +1,7 @@
 var NAVTREEINDEX47 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a24948d1f75d0b7f6118b535e655ada09":[3,0,0,17,8,6],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a3093825d2725664b6304ae2f31217759":[3,0,0,17,8,11],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a320fae9dc5f8cb947997f9fdb205ec9c":[3,0,0,17,8,4],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a37135ec545f4025fc50aba0017d8566d":[3,0,0,17,8,9],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a4a93c5b33b420280509114f8a9ac86aa":[3,0,0,17,8,10],
@@ -211,6 +213,7 @@ var NAVTREEINDEX47 =
 "common__solver__option_8h.html":[4,0,0,11,8],
 "common__solver__option_8h.html#ae07229124cd16e9d8b62fe359c7d0b40":[4,0,0,11,8,1],
 "common__solver__option_8h.html#ae07229124cd16e9d8b62fe359c7d0b40a222307df6fb67d2a524cade7227ca4f8":[4,0,0,11,8,1,0],
+"common__solver__option_8h.html#ae07229124cd16e9d8b62fe359c7d0b40a88b173449afee96caef8bf2715f31380":[4,0,0,11,8,1,2],
 "common__solver__option_8h.html#ae07229124cd16e9d8b62fe359c7d0b40aca5719f05d0aceacc42e256644394100":[4,0,0,11,8,1,1],
 "common__solver__option_8h.html#aed794af38e7da9270528fd2185861862":[4,0,0,11,8,2],
 "compass__gait_8h.html":[4,0,0,3,4,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX47 =
 "constraint__relaxing__ik_8h.html":[4,0,0,8,5,4],
 "constraint__specs_8h.html":[4,0,0,8,10,3],
 "contact__configuration_8h.html":[4,0,0,8,2,7],
-"contact__jacobians_8h.html":[4,0,0,8,10,4],
-"contact__jacobians_8h.html#a9436deb241da5e1c194a7d7ecd3e1ae8":[4,0,0,8,10,4,0],
-"contact__model__doxygen_8h.html":[4,0,0,8,10,5],
-"contact__problem__graph_8h.html":[4,0,0,8,2,0,0]
+"contact__jacobians_8h.html":[4,0,0,8,10,4]
 };

@@ -1578,6 +1578,16 @@ print to a file, then use SolverOptions::SetOption(kPrintFileName,
 1) to turn on printing to the console, or
 SolverOptions::SetOption(kPrintToConsole, 0) to turn off printing to
 the console.</p>
+<blockquote>
+<div><p>kStandaloneReproductionFileName : Some of our solver interfaces support writing a standalone (e.g. it</p>
+</div></blockquote>
+<p>does not depend on Drake) minimal reproduction of the problem to a
+file. This is especially useful for sending bug reports upstream to
+the developers of the solver. To enable this, use e.g.
+SolverOptions::SetOption(kStandaloneReproductionFileName,
+“reproduction.txt”). To disable, use
+SolverOptions::SetOption(kStandaloneReproductionFileName, “”), where
+the empty string “” indicates that no file should be written.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.CommonSolverOption.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.CommonSolverOption" title="pydrake.solvers.CommonSolverOption"><span class="pre">pydrake.solvers.CommonSolverOption</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.CommonSolverOption.__init__" title="Permalink to this definition"></a></dt>
@@ -1591,6 +1601,11 @@ the console.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pydrake.solvers.CommonSolverOption.kPrintToConsole">
 <span class="sig-name descname"><span class="pre">kPrintToConsole</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;CommonSolverOption.kPrintToConsole:</span> <span class="pre">1&gt;</span></em><a class="headerlink" href="#pydrake.solvers.CommonSolverOption.kPrintToConsole" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.solvers.CommonSolverOption.kStandaloneReproductionFileName">
+<span class="sig-name descname"><span class="pre">kStandaloneReproductionFileName</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;CommonSolverOption.kStandaloneReproductionFileName:</span> <span class="pre">2&gt;</span></em><a class="headerlink" href="#pydrake.solvers.CommonSolverOption.kStandaloneReproductionFileName" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
@@ -3755,6 +3770,27 @@ not variable, but expression 0.</p>
 <span class="sig-name descname"><span class="pre">AddLorentzConeConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.MathematicalProgram.AddLorentzConeConstraint" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
+<li><p>AddLorentzConeConstraint(self: pydrake.solvers.MathematicalProgram, f: pydrake.symbolic.Formula, eval_type: pydrake.solvers.LorentzConeConstraint.EvalType = &lt;EvalType.kConvexSmooth: 1&gt;, psd_tol: float = 1e-08, coefficient_tol: float = 1e-08) -&gt; pydrake.solvers.Binding[LorentzConeConstraint]</p></li>
+</ol>
+<p>Adds a Lorentz cone constraint of the form Ax+b &gt;= <a href="#id23"><span class="problematic" id="id24">|</span></a>Cx+d|₂ from a
+symbolic formula with one side which can be decomposed into
+sqrt((Cx+d)’(Cx+d)).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">eval_type</span></code>:</dt><dd><p>The evaluation type when evaluating the lorentz cone constraint in
+generic optimization. Refer to LorentzConeConstraint::EvalType for
+more details.</p>
+</dd>
+</dl>
+<p>See symbolic::DecomposeL2NormExpression for details on the tolerance
+parameters, <code class="docutils literal notranslate"><span class="pre">psd_tol</span></code> and <code class="docutils literal notranslate"><span class="pre">coefficient_tol</span></code>. Consider using the
+overload which takes a vector of expressions to avoid the numerical
+decomposition.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if f cannot be decomposed into a Lorentz cone.</strong> – </p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
 <li><p>AddLorentzConeConstraint(self: pydrake.solvers.MathematicalProgram, v: numpy.ndarray[object[m, 1]], eval_type: pydrake.solvers.LorentzConeConstraint.EvalType = &lt;EvalType.kConvexSmooth: 1&gt;) -&gt; pydrake.solvers.Binding[LorentzConeConstraint]</p></li>
 </ol>
 <p>Adds Lorentz cone constraint referencing potentially a subset of the
@@ -3784,7 +3820,7 @@ generic optimization. Refer to LorentzConeConstraint::EvalType for
 more details.</p>
 </dd>
 </dl>
-<ol class="arabic simple" start="2">
+<ol class="arabic simple" start="3">
 <li><p>AddLorentzConeConstraint(self: pydrake.solvers.MathematicalProgram, linear_expression: pydrake.symbolic.Expression, quadratic_expression: pydrake.symbolic.Expression, tol: float = 0.0, eval_type: pydrake.solvers.LorentzConeConstraint.EvalType = &lt;EvalType.kConvexSmooth: 1&gt;) -&gt; pydrake.solvers.Binding[LorentzConeConstraint]</p></li>
 </ol>
 <p>Adds Lorentz cone constraint on the linear expression v1 and quadratic
@@ -3813,7 +3849,7 @@ variables.</p>
 </dd>
 </dl>
 <p>Precondition:
-1. <code class="docutils literal notranslate"><span class="pre">v1</span></code> is a linear expression, in the form of c’<a href="#id23"><span class="problematic" id="id24">*</span></a>x + d.
+1. <code class="docutils literal notranslate"><span class="pre">v1</span></code> is a linear expression, in the form of c’<a href="#id25"><span class="problematic" id="id26">*</span></a>x + d.
 2. <code class="docutils literal notranslate"><span class="pre">v2</span></code> is a quadratic expression, in the form of</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>x&#39;*Q*x + b&#39;x + a
 </pre></div>
@@ -3832,14 +3868,14 @@ Lorentz cone, where</p>
 <span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">R</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">d</span><span class="w"></span>
 </pre></div>
 </div>
-</details><p>while (R, d) satisfies y’<a href="#id25"><span class="problematic" id="id26">*</span></a>y = x’<a href="#id27"><span class="problematic" id="id28">*</span></a>Q*x + b’<a href="#id29"><span class="problematic" id="id30">*</span></a>x + a For example, to add
+</details><p>while (R, d) satisfies y’<a href="#id27"><span class="problematic" id="id28">*</span></a>y = x’<a href="#id29"><span class="problematic" id="id30">*</span></a>Q*x + b’<a href="#id31"><span class="problematic" id="id32">*</span></a>x + a For example, to add
 the Lorentz cone constraint</p>
 <p>x+1 &gt;= sqrt(y² + 2y + x² + 4), the user could call</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">cc</span><span class="p">}</span><span class="w"></span>
 <span class="n">prog</span><span class="p">.</span><span class="n">AddLorentzConeConstraint</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">pow</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-</details><ol class="arabic simple" start="3">
+</details><ol class="arabic simple" start="4">
 <li><p>AddLorentzConeConstraint(self: pydrake.solvers.MathematicalProgram, A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], b: numpy.ndarray[numpy.float64[m, 1]], vars: numpy.ndarray[object[m, 1]], eval_type: pydrake.solvers.LorentzConeConstraint.EvalType = &lt;EvalType.kConvexSmooth: 1&gt;) -&gt; pydrake.solvers.Binding[LorentzConeConstraint]</p></li>
 </ol>
 <p>Adds Lorentz cone constraint referencing potentially a subset of the
@@ -3992,13 +4028,13 @@ X.</p>
 <span class="sig-name descname"><span class="pre">AddPositiveDiagonallyDominantMatrixConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">X</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.solvers.MathematicalProgram.AddPositiveDiagonallyDominantMatrixConstraint" title="Permalink to this definition"></a></dt>
 <dd><p>Adds the constraint that a symmetric matrix is diagonally dominant
 with non-negative diagonal entries. A symmetric matrix X is diagonally
-dominant with non-negative diagonal entries if X(i, i) &gt;= ∑ⱼ <a href="#id49"><span class="problematic" id="id50">|X(i, j)|</span></a>
+dominant with non-negative diagonal entries if X(i, i) &gt;= ∑ⱼ <a href="#id51"><span class="problematic" id="id52">|X(i, j)|</span></a>
 ∀ j ≠ i namely in each row, the diagonal entry is larger than the sum
 of the absolute values of all other entries in the same row. A matrix
 being diagonally dominant with non-negative diagonals is a sufficient
 (but not necessary) condition of a matrix being positive semidefinite.
 Internally we will create a matrix Y as slack variables, such that
-Y(i, j) represents the absolute value <a href="#id51"><span class="problematic" id="id52">|X(i, j)|</span></a> ∀ j ≠ i. The diagonal
+Y(i, j) represents the absolute value <a href="#id53"><span class="problematic" id="id54">|X(i, j)|</span></a> ∀ j ≠ i. The diagonal
 entries Y(i, i) = X(i, i) The users can refer to “DSOS and SDSOS
 Optimization: More Tractable Alternatives to Sum of Squares and
 Semidefinite Optimization” by Amir Ali Ahmadi and Anirudha Majumdar,
@@ -4010,7 +4046,7 @@ X.</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>Y The slack variable. Y(i, j) represents <a href="#id53"><span class="problematic" id="id54">|X(i, j)|</span></a> ∀ j ≠ i, with
+<dd class="field-odd"><p>Y The slack variable. Y(i, j) represents <a href="#id55"><span class="problematic" id="id56">|X(i, j)|</span></a> ∀ j ≠ i, with
 the constraint Y(i, j) &gt;= X(i, j) and Y(i, j) &gt;= -X(i, j). Y is a
 symmetric matrix. The diagonal entries Y(i, i) = X(i, i)</p>
 </dd>
@@ -4057,7 +4093,7 @@ variable M that are also newly added.</p>
 </dd>
 </dl>
 <p>For example, to add a constraint that</p>
-<p>⌈x + 1 2x + 3 x+y⌉ <a href="#id55"><span class="problematic" id="id56">|2x+ 3 2 0|</span></a> is positive semidefinite ⌊x + y 0 x⌋
+<p>⌈x + 1 2x + 3 x+y⌉ <a href="#id57"><span class="problematic" id="id58">|2x+ 3 2 0|</span></a> is positive semidefinite ⌊x + y 0 x⌋
 The user could call</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">cc</span><span class="p">}</span><span class="w"></span>
 <span class="n">Matrix3</span><span class="o">&lt;</span><span class="n">symbolic</span><span class="o">::</span><span class="n">Expression</span><span class="o">&gt;</span><span class="w"> </span><span class="n">e</span><span class="w"></span>
@@ -4190,7 +4226,7 @@ for an explanation.</p>
 <ol class="arabic simple">
 <li><p>AddQuadraticCost(self: pydrake.solvers.MathematicalProgram, e: pydrake.symbolic.Expression, is_convex: Optional[bool] = None) -&gt; pydrake.solvers.Binding[QuadraticCost]</p></li>
 </ol>
-<p>Add a quadratic cost term of the form 0.5*x’<a href="#id31"><span class="problematic" id="id32">*</span></a>Q*x + b’<a href="#id33"><span class="problematic" id="id34">*</span></a>x + c.</p>
+<p>Add a quadratic cost term of the form 0.5*x’<a href="#id33"><span class="problematic" id="id34">*</span></a>Q*x + b’<a href="#id35"><span class="problematic" id="id36">*</span></a>x + c.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">e</span></code>:</dt><dd><p>A quadratic symbolic expression.</p>
 </dd>
@@ -4212,7 +4248,7 @@ whether the cost is convex or not.</p>
 <ol class="arabic simple" start="2">
 <li><p>AddQuadraticCost(self: pydrake.solvers.MathematicalProgram, Q: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], b: numpy.ndarray[numpy.float64[m, 1]], vars: numpy.ndarray[object[m, 1]], is_convex: Optional[bool] = None) -&gt; pydrake.solvers.Binding[QuadraticCost]</p></li>
 </ol>
-<p>Adds a cost term of the form 0.5*x’<a href="#id35"><span class="problematic" id="id36">*</span></a>Q*x + b’x Applied to subset of the
+<p>Adds a cost term of the form 0.5*x’<a href="#id37"><span class="problematic" id="id38">*</span></a>Q*x + b’x Applied to subset of the
 variables.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">is_convex</span></code>:</dt><dd><p>Whether the cost is already known to be convex. If
@@ -4225,7 +4261,7 @@ cost is convex or not.</p>
 <ol class="arabic simple" start="3">
 <li><p>AddQuadraticCost(self: pydrake.solvers.MathematicalProgram, Q: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], b: numpy.ndarray[numpy.float64[m, 1]], c: float, vars: numpy.ndarray[object[m, 1]], is_convex: Optional[bool] = None) -&gt; pydrake.solvers.Binding[QuadraticCost]</p></li>
 </ol>
-<p>Adds a cost term of the form 0.5*x’<a href="#id37"><span class="problematic" id="id38">*</span></a>Q*x + b’x + c Applied to subset of
+<p>Adds a cost term of the form 0.5*x’<a href="#id39"><span class="problematic" id="id40">*</span></a>Q*x + b’x + c Applied to subset of
 the variables.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">is_convex</span></code>:</dt><dd><p>Whether the cost is already known to be convex. If
@@ -4240,7 +4276,7 @@ cost is convex or not.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.MathematicalProgram.AddQuadraticErrorCost">
 <span class="sig-name descname"><span class="pre">AddQuadraticErrorCost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">Q</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_desired</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vars</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.QuadraticCost" title="pydrake.solvers.QuadraticCost"><span class="pre">QuadraticCost</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.solvers.MathematicalProgram.AddQuadraticErrorCost" title="Permalink to this definition"></a></dt>
-<dd><p>Adds a cost term of the form (x-x_desired)’<a href="#id39"><span class="problematic" id="id40">*</span></a>Q*(x-x_desired).</p>
+<dd><p>Adds a cost term of the form (x-x_desired)’<a href="#id41"><span class="problematic" id="id42">*</span></a>Q*(x-x_desired).</p>
 </dd></dl>
 
 <dl class="py method">
@@ -4276,11 +4312,11 @@ bound variables.</p>
 <p>Precondition:
 1. <code class="docutils literal notranslate"><span class="pre">linear_expression1</span></code> is a linear (affine) expression, in the form of</p>
 <blockquote>
-<div><p>v1 = c1’<a href="#id41"><span class="problematic" id="id42">*</span></a>x + d1.</p>
+<div><p>v1 = c1’<a href="#id43"><span class="problematic" id="id44">*</span></a>x + d1.</p>
 </div></blockquote>
 <ol class="arabic simple" start="2">
 <li><p><code class="docutils literal notranslate"><span class="pre">linear_expression2</span></code> is a linear (affine) expression, in the form of
-v2 = c2’<a href="#id43"><span class="problematic" id="id44">*</span></a>x + d2.</p></li>
+v2 = c2’<a href="#id45"><span class="problematic" id="id46">*</span></a>x + d2.</p></li>
 </ol>
 <ol class="arabic simple" start="2">
 <li><p><code class="docutils literal notranslate"><span class="pre">quadratic_expression</span></code> is a quadratic expression, in the form of</p></li>
@@ -5906,7 +5942,7 @@ condition, while the dual variable stays inside the dual cone.</p>
 of the dual symmetric psd matrix. Namely for the primal problem</p>
 <p>min trace(C*X) s.t A(X) = b X is psd</p>
 <p>the dual is</p>
-<p>max b’<a href="#id45"><span class="problematic" id="id46">*</span></a>y s.t A’(y) - C = Z Z is psd.</p>
+<p>max b’<a href="#id47"><span class="problematic" id="id48">*</span></a>y s.t A’(y) - C = Z Z is psd.</p>
 <p>We return the lower triangular part of Z. You can call
 drake::math::ToSymmetricMatrixFromLowerTriangularColumns to get the
 matrix Z.</p>
@@ -6672,12 +6708,12 @@ bilinear product.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.solvers.MixedIntegerRotationConstraintGenerator.ReturnType.B_">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">B_</span></span><a class="headerlink" href="#pydrake.solvers.MixedIntegerRotationConstraintGenerator.ReturnType.B_" title="Permalink to this definition"></a></dt>
-<dd><p><a href="#id57"><span class="problematic" id="id58">B_</span></a> contains the new binary variables added to the program. B_`i][j]
+<dd><p><a href="#id59"><span class="problematic" id="id60">B_</span></a> contains the new binary variables added to the program. B_`i][j]
 represents in which interval R(i, j) lies. If we use linear binning,
-then B_[i][j] is of length 2 * <a href="#id59"><span class="problematic" id="id60">num_intervals_per_half_axis_</span></a>. B_[i][j
+then B_[i][j] is of length 2 * <a href="#id61"><span class="problematic" id="id62">num_intervals_per_half_axis_</span></a>. B_[i][j
 &lt;k&gt;`_ = 1 =&gt; φ(k) ≤ R(i, j) ≤ φ(k + 1) B_`i][j &lt;k&gt;`_ = 0 =&gt; R(i, j) ≥
 φ(k + 1) or R(i, j) ≤ φ(k) If we use logarithmic binning, then
-B_[i][j] is of length 1 + log₂(<a href="#id61"><span class="problematic" id="id62">num_intervals_per_half_axis_</span></a>). If
+B_[i][j] is of length 1 + log₂(<a href="#id63"><span class="problematic" id="id64">num_intervals_per_half_axis_</span></a>). If
 B_[i][j] represents integer k in reflected Gray code, then R(i, j) is
 in the interval [φ(k), φ(k+1)].</p>
 </dd></dl>
@@ -6686,7 +6722,7 @@ in the interval [φ(k), φ(k+1)].</p>
 <dt class="sig sig-object py" id="pydrake.solvers.MixedIntegerRotationConstraintGenerator.ReturnType.lambda_">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lambda_</span></span><a class="headerlink" href="#pydrake.solvers.MixedIntegerRotationConstraintGenerator.ReturnType.lambda_" title="Permalink to this definition"></a></dt>
 <dd><p>λ contains part of the new continuous variables added to the program.
-λ_[i][j] is of length 2 * <a href="#id63"><span class="problematic" id="id64">num_intervals_per_half_axis_</span></a> + 1, such that
+λ_[i][j] is of length 2 * <a href="#id65"><span class="problematic" id="id66">num_intervals_per_half_axis_</span></a> + 1, such that
 R(i, j) = φᵀ * λ_[i][j]. Notice that λ_[i][j] satisfies the special
 ordered set of type 2 (SOS2) constraint. Namely at most two entries in
 λ_[i][j] can be strictly positive, and these two entries have to be
@@ -7369,7 +7405,7 @@ more details.</p>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
 <p>lb ≤ .5 xᵀQx + bᵀx ≤ ub Without loss of generality, the class stores a
 symmetric matrix Q. For a non-symmetric matrix Q₀, we can define Q =
-(Q₀ + Q₀ᵀ) / 2, since xᵀQ₀x = xᵀQ₀ᵀx = xᵀ*(Q₀+Q₀ᵀ)/2 <a href="#id47"><span class="problematic" id="id48">*</span></a>x. The first
+(Q₀ + Q₀ᵀ) / 2, since xᵀQ₀x = xᵀQ₀ᵀx = xᵀ*(Q₀+Q₀ᵀ)/2 <a href="#id49"><span class="problematic" id="id50">*</span></a>x. The first
 equality holds because the transpose of a scalar is the scalar itself.
 Hence we can always convert a non-symmetric matrix Q₀ to a symmetric
 matrix Q.</p>
@@ -8241,6 +8277,14 @@ empty string if the option has not been set.</p>
 <span class="sig-name descname"><span class="pre">get_print_to_console</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.SolverOptions" title="pydrake.solvers.SolverOptions"><span class="pre">pydrake.solvers.SolverOptions</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.solvers.SolverOptions.get_print_to_console" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the kPrintToConsole set via CommonSolverOption, or else false
 if the option has not been set.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.SolverOptions.get_standalone_reproduction_file_name">
+<span class="sig-name descname"><span class="pre">get_standalone_reproduction_file_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.SolverOptions" title="pydrake.solvers.SolverOptions"><span class="pre">pydrake.solvers.SolverOptions</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.SolverOptions.get_standalone_reproduction_file_name" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the kStandaloneReproductionFileName set via
+CommonSolverOption, or else an empty string if the option has not been
+set.</p>
 </dd></dl>
 
 <dl class="py method">

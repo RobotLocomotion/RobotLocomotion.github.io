@@ -514,6 +514,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a12c149981283b0e251f55055c5ea4b40"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_lorentz_cone_constraint.html">LorentzConeConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a12c149981283b0e251f55055c5ea4b40">AddConstraint</a> (const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_lorentz_cone_constraint.html">LorentzConeConstraint</a> &gt; &amp;binding)</td></tr>
 <tr class="memdesc:a12c149981283b0e251f55055c5ea4b40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds Lorentz cone constraint referencing potentially a subset of the decision variables.  <a href="#a12c149981283b0e251f55055c5ea4b40">More...</a><br /></td></tr>
 <tr class="separator:a12c149981283b0e251f55055c5ea4b40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa74cba04584b596f2c2ea8cb61c3539a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_lorentz_cone_constraint.html">LorentzConeConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#aa74cba04584b596f2c2ea8cb61c3539a">AddLorentzConeConstraint</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">symbolic::Formula</a> &amp;f, <a class="el" href="classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#a7e69b5efb34e150cd2b2422e1e943da4">LorentzConeConstraint::EvalType</a> eval_type=<a class="el" href="classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#a7e69b5efb34e150cd2b2422e1e943da4a6d5ca2cdc67e830f77b77110a22b23a1">LorentzConeConstraint::EvalType::kConvexSmooth</a>, <a class="el" href="classdouble.html">double</a> psd_tol=1e-8, double coefficient_tol=1e-8)</td></tr>
+<tr class="memdesc:aa74cba04584b596f2c2ea8cb61c3539a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a Lorentz cone constraint of the form Ax+b &gt;= |Cx+d|₂ from a symbolic formula with one side which can be decomposed into sqrt((Cx+d)'(Cx+d)).  <a href="#aa74cba04584b596f2c2ea8cb61c3539a">More...</a><br /></td></tr>
+<tr class="separator:aa74cba04584b596f2c2ea8cb61c3539a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9684f622903a0e38d1bf1ef8af6fcd51"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_lorentz_cone_constraint.html">LorentzConeConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a9684f622903a0e38d1bf1ef8af6fcd51">AddLorentzConeConstraint</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt;&gt; &amp;v, <a class="el" href="classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#a7e69b5efb34e150cd2b2422e1e943da4">LorentzConeConstraint::EvalType</a> eval_type=<a class="el" href="classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#a7e69b5efb34e150cd2b2422e1e943da4a6d5ca2cdc67e830f77b77110a22b23a1">LorentzConeConstraint::EvalType::kConvexSmooth</a>)</td></tr>
 <tr class="memdesc:a9684f622903a0e38d1bf1ef8af6fcd51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds Lorentz cone constraint referencing potentially a subset of the decision variables.  <a href="#a9684f622903a0e38d1bf1ef8af6fcd51">More...</a><br /></td></tr>
 <tr class="separator:a9684f622903a0e38d1bf1ef8af6fcd51"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3767,8 +3770,63 @@ Each entry in new_indeterminates should be of CONTINUOUS type. </dd></dl>
 
 </div>
 </div>
+<a id="aa74cba04584b596f2c2ea8cb61c3539a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa74cba04584b596f2c2ea8cb61c3539a">&#9670;&nbsp;</a></span>AddLorentzConeConstraint() <span class="overload">[1/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_lorentz_cone_constraint.html">LorentzConeConstraint</a>&gt; AddLorentzConeConstraint </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">symbolic::Formula</a> &amp;&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#a7e69b5efb34e150cd2b2422e1e943da4">LorentzConeConstraint::EvalType</a>&#160;</td>
+          <td class="paramname"><em>eval_type</em> = <code><a class="el" href="classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#a7e69b5efb34e150cd2b2422e1e943da4a6d5ca2cdc67e830f77b77110a22b23a1">LorentzConeConstraint::EvalType::kConvexSmooth</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>psd_tol</em> = <code>1e-8</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>coefficient_tol</em> = <code>1e-8</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a Lorentz cone constraint of the form Ax+b &gt;= |Cx+d|₂ from a symbolic formula with one side which can be decomposed into sqrt((Cx+d)'(Cx+d)). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">eval_type</td><td>The evaluation type when evaluating the lorentz cone constraint in generic optimization. Refer to <a class="el" href="classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#a7e69b5efb34e150cd2b2422e1e943da4" title="We provide three possible Eval functions to represent the Lorentz cone constraint z₀ ≥ sqrt(z₁² + ....">LorentzConeConstraint::EvalType</a> for more details.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>See <a class="el" href="namespacedrake_1_1symbolic.html#a20c5b25729d776ddbbcc40dd07e7f617" title="Decomposes an L2 norm e = |Ax+b|₂ into A, b, and the variable vector x (or returns false if the decom...">symbolic::DecomposeL2NormExpression</a> for details on the tolerance parameters, <code>psd_tol</code> and <code>coefficient_tol</code>. Consider using the overload which takes a vector of expressions to avoid the numerical decomposition.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>f</code> cannot be decomposed into a Lorentz cone. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a9684f622903a0e38d1bf1ef8af6fcd51"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9684f622903a0e38d1bf1ef8af6fcd51">&#9670;&nbsp;</a></span>AddLorentzConeConstraint() <span class="overload">[1/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9684f622903a0e38d1bf1ef8af6fcd51">&#9670;&nbsp;</a></span>AddLorentzConeConstraint() <span class="overload">[2/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3816,7 +3874,7 @@ Each entry in new_indeterminates should be of CONTINUOUS type. </dd></dl>
 </div>
 </div>
 <a id="a02d2492e6743d60dfe4060377e4a5503"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a02d2492e6743d60dfe4060377e4a5503">&#9670;&nbsp;</a></span>AddLorentzConeConstraint() <span class="overload">[2/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a02d2492e6743d60dfe4060377e4a5503">&#9670;&nbsp;</a></span>AddLorentzConeConstraint() <span class="overload">[3/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3897,7 +3955,7 @@ Each entry in new_indeterminates should be of CONTINUOUS type. </dd></dl>
 </div>
 </div>
 <a id="a848e948c48c906a76d249a0606464868"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a848e948c48c906a76d249a0606464868">&#9670;&nbsp;</a></span>AddLorentzConeConstraint() <span class="overload">[3/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a848e948c48c906a76d249a0606464868">&#9670;&nbsp;</a></span>AddLorentzConeConstraint() <span class="overload">[4/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3953,7 +4011,7 @@ Each entry in new_indeterminates should be of CONTINUOUS type. </dd></dl>
 </div>
 </div>
 <a id="adb2e0b7c0a939513aba56fc147696a8a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adb2e0b7c0a939513aba56fc147696a8a">&#9670;&nbsp;</a></span>AddLorentzConeConstraint() <span class="overload">[4/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adb2e0b7c0a939513aba56fc147696a8a">&#9670;&nbsp;</a></span>AddLorentzConeConstraint() <span class="overload">[5/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4010,7 +4068,7 @@ Each entry in new_indeterminates should be of CONTINUOUS type. </dd></dl>
 </div>
 </div>
 <a id="a6d2d933f65af2e81e40e08564c929529"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6d2d933f65af2e81e40e08564c929529">&#9670;&nbsp;</a></span>AddLorentzConeConstraint() <span class="overload">[5/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d2d933f65af2e81e40e08564c929529">&#9670;&nbsp;</a></span>AddLorentzConeConstraint() <span class="overload">[6/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4051,7 +4109,7 @@ Each entry in new_indeterminates should be of CONTINUOUS type. </dd></dl>
 </div>
 </div>
 <a id="a8a9082746a4852ea5087b2a6e3cc57ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8a9082746a4852ea5087b2a6e3cc57ee">&#9670;&nbsp;</a></span>AddLorentzConeConstraint() <span class="overload">[6/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a9082746a4852ea5087b2a6e3cc57ee">&#9670;&nbsp;</a></span>AddLorentzConeConstraint() <span class="overload">[7/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
