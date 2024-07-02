@@ -1,5 +1,8 @@
 var NAVTREEINDEX63 =
 {
+"structdrake_1_1multibody_1_1parsing_1_1_add_model.html#ae88fbb6c242a8feeda1597a4462514a7":[3,0,0,8,3,3,3],
+"structdrake_1_1multibody_1_1parsing_1_1_add_model.html#aefc35c7944eed319c89bc1b399f0eb67":[3,0,0,8,3,3,4],
+"structdrake_1_1multibody_1_1parsing_1_1_add_model_instance.html":[3,0,0,8,3,4],
 "structdrake_1_1multibody_1_1parsing_1_1_add_model_instance.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,8,3,4,1],
 "structdrake_1_1multibody_1_1parsing_1_1_add_model_instance.html#a9b45b3e13bd9167aab02e17e08916231":[3,0,0,8,3,4,2],
 "structdrake_1_1multibody_1_1parsing_1_1_add_model_instance.html#ac532c4b500b1a85ea22217f2c65a70ed":[3,0,0,8,3,4,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX63 =
 "structdrake_1_1symbolic_1_1_sin_cos.html#acc45493e97e5176d748160a80140ecb2":[3,0,0,14,63,1],
 "structdrake_1_1systems_1_1_initialize_params.html":[1,4,0,2],
 "structdrake_1_1systems_1_1_initialize_params.html#a719eb34446ec802c2f31bf8d8b2ab4fa":[1,4,0,2,1],
-"structdrake_1_1systems_1_1_initialize_params.html#a8e8824802dedfbc36776227f7482b6bc":[1,4,0,2,0],
-"structdrake_1_1systems_1_1_periodic_event_data_comparator.html":[3,0,0,15,77],
-"structdrake_1_1systems_1_1_periodic_event_data_comparator.html#a427c5f42d5940b0e40fba4abe2b3111a":[3,0,0,15,77,0],
-"structdrake_1_1systems_1_1_simulator_config.html":[3,0,0,15,94]
+"structdrake_1_1systems_1_1_initialize_params.html#a8e8824802dedfbc36776227f7482b6bc":[1,4,0,2,0]
 };

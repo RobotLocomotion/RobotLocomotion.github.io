@@ -202,12 +202,18 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a2af5f59f2eac4720da5c5d9a901d414f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html">solvers::SolverInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#a2af5f59f2eac4720da5c5d9a901d414f">restriction_solver</a> {nullptr}</td></tr>
 <tr class="memdesc:a2af5f59f2eac4720da5c5d9a901d414f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optimizer to be used in SolveConvexRestriction(), which is also called during the rounding stage of SolveShortestPath() given the relaxation.  <a href="#a2af5f59f2eac4720da5c5d9a901d414f">More...</a><br /></td></tr>
 <tr class="separator:a2af5f59f2eac4720da5c5d9a901d414f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf69707f5aa6d2853d36600958706ef0"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html">solvers::SolverInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#acf69707f5aa6d2853d36600958706ef0">preprocessing_solver</a> {nullptr}</td></tr>
+<tr class="memdesc:acf69707f5aa6d2853d36600958706ef0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optimizer to be used in the preprocessing stage of GCS, which is performed when SolveShortestPath is called when the <code>preprocessing</code> setting has been set to true.  <a href="#acf69707f5aa6d2853d36600958706ef0">More...</a><br /></td></tr>
+<tr class="separator:acf69707f5aa6d2853d36600958706ef0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa705e1cce16e5f276d9f1ff95851698e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">solvers::SolverOptions</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#aa705e1cce16e5f276d9f1ff95851698e">solver_options</a> {}</td></tr>
 <tr class="memdesc:aa705e1cce16e5f276d9f1ff95851698e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Options passed to the solver when solving the generated problem.  <a href="#aa705e1cce16e5f276d9f1ff95851698e">More...</a><br /></td></tr>
 <tr class="separator:aa705e1cce16e5f276d9f1ff95851698e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab41a3270130e638897f5c67f2cae3705"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">solvers::SolverOptions</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#ab41a3270130e638897f5c67f2cae3705">restriction_solver_options</a></td></tr>
 <tr class="memdesc:ab41a3270130e638897f5c67f2cae3705"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional solver options to be used in SolveConvexRestriction(), which is also used during the rounding stage of SolveShortestPath() given the relaxation.  <a href="#ab41a3270130e638897f5c67f2cae3705">More...</a><br /></td></tr>
 <tr class="separator:ab41a3270130e638897f5c67f2cae3705"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1becd1e36f21ad0e73dd5886f911e551"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">solvers::SolverOptions</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#a1becd1e36f21ad0e73dd5886f911e551">preprocessing_solver_options</a></td></tr>
+<tr class="memdesc:a1becd1e36f21ad0e73dd5886f911e551"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional solver options to be used by preprocessing_solver in the preprocessing stage of GCS, which is used in SolveShortestPath.  <a href="#a1becd1e36f21ad0e73dd5886f911e551">More...</a><br /></td></tr>
+<tr class="separator:a1becd1e36f21ad0e73dd5886f911e551"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a8e8824802dedfbc36776227f7482b6bc"></a>
@@ -317,6 +323,40 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="acf69707f5aa6d2853d36600958706ef0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf69707f5aa6d2853d36600958706ef0">&#9670;&nbsp;</a></span>preprocessing_solver</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html">solvers::SolverInterface</a>* preprocessing_solver {nullptr}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Optimizer to be used in the preprocessing stage of GCS, which is performed when SolveShortestPath is called when the <code>preprocessing</code> setting has been set to true. </p>
+<p>If not set, the interface at .solver will be used, if provided, otherwise the best solver for the given problem is selected. Note that if the solver cannot handle the type of optimization problem generated, then calling the <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html#aec933bef2f8c7a702a6fd5c59feac5ec" title="Solves an optimization program with optional initial guess and solver options.">solvers::SolverInterface::Solve()</a> method will throw. </p>
+
+</div>
+</div>
+<a id="a1becd1e36f21ad0e73dd5886f911e551"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1becd1e36f21ad0e73dd5886f911e551">&#9670;&nbsp;</a></span>preprocessing_solver_options</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;<a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">solvers::SolverOptions</a>&gt; preprocessing_solver_options</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">{</div><div class="line">      std::nullopt}</div></div><!-- fragment -->
+<p>Optional solver options to be used by preprocessing_solver in the preprocessing stage of GCS, which is used in SolveShortestPath. </p>
+<p>If preprocessing_solver is set but this parameter is not then solver_options is used. If preprocessing_solver is not set, this parameter is ignored. For instance, one might want to print solver logs for the main optimization, but not from the many smaller preprocessing optimizations. </p>
+
+</div>
+</div>
 <a id="a2af5f59f2eac4720da5c5d9a901d414f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2af5f59f2eac4720da5c5d9a901d414f">&#9670;&nbsp;</a></span>restriction_solver</h2>
 
@@ -330,7 +370,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Optimizer to be used in SolveConvexRestriction(), which is also called during the rounding stage of SolveShortestPath() given the relaxation. </p>
-<p>If not set, the interface at .solver will be used, if provided, otherwise the best solver for the given problem is selected. Note that if the solver cannot handle the type of optimization problem generated, the calling the <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html#aec933bef2f8c7a702a6fd5c59feac5ec" title="Solves an optimization program with optional initial guess and solver options.">solvers::SolverInterface::Solve()</a> method will throw. </p>
+<p>If not set, the interface at .solver will be used, if provided, otherwise the best solver for the given problem is selected. Note that if the solver cannot handle the type of optimization problem generated, then calling the <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html#aec933bef2f8c7a702a6fd5c59feac5ec" title="Solves an optimization program with optional initial guess and solver options.">solvers::SolverInterface::Solve()</a> method will throw. </p>
 
 </div>
 </div>

@@ -173,7 +173,8 @@ var NAVTREEINDEX48 =
 "detail__tinyxml_8h.html":[4,0,0,8,9,18],
 "detail__urdf__geometry_8h.html":[4,0,0,8,9,20],
 "detail__urdf__parser_8h.html":[4,0,0,8,9,21],
-"detail__usd__parser_8h.html":[4,0,0,8,9,22],
+"detail__usd__geometry_8h.html":[4,0,0,8,9,22],
+"detail__usd__parser_8h.html":[4,0,0,8,9,23],
 "detect__zero__simplex_8h.html":[4,0,0,4,2,13],
 "diagnostic__policy_8h.html":[4,0,0,1,15],
 "diagnostic__policy__test__base_8h.html":[4,0,0,1,4,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX48 =
 "dir_4c496d2360378cdad57abc2aec0d63ce.html":[4,0,0,8,11],
 "dir_4c661b13a74b238bb3ec8802c387109a.html":[4,0,0,0,0,9],
 "dir_4d6afa0018d27b03aafc768625d5f8d5.html":[4,0,0,8,12],
-"dir_4e7f59081b2683f4314b7e1101ce9a3e.html":[4,0,0,8,7],
-"dir_4fab2163d3e645fa924c3ec116374936.html":[4,0,0,12,1,0]
+"dir_4e7f59081b2683f4314b7e1101ce9a3e.html":[4,0,0,8,7]
 };

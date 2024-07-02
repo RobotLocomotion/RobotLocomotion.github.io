@@ -1,5 +1,6 @@
 var NAVTREEINDEX54 =
 {
+"integer__optimization__util_8h.html#a1460b4c245321e57b234a724d774fc50":[4,0,0,11,26,0],
 "integer__optimization__util_8h.html#aa7a863c255da14a1441e3ac58d082472":[4,0,0,11,26,3],
 "integer__optimization__util_8h.html#ab3ba521ece6e61a25713f11610b01d97":[4,0,0,11,26,1],
 "integer__optimization__util_8h.html#ada3cfbf9597820039fe2d6c3f175731b":[4,0,0,11,26,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX54 =
 "math__py_8h.html":[4,0,0,0,0,5,0],
 "mathematical__program_8h.html":[4,0,0,11,30],
 "mathematical__program_8h.html#abf0cd38a406880348f0c7fda298c66c2":[4,0,0,11,30,4],
-"mathematical__program__doxygen_8h.html":[4,0,0,11,31],
-"mathematical__program__result_8h.html":[4,0,0,11,32]
+"mathematical__program__doxygen_8h.html":[4,0,0,11,31]
 };
