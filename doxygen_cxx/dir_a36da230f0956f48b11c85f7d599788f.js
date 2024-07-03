@@ -46,6 +46,8 @@ var dir_a36da230f0956f48b11c85f7d599788f =
     [ "fmt_eigen.h", "fmt__eigen_8h.html", "fmt__eigen_8h" ],
     [ "fmt_ostream.h", "fmt__ostream_8h.html", "fmt__ostream_8h" ],
     [ "hash.h", "hash_8h.html", "hash_8h" ],
+    [ "hwy_dynamic.h", "hwy__dynamic_8h.html", null ],
+    [ "hwy_dynamic_impl.h", "hwy__dynamic__impl_8h.html", null ],
     [ "identifier.h", "identifier_8h.html", "identifier_8h" ],
     [ "is_approx_equal_abstol.h", "is__approx__equal__abstol_8h.html", "is__approx__equal__abstol_8h" ],
     [ "is_cloneable.h", "is__cloneable_8h.html", "is__cloneable_8h" ],

@@ -203,12 +203,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a09f1477bfa664da452fb472f7c1959cc"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a09f1477bfa664da452fb472f7c1959cc">xv</a> () const</td></tr>
 <tr class="memdesc:a09f1477bfa664da452fb472f7c1959cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the continuous decision variables associated with vertex <code>v</code>.  <a href="#a09f1477bfa664da452fb472f7c1959cc">More...</a><br /></td></tr>
 <tr class="separator:a09f1477bfa664da452fb472f7c1959cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade659478ee4a5dcff76b62e8fa8c4347"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>, <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#ade659478ee4a5dcff76b62e8fa8c4347">AddCost</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;e)</td></tr>
-<tr class="memdesc:ade659478ee4a5dcff76b62e8fa8c4347"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a cost to this edge, described by a <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> <code>e</code> containing <em>only</em> elements of <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#aeacbc2abb655b394b863536ddcd78036" title="Returns the continuous decision variables associated with vertex u.">xu()</a> and <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a09f1477bfa664da452fb472f7c1959cc" title="Returns the continuous decision variables associated with vertex v.">xv()</a> as variables.  <a href="#ade659478ee4a5dcff76b62e8fa8c4347">More...</a><br /></td></tr>
-<tr class="separator:ade659478ee4a5dcff76b62e8fa8c4347"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac220304b387f5113f72d957f922585fc"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>, <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#ac220304b387f5113f72d957f922585fc">AddCost</a> (const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a> &gt; &amp;binding)</td></tr>
-<tr class="memdesc:ac220304b387f5113f72d957f922585fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a cost to this edge.  <a href="#ac220304b387f5113f72d957f922585fc">More...</a><br /></td></tr>
-<tr class="separator:ac220304b387f5113f72d957f922585fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a39b1e3276bba1f810ecbdb36dc74e5"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>, <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a9a39b1e3276bba1f810ecbdb36dc74e5">AddCost</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;e, const std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5b">Transcription</a> &gt; &amp;use_in_transcription={ <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5ba058f4d93de65b4c9dd778be760beaa90">Transcription::kMIP</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5baf0eaaa21b3713d009fbdbbcfc1f8b9b8">Transcription::kRelaxation</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5bae6e3b13561e5aed0294cf5ca5765dd02">Transcription::kRestriction</a>})</td></tr>
+<tr class="memdesc:a9a39b1e3276bba1f810ecbdb36dc74e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a cost to this edge, described by a <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> <code>e</code> containing <em>only</em> elements of <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#aeacbc2abb655b394b863536ddcd78036" title="Returns the continuous decision variables associated with vertex u.">xu()</a> and <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a09f1477bfa664da452fb472f7c1959cc" title="Returns the continuous decision variables associated with vertex v.">xv()</a> as variables.  <a href="#a9a39b1e3276bba1f810ecbdb36dc74e5">More...</a><br /></td></tr>
+<tr class="separator:a9a39b1e3276bba1f810ecbdb36dc74e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07ad310a45925cd9087b4a53c448fdb0"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>, <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a07ad310a45925cd9087b4a53c448fdb0">AddCost</a> (const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a> &gt; &amp;binding, const std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5b">Transcription</a> &gt; &amp;use_in_transcription={ <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5ba058f4d93de65b4c9dd778be760beaa90">Transcription::kMIP</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5baf0eaaa21b3713d009fbdbbcfc1f8b9b8">Transcription::kRelaxation</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5bae6e3b13561e5aed0294cf5ca5765dd02">Transcription::kRestriction</a>})</td></tr>
+<tr class="memdesc:a07ad310a45925cd9087b4a53c448fdb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a cost to this edge.  <a href="#a07ad310a45925cd9087b4a53c448fdb0">More...</a><br /></td></tr>
+<tr class="separator:a07ad310a45925cd9087b4a53c448fdb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c2df3239ac47b11ac8fab374f444240"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a4c2df3239ac47b11ac8fab374f444240">AddConstraint</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">symbolic::Formula</a> &amp;f, const std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5b">Transcription</a> &gt; &amp;use_in_transcription={ <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5ba058f4d93de65b4c9dd778be760beaa90">Transcription::kMIP</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5baf0eaaa21b3713d009fbdbbcfc1f8b9b8">Transcription::kRelaxation</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5bae6e3b13561e5aed0294cf5ca5765dd02">Transcription::kRestriction</a>})</td></tr>
 <tr class="memdesc:a4c2df3239ac47b11ac8fab374f444240"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a constraint to this edge.  <a href="#a4c2df3239ac47b11ac8fab374f444240">More...</a><br /></td></tr>
 <tr class="separator:a4c2df3239ac47b11ac8fab374f444240"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -221,9 +221,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae9472d3bcadcdc5e3845fdea8de7438d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#ae9472d3bcadcdc5e3845fdea8de7438d">ClearPhiConstraints</a> ()</td></tr>
 <tr class="memdesc:ae9472d3bcadcdc5e3845fdea8de7438d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes any constraints added with AddPhiConstraint.  <a href="#ae9472d3bcadcdc5e3845fdea8de7438d">More...</a><br /></td></tr>
 <tr class="separator:ae9472d3bcadcdc5e3845fdea8de7438d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af13ce00c10da001d2d5786d97a9f59f6"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#af13ce00c10da001d2d5786d97a9f59f6">GetCosts</a> () const</td></tr>
-<tr class="memdesc:af13ce00c10da001d2d5786d97a9f59f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all costs on this edge.  <a href="#af13ce00c10da001d2d5786d97a9f59f6">More...</a><br /></td></tr>
-<tr class="separator:af13ce00c10da001d2d5786d97a9f59f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b530f5f0f6f14ee171d7b641203f1d1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a5b530f5f0f6f14ee171d7b641203f1d1">GetCosts</a> (const std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5b">Transcription</a> &gt; &amp;used_in_transcription={ <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5ba058f4d93de65b4c9dd778be760beaa90">Transcription::kMIP</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5baf0eaaa21b3713d009fbdbbcfc1f8b9b8">Transcription::kRelaxation</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5bae6e3b13561e5aed0294cf5ca5765dd02">Transcription::kRestriction</a>}) const</td></tr>
+<tr class="memdesc:a5b530f5f0f6f14ee171d7b641203f1d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns costs on this edge.  <a href="#a5b530f5f0f6f14ee171d7b641203f1d1">More...</a><br /></td></tr>
+<tr class="separator:a5b530f5f0f6f14ee171d7b641203f1d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a063e5bb012269b6ca2cf6e4efe2ea4b5"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a063e5bb012269b6ca2cf6e4efe2ea4b5">GetConstraints</a> (const std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5b">Transcription</a> &gt; &amp;used_in_transcription={ <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5ba058f4d93de65b4c9dd778be760beaa90">Transcription::kMIP</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5baf0eaaa21b3713d009fbdbbcfc1f8b9b8">Transcription::kRelaxation</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5bae6e3b13561e5aed0294cf5ca5765dd02">Transcription::kRestriction</a>}) const</td></tr>
 <tr class="memdesc:a063e5bb012269b6ca2cf6e4efe2ea4b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns constraints on this edge.  <a href="#a063e5bb012269b6ca2cf6e4efe2ea4b5">More...</a><br /></td></tr>
 <tr class="separator:a063e5bb012269b6ca2cf6e4efe2ea4b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -412,8 +412,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="ade659478ee4a5dcff76b62e8fa8c4347"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade659478ee4a5dcff76b62e8fa8c4347">&#9670;&nbsp;</a></span>AddCost() <span class="overload">[1/2]</span></h2>
+<a id="a9a39b1e3276bba1f810ecbdb36dc74e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a39b1e3276bba1f810ecbdb36dc74e5">&#9670;&nbsp;</a></span>AddCost() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -422,27 +422,44 @@ Friends</h2></td></tr>
           <td class="memname">std::pair&lt;<a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>, <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a>&gt; &gt; AddCost </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;&#160;</td>
-          <td class="paramname"><em>e</em></td><td>)</td>
+          <td class="paramname"><em>e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5b">Transcription</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>use_in_transcription</em> = <code>{&#160;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5ba058f4d93de65b4c9dd778be760beaa90">Transcription::kMIP</a>,&#160;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5baf0eaaa21b3713d009fbdbbcfc1f8b9b8">Transcription::kRelaxation</a>,&#160;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5bae6e3b13561e5aed0294cf5ca5765dd02">Transcription::kRestriction</a>}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Adds a cost to this edge, described by a <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> <code>e</code> containing <em>only</em> elements of <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#aeacbc2abb655b394b863536ddcd78036" title="Returns the continuous decision variables associated with vertex u.">xu()</a> and <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a09f1477bfa664da452fb472f7c1959cc" title="Returns the continuous decision variables associated with vertex v.">xv()</a> as variables. </p>
 <p>For technical reasons relating to being able to "turn-off" the cost on inactive edges, all costs are eventually implemented with a slack variable and a constraint: </p><pre class="fragment">min g(xu, xv) ⇒ min ℓ, s.t. ℓ ≥ g(xu,xv)
-</pre> <dl class="section note"><dt>Note</dt><dd>Linear costs lead to negative costs if decision variables are not properly constrained. Users may want to check that the solution does not contain negative costs. </dd></dl>
+</pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">use_in_transcription</td><td>specifies the components of the problem to which the constraint should be added. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Linear costs lead to negative costs if decision variables are not properly constrained. Users may want to check that the solution does not contain negative costs. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>the pair &lt;ℓ, g(xu, xv)&gt;. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if e.GetVariables() is not a subset of <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#aeacbc2abb655b394b863536ddcd78036" title="Returns the continuous decision variables associated with vertex u.">xu()</a> ∪ <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a09f1477bfa664da452fb472f7c1959cc" title="Returns the continuous decision variables associated with vertex v.">xv()</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if no transcription is specified. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="ac220304b387f5113f72d957f922585fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac220304b387f5113f72d957f922585fc">&#9670;&nbsp;</a></span>AddCost() <span class="overload">[2/2]</span></h2>
+<a id="a07ad310a45925cd9087b4a53c448fdb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07ad310a45925cd9087b4a53c448fdb0">&#9670;&nbsp;</a></span>AddCost() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -451,19 +468,36 @@ Friends</h2></td></tr>
           <td class="memname">std::pair&lt;<a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>, <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a>&gt; &gt; AddCost </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>binding</em></td><td>)</td>
+          <td class="paramname"><em>binding</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5b">Transcription</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>use_in_transcription</em> = <code>{&#160;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5ba058f4d93de65b4c9dd778be760beaa90">Transcription::kMIP</a>,&#160;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5baf0eaaa21b3713d009fbdbbcfc1f8b9b8">Transcription::kRelaxation</a>,&#160;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5bae6e3b13561e5aed0294cf5ca5765dd02">Transcription::kRestriction</a>}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Adds a cost to this edge. </p>
 <p><code>binding</code> must contain <em>only</em> elements of <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#aeacbc2abb655b394b863536ddcd78036" title="Returns the continuous decision variables associated with vertex u.">xu()</a> and <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a09f1477bfa664da452fb472f7c1959cc" title="Returns the continuous decision variables associated with vertex v.">xv()</a> as variables. For technical reasons relating to being able to "turn-off" the cost on inactive edges, all costs are eventually implemented with a slack variable and a constraint: </p><pre class="fragment">min g(xu, xv) ⇒ min ℓ, s.t. ℓ ≥ g(xu,xv)
-</pre> <dl class="section note"><dt>Note</dt><dd>Linear costs lead to negative costs if decision variables are not properly constrained. Users may want to check that the solution does not contain negative costs. </dd></dl>
+</pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">use_in_transcription</td><td>specifies the components of the problem to which the constraint should be added. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Linear costs lead to negative costs if decision variables are not properly constrained. Users may want to check that the solution does not contain negative costs. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>the pair &lt;ℓ, g(xu, xv)&gt;. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if binding.variables() is not a subset of <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#aeacbc2abb655b394b863536ddcd78036" title="Returns the continuous decision variables associated with vertex u.">xu()</a> ∪ <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a09f1477bfa664da452fb472f7c1959cc" title="Returns the continuous decision variables associated with vertex v.">xv()</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if no transcription is specified. </td></tr>
   </table>
   </dd>
 </dl>
@@ -542,22 +576,35 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="af13ce00c10da001d2d5786d97a9f59f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af13ce00c10da001d2d5786d97a9f59f6">&#9670;&nbsp;</a></span>GetCosts()</h2>
+<a id="a5b530f5f0f6f14ee171d7b641203f1d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b530f5f0f6f14ee171d7b641203f1d1">&#9670;&nbsp;</a></span>GetCosts()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::vector&lt;<a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a>&gt; &gt;&amp; GetCosts </td>
+          <td class="memname">std::vector&lt;<a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a>&gt; &gt; GetCosts </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5b">Transcription</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>used_in_transcription</em> = <code>{&#160;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5ba058f4d93de65b4c9dd778be760beaa90">Transcription::kMIP</a>,&#160;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5baf0eaaa21b3713d009fbdbbcfc1f8b9b8">Transcription::kRelaxation</a>,&#160;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5bae6e3b13561e5aed0294cf5ca5765dd02">Transcription::kRestriction</a>}</code></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns all costs on this edge. </p>
+<p>Returns costs on this edge. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">used_in_transcription</td><td>specifies the components of the problem from which the constraint should be retrieved. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if no transcription is specified. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

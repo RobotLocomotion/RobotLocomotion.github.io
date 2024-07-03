@@ -1649,6 +1649,11 @@ optimization problem.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">tol</span></code>:</dt><dd><p>A tolerance for bound checking.</p>
 </dd>
 </dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if the size of x isn't correct.</strong> – </p>
+</dd>
+</dl>
 <ol class="arabic simple" start="2">
 <li><p>CheckSatisfied(self: pydrake.solvers.Constraint, x: numpy.ndarray[object[m, 1]], tol: float = 1e-06) -&gt; bool</p></li>
 </ol>
@@ -1659,6 +1664,11 @@ optimization problem.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">tol</span></code>:</dt><dd><p>A tolerance for bound checking.</p>
 </dd>
 </dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if the size of x isn't correct.</strong> – </p>
+</dd>
+</dl>
 <ol class="arabic simple" start="3">
 <li><p>CheckSatisfied(self: pydrake.solvers.Constraint, x: numpy.ndarray[object[m, 1]]) -&gt; pydrake.symbolic.Formula</p></li>
 </ol>
@@ -1667,6 +1677,11 @@ optimization problem.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">x</span></code>:</dt><dd><p>A <code class="docutils literal notranslate"><span class="pre">num_vars</span></code> x 1 vector.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">tol</span></code>:</dt><dd><p>A tolerance for bound checking.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if the size of x isn't correct.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -2432,6 +2447,11 @@ non-differentiable when any element of Ax + b equals zero.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">b</span></code>:</dt><dd><p>Constant term.</p>
 </dd>
 </dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if the size of A and b don't match.</strong> – </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -2476,6 +2496,11 @@ variables (columns of A) cannot change.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">A</span></code>:</dt><dd><p>Linear term.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">b</span></code>:</dt><dd><p>Constant term.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if the size of A and b don't match.</strong> – </p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
@@ -2835,6 +2860,11 @@ non-differentiable when any two or more elements of Ax + b are equal.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">b</span></code>:</dt><dd><p>Constant term.</p>
 </dd>
 </dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if the size of A and b don't match.</strong> – </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -2887,7 +2917,12 @@ is non-convex. For more information and visualization, please refer to
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.LorentzConeConstraint.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.solvers.LorentzConeConstraint,</span> <span class="pre">A:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">n]],</span> <span class="pre">b:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]],</span> <span class="pre">eval_type:</span> <span class="pre">pydrake.solvers.LorentzConeConstraint.EvalType</span> <span class="pre">=</span> <span class="pre">&lt;EvalType.kConvexSmooth:</span> <span class="pre">1&gt;</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.LorentzConeConstraint.__init__" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if A.row</strong><strong>(</strong><strong>) </strong><strong>&lt; 2.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.LorentzConeConstraint.A">
@@ -7435,6 +7470,14 @@ incorrectly, then the downstream code (for example the solver)
 will malfunction.</p>
 </dd>
 </dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if Q0 isn't a square matrix</strong><strong>, or </strong><strong>b.rows</strong><strong>(</strong><strong>) </strong><strong>!=</strong> – </p></li>
+<li><p><strong>Q0.rows</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -7687,7 +7730,12 @@ cone, if</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.RotatedLorentzConeConstraint.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.RotatedLorentzConeConstraint" title="pydrake.solvers.RotatedLorentzConeConstraint"><span class="pre">pydrake.solvers.RotatedLorentzConeConstraint</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.RotatedLorentzConeConstraint.__init__" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if A.rows</strong><strong>(</strong><strong>) </strong><strong>&lt; 3.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.RotatedLorentzConeConstraint.A">

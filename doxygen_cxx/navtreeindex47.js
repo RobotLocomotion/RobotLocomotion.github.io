@@ -1,5 +1,6 @@
 var NAVTREEINDEX47 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a22881c8c97b471c7c9a56d437df6e542":[3,0,0,17,8,18],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a24948d1f75d0b7f6118b535e655ada09":[3,0,0,17,8,6],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a3093825d2725664b6304ae2f31217759":[3,0,0,17,8,11],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a320fae9dc5f8cb947997f9fdb205ec9c":[3,0,0,17,8,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX47 =
 "constraint_8h.html":[4,0,0,11,9],
 "constraint__relaxing__ik_8h.html":[4,0,0,8,5,4],
 "constraint__specs_8h.html":[4,0,0,8,10,3],
-"contact__configuration_8h.html":[4,0,0,8,2,7],
-"contact__jacobians_8h.html":[4,0,0,8,10,4]
+"contact__configuration_8h.html":[4,0,0,8,2,7]
 };

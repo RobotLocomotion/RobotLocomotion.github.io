@@ -10979,6 +10979,32 @@ BasicVector.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.System.ExecuteForcedEvents">
+<span class="sig-name descname"><span class="pre">ExecuteForcedEvents</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System" title="pydrake.systems.framework.System"><span class="pre">pydrake.systems.framework.System</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">publish</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.System.ExecuteForcedEvents" title="Permalink to this definition"></a></dt>
+<dd><p>This method triggers all of the forced events registered with this
+System (which might be a Diagram). Ordering and status return handling
+mimic the Simulator: unrestricted events are processed first, then
+discrete update events, then publish events. “Reached termination”
+status returns are ignored.</p>
+<p>An option is provided to suppress publish events. This can be useful,
+for example, to update state in a Diagram without triggering a
+visualization.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The Context supplied to the handlers and modified in place on
+return.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if it invokes an event handler that returns status</strong> – </p></li>
+<li><p><strong>indicating failure.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.System.ExecuteInitializationEvents">
 <span class="sig-name descname"><span class="pre">ExecuteInitializationEvents</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System" title="pydrake.systems.framework.System"><span class="pre">pydrake.systems.framework.System</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.System.ExecuteInitializationEvents" title="Permalink to this definition"></a></dt>
 <dd><p>This method triggers all of the initialization events returned by
@@ -10989,6 +11015,11 @@ callers who do not want to use the full Simulator workflow.</p>
 because <em>only</em> initialization events are handled here, while
 Simulator::Initialize() also processes other events associated with
 time zero. Also, “reached termination” returns are ignored here.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The Context supplied to the handlers and modified in place on
+return.</p>
+</dd>
+</dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
@@ -12135,6 +12166,32 @@ BasicVector.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.System_-AutoDiffXd-.ExecuteForcedEvents">
+<span id="pydrake.systems.framework.System_[AutoDiffXd].ExecuteForcedEvents"></span><span class="sig-name descname"><span class="pre">ExecuteForcedEvents</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">publish</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.System_-AutoDiffXd-.ExecuteForcedEvents" title="Permalink to this definition"></a></dt>
+<dd><p>This method triggers all of the forced events registered with this
+System (which might be a Diagram). Ordering and status return handling
+mimic the Simulator: unrestricted events are processed first, then
+discrete update events, then publish events. “Reached termination”
+status returns are ignored.</p>
+<p>An option is provided to suppress publish events. This can be useful,
+for example, to update state in a Diagram without triggering a
+visualization.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The Context supplied to the handlers and modified in place on
+return.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if it invokes an event handler that returns status</strong> – </p></li>
+<li><p><strong>indicating failure.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.System_-AutoDiffXd-.ExecuteInitializationEvents">
 <span id="pydrake.systems.framework.System_[AutoDiffXd].ExecuteInitializationEvents"></span><span class="sig-name descname"><span class="pre">ExecuteInitializationEvents</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.System_-AutoDiffXd-.ExecuteInitializationEvents" title="Permalink to this definition"></a></dt>
 <dd><p>This method triggers all of the initialization events returned by
@@ -12145,6 +12202,11 @@ callers who do not want to use the full Simulator workflow.</p>
 because <em>only</em> initialization events are handled here, while
 Simulator::Initialize() also processes other events associated with
 time zero. Also, “reached termination” returns are ignored here.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The Context supplied to the handlers and modified in place on
+return.</p>
+</dd>
+</dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13285,6 +13347,32 @@ BasicVector.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.System_-Expression-.ExecuteForcedEvents">
+<span id="pydrake.systems.framework.System_[Expression].ExecuteForcedEvents"></span><span class="sig-name descname"><span class="pre">ExecuteForcedEvents</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">publish</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.System_-Expression-.ExecuteForcedEvents" title="Permalink to this definition"></a></dt>
+<dd><p>This method triggers all of the forced events registered with this
+System (which might be a Diagram). Ordering and status return handling
+mimic the Simulator: unrestricted events are processed first, then
+discrete update events, then publish events. “Reached termination”
+status returns are ignored.</p>
+<p>An option is provided to suppress publish events. This can be useful,
+for example, to update state in a Diagram without triggering a
+visualization.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The Context supplied to the handlers and modified in place on
+return.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if it invokes an event handler that returns status</strong> – </p></li>
+<li><p><strong>indicating failure.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.System_-Expression-.ExecuteInitializationEvents">
 <span id="pydrake.systems.framework.System_[Expression].ExecuteInitializationEvents"></span><span class="sig-name descname"><span class="pre">ExecuteInitializationEvents</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.System_-Expression-.ExecuteInitializationEvents" title="Permalink to this definition"></a></dt>
 <dd><p>This method triggers all of the initialization events returned by
@@ -13295,6 +13383,11 @@ callers who do not want to use the full Simulator workflow.</p>
 because <em>only</em> initialization events are handled here, while
 Simulator::Initialize() also processes other events associated with
 time zero. Also, “reached termination” returns are ignored here.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The Context supplied to the handlers and modified in place on
+return.</p>
+</dd>
+</dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">

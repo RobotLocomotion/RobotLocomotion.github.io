@@ -1,5 +1,6 @@
 var NAVTREEINDEX50 =
 {
+"examples_2rod2d_2constraint__problem__data_8h.html":[4,0,0,3,16,0],
 "examples_2rod2d_2constraint__solver_8h.html":[4,0,0,3,16,1],
 "examples__py_8h.html":[4,0,0,0,0,2,0],
 "expect__equal_8h.html":[4,0,0,8,2,0,2],
@@ -218,7 +219,6 @@ var NAVTREEINDEX50 =
 "extract__double_8h.html#aa25d21a232067d56c472d508b45d90cf":[4,0,0,1,30,1],
 "extract__double_8h.html#acffe42a683dd67544fb4d499d082b16d":[4,0,0,1,30,0],
 "fast__pose__composition__functions_8h.html":[4,0,0,7,15],
-"fast__pose__composition__functions__avx2__fma_8h.html":[4,0,0,7,16],
 "fem_2schur__complement_8h.html":[4,0,0,8,3,27],
 "fem_2schur__complement_8h.html#ae9855666bb260098093f51536a01eee5":[4,0,0,8,3,27,0],
 "fem__element_8h.html":[4,0,0,8,3,10],

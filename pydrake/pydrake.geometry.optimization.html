@@ -1853,7 +1853,7 @@ should be added.</p>
 <span class="sig-name descname"><span class="pre">AddCost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.AddCost" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>AddCost(self: pydrake.geometry.optimization.GraphOfConvexSets.Edge, e: pydrake.symbolic.Expression) -&gt; tuple[pydrake.symbolic.Variable, pydrake.solvers.Binding[Cost]]</p></li>
+<li><p>AddCost(self: pydrake.geometry.optimization.GraphOfConvexSets.Edge, e: pydrake.symbolic.Expression, use_in_transcription: set[pydrake.geometry.optimization.GraphOfConvexSets.Transcription] = {&lt;Transcription.kMIP: 0&gt;, &lt;Transcription.kRelaxation: 1&gt;, &lt;Transcription.kRestriction: 2&gt;}) -&gt; tuple[pydrake.symbolic.Variable, pydrake.solvers.Binding[Cost]]</p></li>
 </ol>
 <p>Adds a cost to this edge, described by a symbolic::Expression <code class="docutils literal notranslate"><span class="pre">e</span></code>
 containing <em>only</em> elements of xu() and xv() as variables. For
@@ -1863,7 +1863,12 @@ variable and a constraint:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>min g(xu, xv) ⇒ min ℓ, s.t. ℓ ≥ g(xu,xv)
 </pre></div>
 </div>
-</details><div class="admonition note">
+</details><dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">use_in_transcription</span></code>:</dt><dd><p>specifies the components of the problem to which the constraint
+should be added.</p>
+</dd>
+</dl>
+<div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Linear costs lead to negative costs if decision variables are not
 properly constrained. Users may want to check that the solution
@@ -1874,11 +1879,14 @@ does not contain negative costs.</p>
 <dd class="field-odd"><p>the pair &lt;ℓ, g(xu, xv)&gt;.</p>
 </dd>
 <dt class="field-even">Raises</dt>
-<dd class="field-even"><p><strong>RuntimeError if e.GetVariables</strong><strong>(</strong><strong>) </strong><strong>is not a subset of xu</strong><strong>(</strong><strong>) </strong><strong>∪ xv</strong><strong>(</strong><strong>)</strong><strong></strong> – </p>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>RuntimeError if e.GetVariables</strong><strong>(</strong><strong>) </strong><strong>is not a subset of xu</strong><strong>(</strong><strong>) </strong><strong>∪ xv</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>RuntimeError if no transcription is specified.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>AddCost(self: pydrake.geometry.optimization.GraphOfConvexSets.Edge, binding: pydrake.solvers.Binding[Cost]) -&gt; tuple[pydrake.symbolic.Variable, pydrake.solvers.Binding[Cost]]</p></li>
+<li><p>AddCost(self: pydrake.geometry.optimization.GraphOfConvexSets.Edge, binding: pydrake.solvers.Binding[Cost], use_in_transcription: set[pydrake.geometry.optimization.GraphOfConvexSets.Transcription] = {&lt;Transcription.kMIP: 0&gt;, &lt;Transcription.kRelaxation: 1&gt;, &lt;Transcription.kRestriction: 2&gt;}) -&gt; tuple[pydrake.symbolic.Variable, pydrake.solvers.Binding[Cost]]</p></li>
 </ol>
 <p>Adds a cost to this edge. <code class="docutils literal notranslate"><span class="pre">binding</span></code> must contain <em>only</em> elements of
 xu() and xv() as variables. For technical reasons relating to being
@@ -1887,7 +1895,12 @@ eventually implemented with a slack variable and a constraint:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>min g(xu, xv) ⇒ min ℓ, s.t. ℓ ≥ g(xu,xv)
 </pre></div>
 </div>
-</details><div class="admonition note">
+</details><dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">use_in_transcription</span></code>:</dt><dd><p>specifies the components of the problem to which the constraint
+should be added.</p>
+</dd>
+</dl>
+<div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Linear costs lead to negative costs if decision variables are not
 properly constrained. Users may want to check that the solution
@@ -1901,6 +1914,7 @@ does not contain negative costs.</p>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>RuntimeError if binding.variables</strong><strong>(</strong><strong>) </strong><strong>is not a subset of xu</strong><strong>(</strong><strong>) </strong><strong>∪</strong> – </p></li>
 <li><p><strong>xv</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>RuntimeError if no transcription is specified.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -1942,8 +1956,18 @@ should be retrieved.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetCosts">
-<span class="sig-name descname"><span class="pre">GetCosts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge" title="pydrake.geometry.optimization.GraphOfConvexSets.Edge"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Edge</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Cost</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetCosts" title="Permalink to this definition"></a></dt>
-<dd><p>Returns all costs on this edge.</p>
+<span class="sig-name descname"><span class="pre">GetCosts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Edge</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">used_in_transcription:</span> <span class="pre">set[pydrake.geometry.optimization.GraphOfConvexSets.Transcription]</span> <span class="pre">=</span> <span class="pre">{&lt;Transcription.kMIP:</span> <span class="pre">0&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">&lt;Transcription.kRelaxation:</span> <span class="pre">1&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">&lt;Transcription.kRestriction:</span> <span class="pre">2&gt;}</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Cost</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetCosts" title="Permalink to this definition"></a></dt>
+<dd><p>Returns costs on this edge.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">used_in_transcription</span></code>:</dt><dd><p>specifies the components of the problem from which the constraint
+should be retrieved.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if no transcription is specified.</strong> – </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -2304,7 +2328,7 @@ should be added.</p>
 <span class="sig-name descname"><span class="pre">AddCost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex.AddCost" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>AddCost(self: pydrake.geometry.optimization.GraphOfConvexSets.Vertex, e: pydrake.symbolic.Expression) -&gt; tuple[pydrake.symbolic.Variable, pydrake.solvers.Binding[Cost]]</p></li>
+<li><p>AddCost(self: pydrake.geometry.optimization.GraphOfConvexSets.Vertex, e: pydrake.symbolic.Expression, use_in_transcription: set[pydrake.geometry.optimization.GraphOfConvexSets.Transcription] = {&lt;Transcription.kMIP: 0&gt;, &lt;Transcription.kRelaxation: 1&gt;, &lt;Transcription.kRestriction: 2&gt;}) -&gt; tuple[pydrake.symbolic.Variable, pydrake.solvers.Binding[Cost]]</p></li>
 </ol>
 <p>Adds a cost to this vertex, described by a symbolic::Expression <code class="docutils literal notranslate"><span class="pre">e</span></code>
 containing <em>only</em> elements of x() as variables. For technical reasons
@@ -2314,7 +2338,12 @@ constraint:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>min g(x) ⇒ min ℓ, s.t. ℓ ≥ g(x)
 </pre></div>
 </div>
-</details><div class="admonition note">
+</details><dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">use_in_transcription</span></code>:</dt><dd><p>specifies the components of the problem to which the constraint
+should be added.</p>
+</dd>
+</dl>
+<div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Linear costs lead to negative costs if decision variables are not
 properly constrained. Users may want to check that the solution
@@ -2325,11 +2354,14 @@ does not contain negative costs.</p>
 <dd class="field-odd"><p>the pair &lt;ℓ, g(x)&gt;.</p>
 </dd>
 <dt class="field-even">Raises</dt>
-<dd class="field-even"><p><strong>RuntimeError if e.GetVariables</strong><strong>(</strong><strong>) </strong><strong>is not a subset of x</strong><strong>(</strong><strong>)</strong><strong></strong> – </p>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>RuntimeError if e.GetVariables</strong><strong>(</strong><strong>) </strong><strong>is not a subset of x</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>RuntimeError if no transcription is specified.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>AddCost(self: pydrake.geometry.optimization.GraphOfConvexSets.Vertex, binding: pydrake.solvers.Binding[Cost]) -&gt; tuple[pydrake.symbolic.Variable, pydrake.solvers.Binding[Cost]]</p></li>
+<li><p>AddCost(self: pydrake.geometry.optimization.GraphOfConvexSets.Vertex, binding: pydrake.solvers.Binding[Cost], use_in_transcription: set[pydrake.geometry.optimization.GraphOfConvexSets.Transcription] = {&lt;Transcription.kMIP: 0&gt;, &lt;Transcription.kRelaxation: 1&gt;, &lt;Transcription.kRestriction: 2&gt;}) -&gt; tuple[pydrake.symbolic.Variable, pydrake.solvers.Binding[Cost]]</p></li>
 </ol>
 <p>Adds a cost to this vertex. <code class="docutils literal notranslate"><span class="pre">binding</span></code> must contain <em>only</em> elements
 of x() as variables. For technical reasons relating to being able to
@@ -2338,7 +2370,12 @@ implemented with a slack variable and a constraint:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>min g(x) ⇒ min ℓ, s.t. ℓ ≥ g(x)
 </pre></div>
 </div>
-</details><div class="admonition note">
+</details><dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">use_in_transcription</span></code>:</dt><dd><p>specifies the components of the problem to which the constraint
+should be added.</p>
+</dd>
+</dl>
+<div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Linear costs lead to negative costs if decision variables are not
 properly constrained. Users may want to check that the solution
@@ -2349,7 +2386,10 @@ does not contain negative costs.</p>
 <dd class="field-odd"><p>the pair &lt;ℓ, g(x)&gt;.</p>
 </dd>
 <dt class="field-even">Raises</dt>
-<dd class="field-even"><p><strong>RuntimeError if binding.variables</strong><strong>(</strong><strong>) </strong><strong>is not a subset of x</strong><strong>(</strong><strong>)</strong><strong></strong> – </p>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>RuntimeError if binding.variables</strong><strong>(</strong><strong>) </strong><strong>is not a subset of x</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>RuntimeError if no transcription is specified.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -2378,8 +2418,18 @@ should be retrieved.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.GraphOfConvexSets.Vertex.GetCosts">
-<span class="sig-name descname"><span class="pre">GetCosts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex" title="pydrake.geometry.optimization.GraphOfConvexSets.Vertex"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Vertex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Cost</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex.GetCosts" title="Permalink to this definition"></a></dt>
-<dd><p>Returns all costs on this vertex.</p>
+<span class="sig-name descname"><span class="pre">GetCosts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Vertex</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">used_in_transcription:</span> <span class="pre">set[pydrake.geometry.optimization.GraphOfConvexSets.Transcription]</span> <span class="pre">=</span> <span class="pre">{&lt;Transcription.kMIP:</span> <span class="pre">0&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">&lt;Transcription.kRelaxation:</span> <span class="pre">1&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">&lt;Transcription.kRestriction:</span> <span class="pre">2&gt;}</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Cost</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex.GetCosts" title="Permalink to this definition"></a></dt>
+<dd><p>Returns costs on this vertex.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">used_in_transcription</span></code>:</dt><dd><p>specifies the components of the problem from which the constraint
+should be retrieved.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if no transcription is specified.</strong> – </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">

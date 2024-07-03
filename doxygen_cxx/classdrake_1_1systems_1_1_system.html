@@ -382,6 +382,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:affcc9107de045c4500b366b947a3796a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#affcc9107de045c4500b366b947a3796a">ExecuteInitializationEvents</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; *context) const</td></tr>
 <tr class="memdesc:affcc9107de045c4500b366b947a3796a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method triggers all of the initialization events returned by <a class="el" href="classdrake_1_1systems_1_1_system.html#ae6f84e649d76754f38ea7420a21a1a04" title="This method is called by Simulator::Initialize() to gather all update and publish events that need to...">GetInitializationEvents()</a>.  <a href="#affcc9107de045c4500b366b947a3796a">More...</a><br /></td></tr>
 <tr class="separator:affcc9107de045c4500b366b947a3796a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90b36c14bbcdf47bf14f2906e18573ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a90b36c14bbcdf47bf14f2906e18573ca">ExecuteForcedEvents</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; *context, bool publish=true) const</td></tr>
+<tr class="memdesc:a90b36c14bbcdf47bf14f2906e18573ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method triggers all of the forced events registered with this System (which might be a <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a>).  <a href="#a90b36c14bbcdf47bf14f2906e18573ca">More...</a><br /></td></tr>
+<tr class="separator:a90b36c14bbcdf47bf14f2906e18573ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63e5a7b117d53a54d79d44a63b2cffb7"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdrake_1_1systems_1_1_periodic_event_data.html">PeriodicEventData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a63e5a7b117d53a54d79d44a63b2cffb7">GetUniquePeriodicDiscreteUpdateAttribute</a> () const</td></tr>
 <tr class="memdesc:a63e5a7b117d53a54d79d44a63b2cffb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether there exists a unique periodic timing (offset and period) that triggers one or more discrete update events (and, if so, returns that unique periodic timing).  <a href="#a63e5a7b117d53a54d79d44a63b2cffb7">More...</a><br /></td></tr>
 <tr class="separator:a63e5a7b117d53a54d79d44a63b2cffb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2414,8 +2417,8 @@ Scalar type conversion by template parameter</h2></td></tr>
 
 </div>
 </div>
-<a id="a7d078e4f799ae50f07ae35389352835f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d078e4f799ae50f07ae35389352835f">&#9670;&nbsp;</a></span>DeclareCacheEntry() <span class="overload">[1/3]</span></h2>
+<a id="a4076a7594095a9ca6936dd70c7254f84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4076a7594095a9ca6936dd70c7254f84">&#9670;&nbsp;</a></span>DeclareCacheEntry() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2454,10 +2457,8 @@ Scalar type conversion by template parameter</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Declares a cache entry by specifying only a calculator function that is a class member function (method) with signature: </p>
-<p><a class="anchor" id="DeclareCacheEntry_calc_only"></a></p><div class="fragment"><div class="line"><span class="keywordtype">void</span> MySystem::CalcCacheValue(<span class="keyword">const</span> MyContext&amp;, ValueType*) <span class="keyword">const</span>;</div></div><!-- fragment --><p> where <code>MySystem</code> is a class derived from <code><a class="el" href="classdrake_1_1systems_1_1_system_base.html" title="Provides non-templatized functionality shared by the templatized System classes.">SystemBase</a></code> and <code>MyContext</code> is a class derived from <code><a class="el" href="classdrake_1_1systems_1_1_context_base.html" title="Provides non-templatized Context functionality shared by the templatized derived classes.">ContextBase</a></code>. <code>ValueType</code> is a concrete type such that (a) <code><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">Value</a>&lt;ValueType&gt;</code> is permitted, and (b) <code>ValueType</code> is default constructible. That allows us to create a model value using <code><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">Value</a>&lt;ValueType&gt;{}</code> (value initialized so numerical types will be zeroed in the model). (The method name is arbitrary.) Template arguments will be deduced and do not need to be specified. See the first <a class="el" href="classdrake_1_1systems_1_1_system_base.html#a7da4e8aa9a414faa5b40fc64e8ca40e3" title="Declares a new CacheEntry in this System using the most generic form of the calculation function.">DeclareCacheEntry()</a> signature above for more information about the parameters and behavior.</p>
-<dl class="section note"><dt>Note</dt><dd>The default constructor will be called once immediately to create a model value, and subsequent allocations will just copy the model value without invoking the constructor again. If you want the constructor invoked again at each allocation (not common), use one of the other signatures to explicitly provide a method for the allocator to call; that method can then invoke the <code>ValueType</code> default constructor each time it is called. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">drake::Value</a> </dd></dl>
+<p>Declares a cache entry by specifying a model value of concrete type <code>ValueType</code> and a calculator function that is a class member function (method) with signature: </p>
+<p><a class="anchor" id="DeclareCacheEntry_model_and_calc"></a></p><div class="fragment"><div class="line"><span class="keywordtype">void</span> MySystem::CalcCacheValue(<span class="keyword">const</span> MyContext&amp;, ValueType*) <span class="keyword">const</span>;</div></div><!-- fragment --><p> where <code>MySystem</code> is a class derived from <code><a class="el" href="classdrake_1_1systems_1_1_system_base.html" title="Provides non-templatized functionality shared by the templatized System classes.">SystemBase</a></code>, <code>MyContext</code> is a class derived from <code><a class="el" href="classdrake_1_1systems_1_1_context_base.html" title="Provides non-templatized Context functionality shared by the templatized derived classes.">ContextBase</a></code>, and <code>ValueType</code> is any concrete type such that <code><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">Value</a>&lt;ValueType&gt;</code> is permitted. (The method names are arbitrary.) Template arguments will be deduced and do not need to be specified. See the <a class="el" href="classdrake_1_1systems_1_1_system_base.html#DeclareCacheEntry_primary">primary DeclareCacheEntry() signature</a> above for more information about the parameters and behavior. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">drake::Value</a> </dd></dl>
 
 </div>
 </div>
@@ -2501,8 +2502,8 @@ Scalar type conversion by template parameter</h2></td></tr>
 
 </div>
 </div>
-<a id="a4076a7594095a9ca6936dd70c7254f84"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4076a7594095a9ca6936dd70c7254f84">&#9670;&nbsp;</a></span>DeclareCacheEntry() <span class="overload">[3/3]</span></h2>
+<a id="a7d078e4f799ae50f07ae35389352835f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d078e4f799ae50f07ae35389352835f">&#9670;&nbsp;</a></span>DeclareCacheEntry() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2541,8 +2542,10 @@ Scalar type conversion by template parameter</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Declares a cache entry by specifying a model value of concrete type <code>ValueType</code> and a calculator function that is a class member function (method) with signature: </p>
-<p><a class="anchor" id="DeclareCacheEntry_model_and_calc"></a></p><div class="fragment"><div class="line"><span class="keywordtype">void</span> MySystem::CalcCacheValue(<span class="keyword">const</span> MyContext&amp;, ValueType*) <span class="keyword">const</span>;</div></div><!-- fragment --><p> where <code>MySystem</code> is a class derived from <code><a class="el" href="classdrake_1_1systems_1_1_system_base.html" title="Provides non-templatized functionality shared by the templatized System classes.">SystemBase</a></code>, <code>MyContext</code> is a class derived from <code><a class="el" href="classdrake_1_1systems_1_1_context_base.html" title="Provides non-templatized Context functionality shared by the templatized derived classes.">ContextBase</a></code>, and <code>ValueType</code> is any concrete type such that <code><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">Value</a>&lt;ValueType&gt;</code> is permitted. (The method names are arbitrary.) Template arguments will be deduced and do not need to be specified. See the <a class="el" href="classdrake_1_1systems_1_1_system_base.html#DeclareCacheEntry_primary">primary DeclareCacheEntry() signature</a> above for more information about the parameters and behavior. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">drake::Value</a> </dd></dl>
+<p>Declares a cache entry by specifying only a calculator function that is a class member function (method) with signature: </p>
+<p><a class="anchor" id="DeclareCacheEntry_calc_only"></a></p><div class="fragment"><div class="line"><span class="keywordtype">void</span> MySystem::CalcCacheValue(<span class="keyword">const</span> MyContext&amp;, ValueType*) <span class="keyword">const</span>;</div></div><!-- fragment --><p> where <code>MySystem</code> is a class derived from <code><a class="el" href="classdrake_1_1systems_1_1_system_base.html" title="Provides non-templatized functionality shared by the templatized System classes.">SystemBase</a></code> and <code>MyContext</code> is a class derived from <code><a class="el" href="classdrake_1_1systems_1_1_context_base.html" title="Provides non-templatized Context functionality shared by the templatized derived classes.">ContextBase</a></code>. <code>ValueType</code> is a concrete type such that (a) <code><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">Value</a>&lt;ValueType&gt;</code> is permitted, and (b) <code>ValueType</code> is default constructible. That allows us to create a model value using <code><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">Value</a>&lt;ValueType&gt;{}</code> (value initialized so numerical types will be zeroed in the model). (The method name is arbitrary.) Template arguments will be deduced and do not need to be specified. See the first <a class="el" href="classdrake_1_1systems_1_1_system_base.html#a7da4e8aa9a414faa5b40fc64e8ca40e3" title="Declares a new CacheEntry in this System using the most generic form of the calculation function.">DeclareCacheEntry()</a> signature above for more information about the parameters and behavior.</p>
+<dl class="section note"><dt>Note</dt><dd>The default constructor will be called once immediately to create a model value, and subsequent allocations will just copy the model value without invoking the constructor again. If you want the constructor invoked again at each allocation (not common), use one of the other signatures to explicitly provide a method for the allocator to call; that method can then invoke the <code>ValueType</code> default constructor each time it is called. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">drake::Value</a> </dd></dl>
 
 </div>
 </div>
@@ -3696,6 +3699,50 @@ the port's value must be of type Vec&lt;T&gt;.</dd></dl>
 
 </div>
 </div>
+<a id="a90b36c14bbcdf47bf14f2906e18573ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90b36c14bbcdf47bf14f2906e18573ca">&#9670;&nbsp;</a></span>ExecuteForcedEvents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ExecuteForcedEvents </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>publish</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method triggers all of the forced events registered with this System (which might be a <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a>). </p>
+<p>Ordering and status return handling mimic the <a class="el" href="classdrake_1_1systems_1_1_simulator.html" title="A class for advancing the state of hybrid dynamic systems, represented by System&lt;T&gt; objects,...">Simulator</a>: unrestricted events are processed first, then discrete update events, then publish events. "Reached termination" status returns are ignored.</p>
+<p>An option is provided to suppress publish events. This can be useful, for example, to update state in a <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a> without triggering a visualization.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">context</td><td>The <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> supplied to the handlers and modified in place on return.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if it invokes an event handler that returns status indicating failure. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="affcc9107de045c4500b366b947a3796a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#affcc9107de045c4500b366b947a3796a">&#9670;&nbsp;</a></span>ExecuteInitializationEvents()</h2>
 
@@ -3716,6 +3763,12 @@ the port's value must be of type Vec&lt;T&gt;.</dd></dl>
 <p>The method allocates temporary storage to perform the updates, and is intended only as a convenience method for callers who do not want to use the full <a class="el" href="classdrake_1_1systems_1_1_simulator.html" title="A class for advancing the state of hybrid dynamic systems, represented by System&lt;T&gt; objects,...">Simulator</a> workflow.</p>
 <p>Note that this is not fully equivalent to <a class="el" href="classdrake_1_1systems_1_1_simulator.html#aa1862c2aeab9862e391194d157a96c21" title="Prepares the Simulator for a simulation.">Simulator::Initialize()</a> because <em>only</em> initialization events are handled here, while <a class="el" href="classdrake_1_1systems_1_1_simulator.html#aa1862c2aeab9862e391194d157a96c21" title="Prepares the Simulator for a simulation.">Simulator::Initialize()</a> also processes other events associated with time zero. Also, "reached
 termination" returns are ignored here.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">context</td><td>The <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> supplied to the handlers and modified in place on return.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if it invokes an event handler that returns status indicating failure. </td></tr>

@@ -2,7 +2,6 @@ var searchData=
 [
   ['factory_2eh',['factory.h',['../render__gl_2factory_8h.html',1,'(Global Namespace)'],['../render__gltf__client_2factory_8h.html',1,'(Global Namespace)'],['../render__vtk_2factory_8h.html',1,'(Global Namespace)']]],
   ['fast_5fpose_5fcomposition_5ffunctions_2eh',['fast_pose_composition_functions.h',['../fast__pose__composition__functions_8h.html',1,'']]],
-  ['fast_5fpose_5fcomposition_5ffunctions_5favx2_5ffma_2eh',['fast_pose_composition_functions_avx2_fma.h',['../fast__pose__composition__functions__avx2__fma_8h.html',1,'']]],
   ['fem_5felement_2eh',['fem_element.h',['../fem__element_8h.html',1,'']]],
   ['fem_5findexes_2eh',['fem_indexes.h',['../fem__indexes_8h.html',1,'']]],
   ['fem_5fmodel_2eh',['fem_model.h',['../fem__model_8h.html',1,'']]],

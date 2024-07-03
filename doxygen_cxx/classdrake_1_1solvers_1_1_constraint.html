@@ -393,8 +393,8 @@ Protected Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">num_constraints.</td><td>The number of rows in the constraint output. </td></tr>
     <tr><td class="paramname">num_vars.</td><td>The number of rows in the input. If the input dimension is unknown, then set <code>num_vars</code> to Eigen::Dynamic. </td></tr>
-    <tr><td class="paramname">lb</td><td>Lower bound, which must be a <code>num_constraints</code> x 1 vector. </td></tr>
-    <tr><td class="paramname">ub</td><td>Upper bound, which must be a <code>num_constraints</code> x 1 vector. </td></tr>
+    <tr><td class="paramname">lb</td><td>Lower bound, which must be a <code>num_constraints</code> x 1 vector, lb cannot contain NAN. </td></tr>
+    <tr><td class="paramname">ub</td><td>Upper bound, which must be a <code>num_constraints</code> x 1 vector, ub cannot contain NAN. </td></tr>
   </table>
   </dd>
 </dl>
@@ -472,6 +472,12 @@ Protected Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">x</td><td>A <code>num_vars</code> x 1 vector. </td></tr>
     <tr><td class="paramname">tol</td><td>A tolerance for bound checking. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the size of x isn't correct. </td></tr>
   </table>
   </dd>
 </dl>
