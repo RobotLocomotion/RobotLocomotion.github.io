@@ -5358,7 +5358,9 @@ for the list of instantiations.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.JointActuator.calc_reflected_inertia">
 <span class="sig-name descname"><span class="pre">calc_reflected_inertia</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.JointActuator" title="pydrake.multibody.tree.JointActuator"><span class="pre">pydrake.multibody.tree.JointActuator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.JointActuator.calc_reflected_inertia" title="Permalink to this definition"></a></dt>
 <dd><p>Calculates the reflected inertia value for this actuator in
-<code class="docutils literal notranslate"><span class="pre">context</span></code>. See reflected_inertia.</p>
+<code class="docutils literal notranslate"><span class="pre">context</span></code>. See reflected_inertia. Note that this ONLY depends on the
+Parameters in the context; it does not depend on time, input, state,
+etc.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -5393,7 +5395,9 @@ reflected_inertia.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.JointActuator.gear_ratio">
 <span class="sig-name descname"><span class="pre">gear_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.JointActuator" title="pydrake.multibody.tree.JointActuator"><span class="pre">pydrake.multibody.tree.JointActuator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.JointActuator.gear_ratio" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the associated gear ratio value for this actuator, stored in
-<code class="docutils literal notranslate"><span class="pre">context</span></code>. See reflected_inertia.</p>
+<code class="docutils literal notranslate"><span class="pre">context</span></code>. See reflected_inertia. Note that this ONLY depends on the
+Parameters in the context; it does not depend on time, input, state,
+etc.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -5480,7 +5484,9 @@ within the vector of actuation inputs for the full multibody / system.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.JointActuator.rotor_inertia">
 <span class="sig-name descname"><span class="pre">rotor_inertia</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.JointActuator" title="pydrake.multibody.tree.JointActuator"><span class="pre">pydrake.multibody.tree.JointActuator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.JointActuator.rotor_inertia" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the associated rotor inertia value for this actuator, stored
-in <code class="docutils literal notranslate"><span class="pre">context</span></code>. See reflected_inertia.</p>
+in <code class="docutils literal notranslate"><span class="pre">context</span></code>. See reflected_inertia. Note that this ONLY depends on
+the Parameters in the context; it does not depend on time, input,
+state, etc.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -5590,7 +5596,9 @@ AddInOneForce().</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.JointActuator_-AutoDiffXd-.calc_reflected_inertia">
 <span id="pydrake.multibody.tree.JointActuator_[AutoDiffXd].calc_reflected_inertia"></span><span class="sig-name descname"><span class="pre">calc_reflected_inertia</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.JointActuator_" title="pydrake.multibody.tree.JointActuator_"><span class="pre">pydrake.multibody.tree.JointActuator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.JointActuator_-AutoDiffXd-.calc_reflected_inertia" title="Permalink to this definition"></a></dt>
 <dd><p>Calculates the reflected inertia value for this actuator in
-<code class="docutils literal notranslate"><span class="pre">context</span></code>. See reflected_inertia.</p>
+<code class="docutils literal notranslate"><span class="pre">context</span></code>. See reflected_inertia. Note that this ONLY depends on the
+Parameters in the context; it does not depend on time, input, state,
+etc.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -5625,7 +5633,9 @@ reflected_inertia.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.JointActuator_-AutoDiffXd-.gear_ratio">
 <span id="pydrake.multibody.tree.JointActuator_[AutoDiffXd].gear_ratio"></span><span class="sig-name descname"><span class="pre">gear_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.JointActuator_" title="pydrake.multibody.tree.JointActuator_"><span class="pre">pydrake.multibody.tree.JointActuator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.JointActuator_-AutoDiffXd-.gear_ratio" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the associated gear ratio value for this actuator, stored in
-<code class="docutils literal notranslate"><span class="pre">context</span></code>. See reflected_inertia.</p>
+<code class="docutils literal notranslate"><span class="pre">context</span></code>. See reflected_inertia. Note that this ONLY depends on the
+Parameters in the context; it does not depend on time, input, state,
+etc.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -5712,7 +5722,9 @@ within the vector of actuation inputs for the full multibody / system.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.JointActuator_-AutoDiffXd-.rotor_inertia">
 <span id="pydrake.multibody.tree.JointActuator_[AutoDiffXd].rotor_inertia"></span><span class="sig-name descname"><span class="pre">rotor_inertia</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.JointActuator_" title="pydrake.multibody.tree.JointActuator_"><span class="pre">pydrake.multibody.tree.JointActuator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.JointActuator_-AutoDiffXd-.rotor_inertia" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the associated rotor inertia value for this actuator, stored
-in <code class="docutils literal notranslate"><span class="pre">context</span></code>. See reflected_inertia.</p>
+in <code class="docutils literal notranslate"><span class="pre">context</span></code>. See reflected_inertia. Note that this ONLY depends on
+the Parameters in the context; it does not depend on time, input,
+state, etc.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -5816,7 +5828,9 @@ AddInOneForce().</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.JointActuator_-Expression-.calc_reflected_inertia">
 <span id="pydrake.multibody.tree.JointActuator_[Expression].calc_reflected_inertia"></span><span class="sig-name descname"><span class="pre">calc_reflected_inertia</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.JointActuator_" title="pydrake.multibody.tree.JointActuator_"><span class="pre">pydrake.multibody.tree.JointActuator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.JointActuator_-Expression-.calc_reflected_inertia" title="Permalink to this definition"></a></dt>
 <dd><p>Calculates the reflected inertia value for this actuator in
-<code class="docutils literal notranslate"><span class="pre">context</span></code>. See reflected_inertia.</p>
+<code class="docutils literal notranslate"><span class="pre">context</span></code>. See reflected_inertia. Note that this ONLY depends on the
+Parameters in the context; it does not depend on time, input, state,
+etc.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -5851,7 +5865,9 @@ reflected_inertia.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.JointActuator_-Expression-.gear_ratio">
 <span id="pydrake.multibody.tree.JointActuator_[Expression].gear_ratio"></span><span class="sig-name descname"><span class="pre">gear_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.JointActuator_" title="pydrake.multibody.tree.JointActuator_"><span class="pre">pydrake.multibody.tree.JointActuator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.JointActuator_-Expression-.gear_ratio" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the associated gear ratio value for this actuator, stored in
-<code class="docutils literal notranslate"><span class="pre">context</span></code>. See reflected_inertia.</p>
+<code class="docutils literal notranslate"><span class="pre">context</span></code>. See reflected_inertia. Note that this ONLY depends on the
+Parameters in the context; it does not depend on time, input, state,
+etc.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -5938,7 +5954,9 @@ within the vector of actuation inputs for the full multibody / system.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.JointActuator_-Expression-.rotor_inertia">
 <span id="pydrake.multibody.tree.JointActuator_[Expression].rotor_inertia"></span><span class="sig-name descname"><span class="pre">rotor_inertia</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.JointActuator_" title="pydrake.multibody.tree.JointActuator_"><span class="pre">pydrake.multibody.tree.JointActuator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.JointActuator_-Expression-.rotor_inertia" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the associated rotor inertia value for this actuator, stored
-in <code class="docutils literal notranslate"><span class="pre">context</span></code>. See reflected_inertia.</p>
+in <code class="docutils literal notranslate"><span class="pre">context</span></code>. See reflected_inertia. Note that this ONLY depends on
+the Parameters in the context; it does not depend on time, input,
+state, etc.</p>
 </dd></dl>
 
 <dl class="py method">
