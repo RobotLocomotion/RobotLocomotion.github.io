@@ -1,5 +1,7 @@
 var NAVTREEINDEX50 =
 {
+"event__collection_8h.html#a8fe4af31f6249dedb89f6c04bc5acfae":[4,0,0,12,3,20,6],
+"event__status_8h.html":[4,0,0,12,3,21],
 "examples_2rod2d_2constraint__problem__data_8h.html":[4,0,0,3,16,0],
 "examples_2rod2d_2constraint__solver_8h.html":[4,0,0,3,16,1],
 "examples__py_8h.html":[4,0,0,0,0,2,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX50 =
 "find__resource_8h.html#ac72eb43ba982b5a4d188c85aa14e0cc6":[4,0,0,1,33,2],
 "find__runfiles_8h.html":[4,0,0,1,34],
 "find__runfiles_8h.html#a9bdf00a0f32970352a90afbae0f4114a":[4,0,0,1,34,2],
-"find__runfiles_8h.html#ae65839d11c343c02ff41aec068e4ff28":[4,0,0,1,34,1],
-"finite__horizon__linear__quadratic__regulator_8h.html":[4,0,0,12,1,3],
-"finite__horizon__linear__quadratic__regulator_8h.html#ga2ebe52e849a0597ad54f37ab6e35df8a":[4,0,0,12,1,3,3]
+"find__runfiles_8h.html#ae65839d11c343c02ff41aec068e4ff28":[4,0,0,1,34,1]
 };

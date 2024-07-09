@@ -9,6 +9,7 @@ var classdrake_1_1multibody_1_1_rigid_body =
     [ "AddInForceInWorld", "classdrake_1_1multibody_1_1_rigid_body.html#a64de0960e4ea0ac2144af8c2295a7871", null ],
     [ "body_frame", "classdrake_1_1multibody_1_1_rigid_body.html#a7548bfd7fb38358e82ab0977f918e364", null ],
     [ "CalcCenterOfMassInBodyFrame", "classdrake_1_1multibody_1_1_rigid_body.html#afb3251f4cee150e826e6691f5f512c8d", null ],
+    [ "CalcCenterOfMassTranslationalAccelerationInWorld", "classdrake_1_1multibody_1_1_rigid_body.html#ab704aff8be7712af4b08ad4446053677", null ],
     [ "CalcCenterOfMassTranslationalVelocityInWorld", "classdrake_1_1multibody_1_1_rigid_body.html#a2026c5b7ca4f16add5577e474600be34", null ],
     [ "CalcSpatialInertiaInBodyFrame", "classdrake_1_1multibody_1_1_rigid_body.html#a126411c874f10a27d8a98fe79924dc7e", null ],
     [ "CloneToScalar", "classdrake_1_1multibody_1_1_rigid_body.html#a575a25714e6e88c9ca1c678871f1477e", null ],

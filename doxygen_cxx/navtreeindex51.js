@@ -1,5 +1,7 @@
 var NAVTREEINDEX51 =
 {
+"finite__horizon__linear__quadratic__regulator_8h.html":[4,0,0,12,1,3],
+"finite__horizon__linear__quadratic__regulator_8h.html#ga2ebe52e849a0597ad54f37ab6e35df8a":[4,0,0,12,1,3,3],
 "finite__horizon__linear__quadratic__regulator_8h.html#ga58307d2135757a498c434e96d7b99853":[4,0,0,12,1,3,2],
 "first__order__low__pass__filter_8h.html":[4,0,0,12,6,9],
 "fixed__input__port__value_8h.html":[4,0,0,12,3,22],
@@ -189,8 +191,8 @@ var NAVTREEINDEX51 =
 "framework__py__values_8h.html#ae073851bc679a64d47dc27c133b8d89d":[4,0,0,0,0,10,2,0],
 "free__body_8h.html":[4,0,0,8,0,1,0],
 "function_8h.html":[4,0,0,11,20],
-"functions.html":[3,3,0],
 "functions.html":[3,3,0,0],
+"functions.html":[3,3,0],
 "functions_b.html":[3,3,0,1],
 "functions_c.html":[3,3,0,2],
 "functions_d.html":[3,3,0,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX51 =
 "functions_rela_f.html":[3,3,6,5],
 "functions_rela_g.html":[3,3,6,6],
 "functions_rela_h.html":[3,3,6,7],
-"functions_rela_i.html":[3,3,6,8],
-"functions_rela_j.html":[3,3,6,9],
-"functions_rela_l.html":[3,3,6,10]
+"functions_rela_i.html":[3,3,6,8]
 };

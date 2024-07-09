@@ -278,6 +278,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2026c5b7ca4f16add5577e474600be34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a2026c5b7ca4f16add5577e474600be34">CalcCenterOfMassTranslationalVelocityInWorld</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
 <tr class="memdesc:a2026c5b7ca4f16add5577e474600be34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates Bcm's translational velocity in the world frame W.  <a href="#a2026c5b7ca4f16add5577e474600be34">More...</a><br /></td></tr>
 <tr class="separator:a2026c5b7ca4f16add5577e474600be34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab704aff8be7712af4b08ad4446053677"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#ab704aff8be7712af4b08ad4446053677">CalcCenterOfMassTranslationalAccelerationInWorld</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
+<tr class="memdesc:ab704aff8be7712af4b08ad4446053677"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates Bcm's translational acceleration in the world frame W.  <a href="#ab704aff8be7712af4b08ad4446053677">More...</a><br /></td></tr>
+<tr class="separator:ab704aff8be7712af4b08ad4446053677"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a126411c874f10a27d8a98fe79924dc7e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a126411c874f10a27d8a98fe79924dc7e">CalcSpatialInertiaInBodyFrame</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
 <tr class="memdesc:a126411c874f10a27d8a98fe79924dc7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets this body's spatial inertia about its origin from the given context.  <a href="#a126411c874f10a27d8a98fe79924dc7e">More...</a><br /></td></tr>
 <tr class="separator:a126411c874f10a27d8a98fe79924dc7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -724,6 +727,38 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>p_BoBcm_B position vector from Bo (this rigid body B's origin) to Bcm (B's center of mass), expressed in B. </dd></dl>
 <dl class="section pre"><dt>Precondition</dt><dd>the context makes sense for use by this RigidBody. </dd></dl>
+
+</div>
+</div>
+<a id="ab704aff8be7712af4b08ad4446053677"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab704aff8be7712af4b08ad4446053677">&#9670;&nbsp;</a></span>CalcCenterOfMassTranslationalAccelerationInWorld()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt;T&gt; CalcCenterOfMassTranslationalAccelerationInWorld </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates Bcm's translational acceleration in the world frame W. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The context contains the state of the model. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">a_WBcm_W</td><td>The translational acceleration of Bcm (this rigid body's center of mass) in the world frame W, expressed in W. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

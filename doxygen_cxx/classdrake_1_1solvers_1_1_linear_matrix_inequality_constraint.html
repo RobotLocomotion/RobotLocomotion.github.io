@@ -172,7 +172,8 @@ $(document).ready(function(){initNavTree('classdrake_1_1solvers_1_1_linear_matri
 \[ F_0 + x_1 F_1 + ... + x_n F_n \text{ is p.s.d} \]
 </p>
 <p> where p.s.d stands for positive semidefinite. </p>
-<p>\( F_0, F_1, ..., F_n \) are all given symmetric matrices of the same size. </p>
+<p>\( F_0, F_1, ..., F_n \) are all given symmetric matrices of the same size.</p>
+<dl class="section note"><dt>Note</dt><dd>if the matrices Fᵢ all have 1 row, then it is better to impose a linear inequality constraints; if they all have 2 rows, then it is better to impose a rotated Lorentz cone constraint, since a 2 x 2 matrix X being p.s.d is equivalent to the constraint [X(0, 0), X(1, 1), X(0, 1)] in the rotated Lorentz cone. </dd></dl>
 </div>
 <p><code>#include &lt;drake/solvers/constraint.h&gt;</code></p>
 <table class="memberdecls">

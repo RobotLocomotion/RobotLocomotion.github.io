@@ -1,5 +1,7 @@
 var NAVTREEINDEX52 =
 {
+"functions_rela_j.html":[3,3,6,9],
+"functions_rela_l.html":[3,3,6,10],
 "functions_rela_m.html":[3,3,6,11],
 "functions_rela_o.html":[3,3,6,12],
 "functions_rela_p.html":[3,3,6,13],
@@ -16,8 +18,8 @@ var NAVTREEINDEX52 =
 "functions_type.html":[3,3,3],
 "functions_u.html":[3,3,0,20],
 "functions_v.html":[3,3,0,21],
-"functions_vars.html":[3,3,2],
 "functions_vars.html":[3,3,2,0],
+"functions_vars.html":[3,3,2],
 "functions_vars_b.html":[3,3,2,1],
 "functions_vars_c.html":[3,3,2,2],
 "functions_vars_d.html":[3,3,2,3],
@@ -114,6 +116,7 @@ var NAVTREEINDEX52 =
 "geodesic__convexity_8h.html#a9dfedbcb8cfab6091ea2d7ac4353cee1":[4,0,0,4,1,11,0],
 "geodesic__convexity_8h.html#aeab8ca89c6e95c43cf9ec8c6284f395f":[4,0,0,4,1,11,4],
 "geometry__contact__data_8h.html":[4,0,0,8,10,21],
+"geometry__contact__data_8h.html#a198f5843fae1e5985d6f351cda46cadc":[4,0,0,8,10,21,0],
 "geometry__doxygen_8h.html":[4,0,0,4,14],
 "geometry__file__formats__doxygen_8h.html":[4,0,0,4,15],
 "geometry__frame_8h.html":[4,0,0,4,16],
@@ -236,18 +239,15 @@ var NAVTREEINDEX52 =
 "group__default__scalars.html":[1,6,1],
 "group__default__scalars.html#ga0659aa8320fcb199bb53a153120a4d14":[4,0,0,1,14,1],
 "group__default__scalars.html#ga0659aa8320fcb199bb53a153120a4d14":[1,6,1,1],
-"group__default__scalars.html#ga3273477e81e9dcb7d96cfb28382798b6":[4,0,0,1,14,5],
 "group__default__scalars.html#ga3273477e81e9dcb7d96cfb28382798b6":[1,6,1,5],
+"group__default__scalars.html#ga3273477e81e9dcb7d96cfb28382798b6":[4,0,0,1,14,5],
 "group__default__scalars.html#ga6333534b3097a37c55fbacf434491e2e":[4,0,0,1,14,0],
 "group__default__scalars.html#ga6333534b3097a37c55fbacf434491e2e":[1,6,1,0],
-"group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[4,0,0,1,14,4],
 "group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[1,6,1,4],
+"group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[4,0,0,1,14,4],
 "group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[4,0,0,1,14,2],
 "group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[1,6,1,2],
-"group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[1,6,1,3],
 "group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[4,0,0,1,14,3],
-"group__discrete__systems.html":[1,2,9],
-"group__drake__contacts.html":[1,3,0],
-"group__environment__variables.html":[1,6,6],
-"group__estimation.html":[1,4,4]
+"group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[1,6,1,3],
+"group__discrete__systems.html":[1,2,9]
 };

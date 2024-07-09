@@ -1,5 +1,9 @@
 var NAVTREEINDEX58 =
 {
+"rational__function_8h.html#a267c5d854d55ce16b1e58490ff426661":[4,0,0,1,3,14,9],
+"rational__function_8h.html#a27ad135e8775cf9d721b1223218fff2d":[4,0,0,1,3,14,26],
+"rational__function_8h.html#a347249d56768661c610bf3bafb5ff167":[4,0,0,1,3,14,6],
+"rational__function_8h.html#a3c8b6db1763f8f7a5d98de636b9cd7c9":[4,0,0,1,3,14,24],
 "rational__function_8h.html#a43d86ae3f21714ef199febddf60550fe":[4,0,0,1,3,14,31],
 "rational__function_8h.html#a44a9560b5bbc179968621e3df178742c":[4,0,0,1,3,14,22],
 "rational__function_8h.html#a4a8d6fb5671a17bf0c89c1c5aef9efaf":[4,0,0,1,3,14,25],
@@ -148,7 +152,7 @@ var NAVTREEINDEX58 =
 "sap__contact__problem_8h.html":[4,0,0,8,2,0,8],
 "sap__coupler__constraint_8h.html":[4,0,0,8,2,0,9],
 "sap__distance__constraint_8h.html":[4,0,0,8,2,0,10],
-"sap__driver_8h.html":[4,0,0,8,10,36],
+"sap__driver_8h.html":[4,0,0,8,10,37],
 "sap__fixed__constraint_8h.html":[4,0,0,8,2,0,11],
 "sap__friction__cone__constraint_8h.html":[4,0,0,8,2,0,12],
 "sap__holonomic__constraint_8h.html":[4,0,0,8,2,0,13],
@@ -169,8 +173,8 @@ var NAVTREEINDEX58 =
 "scalar__conversion_8h.html#ab7eb9f17930349a33024bcbce629e491":[4,0,0,12,3,0,3,4],
 "scalar__conversion_8h.html#ac7ed4cbbc75e344a25b9a6638ee008ff":[4,0,0,12,3,0,3,2],
 "scalar__conversion__traits_8h.html":[4,0,0,12,3,34],
-"scalar__convertible__component_8h.html":[4,0,0,8,10,37],
-"scalar__convertible__component_8h.html#acef3f42867c56ac5494fe039b8e839bb":[4,0,0,8,10,37,0],
+"scalar__convertible__component_8h.html":[4,0,0,8,10,38],
+"scalar__convertible__component_8h.html#acef3f42867c56ac5494fe039b8e839bb":[4,0,0,8,10,38,0],
 "scalar__dense__output_8h.html":[4,0,0,12,0,19],
 "scalar__dense__output_8h.html#a74f352a21c5aa894cf80a16fdd8ec7ef":[4,0,0,12,0,19,1],
 "scalar__initial__value__problem_8h.html":[4,0,0,12,0,20],
@@ -245,9 +249,5 @@ var NAVTREEINDEX58 =
 "signed__distance__pair_8h.html":[4,0,0,4,3,3],
 "signed__distance__to__point_8h.html":[4,0,0,4,3,4],
 "sim__iiwa__driver_8h.html":[4,0,0,6,1,8],
-"sim__rgbd__sensor_8h.html":[4,0,0,12,8,22],
-"simplex__gaussian__quadrature_8h.html":[4,0,0,8,3,28],
-"simplification_8h.html":[4,0,0,1,3,16],
-"simplification_8h.html#a134e54042165751a5e5369b4631c90eb":[4,0,0,1,3,16,2],
-"simplification_8h.html#a697784ea0eafd05039e3a0c97b7c1415":[4,0,0,1,3,16,3]
+"sim__rgbd__sensor_8h.html":[4,0,0,12,8,22]
 };

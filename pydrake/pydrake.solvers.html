@@ -2814,6 +2814,14 @@ variables (size of a) cannot change.</p>
 \[F_0 + x_1  F_1 + ... + x_n  F_n \text{ is p.s.d}\]</div>
 <p>where p.s.d stands for positive semidefinite. <span class="math notranslate nohighlight">\(F_0, F_1, ...,
 F_n\)</span> are all given symmetric matrices of the same size.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>if the matrices Fᵢ all have 1 row, then it is better to impose a
+linear inequality constraints; if they all have 2 rows, then it is
+better to impose a rotated Lorentz cone constraint, since a 2 x 2
+matrix X being p.s.d is equivalent to the constraint [X(0, 0),
+X(1, 1), X(0, 1)] in the rotated Lorentz cone.</p>
+</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.LinearMatrixInequalityConstraint.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.LinearMatrixInequalityConstraint" title="pydrake.solvers.LinearMatrixInequalityConstraint"><span class="pre">pydrake.solvers.LinearMatrixInequalityConstraint</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">F</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symmetry_tolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1e-10</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.LinearMatrixInequalityConstraint.__init__" title="Permalink to this definition"></a></dt>
@@ -4063,13 +4071,13 @@ X.</p>
 <span class="sig-name descname"><span class="pre">AddPositiveDiagonallyDominantMatrixConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">X</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.solvers.MathematicalProgram.AddPositiveDiagonallyDominantMatrixConstraint" title="Permalink to this definition"></a></dt>
 <dd><p>Adds the constraint that a symmetric matrix is diagonally dominant
 with non-negative diagonal entries. A symmetric matrix X is diagonally
-dominant with non-negative diagonal entries if X(i, i) &gt;= ∑ⱼ <a href="#id51"><span class="problematic" id="id52">|X(i, j)|</span></a>
+dominant with non-negative diagonal entries if X(i, i) &gt;= ∑ⱼ <a href="#id55"><span class="problematic" id="id56">|X(i, j)|</span></a>
 ∀ j ≠ i namely in each row, the diagonal entry is larger than the sum
 of the absolute values of all other entries in the same row. A matrix
 being diagonally dominant with non-negative diagonals is a sufficient
 (but not necessary) condition of a matrix being positive semidefinite.
 Internally we will create a matrix Y as slack variables, such that
-Y(i, j) represents the absolute value <a href="#id53"><span class="problematic" id="id54">|X(i, j)|</span></a> ∀ j ≠ i. The diagonal
+Y(i, j) represents the absolute value <a href="#id57"><span class="problematic" id="id58">|X(i, j)|</span></a> ∀ j ≠ i. The diagonal
 entries Y(i, i) = X(i, i) The users can refer to “DSOS and SDSOS
 Optimization: More Tractable Alternatives to Sum of Squares and
 Semidefinite Optimization” by Amir Ali Ahmadi and Anirudha Majumdar,
@@ -4081,7 +4089,7 @@ X.</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>Y The slack variable. Y(i, j) represents <a href="#id55"><span class="problematic" id="id56">|X(i, j)|</span></a> ∀ j ≠ i, with
+<dd class="field-odd"><p>Y The slack variable. Y(i, j) represents <a href="#id59"><span class="problematic" id="id60">|X(i, j)|</span></a> ∀ j ≠ i, with
 the constraint Y(i, j) &gt;= X(i, j) and Y(i, j) &gt;= -X(i, j). Y is a
 symmetric matrix. The diagonal entries Y(i, i) = X(i, i)</p>
 </dd>
@@ -4128,7 +4136,7 @@ variable M that are also newly added.</p>
 </dd>
 </dl>
 <p>For example, to add a constraint that</p>
-<p>⌈x + 1 2x + 3 x+y⌉ <a href="#id57"><span class="problematic" id="id58">|2x+ 3 2 0|</span></a> is positive semidefinite ⌊x + y 0 x⌋
+<p>⌈x + 1 2x + 3 x+y⌉ <a href="#id61"><span class="problematic" id="id62">|2x+ 3 2 0|</span></a> is positive semidefinite ⌊x + y 0 x⌋
 The user could call</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">cc</span><span class="p">}</span><span class="w"></span>
 <span class="n">Matrix3</span><span class="o">&lt;</span><span class="n">symbolic</span><span class="o">::</span><span class="n">Expression</span><span class="o">&gt;</span><span class="w"> </span><span class="n">e</span><span class="w"></span>
@@ -6743,12 +6751,12 @@ bilinear product.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.solvers.MixedIntegerRotationConstraintGenerator.ReturnType.B_">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">B_</span></span><a class="headerlink" href="#pydrake.solvers.MixedIntegerRotationConstraintGenerator.ReturnType.B_" title="Permalink to this definition"></a></dt>
-<dd><p><a href="#id59"><span class="problematic" id="id60">B_</span></a> contains the new binary variables added to the program. B_`i][j]
+<dd><p><a href="#id63"><span class="problematic" id="id64">B_</span></a> contains the new binary variables added to the program. B_`i][j]
 represents in which interval R(i, j) lies. If we use linear binning,
-then B_[i][j] is of length 2 * <a href="#id61"><span class="problematic" id="id62">num_intervals_per_half_axis_</span></a>. B_[i][j
+then B_[i][j] is of length 2 * <a href="#id65"><span class="problematic" id="id66">num_intervals_per_half_axis_</span></a>. B_[i][j
 &lt;k&gt;`_ = 1 =&gt; φ(k) ≤ R(i, j) ≤ φ(k + 1) B_`i][j &lt;k&gt;`_ = 0 =&gt; R(i, j) ≥
 φ(k + 1) or R(i, j) ≤ φ(k) If we use logarithmic binning, then
-B_[i][j] is of length 1 + log₂(<a href="#id63"><span class="problematic" id="id64">num_intervals_per_half_axis_</span></a>). If
+B_[i][j] is of length 1 + log₂(<a href="#id67"><span class="problematic" id="id68">num_intervals_per_half_axis_</span></a>). If
 B_[i][j] represents integer k in reflected Gray code, then R(i, j) is
 in the interval [φ(k), φ(k+1)].</p>
 </dd></dl>
@@ -6757,7 +6765,7 @@ in the interval [φ(k), φ(k+1)].</p>
 <dt class="sig sig-object py" id="pydrake.solvers.MixedIntegerRotationConstraintGenerator.ReturnType.lambda_">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lambda_</span></span><a class="headerlink" href="#pydrake.solvers.MixedIntegerRotationConstraintGenerator.ReturnType.lambda_" title="Permalink to this definition"></a></dt>
 <dd><p>λ contains part of the new continuous variables added to the program.
-λ_[i][j] is of length 2 * <a href="#id65"><span class="problematic" id="id66">num_intervals_per_half_axis_</span></a> + 1, such that
+λ_[i][j] is of length 2 * <a href="#id69"><span class="problematic" id="id70">num_intervals_per_half_axis_</span></a> + 1, such that
 R(i, j) = φᵀ * λ_[i][j]. Notice that λ_[i][j] satisfies the special
 ordered set of type 2 (SOS2) constraint. Namely at most two entries in
 λ_[i][j] can be strictly positive, and these two entries have to be
@@ -7195,6 +7203,14 @@ variables (columns of A) cannot change.</p>
 S is p.s.d\]</div>
 <p>}</p>
 <p>namely, all eigen values of S are non-negative.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>if the matix S has 1 row, then it is better to impose a linear
+inequality constraints; if it has 2 rows, then it is better to
+impose a rotated Lorentz cone constraint, since a 2 x 2 matrix S
+being p.s.d is equivalent to the constraint [S(0, 0), S(1, 1),
+S(0, 1)] in the rotated Lorentz cone.</p>
+</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.PositiveSemidefiniteConstraint.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.PositiveSemidefiniteConstraint" title="pydrake.solvers.PositiveSemidefiniteConstraint"><span class="pre">pydrake.solvers.PositiveSemidefiniteConstraint</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">rows</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.PositiveSemidefiniteConstraint.__init__" title="Permalink to this definition"></a></dt>
@@ -7211,13 +7227,19 @@ indicate the positive semidefiniteness of some decision variables.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">rows</span></code>:</dt><dd><p>The number of rows (and columns) of the symmetric matrix.</p>
 </dd>
 </dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">rows</span></code> should be a positive integer. If <a href="#id49"><span class="problematic" id="id50">`</span></a>rows`==1 or <a href="#id51"><span class="problematic" id="id52">`</span></a>rows`==2,
+then consider imposing a linear inequality or rotated Lorentz cone
+constraint respectively.</p>
+</div>
 <p>Example:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Create a MathematicalProgram object.</span>
 <span class="k">auto</span><span class="w"> </span><span class="n">prog</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MathematicalProgram</span><span class="p">();</span><span class="w"></span>
 
-<span class="c1">// Add a 2 x 2 symmetric matrix S to optimization program as new decision</span>
+<span class="c1">// Add a 3 x 3 symmetric matrix S to optimization program as new decision</span>
 <span class="c1">// variables.</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prog</span><span class="p">.</span><span class="n">NewSymmetricContinuousVariables</span><span class="o">&lt;</span><span class="mi">2</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;S&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prog</span><span class="p">.</span><span class="n">NewSymmetricContinuousVariables</span><span class="o">&lt;</span><span class="mi">3</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;S&quot;</span><span class="p">);</span><span class="w"></span>
 
 <span class="c1">// Impose a positive semidefinite constraint on S.</span>
 <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">PositiveSemidefiniteConstraint</span><span class="o">&gt;</span><span class="w"> </span><span class="n">psd_constraint</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
@@ -7230,8 +7252,8 @@ indicate the positive semidefiniteness of some decision variables.</p>
 <span class="c1">// Add the constraint that S(1, 0) = 1.</span>
 <span class="n">prog</span><span class="p">.</span><span class="n">AddBoundingBoxConstraint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">));</span><span class="w"></span>
 
-<span class="c1">// Minimize S(0, 0) + S(1, 1).</span>
-<span class="n">prog</span><span class="p">.</span><span class="n">AddLinearCost</span><span class="p">(</span><span class="n">Eigen</span><span class="o">::</span><span class="n">RowVector2d</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="p">{</span><span class="n">S</span><span class="p">.</span><span class="n">diagonal</span><span class="p">()});</span><span class="w"></span>
+<span class="c1">// Minimize S(0, 0) + S(1, 1) + S(2, 2).</span>
+<span class="n">prog</span><span class="p">.</span><span class="n">AddLinearCost</span><span class="p">(</span><span class="n">Eigen</span><span class="o">::</span><span class="n">RowVector3d</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="p">{</span><span class="n">S</span><span class="p">.</span><span class="n">diagonal</span><span class="p">()});</span><span class="w"></span>
 
 <span class="c1">/////////////////////////////////////////////////////////////</span>
 
@@ -7243,8 +7265,8 @@ indicate the positive semidefiniteness of some decision variables.</p>
 
 <span class="c1">// Compute the eigen values of the solution, to see if they are</span>
 <span class="c1">// all non-negative.</span>
-<span class="n">Eigen</span><span class="o">::</span><span class="n">Vector4d</span><span class="w"> </span><span class="n">S_stacked</span><span class="p">;</span><span class="w"></span>
-<span class="n">S_stacked</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">S_value</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="n">S_value</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+<span class="n">Vector6d</span><span class="w"> </span><span class="n">S_stacked</span><span class="p">;</span><span class="w"></span>
+<span class="n">S_stacked</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">S_value</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="n">S_value</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">S_value</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
 
 <span class="n">Eigen</span><span class="o">::</span><span class="n">VectorXd</span><span class="w"> </span><span class="n">S_eigen_values</span><span class="p">;</span><span class="w"></span>
 <span class="n">psd_constraint</span><span class="o">-&gt;</span><span class="n">Eval</span><span class="p">(</span><span class="n">S_stacked</span><span class="p">,</span><span class="w"> </span><span class="n">S_eigen_values</span><span class="p">);</span><span class="w"></span>
@@ -7440,7 +7462,7 @@ more details.</p>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
 <p>lb ≤ .5 xᵀQx + bᵀx ≤ ub Without loss of generality, the class stores a
 symmetric matrix Q. For a non-symmetric matrix Q₀, we can define Q =
-(Q₀ + Q₀ᵀ) / 2, since xᵀQ₀x = xᵀQ₀ᵀx = xᵀ*(Q₀+Q₀ᵀ)/2 <a href="#id49"><span class="problematic" id="id50">*</span></a>x. The first
+(Q₀ + Q₀ᵀ) / 2, since xᵀQ₀x = xᵀQ₀ᵀx = xᵀ*(Q₀+Q₀ᵀ)/2 <a href="#id53"><span class="problematic" id="id54">*</span></a>x. The first
 equality holds because the transpose of a scalar is the scalar itself.
 Hence we can always convert a non-symmetric matrix Q₀ to a symmetric
 matrix Q.</p>
