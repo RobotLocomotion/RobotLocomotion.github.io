@@ -1,5 +1,6 @@
 var NAVTREEINDEX63 =
 {
+"structdrake_1_1multibody_1_1parsing_1_1_add_frame.html#a9b45b3e13bd9167aab02e17e08916231":[3,0,0,8,3,2,2],
 "structdrake_1_1multibody_1_1parsing_1_1_add_frame.html#ac532c4b500b1a85ea22217f2c65a70ed":[3,0,0,8,3,2,0],
 "structdrake_1_1multibody_1_1parsing_1_1_add_model.html":[3,0,0,8,3,3],
 "structdrake_1_1multibody_1_1parsing_1_1_add_model.html#a4e550ebb9a213be8a3939f0c6ad4816b":[3,0,0,8,3,3,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX63 =
 "structdrake_1_1symbolic_1_1_sin_cos.html#a06a14e4a94aab4befcf2506ef07dc38f":[3,0,0,14,63,7],
 "structdrake_1_1symbolic_1_1_sin_cos.html#a0bee03f130c602c5c1fd0521c716ebbd":[3,0,0,14,63,5],
 "structdrake_1_1symbolic_1_1_sin_cos.html#a1c36ee4d69b2b1e95ea82cc4fff7fad6":[3,0,0,14,63,6],
-"structdrake_1_1symbolic_1_1_sin_cos.html#a1c615a950f134b68ee764a6b9d765e73":[3,0,0,14,63,3],
-"structdrake_1_1symbolic_1_1_sin_cos.html#a2c92f605c1db3ad56e29d2fdcb656360":[3,0,0,14,63,0]
+"structdrake_1_1symbolic_1_1_sin_cos.html#a1c615a950f134b68ee764a6b9d765e73":[3,0,0,14,63,3]
 };

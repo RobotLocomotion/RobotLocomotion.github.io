@@ -542,9 +542,8 @@ details.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.plant.ContactResults">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.plant.</span></span><span class="sig-name descname"><span class="pre">ContactResults</span></span><a class="headerlink" href="#pydrake.multibody.plant.ContactResults" title="Permalink to this definition"></a></dt>
 <dd><p>A container class storing the contact results information for each
-contact pair for a given state of the simulation. Note that copying
-this data structure is expensive when <code class="docutils literal notranslate"><span class="pre">num_hydroelastic_contacts()</span> <span class="pre">&gt;</span>
-<span class="pre">0</span></code> because a deep copy is performed.</p>
+contact pair for a given state of the simulation.</p>
+<p>This class is immutable, so can be efficiently copied and moved.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This class is templated; see <a class="reference internal" href="#pydrake.multibody.plant.ContactResults_" title="pydrake.multibody.plant.ContactResults_"><code class="xref py py-class docutils literal notranslate"><span class="pre">ContactResults_</span></code></a>
@@ -553,7 +552,8 @@ for the list of instantiations.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.ContactResults.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.ContactResults" title="pydrake.multibody.plant.ContactResults"><span class="pre">pydrake.multibody.plant.ContactResults</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.ContactResults.__init__" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Constructs an empty ContactResults.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.ContactResults.hydroelastic_contact_info">
@@ -594,9 +594,9 @@ throws.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.ContactResults.SelectHydroelastic">
 <span class="sig-name descname"><span class="pre">SelectHydroelastic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.ContactResults" title="pydrake.multibody.plant.ContactResults"><span class="pre">pydrake.multibody.plant.ContactResults</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">selector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.multibody.plant.HydroelasticContactInfo" title="pydrake.multibody.plant.HydroelasticContactInfo"><span class="pre">pydrake.multibody.plant.HydroelasticContactInfo</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.plant.ContactResults" title="pydrake.multibody.plant.ContactResults"><span class="pre">pydrake.multibody.plant.ContactResults</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.ContactResults.SelectHydroelastic" title="Permalink to this definition"></a></dt>
-<dd><p>Returns ContactResults with only HydroelasticContactInfo instances
-satisfying the selection criterion and with all PointPairContactInfo
-instances.</p>
+<dd><p>Returns a selective copy of this object. Only HydroelasticContactInfo
+instances satisfying the selection criterion are copied; all other
+contacts (point_pair and deformable) are unconditionally copied.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">selector</span></code>:</dt><dd><p>Boolean predicate that returns true to select which
 HydroelasticContactInfo.</p>
@@ -604,7 +604,8 @@ HydroelasticContactInfo.</p>
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>It uses deep copy.</p>
+<p>It uses deep copy (unless the operation is trivially identifiable
+as being vacuous, e.g., when num_hydroelastic_contacts() == 0).</p>
 </div>
 </dd></dl>
 
@@ -620,13 +621,13 @@ HydroelasticContactInfo.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.plant.ContactResults_-AutoDiffXd">
 <span id="pydrake.multibody.plant.ContactResults_[AutoDiffXd]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.plant.</span></span><span class="sig-name descname"><span class="pre">ContactResults_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.multibody.plant.ContactResults_-AutoDiffXd" title="Permalink to this definition"></a></dt>
 <dd><p>A container class storing the contact results information for each
-contact pair for a given state of the simulation. Note that copying
-this data structure is expensive when <code class="docutils literal notranslate"><span class="pre">num_hydroelastic_contacts()</span> <span class="pre">&gt;</span>
-<span class="pre">0</span></code> because a deep copy is performed.</p>
+contact pair for a given state of the simulation.</p>
+<p>This class is immutable, so can be efficiently copied and moved.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.ContactResults_-AutoDiffXd-.__init__">
 <span id="pydrake.multibody.plant.ContactResults_[AutoDiffXd].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.ContactResults_" title="pydrake.multibody.plant.ContactResults_"><span class="pre">pydrake.multibody.plant.ContactResults_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.ContactResults_-AutoDiffXd-.__init__" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Constructs an empty ContactResults.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.ContactResults_-AutoDiffXd-.hydroelastic_contact_info">
@@ -667,9 +668,9 @@ throws.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.ContactResults_-AutoDiffXd-.SelectHydroelastic">
 <span id="pydrake.multibody.plant.ContactResults_[AutoDiffXd].SelectHydroelastic"></span><span class="sig-name descname"><span class="pre">SelectHydroelastic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.ContactResults_" title="pydrake.multibody.plant.ContactResults_"><span class="pre">pydrake.multibody.plant.ContactResults_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.multibody.plant.HydroelasticContactInfo_" title="pydrake.multibody.plant.HydroelasticContactInfo_"><span class="pre">pydrake.multibody.plant.HydroelasticContactInfo_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.plant.ContactResults_" title="pydrake.multibody.plant.ContactResults_"><span class="pre">pydrake.multibody.plant.ContactResults_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.ContactResults_-AutoDiffXd-.SelectHydroelastic" title="Permalink to this definition"></a></dt>
-<dd><p>Returns ContactResults with only HydroelasticContactInfo instances
-satisfying the selection criterion and with all PointPairContactInfo
-instances.</p>
+<dd><p>Returns a selective copy of this object. Only HydroelasticContactInfo
+instances satisfying the selection criterion are copied; all other
+contacts (point_pair and deformable) are unconditionally copied.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">selector</span></code>:</dt><dd><p>Boolean predicate that returns true to select which
 HydroelasticContactInfo.</p>
@@ -677,7 +678,8 @@ HydroelasticContactInfo.</p>
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>It uses deep copy.</p>
+<p>It uses deep copy (unless the operation is trivially identifiable
+as being vacuous, e.g., when num_hydroelastic_contacts() == 0).</p>
 </div>
 </dd></dl>
 
@@ -687,13 +689,13 @@ HydroelasticContactInfo.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.plant.ContactResults_-Expression">
 <span id="pydrake.multibody.plant.ContactResults_[Expression]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.plant.</span></span><span class="sig-name descname"><span class="pre">ContactResults_[Expression]</span></span><a class="headerlink" href="#pydrake.multibody.plant.ContactResults_-Expression" title="Permalink to this definition"></a></dt>
 <dd><p>A container class storing the contact results information for each
-contact pair for a given state of the simulation. Note that copying
-this data structure is expensive when <code class="docutils literal notranslate"><span class="pre">num_hydroelastic_contacts()</span> <span class="pre">&gt;</span>
-<span class="pre">0</span></code> because a deep copy is performed.</p>
+contact pair for a given state of the simulation.</p>
+<p>This class is immutable, so can be efficiently copied and moved.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.ContactResults_-Expression-.__init__">
 <span id="pydrake.multibody.plant.ContactResults_[Expression].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.ContactResults_" title="pydrake.multibody.plant.ContactResults_"><span class="pre">pydrake.multibody.plant.ContactResults_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.ContactResults_-Expression-.__init__" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Constructs an empty ContactResults.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.ContactResults_-Expression-.hydroelastic_contact_info">
@@ -734,9 +736,9 @@ throws.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.ContactResults_-Expression-.SelectHydroelastic">
 <span id="pydrake.multibody.plant.ContactResults_[Expression].SelectHydroelastic"></span><span class="sig-name descname"><span class="pre">SelectHydroelastic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.ContactResults_" title="pydrake.multibody.plant.ContactResults_"><span class="pre">pydrake.multibody.plant.ContactResults_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.multibody.plant.HydroelasticContactInfo_" title="pydrake.multibody.plant.HydroelasticContactInfo_"><span class="pre">pydrake.multibody.plant.HydroelasticContactInfo_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.plant.ContactResults_" title="pydrake.multibody.plant.ContactResults_"><span class="pre">pydrake.multibody.plant.ContactResults_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.ContactResults_-Expression-.SelectHydroelastic" title="Permalink to this definition"></a></dt>
-<dd><p>Returns ContactResults with only HydroelasticContactInfo instances
-satisfying the selection criterion and with all PointPairContactInfo
-instances.</p>
+<dd><p>Returns a selective copy of this object. Only HydroelasticContactInfo
+instances satisfying the selection criterion are copied; all other
+contacts (point_pair and deformable) are unconditionally copied.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">selector</span></code>:</dt><dd><p>Boolean predicate that returns true to select which
 HydroelasticContactInfo.</p>
@@ -744,7 +746,8 @@ HydroelasticContactInfo.</p>
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>It uses deep copy.</p>
+<p>It uses deep copy (unless the operation is trivially identifiable
+as being vacuous, e.g., when num_hydroelastic_contacts() == 0).</p>
 </div>
 </dd></dl>
 

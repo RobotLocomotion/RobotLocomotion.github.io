@@ -159,6 +159,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_contact_re
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classdrake_1_1multibody_1_1_contact_results-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -170,7 +171,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_contact_re
 class drake::multibody::ContactResults&lt; T &gt;</h3>
 
 <p>A container class storing the contact results information for each contact pair for a given state of the simulation. </p>
-<p>Note that copying this data structure is expensive when <code><a class="el" href="classdrake_1_1multibody_1_1_contact_results.html#ae7c6b861ca2a0d7ea1da35fb8daa41c4" title="Returns the number of hydroelastic contacts.">num_hydroelastic_contacts()</a> &gt; 0</code> because a deep copy is performed.</p>
+<p>This class is immutable, so can be efficiently copied and moved.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>
@@ -182,19 +183,12 @@ class drake::multibody::ContactResults&lt; T &gt;</h3>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1a0028ecb11611ebcbe54f4df2c0fcc5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_contact_results.html#a1a0028ecb11611ebcbe54f4df2c0fcc5">ContactResults</a> ()</td></tr>
-<tr class="separator:a1a0028ecb11611ebcbe54f4df2c0fcc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74aae5f77da579431423377def7d90a1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_contact_results.html#a74aae5f77da579431423377def7d90a1">ContactResults</a> (const <a class="el" href="classdrake_1_1multibody_1_1_contact_results.html">ContactResults</a> &amp;)</td></tr>
-<tr class="separator:a74aae5f77da579431423377def7d90a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a956d63e9dc64c47eb5d5acc090c75ec3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_contact_results.html#a956d63e9dc64c47eb5d5acc090c75ec3">ContactResults</a> (<a class="el" href="classdrake_1_1multibody_1_1_contact_results.html">ContactResults</a> &amp;&amp;)=default</td></tr>
-<tr class="separator:a956d63e9dc64c47eb5d5acc090c75ec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f74cd31bd1bc9b0366f9f8cea2b9dd9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_contact_results.html">ContactResults</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_contact_results.html#a7f74cd31bd1bc9b0366f9f8cea2b9dd9">operator=</a> (const <a class="el" href="classdrake_1_1multibody_1_1_contact_results.html">ContactResults</a> &amp;)</td></tr>
-<tr class="separator:a7f74cd31bd1bc9b0366f9f8cea2b9dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6876ed6779266e390e4e81587f7e4f56"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_contact_results.html">ContactResults</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_contact_results.html#a6876ed6779266e390e4e81587f7e4f56">operator=</a> (<a class="el" href="classdrake_1_1multibody_1_1_contact_results.html">ContactResults</a> &amp;&amp;)=default</td></tr>
-<tr class="separator:a6876ed6779266e390e4e81587f7e4f56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a264b7252c451e219934b5ae434cab81f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_contact_results.html#a264b7252c451e219934b5ae434cab81f">ContactResults</a> (std::vector&lt; <a class="el" href="classdrake_1_1multibody_1_1_point_pair_contact_info.html">PointPairContactInfo</a>&lt; T &gt;&gt; &amp;&amp;point_pair, std::vector&lt; <a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html">HydroelasticContactInfo</a>&lt; T &gt;&gt; &amp;&amp;hydroelastic={}, std::vector&lt; <a class="el" href="classdrake_1_1multibody_1_1_deformable_contact_info.html">DeformableContactInfo</a>&lt; T &gt;&gt; &amp;&amp;deformable={})</td></tr>
-<tr class="memdesc:a264b7252c451e219934b5ae434cab81f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1multibody_1_1_contact_results.html" title="A container class storing the contact results information for each contact pair for a given state of ...">ContactResults</a> with the given values.  <a href="#a264b7252c451e219934b5ae434cab81f">More...</a><br /></td></tr>
-<tr class="separator:a264b7252c451e219934b5ae434cab81f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef42edfb1ac795aead7a9f6c76847024"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_contact_results.html#aef42edfb1ac795aead7a9f6c76847024">ContactResults</a> ()=default</td></tr>
+<tr class="memdesc:aef42edfb1ac795aead7a9f6c76847024"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an empty ContactResults.  <a href="#aef42edfb1ac795aead7a9f6c76847024">More...</a><br /></td></tr>
+<tr class="separator:aef42edfb1ac795aead7a9f6c76847024"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe22df50be53afe93dc6c8df243cdd0d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_contact_results.html#afe22df50be53afe93dc6c8df243cdd0d">ContactResults</a> (std::vector&lt; <a class="el" href="classdrake_1_1multibody_1_1_point_pair_contact_info.html">PointPairContactInfo</a>&lt; T &gt;&gt; &amp;&amp;point_pair, std::vector&lt; <a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html">HydroelasticContactInfo</a>&lt; T &gt;&gt; &amp;&amp;hydroelastic={}, std::vector&lt; <a class="el" href="classdrake_1_1multibody_1_1_deformable_contact_info.html">DeformableContactInfo</a>&lt; T &gt;&gt; &amp;&amp;deformable={}, std::shared_ptr&lt; const void &gt; &amp;&amp;backing_store={})</td></tr>
+<tr class="memdesc:afe22df50be53afe93dc6c8df243cdd0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a ContactResults with the given contact infos.  <a href="#afe22df50be53afe93dc6c8df243cdd0d">More...</a><br /></td></tr>
+<tr class="separator:afe22df50be53afe93dc6c8df243cdd0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9fd1962ed7260702ffdefa422ad82f4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_contact_results.html#ad9fd1962ed7260702ffdefa422ad82f4">~ContactResults</a> ()</td></tr>
 <tr class="separator:ad9fd1962ed7260702ffdefa422ad82f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade01b0d7de50d59e8c0739eed77d1979"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_contact_results.html#ade01b0d7de50d59e8c0739eed77d1979">num_point_pair_contacts</a> () const</td></tr>
@@ -219,32 +213,27 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a208fb8b999d2a234339e911892f24369"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the plant that produced these contact results.  <a href="#a208fb8b999d2a234339e911892f24369">More...</a><br /></td></tr>
 <tr class="separator:a208fb8b999d2a234339e911892f24369"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb3d397ff78c83707d3fab3eba7186cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_contact_results.html">ContactResults</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_contact_results.html#abb3d397ff78c83707d3fab3eba7186cf">SelectHydroelastic</a> (std::function&lt; bool(const <a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html">HydroelasticContactInfo</a>&lt; T &gt; &amp;)&gt; selector) const</td></tr>
-<tr class="memdesc:abb3d397ff78c83707d3fab3eba7186cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <a class="el" href="classdrake_1_1multibody_1_1_contact_results.html" title="A container class storing the contact results information for each contact pair for a given state of ...">ContactResults</a> with only <a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html" title="A class containing information regarding contact and contact response between two geometries attached...">HydroelasticContactInfo</a> instances satisfying the selection criterion and with all <a class="el" href="classdrake_1_1multibody_1_1_point_pair_contact_info.html" title="A class containing information regarding contact response between two bodies including:">PointPairContactInfo</a> instances.  <a href="#abb3d397ff78c83707d3fab3eba7186cf">More...</a><br /></td></tr>
+<tr class="memdesc:abb3d397ff78c83707d3fab3eba7186cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a selective copy of this object.  <a href="#abb3d397ff78c83707d3fab3eba7186cf">More...</a><br /></td></tr>
 <tr class="separator:abb3d397ff78c83707d3fab3eba7186cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
+<tr class="memitem:ac889df1794d59cf41eec1da736b6d188"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_contact_results.html#ac889df1794d59cf41eec1da736b6d188">ContactResults</a> (const <a class="el" href="classdrake_1_1multibody_1_1_contact_results.html">ContactResults</a> &amp;)=default</td></tr>
+<tr class="separator:ac889df1794d59cf41eec1da736b6d188"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a244e195af51ee4efc69efe60f8907e25"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_contact_results.html">ContactResults</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_contact_results.html#a244e195af51ee4efc69efe60f8907e25">operator=</a> (const <a class="el" href="classdrake_1_1multibody_1_1_contact_results.html">ContactResults</a> &amp;)=default</td></tr>
+<tr class="separator:a244e195af51ee4efc69efe60f8907e25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a956d63e9dc64c47eb5d5acc090c75ec3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_contact_results.html#a956d63e9dc64c47eb5d5acc090c75ec3">ContactResults</a> (<a class="el" href="classdrake_1_1multibody_1_1_contact_results.html">ContactResults</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:a956d63e9dc64c47eb5d5acc090c75ec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6876ed6779266e390e4e81587f7e4f56"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_contact_results.html">ContactResults</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_contact_results.html#a6876ed6779266e390e4e81587f7e4f56">operator=</a> (<a class="el" href="classdrake_1_1multibody_1_1_contact_results.html">ContactResults</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:a6876ed6779266e390e4e81587f7e4f56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a1a0028ecb11611ebcbe54f4df2c0fcc5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1a0028ecb11611ebcbe54f4df2c0fcc5">&#9670;&nbsp;</a></span>ContactResults() <span class="overload">[1/4]</span></h2>
+<a id="ac889df1794d59cf41eec1da736b6d188"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac889df1794d59cf41eec1da736b6d188">&#9670;&nbsp;</a></span>ContactResults() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_contact_results.html">ContactResults</a> </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a74aae5f77da579431423377def7d90a1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a74aae5f77da579431423377def7d90a1">&#9670;&nbsp;</a></span>ContactResults() <span class="overload">[2/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_contact_results.html">ContactResults</a> </td>
@@ -254,12 +243,17 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
 </div>
 <a id="a956d63e9dc64c47eb5d5acc090c75ec3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a956d63e9dc64c47eb5d5acc090c75ec3">&#9670;&nbsp;</a></span>ContactResults() <span class="overload">[3/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a956d63e9dc64c47eb5d5acc090c75ec3">&#9670;&nbsp;</a></span>ContactResults() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -284,8 +278,35 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a264b7252c451e219934b5ae434cab81f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a264b7252c451e219934b5ae434cab81f">&#9670;&nbsp;</a></span>ContactResults() <span class="overload">[4/4]</span></h2>
+<a id="aef42edfb1ac795aead7a9f6c76847024"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef42edfb1ac795aead7a9f6c76847024">&#9670;&nbsp;</a></span>ContactResults() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_contact_results.html">ContactResults</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs an empty ContactResults. </p>
+
+</div>
+</div>
+<a id="afe22df50be53afe93dc6c8df243cdd0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe22df50be53afe93dc6c8df243cdd0d">&#9670;&nbsp;</a></span>ContactResults() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -309,7 +330,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::vector&lt; <a class="el" href="classdrake_1_1multibody_1_1_deformable_contact_info.html">DeformableContactInfo</a>&lt; T &gt;&gt; &amp;&amp;&#160;</td>
-          <td class="paramname"><em>deformable</em> = <code>{}</code>&#160;</td>
+          <td class="paramname"><em>deformable</em> = <code>{}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::shared_ptr&lt; const void &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>backing_store</em> = <code>{}</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -324,7 +351,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Constructs a <a class="el" href="classdrake_1_1multibody_1_1_contact_results.html" title="A container class storing the contact results information for each contact pair for a given state of ...">ContactResults</a> with the given values. </p>
+<p>Constructs a ContactResults with the given contact infos. </p>
+<p>(Advanced) The optional <code>backing_store</code> argument allows the caller to keep alive type-erased shared_ptr data that is referenced by the contact infos. This object will hold the <code>backing_store</code> until this object is destroyed. </p>
 
 </div>
 </div>
@@ -445,26 +473,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a7f74cd31bd1bc9b0366f9f8cea2b9dd9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7f74cd31bd1bc9b0366f9f8cea2b9dd9">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_contact_results.html">ContactResults</a>&amp; operator= </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_contact_results.html">ContactResults</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a6876ed6779266e390e4e81587f7e4f56"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6876ed6779266e390e4e81587f7e4f56">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6876ed6779266e390e4e81587f7e4f56">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -476,6 +486,32 @@ Public Member Functions</h2></td></tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_contact_results.html">ContactResults</a>&amp; operator= </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_contact_results.html">ContactResults</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a244e195af51ee4efc69efe60f8907e25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a244e195af51ee4efc69efe60f8907e25">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_contact_results.html">ContactResults</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_contact_results.html">ContactResults</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -546,14 +582,15 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns <a class="el" href="classdrake_1_1multibody_1_1_contact_results.html" title="A container class storing the contact results information for each contact pair for a given state of ...">ContactResults</a> with only <a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html" title="A class containing information regarding contact and contact response between two geometries attached...">HydroelasticContactInfo</a> instances satisfying the selection criterion and with all <a class="el" href="classdrake_1_1multibody_1_1_point_pair_contact_info.html" title="A class containing information regarding contact response between two bodies including:">PointPairContactInfo</a> instances. </p>
+<p>Returns a selective copy of this object. </p>
+<p>Only <a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html" title="A class containing information regarding contact and contact response between two geometries attached...">HydroelasticContactInfo</a> instances satisfying the selection criterion are copied; all other contacts (point_pair and deformable) are unconditionally copied.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">selector</td><td>Boolean predicate that returns true to select which <a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html" title="A class containing information regarding contact and contact response between two geometries attached...">HydroelasticContactInfo</a>.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>It uses deep copy. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It uses deep copy (unless the operation is trivially identifiable as being vacuous, e.g., when <a class="el" href="classdrake_1_1multibody_1_1_contact_results.html#ae7c6b861ca2a0d7ea1da35fb8daa41c4" title="Returns the number of hydroelastic contacts.">num_hydroelastic_contacts()</a> == 0). </dd></dl>
 
 </div>
 </div>

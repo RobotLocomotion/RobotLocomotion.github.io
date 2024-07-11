@@ -1,5 +1,6 @@
 var NAVTREEINDEX65 =
 {
+"structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_depth16_u_01_4.html":[3,0,0,15,8,24],
 "structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_depth16_u_01_4.html#ae99b366a9a1126b3fc6014ceb7eca8d5":[3,0,0,15,8,24,0],
 "structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_depth32_f_01_4.html":[3,0,0,15,8,25],
 "structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_depth32_f_01_4.html#ae99b366a9a1126b3fc6014ceb7eca8d5":[3,0,0,15,8,25,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX65 =
 "system__dynamics__data_8h.html":[4,0,0,8,2,20],
 "system__dynamics__data_8h.html#aadd94ea888130540aa18f2ad7cff1ced":[4,0,0,8,2,20,0],
 "system__output_8h.html":[4,0,0,12,3,43],
-"system__output_8h.html#af61dd5d97b6aa0f6fef7c1b030cc939a":[4,0,0,12,3,43,2],
-"system__scalar__conversion__doxygen_8h.html":[4,0,0,12,3,44]
+"system__output_8h.html#af61dd5d97b6aa0f6fef7c1b030cc939a":[4,0,0,12,3,43,2]
 };

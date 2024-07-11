@@ -188,6 +188,18 @@ class drake::multibody::HydroelasticContactInfo&lt; T &gt;</h3>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a7abb7039d6fc5ad512bac62ffada3427"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#a7abb7039d6fc5ad512bac62ffada3427">HydroelasticContactInfo</a> (std::shared_ptr&lt; const <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html">geometry::ContactSurface</a>&lt; T &gt;&gt; <a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#ac38327b0cc2eae38d5291f0507738411">contact_surface</a>, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; T &gt; &amp;<a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#a5e75e607ebf2e82f0f6d774a0ca5f0f1">F_Ac_W</a>)</td></tr>
+<tr class="memdesc:a7abb7039d6fc5ad512bac62ffada3427"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs this structure using the given contact surface and spatial force.  <a href="#a7abb7039d6fc5ad512bac62ffada3427">More...</a><br /></td></tr>
+<tr class="separator:a7abb7039d6fc5ad512bac62ffada3427"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a071434d119cb022200cf6b6e18243d71"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#a071434d119cb022200cf6b6e18243d71">HydroelasticContactInfo</a> (const <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html">geometry::ContactSurface</a>&lt; T &gt; *<a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#ac38327b0cc2eae38d5291f0507738411">contact_surface</a>, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; T &gt; &amp;<a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#a5e75e607ebf2e82f0f6d774a0ca5f0f1">F_Ac_W</a>)</td></tr>
+<tr class="memdesc:a071434d119cb022200cf6b6e18243d71"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Constructs by aliasing the given contact_surface, without any expensive reference counting.  <a href="#a071434d119cb022200cf6b6e18243d71">More...</a><br /></td></tr>
+<tr class="separator:a071434d119cb022200cf6b6e18243d71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02c0dfd2622354b8ba7e0c2a35fc5656"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#a02c0dfd2622354b8ba7e0c2a35fc5656">HydroelasticContactInfo</a> (const <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html">geometry::ContactSurface</a>&lt; T &gt; *<a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#ac38327b0cc2eae38d5291f0507738411">contact_surface</a>, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; T &gt; &amp;<a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#a5e75e607ebf2e82f0f6d774a0ca5f0f1">F_Ac_W</a>, std::vector&lt; <a class="el" href="structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html">HydroelasticQuadraturePointData</a>&lt; T &gt;&gt; &amp;&amp;<a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#a12ae1c95e942924afbd21907bab9f6a1">quadrature_point_data</a>)</td></tr>
+<tr class="memdesc:a02c0dfd2622354b8ba7e0c2a35fc5656"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a02c0dfd2622354b8ba7e0c2a35fc5656">More...</a><br /></td></tr>
+<tr class="separator:a02c0dfd2622354b8ba7e0c2a35fc5656"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6e57627705f9b3e5f66c6a8f5f12a84"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#ac6e57627705f9b3e5f66c6a8f5f12a84">HydroelasticContactInfo</a> (std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html">geometry::ContactSurface</a>&lt; T &gt;&gt; <a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#ac38327b0cc2eae38d5291f0507738411">contact_surface</a>, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; T &gt; &amp;<a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#a5e75e607ebf2e82f0f6d774a0ca5f0f1">F_Ac_W</a>, std::vector&lt; <a class="el" href="structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html">HydroelasticQuadraturePointData</a>&lt; T &gt;&gt; &amp;&amp;<a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#a12ae1c95e942924afbd21907bab9f6a1">quadrature_point_data</a>)</td></tr>
+<tr class="memdesc:ac6e57627705f9b3e5f66c6a8f5f12a84"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#ac6e57627705f9b3e5f66c6a8f5f12a84">More...</a><br /></td></tr>
+<tr class="separator:ac6e57627705f9b3e5f66c6a8f5f12a84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf1319c97ef104c9645ed384cf017838"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#adf1319c97ef104c9645ed384cf017838">~HydroelasticContactInfo</a> ()</td></tr>
 <tr class="separator:adf1319c97ef104c9645ed384cf017838"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac38327b0cc2eae38d5291f0507738411"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html">geometry::ContactSurface</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#ac38327b0cc2eae38d5291f0507738411">contact_surface</a> () const</td></tr>
@@ -199,32 +211,84 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5e75e607ebf2e82f0f6d774a0ca5f0f1"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#a5e75e607ebf2e82f0f6d774a0ca5f0f1">F_Ac_W</a> () const</td></tr>
 <tr class="memdesc:a5e75e607ebf2e82f0f6d774a0ca5f0f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the spatial force applied on body A, at the centroid point C of the surface mesh M, and expressed in the world frame W.  <a href="#a5e75e607ebf2e82f0f6d774a0ca5f0f1">More...</a><br /></td></tr>
 <tr class="separator:a5e75e607ebf2e82f0f6d774a0ca5f0f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Construction</div></td></tr>
-<tr><td colspan="2"><div class="groupText"><p>The constructors below adhere to a number of invariants.</p>
-<p>The <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html" title="The ContactSurface characterizes the intersection of two geometries M and N as a contact surface with...">geometry::ContactSurface</a> defines contact between two geometries M and N (via <a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#ac38327b0cc2eae38d5291f0507738411" title="Returns a reference to the ContactSurface data structure.">contact_surface()</a>.id_M() and <a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#ac38327b0cc2eae38d5291f0507738411" title="Returns a reference to the ContactSurface data structure.">contact_surface()</a>.id_N(), respectively). HydroelasticContactInfo further associates geometries M and N with the bodies to which they are rigidly fixed, A and B, respectively. It is the responsibility of the caller of these constructors to ensure that the parameters satisfy the documented invariants, see below. Similarly, the spatial force <code>F_Ac_W</code> must be provided as indicated by the monogram notation in use, that is, it is the spatial force on body A, at the contact surface's centroid C, and expressed in the world frame. </p>
-</div></td></tr>
-<tr class="memitem:a40d55e8453d53bb78d6e4d29eb453c41"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#a40d55e8453d53bb78d6e4d29eb453c41">HydroelasticContactInfo</a> (const <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html">geometry::ContactSurface</a>&lt; T &gt; *<a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#ac38327b0cc2eae38d5291f0507738411">contact_surface</a>, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; T &gt; &amp;<a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#a5e75e607ebf2e82f0f6d774a0ca5f0f1">F_Ac_W</a>, std::vector&lt; <a class="el" href="structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html">HydroelasticQuadraturePointData</a>&lt; T &gt;&gt; &amp;&amp;<a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#a12ae1c95e942924afbd21907bab9f6a1">quadrature_point_data</a>={})</td></tr>
-<tr class="separator:a40d55e8453d53bb78d6e4d29eb453c41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0373d5373cbf8fc8f13851150bb87f6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#aa0373d5373cbf8fc8f13851150bb87f6">HydroelasticContactInfo</a> (std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html">geometry::ContactSurface</a>&lt; T &gt;&gt; <a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#ac38327b0cc2eae38d5291f0507738411">contact_surface</a>, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; T &gt; &amp;<a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#a5e75e607ebf2e82f0f6d774a0ca5f0f1">F_Ac_W</a>, std::vector&lt; <a class="el" href="structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html">HydroelasticQuadraturePointData</a>&lt; T &gt;&gt; &amp;&amp;<a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#a12ae1c95e942924afbd21907bab9f6a1">quadrature_point_data</a>={})</td></tr>
-<tr class="memdesc:aa0373d5373cbf8fc8f13851150bb87f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">This constructor takes ownership of <code>contact_surface</code> via a std::unique_ptr, instead of aliasing a pre-existing contact surface.  <a href="#aa0373d5373cbf8fc8f13851150bb87f6">More...</a><br /></td></tr>
-<tr class="separator:aa0373d5373cbf8fc8f13851150bb87f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible,</div></td></tr>
-<tr><td colspan="2"><div class="groupText"><p>MoveAssignable.</p>
-</div></td></tr>
-<tr class="memitem:a1466326a0af1bf52d39ac3158dc16d21"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#a1466326a0af1bf52d39ac3158dc16d21">HydroelasticContactInfo</a> (const <a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html">HydroelasticContactInfo</a> &amp;info)</td></tr>
-<tr class="memdesc:a1466326a0af1bf52d39ac3158dc16d21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clones this data structure, making deep copies of all underlying data.  <a href="#a1466326a0af1bf52d39ac3158dc16d21">More...</a><br /></td></tr>
-<tr class="separator:a1466326a0af1bf52d39ac3158dc16d21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84c9184869a4b154885d70619a36a2be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html">HydroelasticContactInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#a84c9184869a4b154885d70619a36a2be">operator=</a> (const <a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html">HydroelasticContactInfo</a> &amp;info)</td></tr>
-<tr class="memdesc:a84c9184869a4b154885d70619a36a2be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clones this object in the same manner as the copy constructor.  <a href="#a84c9184869a4b154885d70619a36a2be">More...</a><br /></td></tr>
-<tr class="separator:a84c9184869a4b154885d70619a36a2be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a158a4c10cbb446de97811be1251b819a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#a158a4c10cbb446de97811be1251b819a">HydroelasticContactInfo</a> (<a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html">HydroelasticContactInfo</a> &amp;&amp;)=default</td></tr>
-<tr class="separator:a158a4c10cbb446de97811be1251b819a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8ebf5d56f723686c5dc57d1c41f551e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html">HydroelasticContactInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#ad8ebf5d56f723686c5dc57d1c41f551e">operator=</a> (<a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html">HydroelasticContactInfo</a> &amp;&amp;)=default</td></tr>
-<tr class="separator:ad8ebf5d56f723686c5dc57d1c41f551e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable</div></td></tr>
+<tr class="memitem:a2b643f2cbdf743769b1c5a6c3b7ea1d6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#a2b643f2cbdf743769b1c5a6c3b7ea1d6">HydroelasticContactInfo</a> (const <a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html">HydroelasticContactInfo</a> &amp;)</td></tr>
+<tr class="separator:a2b643f2cbdf743769b1c5a6c3b7ea1d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a795d088e0d6b58a17e6e929c389a50f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html">HydroelasticContactInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#a795d088e0d6b58a17e6e929c389a50f8">operator=</a> (const <a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html">HydroelasticContactInfo</a> &amp;)</td></tr>
+<tr class="separator:a795d088e0d6b58a17e6e929c389a50f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a40d55e8453d53bb78d6e4d29eb453c41"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a40d55e8453d53bb78d6e4d29eb453c41">&#9670;&nbsp;</a></span>HydroelasticContactInfo() <span class="overload">[1/4]</span></h2>
+<a id="a7abb7039d6fc5ad512bac62ffada3427"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7abb7039d6fc5ad512bac62ffada3427">&#9670;&nbsp;</a></span>HydroelasticContactInfo() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html">HydroelasticContactInfo</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; const <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html">geometry::ContactSurface</a>&lt; T &gt;&gt;&#160;</td>
+          <td class="paramname"><em>contact_surface</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>F_Ac_W</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs this structure using the given contact surface and spatial force. </p>
+<p>The <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html" title="The ContactSurface characterizes the intersection of two geometries M and N as a contact surface with...">geometry::ContactSurface</a> defines contact between two geometries M and N (via <a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#ac38327b0cc2eae38d5291f0507738411" title="Returns a reference to the ContactSurface data structure.">contact_surface()</a>.id_M() and <a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#ac38327b0cc2eae38d5291f0507738411" title="Returns a reference to the ContactSurface data structure.">contact_surface()</a>.id_N(), respectively). HydroelasticContactInfo further associates geometries M and N with the bodies to which they are rigidly fixed, A and B, respectively. It is the responsibility of the caller of this constructor to ensure that the parameters satisfy the documented invariants, see below. Similarly, the spatial force <code>F_Ac_W</code> must be provided as indicated by the monogram notation in use, that is, it is the spatial force on body A, at the contact surface's centroid C, and expressed in the world frame.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">contact_surface</td><td>Contact surface between two geometries M and N, see <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a9d19415980a599e76803d1c2ac6954cd" title="Returns the geometry id of Geometry M.">geometry::ContactSurface::id_M()</a> and <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a643bdff7b47f07604755e0a7e0707fee" title="Returns the geometry id of Geometry N.">geometry::ContactSurface::id_N()</a>. This must point to immutable data (i.e., data that will never change), and must not be nullptr. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">F_Ac_W</td><td>Spatial force applied on body A, at contact surface centroid C, and expressed in the world frame W. The position <code>p_WC</code> of C in the world frame W can be obtained with <code>ContactSurface::centroid()</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a071434d119cb022200cf6b6e18243d71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a071434d119cb022200cf6b6e18243d71">&#9670;&nbsp;</a></span>HydroelasticContactInfo() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html">HydroelasticContactInfo</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html">geometry::ContactSurface</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>contact_surface</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>F_Ac_W</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Advanced) Constructs by aliasing the given contact_surface, without any expensive reference counting. </p>
+<p>It is the responsibility of the caller to ensure that the given contact_surface outlives this object. Copying or moving this object will result in a deep copy of the surface. </p>
+
+</div>
+</div>
+<a id="a02c0dfd2622354b8ba7e0c2a35fc5656"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02c0dfd2622354b8ba7e0c2a35fc5656">&#9670;&nbsp;</a></span>HydroelasticContactInfo() <span class="overload">[3/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -245,7 +309,7 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::vector&lt; <a class="el" href="structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html">HydroelasticQuadraturePointData</a>&lt; T &gt;&gt; &amp;&amp;&#160;</td>
-          <td class="paramname"><em>quadrature_point_data</em> = <code>{}</code>&#160;</td>
+          <td class="paramname"><em>quadrature_point_data</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -254,20 +318,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p><a class="anchor" id="hydro_contact_info_non_owning_ctor"></a>Constructs this structure using the given contact surface, traction field, and slip field. This constructor does not own the ContactSurface; it points to a ContactSurface that another owns, see <a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#ac38327b0cc2eae38d5291f0507738411" title="Returns a reference to the ContactSurface data structure.">contact_surface()</a>.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">contact_surface</td><td>Contact surface between two geometries M and N, see <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a9d19415980a599e76803d1c2ac6954cd" title="Returns the geometry id of Geometry M.">geometry::ContactSurface::id_M()</a> and <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a643bdff7b47f07604755e0a7e0707fee" title="Returns the geometry id of Geometry N.">geometry::ContactSurface::id_N()</a>. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">F_Ac_W</td><td>Spatial force applied on body A, at contact surface centroid C, and expressed in the world frame W. The position <code>p_WC</code> of C in the world frame W can be obtained with <code>ContactSurface::centroid()</code>. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">quadrature_point_data</td><td>Ignored data that will be discarded, kept here as an argument only for backwards compatibility. </td></tr>
-  </table>
-  </dd>
-</dl>
+
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000003">Deprecated:</a></b></dt><dd>Do not pass quadrature_point_data. <br />
+ This will be removed from Drake on or after 2024-11-01.</dd></dl>
 
 </div>
 </div>
-<a id="aa0373d5373cbf8fc8f13851150bb87f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa0373d5373cbf8fc8f13851150bb87f6">&#9670;&nbsp;</a></span>HydroelasticContactInfo() <span class="overload">[2/4]</span></h2>
+<a id="ac6e57627705f9b3e5f66c6a8f5f12a84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6e57627705f9b3e5f66c6a8f5f12a84">&#9670;&nbsp;</a></span>HydroelasticContactInfo() <span class="overload">[4/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -288,7 +347,7 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::vector&lt; <a class="el" href="structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html">HydroelasticQuadraturePointData</a>&lt; T &gt;&gt; &amp;&amp;&#160;</td>
-          <td class="paramname"><em>quadrature_point_data</em> = <code>{}</code>&#160;</td>
+          <td class="paramname"><em>quadrature_point_data</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -298,13 +357,14 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>This constructor takes ownership of <code>contact_surface</code> via a std::unique_ptr, instead of aliasing a pre-existing contact surface. </p>
-<p>In all other respects, it is identical to the <a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#hydro_contact_info_non_owning_ctor">other overload</a> that takes <code>contact_surface</code> by raw pointer. </p>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000004">Deprecated:</a></b></dt><dd>Do not pass quadrature_point_data. <br />
+ This will be removed from Drake on or after 2024-11-01.</dd></dl>
 
 </div>
 </div>
-<a id="a1466326a0af1bf52d39ac3158dc16d21"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1466326a0af1bf52d39ac3158dc16d21">&#9670;&nbsp;</a></span>HydroelasticContactInfo() <span class="overload">[3/4]</span></h2>
+<a id="a2b643f2cbdf743769b1c5a6c3b7ea1d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b643f2cbdf743769b1c5a6c3b7ea1d6">&#9670;&nbsp;</a></span>HydroelasticContactInfo() <span class="overload">[5/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -313,39 +373,10 @@ Public Member Functions</h2></td></tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html">HydroelasticContactInfo</a> </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html">HydroelasticContactInfo</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>info</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Clones this data structure, making deep copies of all underlying data. </p>
-<dl class="section note"><dt>Note</dt><dd>The new object will contain a cloned ContactSurface even if the original was constructed using a raw pointer referencing an existing ContactSurface. </dd></dl>
-
-</div>
-</div>
-<a id="a158a4c10cbb446de97811be1251b819a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a158a4c10cbb446de97811be1251b819a">&#9670;&nbsp;</a></span>HydroelasticContactInfo() <span class="overload">[4/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html">HydroelasticContactInfo</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html">HydroelasticContactInfo</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>
@@ -408,8 +439,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a84c9184869a4b154885d70619a36a2be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a84c9184869a4b154885d70619a36a2be">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a795d088e0d6b58a17e6e929c389a50f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a795d088e0d6b58a17e6e929c389a50f8">&#9670;&nbsp;</a></span>operator=()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -418,39 +449,10 @@ Public Member Functions</h2></td></tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html">HydroelasticContactInfo</a>&amp; operator= </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html">HydroelasticContactInfo</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>info</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Clones this object in the same manner as the copy constructor. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#a1466326a0af1bf52d39ac3158dc16d21" title="Clones this data structure, making deep copies of all underlying data.">HydroelasticContactInfo(const HydroelasticContactInfo&amp;)</a> </dd></dl>
-
-</div>
-</div>
-<a id="ad8ebf5d56f723686c5dc57d1c41f551e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8ebf5d56f723686c5dc57d1c41f551e">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html">HydroelasticContactInfo</a>&amp; operator= </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html">HydroelasticContactInfo</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>
@@ -471,7 +473,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000003">Deprecated:</a></b></dt><dd>This function is being removed.  This detailed information was too costly to report, so is effectively  no longer part of the ContactResults output port. The returned vector  will always be empty during the deprecation window. <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000005">Deprecated:</a></b></dt><dd>This function is being removed.  This detailed information was too costly to report, so is effectively  no longer part of the ContactResults output port. The returned vector  will always be empty during the deprecation window. <br />
  This will be removed from Drake on or after 2024-11-01.</dd></dl>
 
 </div>

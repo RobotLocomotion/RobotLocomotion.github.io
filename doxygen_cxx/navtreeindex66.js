@@ -1,5 +1,6 @@
 var NAVTREEINDEX66 =
 {
+"system__scalar__conversion__doxygen_8h.html":[4,0,0,12,3,44],
 "system__scalar__converter_8h.html":[4,0,0,12,3,45],
 "system__symbolic__inspector_8h.html":[4,0,0,12,3,46],
 "system__type__tag_8h.html":[4,0,0,12,3,47],
