@@ -228,7 +228,13 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
  This will be removed from Drake on or after 2024-08-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a6e9c573b8e817fdaccbbcbdd29810ae7">SpatialInertia&lt; T &gt;::SpatialInertia</a>  ()=default</dt>
 <dd><a class="anchor" id="_deprecated000021"></a>The default constructor is deprecated. If you really want NaNs, then  call the SpatialInertia&lt;T&gt;::NaN() factory function. If you were only  calling this constructor as part of adding a RigidBody to  MultibodyPlant, then instead you should omit the SpatialInertia  argument from MultibodyPlant::AddRigidBody(); it now defaults to zero. <br />
- This will be removed from Drake on or after 2024-10-01.</dd>
+ This will be removed from Drake on or after 2024-10-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1systems_1_1_vector_system.html#ae9f3aedf057626dfc509c725e294f485">VectorSystem&lt; T &gt;::VectorSystem</a>  (int input_size, int output_size)</dt>
+<dd><a class="anchor" id="_deprecated000023"></a>The direct_feedthrough argument is now required. <br />
+ This will be removed from Drake on or after 2024-11-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1systems_1_1_vector_system.html#a5085b213af29cc684ca0133e54f7405c">VectorSystem&lt; T &gt;::VectorSystem</a>  (<a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html" title="Helper class to convert a System into a System&lt;T&gt;, intended for internal use by the System framework,...">SystemScalarConverter</a> converter, int input_size, int output_size)</dt>
+<dd><a class="anchor" id="_deprecated000024"></a>The direct_feedthrough argument is now required.  To match the prior default, pass std::nullopt but beware that inferring  feedthrough from symbolic form is incredibly computationally expensive  and should generally be avoided. <br />
+ This will be removed from Drake on or after 2024-11-01.</dd>
 </dl>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->

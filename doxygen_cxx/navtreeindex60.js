@@ -1,5 +1,7 @@
 var NAVTREEINDEX60 =
 {
+"string__map_8h.html#a4730f000053dc13014d5e316c6f91201":[4,0,0,1,63,0],
+"string__map_8h.html#a5bb95e80e713a1874862fba2397c8cd2":[4,0,0,1,63,1],
 "string__set_8h.html":[4,0,0,1,64],
 "string__set_8h.html#a634b3a51a11fe7326bdf6cc85a121380":[4,0,0,1,64,1],
 "string__set_8h.html#accb8b7f9037ecf74ea4906a96fd775d1":[4,0,0,1,64,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX60 =
 "structdrake_1_1geometry_1_1_meshcat_params.html#a13d2ccebff386877ee5fa1fbe2351a0f":[3,0,0,4,33,6],
 "structdrake_1_1geometry_1_1_meshcat_params.html#a241bd85a9962ef15126bad0ea330c0b1":[3,0,0,4,33,3],
 "structdrake_1_1geometry_1_1_meshcat_params.html#a37117f2a3803b9cfd665be53b850fee7":[3,0,0,4,33,4],
-"structdrake_1_1geometry_1_1_meshcat_params.html#a696b1086704b0858059129b61eaa4a9f":[3,0,0,4,33,2],
-"structdrake_1_1geometry_1_1_meshcat_params.html#a89a7b03f2e5b34b3ca7fa0b92d282def":[3,0,0,4,33,5],
-"structdrake_1_1geometry_1_1_meshcat_params.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,33,1]
+"structdrake_1_1geometry_1_1_meshcat_params.html#a696b1086704b0858059129b61eaa4a9f":[3,0,0,4,33,2]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX47 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_pose.html#af3ed665c279c199edc05b05413deb70b":[3,0,0,17,7,7],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html":[3,0,0,17,8],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a0737945305cf88496fc289776515e0d9":[3,0,0,17,8,16],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a1ffd5b82508f158e6e2d5b85be11bacc":[3,0,0,17,8,21],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a22881c8c97b471c7c9a56d437df6e542":[3,0,0,17,8,18],
@@ -247,7 +249,5 @@ var NAVTREEINDEX47 =
 "constants_8h.html#af8777bc10296f9d39d52753861110e26":[4,0,0,1,12,0],
 "constants_8h.html#af8777bc10296f9d39d52753861110e26abab0767e88027de9944aa55c24c8387a":[4,0,0,1,12,0,0],
 "constants_8h.html#af8777bc10296f9d39d52753861110e26af460a96ab20647996c15854794763384":[4,0,0,1,12,0,1],
-"constitutive__model_8h.html":[4,0,0,8,3,2],
-"constraint_8h.html":[4,0,0,11,9],
-"constraint__relaxing__ik_8h.html":[4,0,0,8,5,4]
+"constitutive__model_8h.html":[4,0,0,8,3,2]
 };

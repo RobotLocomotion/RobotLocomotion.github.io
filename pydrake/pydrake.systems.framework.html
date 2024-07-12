@@ -15501,20 +15501,33 @@ for the list of instantiations.</p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.VectorSystem.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.VectorSystem" title="pydrake.systems.framework.VectorSystem"><span class="pre">pydrake.systems.framework.VectorSystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direct_feedthrough</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.VectorSystem.__init__" title="Permalink to this definition"></a></dt>
-<dd><p>Creates a system with one input port and one output port of the given
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.VectorSystem.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.systems.framework.VectorSystem, input_size: int, output_size: int, direct_feedthrough: Optional[bool]) -&gt; None</p></li>
+</ol>
+<p>Creates a system with one input port and one output port of the given
 sizes, when the sizes are non-zero. Either size can be zero, in which
 case no input (or output) port is created.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">direct_feedthrough</span></code> specifies whether the input port direct
 feeds through to the output port. (See
-SystemBase::GetDirectFeedthroughs().) When not provided, assumes true
-(the output is direct feedthrough). When false, the DoCalcVectorOutput
+SystemBase::GetDirectFeedthroughs().) When nullopt, assumes true (the
+output is direct feedthrough). When false, the DoCalcVectorOutput
 <code class="docutils literal notranslate"><span class="pre">input</span></code> will be empty (zero-sized).</p>
 <p>Does <em>not</em> declare scalar-type conversion support (AutoDiff, etc.). To
 enable AutoDiff support, use the SystemScalarConverter-based
 constructor. (For that, see system_scalar_conversion at the example
 titled “Example using drake::systems::VectorSystem as the base
 class”.)</p>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.systems.framework.VectorSystem, input_size: int, output_size: int) -&gt; None</p></li>
+</ol>
+<p>(Deprecated.)</p>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>The direct_feedthrough argument is now required. This will be
+removed from Drake on or after 2024-11-01.</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -15536,20 +15549,33 @@ optionally declare continuous or discrete state, but not both;
 subclasses may not declare abstract state.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.VectorSystem_-AutoDiffXd-.__init__">
-<span id="pydrake.systems.framework.VectorSystem_[AutoDiffXd].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.VectorSystem_" title="pydrake.systems.framework.VectorSystem_"><span class="pre">pydrake.systems.framework.VectorSystem_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direct_feedthrough</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.VectorSystem_-AutoDiffXd-.__init__" title="Permalink to this definition"></a></dt>
-<dd><p>Creates a system with one input port and one output port of the given
+<span id="pydrake.systems.framework.VectorSystem_[AutoDiffXd].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.VectorSystem_-AutoDiffXd-.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.systems.framework.VectorSystem_[AutoDiffXd], input_size: int, output_size: int, direct_feedthrough: Optional[bool]) -&gt; None</p></li>
+</ol>
+<p>Creates a system with one input port and one output port of the given
 sizes, when the sizes are non-zero. Either size can be zero, in which
 case no input (or output) port is created.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">direct_feedthrough</span></code> specifies whether the input port direct
 feeds through to the output port. (See
-SystemBase::GetDirectFeedthroughs().) When not provided, assumes true
-(the output is direct feedthrough). When false, the DoCalcVectorOutput
+SystemBase::GetDirectFeedthroughs().) When nullopt, assumes true (the
+output is direct feedthrough). When false, the DoCalcVectorOutput
 <code class="docutils literal notranslate"><span class="pre">input</span></code> will be empty (zero-sized).</p>
 <p>Does <em>not</em> declare scalar-type conversion support (AutoDiff, etc.). To
 enable AutoDiff support, use the SystemScalarConverter-based
 constructor. (For that, see system_scalar_conversion at the example
 titled “Example using drake::systems::VectorSystem as the base
 class”.)</p>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.systems.framework.VectorSystem_[AutoDiffXd], input_size: int, output_size: int) -&gt; None</p></li>
+</ol>
+<p>(Deprecated.)</p>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>The direct_feedthrough argument is now required. This will be
+removed from Drake on or after 2024-11-01.</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -15565,20 +15591,33 @@ optionally declare continuous or discrete state, but not both;
 subclasses may not declare abstract state.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.VectorSystem_-Expression-.__init__">
-<span id="pydrake.systems.framework.VectorSystem_[Expression].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.VectorSystem_" title="pydrake.systems.framework.VectorSystem_"><span class="pre">pydrake.systems.framework.VectorSystem_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direct_feedthrough</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.VectorSystem_-Expression-.__init__" title="Permalink to this definition"></a></dt>
-<dd><p>Creates a system with one input port and one output port of the given
+<span id="pydrake.systems.framework.VectorSystem_[Expression].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.VectorSystem_-Expression-.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.systems.framework.VectorSystem_[Expression], input_size: int, output_size: int, direct_feedthrough: Optional[bool]) -&gt; None</p></li>
+</ol>
+<p>Creates a system with one input port and one output port of the given
 sizes, when the sizes are non-zero. Either size can be zero, in which
 case no input (or output) port is created.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">direct_feedthrough</span></code> specifies whether the input port direct
 feeds through to the output port. (See
-SystemBase::GetDirectFeedthroughs().) When not provided, assumes true
-(the output is direct feedthrough). When false, the DoCalcVectorOutput
+SystemBase::GetDirectFeedthroughs().) When nullopt, assumes true (the
+output is direct feedthrough). When false, the DoCalcVectorOutput
 <code class="docutils literal notranslate"><span class="pre">input</span></code> will be empty (zero-sized).</p>
 <p>Does <em>not</em> declare scalar-type conversion support (AutoDiff, etc.). To
 enable AutoDiff support, use the SystemScalarConverter-based
 constructor. (For that, see system_scalar_conversion at the example
 titled “Example using drake::systems::VectorSystem as the base
 class”.)</p>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.systems.framework.VectorSystem_[Expression], input_size: int, output_size: int) -&gt; None</p></li>
+</ol>
+<p>(Deprecated.)</p>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>The direct_feedthrough argument is now required. This will be
+removed from Drake on or after 2024-11-01.</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
