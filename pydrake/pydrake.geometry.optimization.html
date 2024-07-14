@@ -3012,7 +3012,7 @@ ordering of hyperplanes in between iterations.</p>
 <span class="sig-name descname"><span class="pre">UniformSample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.UniformSample" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>UniformSample(self: pydrake.geometry.optimization.HPolyhedron, generator: pydrake.common.RandomGenerator, previous_sample: numpy.ndarray[numpy.float64[m, 1]], mixing_steps: int = 10) -&gt; numpy.ndarray[numpy.float64[m, 1]]</p></li>
+<li><p>UniformSample(self: pydrake.geometry.optimization.HPolyhedron, generator: pydrake.common.RandomGenerator, previous_sample: numpy.ndarray[numpy.float64[m, 1]], mixing_steps: int = 10, subspace: Optional[numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]] = None, tol: float = 1e-08) -&gt; numpy.ndarray[numpy.float64[m, 1]]</p></li>
 </ol>
 <p>Draw an (approximately) uniform sample from the set using the hit and
 run Markov-chain Monte-Carlo strategy described in
@@ -3024,14 +3024,28 @@ sample, <code class="docutils literal notranslate"><span class="pre">mixing_step
 obtain an approximately uniformly random point. The distribution of
 samples will converge to the true uniform distribution at a geometric
 rate in the total number of hit-and-run steps which is
-<code class="docutils literal notranslate"><span class="pre">mixing_steps</span></code> * the number of times this function is called.</p>
+<code class="docutils literal notranslate"><span class="pre">mixing_steps</span></code> * the number of times this function is called. If a
+<code class="docutils literal notranslate"><span class="pre">subspace</span></code> is provided, the random samples are constrained to lie in
+the affine subspace through <code class="docutils literal notranslate"><span class="pre">previous_sample</span></code>, spanned by the
+columns of <code class="docutils literal notranslate"><span class="pre">subspace</span></code>. To obtain uniform samples, subspace should
+have orthonormal, columns. This enables drawing uniform samples from
+an HPolyhedron which is not full-dimensional – one can pass the basis
+of the affine hull of the HPolyhedron, which can be computed with the
+AffineSubspace class. <code class="docutils literal notranslate"><span class="pre">tol</span></code> is a numerical tolerance for checking if
+any halfspaces in the given HPolyhedron are implied by the
+<code class="docutils literal notranslate"><span class="pre">subspace</span></code> definition (and therefore can be ignored by the
+hit-and-run sampler).</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>subspace.rows() == ambient_dimension().</p>
+</dd>
+</dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if previous_sample is not in the set.</strong> – </p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>UniformSample(self: pydrake.geometry.optimization.HPolyhedron, generator: pydrake.common.RandomGenerator, mixing_steps: int = 10) -&gt; numpy.ndarray[numpy.float64[m, 1]]</p></li>
+<li><p>UniformSample(self: pydrake.geometry.optimization.HPolyhedron, generator: pydrake.common.RandomGenerator, mixing_steps: int = 10, subspace: Optional[numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]] = None, tol: float = 1e-08) -&gt; numpy.ndarray[numpy.float64[m, 1]]</p></li>
 </ol>
 <p>Variant of UniformSample that uses the ChebyshevCenter() as the
 previous_sample as a feasible point to start the Markov chain

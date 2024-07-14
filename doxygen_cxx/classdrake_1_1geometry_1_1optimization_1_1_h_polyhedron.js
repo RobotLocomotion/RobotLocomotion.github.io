@@ -30,6 +30,6 @@ var classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron =
     [ "Scale", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a95efbfc978d1926652dff936c8931e03", null ],
     [ "Serialize", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a8e8824802dedfbc36776227f7482b6bc", null ],
     [ "SimplifyByIncrementalFaceTranslation", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a196e1a9660d75079e2491b6b2492bb84", null ],
-    [ "UniformSample", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a80e9c64e03b429fb85e48d909a3674d8", null ],
-    [ "UniformSample", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#acf256e1d8e05606d0c57f6ed1220ac49", null ]
+    [ "UniformSample", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a99bfbaa0f51a0b3b0e51e0c0b2de0946", null ],
+    [ "UniformSample", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#abb2d50e8839a47048a99dd2b6c18f886", null ]
 ];

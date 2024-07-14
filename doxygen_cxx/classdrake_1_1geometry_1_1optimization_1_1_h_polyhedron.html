@@ -234,12 +234,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aba50cc657a0a2c943a9657cb820e8289"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#aba50cc657a0a2c943a9657cb820e8289">PontryaginDifference</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> &amp;other) const</td></tr>
 <tr class="memdesc:aba50cc657a0a2c943a9657cb820e8289"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Pontryagin (Minkowski) Difference of <code>this</code> and <code>other</code>.  <a href="#aba50cc657a0a2c943a9657cb820e8289">More...</a><br /></td></tr>
 <tr class="separator:aba50cc657a0a2c943a9657cb820e8289"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80e9c64e03b429fb85e48d909a3674d8"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a80e9c64e03b429fb85e48d909a3674d8">UniformSample</a> (<a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a> *generator, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;previous_sample, <a class="el" href="classint.html">int</a> mixing_steps=10) const</td></tr>
-<tr class="memdesc:a80e9c64e03b429fb85e48d909a3674d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an (approximately) uniform sample from the set using the hit and run Markov-chain Monte-Carlo strategy described in <a href="https://link.springer.com/article/10.1007/s101070050099">https://link.springer.com/article/10.1007/s101070050099</a>.  <a href="#a80e9c64e03b429fb85e48d909a3674d8">More...</a><br /></td></tr>
-<tr class="separator:a80e9c64e03b429fb85e48d909a3674d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf256e1d8e05606d0c57f6ed1220ac49"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#acf256e1d8e05606d0c57f6ed1220ac49">UniformSample</a> (<a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a> *generator, <a class="el" href="classint.html">int</a> mixing_steps=10) const</td></tr>
-<tr class="memdesc:acf256e1d8e05606d0c57f6ed1220ac49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variant of UniformSample that uses the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a8f101502c5626e477259a06f4acd97e1" title="Solves a linear program to compute the center of the largest inscribed ball in the polyhedron.">ChebyshevCenter()</a> as the previous_sample as a feasible point to start the Markov chain sampling.  <a href="#acf256e1d8e05606d0c57f6ed1220ac49">More...</a><br /></td></tr>
-<tr class="separator:acf256e1d8e05606d0c57f6ed1220ac49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99bfbaa0f51a0b3b0e51e0c0b2de0946"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a99bfbaa0f51a0b3b0e51e0c0b2de0946">UniformSample</a> (<a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a> *generator, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;previous_sample, <a class="el" href="classint.html">int</a> mixing_steps=10, const std::optional&lt; Eigen::Ref&lt; const Eigen::MatrixXd &gt;&gt; &amp;subspace=std::nullopt, <a class="el" href="classdouble.html">double</a> tol=1e-8) const</td></tr>
+<tr class="memdesc:a99bfbaa0f51a0b3b0e51e0c0b2de0946"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an (approximately) uniform sample from the set using the hit and run Markov-chain Monte-Carlo strategy described in <a href="https://link.springer.com/article/10.1007/s101070050099">https://link.springer.com/article/10.1007/s101070050099</a>.  <a href="#a99bfbaa0f51a0b3b0e51e0c0b2de0946">More...</a><br /></td></tr>
+<tr class="separator:a99bfbaa0f51a0b3b0e51e0c0b2de0946"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb2d50e8839a47048a99dd2b6c18f886"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#abb2d50e8839a47048a99dd2b6c18f886">UniformSample</a> (<a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a> *generator, <a class="el" href="classint.html">int</a> mixing_steps=10, const std::optional&lt; Eigen::Ref&lt; const Eigen::MatrixXd &gt;&gt; &amp;subspace=std::nullopt, <a class="el" href="classdouble.html">double</a> tol=1e-8) const</td></tr>
+<tr class="memdesc:abb2d50e8839a47048a99dd2b6c18f886"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variant of UniformSample that uses the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a8f101502c5626e477259a06f4acd97e1" title="Solves a linear program to compute the center of the largest inscribed ball in the polyhedron.">ChebyshevCenter()</a> as the previous_sample as a feasible point to start the Markov chain sampling.  <a href="#abb2d50e8839a47048a99dd2b6c18f886">More...</a><br /></td></tr>
+<tr class="separator:abb2d50e8839a47048a99dd2b6c18f886"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e8824802dedfbc36776227f7482b6bc"><td class="memTemplParams" colspan="2">template&lt;typename Archive &gt; </td></tr>
 <tr class="memitem:a8e8824802dedfbc36776227f7482b6bc"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a8e8824802dedfbc36776227f7482b6bc">Serialize</a> (Archive *a)</td></tr>
 <tr class="memdesc:a8e8824802dedfbc36776227f7482b6bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passes this object to an Archive.  <a href="#a8e8824802dedfbc36776227f7482b6bc">More...</a><br /></td></tr>
@@ -1260,8 +1260,8 @@ All elements of <code>intersecting_polytopes</code> intersect with <code>this</c
 
 </div>
 </div>
-<a id="a80e9c64e03b429fb85e48d909a3674d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80e9c64e03b429fb85e48d909a3674d8">&#9670;&nbsp;</a></span>UniformSample() <span class="overload">[1/2]</span></h2>
+<a id="a99bfbaa0f51a0b3b0e51e0c0b2de0946"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99bfbaa0f51a0b3b0e51e0c0b2de0946">&#9670;&nbsp;</a></span>UniformSample() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1282,7 +1282,19 @@ All elements of <code>intersecting_polytopes</code> intersect with <code>this</c
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
-          <td class="paramname"><em>mixing_steps</em> = <code>10</code>&#160;</td>
+          <td class="paramname"><em>mixing_steps</em> = <code>10</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::optional&lt; Eigen::Ref&lt; const Eigen::MatrixXd &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>subspace</em> = <code>std::nullopt</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>tol</em> = <code>1e-8</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1293,7 +1305,8 @@ All elements of <code>intersecting_polytopes</code> intersect with <code>this</c
 </div><div class="memdoc">
 
 <p>Draw an (approximately) uniform sample from the set using the hit and run Markov-chain Monte-Carlo strategy described in <a href="https://link.springer.com/article/10.1007/s101070050099">https://link.springer.com/article/10.1007/s101070050099</a>. </p>
-<p>To draw many samples from the uniform distribution, pass the output of one iteration in as the <code>previous_sample</code> to the next, with <code>mixing_steps</code> set to a relatively low number. When drawing a single sample, <code>mixing_steps</code> should be set relatively high in order to obtain an approximately uniformly random point. The distribution of samples will converge to the true uniform distribution at a geometric rate in the total number of hit-and-run steps which is <code>mixing_steps</code> * the number of times this function is called. </p><dl class="exception"><dt>Exceptions</dt><dd>
+<p>To draw many samples from the uniform distribution, pass the output of one iteration in as the <code>previous_sample</code> to the next, with <code>mixing_steps</code> set to a relatively low number. When drawing a single sample, <code>mixing_steps</code> should be set relatively high in order to obtain an approximately uniformly random point. The distribution of samples will converge to the true uniform distribution at a geometric rate in the total number of hit-and-run steps which is <code>mixing_steps</code> * the number of times this function is called. If a <code>subspace</code> is provided, the random samples are constrained to lie in the affine subspace through <code>previous_sample</code>, spanned by the columns of <code>subspace</code>. To obtain uniform samples, subspace should have orthonormal, columns. This enables drawing uniform samples from an <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html" title="Implements a polyhedral convex set using the half-space representation: {x| A x ≤ b}.">HPolyhedron</a> which is not full-dimensional &ndash; one can pass the basis of the affine hull of the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html" title="Implements a polyhedral convex set using the half-space representation: {x| A x ≤ b}.">HPolyhedron</a>, which can be computed with the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html" title="An affine subspace (also known as a &quot;flat&quot;, a &quot;linear variety&quot;, or a &quot;linear manifold&quot;) is a vector s...">AffineSubspace</a> class. <code>tol</code> is a numerical tolerance for checking if any halfspaces in the given <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html" title="Implements a polyhedral convex set using the half-space representation: {x| A x ≤ b}.">HPolyhedron</a> are implied by the <code>subspace</code> definition (and therefore can be ignored by the hit-and-run sampler). </p><dl class="section pre"><dt>Precondition</dt><dd>subspace.rows() == <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a>. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if previous_sample is not in the set. </td></tr>
   </table>
@@ -1302,8 +1315,8 @@ All elements of <code>intersecting_polytopes</code> intersect with <code>this</c
 
 </div>
 </div>
-<a id="acf256e1d8e05606d0c57f6ed1220ac49"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf256e1d8e05606d0c57f6ed1220ac49">&#9670;&nbsp;</a></span>UniformSample() <span class="overload">[2/2]</span></h2>
+<a id="abb2d50e8839a47048a99dd2b6c18f886"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb2d50e8839a47048a99dd2b6c18f886">&#9670;&nbsp;</a></span>UniformSample() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1318,7 +1331,19 @@ All elements of <code>intersecting_polytopes</code> intersect with <code>this</c
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
-          <td class="paramname"><em>mixing_steps</em> = <code>10</code>&#160;</td>
+          <td class="paramname"><em>mixing_steps</em> = <code>10</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::optional&lt; Eigen::Ref&lt; const Eigen::MatrixXd &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>subspace</em> = <code>std::nullopt</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>tol</em> = <code>1e-8</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
