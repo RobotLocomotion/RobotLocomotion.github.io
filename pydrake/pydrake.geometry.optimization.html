@@ -440,7 +440,7 @@ its representation in the local coordinates of the affine subspace.</p>
 <span class="sig-prename descclassname"><span class="pre">pydrake.geometry.optimization.</span></span><span class="sig-name descname"><span class="pre">CalcPairwiseIntersections</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.CalcPairwiseIntersections" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>CalcPairwiseIntersections(convex_sets_A: list[pydrake.geometry.optimization.ConvexSet], convex_sets_B: list[pydrake.geometry.optimization.ConvexSet], continuous_revolute_joints: list[int]) -&gt; list[tuple[int, int, numpy.ndarray[numpy.float64[m, 1]]]]</p></li>
+<li><p>CalcPairwiseIntersections(convex_sets_A: list[pydrake.geometry.optimization.ConvexSet], convex_sets_B: list[pydrake.geometry.optimization.ConvexSet], continuous_revolute_joints: list[int], preprocess_bbox: bool = True) -&gt; list[tuple[int, int, numpy.ndarray[numpy.float64[m, 1]]]]</p></li>
 </ol>
 <p>Computes the pairwise intersections edges between two lists of convex
 sets. Each edge is a tuple in the form [index_A, index_B,
@@ -463,6 +463,12 @@ computed between <code class="docutils literal notranslate"><span class="pre">co
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">continuous_revolute_joints</span></code>:</dt><dd><p>is a list of joint indices corresponding to continuous revolute
 joints.</p>
 </dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">preprocess_bbox</span></code>:</dt><dd><p>is a flag for whether the function should precompute axis-aligned
+bounding boxes for every set. This can speed up the pairwise
+intersection checks, by determining some sets to be disjoint
+without needing to solve an optimization problem. However, it does
+require some overhead to compute those bounding boxes.</p>
+</dd>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
@@ -476,7 +482,7 @@ joints.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>CalcPairwiseIntersections(convex_sets: list[pydrake.geometry.optimization.ConvexSet], continuous_revolute_joints: list[int]) -&gt; list[tuple[int, int, numpy.ndarray[numpy.float64[m, 1]]]]</p></li>
+<li><p>CalcPairwiseIntersections(convex_sets: list[pydrake.geometry.optimization.ConvexSet], continuous_revolute_joints: list[int], preprocess_bbox: bool = True) -&gt; list[tuple[int, int, numpy.ndarray[numpy.float64[m, 1]]]]</p></li>
 </ol>
 <p>Convenience overload to compute pairwise intersections within a list
 of convex sets. Equivalent to calling
@@ -488,6 +494,11 @@ computed within <code class="docutils literal notranslate"><span class="pre">con
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">continuous_revolute_joints</span></code>:</dt><dd><p>is a list of joint indices corresponding to continuous revolute
 joints.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">preprocess_bbox</span></code>:</dt><dd><p>is a flag for whether the function should precompute axis-aligned
+bounding boxes for every set. This can speed up the pairwise
+intersection checks, by determining some sets to be disjoint
+without needing to solve an optimization problem.</p>
 </dd>
 </dl>
 <dl class="field-list simple">

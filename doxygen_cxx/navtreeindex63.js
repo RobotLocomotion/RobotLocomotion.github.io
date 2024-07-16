@@ -1,5 +1,7 @@
 var NAVTREEINDEX63 =
 {
+"structdrake_1_1multibody_1_1parsing_1_1_add_directives.html#aefc35c7944eed319c89bc1b399f0eb67":[3,0,0,8,3,1,2],
+"structdrake_1_1multibody_1_1parsing_1_1_add_frame.html":[3,0,0,8,3,2],
 "structdrake_1_1multibody_1_1parsing_1_1_add_frame.html#a636ceb2573c5bf8b0d3a1e978717dc94":[3,0,0,8,3,2,3],
 "structdrake_1_1multibody_1_1parsing_1_1_add_frame.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,8,3,2,1],
 "structdrake_1_1multibody_1_1parsing_1_1_add_frame.html#a9b45b3e13bd9167aab02e17e08916231":[3,0,0,8,3,2,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX63 =
 "structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data.html":[3,0,0,14,58,0],
 "structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data.html#af29303862b440941e562a6b6a11de551":[3,0,0,14,58,0,0],
 "structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data.html#af3841474533d8bd1db7c131548d0bc27":[3,0,0,14,58,0,1],
-"structdrake_1_1symbolic_1_1_sin_cos.html":[3,0,0,14,63],
-"structdrake_1_1symbolic_1_1_sin_cos.html#a06a14e4a94aab4befcf2506ef07dc38f":[3,0,0,14,63,7],
-"structdrake_1_1symbolic_1_1_sin_cos.html#a0bee03f130c602c5c1fd0521c716ebbd":[3,0,0,14,63,5]
+"structdrake_1_1symbolic_1_1_sin_cos.html":[3,0,0,14,63]
 };

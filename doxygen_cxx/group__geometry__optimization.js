@@ -111,6 +111,7 @@ var group__geometry__optimization =
         [ "GetSolutionPhiXv", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#aa5a517418d1cf8ab7bf2bf38605090e8", null ],
         [ "id", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#ade65736801b111b655c1cc32af8f2a92", null ],
         [ "name", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#ad8227ba86a01f26e4f173cd5e219d5d1", null ],
+        [ "NewSlackVariables", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#afadd51793f68302ecae5d19071082409", null ],
         [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#ae407bda33d0047c6a0301e31126e1bf4", null ],
         [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a65e78fcef5eb74c3f87cdebce36f5de2", null ],
         [ "phi", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#ae27544a079b05b64881722b0002f7b96", null ],

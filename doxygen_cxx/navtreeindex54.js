@@ -1,5 +1,7 @@
 var NAVTREEINDEX54 =
 {
+"inertia__visualizer_8h.html":[4,0,0,13,3],
+"inertia__visualizer_8h.html#ac3899c4392068f63d78217c4634e13a1":[4,0,0,13,3,0],
 "initial__value__problem_8h.html":[4,0,0,12,0,9],
 "initial__value__problem_8h.html#aec4184a3d8bf137b9565c1943acd9f9a":[4,0,0,12,0,9,1],
 "initialization__test__system_8h.html":[4,0,0,12,3,0,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX54 =
 "manipulator__equation__constraint_8h.html":[4,0,0,8,8,3],
 "mass__damper__spring__analytical__solution_8h.html":[4,0,0,8,0,4,0],
 "math_2autodiff_8h.html":[4,0,0,7,0],
-"math_2autodiff_8h.html#a285789fb9b379daf395aeb3b206dae8e":[4,0,0,7,0,6],
-"math_2autodiff_8h.html#a32942f788a67278f27426f128e50e0b2":[4,0,0,7,0,3],
-"math_2autodiff_8h.html#a3e75abd55fa93ee21998756cf8c6e244":[4,0,0,7,0,5]
+"math_2autodiff_8h.html#a285789fb9b379daf395aeb3b206dae8e":[4,0,0,7,0,6]
 };

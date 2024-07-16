@@ -1,5 +1,7 @@
 var NAVTREEINDEX11 =
 {
+"classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html#a26ba28914aa5a6945a50a2221f053d95":[3,0,0,4,1,14,0],
+"classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html#a48e40be6382b66a7fd0cdf4ac8aad2a6":[3,0,0,4,1,14,5],
 "classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html#a621852108208d835ec699ee7ba6a0eea":[3,0,0,4,1,14,4],
 "classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html#a67d251c01ea5f9c0add9099193393f14":[3,0,0,4,1,14,8],
 "classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html#a76414bece6e7dfd551e66a54eb052f7f":[3,0,0,4,1,14,2],
@@ -116,8 +118,8 @@ var NAVTREEINDEX11 =
 "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a27ac7192a38685b7263b3d5a225f7b9d":[1,5,5,12,11],
 "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a35f094b504e82e46e049d81f5e39cc2f":[1,1,1,12,10],
 "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a35f094b504e82e46e049d81f5e39cc2f":[1,5,5,12,10],
-"classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a3f9ab23e6550deb5b0aed63101cac134":[1,1,1,12,9],
 "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a3f9ab23e6550deb5b0aed63101cac134":[1,5,5,12,9],
+"classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a3f9ab23e6550deb5b0aed63101cac134":[1,1,1,12,9],
 "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a684737cf917c2d16d0f69d211f7bb879":[1,1,1,12,2],
 "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a684737cf917c2d16d0f69d211f7bb879":[1,5,5,12,2],
 "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a76bd48df66d7ff6d91b9fa645da35d1f":[1,5,5,12,12],
@@ -247,7 +249,5 @@ var NAVTREEINDEX11 =
 "classdrake_1_1lcm_1_1_drake_lcm.html#a58ffc29be696f46957f858506550bc75":[3,0,0,5,0,6],
 "classdrake_1_1lcm_1_1_drake_lcm.html#a6a8336aee2fe2421bb23d59d145238f2":[3,0,0,5,0,0],
 "classdrake_1_1lcm_1_1_drake_lcm.html#a715527eb52d67dfc6e8c7b740e3b9d61":[3,0,0,5,0,2],
-"classdrake_1_1lcm_1_1_drake_lcm.html#a7678d452d02b7abeed1fcc658e570497":[3,0,0,5,0,5],
-"classdrake_1_1lcm_1_1_drake_lcm.html#a85767dac8b9304854190439c7dcdf7b3":[3,0,0,5,0,12],
-"classdrake_1_1lcm_1_1_drake_lcm.html#a8aee2fd72d82917c6e7f2a4711b03708":[3,0,0,5,0,1]
+"classdrake_1_1lcm_1_1_drake_lcm.html#a7678d452d02b7abeed1fcc658e570497":[3,0,0,5,0,5]
 };

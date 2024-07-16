@@ -203,6 +203,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a09f1477bfa664da452fb472f7c1959cc"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a09f1477bfa664da452fb472f7c1959cc">xv</a> () const</td></tr>
 <tr class="memdesc:a09f1477bfa664da452fb472f7c1959cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the continuous decision variables associated with vertex <code>v</code>.  <a href="#a09f1477bfa664da452fb472f7c1959cc">More...</a><br /></td></tr>
 <tr class="separator:a09f1477bfa664da452fb472f7c1959cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afadd51793f68302ecae5d19071082409"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#afadd51793f68302ecae5d19071082409">NewSlackVariables</a> (<a class="el" href="classint.html">int</a> rows, const std::string &amp;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#ad8227ba86a01f26e4f173cd5e219d5d1">name</a>)</td></tr>
+<tr class="memdesc:afadd51793f68302ecae5d19071082409"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates continuous slack variables for this edge, appending them to an internal vector of existing slack variables.  <a href="#afadd51793f68302ecae5d19071082409">More...</a><br /></td></tr>
+<tr class="separator:afadd51793f68302ecae5d19071082409"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a39b1e3276bba1f810ecbdb36dc74e5"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>, <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a9a39b1e3276bba1f810ecbdb36dc74e5">AddCost</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;e, const std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5b">Transcription</a> &gt; &amp;use_in_transcription={ <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5ba058f4d93de65b4c9dd778be760beaa90">Transcription::kMIP</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5baf0eaaa21b3713d009fbdbbcfc1f8b9b8">Transcription::kRelaxation</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5bae6e3b13561e5aed0294cf5ca5765dd02">Transcription::kRestriction</a>})</td></tr>
 <tr class="memdesc:a9a39b1e3276bba1f810ecbdb36dc74e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a cost to this edge, described by a <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> <code>e</code> containing <em>only</em> elements of <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#aeacbc2abb655b394b863536ddcd78036" title="Returns the continuous decision variables associated with vertex u.">xu()</a> and <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a09f1477bfa664da452fb472f7c1959cc" title="Returns the continuous decision variables associated with vertex v.">xv()</a> as variables.  <a href="#a9a39b1e3276bba1f810ecbdb36dc74e5">More...</a><br /></td></tr>
 <tr class="separator:a9a39b1e3276bba1f810ecbdb36dc74e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -705,6 +708,37 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the string name associated with this edge. </p>
+
+</div>
+</div>
+<a id="afadd51793f68302ecae5d19071082409"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afadd51793f68302ecae5d19071082409">&#9670;&nbsp;</a></span>NewSlackVariables()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> NewSlackVariables </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates continuous slack variables for this edge, appending them to an internal vector of existing slack variables. </p>
+<p>These slack variables can be used in any cost or constraint on this edge only, and allows for modeling more complex costs and constraints. </p>
 
 </div>
 </div>
