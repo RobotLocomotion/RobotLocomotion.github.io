@@ -1,5 +1,7 @@
 var NAVTREEINDEX21 =
 {
+"classdrake_1_1multibody_1_1_tamsi_solver.html#a341180b650aeddec340037d98a48e2cf":[3,0,0,8,99,15],
+"classdrake_1_1multibody_1_1_tamsi_solver.html#a3b3d2411402ef5b22576cabf83a2072d":[3,0,0,8,99,1],
 "classdrake_1_1multibody_1_1_tamsi_solver.html#a4be23a2b9c291aeb80deed52cf42ba6d":[3,0,0,8,99,21],
 "classdrake_1_1multibody_1_1_tamsi_solver.html#a72660d4b210220b673a299c606992f00":[3,0,0,8,99,17],
 "classdrake_1_1multibody_1_1_tamsi_solver.html#a8c6125a41db505a5d9caf8b5d93c591e":[3,0,0,8,99,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX21 =
 "classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#ab8cc6237eaa898941ec89897b9fd0414":[3,0,0,8,0,2,0,8],
 "classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#acabb927a720a280e0de5d5a7ffc586cb":[3,0,0,8,0,2,0,9],
 "classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#ad136510994e0802edec084f8f0dea379":[3,0,0,8,0,2,0,7],
-"classdrake_1_1multibody_1_1benchmarks_1_1pendulum_1_1_pendulum_parameters.html":[3,0,0,8,0,3,0],
-"classdrake_1_1multibody_1_1benchmarks_1_1pendulum_1_1_pendulum_parameters.html#a288b504edf60fa7ec5d642222dec6b14":[3,0,0,8,0,3,0,9],
-"classdrake_1_1multibody_1_1benchmarks_1_1pendulum_1_1_pendulum_parameters.html#a2fc0796487ccc0c7d24e9aa289e4be14":[3,0,0,8,0,3,0,4]
+"classdrake_1_1multibody_1_1benchmarks_1_1pendulum_1_1_pendulum_parameters.html":[3,0,0,8,0,3,0]
 };

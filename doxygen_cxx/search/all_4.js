@@ -305,6 +305,7 @@ var searchData=
   ['discrete_5flyapunov_5fequation_2eh',['discrete_lyapunov_equation.h',['../discrete__lyapunov__equation_8h.html',1,'']]],
   ['discrete_5fstate',['discrete_state',['../classdrake_1_1systems_1_1_system_symbolic_inspector.html#a6b777b78d78d419146fa3c0d80efcff9',1,'drake::systems::SystemSymbolicInspector']]],
   ['discrete_5fstate_5fticket',['discrete_state_ticket',['../classdrake_1_1systems_1_1_system_base.html#adf86073429b07d388b0157956bfdbac6',1,'drake::systems::SystemBase']]],
+  ['discrete_5fstep_5fmemory_2eh',['discrete_step_memory.h',['../discrete__step__memory_8h.html',1,'']]],
   ['discrete_20systems',['Discrete Systems',['../group__discrete__systems.html',1,'']]],
   ['discrete_5fsystems_2eh',['discrete_systems.h',['../discrete__systems_8h.html',1,'']]],
   ['discrete_5ftime_5fdelay_2eh',['discrete_time_delay.h',['../discrete__time__delay_8h.html',1,'']]],

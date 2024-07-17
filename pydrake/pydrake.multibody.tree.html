@@ -750,10 +750,6 @@ geometry::Sphere, etc.) For meshes, it depends on how the mesh is
 defined. For more discussion on the nuances of geometry::Mesh and
 geometry::Convex calculations CalcSpatialInertia(const
 geometry::TriangleSurfaceMesh&lt;double&gt;&amp;,double) “see below”.</p>
-<p>Note: Spatial inertia calculations for the geometry::Convex type do
-not currently require that the underlying mesh actually be convex.
-Although certain collision calculations involving geometry::Convex may
-use the mesh’s convex hull, this function uses the <em>actual</em> mesh.</p>
 <dl class="simple">
 <dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>The spatial inertia of the hypothetical body implied by the given
 <code class="docutils literal notranslate"><span class="pre">shape</span></code>.</p>

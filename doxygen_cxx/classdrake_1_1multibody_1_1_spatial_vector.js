@@ -14,7 +14,7 @@ var classdrake_1_1multibody_1_1_spatial_vector =
     [ "get_coeffs", "classdrake_1_1multibody_1_1_spatial_vector.html#ab09bd8d0cfc7e7ae4853c5f57973254a", null ],
     [ "get_coeffs", "classdrake_1_1multibody_1_1_spatial_vector.html#a929ee35f2e827f504f3557b18b3c40c8", null ],
     [ "GetMaximumAbsoluteDifferences", "classdrake_1_1multibody_1_1_spatial_vector.html#a3ec0b46e26e4295575e966033fb79f4c", null ],
-    [ "IsApprox", "classdrake_1_1multibody_1_1_spatial_vector.html#adecee900de2aa10bca5a4e9e36121b25", null ],
+    [ "IsApprox", "classdrake_1_1multibody_1_1_spatial_vector.html#ac07d322df9b6d0290f529b978225802d", null ],
     [ "IsNearlyEqualWithinAbsoluteTolerance", "classdrake_1_1multibody_1_1_spatial_vector.html#a1e1aab695295b4f88e6f0bfd5271357c", null ],
     [ "mutable_data", "classdrake_1_1multibody_1_1_spatial_vector.html#a0956f52a2d65962e383a87b3e6c3a30b", null ],
     [ "operator *=", "classdrake_1_1multibody_1_1_spatial_vector.html#a6947e18a0d4a01796dba364cf898084b", null ],

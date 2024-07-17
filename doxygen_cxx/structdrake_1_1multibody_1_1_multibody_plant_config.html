@@ -184,6 +184,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:aa216048ea5d8bbcef641752b6d744ba8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_multibody_plant_config.html#aa216048ea5d8bbcef641752b6d744ba8">time_step</a> {0.001}</td></tr>
 <tr class="memdesc:aa216048ea5d8bbcef641752b6d744ba8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configures the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a47a63154823dffd5838329527aafbd58">MultibodyPlant::MultibodyPlant()</a> constructor time_step.  <a href="#aa216048ea5d8bbcef641752b6d744ba8">More...</a><br /></td></tr>
 <tr class="separator:aa216048ea5d8bbcef641752b6d744ba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64a4087244dd4a8102ef1bb4abafecc4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_multibody_plant_config.html#a64a4087244dd4a8102ef1bb4abafecc4">use_sampled_output_ports</a> {true}</td></tr>
+<tr class="memdesc:a64a4087244dd4a8102ef1bb4abafecc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configures the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#adb2f51f2f513478a97b0175bff3a65ae" title="(Advanced) For a discrete-time plant, configures whether the output ports are sampled (the default) o...">MultibodyPlant::SetUseSampledOutputPorts()</a>.  <a href="#a64a4087244dd4a8102ef1bb4abafecc4">More...</a><br /></td></tr>
+<tr class="separator:a64a4087244dd4a8102ef1bb4abafecc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36743d8dd30dc7ff0ca3778564e2a90f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_multibody_plant_config.html#a36743d8dd30dc7ff0ca3778564e2a90f">penetration_allowance</a> {0.001}</td></tr>
 <tr class="memdesc:a36743d8dd30dc7ff0ca3778564e2a90f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configures the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a1e5e058b968b927f6342a8127aea663a" title="Sets the penetration allowance used to estimate the coefficients in the penalty method used to impose...">MultibodyPlant::set_penetration_allowance()</a>.  <a href="#a36743d8dd30dc7ff0ca3778564e2a90f">More...</a><br /></td></tr>
 <tr class="separator:a36743d8dd30dc7ff0ca3778564e2a90f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -402,6 +405,23 @@ Public Attributes</h2></td></tr>
 
 <p>Configures the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a47a63154823dffd5838329527aafbd58">MultibodyPlant::MultibodyPlant()</a> constructor time_step. </p>
 <p>There is no default value for this within <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> itself, so here we choose a nominal value (a discrete system, with a 1ms periodic update) as a reasonably conservative estimate that works in many cases. </p>
+
+</div>
+</div>
+<a id="a64a4087244dd4a8102ef1bb4abafecc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64a4087244dd4a8102ef1bb4abafecc4">&#9670;&nbsp;</a></span>use_sampled_output_ports</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool use_sampled_output_ports {true}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configures the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#adb2f51f2f513478a97b0175bff3a65ae" title="(Advanced) For a discrete-time plant, configures whether the output ports are sampled (the default) o...">MultibodyPlant::SetUseSampledOutputPorts()</a>. </p>
+<p>Ignored when the time_step is zero. </p>
 
 </div>
 </div>

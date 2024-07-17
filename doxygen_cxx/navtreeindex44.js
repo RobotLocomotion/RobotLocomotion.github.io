@@ -1,5 +1,7 @@
 var NAVTREEINDEX44 =
 {
+"classdrake_1_1systems_1_1analysis_1_1test_1_1_stiff_double_mass_spring_system.html#afc5251913437ef2de4b6e8b5a2cbfbed":[3,0,0,15,0,0,2,9],
+"classdrake_1_1systems_1_1analysis__test_1_1_cubic_scalar_system.html":[3,0,0,15,1,0],
 "classdrake_1_1systems_1_1analysis__test_1_1_cubic_scalar_system.html#a5d10bc0c5eae442bf40d94e8200b3460":[3,0,0,15,1,0,1],
 "classdrake_1_1systems_1_1analysis__test_1_1_cubic_scalar_system.html#a7a03b8870d44742ad1da82331acb81dd":[3,0,0,15,1,0,0],
 "classdrake_1_1systems_1_1analysis__test_1_1_implicit_integrator_test.html":[3,0,0,15,1,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX44 =
 "classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html":[1,2,6,1],
 "classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html#a07b0cd6338cce59ac34ac8293f8741c3":[1,2,6,1,5],
 "classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html#a0ce12746baa534e50bbaf7d77c309247":[1,2,6,1,13],
-"classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html#a2f773925763b713c44fcc47782e23a53":[1,2,6,1,15],
-"classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html#a38303f9274dfbaa0c25a5f2b53aeaaea":[1,2,6,1,12],
-"classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html#a3d596fdb66187825a3bb02c9bc33d9a3":[1,2,6,1,8]
+"classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html#a2f773925763b713c44fcc47782e23a53":[1,2,6,1,15]
 };

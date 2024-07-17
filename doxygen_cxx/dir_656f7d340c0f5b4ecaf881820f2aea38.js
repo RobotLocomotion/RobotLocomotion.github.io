@@ -18,6 +18,7 @@ var dir_656f7d340c0f5b4ecaf881820f2aea38 =
     ] ],
     [ "discrete_contact_data.h", "discrete__contact__data_8h.html", null ],
     [ "discrete_contact_pair.h", "discrete__contact__pair_8h.html", null ],
+    [ "discrete_step_memory.h", "discrete__step__memory_8h.html", null ],
     [ "discrete_update_manager.h", "discrete__update__manager_8h.html", "discrete__update__manager_8h" ],
     [ "dummy_physical_model.h", "dummy__physical__model_8h.html", "dummy__physical__model_8h" ],
     [ "externally_applied_spatial_force.h", "externally__applied__spatial__force_8h.html", [

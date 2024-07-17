@@ -1,5 +1,7 @@
 var NAVTREEINDEX49 =
 {
+"dir_41feb80e12a36dca7cd3992ad22e20a8.html":[4,0,0,3,0],
+"dir_474aa644b99dd5481f12728ecfc3f855.html":[4,0,0,3,11,3],
 "dir_47be7cb145c8f2c349a22ea5364e6acd.html":[4,0,0,3,4],
 "dir_48e4d4a473e039105b12a2118c672ffe.html":[4,0,0,1,1],
 "dir_4aa43041a9cb7441d26dd3284a5677ba.html":[4,0,0,3,3],
@@ -105,11 +107,12 @@ var NAVTREEINDEX49 =
 "discrete__derivative_8h.html":[4,0,0,12,6,6],
 "discrete__lyapunov__equation_8h.html":[4,0,0,7,12],
 "discrete__lyapunov__equation_8h.html#a41733a5b284046800224cd293e055ff7":[4,0,0,7,12,0],
+"discrete__step__memory_8h.html":[4,0,0,8,10,16],
 "discrete__systems_8h.html":[4,0,0,12,9],
 "discrete__time__delay_8h.html":[4,0,0,12,6,7],
 "discrete__time__trajectory_8h.html":[4,0,0,1,5,4],
-"discrete__update__manager_8h.html":[4,0,0,8,10,16],
-"discrete__update__manager_8h.html#a873b31894c71d649596f62315eff5bb4":[4,0,0,8,10,16,0],
+"discrete__update__manager_8h.html":[4,0,0,8,10,17],
+"discrete__update__manager_8h.html#a873b31894c71d649596f62315eff5bb4":[4,0,0,8,10,17,0],
 "discrete__values_8h.html":[4,0,0,12,3,18],
 "discrete__values_8h.html#accf0d259e0fc0e2be1cd2d93e3f6fea4":[4,0,0,12,3,18,1],
 "distance__and__interpolation__provider_8h.html":[4,0,0,10,10],
@@ -165,8 +168,8 @@ var NAVTREEINDEX49 =
 "drake__visualizer_8h.html#a25bbce5543d108e2a4675813e3d6c5f1":[4,0,0,4,12,4],
 "drake__visualizer_8h.html#acbab8995daa433cebfc335ffe8ae8fd0":[4,0,0,4,12,3],
 "drake__visualizer__params_8h.html":[4,0,0,4,13],
-"dummy__physical__model_8h.html":[4,0,0,8,10,17],
-"dummy__physical__model_8h.html#a62f76d0e3f734aa4c0443f71f30cbbfe":[4,0,0,8,10,17,0],
+"dummy__physical__model_8h.html":[4,0,0,8,10,18],
+"dummy__physical__model_8h.html#a62f76d0e3f734aa4c0443f71f30cbbfe":[4,0,0,8,10,18,0],
 "dummy__render__engine_8h.html":[4,0,0,4,8,1],
 "dummy__value_8h.html":[4,0,0,1,27],
 "dynamic__programming_8h.html":[4,0,0,12,1,2],
@@ -246,8 +249,5 @@ var NAVTREEINDEX49 =
 "event_8h.html#a59b7f49353f2a99b6c22d2eaae0fe9e9a1800fd44ac807b793ceba2dd9cef1e25":[4,0,0,12,3,19,14,1],
 "event_8h.html#a59b7f49353f2a99b6c22d2eaae0fe9e9a25c2dc47991b3df171ed5192bcf70390":[4,0,0,12,3,19,14,0],
 "event_8h.html#a59b7f49353f2a99b6c22d2eaae0fe9e9a4ee52a6184757eae288c6bfaca2b3cc8":[4,0,0,12,3,19,14,3],
-"event_8h.html#a59b7f49353f2a99b6c22d2eaae0fe9e9a74e1dac7f98f52df26d510f93c36ae34":[4,0,0,12,3,19,14,6],
-"event_8h.html#a59b7f49353f2a99b6c22d2eaae0fe9e9aa4dadcf41a1fb6841557aad7688dc1a4":[4,0,0,12,3,19,14,4],
-"event_8h.html#a59b7f49353f2a99b6c22d2eaae0fe9e9af8ece195be5dd5e820bdeee7ad21a4bf":[4,0,0,12,3,19,14,2],
-"event_8h.html#ac84c84e9fbb652ce19106e2f2e1f3d15":[4,0,0,12,3,19,13]
+"event_8h.html#a59b7f49353f2a99b6c22d2eaae0fe9e9a74e1dac7f98f52df26d510f93c36ae34":[4,0,0,12,3,19,14,6]
 };

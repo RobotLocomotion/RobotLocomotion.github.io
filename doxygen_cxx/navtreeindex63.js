@@ -1,5 +1,9 @@
 var NAVTREEINDEX63 =
 {
+"structdrake_1_1multibody_1_1parsing_1_1_add_directives.html":[3,0,0,8,3,1],
+"structdrake_1_1multibody_1_1parsing_1_1_add_directives.html#a7928432abfdcccb409e49b309ebf3026":[3,0,0,8,3,1,3],
+"structdrake_1_1multibody_1_1parsing_1_1_add_directives.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,8,3,1,1],
+"structdrake_1_1multibody_1_1parsing_1_1_add_directives.html#ac532c4b500b1a85ea22217f2c65a70ed":[3,0,0,8,3,1,0],
 "structdrake_1_1multibody_1_1parsing_1_1_add_directives.html#aefc35c7944eed319c89bc1b399f0eb67":[3,0,0,8,3,1,2],
 "structdrake_1_1multibody_1_1parsing_1_1_add_frame.html":[3,0,0,8,3,2],
 "structdrake_1_1multibody_1_1parsing_1_1_add_frame.html#a636ceb2573c5bf8b0d3a1e978717dc94":[3,0,0,8,3,2,3],
@@ -245,9 +249,5 @@ var NAVTREEINDEX63 =
 "structdrake_1_1symbolic_1_1_basis_element_graded_reverse_lex_order.html":[3,0,0,14,0],
 "structdrake_1_1symbolic_1_1_basis_element_graded_reverse_lex_order.html#a27f28cb60a97c16b3dd9b30cb72b2a8f":[3,0,0,14,0,0],
 "structdrake_1_1symbolic_1_1_graded_reverse_lex_order.html":[3,0,0,14,54],
-"structdrake_1_1symbolic_1_1_graded_reverse_lex_order.html#af1b666b4bbbf1ba4ad66a257f92e73a4":[3,0,0,14,54,0],
-"structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data.html":[3,0,0,14,58,0],
-"structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data.html#af29303862b440941e562a6b6a11de551":[3,0,0,14,58,0,0],
-"structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data.html#af3841474533d8bd1db7c131548d0bc27":[3,0,0,14,58,0,1],
-"structdrake_1_1symbolic_1_1_sin_cos.html":[3,0,0,14,63]
+"structdrake_1_1symbolic_1_1_graded_reverse_lex_order.html#af1b666b4bbbf1ba4ad66a257f92e73a4":[3,0,0,14,54,0]
 };

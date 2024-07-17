@@ -1812,11 +1812,22 @@ get_state_output_port(), get_actuation_input_port().</p>
 <p>The state of a multibody system <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">[q;</span> <span class="pre">v]</span></code> is given by its
 generalized positions vector q, of size <code class="docutils literal notranslate"><span class="pre">nq</span></code> (see num_positions()),
 and by its generalized velocities vector v, of size <code class="docutils literal notranslate"><span class="pre">nv</span></code> (see
-num_velocities()). As a Drake systems::System “System”, MultibodyPlant
-implements the governing equations for a multibody dynamical system in
-the form <code class="docutils literal notranslate"><span class="pre">ẋ</span> <span class="pre">=</span> <span class="pre">f(t,</span> <span class="pre">x,</span> <span class="pre">u)</span></code> with t being time and u the actuation
-forces. The governing equations for the dynamics of a multibody system
-modeled with MultibodyPlant are [Featherstone 2008, Jain 2010]:</p>
+num_velocities()).</p>
+<p>A MultibodyPlant can be constructed to be either continuous or
+discrete. The choice is indicated by the time_step passed to the
+constructor – a non-zero time_step indicates a discrete plant, while
+a zero time_step indicates continuous. A systems::Simulator
+“Simulator” will step a discrete plant using the indicated time_step,
+but will allow a numerical integrator to choose how to advance time
+for a continuous MultibodyPlant.</p>
+<p>We’ll discuss continuous plant dynamics in this section. Discrete
+dynamics is more complicated and gets its own section below.</p>
+<p>As a Drake systems::System “System”, MultibodyPlant implements the
+governing equations for a multibody dynamical system in the form <code class="docutils literal notranslate"><span class="pre">ẋ</span>
+<span class="pre">=</span> <span class="pre">f(t,</span> <span class="pre">x,</span> <span class="pre">u)</span></code> with t being time and u external inputs such as
+actuation forces. The governing equations for the dynamics of a
+multibody system modeled with MultibodyPlant are [Featherstone 2008,
+Jain 2010]:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>q̇ = N(q)v
 (1)    M(q)v̇ + C(q, v)v = τ
 </pre></div>
@@ -1831,7 +1842,128 @@ generalized positions) and the generalized velocities v, [Seth 2010].
 hand side of Eq. (1) is the system’s generalized forces. These
 incorporate gravity, springs, externally applied body forces,
 constraint forces, and contact forces.</p>
-<p><a href="#id5"><span class="problematic" id="id6">**</span></a>** Actuation</p>
+<p><a href="#id5"><span class="problematic" id="id6">**</span></a>** Discrete system dynamics</p>
+<p>We’ll start with the basic difference equation interpretation of a
+discrete plant and then explain some Drake-specific subtleties.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We use “kinematics” here to refer to quantities that involve only
+position or velocity, and “dynamics” to refer to quantities that
+also involve forces.</p>
+</div>
+<p>By default, a discrete MultibodyPlant has these update dynamics:</p>
+<p>x[0] = initial kinematics state variables x (={q, v}), s s[0] = empty
+(no sample yet)</p>
+<p>s[n+1] = g(t[n], x[n], u[n]) record sample x[n+1] = f(t[n], x[n],
+u[n]) update kinematics yd[n+1] = gd(s) dynamic outputs use sampled
+values yk[n+1] = gk(x) kinematic outputs use current x</p>
+<p>Optionally, output port sampling can be disabled. In that case we
+have:</p>
+<p>x[n+1] = f(t[n], x[n], u[n]) update kinematics yd[n+1] = gd(g(t, x,
+u)) dynamic outputs use current values yk[n+1] = gk(x) kinematic
+outputs use current x</p>
+<p>We’re using <code class="docutils literal notranslate"><span class="pre">yd</span></code> and <code class="docutils literal notranslate"><span class="pre">yk</span></code> above to represent the calculated values
+of dynamic and kinematic output ports, resp. Kinematic output ports
+are those that depend only on position and velocity: <code class="docutils literal notranslate"><span class="pre">state</span></code>,
+<cite>body_poses</cite>, <code class="docutils literal notranslate"><span class="pre">body_spatial_velocities</span></code>. Everything else depends on
+forces so is a dynamic output port: <code class="docutils literal notranslate"><span class="pre">body_spatial_accelerations</span></code>,
+<cite>generalized_acceleration</cite>, <code class="docutils literal notranslate"><span class="pre">net_actuation</span></code>, <cite>reaction_forces</cite>, and
+<code class="docutils literal notranslate"><span class="pre">contact_results</span></code>.</p>
+<p>Use the function SetUseSampledOutputPorts() to choose which dynamics
+you prefer. The default behavior (output port sampling) is more
+efficient for simulation, but use slightly-different kinematics for
+the dynamic output port computations versus the kinematic output
+ports. Disabling output port sampling provides “live” output port
+results that are recalculated from the current state and inputs
+whenever changes occur. It also eliminates the sampling state variable
+(s above). Note that kinematic output ports (that is, those depending
+only on position and velocity) are always “live” – they are
+calculated as needed from the current (updated) state.</p>
+<p>The reason that the default mode is more efficient for simulation is
+that the sample variable s records expensive-to-compute results (such
+as hydroelastic contact forces) that are needed to advance the state
+x. Those results are thus available for free at the start of step n.
+If instead we wait until after the state is updated to n+1, we would
+have to recalculate those expensive results at the new state in order
+to report them. Thus sampling means the output ports show the results
+that were calculated using kinematics values x[n], although the
+Context has been updated to kinematics values x[n+1]. If that isn’t
+tolerable you should disable output port sampling. You can also force
+an update to occur using ExecuteForcedEvents().</p>
+<p>See output_port_sampling “Output port sampling” below for more
+practical considerations.</p>
+<p>Minor details most users won’t care about:</p>
+<ul class="simple">
+<li><p>The sample variable s is a Drake Abstract state variable. When it is</p></li>
+</ul>
+<p>present, the plant update is performed using an Unrestricted update; when it
+is absent we are able to use a Discrete update. Some Drake features (e.g.
+linearization of discrete systems) may be restricted to systems that use
+only Discrete (numeric) state variables and Discrete update.
+- The sample variable s is used only by output ports. It does not affect the
+behavior of any MultibodyPlant “Calc” or “Eval” functions – those are
+always calculated using the current values of time, kinematic state, and
+input port values.</p>
+<p><a href="#id7"><span class="problematic" id="id8">**</span></a>** Output port sampling</p>
+<p>As described in mbp_discrete_dynamics “Discrete system dynamics”
+above, the semantics of certain MultibodyPlant output ports depends on
+whether the plant is configured to advance using continuous time
+integration or discrete time steps (see is_discrete()). This section
+explains the details, focusing on the practical aspects moreso than
+the equations.</p>
+<p>Output ports that only depend on the [q, v] kinematic state (such as
+get_body_poses_output_port() or
+get_body_spatial_velocities_output_port()) do <em>not</em> change semantics
+for continuous vs discrete time. In all cases, the output value is a
+function of the kinematic state in the context.</p>
+<p>Output ports that incorporate dynamics (i.e., forces) <em>do</em> change
+semantics based on the plant mode. Imagine that the
+get_applied_spatial_force_input_port() provides a continuously
+time-varying input force. The
+get_body_spatial_accelerations_output_port() output is dependent on
+that force. We could return a snapshot of the acceleration that was
+used in the last time step, or we could recalculate the acceleration
+to immediately reflect the changing forces. We call the former a
+“sampled” port and the latter a “live” port.</p>
+<p>For a continuous-time plant, there is no distinction – the output
+port is always live – it immediately reflects the instantaneous input
+value. It is a “direct feedthrough” output port (see
+SystemBase::GetDirectFeedthroughs()).</p>
+<p>For a discrete-time plant, the user can choose whether the output
+should be sampled or live: Use the function SetUseSampledOutputPorts()
+to change whether output ports are sampled or not, and
+has_sampled_output_ports() to check the current setting. When sampling
+is disabled, the only state in the context is the kinematic [q, v], so
+dynamics output ports will always reflect the instantaneous answer
+(i.e., direct feedthrough). When sampling is enabled (the default),
+the plant state incorporates a snapshot of the most recent step’s
+kinematics and dynamics, and the output ports will reflect that
+sampled state (i.e., not direct feedthrough). For a detailed
+discussion, see mbp_discrete_dynamics “Discrete system dynamics”.</p>
+<p>For a discrete-time plant, the sampled outputs are generally <em>much</em>
+faster to calculate than the feedthrough outputs when any inputs ports
+are changing values faster than the discrete time step, e.g., during a
+simulation. When input ports are fixed, or change at the time step
+rate (e.g., during motion planning), sampled vs feedthrough will have
+similar computational performance.</p>
+<p>Direct plant API function calls (e.g.,
+EvalBodySpatialAccelerationInWorld()) that depend on forces always use
+the instantaneous (not sampled) accelerations.</p>
+<p>Here are some practical tips that might help inform your particular
+situation:</p>
+<p>(1) If you need a minimal-state representation for motion planning,
+mathematical optimization, or similar, then you can either use a
+continuous-time plant or set the config option
+<code class="docutils literal notranslate"><span class="pre">use_sampled_output_ports=false</span></code> on a discrete-time plant.</p>
+<p>(2) By default, setting the positions of a discrete-time plant in the
+Context will not have any effect on the dynamics-related output ports,
+e.g., the contact results will not change. If you need to see changes
+to outputs without running the plant in a Simulator, then you can
+either use a continuous-time plant, set the config option
+<code class="docutils literal notranslate"><span class="pre">use_sampled_output_ports=false</span></code>, or use ExecuteForcedEvents() to
+force a dynamics step and then the outputs (and positions) will
+change.</p>
+<p><a href="#id9"><span class="problematic" id="id10">**</span></a>** Actuation</p>
 <p>In a MultibodyPlant model an actuator can be added as a JointActuator,
 see AddJointActuator(). The plant declares actuation input ports to
 provide feedforward actuation, both for the MultibodyPlant as a whole
@@ -1902,7 +2034,7 @@ controlled actuators”.</p>
 <p>** Using PD controlled actuators</p>
 <p>While PD controllers can be modeled externally and be connected to the
 MultibodyPlant model via the get_actuation_input_port(), simulation
-stability at discrete time steps can be compromised for high
+stability at discrete-time steps can be compromised for high
 controller gains. For such cases, simulation stability and robustness
 can be improved significantly by moving your PD controller into the
 plant where the discrete solver can strongly couple controller and
@@ -1984,7 +2116,7 @@ a given actuator.</p>
 Joint::Lock()), and thus they have no effect on the actuation
 output.</p>
 </div>
-<p><a href="#id7"><span class="problematic" id="id8">**</span></a>** Loading models from SDFormat files</p>
+<p><a href="#id11"><span class="problematic" id="id12">**</span></a>** Loading models from SDFormat files</p>
 <p>Drake has the capability to load multibody models from SDFormat and
 URDF files. Consider the example below which loads an acrobot model:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">acrobot</span><span class="p">;</span><span class="w"></span>
@@ -2004,7 +2136,7 @@ order to load multiple model instances. Other methods are available on
 Parser such as AddModels() which allows creating model instances per
 each <code class="docutils literal notranslate"><span class="pre">&lt;model&gt;</span></code> tag found in the file. Please refer to each of these
 methods’ documentation for further details.</p>
-<p><a href="#id9"><span class="problematic" id="id10">**</span></a>** Working with SceneGraph</p>
+<p><a href="#id13"><span class="problematic" id="id14">**</span></a>** Working with SceneGraph</p>
 <p>** Adding a MultibodyPlant connected to a SceneGraph to your Diagram</p>
 <p>Probably the simplest way to add and wire up a MultibodyPlant with a
 SceneGraph in your Diagram is using AddMultibodyPlantSceneGraph().</p>
@@ -2079,13 +2211,13 @@ geometry::ProximityProperties by geometry::SceneGraph. These
 properties can be obtained before or after context creation through
 geometry::SceneGraphInspector APIs as outlined below. MultibodyPlant
 expects the following properties for point contact modeling:</p>
-<p><a href="#id91"><span class="problematic" id="id92">|Group name|Property Name|Required|Property Type|Property Description|</span></a>
-<a href="#id93"><span class="problematic" id="id94">|:--------:|</span></a>:———–:<a href="#id95"><span class="problematic" id="id96">|:------:|</span></a>:—————-:<a href="#id97"><span class="problematic" id="id98">|:-------------------|</span></a>
-<a href="#id99"><span class="problematic" id="id100">|material|coulomb_friction|yes¹|CoulombFriction&lt;T&gt;|Static and Dynamic
-friction.|</span></a> <a href="#id101"><span class="problematic" id="id102">|material|point_contact_stiffness|no²|T|</span></a> Compliant point
-contact stiffness.| <a href="#id103"><span class="problematic" id="id104">|material|hunt_crossley_dissipation |no²⁴|T|</span></a>
+<p><a href="#id103"><span class="problematic" id="id104">|Group name|Property Name|Required|Property Type|Property Description|</span></a>
+<a href="#id105"><span class="problematic" id="id106">|:--------:|</span></a>:———–:<a href="#id107"><span class="problematic" id="id108">|:------:|</span></a>:—————-:<a href="#id109"><span class="problematic" id="id110">|:-------------------|</span></a>
+<a href="#id111"><span class="problematic" id="id112">|material|coulomb_friction|yes¹|CoulombFriction&lt;T&gt;|Static and Dynamic
+friction.|</span></a> <a href="#id113"><span class="problematic" id="id114">|material|point_contact_stiffness|no²|T|</span></a> Compliant point
+contact stiffness.| <a href="#id115"><span class="problematic" id="id116">|material|hunt_crossley_dissipation |no²⁴|T|</span></a>
 Compliant contact dissipation.|
-<a href="#id105"><span class="problematic" id="id106">|material|relaxation_time|yes³⁴|T|Linear Kelvin–Voigt model
+<a href="#id117"><span class="problematic" id="id118">|material|relaxation_time|yes³⁴|T|Linear Kelvin–Voigt model
 parameter.|</span></a></p>
 <p>¹ Collision geometry is required to be registered with a
 geometry::ProximityProperties object that contains the (“material”,
@@ -2144,7 +2276,7 @@ as:</p>
 <span class="s">&quot;coulomb_friction&quot;</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-</details><p><a href="#id11"><span class="problematic" id="id12">**</span></a>** Working with MultibodyElement parameters Several
+</details><p><a href="#id15"><span class="problematic" id="id16">**</span></a>** Working with MultibodyElement parameters Several
 MultibodyElements expose parameters, allowing the user flexible
 modification of some aspects of the plant’s model, post
 systems::Context creation. For details, refer to the documentation for
@@ -2192,7 +2324,7 @@ take derivatives with respect to one of the bodies’ masses:</p>
 <span class="n">plant_autodiff</span><span class="o">-&gt;</span><span class="n">CalcMassMatrix</span><span class="p">(</span><span class="o">*</span><span class="n">context_autodiff</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">M_autodiff</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-</details><p><a href="#id13"><span class="problematic" id="id14">**</span></a>** Adding modeling elements</p>
+</details><p><a href="#id17"><span class="problematic" id="id18">**</span></a>** Adding modeling elements</p>
 <p>Add multibody elements to a MultibodyPlant with methods like:</p>
 <ul class="simple">
 <li><p>Bodies: AddRigidBody()</p></li>
@@ -2201,11 +2333,11 @@ take derivatives with respect to one of the bodies’ masses:</p>
 </ul>
 <p>All modeling elements <strong>must</strong> be added before Finalize() is called.
 See mbp_finalize_stage “Finalize stage” for a discussion.</p>
-<p><a href="#id15"><span class="problematic" id="id16">**</span></a>** Modeling contact</p>
+<p><a href="#id19"><span class="problematic" id="id20">**</span></a>** Modeling contact</p>
 <p>Please refer to drake_contacts “Contact Modeling in Drake” for details
 on the available approximations, setup, and considerations for a
 multibody simulation with frictional contact.</p>
-<p><a href="#id17"><span class="problematic" id="id18">**</span></a>** Energy and Power</p>
+<p><a href="#id21"><span class="problematic" id="id22">**</span></a>** Energy and Power</p>
 <p>MultibodyPlant implements the System energy and power methods, with
 some limitations. - Kinetic energy: fully implemented. - Potential
 energy and conservative power: currently include only gravity and
@@ -2216,7 +2348,7 @@ objects; actuation and input port forces, joint damping, and
 dissipation from joint limits, friction, and contact dissipation are
 not included.</p>
 <p>See Drake issue #12942 for more discussion.</p>
-<p><a href="#id19"><span class="problematic" id="id20">**</span></a>** Finalize() stage</p>
+<p><a href="#id23"><span class="problematic" id="id24">**</span></a>** Finalize() stage</p>
 <p>Once the user is done adding modeling elements and registering
 geometry, a call to Finalize() must be performed. This call will: -
 Build the underlying tree structure of the multibody model, - declare
@@ -2225,7 +2357,7 @@ declare collision filters to ignore collisions among rigid bodies: -
 between rigid bodies connected by a joint, - within subgraphs of
 welded rigid bodies. Note that MultibodyPlant will <em>not</em> introduce
 <em>any</em> collision filters on deformable bodies.</p>
-<p><a href="#id21"><span class="problematic" id="id22">**</span></a>** References</p>
+<p><a href="#id25"><span class="problematic" id="id26">**</span></a>** References</p>
 <ul class="simple">
 <li><p>[Featherstone 2008] Featherstone, R., 2008.</p></li>
 </ul>
@@ -2434,7 +2566,7 @@ to be strictly positive.</p>
 <span class="sig-name descname"><span class="pre">AddForceElement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_element</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ForceElement" title="pydrake.multibody.tree.ForceElement"><span class="pre">pydrake.multibody.tree.ForceElement</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ForceElement" title="pydrake.multibody.tree.ForceElement"><span class="pre">pydrake.multibody.tree.ForceElement</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.AddForceElement" title="Permalink to this definition"></a></dt>
 <dd><p>Adds a new force element model of type <code class="docutils literal notranslate"><span class="pre">ForceElementType</span></code> to
 <code class="docutils literal notranslate"><span class="pre">this</span></code> MultibodyPlant. The arguments to this method <code class="docutils literal notranslate"><span class="pre">args</span></code> are
-forwarded to <a href="#id23"><span class="problematic" id="id24">``</span></a>ForceElementType`’s constructor.</p>
+forwarded to <a href="#id27"><span class="problematic" id="id28">``</span></a>ForceElementType`’s constructor.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">args</span></code>:</dt><dd><p>Zero or more parameters provided to the constructor of the new
 force element. It must be the case that
@@ -3218,7 +3350,7 @@ in 𝑠. The Jacobian is a function of only generalized positions q
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The world_body() is ignored. <a href="#id139"><span class="problematic" id="id140">J𝑠_v_ACcm_</span></a> = ∑ (mᵢ Jᵢ) / mₛ, where mₛ
+<p>The world_body() is ignored. <a href="#id151"><span class="problematic" id="id152">J𝑠_v_ACcm_</span></a> = ∑ (mᵢ Jᵢ) / mₛ, where mₛ
 = ∑ mᵢ, mᵢ is the mass of the iᵗʰ body contained in
 model_instances, and Jᵢ is Bcm’s translational velocity Jacobian
 in frame A, expressed in frame E (Bcm is the center of mass of the
@@ -4058,6 +4190,10 @@ frame. You can obtain the spatial acceleration <code class="docutils literal not
 spatial accelerations is indexed by BodyIndex, and it has size
 num_bodies(). BodyIndex “zero” (0) always corresponds to the world
 body, with zero spatial acceleration at all times.</p>
+<p>In a discrete-time plant, the use_sampled_output_ports setting affects
+the output of this port. See output_port_sampling “Output port
+sampling” for details. When sampling is enabled and the plant has not
+yet taken a step, the output value will be all zeros.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if called pre-finalize.</strong> – </p>
@@ -4124,6 +4260,10 @@ the smallest of the two time scales <code class="docutils literal notranslate"><
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.get_contact_results_output_port">
 <span class="sig-name descname"><span class="pre">get_contact_results_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.get_contact_results_output_port" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a constant reference to the port that outputs ContactResults.</p>
+<p>In a discrete-time plant, the use_sampled_output_ports setting affects
+the output of this port. See output_port_sampling “Output port
+sampling” for details. When sampling is enabled and the plant has not
+yet taken a step, the output value will be empty (no contacts).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong><strong>, </strong><strong>see Finalize</strong><strong>(</strong><strong>)</strong><strong></strong> – </p>
@@ -4241,6 +4381,10 @@ models.</p>
 </ol>
 <p>Returns a constant reference to the output port for generalized
 accelerations v̇ of the model.</p>
+<p>In a discrete-time plant, the use_sampled_output_ports setting affects
+the output of this port. See output_port_sampling “Output port
+sampling” for details. When sampling is enabled and the plant has not
+yet taken a step, the output value will be all zeros.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
 </dd>
@@ -4255,6 +4399,10 @@ accelerations v̇ of the model.</p>
 </ol>
 <p>Returns a constant reference to the output port for the generalized
 accelerations v̇ᵢ ⊆ v̇ for model instance i.</p>
+<p>In a discrete-time plant, the use_sampled_output_ports setting affects
+the output of this port. See output_port_sampling “Output port
+sampling” for details. When sampling is enabled and the plant has not
+yet taken a step, the output value will be all zeros.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
 </dd>
@@ -4274,6 +4422,10 @@ accelerations v̇ᵢ ⊆ v̇ for model instance i.</p>
 <span class="sig-name descname"><span class="pre">get_generalized_contact_forces_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.get_generalized_contact_forces_output_port" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a constant reference to the output port of generalized contact
 forces for a specific model instance.</p>
+<p>In a discrete-time plant, the use_sampled_output_ports setting affects
+the output of this port. See output_port_sampling “Output port
+sampling” for details. When sampling is enabled and the plant has not
+yet taken a step, the output value will be all zeros.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
 </dd>
@@ -4393,6 +4545,10 @@ valued port. The actuation value for a particular actuator can be
 found at offset JointActuator::input_start() in this vector. Models
 that include PD controllers will include their contribution in this
 port, refer to mbp_actuation “Actuation” for further details.</p>
+<p>In a discrete-time plant, the use_sampled_output_ports setting affects
+the output of this port. See output_port_sampling “Output port
+sampling” for details. When sampling is enabled and the plant has not
+yet taken a step, the output value will be all zeros.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>PD controllers are not considered for actuators on locked joints,
@@ -4419,6 +4575,10 @@ increasing JointActuatorIndex within <code class="docutils literal notranslate">
 <p>Every model instance in <code class="docutils literal notranslate"><span class="pre">this</span></code> plant model has a net actuation
 output port, even if zero sized (for model instance with no
 actuators).</p>
+<p>In a discrete-time plant, the use_sampled_output_ports setting affects
+the output of this port. See output_port_sampling “Output port
+sampling” for details. When sampling is enabled and the plant has not
+yet taken a step, the output value will be all zeros.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>PD controllers are not considered for actuators on locked joints,
@@ -4457,6 +4617,10 @@ JointIndex, see Joint::index(). Each entry corresponds to the spatial
 force <code class="docutils literal notranslate"><span class="pre">F_CJc_Jc</span></code> applied on the joint’s child body C
 (Joint::child_body()), at the joint’s child frame <code class="docutils literal notranslate"><span class="pre">Jc</span></code>
 (Joint::frame_on_child()) and expressed in frame <code class="docutils literal notranslate"><span class="pre">Jc</span></code>.</p>
+<p>In a discrete-time plant, the use_sampled_output_ports setting affects
+the output of this port. See output_port_sampling “Output port
+sampling” for details. When sampling is enabled and the plant has not
+yet taken a step, the output value will be all zeros.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if called pre-finalize.</strong> – </p>
@@ -5634,6 +5798,16 @@ removed using RemoveJointActuator().</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.has_sampled_output_ports">
+<span class="sig-name descname"><span class="pre">has_sampled_output_ports</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.has_sampled_output_ports" title="Permalink to this definition"></a></dt>
+<dd><p>(Advanced) If <code class="docutils literal notranslate"><span class="pre">this</span></code> plant is continuous (i.e., is_discrete() is
+<code class="docutils literal notranslate"><span class="pre">False</span></code>), returns false. If <code class="docutils literal notranslate"><span class="pre">this</span></code> plant is discrete, returns
+whether or not the output ports are sampled (change only at a time
+step boundary) or live (instantaneously reflect changes to the input
+ports). See output_port_sampling “Output port sampling” for details.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.HasBodyNamed">
 <span class="sig-name descname"><span class="pre">HasBodyNamed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.HasBodyNamed" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
@@ -6628,7 +6802,7 @@ but non-zero number can be used, e.g. 1.0e-3.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.set_stiction_tolerance">
 <span class="sig-name descname"><span class="pre">set_stiction_tolerance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_stiction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.001</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.set_stiction_tolerance" title="Permalink to this definition"></a></dt>
-<dd><p><a href="#id27"><span class="problematic" id="id28">**</span></a>** Stribeck model of friction</p>
+<dd><p><a href="#id31"><span class="problematic" id="id32">**</span></a>** Stribeck model of friction</p>
 <p>Currently MultibodyPlant uses the Stribeck approximation to model dry
 friction. The Stribeck model of friction is an approximation to
 Coulomb’s law of friction that allows using continuous time
@@ -6902,6 +7076,24 @@ MultibodyPlant::num_positions() or <code class="docutils literal notranslate"><s
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.SetUseSampledOutputPorts">
+<span class="sig-name descname"><span class="pre">SetUseSampledOutputPorts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_sampled_output_ports</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.SetUseSampledOutputPorts" title="Permalink to this definition"></a></dt>
+<dd><p>(Advanced) For a discrete-time plant, configures whether the output
+ports are sampled (the default) or live (opt-in). See
+output_port_sampling “Output port sampling” for details.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the plant is already finalized.</strong> – </p></li>
+<li><p><strong>RuntimeError if use_sampled_output_ports is True but</strong> – </p></li>
+<li><p><strong>this` MultibodyPlant is not a discrete model</strong><strong> (</strong><strong>is_discrete</strong><strong>(</strong><strong>) </strong><strong>=</strong> – </p></li>
+<li><p><strong>false</strong><strong>)</strong><strong></strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.SetVelocities">
 <span class="sig-name descname"><span class="pre">SetVelocities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.SetVelocities" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
@@ -7041,7 +7233,7 @@ queries.
 Explicitly form matrices that appear in the equations of motion.
 - mbp_introspection “Introspection”:
 Perform introspection to find out what’s in the MultibodyPlant.</p>
-<p><a href="#id31"><span class="problematic" id="id32">**</span></a>** Model Instances</p>
+<p><a href="#id35"><span class="problematic" id="id36">**</span></a>** Model Instances</p>
 <p>A MultiBodyPlant may contain multiple model instances. Each model
 instance corresponds to a set of bodies and their connections
 (joints). Model instances provide methods to get or set the state of
@@ -7072,15 +7264,26 @@ GetVelocitiesFromArray(), SetPositionsInArray(),
 SetVelocitiesInArray(), SetActuationInArray(),
 HasModelInstanceNamed(), GetModelInstanceName(),
 get_state_output_port(), get_actuation_input_port().</p>
-<p><a href="#id33"><span class="problematic" id="id34">**</span></a>** System dynamics</p>
+<p><a href="#id37"><span class="problematic" id="id38">**</span></a>** System dynamics</p>
 <p>The state of a multibody system <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">[q;</span> <span class="pre">v]</span></code> is given by its
 generalized positions vector q, of size <code class="docutils literal notranslate"><span class="pre">nq</span></code> (see num_positions()),
 and by its generalized velocities vector v, of size <code class="docutils literal notranslate"><span class="pre">nv</span></code> (see
-num_velocities()). As a Drake systems::System “System”, MultibodyPlant
-implements the governing equations for a multibody dynamical system in
-the form <code class="docutils literal notranslate"><span class="pre">ẋ</span> <span class="pre">=</span> <span class="pre">f(t,</span> <span class="pre">x,</span> <span class="pre">u)</span></code> with t being time and u the actuation
-forces. The governing equations for the dynamics of a multibody system
-modeled with MultibodyPlant are [Featherstone 2008, Jain 2010]:</p>
+num_velocities()).</p>
+<p>A MultibodyPlant can be constructed to be either continuous or
+discrete. The choice is indicated by the time_step passed to the
+constructor – a non-zero time_step indicates a discrete plant, while
+a zero time_step indicates continuous. A systems::Simulator
+“Simulator” will step a discrete plant using the indicated time_step,
+but will allow a numerical integrator to choose how to advance time
+for a continuous MultibodyPlant.</p>
+<p>We’ll discuss continuous plant dynamics in this section. Discrete
+dynamics is more complicated and gets its own section below.</p>
+<p>As a Drake systems::System “System”, MultibodyPlant implements the
+governing equations for a multibody dynamical system in the form <code class="docutils literal notranslate"><span class="pre">ẋ</span>
+<span class="pre">=</span> <span class="pre">f(t,</span> <span class="pre">x,</span> <span class="pre">u)</span></code> with t being time and u external inputs such as
+actuation forces. The governing equations for the dynamics of a
+multibody system modeled with MultibodyPlant are [Featherstone 2008,
+Jain 2010]:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>q̇ = N(q)v
 (1)    M(q)v̇ + C(q, v)v = τ
 </pre></div>
@@ -7095,7 +7298,128 @@ generalized positions) and the generalized velocities v, [Seth 2010].
 hand side of Eq. (1) is the system’s generalized forces. These
 incorporate gravity, springs, externally applied body forces,
 constraint forces, and contact forces.</p>
-<p><a href="#id35"><span class="problematic" id="id36">**</span></a>** Actuation</p>
+<p><a href="#id39"><span class="problematic" id="id40">**</span></a>** Discrete system dynamics</p>
+<p>We’ll start with the basic difference equation interpretation of a
+discrete plant and then explain some Drake-specific subtleties.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We use “kinematics” here to refer to quantities that involve only
+position or velocity, and “dynamics” to refer to quantities that
+also involve forces.</p>
+</div>
+<p>By default, a discrete MultibodyPlant has these update dynamics:</p>
+<p>x[0] = initial kinematics state variables x (={q, v}), s s[0] = empty
+(no sample yet)</p>
+<p>s[n+1] = g(t[n], x[n], u[n]) record sample x[n+1] = f(t[n], x[n],
+u[n]) update kinematics yd[n+1] = gd(s) dynamic outputs use sampled
+values yk[n+1] = gk(x) kinematic outputs use current x</p>
+<p>Optionally, output port sampling can be disabled. In that case we
+have:</p>
+<p>x[n+1] = f(t[n], x[n], u[n]) update kinematics yd[n+1] = gd(g(t, x,
+u)) dynamic outputs use current values yk[n+1] = gk(x) kinematic
+outputs use current x</p>
+<p>We’re using <code class="docutils literal notranslate"><span class="pre">yd</span></code> and <code class="docutils literal notranslate"><span class="pre">yk</span></code> above to represent the calculated values
+of dynamic and kinematic output ports, resp. Kinematic output ports
+are those that depend only on position and velocity: <code class="docutils literal notranslate"><span class="pre">state</span></code>,
+<cite>body_poses</cite>, <code class="docutils literal notranslate"><span class="pre">body_spatial_velocities</span></code>. Everything else depends on
+forces so is a dynamic output port: <code class="docutils literal notranslate"><span class="pre">body_spatial_accelerations</span></code>,
+<cite>generalized_acceleration</cite>, <code class="docutils literal notranslate"><span class="pre">net_actuation</span></code>, <cite>reaction_forces</cite>, and
+<code class="docutils literal notranslate"><span class="pre">contact_results</span></code>.</p>
+<p>Use the function SetUseSampledOutputPorts() to choose which dynamics
+you prefer. The default behavior (output port sampling) is more
+efficient for simulation, but use slightly-different kinematics for
+the dynamic output port computations versus the kinematic output
+ports. Disabling output port sampling provides “live” output port
+results that are recalculated from the current state and inputs
+whenever changes occur. It also eliminates the sampling state variable
+(s above). Note that kinematic output ports (that is, those depending
+only on position and velocity) are always “live” – they are
+calculated as needed from the current (updated) state.</p>
+<p>The reason that the default mode is more efficient for simulation is
+that the sample variable s records expensive-to-compute results (such
+as hydroelastic contact forces) that are needed to advance the state
+x. Those results are thus available for free at the start of step n.
+If instead we wait until after the state is updated to n+1, we would
+have to recalculate those expensive results at the new state in order
+to report them. Thus sampling means the output ports show the results
+that were calculated using kinematics values x[n], although the
+Context has been updated to kinematics values x[n+1]. If that isn’t
+tolerable you should disable output port sampling. You can also force
+an update to occur using ExecuteForcedEvents().</p>
+<p>See output_port_sampling “Output port sampling” below for more
+practical considerations.</p>
+<p>Minor details most users won’t care about:</p>
+<ul class="simple">
+<li><p>The sample variable s is a Drake Abstract state variable. When it is</p></li>
+</ul>
+<p>present, the plant update is performed using an Unrestricted update; when it
+is absent we are able to use a Discrete update. Some Drake features (e.g.
+linearization of discrete systems) may be restricted to systems that use
+only Discrete (numeric) state variables and Discrete update.
+- The sample variable s is used only by output ports. It does not affect the
+behavior of any MultibodyPlant “Calc” or “Eval” functions – those are
+always calculated using the current values of time, kinematic state, and
+input port values.</p>
+<p><a href="#id41"><span class="problematic" id="id42">**</span></a>** Output port sampling</p>
+<p>As described in mbp_discrete_dynamics “Discrete system dynamics”
+above, the semantics of certain MultibodyPlant output ports depends on
+whether the plant is configured to advance using continuous time
+integration or discrete time steps (see is_discrete()). This section
+explains the details, focusing on the practical aspects moreso than
+the equations.</p>
+<p>Output ports that only depend on the [q, v] kinematic state (such as
+get_body_poses_output_port() or
+get_body_spatial_velocities_output_port()) do <em>not</em> change semantics
+for continuous vs discrete time. In all cases, the output value is a
+function of the kinematic state in the context.</p>
+<p>Output ports that incorporate dynamics (i.e., forces) <em>do</em> change
+semantics based on the plant mode. Imagine that the
+get_applied_spatial_force_input_port() provides a continuously
+time-varying input force. The
+get_body_spatial_accelerations_output_port() output is dependent on
+that force. We could return a snapshot of the acceleration that was
+used in the last time step, or we could recalculate the acceleration
+to immediately reflect the changing forces. We call the former a
+“sampled” port and the latter a “live” port.</p>
+<p>For a continuous-time plant, there is no distinction – the output
+port is always live – it immediately reflects the instantaneous input
+value. It is a “direct feedthrough” output port (see
+SystemBase::GetDirectFeedthroughs()).</p>
+<p>For a discrete-time plant, the user can choose whether the output
+should be sampled or live: Use the function SetUseSampledOutputPorts()
+to change whether output ports are sampled or not, and
+has_sampled_output_ports() to check the current setting. When sampling
+is disabled, the only state in the context is the kinematic [q, v], so
+dynamics output ports will always reflect the instantaneous answer
+(i.e., direct feedthrough). When sampling is enabled (the default),
+the plant state incorporates a snapshot of the most recent step’s
+kinematics and dynamics, and the output ports will reflect that
+sampled state (i.e., not direct feedthrough). For a detailed
+discussion, see mbp_discrete_dynamics “Discrete system dynamics”.</p>
+<p>For a discrete-time plant, the sampled outputs are generally <em>much</em>
+faster to calculate than the feedthrough outputs when any inputs ports
+are changing values faster than the discrete time step, e.g., during a
+simulation. When input ports are fixed, or change at the time step
+rate (e.g., during motion planning), sampled vs feedthrough will have
+similar computational performance.</p>
+<p>Direct plant API function calls (e.g.,
+EvalBodySpatialAccelerationInWorld()) that depend on forces always use
+the instantaneous (not sampled) accelerations.</p>
+<p>Here are some practical tips that might help inform your particular
+situation:</p>
+<p>(1) If you need a minimal-state representation for motion planning,
+mathematical optimization, or similar, then you can either use a
+continuous-time plant or set the config option
+<code class="docutils literal notranslate"><span class="pre">use_sampled_output_ports=false</span></code> on a discrete-time plant.</p>
+<p>(2) By default, setting the positions of a discrete-time plant in the
+Context will not have any effect on the dynamics-related output ports,
+e.g., the contact results will not change. If you need to see changes
+to outputs without running the plant in a Simulator, then you can
+either use a continuous-time plant, set the config option
+<code class="docutils literal notranslate"><span class="pre">use_sampled_output_ports=false</span></code>, or use ExecuteForcedEvents() to
+force a dynamics step and then the outputs (and positions) will
+change.</p>
+<p><a href="#id43"><span class="problematic" id="id44">**</span></a>** Actuation</p>
 <p>In a MultibodyPlant model an actuator can be added as a JointActuator,
 see AddJointActuator(). The plant declares actuation input ports to
 provide feedforward actuation, both for the MultibodyPlant as a whole
@@ -7166,7 +7490,7 @@ controlled actuators”.</p>
 <p>** Using PD controlled actuators</p>
 <p>While PD controllers can be modeled externally and be connected to the
 MultibodyPlant model via the get_actuation_input_port(), simulation
-stability at discrete time steps can be compromised for high
+stability at discrete-time steps can be compromised for high
 controller gains. For such cases, simulation stability and robustness
 can be improved significantly by moving your PD controller into the
 plant where the discrete solver can strongly couple controller and
@@ -7248,7 +7572,7 @@ a given actuator.</p>
 Joint::Lock()), and thus they have no effect on the actuation
 output.</p>
 </div>
-<p><a href="#id37"><span class="problematic" id="id38">**</span></a>** Loading models from SDFormat files</p>
+<p><a href="#id45"><span class="problematic" id="id46">**</span></a>** Loading models from SDFormat files</p>
 <p>Drake has the capability to load multibody models from SDFormat and
 URDF files. Consider the example below which loads an acrobot model:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">acrobot</span><span class="p">;</span><span class="w"></span>
@@ -7268,7 +7592,7 @@ order to load multiple model instances. Other methods are available on
 Parser such as AddModels() which allows creating model instances per
 each <code class="docutils literal notranslate"><span class="pre">&lt;model&gt;</span></code> tag found in the file. Please refer to each of these
 methods’ documentation for further details.</p>
-<p><a href="#id39"><span class="problematic" id="id40">**</span></a>** Working with SceneGraph</p>
+<p><a href="#id47"><span class="problematic" id="id48">**</span></a>** Working with SceneGraph</p>
 <p>** Adding a MultibodyPlant connected to a SceneGraph to your Diagram</p>
 <p>Probably the simplest way to add and wire up a MultibodyPlant with a
 SceneGraph in your Diagram is using AddMultibodyPlantSceneGraph().</p>
@@ -7343,13 +7667,13 @@ geometry::ProximityProperties by geometry::SceneGraph. These
 properties can be obtained before or after context creation through
 geometry::SceneGraphInspector APIs as outlined below. MultibodyPlant
 expects the following properties for point contact modeling:</p>
-<p><a href="#id107"><span class="problematic" id="id108">|Group name|Property Name|Required|Property Type|Property Description|</span></a>
-<a href="#id109"><span class="problematic" id="id110">|:--------:|</span></a>:———–:<a href="#id111"><span class="problematic" id="id112">|:------:|</span></a>:—————-:<a href="#id113"><span class="problematic" id="id114">|:-------------------|</span></a>
-<a href="#id115"><span class="problematic" id="id116">|material|coulomb_friction|yes¹|CoulombFriction&lt;T&gt;|Static and Dynamic
-friction.|</span></a> <a href="#id117"><span class="problematic" id="id118">|material|point_contact_stiffness|no²|T|</span></a> Compliant point
-contact stiffness.| <a href="#id119"><span class="problematic" id="id120">|material|hunt_crossley_dissipation |no²⁴|T|</span></a>
+<p><a href="#id119"><span class="problematic" id="id120">|Group name|Property Name|Required|Property Type|Property Description|</span></a>
+<a href="#id121"><span class="problematic" id="id122">|:--------:|</span></a>:———–:<a href="#id123"><span class="problematic" id="id124">|:------:|</span></a>:—————-:<a href="#id125"><span class="problematic" id="id126">|:-------------------|</span></a>
+<a href="#id127"><span class="problematic" id="id128">|material|coulomb_friction|yes¹|CoulombFriction&lt;T&gt;|Static and Dynamic
+friction.|</span></a> <a href="#id129"><span class="problematic" id="id130">|material|point_contact_stiffness|no²|T|</span></a> Compliant point
+contact stiffness.| <a href="#id131"><span class="problematic" id="id132">|material|hunt_crossley_dissipation |no²⁴|T|</span></a>
 Compliant contact dissipation.|
-<a href="#id121"><span class="problematic" id="id122">|material|relaxation_time|yes³⁴|T|Linear Kelvin–Voigt model
+<a href="#id133"><span class="problematic" id="id134">|material|relaxation_time|yes³⁴|T|Linear Kelvin–Voigt model
 parameter.|</span></a></p>
 <p>¹ Collision geometry is required to be registered with a
 geometry::ProximityProperties object that contains the (“material”,
@@ -7408,7 +7732,7 @@ as:</p>
 <span class="s">&quot;coulomb_friction&quot;</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-</details><p><a href="#id41"><span class="problematic" id="id42">**</span></a>** Working with MultibodyElement parameters Several
+</details><p><a href="#id49"><span class="problematic" id="id50">**</span></a>** Working with MultibodyElement parameters Several
 MultibodyElements expose parameters, allowing the user flexible
 modification of some aspects of the plant’s model, post
 systems::Context creation. For details, refer to the documentation for
@@ -7456,7 +7780,7 @@ take derivatives with respect to one of the bodies’ masses:</p>
 <span class="n">plant_autodiff</span><span class="o">-&gt;</span><span class="n">CalcMassMatrix</span><span class="p">(</span><span class="o">*</span><span class="n">context_autodiff</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">M_autodiff</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-</details><p><a href="#id43"><span class="problematic" id="id44">**</span></a>** Adding modeling elements</p>
+</details><p><a href="#id51"><span class="problematic" id="id52">**</span></a>** Adding modeling elements</p>
 <p>Add multibody elements to a MultibodyPlant with methods like:</p>
 <ul class="simple">
 <li><p>Bodies: AddRigidBody()</p></li>
@@ -7465,11 +7789,11 @@ take derivatives with respect to one of the bodies’ masses:</p>
 </ul>
 <p>All modeling elements <strong>must</strong> be added before Finalize() is called.
 See mbp_finalize_stage “Finalize stage” for a discussion.</p>
-<p><a href="#id45"><span class="problematic" id="id46">**</span></a>** Modeling contact</p>
+<p><a href="#id53"><span class="problematic" id="id54">**</span></a>** Modeling contact</p>
 <p>Please refer to drake_contacts “Contact Modeling in Drake” for details
 on the available approximations, setup, and considerations for a
 multibody simulation with frictional contact.</p>
-<p><a href="#id47"><span class="problematic" id="id48">**</span></a>** Energy and Power</p>
+<p><a href="#id55"><span class="problematic" id="id56">**</span></a>** Energy and Power</p>
 <p>MultibodyPlant implements the System energy and power methods, with
 some limitations. - Kinetic energy: fully implemented. - Potential
 energy and conservative power: currently include only gravity and
@@ -7480,7 +7804,7 @@ objects; actuation and input port forces, joint damping, and
 dissipation from joint limits, friction, and contact dissipation are
 not included.</p>
 <p>See Drake issue #12942 for more discussion.</p>
-<p><a href="#id49"><span class="problematic" id="id50">**</span></a>** Finalize() stage</p>
+<p><a href="#id57"><span class="problematic" id="id58">**</span></a>** Finalize() stage</p>
 <p>Once the user is done adding modeling elements and registering
 geometry, a call to Finalize() must be performed. This call will: -
 Build the underlying tree structure of the multibody model, - declare
@@ -7489,7 +7813,7 @@ declare collision filters to ignore collisions among rigid bodies: -
 between rigid bodies connected by a joint, - within subgraphs of
 welded rigid bodies. Note that MultibodyPlant will <em>not</em> introduce
 <em>any</em> collision filters on deformable bodies.</p>
-<p><a href="#id51"><span class="problematic" id="id52">**</span></a>** References</p>
+<p><a href="#id59"><span class="problematic" id="id60">**</span></a>** References</p>
 <ul class="simple">
 <li><p>[Featherstone 2008] Featherstone, R., 2008.</p></li>
 </ul>
@@ -7693,7 +8017,7 @@ to be strictly positive.</p>
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].AddForceElement"></span><span class="sig-name descname"><span class="pre">AddForceElement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_element</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ForceElement_" title="pydrake.multibody.tree.ForceElement_"><span class="pre">pydrake.multibody.tree.ForceElement_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ForceElement_" title="pydrake.multibody.tree.ForceElement_"><span class="pre">pydrake.multibody.tree.ForceElement_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.AddForceElement" title="Permalink to this definition"></a></dt>
 <dd><p>Adds a new force element model of type <code class="docutils literal notranslate"><span class="pre">ForceElementType</span></code> to
 <code class="docutils literal notranslate"><span class="pre">this</span></code> MultibodyPlant. The arguments to this method <code class="docutils literal notranslate"><span class="pre">args</span></code> are
-forwarded to <a href="#id53"><span class="problematic" id="id54">``</span></a>ForceElementType`’s constructor.</p>
+forwarded to <a href="#id61"><span class="problematic" id="id62">``</span></a>ForceElementType`’s constructor.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">args</span></code>:</dt><dd><p>Zero or more parameters provided to the constructor of the new
 force element. It must be the case that
@@ -8477,7 +8801,7 @@ in 𝑠. The Jacobian is a function of only generalized positions q
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The world_body() is ignored. <a href="#id141"><span class="problematic" id="id142">J𝑠_v_ACcm_</span></a> = ∑ (mᵢ Jᵢ) / mₛ, where mₛ
+<p>The world_body() is ignored. <a href="#id153"><span class="problematic" id="id154">J𝑠_v_ACcm_</span></a> = ∑ (mᵢ Jᵢ) / mₛ, where mₛ
 = ∑ mᵢ, mᵢ is the mass of the iᵗʰ body contained in
 model_instances, and Jᵢ is Bcm’s translational velocity Jacobian
 in frame A, expressed in frame E (Bcm is the center of mass of the
@@ -9317,6 +9641,10 @@ frame. You can obtain the spatial acceleration <code class="docutils literal not
 spatial accelerations is indexed by BodyIndex, and it has size
 num_bodies(). BodyIndex “zero” (0) always corresponds to the world
 body, with zero spatial acceleration at all times.</p>
+<p>In a discrete-time plant, the use_sampled_output_ports setting affects
+the output of this port. See output_port_sampling “Output port
+sampling” for details. When sampling is enabled and the plant has not
+yet taken a step, the output value will be all zeros.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if called pre-finalize.</strong> – </p>
@@ -9383,6 +9711,10 @@ the smallest of the two time scales <code class="docutils literal notranslate"><
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_contact_results_output_port">
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].get_contact_results_output_port"></span><span class="sig-name descname"><span class="pre">get_contact_results_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort_" title="pydrake.systems.framework.OutputPort_"><span class="pre">pydrake.systems.framework.OutputPort_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_contact_results_output_port" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a constant reference to the port that outputs ContactResults.</p>
+<p>In a discrete-time plant, the use_sampled_output_ports setting affects
+the output of this port. See output_port_sampling “Output port
+sampling” for details. When sampling is enabled and the plant has not
+yet taken a step, the output value will be empty (no contacts).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong><strong>, </strong><strong>see Finalize</strong><strong>(</strong><strong>)</strong><strong></strong> – </p>
@@ -9500,6 +9832,10 @@ models.</p>
 </ol>
 <p>Returns a constant reference to the output port for generalized
 accelerations v̇ of the model.</p>
+<p>In a discrete-time plant, the use_sampled_output_ports setting affects
+the output of this port. See output_port_sampling “Output port
+sampling” for details. When sampling is enabled and the plant has not
+yet taken a step, the output value will be all zeros.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
 </dd>
@@ -9514,6 +9850,10 @@ accelerations v̇ of the model.</p>
 </ol>
 <p>Returns a constant reference to the output port for the generalized
 accelerations v̇ᵢ ⊆ v̇ for model instance i.</p>
+<p>In a discrete-time plant, the use_sampled_output_ports setting affects
+the output of this port. See output_port_sampling “Output port
+sampling” for details. When sampling is enabled and the plant has not
+yet taken a step, the output value will be all zeros.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
 </dd>
@@ -9533,6 +9873,10 @@ accelerations v̇ᵢ ⊆ v̇ for model instance i.</p>
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].get_generalized_contact_forces_output_port"></span><span class="sig-name descname"><span class="pre">get_generalized_contact_forces_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort_" title="pydrake.systems.framework.OutputPort_"><span class="pre">pydrake.systems.framework.OutputPort_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_generalized_contact_forces_output_port" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a constant reference to the output port of generalized contact
 forces for a specific model instance.</p>
+<p>In a discrete-time plant, the use_sampled_output_ports setting affects
+the output of this port. See output_port_sampling “Output port
+sampling” for details. When sampling is enabled and the plant has not
+yet taken a step, the output value will be all zeros.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
 </dd>
@@ -9652,6 +9996,10 @@ valued port. The actuation value for a particular actuator can be
 found at offset JointActuator::input_start() in this vector. Models
 that include PD controllers will include their contribution in this
 port, refer to mbp_actuation “Actuation” for further details.</p>
+<p>In a discrete-time plant, the use_sampled_output_ports setting affects
+the output of this port. See output_port_sampling “Output port
+sampling” for details. When sampling is enabled and the plant has not
+yet taken a step, the output value will be all zeros.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>PD controllers are not considered for actuators on locked joints,
@@ -9678,6 +10026,10 @@ increasing JointActuatorIndex within <code class="docutils literal notranslate">
 <p>Every model instance in <code class="docutils literal notranslate"><span class="pre">this</span></code> plant model has a net actuation
 output port, even if zero sized (for model instance with no
 actuators).</p>
+<p>In a discrete-time plant, the use_sampled_output_ports setting affects
+the output of this port. See output_port_sampling “Output port
+sampling” for details. When sampling is enabled and the plant has not
+yet taken a step, the output value will be all zeros.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>PD controllers are not considered for actuators on locked joints,
@@ -9716,6 +10068,10 @@ JointIndex, see Joint::index(). Each entry corresponds to the spatial
 force <code class="docutils literal notranslate"><span class="pre">F_CJc_Jc</span></code> applied on the joint’s child body C
 (Joint::child_body()), at the joint’s child frame <code class="docutils literal notranslate"><span class="pre">Jc</span></code>
 (Joint::frame_on_child()) and expressed in frame <code class="docutils literal notranslate"><span class="pre">Jc</span></code>.</p>
+<p>In a discrete-time plant, the use_sampled_output_ports setting affects
+the output of this port. See output_port_sampling “Output port
+sampling” for details. When sampling is enabled and the plant has not
+yet taken a step, the output value will be all zeros.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if called pre-finalize.</strong> – </p>
@@ -10893,6 +11249,16 @@ removed using RemoveJointActuator().</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.has_sampled_output_ports">
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].has_sampled_output_ports"></span><span class="sig-name descname"><span class="pre">has_sampled_output_ports</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.has_sampled_output_ports" title="Permalink to this definition"></a></dt>
+<dd><p>(Advanced) If <code class="docutils literal notranslate"><span class="pre">this</span></code> plant is continuous (i.e., is_discrete() is
+<code class="docutils literal notranslate"><span class="pre">False</span></code>), returns false. If <code class="docutils literal notranslate"><span class="pre">this</span></code> plant is discrete, returns
+whether or not the output ports are sampled (change only at a time
+step boundary) or live (instantaneously reflect changes to the input
+ports). See output_port_sampling “Output port sampling” for details.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.HasBodyNamed">
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].HasBodyNamed"></span><span class="sig-name descname"><span class="pre">HasBodyNamed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.HasBodyNamed" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
@@ -11849,7 +12215,7 @@ but non-zero number can be used, e.g. 1.0e-3.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.set_stiction_tolerance">
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].set_stiction_tolerance"></span><span class="sig-name descname"><span class="pre">set_stiction_tolerance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_stiction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.001</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.set_stiction_tolerance" title="Permalink to this definition"></a></dt>
-<dd><p><a href="#id57"><span class="problematic" id="id58">**</span></a>** Stribeck model of friction</p>
+<dd><p><a href="#id65"><span class="problematic" id="id66">**</span></a>** Stribeck model of friction</p>
 <p>Currently MultibodyPlant uses the Stribeck approximation to model dry
 friction. The Stribeck model of friction is an approximation to
 Coulomb’s law of friction that allows using continuous time
@@ -12123,6 +12489,24 @@ MultibodyPlant::num_positions() or <code class="docutils literal notranslate"><s
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.SetUseSampledOutputPorts">
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].SetUseSampledOutputPorts"></span><span class="sig-name descname"><span class="pre">SetUseSampledOutputPorts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_sampled_output_ports</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.SetUseSampledOutputPorts" title="Permalink to this definition"></a></dt>
+<dd><p>(Advanced) For a discrete-time plant, configures whether the output
+ports are sampled (the default) or live (opt-in). See
+output_port_sampling “Output port sampling” for details.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the plant is already finalized.</strong> – </p></li>
+<li><p><strong>RuntimeError if use_sampled_output_ports is True but</strong> – </p></li>
+<li><p><strong>this` MultibodyPlant is not a discrete model</strong><strong> (</strong><strong>is_discrete</strong><strong>(</strong><strong>) </strong><strong>=</strong> – </p></li>
+<li><p><strong>false</strong><strong>)</strong><strong></strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.SetVelocities">
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].SetVelocities"></span><span class="sig-name descname"><span class="pre">SetVelocities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.SetVelocities" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
@@ -12256,7 +12640,7 @@ queries.
 Explicitly form matrices that appear in the equations of motion.
 - mbp_introspection “Introspection”:
 Perform introspection to find out what’s in the MultibodyPlant.</p>
-<p><a href="#id61"><span class="problematic" id="id62">**</span></a>** Model Instances</p>
+<p><a href="#id69"><span class="problematic" id="id70">**</span></a>** Model Instances</p>
 <p>A MultiBodyPlant may contain multiple model instances. Each model
 instance corresponds to a set of bodies and their connections
 (joints). Model instances provide methods to get or set the state of
@@ -12287,15 +12671,26 @@ GetVelocitiesFromArray(), SetPositionsInArray(),
 SetVelocitiesInArray(), SetActuationInArray(),
 HasModelInstanceNamed(), GetModelInstanceName(),
 get_state_output_port(), get_actuation_input_port().</p>
-<p><a href="#id63"><span class="problematic" id="id64">**</span></a>** System dynamics</p>
+<p><a href="#id71"><span class="problematic" id="id72">**</span></a>** System dynamics</p>
 <p>The state of a multibody system <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">[q;</span> <span class="pre">v]</span></code> is given by its
 generalized positions vector q, of size <code class="docutils literal notranslate"><span class="pre">nq</span></code> (see num_positions()),
 and by its generalized velocities vector v, of size <code class="docutils literal notranslate"><span class="pre">nv</span></code> (see
-num_velocities()). As a Drake systems::System “System”, MultibodyPlant
-implements the governing equations for a multibody dynamical system in
-the form <code class="docutils literal notranslate"><span class="pre">ẋ</span> <span class="pre">=</span> <span class="pre">f(t,</span> <span class="pre">x,</span> <span class="pre">u)</span></code> with t being time and u the actuation
-forces. The governing equations for the dynamics of a multibody system
-modeled with MultibodyPlant are [Featherstone 2008, Jain 2010]:</p>
+num_velocities()).</p>
+<p>A MultibodyPlant can be constructed to be either continuous or
+discrete. The choice is indicated by the time_step passed to the
+constructor – a non-zero time_step indicates a discrete plant, while
+a zero time_step indicates continuous. A systems::Simulator
+“Simulator” will step a discrete plant using the indicated time_step,
+but will allow a numerical integrator to choose how to advance time
+for a continuous MultibodyPlant.</p>
+<p>We’ll discuss continuous plant dynamics in this section. Discrete
+dynamics is more complicated and gets its own section below.</p>
+<p>As a Drake systems::System “System”, MultibodyPlant implements the
+governing equations for a multibody dynamical system in the form <code class="docutils literal notranslate"><span class="pre">ẋ</span>
+<span class="pre">=</span> <span class="pre">f(t,</span> <span class="pre">x,</span> <span class="pre">u)</span></code> with t being time and u external inputs such as
+actuation forces. The governing equations for the dynamics of a
+multibody system modeled with MultibodyPlant are [Featherstone 2008,
+Jain 2010]:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>q̇ = N(q)v
 (1)    M(q)v̇ + C(q, v)v = τ
 </pre></div>
@@ -12310,7 +12705,128 @@ generalized positions) and the generalized velocities v, [Seth 2010].
 hand side of Eq. (1) is the system’s generalized forces. These
 incorporate gravity, springs, externally applied body forces,
 constraint forces, and contact forces.</p>
-<p><a href="#id65"><span class="problematic" id="id66">**</span></a>** Actuation</p>
+<p><a href="#id73"><span class="problematic" id="id74">**</span></a>** Discrete system dynamics</p>
+<p>We’ll start with the basic difference equation interpretation of a
+discrete plant and then explain some Drake-specific subtleties.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We use “kinematics” here to refer to quantities that involve only
+position or velocity, and “dynamics” to refer to quantities that
+also involve forces.</p>
+</div>
+<p>By default, a discrete MultibodyPlant has these update dynamics:</p>
+<p>x[0] = initial kinematics state variables x (={q, v}), s s[0] = empty
+(no sample yet)</p>
+<p>s[n+1] = g(t[n], x[n], u[n]) record sample x[n+1] = f(t[n], x[n],
+u[n]) update kinematics yd[n+1] = gd(s) dynamic outputs use sampled
+values yk[n+1] = gk(x) kinematic outputs use current x</p>
+<p>Optionally, output port sampling can be disabled. In that case we
+have:</p>
+<p>x[n+1] = f(t[n], x[n], u[n]) update kinematics yd[n+1] = gd(g(t, x,
+u)) dynamic outputs use current values yk[n+1] = gk(x) kinematic
+outputs use current x</p>
+<p>We’re using <code class="docutils literal notranslate"><span class="pre">yd</span></code> and <code class="docutils literal notranslate"><span class="pre">yk</span></code> above to represent the calculated values
+of dynamic and kinematic output ports, resp. Kinematic output ports
+are those that depend only on position and velocity: <code class="docutils literal notranslate"><span class="pre">state</span></code>,
+<cite>body_poses</cite>, <code class="docutils literal notranslate"><span class="pre">body_spatial_velocities</span></code>. Everything else depends on
+forces so is a dynamic output port: <code class="docutils literal notranslate"><span class="pre">body_spatial_accelerations</span></code>,
+<cite>generalized_acceleration</cite>, <code class="docutils literal notranslate"><span class="pre">net_actuation</span></code>, <cite>reaction_forces</cite>, and
+<code class="docutils literal notranslate"><span class="pre">contact_results</span></code>.</p>
+<p>Use the function SetUseSampledOutputPorts() to choose which dynamics
+you prefer. The default behavior (output port sampling) is more
+efficient for simulation, but use slightly-different kinematics for
+the dynamic output port computations versus the kinematic output
+ports. Disabling output port sampling provides “live” output port
+results that are recalculated from the current state and inputs
+whenever changes occur. It also eliminates the sampling state variable
+(s above). Note that kinematic output ports (that is, those depending
+only on position and velocity) are always “live” – they are
+calculated as needed from the current (updated) state.</p>
+<p>The reason that the default mode is more efficient for simulation is
+that the sample variable s records expensive-to-compute results (such
+as hydroelastic contact forces) that are needed to advance the state
+x. Those results are thus available for free at the start of step n.
+If instead we wait until after the state is updated to n+1, we would
+have to recalculate those expensive results at the new state in order
+to report them. Thus sampling means the output ports show the results
+that were calculated using kinematics values x[n], although the
+Context has been updated to kinematics values x[n+1]. If that isn’t
+tolerable you should disable output port sampling. You can also force
+an update to occur using ExecuteForcedEvents().</p>
+<p>See output_port_sampling “Output port sampling” below for more
+practical considerations.</p>
+<p>Minor details most users won’t care about:</p>
+<ul class="simple">
+<li><p>The sample variable s is a Drake Abstract state variable. When it is</p></li>
+</ul>
+<p>present, the plant update is performed using an Unrestricted update; when it
+is absent we are able to use a Discrete update. Some Drake features (e.g.
+linearization of discrete systems) may be restricted to systems that use
+only Discrete (numeric) state variables and Discrete update.
+- The sample variable s is used only by output ports. It does not affect the
+behavior of any MultibodyPlant “Calc” or “Eval” functions – those are
+always calculated using the current values of time, kinematic state, and
+input port values.</p>
+<p><a href="#id75"><span class="problematic" id="id76">**</span></a>** Output port sampling</p>
+<p>As described in mbp_discrete_dynamics “Discrete system dynamics”
+above, the semantics of certain MultibodyPlant output ports depends on
+whether the plant is configured to advance using continuous time
+integration or discrete time steps (see is_discrete()). This section
+explains the details, focusing on the practical aspects moreso than
+the equations.</p>
+<p>Output ports that only depend on the [q, v] kinematic state (such as
+get_body_poses_output_port() or
+get_body_spatial_velocities_output_port()) do <em>not</em> change semantics
+for continuous vs discrete time. In all cases, the output value is a
+function of the kinematic state in the context.</p>
+<p>Output ports that incorporate dynamics (i.e., forces) <em>do</em> change
+semantics based on the plant mode. Imagine that the
+get_applied_spatial_force_input_port() provides a continuously
+time-varying input force. The
+get_body_spatial_accelerations_output_port() output is dependent on
+that force. We could return a snapshot of the acceleration that was
+used in the last time step, or we could recalculate the acceleration
+to immediately reflect the changing forces. We call the former a
+“sampled” port and the latter a “live” port.</p>
+<p>For a continuous-time plant, there is no distinction – the output
+port is always live – it immediately reflects the instantaneous input
+value. It is a “direct feedthrough” output port (see
+SystemBase::GetDirectFeedthroughs()).</p>
+<p>For a discrete-time plant, the user can choose whether the output
+should be sampled or live: Use the function SetUseSampledOutputPorts()
+to change whether output ports are sampled or not, and
+has_sampled_output_ports() to check the current setting. When sampling
+is disabled, the only state in the context is the kinematic [q, v], so
+dynamics output ports will always reflect the instantaneous answer
+(i.e., direct feedthrough). When sampling is enabled (the default),
+the plant state incorporates a snapshot of the most recent step’s
+kinematics and dynamics, and the output ports will reflect that
+sampled state (i.e., not direct feedthrough). For a detailed
+discussion, see mbp_discrete_dynamics “Discrete system dynamics”.</p>
+<p>For a discrete-time plant, the sampled outputs are generally <em>much</em>
+faster to calculate than the feedthrough outputs when any inputs ports
+are changing values faster than the discrete time step, e.g., during a
+simulation. When input ports are fixed, or change at the time step
+rate (e.g., during motion planning), sampled vs feedthrough will have
+similar computational performance.</p>
+<p>Direct plant API function calls (e.g.,
+EvalBodySpatialAccelerationInWorld()) that depend on forces always use
+the instantaneous (not sampled) accelerations.</p>
+<p>Here are some practical tips that might help inform your particular
+situation:</p>
+<p>(1) If you need a minimal-state representation for motion planning,
+mathematical optimization, or similar, then you can either use a
+continuous-time plant or set the config option
+<code class="docutils literal notranslate"><span class="pre">use_sampled_output_ports=false</span></code> on a discrete-time plant.</p>
+<p>(2) By default, setting the positions of a discrete-time plant in the
+Context will not have any effect on the dynamics-related output ports,
+e.g., the contact results will not change. If you need to see changes
+to outputs without running the plant in a Simulator, then you can
+either use a continuous-time plant, set the config option
+<code class="docutils literal notranslate"><span class="pre">use_sampled_output_ports=false</span></code>, or use ExecuteForcedEvents() to
+force a dynamics step and then the outputs (and positions) will
+change.</p>
+<p><a href="#id77"><span class="problematic" id="id78">**</span></a>** Actuation</p>
 <p>In a MultibodyPlant model an actuator can be added as a JointActuator,
 see AddJointActuator(). The plant declares actuation input ports to
 provide feedforward actuation, both for the MultibodyPlant as a whole
@@ -12381,7 +12897,7 @@ controlled actuators”.</p>
 <p>** Using PD controlled actuators</p>
 <p>While PD controllers can be modeled externally and be connected to the
 MultibodyPlant model via the get_actuation_input_port(), simulation
-stability at discrete time steps can be compromised for high
+stability at discrete-time steps can be compromised for high
 controller gains. For such cases, simulation stability and robustness
 can be improved significantly by moving your PD controller into the
 plant where the discrete solver can strongly couple controller and
@@ -12463,7 +12979,7 @@ a given actuator.</p>
 Joint::Lock()), and thus they have no effect on the actuation
 output.</p>
 </div>
-<p><a href="#id67"><span class="problematic" id="id68">**</span></a>** Loading models from SDFormat files</p>
+<p><a href="#id79"><span class="problematic" id="id80">**</span></a>** Loading models from SDFormat files</p>
 <p>Drake has the capability to load multibody models from SDFormat and
 URDF files. Consider the example below which loads an acrobot model:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">acrobot</span><span class="p">;</span><span class="w"></span>
@@ -12483,7 +12999,7 @@ order to load multiple model instances. Other methods are available on
 Parser such as AddModels() which allows creating model instances per
 each <code class="docutils literal notranslate"><span class="pre">&lt;model&gt;</span></code> tag found in the file. Please refer to each of these
 methods’ documentation for further details.</p>
-<p><a href="#id69"><span class="problematic" id="id70">**</span></a>** Working with SceneGraph</p>
+<p><a href="#id81"><span class="problematic" id="id82">**</span></a>** Working with SceneGraph</p>
 <p>** Adding a MultibodyPlant connected to a SceneGraph to your Diagram</p>
 <p>Probably the simplest way to add and wire up a MultibodyPlant with a
 SceneGraph in your Diagram is using AddMultibodyPlantSceneGraph().</p>
@@ -12558,13 +13074,13 @@ geometry::ProximityProperties by geometry::SceneGraph. These
 properties can be obtained before or after context creation through
 geometry::SceneGraphInspector APIs as outlined below. MultibodyPlant
 expects the following properties for point contact modeling:</p>
-<p><a href="#id123"><span class="problematic" id="id124">|Group name|Property Name|Required|Property Type|Property Description|</span></a>
-<a href="#id125"><span class="problematic" id="id126">|:--------:|</span></a>:———–:<a href="#id127"><span class="problematic" id="id128">|:------:|</span></a>:—————-:<a href="#id129"><span class="problematic" id="id130">|:-------------------|</span></a>
-<a href="#id131"><span class="problematic" id="id132">|material|coulomb_friction|yes¹|CoulombFriction&lt;T&gt;|Static and Dynamic
-friction.|</span></a> <a href="#id133"><span class="problematic" id="id134">|material|point_contact_stiffness|no²|T|</span></a> Compliant point
-contact stiffness.| <a href="#id135"><span class="problematic" id="id136">|material|hunt_crossley_dissipation |no²⁴|T|</span></a>
+<p><a href="#id135"><span class="problematic" id="id136">|Group name|Property Name|Required|Property Type|Property Description|</span></a>
+<a href="#id137"><span class="problematic" id="id138">|:--------:|</span></a>:———–:<a href="#id139"><span class="problematic" id="id140">|:------:|</span></a>:—————-:<a href="#id141"><span class="problematic" id="id142">|:-------------------|</span></a>
+<a href="#id143"><span class="problematic" id="id144">|material|coulomb_friction|yes¹|CoulombFriction&lt;T&gt;|Static and Dynamic
+friction.|</span></a> <a href="#id145"><span class="problematic" id="id146">|material|point_contact_stiffness|no²|T|</span></a> Compliant point
+contact stiffness.| <a href="#id147"><span class="problematic" id="id148">|material|hunt_crossley_dissipation |no²⁴|T|</span></a>
 Compliant contact dissipation.|
-<a href="#id137"><span class="problematic" id="id138">|material|relaxation_time|yes³⁴|T|Linear Kelvin–Voigt model
+<a href="#id149"><span class="problematic" id="id150">|material|relaxation_time|yes³⁴|T|Linear Kelvin–Voigt model
 parameter.|</span></a></p>
 <p>¹ Collision geometry is required to be registered with a
 geometry::ProximityProperties object that contains the (“material”,
@@ -12623,7 +13139,7 @@ as:</p>
 <span class="s">&quot;coulomb_friction&quot;</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-</details><p><a href="#id71"><span class="problematic" id="id72">**</span></a>** Working with MultibodyElement parameters Several
+</details><p><a href="#id83"><span class="problematic" id="id84">**</span></a>** Working with MultibodyElement parameters Several
 MultibodyElements expose parameters, allowing the user flexible
 modification of some aspects of the plant’s model, post
 systems::Context creation. For details, refer to the documentation for
@@ -12671,7 +13187,7 @@ take derivatives with respect to one of the bodies’ masses:</p>
 <span class="n">plant_autodiff</span><span class="o">-&gt;</span><span class="n">CalcMassMatrix</span><span class="p">(</span><span class="o">*</span><span class="n">context_autodiff</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">M_autodiff</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-</details><p><a href="#id73"><span class="problematic" id="id74">**</span></a>** Adding modeling elements</p>
+</details><p><a href="#id85"><span class="problematic" id="id86">**</span></a>** Adding modeling elements</p>
 <p>Add multibody elements to a MultibodyPlant with methods like:</p>
 <ul class="simple">
 <li><p>Bodies: AddRigidBody()</p></li>
@@ -12680,11 +13196,11 @@ take derivatives with respect to one of the bodies’ masses:</p>
 </ul>
 <p>All modeling elements <strong>must</strong> be added before Finalize() is called.
 See mbp_finalize_stage “Finalize stage” for a discussion.</p>
-<p><a href="#id75"><span class="problematic" id="id76">**</span></a>** Modeling contact</p>
+<p><a href="#id87"><span class="problematic" id="id88">**</span></a>** Modeling contact</p>
 <p>Please refer to drake_contacts “Contact Modeling in Drake” for details
 on the available approximations, setup, and considerations for a
 multibody simulation with frictional contact.</p>
-<p><a href="#id77"><span class="problematic" id="id78">**</span></a>** Energy and Power</p>
+<p><a href="#id89"><span class="problematic" id="id90">**</span></a>** Energy and Power</p>
 <p>MultibodyPlant implements the System energy and power methods, with
 some limitations. - Kinetic energy: fully implemented. - Potential
 energy and conservative power: currently include only gravity and
@@ -12695,7 +13211,7 @@ objects; actuation and input port forces, joint damping, and
 dissipation from joint limits, friction, and contact dissipation are
 not included.</p>
 <p>See Drake issue #12942 for more discussion.</p>
-<p><a href="#id79"><span class="problematic" id="id80">**</span></a>** Finalize() stage</p>
+<p><a href="#id91"><span class="problematic" id="id92">**</span></a>** Finalize() stage</p>
 <p>Once the user is done adding modeling elements and registering
 geometry, a call to Finalize() must be performed. This call will: -
 Build the underlying tree structure of the multibody model, - declare
@@ -12704,7 +13220,7 @@ declare collision filters to ignore collisions among rigid bodies: -
 between rigid bodies connected by a joint, - within subgraphs of
 welded rigid bodies. Note that MultibodyPlant will <em>not</em> introduce
 <em>any</em> collision filters on deformable bodies.</p>
-<p><a href="#id81"><span class="problematic" id="id82">**</span></a>** References</p>
+<p><a href="#id93"><span class="problematic" id="id94">**</span></a>** References</p>
 <ul class="simple">
 <li><p>[Featherstone 2008] Featherstone, R., 2008.</p></li>
 </ul>
@@ -12908,7 +13424,7 @@ to be strictly positive.</p>
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].AddForceElement"></span><span class="sig-name descname"><span class="pre">AddForceElement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_element</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ForceElement_" title="pydrake.multibody.tree.ForceElement_"><span class="pre">pydrake.multibody.tree.ForceElement_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ForceElement_" title="pydrake.multibody.tree.ForceElement_"><span class="pre">pydrake.multibody.tree.ForceElement_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.AddForceElement" title="Permalink to this definition"></a></dt>
 <dd><p>Adds a new force element model of type <code class="docutils literal notranslate"><span class="pre">ForceElementType</span></code> to
 <code class="docutils literal notranslate"><span class="pre">this</span></code> MultibodyPlant. The arguments to this method <code class="docutils literal notranslate"><span class="pre">args</span></code> are
-forwarded to <a href="#id83"><span class="problematic" id="id84">``</span></a>ForceElementType`’s constructor.</p>
+forwarded to <a href="#id95"><span class="problematic" id="id96">``</span></a>ForceElementType`’s constructor.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">args</span></code>:</dt><dd><p>Zero or more parameters provided to the constructor of the new
 force element. It must be the case that
@@ -13692,7 +14208,7 @@ in 𝑠. The Jacobian is a function of only generalized positions q
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The world_body() is ignored. <a href="#id143"><span class="problematic" id="id144">J𝑠_v_ACcm_</span></a> = ∑ (mᵢ Jᵢ) / mₛ, where mₛ
+<p>The world_body() is ignored. <a href="#id155"><span class="problematic" id="id156">J𝑠_v_ACcm_</span></a> = ∑ (mᵢ Jᵢ) / mₛ, where mₛ
 = ∑ mᵢ, mᵢ is the mass of the iᵗʰ body contained in
 model_instances, and Jᵢ is Bcm’s translational velocity Jacobian
 in frame A, expressed in frame E (Bcm is the center of mass of the
@@ -14532,6 +15048,10 @@ frame. You can obtain the spatial acceleration <code class="docutils literal not
 spatial accelerations is indexed by BodyIndex, and it has size
 num_bodies(). BodyIndex “zero” (0) always corresponds to the world
 body, with zero spatial acceleration at all times.</p>
+<p>In a discrete-time plant, the use_sampled_output_ports setting affects
+the output of this port. See output_port_sampling “Output port
+sampling” for details. When sampling is enabled and the plant has not
+yet taken a step, the output value will be all zeros.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if called pre-finalize.</strong> – </p>
@@ -14598,6 +15118,10 @@ the smallest of the two time scales <code class="docutils literal notranslate"><
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.get_contact_results_output_port">
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].get_contact_results_output_port"></span><span class="sig-name descname"><span class="pre">get_contact_results_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort_" title="pydrake.systems.framework.OutputPort_"><span class="pre">pydrake.systems.framework.OutputPort_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.get_contact_results_output_port" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a constant reference to the port that outputs ContactResults.</p>
+<p>In a discrete-time plant, the use_sampled_output_ports setting affects
+the output of this port. See output_port_sampling “Output port
+sampling” for details. When sampling is enabled and the plant has not
+yet taken a step, the output value will be empty (no contacts).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong><strong>, </strong><strong>see Finalize</strong><strong>(</strong><strong>)</strong><strong></strong> – </p>
@@ -14715,6 +15239,10 @@ models.</p>
 </ol>
 <p>Returns a constant reference to the output port for generalized
 accelerations v̇ of the model.</p>
+<p>In a discrete-time plant, the use_sampled_output_ports setting affects
+the output of this port. See output_port_sampling “Output port
+sampling” for details. When sampling is enabled and the plant has not
+yet taken a step, the output value will be all zeros.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
 </dd>
@@ -14729,6 +15257,10 @@ accelerations v̇ of the model.</p>
 </ol>
 <p>Returns a constant reference to the output port for the generalized
 accelerations v̇ᵢ ⊆ v̇ for model instance i.</p>
+<p>In a discrete-time plant, the use_sampled_output_ports setting affects
+the output of this port. See output_port_sampling “Output port
+sampling” for details. When sampling is enabled and the plant has not
+yet taken a step, the output value will be all zeros.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
 </dd>
@@ -14748,6 +15280,10 @@ accelerations v̇ᵢ ⊆ v̇ for model instance i.</p>
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].get_generalized_contact_forces_output_port"></span><span class="sig-name descname"><span class="pre">get_generalized_contact_forces_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort_" title="pydrake.systems.framework.OutputPort_"><span class="pre">pydrake.systems.framework.OutputPort_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.get_generalized_contact_forces_output_port" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a constant reference to the output port of generalized contact
 forces for a specific model instance.</p>
+<p>In a discrete-time plant, the use_sampled_output_ports setting affects
+the output of this port. See output_port_sampling “Output port
+sampling” for details. When sampling is enabled and the plant has not
+yet taken a step, the output value will be all zeros.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
 </dd>
@@ -14867,6 +15403,10 @@ valued port. The actuation value for a particular actuator can be
 found at offset JointActuator::input_start() in this vector. Models
 that include PD controllers will include their contribution in this
 port, refer to mbp_actuation “Actuation” for further details.</p>
+<p>In a discrete-time plant, the use_sampled_output_ports setting affects
+the output of this port. See output_port_sampling “Output port
+sampling” for details. When sampling is enabled and the plant has not
+yet taken a step, the output value will be all zeros.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>PD controllers are not considered for actuators on locked joints,
@@ -14893,6 +15433,10 @@ increasing JointActuatorIndex within <code class="docutils literal notranslate">
 <p>Every model instance in <code class="docutils literal notranslate"><span class="pre">this</span></code> plant model has a net actuation
 output port, even if zero sized (for model instance with no
 actuators).</p>
+<p>In a discrete-time plant, the use_sampled_output_ports setting affects
+the output of this port. See output_port_sampling “Output port
+sampling” for details. When sampling is enabled and the plant has not
+yet taken a step, the output value will be all zeros.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>PD controllers are not considered for actuators on locked joints,
@@ -14931,6 +15475,10 @@ JointIndex, see Joint::index(). Each entry corresponds to the spatial
 force <code class="docutils literal notranslate"><span class="pre">F_CJc_Jc</span></code> applied on the joint’s child body C
 (Joint::child_body()), at the joint’s child frame <code class="docutils literal notranslate"><span class="pre">Jc</span></code>
 (Joint::frame_on_child()) and expressed in frame <code class="docutils literal notranslate"><span class="pre">Jc</span></code>.</p>
+<p>In a discrete-time plant, the use_sampled_output_ports setting affects
+the output of this port. See output_port_sampling “Output port
+sampling” for details. When sampling is enabled and the plant has not
+yet taken a step, the output value will be all zeros.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if called pre-finalize.</strong> – </p>
@@ -16108,6 +16656,16 @@ removed using RemoveJointActuator().</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.has_sampled_output_ports">
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].has_sampled_output_ports"></span><span class="sig-name descname"><span class="pre">has_sampled_output_ports</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.has_sampled_output_ports" title="Permalink to this definition"></a></dt>
+<dd><p>(Advanced) If <code class="docutils literal notranslate"><span class="pre">this</span></code> plant is continuous (i.e., is_discrete() is
+<code class="docutils literal notranslate"><span class="pre">False</span></code>), returns false. If <code class="docutils literal notranslate"><span class="pre">this</span></code> plant is discrete, returns
+whether or not the output ports are sampled (change only at a time
+step boundary) or live (instantaneously reflect changes to the input
+ports). See output_port_sampling “Output port sampling” for details.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.HasBodyNamed">
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].HasBodyNamed"></span><span class="sig-name descname"><span class="pre">HasBodyNamed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.HasBodyNamed" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
@@ -17064,7 +17622,7 @@ but non-zero number can be used, e.g. 1.0e-3.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.set_stiction_tolerance">
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].set_stiction_tolerance"></span><span class="sig-name descname"><span class="pre">set_stiction_tolerance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_stiction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.001</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.set_stiction_tolerance" title="Permalink to this definition"></a></dt>
-<dd><p><a href="#id87"><span class="problematic" id="id88">**</span></a>** Stribeck model of friction</p>
+<dd><p><a href="#id99"><span class="problematic" id="id100">**</span></a>** Stribeck model of friction</p>
 <p>Currently MultibodyPlant uses the Stribeck approximation to model dry
 friction. The Stribeck model of friction is an approximation to
 Coulomb’s law of friction that allows using continuous time
@@ -17338,6 +17896,24 @@ MultibodyPlant::num_positions() or <code class="docutils literal notranslate"><s
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.SetUseSampledOutputPorts">
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].SetUseSampledOutputPorts"></span><span class="sig-name descname"><span class="pre">SetUseSampledOutputPorts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_sampled_output_ports</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.SetUseSampledOutputPorts" title="Permalink to this definition"></a></dt>
+<dd><p>(Advanced) For a discrete-time plant, configures whether the output
+ports are sampled (the default) or live (opt-in). See
+output_port_sampling “Output port sampling” for details.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the plant is already finalized.</strong> – </p></li>
+<li><p><strong>RuntimeError if use_sampled_output_ports is True but</strong> – </p></li>
+<li><p><strong>this` MultibodyPlant is not a discrete model</strong><strong> (</strong><strong>is_discrete</strong><strong>(</strong><strong>) </strong><strong>=</strong> – </p></li>
+<li><p><strong>false</strong><strong>)</strong><strong></strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.SetVelocities">
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].SetVelocities"></span><span class="sig-name descname"><span class="pre">SetVelocities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.SetVelocities" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
@@ -17545,6 +18121,13 @@ converge. For instance, set values in the range (1e-3, 1e-2).</p>
 here we choose a nominal value (a discrete system, with a 1ms periodic
 update) as a reasonably conservative estimate that works in many
 cases.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlantConfig.use_sampled_output_ports">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">use_sampled_output_ports</span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlantConfig.use_sampled_output_ports" title="Permalink to this definition"></a></dt>
+<dd><p>Configures the MultibodyPlant::SetUseSampledOutputPorts(). Ignored
+when the time_step is zero.</p>
 </dd></dl>
 
 </dd></dl>

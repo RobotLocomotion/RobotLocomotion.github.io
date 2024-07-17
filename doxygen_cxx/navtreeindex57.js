@@ -1,5 +1,8 @@
 var NAVTREEINDEX57 =
 {
+"piecewise__quaternion_8h.html":[4,0,0,1,5,9],
+"piecewise__quaternion_8h.html#af30967658847c362d4f84bccf61f18dc":[4,0,0,1,5,9,1],
+"piecewise__trajectory_8h.html":[4,0,0,1,5,10],
 "piecewise__trajectory_8h.html#a5870562877703fa07aeb4cd0b6276cb1":[4,0,0,1,5,10,1],
 "pixel__types_8h.html":[4,0,0,12,8,17],
 "pixel__types_8h.html#a266fb9c71cff0c0c0039862c33d7298a":[4,0,0,12,8,17,16],
@@ -23,8 +26,8 @@ var NAVTREEINDEX57 =
 "pixel__types_8h.html#a60883d4958a60b91661e97027a85072aaf34c9bbc14fec59d55cb4a75ec163294":[4,0,0,12,8,17,10,3],
 "pixel__types_8h.html#a71e237783020d662652f8ab4fed9bd63":[4,0,0,12,8,17,13],
 "pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1":[4,0,0,12,8,17,19],
-"pixel__types_8h.html#aa27964439659a0be90e567d865ffb792":[4,0,0,12,8,17,18],
 "pixel__types_8h.html#aa27964439659a0be90e567d865ffb792":[4,0,0,12,8,17,11],
+"pixel__types_8h.html#aa27964439659a0be90e567d865ffb792":[4,0,0,12,8,17,18],
 "pixel__types_8h.html#aa27964439659a0be90e567d865ffb792a00582391087709af581a9e896ef882ef":[4,0,0,12,8,17,11,1],
 "pixel__types_8h.html#aa27964439659a0be90e567d865ffb792a01f5fa4aac9e911952ef4bfac3d864ab":[4,0,0,12,8,17,11,0],
 "pixel__types_8h.html#aa27964439659a0be90e567d865ffb792a0e8d8cf2ebb8164d8a669d983eca5276":[4,0,0,12,8,17,11,3],
@@ -73,8 +76,8 @@ var NAVTREEINDEX57 =
 "point__contact__data_8h.html":[4,0,0,8,2,16],
 "point__contact__data_8h.html#a931a41c68e1ab557471d5772d8c37822":[4,0,0,8,2,16,0],
 "point__contact__visualizer_8h.html":[4,0,0,8,7,4],
-"point__pair__contact__info_8h.html":[4,0,0,8,10,35],
-"point__pair__contact__info_8h.html#a7e23a07dec2d6efad729851dc1899214":[4,0,0,8,10,35,1],
+"point__pair__contact__info_8h.html":[4,0,0,8,10,36],
+"point__pair__contact__info_8h.html#a7e23a07dec2d6efad729851dc1899214":[4,0,0,8,10,36,1],
 "point__source__force__field_8h.html":[4,0,0,3,11,2,1],
 "point__to__line__distance__constraint_8h.html":[4,0,0,8,5,17],
 "point__to__point__distance__constraint_8h.html":[4,0,0,8,5,18],
@@ -164,8 +167,8 @@ var NAVTREEINDEX57 =
 "program__attribute_8h.html#ab09ca5e1afe9e5a4e8744ecb27839b15af91d74856b95694eb9624142e4317bb4":[4,0,0,11,43,5,8],
 "program__attribute_8h.html#adbd6047c1efdb345f4761a04b3764c90":[4,0,0,11,43,9],
 "program__attribute_8h.html#adfb26b995d486732f1b2867751dbbee7":[4,0,0,11,43,10],
-"propeller_8h.html":[4,0,0,8,10,36],
-"propeller_8h.html#a32977dd1d582be75b79734dd5f8c2272":[4,0,0,8,10,36,1],
+"propeller_8h.html":[4,0,0,8,10,37],
+"propeller_8h.html#a32977dd1d582be75b79734dd5f8c2272":[4,0,0,8,10,37,1],
 "proximity__doxygen_8h.html":[4,0,0,4,2,53],
 "proximity__engine_8h.html":[4,0,0,4,41],
 "proximity__properties_8h.html":[4,0,0,4,42],
@@ -246,8 +249,5 @@ var NAVTREEINDEX57 =
 "rational__forward__kinematics_8h.html":[4,0,0,8,11,0],
 "rational__forward__kinematics__internal_8h.html":[4,0,0,8,11,1],
 "rational__function_8h.html":[4,0,0,1,3,14],
-"rational__function_8h.html#a0dc08ea95543252bcf2b31fdfe723d26":[4,0,0,1,3,14,16],
-"rational__function_8h.html#a0ec6e83953a4663403fcb08592e16b01":[4,0,0,1,3,14,18],
-"rational__function_8h.html#a1611c62700b00b9861c339879899a121":[4,0,0,1,3,14,5],
-"rational__function_8h.html#a167d0d14d66effceeb5834371626452b":[4,0,0,1,3,14,15]
+"rational__function_8h.html#a0dc08ea95543252bcf2b31fdfe723d26":[4,0,0,1,3,14,16]
 };
