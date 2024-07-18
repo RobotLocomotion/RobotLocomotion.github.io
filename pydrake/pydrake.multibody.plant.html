@@ -3031,9 +3031,9 @@ plant.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The world_body() is ignored. p_WoScm_W = ∑ (mᵢ pᵢ) / mₛ, where mₛ
-= ∑ mᵢ, mᵢ is the mass of the iᵗʰ body, and pᵢ is Bcm’s position
-vector from Wo expressed in frame W (Bcm is the center of mass of
-the iᵗʰ body).</p>
+= ∑ mᵢ, mᵢ is the mass of the iᵗʰ body, and pᵢ is Bᵢcm’s position
+from Wo expressed in frame W (Bᵢcm is the center of mass of the
+iᵗʰ body).</p>
 </div>
 <ol class="arabic simple" start="2">
 <li><p>CalcCenterOfMassPositionInWorld(self: pydrake.multibody.plant.MultibodyPlant, context: pydrake.systems.framework.Context, model_instances: list[pydrake.multibody.tree.ModelInstanceIndex]) -&gt; numpy.ndarray[numpy.float64[3, 1]]</p></li>
@@ -3064,8 +3064,8 @@ non-world bodies contained in model_instances.</p>
 <p class="admonition-title">Note</p>
 <p>The world_body() is ignored. p_WoScm_W = ∑ (mᵢ pᵢ) / mₛ, where mₛ
 = ∑ mᵢ, mᵢ is the mass of the iᵗʰ body contained in
-model_instances, and pᵢ is Bcm’s position vector from Wo expressed
-in frame W (Bcm is the center of mass of the iᵗʰ body).</p>
+model_instances, and pᵢ is Bᵢcm’s position vector from Wo
+expressed in frame W (Bᵢcm is the center of mass of the iᵗʰ body).</p>
 </div>
 </dd></dl>
 
@@ -3352,9 +3352,9 @@ in 𝑠. The Jacobian is a function of only generalized positions q
 <p class="admonition-title">Note</p>
 <p>The world_body() is ignored. <a href="#id151"><span class="problematic" id="id152">J𝑠_v_ACcm_</span></a> = ∑ (mᵢ Jᵢ) / mₛ, where mₛ
 = ∑ mᵢ, mᵢ is the mass of the iᵗʰ body contained in
-model_instances, and Jᵢ is Bcm’s translational velocity Jacobian
-in frame A, expressed in frame E (Bcm is the center of mass of the
-iᵗʰ body).</p>
+model_instances, and Jᵢ is Bᵢcm’s translational velocity Jacobian
+in frame A, expressed in frame E (Bᵢcm is the center of mass of
+the iᵗʰ body).</p>
 </div>
 </dd></dl>
 
@@ -8482,9 +8482,9 @@ plant.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The world_body() is ignored. p_WoScm_W = ∑ (mᵢ pᵢ) / mₛ, where mₛ
-= ∑ mᵢ, mᵢ is the mass of the iᵗʰ body, and pᵢ is Bcm’s position
-vector from Wo expressed in frame W (Bcm is the center of mass of
-the iᵗʰ body).</p>
+= ∑ mᵢ, mᵢ is the mass of the iᵗʰ body, and pᵢ is Bᵢcm’s position
+from Wo expressed in frame W (Bᵢcm is the center of mass of the
+iᵗʰ body).</p>
 </div>
 <ol class="arabic simple" start="2">
 <li><p>CalcCenterOfMassPositionInWorld(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], model_instances: list[pydrake.multibody.tree.ModelInstanceIndex]) -&gt; numpy.ndarray[object[3, 1]]</p></li>
@@ -8515,8 +8515,8 @@ non-world bodies contained in model_instances.</p>
 <p class="admonition-title">Note</p>
 <p>The world_body() is ignored. p_WoScm_W = ∑ (mᵢ pᵢ) / mₛ, where mₛ
 = ∑ mᵢ, mᵢ is the mass of the iᵗʰ body contained in
-model_instances, and pᵢ is Bcm’s position vector from Wo expressed
-in frame W (Bcm is the center of mass of the iᵗʰ body).</p>
+model_instances, and pᵢ is Bᵢcm’s position vector from Wo
+expressed in frame W (Bᵢcm is the center of mass of the iᵗʰ body).</p>
 </div>
 </dd></dl>
 
@@ -8803,9 +8803,9 @@ in 𝑠. The Jacobian is a function of only generalized positions q
 <p class="admonition-title">Note</p>
 <p>The world_body() is ignored. <a href="#id153"><span class="problematic" id="id154">J𝑠_v_ACcm_</span></a> = ∑ (mᵢ Jᵢ) / mₛ, where mₛ
 = ∑ mᵢ, mᵢ is the mass of the iᵗʰ body contained in
-model_instances, and Jᵢ is Bcm’s translational velocity Jacobian
-in frame A, expressed in frame E (Bcm is the center of mass of the
-iᵗʰ body).</p>
+model_instances, and Jᵢ is Bᵢcm’s translational velocity Jacobian
+in frame A, expressed in frame E (Bᵢcm is the center of mass of
+the iᵗʰ body).</p>
 </div>
 </dd></dl>
 
@@ -13889,9 +13889,9 @@ plant.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The world_body() is ignored. p_WoScm_W = ∑ (mᵢ pᵢ) / mₛ, where mₛ
-= ∑ mᵢ, mᵢ is the mass of the iᵗʰ body, and pᵢ is Bcm’s position
-vector from Wo expressed in frame W (Bcm is the center of mass of
-the iᵗʰ body).</p>
+= ∑ mᵢ, mᵢ is the mass of the iᵗʰ body, and pᵢ is Bᵢcm’s position
+from Wo expressed in frame W (Bᵢcm is the center of mass of the
+iᵗʰ body).</p>
 </div>
 <ol class="arabic simple" start="2">
 <li><p>CalcCenterOfMassPositionInWorld(self: pydrake.multibody.plant.MultibodyPlant_[Expression], context: pydrake.systems.framework.Context_[Expression], model_instances: list[pydrake.multibody.tree.ModelInstanceIndex]) -&gt; numpy.ndarray[object[3, 1]]</p></li>
@@ -13922,8 +13922,8 @@ non-world bodies contained in model_instances.</p>
 <p class="admonition-title">Note</p>
 <p>The world_body() is ignored. p_WoScm_W = ∑ (mᵢ pᵢ) / mₛ, where mₛ
 = ∑ mᵢ, mᵢ is the mass of the iᵗʰ body contained in
-model_instances, and pᵢ is Bcm’s position vector from Wo expressed
-in frame W (Bcm is the center of mass of the iᵗʰ body).</p>
+model_instances, and pᵢ is Bᵢcm’s position vector from Wo
+expressed in frame W (Bᵢcm is the center of mass of the iᵗʰ body).</p>
 </div>
 </dd></dl>
 
@@ -14210,9 +14210,9 @@ in 𝑠. The Jacobian is a function of only generalized positions q
 <p class="admonition-title">Note</p>
 <p>The world_body() is ignored. <a href="#id155"><span class="problematic" id="id156">J𝑠_v_ACcm_</span></a> = ∑ (mᵢ Jᵢ) / mₛ, where mₛ
 = ∑ mᵢ, mᵢ is the mass of the iᵗʰ body contained in
-model_instances, and Jᵢ is Bcm’s translational velocity Jacobian
-in frame A, expressed in frame E (Bcm is the center of mass of the
-iᵗʰ body).</p>
+model_instances, and Jᵢ is Bᵢcm’s translational velocity Jacobian
+in frame A, expressed in frame E (Bᵢcm is the center of mass of
+the iᵗʰ body).</p>
 </div>
 </dd></dl>
 

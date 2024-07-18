@@ -1,5 +1,7 @@
 var NAVTREEINDEX47 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_pose.html#abe9bbc905bd05580ba6943a89d530b4b":[3,0,0,17,7,3],
+"classdrake_1_1trajectories_1_1_piecewise_pose.html#ac80c5bfd4c7165e52988d167dc3f24dc":[3,0,0,17,7,6],
 "classdrake_1_1trajectories_1_1_piecewise_pose.html#adca8eca2ee324f57170dedfb4b06160b":[3,0,0,17,7,5],
 "classdrake_1_1trajectories_1_1_piecewise_pose.html#ae2f8a49b642aecb5c19ef3625be5e61d":[3,0,0,17,7,12],
 "classdrake_1_1trajectories_1_1_piecewise_pose.html#aec3c151ab7b4b34d667c50ec9d229003":[3,0,0,17,7,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX47 =
 "cond_8h.html#ac20110c691980f564476914e3fda5991":[4,0,0,1,11,1],
 "conex__supernodal__solver_8h.html":[4,0,0,8,2,6],
 "constant__value__source_8h.html":[4,0,0,12,6,3],
-"constant__value__source_8h.html#a6ea7c5d25d3383ac5d04462fcb808840":[4,0,0,12,6,3,0],
-"constant__vector__source_8h.html":[4,0,0,12,6,4],
-"constants_8h.html":[4,0,0,1,12]
+"constant__value__source_8h.html#a6ea7c5d25d3383ac5d04462fcb808840":[4,0,0,12,6,3,0]
 };

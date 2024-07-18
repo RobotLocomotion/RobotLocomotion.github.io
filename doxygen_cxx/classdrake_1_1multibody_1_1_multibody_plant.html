@@ -882,6 +882,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2026c5b7ca4f16add5577e474600be34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a2026c5b7ca4f16add5577e474600be34">CalcCenterOfMassTranslationalVelocityInWorld</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
 <tr class="memdesc:a2026c5b7ca4f16add5577e474600be34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates system center of mass translational velocity in world frame W.  <a href="#a2026c5b7ca4f16add5577e474600be34">More...</a><br /></td></tr>
 <tr class="separator:a2026c5b7ca4f16add5577e474600be34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab704aff8be7712af4b08ad4446053677"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ab704aff8be7712af4b08ad4446053677">CalcCenterOfMassTranslationalAccelerationInWorld</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
+<tr class="memdesc:ab704aff8be7712af4b08ad4446053677"><td class="mdescLeft">&#160;</td><td class="mdescRight">For the system S contained in this MultibodyPlant, calculates Scm's translational acceleration in the world frame W expressed in W, where Scm is the center of mass of S.  <a href="#ab704aff8be7712af4b08ad4446053677">More...</a><br /></td></tr>
+<tr class="separator:ab704aff8be7712af4b08ad4446053677"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a397cff87877011a6abe8c565431180f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a397cff87877011a6abe8c565431180f2">CalcCenterOfMassTranslationalAccelerationInWorld</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> &gt; &amp;model_instances) const</td></tr>
+<tr class="memdesc:a397cff87877011a6abe8c565431180f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">For the system S containing the selected model instances, calculates Scm's translational acceleration in the world frame W expressed in W, where Scm is the center of mass of S.  <a href="#a397cff87877011a6abe8c565431180f2">More...</a><br /></td></tr>
+<tr class="separator:a397cff87877011a6abe8c565431180f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16fc1c385cc07dda2780f12ce664fcbb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a16fc1c385cc07dda2780f12ce664fcbb">CalcCenterOfMassTranslationalVelocityInWorld</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> &gt; &amp;model_instances) const</td></tr>
 <tr class="memdesc:a16fc1c385cc07dda2780f12ce664fcbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates system center of mass translational velocity in world frame W.  <a href="#a16fc1c385cc07dda2780f12ce664fcbb">More...</a><br /></td></tr>
 <tr class="separator:a16fc1c385cc07dda2780f12ce664fcbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2377,7 +2383,7 @@ A distance constraint is the wrong modeling choice if the distance needs to go t
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>The <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a29ef779ddfeea96c5d80c27d68a4f864" title="Returns a constant reference to the world body.">world_body()</a> is ignored. p_WoScm_W = ∑ (mᵢ pᵢ) / mₛ, where mₛ = ∑ mᵢ, mᵢ is the mass of the iᵗʰ body, and pᵢ is Bcm's position vector from Wo expressed in frame W (Bcm is the center of mass of the iᵗʰ body). </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a29ef779ddfeea96c5d80c27d68a4f864" title="Returns a constant reference to the world body.">world_body()</a> is ignored. p_WoScm_W = ∑ (mᵢ pᵢ) / mₛ, where mₛ = ∑ mᵢ, mᵢ is the mass of the iᵗʰ body, and pᵢ is Bᵢcm's position from Wo expressed in frame W (Bᵢcm is the center of mass of the iᵗʰ body). </dd></dl>
 
 </div>
 </div>
@@ -2428,7 +2434,102 @@ A distance constraint is the wrong modeling choice if the distance needs to go t
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>The <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a29ef779ddfeea96c5d80c27d68a4f864" title="Returns a constant reference to the world body.">world_body()</a> is ignored. p_WoScm_W = ∑ (mᵢ pᵢ) / mₛ, where mₛ = ∑ mᵢ, mᵢ is the mass of the iᵗʰ body contained in model_instances, and pᵢ is Bcm's position vector from Wo expressed in frame W (Bcm is the center of mass of the iᵗʰ body). </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a29ef779ddfeea96c5d80c27d68a4f864" title="Returns a constant reference to the world body.">world_body()</a> is ignored. p_WoScm_W = ∑ (mᵢ pᵢ) / mₛ, where mₛ = ∑ mᵢ, mᵢ is the mass of the iᵗʰ body contained in model_instances, and pᵢ is Bᵢcm's position vector from Wo expressed in frame W (Bᵢcm is the center of mass of the iᵗʰ body). </dd></dl>
+
+</div>
+</div>
+<a id="ab704aff8be7712af4b08ad4446053677"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab704aff8be7712af4b08ad4446053677">&#9670;&nbsp;</a></span>CalcCenterOfMassTranslationalAccelerationInWorld() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt;T&gt; CalcCenterOfMassTranslationalAccelerationInWorld </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>For the system S contained in this MultibodyPlant, calculates Scm's translational acceleration in the world frame W expressed in W, where Scm is the center of mass of S. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The context contains the state of the model. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">a_WScm_W</td><td>Scm's translational acceleration in the world frame W expressed in the world frame W. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>this</code> has no body except <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a29ef779ddfeea96c5d80c27d68a4f864" title="Returns a constant reference to the world body.">world_body()</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if mₛ ≤ 0, where mₛ is the mass of system S. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>The <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a29ef779ddfeea96c5d80c27d68a4f864" title="Returns a constant reference to the world body.">world_body()</a> is ignored. a_WScm_W = ∑ (mᵢ aᵢ) / mₛ, where mₛ = ∑ mᵢ is the mass of system S, mᵢ is the mass of the iᵗʰ body, and aᵢ is the translational acceleration of Bᵢcm in world W expressed in W (Bᵢcm is the center of mass of the iᵗʰ body). </dd>
+<dd>
+When cached values are out of sync with the state stored in context, this method performs an expensive forward dynamics computation, whereas once evaluated, successive calls to this method are inexpensive. </dd></dl>
+
+</div>
+</div>
+<a id="a397cff87877011a6abe8c565431180f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a397cff87877011a6abe8c565431180f2">&#9670;&nbsp;</a></span>CalcCenterOfMassTranslationalAccelerationInWorld() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt;T&gt; CalcCenterOfMassTranslationalAccelerationInWorld </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>model_instances</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>For the system S containing the selected model instances, calculates Scm's translational acceleration in the world frame W expressed in W, where Scm is the center of mass of S. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The context contains the state of the model. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">model_instances</td><td>Vector of selected model instances. If a model instance is repeated in the vector (unusual), it is only counted once. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">a_WScm_W</td><td>Scm's translational acceleration in the world frame W expressed in the world frame W. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if model_instances is empty or only has world body. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if mₛ ≤ 0, where mₛ is the mass of system S. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>The <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a29ef779ddfeea96c5d80c27d68a4f864" title="Returns a constant reference to the world body.">world_body()</a> is ignored. a_WScm_W = ∑ (mᵢ aᵢ) / mₛ, where mₛ = ∑ mᵢ is the mass of system S, mᵢ is the mass of the iᵗʰ body in model_instances, and aᵢ is the translational acceleration of Bᵢcm in world W expressed in W (Bᵢcm is the center of mass of the iᵗʰ body). </dd>
+<dd>
+When cached values are out of sync with the state stored in context, this method performs an expensive forward dynamics computation, whereas once evaluated, successive calls to this method are inexpensive. </dd></dl>
 
 </div>
 </div>
@@ -2468,7 +2569,7 @@ A distance constraint is the wrong modeling choice if the distance needs to go t
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>The <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a29ef779ddfeea96c5d80c27d68a4f864" title="Returns a constant reference to the world body.">world_body()</a> is ignored. v_WScm_W = ∑ (mᵢ vᵢ) / mₛ, where mₛ = ∑ mᵢ, mᵢ is the mass of the iᵗʰ body, and vᵢ is Bcm's velocity in world W (Bcm is the center of mass of the iᵗʰ body). </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a29ef779ddfeea96c5d80c27d68a4f864" title="Returns a constant reference to the world body.">world_body()</a> is ignored. v_WScm_W = ∑ (mᵢ vᵢ) / mₛ, where mₛ = ∑ mᵢ, mᵢ is the mass of the iᵗʰ body, and vᵢ is Bᵢcm's velocity in world W (Bᵢcm is the center of mass of the iᵗʰ body). </dd></dl>
 
 </div>
 </div>
@@ -2519,7 +2620,7 @@ A distance constraint is the wrong modeling choice if the distance needs to go t
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>The <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a29ef779ddfeea96c5d80c27d68a4f864" title="Returns a constant reference to the world body.">world_body()</a> is ignored. v_WScm_W = ∑ (mᵢ vᵢ) / mₛ, where mₛ = ∑ mᵢ, mᵢ is the mass of the iᵗʰ body contained in model_instances, and vᵢ is Bcm's velocity in world W expressed in frame W (Bcm is the center of mass of the iᵗʰ body). </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a29ef779ddfeea96c5d80c27d68a4f864" title="Returns a constant reference to the world body.">world_body()</a> is ignored. v_WScm_W = ∑ (mᵢ vᵢ) / mₛ, where mₛ = ∑ mᵢ, mᵢ is the mass of the iᵗʰ body contained in model_instances, and vᵢ is Bᵢcm's velocity in world W expressed in frame W (Bᵢcm is the center of mass of the iᵗʰ body). </dd></dl>
 
 </div>
 </div>
@@ -2950,7 +3051,7 @@ A distance constraint is the wrong modeling choice if the distance needs to go t
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>The <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a29ef779ddfeea96c5d80c27d68a4f864" title="Returns a constant reference to the world body.">world_body()</a> is ignored. J𝑠_v_ACcm_ = ∑ (mᵢ Jᵢ) / mₛ, where mₛ = ∑ mᵢ, mᵢ is the mass of the iᵗʰ body contained in model_instances, and Jᵢ is Bcm's translational velocity Jacobian in frame A, expressed in frame E (Bcm is the center of mass of the iᵗʰ body). </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a29ef779ddfeea96c5d80c27d68a4f864" title="Returns a constant reference to the world body.">world_body()</a> is ignored. J𝑠_v_ACcm_ = ∑ (mᵢ Jᵢ) / mₛ, where mₛ = ∑ mᵢ, mᵢ is the mass of the iᵗʰ body contained in model_instances, and Jᵢ is Bᵢcm's translational velocity Jacobian in frame A, expressed in frame E (Bᵢcm is the center of mass of the iᵗʰ body). </dd></dl>
 
 </div>
 </div>
@@ -8492,8 +8593,8 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 
 </div>
 </div>
-<a id="af4f43a6f72128af8e926d32c37ed7580"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4f43a6f72128af8e926d32c37ed7580">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="aecc2576d314d5baf56ad6ad593b26f9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecc2576d314d5baf56ad6ad593b26f9f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -8504,7 +8605,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -8518,8 +8619,8 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 
 </div>
 </div>
-<a id="aecc2576d314d5baf56ad6ad593b26f9f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aecc2576d314d5baf56ad6ad593b26f9f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="af4f43a6f72128af8e926d32c37ed7580"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4f43a6f72128af8e926d32c37ed7580">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -8530,7 +8631,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
