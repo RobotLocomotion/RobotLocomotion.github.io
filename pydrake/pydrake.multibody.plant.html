@@ -3070,6 +3070,149 @@ expressed in frame W (Bᵢcm is the center of mass of the iᵗʰ body).</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.CalcCenterOfMassTranslationalAccelerationInWorld">
+<span class="sig-name descname"><span class="pre">CalcCenterOfMassTranslationalAccelerationInWorld</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.CalcCenterOfMassTranslationalAccelerationInWorld" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>CalcCenterOfMassTranslationalAccelerationInWorld(self: pydrake.multibody.plant.MultibodyPlant, context: pydrake.systems.framework.Context) -&gt; numpy.ndarray[numpy.float64[3, 1]]</p></li>
+</ol>
+<p>For the system S contained in this MultibodyPlant, calculates Scm’s
+translational acceleration in the world frame W expressed in W, where
+Scm is the center of mass of S.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context contains the state of the model.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">a_WScm_W</span></code>:</dt><dd><p>Scm’s translational acceleration in the world frame W expressed in
+the world frame W.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this has no body except world_body</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>RuntimeError if mₛ ≤ 0</strong><strong>, </strong><strong>where mₛ is the mass of system S.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The world_body() is ignored. a_WScm_W = ∑ (mᵢ aᵢ) / mₛ, where mₛ =
+∑ mᵢ is the mass of system S, mᵢ is the mass of the iᵗʰ body, and
+aᵢ is the translational acceleration of Bᵢcm in world W expressed
+in W (Bᵢcm is the center of mass of the iᵗʰ body).</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When cached values are out of sync with the state stored in
+context, this method performs an expensive forward dynamics
+computation, whereas once evaluated, successive calls to this
+method are inexpensive.</p>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>CalcCenterOfMassTranslationalAccelerationInWorld(self: pydrake.multibody.plant.MultibodyPlant, context: pydrake.systems.framework.Context, model_instances: list[pydrake.multibody.tree.ModelInstanceIndex]) -&gt; numpy.ndarray[numpy.float64[3, 1]]</p></li>
+</ol>
+<p>For the system S containing the selected model instances, calculates
+Scm’s translational acceleration in the world frame W expressed in W,
+where Scm is the center of mass of S.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context contains the state of the model.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">model_instances</span></code>:</dt><dd><p>Vector of selected model instances. If a model instance is
+repeated in the vector (unusual), it is only counted once.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">a_WScm_W</span></code>:</dt><dd><p>Scm’s translational acceleration in the world frame W expressed in
+the world frame W.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if model_instances is empty</strong><strong> or </strong><strong>only has world body.</strong> – </p></li>
+<li><p><strong>RuntimeError if mₛ ≤ 0</strong><strong>, </strong><strong>where mₛ is the mass of system S.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The world_body() is ignored. a_WScm_W = ∑ (mᵢ aᵢ) / mₛ, where mₛ =
+∑ mᵢ is the mass of system S, mᵢ is the mass of the iᵗʰ body in
+model_instances, and aᵢ is the translational acceleration of Bᵢcm
+in world W expressed in W (Bᵢcm is the center of mass of the iᵗʰ
+body).</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When cached values are out of sync with the state stored in
+context, this method performs an expensive forward dynamics
+computation, whereas once evaluated, successive calls to this
+method are inexpensive.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.CalcCenterOfMassTranslationalVelocityInWorld">
+<span class="sig-name descname"><span class="pre">CalcCenterOfMassTranslationalVelocityInWorld</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.CalcCenterOfMassTranslationalVelocityInWorld" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>CalcCenterOfMassTranslationalVelocityInWorld(self: pydrake.multibody.plant.MultibodyPlant, context: pydrake.systems.framework.Context) -&gt; numpy.ndarray[numpy.float64[3, 1]]</p></li>
+</ol>
+<p>Calculates system center of mass translational velocity in world frame
+W.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context contains the state of the model.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">v_WScm_W</span></code>:</dt><dd><p>Scm’s translational velocity in frame W, expressed in W, where Scm
+is the center of mass of the system S stored by <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this has no body except world_body</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>RuntimeError if mₛ ≤ 0</strong><strong> (</strong><strong>where mₛ is the mass of system S</strong><strong>)</strong><strong></strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The world_body() is ignored. v_WScm_W = ∑ (mᵢ vᵢ) / mₛ, where mₛ =
+∑ mᵢ, mᵢ is the mass of the iᵗʰ body, and vᵢ is Bᵢcm’s velocity in
+world W (Bᵢcm is the center of mass of the iᵗʰ body).</p>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>CalcCenterOfMassTranslationalVelocityInWorld(self: pydrake.multibody.plant.MultibodyPlant, context: pydrake.systems.framework.Context, model_instances: list[pydrake.multibody.tree.ModelInstanceIndex]) -&gt; numpy.ndarray[numpy.float64[3, 1]]</p></li>
+</ol>
+<p>Calculates system center of mass translational velocity in world frame
+W.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context contains the state of the model.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">model_instances</span></code>:</dt><dd><p>Vector of selected model instances. If a model instance is
+repeated in the vector (unusual), it is only counted once.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">v_WScm_W</span></code>:</dt><dd><p>Scm’s translational velocity in frame W, expressed in W, where Scm
+is the center of mass of the system S of non-world bodies
+contained in model_instances.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if model_instances is empty</strong><strong> or </strong><strong>only has world body.</strong> – </p></li>
+<li><p><strong>RuntimeError if mₛ ≤ 0</strong><strong> (</strong><strong>where mₛ is the mass of system S</strong><strong>)</strong><strong></strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The world_body() is ignored. v_WScm_W = ∑ (mᵢ vᵢ) / mₛ, where mₛ =
+∑ mᵢ, mᵢ is the mass of the iᵗʰ body contained in model_instances,
+and vᵢ is Bᵢcm’s velocity in world W expressed in frame W (Bᵢcm is
+the center of mass of the iᵗʰ body).</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.CalcForceElementsContribution">
 <span class="sig-name descname"><span class="pre">CalcForceElementsContribution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">forces</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.MultibodyForces" title="pydrake.multibody.tree.MultibodyForces"><span class="pre">pydrake.multibody.tree.MultibodyForces</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.CalcForceElementsContribution" title="Permalink to this definition"></a></dt>
 <dd><p>Computes the combined force contribution of ForceElement objects in
@@ -8521,6 +8664,149 @@ expressed in frame W (Bᵢcm is the center of mass of the iᵗʰ body).</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.CalcCenterOfMassTranslationalAccelerationInWorld">
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].CalcCenterOfMassTranslationalAccelerationInWorld"></span><span class="sig-name descname"><span class="pre">CalcCenterOfMassTranslationalAccelerationInWorld</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.CalcCenterOfMassTranslationalAccelerationInWorld" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>CalcCenterOfMassTranslationalAccelerationInWorld(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd]) -&gt; numpy.ndarray[object[3, 1]]</p></li>
+</ol>
+<p>For the system S contained in this MultibodyPlant, calculates Scm’s
+translational acceleration in the world frame W expressed in W, where
+Scm is the center of mass of S.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context contains the state of the model.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">a_WScm_W</span></code>:</dt><dd><p>Scm’s translational acceleration in the world frame W expressed in
+the world frame W.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this has no body except world_body</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>RuntimeError if mₛ ≤ 0</strong><strong>, </strong><strong>where mₛ is the mass of system S.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The world_body() is ignored. a_WScm_W = ∑ (mᵢ aᵢ) / mₛ, where mₛ =
+∑ mᵢ is the mass of system S, mᵢ is the mass of the iᵗʰ body, and
+aᵢ is the translational acceleration of Bᵢcm in world W expressed
+in W (Bᵢcm is the center of mass of the iᵗʰ body).</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When cached values are out of sync with the state stored in
+context, this method performs an expensive forward dynamics
+computation, whereas once evaluated, successive calls to this
+method are inexpensive.</p>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>CalcCenterOfMassTranslationalAccelerationInWorld(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], model_instances: list[pydrake.multibody.tree.ModelInstanceIndex]) -&gt; numpy.ndarray[object[3, 1]]</p></li>
+</ol>
+<p>For the system S containing the selected model instances, calculates
+Scm’s translational acceleration in the world frame W expressed in W,
+where Scm is the center of mass of S.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context contains the state of the model.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">model_instances</span></code>:</dt><dd><p>Vector of selected model instances. If a model instance is
+repeated in the vector (unusual), it is only counted once.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">a_WScm_W</span></code>:</dt><dd><p>Scm’s translational acceleration in the world frame W expressed in
+the world frame W.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if model_instances is empty</strong><strong> or </strong><strong>only has world body.</strong> – </p></li>
+<li><p><strong>RuntimeError if mₛ ≤ 0</strong><strong>, </strong><strong>where mₛ is the mass of system S.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The world_body() is ignored. a_WScm_W = ∑ (mᵢ aᵢ) / mₛ, where mₛ =
+∑ mᵢ is the mass of system S, mᵢ is the mass of the iᵗʰ body in
+model_instances, and aᵢ is the translational acceleration of Bᵢcm
+in world W expressed in W (Bᵢcm is the center of mass of the iᵗʰ
+body).</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When cached values are out of sync with the state stored in
+context, this method performs an expensive forward dynamics
+computation, whereas once evaluated, successive calls to this
+method are inexpensive.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.CalcCenterOfMassTranslationalVelocityInWorld">
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].CalcCenterOfMassTranslationalVelocityInWorld"></span><span class="sig-name descname"><span class="pre">CalcCenterOfMassTranslationalVelocityInWorld</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.CalcCenterOfMassTranslationalVelocityInWorld" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>CalcCenterOfMassTranslationalVelocityInWorld(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd]) -&gt; numpy.ndarray[object[3, 1]]</p></li>
+</ol>
+<p>Calculates system center of mass translational velocity in world frame
+W.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context contains the state of the model.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">v_WScm_W</span></code>:</dt><dd><p>Scm’s translational velocity in frame W, expressed in W, where Scm
+is the center of mass of the system S stored by <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this has no body except world_body</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>RuntimeError if mₛ ≤ 0</strong><strong> (</strong><strong>where mₛ is the mass of system S</strong><strong>)</strong><strong></strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The world_body() is ignored. v_WScm_W = ∑ (mᵢ vᵢ) / mₛ, where mₛ =
+∑ mᵢ, mᵢ is the mass of the iᵗʰ body, and vᵢ is Bᵢcm’s velocity in
+world W (Bᵢcm is the center of mass of the iᵗʰ body).</p>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>CalcCenterOfMassTranslationalVelocityInWorld(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], model_instances: list[pydrake.multibody.tree.ModelInstanceIndex]) -&gt; numpy.ndarray[object[3, 1]]</p></li>
+</ol>
+<p>Calculates system center of mass translational velocity in world frame
+W.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context contains the state of the model.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">model_instances</span></code>:</dt><dd><p>Vector of selected model instances. If a model instance is
+repeated in the vector (unusual), it is only counted once.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">v_WScm_W</span></code>:</dt><dd><p>Scm’s translational velocity in frame W, expressed in W, where Scm
+is the center of mass of the system S of non-world bodies
+contained in model_instances.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if model_instances is empty</strong><strong> or </strong><strong>only has world body.</strong> – </p></li>
+<li><p><strong>RuntimeError if mₛ ≤ 0</strong><strong> (</strong><strong>where mₛ is the mass of system S</strong><strong>)</strong><strong></strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The world_body() is ignored. v_WScm_W = ∑ (mᵢ vᵢ) / mₛ, where mₛ =
+∑ mᵢ, mᵢ is the mass of the iᵗʰ body contained in model_instances,
+and vᵢ is Bᵢcm’s velocity in world W expressed in frame W (Bᵢcm is
+the center of mass of the iᵗʰ body).</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.CalcForceElementsContribution">
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].CalcForceElementsContribution"></span><span class="sig-name descname"><span class="pre">CalcForceElementsContribution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forces</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.MultibodyForces_" title="pydrake.multibody.tree.MultibodyForces_"><span class="pre">pydrake.multibody.tree.MultibodyForces_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.CalcForceElementsContribution" title="Permalink to this definition"></a></dt>
 <dd><p>Computes the combined force contribution of ForceElement objects in
@@ -13924,6 +14210,149 @@ non-world bodies contained in model_instances.</p>
 = ∑ mᵢ, mᵢ is the mass of the iᵗʰ body contained in
 model_instances, and pᵢ is Bᵢcm’s position vector from Wo
 expressed in frame W (Bᵢcm is the center of mass of the iᵗʰ body).</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.CalcCenterOfMassTranslationalAccelerationInWorld">
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].CalcCenterOfMassTranslationalAccelerationInWorld"></span><span class="sig-name descname"><span class="pre">CalcCenterOfMassTranslationalAccelerationInWorld</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.CalcCenterOfMassTranslationalAccelerationInWorld" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>CalcCenterOfMassTranslationalAccelerationInWorld(self: pydrake.multibody.plant.MultibodyPlant_[Expression], context: pydrake.systems.framework.Context_[Expression]) -&gt; numpy.ndarray[object[3, 1]]</p></li>
+</ol>
+<p>For the system S contained in this MultibodyPlant, calculates Scm’s
+translational acceleration in the world frame W expressed in W, where
+Scm is the center of mass of S.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context contains the state of the model.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">a_WScm_W</span></code>:</dt><dd><p>Scm’s translational acceleration in the world frame W expressed in
+the world frame W.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this has no body except world_body</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>RuntimeError if mₛ ≤ 0</strong><strong>, </strong><strong>where mₛ is the mass of system S.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The world_body() is ignored. a_WScm_W = ∑ (mᵢ aᵢ) / mₛ, where mₛ =
+∑ mᵢ is the mass of system S, mᵢ is the mass of the iᵗʰ body, and
+aᵢ is the translational acceleration of Bᵢcm in world W expressed
+in W (Bᵢcm is the center of mass of the iᵗʰ body).</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When cached values are out of sync with the state stored in
+context, this method performs an expensive forward dynamics
+computation, whereas once evaluated, successive calls to this
+method are inexpensive.</p>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>CalcCenterOfMassTranslationalAccelerationInWorld(self: pydrake.multibody.plant.MultibodyPlant_[Expression], context: pydrake.systems.framework.Context_[Expression], model_instances: list[pydrake.multibody.tree.ModelInstanceIndex]) -&gt; numpy.ndarray[object[3, 1]]</p></li>
+</ol>
+<p>For the system S containing the selected model instances, calculates
+Scm’s translational acceleration in the world frame W expressed in W,
+where Scm is the center of mass of S.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context contains the state of the model.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">model_instances</span></code>:</dt><dd><p>Vector of selected model instances. If a model instance is
+repeated in the vector (unusual), it is only counted once.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">a_WScm_W</span></code>:</dt><dd><p>Scm’s translational acceleration in the world frame W expressed in
+the world frame W.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if model_instances is empty</strong><strong> or </strong><strong>only has world body.</strong> – </p></li>
+<li><p><strong>RuntimeError if mₛ ≤ 0</strong><strong>, </strong><strong>where mₛ is the mass of system S.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The world_body() is ignored. a_WScm_W = ∑ (mᵢ aᵢ) / mₛ, where mₛ =
+∑ mᵢ is the mass of system S, mᵢ is the mass of the iᵗʰ body in
+model_instances, and aᵢ is the translational acceleration of Bᵢcm
+in world W expressed in W (Bᵢcm is the center of mass of the iᵗʰ
+body).</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When cached values are out of sync with the state stored in
+context, this method performs an expensive forward dynamics
+computation, whereas once evaluated, successive calls to this
+method are inexpensive.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.CalcCenterOfMassTranslationalVelocityInWorld">
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].CalcCenterOfMassTranslationalVelocityInWorld"></span><span class="sig-name descname"><span class="pre">CalcCenterOfMassTranslationalVelocityInWorld</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.CalcCenterOfMassTranslationalVelocityInWorld" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>CalcCenterOfMassTranslationalVelocityInWorld(self: pydrake.multibody.plant.MultibodyPlant_[Expression], context: pydrake.systems.framework.Context_[Expression]) -&gt; numpy.ndarray[object[3, 1]]</p></li>
+</ol>
+<p>Calculates system center of mass translational velocity in world frame
+W.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context contains the state of the model.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">v_WScm_W</span></code>:</dt><dd><p>Scm’s translational velocity in frame W, expressed in W, where Scm
+is the center of mass of the system S stored by <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this has no body except world_body</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>RuntimeError if mₛ ≤ 0</strong><strong> (</strong><strong>where mₛ is the mass of system S</strong><strong>)</strong><strong></strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The world_body() is ignored. v_WScm_W = ∑ (mᵢ vᵢ) / mₛ, where mₛ =
+∑ mᵢ, mᵢ is the mass of the iᵗʰ body, and vᵢ is Bᵢcm’s velocity in
+world W (Bᵢcm is the center of mass of the iᵗʰ body).</p>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>CalcCenterOfMassTranslationalVelocityInWorld(self: pydrake.multibody.plant.MultibodyPlant_[Expression], context: pydrake.systems.framework.Context_[Expression], model_instances: list[pydrake.multibody.tree.ModelInstanceIndex]) -&gt; numpy.ndarray[object[3, 1]]</p></li>
+</ol>
+<p>Calculates system center of mass translational velocity in world frame
+W.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context contains the state of the model.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">model_instances</span></code>:</dt><dd><p>Vector of selected model instances. If a model instance is
+repeated in the vector (unusual), it is only counted once.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">v_WScm_W</span></code>:</dt><dd><p>Scm’s translational velocity in frame W, expressed in W, where Scm
+is the center of mass of the system S of non-world bodies
+contained in model_instances.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if model_instances is empty</strong><strong> or </strong><strong>only has world body.</strong> – </p></li>
+<li><p><strong>RuntimeError if mₛ ≤ 0</strong><strong> (</strong><strong>where mₛ is the mass of system S</strong><strong>)</strong><strong></strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The world_body() is ignored. v_WScm_W = ∑ (mᵢ vᵢ) / mₛ, where mₛ =
+∑ mᵢ, mᵢ is the mass of the iᵗʰ body contained in model_instances,
+and vᵢ is Bᵢcm’s velocity in world W expressed in frame W (Bᵢcm is
+the center of mass of the iᵗʰ body).</p>
 </div>
 </dd></dl>
 
