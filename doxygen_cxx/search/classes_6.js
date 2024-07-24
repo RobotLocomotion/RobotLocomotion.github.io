@@ -6,6 +6,7 @@ var searchData=
   ['gaussiantrianglequadraturerule',['GaussianTriangleQuadratureRule',['../classdrake_1_1multibody_1_1_gaussian_triangle_quadrature_rule.html',1,'drake::multibody']]],
   ['gaussianvector',['GaussianVector',['../classdrake_1_1schema_1_1_gaussian_vector.html',1,'drake::schema']]],
   ['gazetargetconstraint',['GazeTargetConstraint',['../classdrake_1_1multibody_1_1_gaze_target_constraint.html',1,'drake::multibody']]],
+  ['gcsgraphvizoptions',['GcsGraphvizOptions',['../structdrake_1_1geometry_1_1optimization_1_1_gcs_graphviz_options.html',1,'drake::geometry::optimization']]],
   ['gcstrajectoryoptimization',['GcsTrajectoryOptimization',['../classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html',1,'drake::planning::trajectory_optimization']]],
   ['genericintegratortest',['GenericIntegratorTest',['../structdrake_1_1systems_1_1analysis__test_1_1_generic_integrator_test.html',1,'drake::systems::analysis_test']]],
   ['genericpolynomial',['GenericPolynomial',['../classdrake_1_1symbolic_1_1_generic_polynomial.html',1,'drake::symbolic']]],

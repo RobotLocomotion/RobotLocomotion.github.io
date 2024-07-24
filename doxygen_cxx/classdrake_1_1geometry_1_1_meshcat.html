@@ -314,12 +314,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af4681ade5efb8da0d67f86ecae9b9ac8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#af4681ade5efb8da0d67f86ecae9b9ac8">Delete</a> (std::string_view path=&quot;&quot;)</td></tr>
 <tr class="memdesc:af4681ade5efb8da0d67f86ecae9b9ac8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes the object at the given <code>path</code> as well as all of its children.  <a href="#af4681ade5efb8da0d67f86ecae9b9ac8">More...</a><br /></td></tr>
 <tr class="separator:af4681ade5efb8da0d67f86ecae9b9ac8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85a13960e9b5cbf4becb62e66e6f3a8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a85a13960e9b5cbf4becb62e66e6f3a8b">SetRealtimeRate</a> (<a class="el" href="classdouble.html">double</a> rate)</td></tr>
-<tr class="memdesc:a85a13960e9b5cbf4becb62e66e6f3a8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the realtime rate that is displayed in the meshcat visualizer stats strip chart.  <a href="#a85a13960e9b5cbf4becb62e66e6f3a8b">More...</a><br /></td></tr>
-<tr class="separator:a85a13960e9b5cbf4becb62e66e6f3a8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5c20c156d9affc723055d0384137c44"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#ae5c20c156d9affc723055d0384137c44">GetRealtimeRate</a> () const</td></tr>
-<tr class="memdesc:ae5c20c156d9affc723055d0384137c44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the realtime rate that is displayed in the meshcat visualizer stats strip chart.  <a href="#ae5c20c156d9affc723055d0384137c44">More...</a><br /></td></tr>
-<tr class="separator:ae5c20c156d9affc723055d0384137c44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa50f8f047c5c453bdf50ab98bad4f6fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#aa50f8f047c5c453bdf50ab98bad4f6fa">SetProperty</a> (std::string_view path, std::string property, bool value, std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt; time_in_recording=std::nullopt)</td></tr>
 <tr class="memdesc:aa50f8f047c5c453bdf50ab98bad4f6fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a single named property of the object at the given path.  <a href="#aa50f8f047c5c453bdf50ab98bad4f6fa">More...</a><br /></td></tr>
 <tr class="separator:aa50f8f047c5c453bdf50ab98bad4f6fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -373,6 +367,19 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7b80af00a00e2a047d59cdc4dc1e7754"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37b1b4538dd47e4dc5fd9c671454b4d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">Meshcat</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a37b1b4538dd47e4dc5fd9c671454b4d2">operator=</a> (<a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">Meshcat</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:a37b1b4538dd47e4dc5fd9c671454b4d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:ad5c9a4ca195d1de4257785b8ad351e2b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#ad5c9a4ca195d1de4257785b8ad351e2b">SetSimulationTime</a> (<a class="el" href="classdouble.html">double</a> sim_time)</td></tr>
+<tr class="memdesc:ad5c9a4ca195d1de4257785b8ad351e2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">@group Realtime Rate Reporting  <a href="#ad5c9a4ca195d1de4257785b8ad351e2b">More...</a><br /></td></tr>
+<tr class="separator:ad5c9a4ca195d1de4257785b8ad351e2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa74d106dfb006f716531e28eb8e0ffdb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#aa74d106dfb006f716531e28eb8e0ffdb">GetSimulationTime</a> () const</td></tr>
+<tr class="memdesc:aa74d106dfb006f716531e28eb8e0ffdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the last time value passed to <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#ad5c9a4ca195d1de4257785b8ad351e2b" title="@group Realtime Rate Reporting">SetSimulationTime()</a>.  <a href="#aa74d106dfb006f716531e28eb8e0ffdb">More...</a><br /></td></tr>
+<tr class="separator:aa74d106dfb006f716531e28eb8e0ffdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85a13960e9b5cbf4becb62e66e6f3a8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a85a13960e9b5cbf4becb62e66e6f3a8b">SetRealtimeRate</a> (<a class="el" href="classdouble.html">double</a> rate)</td></tr>
+<tr class="memdesc:a85a13960e9b5cbf4becb62e66e6f3a8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Immediately broadcasts the given realtime rate to all connected clients.  <a href="#a85a13960e9b5cbf4becb62e66e6f3a8b">More...</a><br /></td></tr>
+<tr class="separator:a85a13960e9b5cbf4becb62e66e6f3a8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5c20c156d9affc723055d0384137c44"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#ae5c20c156d9affc723055d0384137c44">GetRealtimeRate</a> () const</td></tr>
+<tr class="memdesc:ae5c20c156d9affc723055d0384137c44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the realtime rate that was last broadcast by this instance (typically, the value displayed in the meshcat visualizer stats chart).  <a href="#ae5c20c156d9affc723055d0384137c44">More...</a><br /></td></tr>
+<tr class="separator:ae5c20c156d9affc723055d0384137c44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Meshcat Controls</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> "Controls" are user interface elements in the browser.</p>
 <p>These currently include buttons and sliders.</p><ul>
@@ -993,8 +1000,27 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Gets the realtime rate that is displayed in the meshcat visualizer stats strip chart. </p>
-<p>See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a85a13960e9b5cbf4becb62e66e6f3a8b" title="Sets the realtime rate that is displayed in the meshcat visualizer stats strip chart.">SetRealtimeRate()</a>. Note that this value might be a smoothing function across multiple calls to <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a85a13960e9b5cbf4becb62e66e6f3a8b" title="Sets the realtime rate that is displayed in the meshcat visualizer stats strip chart.">SetRealtimeRate()</a> rather than the most recent argument value, in case this class ever adds smoothing capability. </p>
+<p>Gets the realtime rate that was last broadcast by this instance (typically, the value displayed in the meshcat visualizer stats chart). </p>
+<p>See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a85a13960e9b5cbf4becb62e66e6f3a8b" title="Immediately broadcasts the given realtime rate to all connected clients.">SetRealtimeRate()</a>. </p>
+
+</div>
+</div>
+<a id="aa74d106dfb006f716531e28eb8e0ffdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa74d106dfb006f716531e28eb8e0ffdb">&#9670;&nbsp;</a></span>GetSimulationTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> GetSimulationTime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the last time value passed to <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#ad5c9a4ca195d1de4257785b8ad351e2b" title="@group Realtime Rate Reporting">SetSimulationTime()</a>. </p>
 
 </div>
 </div>
@@ -1954,14 +1980,59 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Sets the realtime rate that is displayed in the meshcat visualizer stats strip chart. </p>
-<p>This rate is the ratio between sim time and real world time. 1 indicates the simulator is the same speed as real time. 2 indicates running twice as fast as real time, 0.5 is half speed, etc. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_simulator.html#abda3671ab5939691e7e39fcba568174b" title="Slow the simulation down to approximately synchronize with real time when it would otherwise run too ...">drake::systems::Simulator::set_target_realtime_rate()</a> </dd></dl>
+<p>Immediately broadcasts the given realtime rate to all connected clients. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">rate</td><td>the realtime rate value to be displayed, will be converted to a percentage (multiplied by 100) </td></tr>
+    <tr><td class="paramname">rate</td><td>the realtime rate value to broadcast, will be converted to a percentage (multiplied by 100) </td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ad5c9a4ca195d1de4257785b8ad351e2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5c9a4ca195d1de4257785b8ad351e2b">&#9670;&nbsp;</a></span>SetSimulationTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetSimulationTime </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>sim_time</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>@group Realtime Rate Reporting </p>
+<p>Meshcat can be used to visualize the realtime rate of a simulation's computation in the meshcat visualizer webpage. <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> broadcasts a realtime rate message that is received and displayed by the browser in a <a href="https://github.com/mrdoob/stats.js">stats strip chart</a></p>
+<p>Advancing the simulation's time requires a certain amount of real world compute time. The realtime rate, a non-negative real value, is the ratio of the sim time to real world time. A value of one indicates that the simulation is advancing at the same rate as the real world clock. Higher values indicate faster simulations. Lower values indicate slower simulations.</p>
+<p>The realtime rate value can be broadcast to the visualizer in one of two ways:</p>
+<ul>
+<li>Throttled - <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> is configured to broadcast realtime rate data in a "smoothed" manner, so that the visualization doesn't fluctuate at arbitrarily high rates and possibly make the value difficult to read. See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#ad5c9a4ca195d1de4257785b8ad351e2b" title="@group Realtime Rate Reporting">SetSimulationTime()</a>. This is the preferred means of reporting real time rate.</li>
+<li>Immediate - a Meshcat user <em>can</em> compute realtime rate themselves and simply ask Meshcat to dispatch a message with that computed value. See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a85a13960e9b5cbf4becb62e66e6f3a8b" title="Immediately broadcasts the given realtime rate to all connected clients.">SetRealtimeRate()</a>. This is not recommended and the user is responsible for computing the value and controlling the frequency at which this is done.Updates Meshcat's knowledge of simulation time. Changes to simulation time <em>may</em> trigger a realtime rate message to the meshcat visualizer client based on the configured value in <a class="el" href="structdrake_1_1geometry_1_1_meshcat_params.html#ad883680f1189f5c5cfa4c0a7062c4dbf" title="The minimum period of wall clock time (in seconds) between updates to the broadcast realtime rate.">MeshcatParams::realtime_rate_period</a> value.</li>
+</ul>
+<p>Invoking this method <em>may</em> dispatch a message to clients. The following rules apply to invocations and messages:</p>
+<ul>
+<li>The first invocation is necessary to <em>initialize</em> the calculation; it defines the the starting point from which all calculations are performed (for both wall clock time as well as simulation time). As no interval can be measured from a single invocation, no rate can be computed. Therefore, the first invocation will <em>never</em> broadcast the message.</li>
+<li>Wall clock time must advance at least <a class="el" href="structdrake_1_1geometry_1_1_meshcat_params.html#ad883680f1189f5c5cfa4c0a7062c4dbf" title="The minimum period of wall clock time (in seconds) between updates to the broadcast realtime rate.">MeshcatParams::realtime_rate_period</a> seconds for a message to be sent.</li>
+<li><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> promises to broadcast one message per elapsed period &ndash; starting from initialization &ndash; regardless of the frequency at which <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#ad5c9a4ca195d1de4257785b8ad351e2b" title="@group Realtime Rate Reporting">SetSimulationTime()</a> actually gets invoked. If the elapsed time between invocations exceeds <a class="el" href="structdrake_1_1geometry_1_1_meshcat_params.html#ad883680f1189f5c5cfa4c0a7062c4dbf" title="The minimum period of wall clock time (in seconds) between updates to the broadcast realtime rate.">MeshcatParams::realtime_rate_period</a>, multiple messages will be broadcast; one for each complete period.<ul>
+<li>This implies that each column of pixels in the realtime rate chart in the client visualizer represents a fixed amount of wall clock time.</li>
+</ul>
+</li>
+</ul>
+<p>When the realtime rate is broadcast, that value will be reported by <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#ae5c20c156d9affc723055d0384137c44" title="Gets the realtime rate that was last broadcast by this instance (typically, the value displayed in th...">GetRealtimeRate()</a>.</p>
+<p>The realtime rate calculation can be "reset" by passing a simulation time value that is <em>strictly less</em> than the value of the previous invocation. This has the effect of re-initializing the calculation with the passed time and the wall clock time of the invocation. So, if the simulation's context gets reset to <code>time = 0</code>, calls to this method passing the context time will implicitly reset realtime rate calculations accordingly. Resetting the calculator will reset the value reported by <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#ae5c20c156d9affc723055d0384137c44" title="Gets the realtime rate that was last broadcast by this instance (typically, the value displayed in th...">GetRealtimeRate()</a> to zero.</p>
+<p>This function is safe to be called redundantly with the same simulation time. Redundant calls are a no-op.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sim_time</td><td>The <em>absolute</em> sim time being visualized.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_simulator.html#abda3671ab5939691e7e39fcba568174b" title="Slow the simulation down to approximately synchronize with real time when it would otherwise run too ...">drake::systems::Simulator::set_target_realtime_rate()</a> </dd></dl>
 
 </div>
 </div>

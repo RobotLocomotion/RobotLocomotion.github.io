@@ -333,7 +333,7 @@ the points is added as a basis vector.</p>
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.AffineSubspace.AffineDimension">
 <span class="sig-name descname"><span class="pre">AffineDimension</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.AffineSubspace" title="pydrake.geometry.optimization.AffineSubspace"><span class="pre">pydrake.geometry.optimization.AffineSubspace</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.AffineSubspace.AffineDimension" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the affine dimension of this set. For an affine subspace, this
-is simply the number of columns in the <a href="#id15"><span class="problematic" id="id16">basis_</span></a> matrix. A point will
+is simply the number of columns in the <a href="#id19"><span class="problematic" id="id20">basis_</span></a> matrix. A point will
 have affine dimension zero.</p>
 </dd></dl>
 
@@ -395,7 +395,7 @@ instead. This will be removed from Drake on or after 2024-08-01.</p>
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.AffineSubspace.ToGlobalCoordinates">
 <span class="sig-name descname"><span class="pre">ToGlobalCoordinates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.AffineSubspace" title="pydrake.geometry.optimization.AffineSubspace"><span class="pre">pydrake.geometry.optimization.AffineSubspace</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.AffineSubspace.ToGlobalCoordinates" title="Permalink to this definition"></a></dt>
 <dd><p>Given a point y in the basis of the AffineSubspace, with the zero
-point at <a href="#id17"><span class="problematic" id="id18">translation_</span></a>, returns the coordinates of y in the standard
+point at <a href="#id21"><span class="problematic" id="id22">translation_</span></a>, returns the coordinates of y in the standard
 basis of the ambient space. If the AffineSubspace is a point, it has
 an empty basis, so the only possible local coordinates are also empty
 (and should be passed in as a length-zero vector). Each column of the
@@ -413,7 +413,7 @@ its representation in the coordinate system of the ambient space.</p>
 <span class="sig-name descname"><span class="pre">ToLocalCoordinates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.AffineSubspace" title="pydrake.geometry.optimization.AffineSubspace"><span class="pre">pydrake.geometry.optimization.AffineSubspace</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.AffineSubspace.ToLocalCoordinates" title="Permalink to this definition"></a></dt>
 <dd><p>Given a point x in the standard basis of the ambient space, returns
 the coordinates of x in the basis of the AffineSubspace, with the zero
-point at <a href="#id19"><span class="problematic" id="id20">translation_</span></a>. The component of x that is orthogonal to the
+point at <a href="#id23"><span class="problematic" id="id24">translation_</span></a>. The component of x that is orthogonal to the
 AffineSubspace (if it exists) is discarded, so
 ToGlobalCoordinates(ToLocalCoordinates(x)) is equivalent to
 Project(x). Note that if the AffineSubspace is a point, the basis is
@@ -1719,6 +1719,60 @@ plane, namely {x|aᵀx+b ≤ −δ}.</p>
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.GcsGraphvizOptions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.optimization.</span></span><span class="sig-name descname"><span class="pre">GcsGraphvizOptions</span></span><a class="headerlink" href="#pydrake.geometry.optimization.GcsGraphvizOptions" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.GcsGraphvizOptions.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.GcsGraphvizOptions" title="pydrake.geometry.optimization.GcsGraphvizOptions"><span class="pre">pydrake.geometry.optimization.GcsGraphvizOptions</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.GcsGraphvizOptions.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.GcsGraphvizOptions.precision">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">precision</span></span><a class="headerlink" href="#pydrake.geometry.optimization.GcsGraphvizOptions.precision" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the floating point precision (how many digits are generated) of
+the annotations.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.GcsGraphvizOptions.scientific">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">scientific</span></span><a class="headerlink" href="#pydrake.geometry.optimization.GcsGraphvizOptions.scientific" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the floating point formatting to scientific (if true) or fixed
+(if false).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.GcsGraphvizOptions.show_costs">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">show_costs</span></span><a class="headerlink" href="#pydrake.geometry.optimization.GcsGraphvizOptions.show_costs" title="Permalink to this definition"></a></dt>
+<dd><p>Determines whether the cost value results are shown. This will show
+both edge and vertex costs.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.GcsGraphvizOptions.show_flows">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">show_flows</span></span><a class="headerlink" href="#pydrake.geometry.optimization.GcsGraphvizOptions.show_flows" title="Permalink to this definition"></a></dt>
+<dd><p>Determines whether the flow value results are shown. The flow values
+are shown both with a numeric value and through the transparency value
+on the edge, where a flow of 0.0 will correspond to an (almost)
+invisible edge, and a flow of 1.0 will display as a fully black edge.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.GcsGraphvizOptions.show_slacks">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">show_slacks</span></span><a class="headerlink" href="#pydrake.geometry.optimization.GcsGraphvizOptions.show_slacks" title="Permalink to this definition"></a></dt>
+<dd><p>Determines whether the values of the intermediate (slack) variables
+are also displayed in the graph.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.GcsGraphvizOptions.show_vars">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">show_vars</span></span><a class="headerlink" href="#pydrake.geometry.optimization.GcsGraphvizOptions.show_vars" title="Permalink to this definition"></a></dt>
+<dd><p>Determines whether the solution values for decision variables in each
+set are shown.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.GraphOfConvexSets">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.optimization.</span></span><span class="sig-name descname"><span class="pre">GraphOfConvexSets</span></span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets" title="Permalink to this definition"></a></dt>
 <dd><p>GraphOfConvexSets (GCS) implements the design pattern and optimization
@@ -2104,19 +2158,38 @@ builds.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.GraphOfConvexSets.GetGraphvizString">
-<span class="sig-name descname"><span class="pre">GetGraphvizString</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets" title="pydrake.geometry.optimization.GraphOfConvexSets"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.MathematicalProgramResult" title="pydrake.solvers.MathematicalProgramResult"><span class="pre">pydrake.solvers.MathematicalProgramResult</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_slacks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scientific</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.GetGraphvizString" title="Permalink to this definition"></a></dt>
-<dd><p>Returns a Graphviz string describing the graph vertices and edges. If
+<span class="sig-name descname"><span class="pre">GetGraphvizString</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.GetGraphvizString" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>GetGraphvizString(self: pydrake.geometry.optimization.GraphOfConvexSets, result: Optional[pydrake.solvers.MathematicalProgramResult] = None, options: pydrake.geometry.optimization.GcsGraphvizOptions = GcsGraphvizOptions(show_slacks=True, show_vars=True, show_flows=True, show_costs=True, scientific=False, precision=3), active_path: Optional[list[pydrake.geometry.optimization.GraphOfConvexSets.Edge]] = None) -&gt; str</p></li>
+</ol>
+<p>Returns a Graphviz string describing the graph vertices and edges. If
 <code class="docutils literal notranslate"><span class="pre">results</span></code> is supplied, then the graph will be annotated with the
-solution values.</p>
+solution values, according to <code class="docutils literal notranslate"><span class="pre">options</span></code>.</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">show_slacks</span></code>:</dt><dd><p>determines whether the values of the intermediate (slack)
-variables are also displayed in the graph.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">result</span></code>:</dt><dd><p>the optional result from a solver.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">precision</span></code>:</dt><dd><p>sets the floating point precision (how many digits are generated)
-of the annotations.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">options</span></code>:</dt><dd><p>the struct containing various options for visualization.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">scientific</span></code>:</dt><dd><p>sets the floating point formatting to scientific (if true) or
-fixed (if false).</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">active_path</span></code>:</dt><dd><p>optionally highlights a given path in the graph. The path is
+displayed as dashed edges in red, displayed in addition to the
+original graph edges.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>GetGraphvizString(self: pydrake.geometry.optimization.GraphOfConvexSets, result: Optional[pydrake.solvers.MathematicalProgramResult] = None, show_slacks: bool = True, show_vars: bool = True, show_flows: bool = True, show_costs: bool = True, scientific: bool = False, precision: int = 3, active_path: Optional[list[pydrake.geometry.optimization.GraphOfConvexSets.Edge]] = None) -&gt; str</p></li>
+</ol>
+<p>Returns a Graphviz string describing the graph vertices and edges. If
+<code class="docutils literal notranslate"><span class="pre">results</span></code> is supplied, then the graph will be annotated with the
+solution values, according to <code class="docutils literal notranslate"><span class="pre">options</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">result</span></code>:</dt><dd><p>the optional result from a solver.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">options</span></code>:</dt><dd><p>the struct containing various options for visualization.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">active_path</span></code>:</dt><dd><p>optionally highlights a given path in the graph. The path is
+displayed as dashed edges in red, displayed in addition to the
+original graph edges.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2163,6 +2236,78 @@ to the vertex. Runtime is O(nₑ) where nₑ is the number of edges in the
 graph.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>The vertex must be part of the graph.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.GraphOfConvexSets.SamplePaths">
+<span class="sig-name descname"><span class="pre">SamplePaths</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.SamplePaths" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>SamplePaths(self: pydrake.geometry.optimization.GraphOfConvexSets, source: pydrake.geometry.optimization.GraphOfConvexSets.Vertex, target: pydrake.geometry.optimization.GraphOfConvexSets.Vertex, flows: dict[pydrake.geometry.optimization.GraphOfConvexSets.Edge, float], options: pydrake.geometry.optimization.GraphOfConvexSetsOptions) -&gt; list[list[pydrake.geometry.optimization.GraphOfConvexSets.Edge]]</p></li>
+</ol>
+<p>Samples a collection of unique paths from <code class="docutils literal notranslate"><span class="pre">source</span></code> to <code class="docutils literal notranslate"><span class="pre">target</span></code>,
+where the flow values (the relaxed binary variables associated with
+each <code class="docutils literal notranslate"><span class="pre">Edge</span></code>) <cite>flows</cite> are interpreted as the probabilities of
+transitioning an edge. The returned paths are guaranteed to be unique,
+and the number of returned paths can be 0 if no paths are found. This
+function implements the first part of the rounding scheme put forth in
+Section 4.2 of “Motion Planning around Obstacles with Convex
+Optimization”: <a class="reference external" href="https://arxiv.org/abs/2205.04422">https://arxiv.org/abs/2205.04422</a></p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">source</span></code>:</dt><dd><p>specifies the source vertex.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">target</span></code>:</dt><dd><p>specifies the target vertex.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">flows</span></code>:</dt><dd><p>specifies the edge flows, which are interprested as the
+probability of transition an edge. Edge flows that are not
+specified are taken to be zero.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">options</span></code>:</dt><dd><p>include all settings for sampling the paths. Specifically, the
+behavior of this function is determined through
+<code class="docutils literal notranslate"><span class="pre">options.rounding_seed</span></code>, <cite>options.max_rounded_paths</cite>,
+<code class="docutils literal notranslate"><span class="pre">options.max_rounding_trials</span></code>, and <code class="docutils literal notranslate"><span class="pre">options.flow_tolerance</span></code>,
+as described in <code class="docutils literal notranslate"><span class="pre">GraphOfConvexSetsOptions</span></code>.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A vector of paths, where each path is a vector of <a href="#id5"><span class="problematic" id="id6">`</span></a>Edge`s.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>RuntimeError if options.max_rounded_path &lt; 1.</strong> – </p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>SamplePaths(self: pydrake.geometry.optimization.GraphOfConvexSets, source: pydrake.geometry.optimization.GraphOfConvexSets.Vertex, target: pydrake.geometry.optimization.GraphOfConvexSets.Vertex, result: pydrake.solvers.MathematicalProgramResult, options: pydrake.geometry.optimization.GraphOfConvexSetsOptions) -&gt; list[list[pydrake.geometry.optimization.GraphOfConvexSets.Edge]]</p></li>
+</ol>
+<p>Samples a collection of unique paths from <code class="docutils literal notranslate"><span class="pre">source</span></code> to <code class="docutils literal notranslate"><span class="pre">target</span></code>,
+where the flow values (the relaxed binary variables associated with
+each <code class="docutils literal notranslate"><span class="pre">Edge</span></code>) in <code class="docutils literal notranslate"><span class="pre">result</span></code> are interpreted as the probabilities of
+transitioning an edge. The returned paths are guaranteed to be unique,
+and the number of returned paths can be 0 if no paths are found. This
+function implements the first part of the rounding scheme put forth in
+Section 4.2 of “Motion Planning around Obstacles with Convex
+Optimization”: <a class="reference external" href="https://arxiv.org/abs/2205.04422">https://arxiv.org/abs/2205.04422</a></p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">source</span></code>:</dt><dd><p>specifies the source vertex.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">target</span></code>:</dt><dd><p>specifies the target vertex.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">options</span></code>:</dt><dd><p>include all settings for sampling the paths. Specifically, the
+behavior of this function is determined through
+<code class="docutils literal notranslate"><span class="pre">options.rounding_seed</span></code>, <cite>options.max_rounded_paths</cite>,
+<code class="docutils literal notranslate"><span class="pre">options.max_rounding_trials</span></code>, and <code class="docutils literal notranslate"><span class="pre">options.flow_tolerance</span></code>,
+as described in <code class="docutils literal notranslate"><span class="pre">GraphOfConvexSetsOptions</span></code>.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A vector of paths, where each path is a vector of <a href="#id7"><span class="problematic" id="id8">`</span></a>Edge`s.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>RuntimeError if options.max_rounded_path &lt; 1.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -2844,7 +2989,7 @@ upper corners.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.HPolyhedron.MakeL1Ball">
 <em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MakeL1Ball</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dim</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.optimization.HPolyhedron" title="pydrake.geometry.optimization.HPolyhedron"><span class="pre">pydrake.geometry.optimization.HPolyhedron</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.MakeL1Ball" title="Permalink to this definition"></a></dt>
-<dd><p>Constructs the L1-norm unit ball in <code class="docutils literal notranslate"><span class="pre">dim</span></code> dimensions, {x | <a href="#id5"><span class="problematic" id="id6">|</span></a>x|₁ &lt;= 1
+<dd><p>Constructs the L1-norm unit ball in <code class="docutils literal notranslate"><span class="pre">dim</span></code> dimensions, {x | <a href="#id9"><span class="problematic" id="id10">|</span></a>x|₁ &lt;= 1
 }. This set is also known as the cross-polytope and is described by
 the 2ᵈⁱᵐ signed unit vectors.</p>
 </dd></dl>
@@ -2852,7 +2997,7 @@ the 2ᵈⁱᵐ signed unit vectors.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.HPolyhedron.MakeUnitBox">
 <em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MakeUnitBox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dim</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.optimization.HPolyhedron" title="pydrake.geometry.optimization.HPolyhedron"><span class="pre">pydrake.geometry.optimization.HPolyhedron</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.MakeUnitBox" title="Permalink to this definition"></a></dt>
-<dd><p>Constructs the L∞-norm unit box in <code class="docutils literal notranslate"><span class="pre">dim</span></code> dimensions, {x | <a href="#id7"><span class="problematic" id="id8">|</span></a>x|∞ &lt;= 1
+<dd><p>Constructs the L∞-norm unit box in <code class="docutils literal notranslate"><span class="pre">dim</span></code> dimensions, {x | <a href="#id11"><span class="problematic" id="id12">|</span></a>x|∞ &lt;= 1
 }. This is an axis-aligned box, centered at the origin, with edge
 length 2.</p>
 </dd></dl>
@@ -2902,7 +3047,7 @@ C ≽ 0
 </pre></div>
 </div>
 </details><p>where aᵢ and bᵢ denote the ith row. This defines the ellipsoid E = {
-Cx + d | <a href="#id9"><span class="problematic" id="id10">|</span></a>x|₂ ≤ 1}.</p>
+Cx + d | <a href="#id13"><span class="problematic" id="id14">|</span></a>x|₂ ≤ 1}.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>the HPolyhedron is bounded.</p>
 </dd>
@@ -3153,7 +3298,7 @@ shorthand for <code class="docutils literal notranslate"><span class="pre">cente
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.Hyperellipsoid.MakeUnitBall">
 <em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MakeUnitBall</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dim</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.optimization.Hyperellipsoid" title="pydrake.geometry.optimization.Hyperellipsoid"><span class="pre">pydrake.geometry.optimization.Hyperellipsoid</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.Hyperellipsoid.MakeUnitBall" title="Permalink to this definition"></a></dt>
-<dd><p>Constructs the L₂-norm unit ball in <code class="docutils literal notranslate"><span class="pre">dim</span></code> dimensions, {x | <a href="#id11"><span class="problematic" id="id12">|</span></a>x|₂ &lt;= 1
+<dd><p>Constructs the L₂-norm unit ball in <code class="docutils literal notranslate"><span class="pre">dim</span></code> dimensions, {x | <a href="#id15"><span class="problematic" id="id16">|</span></a>x|₂ &lt;= 1
 }.</p>
 </dd></dl>
 
@@ -3301,7 +3446,7 @@ the upper bounds. Returns std::nullopt if the intersection is empty.</p>
 <p>A convex set that represents the intersection of multiple sets: S = X₁
 ∩ X₂ ∩ … ∩ Xₙ = {x | x ∈ X₁, x ∈ X₂, …, x ∈ Xₙ}</p>
 <p>Special behavior for IsEmpty: The intersection of zero sets (i.e. when
-we have <a href="#id21"><span class="problematic" id="id22">sets_</span></a>.size() == 0) is always nonempty. This includes the
+we have <a href="#id25"><span class="problematic" id="id26">sets_</span></a>.size() == 0) is always nonempty. This includes the
 zero-dimensional case, which we treat as being {0}, the unique
 zero-dimensional vector space.</p>
 <dl class="py method">
@@ -3594,7 +3739,7 @@ IRIS algorithm.</p>
 X₁ ⨁ X₂ ⨁ … ⨁ Xₙ = {x₁ + x₂ + … + xₙ | x₁ ∈ X₁, x₂ ∈ X₂, …, xₙ ∈
 Xₙ}</p>
 <p>Special behavior for IsEmpty: The Minkowski sum of zero sets (i.e.
-when we have <a href="#id23"><span class="problematic" id="id24">sets_</span></a>.size() == 0) is treated as the singleton {0}, which
+when we have <a href="#id27"><span class="problematic" id="id28">sets_</span></a>.size() == 0) is treated as the singleton {0}, which
 is nonempty. This includes the zero-dimensional case.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.MinkowskiSum.__init__">
@@ -3967,10 +4112,10 @@ vertices could be strictly in the interior of the set).</p>
 set is always bounded (hence the name polytope, instead of
 polyhedron).</p>
 <p>A VPolytope is empty if and only if it is composed of zero vertices,
-i.e., if <a href="#id25"><span class="problematic" id="id26">vertices_</span></a>.cols() == 0. This includes the zero-dimensional
-case. If <a href="#id27"><span class="problematic" id="id28">vertices_</span></a>.rows() == 0 but <a href="#id29"><span class="problematic" id="id30">vertices_</span></a>.cols() &gt; 0, we treat this
+i.e., if <a href="#id29"><span class="problematic" id="id30">vertices_</span></a>.cols() == 0. This includes the zero-dimensional
+case. If <a href="#id31"><span class="problematic" id="id32">vertices_</span></a>.rows() == 0 but <a href="#id33"><span class="problematic" id="id34">vertices_</span></a>.cols() &gt; 0, we treat this
 as having one or more copies of 0 in the zero-dimensional vector space
-{0}. If <a href="#id31"><span class="problematic" id="id32">vertices_</span></a>.rows() and <a href="#id33"><span class="problematic" id="id34">vertices_</span></a>.cols() are zero, we treat this
+{0}. If <a href="#id35"><span class="problematic" id="id36">vertices_</span></a>.rows() and <a href="#id37"><span class="problematic" id="id38">vertices_</span></a>.cols() are zero, we treat this
 as no points in {0}, which is empty.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.VPolytope.__init__">
@@ -4033,7 +4178,7 @@ upper corners.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.VPolytope.MakeUnitBox">
 <em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MakeUnitBox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dim</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.optimization.VPolytope" title="pydrake.geometry.optimization.VPolytope"><span class="pre">pydrake.geometry.optimization.VPolytope</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.VPolytope.MakeUnitBox" title="Permalink to this definition"></a></dt>
-<dd><p>Constructs the L∞-norm unit box in <code class="docutils literal notranslate"><span class="pre">dim</span></code> dimensions, {x | <a href="#id13"><span class="problematic" id="id14">|</span></a>x|∞ &lt;= 1
+<dd><p>Constructs the L∞-norm unit box in <code class="docutils literal notranslate"><span class="pre">dim</span></code> dimensions, {x | <a href="#id17"><span class="problematic" id="id18">|</span></a>x|∞ &lt;= 1
 }. This is an axis-aligned box, centered at the origin, with edge
 length 2.</p>
 </dd></dl>

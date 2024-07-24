@@ -10,6 +10,7 @@ var namespacedrake_1_1geometry_1_1optimization =
     [ "CspaceFreePolytopeBase", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base" ],
     [ "CSpaceSeparatingPlane", "structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html", "structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane" ],
     [ "FindSeparationCertificateOptions", "structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html", "structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options" ],
+    [ "GcsGraphvizOptions", "structdrake_1_1geometry_1_1optimization_1_1_gcs_graphviz_options.html", "structdrake_1_1geometry_1_1optimization_1_1_gcs_graphviz_options" ],
     [ "GraphOfConvexSets", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets" ],
     [ "GraphOfConvexSetsOptions", "structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html", "structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options" ],
     [ "HPolyhedron", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron" ],

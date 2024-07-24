@@ -202,6 +202,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a89a7b03f2e5b34b3ca7fa0b92d282def"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_meshcat_params.html#a89a7b03f2e5b34b3ca7fa0b92d282def">show_stats_plot</a> {true}</td></tr>
 <tr class="memdesc:a89a7b03f2e5b34b3ca7fa0b92d282def"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether or not to display the stats plot widget in the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> user interface.  <a href="#a89a7b03f2e5b34b3ca7fa0b92d282def">More...</a><br /></td></tr>
 <tr class="separator:a89a7b03f2e5b34b3ca7fa0b92d282def"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad883680f1189f5c5cfa4c0a7062c4dbf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_meshcat_params.html#ad883680f1189f5c5cfa4c0a7062c4dbf">realtime_rate_period</a> {0.25}</td></tr>
+<tr class="memdesc:ad883680f1189f5c5cfa4c0a7062c4dbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">The minimum period of wall clock time (in seconds) between updates to the broadcast realtime rate.  <a href="#ad883680f1189f5c5cfa4c0a7062c4dbf">More...</a><br /></td></tr>
+<tr class="separator:ad883680f1189f5c5cfa4c0a7062c4dbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a8e8824802dedfbc36776227f7482b6bc"></a>
@@ -275,6 +278,24 @@ Public Attributes</h2></td></tr>
 
 <p><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> will listen on the given http <code>port</code>. </p>
 <p>If no port is specified, then it will listen on the first available port starting at 7000 (up to 7999). If port 0 is specified, it will listen on an arbitrary "ephemeral" port. </p><dl class="section pre"><dt>Precondition</dt><dd>We require <code>port</code> == 0 || <code>port</code> &gt;= 1024. </dd></dl>
+
+</div>
+</div>
+<a id="ad883680f1189f5c5cfa4c0a7062c4dbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad883680f1189f5c5cfa4c0a7062c4dbf">&#9670;&nbsp;</a></span>realtime_rate_period</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> realtime_rate_period {0.25}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The minimum period of wall clock time (in seconds) between updates to the broadcast realtime rate. </p>
+<p>If the period is too short, the reported realtime rate can become visually noisy. Too long, and acute changes in performance may be masked. It must be strictly <em>positive</em>.</p>
+<p><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> promises to broadcast messages to clients at this fixed period. See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#ad5c9a4ca195d1de4257785b8ad351e2b" title="@group Realtime Rate Reporting">Meshcat::SetSimulationTime()</a> for details. </p>
 
 </div>
 </div>

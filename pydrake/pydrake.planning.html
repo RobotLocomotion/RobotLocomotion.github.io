@@ -2465,8 +2465,29 @@ edges.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.GetGraphvizString">
-<span class="sig-name descname"><span class="pre">GetGraphvizString</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.GcsTrajectoryOptimization" title="pydrake.planning.GcsTrajectoryOptimization"><span class="pre">pydrake.planning.GcsTrajectoryOptimization</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.MathematicalProgramResult" title="pydrake.solvers.MathematicalProgramResult"><span class="pre">pydrake.solvers.MathematicalProgramResult</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_slack</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scientific</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.GetGraphvizString" title="Permalink to this definition"></a></dt>
-<dd><p>Returns a Graphviz string describing the graph vertices and edges. If
+<span class="sig-name descname"><span class="pre">GetGraphvizString</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.GetGraphvizString" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>GetGraphvizString(self: pydrake.planning.GcsTrajectoryOptimization, result: Optional[pydrake.solvers.MathematicalProgramResult] = None, options: pydrake.geometry.optimization.GcsGraphvizOptions = GcsGraphvizOptions(show_slacks=True, show_vars=True, show_flows=True, show_costs=True, scientific=False, precision=3)) -&gt; str</p></li>
+</ol>
+<p>Returns a Graphviz string describing the graph vertices and edges. If
+<code class="docutils literal notranslate"><span class="pre">results</span></code> is supplied, then the graph will be annotated with the
+solution values.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">show_slacks</span></code>:</dt><dd><p>determines whether the values of the intermediate (slack)
+variables are also displayed in the graph.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">precision</span></code>:</dt><dd><p>sets the floating point precision (how many digits are generated)
+of the annotations.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">scientific</span></code>:</dt><dd><p>sets the floating point formatting to scientific (if true) or
+fixed (if false).</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>GetGraphvizString(self: pydrake.planning.GcsTrajectoryOptimization, result: Optional[pydrake.solvers.MathematicalProgramResult] = None, show_slacks: bool = True, show_vars: bool = True, show_flows: bool = True, show_costs: bool = True, scientific: bool = False, precision: int = 3) -&gt; str</p></li>
+</ol>
+<p>Returns a Graphviz string describing the graph vertices and edges. If
 <code class="docutils literal notranslate"><span class="pre">results</span></code> is supplied, then the graph will be annotated with the
 solution values.</p>
 <dl class="simple">

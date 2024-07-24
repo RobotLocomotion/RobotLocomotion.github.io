@@ -1,5 +1,14 @@
 var NAVTREEINDEX3 =
 {
+"classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_geometry.html#a161d9f4393a6ee9861c4a4bb03261ba2":[3,0,0,3,4,3,2],
+"classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_geometry.html#a45ad6611c08c787a1771ebdb38eb103d":[3,0,0,3,4,3,4],
+"classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_geometry.html#a68c648cf2aa76993b814aeda4863e0ce":[3,0,0,3,4,3,6],
+"classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_geometry.html#a9ccb7ea182b35ca7fd993f3de5e6975b":[3,0,0,3,4,3,3],
+"classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_geometry.html#a9d1907dd0a21476ca4d09cddba0745ff":[3,0,0,3,4,3,5],
+"classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_geometry.html#aa34c58e2d476b81fea5b75a5a27c9942":[3,0,0,3,4,3,1],
+"classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_geometry.html#add3b6beaa312ca6736cdabc58680115b":[3,0,0,3,4,3,0],
+"classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params.html":[3,0,0,3,4,4],
+"classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params.html#a03c50d9bd6fdbbf7cadc139a8eaf0c24":[3,0,0,3,4,4,13],
 "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params.html#a055b2a25944eddab3e6e93b4defe8dce":[3,0,0,3,4,4,16],
 "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params.html#a13c3dccc72607c5cb0e5ac83cc08e475":[3,0,0,3,4,4,8],
 "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params.html#a1806c65958ddfc2b52ae245b96e6d6ad":[3,0,0,3,4,4,17],
@@ -240,14 +249,5 @@ var NAVTREEINDEX3 =
 "classdrake_1_1examples_1_1pendulum_1_1_pendulum_params.html#ae873ec4e8346cafeaf056f7d64a93f6c":[3,0,0,3,11,3,18],
 "classdrake_1_1examples_1_1pendulum_1_1_pendulum_params.html#aefcde25d27da4f42e4bb7a0f31764533":[3,0,0,3,11,3,15],
 "classdrake_1_1examples_1_1pendulum_1_1_pendulum_params.html#af31ddcd6e4061eb1266e2e44d0084ed3":[3,0,0,3,11,3,21],
-"classdrake_1_1examples_1_1pendulum_1_1_pendulum_plant.html":[3,0,0,3,11,5],
-"classdrake_1_1examples_1_1pendulum_1_1_pendulum_plant.html#a1ff548e83dbd527015a04d6a1e856f4b":[3,0,0,3,11,5,2],
-"classdrake_1_1examples_1_1pendulum_1_1_pendulum_plant.html#a2913da3e8bfc64780eabce978f042dca":[3,0,0,3,11,5,5],
-"classdrake_1_1examples_1_1pendulum_1_1_pendulum_plant.html#a4509c581557f61429c5d01227fe56344":[3,0,0,3,11,5,11],
-"classdrake_1_1examples_1_1pendulum_1_1_pendulum_plant.html#a6657d0c7407a73d4aa2cb706c0564859":[3,0,0,3,11,5,15],
-"classdrake_1_1examples_1_1pendulum_1_1_pendulum_plant.html#a866a65044ef28473ca165d235830d307":[3,0,0,3,11,5,8],
-"classdrake_1_1examples_1_1pendulum_1_1_pendulum_plant.html#a891b5d22c73d34a1ebb69436a3db0b5a":[3,0,0,3,11,5,13],
-"classdrake_1_1examples_1_1pendulum_1_1_pendulum_plant.html#abff1502cbccbd53fbbe24e8d47553734":[3,0,0,3,11,5,3],
-"classdrake_1_1examples_1_1pendulum_1_1_pendulum_plant.html#ac02d5b41a1483e04e49489d836349433":[3,0,0,3,11,5,9],
-"classdrake_1_1examples_1_1pendulum_1_1_pendulum_plant.html#ac8009de5687008e5128f15f5ecb737c8":[3,0,0,3,11,5,6]
+"classdrake_1_1examples_1_1pendulum_1_1_pendulum_plant.html":[3,0,0,3,11,5]
 };

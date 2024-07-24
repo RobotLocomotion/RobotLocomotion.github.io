@@ -199,9 +199,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5e794da51482f4bf72e358b073b7e30e"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classint.html">int</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a5e794da51482f4bf72e358b073b7e30e">continuous_revolute_joints</a> ()</td></tr>
 <tr class="memdesc:a5e794da51482f4bf72e358b073b7e30e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of indices corresponding to continuous revolute joints.  <a href="#a5e794da51482f4bf72e358b073b7e30e">More...</a><br /></td></tr>
 <tr class="separator:a5e794da51482f4bf72e358b073b7e30e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae696ea90dcbf1b197d5a4a30f895421d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#ae696ea90dcbf1b197d5a4a30f895421d">GetGraphvizString</a> (const std::optional&lt; <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &gt; &amp;result=std::nullopt, bool show_slack=true, <a class="el" href="classint.html">int</a> precision=3, bool scientific=false) const</td></tr>
-<tr class="memdesc:ae696ea90dcbf1b197d5a4a30f895421d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a Graphviz string describing the graph vertices and edges.  <a href="#ae696ea90dcbf1b197d5a4a30f895421d">More...</a><br /></td></tr>
-<tr class="separator:ae696ea90dcbf1b197d5a4a30f895421d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0da384910fa6cd59ecac838c15309186"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a0da384910fa6cd59ecac838c15309186">GetGraphvizString</a> (const std::optional&lt; <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &gt; &amp;result=std::nullopt, const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_gcs_graphviz_options.html">geometry::optimization::GcsGraphvizOptions</a> &amp;options={}) const</td></tr>
+<tr class="memdesc:a0da384910fa6cd59ecac838c15309186"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a Graphviz string describing the graph vertices and edges.  <a href="#a0da384910fa6cd59ecac838c15309186">More...</a><br /></td></tr>
+<tr class="separator:a0da384910fa6cd59ecac838c15309186"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff9544b6375a592b1b9bda5eb1149a6f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#aff9544b6375a592b1b9bda5eb1149a6f">AddRegions</a> (const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">geometry::optimization::ConvexSets</a> &amp;regions, const std::vector&lt; std::pair&lt; <a class="el" href="classint.html">int</a>, <a class="el" href="classint.html">int</a> &gt;&gt; &amp;edges_between_regions, <a class="el" href="classint.html">int</a> order, <a class="el" href="classdouble.html">double</a> h_min=0, <a class="el" href="classdouble.html">double</a> h_max=20, std::string name=&quot;&quot;, std::optional&lt; const std::vector&lt; Eigen::VectorXd &gt;&gt; edge_offsets=std::nullopt)</td></tr>
 <tr class="memdesc:aff9544b6375a592b1b9bda5eb1149a6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html" title="A Subgraph is a subset of the larger graph.">Subgraph</a> with the given regions and indices.  <a href="#aff9544b6375a592b1b9bda5eb1149a6f">More...</a><br /></td></tr>
 <tr class="separator:aff9544b6375a592b1b9bda5eb1149a6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -882,8 +882,8 @@ Planning with Graphs of Geodesically-Convex Sets", and per the discussion in Sub
 
 </div>
 </div>
-<a id="ae696ea90dcbf1b197d5a4a30f895421d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae696ea90dcbf1b197d5a4a30f895421d">&#9670;&nbsp;</a></span>GetGraphvizString()</h2>
+<a id="a0da384910fa6cd59ecac838c15309186"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0da384910fa6cd59ecac838c15309186">&#9670;&nbsp;</a></span>GetGraphvizString()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -897,20 +897,8 @@ Planning with Graphs of Geodesically-Convex Sets", and per the discussion in Sub
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>show_slack</em> = <code>true</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
-          <td class="paramname"><em>precision</em> = <code>3</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>scientific</em> = <code>false</code>&#160;</td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_gcs_graphviz_options.html">geometry::optimization::GcsGraphvizOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
         </tr>
         <tr>
           <td></td>

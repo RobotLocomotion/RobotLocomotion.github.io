@@ -204,9 +204,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3e2c68dd6b16c5d8696d1aebeb166607"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html#a3e2c68dd6b16c5d8696d1aebeb166607">MeshcatVisualizer</a> (const <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html">MeshcatVisualizer</a>&lt; U &gt; &amp;other)</td></tr>
 <tr class="memdesc:a3e2c68dd6b16c5d8696d1aebeb166607"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scalar-converting copy constructor.  <a href="#a3e2c68dd6b16c5d8696d1aebeb166607">More...</a><br /></td></tr>
 <tr class="separator:a3e2c68dd6b16c5d8696d1aebeb166607"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab648811a71fc30082c0e3283f495d9df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html#ab648811a71fc30082c0e3283f495d9df">ResetRealtimeRateCalculator</a> () const</td></tr>
-<tr class="memdesc:ab648811a71fc30082c0e3283f495d9df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the realtime rate calculator.  <a href="#ab648811a71fc30082c0e3283f495d9df">More...</a><br /></td></tr>
-<tr class="separator:ab648811a71fc30082c0e3283f495d9df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2ecf38c19f32573ca3939ed10df5c98"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html#ab2ecf38c19f32573ca3939ed10df5c98">ResetRealtimeRateCalculator</a> ()</td></tr>
+<tr class="memdesc:ab2ecf38c19f32573ca3939ed10df5c98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the realtime rate calculator.  <a href="#ab2ecf38c19f32573ca3939ed10df5c98">More...</a><br /></td></tr>
+<tr class="separator:ab2ecf38c19f32573ca3939ed10df5c98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02a874939f6aa43e29fc929d223dfb76"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html#a02a874939f6aa43e29fc929d223dfb76">Delete</a> () const</td></tr>
 <tr class="memdesc:a02a874939f6aa43e29fc929d223dfb76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls Meshcat::Delete(std::string path), with the path set to <a class="el" href="structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a78fb15511f687fe7fdb8e3ba9613648b" title="A prefix to add to the path for all objects and transforms curated by the MeshcatVisualizer.">MeshcatVisualizerParams::prefix</a>.  <a href="#a02a874939f6aa43e29fc929d223dfb76">More...</a><br /></td></tr>
 <tr class="separator:a02a874939f6aa43e29fc929d223dfb76"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1684,8 +1684,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ab648811a71fc30082c0e3283f495d9df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab648811a71fc30082c0e3283f495d9df">&#9670;&nbsp;</a></span>ResetRealtimeRateCalculator()</h2>
+<a id="ab2ecf38c19f32573ca3939ed10df5c98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2ecf38c19f32573ca3939ed10df5c98">&#9670;&nbsp;</a></span>ResetRealtimeRateCalculator()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1694,13 +1694,16 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname">void ResetRealtimeRateCalculator </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Resets the realtime rate calculator. </p>
-<p>Calculation will resume on the next periodic publish event. This is useful for correcting the realtime rate after simulation is resumed from a paused state, etc. </p>
+<p>Calculation will begin anew on the <em>next</em> periodic publish event. This is useful for correcting the realtime rate after simulation is resumed from a paused state, etc.</p>
+<p>Invocation of this method may lead to one or more erroneous rate calculations (based on the amount of wall time elapsed between this call and the next invocation of <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#ad5c9a4ca195d1de4257785b8ad351e2b" title="@group Realtime Rate Reporting">Meshcat::SetSimulationTime()</a> &ndash; e.g., when this system next publishes).</p>
+<p>MeshcatVisualizer uses <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#ad5c9a4ca195d1de4257785b8ad351e2b" title="@group Realtime Rate Reporting">Meshcat::SetSimulationTime()</a> to report realtime rate in a <em>throttled</em> manner. See that method's documentation to understand what to expect and how to configure it. (Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">Deprecated:</a></b></dt><dd>Instead of explicitly resetting the calculator on this  system, prefer to (re)set the Context's time value to an  earlier time to implicitly reset the calculator. <br />
+ This will be removed from Drake on or after 2024-11-01.</dd></dl>
 
 </div>
 </div>

@@ -19,7 +19,7 @@ var classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimi
     [ "continuous_revolute_joints", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a5e794da51482f4bf72e358b073b7e30e", null ],
     [ "EstimateComplexity", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a3026f3dacc50a81434a05e8c9348eebf", null ],
     [ "GetEdgesBetweenSubgraphs", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a371ed21c43d6eb12f5f4c55b0d6da8b8", null ],
-    [ "GetGraphvizString", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#ae696ea90dcbf1b197d5a4a30f895421d", null ],
+    [ "GetGraphvizString", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a0da384910fa6cd59ecac838c15309186", null ],
     [ "GetSubgraphs", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a4471b7b36088e3f9a445818011a88b20", null ],
     [ "graph_of_convex_sets", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a69241ad5a6d2fafc3af8987e63bf49be", null ],
     [ "NormalizeSegmentTimes", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a0745622466ef1e6253a0de1c1216d804", null ],

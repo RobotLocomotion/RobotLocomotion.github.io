@@ -2398,7 +2398,7 @@ containing library. No other values for KinematicsValue are supported.</p>
 <p>Currently, the following data types with the following scalar types
 are supported:</p>
 <p>Alias | Instantiation | Scalar types
-————————————-<a href="#id18"><span class="problematic" id="id19">|--------------------------------------------------|</span></a>————-
+————————————-<a href="#id22"><span class="problematic" id="id23">|--------------------------------------------------|</span></a>————-
 FramePoseVector&lt;Scalar&gt; |
 KinematicsVector&lt;FrameId,RigidTransform&lt;Scalar&gt;&gt; |
 double/AutoDiffXd/Expression GeometryConfigurationVector&lt;Scalar&gt; |
@@ -2540,7 +2540,7 @@ containing library. No other values for KinematicsValue are supported.</p>
 <p>Currently, the following data types with the following scalar types
 are supported:</p>
 <p>Alias | Instantiation | Scalar types
-————————————-<a href="#id20"><span class="problematic" id="id21">|--------------------------------------------------|</span></a>————-
+————————————-<a href="#id24"><span class="problematic" id="id25">|--------------------------------------------------|</span></a>————-
 FramePoseVector&lt;Scalar&gt; |
 KinematicsVector&lt;FrameId,RigidTransform&lt;Scalar&gt;&gt; |
 double/AutoDiffXd/Expression GeometryConfigurationVector&lt;Scalar&gt; |
@@ -2671,7 +2671,7 @@ containing library. No other values for KinematicsValue are supported.</p>
 <p>Currently, the following data types with the following scalar types
 are supported:</p>
 <p>Alias | Instantiation | Scalar types
-————————————-<a href="#id22"><span class="problematic" id="id23">|--------------------------------------------------|</span></a>————-
+————————————-<a href="#id26"><span class="problematic" id="id27">|--------------------------------------------------|</span></a>————-
 FramePoseVector&lt;Scalar&gt; |
 KinematicsVector&lt;FrameId,RigidTransform&lt;Scalar&gt;&gt; |
 double/AutoDiffXd/Expression GeometryConfigurationVector&lt;Scalar&gt; |
@@ -4285,11 +4285,9 @@ your gamepad is working), see
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.Meshcat.GetRealtimeRate">
 <span class="sig-name descname"><span class="pre">GetRealtimeRate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Meshcat" title="pydrake.geometry.Meshcat"><span class="pre">pydrake.geometry.Meshcat</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.geometry.Meshcat.GetRealtimeRate" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the realtime rate that is displayed in the meshcat visualizer
-stats strip chart. See SetRealtimeRate(). Note that this value might
-be a smoothing function across multiple calls to SetRealtimeRate()
-rather than the most recent argument value, in case this class ever
-adds smoothing capability.</p>
+<dd><p>Gets the realtime rate that was last broadcast by this instance
+(typically, the value displayed in the meshcat visualizer stats
+chart). See SetRealtimeRate().</p>
 </dd></dl>
 
 <dl class="py method">
@@ -4812,20 +4810,60 @@ not currently recording, then this value is simply ignored.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.Meshcat.SetRealtimeRate">
 <span class="sig-name descname"><span class="pre">SetRealtimeRate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Meshcat" title="pydrake.geometry.Meshcat"><span class="pre">pydrake.geometry.Meshcat</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">rate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.Meshcat.SetRealtimeRate" title="Permalink to this definition"></a></dt>
-<dd><p>Sets the realtime rate that is displayed in the meshcat visualizer
-stats strip chart. This rate is the ratio between sim time and real
-world time. 1 indicates the simulator is the same speed as real time.
-2 indicates running twice as fast as real time, 0.5 is half speed,
-etc.</p>
+<dd><p>Immediately broadcasts the given realtime rate to all connected
+clients.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">rate</span></code>:</dt><dd><p>the realtime rate value to broadcast, will be converted to a
+percentage (multiplied by 100)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.Meshcat.SetSimulationTime">
+<span class="sig-name descname"><span class="pre">SetSimulationTime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Meshcat" title="pydrake.geometry.Meshcat"><span class="pre">pydrake.geometry.Meshcat</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">sim_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.Meshcat.SetSimulationTime" title="Permalink to this definition"></a></dt>
+<dd><p>Updates Meshcat’s knowledge of simulation time. Changes to simulation
+time <em>may</em> trigger a realtime rate message to the meshcat visualizer
+client based on the configured value in
+MeshcatParams::realtime_rate_period value.</p>
+<p>Invoking this method <em>may</em> dispatch a message to clients. The
+following rules apply to invocations and messages:</p>
+<ul class="simple">
+<li><p>The first invocation is necessary to <em>initialize</em> the calculation; it</p></li>
+</ul>
+<p>defines the the starting point from which all calculations are performed
+(for both wall clock time as well as simulation time). As no interval can
+be measured from a single invocation, no rate can be computed. Therefore,
+the first invocation will <em>never</em> broadcast the message.
+- Wall clock time must advance at least MeshcatParams::realtime_rate_period
+seconds for a message to be sent.
+- Meshcat promises to broadcast one message per elapsed period – starting
+from initialization – regardless of the frequency at which
+SetSimulationTime() actually gets invoked. If the elapsed time between
+invocations exceeds MeshcatParams::realtime_rate_period, multiple
+messages will be broadcast; one for each complete period.
+- This implies that each column of pixels in the realtime rate chart in
+the client visualizer represents a fixed amount of wall clock time.</p>
+<p>When the realtime rate is broadcast, that value will be reported by
+GetRealtimeRate().</p>
+<p>The realtime rate calculation can be “reset” by passing a simulation
+time value that is <em>strictly less</em> than the value of the previous
+invocation. This has the effect of re-initializing the calculation
+with the passed time and the wall clock time of the invocation. So, if
+the simulation’s context gets reset to <code class="docutils literal notranslate"><span class="pre">time</span> <span class="pre">=</span> <span class="pre">0</span></code>, calls to this
+method passing the context time will implicitly reset realtime rate
+calculations accordingly. Resetting the calculator will reset the
+value reported by GetRealtimeRate() to zero.</p>
+<p>This function is safe to be called redundantly with the same
+simulation time. Redundant calls are a no-op.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">sim_time</span></code>:</dt><dd><p>The <em>absolute</em> sim time being visualized.</p>
+</dd>
+</dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>drake::systems::Simulator::set_target_realtime_rate()</p>
 </div>
-<dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">rate</span></code>:</dt><dd><p>the realtime rate value to be displayed, will be converted to a
-percentage (multiplied by 100)</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -5431,6 +5469,17 @@ property, value).</p>
 </dd></dl>
 
 <dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.MeshcatParams.realtime_rate_period">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">realtime_rate_period</span></span><a class="headerlink" href="#pydrake.geometry.MeshcatParams.realtime_rate_period" title="Permalink to this definition"></a></dt>
+<dd><p>The minimum period of wall clock time (in seconds) between updates to
+the broadcast realtime rate. If the period is too short, the reported
+realtime rate can become visually noisy. Too long, and acute changes
+in performance may be masked. It must be strictly <em>positive</em>.</p>
+<p>Meshcat promises to broadcast messages to clients at this fixed
+period. See Meshcat::SetSimulationTime() for details.</p>
+</dd></dl>
+
+<dl class="py property">
 <dt class="sig sig-object py" id="pydrake.geometry.MeshcatParams.show_stats_plot">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">show_stats_plot</span></span><a class="headerlink" href="#pydrake.geometry.MeshcatParams.show_stats_plot" title="Permalink to this definition"></a></dt>
 <dd><p>Determines whether or not to display the stats plot widget in the
@@ -5717,9 +5766,23 @@ cause a runtime error when attempting to broadcast messages.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.MeshcatVisualizer.ResetRealtimeRateCalculator">
 <span class="sig-name descname"><span class="pre">ResetRealtimeRateCalculator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.MeshcatVisualizer" title="pydrake.geometry.MeshcatVisualizer"><span class="pre">pydrake.geometry.MeshcatVisualizer</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizer.ResetRealtimeRateCalculator" title="Permalink to this definition"></a></dt>
-<dd><p>Resets the realtime rate calculator. Calculation will resume on the
-next periodic publish event. This is useful for correcting the
+<dd><p>Resets the realtime rate calculator. Calculation will begin anew on
+the <em>next</em> periodic publish event. This is useful for correcting the
 realtime rate after simulation is resumed from a paused state, etc.</p>
+<p>Invocation of this method may lead to one or more erroneous rate
+calculations (based on the amount of wall time elapsed between this
+call and the next invocation of Meshcat::SetSimulationTime() – e.g.,
+when this system next publishes).</p>
+<p>MeshcatVisualizer uses Meshcat::SetSimulationTime() to report realtime
+rate in a <em>throttled</em> manner. See that method’s documentation to
+understand what to expect and how to configure it. <a href="#id9"><span class="problematic" id="id10">*</span></a>/ (Deprecated.)</p>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>Instead of explicitly resetting the calculator on this system,
+prefer to (re)set the Context’s time value to an earlier time to
+implicitly reset the calculator. This will be removed from Drake
+on or after 2024-11-01.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -5866,9 +5929,23 @@ cause a runtime error when attempting to broadcast messages.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.MeshcatVisualizer_-AutoDiffXd-.ResetRealtimeRateCalculator">
 <span id="pydrake.geometry.MeshcatVisualizer_[AutoDiffXd].ResetRealtimeRateCalculator"></span><span class="sig-name descname"><span class="pre">ResetRealtimeRateCalculator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.MeshcatVisualizer_" title="pydrake.geometry.MeshcatVisualizer_"><span class="pre">pydrake.geometry.MeshcatVisualizer_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizer_-AutoDiffXd-.ResetRealtimeRateCalculator" title="Permalink to this definition"></a></dt>
-<dd><p>Resets the realtime rate calculator. Calculation will resume on the
-next periodic publish event. This is useful for correcting the
+<dd><p>Resets the realtime rate calculator. Calculation will begin anew on
+the <em>next</em> periodic publish event. This is useful for correcting the
 realtime rate after simulation is resumed from a paused state, etc.</p>
+<p>Invocation of this method may lead to one or more erroneous rate
+calculations (based on the amount of wall time elapsed between this
+call and the next invocation of Meshcat::SetSimulationTime() – e.g.,
+when this system next publishes).</p>
+<p>MeshcatVisualizer uses Meshcat::SetSimulationTime() to report realtime
+rate in a <em>throttled</em> manner. See that method’s documentation to
+understand what to expect and how to configure it. <a href="#id11"><span class="problematic" id="id12">*</span></a>/ (Deprecated.)</p>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>Instead of explicitly resetting the calculator on this system,
+prefer to (re)set the Context’s time value to an earlier time to
+implicitly reset the calculator. This will be removed from Drake
+on or after 2024-11-01.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -6255,7 +6332,7 @@ being measured and expressed in the mesh’s frame M).</p>
 integers which <em>encodes</em> P polygons. Each polygon can have an
 arbitrary number of vertices. The encoding of the P polygons is as
 follows:</p>
-<p><a href="#id24"><span class="problematic" id="id25">|c₁|v₁₀|v₁₁|</span></a>…|cᵢ|cᵢ₀|cᵢ₁|…|cₚ|cₚ₀|cₚ₁|…|</p>
+<p><a href="#id28"><span class="problematic" id="id29">|c₁|v₁₀|v₁₁|</span></a>…|cᵢ|cᵢ₀|cᵢ₁|…|cₚ|cₚ₀|cₚ₁|…|</p>
 <p>Each polygon is defined in sequence. The definition consists of an
 integer indicating the <em>number</em> of vertices in that polygon (c₁, cᵢ,
 and cₘ in the illustration above). The next cᵢ integers in the
@@ -6445,7 +6522,7 @@ being measured and expressed in the mesh’s frame M).</p>
 integers which <em>encodes</em> P polygons. Each polygon can have an
 arbitrary number of vertices. The encoding of the P polygons is as
 follows:</p>
-<p><a href="#id26"><span class="problematic" id="id27">|c₁|v₁₀|v₁₁|</span></a>…|cᵢ|cᵢ₀|cᵢ₁|…|cₚ|cₚ₀|cₚ₁|…|</p>
+<p><a href="#id30"><span class="problematic" id="id31">|c₁|v₁₀|v₁₁|</span></a>…|cᵢ|cᵢ₀|cᵢ₁|…|cₚ|cₚ₀|cₚ₁|…|</p>
 <p>Each polygon is defined in sequence. The definition consists of an
 integer indicating the <em>number</em> of vertices in that polygon (c₁, cᵢ,
 and cₘ in the illustration above). The next cᵢ integers in the
@@ -7275,7 +7352,7 @@ geometries and penetrating geometries.</p>
 and B.</p>
 <p>If the objects do not overlap (i.e., A ⋂ B = ∅), φ &gt; 0 and represents
 the minimal distance between the two objects. More formally: φ =
-min(<a href="#id28"><span class="problematic" id="id29">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
+min(<a href="#id32"><span class="problematic" id="id33">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The pair (Aₚ, Bₚ) is a “witness” of the distance. The pair need
@@ -7285,7 +7362,7 @@ not be unique (think of two parallel planes).</p>
 interpreted as the negative penetration depth. It is the smallest
 length of the vector v, such that by shifting one object along that
 vector relative to the other, the two objects will no longer be
-overlapping. More formally, φ(A, B) = -min <a href="#id30"><span class="problematic" id="id31">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
+overlapping. More formally, φ(A, B) = -min <a href="#id34"><span class="problematic" id="id35">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
 where Tᵥ is a rigid transformation that displaces A by the vector v,
 namely Tᵥ · A = {u + v | ∀ u ∈ A}. By implication, there exist points
 Aₚ and Bₚ on the surfaces of objects A and B, respectively, such that
@@ -7455,8 +7532,8 @@ outside Gᵢ, then ∇φᵢ(p) equals the unit vector in the direction from
 the nearest point Nᵢ on Gᵢ’s surface to p. If p is inside Gᵢ, then
 ∇φᵢ(p) is in the direction from p to Nᵢ. This observation is written
 formally as:</p>
-<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id32"><span class="problematic" id="id33">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
-<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id34"><span class="problematic" id="id35">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
+<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id36"><span class="problematic" id="id37">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
+<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id38"><span class="problematic" id="id39">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
 <p>Note that ∇φᵢ(p) is also defined on Gᵢ’s surface, but we cannot use
 the above formula.</p>
 <p><strong>Characterizing the returned values</strong></p>
@@ -8060,7 +8137,7 @@ geometries and penetrating geometries.</p>
 and B.</p>
 <p>If the objects do not overlap (i.e., A ⋂ B = ∅), φ &gt; 0 and represents
 the minimal distance between the two objects. More formally: φ =
-min(<a href="#id36"><span class="problematic" id="id37">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
+min(<a href="#id40"><span class="problematic" id="id41">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The pair (Aₚ, Bₚ) is a “witness” of the distance. The pair need
@@ -8070,7 +8147,7 @@ not be unique (think of two parallel planes).</p>
 interpreted as the negative penetration depth. It is the smallest
 length of the vector v, such that by shifting one object along that
 vector relative to the other, the two objects will no longer be
-overlapping. More formally, φ(A, B) = -min <a href="#id38"><span class="problematic" id="id39">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
+overlapping. More formally, φ(A, B) = -min <a href="#id42"><span class="problematic" id="id43">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
 where Tᵥ is a rigid transformation that displaces A by the vector v,
 namely Tᵥ · A = {u + v | ∀ u ∈ A}. By implication, there exist points
 Aₚ and Bₚ on the surfaces of objects A and B, respectively, such that
@@ -8240,8 +8317,8 @@ outside Gᵢ, then ∇φᵢ(p) equals the unit vector in the direction from
 the nearest point Nᵢ on Gᵢ’s surface to p. If p is inside Gᵢ, then
 ∇φᵢ(p) is in the direction from p to Nᵢ. This observation is written
 formally as:</p>
-<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id40"><span class="problematic" id="id41">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
-<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id42"><span class="problematic" id="id43">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
+<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id44"><span class="problematic" id="id45">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
+<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id46"><span class="problematic" id="id47">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
 <p>Note that ∇φᵢ(p) is also defined on Gᵢ’s surface, but we cannot use
 the above formula.</p>
 <p><strong>Characterizing the returned values</strong></p>
@@ -8714,7 +8791,7 @@ geometries and penetrating geometries.</p>
 and B.</p>
 <p>If the objects do not overlap (i.e., A ⋂ B = ∅), φ &gt; 0 and represents
 the minimal distance between the two objects. More formally: φ =
-min(<a href="#id44"><span class="problematic" id="id45">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
+min(<a href="#id48"><span class="problematic" id="id49">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The pair (Aₚ, Bₚ) is a “witness” of the distance. The pair need
@@ -8724,7 +8801,7 @@ not be unique (think of two parallel planes).</p>
 interpreted as the negative penetration depth. It is the smallest
 length of the vector v, such that by shifting one object along that
 vector relative to the other, the two objects will no longer be
-overlapping. More formally, φ(A, B) = -min <a href="#id46"><span class="problematic" id="id47">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
+overlapping. More formally, φ(A, B) = -min <a href="#id50"><span class="problematic" id="id51">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
 where Tᵥ is a rigid transformation that displaces A by the vector v,
 namely Tᵥ · A = {u + v | ∀ u ∈ A}. By implication, there exist points
 Aₚ and Bₚ on the surfaces of objects A and B, respectively, such that
@@ -8894,8 +8971,8 @@ outside Gᵢ, then ∇φᵢ(p) equals the unit vector in the direction from
 the nearest point Nᵢ on Gᵢ’s surface to p. If p is inside Gᵢ, then
 ∇φᵢ(p) is in the direction from p to Nᵢ. This observation is written
 formally as:</p>
-<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id48"><span class="problematic" id="id49">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
-<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id50"><span class="problematic" id="id51">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
+<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id52"><span class="problematic" id="id53">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
+<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id54"><span class="problematic" id="id55">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
 <p>Note that ∇φᵢ(p) is also defined on Gᵢ’s surface, but we cannot use
 the above formula.</p>
 <p><strong>Characterizing the returned values</strong></p>
@@ -9138,7 +9215,7 @@ the indicated parent frame P.</p>
 scales coordinates by the given scale factor. Polygons will be
 triangulated if they are not triangles already. All objects in the
 .obj file will be merged into the surface mesh. See
-<a class="reference external" href="https://en.wikipedia.org/wiki/">https://en.wikipedia.org/wiki/</a><a href="#id58"><span class="problematic" id="id59">Wavefront_</span></a>.obj_file for the file format.</p>
+<a class="reference external" href="https://en.wikipedia.org/wiki/">https://en.wikipedia.org/wiki/</a><a href="#id62"><span class="problematic" id="id63">Wavefront_</span></a>.obj_file for the file format.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">filename</span></code>:</dt><dd><p>A valid file name with absolute path or relative path.</p>
 </dd>
@@ -14956,7 +15033,7 @@ query point Q, expressed in world frame W.</p>
 <p><code class="docutils literal notranslate"><span class="pre">grad_W</span></code> is not well defined everywhere. For example, when
 computing the distance from a point to a sphere, and the point
 coincides with the center of the sphere, grad_W is not well
-defined (as it can be computed as p_GQ / <a href="#id52"><span class="problematic" id="id53">|p_GQ|</span></a>, but the
+defined (as it can be computed as p_GQ / <a href="#id56"><span class="problematic" id="id57">|p_GQ|</span></a>, but the
 denominator is 0). When grad_W is not well defined, and we
 instantiate SignedDistanceToPoint&lt;T&gt; with T being an
 AutoDiffScalar (like AutoDiffXd), the gradient of the query result
@@ -15047,7 +15124,7 @@ query point Q, expressed in world frame W.</p>
 <p><code class="docutils literal notranslate"><span class="pre">grad_W</span></code> is not well defined everywhere. For example, when
 computing the distance from a point to a sphere, and the point
 coincides with the center of the sphere, grad_W is not well
-defined (as it can be computed as p_GQ / <a href="#id54"><span class="problematic" id="id55">|p_GQ|</span></a>, but the
+defined (as it can be computed as p_GQ / <a href="#id58"><span class="problematic" id="id59">|p_GQ|</span></a>, but the
 denominator is 0). When grad_W is not well defined, and we
 instantiate SignedDistanceToPoint&lt;T&gt; with T being an
 AutoDiffScalar (like AutoDiffXd), the gradient of the query result
@@ -15132,7 +15209,7 @@ query point Q, expressed in world frame W.</p>
 <p><code class="docutils literal notranslate"><span class="pre">grad_W</span></code> is not well defined everywhere. For example, when
 computing the distance from a point to a sphere, and the point
 coincides with the center of the sphere, grad_W is not well
-defined (as it can be computed as p_GQ / <a href="#id56"><span class="problematic" id="id57">|p_GQ|</span></a>, but the
+defined (as it can be computed as p_GQ / <a href="#id60"><span class="problematic" id="id61">|p_GQ|</span></a>, but the
 denominator is 0). When grad_W is not well defined, and we
 instantiate SignedDistanceToPoint&lt;T&gt; with T being an
 AutoDiffScalar (like AutoDiffXd), the gradient of the query result

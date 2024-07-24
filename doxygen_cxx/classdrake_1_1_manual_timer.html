@@ -1,0 +1,452 @@
+<!-- HTML header for doxygen 1.8.15-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: ManualTimer Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/%2Findex.ipynb">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+ </div>
+</div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classdrake_1_1_manual_timer.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="classdrake_1_1_manual_timer-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">ManualTimer Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Implementation of timing for use with unit tests that control time manually. </p>
+</div>
+<p><code>#include &lt;drake/common/timer.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a48a3e4af06aa4b60a85ad908c9375876"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_manual_timer.html#a48a3e4af06aa4b60a85ad908c9375876">ManualTimer</a> ()</td></tr>
+<tr class="separator:a48a3e4af06aa4b60a85ad908c9375876"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa143ab26d744bccc73ca5aa5c91243dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_manual_timer.html#aa143ab26d744bccc73ca5aa5c91243dc">Start</a> () final</td></tr>
+<tr class="memdesc:aa143ab26d744bccc73ca5aa5c91243dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begins timing. Call Start every time you want to reset the timer to zero.  <a href="#aa143ab26d744bccc73ca5aa5c91243dc">More...</a><br /></td></tr>
+<tr class="separator:aa143ab26d744bccc73ca5aa5c91243dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2b1740e982eea27707e6c0cd6563d6d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_manual_timer.html#aa2b1740e982eea27707e6c0cd6563d6d">Tick</a> () final</td></tr>
+<tr class="memdesc:aa2b1740e982eea27707e6c0cd6563d6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtains a timer measurement in seconds.  <a href="#aa2b1740e982eea27707e6c0cd6563d6d">More...</a><br /></td></tr>
+<tr class="separator:aa2b1740e982eea27707e6c0cd6563d6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a488df3c1e3ac8c8eb9da98b577da3697"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_manual_timer.html#a488df3c1e3ac8c8eb9da98b577da3697">set_tick</a> (<a class="el" href="classdouble.html">double</a> tick)</td></tr>
+<tr class="memdesc:a488df3c1e3ac8c8eb9da98b577da3697"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the return value of <a class="el" href="classdrake_1_1_manual_timer.html#aa2b1740e982eea27707e6c0cd6563d6d" title="Obtains a timer measurement in seconds.">Tick()</a>.  <a href="#a488df3c1e3ac8c8eb9da98b577da3697">More...</a><br /></td></tr>
+<tr class="separator:a488df3c1e3ac8c8eb9da98b577da3697"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
+<tr class="memitem:a447e4279fa6b3570d006fd17d9537fb9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_manual_timer.html#a447e4279fa6b3570d006fd17d9537fb9">ManualTimer</a> (const <a class="el" href="classdrake_1_1_manual_timer.html">ManualTimer</a> &amp;)=default</td></tr>
+<tr class="separator:a447e4279fa6b3570d006fd17d9537fb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2598ab5235c22d2e396986246c67cd1b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1_manual_timer.html">ManualTimer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_manual_timer.html#a2598ab5235c22d2e396986246c67cd1b">operator=</a> (const <a class="el" href="classdrake_1_1_manual_timer.html">ManualTimer</a> &amp;)=default</td></tr>
+<tr class="separator:a2598ab5235c22d2e396986246c67cd1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a139b1270ef2287ce5f36f0c20f066e3a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_manual_timer.html#a139b1270ef2287ce5f36f0c20f066e3a">ManualTimer</a> (<a class="el" href="classdrake_1_1_manual_timer.html">ManualTimer</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:a139b1270ef2287ce5f36f0c20f066e3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcdf2c43260313172a1d7cb9309dc92f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1_manual_timer.html">ManualTimer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_manual_timer.html#afcdf2c43260313172a1d7cb9309dc92f">operator=</a> (<a class="el" href="classdrake_1_1_manual_timer.html">ManualTimer</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:afcdf2c43260313172a1d7cb9309dc92f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classdrake_1_1_timer"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classdrake_1_1_timer')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classdrake_1_1_timer.html">Timer</a></td></tr>
+<tr class="memitem:a17896e888578cea83217f4bbef07559a inherit pub_methods_classdrake_1_1_timer"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_timer.html#a17896e888578cea83217f4bbef07559a">Timer</a> ()=default</td></tr>
+<tr class="memdesc:a17896e888578cea83217f4bbef07559a inherit pub_methods_classdrake_1_1_timer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Properly implemented Timers must start timing upon construction.  <a href="classdrake_1_1_timer.html#a17896e888578cea83217f4bbef07559a">More...</a><br /></td></tr>
+<tr class="separator:a17896e888578cea83217f4bbef07559a inherit pub_methods_classdrake_1_1_timer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfa2bf6fff884eb5905981c59bc1329f inherit pub_methods_classdrake_1_1_timer"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_timer.html#abfa2bf6fff884eb5905981c59bc1329f">~Timer</a> ()=default</td></tr>
+<tr class="separator:abfa2bf6fff884eb5905981c59bc1329f inherit pub_methods_classdrake_1_1_timer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_methods_classdrake_1_1_timer"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classdrake_1_1_timer')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classdrake_1_1_timer.html">Timer</a></td></tr>
+<tr class="memitem:a7a32f74f10295421db69f526d68900a3 inherit pro_methods_classdrake_1_1_timer"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_timer.html#a7a32f74f10295421db69f526d68900a3">Timer</a> (const <a class="el" href="classdrake_1_1_timer.html">Timer</a> &amp;)=default</td></tr>
+<tr class="separator:a7a32f74f10295421db69f526d68900a3 inherit pro_methods_classdrake_1_1_timer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2abba3fcf3bcf86c435e1f1b08f0a78 inherit pro_methods_classdrake_1_1_timer"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1_timer.html">Timer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_timer.html#ac2abba3fcf3bcf86c435e1f1b08f0a78">operator=</a> (const <a class="el" href="classdrake_1_1_timer.html">Timer</a> &amp;)=default</td></tr>
+<tr class="separator:ac2abba3fcf3bcf86c435e1f1b08f0a78 inherit pro_methods_classdrake_1_1_timer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9144e52765576cfa4babbf193188d524 inherit pro_methods_classdrake_1_1_timer"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_timer.html#a9144e52765576cfa4babbf193188d524">Timer</a> (<a class="el" href="classdrake_1_1_timer.html">Timer</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:a9144e52765576cfa4babbf193188d524 inherit pro_methods_classdrake_1_1_timer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a355094d4a58b796c2636e18b1adac50e inherit pro_methods_classdrake_1_1_timer"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1_timer.html">Timer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_timer.html#a355094d4a58b796c2636e18b1adac50e">operator=</a> (<a class="el" href="classdrake_1_1_timer.html">Timer</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:a355094d4a58b796c2636e18b1adac50e inherit pro_methods_classdrake_1_1_timer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a447e4279fa6b3570d006fd17d9537fb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a447e4279fa6b3570d006fd17d9537fb9">&#9670;&nbsp;</a></span>ManualTimer() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1_manual_timer.html">ManualTimer</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1_manual_timer.html">ManualTimer</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a139b1270ef2287ce5f36f0c20f066e3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a139b1270ef2287ce5f36f0c20f066e3a">&#9670;&nbsp;</a></span>ManualTimer() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1_manual_timer.html">ManualTimer</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_manual_timer.html">ManualTimer</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a48a3e4af06aa4b60a85ad908c9375876"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48a3e4af06aa4b60a85ad908c9375876">&#9670;&nbsp;</a></span>ManualTimer() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1_manual_timer.html">ManualTimer</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a2598ab5235c22d2e396986246c67cd1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2598ab5235c22d2e396986246c67cd1b">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1_manual_timer.html">ManualTimer</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1_manual_timer.html">ManualTimer</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afcdf2c43260313172a1d7cb9309dc92f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcdf2c43260313172a1d7cb9309dc92f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1_manual_timer.html">ManualTimer</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_manual_timer.html">ManualTimer</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a488df3c1e3ac8c8eb9da98b577da3697"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a488df3c1e3ac8c8eb9da98b577da3697">&#9670;&nbsp;</a></span>set_tick()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_tick </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>tick</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the return value of <a class="el" href="classdrake_1_1_manual_timer.html#aa2b1740e982eea27707e6c0cd6563d6d" title="Obtains a timer measurement in seconds.">Tick()</a>. </p>
+
+</div>
+</div>
+<a id="aa143ab26d744bccc73ca5aa5c91243dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa143ab26d744bccc73ca5aa5c91243dc">&#9670;&nbsp;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Begins timing. Call Start every time you want to reset the timer to zero. </p>
+
+<p>Implements <a class="el" href="classdrake_1_1_timer.html#a63ce9b9c6710c0dae98f88d6c602313a">Timer</a>.</p>
+
+</div>
+</div>
+<a id="aa2b1740e982eea27707e6c0cd6563d6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2b1740e982eea27707e6c0cd6563d6d">&#9670;&nbsp;</a></span>Tick()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> Tick </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obtains a timer measurement in seconds. </p>
+<p>Call this repeatedly to get multiple measurements. </p><dl class="section return"><dt>Returns</dt><dd>the amount of time since the timer started. </dd></dl>
+
+<p>Implements <a class="el" href="classdrake_1_1_timer.html#ad52040aeef9d0c241dbee8e160354357">Timer</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/common/<a class="el" href="timer_8h.html">timer.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a class="el" href="namespacedrake.html">drake</a></li><li class="navelem"><a class="el" href="classdrake_1_1_manual_timer.html">ManualTimer</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>    
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>    
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().value = searchBox.searchLabel;
+</script>
+</body>
+</html>
