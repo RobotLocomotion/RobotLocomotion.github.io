@@ -303,9 +303,6 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info_3_01symbolic_1_1_expression_01_4.html">HydroelasticContactInfo&lt; symbolic::Expression &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Full specialization of <a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html" title="A class containing information regarding contact and contact response between two geometries attached...">HydroelasticContactInfo</a> for T = Expression, with no member data.  <a href="classdrake_1_1multibody_1_1_hydroelastic_contact_info_3_01symbolic_1_1_expression_01_4.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html">HydroelasticQuadraturePointData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Results from intermediate calculations used during the quadrature routine.  <a href="structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_inverse_kinematics.html">InverseKinematics</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves an inverse kinematics (IK) problem on a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>, to find the postures of the robot satisfying certain constraints.  <a href="classdrake_1_1multibody_1_1_inverse_kinematics.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -507,9 +504,12 @@ Typedefs</h2></td></tr>
 <tr class="memitem:ad6f28f9f3c7b71cc803442f421b26352"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#ad6f28f9f3c7b71cc803442f421b26352">DeformableBodyIndex</a> = <a class="el" href="classdrake_1_1_type_safe_index.html">TypeSafeIndex</a>&lt; class DeformableBodyTag &gt;</td></tr>
 <tr class="memdesc:ad6f28f9f3c7b71cc803442f421b26352"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Indexes deformable bodies, only used after Finalize().  <a href="#ad6f28f9f3c7b71cc803442f421b26352">More...</a><br /></td></tr>
 <tr class="separator:ad6f28f9f3c7b71cc803442f421b26352"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae295cf299b8c55381172b0c591f23b63"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ae295cf299b8c55381172b0c591f23b63"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#ae295cf299b8c55381172b0c591f23b63">DeformableContactPointData</a> = <a class="el" href="structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html">HydroelasticQuadraturePointData</a>&lt; T &gt;</td></tr>
-<tr class="separator:ae295cf299b8c55381172b0c591f23b63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bf20ea033c552f5b0b429d42a78aefa"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a2bf20ea033c552f5b0b429d42a78aefa"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a2bf20ea033c552f5b0b429d42a78aefa">HydroelasticQuadraturePointData</a> = internal::HydroelasticQuadraturePointData&lt; T &gt;</td></tr>
+<tr class="separator:a2bf20ea033c552f5b0b429d42a78aefa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4dffaf093012d7be6fa1d3f36633c40"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ad4dffaf093012d7be6fa1d3f36633c40"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#ad4dffaf093012d7be6fa1d3f36633c40">DeformableContactPointData</a> = internal::DeformableContactPointData&lt; T &gt;</td></tr>
+<tr class="separator:ad4dffaf093012d7be6fa1d3f36633c40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb169d7f3b447c98cbd02015fba0d6f9"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:adb169d7f3b447c98cbd02015fba0d6f9"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#adb169d7f3b447c98cbd02015fba0d6f9">PhysicalModelPointerVariant</a> = std::variant&lt; const <a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html">DeformableModel</a>&lt; T &gt; *, std::monostate &gt;</td></tr>
 <tr class="separator:adb169d7f3b447c98cbd02015fba0d6f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -634,10 +634,6 @@ Functions</h2></td></tr>
 <tr class="memitem:aada1fb90629198ff0ee920969d517335"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_coulomb_friction.html">CoulombFriction</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#aada1fb90629198ff0ee920969d517335">CalcContactFrictionFromSurfaceProperties</a> (const <a class="el" href="classdrake_1_1multibody_1_1_coulomb_friction.html">CoulombFriction</a>&lt; T &gt; &amp;surface_properties1, const <a class="el" href="classdrake_1_1multibody_1_1_coulomb_friction.html">CoulombFriction</a>&lt; T &gt; &amp;surface_properties2)</td></tr>
 <tr class="memdesc:aada1fb90629198ff0ee920969d517335"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the surface properties of two different surfaces, this method computes the Coulomb's law coefficients of friction characterizing the interaction by friction of the given surface pair.  <a href="#aada1fb90629198ff0ee920969d517335">More...</a><br /></td></tr>
 <tr class="separator:aada1fb90629198ff0ee920969d517335"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0833cf112bc08569736e6aca2251ebaf"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a0833cf112bc08569736e6aca2251ebaf"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a0833cf112bc08569736e6aca2251ebaf">operator==</a> (const <a class="el" href="structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html">HydroelasticQuadraturePointData</a>&lt; T &gt; &amp;data1, const <a class="el" href="structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html">HydroelasticQuadraturePointData</a>&lt; T &gt; &amp;data2)</td></tr>
-<tr class="memdesc:a0833cf112bc08569736e6aca2251ebaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if all of the corresponding individual fields of <code>data1</code> and <code>data2</code> are equal (i.e., using their corresponding <code><a class="el" href="namespacedrake_1_1multibody.html#a0833cf112bc08569736e6aca2251ebaf" title="Returns true if all of the corresponding individual fields of data1 and data2 are equal (i....">operator==()</a></code> functions).  <a href="#a0833cf112bc08569736e6aca2251ebaf">More...</a><br /></td></tr>
-<tr class="separator:a0833cf112bc08569736e6aca2251ebaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e468aa35ef6a84196ac20a13065ca0c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html">AddMultibodyPlantSceneGraphResult</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a7e468aa35ef6a84196ac20a13065ca0c">AddMultibodyPlant</a> (const <a class="el" href="structdrake_1_1multibody_1_1_multibody_plant_config.html">MultibodyPlantConfig</a> &amp;config, <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *builder)</td></tr>
 <tr class="memdesc:a7e468aa35ef6a84196ac20a13065ca0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a new <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> and SceneGraph to the given <code>builder</code>.  <a href="#a7e468aa35ef6a84196ac20a13065ca0c">More...</a><br /></td></tr>
 <tr class="separator:a7e468aa35ef6a84196ac20a13065ca0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -769,14 +765,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ae295cf299b8c55381172b0c591f23b63"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae295cf299b8c55381172b0c591f23b63">&#9670;&nbsp;</a></span>DeformableContactPointData</h2>
+<a id="ad4dffaf093012d7be6fa1d3f36633c40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4dffaf093012d7be6fa1d3f36633c40">&#9670;&nbsp;</a></span>DeformableContactPointData</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="namespacedrake_1_1multibody.html#ae295cf299b8c55381172b0c591f23b63">DeformableContactPointData</a> =  <a class="el" href="structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html">HydroelasticQuadraturePointData</a>&lt;T&gt;</td>
+          <td class="memname">using <a class="el" href="namespacedrake_1_1multibody.html#ad4dffaf093012d7be6fa1d3f36633c40">DeformableContactPointData</a> =  internal::DeformableContactPointData&lt;T&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -812,6 +808,20 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Type used to identify frames by index in a multibody tree system. </p>
+
+</div>
+</div>
+<a id="a2bf20ea033c552f5b0b429d42a78aefa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bf20ea033c552f5b0b429d42a78aefa">&#9670;&nbsp;</a></span>HydroelasticQuadraturePointData</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacedrake_1_1multibody.html#a2bf20ea033c552f5b0b429d42a78aefa">HydroelasticQuadraturePointData</a> =  internal::HydroelasticQuadraturePointData&lt;T&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -1572,36 +1582,6 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a id="a0833cf112bc08569736e6aca2251ebaf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0833cf112bc08569736e6aca2251ebaf">&#9670;&nbsp;</a></span>operator==()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool drake::multibody::operator== </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html">HydroelasticQuadraturePointData</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>data1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html">HydroelasticQuadraturePointData</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>data2</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns <code>true</code> if all of the corresponding individual fields of <code>data1</code> and <code>data2</code> are equal (i.e., using their corresponding <code><a class="el" href="namespacedrake_1_1multibody.html#a0833cf112bc08569736e6aca2251ebaf" title="Returns true if all of the corresponding individual fields of data1 and data2 are equal (i....">operator==()</a></code> functions). </p>
 
 </div>
 </div>

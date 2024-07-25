@@ -1,6 +1,5 @@
 var NAVTREEINDEX24 =
 {
-"classdrake_1_1planning_1_1_robot_diagram_builder.html#ad4059f303a9d87f9097f8428fd027a5a":[1,4,2,3,1,1],
 "classdrake_1_1planning_1_1_robot_diagram_builder.html#ad56bf8e93cf790fb6af96a2052c4069c":[1,4,2,3,1,4],
 "classdrake_1_1planning_1_1_robot_diagram_builder.html#adc75eb5d08543dbab60c9ff58eb96aeb":[1,4,2,3,1,5],
 "classdrake_1_1planning_1_1_robot_diagram_builder.html#af4780fc4af4fa63c1c93d9ab39aa0132":[1,4,2,3,1,11],
@@ -132,8 +131,8 @@ var NAVTREEINDEX24 =
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a69241ad5a6d2fafc3af8987e63bf49be":[3,0,0,10,2,3,21],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a74601e7a7d4fab817e64e564b96e98bd":[3,0,0,10,2,3,3],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a88df1e80fc5caca3da4c817fc3e23338":[3,0,0,10,2,3,26],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a8bebbda88b8d0ae4fadc88777404491e":[3,0,0,10,2,3,7],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a8ddb1df26a2324afc83f84c90281c249":[3,0,0,10,2,3,28],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a911b5de11eb9496e591102bbfc00df0c":[3,0,0,10,2,3,7],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a9c41ee6c46e4e39173da8e589408b9ef":[3,0,0,10,2,3,5],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a9e725d3d3b1c11c6760e99faeaa0aa35":[3,0,0,10,2,3,27],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#aba2887f0ca1fbbdfb49cf6b0ee21e553":[3,0,0,10,2,3,23],
@@ -249,5 +248,6 @@ var NAVTREEINDEX24 =
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ab49f6e9326df207d977c7ac16b1b9ef5":[1,4,2,1,5,32],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ab73513d4918d09cf5e9f729aca68c7c7":[1,4,2,1,5,36],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#aba9607c2694941163fbae6973488fd0a":[1,4,2,1,5,39],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#abb8b403c020ea0cc825ebf70d011ea54":[1,4,2,1,5,22]
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#abb8b403c020ea0cc825ebf70d011ea54":[1,4,2,1,5,22],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ac0a72307ec708171880ffe207bd89ba2":[1,4,2,1,5,23]
 };

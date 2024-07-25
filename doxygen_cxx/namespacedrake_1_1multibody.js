@@ -45,7 +45,6 @@ var namespacedrake_1_1multibody =
     [ "GravityForceField", "classdrake_1_1multibody_1_1_gravity_force_field.html", "classdrake_1_1multibody_1_1_gravity_force_field" ],
     [ "HydroelasticContactInfo", "classdrake_1_1multibody_1_1_hydroelastic_contact_info.html", "classdrake_1_1multibody_1_1_hydroelastic_contact_info" ],
     [ "HydroelasticContactInfo< symbolic::Expression >", "classdrake_1_1multibody_1_1_hydroelastic_contact_info_3_01symbolic_1_1_expression_01_4.html", "classdrake_1_1multibody_1_1_hydroelastic_contact_info_3_01symbolic_1_1_expression_01_4" ],
-    [ "HydroelasticQuadraturePointData", "structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html", "structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data" ],
     [ "InverseKinematics", "classdrake_1_1multibody_1_1_inverse_kinematics.html", "classdrake_1_1multibody_1_1_inverse_kinematics" ],
     [ "Joint", "classdrake_1_1multibody_1_1_joint.html", "classdrake_1_1multibody_1_1_joint" ],
     [ "JointActuator", "classdrake_1_1multibody_1_1_joint_actuator.html", "classdrake_1_1multibody_1_1_joint_actuator" ],

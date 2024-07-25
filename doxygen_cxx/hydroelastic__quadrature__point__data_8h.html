@@ -159,15 +159,14 @@ $(document).ready(function(){initNavTree('hydroelastic__quadrature__point__data_
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle">
 <div class="title">hydroelastic_quadrature_point_data.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="eigen__types_8h.html">drake/common/eigen_types.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="drake__deprecated_8h.html">drake/common/drake_deprecated.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="eigen__types_8h.html">drake/common/eigen_types.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="triangle__surface__mesh_8h.html">drake/geometry/proximity/triangle_surface_mesh.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for hydroelastic_quadrature_point_data.h:</div>
@@ -182,12 +181,6 @@ This graph shows which files directly or indirectly include this file:</div>
 </div>
 </div>
 </div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html">HydroelasticQuadraturePointData&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Results from intermediate calculations used during the quadrature routine.  <a href="structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacedrake"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html">drake</a></td></tr>
@@ -197,16 +190,12 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:ae295cf299b8c55381172b0c591f23b63"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ae295cf299b8c55381172b0c591f23b63"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#ae295cf299b8c55381172b0c591f23b63">DeformableContactPointData</a> = HydroelasticQuadraturePointData&lt; T &gt;</td></tr>
-<tr class="separator:ae295cf299b8c55381172b0c591f23b63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a0833cf112bc08569736e6aca2251ebaf"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a0833cf112bc08569736e6aca2251ebaf"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a0833cf112bc08569736e6aca2251ebaf">operator==</a> (const HydroelasticQuadraturePointData&lt; T &gt; &amp;data1, const HydroelasticQuadraturePointData&lt; T &gt; &amp;data2)</td></tr>
-<tr class="memdesc:a0833cf112bc08569736e6aca2251ebaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if all of the corresponding individual fields of <code>data1</code> and <code>data2</code> are equal (i.e., using their corresponding <code><a class="el" href="namespacedrake_1_1multibody.html#a0833cf112bc08569736e6aca2251ebaf" title="Returns true if all of the corresponding individual fields of data1 and data2 are equal (i....">operator==()</a></code> functions).  <a href="namespacedrake_1_1multibody.html#a0833cf112bc08569736e6aca2251ebaf">More...</a><br /></td></tr>
-<tr class="separator:a0833cf112bc08569736e6aca2251ebaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bf20ea033c552f5b0b429d42a78aefa"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a2bf20ea033c552f5b0b429d42a78aefa"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a2bf20ea033c552f5b0b429d42a78aefa">HydroelasticQuadraturePointData</a> = internal::HydroelasticQuadraturePointData&lt; T &gt;</td></tr>
+<tr class="separator:a2bf20ea033c552f5b0b429d42a78aefa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4dffaf093012d7be6fa1d3f36633c40"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ad4dffaf093012d7be6fa1d3f36633c40"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#ad4dffaf093012d7be6fa1d3f36633c40">DeformableContactPointData</a> = internal::DeformableContactPointData&lt; T &gt;</td></tr>
+<tr class="separator:ad4dffaf093012d7be6fa1d3f36633c40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

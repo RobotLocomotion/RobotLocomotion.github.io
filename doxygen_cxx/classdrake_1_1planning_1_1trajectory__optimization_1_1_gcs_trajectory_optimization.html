@@ -211,9 +211,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a88df1e80fc5caca3da4c817fc3e23338"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a88df1e80fc5caca3da4c817fc3e23338">RemoveSubgraph</a> (const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;subgraph)</td></tr>
 <tr class="memdesc:a88df1e80fc5caca3da4c817fc3e23338"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a subgraph and all associated edges found in the subgraph and to and from other subgraphs.  <a href="#a88df1e80fc5caca3da4c817fc3e23338">More...</a><br /></td></tr>
 <tr class="separator:a88df1e80fc5caca3da4c817fc3e23338"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8bebbda88b8d0ae4fadc88777404491e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html">EdgesBetweenSubgraphs</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a8bebbda88b8d0ae4fadc88777404491e">AddEdges</a> (const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;from_subgraph, const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;to_subgraph, const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">geometry::optimization::ConvexSet</a> *subspace=nullptr)</td></tr>
-<tr class="memdesc:a8bebbda88b8d0ae4fadc88777404491e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connects two subgraphs with directed edges.  <a href="#a8bebbda88b8d0ae4fadc88777404491e">More...</a><br /></td></tr>
-<tr class="separator:a8bebbda88b8d0ae4fadc88777404491e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a911b5de11eb9496e591102bbfc00df0c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html">EdgesBetweenSubgraphs</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a911b5de11eb9496e591102bbfc00df0c">AddEdges</a> (const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;from_subgraph, const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;to_subgraph, const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">geometry::optimization::ConvexSet</a> *subspace=nullptr, std::optional&lt; const std::vector&lt; std::pair&lt; <a class="el" href="classint.html">int</a>, <a class="el" href="classint.html">int</a> &gt;&gt;&gt; edges_between_regions=std::nullopt, std::optional&lt; const std::vector&lt; Eigen::VectorXd &gt;&gt; edge_offsets=std::nullopt)</td></tr>
+<tr class="memdesc:a911b5de11eb9496e591102bbfc00df0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connects two subgraphs with directed edges.  <a href="#a911b5de11eb9496e591102bbfc00df0c">More...</a><br /></td></tr>
+<tr class="separator:a911b5de11eb9496e591102bbfc00df0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a515805314ae145e3be6b636d0986bb09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a515805314ae145e3be6b636d0986bb09">AddTimeCost</a> (<a class="el" href="classdouble.html">double</a> weight=1.0)</td></tr>
 <tr class="memdesc:a515805314ae145e3be6b636d0986bb09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a minimum time cost to all regions in the whole graph.  <a href="#a515805314ae145e3be6b636d0986bb09">More...</a><br /></td></tr>
 <tr class="separator:a515805314ae145e3be6b636d0986bb09"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -422,8 +422,8 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a8bebbda88b8d0ae4fadc88777404491e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8bebbda88b8d0ae4fadc88777404491e">&#9670;&nbsp;</a></span>AddEdges()</h2>
+<a id="a911b5de11eb9496e591102bbfc00df0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a911b5de11eb9496e591102bbfc00df0c">&#9670;&nbsp;</a></span>AddEdges()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -444,7 +444,19 @@ Static Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">geometry::optimization::ConvexSet</a> *&#160;</td>
-          <td class="paramname"><em>subspace</em> = <code>nullptr</code>&#160;</td>
+          <td class="paramname"><em>subspace</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; const std::vector&lt; std::pair&lt; <a class="el" href="classint.html">int</a>, <a class="el" href="classint.html">int</a> &gt;&gt;&gt;&#160;</td>
+          <td class="paramname"><em>edges_between_regions</em> = <code>std::nullopt</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; const std::vector&lt; Eigen::VectorXd &gt;&gt;&#160;</td>
+          <td class="paramname"><em>edge_offsets</em> = <code>std::nullopt</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -459,7 +471,16 @@ Static Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">from_subgraph</td><td>is the subgraph to connect from. Must have been created from a call to <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#aff9544b6375a592b1b9bda5eb1149a6f" title="Creates a Subgraph with the given regions and indices.">AddRegions()</a> on this object, not some other optimization program. </td></tr>
     <tr><td class="paramname">to_subgraph</td><td>is the subgraph to connect to. Must have been created from a call to <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#aff9544b6375a592b1b9bda5eb1149a6f" title="Creates a Subgraph with the given regions and indices.">AddRegions()</a> on this object, not some other optimization program. </td></tr>
-    <tr><td class="paramname">subspace</td><td>is the subspace that the connecting control points must be in. Subspace is optional. Only edges that connect through the subspace will be added, and the subspace is added as a constraint on the connecting control points. Subspaces of type point or HPolyhedron are supported since other sets require constraints that are not yet supported by the GraphOfConvexSets::Edge constraint, e.g., set containment of a HyperEllipsoid is formulated via LorentzCone constraints. Workaround: Create a subgraph of zero order with the subspace as the region and connect it between the two subgraphs. This works because GraphOfConvexSet::Vertex , supports arbitrary instances of ConvexSets. </td></tr>
+    <tr><td class="paramname">subspace</td><td>is the subspace that the connecting control points must be in. Subspace is optional. Only edges that connect through the subspace will be added, and the subspace is added as a constraint on the connecting control points. Subspaces of type point or HPolyhedron are supported since other sets require constraints that are not yet supported by the GraphOfConvexSets::Edge constraint, e.g., set containment of a Hyperellipsoid is formulated via LorentzCone constraints. Workaround: Create a subgraph of zero order with the subspace as the region and connect it between the two subgraphs. This works because GraphOfConvexSet::Vertex supports arbitrary instances of ConvexSets. </td></tr>
+    <tr><td class="paramname">edges_between_regions</td><td>can be used to manually specify which edges should be added, avoiding the intersection checks. It should be a list of tuples <code>(i,j)</code>, where an edge will be added from the <code>i</code>th index region in <code>from_subgraph</code> to the <code>j</code>th index region in <code>to_subgraph</code>. </td></tr>
+    <tr><td class="paramname">edge_offsets</td><td>is an optional list of vectors. If defined, the list must contain the same number of entries as <code>edges_between_regions</code>, and the order must match. In other words, if defined, there must be one edge offset for each specified edge, and they must be at the same index. For each pair of sets listed in <code>edges_between_regions</code>, the first set is translated (in configuration space) by the corresponding vector in edge_offsets before computing the constraints associated to that edge. This is used to add edges between sets that "wrap around" 2π along some dimension, due to, e.g., a continuous revolute joint. This edge offset corresponds to the translation component of the affine map τ_uv in equation (11) of "Non-Euclidean Motion
+Planning with Graphs of Geodesically-Convex Sets", and per the discussion in Subsection VI A, τ_uv has no rotation component. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>edge_offsets</code> is provided, but <code>edge_offsets.size() != edges_between_regions.size()</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -674,7 +695,7 @@ Static Public Member Functions</h2></td></tr>
     <tr><td class="paramname">h_max</td><td>is the maximum duration to spend in a region (seconds). Some solvers struggle numerically with large values. </td></tr>
     <tr><td class="paramname">h_min</td><td>is the minimum duration to spend in a region (seconds) if that region is visited on the optimal path. Some cost and constraints are only convex for h &gt; 0. For example the perspective quadratic cost of the path energy ||ṙ(s)||² / h becomes non-convex for h = 0. Otherwise h_min can be set to 0. </td></tr>
     <tr><td class="paramname">name</td><td>is the name of the subgraph. If the passed name is an empty string, a default name will be provided. </td></tr>
-    <tr><td class="paramname">edge_offsets</td><td>is an optional list of vectors. If defined, the list must contain the same number of entries as edges_between_regions. In other words, if defined, there must be one edge offset for each specified edge. For each pair of sets listed in edges_between_regions, the first set is translated (in configuration space) by the corresponding vector in edge_offsets before computing the constraints associated to that edge. This is used to add edges between sets that "wrap around" 2π along some dimension, due to, e.g., a continuous revolute joint. This edge offset corresponds to the translation component of the affine map τ_uv in equation (11) of "Non-Euclidean Motion
+    <tr><td class="paramname">edge_offsets</td><td>is an optional list of vectors. If defined, the list must contain the same number of entries as <code>edges_between_regions</code>. For each pair of sets listed in <code>edges_between_regions</code>, the first set is translated (in configuration space) by the corresponding vector in edge_offsets before computing the constraints associated to that edge. This is used to add edges between sets that "wrap around" 2π along some dimension, due to, e.g., a continuous revolute joint. This edge offset corresponds to the translation component of the affine map τ_uv in equation (11) of "Non-Euclidean Motion
 Planning with Graphs of Geodesically-Convex Sets", and per the discussion in Subsection VI A, τ_uv has no rotation component. </td></tr>
   </table>
   </dd>

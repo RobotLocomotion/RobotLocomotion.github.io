@@ -1,6 +1,5 @@
 var NAVTREEINDEX59 =
 {
-"sdpa__free__format_8h.html#a121673ddbdadd10b2e3ceab52a93f5d3a54b9d7601ece96fc42e2ffd67aae2690":[4,0,0,11,47,0,1],
 "sdpa__free__format_8h.html#a2294ac3fe1dc938852cfa11db48ba1c9":[4,0,0,11,47,2],
 "sdpa__free__format_8h.html#aeb2470f8cacd8e5f5a473b10d0acf6cc":[4,0,0,11,47,1],
 "semi__explicit__euler__integrator_8h.html":[4,0,0,12,0,22],
@@ -249,5 +248,6 @@ var NAVTREEINDEX59 =
 "static__friction__cone__constraint_8h.html":[4,0,0,8,8,10],
 "stationary__system_8h.html":[4,0,0,12,0,0,17],
 "stationary__system_8h.html#af049a2e4a758fda07c5de7b35e50fea2":[4,0,0,12,0,0,17,1],
-"stepwise__dense__output_8h.html":[4,0,0,12,0,30]
+"stepwise__dense__output_8h.html":[4,0,0,12,0,30],
+"stepwise__dense__output_8h.html#ac63f86fd8744281284fd18e143109605":[4,0,0,12,0,30,1]
 };

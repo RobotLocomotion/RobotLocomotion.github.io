@@ -1,6 +1,5 @@
 var NAVTREEINDEX36 =
 {
-"classdrake_1_1systems_1_1_dependency_graph.html":[3,0,0,15,27],
 "classdrake_1_1systems_1_1_dependency_graph.html#a08fd5430128364097560243149f35ac7":[3,0,0,15,27,10],
 "classdrake_1_1systems_1_1_dependency_graph.html#a256ab5701586f9f1d327ac2f2db32ce6":[3,0,0,15,27,5],
 "classdrake_1_1systems_1_1_dependency_graph.html#a290a6ba7f4b91127a264fecd79686d1f":[3,0,0,15,27,7],
@@ -249,5 +248,6 @@ var NAVTREEINDEX36 =
 "classdrake_1_1systems_1_1_discrete_time_integrator.html":[1,2,1,9],
 "classdrake_1_1systems_1_1_discrete_time_integrator.html#a11a750e5f18413650ec9c7e4428bdeca":[1,2,1,9,4],
 "classdrake_1_1systems_1_1_discrete_time_integrator.html#a40ae6287deaafe0cd0f9dd4458759da9":[1,2,1,9,6],
-"classdrake_1_1systems_1_1_discrete_time_integrator.html#a4c7c0898a45966b804bd5e398a933d12":[1,2,1,9,2]
+"classdrake_1_1systems_1_1_discrete_time_integrator.html#a4c7c0898a45966b804bd5e398a933d12":[1,2,1,9,2],
+"classdrake_1_1systems_1_1_discrete_time_integrator.html#a62afefad7e93903a15d31c33c5d9fded":[1,2,1,9,3]
 };

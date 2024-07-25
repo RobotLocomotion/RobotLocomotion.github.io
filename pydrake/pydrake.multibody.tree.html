@@ -5527,12 +5527,20 @@ feedforward actuation and <code class="docutils literal notranslate"><span class
 MultibodyPlant::get_actuation_input_port(). Desired configuration and
 velocity are specified through
 MultibodyPlant::get_desired_state_input_port().</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>The MultibodyPlant associated with this actuator has not yet
+allocated a Context. In other words, although gains can be changed
+post-Finalize, they cannot be changed during simulation.</p>
+</dd>
+</dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>iff the proportional gain is not strictly positive</strong><strong> or </strong><strong>if the</strong> – </p></li>
 <li><p><strong>derivative gain is negative.</strong> – </p></li>
-<li><p><strong>iff the owning MultibodyPlant is finalized. See</strong> – </p></li>
+<li><p><strong>iff the owning MultibodyPlant is finalized and no gains were set</strong> – </p></li>
+<li><p><strong>pre-finalize. In other words</strong><strong>, </strong><strong>editing gains post-finalize is</strong> – </p></li>
+<li><p><strong>fine</strong><strong>, </strong><strong>but adding gains post-finalize is an error. See</strong> – </p></li>
 <li><p><strong>MultibodyPlant::Finalize</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
 </ul>
 </dd>
@@ -5765,12 +5773,20 @@ feedforward actuation and <code class="docutils literal notranslate"><span class
 MultibodyPlant::get_actuation_input_port(). Desired configuration and
 velocity are specified through
 MultibodyPlant::get_desired_state_input_port().</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>The MultibodyPlant associated with this actuator has not yet
+allocated a Context. In other words, although gains can be changed
+post-Finalize, they cannot be changed during simulation.</p>
+</dd>
+</dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>iff the proportional gain is not strictly positive</strong><strong> or </strong><strong>if the</strong> – </p></li>
 <li><p><strong>derivative gain is negative.</strong> – </p></li>
-<li><p><strong>iff the owning MultibodyPlant is finalized. See</strong> – </p></li>
+<li><p><strong>iff the owning MultibodyPlant is finalized and no gains were set</strong> – </p></li>
+<li><p><strong>pre-finalize. In other words</strong><strong>, </strong><strong>editing gains post-finalize is</strong> – </p></li>
+<li><p><strong>fine</strong><strong>, </strong><strong>but adding gains post-finalize is an error. See</strong> – </p></li>
 <li><p><strong>MultibodyPlant::Finalize</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
 </ul>
 </dd>
@@ -5997,12 +6013,20 @@ feedforward actuation and <code class="docutils literal notranslate"><span class
 MultibodyPlant::get_actuation_input_port(). Desired configuration and
 velocity are specified through
 MultibodyPlant::get_desired_state_input_port().</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>The MultibodyPlant associated with this actuator has not yet
+allocated a Context. In other words, although gains can be changed
+post-Finalize, they cannot be changed during simulation.</p>
+</dd>
+</dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>iff the proportional gain is not strictly positive</strong><strong> or </strong><strong>if the</strong> – </p></li>
 <li><p><strong>derivative gain is negative.</strong> – </p></li>
-<li><p><strong>iff the owning MultibodyPlant is finalized. See</strong> – </p></li>
+<li><p><strong>iff the owning MultibodyPlant is finalized and no gains were set</strong> – </p></li>
+<li><p><strong>pre-finalize. In other words</strong><strong>, </strong><strong>editing gains post-finalize is</strong> – </p></li>
+<li><p><strong>fine</strong><strong>, </strong><strong>but adding gains post-finalize is an error. See</strong> – </p></li>
 <li><p><strong>MultibodyPlant::Finalize</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
 </ul>
 </dd>

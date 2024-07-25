@@ -472,7 +472,6 @@ var searchData=
   ['contact_5fmodel_5fdoxygen_2eh',['contact_model_doxygen.h',['../contact__model__doxygen_8h.html',1,'']]],
   ['contact_5fpair_5fto_5fwrench_5fevaluator',['contact_pair_to_wrench_evaluator',['../classdrake_1_1multibody_1_1_manipulator_equation_constraint.html#a5ff5b6030752a7e5cc7579bb498d4571',1,'drake::multibody::ManipulatorEquationConstraint::contact_pair_to_wrench_evaluator()'],['../classdrake_1_1multibody_1_1_static_equilibrium_constraint.html#a5ff5b6030752a7e5cc7579bb498d4571',1,'drake::multibody::StaticEquilibriumConstraint::contact_pair_to_wrench_evaluator()']]],
   ['contact_5fpoint',['contact_point',['../classdrake_1_1multibody_1_1_point_pair_contact_info.html#ab9a94e5485a94db25be84679cdb91085',1,'drake::multibody::PointPairContactInfo']]],
-  ['contact_5fpoint_5fdata',['contact_point_data',['../classdrake_1_1multibody_1_1_deformable_contact_info.html#ab2cc67dee56fc240f02d70156e7079a0',1,'drake::multibody::DeformableContactInfo']]],
   ['contact_5fproblem_5fgraph_2eh',['contact_problem_graph.h',['../contact__problem__graph_8h.html',1,'']]],
   ['contact_5fproperties_2eh',['contact_properties.h',['../contact__properties_8h.html',1,'']]],
   ['contact_5fresults_2eh',['contact_results.h',['../contact__results_8h.html',1,'']]],
