@@ -21,6 +21,7 @@ var dir_ffd084df0f71d68f8337a7d6f3dcd2dc =
     [ "find_collision_candidates_callback.h", "find__collision__candidates__callback_8h.html", null ],
     [ "hydroelastic_callback.h", "hydroelastic__callback_8h.html", null ],
     [ "hydroelastic_internal.h", "hydroelastic__internal_8h.html", null ],
+    [ "inflate_mesh.h", "inflate__mesh_8h.html", null ],
     [ "make_box_field.h", "make__box__field_8h.html", null ],
     [ "make_box_mesh.h", "make__box__mesh_8h.html", null ],
     [ "make_capsule_field.h", "make__capsule__field_8h.html", null ],

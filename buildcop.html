@@ -140,8 +140,7 @@ analysis.
         <h1 id="overview">Overview</h1>
 
 <p>The Drake build cop monitors <a href="https://drake-jenkins.csail.mit.edu/view/Continuous%20Production/">continuous</a>,
-<a href="https://drake-jenkins.csail.mit.edu/view/Nightly%20Production/">nightly</a>, and
-<a href="https://drake-jenkins.csail.mit.edu/view/Weekly%20Production/">weekly</a>
+and <a href="https://drake-jenkins.csail.mit.edu/view/Nightly%20Production/">nightly</a>
 production continuous integration failures in the
 <a href="https://github.com/RobotLocomotion/drake">RobotLocomotion/drake</a> GitHub
 repo.</p>
@@ -162,7 +161,7 @@ is maintained on the
 <p>Two build cops are expected to be on duty Monday through Thursday, holidays excepted. At
 least one build cop should be on duty during normal business hours Eastern Time,
 approximately 9am to 5pm. Developers are encouraged, but not required, to merge
-pull requests during times when the build cop is on duty. Nightly and weekly
+pull requests during times when the build cop is on duty. Nightly
 build failures will be addressed the following weekday morning.</p>
 
 <p>When a CI build failure occurs, the build cop will be notified by email.
@@ -287,12 +286,10 @@ PR in your new PR.</li>
 build dashboard in Jenkins at least once an hour during on-call hours. These
 builds run after every merge to Drake. Also check the
 <a href="https://drake-jenkins.csail.mit.edu/view/Nightly%20Production/">Nightly Production</a>
-build dashboard every morning and
-<a href="https://drake-jenkins.csail.mit.edu/view/Weekly%20Production/">Weekly Production</a>
-build dashboard on Monday morning. These builds are unusually
+build dashboard every morning. These builds are unusually
 resource-intensive, and therefore run at most once per day.</p>
 
-<p>If any Continuous, Nightly, or Weekly Production builds turn yellow or red, you
+<p>If any Continuous or Nightly Production builds turn yellow or red, you
 need to act.</p>
 
 <p>In Jenkins, builds that are in progress (blinking on and off) will show the

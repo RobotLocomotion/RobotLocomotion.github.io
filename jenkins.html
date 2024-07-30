@@ -176,7 +176,7 @@ it, in the lower-right corner of the “Review discussion” box.</p>
 <h1 id="scheduling-an-on-demand-build">Scheduling an On-Demand Build</h1>
 
 <p>There are a number of Jenkins builds that do not normally run pre-merge, but do
-run post-merge, nightly, or weekly. These builds include lower-priority
+run post-merge or nightly. These builds include lower-priority
 platforms (e.g., macOS), and specialized options (e.g.,
 <a href="https://releases.llvm.org/6.0.0/tools/clang/docs/UndefinedBehaviorSanitizer.html">UndefinedBehaviorSanitizer</a>).
 Members of the RobotLocomotion organization can manually schedule these builds
@@ -199,8 +199,8 @@ on pull requests that have not yet been merged, or on arbitrary commits in the
   <li><code class="language-plaintext highlighter-rouge">@drake-jenkins-bot linux-jammy-clang-bazel-experimental-valgrind-memcheck please</code></li>
 </ul>
 
-<p>A list of Jenkins bot commands that cover the full set of continuous, nightly
-and weekly production jobs are available for
+<p>A list of Jenkins bot commands that cover the full set of continuous and nightly
+production jobs are available for
 <a href="https://github.com/RobotLocomotion/drake/blob/jenkins-jobs-experimental/request-jobs-provisioned.txt">provisioned</a>
 and
 <a href="https://github.com/RobotLocomotion/drake/blob/jenkins-jobs-experimental/request-jobs-unprovisioned.txt">unprovisioned</a>
@@ -225,10 +225,9 @@ merged with master), or the desired commit SHA in the <code class="language-plai
 <p>The list of experimental builds includes builds that automatically run on opened
 and updated pull requests, as well as numerous other builds for on-demand use.
 To help identify the on-demand build you want to run, you can consult the lists
-of <a href="https://drake-jenkins.csail.mit.edu/view/Continuous/">continuous</a>,
-<a href="https://drake-jenkins.csail.mit.edu/view/Nightly/">nightly</a>, and
-<a href="https://drake-jenkins.csail.mit.edu/view/Weekly/">weekly</a> builds,
-but you should not schedule continuous, nightly, or weekly builds directly.</p>
+of <a href="https://drake-jenkins.csail.mit.edu/view/Continuous/">continuous</a>, and
+<a href="https://drake-jenkins.csail.mit.edu/view/Nightly/">nightly</a>
+but you should not schedule continuous or nightly builds directly.</p>
 
 <h2 id="updating-installation-prerequisites">Updating Installation Prerequisites</h2>
 

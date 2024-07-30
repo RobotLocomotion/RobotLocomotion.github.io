@@ -1,5 +1,6 @@
 var NAVTREEINDEX59 =
 {
+"sdpa__free__format_8h.html#a121673ddbdadd10b2e3ceab52a93f5d3a54b9d7601ece96fc42e2ffd67aae2690":[4,0,0,11,47,0,1],
 "sdpa__free__format_8h.html#a2294ac3fe1dc938852cfa11db48ba1c9":[4,0,0,11,47,2],
 "sdpa__free__format_8h.html#aeb2470f8cacd8e5f5a473b10d0acf6cc":[4,0,0,11,47,1],
 "semi__explicit__euler__integrator_8h.html":[4,0,0,12,0,22],
@@ -119,7 +120,7 @@ var NAVTREEINDEX59 =
 "sorted__pair_8h.html#abfec653508bbfb544860dbfd0677bfa3":[4,0,0,1,60,6],
 "sorted__pair_8h.html#ae8b6812b1ccb5ba802e724ef1082569c":[4,0,0,1,60,8],
 "sorted__pair__pybind_8h.html":[4,0,0,0,0,1,7],
-"sorted__triplet_8h.html":[4,0,0,4,2,55],
+"sorted__triplet_8h.html":[4,0,0,4,2,56],
 "sos__basis__generator_8h.html":[4,0,0,11,59],
 "sos__basis__generator_8h.html#a6703c1f6f99f3e06a86f6a54e7dbd63d":[4,0,0,11,59,0],
 "spanning__forest_8h.html":[4,0,0,8,13,9],
@@ -248,6 +249,5 @@ var NAVTREEINDEX59 =
 "static__friction__cone__constraint_8h.html":[4,0,0,8,8,10],
 "stationary__system_8h.html":[4,0,0,12,0,0,17],
 "stationary__system_8h.html#af049a2e4a758fda07c5de7b35e50fea2":[4,0,0,12,0,0,17,1],
-"stepwise__dense__output_8h.html":[4,0,0,12,0,30],
-"stepwise__dense__output_8h.html#ac63f86fd8744281284fd18e143109605":[4,0,0,12,0,30,1]
+"stepwise__dense__output_8h.html":[4,0,0,12,0,30]
 };

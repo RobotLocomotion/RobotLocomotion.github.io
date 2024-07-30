@@ -120,18 +120,18 @@ var NAVTREEINDEX =
 "functions_func_~.html",
 "group__control.html#gae7d3c5debca2daa6de88dbc014263f5c",
 "implicit__integrator__test_8h.html#ab6fe9bae0a04120809f27f6f2b0a36e0",
-"make__sphere__mesh_8h.html",
+"make__sphere__field_8h.html",
 "namespacedrake_1_1examples_1_1fibonacci.html",
-"pendulum__state_8h.html",
-"random_8h.html#a72383be4710d27584d0821effc6506a5a601bf5851ffd28f5e6219c0f1945c8d6",
-"sdpa__free__format_8h.html#a2294ac3fe1dc938852cfa11db48ba1c9",
-"stiff__double__mass__spring__system_8h.html",
-"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html",
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a8e8824802dedfbc36776227f7482b6bc",
-"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a3a415b5e7e1f412ec0002e0251ced626",
-"structdrake_1_1solvers_1_1_scs_solver_details.html#aab6f168571c2073e01e240524b8a3da0",
-"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_depth32_f_01_4.html#afe6901f952a36afe20ac9b9e21e1a22a",
-"symbolic__test__util_8h.html#ade9bc3fff93c686d4776771a8e0249af"
+"pendulum__plant_8h.html",
+"random_8h.html#a72383be4710d27584d0821effc6506a5a3ea9f7aca87fd7b64469a0d1119f0b50",
+"sdpa__free__format_8h.html#a121673ddbdadd10b2e3ceab52a93f5d3a54b9d7601ece96fc42e2ffd67aae2690",
+"stepwise__dense__output_8h.html#ac63f86fd8744281284fd18e143109605",
+"structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html#ae484f63d5fef688b4c3f438455d6eec9",
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a6c4438afbf2190941ebeae2f8e16dd11",
+"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a2f34a2f66899dfd008ab76f9fee983de",
+"structdrake_1_1solvers_1_1_scs_solver_details.html#aa19049e37f2ac70a89ed4a46ddb36b40",
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_depth32_f_01_4.html#af38c722527b26de4a7e90ea5d6b21915",
+"symbolic__test__util_8h.html#adb8b893205178f5d6b6d50f7421ec51a"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
