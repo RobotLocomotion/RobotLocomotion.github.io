@@ -1,5 +1,9 @@
 var NAVTREEINDEX24 =
 {
+"classdrake_1_1planning_1_1_robot_diagram_builder.html#ac01308fa7300bb8824ae7ff2556bbe95":[1,4,2,3,1,9],
+"classdrake_1_1planning_1_1_robot_diagram_builder.html#ac1329aeca3e6d6fb1368df702dcda08e":[1,4,2,3,1,10],
+"classdrake_1_1planning_1_1_robot_diagram_builder.html#aca25a244485799151f75d32f9b8ee324":[1,4,2,3,1,13],
+"classdrake_1_1planning_1_1_robot_diagram_builder.html#ad4059f303a9d87f9097f8428fd027a5a":[1,4,2,3,1,1],
 "classdrake_1_1planning_1_1_robot_diagram_builder.html#ad56bf8e93cf790fb6af96a2052c4069c":[1,4,2,3,1,4],
 "classdrake_1_1planning_1_1_robot_diagram_builder.html#adc75eb5d08543dbab60c9ff58eb96aeb":[1,4,2,3,1,5],
 "classdrake_1_1planning_1_1_robot_diagram_builder.html#af4780fc4af4fa63c1c93d9ab39aa0132":[1,4,2,3,1,11],
@@ -245,9 +249,5 @@ var NAVTREEINDEX24 =
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a9d46ef6b46970dd14cb5dd325259a3aa":[1,4,2,1,5,41],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a9eb8351c5e1b3a7a35793ae13a35fdd7":[1,4,2,1,5,24],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#aacc0c26923b19361fd6d4361468d4b02":[1,4,2,1,5,30],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ab49f6e9326df207d977c7ac16b1b9ef5":[1,4,2,1,5,32],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ab73513d4918d09cf5e9f729aca68c7c7":[1,4,2,1,5,36],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#aba9607c2694941163fbae6973488fd0a":[1,4,2,1,5,39],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#abb8b403c020ea0cc825ebf70d011ea54":[1,4,2,1,5,22],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ac0a72307ec708171880ffe207bd89ba2":[1,4,2,1,5,23]
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ab49f6e9326df207d977c7ac16b1b9ef5":[1,4,2,1,5,32]
 };

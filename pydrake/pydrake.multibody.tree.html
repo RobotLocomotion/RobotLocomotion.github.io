@@ -1248,9 +1248,7 @@ documentation for more information.</p>
 <dd><p>Returns the rigid transform X_PF that characterizes <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F’s
 pose in its parent frame P.</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>contains the state of the multibody plant.</p>
-</dd>
-<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">this</span></code> frame has been registered in the given <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>of the multibody plant associated with this frame.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1260,12 +1258,10 @@ pose in its parent frame P.</p>
 <span class="sig-name descname"><span class="pre">SetPoseInParentFrame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.FixedOffsetFrame" title="pydrake.multibody.tree.FixedOffsetFrame"><span class="pre">pydrake.multibody.tree.FixedOffsetFrame</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_PF</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.FixedOffsetFrame.SetPoseInParentFrame" title="Permalink to this definition"></a></dt>
 <dd><p>Sets the pose of <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F in its parent frame P.</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>contains the state of the multibody plant.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>of the multibody plant associated with this frame.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_PF</span></code>:</dt><dd><p>Rigid transform that characterizes <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F’s pose
 (orientation and position) in its parent frame P.</p>
-</dd>
-<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">this</span></code> frame has been registered in the given <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1337,9 +1333,7 @@ documentation for more information.</p>
 <dd><p>Returns the rigid transform X_PF that characterizes <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F’s
 pose in its parent frame P.</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>contains the state of the multibody plant.</p>
-</dd>
-<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">this</span></code> frame has been registered in the given <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>of the multibody plant associated with this frame.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1349,12 +1343,10 @@ pose in its parent frame P.</p>
 <span id="pydrake.multibody.tree.FixedOffsetFrame_[AutoDiffXd].SetPoseInParentFrame"></span><span class="sig-name descname"><span class="pre">SetPoseInParentFrame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.FixedOffsetFrame_" title="pydrake.multibody.tree.FixedOffsetFrame_"><span class="pre">pydrake.multibody.tree.FixedOffsetFrame_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_PF</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform_" title="pydrake.math.RigidTransform_"><span class="pre">pydrake.math.RigidTransform_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.FixedOffsetFrame_-AutoDiffXd-.SetPoseInParentFrame" title="Permalink to this definition"></a></dt>
 <dd><p>Sets the pose of <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F in its parent frame P.</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>contains the state of the multibody plant.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>of the multibody plant associated with this frame.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_PF</span></code>:</dt><dd><p>Rigid transform that characterizes <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F’s pose
 (orientation and position) in its parent frame P.</p>
-</dd>
-<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">this</span></code> frame has been registered in the given <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1420,9 +1412,7 @@ documentation for more information.</p>
 <dd><p>Returns the rigid transform X_PF that characterizes <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F’s
 pose in its parent frame P.</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>contains the state of the multibody plant.</p>
-</dd>
-<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">this</span></code> frame has been registered in the given <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>of the multibody plant associated with this frame.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1432,12 +1422,10 @@ pose in its parent frame P.</p>
 <span id="pydrake.multibody.tree.FixedOffsetFrame_[Expression].SetPoseInParentFrame"></span><span class="sig-name descname"><span class="pre">SetPoseInParentFrame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.FixedOffsetFrame_" title="pydrake.multibody.tree.FixedOffsetFrame_"><span class="pre">pydrake.multibody.tree.FixedOffsetFrame_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_PF</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform_" title="pydrake.math.RigidTransform_"><span class="pre">pydrake.math.RigidTransform_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.FixedOffsetFrame_-Expression-.SetPoseInParentFrame" title="Permalink to this definition"></a></dt>
 <dd><p>Sets the pose of <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F in its parent frame P.</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>contains the state of the multibody plant.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>of the multibody plant associated with this frame.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_PF</span></code>:</dt><dd><p>Rigid transform that characterizes <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F’s pose
 (orientation and position) in its parent frame P.</p>
-</dd>
-<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">this</span></code> frame has been registered in the given <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1724,7 +1712,9 @@ in <code class="docutils literal notranslate"><span class="pre">frame_M</span></
 <span class="sig-name descname"><span class="pre">CalcPoseInBodyFrame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Frame" title="pydrake.multibody.tree.Frame"><span class="pre">pydrake.multibody.tree.Frame</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.Frame.CalcPoseInBodyFrame" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the pose <code class="docutils literal notranslate"><span class="pre">X_BF</span></code> of <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F in the body frame B
 associated with this frame. In particular, if <code class="docutils literal notranslate"><span class="pre">this</span></code> <strong>is</strong> the body
-frame B, this method directly returns the identity transformation.</p>
+frame B, this method directly returns the identity transformation.
+Note that this ONLY depends on the Parameters in the context; it does
+not depend on time, input, state, etc.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1940,7 +1930,9 @@ the same.</p>
 attached).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If <code class="docutils literal notranslate"><span class="pre">this</span></code> is B, this method returns the identity RotationMatrix.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">this</span></code> is B, this method returns the identity RotationMatrix.
+Note that this ONLY depends on the Parameters in the context; it
+does not depend on time, input, state, etc.</p>
 </div>
 </dd></dl>
 
@@ -2358,7 +2350,9 @@ in <code class="docutils literal notranslate"><span class="pre">frame_M</span></
 <span id="pydrake.multibody.tree.Frame_[AutoDiffXd].CalcPoseInBodyFrame"></span><span class="sig-name descname"><span class="pre">CalcPoseInBodyFrame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Frame_" title="pydrake.multibody.tree.Frame_"><span class="pre">pydrake.multibody.tree.Frame_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform_" title="pydrake.math.RigidTransform_"><span class="pre">pydrake.math.RigidTransform_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Frame_-AutoDiffXd-.CalcPoseInBodyFrame" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the pose <code class="docutils literal notranslate"><span class="pre">X_BF</span></code> of <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F in the body frame B
 associated with this frame. In particular, if <code class="docutils literal notranslate"><span class="pre">this</span></code> <strong>is</strong> the body
-frame B, this method directly returns the identity transformation.</p>
+frame B, this method directly returns the identity transformation.
+Note that this ONLY depends on the Parameters in the context; it does
+not depend on time, input, state, etc.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2574,7 +2568,9 @@ the same.</p>
 attached).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If <code class="docutils literal notranslate"><span class="pre">this</span></code> is B, this method returns the identity RotationMatrix.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">this</span></code> is B, this method returns the identity RotationMatrix.
+Note that this ONLY depends on the Parameters in the context; it
+does not depend on time, input, state, etc.</p>
 </div>
 </dd></dl>
 
@@ -2986,7 +2982,9 @@ in <code class="docutils literal notranslate"><span class="pre">frame_M</span></
 <span id="pydrake.multibody.tree.Frame_[Expression].CalcPoseInBodyFrame"></span><span class="sig-name descname"><span class="pre">CalcPoseInBodyFrame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Frame_" title="pydrake.multibody.tree.Frame_"><span class="pre">pydrake.multibody.tree.Frame_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform_" title="pydrake.math.RigidTransform_"><span class="pre">pydrake.math.RigidTransform_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Frame_-Expression-.CalcPoseInBodyFrame" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the pose <code class="docutils literal notranslate"><span class="pre">X_BF</span></code> of <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F in the body frame B
 associated with this frame. In particular, if <code class="docutils literal notranslate"><span class="pre">this</span></code> <strong>is</strong> the body
-frame B, this method directly returns the identity transformation.</p>
+frame B, this method directly returns the identity transformation.
+Note that this ONLY depends on the Parameters in the context; it does
+not depend on time, input, state, etc.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -3202,7 +3200,9 @@ the same.</p>
 attached).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If <code class="docutils literal notranslate"><span class="pre">this</span></code> is B, this method returns the identity RotationMatrix.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">this</span></code> is B, this method returns the identity RotationMatrix.
+Note that this ONLY depends on the Parameters in the context; it
+does not depend on time, input, state, etc.</p>
 </div>
 </dd></dl>
 

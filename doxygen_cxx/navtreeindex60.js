@@ -1,5 +1,10 @@
 var NAVTREEINDEX60 =
 {
+"static__friction__cone__complementarity__constraint_8h.html#ga4508ec670196c3fe45e9b52af8a73d4a":[4,0,0,8,8,9,0],
+"static__friction__cone__constraint_8h.html":[4,0,0,8,8,10],
+"stationary__system_8h.html":[4,0,0,12,0,0,17],
+"stationary__system_8h.html#af049a2e4a758fda07c5de7b35e50fea2":[4,0,0,12,0,0,17,1],
+"stepwise__dense__output_8h.html":[4,0,0,12,0,30],
 "stepwise__dense__output_8h.html#ac63f86fd8744281284fd18e143109605":[4,0,0,12,0,30,1],
 "stiff__double__mass__spring__system_8h.html":[4,0,0,12,0,0,18],
 "stochastic_8h.html":[4,0,0,1,2,1],
@@ -244,10 +249,5 @@ var NAVTREEINDEX60 =
 "structdrake_1_1geometry_1_1_equirectangular_map.html#a4d455efceee21e97d8e21ee40e9b4a20":[3,0,0,4,16,1],
 "structdrake_1_1geometry_1_1_equirectangular_map.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,16,0],
 "structdrake_1_1geometry_1_1_gltf_extension.html":[3,0,0,4,25],
-"structdrake_1_1geometry_1_1_gltf_extension.html#a3e06f5125c9d12865c929726ef90f723":[3,0,0,4,25,1],
-"structdrake_1_1geometry_1_1_gltf_extension.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,25,0],
-"structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html":[3,0,0,4,30,0],
-"structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html#a28cb55393e1523165dc2b4f624437e29":[3,0,0,4,30,0,2],
-"structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,30,0,0],
-"structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html#aa0de0a897162ef2c7d4a43529b8f25f7":[3,0,0,4,30,0,1]
+"structdrake_1_1geometry_1_1_gltf_extension.html#a3e06f5125c9d12865c929726ef90f723":[3,0,0,4,25,1]
 };

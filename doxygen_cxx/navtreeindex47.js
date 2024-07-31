@@ -1,5 +1,9 @@
 var NAVTREEINDEX47 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ae9172b5dec49b4fdc1a94684a25677d2":[3,0,0,17,6,21],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#aed61fed2b1bff79c2fb7b083d159a61b":[3,0,0,17,6,19],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#af9607087f0b9ae63e285094756e4ac1c":[3,0,0,17,6,38],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#af99a17f5dcb1100c81ee61a088a69db0":[3,0,0,17,6,29],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#afca7568bb098808d681cb14d7fa09f99":[3,0,0,17,6,49],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#afe3341f2b051ca0d1d376d1da25574b9":[3,0,0,17,6,18],
 "classdrake_1_1trajectories_1_1_piecewise_pose.html":[3,0,0,17,7],
@@ -245,9 +249,5 @@ var NAVTREEINDEX47 =
 "compass__gait__continuous__state_8h.html":[4,0,0,3,4,2],
 "compass__gait__geometry_8h.html":[4,0,0,3,4,3],
 "compass__gait__params_8h.html":[4,0,0,3,4,4],
-"compliant__contact__manager_8h.html":[4,0,0,8,10,2],
-"compliant__contact__manager_8h.html#ac599f4f3a6b1e2f688346350cd2d5577":[4,0,0,8,10,2,0],
-"composite__trajectory_8h.html":[4,0,0,1,5,2],
-"composite__trajectory_8h.html#a7d187029060664e74b24abbdc3ec45af":[4,0,0,1,5,2,1],
-"compute__numerical__gradient_8h.html":[4,0,0,7,5]
+"compliant__contact__manager_8h.html":[4,0,0,8,10,2]
 };
