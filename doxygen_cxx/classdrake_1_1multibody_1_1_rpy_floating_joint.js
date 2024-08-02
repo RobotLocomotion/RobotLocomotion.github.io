@@ -24,7 +24,6 @@ var classdrake_1_1multibody_1_1_rpy_floating_joint =
     [ "set_default_translation", "classdrake_1_1multibody_1_1_rpy_floating_joint.html#a5ba359c812c9d8890a46e9dc7337bad0", null ],
     [ "set_random_angles_distribution", "classdrake_1_1multibody_1_1_rpy_floating_joint.html#a28c50134f42cc652878abd18032d88dc", null ],
     [ "set_random_translation_distribution", "classdrake_1_1multibody_1_1_rpy_floating_joint.html#ac32b52f819a833c14444d04a0f116628", null ],
-    [ "set_translation", "classdrake_1_1multibody_1_1_rpy_floating_joint.html#a09dca4f598093065362c869df4a03e2e", null ],
     [ "set_translational_velocity", "classdrake_1_1multibody_1_1_rpy_floating_joint.html#ac7583eca4df20c0db97d10b2ea63b484", null ],
     [ "SetOrientation", "classdrake_1_1multibody_1_1_rpy_floating_joint.html#a24ee6b28184a173aa3bcaeaaa4568bed", null ],
     [ "SetPose", "classdrake_1_1multibody_1_1_rpy_floating_joint.html#a488d11cb18b724242bf38e7c090f3c41", null ],

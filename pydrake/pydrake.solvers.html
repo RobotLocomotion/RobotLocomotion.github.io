@@ -2510,17 +2510,6 @@ variables (columns of A) cannot change.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.solvers.L2NormCost.A">
-<span class="sig-name descname"><span class="pre">A</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.L2NormCost" title="pydrake.solvers.L2NormCost"><span class="pre">pydrake.solvers.L2NormCost</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.solvers.L2NormCost.A" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use A_dense function instead. This will be removed from Drake on
-or after 2024-08-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.L2NormCost.b">
 <span class="sig-name descname"><span class="pre">b</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.L2NormCost" title="pydrake.solvers.L2NormCost"><span class="pre">pydrake.solvers.L2NormCost</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.solvers.L2NormCost.b" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
@@ -3294,6 +3283,18 @@ f)</p>
 <dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Derived</span></code>:</dt><dd><p>Eigen::Matrix or Eigen::Array with Formula as the Scalar.</p>
 </dd>
 </dl>
+<ol class="arabic simple" start="6">
+<li><p>AddConstraint(self: pydrake.solvers.MathematicalProgram, binding: pydrake.solvers.Binding[Constraint]) -&gt; pydrake.solvers.Binding[Constraint]</p></li>
+</ol>
+<p>Adds a generic constraint to the program. This should only be used if
+a more specific type of constraint is not available, as it may require
+the use of a significantly more expensive solver.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">binding</span></code>.evaluator()-&gt;num_constraints() == 0, then this
+constraint is not added into the MathematicalProgram. We return
+<code class="docutils literal notranslate"><span class="pre">binding</span></code> directly.</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -5634,6 +5635,13 @@ indeterminates.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.MathematicalProgram.required_capabilities">
+<span class="sig-name descname"><span class="pre">required_capabilities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">set</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.ProgramAttribute" title="pydrake.solvers.ProgramAttribute"><span class="pre">pydrake.solvers.ProgramAttribute</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.solvers.MathematicalProgram.required_capabilities" title="Permalink to this definition"></a></dt>
+<dd><p>Getter for the required capability on the solver, given the
+cost/constraint/variable types in the program.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.MathematicalProgram.rotated_lorentz_cone_constraints">
 <span class="sig-name descname"><span class="pre">rotated_lorentz_cone_constraints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.RotatedLorentzConeConstraint" title="pydrake.solvers.RotatedLorentzConeConstraint"><span class="pre">RotatedLorentzConeConstraint</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.solvers.MathematicalProgram.rotated_lorentz_cone_constraints" title="Permalink to this definition"></a></dt>
 <dd><p>Getter for rotated Lorentz cone constraints.</p>
@@ -6751,12 +6759,12 @@ bilinear product.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.solvers.MixedIntegerRotationConstraintGenerator.ReturnType.B_">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">B_</span></span><a class="headerlink" href="#pydrake.solvers.MixedIntegerRotationConstraintGenerator.ReturnType.B_" title="Permalink to this definition"></a></dt>
-<dd><p><a href="#id63"><span class="problematic" id="id64">B_</span></a> contains the new binary variables added to the program. B_`i][j]
+<dd><p><a href="#id65"><span class="problematic" id="id66">B_</span></a> contains the new binary variables added to the program. B_`i][j]
 represents in which interval R(i, j) lies. If we use linear binning,
-then B_[i][j] is of length 2 * <a href="#id65"><span class="problematic" id="id66">num_intervals_per_half_axis_</span></a>. B_[i][j
+then B_[i][j] is of length 2 * <a href="#id67"><span class="problematic" id="id68">num_intervals_per_half_axis_</span></a>. B_[i][j
 &lt;k&gt;`_ = 1 =&gt; φ(k) ≤ R(i, j) ≤ φ(k + 1) B_`i][j &lt;k&gt;`_ = 0 =&gt; R(i, j) ≥
 φ(k + 1) or R(i, j) ≤ φ(k) If we use logarithmic binning, then
-B_[i][j] is of length 1 + log₂(<a href="#id67"><span class="problematic" id="id68">num_intervals_per_half_axis_</span></a>). If
+B_[i][j] is of length 1 + log₂(<a href="#id69"><span class="problematic" id="id70">num_intervals_per_half_axis_</span></a>). If
 B_[i][j] represents integer k in reflected Gray code, then R(i, j) is
 in the interval [φ(k), φ(k+1)].</p>
 </dd></dl>
@@ -6765,7 +6773,7 @@ in the interval [φ(k), φ(k+1)].</p>
 <dt class="sig sig-object py" id="pydrake.solvers.MixedIntegerRotationConstraintGenerator.ReturnType.lambda_">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lambda_</span></span><a class="headerlink" href="#pydrake.solvers.MixedIntegerRotationConstraintGenerator.ReturnType.lambda_" title="Permalink to this definition"></a></dt>
 <dd><p>λ contains part of the new continuous variables added to the program.
-λ_[i][j] is of length 2 * <a href="#id69"><span class="problematic" id="id70">num_intervals_per_half_axis_</span></a> + 1, such that
+λ_[i][j] is of length 2 * <a href="#id71"><span class="problematic" id="id72">num_intervals_per_half_axis_</span></a> + 1, such that
 R(i, j) = φᵀ * λ_[i][j]. Notice that λ_[i][j] satisfies the special
 ordered set of type 2 (SOS2) constraint. Namely at most two entries in
 λ_[i][j] can be strictly positive, and these two entries have to be
@@ -7280,6 +7288,119 @@ constraint respectively.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.PositiveSemidefiniteConstraint.matrix_rows">
 <span class="sig-name descname"><span class="pre">matrix_rows</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.PositiveSemidefiniteConstraint" title="pydrake.solvers.PositiveSemidefiniteConstraint"><span class="pre">pydrake.solvers.PositiveSemidefiniteConstraint</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.solvers.PositiveSemidefiniteConstraint.matrix_rows" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.solvers.ProgramAttribute">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">ProgramAttribute</span></span><a class="headerlink" href="#pydrake.solvers.ProgramAttribute" title="Permalink to this definition"></a></dt>
+<dd><p>Members:</p>
+<blockquote>
+<div><p>kGenericCost : A generic cost, doesn’t belong to any specific cost type</p>
+<p>kGenericConstraint : A generic constraint, doesn’t belong to any specific</p>
+<p>kQuadraticCost : A quadratic function as the cost.</p>
+<p>kQuadraticConstraint : A constraint on a quadratic function.</p>
+<p>kLinearCost : A linear function as the cost.</p>
+<p>kLinearConstraint : A constraint on a linear function.</p>
+<p>kLinearEqualityConstraint : An equality constraint on a linear function.</p>
+<p>kLinearComplementarityConstraint : A linear complementarity constraint in</p>
+<p>kLorentzConeConstraint : A Lorentz cone constraint.</p>
+<p>kRotatedLorentzConeConstraint : A rotated Lorentz cone constraint.</p>
+<p>kPositiveSemidefiniteConstraint : A positive semidefinite constraint.</p>
+<p>kExponentialConeConstraint : An exponential cone constraint.</p>
+<p>kL2NormCost : An L2 norm <a href="#id63"><span class="problematic" id="id64">|Ax+b|</span></a></p>
+<p>kBinaryVariable : Variable taking binary value {0, 1}.</p>
+<p>kCallback : Supports callback during solving the problem.</p>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.ProgramAttribute.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.ProgramAttribute" title="pydrake.solvers.ProgramAttribute"><span class="pre">pydrake.solvers.ProgramAttribute</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.ProgramAttribute.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.solvers.ProgramAttribute.kBinaryVariable">
+<span class="sig-name descname"><span class="pre">kBinaryVariable</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;ProgramAttribute.kBinaryVariable:</span> <span class="pre">13&gt;</span></em><a class="headerlink" href="#pydrake.solvers.ProgramAttribute.kBinaryVariable" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.solvers.ProgramAttribute.kCallback">
+<span class="sig-name descname"><span class="pre">kCallback</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;ProgramAttribute.kCallback:</span> <span class="pre">14&gt;</span></em><a class="headerlink" href="#pydrake.solvers.ProgramAttribute.kCallback" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.solvers.ProgramAttribute.kExponentialConeConstraint">
+<span class="sig-name descname"><span class="pre">kExponentialConeConstraint</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;ProgramAttribute.kExponentialConeConstraint:</span> <span class="pre">11&gt;</span></em><a class="headerlink" href="#pydrake.solvers.ProgramAttribute.kExponentialConeConstraint" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.solvers.ProgramAttribute.kGenericConstraint">
+<span class="sig-name descname"><span class="pre">kGenericConstraint</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;ProgramAttribute.kGenericConstraint:</span> <span class="pre">1&gt;</span></em><a class="headerlink" href="#pydrake.solvers.ProgramAttribute.kGenericConstraint" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.solvers.ProgramAttribute.kGenericCost">
+<span class="sig-name descname"><span class="pre">kGenericCost</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;ProgramAttribute.kGenericCost:</span> <span class="pre">0&gt;</span></em><a class="headerlink" href="#pydrake.solvers.ProgramAttribute.kGenericCost" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.solvers.ProgramAttribute.kL2NormCost">
+<span class="sig-name descname"><span class="pre">kL2NormCost</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;ProgramAttribute.kL2NormCost:</span> <span class="pre">12&gt;</span></em><a class="headerlink" href="#pydrake.solvers.ProgramAttribute.kL2NormCost" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.solvers.ProgramAttribute.kLinearComplementarityConstraint">
+<span class="sig-name descname"><span class="pre">kLinearComplementarityConstraint</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;ProgramAttribute.kLinearComplementarityConstraint:</span> <span class="pre">7&gt;</span></em><a class="headerlink" href="#pydrake.solvers.ProgramAttribute.kLinearComplementarityConstraint" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.solvers.ProgramAttribute.kLinearConstraint">
+<span class="sig-name descname"><span class="pre">kLinearConstraint</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;ProgramAttribute.kLinearConstraint:</span> <span class="pre">5&gt;</span></em><a class="headerlink" href="#pydrake.solvers.ProgramAttribute.kLinearConstraint" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.solvers.ProgramAttribute.kLinearCost">
+<span class="sig-name descname"><span class="pre">kLinearCost</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;ProgramAttribute.kLinearCost:</span> <span class="pre">4&gt;</span></em><a class="headerlink" href="#pydrake.solvers.ProgramAttribute.kLinearCost" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.solvers.ProgramAttribute.kLinearEqualityConstraint">
+<span class="sig-name descname"><span class="pre">kLinearEqualityConstraint</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;ProgramAttribute.kLinearEqualityConstraint:</span> <span class="pre">6&gt;</span></em><a class="headerlink" href="#pydrake.solvers.ProgramAttribute.kLinearEqualityConstraint" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.solvers.ProgramAttribute.kLorentzConeConstraint">
+<span class="sig-name descname"><span class="pre">kLorentzConeConstraint</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;ProgramAttribute.kLorentzConeConstraint:</span> <span class="pre">8&gt;</span></em><a class="headerlink" href="#pydrake.solvers.ProgramAttribute.kLorentzConeConstraint" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.solvers.ProgramAttribute.kPositiveSemidefiniteConstraint">
+<span class="sig-name descname"><span class="pre">kPositiveSemidefiniteConstraint</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;ProgramAttribute.kPositiveSemidefiniteConstraint:</span> <span class="pre">10&gt;</span></em><a class="headerlink" href="#pydrake.solvers.ProgramAttribute.kPositiveSemidefiniteConstraint" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.solvers.ProgramAttribute.kQuadraticConstraint">
+<span class="sig-name descname"><span class="pre">kQuadraticConstraint</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;ProgramAttribute.kQuadraticConstraint:</span> <span class="pre">3&gt;</span></em><a class="headerlink" href="#pydrake.solvers.ProgramAttribute.kQuadraticConstraint" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.solvers.ProgramAttribute.kQuadraticCost">
+<span class="sig-name descname"><span class="pre">kQuadraticCost</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;ProgramAttribute.kQuadraticCost:</span> <span class="pre">2&gt;</span></em><a class="headerlink" href="#pydrake.solvers.ProgramAttribute.kQuadraticCost" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.solvers.ProgramAttribute.kRotatedLorentzConeConstraint">
+<span class="sig-name descname"><span class="pre">kRotatedLorentzConeConstraint</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;ProgramAttribute.kRotatedLorentzConeConstraint:</span> <span class="pre">9&gt;</span></em><a class="headerlink" href="#pydrake.solvers.ProgramAttribute.kRotatedLorentzConeConstraint" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.solvers.ProgramAttribute.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pydrake.solvers.ProgramAttribute.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.solvers.ProgramAttribute.value">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.solvers.ProgramAttribute.value" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>

@@ -5,7 +5,6 @@ var classdrake_1_1solvers_1_1_l2_norm_cost =
     [ "L2NormCost", "classdrake_1_1solvers_1_1_l2_norm_cost.html#a8dcb5a3da4de49d28bc6f8d01325852a", null ],
     [ "L2NormCost", "classdrake_1_1solvers_1_1_l2_norm_cost.html#ae691ac50d3dbb4b829c72fea4cdee3e1", null ],
     [ "~L2NormCost", "classdrake_1_1solvers_1_1_l2_norm_cost.html#acebf6030f544a5558f5530b22ef42d62", null ],
-    [ "A", "classdrake_1_1solvers_1_1_l2_norm_cost.html#ace583a472a3bdc1b67f05d6a6571a903", null ],
     [ "b", "classdrake_1_1solvers_1_1_l2_norm_cost.html#aae45694d3595659922653fd027d15cb6", null ],
     [ "DoDisplay", "classdrake_1_1solvers_1_1_l2_norm_cost.html#afd5ade712b02fa2e71e8c26811c9494a", null ],
     [ "DoEval", "classdrake_1_1solvers_1_1_l2_norm_cost.html#a863f7df9d3ee10378794b4c6842a4377", null ],

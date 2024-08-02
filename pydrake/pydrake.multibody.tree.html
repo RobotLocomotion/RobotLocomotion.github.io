@@ -10318,29 +10318,6 @@ documentation for further details and definitions of these frames.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.tree.QuaternionFloatingJoint.get_default_pose">
-<span class="sig-name descname"><span class="pre">get_default_pose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint" title="pydrake.multibody.tree.QuaternionFloatingJoint"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint.get_default_pose" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Removed since functionality already provided by base class
-Joint::GetDefaultPose() This will be removed from Drake on or
-after 2024-08-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.tree.QuaternionFloatingJoint.get_default_position">
-<span class="sig-name descname"><span class="pre">get_default_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint" title="pydrake.multibody.tree.QuaternionFloatingJoint"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint.get_default_position" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use QuaternionFloatingJoint::get_default_translation() This will
-be removed from Drake on or after 2024-08-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.QuaternionFloatingJoint.get_default_quaternion">
 <span class="sig-name descname"><span class="pre">get_default_quaternion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint" title="pydrake.multibody.tree.QuaternionFloatingJoint"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.common.eigen_geometry.html#pydrake.common.eigen_geometry.Quaternion" title="pydrake.common.eigen_geometry.Quaternion"><span class="pre">pydrake.common.eigen_geometry.Quaternion</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint.get_default_quaternion" title="Permalink to this definition"></a></dt>
 <dd><p>Gets the default quaternion <code class="docutils literal notranslate"><span class="pre">q_FM</span></code> for <code class="docutils literal notranslate"><span class="pre">this</span></code> joint.</p>
@@ -10359,28 +10336,6 @@ p_FoMo_F from Fo (inboard frame F’s origin) to Mo (outboard frame M’s
 origin), expressed in inboard frame F.</p>
 <dl class="simple">
 <dt>Returns <code class="docutils literal notranslate"><span class="pre">This</span></code>:</dt><dd><p>joint’s default translation as the position vector p_FM.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.tree.QuaternionFloatingJoint.get_pose">
-<span class="sig-name descname"><span class="pre">get_pose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint" title="pydrake.multibody.tree.QuaternionFloatingJoint"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint.get_pose" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use QuaternionFloatingJoint::GetPose() This will be removed from
-Drake on or after 2024-08-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.tree.QuaternionFloatingJoint.get_position">
-<span class="sig-name descname"><span class="pre">get_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint" title="pydrake.multibody.tree.QuaternionFloatingJoint"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint.get_position" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use QuaternionFloatingJoint::get_translation() This will be
-removed from Drake on or after 2024-08-01.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -10473,17 +10428,6 @@ documentation for further details and definitions of these frames.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.tree.QuaternionFloatingJoint.set_default_position">
-<span class="sig-name descname"><span class="pre">set_default_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint" title="pydrake.multibody.tree.QuaternionFloatingJoint"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_FM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint.set_default_position" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use QuaternionFloatingJoint::set_default_translation() This will
-be removed from Drake on or after 2024-08-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.QuaternionFloatingJoint.set_default_quaternion">
 <span class="sig-name descname"><span class="pre">set_default_quaternion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint" title="pydrake.multibody.tree.QuaternionFloatingJoint"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">q_FM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.common.eigen_geometry.html#pydrake.common.eigen_geometry.Quaternion" title="pydrake.common.eigen_geometry.Quaternion"><span class="pre">pydrake.common.eigen_geometry.Quaternion</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint.set_default_quaternion" title="Permalink to this definition"></a></dt>
 <dd><p>Sets the default quaternion <code class="docutils literal notranslate"><span class="pre">q_FM</span></code> of this joint.</p>
@@ -10500,50 +10444,6 @@ be removed from Drake on or after 2024-08-01.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_FM</span></code>:</dt><dd><p>position vector p_FoMo_F from Fo (inboard frame F’s origin) to Mo
 (outboard frame M’s origin), expressed in frame F.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.tree.QuaternionFloatingJoint.set_pose">
-<span class="sig-name descname"><span class="pre">set_pose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint" title="pydrake.multibody.tree.QuaternionFloatingJoint"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_FM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint" title="pydrake.multibody.tree.QuaternionFloatingJoint"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint.set_pose" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use QuaternionFloatingJoint::SetPose() This will be removed from
-Drake on or after 2024-08-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.tree.QuaternionFloatingJoint.set_position">
-<span class="sig-name descname"><span class="pre">set_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint" title="pydrake.multibody.tree.QuaternionFloatingJoint"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_FM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint" title="pydrake.multibody.tree.QuaternionFloatingJoint"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint.set_position" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use QuaternionFloatingJoint::SetTranslation() This will be removed
-from Drake on or after 2024-08-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.tree.QuaternionFloatingJoint.set_quaternion">
-<span class="sig-name descname"><span class="pre">set_quaternion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint" title="pydrake.multibody.tree.QuaternionFloatingJoint"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">q_FM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.common.eigen_geometry.html#pydrake.common.eigen_geometry.Quaternion" title="pydrake.common.eigen_geometry.Quaternion"><span class="pre">pydrake.common.eigen_geometry.Quaternion</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint" title="pydrake.multibody.tree.QuaternionFloatingJoint"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint.set_quaternion" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use QuaternionFloatingJoint::SetQuaternion() This will be removed
-from Drake on or after 2024-08-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.tree.QuaternionFloatingJoint.set_random_position_distribution">
-<span class="sig-name descname"><span class="pre">set_random_position_distribution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint" title="pydrake.multibody.tree.QuaternionFloatingJoint"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_FM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint.set_random_position_distribution" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use QuaternionFloatingJoint::set_random_translation_distribution()
-This will be removed from Drake on or after 2024-08-01.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -10602,17 +10502,6 @@ frames.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>a constant reference to <code class="docutils literal notranslate"><span class="pre">this</span></code> joint.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.tree.QuaternionFloatingJoint.SetFromRotationMatrix">
-<span class="sig-name descname"><span class="pre">SetFromRotationMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint" title="pydrake.multibody.tree.QuaternionFloatingJoint"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">R_FM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RotationMatrix" title="pydrake.math.RotationMatrix"><span class="pre">pydrake.math.RotationMatrix</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint" title="pydrake.multibody.tree.QuaternionFloatingJoint"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint.SetFromRotationMatrix" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use QuaternionFloatingJoint::SetOrientation() This will be removed
-from Drake on or after 2024-08-01.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -10796,29 +10685,6 @@ documentation for further details and definitions of these frames.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.tree.QuaternionFloatingJoint_-AutoDiffXd-.get_default_pose">
-<span id="pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].get_default_pose"></span><span class="sig-name descname"><span class="pre">get_default_pose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint_" title="pydrake.multibody.tree.QuaternionFloatingJoint_"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_-AutoDiffXd-.get_default_pose" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Removed since functionality already provided by base class
-Joint::GetDefaultPose() This will be removed from Drake on or
-after 2024-08-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.tree.QuaternionFloatingJoint_-AutoDiffXd-.get_default_position">
-<span id="pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].get_default_position"></span><span class="sig-name descname"><span class="pre">get_default_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint_" title="pydrake.multibody.tree.QuaternionFloatingJoint_"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_-AutoDiffXd-.get_default_position" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use QuaternionFloatingJoint::get_default_translation() This will
-be removed from Drake on or after 2024-08-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.QuaternionFloatingJoint_-AutoDiffXd-.get_default_quaternion">
 <span id="pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].get_default_quaternion"></span><span class="sig-name descname"><span class="pre">get_default_quaternion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint_" title="pydrake.multibody.tree.QuaternionFloatingJoint_"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.common.eigen_geometry.html#pydrake.common.eigen_geometry.Quaternion" title="pydrake.common.eigen_geometry.Quaternion"><span class="pre">pydrake.common.eigen_geometry.Quaternion</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_-AutoDiffXd-.get_default_quaternion" title="Permalink to this definition"></a></dt>
 <dd><p>Gets the default quaternion <code class="docutils literal notranslate"><span class="pre">q_FM</span></code> for <code class="docutils literal notranslate"><span class="pre">this</span></code> joint.</p>
@@ -10837,28 +10703,6 @@ p_FoMo_F from Fo (inboard frame F’s origin) to Mo (outboard frame M’s
 origin), expressed in inboard frame F.</p>
 <dl class="simple">
 <dt>Returns <code class="docutils literal notranslate"><span class="pre">This</span></code>:</dt><dd><p>joint’s default translation as the position vector p_FM.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.tree.QuaternionFloatingJoint_-AutoDiffXd-.get_pose">
-<span id="pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].get_pose"></span><span class="sig-name descname"><span class="pre">get_pose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint_" title="pydrake.multibody.tree.QuaternionFloatingJoint_"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform_" title="pydrake.math.RigidTransform_"><span class="pre">pydrake.math.RigidTransform_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_-AutoDiffXd-.get_pose" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use QuaternionFloatingJoint::GetPose() This will be removed from
-Drake on or after 2024-08-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.tree.QuaternionFloatingJoint_-AutoDiffXd-.get_position">
-<span id="pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].get_position"></span><span class="sig-name descname"><span class="pre">get_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint_" title="pydrake.multibody.tree.QuaternionFloatingJoint_"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_-AutoDiffXd-.get_position" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use QuaternionFloatingJoint::get_translation() This will be
-removed from Drake on or after 2024-08-01.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -10951,17 +10795,6 @@ documentation for further details and definitions of these frames.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.tree.QuaternionFloatingJoint_-AutoDiffXd-.set_default_position">
-<span id="pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].set_default_position"></span><span class="sig-name descname"><span class="pre">set_default_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint_" title="pydrake.multibody.tree.QuaternionFloatingJoint_"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_FM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_-AutoDiffXd-.set_default_position" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use QuaternionFloatingJoint::set_default_translation() This will
-be removed from Drake on or after 2024-08-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.QuaternionFloatingJoint_-AutoDiffXd-.set_default_quaternion">
 <span id="pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].set_default_quaternion"></span><span class="sig-name descname"><span class="pre">set_default_quaternion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint_" title="pydrake.multibody.tree.QuaternionFloatingJoint_"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q_FM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.common.eigen_geometry.html#pydrake.common.eigen_geometry.Quaternion" title="pydrake.common.eigen_geometry.Quaternion"><span class="pre">pydrake.common.eigen_geometry.Quaternion</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_-AutoDiffXd-.set_default_quaternion" title="Permalink to this definition"></a></dt>
 <dd><p>Sets the default quaternion <code class="docutils literal notranslate"><span class="pre">q_FM</span></code> of this joint.</p>
@@ -10978,50 +10811,6 @@ be removed from Drake on or after 2024-08-01.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_FM</span></code>:</dt><dd><p>position vector p_FoMo_F from Fo (inboard frame F’s origin) to Mo
 (outboard frame M’s origin), expressed in frame F.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.tree.QuaternionFloatingJoint_-AutoDiffXd-.set_pose">
-<span id="pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].set_pose"></span><span class="sig-name descname"><span class="pre">set_pose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint_" title="pydrake.multibody.tree.QuaternionFloatingJoint_"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_FM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform_" title="pydrake.math.RigidTransform_"><span class="pre">pydrake.math.RigidTransform_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint_" title="pydrake.multibody.tree.QuaternionFloatingJoint_"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_-AutoDiffXd-.set_pose" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use QuaternionFloatingJoint::SetPose() This will be removed from
-Drake on or after 2024-08-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.tree.QuaternionFloatingJoint_-AutoDiffXd-.set_position">
-<span id="pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].set_position"></span><span class="sig-name descname"><span class="pre">set_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint_" title="pydrake.multibody.tree.QuaternionFloatingJoint_"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_FM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint_" title="pydrake.multibody.tree.QuaternionFloatingJoint_"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_-AutoDiffXd-.set_position" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use QuaternionFloatingJoint::SetTranslation() This will be removed
-from Drake on or after 2024-08-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.tree.QuaternionFloatingJoint_-AutoDiffXd-.set_quaternion">
-<span id="pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].set_quaternion"></span><span class="sig-name descname"><span class="pre">set_quaternion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint_" title="pydrake.multibody.tree.QuaternionFloatingJoint_"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q_FM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.common.eigen_geometry.html#pydrake.common.eigen_geometry.Quaternion_" title="pydrake.common.eigen_geometry.Quaternion_"><span class="pre">pydrake.common.eigen_geometry.Quaternion_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint_" title="pydrake.multibody.tree.QuaternionFloatingJoint_"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_-AutoDiffXd-.set_quaternion" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use QuaternionFloatingJoint::SetQuaternion() This will be removed
-from Drake on or after 2024-08-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.tree.QuaternionFloatingJoint_-AutoDiffXd-.set_random_position_distribution">
-<span id="pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].set_random_position_distribution"></span><span class="sig-name descname"><span class="pre">set_random_position_distribution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint_" title="pydrake.multibody.tree.QuaternionFloatingJoint_"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_FM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_-AutoDiffXd-.set_random_position_distribution" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use QuaternionFloatingJoint::set_random_translation_distribution()
-This will be removed from Drake on or after 2024-08-01.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -11080,17 +10869,6 @@ frames.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>a constant reference to <code class="docutils literal notranslate"><span class="pre">this</span></code> joint.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.tree.QuaternionFloatingJoint_-AutoDiffXd-.SetFromRotationMatrix">
-<span id="pydrake.multibody.tree.QuaternionFloatingJoint_[AutoDiffXd].SetFromRotationMatrix"></span><span class="sig-name descname"><span class="pre">SetFromRotationMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint_" title="pydrake.multibody.tree.QuaternionFloatingJoint_"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R_FM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RotationMatrix_" title="pydrake.math.RotationMatrix_"><span class="pre">pydrake.math.RotationMatrix_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint_" title="pydrake.multibody.tree.QuaternionFloatingJoint_"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_-AutoDiffXd-.SetFromRotationMatrix" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use QuaternionFloatingJoint::SetOrientation() This will be removed
-from Drake on or after 2024-08-01.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -11268,29 +11046,6 @@ documentation for further details and definitions of these frames.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.tree.QuaternionFloatingJoint_-Expression-.get_default_pose">
-<span id="pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].get_default_pose"></span><span class="sig-name descname"><span class="pre">get_default_pose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint_" title="pydrake.multibody.tree.QuaternionFloatingJoint_"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_-Expression-.get_default_pose" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Removed since functionality already provided by base class
-Joint::GetDefaultPose() This will be removed from Drake on or
-after 2024-08-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.tree.QuaternionFloatingJoint_-Expression-.get_default_position">
-<span id="pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].get_default_position"></span><span class="sig-name descname"><span class="pre">get_default_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint_" title="pydrake.multibody.tree.QuaternionFloatingJoint_"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_-Expression-.get_default_position" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use QuaternionFloatingJoint::get_default_translation() This will
-be removed from Drake on or after 2024-08-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.QuaternionFloatingJoint_-Expression-.get_default_quaternion">
 <span id="pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].get_default_quaternion"></span><span class="sig-name descname"><span class="pre">get_default_quaternion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint_" title="pydrake.multibody.tree.QuaternionFloatingJoint_"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.common.eigen_geometry.html#pydrake.common.eigen_geometry.Quaternion" title="pydrake.common.eigen_geometry.Quaternion"><span class="pre">pydrake.common.eigen_geometry.Quaternion</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_-Expression-.get_default_quaternion" title="Permalink to this definition"></a></dt>
 <dd><p>Gets the default quaternion <code class="docutils literal notranslate"><span class="pre">q_FM</span></code> for <code class="docutils literal notranslate"><span class="pre">this</span></code> joint.</p>
@@ -11309,28 +11064,6 @@ p_FoMo_F from Fo (inboard frame F’s origin) to Mo (outboard frame M’s
 origin), expressed in inboard frame F.</p>
 <dl class="simple">
 <dt>Returns <code class="docutils literal notranslate"><span class="pre">This</span></code>:</dt><dd><p>joint’s default translation as the position vector p_FM.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.tree.QuaternionFloatingJoint_-Expression-.get_pose">
-<span id="pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].get_pose"></span><span class="sig-name descname"><span class="pre">get_pose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint_" title="pydrake.multibody.tree.QuaternionFloatingJoint_"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform_" title="pydrake.math.RigidTransform_"><span class="pre">pydrake.math.RigidTransform_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_-Expression-.get_pose" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use QuaternionFloatingJoint::GetPose() This will be removed from
-Drake on or after 2024-08-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.tree.QuaternionFloatingJoint_-Expression-.get_position">
-<span id="pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].get_position"></span><span class="sig-name descname"><span class="pre">get_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint_" title="pydrake.multibody.tree.QuaternionFloatingJoint_"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_-Expression-.get_position" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use QuaternionFloatingJoint::get_translation() This will be
-removed from Drake on or after 2024-08-01.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -11423,17 +11156,6 @@ documentation for further details and definitions of these frames.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.tree.QuaternionFloatingJoint_-Expression-.set_default_position">
-<span id="pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].set_default_position"></span><span class="sig-name descname"><span class="pre">set_default_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint_" title="pydrake.multibody.tree.QuaternionFloatingJoint_"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_FM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_-Expression-.set_default_position" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use QuaternionFloatingJoint::set_default_translation() This will
-be removed from Drake on or after 2024-08-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.QuaternionFloatingJoint_-Expression-.set_default_quaternion">
 <span id="pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].set_default_quaternion"></span><span class="sig-name descname"><span class="pre">set_default_quaternion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint_" title="pydrake.multibody.tree.QuaternionFloatingJoint_"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q_FM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.common.eigen_geometry.html#pydrake.common.eigen_geometry.Quaternion" title="pydrake.common.eigen_geometry.Quaternion"><span class="pre">pydrake.common.eigen_geometry.Quaternion</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_-Expression-.set_default_quaternion" title="Permalink to this definition"></a></dt>
 <dd><p>Sets the default quaternion <code class="docutils literal notranslate"><span class="pre">q_FM</span></code> of this joint.</p>
@@ -11450,50 +11172,6 @@ be removed from Drake on or after 2024-08-01.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_FM</span></code>:</dt><dd><p>position vector p_FoMo_F from Fo (inboard frame F’s origin) to Mo
 (outboard frame M’s origin), expressed in frame F.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.tree.QuaternionFloatingJoint_-Expression-.set_pose">
-<span id="pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].set_pose"></span><span class="sig-name descname"><span class="pre">set_pose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint_" title="pydrake.multibody.tree.QuaternionFloatingJoint_"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_FM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform_" title="pydrake.math.RigidTransform_"><span class="pre">pydrake.math.RigidTransform_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint_" title="pydrake.multibody.tree.QuaternionFloatingJoint_"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_-Expression-.set_pose" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use QuaternionFloatingJoint::SetPose() This will be removed from
-Drake on or after 2024-08-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.tree.QuaternionFloatingJoint_-Expression-.set_position">
-<span id="pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].set_position"></span><span class="sig-name descname"><span class="pre">set_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint_" title="pydrake.multibody.tree.QuaternionFloatingJoint_"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_FM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint_" title="pydrake.multibody.tree.QuaternionFloatingJoint_"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_-Expression-.set_position" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use QuaternionFloatingJoint::SetTranslation() This will be removed
-from Drake on or after 2024-08-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.tree.QuaternionFloatingJoint_-Expression-.set_quaternion">
-<span id="pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].set_quaternion"></span><span class="sig-name descname"><span class="pre">set_quaternion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint_" title="pydrake.multibody.tree.QuaternionFloatingJoint_"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q_FM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.common.eigen_geometry.html#pydrake.common.eigen_geometry.Quaternion_" title="pydrake.common.eigen_geometry.Quaternion_"><span class="pre">pydrake.common.eigen_geometry.Quaternion_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint_" title="pydrake.multibody.tree.QuaternionFloatingJoint_"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_-Expression-.set_quaternion" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use QuaternionFloatingJoint::SetQuaternion() This will be removed
-from Drake on or after 2024-08-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.tree.QuaternionFloatingJoint_-Expression-.set_random_position_distribution">
-<span id="pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].set_random_position_distribution"></span><span class="sig-name descname"><span class="pre">set_random_position_distribution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint_" title="pydrake.multibody.tree.QuaternionFloatingJoint_"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_FM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_-Expression-.set_random_position_distribution" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use QuaternionFloatingJoint::set_random_translation_distribution()
-This will be removed from Drake on or after 2024-08-01.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -11552,17 +11230,6 @@ frames.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>a constant reference to <code class="docutils literal notranslate"><span class="pre">this</span></code> joint.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.tree.QuaternionFloatingJoint_-Expression-.SetFromRotationMatrix">
-<span id="pydrake.multibody.tree.QuaternionFloatingJoint_[Expression].SetFromRotationMatrix"></span><span class="sig-name descname"><span class="pre">SetFromRotationMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint_" title="pydrake.multibody.tree.QuaternionFloatingJoint_"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R_FM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RotationMatrix_" title="pydrake.math.RotationMatrix_"><span class="pre">pydrake.math.RotationMatrix_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.QuaternionFloatingJoint_" title="pydrake.multibody.tree.QuaternionFloatingJoint_"><span class="pre">pydrake.multibody.tree.QuaternionFloatingJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.QuaternionFloatingJoint_-Expression-.SetFromRotationMatrix" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use QuaternionFloatingJoint::SetOrientation() This will be removed
-from Drake on or after 2024-08-01.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -16631,17 +16298,6 @@ joint’s zero configuration.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.tree.RpyFloatingJoint.set_translation">
-<span class="sig-name descname"><span class="pre">set_translation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RpyFloatingJoint" title="pydrake.multibody.tree.RpyFloatingJoint"><span class="pre">pydrake.multibody.tree.RpyFloatingJoint</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_FM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.RpyFloatingJoint" title="pydrake.multibody.tree.RpyFloatingJoint"><span class="pre">pydrake.multibody.tree.RpyFloatingJoint</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.RpyFloatingJoint.set_translation" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use RpyFloatingJoint::SetTranslation() This will be removed from
-Drake on or after 2024-08-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.RpyFloatingJoint.set_translational_velocity">
 <span class="sig-name descname"><span class="pre">set_translational_velocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RpyFloatingJoint" title="pydrake.multibody.tree.RpyFloatingJoint"><span class="pre">pydrake.multibody.tree.RpyFloatingJoint</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_FM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.RpyFloatingJoint" title="pydrake.multibody.tree.RpyFloatingJoint"><span class="pre">pydrake.multibody.tree.RpyFloatingJoint</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.RpyFloatingJoint.set_translational_velocity" title="Permalink to this definition"></a></dt>
 <dd><p>Sets in <code class="docutils literal notranslate"><span class="pre">context</span></code> the state for this joint so that the translational
@@ -17037,17 +16693,6 @@ joint’s zero configuration.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.tree.RpyFloatingJoint_-AutoDiffXd-.set_translation">
-<span id="pydrake.multibody.tree.RpyFloatingJoint_[AutoDiffXd].set_translation"></span><span class="sig-name descname"><span class="pre">set_translation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RpyFloatingJoint_" title="pydrake.multibody.tree.RpyFloatingJoint_"><span class="pre">pydrake.multibody.tree.RpyFloatingJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_FM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.RpyFloatingJoint_" title="pydrake.multibody.tree.RpyFloatingJoint_"><span class="pre">pydrake.multibody.tree.RpyFloatingJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RpyFloatingJoint_-AutoDiffXd-.set_translation" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use RpyFloatingJoint::SetTranslation() This will be removed from
-Drake on or after 2024-08-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.RpyFloatingJoint_-AutoDiffXd-.set_translational_velocity">
 <span id="pydrake.multibody.tree.RpyFloatingJoint_[AutoDiffXd].set_translational_velocity"></span><span class="sig-name descname"><span class="pre">set_translational_velocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RpyFloatingJoint_" title="pydrake.multibody.tree.RpyFloatingJoint_"><span class="pre">pydrake.multibody.tree.RpyFloatingJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_FM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.RpyFloatingJoint_" title="pydrake.multibody.tree.RpyFloatingJoint_"><span class="pre">pydrake.multibody.tree.RpyFloatingJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RpyFloatingJoint_-AutoDiffXd-.set_translational_velocity" title="Permalink to this definition"></a></dt>
 <dd><p>Sets in <code class="docutils literal notranslate"><span class="pre">context</span></code> the state for this joint so that the translational
@@ -17434,17 +17079,6 @@ documentation for details on the translation representation. If an
 angles distribution has has already been set with stochastic
 variables, it will remain so. Otherwise angles will be set to this
 joint’s zero configuration.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.tree.RpyFloatingJoint_-Expression-.set_translation">
-<span id="pydrake.multibody.tree.RpyFloatingJoint_[Expression].set_translation"></span><span class="sig-name descname"><span class="pre">set_translation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RpyFloatingJoint_" title="pydrake.multibody.tree.RpyFloatingJoint_"><span class="pre">pydrake.multibody.tree.RpyFloatingJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_FM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.RpyFloatingJoint_" title="pydrake.multibody.tree.RpyFloatingJoint_"><span class="pre">pydrake.multibody.tree.RpyFloatingJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RpyFloatingJoint_-Expression-.set_translation" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use RpyFloatingJoint::SetTranslation() This will be removed from
-Drake on or after 2024-08-01.</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">

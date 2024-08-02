@@ -200,9 +200,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a941a95906ac84cc920167e46af9fc2dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a941a95906ac84cc920167e46af9fc2dd">AffineDimension</a> () const</td></tr>
 <tr class="memdesc:a941a95906ac84cc920167e46af9fc2dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the affine dimension of this set.  <a href="#a941a95906ac84cc920167e46af9fc2dd">More...</a><br /></td></tr>
 <tr class="separator:a941a95906ac84cc920167e46af9fc2dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5896cc1956d6475fbf60b5da9e0f094"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#ad5896cc1956d6475fbf60b5da9e0f094">Project</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;<a class="el" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>) const</td></tr>
-<tr class="memdesc:ad5896cc1956d6475fbf60b5da9e0f094"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the orthogonal projection of x onto the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html" title="An affine subspace (also known as a &quot;flat&quot;, a &quot;linear variety&quot;, or a &quot;linear manifold&quot;) is a vector s...">AffineSubspace</a>.  <a href="#ad5896cc1956d6475fbf60b5da9e0f094">More...</a><br /></td></tr>
-<tr class="separator:ad5896cc1956d6475fbf60b5da9e0f094"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d1925b7f2c88852aafd90b2bfb6e51c"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a3d1925b7f2c88852aafd90b2bfb6e51c">ToLocalCoordinates</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;<a class="el" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>) const</td></tr>
 <tr class="memdesc:a3d1925b7f2c88852aafd90b2bfb6e51c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a point x in the standard basis of the ambient space, returns the coordinates of x in the basis of the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html" title="An affine subspace (also known as a &quot;flat&quot;, a &quot;linear variety&quot;, or a &quot;linear manifold&quot;) is a vector s...">AffineSubspace</a>, with the zero point at translation_.  <a href="#a3d1925b7f2c88852aafd90b2bfb6e51c">More...</a><br /></td></tr>
 <tr class="separator:a3d1925b7f2c88852aafd90b2bfb6e51c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -649,32 +646,6 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns an orthonormal basis of the vector subspace which is orthogonal to this <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html" title="An affine subspace (also known as a &quot;flat&quot;, a &quot;linear variety&quot;, or a &quot;linear manifold&quot;) is a vector s...">AffineSubspace</a>. </p>
-
-</div>
-</div>
-<a id="ad5896cc1956d6475fbf60b5da9e0f094"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad5896cc1956d6475fbf60b5da9e0f094">&#9670;&nbsp;</a></span>Project()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Eigen::MatrixXd Project </td>
-          <td>(</td>
-          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
-          <td class="paramname"><em>x</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Computes the orthogonal projection of x onto the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html" title="An affine subspace (also known as a &quot;flat&quot;, a &quot;linear variety&quot;, or a &quot;linear manifold&quot;) is a vector s...">AffineSubspace</a>. </p>
-<p>This is achieved by finding the least squares solution y for y to x = translation_</p><ul>
-<li>basis_*y, and returning translation_ + basis_*y. Each column of the input should be a vector in the ambient space, and the corresponding column of the output will be its projection onto the affine subspace. <dl class="section pre"><dt>Precondition</dt><dd>x.rows() == <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> (Deprecated.) </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">Deprecated:</a></b></dt><dd>Projection has moved to `ConvexSet`; use `Projection()` instead. <br />
- This will be removed from Drake on or after 2024-08-01.</dd></dl>
-</li>
-</ul>
 
 </div>
 </div>

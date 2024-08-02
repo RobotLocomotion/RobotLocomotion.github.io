@@ -235,9 +235,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a61ffaa75ca0ee1ddbc8ac4e0ffdf4eef"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_rpy_floating_joint.html">RpyFloatingJoint</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rpy_floating_joint.html#a61ffaa75ca0ee1ddbc8ac4e0ffdf4eef">SetTranslation</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_FM) const</td></tr>
 <tr class="memdesc:a61ffaa75ca0ee1ddbc8ac4e0ffdf4eef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets <code>context</code> to store the translation (position vector) <code>p_FM</code> of frame M's origin Mo measured and expressed in frame F.  <a href="#a61ffaa75ca0ee1ddbc8ac4e0ffdf4eef">More...</a><br /></td></tr>
 <tr class="separator:a61ffaa75ca0ee1ddbc8ac4e0ffdf4eef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09dca4f598093065362c869df4a03e2e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_rpy_floating_joint.html">RpyFloatingJoint</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rpy_floating_joint.html#a09dca4f598093065362c869df4a03e2e">set_translation</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_FM) const</td></tr>
-<tr class="memdesc:a09dca4f598093065362c869df4a03e2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a09dca4f598093065362c869df4a03e2e">More...</a><br /></td></tr>
-<tr class="separator:a09dca4f598093065362c869df4a03e2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac698d80df068cadbde2883f52fd7ad96"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rpy_floating_joint.html#ac698d80df068cadbde2883f52fd7ad96">GetPose</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
 <tr class="memdesc:ac698d80df068cadbde2883f52fd7ad96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the pose <code>X_FM</code> of the outboard frame M as measured and expressed in the inboard frame F.  <a href="#ac698d80df068cadbde2883f52fd7ad96">More...</a><br /></td></tr>
 <tr class="separator:ac698d80df068cadbde2883f52fd7ad96"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1240,38 +1237,6 @@ Friends</h2></td></tr>
 
 <p>Sets the random distribution that the translation vector of this joint will be randomly sampled from. </p>
 <p>See the RpyFloatingJoint class documentation for details on the translation representation. If an angles distribution has has already been set with stochastic variables, it will remain so. Otherwise angles will be set to this joint's zero configuration. </p>
-
-</div>
-</div>
-<a id="a09dca4f598093065362c869df4a03e2e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a09dca4f598093065362c869df4a03e2e">&#9670;&nbsp;</a></span>set_translation()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1multibody_1_1_rpy_floating_joint.html">RpyFloatingJoint</a>&lt;T&gt;&amp; set_translation </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *&#160;</td>
-          <td class="paramname"><em>context</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>p_FM</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000022">Deprecated:</a></b></dt><dd>Use RpyFloatingJoint::SetTranslation() <br />
- This will be removed from Drake on or after 2024-08-01.</dd></dl>
 
 </div>
 </div>

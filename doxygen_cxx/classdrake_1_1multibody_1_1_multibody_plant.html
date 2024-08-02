@@ -819,9 +819,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad44332b9a38a3534af794581915407ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ad44332b9a38a3534af794581915407ec">SetFreeBodyRandomTranslationDistribution</a> (const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;body, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &amp;translation)</td></tr>
 <tr class="memdesc:ad44332b9a38a3534af794581915407ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the distribution used by <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a470c99c41ab31927ae50c9996786bd10" title="Assigns random values to all elements of the state, by drawing samples independently for each joint/f...">SetRandomState()</a> to populate the free body's x-y-z <code>translation</code> with respect to World.  <a href="#ad44332b9a38a3534af794581915407ec">More...</a><br /></td></tr>
 <tr class="separator:ad44332b9a38a3534af794581915407ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6714b39ed77d548326ca4b02c4ff23d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a6714b39ed77d548326ca4b02c4ff23d7">SetFreeBodyRandomPositionDistribution</a> (const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;body, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &amp;position)</td></tr>
-<tr class="memdesc:a6714b39ed77d548326ca4b02c4ff23d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a6714b39ed77d548326ca4b02c4ff23d7">More...</a><br /></td></tr>
-<tr class="separator:a6714b39ed77d548326ca4b02c4ff23d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e948d3233ccb5bf0001d5bd7425062a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a0e948d3233ccb5bf0001d5bd7425062a">SetFreeBodyRandomRotationDistribution</a> (const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;body, const Eigen::Quaternion&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &amp;rotation)</td></tr>
 <tr class="memdesc:a0e948d3233ccb5bf0001d5bd7425062a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the distribution used by <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a470c99c41ab31927ae50c9996786bd10" title="Assigns random values to all elements of the state, by drawing samples independently for each joint/f...">SetRandomState()</a> to populate the free body's <code>rotation</code> with respect to World.  <a href="#a0e948d3233ccb5bf0001d5bd7425062a">More...</a><br /></td></tr>
 <tr class="separator:a0e948d3233ccb5bf0001d5bd7425062a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -4086,7 +4083,7 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
   </table>
   </dd>
 </dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000010">Deprecated:</a></b></dt><dd>We anticipate that after the deprecation date, MultibodyPlant will no  longer provide public access access to its cached contact information.  To inquire about collisions, ask the SceneGraph's QueryObject directly. <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000008">Deprecated:</a></b></dt><dd>We anticipate that after the deprecation date, MultibodyPlant will no  longer provide public access access to its cached contact information.  To inquire about collisions, ask the SceneGraph's QueryObject directly. <br />
  This will be removed from Drake on or after 2024-10-01.</dd></dl>
 
 </div>
@@ -4892,7 +4889,7 @@ It is required to connect this port for PD controlled model instances. </dd></dl
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000007">Deprecated:</a></b></dt><dd>Use get_geometry_pose_output_port() instead (note no 's' plural).  If you were only using this port to connect it to a SceneGraph,  instead should you should use the AddMultibodyPlantSceneGraph() or  AddMultibodyPlant(MultibodyPlantConfig) to add the plant and scene  graph to a DiagramBuilder, already wired up correctly. <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000006">Deprecated:</a></b></dt><dd>Use get_geometry_pose_output_port() instead (note no 's' plural).  If you were only using this port to connect it to a SceneGraph,  instead should you should use the AddMultibodyPlantSceneGraph() or  AddMultibodyPlant(MultibodyPlantConfig) to add the plant and scene  graph to a DiagramBuilder, already wired up correctly. <br />
  This will be removed from Drake on or after 2024-10-01.</dd></dl>
 
 </div>
@@ -9220,7 +9217,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
   </table>
   </dd>
 </dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000008">Deprecated:</a></b></dt><dd>Use set_discrete_contact_approximation() to set the contact model  approximation. The underlying solver will be inferred automatically. <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000007">Deprecated:</a></b></dt><dd>Use set_discrete_contact_approximation() to set the contact model  approximation. The underlying solver will be inferred automatically. <br />
  This will be removed from Drake on or after 2024-04-01.</dd></dl>
 
 </div>
@@ -9815,38 +9812,6 @@ manager != nullptr. </dd></dl>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="a6714b39ed77d548326ca4b02c4ff23d7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6714b39ed77d548326ca4b02c4ff23d7">&#9670;&nbsp;</a></span>SetFreeBodyRandomPositionDistribution()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetFreeBodyRandomPositionDistribution </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>body</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>position</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000009">Deprecated:</a></b></dt><dd>Use MultibodyPlant::SetFreeBodyRandomTranslationDistribution() <br />
- This will be removed from Drake on or after 2024-08-01.</dd></dl>
 
 </div>
 </div>

@@ -329,7 +329,6 @@ var group__systems =
       [ "SetFreeBodyPose", "classdrake_1_1multibody_1_1_multibody_plant.html#a6d48006a82337cf0a92dc1404fa8ede4", null ],
       [ "SetFreeBodyPoseInAnchoredFrame", "classdrake_1_1multibody_1_1_multibody_plant.html#aa046883a4c5530d09082bf39638c119a", null ],
       [ "SetFreeBodyPoseInWorldFrame", "classdrake_1_1multibody_1_1_multibody_plant.html#a97c0546b4129dad123a33b9b84831157", null ],
-      [ "SetFreeBodyRandomPositionDistribution", "classdrake_1_1multibody_1_1_multibody_plant.html#a6714b39ed77d548326ca4b02c4ff23d7", null ],
       [ "SetFreeBodyRandomRotationDistribution", "classdrake_1_1multibody_1_1_multibody_plant.html#a0e948d3233ccb5bf0001d5bd7425062a", null ],
       [ "SetFreeBodyRandomRotationDistributionToUniform", "classdrake_1_1multibody_1_1_multibody_plant.html#a057dc09db3cf93f1cc47fb1db6995ca0", null ],
       [ "SetFreeBodyRandomTranslationDistribution", "classdrake_1_1multibody_1_1_multibody_plant.html#ad44332b9a38a3534af794581915407ec", null ],
