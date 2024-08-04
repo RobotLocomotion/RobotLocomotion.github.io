@@ -1940,6 +1940,12 @@ reports <code class="docutils literal notranslate"><span class="pre">True</span>
 optimization problem introduced in the paper <a class="reference external" href="https://arxiv.org/abs/2205.04422">“Motion Planning around
 Obstacles with Convex Optimization”</a> by Tobia Marcucci, Mark Petersen,
 David von Wrangel, Russ Tedrake.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This feature is considered to be <strong>experimental</strong> and may change
+or be removed at any time, without any deprecation notice ahead of
+time.</p>
+</div>
 <p>Instead of using the full time-scaling curve, this problem uses a
 single time-scaling variable for each region. This formulation yields
 continuous trajectories, which are not differentiable at the
@@ -2495,10 +2501,10 @@ edges.</p>
 <span class="sig-name descname"><span class="pre">GetGraphvizString</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.GetGraphvizString" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>GetGraphvizString(self: pydrake.planning.GcsTrajectoryOptimization, result: Optional[pydrake.solvers.MathematicalProgramResult] = None, options: pydrake.geometry.optimization.GcsGraphvizOptions = GcsGraphvizOptions(show_slacks=True, show_vars=True, show_flows=True, show_costs=True, scientific=False, precision=3)) -&gt; str</p></li>
+<li><p>GetGraphvizString(self: pydrake.planning.GcsTrajectoryOptimization, result: pydrake.solvers.MathematicalProgramResult = None, options: pydrake.geometry.optimization.GcsGraphvizOptions = GcsGraphvizOptions(show_slacks=True, show_vars=True, show_flows=True, show_costs=True, scientific=False, precision=3)) -&gt; str</p></li>
 </ol>
 <p>Returns a Graphviz string describing the graph vertices and edges. If
-<code class="docutils literal notranslate"><span class="pre">results</span></code> is supplied, then the graph will be annotated with the
+<code class="docutils literal notranslate"><span class="pre">result</span></code> is supplied, then the graph will be annotated with the
 solution values.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">show_slacks</span></code>:</dt><dd><p>determines whether the values of the intermediate (slack)
@@ -2512,10 +2518,10 @@ fixed (if false).</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>GetGraphvizString(self: pydrake.planning.GcsTrajectoryOptimization, result: Optional[pydrake.solvers.MathematicalProgramResult] = None, show_slacks: bool = True, show_vars: bool = True, show_flows: bool = True, show_costs: bool = True, scientific: bool = False, precision: int = 3) -&gt; str</p></li>
+<li><p>GetGraphvizString(self: pydrake.planning.GcsTrajectoryOptimization, result: pydrake.solvers.MathematicalProgramResult = None, show_slacks: bool = True, show_vars: bool = True, show_flows: bool = True, show_costs: bool = True, scientific: bool = False, precision: int = 3) -&gt; str</p></li>
 </ol>
 <p>Returns a Graphviz string describing the graph vertices and edges. If
-<code class="docutils literal notranslate"><span class="pre">results</span></code> is supplied, then the graph will be annotated with the
+<code class="docutils literal notranslate"><span class="pre">result</span></code> is supplied, then the graph will be annotated with the
 solution values.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">show_slacks</span></code>:</dt><dd><p>determines whether the values of the intermediate (slack)

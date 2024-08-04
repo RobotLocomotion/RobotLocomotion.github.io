@@ -169,6 +169,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1planning_1_1trajectory__
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html" title="GcsTrajectoryOptimization implements a simplified motion planning optimization problem introduced in ...">GcsTrajectoryOptimization</a> implements a simplified motion planning optimization problem introduced in the paper <a href="https://arxiv.org/abs/2205.04422">"Motion Planning around Obstacles with Convex Optimization"</a> by Tobia Marcucci, Mark Petersen, David von Wrangel, Russ Tedrake. </p>
+<dl class="section warning"><dt>Warning</dt><dd>This feature is considered to be <b>experimental</b> and may change or be removed at any time, without any deprecation notice ahead of time.</dd></dl>
 <p>Instead of using the full time-scaling curve, this problem uses a single time-scaling variable for each region. This formulation yields continuous trajectories, which are not differentiable at the transition times between the regions since non-convex continuity constraints are not supported yet. However, it supports continuity on the path r(s) for arbitrary degree. The path r(s) can be reconstructed from the gcs solution q(t) with <code><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a0745622466ef1e6253a0de1c1216d804" title="Normalizes each trajectory segment to one second in duration.">NormalizeSegmentTimes()</a></code> and post-processed with e.g. Toppra to enforce acceleration bounds.</p>
 <p>The ith piece of the composite trajectory is defined as q(t) = r((t - tᵢ) / hᵢ). r : [0, 1] → ℝⁿ is a the path, parametrized as a Bézier curve with order n. tᵢ and hᵢ are the initial time and duration of the ith sub-trajectory.</p>
 <p>This class supports the notion of a <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html" title="A Subgraph is a subset of the larger graph.">Subgraph</a> of regions. This has proven useful to facilitate multi-modal motion planning such as: <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html" title="A Subgraph is a subset of the larger graph.">Subgraph</a> A: find a collision-free trajectory for the robot to a grasping posture, <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html" title="A Subgraph is a subset of the larger graph.">Subgraph</a> B: find a collision-free trajectory for the robot with the object in its hand to a placing posture, etc.</p>
@@ -199,21 +200,30 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5e794da51482f4bf72e358b073b7e30e"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classint.html">int</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a5e794da51482f4bf72e358b073b7e30e">continuous_revolute_joints</a> ()</td></tr>
 <tr class="memdesc:a5e794da51482f4bf72e358b073b7e30e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of indices corresponding to continuous revolute joints.  <a href="#a5e794da51482f4bf72e358b073b7e30e">More...</a><br /></td></tr>
 <tr class="separator:a5e794da51482f4bf72e358b073b7e30e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0da384910fa6cd59ecac838c15309186"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a0da384910fa6cd59ecac838c15309186">GetGraphvizString</a> (const std::optional&lt; <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &gt; &amp;result=std::nullopt, const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_gcs_graphviz_options.html">geometry::optimization::GcsGraphvizOptions</a> &amp;options={}) const</td></tr>
-<tr class="memdesc:a0da384910fa6cd59ecac838c15309186"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a Graphviz string describing the graph vertices and edges.  <a href="#a0da384910fa6cd59ecac838c15309186">More...</a><br /></td></tr>
-<tr class="separator:a0da384910fa6cd59ecac838c15309186"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff9544b6375a592b1b9bda5eb1149a6f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#aff9544b6375a592b1b9bda5eb1149a6f">AddRegions</a> (const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">geometry::optimization::ConvexSets</a> &amp;regions, const std::vector&lt; std::pair&lt; <a class="el" href="classint.html">int</a>, <a class="el" href="classint.html">int</a> &gt;&gt; &amp;edges_between_regions, <a class="el" href="classint.html">int</a> order, <a class="el" href="classdouble.html">double</a> h_min=0, <a class="el" href="classdouble.html">double</a> h_max=20, std::string name=&quot;&quot;, std::optional&lt; const std::vector&lt; Eigen::VectorXd &gt;&gt; edge_offsets=std::nullopt)</td></tr>
-<tr class="memdesc:aff9544b6375a592b1b9bda5eb1149a6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html" title="A Subgraph is a subset of the larger graph.">Subgraph</a> with the given regions and indices.  <a href="#aff9544b6375a592b1b9bda5eb1149a6f">More...</a><br /></td></tr>
-<tr class="separator:aff9544b6375a592b1b9bda5eb1149a6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8e736f8d73a8dec8b0f3b653f5f0145"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#ae8e736f8d73a8dec8b0f3b653f5f0145">GetGraphvizString</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> *result=nullptr, const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_gcs_graphviz_options.html">geometry::optimization::GcsGraphvizOptions</a> &amp;options={}) const</td></tr>
+<tr class="memdesc:ae8e736f8d73a8dec8b0f3b653f5f0145"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a Graphviz string describing the graph vertices and edges.  <a href="#ae8e736f8d73a8dec8b0f3b653f5f0145">More...</a><br /></td></tr>
+<tr class="separator:ae8e736f8d73a8dec8b0f3b653f5f0145"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af11cefe35bbdfb77825ce99a06dfbf75"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#af11cefe35bbdfb77825ce99a06dfbf75">GetGraphvizString</a> (const std::optional&lt; <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &gt; &amp;result, const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_gcs_graphviz_options.html">geometry::optimization::GcsGraphvizOptions</a> &amp;options={}) const</td></tr>
+<tr class="memdesc:af11cefe35bbdfb77825ce99a06dfbf75"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#af11cefe35bbdfb77825ce99a06dfbf75">More...</a><br /></td></tr>
+<tr class="separator:af11cefe35bbdfb77825ce99a06dfbf75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a411eca99787867a84b5db6f5fd6c5cbc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a411eca99787867a84b5db6f5fd6c5cbc">AddRegions</a> (const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">geometry::optimization::ConvexSets</a> &amp;regions, const std::vector&lt; std::pair&lt; <a class="el" href="classint.html">int</a>, <a class="el" href="classint.html">int</a> &gt;&gt; &amp;edges_between_regions, <a class="el" href="classint.html">int</a> order, <a class="el" href="classdouble.html">double</a> h_min=0, <a class="el" href="classdouble.html">double</a> h_max=20, std::string name=&quot;&quot;, const std::vector&lt; Eigen::VectorXd &gt; *edge_offsets=nullptr)</td></tr>
+<tr class="memdesc:a411eca99787867a84b5db6f5fd6c5cbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html" title="A Subgraph is a subset of the larger graph.">Subgraph</a> with the given regions and indices.  <a href="#a411eca99787867a84b5db6f5fd6c5cbc">More...</a><br /></td></tr>
+<tr class="separator:a411eca99787867a84b5db6f5fd6c5cbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a931a45e4e9fadda50e254bac78d086bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a931a45e4e9fadda50e254bac78d086bc">AddRegions</a> (const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">geometry::optimization::ConvexSets</a> &amp;regions, const std::vector&lt; std::pair&lt; <a class="el" href="classint.html">int</a>, <a class="el" href="classint.html">int</a> &gt;&gt; &amp;edges_between_regions, <a class="el" href="classint.html">int</a> order, <a class="el" href="classdouble.html">double</a> h_min, <a class="el" href="classdouble.html">double</a> h_max, std::string name, const std::optional&lt; std::vector&lt; Eigen::VectorXd &gt;&gt; &amp;edge_offsets)</td></tr>
+<tr class="memdesc:a931a45e4e9fadda50e254bac78d086bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a931a45e4e9fadda50e254bac78d086bc">More...</a><br /></td></tr>
+<tr class="separator:a931a45e4e9fadda50e254bac78d086bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6ea61fbab2a0ff7fed67b5109e5ff05"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#ad6ea61fbab2a0ff7fed67b5109e5ff05">AddRegions</a> (const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">geometry::optimization::ConvexSets</a> &amp;regions, <a class="el" href="classint.html">int</a> order, <a class="el" href="classdouble.html">double</a> h_min=0, <a class="el" href="classdouble.html">double</a> h_max=20, std::string name=&quot;&quot;)</td></tr>
 <tr class="memdesc:ad6ea61fbab2a0ff7fed67b5109e5ff05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html" title="A Subgraph is a subset of the larger graph.">Subgraph</a> with the given regions.  <a href="#ad6ea61fbab2a0ff7fed67b5109e5ff05">More...</a><br /></td></tr>
 <tr class="separator:ad6ea61fbab2a0ff7fed67b5109e5ff05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88df1e80fc5caca3da4c817fc3e23338"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a88df1e80fc5caca3da4c817fc3e23338">RemoveSubgraph</a> (const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;subgraph)</td></tr>
 <tr class="memdesc:a88df1e80fc5caca3da4c817fc3e23338"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a subgraph and all associated edges found in the subgraph and to and from other subgraphs.  <a href="#a88df1e80fc5caca3da4c817fc3e23338">More...</a><br /></td></tr>
 <tr class="separator:a88df1e80fc5caca3da4c817fc3e23338"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a911b5de11eb9496e591102bbfc00df0c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html">EdgesBetweenSubgraphs</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a911b5de11eb9496e591102bbfc00df0c">AddEdges</a> (const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;from_subgraph, const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;to_subgraph, const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">geometry::optimization::ConvexSet</a> *subspace=nullptr, std::optional&lt; const std::vector&lt; std::pair&lt; <a class="el" href="classint.html">int</a>, <a class="el" href="classint.html">int</a> &gt;&gt;&gt; edges_between_regions=std::nullopt, std::optional&lt; const std::vector&lt; Eigen::VectorXd &gt;&gt; edge_offsets=std::nullopt)</td></tr>
-<tr class="memdesc:a911b5de11eb9496e591102bbfc00df0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connects two subgraphs with directed edges.  <a href="#a911b5de11eb9496e591102bbfc00df0c">More...</a><br /></td></tr>
-<tr class="separator:a911b5de11eb9496e591102bbfc00df0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab2a40c54ac922ec7bbc12641dadf08a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html">EdgesBetweenSubgraphs</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#aab2a40c54ac922ec7bbc12641dadf08a">AddEdges</a> (const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;from_subgraph, const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;to_subgraph, const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">geometry::optimization::ConvexSet</a> *subspace=nullptr, const std::vector&lt; std::pair&lt; <a class="el" href="classint.html">int</a>, <a class="el" href="classint.html">int</a> &gt;&gt; *edges_between_regions=nullptr, const std::vector&lt; Eigen::VectorXd &gt; *edge_offsets=nullptr)</td></tr>
+<tr class="memdesc:aab2a40c54ac922ec7bbc12641dadf08a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connects two subgraphs with directed edges.  <a href="#aab2a40c54ac922ec7bbc12641dadf08a">More...</a><br /></td></tr>
+<tr class="separator:aab2a40c54ac922ec7bbc12641dadf08a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b9cb2647b148d69cfc59e05f9bd19bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html">EdgesBetweenSubgraphs</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a2b9cb2647b148d69cfc59e05f9bd19bf">AddEdges</a> (const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;from_subgraph, const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;to_subgraph, const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">geometry::optimization::ConvexSet</a> *subspace, const std::optional&lt; std::vector&lt; std::pair&lt; <a class="el" href="classint.html">int</a>, <a class="el" href="classint.html">int</a> &gt;&gt;&gt; &amp;edges_between_regions, const std::optional&lt; std::vector&lt; Eigen::VectorXd &gt;&gt; &amp;edge_offsets=std::nullopt)</td></tr>
+<tr class="memdesc:a2b9cb2647b148d69cfc59e05f9bd19bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a2b9cb2647b148d69cfc59e05f9bd19bf">More...</a><br /></td></tr>
+<tr class="separator:a2b9cb2647b148d69cfc59e05f9bd19bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a515805314ae145e3be6b636d0986bb09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a515805314ae145e3be6b636d0986bb09">AddTimeCost</a> (<a class="el" href="classdouble.html">double</a> weight=1.0)</td></tr>
 <tr class="memdesc:a515805314ae145e3be6b636d0986bb09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a minimum time cost to all regions in the whole graph.  <a href="#a515805314ae145e3be6b636d0986bb09">More...</a><br /></td></tr>
 <tr class="separator:a515805314ae145e3be6b636d0986bb09"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -422,8 +432,8 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a911b5de11eb9496e591102bbfc00df0c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a911b5de11eb9496e591102bbfc00df0c">&#9670;&nbsp;</a></span>AddEdges()</h2>
+<a id="aab2a40c54ac922ec7bbc12641dadf08a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab2a40c54ac922ec7bbc12641dadf08a">&#9670;&nbsp;</a></span>AddEdges() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -449,14 +459,14 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::optional&lt; const std::vector&lt; std::pair&lt; <a class="el" href="classint.html">int</a>, <a class="el" href="classint.html">int</a> &gt;&gt;&gt;&#160;</td>
-          <td class="paramname"><em>edges_between_regions</em> = <code>std::nullopt</code>, </td>
+          <td class="paramtype">const std::vector&lt; std::pair&lt; <a class="el" href="classint.html">int</a>, <a class="el" href="classint.html">int</a> &gt;&gt; *&#160;</td>
+          <td class="paramname"><em>edges_between_regions</em> = <code>nullptr</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::optional&lt; const std::vector&lt; Eigen::VectorXd &gt;&gt;&#160;</td>
-          <td class="paramname"><em>edge_offsets</em> = <code>std::nullopt</code>&#160;</td>
+          <td class="paramtype">const std::vector&lt; Eigen::VectorXd &gt; *&#160;</td>
+          <td class="paramname"><em>edge_offsets</em> = <code>nullptr</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -469,8 +479,8 @@ Static Public Member Functions</h2></td></tr>
 <p>Connects two subgraphs with directed edges. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">from_subgraph</td><td>is the subgraph to connect from. Must have been created from a call to <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#aff9544b6375a592b1b9bda5eb1149a6f" title="Creates a Subgraph with the given regions and indices.">AddRegions()</a> on this object, not some other optimization program. </td></tr>
-    <tr><td class="paramname">to_subgraph</td><td>is the subgraph to connect to. Must have been created from a call to <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#aff9544b6375a592b1b9bda5eb1149a6f" title="Creates a Subgraph with the given regions and indices.">AddRegions()</a> on this object, not some other optimization program. </td></tr>
+    <tr><td class="paramname">from_subgraph</td><td>is the subgraph to connect from. Must have been created from a call to <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a411eca99787867a84b5db6f5fd6c5cbc" title="Creates a Subgraph with the given regions and indices.">AddRegions()</a> on this object, not some other optimization program. </td></tr>
+    <tr><td class="paramname">to_subgraph</td><td>is the subgraph to connect to. Must have been created from a call to <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a411eca99787867a84b5db6f5fd6c5cbc" title="Creates a Subgraph with the given regions and indices.">AddRegions()</a> on this object, not some other optimization program. </td></tr>
     <tr><td class="paramname">subspace</td><td>is the subspace that the connecting control points must be in. Subspace is optional. Only edges that connect through the subspace will be added, and the subspace is added as a constraint on the connecting control points. Subspaces of type point or HPolyhedron are supported since other sets require constraints that are not yet supported by the GraphOfConvexSets::Edge constraint, e.g., set containment of a Hyperellipsoid is formulated via LorentzCone constraints. Workaround: Create a subgraph of zero order with the subspace as the region and connect it between the two subgraphs. This works because GraphOfConvexSet::Vertex supports arbitrary instances of ConvexSets. </td></tr>
     <tr><td class="paramname">edges_between_regions</td><td>can be used to manually specify which edges should be added, avoiding the intersection checks. It should be a list of tuples <code>(i,j)</code>, where an edge will be added from the <code>i</code>th index region in <code>from_subgraph</code> to the <code>j</code>th index region in <code>to_subgraph</code>. </td></tr>
     <tr><td class="paramname">edge_offsets</td><td>is an optional list of vectors. If defined, the list must contain the same number of entries as <code>edges_between_regions</code>, and the order must match. In other words, if defined, there must be one edge offset for each specified edge, and they must be at the same index. For each pair of sets listed in <code>edges_between_regions</code>, the first set is translated (in configuration space) by the corresponding vector in edge_offsets before computing the constraints associated to that edge. This is used to add edges between sets that "wrap around" 2π along some dimension, due to, e.g., a continuous revolute joint. This edge offset corresponds to the translation component of the affine map τ_uv in equation (11) of "Non-Euclidean Motion
@@ -484,6 +494,56 @@ Planning with Graphs of Geodesically-Convex Sets", and per the discussion in Sub
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a2b9cb2647b148d69cfc59e05f9bd19bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b9cb2647b148d69cfc59e05f9bd19bf">&#9670;&nbsp;</a></span>AddEdges() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html">EdgesBetweenSubgraphs</a>&amp; AddEdges </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;&#160;</td>
+          <td class="paramname"><em>from_subgraph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;&#160;</td>
+          <td class="paramname"><em>to_subgraph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">geometry::optimization::ConvexSet</a> *&#160;</td>
+          <td class="paramname"><em>subspace</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::optional&lt; std::vector&lt; std::pair&lt; <a class="el" href="classint.html">int</a>, <a class="el" href="classint.html">int</a> &gt;&gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>edges_between_regions</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::optional&lt; std::vector&lt; Eigen::VectorXd &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>edge_offsets</em> = <code>std::nullopt</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000014">Deprecated:</a></b></dt><dd>edges_between_regions should be of type const  std::vector&lt;std::pair&lt;int, int&gt;&gt;*, and edge_offsets should  be of type const std::vector&lt;Eigen::VectorXd&gt;*. <br />
+ This will be removed from Drake on or after 2024-10-01.</dd></dl>
 
 </div>
 </div>
@@ -630,8 +690,8 @@ Planning with Graphs of Geodesically-Convex Sets", and per the discussion in Sub
 
 </div>
 </div>
-<a id="aff9544b6375a592b1b9bda5eb1149a6f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff9544b6375a592b1b9bda5eb1149a6f">&#9670;&nbsp;</a></span>AddRegions() <span class="overload">[1/2]</span></h2>
+<a id="a411eca99787867a84b5db6f5fd6c5cbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a411eca99787867a84b5db6f5fd6c5cbc">&#9670;&nbsp;</a></span>AddRegions() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -675,8 +735,8 @@ Planning with Graphs of Geodesically-Convex Sets", and per the discussion in Sub
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::optional&lt; const std::vector&lt; Eigen::VectorXd &gt;&gt;&#160;</td>
-          <td class="paramname"><em>edge_offsets</em> = <code>std::nullopt</code>&#160;</td>
+          <td class="paramtype">const std::vector&lt; Eigen::VectorXd &gt; *&#160;</td>
+          <td class="paramname"><em>edge_offsets</em> = <code>nullptr</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -709,8 +769,70 @@ Planning with Graphs of Geodesically-Convex Sets", and per the discussion in Sub
 
 </div>
 </div>
+<a id="a931a45e4e9fadda50e254bac78d086bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a931a45e4e9fadda50e254bac78d086bc">&#9670;&nbsp;</a></span>AddRegions() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a>&amp; AddRegions </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">geometry::optimization::ConvexSets</a> &amp;&#160;</td>
+          <td class="paramname"><em>regions</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::pair&lt; <a class="el" href="classint.html">int</a>, <a class="el" href="classint.html">int</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>edges_between_regions</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>order</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>h_min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>h_max</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::optional&lt; std::vector&lt; Eigen::VectorXd &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>edge_offsets</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000013">Deprecated:</a></b></dt><dd>edge_offsets should be of type const std::vector&lt;Eigen::VectorXd&gt;*. <br />
+ This will be removed from Drake on or after 2024-10-01.</dd></dl>
+
+</div>
+</div>
 <a id="ad6ea61fbab2a0ff7fed67b5109e5ff05"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad6ea61fbab2a0ff7fed67b5109e5ff05">&#9670;&nbsp;</a></span>AddRegions() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6ea61fbab2a0ff7fed67b5109e5ff05">&#9670;&nbsp;</a></span>AddRegions() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -903,8 +1025,8 @@ Planning with Graphs of Geodesically-Convex Sets", and per the discussion in Sub
 
 </div>
 </div>
-<a id="a0da384910fa6cd59ecac838c15309186"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0da384910fa6cd59ecac838c15309186">&#9670;&nbsp;</a></span>GetGraphvizString()</h2>
+<a id="ae8e736f8d73a8dec8b0f3b653f5f0145"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8e736f8d73a8dec8b0f3b653f5f0145">&#9670;&nbsp;</a></span>GetGraphvizString() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -912,8 +1034,8 @@ Planning with Graphs of Geodesically-Convex Sets", and per the discussion in Sub
         <tr>
           <td class="memname">std::string GetGraphvizString </td>
           <td>(</td>
-          <td class="paramtype">const std::optional&lt; <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>result</em> = <code>std::nullopt</code>, </td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> *&#160;</td>
+          <td class="paramname"><em>result</em> = <code>nullptr</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -930,7 +1052,7 @@ Planning with Graphs of Geodesically-Convex Sets", and per the discussion in Sub
 </div><div class="memdoc">
 
 <p>Returns a Graphviz string describing the graph vertices and edges. </p>
-<p>If <code>results</code> is supplied, then the graph will be annotated with the solution values. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>If <code>result</code> is supplied, then the graph will be annotated with the solution values. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">show_slacks</td><td>determines whether the values of the intermediate (slack) variables are also displayed in the graph. </td></tr>
     <tr><td class="paramname">precision</td><td>sets the floating point precision (how many digits are generated) of the annotations. </td></tr>
@@ -938,6 +1060,38 @@ Planning with Graphs of Geodesically-Convex Sets", and per the discussion in Sub
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="af11cefe35bbdfb77825ce99a06dfbf75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af11cefe35bbdfb77825ce99a06dfbf75">&#9670;&nbsp;</a></span>GetGraphvizString() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string GetGraphvizString </td>
+          <td>(</td>
+          <td class="paramtype">const std::optional&lt; <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_gcs_graphviz_options.html">geometry::optimization::GcsGraphvizOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000012">Deprecated:</a></b></dt><dd>result should be of type const solvers::MathematicalProgramResult*. <br />
+ This will be removed from Drake on or after 2024-10-01.</dd></dl>
 
 </div>
 </div>
@@ -1108,7 +1262,7 @@ Planning with Graphs of Geodesically-Convex Sets", and per the discussion in Sub
 </div><div class="memdoc">
 
 <p>Remove a subgraph and all associated edges found in the subgraph and to and from other subgraphs. </p>
-<dl class="section pre"><dt>Precondition</dt><dd>The subgraph must have been created from a call to <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#aff9544b6375a592b1b9bda5eb1149a6f" title="Creates a Subgraph with the given regions and indices.">AddRegions()</a> on this object. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>The subgraph must have been created from a call to <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a411eca99787867a84b5db6f5fd6c5cbc" title="Creates a Subgraph with the given regions and indices.">AddRegions()</a> on this object. </dd></dl>
 
 </div>
 </div>
@@ -1139,7 +1293,7 @@ Planning with Graphs of Geodesically-Convex Sets", and per the discussion in Sub
 </div><div class="memdoc">
 
 <p>Solves a trajectory optimization problem through specific vertices. </p>
-<p>This method allows for targeted optimization by considering only selected active vertices, reducing the problem's complexity. See <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5c50ae80b0c136e138f815b4a83a30d1" title="The non-convexity in a GCS problem comes from the binary variables (phi) associated with the edges be...">geometry::optimization::GraphOfConvexSets::SolveConvexRestriction()</a>. This API prefers a sequence of vertices over edges, as a user may know which regions the solution should pass through. <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#aff9544b6375a592b1b9bda5eb1149a6f" title="Creates a Subgraph with the given regions and indices.">GcsTrajectoryOptimization::AddRegions()</a> automatically manages edge creation and intersection checks, which makes passing a sequence of edges less convenient.</p>
+<p>This method allows for targeted optimization by considering only selected active vertices, reducing the problem's complexity. See <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5c50ae80b0c136e138f815b4a83a30d1" title="The non-convexity in a GCS problem comes from the binary variables (phi) associated with the edges be...">geometry::optimization::GraphOfConvexSets::SolveConvexRestriction()</a>. This API prefers a sequence of vertices over edges, as a user may know which regions the solution should pass through. <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a411eca99787867a84b5db6f5fd6c5cbc" title="Creates a Subgraph with the given regions and indices.">GcsTrajectoryOptimization::AddRegions()</a> automatically manages edge creation and intersection checks, which makes passing a sequence of edges less convenient.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">active_vertices</td><td>A sequence of ordered vertices of subgraphs to be included in the problem. </td></tr>
@@ -1195,8 +1349,8 @@ Planning with Graphs of Geodesically-Convex Sets", and per the discussion in Sub
 <dl class="section see"><dt>See also</dt><dd><code><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a51f263df76c721f1bbdeb5708bf7df86" title="Formulates and solves the mixed-integer convex formulation of the shortest path problem on the graph,...">geometry::optimization::GraphOfConvexSets::SolveShortestPath()</a></code> for further details.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">source</td><td>specifies the source subgraph. Must have been created from a call to <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#aff9544b6375a592b1b9bda5eb1149a6f" title="Creates a Subgraph with the given regions and indices.">AddRegions()</a> on this object, not some other optimization program. If the source is a subgraph with more than one region, an empty set will be added and optimizer will choose the best region to start in. To start in a particular point, consider adding a subgraph of order zero with a single region of type Point. </td></tr>
-    <tr><td class="paramname">target</td><td>specifies the target subgraph. Must have been created from a call to <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#aff9544b6375a592b1b9bda5eb1149a6f" title="Creates a Subgraph with the given regions and indices.">AddRegions()</a> on this object, not some other optimization program. If the target is a subgraph with more than one region, an empty set will be added and optimizer will choose the best region to end in. To end in a particular point, consider adding a subgraph of order zero with a single region of type Point. </td></tr>
+    <tr><td class="paramname">source</td><td>specifies the source subgraph. Must have been created from a call to <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a411eca99787867a84b5db6f5fd6c5cbc" title="Creates a Subgraph with the given regions and indices.">AddRegions()</a> on this object, not some other optimization program. If the source is a subgraph with more than one region, an empty set will be added and optimizer will choose the best region to start in. To start in a particular point, consider adding a subgraph of order zero with a single region of type Point. </td></tr>
+    <tr><td class="paramname">target</td><td>specifies the target subgraph. Must have been created from a call to <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a411eca99787867a84b5db6f5fd6c5cbc" title="Creates a Subgraph with the given regions and indices.">AddRegions()</a> on this object, not some other optimization program. If the target is a subgraph with more than one region, an empty set will be added and optimizer will choose the best region to end in. To end in a particular point, consider adding a subgraph of order zero with a single region of type Point. </td></tr>
     <tr><td class="paramname">options</td><td>include all settings for solving the shortest path problem. The following default options will be used if they are not provided in <code>options</code>:<ul>
 <li><code>options.convex_relaxation = true</code>,</li>
 <li><code>options.max_rounded_paths = 5</code>,</li>

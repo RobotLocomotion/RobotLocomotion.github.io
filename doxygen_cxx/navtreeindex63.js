@@ -1,5 +1,10 @@
 var NAVTREEINDEX63 =
 {
+"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#aa320d63d28f6de621da0a93f91d6ed9f":[3,0,0,8,2,1,2],
+"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#abf7bcad233bb525d781901c05545b68e":[3,0,0,8,2,1,5],
+"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#ae3c085d0521d5da888d23da447ae4328":[3,0,0,8,2,1,3],
+"structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html":[3,0,0,8,3,0],
+"structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#a1ac4262e3bb2a1be1e29ce90bd7c2377":[3,0,0,8,3,0,2],
 "structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#a37624b00959bd2e6080521c344fcfd1e":[3,0,0,8,3,0,4],
 "structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#a5c749691be5578a38f745d722a31646e":[3,0,0,8,3,0,3],
 "structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#a7928432abfdcccb409e49b309ebf3026":[3,0,0,8,3,0,5],
@@ -244,10 +249,5 @@ var NAVTREEINDEX63 =
 "structdrake_1_1solvers_1_1_semidefinite_relaxation_options.html":[3,0,0,13,66],
 "structdrake_1_1solvers_1_1_semidefinite_relaxation_options.html#a2d0ed785e8b4d09c5a15770af0067ab9":[3,0,0,13,66,4],
 "structdrake_1_1solvers_1_1_semidefinite_relaxation_options.html#a5e07222e141a6d4295e5d0773357d868":[3,0,0,13,66,3],
-"structdrake_1_1solvers_1_1_semidefinite_relaxation_options.html#a665e628ae3be6880cd1d96aa79867bf3":[3,0,0,13,66,1],
-"structdrake_1_1solvers_1_1_semidefinite_relaxation_options.html#abe7cc73e24fe58cd9ad359cf82044447":[3,0,0,13,66,0],
-"structdrake_1_1solvers_1_1_semidefinite_relaxation_options.html#afcf57444ce2685aa6f70ca6e44b7a783":[3,0,0,13,66,2],
-"structdrake_1_1solvers_1_1_snopt_solver_details.html":[3,0,0,13,68],
-"structdrake_1_1solvers_1_1_snopt_solver_details.html#a29045c997670516117cd2d1cac1069ed":[3,0,0,13,68,2],
-"structdrake_1_1solvers_1_1_snopt_solver_details.html#a6334e0bf98d851767f24d43a7e6ade5d":[3,0,0,13,68,0]
+"structdrake_1_1solvers_1_1_semidefinite_relaxation_options.html#a665e628ae3be6880cd1d96aa79867bf3":[3,0,0,13,66,1]
 };

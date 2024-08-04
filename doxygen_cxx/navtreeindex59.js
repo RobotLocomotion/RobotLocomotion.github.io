@@ -1,5 +1,10 @@
 var NAVTREEINDEX59 =
 {
+"semidefinite__relaxation__internal_8h.html":[4,0,0,11,49],
+"sensors__py_8h.html":[4,0,0,0,0,10,5],
+"sequential__expression__manager_8h.html":[4,0,0,10,4,6],
+"serialize__pybind_8h.html":[4,0,0,0,0,1,6],
+"serialize__pybind_8h.html#a0b3e8f87bda821cd1fa9a52586e25f1e":[4,0,0,0,0,1,6,0],
 "serialize__pybind_8h.html#a68be3d37cf9d6c6fcc2afb98d04c046f":[4,0,0,0,0,1,6,1],
 "serialize__pybind_8h.html#aa9814a507ba70a62d61b467c3ba06cce":[4,0,0,0,0,1,6,2],
 "serializer_8h.html":[4,0,0,12,4,8],
@@ -244,10 +249,5 @@ var NAVTREEINDEX59 =
 "stochastic_8h.html#a0611532f6e53d2b3eb39986468ad1399":[4,0,0,1,2,1,9],
 "stochastic_8h.html#a0d1c5da87f4161d4e6a493411c26976a":[4,0,0,1,2,1,24],
 "stochastic_8h.html#a2f098a551fbf448099900c3f3c3e13b4":[4,0,0,1,2,1,21],
-"stochastic_8h.html#a4891bbf6ba4372801a10dacfcbbd6172":[4,0,0,1,2,1,14],
-"stochastic_8h.html#a4f95ed0d3b0cb1459ef88fa33e833e5e":[4,0,0,1,2,1,19],
-"stochastic_8h.html#a57679ebbc3affa5691736cd9fae0173c":[4,0,0,1,2,1,17],
-"stochastic_8h.html#a57f6c7970d805c54498388c6e47113fa":[4,0,0,1,2,1,12],
-"stochastic_8h.html#a7d8363da077652b8868dcd5f6200358c":[4,0,0,1,2,1,22],
-"stochastic_8h.html#a884497545d6076a3763d5e62549b117d":[4,0,0,1,2,1,18]
+"stochastic_8h.html#a4891bbf6ba4372801a10dacfcbbd6172":[4,0,0,1,2,1,14]
 };
