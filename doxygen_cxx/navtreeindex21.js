@@ -1,5 +1,6 @@
 var NAVTREEINDEX21 =
 {
+"classdrake_1_1multibody_1_1_static_friction_cone_constraint.html#a924d231c07d032bc1207ced36b12cfb4":[1,1,0,21,6],
 "classdrake_1_1multibody_1_1_static_friction_cone_constraint.html#af8c78f1d87a7163440af74966fbabce0":[1,1,0,21,1],
 "classdrake_1_1multibody_1_1_tamsi_solver.html":[3,0,0,8,98],
 "classdrake_1_1multibody_1_1_tamsi_solver.html#a032d564905879232190e6b62afd0b8d0":[3,0,0,8,98,20],
@@ -248,6 +249,5 @@ var NAVTREEINDEX21 =
 "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#af1cceadfb10b5a80fb76244297d7ae81":[3,0,0,8,0,1,0,21],
 "classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html":[3,0,0,8,0,2,0],
 "classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#a06b2aa94973b357511d0702cf1901dd0":[3,0,0,8,0,2,0,6],
-"classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#a0d402be2ee9c3cf08973fc59ad961b4e":[3,0,0,8,0,2,0,3],
-"classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#a722b8e19a396259de4990b566f07dc6b":[3,0,0,8,0,2,0,2]
+"classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#a0d402be2ee9c3cf08973fc59ad961b4e":[3,0,0,8,0,2,0,3]
 };

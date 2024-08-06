@@ -1,5 +1,6 @@
 var NAVTREEINDEX23 =
 {
+"classdrake_1_1perception_1_1_point_cloud.html#aeaded257ce1f7b99a46f25bc263cb264":[3,0,0,9,2,3],
 "classdrake_1_1perception_1_1_point_cloud.html#aedd5d17fcacfcdb4b975512985f861d8":[3,0,0,9,2,29],
 "classdrake_1_1perception_1_1_point_cloud.html#aef051cf5211a7340ca23e689eae41357":[3,0,0,9,2,30],
 "classdrake_1_1perception_1_1_point_cloud.html#af1ac2a91848342b7787b4e9b47f8b023":[3,0,0,9,2,33],
@@ -248,6 +249,5 @@ var NAVTREEINDEX23 =
 "classdrake_1_1planning_1_1_robot_diagram_builder.html#afcfb0c4d2f26618363069032bc873d00":[1,4,2,3,1,3],
 "classdrake_1_1planning_1_1_scene_graph_collision_checker.html":[1,4,2,2,6],
 "classdrake_1_1planning_1_1_scene_graph_collision_checker.html#a791d21d5209f421abb9010fb41722a47":[1,4,2,2,6,0],
-"classdrake_1_1planning_1_1_scene_graph_collision_checker.html#ae3cd975bfe4fcb92914ddaf333273205":[1,4,2,2,6,1],
-"classdrake_1_1planning_1_1_unimplemented_collision_checker.html":[3,0,0,10,15]
+"classdrake_1_1planning_1_1_scene_graph_collision_checker.html#ae3cd975bfe4fcb92914ddaf333273205":[1,4,2,2,6,1]
 };

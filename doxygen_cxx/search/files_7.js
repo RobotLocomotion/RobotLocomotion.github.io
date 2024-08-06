@@ -6,7 +6,7 @@ var searchData=
   ['hpolyhedron_2eh',['hpolyhedron.h',['../hpolyhedron_8h.html',1,'']]],
   ['hwy_5fdynamic_2eh',['hwy_dynamic.h',['../hwy__dynamic_8h.html',1,'']]],
   ['hwy_5fdynamic_5fimpl_2eh',['hwy_dynamic_impl.h',['../hwy__dynamic__impl_8h.html',1,'']]],
-  ['hydroelastic_5fcallback_2eh',['hydroelastic_callback.h',['../hydroelastic__callback_8h.html',1,'']]],
+  ['hydroelastic_5fcalculator_2eh',['hydroelastic_calculator.h',['../hydroelastic__calculator_8h.html',1,'']]],
   ['hydroelastic_5fcontact_5fforces_5fcontinuous_5fcache_5fdata_2eh',['hydroelastic_contact_forces_continuous_cache_data.h',['../hydroelastic__contact__forces__continuous__cache__data_8h.html',1,'']]],
   ['hydroelastic_5fcontact_5finfo_2eh',['hydroelastic_contact_info.h',['../hydroelastic__contact__info_8h.html',1,'']]],
   ['hydroelastic_5fcontact_5fvisualizer_2eh',['hydroelastic_contact_visualizer.h',['../hydroelastic__contact__visualizer_8h.html',1,'']]],

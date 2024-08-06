@@ -18,6 +18,7 @@ var classdrake_1_1multibody_1_1_multibody_plant =
     [ "AddRigidBody", "classdrake_1_1multibody_1_1_multibody_plant.html#a0d2828eaa6f5e384374e3ecec1a357ce", null ],
     [ "AddWeldConstraint", "classdrake_1_1multibody_1_1_multibody_plant.html#aec4f15db42bddd6789b0732762046ce6", null ],
     [ "CalcBiasCenterOfMassTranslationalAcceleration", "classdrake_1_1multibody_1_1_multibody_plant.html#a029b22a36d5c6ee85247b9c1cfe84c6b", null ],
+    [ "CalcBiasCenterOfMassTranslationalAcceleration", "classdrake_1_1multibody_1_1_multibody_plant.html#ade449bc8945e929de4382badd096df3b", null ],
     [ "CalcBiasSpatialAcceleration", "classdrake_1_1multibody_1_1_multibody_plant.html#aa238d2cebe527f4da55e0ec5d75e8dda", null ],
     [ "CalcBiasTerm", "classdrake_1_1multibody_1_1_multibody_plant.html#a843e1ba389c017c706df10935784b4e5", null ],
     [ "CalcBiasTranslationalAcceleration", "classdrake_1_1multibody_1_1_multibody_plant.html#add53749e8bb0ec1b0c564bdc14d3c74e", null ],

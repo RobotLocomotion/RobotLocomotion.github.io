@@ -1,5 +1,6 @@
 var NAVTREEINDEX20 =
 {
+"classdrake_1_1multibody_1_1_rpy_floating_joint.html#a78c0363e81b89f005b383543f2a9cfc0":[3,0,0,8,84,8],
 "classdrake_1_1multibody_1_1_rpy_floating_joint.html#a7b17c035e227e8fee348373149aed08b":[3,0,0,8,84,6],
 "classdrake_1_1multibody_1_1_rpy_floating_joint.html#a825f8af102f87f42e1d44c05c220d8a2":[3,0,0,8,84,14],
 "classdrake_1_1multibody_1_1_rpy_floating_joint.html#a885ca2794afaaf292681d6f725e3b09f":[3,0,0,8,84,20],
@@ -248,6 +249,5 @@ var NAVTREEINDEX20 =
 "classdrake_1_1multibody_1_1_static_friction_cone_constraint.html#a28f171a47b4f4853697f3ad6081eb498":[1,1,0,21,2],
 "classdrake_1_1multibody_1_1_static_friction_cone_constraint.html#a47b54b734c2907d4d30807cda630ca8a":[1,1,0,21,5],
 "classdrake_1_1multibody_1_1_static_friction_cone_constraint.html#a6a324051a7c2c1135b5de6c6b19a36c8":[1,1,0,21,0],
-"classdrake_1_1multibody_1_1_static_friction_cone_constraint.html#a8dc2f2fd87afb1bdc61c7a7d93b952bd":[1,1,0,21,3],
-"classdrake_1_1multibody_1_1_static_friction_cone_constraint.html#a924d231c07d032bc1207ced36b12cfb4":[1,1,0,21,6]
+"classdrake_1_1multibody_1_1_static_friction_cone_constraint.html#a8dc2f2fd87afb1bdc61c7a7d93b952bd":[1,1,0,21,3]
 };

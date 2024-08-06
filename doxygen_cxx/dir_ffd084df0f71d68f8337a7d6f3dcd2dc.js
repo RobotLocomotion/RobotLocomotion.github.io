@@ -19,7 +19,7 @@ var dir_ffd084df0f71d68f8337a7d6f3dcd2dc =
     [ "distance_to_shape_touching.h", "distance__to__shape__touching_8h.html", null ],
     [ "field_intersection.h", "field__intersection_8h.html", null ],
     [ "find_collision_candidates_callback.h", "find__collision__candidates__callback_8h.html", null ],
-    [ "hydroelastic_callback.h", "hydroelastic__callback_8h.html", null ],
+    [ "hydroelastic_calculator.h", "hydroelastic__calculator_8h.html", null ],
     [ "hydroelastic_internal.h", "hydroelastic__internal_8h.html", null ],
     [ "inflate_mesh.h", "inflate__mesh_8h.html", null ],
     [ "make_box_field.h", "make__box__field_8h.html", null ],

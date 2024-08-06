@@ -114,7 +114,7 @@ var searchData=
   ['hwy_5fdynamic_5fimpl_2eh',['hwy_dynamic_impl.h',['../hwy__dynamic__impl_8h.html',1,'']]],
   ['hydro_5fforce_5fcolor',['hydro_force_color',['../structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a2f34a2f66899dfd008ab76f9fee983de',1,'drake::multibody::meshcat::ContactVisualizerParams']]],
   ['hydro_5fmoment_5fcolor',['hydro_moment_color',['../structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#abf7bcad233bb525d781901c05545b68e',1,'drake::multibody::meshcat::ContactVisualizerParams']]],
-  ['hydroelastic_5fcallback_2eh',['hydroelastic_callback.h',['../hydroelastic__callback_8h.html',1,'']]],
+  ['hydroelastic_5fcalculator_2eh',['hydroelastic_calculator.h',['../hydroelastic__calculator_8h.html',1,'']]],
   ['hydroelastic_5fcontact_5fforces_5fcontinuous_5fcache_5fdata_2eh',['hydroelastic_contact_forces_continuous_cache_data.h',['../hydroelastic__contact__forces__continuous__cache__data_8h.html',1,'']]],
   ['hydroelastic_5fcontact_5finfo',['hydroelastic_contact_info',['../classdrake_1_1multibody_1_1_contact_results.html#a63c9a6f5c27d18e12af75c0c13cde672',1,'drake::multibody::ContactResults']]],
   ['hydroelastic_5fcontact_5finfo_2eh',['hydroelastic_contact_info.h',['../hydroelastic__contact__info_8h.html',1,'']]],

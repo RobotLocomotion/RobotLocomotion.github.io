@@ -160,6 +160,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_multibody_
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="#related">Related Functions</a> &#124;
 <a href="classdrake_1_1multibody_1_1_multibody_plant-members.html">List of all members</a>  </div>
@@ -406,6 +407,21 @@ To inter-operate between the whole plant actuation vector and sets of per-model 
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a5c7b2e7b0c09b6479d25250405ffd0c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a5c7b2e7b0c09b6479d25250405ffd0c4">MakeStateSelectorMatrix</a> (const std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#a27485be8a33f5ed2ee7f3f8de9dd40c0">JointIndex</a> &gt; &amp;user_to_joint_index_map) const</td></tr>
+<tr class="memdesc:a5c7b2e7b0c09b6479d25250405ffd0c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allows users to map the state of <code>this</code> model, x, into a vector of selected state xₛ with a given preferred ordering.  <a href="#a5c7b2e7b0c09b6479d25250405ffd0c4">More...</a><br /></td></tr>
+<tr class="separator:a5c7b2e7b0c09b6479d25250405ffd0c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d7f5496735d233ea0b984c5a290671f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a0d7f5496735d233ea0b984c5a290671f">MakeActuatorSelectorMatrix</a> (const std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#acc810ff385ed4dede2e011b0b6fd3f2c">JointActuatorIndex</a> &gt; &amp;user_to_actuator_index_map) const</td></tr>
+<tr class="memdesc:a0d7f5496735d233ea0b984c5a290671f"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allows user to map a vector <code>uₛ</code> containing the actuation for a set of selected actuators into the vector u containing the actuation values for <code>this</code> full model.  <a href="#a0d7f5496735d233ea0b984c5a290671f">More...</a><br /></td></tr>
+<tr class="separator:a0d7f5496735d233ea0b984c5a290671f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78463f908367335926f461a19978d89b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a78463f908367335926f461a19978d89b">MakeActuationMatrix</a> () const</td></tr>
+<tr class="memdesc:a78463f908367335926f461a19978d89b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method creates an actuation matrix B mapping a vector of actuation values u into generalized forces <code>tau_u = B * u</code>, where B is a matrix of size <code>nv x nu</code> with <code>nu</code> equal to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae3fc8de8de8eaf2d37a24c79d6be8e97" title="Returns the total number of actuated degrees of freedom.">num_actuated_dofs()</a> and <code>nv</code> equal to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae0163ac0976659d811e3337647ff0313" title="Returns the size of the generalized velocity vector v for this model.">num_velocities()</a>.  <a href="#a78463f908367335926f461a19978d89b">More...</a><br /></td></tr>
+<tr class="separator:a78463f908367335926f461a19978d89b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46d75f530d3a4affed6a20fd26b9fd8f"><td class="memItemLeft" align="right" valign="top">Eigen::SparseMatrix&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a46d75f530d3a4affed6a20fd26b9fd8f">MakeActuationMatrixPseudoinverse</a> () const</td></tr>
+<tr class="memdesc:a46d75f530d3a4affed6a20fd26b9fd8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the pseudoinverse of the actuation matrix B directly (without requiring an explicit inverse calculation).  <a href="#a46d75f530d3a4affed6a20fd26b9fd8f">More...</a><br /></td></tr>
+<tr class="separator:a46d75f530d3a4affed6a20fd26b9fd8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a029244fdbe2f10a7bfaf5c21175d834c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a029244fdbe2f10a7bfaf5c21175d834c">MakeActuatorSelectorMatrix</a> (const std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#a27485be8a33f5ed2ee7f3f8de9dd40c0">JointIndex</a> &gt; &amp;user_to_joint_index_map) const</td></tr>
+<tr class="memdesc:a029244fdbe2f10a7bfaf5c21175d834c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alternative signature to build an actuation selector matrix <code>Su</code> such that <code>u = Su⋅uₛ</code>, where u is the vector of actuation values for the full model (see <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a1cc1d71e6c2e91fcd215105ae4ed01e4" title="Returns a constant reference to the input port for external actuation for all actuated dofs.">get_actuation_input_port()</a>) and uₛ is a vector of actuation values for the actuators acting on the joints listed by <code>user_to_joint_index_map</code>.  <a href="#a029244fdbe2f10a7bfaf5c21175d834c">More...</a><br /></td></tr>
+<tr class="separator:a029244fdbe2f10a7bfaf5c21175d834c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a3aeb03d90d213da4702f2dc5e484fc86"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a3aeb03d90d213da4702f2dc5e484fc86">MultibodyPlant</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a> &amp;)=delete</td></tr>
 <tr class="separator:a3aeb03d90d213da4702f2dc5e484fc86"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -963,24 +979,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afab5cf2a636d29dd5b05225fab9b72de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#afab5cf2a636d29dd5b05225fab9b72de">CalcJacobianCenterOfMassTranslationalVelocity</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> &gt; &amp;model_instances, <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658">JacobianWrtVariable</a> with_respect_to, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_A, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_E, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#acfe2dee57bc492bfbd96fe078b65ab00">Matrix3X</a>&lt; T &gt;&gt; Js_v_ACcm_E) const</td></tr>
 <tr class="memdesc:afab5cf2a636d29dd5b05225fab9b72de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates J𝑠_v_ACcm_E, point Ccm's translational velocity Jacobian in frame A with respect to "speeds" 𝑠, expressed in frame E, where point CCm is the center of mass of the system of all non-world bodies contained in model_instances.  <a href="#afab5cf2a636d29dd5b05225fab9b72de">More...</a><br /></td></tr>
 <tr class="separator:afab5cf2a636d29dd5b05225fab9b72de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Bias acceleration functions</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="bias_acceleration_functions"></a> The name a𝑠Bias_AP denotes a point P's bias translational acceleration with respect to "speeds" 𝑠 measured in a frame A, where 𝑠 is either q̇ (time-derivatives of generalized positions) or v (generalized velocities). a𝑠Bias_AP includes the terms in a_AP (P's translational acceleration in A) that depend on q, q̇, v, but not terms that depend on 𝑠̇, i.e., a𝑠Bias_AP = a_AP when 𝑠̇ = 0. The proof below starts with v_AP (point P's translational velocity in frame A) written in terms of J𝑠_v_AP (point P's translational velocity Jacobian in frame A for s). </p><pre>
+   v_AP = J𝑠_v_AP ⋅ 𝑠         which upon vector differentiation in A gives
+   a_AP = Ĵ𝑠_v_AP ⋅ 𝑠  +  J𝑠_v_AP ⋅ 𝑠̇                 setting 𝑠̇ = 0, gives
+   a𝑠Bias_AP = Ĵ𝑠_v_AP ⋅ 𝑠                               is quadratic in s.
+ </pre><p> Note: Since Ĵ𝑠_v_AP (the time-derivative of J𝑠_v_AP in frame A) is linear in s, a𝑠Bias_AP = Ĵ𝑠_v_AP ⋅ 𝑠 is quadratic in 𝑠.</p>
+<p>Similarly, A𝑠Bias_AB denotes a frame B's bias spatial acceleration with respect to speeds 𝑠 measured in frame A. It can be written in terms of the time-derivative of J𝑠_V_AB (B's spatial velocity Jacobian in frame A for speeds 𝑠) as </p><pre>
+   A𝑠Bias_AB = Ĵ𝑠_V_AB ⋅ 𝑠                       is quadratic in s. </pre> <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a5f39a8f68fae3de53767a281503a3313" title="For one point Bp fixed/welded to a frame B, calculates J𝑠_V_ABp, Bp&#39;s spatial velocity Jacobian in fr...">CalcJacobianSpatialVelocity()</a> for details on J𝑠_V_AB. </dd></dl>
+</div></td></tr>
 <tr class="memitem:a029b22a36d5c6ee85247b9c1cfe84c6b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a029b22a36d5c6ee85247b9c1cfe84c6b">CalcBiasCenterOfMassTranslationalAcceleration</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658">JacobianWrtVariable</a> with_respect_to, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_A, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_E) const</td></tr>
-<tr class="memdesc:a029b22a36d5c6ee85247b9c1cfe84c6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates abias_ACcm_E, point Ccm's translational "bias" acceleration term in frame A with respect to "speeds" 𝑠, expressed in frame E, where point Ccm is the composite center of mass of the system of all bodies (except <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a29ef779ddfeea96c5d80c27d68a4f864" title="Returns a constant reference to the world body.">world_body()</a>) in the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>.  <a href="#a029b22a36d5c6ee85247b9c1cfe84c6b">More...</a><br /></td></tr>
+<tr class="memdesc:a029b22a36d5c6ee85247b9c1cfe84c6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">For the system S of all bodies other than the world body, calculates a𝑠Bias_AScm_E, Scm's translational acceleration bias in frame A with respect to "speeds" 𝑠, expressed in frame E, where Scm is the center of mass of S and speeds 𝑠 is either q̇ or v.  <a href="#a029b22a36d5c6ee85247b9c1cfe84c6b">More...</a><br /></td></tr>
 <tr class="separator:a029b22a36d5c6ee85247b9c1cfe84c6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c7b2e7b0c09b6479d25250405ffd0c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a5c7b2e7b0c09b6479d25250405ffd0c4">MakeStateSelectorMatrix</a> (const std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#a27485be8a33f5ed2ee7f3f8de9dd40c0">JointIndex</a> &gt; &amp;user_to_joint_index_map) const</td></tr>
-<tr class="memdesc:a5c7b2e7b0c09b6479d25250405ffd0c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allows users to map the state of <code>this</code> model, x, into a vector of selected state xₛ with a given preferred ordering.  <a href="#a5c7b2e7b0c09b6479d25250405ffd0c4">More...</a><br /></td></tr>
-<tr class="separator:a5c7b2e7b0c09b6479d25250405ffd0c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d7f5496735d233ea0b984c5a290671f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a0d7f5496735d233ea0b984c5a290671f">MakeActuatorSelectorMatrix</a> (const std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#acc810ff385ed4dede2e011b0b6fd3f2c">JointActuatorIndex</a> &gt; &amp;user_to_actuator_index_map) const</td></tr>
-<tr class="memdesc:a0d7f5496735d233ea0b984c5a290671f"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allows user to map a vector <code>uₛ</code> containing the actuation for a set of selected actuators into the vector u containing the actuation values for <code>this</code> full model.  <a href="#a0d7f5496735d233ea0b984c5a290671f">More...</a><br /></td></tr>
-<tr class="separator:a0d7f5496735d233ea0b984c5a290671f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78463f908367335926f461a19978d89b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a78463f908367335926f461a19978d89b">MakeActuationMatrix</a> () const</td></tr>
-<tr class="memdesc:a78463f908367335926f461a19978d89b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method creates an actuation matrix B mapping a vector of actuation values u into generalized forces <code>tau_u = B * u</code>, where B is a matrix of size <code>nv x nu</code> with <code>nu</code> equal to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae3fc8de8de8eaf2d37a24c79d6be8e97" title="Returns the total number of actuated degrees of freedom.">num_actuated_dofs()</a> and <code>nv</code> equal to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae0163ac0976659d811e3337647ff0313" title="Returns the size of the generalized velocity vector v for this model.">num_velocities()</a>.  <a href="#a78463f908367335926f461a19978d89b">More...</a><br /></td></tr>
-<tr class="separator:a78463f908367335926f461a19978d89b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46d75f530d3a4affed6a20fd26b9fd8f"><td class="memItemLeft" align="right" valign="top">Eigen::SparseMatrix&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a46d75f530d3a4affed6a20fd26b9fd8f">MakeActuationMatrixPseudoinverse</a> () const</td></tr>
-<tr class="memdesc:a46d75f530d3a4affed6a20fd26b9fd8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the pseudoinverse of the actuation matrix B directly (without requiring an explicit inverse calculation).  <a href="#a46d75f530d3a4affed6a20fd26b9fd8f">More...</a><br /></td></tr>
-<tr class="separator:a46d75f530d3a4affed6a20fd26b9fd8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a029244fdbe2f10a7bfaf5c21175d834c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a029244fdbe2f10a7bfaf5c21175d834c">MakeActuatorSelectorMatrix</a> (const std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#a27485be8a33f5ed2ee7f3f8de9dd40c0">JointIndex</a> &gt; &amp;user_to_joint_index_map) const</td></tr>
-<tr class="memdesc:a029244fdbe2f10a7bfaf5c21175d834c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alternative signature to build an actuation selector matrix <code>Su</code> such that <code>u = Su⋅uₛ</code>, where u is the vector of actuation values for the full model (see <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a1cc1d71e6c2e91fcd215105ae4ed01e4" title="Returns a constant reference to the input port for external actuation for all actuated dofs.">get_actuation_input_port()</a>) and uₛ is a vector of actuation values for the actuators acting on the joints listed by <code>user_to_joint_index_map</code>.  <a href="#a029244fdbe2f10a7bfaf5c21175d834c">More...</a><br /></td></tr>
-<tr class="separator:a029244fdbe2f10a7bfaf5c21175d834c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade449bc8945e929de4382badd096df3b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ade449bc8945e929de4382badd096df3b">CalcBiasCenterOfMassTranslationalAcceleration</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> &gt; &amp;model_instances, <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658">JacobianWrtVariable</a> with_respect_to, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_A, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_E) const</td></tr>
+<tr class="memdesc:ade449bc8945e929de4382badd096df3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">For the system S containing the selected model instances, calculates a𝑠Bias_AScm_E, Scm's translational acceleration bias in frame A with respect to "speeds" 𝑠, expressed in frame E, where Scm is the center of mass of S and speeds 𝑠 is either q̇ or v.  <a href="#ade449bc8945e929de4382badd096df3b">More...</a><br /></td></tr>
+<tr class="separator:ade449bc8945e929de4382badd096df3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Introspection</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="mbp_introspection"></a> These methods allow a user to query whether a given multibody element is part of this plant's model. These queries can be performed at any time during the lifetime of a MultibodyPlant model, i.e. there is no restriction on whether they must be called before or after <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a>. These queries can be performed while new multibody elements are being added to the model. These methods allow a user to retrieve a reference to a multibody element by its name. An exception is thrown if there is no element with the requested name.</p>
 <p>If the named element is present in more than one model instance and a model instance is not explicitly specified, std::logic_error is thrown. </p>
@@ -2074,7 +2087,7 @@ A distance constraint is the wrong modeling choice if the distance needs to go t
 </div>
 </div>
 <a id="a029b22a36d5c6ee85247b9c1cfe84c6b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a029b22a36d5c6ee85247b9c1cfe84c6b">&#9670;&nbsp;</a></span>CalcBiasCenterOfMassTranslationalAcceleration()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a029b22a36d5c6ee85247b9c1cfe84c6b">&#9670;&nbsp;</a></span>CalcBiasCenterOfMassTranslationalAcceleration() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2111,31 +2124,100 @@ A distance constraint is the wrong modeling choice if the distance needs to go t
       </table>
 </div><div class="memdoc">
 
-<p>Calculates abias_ACcm_E, point Ccm's translational "bias" acceleration term in frame A with respect to "speeds" 𝑠, expressed in frame E, where point Ccm is the composite center of mass of the system of all bodies (except <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a29ef779ddfeea96c5d80c27d68a4f864" title="Returns a constant reference to the world body.">world_body()</a>) in the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>. </p>
-<p>abias_ACcm is the part of a_ACcm (Ccm's translational acceleration) that does not multiply ṡ, equal to abias_ACcm = J̇𝑠_v_ACcm ⋅ s. This allows a_ACcm to be written as a_ACcm = J𝑠_v_ACcm ⋅ ṡ + abias_ACcm.</p>
+<p>For the system S of all bodies other than the world body, calculates a𝑠Bias_AScm_E, Scm's translational acceleration bias in frame A with respect to "speeds" 𝑠, expressed in frame E, where Scm is the center of mass of S and speeds 𝑠 is either q̇ or v. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The state of the multibody system. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">with_respect_to</td><td>Enum equal to <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658a08a6dd2b7a7e7a0a13886a70c696f72b" title="J = ∂V/∂q̇">JacobianWrtVariable::kQDot</a> or <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658a63b39853c60d1092c257c1ab898bad0a" title="J = ∂V/∂v.">JacobianWrtVariable::kV</a>, indicating whether the Jacobian <code>abias_ACcm</code> is partial derivatives with respect to 𝑠 = q̇ (time-derivatives of generalized positions) or with respect to 𝑠 = v (generalized velocities). </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">frame_A</td><td>The frame in which abias_ACcm is measured. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">frame_E</td><td>The frame in which abias_ACcm is expressed on output. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>Contains the state of the multibody system. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">with_respect_to</td><td>Enum equal to <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658a08a6dd2b7a7e7a0a13886a70c696f72b" title="J = ∂V/∂q̇">JacobianWrtVariable::kQDot</a> or <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658a63b39853c60d1092c257c1ab898bad0a" title="J = ∂V/∂v.">JacobianWrtVariable::kV</a>, indicating whether the accceleration bias is with respect to 𝑠 = q̇ or 𝑠 = v. Currently, an exception is thrown if with_respect_to is <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658a08a6dd2b7a7e7a0a13886a70c696f72b" title="J = ∂V/∂q̇">JacobianWrtVariable::kQDot</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">frame_A</td><td>The frame in which a𝑠Bias_AScm is measured. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">frame_E</td><td>The frame in which a𝑠Bias_AScm is expressed on output. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">abias_ACcm_E</td><td>Point Ccm's translational "bias" acceleration term in frame A with respect to "speeds" 𝑠, expressed in frame E. </td></tr>
-  </table>
-  </dd>
-</dl>
+<dl class="section return"><dt>Returns</dt><dd>a𝑠Bias_AScm_E Point Scm's translational acceleration bias in frame A with respect to speeds 𝑠 (𝑠 = q̇ or 𝑠 = v), expressed in frame E. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if Ccm does not exist, which occurs if there are no massive bodies in <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> (except <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a29ef779ddfeea96c5d80c27d68a4f864" title="Returns a constant reference to the world body.">world_body()</a>). </td></tr>
-    <tr><td class="paramname">std::exception</td><td>if composite_mass &lt;= 0, where composite_mass is the total mass of all bodies except <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a29ef779ddfeea96c5d80c27d68a4f864" title="Returns a constant reference to the world body.">world_body()</a> in <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>. </td></tr>
-    <tr><td class="paramname">std::exception</td><td>if frame_A is not the world frame. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>this</code> has no body except <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a29ef779ddfeea96c5d80c27d68a4f864" title="Returns a constant reference to the world body.">world_body()</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if mₛ ≤ 0, where mₛ is the mass of system S. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if with_respect_to is <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658a08a6dd2b7a7e7a0a13886a70c696f72b" title="J = ∂V/∂q̇">JacobianWrtVariable::kQDot</a>. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aa4e686199a5e9ddee98538741b7a0382" title="Calculates J𝑠_v_ACcm_E, point Ccm&#39;s translational velocity Jacobian in frame A with respect to &quot;speed...">CalcJacobianCenterOfMassTranslationalVelocity()</a> to compute J𝑠_v_Scm, point Scm's translational velocity Jacobian in frame A with respect to 𝑠. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a29ef779ddfeea96c5d80c27d68a4f864" title="Returns a constant reference to the world body.">world_body()</a> is ignored. asBias_AScm_E = ∑ (mᵢ aᵢ) / mₛ, where mₛ = ∑ mᵢ is the mass of system S, mᵢ is the mass of the iᵗʰ body, and aᵢ is the translational bias acceleration of Bᵢcm in frame A expressed in frame E for speeds 𝑠 (Bᵢcm is the center of mass of the iᵗʰ body). </dd>
+<dd>
+See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#bias_acceleration_functions">Bias acceleration functions</a> for theory and details. </dd></dl>
+
+</div>
+</div>
+<a id="ade449bc8945e929de4382badd096df3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade449bc8945e929de4382badd096df3b">&#9670;&nbsp;</a></span>CalcBiasCenterOfMassTranslationalAcceleration() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt;T&gt; CalcBiasCenterOfMassTranslationalAcceleration </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>model_instances</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658">JacobianWrtVariable</a>&#160;</td>
+          <td class="paramname"><em>with_respect_to</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>frame_A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>frame_E</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>For the system S containing the selected model instances, calculates a𝑠Bias_AScm_E, Scm's translational acceleration bias in frame A with respect to "speeds" 𝑠, expressed in frame E, where Scm is the center of mass of S and speeds 𝑠 is either q̇ or v. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>Contains the state of the multibody system. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">model_instances</td><td>Vector of selected model instances. If a model instance is repeated in the vector (unusual), it is only counted once. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">with_respect_to</td><td>Enum equal to <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658a08a6dd2b7a7e7a0a13886a70c696f72b" title="J = ∂V/∂q̇">JacobianWrtVariable::kQDot</a> or <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658a63b39853c60d1092c257c1ab898bad0a" title="J = ∂V/∂v.">JacobianWrtVariable::kV</a>, indicating whether the accceleration bias is with respect to 𝑠 = q̇ or 𝑠 = v. Currently, an exception is thrown if with_respect_to is <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658a08a6dd2b7a7e7a0a13886a70c696f72b" title="J = ∂V/∂q̇">JacobianWrtVariable::kQDot</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">frame_A</td><td>The frame in which a𝑠Bias_AScm is measured. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">frame_E</td><td>The frame in which a𝑠Bias_AScm is expressed on output. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a𝑠Bias_AScm_E Point Scm's translational acceleration bias in frame A with respect to speeds 𝑠 (𝑠 = q̇ or 𝑠 = v), expressed in frame E. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>this</code> has no body except <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a29ef779ddfeea96c5d80c27d68a4f864" title="Returns a constant reference to the world body.">world_body()</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if mₛ ≤ 0, where mₛ is the mass of system S. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if with_respect_to is <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658a08a6dd2b7a7e7a0a13886a70c696f72b" title="J = ∂V/∂q̇">JacobianWrtVariable::kQDot</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aa4e686199a5e9ddee98538741b7a0382" title="Calculates J𝑠_v_ACcm_E, point Ccm&#39;s translational velocity Jacobian in frame A with respect to &quot;speed...">CalcJacobianCenterOfMassTranslationalVelocity()</a> to compute J𝑠_v_Scm, point Scm's translational velocity Jacobian in frame A with respect to 𝑠. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a29ef779ddfeea96c5d80c27d68a4f864" title="Returns a constant reference to the world body.">world_body()</a> is ignored. asBias_AScm_E = ∑ (mᵢ aᵢ) / mₛ, where mₛ = ∑ mᵢ is the mass of system S, mᵢ is the mass of the iᵗʰ body, and aᵢ is the translational bias acceleration of Bᵢcm in frame A expressed in frame E for speeds 𝑠 (Bᵢcm is the center of mass of the iᵗʰ body). </dd>
+<dd>
+See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#bias_acceleration_functions">Bias acceleration functions</a> for theory and details. </dd></dl>
 
 </div>
 </div>
@@ -2190,16 +2272,16 @@ A distance constraint is the wrong modeling choice if the distance needs to go t
 </div><div class="memdoc">
 
 <p>For one point Bp affixed/welded to a frame B, calculates A𝑠Bias_ABp, Bp's spatial acceleration bias in frame A with respect to "speeds" 𝑠, where 𝑠 is either q̇ (time-derivatives of generalized positions) or v (generalized velocities). </p>
-<p>A𝑠Bias_ABp is the term in A_ABp (Bp's spatial acceleration in A) that does not include 𝑠̇, i.e., A𝑠Bias_ABp is Bi's translational acceleration in A when 𝑠̇ = 0. </p><pre>
+<p>A𝑠Bias_ABp includes the terms in A_ABp (Bp's spatial acceleration in A) that depend on q, q̇, v, but not terms that depend on 𝑠̇, i.e., A𝑠Bias_ABp = A_ABp when 𝑠̇ = 0. </p><pre>
   A_ABp =  J𝑠_V_ABp ⋅ 𝑠̇  +  J̇𝑠_V_ABp ⋅ 𝑠   (𝑠 = q̇ or 𝑠 = v), hence
   A𝑠Bias_ABp = J̇𝑠_V_ABp ⋅ 𝑠
 </pre><p> where J𝑠_V_ABp is Bp's spatial velocity Jacobian in frame A for speeds s (see <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a5f39a8f68fae3de53767a281503a3313" title="For one point Bp fixed/welded to a frame B, calculates J𝑠_V_ABp, Bp&#39;s spatial velocity Jacobian in fr...">CalcJacobianSpatialVelocity()</a> for details on J𝑠_V_ABp). </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The state of the multibody system. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">with_respect_to</td><td>Enum equal to <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658a08a6dd2b7a7e7a0a13886a70c696f72b" title="J = ∂V/∂q̇">JacobianWrtVariable::kQDot</a> or <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658a63b39853c60d1092c257c1ab898bad0a" title="J = ∂V/∂v.">JacobianWrtVariable::kV</a>, indicating whether the spatial accceleration bias is with respect to 𝑠 = q̇ or 𝑠 = v. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">with_respect_to</td><td>Enum equal to <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658a08a6dd2b7a7e7a0a13886a70c696f72b" title="J = ∂V/∂q̇">JacobianWrtVariable::kQDot</a> or <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658a63b39853c60d1092c257c1ab898bad0a" title="J = ∂V/∂v.">JacobianWrtVariable::kV</a>, indicating whether the spatial accceleration bias is with respect to 𝑠 = q̇ or 𝑠 = v. Currently, an exception is thrown if with_respect_to is <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658a08a6dd2b7a7e7a0a13886a70c696f72b" title="J = ∂V/∂q̇">JacobianWrtVariable::kQDot</a>. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">frame_B</td><td>The frame on which point Bp is affixed/welded. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">p_BoBp_B</td><td>Position vector from Bo (frame_B's origin) to point Bp (regarded as affixed/welded to B), expressed in frame_B. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">frame_A</td><td>The frame that measures A𝑠Bias_ABp. Currently, an exception is thrown if frame_A is not the World frame. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">frame_A</td><td>The frame in which A𝑠Bias_ABp is measured. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">frame_E</td><td>The frame in which A𝑠Bias_ABp is expressed on output. </td></tr>
   </table>
   </dd>
@@ -2213,8 +2295,7 @@ A distance constraint is the wrong modeling choice if the distance needs to go t
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a5f39a8f68fae3de53767a281503a3313" title="For one point Bp fixed/welded to a frame B, calculates J𝑠_V_ABp, Bp&#39;s spatial velocity Jacobian in fr...">CalcJacobianSpatialVelocity()</a> to compute J𝑠_V_ABp, point Bp's translational velocity Jacobian in frame A with respect to 𝑠. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if with_respect_to is not <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658a63b39853c60d1092c257c1ab898bad0a" title="J = ∂V/∂v.">JacobianWrtVariable::kV</a> </td></tr>
-    <tr><td class="paramname">std::exception</td><td>if frame_A is not the world frame. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if with_respect_to is <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658a08a6dd2b7a7e7a0a13886a70c696f72b" title="J = ∂V/∂q̇">JacobianWrtVariable::kQDot</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2312,16 +2393,16 @@ A distance constraint is the wrong modeling choice if the distance needs to go t
 </div><div class="memdoc">
 
 <p>For each point Bi affixed/welded to a frame B, calculates a𝑠Bias_ABi, Bi's translational acceleration bias in frame A with respect to "speeds" 𝑠, where 𝑠 is either q̇ (time-derivatives of generalized positions) or v (generalized velocities). </p>
-<p>a𝑠Bias_ABi is the term in a_ABi (Bi's translational acceleration in A) that does not include 𝑠̇, i.e., a𝑠Bias_ABi is Bi's translational acceleration in A when 𝑠̇ = 0. </p><pre>
+<p>a𝑠Bias_ABi includes the terms in a_ABi (Bi's translational acceleration in A) that depend on q, q̇, v, but not terms that depend on 𝑠̇, i.e., a𝑠Bias_ABi = a_ABi when 𝑠̇ = 0. </p><pre>
   a_ABi =  J𝑠_v_ABi ⋅ 𝑠̇  +  J̇𝑠_v_ABi ⋅ 𝑠  (𝑠 = q̇ or 𝑠 = v), hence
   a𝑠Bias_ABi = J̇𝑠_v_ABi ⋅ 𝑠
 </pre><p> where J𝑠_v_ABi is Bi's translational velocity Jacobian in frame A for s (see <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae2516569f5a2cc27e76ee0cc8b728746" title="For each point Bi affixed/welded to a frame B, calculates J𝑠_v_ABi, Bi&#39;s translational velocity Jacob...">CalcJacobianTranslationalVelocity()</a> for details on J𝑠_v_ABi). </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The state of the multibody system. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">with_respect_to</td><td>Enum equal to <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658a08a6dd2b7a7e7a0a13886a70c696f72b" title="J = ∂V/∂q̇">JacobianWrtVariable::kQDot</a> or <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658a63b39853c60d1092c257c1ab898bad0a" title="J = ∂V/∂v.">JacobianWrtVariable::kV</a>, indicating whether the translational acceleration bias is with respect to 𝑠 = q̇ or 𝑠 = v. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">with_respect_to</td><td>Enum equal to <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658a08a6dd2b7a7e7a0a13886a70c696f72b" title="J = ∂V/∂q̇">JacobianWrtVariable::kQDot</a> or <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658a63b39853c60d1092c257c1ab898bad0a" title="J = ∂V/∂v.">JacobianWrtVariable::kV</a>, indicating whether the translational acceleration bias is with respect to 𝑠 = q̇ or 𝑠 = v. Currently, an exception is thrown if with_respect_to is <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658a08a6dd2b7a7e7a0a13886a70c696f72b" title="J = ∂V/∂q̇">JacobianWrtVariable::kQDot</a>. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">frame_B</td><td>The frame on which points Bi are affixed/welded. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">p_BoBi_B</td><td>A position vector or list of p position vectors from Bo (frame_B's origin) to points Bi (regarded as affixed to B), where each position vector is expressed in frame_B. Each column in the <code>3 x p</code> matrix p_BoBi_B corresponds to a position vector. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">frame_A</td><td>The frame that measures a𝑠Bias_ABi. Currently, an exception is thrown if frame_A is not the World frame. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">frame_A</td><td>The frame in which a𝑠Bias_ABi is measured. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">frame_E</td><td>The frame in which a𝑠Bias_ABi is expressed on output. </td></tr>
   </table>
   </dd>
@@ -2336,8 +2417,7 @@ A distance constraint is the wrong modeling choice if the distance needs to go t
 <dl class="section pre"><dt>Precondition</dt><dd>p_BoBi_B must have 3 rows. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if with_respect_to is not <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658a63b39853c60d1092c257c1ab898bad0a" title="J = ∂V/∂v.">JacobianWrtVariable::kV</a> </td></tr>
-    <tr><td class="paramname">std::exception</td><td>if frame_A is not the world frame. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if with_respect_to is <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658a08a6dd2b7a7e7a0a13886a70c696f72b" title="J = ∂V/∂q̇">JacobianWrtVariable::kQDot</a>. </td></tr>
   </table>
   </dd>
 </dl>

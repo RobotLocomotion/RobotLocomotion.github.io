@@ -2802,42 +2802,117 @@ weld joint.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.CalcBiasCenterOfMassTranslationalAcceleration">
-<span class="sig-name descname"><span class="pre">CalcBiasCenterOfMassTranslationalAcceleration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_respect_to</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JacobianWrtVariable" title="pydrake.multibody.tree.JacobianWrtVariable"><span class="pre">pydrake.multibody.tree.JacobianWrtVariable</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame" title="pydrake.multibody.tree.Frame"><span class="pre">pydrake.multibody.tree.Frame</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_E</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame" title="pydrake.multibody.tree.Frame"><span class="pre">pydrake.multibody.tree.Frame</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.CalcBiasCenterOfMassTranslationalAcceleration" title="Permalink to this definition"></a></dt>
-<dd><p>Calculates abias_ACcm_E, point Ccm’s translational “bias” acceleration
-term in frame A with respect to “speeds” 𝑠, expressed in frame E,
-where point Ccm is the composite center of mass of the system of all
-bodies (except world_body()) in the MultibodyPlant. abias_ACcm is the
-part of a_ACcm (Ccm’s translational acceleration) that does not
-multiply ṡ, equal to abias_ACcm = J̇𝑠_v_ACcm ⋅ s. This allows a_ACcm
-to be written as a_ACcm = J𝑠_v_ACcm ⋅ ṡ + abias_ACcm.</p>
+<span class="sig-name descname"><span class="pre">CalcBiasCenterOfMassTranslationalAcceleration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.CalcBiasCenterOfMassTranslationalAcceleration" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>CalcBiasCenterOfMassTranslationalAcceleration(self: pydrake.multibody.plant.MultibodyPlant, context: pydrake.systems.framework.Context, with_respect_to: pydrake.multibody.tree.JacobianWrtVariable, frame_A: pydrake.multibody.tree.Frame, frame_E: pydrake.multibody.tree.Frame) -&gt; numpy.ndarray[numpy.float64[3, 1]]</p></li>
+</ol>
+<p>For the system S of all bodies other than the world body, calculates
+a𝑠Bias_AScm_E, Scm’s translational acceleration bias in frame A with
+respect to “speeds” 𝑠, expressed in frame E, where Scm is the center
+of mass of S and speeds 𝑠 is either q̇ or v.</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The state of the multibody system.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>Contains the state of the multibody system.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">with_respect_to</span></code>:</dt><dd><p>Enum equal to JacobianWrtVariable::kQDot or
-JacobianWrtVariable::kV, indicating whether the Jacobian
-<code class="docutils literal notranslate"><span class="pre">abias_ACcm</span></code> is partial derivatives with respect to 𝑠 = q̇
-(time-derivatives of generalized positions) or with respect to 𝑠 =
-v (generalized velocities).</p>
+JacobianWrtVariable::kV, indicating whether the accceleration bias
+is with respect to 𝑠 = q̇ or 𝑠 = v. Currently, an exception is
+thrown if with_respect_to is JacobianWrtVariable::kQDot.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>The frame in which abias_ACcm is measured.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>The frame in which a𝑠Bias_AScm is measured.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which abias_ACcm is expressed on output.</p>
-</dd>
-<dt>Returns <code class="docutils literal notranslate"><span class="pre">abias_ACcm_E</span></code>:</dt><dd><p>Point Ccm’s translational “bias” acceleration term in frame A with
-respect to “speeds” 𝑠, expressed in frame E.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which a𝑠Bias_AScm is expressed on output.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if Ccm does not exist</strong><strong>, </strong><strong>which occurs if there are no</strong> – </p></li>
-<li><p><strong>massive bodies in MultibodyPlant</strong><strong> (</strong><strong>except world_body</strong><strong>(</strong><strong>)</strong><strong>)</strong><strong></strong> – </p></li>
-<li><p><strong>RuntimeError if composite_mass &lt;= 0</strong><strong>, </strong><strong>where composite_mass is the</strong> – </p></li>
-<li><p><strong>total mass of all bodies except world_body</strong><strong>(</strong><strong>) </strong><strong>in MultibodyPlant.</strong> – </p></li>
-<li><p><strong>RuntimeError if frame_A is not the world frame.</strong> – </p></li>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a𝑠Bias_AScm_E Point Scm’s translational acceleration bias in frame
+A with respect to speeds 𝑠 (𝑠 = q̇ or 𝑠 = v), expressed in frame
+E.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>RuntimeError if this has no body except world_body</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>RuntimeError if mₛ ≤ 0</strong><strong>, </strong><strong>where mₛ is the mass of system S.</strong> – </p></li>
+<li><p><strong>RuntimeError if with_respect_to is JacobianWrtVariable::kQDot.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>CalcJacobianCenterOfMassTranslationalVelocity() to compute
+J𝑠_v_Scm, point Scm’s translational velocity Jacobian in frame A
+with respect to 𝑠.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The world_body() is ignored. asBias_AScm_E = ∑ (mᵢ aᵢ) / mₛ, where
+mₛ = ∑ mᵢ is the mass of system S, mᵢ is the mass of the iᵗʰ body,
+and aᵢ is the translational bias acceleration of Bᵢcm in frame A
+expressed in frame E for speeds 𝑠 (Bᵢcm is the center of mass of
+the iᵗʰ body).</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>See bias_acceleration_functions “Bias acceleration functions” for
+theory and details.</p>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>CalcBiasCenterOfMassTranslationalAcceleration(self: pydrake.multibody.plant.MultibodyPlant, context: pydrake.systems.framework.Context, model_instances: list[pydrake.multibody.tree.ModelInstanceIndex], with_respect_to: pydrake.multibody.tree.JacobianWrtVariable, frame_A: pydrake.multibody.tree.Frame, frame_E: pydrake.multibody.tree.Frame) -&gt; numpy.ndarray[numpy.float64[3, 1]]</p></li>
+</ol>
+<p>For the system S containing the selected model instances, calculates
+a𝑠Bias_AScm_E, Scm’s translational acceleration bias in frame A with
+respect to “speeds” 𝑠, expressed in frame E, where Scm is the center
+of mass of S and speeds 𝑠 is either q̇ or v.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>Contains the state of the multibody system.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">model_instances</span></code>:</dt><dd><p>Vector of selected model instances. If a model instance is
+repeated in the vector (unusual), it is only counted once.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">with_respect_to</span></code>:</dt><dd><p>Enum equal to JacobianWrtVariable::kQDot or
+JacobianWrtVariable::kV, indicating whether the accceleration bias
+is with respect to 𝑠 = q̇ or 𝑠 = v. Currently, an exception is
+thrown if with_respect_to is JacobianWrtVariable::kQDot.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>The frame in which a𝑠Bias_AScm is measured.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which a𝑠Bias_AScm is expressed on output.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a𝑠Bias_AScm_E Point Scm’s translational acceleration bias in frame
+A with respect to speeds 𝑠 (𝑠 = q̇ or 𝑠 = v), expressed in frame
+E.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>RuntimeError if this has no body except world_body</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>RuntimeError if mₛ ≤ 0</strong><strong>, </strong><strong>where mₛ is the mass of system S.</strong> – </p></li>
+<li><p><strong>RuntimeError if with_respect_to is JacobianWrtVariable::kQDot.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>CalcJacobianCenterOfMassTranslationalVelocity() to compute
+J𝑠_v_Scm, point Scm’s translational velocity Jacobian in frame A
+with respect to 𝑠.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The world_body() is ignored. asBias_AScm_E = ∑ (mᵢ aᵢ) / mₛ, where
+mₛ = ∑ mᵢ is the mass of system S, mᵢ is the mass of the iᵗʰ body,
+and aᵢ is the translational bias acceleration of Bᵢcm in frame A
+expressed in frame E for speeds 𝑠 (Bᵢcm is the center of mass of
+the iᵗʰ body).</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>See bias_acceleration_functions “Bias acceleration functions” for
+theory and details.</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -2846,9 +2921,9 @@ respect to “speeds” 𝑠, expressed in frame E.</p>
 <dd><p>For one point Bp affixed/welded to a frame B, calculates A𝑠Bias_ABp,
 Bp’s spatial acceleration bias in frame A with respect to “speeds” 𝑠,
 where 𝑠 is either q̇ (time-derivatives of generalized positions) or v
-(generalized velocities). A𝑠Bias_ABp is the term in A_ABp (Bp’s
-spatial acceleration in A) that does not include 𝑠̇, i.e., A𝑠Bias_ABp
-is Bi’s translational acceleration in A when 𝑠̇ = 0.</p>
+(generalized velocities). A𝑠Bias_ABp includes the terms in A_ABp (Bp’s
+spatial acceleration in A) that depend on q, q̇, v, but not terms that
+depend on 𝑠̇, i.e., A𝑠Bias_ABp = A_ABp when 𝑠̇ = 0.</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>A_ABp =  J𝑠_V_ABp ⋅ 𝑠̇  +  J̇𝑠_V_ABp ⋅ 𝑠   (𝑠 = q̇ or 𝑠 = v), hence
   A𝑠Bias_ABp = J̇𝑠_V_ABp ⋅ 𝑠
 </pre></div>
@@ -2860,15 +2935,16 @@ s (see CalcJacobianSpatialVelocity() for details on J𝑠_V_ABp).</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">with_respect_to</span></code>:</dt><dd><p>Enum equal to JacobianWrtVariable::kQDot or
 JacobianWrtVariable::kV, indicating whether the spatial
-accceleration bias is with respect to 𝑠 = q̇ or 𝑠 = v.</p>
+accceleration bias is with respect to 𝑠 = q̇ or 𝑠 = v. Currently,
+an exception is thrown if with_respect_to is
+JacobianWrtVariable::kQDot.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_B</span></code>:</dt><dd><p>The frame on which point Bp is affixed/welded.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_BoBp_B</span></code>:</dt><dd><p>Position vector from Bo (frame_B’s origin) to point Bp (regarded
 as affixed/welded to B), expressed in frame_B.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>The frame that measures A𝑠Bias_ABp. Currently, an exception is
-thrown if frame_A is not the World frame.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>The frame in which A𝑠Bias_ABp is measured.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which A𝑠Bias_ABp is expressed on output.</p>
 </dd>
@@ -2895,10 +2971,7 @@ translational velocity Jacobian in frame A with respect to 𝑠.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if with_respect_to is not JacobianWrtVariable::kV</strong> – </p></li>
-<li><p><strong>RuntimeError if frame_A is not the world frame.</strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if with_respect_to is JacobianWrtVariable::kQDot.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -2937,9 +3010,10 @@ the proper size.</p>
 <dd><p>For each point Bi affixed/welded to a frame B, calculates a𝑠Bias_ABi,
 Bi’s translational acceleration bias in frame A with respect to
 “speeds” 𝑠, where 𝑠 is either q̇ (time-derivatives of generalized
-positions) or v (generalized velocities). a𝑠Bias_ABi is the term in
-a_ABi (Bi’s translational acceleration in A) that does not include 𝑠̇,
-i.e., a𝑠Bias_ABi is Bi’s translational acceleration in A when 𝑠̇ = 0.</p>
+positions) or v (generalized velocities). a𝑠Bias_ABi includes the
+terms in a_ABi (Bi’s translational acceleration in A) that depend on
+q, q̇, v, but not terms that depend on 𝑠̇, i.e., a𝑠Bias_ABi = a_ABi
+when 𝑠̇ = 0.</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>a_ABi =  J𝑠_v_ABi ⋅ 𝑠̇  +  J̇𝑠_v_ABi ⋅ 𝑠  (𝑠 = q̇ or 𝑠 = v), hence
   a𝑠Bias_ABi = J̇𝑠_v_ABi ⋅ 𝑠
 </pre></div>
@@ -2951,7 +3025,9 @@ s (see CalcJacobianTranslationalVelocity() for details on J𝑠_v_ABi).</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">with_respect_to</span></code>:</dt><dd><p>Enum equal to JacobianWrtVariable::kQDot or
 JacobianWrtVariable::kV, indicating whether the translational
-acceleration bias is with respect to 𝑠 = q̇ or 𝑠 = v.</p>
+acceleration bias is with respect to 𝑠 = q̇ or 𝑠 = v. Currently,
+an exception is thrown if with_respect_to is
+JacobianWrtVariable::kQDot.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_B</span></code>:</dt><dd><p>The frame on which points Bi are affixed/welded.</p>
 </dd>
@@ -2960,8 +3036,7 @@ origin) to points Bi (regarded as affixed to B), where each
 position vector is expressed in frame_B. Each column in the <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">x</span>
 <span class="pre">p</span></code> matrix p_BoBi_B corresponds to a position vector.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>The frame that measures a𝑠Bias_ABi. Currently, an exception is
-thrown if frame_A is not the World frame.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>The frame in which a𝑠Bias_ABi is measured.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which a𝑠Bias_ABi is expressed on output.</p>
 </dd>
@@ -2994,10 +3069,7 @@ Bi’s translational velocity Jacobian in frame A with respect to 𝑠.</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if with_respect_to is not JacobianWrtVariable::kV</strong> – </p></li>
-<li><p><strong>RuntimeError if frame_A is not the world frame.</strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if with_respect_to is JacobianWrtVariable::kQDot.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -8396,42 +8468,117 @@ weld joint.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.CalcBiasCenterOfMassTranslationalAcceleration">
-<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].CalcBiasCenterOfMassTranslationalAcceleration"></span><span class="sig-name descname"><span class="pre">CalcBiasCenterOfMassTranslationalAcceleration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_respect_to</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JacobianWrtVariable" title="pydrake.multibody.tree.JacobianWrtVariable"><span class="pre">pydrake.multibody.tree.JacobianWrtVariable</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame_" title="pydrake.multibody.tree.Frame_"><span class="pre">pydrake.multibody.tree.Frame_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_E</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame_" title="pydrake.multibody.tree.Frame_"><span class="pre">pydrake.multibody.tree.Frame_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.CalcBiasCenterOfMassTranslationalAcceleration" title="Permalink to this definition"></a></dt>
-<dd><p>Calculates abias_ACcm_E, point Ccm’s translational “bias” acceleration
-term in frame A with respect to “speeds” 𝑠, expressed in frame E,
-where point Ccm is the composite center of mass of the system of all
-bodies (except world_body()) in the MultibodyPlant. abias_ACcm is the
-part of a_ACcm (Ccm’s translational acceleration) that does not
-multiply ṡ, equal to abias_ACcm = J̇𝑠_v_ACcm ⋅ s. This allows a_ACcm
-to be written as a_ACcm = J𝑠_v_ACcm ⋅ ṡ + abias_ACcm.</p>
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].CalcBiasCenterOfMassTranslationalAcceleration"></span><span class="sig-name descname"><span class="pre">CalcBiasCenterOfMassTranslationalAcceleration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.CalcBiasCenterOfMassTranslationalAcceleration" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>CalcBiasCenterOfMassTranslationalAcceleration(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], with_respect_to: pydrake.multibody.tree.JacobianWrtVariable, frame_A: pydrake.multibody.tree.Frame_[AutoDiffXd], frame_E: pydrake.multibody.tree.Frame_[AutoDiffXd]) -&gt; numpy.ndarray[object[3, 1]]</p></li>
+</ol>
+<p>For the system S of all bodies other than the world body, calculates
+a𝑠Bias_AScm_E, Scm’s translational acceleration bias in frame A with
+respect to “speeds” 𝑠, expressed in frame E, where Scm is the center
+of mass of S and speeds 𝑠 is either q̇ or v.</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The state of the multibody system.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>Contains the state of the multibody system.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">with_respect_to</span></code>:</dt><dd><p>Enum equal to JacobianWrtVariable::kQDot or
-JacobianWrtVariable::kV, indicating whether the Jacobian
-<code class="docutils literal notranslate"><span class="pre">abias_ACcm</span></code> is partial derivatives with respect to 𝑠 = q̇
-(time-derivatives of generalized positions) or with respect to 𝑠 =
-v (generalized velocities).</p>
+JacobianWrtVariable::kV, indicating whether the accceleration bias
+is with respect to 𝑠 = q̇ or 𝑠 = v. Currently, an exception is
+thrown if with_respect_to is JacobianWrtVariable::kQDot.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>The frame in which abias_ACcm is measured.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>The frame in which a𝑠Bias_AScm is measured.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which abias_ACcm is expressed on output.</p>
-</dd>
-<dt>Returns <code class="docutils literal notranslate"><span class="pre">abias_ACcm_E</span></code>:</dt><dd><p>Point Ccm’s translational “bias” acceleration term in frame A with
-respect to “speeds” 𝑠, expressed in frame E.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which a𝑠Bias_AScm is expressed on output.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if Ccm does not exist</strong><strong>, </strong><strong>which occurs if there are no</strong> – </p></li>
-<li><p><strong>massive bodies in MultibodyPlant</strong><strong> (</strong><strong>except world_body</strong><strong>(</strong><strong>)</strong><strong>)</strong><strong></strong> – </p></li>
-<li><p><strong>RuntimeError if composite_mass &lt;= 0</strong><strong>, </strong><strong>where composite_mass is the</strong> – </p></li>
-<li><p><strong>total mass of all bodies except world_body</strong><strong>(</strong><strong>) </strong><strong>in MultibodyPlant.</strong> – </p></li>
-<li><p><strong>RuntimeError if frame_A is not the world frame.</strong> – </p></li>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a𝑠Bias_AScm_E Point Scm’s translational acceleration bias in frame
+A with respect to speeds 𝑠 (𝑠 = q̇ or 𝑠 = v), expressed in frame
+E.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>RuntimeError if this has no body except world_body</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>RuntimeError if mₛ ≤ 0</strong><strong>, </strong><strong>where mₛ is the mass of system S.</strong> – </p></li>
+<li><p><strong>RuntimeError if with_respect_to is JacobianWrtVariable::kQDot.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>CalcJacobianCenterOfMassTranslationalVelocity() to compute
+J𝑠_v_Scm, point Scm’s translational velocity Jacobian in frame A
+with respect to 𝑠.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The world_body() is ignored. asBias_AScm_E = ∑ (mᵢ aᵢ) / mₛ, where
+mₛ = ∑ mᵢ is the mass of system S, mᵢ is the mass of the iᵗʰ body,
+and aᵢ is the translational bias acceleration of Bᵢcm in frame A
+expressed in frame E for speeds 𝑠 (Bᵢcm is the center of mass of
+the iᵗʰ body).</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>See bias_acceleration_functions “Bias acceleration functions” for
+theory and details.</p>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>CalcBiasCenterOfMassTranslationalAcceleration(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], model_instances: list[pydrake.multibody.tree.ModelInstanceIndex], with_respect_to: pydrake.multibody.tree.JacobianWrtVariable, frame_A: pydrake.multibody.tree.Frame_[AutoDiffXd], frame_E: pydrake.multibody.tree.Frame_[AutoDiffXd]) -&gt; numpy.ndarray[object[3, 1]]</p></li>
+</ol>
+<p>For the system S containing the selected model instances, calculates
+a𝑠Bias_AScm_E, Scm’s translational acceleration bias in frame A with
+respect to “speeds” 𝑠, expressed in frame E, where Scm is the center
+of mass of S and speeds 𝑠 is either q̇ or v.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>Contains the state of the multibody system.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">model_instances</span></code>:</dt><dd><p>Vector of selected model instances. If a model instance is
+repeated in the vector (unusual), it is only counted once.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">with_respect_to</span></code>:</dt><dd><p>Enum equal to JacobianWrtVariable::kQDot or
+JacobianWrtVariable::kV, indicating whether the accceleration bias
+is with respect to 𝑠 = q̇ or 𝑠 = v. Currently, an exception is
+thrown if with_respect_to is JacobianWrtVariable::kQDot.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>The frame in which a𝑠Bias_AScm is measured.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which a𝑠Bias_AScm is expressed on output.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a𝑠Bias_AScm_E Point Scm’s translational acceleration bias in frame
+A with respect to speeds 𝑠 (𝑠 = q̇ or 𝑠 = v), expressed in frame
+E.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>RuntimeError if this has no body except world_body</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>RuntimeError if mₛ ≤ 0</strong><strong>, </strong><strong>where mₛ is the mass of system S.</strong> – </p></li>
+<li><p><strong>RuntimeError if with_respect_to is JacobianWrtVariable::kQDot.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>CalcJacobianCenterOfMassTranslationalVelocity() to compute
+J𝑠_v_Scm, point Scm’s translational velocity Jacobian in frame A
+with respect to 𝑠.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The world_body() is ignored. asBias_AScm_E = ∑ (mᵢ aᵢ) / mₛ, where
+mₛ = ∑ mᵢ is the mass of system S, mᵢ is the mass of the iᵗʰ body,
+and aᵢ is the translational bias acceleration of Bᵢcm in frame A
+expressed in frame E for speeds 𝑠 (Bᵢcm is the center of mass of
+the iᵗʰ body).</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>See bias_acceleration_functions “Bias acceleration functions” for
+theory and details.</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -8440,9 +8587,9 @@ respect to “speeds” 𝑠, expressed in frame E.</p>
 <dd><p>For one point Bp affixed/welded to a frame B, calculates A𝑠Bias_ABp,
 Bp’s spatial acceleration bias in frame A with respect to “speeds” 𝑠,
 where 𝑠 is either q̇ (time-derivatives of generalized positions) or v
-(generalized velocities). A𝑠Bias_ABp is the term in A_ABp (Bp’s
-spatial acceleration in A) that does not include 𝑠̇, i.e., A𝑠Bias_ABp
-is Bi’s translational acceleration in A when 𝑠̇ = 0.</p>
+(generalized velocities). A𝑠Bias_ABp includes the terms in A_ABp (Bp’s
+spatial acceleration in A) that depend on q, q̇, v, but not terms that
+depend on 𝑠̇, i.e., A𝑠Bias_ABp = A_ABp when 𝑠̇ = 0.</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>A_ABp =  J𝑠_V_ABp ⋅ 𝑠̇  +  J̇𝑠_V_ABp ⋅ 𝑠   (𝑠 = q̇ or 𝑠 = v), hence
   A𝑠Bias_ABp = J̇𝑠_V_ABp ⋅ 𝑠
 </pre></div>
@@ -8454,15 +8601,16 @@ s (see CalcJacobianSpatialVelocity() for details on J𝑠_V_ABp).</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">with_respect_to</span></code>:</dt><dd><p>Enum equal to JacobianWrtVariable::kQDot or
 JacobianWrtVariable::kV, indicating whether the spatial
-accceleration bias is with respect to 𝑠 = q̇ or 𝑠 = v.</p>
+accceleration bias is with respect to 𝑠 = q̇ or 𝑠 = v. Currently,
+an exception is thrown if with_respect_to is
+JacobianWrtVariable::kQDot.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_B</span></code>:</dt><dd><p>The frame on which point Bp is affixed/welded.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_BoBp_B</span></code>:</dt><dd><p>Position vector from Bo (frame_B’s origin) to point Bp (regarded
 as affixed/welded to B), expressed in frame_B.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>The frame that measures A𝑠Bias_ABp. Currently, an exception is
-thrown if frame_A is not the World frame.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>The frame in which A𝑠Bias_ABp is measured.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which A𝑠Bias_ABp is expressed on output.</p>
 </dd>
@@ -8489,10 +8637,7 @@ translational velocity Jacobian in frame A with respect to 𝑠.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if with_respect_to is not JacobianWrtVariable::kV</strong> – </p></li>
-<li><p><strong>RuntimeError if frame_A is not the world frame.</strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if with_respect_to is JacobianWrtVariable::kQDot.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -8531,9 +8676,10 @@ the proper size.</p>
 <dd><p>For each point Bi affixed/welded to a frame B, calculates a𝑠Bias_ABi,
 Bi’s translational acceleration bias in frame A with respect to
 “speeds” 𝑠, where 𝑠 is either q̇ (time-derivatives of generalized
-positions) or v (generalized velocities). a𝑠Bias_ABi is the term in
-a_ABi (Bi’s translational acceleration in A) that does not include 𝑠̇,
-i.e., a𝑠Bias_ABi is Bi’s translational acceleration in A when 𝑠̇ = 0.</p>
+positions) or v (generalized velocities). a𝑠Bias_ABi includes the
+terms in a_ABi (Bi’s translational acceleration in A) that depend on
+q, q̇, v, but not terms that depend on 𝑠̇, i.e., a𝑠Bias_ABi = a_ABi
+when 𝑠̇ = 0.</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>a_ABi =  J𝑠_v_ABi ⋅ 𝑠̇  +  J̇𝑠_v_ABi ⋅ 𝑠  (𝑠 = q̇ or 𝑠 = v), hence
   a𝑠Bias_ABi = J̇𝑠_v_ABi ⋅ 𝑠
 </pre></div>
@@ -8545,7 +8691,9 @@ s (see CalcJacobianTranslationalVelocity() for details on J𝑠_v_ABi).</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">with_respect_to</span></code>:</dt><dd><p>Enum equal to JacobianWrtVariable::kQDot or
 JacobianWrtVariable::kV, indicating whether the translational
-acceleration bias is with respect to 𝑠 = q̇ or 𝑠 = v.</p>
+acceleration bias is with respect to 𝑠 = q̇ or 𝑠 = v. Currently,
+an exception is thrown if with_respect_to is
+JacobianWrtVariable::kQDot.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_B</span></code>:</dt><dd><p>The frame on which points Bi are affixed/welded.</p>
 </dd>
@@ -8554,8 +8702,7 @@ origin) to points Bi (regarded as affixed to B), where each
 position vector is expressed in frame_B. Each column in the <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">x</span>
 <span class="pre">p</span></code> matrix p_BoBi_B corresponds to a position vector.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>The frame that measures a𝑠Bias_ABi. Currently, an exception is
-thrown if frame_A is not the World frame.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>The frame in which a𝑠Bias_ABi is measured.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which a𝑠Bias_ABi is expressed on output.</p>
 </dd>
@@ -8588,10 +8735,7 @@ Bi’s translational velocity Jacobian in frame A with respect to 𝑠.</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if with_respect_to is not JacobianWrtVariable::kV</strong> – </p></li>
-<li><p><strong>RuntimeError if frame_A is not the world frame.</strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if with_respect_to is JacobianWrtVariable::kQDot.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -13946,42 +14090,117 @@ weld joint.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.CalcBiasCenterOfMassTranslationalAcceleration">
-<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].CalcBiasCenterOfMassTranslationalAcceleration"></span><span class="sig-name descname"><span class="pre">CalcBiasCenterOfMassTranslationalAcceleration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_respect_to</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JacobianWrtVariable" title="pydrake.multibody.tree.JacobianWrtVariable"><span class="pre">pydrake.multibody.tree.JacobianWrtVariable</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame_" title="pydrake.multibody.tree.Frame_"><span class="pre">pydrake.multibody.tree.Frame_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_E</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame_" title="pydrake.multibody.tree.Frame_"><span class="pre">pydrake.multibody.tree.Frame_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.CalcBiasCenterOfMassTranslationalAcceleration" title="Permalink to this definition"></a></dt>
-<dd><p>Calculates abias_ACcm_E, point Ccm’s translational “bias” acceleration
-term in frame A with respect to “speeds” 𝑠, expressed in frame E,
-where point Ccm is the composite center of mass of the system of all
-bodies (except world_body()) in the MultibodyPlant. abias_ACcm is the
-part of a_ACcm (Ccm’s translational acceleration) that does not
-multiply ṡ, equal to abias_ACcm = J̇𝑠_v_ACcm ⋅ s. This allows a_ACcm
-to be written as a_ACcm = J𝑠_v_ACcm ⋅ ṡ + abias_ACcm.</p>
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].CalcBiasCenterOfMassTranslationalAcceleration"></span><span class="sig-name descname"><span class="pre">CalcBiasCenterOfMassTranslationalAcceleration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.CalcBiasCenterOfMassTranslationalAcceleration" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>CalcBiasCenterOfMassTranslationalAcceleration(self: pydrake.multibody.plant.MultibodyPlant_[Expression], context: pydrake.systems.framework.Context_[Expression], with_respect_to: pydrake.multibody.tree.JacobianWrtVariable, frame_A: pydrake.multibody.tree.Frame_[Expression], frame_E: pydrake.multibody.tree.Frame_[Expression]) -&gt; numpy.ndarray[object[3, 1]]</p></li>
+</ol>
+<p>For the system S of all bodies other than the world body, calculates
+a𝑠Bias_AScm_E, Scm’s translational acceleration bias in frame A with
+respect to “speeds” 𝑠, expressed in frame E, where Scm is the center
+of mass of S and speeds 𝑠 is either q̇ or v.</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The state of the multibody system.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>Contains the state of the multibody system.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">with_respect_to</span></code>:</dt><dd><p>Enum equal to JacobianWrtVariable::kQDot or
-JacobianWrtVariable::kV, indicating whether the Jacobian
-<code class="docutils literal notranslate"><span class="pre">abias_ACcm</span></code> is partial derivatives with respect to 𝑠 = q̇
-(time-derivatives of generalized positions) or with respect to 𝑠 =
-v (generalized velocities).</p>
+JacobianWrtVariable::kV, indicating whether the accceleration bias
+is with respect to 𝑠 = q̇ or 𝑠 = v. Currently, an exception is
+thrown if with_respect_to is JacobianWrtVariable::kQDot.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>The frame in which abias_ACcm is measured.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>The frame in which a𝑠Bias_AScm is measured.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which abias_ACcm is expressed on output.</p>
-</dd>
-<dt>Returns <code class="docutils literal notranslate"><span class="pre">abias_ACcm_E</span></code>:</dt><dd><p>Point Ccm’s translational “bias” acceleration term in frame A with
-respect to “speeds” 𝑠, expressed in frame E.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which a𝑠Bias_AScm is expressed on output.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if Ccm does not exist</strong><strong>, </strong><strong>which occurs if there are no</strong> – </p></li>
-<li><p><strong>massive bodies in MultibodyPlant</strong><strong> (</strong><strong>except world_body</strong><strong>(</strong><strong>)</strong><strong>)</strong><strong></strong> – </p></li>
-<li><p><strong>RuntimeError if composite_mass &lt;= 0</strong><strong>, </strong><strong>where composite_mass is the</strong> – </p></li>
-<li><p><strong>total mass of all bodies except world_body</strong><strong>(</strong><strong>) </strong><strong>in MultibodyPlant.</strong> – </p></li>
-<li><p><strong>RuntimeError if frame_A is not the world frame.</strong> – </p></li>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a𝑠Bias_AScm_E Point Scm’s translational acceleration bias in frame
+A with respect to speeds 𝑠 (𝑠 = q̇ or 𝑠 = v), expressed in frame
+E.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>RuntimeError if this has no body except world_body</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>RuntimeError if mₛ ≤ 0</strong><strong>, </strong><strong>where mₛ is the mass of system S.</strong> – </p></li>
+<li><p><strong>RuntimeError if with_respect_to is JacobianWrtVariable::kQDot.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>CalcJacobianCenterOfMassTranslationalVelocity() to compute
+J𝑠_v_Scm, point Scm’s translational velocity Jacobian in frame A
+with respect to 𝑠.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The world_body() is ignored. asBias_AScm_E = ∑ (mᵢ aᵢ) / mₛ, where
+mₛ = ∑ mᵢ is the mass of system S, mᵢ is the mass of the iᵗʰ body,
+and aᵢ is the translational bias acceleration of Bᵢcm in frame A
+expressed in frame E for speeds 𝑠 (Bᵢcm is the center of mass of
+the iᵗʰ body).</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>See bias_acceleration_functions “Bias acceleration functions” for
+theory and details.</p>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>CalcBiasCenterOfMassTranslationalAcceleration(self: pydrake.multibody.plant.MultibodyPlant_[Expression], context: pydrake.systems.framework.Context_[Expression], model_instances: list[pydrake.multibody.tree.ModelInstanceIndex], with_respect_to: pydrake.multibody.tree.JacobianWrtVariable, frame_A: pydrake.multibody.tree.Frame_[Expression], frame_E: pydrake.multibody.tree.Frame_[Expression]) -&gt; numpy.ndarray[object[3, 1]]</p></li>
+</ol>
+<p>For the system S containing the selected model instances, calculates
+a𝑠Bias_AScm_E, Scm’s translational acceleration bias in frame A with
+respect to “speeds” 𝑠, expressed in frame E, where Scm is the center
+of mass of S and speeds 𝑠 is either q̇ or v.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>Contains the state of the multibody system.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">model_instances</span></code>:</dt><dd><p>Vector of selected model instances. If a model instance is
+repeated in the vector (unusual), it is only counted once.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">with_respect_to</span></code>:</dt><dd><p>Enum equal to JacobianWrtVariable::kQDot or
+JacobianWrtVariable::kV, indicating whether the accceleration bias
+is with respect to 𝑠 = q̇ or 𝑠 = v. Currently, an exception is
+thrown if with_respect_to is JacobianWrtVariable::kQDot.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>The frame in which a𝑠Bias_AScm is measured.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which a𝑠Bias_AScm is expressed on output.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a𝑠Bias_AScm_E Point Scm’s translational acceleration bias in frame
+A with respect to speeds 𝑠 (𝑠 = q̇ or 𝑠 = v), expressed in frame
+E.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>RuntimeError if this has no body except world_body</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>RuntimeError if mₛ ≤ 0</strong><strong>, </strong><strong>where mₛ is the mass of system S.</strong> – </p></li>
+<li><p><strong>RuntimeError if with_respect_to is JacobianWrtVariable::kQDot.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>CalcJacobianCenterOfMassTranslationalVelocity() to compute
+J𝑠_v_Scm, point Scm’s translational velocity Jacobian in frame A
+with respect to 𝑠.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The world_body() is ignored. asBias_AScm_E = ∑ (mᵢ aᵢ) / mₛ, where
+mₛ = ∑ mᵢ is the mass of system S, mᵢ is the mass of the iᵗʰ body,
+and aᵢ is the translational bias acceleration of Bᵢcm in frame A
+expressed in frame E for speeds 𝑠 (Bᵢcm is the center of mass of
+the iᵗʰ body).</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>See bias_acceleration_functions “Bias acceleration functions” for
+theory and details.</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -13990,9 +14209,9 @@ respect to “speeds” 𝑠, expressed in frame E.</p>
 <dd><p>For one point Bp affixed/welded to a frame B, calculates A𝑠Bias_ABp,
 Bp’s spatial acceleration bias in frame A with respect to “speeds” 𝑠,
 where 𝑠 is either q̇ (time-derivatives of generalized positions) or v
-(generalized velocities). A𝑠Bias_ABp is the term in A_ABp (Bp’s
-spatial acceleration in A) that does not include 𝑠̇, i.e., A𝑠Bias_ABp
-is Bi’s translational acceleration in A when 𝑠̇ = 0.</p>
+(generalized velocities). A𝑠Bias_ABp includes the terms in A_ABp (Bp’s
+spatial acceleration in A) that depend on q, q̇, v, but not terms that
+depend on 𝑠̇, i.e., A𝑠Bias_ABp = A_ABp when 𝑠̇ = 0.</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>A_ABp =  J𝑠_V_ABp ⋅ 𝑠̇  +  J̇𝑠_V_ABp ⋅ 𝑠   (𝑠 = q̇ or 𝑠 = v), hence
   A𝑠Bias_ABp = J̇𝑠_V_ABp ⋅ 𝑠
 </pre></div>
@@ -14004,15 +14223,16 @@ s (see CalcJacobianSpatialVelocity() for details on J𝑠_V_ABp).</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">with_respect_to</span></code>:</dt><dd><p>Enum equal to JacobianWrtVariable::kQDot or
 JacobianWrtVariable::kV, indicating whether the spatial
-accceleration bias is with respect to 𝑠 = q̇ or 𝑠 = v.</p>
+accceleration bias is with respect to 𝑠 = q̇ or 𝑠 = v. Currently,
+an exception is thrown if with_respect_to is
+JacobianWrtVariable::kQDot.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_B</span></code>:</dt><dd><p>The frame on which point Bp is affixed/welded.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_BoBp_B</span></code>:</dt><dd><p>Position vector from Bo (frame_B’s origin) to point Bp (regarded
 as affixed/welded to B), expressed in frame_B.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>The frame that measures A𝑠Bias_ABp. Currently, an exception is
-thrown if frame_A is not the World frame.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>The frame in which A𝑠Bias_ABp is measured.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which A𝑠Bias_ABp is expressed on output.</p>
 </dd>
@@ -14039,10 +14259,7 @@ translational velocity Jacobian in frame A with respect to 𝑠.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if with_respect_to is not JacobianWrtVariable::kV</strong> – </p></li>
-<li><p><strong>RuntimeError if frame_A is not the world frame.</strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if with_respect_to is JacobianWrtVariable::kQDot.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -14081,9 +14298,10 @@ the proper size.</p>
 <dd><p>For each point Bi affixed/welded to a frame B, calculates a𝑠Bias_ABi,
 Bi’s translational acceleration bias in frame A with respect to
 “speeds” 𝑠, where 𝑠 is either q̇ (time-derivatives of generalized
-positions) or v (generalized velocities). a𝑠Bias_ABi is the term in
-a_ABi (Bi’s translational acceleration in A) that does not include 𝑠̇,
-i.e., a𝑠Bias_ABi is Bi’s translational acceleration in A when 𝑠̇ = 0.</p>
+positions) or v (generalized velocities). a𝑠Bias_ABi includes the
+terms in a_ABi (Bi’s translational acceleration in A) that depend on
+q, q̇, v, but not terms that depend on 𝑠̇, i.e., a𝑠Bias_ABi = a_ABi
+when 𝑠̇ = 0.</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>a_ABi =  J𝑠_v_ABi ⋅ 𝑠̇  +  J̇𝑠_v_ABi ⋅ 𝑠  (𝑠 = q̇ or 𝑠 = v), hence
   a𝑠Bias_ABi = J̇𝑠_v_ABi ⋅ 𝑠
 </pre></div>
@@ -14095,7 +14313,9 @@ s (see CalcJacobianTranslationalVelocity() for details on J𝑠_v_ABi).</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">with_respect_to</span></code>:</dt><dd><p>Enum equal to JacobianWrtVariable::kQDot or
 JacobianWrtVariable::kV, indicating whether the translational
-acceleration bias is with respect to 𝑠 = q̇ or 𝑠 = v.</p>
+acceleration bias is with respect to 𝑠 = q̇ or 𝑠 = v. Currently,
+an exception is thrown if with_respect_to is
+JacobianWrtVariable::kQDot.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_B</span></code>:</dt><dd><p>The frame on which points Bi are affixed/welded.</p>
 </dd>
@@ -14104,8 +14324,7 @@ origin) to points Bi (regarded as affixed to B), where each
 position vector is expressed in frame_B. Each column in the <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">x</span>
 <span class="pre">p</span></code> matrix p_BoBi_B corresponds to a position vector.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>The frame that measures a𝑠Bias_ABi. Currently, an exception is
-thrown if frame_A is not the World frame.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>The frame in which a𝑠Bias_ABi is measured.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which a𝑠Bias_ABi is expressed on output.</p>
 </dd>
@@ -14138,10 +14357,7 @@ Bi’s translational velocity Jacobian in frame A with respect to 𝑠.</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if with_respect_to is not JacobianWrtVariable::kV</strong> – </p></li>
-<li><p><strong>RuntimeError if frame_A is not the world frame.</strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if with_respect_to is JacobianWrtVariable::kQDot.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
