@@ -28,6 +28,7 @@ var formula__cell_8h =
     [ "is_isnan", "formula__cell_8h.html#a726023da52d6033c2565368b6def1e16", null ],
     [ "is_less_than", "formula__cell_8h.html#aaed4c523512b2ee45d906c0f9d0b1d13", null ],
     [ "is_less_than_or_equal_to", "formula__cell_8h.html#adfca6086d970d576d51fa5364416a297", null ],
+    [ "is_nary", "formula__cell_8h.html#a450bcac9577de0ca8d380d2a70d5fb12", null ],
     [ "is_negation", "formula__cell_8h.html#a18a463fed830ca5aa9b3ff7bdef8f67a", null ],
     [ "is_not_equal_to", "formula__cell_8h.html#ac5cfac124e8ae1c7450c4e0c91c2bc07", null ],
     [ "is_positive_semidefinite", "formula__cell_8h.html#a42a59dcaebd746af03b1996daf8d8901", null ],

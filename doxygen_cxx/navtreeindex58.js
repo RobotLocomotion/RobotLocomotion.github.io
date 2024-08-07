@@ -1,5 +1,6 @@
 var NAVTREEINDEX58 =
 {
+"random__rotation_8h.html":[4,0,0,7,27],
 "random__rotation_8h.html#a6c92561b046b32c1ebe172bd32dc8276":[4,0,0,7,27,1],
 "random__rotation_8h.html#acc24ae9bbbf0b9d253f3344b97a9f3d4":[4,0,0,7,27,3],
 "random__rotation_8h.html#ae6aefde593f0fbe2f9ef04f40979827f":[4,0,0,7,27,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX58 =
 "sdpa__free__format_8h.html#aeb2470f8cacd8e5f5a473b10d0acf6cc":[4,0,0,11,47,1],
 "semi__explicit__euler__integrator_8h.html":[4,0,0,12,0,22],
 "semi__explicit__euler__integrator_8h.html#a413d310f1acaf9c5679e077c9004eea8":[4,0,0,12,0,22,0],
-"semidefinite__relaxation_8h.html":[4,0,0,11,48],
-"semidefinite__relaxation_8h.html#a163b69b1b6a59eef7209dc949537b941":[4,0,0,11,48,2]
+"semidefinite__relaxation_8h.html":[4,0,0,11,48]
 };

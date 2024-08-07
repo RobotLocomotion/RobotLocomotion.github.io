@@ -1,5 +1,6 @@
 var NAVTREEINDEX59 =
 {
+"semidefinite__relaxation_8h.html#a163b69b1b6a59eef7209dc949537b941":[4,0,0,11,48,2],
 "semidefinite__relaxation_8h.html#a369749919dd3d182cd40a1c089731158":[4,0,0,11,48,1],
 "semidefinite__relaxation__internal_8h.html":[4,0,0,11,49],
 "sensors__py_8h.html":[4,0,0,0,0,10,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX59 =
 "stochastic_8h.html":[4,0,0,1,2,1],
 "stochastic_8h.html#a025af5d6df759f4a5bdb396846dcca74":[4,0,0,1,2,1,20],
 "stochastic_8h.html#a0611532f6e53d2b3eb39986468ad1399":[4,0,0,1,2,1,9],
-"stochastic_8h.html#a0d1c5da87f4161d4e6a493411c26976a":[4,0,0,1,2,1,24],
-"stochastic_8h.html#a2f098a551fbf448099900c3f3c3e13b4":[4,0,0,1,2,1,21]
+"stochastic_8h.html#a0d1c5da87f4161d4e6a493411c26976a":[4,0,0,1,2,1,24]
 };

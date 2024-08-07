@@ -1,5 +1,6 @@
 var NAVTREEINDEX60 =
 {
+"stochastic_8h.html#a2f098a551fbf448099900c3f3c3e13b4":[4,0,0,1,2,1,21],
 "stochastic_8h.html#a4891bbf6ba4372801a10dacfcbbd6172":[4,0,0,1,2,1,14],
 "stochastic_8h.html#a4f95ed0d3b0cb1459ef88fa33e833e5e":[4,0,0,1,2,1,19],
 "stochastic_8h.html#a57679ebbc3affa5691736cd9fae0173c":[4,0,0,1,2,1,17],
@@ -248,6 +249,5 @@ var NAVTREEINDEX60 =
 "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a24c109489bdfad4b0937c2d19d9c0e20":[3,0,0,4,30,1,1],
 "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a3b79efd873843125dabba312ddde65a3":[3,0,0,4,30,1,4],
 "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a4467598fbba812fe1339ab4e83806573":[3,0,0,4,30,1,6],
-"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a5eeeb20fab9ff0f54568882b94d57921":[3,0,0,4,30,1,3],
-"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,30,1,0]
+"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a5eeeb20fab9ff0f54568882b94d57921":[3,0,0,4,30,1,3]
 };
