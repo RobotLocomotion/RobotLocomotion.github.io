@@ -1,5 +1,7 @@
 var NAVTREEINDEX60 =
 {
+"stochastic_8h.html#a0611532f6e53d2b3eb39986468ad1399":[4,0,0,1,2,1,9],
+"stochastic_8h.html#a0d1c5da87f4161d4e6a493411c26976a":[4,0,0,1,2,1,24],
 "stochastic_8h.html#a2f098a551fbf448099900c3f3c3e13b4":[4,0,0,1,2,1,21],
 "stochastic_8h.html#a4891bbf6ba4372801a10dacfcbbd6172":[4,0,0,1,2,1,14],
 "stochastic_8h.html#a4f95ed0d3b0cb1459ef88fa33e833e5e":[4,0,0,1,2,1,19],
@@ -212,17 +214,18 @@ var NAVTREEINDEX60 =
 "structdrake_1_1examples_1_1scene__graph_1_1bouncing__ball_1_1_bouncing_ball_vector_indices.html#a9c398193f54100cd0c78342fe06af2f4":[3,0,0,3,16,0,2,3],
 "structdrake_1_1examples_1_1scene__graph_1_1bouncing__ball_1_1_bouncing_ball_vector_indices.html#aacb5b00cc0c596da1dca6a4126032222":[3,0,0,3,16,0,2,1],
 "structdrake_1_1geometry_1_1_default_proximity_properties.html":[3,0,0,4,10],
-"structdrake_1_1geometry_1_1_default_proximity_properties.html#a114a86a4dc5c458db9cc50a31ec8fdbf":[3,0,0,4,10,8],
+"structdrake_1_1geometry_1_1_default_proximity_properties.html#a114a86a4dc5c458db9cc50a31ec8fdbf":[3,0,0,4,10,9],
 "structdrake_1_1geometry_1_1_default_proximity_properties.html#a22d4299bf05a2a0f59b06b050cbf1e7f":[3,0,0,4,10,2],
 "structdrake_1_1geometry_1_1_default_proximity_properties.html#a3e38e6cb42b54dab9e928c6166949782":[3,0,0,4,10,3],
 "structdrake_1_1geometry_1_1_default_proximity_properties.html#a42fb9f60338529459fa05fee8d4c4d2e":[3,0,0,4,10,4],
-"structdrake_1_1geometry_1_1_default_proximity_properties.html#a724e701eb8bbecc4fbf5bb77227a5ab7":[3,0,0,4,10,6],
+"structdrake_1_1geometry_1_1_default_proximity_properties.html#a724e701eb8bbecc4fbf5bb77227a5ab7":[3,0,0,4,10,7],
 "structdrake_1_1geometry_1_1_default_proximity_properties.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,10,0],
-"structdrake_1_1geometry_1_1_default_proximity_properties.html#ab464f1343904abb84d2b27e78dac2a69":[3,0,0,4,10,9],
+"structdrake_1_1geometry_1_1_default_proximity_properties.html#ab464f1343904abb84d2b27e78dac2a69":[3,0,0,4,10,10],
 "structdrake_1_1geometry_1_1_default_proximity_properties.html#ac5e331dc922e5fcf0083aafe07e3ac0c":[3,0,0,4,10,1],
-"structdrake_1_1geometry_1_1_default_proximity_properties.html#ad4cce1d859d70cf4b5b9620ea36b7a42":[3,0,0,4,10,10],
+"structdrake_1_1geometry_1_1_default_proximity_properties.html#ad4cce1d859d70cf4b5b9620ea36b7a42":[3,0,0,4,10,11],
 "structdrake_1_1geometry_1_1_default_proximity_properties.html#ad67da500a161dc406336020e2f3be598":[3,0,0,4,10,5],
-"structdrake_1_1geometry_1_1_default_proximity_properties.html#af27f062b2892a8a4f0c782238e1936a3":[3,0,0,4,10,7],
+"structdrake_1_1geometry_1_1_default_proximity_properties.html#ada2ca25da33c3b3bf317fc190210df77":[3,0,0,4,10,6],
+"structdrake_1_1geometry_1_1_default_proximity_properties.html#af27f062b2892a8a4f0c782238e1936a3":[3,0,0,4,10,8],
 "structdrake_1_1geometry_1_1_drake_visualizer_params.html":[3,0,0,4,12],
 "structdrake_1_1geometry_1_1_drake_visualizer_params.html#a2d836029fd25573125bd231e1ad19ecb":[3,0,0,4,12,3],
 "structdrake_1_1geometry_1_1_drake_visualizer_params.html#a3a415b5e7e1f412ec0002e0251ced626":[3,0,0,4,12,2],
@@ -246,8 +249,5 @@ var NAVTREEINDEX60 =
 "structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html#aa0de0a897162ef2c7d4a43529b8f25f7":[3,0,0,4,30,0,1],
 "structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html#ae484f63d5fef688b4c3f438455d6eec9":[3,0,0,4,30,0,3],
 "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html":[3,0,0,4,30,1],
-"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a24c109489bdfad4b0937c2d19d9c0e20":[3,0,0,4,30,1,1],
-"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a3b79efd873843125dabba312ddde65a3":[3,0,0,4,30,1,4],
-"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a4467598fbba812fe1339ab4e83806573":[3,0,0,4,30,1,6],
-"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a5eeeb20fab9ff0f54568882b94d57921":[3,0,0,4,30,1,3]
+"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a24c109489bdfad4b0937c2d19d9c0e20":[3,0,0,4,30,1,1]
 };

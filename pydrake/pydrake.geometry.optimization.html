@@ -453,10 +453,11 @@ computed between <code class="docutils literal notranslate"><span class="pre">co
 joints.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">preprocess_bbox</span></code>:</dt><dd><p>is a flag for whether the function should precompute axis-aligned
-bounding boxes for every set. This can speed up the pairwise
-intersection checks, by determining some sets to be disjoint
-without needing to solve an optimization problem. However, it does
-require some overhead to compute those bounding boxes.</p>
+bounding boxes (AABBs) for every set. This can speed up the
+pairwise intersection checks, by determining some sets to be
+disjoint without needing to solve an optimization problem.
+However, it does require some overhead to compute those bounding
+boxes.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -471,6 +472,37 @@ require some overhead to compute those bounding boxes.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
+<li><p>CalcPairwiseIntersections(convex_sets_A: list[pydrake.geometry.optimization.ConvexSet], convex_sets_B: list[pydrake.geometry.optimization.ConvexSet], continuous_revolute_joints: list[int], bboxes_A: list[pydrake.geometry.optimization.Hyperrectangle], bboxes_B: list[pydrake.geometry.optimization.Hyperrectangle]) -&gt; list[tuple[int, int, numpy.ndarray[numpy.float64[m, 1]]]]</p></li>
+</ol>
+<p>Overload of <code class="docutils literal notranslate"><span class="pre">CalcPairwiseIntersections</span></code> allowing the user to supply
+axis- aligned bounding boxes if they’re known a priori, to save on
+computation time.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">bboxes_A</span></code>:</dt><dd><p>is a vector of Hyperrectangles, allowing the user to manually pass
+in the AABBs of each set in <code class="docutils literal notranslate"><span class="pre">convex_sets_A</span></code> to avoid
+recomputation.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">bboxes_B</span></code>:</dt><dd><p>serves the same role to <code class="docutils literal notranslate"><span class="pre">convex_sets_B</span></code> as <code class="docutils literal notranslate"><span class="pre">bboxes_A</span></code> does to
+<code class="docutils literal notranslate"><span class="pre">convex_sets_A</span></code>.</p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The function does not check that the entries of bboxes_A are
+indeed the AABBs corresponding to the sets in <code class="docutils literal notranslate"><span class="pre">convex_sets_A</span></code>
+(and likewise for bboxes_B).</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>if convex_sets_A.size</strong><strong>(</strong><strong>) </strong><strong>!= bboxes_A.size</strong><strong>(</strong><strong>)</strong> – </p></li>
+<li><p><strong>if convex_sets_B.size</strong><strong>(</strong><strong>) </strong><strong>!= bboxes_B.size</strong><strong>(</strong><strong>)</strong> – </p></li>
+<li><p><strong>if not all entries of convex_sets_A</strong><strong>, </strong><strong>convex_sets_B</strong><strong>,</strong> – </p></li>
+<li><p><strong>bboxes_A`</strong><strong>, </strong><strong>and bboxes_B have the same ambient dimension</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic simple" start="3">
 <li><p>CalcPairwiseIntersections(convex_sets: list[pydrake.geometry.optimization.ConvexSet], continuous_revolute_joints: list[int], preprocess_bbox: bool = True) -&gt; list[tuple[int, int, numpy.ndarray[numpy.float64[m, 1]]]]</p></li>
 </ol>
 <p>Convenience overload to compute pairwise intersections within a list
@@ -478,8 +510,8 @@ of convex sets. Equivalent to calling
 CalcPairwiseIntersections(convex_sets, convex_sets,
 continuous_revolute_joints).</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">convex_sets_A</span></code>:</dt><dd><p>is a vector of convex sets. Pairwise intersections will be
-computed within <code class="docutils literal notranslate"><span class="pre">convex_sets_A</span></code>.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">convex_sets</span></code>:</dt><dd><p>is a vector of convex sets. Pairwise intersections will be
+computed within <code class="docutils literal notranslate"><span class="pre">convex_sets</span></code>.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">continuous_revolute_joints</span></code>:</dt><dd><p>is a list of joint indices corresponding to continuous revolute
 joints.</p>
@@ -496,8 +528,34 @@ without needing to solve an optimization problem.</p>
 <li><p><strong>if continuous_revolute_joints has repeated entries</strong><strong>, or </strong><strong>if any</strong> – </p></li>
 <li><p><strong>entry is outside the interval</strong><strong> [</strong><strong>0</strong><strong>, </strong><strong>ambient_dimension</strong><strong>)</strong><strong>, </strong><strong>where</strong> – </p></li>
 <li><p><strong>ambient_dimension is the ambient dimension of the convex sets in</strong> – </p></li>
-<li><p><strong>convex_sets_A` and convex_sets_B</strong> – </p></li>
-<li><p><strong>if convex_sets_A is empty.</strong> – </p></li>
+<li><p><strong>convex_sets`</strong> – </p></li>
+<li><p><strong>if convex_sets is empty.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic simple" start="4">
+<li><p>CalcPairwiseIntersections(convex_sets: list[pydrake.geometry.optimization.ConvexSet], continuous_revolute_joints: list[int], bboxes: list[pydrake.geometry.optimization.Hyperrectangle] = []) -&gt; list[tuple[int, int, numpy.ndarray[numpy.float64[m, 1]]]]</p></li>
+</ol>
+<p>Overload of <code class="docutils literal notranslate"><span class="pre">CalcPairwiseIntersections</span></code> allowing the user to supply
+axis- aligned bounding boxes if they’re known a priori, to save on
+computation time.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">bboxes</span></code>:</dt><dd><p>is a vector of Hyperrectangles, allowing the user to manually pass
+in the AABBs of each set in <code class="docutils literal notranslate"><span class="pre">convex_sets</span></code> to avoid
+recomputation.</p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The function does not check that the entries are indeed the AABBs
+corresponding to the sets in <code class="docutils literal notranslate"><span class="pre">convex_sets</span></code>.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>if convex_sets.size</strong><strong>(</strong><strong>) </strong><strong>!= bboxes.size</strong><strong>(</strong><strong>)</strong> – </p></li>
+<li><p><strong>if not all entries of convex_sets and bboxes have the same</strong> – </p></li>
+<li><p><strong>ambient dimension.</strong> – </p></li>
 </ul>
 </dd>
 </dl>

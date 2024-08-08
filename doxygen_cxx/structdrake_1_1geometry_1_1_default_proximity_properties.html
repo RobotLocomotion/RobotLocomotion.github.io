@@ -200,6 +200,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ab464f1343904abb84d2b27e78dac2a69"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_default_proximity_properties.html#ab464f1343904abb84d2b27e78dac2a69">slab_thickness</a></td></tr>
 <tr class="memdesc:ab464f1343904abb84d2b27e78dac2a69"><td class="mdescLeft">&#160;</td><td class="mdescRight">For a halfspace, the thickness of compliant material to model, in units of meters.  <a href="#ab464f1343904abb84d2b27e78dac2a69">More...</a><br /></td></tr>
 <tr class="separator:ab464f1343904abb84d2b27e78dac2a69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada2ca25da33c3b3bf317fc190210df77"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_default_proximity_properties.html#ada2ca25da33c3b3bf317fc190210df77">margin</a></td></tr>
+<tr class="memdesc:ada2ca25da33c3b3bf317fc190210df77"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Specifies a thin layer of thickness "margin" (in meters) around each geometry.  <a href="#ada2ca25da33c3b3bf317fc190210df77">More...</a><br /></td></tr>
+<tr class="separator:ada2ca25da33c3b3bf317fc190210df77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">General Contact Properties</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>These properties affect contact in general.</p>
 <p>For more detail, including limits of the numeric parameters, </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacedrake_1_1geometry.html#a524d11f70b0594572404257e3f8640ee" title="AddContactMaterial() adds general contact material properties to the given set of proximity propertie...">geometry::AddContactMaterial</a>, <a class="el" href="classdrake_1_1multibody_1_1_coulomb_friction.html" title="Parameters for Coulomb&#39;s Law of Friction, namely:">multibody::CoulombFriction</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#mbp_contact_modeling">mbp_contact_modeling</a>, <a class="el" href="group__compliant__contact.html#mbp_dissipation_model">Modeling Dissipation</a>. </dd></dl>
@@ -333,6 +336,27 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>A measure of material stiffness, in units of Pascals. </p>
+
+</div>
+</div>
+<a id="ada2ca25da33c3b3bf317fc190210df77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada2ca25da33c3b3bf317fc190210df77">&#9670;&nbsp;</a></span>margin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;<a class="el" href="classdouble.html">double</a>&gt; margin</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Advanced) Specifies a thin layer of thickness "margin" (in meters) around each geometry. </p>
+<p>Two bodies with margins δ₁ and δ₂ are considered for contact resolution whenever their distance is within δ₁ + δ₂. That is, (speculative) contact constraints are added for objects at a distance smaller than δ₁+δ₂.</p>
+<p>There will only be <em>contact</em> if the two zero level sets intersect. Unless the zero level sets of both geometries overlap, there is no contact and no contact force. However, (speculative) contact constraints will be added allowing our discrete contact solvers to predict if a contact "will" occur at the next time step. This leads to additional time coherence and stability. Analytical studies of stability show that a value of 0.1 mm to 1.0 mm is more than enough for most robotics applications. This is not an "action-at-a-distance" trick, there is no contact when the thin margin layers of two objects overlap. The margin is simply a "cheap" mechanism to avoid significantly more complex and costly strategies such as Continuous Collision Detection.</p>
+<dl class="section note"><dt>Note</dt><dd>Inflating the geometries does not appreciably change the domain of contact. In the original mesh, the contact pressure is zero on the mesh's boundary surface. When inflating the meshes, we redefine the pressure field so that its zero level set field is a good approximation to the surface of the original geometry. When visualizing hydroelastic proximity geometry, the rendered geometry will include the inflation.</dd>
+<dd>
+Currently margin only applies to <em>compliant</em> hydroelastic contact and it does not affect point contact. </dd></dl>
 
 </div>
 </div>

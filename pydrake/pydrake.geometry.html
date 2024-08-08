@@ -1661,6 +1661,43 @@ meter.</p>
 </dd></dl>
 
 <dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.DefaultProximityProperties.margin">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">margin</span></span><a class="headerlink" href="#pydrake.geometry.DefaultProximityProperties.margin" title="Permalink to this definition"></a></dt>
+<dd><p>(Advanced) Specifies a thin layer of thickness “margin” (in meters)
+around each geometry. Two bodies with margins δ₁ and δ₂ are considered
+for contact resolution whenever their distance is within δ₁ + δ₂. That
+is, (speculative) contact constraints are added for objects at a
+distance smaller than δ₁+δ₂.</p>
+<p>There will only be <em>contact</em> if the two zero level sets intersect.
+Unless the zero level sets of both geometries overlap, there is no
+contact and no contact force. However, (speculative) contact
+constraints will be added allowing our discrete contact solvers to
+predict if a contact “will” occur at the next time step. This leads to
+additional time coherence and stability. Analytical studies of
+stability show that a value of 0.1 mm to 1.0 mm is more than enough
+for most robotics applications. This is not an “action-at-a-distance”
+trick, there is no contact when the thin margin layers of two objects
+overlap. The margin is simply a “cheap” mechanism to avoid
+significantly more complex and costly strategies such as Continuous
+Collision Detection.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Inflating the geometries does not appreciably change the domain of
+contact. In the original mesh, the contact pressure is zero on the
+mesh’s boundary surface. When inflating the meshes, we redefine
+the pressure field so that its zero level set field is a good
+approximation to the surface of the original geometry. When
+visualizing hydroelastic proximity geometry, the rendered geometry
+will include the inflation.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Currently margin only applies to <em>compliant</em> hydroelastic contact
+and it does not affect point contact.</p>
+</div>
+</dd></dl>
+
+<dl class="py property">
 <dt class="sig sig-object py" id="pydrake.geometry.DefaultProximityProperties.point_stiffness">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">point_stiffness</span></span><a class="headerlink" href="#pydrake.geometry.DefaultProximityProperties.point_stiffness" title="Permalink to this definition"></a></dt>
 <dd><p>&#64;name Point Contact Properties</p>

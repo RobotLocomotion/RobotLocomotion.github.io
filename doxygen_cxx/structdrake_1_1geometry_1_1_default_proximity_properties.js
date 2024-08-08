@@ -6,6 +6,7 @@ var structdrake_1_1geometry_1_1_default_proximity_properties =
     [ "dynamic_friction", "structdrake_1_1geometry_1_1_default_proximity_properties.html#a3e38e6cb42b54dab9e928c6166949782", null ],
     [ "hunt_crossley_dissipation", "structdrake_1_1geometry_1_1_default_proximity_properties.html#a42fb9f60338529459fa05fee8d4c4d2e", null ],
     [ "hydroelastic_modulus", "structdrake_1_1geometry_1_1_default_proximity_properties.html#ad67da500a161dc406336020e2f3be598", null ],
+    [ "margin", "structdrake_1_1geometry_1_1_default_proximity_properties.html#ada2ca25da33c3b3bf317fc190210df77", null ],
     [ "point_stiffness", "structdrake_1_1geometry_1_1_default_proximity_properties.html#a724e701eb8bbecc4fbf5bb77227a5ab7", null ],
     [ "relaxation_time", "structdrake_1_1geometry_1_1_default_proximity_properties.html#af27f062b2892a8a4f0c782238e1936a3", null ],
     [ "resolution_hint", "structdrake_1_1geometry_1_1_default_proximity_properties.html#a114a86a4dc5c458db9cc50a31ec8fdbf", null ],

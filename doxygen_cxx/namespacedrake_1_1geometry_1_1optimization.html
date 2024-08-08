@@ -304,9 +304,15 @@ Functions</h2></td></tr>
 <tr class="memitem:ae773abb9ec94e4f9ff5766e2d40b7136"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::tuple&lt; <a class="el" href="classint.html">int</a>, <a class="el" href="classint.html">int</a>, Eigen::VectorXd &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#ae773abb9ec94e4f9ff5766e2d40b7136">CalcPairwiseIntersections</a> (const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">ConvexSets</a> &amp;convex_sets_A, const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">ConvexSets</a> &amp;convex_sets_B, const std::vector&lt; <a class="el" href="classint.html">int</a> &gt; &amp;continuous_revolute_joints, bool preprocess_bbox=true)</td></tr>
 <tr class="memdesc:ae773abb9ec94e4f9ff5766e2d40b7136"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the pairwise intersections edges between two lists of convex sets.  <a href="#ae773abb9ec94e4f9ff5766e2d40b7136">More...</a><br /></td></tr>
 <tr class="separator:ae773abb9ec94e4f9ff5766e2d40b7136"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81f6ad0948f72e1ad26ad217aa52a86f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::tuple&lt; <a class="el" href="classint.html">int</a>, <a class="el" href="classint.html">int</a>, Eigen::VectorXd &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a81f6ad0948f72e1ad26ad217aa52a86f">CalcPairwiseIntersections</a> (const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">ConvexSets</a> &amp;convex_sets_A, const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">ConvexSets</a> &amp;convex_sets_B, const std::vector&lt; <a class="el" href="classint.html">int</a> &gt; &amp;continuous_revolute_joints, const std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html">geometry::optimization::Hyperrectangle</a> &gt; &amp;bboxes_A, const std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html">geometry::optimization::Hyperrectangle</a> &gt; &amp;bboxes_B)</td></tr>
+<tr class="memdesc:a81f6ad0948f72e1ad26ad217aa52a86f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload of <code>CalcPairwiseIntersections</code> allowing the user to supply axis- aligned bounding boxes if they're known a priori, to save on computation time.  <a href="#a81f6ad0948f72e1ad26ad217aa52a86f">More...</a><br /></td></tr>
+<tr class="separator:a81f6ad0948f72e1ad26ad217aa52a86f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a6ca29c940201232b604c08c06fa9ec"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::tuple&lt; <a class="el" href="classint.html">int</a>, <a class="el" href="classint.html">int</a>, Eigen::VectorXd &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a1a6ca29c940201232b604c08c06fa9ec">CalcPairwiseIntersections</a> (const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">ConvexSets</a> &amp;convex_sets, const std::vector&lt; <a class="el" href="classint.html">int</a> &gt; &amp;continuous_revolute_joints, bool preprocess_bbox=true)</td></tr>
 <tr class="memdesc:a1a6ca29c940201232b604c08c06fa9ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience overload to compute pairwise intersections within a list of convex sets.  <a href="#a1a6ca29c940201232b604c08c06fa9ec">More...</a><br /></td></tr>
 <tr class="separator:a1a6ca29c940201232b604c08c06fa9ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ed67b7028e693aa7ea61351656dccc6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::tuple&lt; <a class="el" href="classint.html">int</a>, <a class="el" href="classint.html">int</a>, Eigen::VectorXd &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a1ed67b7028e693aa7ea61351656dccc6">CalcPairwiseIntersections</a> (const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">ConvexSets</a> &amp;convex_sets, const std::vector&lt; <a class="el" href="classint.html">int</a> &gt; &amp;continuous_revolute_joints, const std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html">geometry::optimization::Hyperrectangle</a> &gt; &amp;bboxes)</td></tr>
+<tr class="memdesc:a1ed67b7028e693aa7ea61351656dccc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload of <code>CalcPairwiseIntersections</code> allowing the user to supply axis- aligned bounding boxes if they're known a priori, to save on computation time.  <a href="#a1ed67b7028e693aa7ea61351656dccc6">More...</a><br /></td></tr>
+<tr class="separator:a1ed67b7028e693aa7ea61351656dccc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gafd8111a93cb3461e05bec3477ee736f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6">Iris</a> (const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">ConvexSets</a> &amp;obstacles, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;sample, const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> &amp;domain, const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a> &amp;options=<a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a>())</td></tr>
 <tr class="memdesc:gafd8111a93cb3461e05bec3477ee736f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The IRIS (Iterative Region Inflation by Semidefinite programming) algorithm, as described in.  <a href="group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6">More...</a><br /></td></tr>
 <tr class="separator:gafd8111a93cb3461e05bec3477ee736f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -444,7 +450,7 @@ Functions</h2></td></tr>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ae773abb9ec94e4f9ff5766e2d40b7136"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae773abb9ec94e4f9ff5766e2d40b7136">&#9670;&nbsp;</a></span>CalcPairwiseIntersections() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae773abb9ec94e4f9ff5766e2d40b7136">&#9670;&nbsp;</a></span>CalcPairwiseIntersections() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -488,7 +494,7 @@ Functions</h2></td></tr>
     <tr><td class="paramname">convex_sets_A</td><td>is a vector of convex sets. Pairwise intersections will be computed between <code>convex_sets_A</code> and <code>convex_sets_B</code>. </td></tr>
     <tr><td class="paramname">convex_sets_B</td><td>is the other vector of convex sets. </td></tr>
     <tr><td class="paramname">continuous_revolute_joints</td><td>is a list of joint indices corresponding to continuous revolute joints. </td></tr>
-    <tr><td class="paramname">preprocess_bbox</td><td>is a flag for whether the function should precompute axis-aligned bounding boxes for every set. This can speed up the pairwise intersection checks, by determining some sets to be disjoint without needing to solve an optimization problem. However, it does require some overhead to compute those bounding boxes.</td></tr>
+    <tr><td class="paramname">preprocess_bbox</td><td>is a flag for whether the function should precompute axis-aligned bounding boxes (AABBs) for every set. This can speed up the pairwise intersection checks, by determining some sets to be disjoint without needing to solve an optimization problem. However, it does require some overhead to compute those bounding boxes.</td></tr>
   </table>
   </dd>
 </dl>
@@ -502,8 +508,72 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a81f6ad0948f72e1ad26ad217aa52a86f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81f6ad0948f72e1ad26ad217aa52a86f">&#9670;&nbsp;</a></span>CalcPairwiseIntersections() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::tuple&lt;<a class="el" href="classint.html">int</a>, <a class="el" href="classint.html">int</a>, Eigen::VectorXd&gt; &gt; drake::geometry::optimization::CalcPairwiseIntersections </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">ConvexSets</a> &amp;&#160;</td>
+          <td class="paramname"><em>convex_sets_A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">ConvexSets</a> &amp;&#160;</td>
+          <td class="paramname"><em>convex_sets_B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classint.html">int</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>continuous_revolute_joints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html">geometry::optimization::Hyperrectangle</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>bboxes_A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html">geometry::optimization::Hyperrectangle</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>bboxes_B</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Overload of <code>CalcPairwiseIntersections</code> allowing the user to supply axis- aligned bounding boxes if they're known a priori, to save on computation time. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bboxes_A</td><td>is a vector of Hyperrectangles, allowing the user to manually pass in the AABBs of each set in <code>convex_sets_A</code> to avoid recomputation. </td></tr>
+    <tr><td class="paramname">bboxes_B</td><td>serves the same role to <code>convex_sets_B</code> as <code>bboxes_A</code> does to <code>convex_sets_A</code>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>The function does not check that the entries of bboxes_A are indeed the AABBs corresponding to the sets in <code>convex_sets_A</code> (and likewise for bboxes_B).</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td><code>convex_sets_A.size() != bboxes_A.size()</code> </td></tr>
+    <tr><td class="paramname">if</td><td><code>convex_sets_B.size() != bboxes_B.size()</code> </td></tr>
+    <tr><td class="paramname">if</td><td>not all entries of <code>convex_sets_A</code>, <code>convex_sets_B</code>, <code>bboxes_A</code>, and <code>bboxes_B</code> have the same ambient dimension. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a1a6ca29c940201232b604c08c06fa9ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1a6ca29c940201232b604c08c06fa9ec">&#9670;&nbsp;</a></span>CalcPairwiseIntersections() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a6ca29c940201232b604c08c06fa9ec">&#9670;&nbsp;</a></span>CalcPairwiseIntersections() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -538,7 +608,7 @@ Functions</h2></td></tr>
 <p>Equivalent to calling CalcPairwiseIntersections(convex_sets, convex_sets, continuous_revolute_joints).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">convex_sets_A</td><td>is a vector of convex sets. Pairwise intersections will be computed within <code>convex_sets_A</code>. </td></tr>
+    <tr><td class="paramname">convex_sets</td><td>is a vector of convex sets. Pairwise intersections will be computed within <code>convex_sets</code>. </td></tr>
     <tr><td class="paramname">continuous_revolute_joints</td><td>is a list of joint indices corresponding to continuous revolute joints. </td></tr>
     <tr><td class="paramname">preprocess_bbox</td><td>is a flag for whether the function should precompute axis-aligned bounding boxes for every set. This can speed up the pairwise intersection checks, by determining some sets to be disjoint without needing to solve an optimization problem.</td></tr>
   </table>
@@ -546,8 +616,58 @@ Functions</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">if</td><td><code>continuous_revolute_joints</code> has repeated entries, or if any entry is outside the interval [0, ambient_dimension), where ambient_dimension is the ambient dimension of the convex sets in <code>convex_sets_A</code> and <code>convex_sets_B</code>. </td></tr>
-    <tr><td class="paramname">if</td><td><code>convex_sets_A</code> is empty. </td></tr>
+    <tr><td class="paramname">if</td><td><code>continuous_revolute_joints</code> has repeated entries, or if any entry is outside the interval [0, ambient_dimension), where ambient_dimension is the ambient dimension of the convex sets in <code>convex_sets</code>. </td></tr>
+    <tr><td class="paramname">if</td><td><code>convex_sets</code> is empty. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1ed67b7028e693aa7ea61351656dccc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ed67b7028e693aa7ea61351656dccc6">&#9670;&nbsp;</a></span>CalcPairwiseIntersections() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::tuple&lt;<a class="el" href="classint.html">int</a>, <a class="el" href="classint.html">int</a>, Eigen::VectorXd&gt; &gt; drake::geometry::optimization::CalcPairwiseIntersections </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">ConvexSets</a> &amp;&#160;</td>
+          <td class="paramname"><em>convex_sets</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classint.html">int</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>continuous_revolute_joints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html">geometry::optimization::Hyperrectangle</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>bboxes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Overload of <code>CalcPairwiseIntersections</code> allowing the user to supply axis- aligned bounding boxes if they're known a priori, to save on computation time. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bboxes</td><td>is a vector of Hyperrectangles, allowing the user to manually pass in the AABBs of each set in <code>convex_sets</code> to avoid recomputation.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>The function does not check that the entries are indeed the AABBs corresponding to the sets in <code>convex_sets</code>.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td><code>convex_sets.size() != bboxes.size()</code> </td></tr>
+    <tr><td class="paramname">if</td><td>not all entries of <code>convex_sets</code> and <code>bboxes</code> have the same ambient dimension. </td></tr>
   </table>
   </dd>
 </dl>
