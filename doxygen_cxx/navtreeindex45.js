@@ -248,6 +248,6 @@ var NAVTREEINDEX45 =
 "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#ab8817bc0f987f64e506b92be652d5644":[1,2,4,3,19],
 "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#abc15d39d0d9cb5544712ad6c0bed1aed":[1,2,4,3,14],
 "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#acaff289a0608d413a89eac135a4c8790":[1,2,4,3,8],
-"classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#ad83228b39a7566b1cf862392f1e5e19a":[1,2,4,3,20],
-"classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#adf4572bb00056a157be83e44f7f41523":[1,2,4,3,18]
+"classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#acfe6bdbdc50d1b6bff27e133688a4230":[1,2,4,3,21],
+"classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#ad83228b39a7566b1cf862392f1e5e19a":[1,2,4,3,20]
 };

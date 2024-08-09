@@ -1,5 +1,6 @@
 var NAVTREEINDEX59 =
 {
+"semi__explicit__euler__integrator_8h.html":[4,0,0,12,0,22],
 "semi__explicit__euler__integrator_8h.html#a413d310f1acaf9c5679e077c9004eea8":[4,0,0,12,0,22,0],
 "semidefinite__relaxation_8h.html":[4,0,0,11,48],
 "semidefinite__relaxation_8h.html#a163b69b1b6a59eef7209dc949537b941":[4,0,0,11,48,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX59 =
 "stepwise__dense__output_8h.html":[4,0,0,12,0,30],
 "stepwise__dense__output_8h.html#ac63f86fd8744281284fd18e143109605":[4,0,0,12,0,30,1],
 "stiff__double__mass__spring__system_8h.html":[4,0,0,12,0,0,18],
-"stochastic_8h.html":[4,0,0,1,2,1],
-"stochastic_8h.html#a025af5d6df759f4a5bdb396846dcca74":[4,0,0,1,2,1,20]
+"stochastic_8h.html":[4,0,0,1,2,1]
 };

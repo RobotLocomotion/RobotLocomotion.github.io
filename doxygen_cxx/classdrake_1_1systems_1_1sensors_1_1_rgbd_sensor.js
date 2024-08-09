@@ -20,5 +20,6 @@ var classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor =
     [ "parent_frame_id", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a22ff82441df0b9b743906c4304135783", null ],
     [ "query_object_input_port", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#adf4572bb00056a157be83e44f7f41523", null ],
     [ "X_BC", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#ab8817bc0f987f64e506b92be652d5644", null ],
-    [ "X_BD", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#ad83228b39a7566b1cf862392f1e5e19a", null ]
+    [ "X_BD", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#ad83228b39a7566b1cf862392f1e5e19a", null ],
+    [ "X_PB", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#acfe6bdbdc50d1b6bff27e133688a4230", null ]
 ];
